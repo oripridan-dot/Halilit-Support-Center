@@ -82,3 +82,7 @@ node_modules/
 
 # Playwright browsers (too large for GitHub)
 .playwright-browsers/
+
+# Large Media Files
+frontend/public/data/product_images/
+frontend/public/data/thumbnails/
