@@ -1,9 +1,9 @@
 {
   "brand_name": "Rapier 33 Electric Guitars",
   "products": [],
-  "generated_at": "2026-01-26T06:43:37.521730",
+  "generated_at": "2026-01-26T12:55:21.885950",
   "brand_slug": "rapier-33-electric-guitars",
-  "refined_at": "2026-01-26T06:43:37.528338+00:00",
+  "refined_at": "2026-01-26T12:55:21.892566+00:00",
   "brand_identity": {
     "id": "rapier-33-electric-guitars",
     "name": "Rapier 33 Electric Guitars",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

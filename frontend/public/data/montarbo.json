@@ -618,9 +618,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.401243",
+  "generated_at": "2026-01-26T12:55:21.587779",
   "brand_slug": "montarbo",
-  "refined_at": "2026-01-26T06:43:37.421449+00:00",
+  "refined_at": "2026-01-26T12:55:21.622312+00:00",
   "brand_identity": {
     "id": "montarbo",
     "name": "Montarbo",
@@ -630,7 +630,8 @@
       "validated": 22,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 22
   },
   "hierarchy": {
     "accessories": {

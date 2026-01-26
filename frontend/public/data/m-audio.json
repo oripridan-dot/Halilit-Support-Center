@@ -702,9 +702,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.508405",
+  "generated_at": "2026-01-26T12:55:21.868225",
   "brand_slug": "m-audio",
-  "refined_at": "2026-01-26T06:43:37.538101+00:00",
+  "refined_at": "2026-01-26T12:55:21.896863+00:00",
   "brand_identity": {
     "id": "m-audio",
     "name": "M Audio",
@@ -714,7 +714,8 @@
       "validated": 25,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 25
   },
   "hierarchy": {
     "accessories": {

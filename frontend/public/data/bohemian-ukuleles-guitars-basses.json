@@ -338,9 +338,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.449206",
+  "generated_at": "2026-01-26T12:55:21.647051",
   "brand_slug": "bohemian-ukuleles-guitars-basses",
-  "refined_at": "2026-01-26T06:43:37.465892+00:00",
+  "refined_at": "2026-01-26T12:55:21.818756+00:00",
   "brand_identity": {
     "id": "bohemian-ukuleles-guitars-basses",
     "name": "Bohemian Ukuleles Guitars Basses",
@@ -350,7 +350,8 @@
       "validated": 12,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 12
   },
   "hierarchy": {
     "accessories": {

@@ -254,9 +254,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.447006",
+  "generated_at": "2026-01-26T12:55:22.601887",
   "brand_slug": "maestro-guitar-pedals-and-effects",
-  "refined_at": "2026-01-26T06:43:38.461933+00:00",
+  "refined_at": "2026-01-26T12:55:22.611628+00:00",
   "brand_identity": {
     "id": "maestro-guitar-pedals-and-effects",
     "name": "Maestro Guitar Pedals And Effects",
@@ -266,7 +266,8 @@
       "validated": 9,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 9
   },
   "hierarchy": {
     "accessories": {

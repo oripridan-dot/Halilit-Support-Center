@@ -2,31 +2,6 @@
   "brand_name": "Amphion",
   "products": [
     {
-      "id": "amphion_06_amp400_12",
-      "name": "Amphion Amp400.12",
-      "description": "Amphion Amp400.12",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/amphion_06_amp400_12.jpg",
-      "product_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Amphion",
-      "logo_url": "/assets/logos/amphion_logo.jpg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/amphion_06_amp400_12.jpg",
-        "thumbnail": "/data/thumbnails/amphion_06_amp400_12.jpg",
-        "high_res": "/data/thumbnails/amphion_06_amp400_12.jpg",
-        "original": "/data/thumbnails/amphion_06_amp400_12.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
       "id": "amphion_06_amp700",
       "name": "Amphion Amp700",
       "description": "Amphion Amp700",
@@ -195,9 +170,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.386431",
+  "generated_at": "2026-01-26T12:55:21.546028",
   "brand_slug": "amphion",
-  "refined_at": "2026-01-26T06:43:37.397042+00:00",
+  "refined_at": "2026-01-26T12:55:21.569471+00:00",
   "brand_identity": {
     "id": "amphion",
     "name": "Amphion",
@@ -207,24 +182,12 @@
       "validated": 7,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 6
   },
   "hierarchy": {
     "accessories": {
       "General": [
-        {
-          "id": "amphion_06_amp400_12",
-          "name": "Amphion Amp400.12",
-          "description": "Amphion Amp400.12",
-          "images": {
-            "main": "/data/thumbnails/amphion_06_amp400_12.jpg",
-            "thumbnail": "/data/thumbnails/amphion_06_amp400_12.jpg",
-            "high_res": "/data/thumbnails/amphion_06_amp400_12.jpg",
-            "original": "/data/thumbnails/amphion_06_amp400_12.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
         {
           "id": "amphion_06_amp700",
           "name": "Amphion Amp700",

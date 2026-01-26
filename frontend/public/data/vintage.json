@@ -114,9 +114,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.233935",
+  "generated_at": "2026-01-26T12:55:21.088106",
   "brand_slug": "vintage",
-  "refined_at": "2026-01-26T06:43:37.384295+00:00",
+  "refined_at": "2026-01-26T12:55:21.188923+00:00",
   "brand_identity": {
     "id": "vintage",
     "name": "Vintage",
@@ -126,7 +126,8 @@
       "validated": 4,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 4
   },
   "hierarchy": {
     "accessories": {

@@ -618,9 +618,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.232542",
+  "generated_at": "2026-01-26T12:55:21.081979",
   "brand_slug": "medeli",
-  "refined_at": "2026-01-26T06:43:37.289374+00:00",
+  "refined_at": "2026-01-26T12:55:21.110981+00:00",
   "brand_identity": {
     "id": "medeli",
     "name": "Medeli",
@@ -630,7 +630,8 @@
       "validated": 22,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 22
   },
   "hierarchy": {
     "accessories": {

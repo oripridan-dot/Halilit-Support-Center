@@ -1932,36 +1932,11 @@
       "category_hierarchy": [
         "accessories"
       ]
-    },
-    {
-      "id": "universal_audio_44_lunarecordingsystem",
-      "name": "Universal Audio LUNA Recording System",
-      "description": "Universal Audio LUNA Recording System",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-      "product_url": "https://www.halilit.com/items/2687467-universal-audio-luna-recording-system",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/2687467-universal-audio-luna-recording-system",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Universal Audio",
-      "logo_url": "/assets/logos/universal-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-        "thumbnail": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-        "high_res": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-        "original": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.609586",
+  "generated_at": "2026-01-26T12:55:22.712726",
   "brand_slug": "universal-audio",
-  "refined_at": "2026-01-26T06:43:38.687174+00:00",
+  "refined_at": "2026-01-26T12:55:22.939563+00:00",
   "brand_identity": {
     "id": "universal-audio",
     "name": "Universal Audio",
@@ -1978,6 +1953,7 @@
       "normalized": 0,
       "uncategorized": 0
     },
+    "total_products": 69,
     "categories": [
       {
         "id": "keys",
@@ -2933,19 +2909,6 @@
             "thumbnail": "/data/thumbnails/universal_audio_44_la2a.jpg",
             "high_res": "/data/thumbnails/universal_audio_44_la2a.jpg",
             "original": "/data/thumbnails/universal_audio_44_la2a.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "universal_audio_44_lunarecordingsystem",
-          "name": "Universal Audio LUNA Recording System",
-          "description": "Universal Audio LUNA Recording System",
-          "images": {
-            "main": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-            "thumbnail": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-            "high_res": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
-            "original": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg"
           },
           "model_number": null,
           "sku": null

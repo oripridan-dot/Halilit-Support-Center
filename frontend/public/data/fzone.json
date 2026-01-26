@@ -282,9 +282,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.346018",
+  "generated_at": "2026-01-26T12:55:21.505463",
   "brand_slug": "fzone",
-  "refined_at": "2026-01-26T06:43:37.369965+00:00",
+  "refined_at": "2026-01-26T12:55:21.557386+00:00",
   "brand_identity": {
     "id": "fzone",
     "name": "Fzone",
@@ -294,7 +294,8 @@
       "validated": 10,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 10
   },
   "hierarchy": {
     "accessories": {

@@ -5490,9 +5490,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.275277",
+  "generated_at": "2026-01-26T12:55:21.137061",
   "brand_slug": "bespeco",
-  "refined_at": "2026-01-26T06:43:37.501652+00:00",
+  "refined_at": "2026-01-26T12:55:21.584643+00:00",
   "brand_identity": {
     "id": "bespeco",
     "name": "Bespeco",
@@ -5503,6 +5503,7 @@
       "normalized": 0,
       "uncategorized": 0
     },
+    "total_products": 196,
     "categories": [
       {
         "id": "keys",

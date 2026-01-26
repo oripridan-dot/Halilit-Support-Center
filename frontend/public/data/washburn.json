@@ -170,9 +170,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.230853",
+  "generated_at": "2026-01-26T12:55:21.084833",
   "brand_slug": "washburn",
-  "refined_at": "2026-01-26T06:43:37.267176+00:00",
+  "refined_at": "2026-01-26T12:55:21.128202+00:00",
   "brand_identity": {
     "id": "washburn",
     "name": "Washburn",
@@ -182,7 +182,8 @@
       "validated": 6,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 6
   },
   "hierarchy": {
     "accessories": {

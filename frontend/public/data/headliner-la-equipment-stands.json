@@ -338,9 +338,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.642309",
+  "generated_at": "2026-01-26T12:55:22.760688",
   "brand_slug": "headliner-la-equipment-stands",
-  "refined_at": "2026-01-26T06:43:38.649606+00:00",
+  "refined_at": "2026-01-26T12:55:22.893691+00:00",
   "brand_identity": {
     "id": "headliner-la-equipment-stands",
     "name": "Headliner La Equipment Stands ",
@@ -350,7 +350,8 @@
       "validated": 12,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 12
   },
   "hierarchy": {
     "accessories": {

@@ -758,9 +758,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.315618",
+  "generated_at": "2026-01-26T12:55:21.181864",
   "brand_slug": "xvive",
-  "refined_at": "2026-01-26T06:43:37.344376+00:00",
+  "refined_at": "2026-01-26T12:55:21.203239+00:00",
   "brand_identity": {
     "id": "xvive",
     "name": "Xvive",
@@ -770,7 +770,8 @@
       "validated": 27,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 27
   },
   "hierarchy": {
     "accessories": {

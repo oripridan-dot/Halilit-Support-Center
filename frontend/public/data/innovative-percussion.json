@@ -1150,9 +1150,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.228910",
+  "generated_at": "2026-01-26T12:55:21.083930",
   "brand_slug": "innovative-percussion",
-  "refined_at": "2026-01-26T06:43:37.251522+00:00",
+  "refined_at": "2026-01-26T12:55:21.132466+00:00",
   "brand_identity": {
     "id": "innovative-percussion",
     "name": "Innovative Percussion",
@@ -1162,7 +1162,8 @@
       "validated": 41,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 41
   },
   "hierarchy": {
     "accessories": {

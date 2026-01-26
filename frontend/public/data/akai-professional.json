@@ -982,9 +982,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.228730",
+  "generated_at": "2026-01-26T12:55:21.086547",
   "brand_slug": "akai-professional",
-  "refined_at": "2026-01-26T06:43:37.261276+00:00",
+  "refined_at": "2026-01-26T12:55:21.130394+00:00",
   "brand_identity": {
     "id": "akai-professional",
     "name": "Akai Professional",
@@ -1000,7 +1000,8 @@
       "validated": 35,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 35
   },
   "hierarchy": {
     "accessories": {

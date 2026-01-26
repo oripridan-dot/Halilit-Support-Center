@@ -422,9 +422,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.360834",
+  "generated_at": "2026-01-26T12:55:21.511255",
   "brand_slug": "xotic",
-  "refined_at": "2026-01-26T06:43:37.388362+00:00",
+  "refined_at": "2026-01-26T12:55:21.556419+00:00",
   "brand_identity": {
     "id": "xotic",
     "name": "Xotic",
@@ -434,7 +434,8 @@
       "validated": 15,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 15
   },
   "hierarchy": {
     "accessories": {

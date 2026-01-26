@@ -1,9 +1,9 @@
 {
   "brand_name": "Oberheim",
   "products": [],
-  "generated_at": "2026-01-26T06:43:38.620108",
+  "generated_at": "2026-01-26T12:55:22.745473",
   "brand_slug": "oberheim",
-  "refined_at": "2026-01-26T06:43:38.625544+00:00",
+  "refined_at": "2026-01-26T12:55:22.885420+00:00",
   "brand_identity": {
     "id": "oberheim",
     "name": "Oberheim",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

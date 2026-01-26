@@ -1206,9 +1206,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.540405",
+  "generated_at": "2026-01-26T12:55:21.920396",
   "brand_slug": "eaw-eastern-acoustic-works",
-  "refined_at": "2026-01-26T06:43:37.572554+00:00",
+  "refined_at": "2026-01-26T12:55:21.967139+00:00",
   "brand_identity": {
     "id": "eaw-eastern-acoustic-works",
     "name": " Eaw Eastern Acoustic Works ",
@@ -1218,7 +1218,8 @@
       "validated": 43,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 43
   },
   "hierarchy": {
     "accessories": {

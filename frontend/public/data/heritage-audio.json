@@ -114,31 +114,6 @@
       ]
     },
     {
-      "id": "heritage_audio_27_hadtt73",
-      "name": "Heritage Audio DTT-73",
-      "description": "Heritage Audio DTT-73",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-      "product_url": "https://www.halilit.com/items/7450409-heritage-audio-dtt-73-dual-mic-line-preamp",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/7450409-heritage-audio-dtt-73-dual-mic-line-preamp",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Heritage Audio",
-      "logo_url": "/assets/logos/heritage-audio_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-        "thumbnail": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-        "high_res": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-        "original": "/data/thumbnails/heritage_audio_27_hadtt73.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
       "id": "heritage_audio_27_ha81aelite",
       "name": "Heritage Audio HA-81A EQ Elite",
       "description": "Heritage Audio HA-81A EQ Elite",
@@ -585,111 +560,11 @@
       "category_hierarchy": [
         "accessories"
       ]
-    },
-    {
-      "id": "heritage_audio_27_73dione",
-      "name": "Heritage Audio 73 Active DI Box",
-      "description": "Heritage Audio 73 Active DI Box",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-      "product_url": "https://www.halilit.com/items/8518144-heritage-audio-73-active-di-box",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/8518144-heritage-audio-73-active-di-box",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Heritage Audio",
-      "logo_url": "/assets/logos/heritage-audio_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-        "thumbnail": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-        "high_res": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-        "original": "/data/thumbnails/heritage_audio_27_73dione.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "heritage_audio_27_73pditwo",
-      "name": "Heritage Audio 73 P DI2 - DI Box",
-      "description": "Heritage Audio 73 P DI2 - DI Box",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-      "product_url": "https://www.halilit.com/items/8530723-heritage-audio-73-p-di2-di-box",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/8530723-heritage-audio-73-p-di2-di-box",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Heritage Audio",
-      "logo_url": "/assets/logos/heritage-audio_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-        "thumbnail": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-        "high_res": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-        "original": "/data/thumbnails/heritage_audio_27_73pditwo.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "heritage_audio_27_73ditwo",
-      "name": "Heritage Audio 73 DI 2 - Active DI Box",
-      "description": "Heritage Audio 73 DI 2 - Active DI Box",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-      "product_url": "https://www.halilit.com/items/8518739-heritage-audio-73-di-2-dual-channel-active-di-box-",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/8518739-heritage-audio-73-di-2-dual-channel-active-di-box-",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Heritage Audio",
-      "logo_url": "/assets/logos/heritage-audio_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-        "thumbnail": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-        "high_res": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-        "original": "/data/thumbnails/heritage_audio_27_73ditwo.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "heritage_audio_27_73pdione",
-      "name": "Heritage Audio 73 P DI One - DI Box",
-      "description": "Heritage Audio 73 P DI One - DI Box",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-      "product_url": "https://www.halilit.com/items/8530631-heritage-audio-73-p-di-one-di-box-",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/8530631-heritage-audio-73-p-di-one-di-box-",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Heritage Audio",
-      "logo_url": "/assets/logos/heritage-audio_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-        "thumbnail": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-        "high_res": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-        "original": "/data/thumbnails/heritage_audio_27_73pdione.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.360424",
+  "generated_at": "2026-01-26T12:55:21.508017",
   "brand_slug": "heritage-audio",
-  "refined_at": "2026-01-26T06:43:37.390266+00:00",
+  "refined_at": "2026-01-26T12:55:21.537022+00:00",
   "brand_identity": {
     "id": "heritage-audio",
     "name": "Heritage Audio",
@@ -699,7 +574,8 @@
       "validated": 25,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 20
   },
   "hierarchy": {
     "accessories": {
@@ -752,19 +628,6 @@
             "thumbnail": "/data/thumbnails/heritage_audio_27_ha73elite.jpg",
             "high_res": "/data/thumbnails/heritage_audio_27_ha73elite.jpg",
             "original": "/data/thumbnails/heritage_audio_27_ha73elite.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "heritage_audio_27_hadtt73",
-          "name": "Heritage Audio DTT-73",
-          "description": "Heritage Audio DTT-73",
-          "images": {
-            "main": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-            "thumbnail": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-            "high_res": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
-            "original": "/data/thumbnails/heritage_audio_27_hadtt73.jpg"
           },
           "model_number": null,
           "sku": null
@@ -973,58 +836,6 @@
             "thumbnail": "/data/thumbnails/heritage_audio_27_haram1000.jpg",
             "high_res": "/data/thumbnails/heritage_audio_27_haram1000.jpg",
             "original": "/data/thumbnails/heritage_audio_27_haram1000.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "heritage_audio_27_73dione",
-          "name": "Heritage Audio 73 Active DI Box",
-          "description": "Heritage Audio 73 Active DI Box",
-          "images": {
-            "main": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-            "thumbnail": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-            "high_res": "/data/thumbnails/heritage_audio_27_73dione.jpg",
-            "original": "/data/thumbnails/heritage_audio_27_73dione.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "heritage_audio_27_73pditwo",
-          "name": "Heritage Audio 73 P DI2 - DI Box",
-          "description": "Heritage Audio 73 P DI2 - DI Box",
-          "images": {
-            "main": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-            "thumbnail": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-            "high_res": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
-            "original": "/data/thumbnails/heritage_audio_27_73pditwo.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "heritage_audio_27_73ditwo",
-          "name": "Heritage Audio 73 DI 2 - Active DI Box",
-          "description": "Heritage Audio 73 DI 2 - Active DI Box",
-          "images": {
-            "main": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-            "thumbnail": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-            "high_res": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
-            "original": "/data/thumbnails/heritage_audio_27_73ditwo.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "heritage_audio_27_73pdione",
-          "name": "Heritage Audio 73 P DI One - DI Box",
-          "description": "Heritage Audio 73 P DI One - DI Box",
-          "images": {
-            "main": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-            "thumbnail": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-            "high_res": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
-            "original": "/data/thumbnails/heritage_audio_27_73pdione.jpg"
           },
           "model_number": null,
           "sku": null

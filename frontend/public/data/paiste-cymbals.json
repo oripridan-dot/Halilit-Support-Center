@@ -4230,9 +4230,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.796904",
+  "generated_at": "2026-01-26T12:55:22.074550",
   "brand_slug": "paiste-cymbals",
-  "refined_at": "2026-01-26T06:43:38.220112+00:00",
+  "refined_at": "2026-01-26T12:55:22.279067+00:00",
   "brand_identity": {
     "id": "paiste-cymbals",
     "name": "Paiste Cymbals",
@@ -4242,7 +4242,8 @@
       "validated": 151,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 151
   },
   "hierarchy": {
     "accessories": {

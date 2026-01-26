@@ -1,9 +1,9 @@
 {
   "brand_name": "Hiwatt",
   "products": [],
-  "generated_at": "2026-01-26T06:43:37.487868",
+  "generated_at": "2026-01-26T12:55:21.846621",
   "brand_slug": "hiwatt",
-  "refined_at": "2026-01-26T06:43:37.506171+00:00",
+  "refined_at": "2026-01-26T12:55:21.878777+00:00",
   "brand_identity": {
     "id": "hiwatt",
     "name": "Hiwatt",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

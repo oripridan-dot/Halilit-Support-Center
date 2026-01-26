@@ -1,10 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { RotateCcw, ZoomIn } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { getPriceValue } from "../../lib/priceFormatter";
 import type { Product } from "../../types";
-
-// TierBarProduct is a type alias for Product with extended functionality
-export type TierBarProduct = Product;
 
 interface TierBarProps {
   products: Product[];
@@ -12,181 +10,193 @@ interface TierBarProps {
   onSelectProduct: (productId: string) => void;
 }
 
-export const TierBar = ({
-  products,
-  onHoverProduct,
-  onSelectProduct,
-}: TierBarProps) => {
+// Visual constants
+const NODE_SIZE = 48; // Size of the product orb (px)
+const X_BUFFER = 0.05; // 5% padding on sides
+const Y_BUFFER = 0.15; // 15% padding top/bottom
+
+export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // 1. Calculate Global Price Extremes (Stable across zooms)
-  const { globalMin, globalMax } = useMemo(() => {
-    if (!products.length) return { globalMin: 0, globalMax: 10000 };
-    const prices = products.map((p) => {
-      const pricing =
-        typeof p.pricing === "number" ? p.pricing : p.pricing?.regular_price;
-      return pricing ?? p.price ?? 0;
-    });
-    return { globalMin: Math.min(...prices), globalMax: Math.max(...prices) };
+  // 1. Calculate Global Extremes (Price & Score)
+  const { minPrice, maxPrice } = useMemo(() => {
+    if (!products.length) return { minPrice: 0, maxPrice: 10000 };
+    const prices = products.map(getPriceValue);
+    return { minPrice: Math.min(...prices), maxPrice: Math.max(...prices) };
   }, [products]);
 
-  // 2. Zoom State (The actual viewport)
-  // null = showing full global range
+  // 2. Zoom State
   const [zoomDomain, setZoomDomain] = useState<[number, number] | null>(null);
-
-  const currentMin = zoomDomain ? zoomDomain[0] : globalMin;
-  const currentMax = zoomDomain ? zoomDomain[1] : globalMax;
+  const currentMin = zoomDomain ? zoomDomain[0] : minPrice;
+  const currentMax = zoomDomain ? zoomDomain[1] : maxPrice;
   const isZoomed = zoomDomain !== null;
 
-  // 3. Curtain Interaction State
-  // [leftCurtainPos, rightCurtainPos] (0.0 to 1.0)
-  // Always snaps back to [0, 1] after interaction
+  // 3. Smart Layout Engine (Collision Avoidance)
+  // This runs whenever the product list or zoom changes.
+  // It maps Price -> X and Score -> Y, then nudges overlapping nodes.
+  const computedLayout = useMemo(() => {
+    const rangeSpan = currentMax - currentMin || 1;
+    
+    // Initial Mapping
+    let nodes = products.map(p => {
+      const price = getPriceValue(p);
+      const score = p.score || 50; // Use calculated score or default
+
+      // Raw Coordinates (0.0 to 1.0)
+      const rawX = (price - currentMin) / rangeSpan;
+      const rawY = score / 100;
+
+      return {
+        id: p.id,
+        product: p,
+        price,
+        // Clamp X to visual buffer
+        x: X_BUFFER + (rawX * (1 - (X_BUFFER * 2))), 
+        // Clamp Y to visual buffer
+        y: Y_BUFFER + (rawY * (1 - (Y_BUFFER * 2))),
+        visible: price >= currentMin && price <= currentMax
+      };
+    }).filter(n => n.visible);
+
+    // Collision Resolution (Simple Iterative Nudge)
+    // We do 3 passes to push nodes apart if they are too close
+    const iterations = 3;
+    const thresholdX = 0.03; // ~3% width overlap
+    const thresholdY = 0.10; // ~10% height overlap
+
+    for (let i = 0; i < iterations; i++) {
+      // Sort by X to optimize checks
+      nodes.sort((a, b) => a.x - b.x);
+
+      for (let j = 0; j < nodes.length; j++) {
+        const nodeA = nodes[j];
+        for (let k = j + 1; k < nodes.length; k++) {
+          const nodeB = nodes[k];
+          
+          // Optimization: If X distance is huge, stop checking this neighbor
+          if (nodeB.x - nodeA.x > thresholdX) break;
+
+          const diffX = Math.abs(nodeA.x - nodeB.x);
+          const diffY = Math.abs(nodeA.y - nodeB.y);
+
+          if (diffX < thresholdX && diffY < thresholdY) {
+            // COLLISION DETECTED
+            // Nudge Y apart (preserve X as much as possible because X is Price)
+            const overlapY = thresholdY - diffY;
+            const push = overlapY * 0.5;
+
+            // Push the higher one up, lower one down
+            if (nodeA.y > nodeB.y) {
+               nodeA.y = Math.min(1 - Y_BUFFER, nodeA.y + push);
+               nodeB.y = Math.max(Y_BUFFER, nodeB.y - push);
+            } else {
+               nodeB.y = Math.min(1 - Y_BUFFER, nodeB.y + push);
+               nodeA.y = Math.max(Y_BUFFER, nodeA.y - push);
+            }
+          }
+        }
+      }
+    }
+    return nodes;
+  }, [products, currentMin, currentMax]);
+
+
+  // 4. Interaction (Zoom Handles)
   const [dragRange, setDragRange] = useState<[number, number]>([0, 1]);
-  const [pullBackIntent, setPullBackIntent] = useState<"left" | "right" | null>(
-    null,
-  );
-  // Reset zoom when product set changes significantly
+  const [pullBackIntent, setPullBackIntent] = useState<"left" | "right" | null>(null);
+
+  // Reset logic
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setZoomDomain(null);
-
     setDragRange([0, 1]);
-  }, [products.length, globalMin, globalMax]);
-
-  // Helper: Get visual position % within Current View
-  // We add a 4% buffer on each side so logos typically stay inside the rail lines
-  const getPosition = (price: number) => {
-    const rangeSpan = currentMax - currentMin;
-    if (rangeSpan === 0) return 50;
-
-    const rawPct = (price - currentMin) / rangeSpan;
-    // Compress 0..1 -> 0.04..0.96
-    return (0.04 + rawPct * 0.92) * 100;
-  };
-
-  // Helper: Check if product is visible in current view
-  const isVisible = (price: number) => {
-    return price >= currentMin && price <= currentMax;
-  };
+  }, [products.length]); // Reset on category change
 
   return (
-    <div
-      className="w-full h-64 relative flex flex-col justify-end pb-8 group/tierbar select-none"
-      ref={containerRef}
-    >
-      {/* ---------------------------------------------------------
-          LAYER 0: STATE INDICATOR
-         --------------------------------------------------------- */}
-      <AnimatePresence>
-        {isZoomed && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-0 right-0 left-0 flex justify-center items-center pointer-events-none"
-          >
-            <div className="bg-amber-500/10 text-amber-500 text-xs font-mono px-3 py-1 rounded-full border border-amber-500/20 flex items-center gap-2 backdrop-blur-md">
-              <ZoomIn className="w-3 h-3" />
-              <span>ZOOM ACTIVE</span>
-              <span className="opacity-50">|</span>
-              <span className="text-[10px]">PULL BACK TO RESET</span>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <div className="w-full h-full relative group/tierbar select-none overflow-hidden bg-[#0a0a0c]" ref={containerRef}>
+      
+      {/* --- LAYER 0: THE GRID (Context) --- */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        {/* Y-Axis Zones */}
+        <div className="absolute top-[10%] left-0 w-full border-t border-dashed border-amber-500/50 flex items-center">
+            <span className="text-[9px] text-amber-500 font-mono pl-2 bg-[#0a0a0c]">TRENDING</span>
+        </div>
+        <div className="absolute top-[50%] left-0 w-full border-t border-zinc-800" />
+        <div className="absolute bottom-[10%] left-0 w-full border-t border-dashed border-zinc-800 flex items-center">
+            <span className="text-[9px] text-zinc-700 font-mono pl-2 bg-[#0a0a0c]">NICHE</span>
+        </div>
 
-      {/* ---------------------------------------------------------
-          LAYER 1: THE PRODUCT LOGO FIELD
-         --------------------------------------------------------- */}
-      <div className="absolute inset-x-0 bottom-16 top-0 overflow-hidden mx-12">
-        <AnimatePresence mode="popLayout">
-          {products.map((product) => {
-            const pricing =
-              typeof product.pricing === "number"
-                ? product.pricing
-                : product.pricing?.regular_price;
-            const productPrice = pricing ?? product.price ?? 0;
-            if (!isVisible(productPrice)) return null;
+        {/* X-Axis Grid (Dynamic) */}
+        {[0.25, 0.5, 0.75].map(pct => (
+          <div key={pct} className="absolute top-0 bottom-0 border-l border-zinc-800" style={{ left: `${pct * 100}%` }} />
+        ))}
+      </div>
 
-            const position = getPosition(productPrice);
+      {/* --- LAYER 1: THE NODES --- */}
+      <div className="absolute inset-0">
+        <AnimatePresence>
+          {computedLayout.map((node) => (
+            <motion.button
+              key={node.id}
+              layoutId={node.id}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ 
+                opacity: 1, 
+                scale: 1, 
+                left: `${node.x * 100}%`,
+                bottom: `${node.y * 100}%` 
+              }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 25 }}
+              className="absolute w-12 h-12 -ml-6 -mb-6 flex items-center justify-center pointer-events-auto group/node z-10"
+              onMouseEnter={() => onHoverProduct(node.product)}
+              onClick={() => onSelectProduct(node.id)}
+            >
+              {/* Connection Line to Price Axis */}
+              <div className="absolute top-1/2 left-1/2 w-px h-[500px] bg-gradient-to-b from-amber-500/20 to-transparent pointer-events-none opacity-0 group-hover/node:opacity-100 transition-opacity origin-top transform rotate-180" />
 
-            // Randomize Y slightly to avoid total overlap
-            // 20% to 60% range keeps it more centered vertically
-            const yOffset =
-              20 + (product.id.charCodeAt(product.id.length - 1) % 40);
+              {/* The Orb */}
+              <div className="relative w-full h-full bg-zinc-900/90 backdrop-blur-md rounded-full border border-zinc-700 hover:border-amber-500 hover:scale-125 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-200 overflow-hidden flex items-center justify-center p-1.5 z-20">
+                <img
+                  src={node.product.logo_url}
+                  alt={node.product.brand}
+                  className="w-full h-full object-contain opacity-80 group-hover/node:opacity-100 group-hover/node:invert"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    // Simple text fallback
+                    const parent = e.currentTarget.parentElement;
+                    if (parent) parent.innerHTML = `<span class="text-[8px] font-bold text-zinc-500">${node.product.brand.substring(0,3)}</span>`;
+                  }}
+                />
+              </div>
 
-            return (
-              <motion.button
-                key={product.id}
-                layout // This enables the "Space" out animation when zoom changes
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1, left: `${position}%` }}
-                exit={{ opacity: 0, scale: 0 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="absolute w-16 h-16 -ml-8 flex items-center justify-center pointer-events-auto"
-                style={{ bottom: `${yOffset}%` }}
-                onMouseEnter={() => onHoverProduct(product)}
-                onClick={() => onSelectProduct(product.id)}
-              >
-                {/* Connecting Line to Axis */}
-                <div className="absolute top-full left-1/2 w-px h-32 bg-gradient-to-b from-amber-500/50 to-transparent pointer-events-none group-hover:from-amber-400" />
-
-                {/* The Logo Orb */}
-                <div className="relative w-full h-full bg-black/80 backdrop-blur-sm rounded-lg border border-transparent hover:border-amber-500 hover:shadow-[0_0_15px_rgba(245,158,11,0.6)] flex items-center justify-center p-2 transition-all duration-200 overflow-hidden">
-                  <img
-                    src={product.logo_url}
-                    alt={product.brand}
-                    className="w-full h-full object-contain opacity-90"
-                    onError={(e) => {
-                      // Fallback: use product brand text
-                      e.currentTarget.style.display = "none";
-                      const parent = e.currentTarget.parentElement;
-                      if (parent && !parent.querySelector(".brand-fallback")) {
-                        const span = document.createElement("div");
-                        span.className =
-                          "brand-fallback text-[8px] font-bold text-amber-500 text-center px-1 leading-tight";
-                        span.textContent = product.brand.split(" ")[0];
-                        parent.appendChild(span);
-                      }
-                    }}
-                  />
+              {/* Price Tooltip (On Hover) */}
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover/node:opacity-100 transition-opacity whitespace-nowrap z-30">
+                <div className="bg-black/90 text-amber-500 text-[9px] font-mono px-2 py-0.5 rounded border border-amber-900/50">
+                  ₪{Math.round(node.price).toLocaleString()}
                 </div>
-              </motion.button>
-            );
-          })}
+              </div>
+            </motion.button>
+          ))}
         </AnimatePresence>
       </div>
 
-      {/* ---------------------------------------------------------
-          LAYER 2: THE BASE AXIS (Rail)
-         --------------------------------------------------------- */}
-      <div className="relative h-1 bg-zinc-800 rounded-full mx-12 overflow-hidden">
-        {/* We don't need active range highlight anymore because the VIEW is the active range */}
-        <div className="absolute inset-0 bg-zinc-700/30" />
-      </div>
-
-      {/* ---------------------------------------------------------
-          LAYER 3: THE ZOOM CURTAINS (Interaction Layer)
-         --------------------------------------------------------- */}
-      <div className="absolute inset-0 pointer-events-none mx-12">
-        {/* LEFT CURTAIN */}
-        <motion.div
-          animate={{ width: `${dragRange[0] * 100}%` }}
-          transition={{ type: "spring", bounce: 0, duration: 0.2 }}
-          className={`absolute top-0 bottom-0 left-0 backdrop-blur-sm border-r border-zinc-700 z-20 transition-colors ${
-            pullBackIntent === "left"
-              ? "bg-red-500/10 border-red-500/50"
-              : "bg-black/80"
-          }`}
+      {/* --- LAYER 2: INTERACTION HANDLES (Curtains) --- */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Left Curtain */}
+        <motion.div 
+            animate={{ width: `${dragRange[0] * 100}%` }} 
+            className={`absolute left-0 top-0 bottom-0 bg-black/60 backdrop-blur-[2px] border-r border-amber-500/30 z-40 transition-colors ${
+                pullBackIntent === "left" ? "bg-red-500/10 border-red-500/50" : ""
+            }`}
         >
-          {/* Left Handle */}
-          <div
+           {/* Left Handle */}
+           <div
             className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 h-16 min-w-[3rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-xl border transition-all z-50 ${
               pullBackIntent === "left"
                 ? "bg-red-900/80 border-red-500 text-red-200"
                 : "bg-zinc-800 hover:bg-zinc-700 border-zinc-600 text-white"
             }`}
-            onMouseDown={(e) => {
+             onMouseDown={(e) => {
               const startX = e.clientX;
               const width = containerRef.current?.offsetWidth || 1;
 
@@ -195,18 +205,12 @@ export const TierBar = ({
                 const deltaPct = deltaPx / width;
 
                 // Logic for Left Handle (Starts at 0)
-                // Dragging Right (+): Zoom In
-                // Dragging Left (-): Pull Back (if zoomed)
-
                 if (isZoomed && deltaPct < -0.05) {
                   setPullBackIntent("left");
-                  setDragRange([0, dragRange[1]]); // Keep visual at 0
+                  setDragRange([0, dragRange[1]]); 
                 } else {
                   setPullBackIntent(null);
-                  const newVal = Math.max(
-                    0,
-                    Math.min(dragRange[1] - 0.1, deltaPct),
-                  ); // Base 0 + delta
+                  const newVal = Math.max(0, Math.min(dragRange[1] - 0.1, deltaPct));
                   setDragRange([newVal, dragRange[1]]);
                 }
               };
@@ -215,68 +219,54 @@ export const TierBar = ({
                 window.removeEventListener("mousemove", onMove);
                 window.removeEventListener("mouseup", onUp);
 
-                // Calculate outcome based on final mouse pos
                 const deltaPx = upE.clientX - startX;
                 const deltaPct = deltaPx / width;
 
                 if (isZoomed && deltaPct < -0.05) {
-                  // EXECUTE RESET
                   setZoomDomain(null);
                   setPullBackIntent(null);
                   setDragRange([0, 1]);
                 } else {
-                  // EXECUTE ZOOM
                   const newVal = Math.max(0, Math.min(0.9, deltaPct));
                   if (newVal > 0.05) {
-                    // Calculate new min price
                     const span = currentMax - currentMin;
                     const newMinPrice = currentMin + newVal * span;
                     setZoomDomain([newMinPrice, currentMax]);
                   }
-                  setDragRange([0, 1]); // Snap back
+                  setDragRange([0, 1]); 
                   setPullBackIntent(null);
                 }
               };
               window.addEventListener("mousemove", onMove);
               window.addEventListener("mouseup", onUp);
             }}
-          >
+           >
             {pullBackIntent === "left" ? (
               <RotateCcw className="w-4 h-4 animate-spin-slow" />
             ) : (
               <div className="flex flex-col items-center">
-                <span className="text-[9px] text-zinc-400 font-mono tracking-wider mb-0.5">
-                  MIN
-                </span>
-                <span className="font-bold font-mono tracking-tighter">
-                  ₪
-                  {Math.round(
-                    currentMin + dragRange[0] * (currentMax - currentMin),
-                  ).toLocaleString()}
-                </span>
+                <span className="text-[9px] text-zinc-400 font-mono tracking-wider mb-0.5">MIN</span>
+                <span className="font-bold font-mono tracking-tighter">₪{Math.round(currentMin + dragRange[0] * (currentMax - currentMin)).toLocaleString()}</span>
               </div>
             )}
-          </div>
+           </div>
         </motion.div>
 
-        {/* RIGHT CURTAIN */}
-        <motion.div
-          animate={{ width: `${(1 - dragRange[1]) * 100}%` }}
-          transition={{ type: "spring", bounce: 0, duration: 0.2 }}
-          className={`absolute top-0 bottom-0 right-0 backdrop-blur-sm border-l border-zinc-700 z-20 transition-colors ${
-            pullBackIntent === "right"
-              ? "bg-red-500/10 border-red-500/50"
-              : "bg-black/80"
-          }`}
-        >
-          {/* Right Handle */}
-          <div
-            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-16 min-w-[3rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-xl border transition-all z-50 ${
-              pullBackIntent === "right"
-                ? "bg-red-900/80 border-red-500 text-red-200"
-                : "bg-zinc-800 hover:bg-zinc-700 border-zinc-600 text-white"
+        {/* Right Curtain */}
+        <motion.div 
+            animate={{ width: `${(1 - dragRange[1]) * 100}%` }} 
+            className={`absolute right-0 top-0 bottom-0 bg-black/60 backdrop-blur-[2px] border-l border-amber-500/30 z-40 transition-colors ${
+                pullBackIntent === "right" ? "bg-red-500/10 border-red-500/50" : ""
             }`}
-            onMouseDown={(e) => {
+        >
+           {/* Right Handle */}
+           <div
+            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-16 min-w-[3rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-xl border transition-all z-50 ${
+                pullBackIntent === "right"
+                  ? "bg-red-900/80 border-red-500 text-red-200"
+                  : "bg-zinc-800 hover:bg-zinc-700 border-zinc-600 text-white"
+              }`}
+             onMouseDown={(e) => {
               const startX = e.clientX;
               const width = containerRef.current?.offsetWidth || 1;
 
@@ -285,19 +275,12 @@ export const TierBar = ({
                 const deltaPct = deltaPx / width;
 
                 // Logic for Right Handle (Starts at 1.0)
-                // Dragging Left (-): Zoom In
-                // Dragging Right (+): Pull Back (if zoomed)
-
                 if (isZoomed && deltaPct > 0.05) {
                   setPullBackIntent("right");
-                  setDragRange([dragRange[0], 1]); // Keep visual at 100%
+                  setDragRange([dragRange[0], 1]);
                 } else {
                   setPullBackIntent(null);
-                  // Base 1 + delta. e.g. 1 + (-0.2) = 0.8
-                  const newVal = Math.min(
-                    1,
-                    Math.max(dragRange[0] + 0.1, 1 + deltaPct),
-                  );
+                  const newVal = Math.min(1, Math.max(dragRange[0] + 0.1, 1 + deltaPct));
                   setDragRange([dragRange[0], newVal]);
                 }
               };
@@ -310,56 +293,56 @@ export const TierBar = ({
                 const deltaPct = deltaPx / width;
 
                 if (isZoomed && deltaPct > 0.05) {
-                  // EXECUTE RESET
                   setZoomDomain(null);
                   setPullBackIntent(null);
                   setDragRange([0, 1]);
                 } else {
-                  // EXECUTE ZOOM
-                  // 1 + (-0.2) = 0.8
-                  const newVal = Math.min(
-                    1,
-                    Math.max(dragRange[0] + 0.1, 1 + deltaPct),
-                  );
-
+                  const newVal = Math.min(1, Math.max(dragRange[0] + 0.1, 1 + deltaPct));
                   if (newVal < 0.95) {
                     const span = currentMax - currentMin;
-                    // newMax = min + percentage * span
                     const newMaxPrice = currentMin + newVal * span;
                     setZoomDomain([currentMin, newMaxPrice]);
                   }
-                  setDragRange([0, 1]); // Snap back
+                  setDragRange([0, 1]);
                   setPullBackIntent(null);
                 }
               };
               window.addEventListener("mousemove", onMove);
               window.addEventListener("mouseup", onUp);
             }}
-          >
+           >
             {pullBackIntent === "right" ? (
               <RotateCcw className="w-4 h-4 animate-spin-slow" />
             ) : (
               <div className="flex flex-col items-center">
-                <span className="text-[9px] text-zinc-400 font-mono tracking-wider mb-0.5">
-                  MAX
-                </span>
-                <span className="font-bold font-mono tracking-tighter">
-                  ₪
-                  {Math.round(
-                    currentMin + dragRange[1] * (currentMax - currentMin),
-                  ).toLocaleString()}
-                </span>
+                <span className="text-[9px] text-zinc-400 font-mono tracking-wider mb-0.5">MAX</span>
+                <span className="font-bold font-mono tracking-tighter">₪{Math.round(currentMin + dragRange[1] * (currentMax - currentMin)).toLocaleString()}</span>
               </div>
             )}
-          </div>
+           </div>
         </motion.div>
       </div>
 
-      {/* Range Info Footer */}
-      <div className="absolute -bottom-6 inset-x-0 flex justify-between px-4 text-[10px] text-zinc-500 font-mono">
-        <span>₪{Math.round(currentMin).toLocaleString()}</span>
-        <span>₪{Math.round(currentMax).toLocaleString()}</span>
+      {/* --- FOOTER: Axis Labels --- */}
+      <div className="absolute bottom-1 inset-x-4 flex justify-between text-[10px] text-zinc-600 font-mono border-t border-zinc-800 pt-1">
+        <span>MIN: ₪{Math.round(currentMin).toLocaleString()}</span>
+        <span className="text-zinc-800">PRICE SPECTRUM</span>
+        <span>MAX: ₪{Math.round(currentMax).toLocaleString()}</span>
       </div>
+
+      {/* Zoom Indicator */}
+      <AnimatePresence>
+        {isZoomed && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold shadow-xl z-50 pointer-events-none"
+          >
+            <ZoomIn className="w-3 h-3" /> ZOOM ACTIVE
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -226,9 +226,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.511374",
+  "generated_at": "2026-01-26T12:55:21.875588",
   "brand_slug": "fusion",
-  "refined_at": "2026-01-26T06:43:37.518760+00:00",
+  "refined_at": "2026-01-26T12:55:21.890835+00:00",
   "brand_identity": {
     "id": "fusion",
     "name": "Fusion",
@@ -238,7 +238,8 @@
       "validated": 8,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 8
   },
   "hierarchy": {
     "accessories": {

@@ -1,9 +1,9 @@
 {
   "brand_name": "Asm",
   "products": [],
-  "generated_at": "2026-01-26T06:43:37.337765",
+  "generated_at": "2026-01-26T12:55:21.218714",
   "brand_slug": "asm",
-  "refined_at": "2026-01-26T06:43:37.343266+00:00",
+  "refined_at": "2026-01-26T12:55:21.501795+00:00",
   "brand_identity": {
     "id": "asm",
     "name": "Asm",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

@@ -142,9 +142,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.506818",
+  "generated_at": "2026-01-26T12:55:21.859070",
   "brand_slug": "mjc-ironworks",
-  "refined_at": "2026-01-26T06:43:37.514006+00:00",
+  "refined_at": "2026-01-26T12:55:21.875042+00:00",
   "brand_identity": {
     "id": "mjc-ironworks",
     "name": "Mjc Ironworks",
@@ -154,7 +154,8 @@
       "validated": 5,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 5
   },
   "hierarchy": {
     "accessories": {

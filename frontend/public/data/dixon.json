@@ -282,9 +282,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.446513",
+  "generated_at": "2026-01-26T12:55:21.630605",
   "brand_slug": "dixon",
-  "refined_at": "2026-01-26T06:43:37.452744+00:00",
+  "refined_at": "2026-01-26T12:55:21.642811+00:00",
   "brand_identity": {
     "id": "dixon",
     "name": "Dixon",
@@ -294,7 +294,8 @@
       "validated": 10,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 10
   },
   "hierarchy": {
     "accessories": {

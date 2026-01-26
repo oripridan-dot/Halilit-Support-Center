@@ -58,9 +58,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.367603",
+  "generated_at": "2026-01-26T12:55:21.524596",
   "brand_slug": "ampeg",
-  "refined_at": "2026-01-26T06:43:37.372882+00:00",
+  "refined_at": "2026-01-26T12:55:21.537254+00:00",
   "brand_identity": {
     "id": "ampeg",
     "name": "Ampeg",
@@ -70,7 +70,8 @@
       "validated": 2,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 2
   },
   "hierarchy": {
     "accessories": {

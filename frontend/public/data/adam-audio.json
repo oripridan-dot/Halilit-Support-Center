@@ -30,9 +30,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.478047",
+  "generated_at": "2026-01-26T12:55:21.836176",
   "brand_slug": "adam-audio",
-  "refined_at": "2026-01-26T06:43:37.508823+00:00",
+  "refined_at": "2026-01-26T12:55:21.852892+00:00",
   "brand_identity": {
     "id": "adam-audio",
     "name": "Adam Audio",
@@ -48,7 +48,8 @@
       "validated": 1,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 1
   },
   "hierarchy": {
     "accessories": {

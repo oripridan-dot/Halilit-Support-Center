@@ -366,9 +366,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.382153",
+  "generated_at": "2026-01-26T12:55:21.544630",
   "brand_slug": "cordoba-guitars",
-  "refined_at": "2026-01-26T06:43:37.491372+00:00",
+  "refined_at": "2026-01-26T12:55:21.820879+00:00",
   "brand_identity": {
     "id": "cordoba-guitars",
     "name": "Cordoba Guitars",
@@ -378,7 +378,8 @@
       "validated": 13,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 13
   },
   "hierarchy": {
     "accessories": {

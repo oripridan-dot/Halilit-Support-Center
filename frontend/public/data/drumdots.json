@@ -58,9 +58,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.477908",
+  "generated_at": "2026-01-26T12:55:22.638794",
   "brand_slug": "drumdots",
-  "refined_at": "2026-01-26T06:43:38.482752+00:00",
+  "refined_at": "2026-01-26T12:55:22.643810+00:00",
   "brand_identity": {
     "id": "drumdots",
     "name": "Drumdots",
@@ -70,7 +70,8 @@
       "validated": 2,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 2
   },
   "hierarchy": {
     "accessories": {

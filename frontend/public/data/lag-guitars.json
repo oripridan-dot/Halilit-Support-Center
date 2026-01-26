@@ -1,9 +1,9 @@
 {
   "brand_name": "Lag Guitars",
   "products": [],
-  "generated_at": "2026-01-26T06:43:37.750197",
+  "generated_at": "2026-01-26T12:55:22.056054",
   "brand_slug": "lag-guitars",
-  "refined_at": "2026-01-26T06:43:37.831278+00:00",
+  "refined_at": "2026-01-26T12:55:22.101727+00:00",
   "brand_identity": {
     "id": "lag-guitars",
     "name": "Lag Guitars",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

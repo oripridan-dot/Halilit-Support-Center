@@ -114,56 +114,6 @@
       ]
     },
     {
-      "id": "adams_447606_adams_symphonic_timpani_",
-      "name": "Adams Symphonic Timpani",
-      "description": "Adams Symphonic Timpani",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-      "product_url": "https://www.halilit.com/items/447606-adams-symphonic-timpani-",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/447606-adams-symphonic-timpani-",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Adams",
-      "logo_url": "/assets/logos/adams_logo.jpg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-        "thumbnail": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-        "high_res": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-        "original": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "adams_447608_baroque_timpani_adams",
-      "name": "Adams Baroque Timpani",
-      "description": "Adams Baroque Timpani",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-      "product_url": "https://www.halilit.com/items/447608-baroque-timpani-adams",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/447608-baroque-timpani-adams",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Adams",
-      "logo_url": "/assets/logos/adams_logo.jpg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-        "thumbnail": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-        "high_res": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-        "original": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
       "id": "adams_97_solist_3_5",
       "name": "Adams Solist Xylophones",
       "description": "Adams Solist Xylophones",
@@ -214,56 +164,6 @@
         "thumbnail": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
         "high_res": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
         "original": "/data/thumbnails/adams_97_2vbc2alwv30.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "adams_97_2parfkg",
-      "name": "Adams Revolution Timpani",
-      "description": "Adams Revolution Timpani",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/adams_97_2parfkg.jpg",
-      "product_url": "https://www.halilit.com/items/531123-adams-revolution-timpani",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/531123-adams-revolution-timpani",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Adams",
-      "logo_url": "/assets/logos/adams_logo.jpg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/adams_97_2parfkg.jpg",
-        "thumbnail": "/data/thumbnails/adams_97_2parfkg.jpg",
-        "high_res": "/data/thumbnails/adams_97_2parfkg.jpg",
-        "original": "/data/thumbnails/adams_97_2parfkg.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "adams_97_2paufkg",
-      "name": "Adams Universal Timpani",
-      "description": "Adams Universal Timpani",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/adams_97_2paufkg.jpg",
-      "product_url": "https://www.halilit.com/items/531128-adams-universal-timpani",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/531128-adams-universal-timpani",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Adams",
-      "logo_url": "/assets/logos/adams_logo.jpg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/adams_97_2paufkg.jpg",
-        "thumbnail": "/data/thumbnails/adams_97_2paufkg.jpg",
-        "high_res": "/data/thumbnails/adams_97_2paufkg.jpg",
-        "original": "/data/thumbnails/adams_97_2paufkg.jpg"
       },
       "category_hierarchy": [
         "accessories"
@@ -438,9 +338,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.456587",
+  "generated_at": "2026-01-26T12:55:21.654150",
   "brand_slug": "adams",
-  "refined_at": "2026-01-26T06:43:37.463943+00:00",
+  "refined_at": "2026-01-26T12:55:21.821933+00:00",
   "brand_identity": {
     "id": "adams",
     "name": "Adams",
@@ -450,7 +350,8 @@
       "validated": 16,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 12
   },
   "hierarchy": {
     "accessories": {
@@ -508,32 +409,6 @@
           "sku": null
         },
         {
-          "id": "adams_447606_adams_symphonic_timpani_",
-          "name": "Adams Symphonic Timpani",
-          "description": "Adams Symphonic Timpani",
-          "images": {
-            "main": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-            "thumbnail": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-            "high_res": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
-            "original": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "adams_447608_baroque_timpani_adams",
-          "name": "Adams Baroque Timpani",
-          "description": "Adams Baroque Timpani",
-          "images": {
-            "main": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-            "thumbnail": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-            "high_res": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
-            "original": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
           "id": "adams_97_solist_3_5",
           "name": "Adams Solist Xylophones",
           "description": "Adams Solist Xylophones",
@@ -555,32 +430,6 @@
             "thumbnail": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
             "high_res": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
             "original": "/data/thumbnails/adams_97_2vbc2alwv30.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "adams_97_2parfkg",
-          "name": "Adams Revolution Timpani",
-          "description": "Adams Revolution Timpani",
-          "images": {
-            "main": "/data/thumbnails/adams_97_2parfkg.jpg",
-            "thumbnail": "/data/thumbnails/adams_97_2parfkg.jpg",
-            "high_res": "/data/thumbnails/adams_97_2parfkg.jpg",
-            "original": "/data/thumbnails/adams_97_2parfkg.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "adams_97_2paufkg",
-          "name": "Adams Universal Timpani",
-          "description": "Adams Universal Timpani",
-          "images": {
-            "main": "/data/thumbnails/adams_97_2paufkg.jpg",
-            "thumbnail": "/data/thumbnails/adams_97_2paufkg.jpg",
-            "high_res": "/data/thumbnails/adams_97_2paufkg.jpg",
-            "original": "/data/thumbnails/adams_97_2paufkg.jpg"
           },
           "model_number": null,
           "sku": null

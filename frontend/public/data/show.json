@@ -562,9 +562,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.294318",
+  "generated_at": "2026-01-26T12:55:21.161471",
   "brand_slug": "show",
-  "refined_at": "2026-01-26T06:43:37.310748+00:00",
+  "refined_at": "2026-01-26T12:55:21.184234+00:00",
   "brand_identity": {
     "id": "show",
     "name": "Show",
@@ -574,7 +574,8 @@
       "validated": 20,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 20
   },
   "hierarchy": {
     "accessories": {

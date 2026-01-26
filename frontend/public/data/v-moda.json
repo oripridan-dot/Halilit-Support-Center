@@ -478,9 +478,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.423807",
+  "generated_at": "2026-01-26T12:55:21.621625",
   "brand_slug": "v-moda",
-  "refined_at": "2026-01-26T06:43:37.452046+00:00",
+  "refined_at": "2026-01-26T12:55:21.808233+00:00",
   "brand_identity": {
     "id": "v-moda",
     "name": "V Moda",
@@ -490,7 +490,8 @@
       "validated": 17,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 17
   },
   "hierarchy": {
     "accessories": {

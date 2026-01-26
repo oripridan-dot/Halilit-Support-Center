@@ -478,9 +478,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.691807",
+  "generated_at": "2026-01-26T12:55:21.964269",
   "brand_slug": "topp-pro",
-  "refined_at": "2026-01-26T06:43:37.703869+00:00",
+  "refined_at": "2026-01-26T12:55:22.000023+00:00",
   "brand_identity": {
     "id": "topp-pro",
     "name": "Topp Pro",
@@ -490,7 +490,8 @@
       "validated": 17,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 17
   },
   "hierarchy": {
     "accessories": {

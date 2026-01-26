@@ -814,9 +814,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.481723",
+  "generated_at": "2026-01-26T12:55:22.640658",
   "brand_slug": "magma",
-  "refined_at": "2026-01-26T06:43:38.601700+00:00",
+  "refined_at": "2026-01-26T12:55:22.656576+00:00",
   "brand_identity": {
     "id": "magma",
     "name": "Magma",
@@ -826,7 +826,8 @@
       "validated": 29,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 29
   },
   "hierarchy": {
     "accessories": {

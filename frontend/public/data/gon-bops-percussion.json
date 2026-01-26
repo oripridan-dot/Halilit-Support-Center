@@ -1150,9 +1150,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.496132",
+  "generated_at": "2026-01-26T12:55:22.649399",
   "brand_slug": "gon-bops-percussion",
-  "refined_at": "2026-01-26T06:43:38.636486+00:00",
+  "refined_at": "2026-01-26T12:55:22.692051+00:00",
   "brand_identity": {
     "id": "gon-bops-percussion",
     "name": "Gon Bops Percussion",
@@ -1162,7 +1162,8 @@
       "validated": 41,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 41
   },
   "hierarchy": {
     "accessories": {

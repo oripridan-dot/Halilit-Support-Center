@@ -7366,9 +7366,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.504351",
+  "generated_at": "2026-01-26T12:55:21.871525",
   "brand_slug": "pearl",
-  "refined_at": "2026-01-26T06:43:38.292201+00:00",
+  "refined_at": "2026-01-26T12:55:22.358299+00:00",
   "brand_identity": {
     "id": "pearl",
     "name": "Pearl",
@@ -7378,7 +7378,8 @@
       "validated": 263,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 263
   },
   "hierarchy": {
     "accessories": {

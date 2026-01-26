@@ -226,9 +226,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.460423",
+  "generated_at": "2026-01-26T12:55:21.814073",
   "brand_slug": "rhythm-tech",
-  "refined_at": "2026-01-26T06:43:37.471096+00:00",
+  "refined_at": "2026-01-26T12:55:21.837214+00:00",
   "brand_identity": {
     "id": "rhythm-tech",
     "name": "Rhythm Tech",
@@ -238,7 +238,8 @@
       "validated": 8,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 8
   },
   "hierarchy": {
     "accessories": {

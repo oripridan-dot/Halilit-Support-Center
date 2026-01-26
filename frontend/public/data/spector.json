@@ -30,9 +30,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.238741",
+  "generated_at": "2026-01-26T12:55:21.098623",
   "brand_slug": "spector",
-  "refined_at": "2026-01-26T06:43:37.305152+00:00",
+  "refined_at": "2026-01-26T12:55:21.150639+00:00",
   "brand_identity": {
     "id": "spector",
     "name": "Spector",
@@ -42,7 +42,8 @@
       "validated": 1,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 1
   },
   "hierarchy": {
     "accessories": {

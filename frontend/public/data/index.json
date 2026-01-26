@@ -1,6 +1,6 @@
 {
   "version": "3.9.0",
-  "build_timestamp": "2026-01-26T06:43:37.226054+00:00",
+  "build_timestamp": "2026-01-26T12:55:21.078114+00:00",
   "environment": "static_production",
   "total_products": 2789,
   "total_verified": 2789,
@@ -16,59 +16,7 @@
       "data_file": "studio-logic.json",
       "product_count": 1,
       "verified_count": 1,
-      "last_updated": "2026-01-26T06:43:37.238278+00:00"
-    },
-    {
-      "id": "washburn",
-      "name": "Washburn",
-      "slug": "washburn",
-      "count": 6,
-      "brand_color": null,
-      "logo_url": "/assets/logos/washburn_logo.jpg",
-      "file": "washburn.json",
-      "data_file": "washburn.json",
-      "product_count": 6,
-      "verified_count": 6,
-      "last_updated": "2026-01-26T06:43:37.274042+00:00"
-    },
-    {
-      "id": "innovative-percussion",
-      "name": "Innovative Percussion",
-      "slug": "innovative-percussion",
-      "count": 41,
-      "brand_color": null,
-      "logo_url": "/assets/logos/innovative-percussion_logo.png",
-      "file": "innovative-percussion.json",
-      "data_file": "innovative-percussion.json",
-      "product_count": 41,
-      "verified_count": 41,
-      "last_updated": "2026-01-26T06:43:37.292668+00:00"
-    },
-    {
-      "id": "akai-professional",
-      "name": "Akai Professional",
-      "slug": "akai-professional",
-      "count": 35,
-      "brand_color": "#ff0000",
-      "logo_url": "/assets/logos/akai-professional_logo.svg",
-      "file": "akai-professional.json",
-      "data_file": "akai-professional.json",
-      "product_count": 35,
-      "verified_count": 35,
-      "last_updated": "2026-01-26T06:43:37.293878+00:00"
-    },
-    {
-      "id": "spector",
-      "name": "Spector",
-      "slug": "spector",
-      "count": 1,
-      "brand_color": null,
-      "logo_url": "/assets/logos/spector_logo.png",
-      "file": "spector.json",
-      "data_file": "spector.json",
-      "product_count": 1,
-      "verified_count": 1,
-      "last_updated": "2026-01-26T06:43:37.308324+00:00"
+      "last_updated": "2026-01-26T12:55:21.097812+00:00"
     },
     {
       "id": "medeli",
@@ -81,59 +29,46 @@
       "data_file": "medeli.json",
       "product_count": 22,
       "verified_count": 22,
-      "last_updated": "2026-01-26T06:43:37.315246+00:00"
+      "last_updated": "2026-01-26T12:55:21.135460+00:00"
     },
     {
-      "id": "guild",
-      "name": "Guild",
-      "slug": "guild",
-      "count": 12,
+      "id": "spector",
+      "name": "Spector",
+      "slug": "spector",
+      "count": 1,
       "brand_color": null,
-      "logo_url": "/assets/logos/guild_logo.jpg",
-      "file": "guild.json",
-      "data_file": "guild.json",
-      "product_count": 12,
-      "verified_count": 12,
-      "last_updated": "2026-01-26T06:43:37.323279+00:00"
+      "logo_url": "/assets/logos/spector_logo.png",
+      "file": "spector.json",
+      "data_file": "spector.json",
+      "product_count": 1,
+      "verified_count": 1,
+      "last_updated": "2026-01-26T12:55:21.152681+00:00"
     },
     {
-      "id": "lynx",
-      "name": "Lynx",
-      "slug": "lynx",
-      "count": 18,
+      "id": "washburn",
+      "name": "Washburn",
+      "slug": "washburn",
+      "count": 6,
       "brand_color": null,
-      "logo_url": "/assets/logos/lynx_logo.png",
-      "file": "lynx.json",
-      "data_file": "lynx.json",
-      "product_count": 18,
-      "verified_count": 18,
-      "last_updated": "2026-01-26T06:43:37.327695+00:00"
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "file": "washburn.json",
+      "data_file": "washburn.json",
+      "product_count": 6,
+      "verified_count": 6,
+      "last_updated": "2026-01-26T12:55:21.157876+00:00"
     },
     {
-      "id": "expressive-e",
-      "name": "Expressive E",
-      "slug": "expressive-e",
-      "count": 2,
-      "brand_color": null,
-      "logo_url": "/assets/logos/expressive-e_logo.jpg",
-      "file": "expressive-e.json",
-      "data_file": "expressive-e.json",
-      "product_count": 2,
-      "verified_count": 2,
-      "last_updated": "2026-01-26T06:43:37.334854+00:00"
-    },
-    {
-      "id": "show",
-      "name": "Show",
-      "slug": "show",
-      "count": 20,
-      "brand_color": null,
-      "logo_url": "/assets/logos/show_logo.png",
-      "file": "show.json",
-      "data_file": "show.json",
-      "product_count": 20,
-      "verified_count": 20,
-      "last_updated": "2026-01-26T06:43:37.335676+00:00"
+      "id": "akai-professional",
+      "name": "Akai Professional",
+      "slug": "akai-professional",
+      "count": 35,
+      "brand_color": "#ff0000",
+      "logo_url": "/assets/logos/akai-professional_logo.svg",
+      "file": "akai-professional.json",
+      "data_file": "akai-professional.json",
+      "product_count": 35,
+      "verified_count": 35,
+      "last_updated": "2026-01-26T12:55:21.162122+00:00"
     },
     {
       "id": "eve-audio",
@@ -146,98 +81,33 @@
       "data_file": "eve-audio.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.337604+00:00"
+      "last_updated": "2026-01-26T12:55:21.180564+00:00"
     },
     {
-      "id": "asm",
-      "name": "Asm",
-      "slug": "asm",
-      "count": 0,
+      "id": "innovative-percussion",
+      "name": "Innovative Percussion",
+      "slug": "innovative-percussion",
+      "count": 41,
       "brand_color": null,
-      "logo_url": "/assets/logos/asm_logo.png",
-      "file": "asm.json",
-      "data_file": "asm.json",
-      "product_count": 0,
-      "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.345678+00:00"
+      "logo_url": "/assets/logos/innovative-percussion_logo.png",
+      "file": "innovative-percussion.json",
+      "data_file": "innovative-percussion.json",
+      "product_count": 41,
+      "verified_count": 41,
+      "last_updated": "2026-01-26T12:55:21.191123+00:00"
     },
     {
-      "id": "oscar-schmidt-acoustic-guitars",
-      "name": "Oscar Schmidt Acoustic Guitars ",
-      "slug": "oscar-schmidt-acoustic-guitars",
-      "count": 0,
-      "brand_color": null,
-      "logo_url": "/assets/logos/oscar-schmidt-acoustic-guitars_logo.png",
-      "file": "oscar-schmidt-acoustic-guitars.json",
-      "data_file": "oscar-schmidt-acoustic-guitars.json",
-      "product_count": 0,
-      "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.359341+00:00"
-    },
-    {
-      "id": "austrian-audio",
-      "name": "Austrian Audio",
-      "slug": "austrian-audio",
-      "count": 5,
-      "brand_color": null,
-      "logo_url": "/assets/logos/austrian-audio_logo.png",
-      "file": "austrian-audio.json",
-      "data_file": "austrian-audio.json",
-      "product_count": 5,
-      "verified_count": 5,
-      "last_updated": "2026-01-26T06:43:37.360473+00:00"
-    },
-    {
-      "id": "xvive",
-      "name": "Xvive",
-      "slug": "xvive",
-      "count": 27,
-      "brand_color": null,
-      "logo_url": "/assets/logos/xvive_logo.png",
-      "file": "xvive.json",
-      "data_file": "xvive.json",
-      "product_count": 27,
-      "verified_count": 27,
-      "last_updated": "2026-01-26T06:43:37.367343+00:00"
-    },
-    {
-      "id": "ampeg",
-      "name": "Ampeg",
-      "slug": "ampeg",
+      "id": "expressive-e",
+      "name": "Expressive E",
+      "slug": "expressive-e",
       "count": 2,
       "brand_color": null,
-      "logo_url": "/assets/logos/ampeg_logo.jpg",
-      "file": "ampeg.json",
-      "data_file": "ampeg.json",
+      "logo_url": "/assets/logos/expressive-e_logo.jpg",
+      "file": "expressive-e.json",
+      "data_file": "expressive-e.json",
       "product_count": 2,
       "verified_count": 2,
-      "last_updated": "2026-01-26T06:43:37.377777+00:00"
-    },
-    {
-      "id": "foxgear-guitar-effects-and-pedals",
-      "name": "Foxgear Guitar Effects And Pedals",
-      "slug": "foxgear-guitar-effects-and-pedals",
-      "count": 21,
-      "brand_color": null,
-      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
-      "file": "foxgear-guitar-effects-and-pedals.json",
-      "data_file": "foxgear-guitar-effects-and-pedals.json",
-      "product_count": 21,
-      "verified_count": 21,
-      "last_updated": "2026-01-26T06:43:37.381243+00:00"
-    },
-    {
-      "id": "fzone",
-      "name": "Fzone",
-      "slug": "fzone",
-      "count": 10,
-      "brand_color": null,
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "file": "fzone.json",
-      "data_file": "fzone.json",
-      "product_count": 10,
-      "verified_count": 10,
-      "last_updated": "2026-01-26T06:43:37.386181+00:00"
+      "last_updated": "2026-01-26T12:55:21.196894+00:00"
     },
     {
       "id": "vintage",
@@ -250,7 +120,137 @@
       "data_file": "vintage.json",
       "product_count": 4,
       "verified_count": 4,
-      "last_updated": "2026-01-26T06:43:37.391296+00:00"
+      "last_updated": "2026-01-26T12:55:21.200259+00:00"
+    },
+    {
+      "id": "show",
+      "name": "Show",
+      "slug": "show",
+      "count": 20,
+      "brand_color": null,
+      "logo_url": "/assets/logos/show_logo.png",
+      "file": "show.json",
+      "data_file": "show.json",
+      "product_count": 20,
+      "verified_count": 20,
+      "last_updated": "2026-01-26T12:55:21.214946+00:00"
+    },
+    {
+      "id": "lynx",
+      "name": "Lynx",
+      "slug": "lynx",
+      "count": 18,
+      "brand_color": null,
+      "logo_url": "/assets/logos/lynx_logo.png",
+      "file": "lynx.json",
+      "data_file": "lynx.json",
+      "product_count": 18,
+      "verified_count": 18,
+      "last_updated": "2026-01-26T12:55:21.218308+00:00"
+    },
+    {
+      "id": "guild",
+      "name": "Guild",
+      "slug": "guild",
+      "count": 12,
+      "brand_color": null,
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "file": "guild.json",
+      "data_file": "guild.json",
+      "product_count": 12,
+      "verified_count": 12,
+      "last_updated": "2026-01-26T12:55:21.496756+00:00"
+    },
+    {
+      "id": "asm",
+      "name": "Asm",
+      "slug": "asm",
+      "count": 0,
+      "brand_color": null,
+      "logo_url": "/assets/logos/asm_logo.png",
+      "file": "asm.json",
+      "data_file": "asm.json",
+      "product_count": 0,
+      "verified_count": 0,
+      "last_updated": "2026-01-26T12:55:21.504316+00:00"
+    },
+    {
+      "id": "oscar-schmidt-acoustic-guitars",
+      "name": "Oscar Schmidt Acoustic Guitars ",
+      "slug": "oscar-schmidt-acoustic-guitars",
+      "count": 0,
+      "brand_color": null,
+      "logo_url": "/assets/logos/oscar-schmidt-acoustic-guitars_logo.png",
+      "file": "oscar-schmidt-acoustic-guitars.json",
+      "data_file": "oscar-schmidt-acoustic-guitars.json",
+      "product_count": 0,
+      "verified_count": 0,
+      "last_updated": "2026-01-26T12:55:21.510874+00:00"
+    },
+    {
+      "id": "xvive",
+      "name": "Xvive",
+      "slug": "xvive",
+      "count": 27,
+      "brand_color": null,
+      "logo_url": "/assets/logos/xvive_logo.png",
+      "file": "xvive.json",
+      "data_file": "xvive.json",
+      "product_count": 27,
+      "verified_count": 27,
+      "last_updated": "2026-01-26T12:55:21.524179+00:00"
+    },
+    {
+      "id": "austrian-audio",
+      "name": "Austrian Audio",
+      "slug": "austrian-audio",
+      "count": 5,
+      "brand_color": null,
+      "logo_url": "/assets/logos/austrian-audio_logo.png",
+      "file": "austrian-audio.json",
+      "data_file": "austrian-audio.json",
+      "product_count": 5,
+      "verified_count": 5,
+      "last_updated": "2026-01-26T12:55:21.533931+00:00"
+    },
+    {
+      "id": "ampeg",
+      "name": "Ampeg",
+      "slug": "ampeg",
+      "count": 2,
+      "brand_color": null,
+      "logo_url": "/assets/logos/ampeg_logo.jpg",
+      "file": "ampeg.json",
+      "data_file": "ampeg.json",
+      "product_count": 2,
+      "verified_count": 2,
+      "last_updated": "2026-01-26T12:55:21.543639+00:00"
+    },
+    {
+      "id": "foxgear-guitar-effects-and-pedals",
+      "name": "Foxgear Guitar Effects And Pedals",
+      "slug": "foxgear-guitar-effects-and-pedals",
+      "count": 21,
+      "brand_color": null,
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "file": "foxgear-guitar-effects-and-pedals.json",
+      "data_file": "foxgear-guitar-effects-and-pedals.json",
+      "product_count": 21,
+      "verified_count": 21,
+      "last_updated": "2026-01-26T12:55:21.545765+00:00"
+    },
+    {
+      "id": "fzone",
+      "name": "Fzone",
+      "slug": "fzone",
+      "count": 10,
+      "brand_color": null,
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "file": "fzone.json",
+      "data_file": "fzone.json",
+      "product_count": 10,
+      "verified_count": 10,
+      "last_updated": "2026-01-26T12:55:21.578232+00:00"
     },
     {
       "id": "xotic",
@@ -263,7 +263,7 @@
       "data_file": "xotic.json",
       "product_count": 15,
       "verified_count": 15,
-      "last_updated": "2026-01-26T06:43:37.401027+00:00"
+      "last_updated": "2026-01-26T12:55:21.587472+00:00"
     },
     {
       "id": "amphion",
@@ -276,7 +276,7 @@
       "data_file": "amphion.json",
       "product_count": 7,
       "verified_count": 7,
-      "last_updated": "2026-01-26T06:43:37.408459+00:00"
+      "last_updated": "2026-01-26T12:55:21.593541+00:00"
     },
     {
       "id": "heritage-audio",
@@ -289,20 +289,7 @@
       "data_file": "heritage-audio.json",
       "product_count": 25,
       "verified_count": 25,
-      "last_updated": "2026-01-26T06:43:37.418596+00:00"
-    },
-    {
-      "id": "maton-guitars",
-      "name": "Maton Guitars",
-      "slug": "maton-guitars",
-      "count": 4,
-      "brand_color": null,
-      "logo_url": "/assets/logos/maton-guitars_logo.png",
-      "file": "maton-guitars.json",
-      "data_file": "maton-guitars.json",
-      "product_count": 4,
-      "verified_count": 4,
-      "last_updated": "2026-01-26T06:43:37.423266+00:00"
+      "last_updated": "2026-01-26T12:55:21.600446+00:00"
     },
     {
       "id": "allen-heath",
@@ -315,7 +302,20 @@
       "data_file": "allen-heath.json",
       "product_count": 105,
       "verified_count": 105,
-      "last_updated": "2026-01-26T06:43:37.446278+00:00"
+      "last_updated": "2026-01-26T12:55:21.621126+00:00"
+    },
+    {
+      "id": "maton-guitars",
+      "name": "Maton Guitars",
+      "slug": "maton-guitars",
+      "count": 4,
+      "brand_color": null,
+      "logo_url": "/assets/logos/maton-guitars_logo.png",
+      "file": "maton-guitars.json",
+      "data_file": "maton-guitars.json",
+      "product_count": 4,
+      "verified_count": 4,
+      "last_updated": "2026-01-26T12:55:21.630331+00:00"
     },
     {
       "id": "steinberg",
@@ -328,7 +328,7 @@
       "data_file": "steinberg.json",
       "product_count": 12,
       "verified_count": 12,
-      "last_updated": "2026-01-26T06:43:37.449030+00:00"
+      "last_updated": "2026-01-26T12:55:21.646775+00:00"
     },
     {
       "id": "montarbo",
@@ -341,7 +341,7 @@
       "data_file": "montarbo.json",
       "product_count": 22,
       "verified_count": 22,
-      "last_updated": "2026-01-26T06:43:37.456090+00:00"
+      "last_updated": "2026-01-26T12:55:21.653867+00:00"
     },
     {
       "id": "dixon",
@@ -354,85 +354,7 @@
       "data_file": "dixon.json",
       "product_count": 10,
       "verified_count": 10,
-      "last_updated": "2026-01-26T06:43:37.460274+00:00"
-    },
-    {
-      "id": "v-moda",
-      "name": "V Moda",
-      "slug": "v-moda",
-      "count": 17,
-      "brand_color": null,
-      "logo_url": "/assets/logos/v-moda_logo.png",
-      "file": "v-moda.json",
-      "data_file": "v-moda.json",
-      "product_count": 17,
-      "verified_count": 17,
-      "last_updated": "2026-01-26T06:43:37.475196+00:00"
-    },
-    {
-      "id": "bohemian-ukuleles-guitars-basses",
-      "name": "Bohemian Ukuleles Guitars Basses",
-      "slug": "bohemian-ukuleles-guitars-basses",
-      "count": 12,
-      "brand_color": null,
-      "logo_url": "/assets/logos/bohemian-ukuleles-guitars-basses_logo.png",
-      "file": "bohemian-ukuleles-guitars-basses.json",
-      "data_file": "bohemian-ukuleles-guitars-basses.json",
-      "product_count": 12,
-      "verified_count": 12,
-      "last_updated": "2026-01-26T06:43:37.477760+00:00"
-    },
-    {
-      "id": "rhythm-tech",
-      "name": "Rhythm Tech",
-      "slug": "rhythm-tech",
-      "count": 8,
-      "brand_color": null,
-      "logo_url": "/assets/logos/rhythm-tech_logo.jpg",
-      "file": "rhythm-tech.json",
-      "data_file": "rhythm-tech.json",
-      "product_count": 8,
-      "verified_count": 8,
-      "last_updated": "2026-01-26T06:43:37.482941+00:00"
-    },
-    {
-      "id": "adams",
-      "name": "Adams",
-      "slug": "adams",
-      "count": 16,
-      "brand_color": null,
-      "logo_url": "/assets/logos/adams_logo.jpg",
-      "file": "adams.json",
-      "data_file": "adams.json",
-      "product_count": 16,
-      "verified_count": 16,
-      "last_updated": "2026-01-26T06:43:37.487478+00:00"
-    },
-    {
-      "id": "encore",
-      "name": "Encore",
-      "slug": "encore",
-      "count": 0,
-      "brand_color": null,
-      "logo_url": "/assets/logos/encore_logo.png",
-      "file": "encore.json",
-      "data_file": "encore.json",
-      "product_count": 0,
-      "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.493087+00:00"
-    },
-    {
-      "id": "marimba-one",
-      "name": "Marimba One",
-      "slug": "marimba-one",
-      "count": 5,
-      "brand_color": null,
-      "logo_url": "/assets/logos/marimba-one_logo.jpg",
-      "file": "marimba-one.json",
-      "data_file": "marimba-one.json",
-      "product_count": 5,
-      "verified_count": 5,
-      "last_updated": "2026-01-26T06:43:37.502716+00:00"
+      "last_updated": "2026-01-26T12:55:21.809927+00:00"
     },
     {
       "id": "cordoba-guitars",
@@ -445,33 +367,59 @@
       "data_file": "cordoba-guitars.json",
       "product_count": 13,
       "verified_count": 13,
-      "last_updated": "2026-01-26T06:43:37.506226+00:00"
+      "last_updated": "2026-01-26T12:55:21.833594+00:00"
     },
     {
-      "id": "hiwatt",
-      "name": "Hiwatt",
-      "slug": "hiwatt",
-      "count": 0,
+      "id": "v-moda",
+      "name": "V Moda",
+      "slug": "v-moda",
+      "count": 17,
       "brand_color": null,
-      "logo_url": "/assets/logos/hiwatt_logo.png",
-      "file": "hiwatt.json",
-      "data_file": "hiwatt.json",
-      "product_count": 0,
-      "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.507991+00:00"
+      "logo_url": "/assets/logos/v-moda_logo.png",
+      "file": "v-moda.json",
+      "data_file": "v-moda.json",
+      "product_count": 17,
+      "verified_count": 17,
+      "last_updated": "2026-01-26T12:55:21.835797+00:00"
     },
     {
-      "id": "dynaudio",
-      "name": "Dynaudio",
-      "slug": "dynaudio",
+      "id": "rhythm-tech",
+      "name": "Rhythm Tech",
+      "slug": "rhythm-tech",
+      "count": 8,
+      "brand_color": null,
+      "logo_url": "/assets/logos/rhythm-tech_logo.jpg",
+      "file": "rhythm-tech.json",
+      "data_file": "rhythm-tech.json",
+      "product_count": 8,
+      "verified_count": 8,
+      "last_updated": "2026-01-26T12:55:21.839188+00:00"
+    },
+    {
+      "id": "encore",
+      "name": "Encore",
+      "slug": "encore",
       "count": 0,
       "brand_color": null,
-      "logo_url": "/assets/logos/dynaudio_logo.png",
-      "file": "dynaudio.json",
-      "data_file": "dynaudio.json",
+      "logo_url": "/assets/logos/encore_logo.png",
+      "file": "encore.json",
+      "data_file": "encore.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.510905+00:00"
+      "last_updated": "2026-01-26T12:55:21.845643+00:00"
+    },
+    {
+      "id": "adams",
+      "name": "Adams",
+      "slug": "adams",
+      "count": 16,
+      "brand_color": null,
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "file": "adams.json",
+      "data_file": "adams.json",
+      "product_count": 16,
+      "verified_count": 16,
+      "last_updated": "2026-01-26T12:55:21.848879+00:00"
     },
     {
       "id": "adam-audio",
@@ -484,7 +432,59 @@
       "data_file": "adam-audio.json",
       "product_count": 1,
       "verified_count": 1,
-      "last_updated": "2026-01-26T06:43:37.512571+00:00"
+      "last_updated": "2026-01-26T12:55:21.858686+00:00"
+    },
+    {
+      "id": "bohemian-ukuleles-guitars-basses",
+      "name": "Bohemian Ukuleles Guitars Basses",
+      "slug": "bohemian-ukuleles-guitars-basses",
+      "count": 12,
+      "brand_color": null,
+      "logo_url": "/assets/logos/bohemian-ukuleles-guitars-basses_logo.png",
+      "file": "bohemian-ukuleles-guitars-basses.json",
+      "data_file": "bohemian-ukuleles-guitars-basses.json",
+      "product_count": 12,
+      "verified_count": 12,
+      "last_updated": "2026-01-26T12:55:21.858909+00:00"
+    },
+    {
+      "id": "dynaudio",
+      "name": "Dynaudio",
+      "slug": "dynaudio",
+      "count": 0,
+      "brand_color": null,
+      "logo_url": "/assets/logos/dynaudio_logo.png",
+      "file": "dynaudio.json",
+      "data_file": "dynaudio.json",
+      "product_count": 0,
+      "verified_count": 0,
+      "last_updated": "2026-01-26T12:55:21.867815+00:00"
+    },
+    {
+      "id": "marimba-one",
+      "name": "Marimba One",
+      "slug": "marimba-one",
+      "count": 5,
+      "brand_color": null,
+      "logo_url": "/assets/logos/marimba-one_logo.jpg",
+      "file": "marimba-one.json",
+      "data_file": "marimba-one.json",
+      "product_count": 5,
+      "verified_count": 5,
+      "last_updated": "2026-01-26T12:55:21.875373+00:00"
+    },
+    {
+      "id": "hiwatt",
+      "name": "Hiwatt",
+      "slug": "hiwatt",
+      "count": 0,
+      "brand_color": null,
+      "logo_url": "/assets/logos/hiwatt_logo.png",
+      "file": "hiwatt.json",
+      "data_file": "hiwatt.json",
+      "product_count": 0,
+      "verified_count": 0,
+      "last_updated": "2026-01-26T12:55:21.883098+00:00"
     },
     {
       "id": "mjc-ironworks",
@@ -497,20 +497,7 @@
       "data_file": "mjc-ironworks.json",
       "product_count": 5,
       "verified_count": 5,
-      "last_updated": "2026-01-26T06:43:37.521353+00:00"
-    },
-    {
-      "id": "fusion",
-      "name": "Fusion",
-      "slug": "fusion",
-      "count": 8,
-      "brand_color": null,
-      "logo_url": "/assets/logos/fusion_logo.png",
-      "file": "fusion.json",
-      "data_file": "fusion.json",
-      "product_count": 8,
-      "verified_count": 8,
-      "last_updated": "2026-01-26T06:43:37.529209+00:00"
+      "last_updated": "2026-01-26T12:55:21.885719+00:00"
     },
     {
       "id": "rapier-33-electric-guitars",
@@ -523,7 +510,20 @@
       "data_file": "rapier-33-electric-guitars.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.531729+00:00"
+      "last_updated": "2026-01-26T12:55:21.899931+00:00"
+    },
+    {
+      "id": "fusion",
+      "name": "Fusion",
+      "slug": "fusion",
+      "count": 8,
+      "brand_color": null,
+      "logo_url": "/assets/logos/fusion_logo.png",
+      "file": "fusion.json",
+      "data_file": "fusion.json",
+      "product_count": 8,
+      "verified_count": 8,
+      "last_updated": "2026-01-26T12:55:21.916614+00:00"
     },
     {
       "id": "maybach",
@@ -536,7 +536,7 @@
       "data_file": "maybach.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.539932+00:00"
+      "last_updated": "2026-01-26T12:55:21.919938+00:00"
     },
     {
       "id": "santos-martinez",
@@ -549,20 +549,7 @@
       "data_file": "santos-martinez.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.542077+00:00"
-    },
-    {
-      "id": "rogers",
-      "name": "Rogers",
-      "slug": "rogers",
-      "count": 8,
-      "brand_color": null,
-      "logo_url": "/assets/logos/rogers_logo.png",
-      "file": "rogers.json",
-      "data_file": "rogers.json",
-      "product_count": 8,
-      "verified_count": 8,
-      "last_updated": "2026-01-26T06:43:37.558569+00:00"
+      "last_updated": "2026-01-26T12:55:21.936030+00:00"
     },
     {
       "id": "m-audio",
@@ -575,7 +562,20 @@
       "data_file": "m-audio.json",
       "product_count": 25,
       "verified_count": 25,
-      "last_updated": "2026-01-26T06:43:37.561198+00:00"
+      "last_updated": "2026-01-26T12:55:21.939400+00:00"
+    },
+    {
+      "id": "rogers",
+      "name": "Rogers",
+      "slug": "rogers",
+      "count": 8,
+      "brand_color": null,
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "file": "rogers.json",
+      "data_file": "rogers.json",
+      "product_count": 8,
+      "verified_count": 8,
+      "last_updated": "2026-01-26T12:55:21.960767+00:00"
     },
     {
       "id": "krk-systems",
@@ -588,7 +588,7 @@
       "data_file": "krk-systems.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.691564+00:00"
+      "last_updated": "2026-01-26T12:55:21.963988+00:00"
     },
     {
       "id": "breedlove-guitars",
@@ -601,20 +601,7 @@
       "data_file": "breedlove-guitars.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.706632+00:00"
-    },
-    {
-      "id": "eaw-eastern-acoustic-works",
-      "name": " Eaw Eastern Acoustic Works ",
-      "slug": "eaw-eastern-acoustic-works",
-      "count": 43,
-      "brand_color": null,
-      "logo_url": "/assets/logos/eaw-eastern-acoustic-works_logo.png",
-      "file": "eaw-eastern-acoustic-works.json",
-      "data_file": "eaw-eastern-acoustic-works.json",
-      "product_count": 43,
-      "verified_count": 43,
-      "last_updated": "2026-01-26T06:43:37.729301+00:00"
+      "last_updated": "2026-01-26T12:55:21.992973+00:00"
     },
     {
       "id": "topp-pro",
@@ -627,20 +614,7 @@
       "data_file": "topp-pro.json",
       "product_count": 17,
       "verified_count": 17,
-      "last_updated": "2026-01-26T06:43:37.734903+00:00"
-    },
-    {
-      "id": "jasmine-guitars",
-      "name": "Jasmine Guitars",
-      "slug": "jasmine-guitars",
-      "count": 0,
-      "brand_color": null,
-      "logo_url": "/assets/logos/jasmine-guitars_logo.png",
-      "file": "jasmine-guitars.json",
-      "data_file": "jasmine-guitars.json",
-      "product_count": 0,
-      "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.748304+00:00"
+      "last_updated": "2026-01-26T12:55:22.032786+00:00"
     },
     {
       "id": "bespeco",
@@ -653,7 +627,33 @@
       "data_file": "bespeco.json",
       "product_count": 196,
       "verified_count": 196,
-      "last_updated": "2026-01-26T06:43:37.795678+00:00"
+      "last_updated": "2026-01-26T12:55:22.045616+00:00"
+    },
+    {
+      "id": "eaw-eastern-acoustic-works",
+      "name": " Eaw Eastern Acoustic Works ",
+      "slug": "eaw-eastern-acoustic-works",
+      "count": 43,
+      "brand_color": null,
+      "logo_url": "/assets/logos/eaw-eastern-acoustic-works_logo.png",
+      "file": "eaw-eastern-acoustic-works.json",
+      "data_file": "eaw-eastern-acoustic-works.json",
+      "product_count": 43,
+      "verified_count": 43,
+      "last_updated": "2026-01-26T12:55:22.055117+00:00"
+    },
+    {
+      "id": "jasmine-guitars",
+      "name": "Jasmine Guitars",
+      "slug": "jasmine-guitars",
+      "count": 0,
+      "brand_color": null,
+      "logo_url": "/assets/logos/jasmine-guitars_logo.png",
+      "file": "jasmine-guitars.json",
+      "data_file": "jasmine-guitars.json",
+      "product_count": 0,
+      "verified_count": 0,
+      "last_updated": "2026-01-26T12:55:22.064390+00:00"
     },
     {
       "id": "lag-guitars",
@@ -666,7 +666,7 @@
       "data_file": "lag-guitars.json",
       "product_count": 0,
       "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:37.837418+00:00"
+      "last_updated": "2026-01-26T12:55:22.102560+00:00"
     },
     {
       "id": "perri-s-leathers",
@@ -679,7 +679,7 @@
       "data_file": "perri-s-leathers.json",
       "product_count": 15,
       "verified_count": 15,
-      "last_updated": "2026-01-26T06:43:38.054765+00:00"
+      "last_updated": "2026-01-26T12:55:22.145763+00:00"
     },
     {
       "id": "headrush-fx",
@@ -692,72 +692,7 @@
       "data_file": "headrush-fx.json",
       "product_count": 4,
       "verified_count": 4,
-      "last_updated": "2026-01-26T06:43:38.076306+00:00"
-    },
-    {
-      "id": "mackie",
-      "name": "Mackie",
-      "slug": "mackie",
-      "count": 172,
-      "brand_color": "#00a651",
-      "logo_url": "/assets/logos/mackie_logo.svg",
-      "file": "mackie.json",
-      "data_file": "mackie.json",
-      "product_count": 172,
-      "verified_count": 172,
-      "last_updated": "2026-01-26T06:43:38.265043+00:00"
-    },
-    {
-      "id": "nord",
-      "name": "Nord",
-      "slug": "nord",
-      "count": 5,
-      "brand_color": "#e31e24",
-      "logo_url": "/assets/logos/nord_logo.png",
-      "file": "nord.json",
-      "data_file": "nord.json",
-      "product_count": 5,
-      "verified_count": 5,
-      "last_updated": "2026-01-26T06:43:38.308436+00:00"
-    },
-    {
-      "id": "boss-blueprint",
-      "name": "Boss Blueprint",
-      "slug": "boss-blueprint",
-      "count": 9,
-      "brand_color": null,
-      "logo_url": "/assets/logos/boss-blueprint_logo.png",
-      "file": "boss-blueprint.json",
-      "data_file": "boss-blueprint.json",
-      "product_count": 9,
-      "verified_count": 9,
-      "last_updated": "2026-01-26T06:43:38.350092+00:00"
-    },
-    {
-      "id": "roland-blueprint",
-      "name": "Roland Blueprint",
-      "slug": "roland-blueprint",
-      "count": 28,
-      "brand_color": null,
-      "logo_url": "/assets/logos/roland-blueprint_logo.png",
-      "file": "roland-blueprint.json",
-      "data_file": "roland-blueprint.json",
-      "product_count": 28,
-      "verified_count": 28,
-      "last_updated": "2026-01-26T06:43:38.368148+00:00"
-    },
-    {
-      "id": "remo",
-      "name": "Remo",
-      "slug": "remo",
-      "count": 223,
-      "brand_color": null,
-      "logo_url": "/assets/logos/remo_logo.jpg",
-      "file": "remo.json",
-      "data_file": "remo.json",
-      "product_count": 223,
-      "verified_count": 223,
-      "last_updated": "2026-01-26T06:43:38.407762+00:00"
+      "last_updated": "2026-01-26T12:55:22.187871+00:00"
     },
     {
       "id": "on-stage",
@@ -770,33 +705,33 @@
       "data_file": "on-stage.json",
       "product_count": 233,
       "verified_count": 233,
-      "last_updated": "2026-01-26T06:43:38.439286+00:00"
+      "last_updated": "2026-01-26T12:55:22.241147+00:00"
     },
     {
-      "id": "tombo",
-      "name": "Tombo",
-      "slug": "tombo",
-      "count": 6,
-      "brand_color": null,
-      "logo_url": "/assets/logos/tombo_logo.jpg",
-      "file": "tombo.json",
-      "data_file": "tombo.json",
-      "product_count": 6,
-      "verified_count": 6,
-      "last_updated": "2026-01-26T06:43:38.446705+00:00"
+      "id": "mackie",
+      "name": "Mackie",
+      "slug": "mackie",
+      "count": 172,
+      "brand_color": "#00a651",
+      "logo_url": "/assets/logos/mackie_logo.svg",
+      "file": "mackie.json",
+      "data_file": "mackie.json",
+      "product_count": 172,
+      "verified_count": 172,
+      "last_updated": "2026-01-26T12:55:22.417324+00:00"
     },
     {
-      "id": "eden",
-      "name": "Eden",
-      "slug": "eden",
-      "count": 1,
+      "id": "remo",
+      "name": "Remo",
+      "slug": "remo",
+      "count": 223,
       "brand_color": null,
-      "logo_url": "/assets/logos/eden_logo.png",
-      "file": "eden.json",
-      "data_file": "eden.json",
-      "product_count": 1,
-      "verified_count": 1,
-      "last_updated": "2026-01-26T06:43:38.450105+00:00"
+      "logo_url": "/assets/logos/remo_logo.jpg",
+      "file": "remo.json",
+      "data_file": "remo.json",
+      "product_count": 223,
+      "verified_count": 223,
+      "last_updated": "2026-01-26T12:55:22.444007+00:00"
     },
     {
       "id": "esp",
@@ -809,7 +744,7 @@
       "data_file": "esp.json",
       "product_count": 5,
       "verified_count": 5,
-      "last_updated": "2026-01-26T06:43:38.457641+00:00"
+      "last_updated": "2026-01-26T12:55:22.484262+00:00"
     },
     {
       "id": "paiste-cymbals",
@@ -822,7 +757,59 @@
       "data_file": "paiste-cymbals.json",
       "product_count": 151,
       "verified_count": 151,
-      "last_updated": "2026-01-26T06:43:38.477581+00:00"
+      "last_updated": "2026-01-26T12:55:22.590072+00:00"
+    },
+    {
+      "id": "roland-blueprint",
+      "name": "Roland Blueprint",
+      "slug": "roland-blueprint",
+      "count": 28,
+      "brand_color": null,
+      "logo_url": "/assets/logos/roland-blueprint_logo.png",
+      "file": "roland-blueprint.json",
+      "data_file": "roland-blueprint.json",
+      "product_count": 28,
+      "verified_count": 28,
+      "last_updated": "2026-01-26T12:55:22.592071+00:00"
+    },
+    {
+      "id": "eden",
+      "name": "Eden",
+      "slug": "eden",
+      "count": 1,
+      "brand_color": null,
+      "logo_url": "/assets/logos/eden_logo.png",
+      "file": "eden.json",
+      "data_file": "eden.json",
+      "product_count": 1,
+      "verified_count": 1,
+      "last_updated": "2026-01-26T12:55:22.601660+00:00"
+    },
+    {
+      "id": "boss-blueprint",
+      "name": "Boss Blueprint",
+      "slug": "boss-blueprint",
+      "count": 9,
+      "brand_color": null,
+      "logo_url": "/assets/logos/boss-blueprint_logo.png",
+      "file": "boss-blueprint.json",
+      "data_file": "boss-blueprint.json",
+      "product_count": 9,
+      "verified_count": 9,
+      "last_updated": "2026-01-26T12:55:22.614680+00:00"
+    },
+    {
+      "id": "tombo",
+      "name": "Tombo",
+      "slug": "tombo",
+      "count": 6,
+      "brand_color": null,
+      "logo_url": "/assets/logos/tombo_logo.jpg",
+      "file": "tombo.json",
+      "data_file": "tombo.json",
+      "product_count": 6,
+      "verified_count": 6,
+      "last_updated": "2026-01-26T12:55:22.616903+00:00"
     },
     {
       "id": "maestro-guitar-pedals-and-effects",
@@ -835,46 +822,7 @@
       "data_file": "maestro-guitar-pedals-and-effects.json",
       "product_count": 9,
       "verified_count": 9,
-      "last_updated": "2026-01-26T06:43:38.481405+00:00"
-    },
-    {
-      "id": "drumdots",
-      "name": "Drumdots",
-      "slug": "drumdots",
-      "count": 2,
-      "brand_color": null,
-      "logo_url": "/assets/logos/drumdots_logo.png",
-      "file": "drumdots.json",
-      "data_file": "drumdots.json",
-      "product_count": 2,
-      "verified_count": 2,
-      "last_updated": "2026-01-26T06:43:38.486749+00:00"
-    },
-    {
-      "id": "turkish",
-      "name": "Turkish",
-      "slug": "turkish",
-      "count": 10,
-      "brand_color": null,
-      "logo_url": "/assets/logos/turkish_logo.jpg",
-      "file": "turkish.json",
-      "data_file": "turkish.json",
-      "product_count": 10,
-      "verified_count": 10,
-      "last_updated": "2026-01-26T06:43:38.495201+00:00"
-    },
-    {
-      "id": "moog",
-      "name": "Moog",
-      "slug": "moog",
-      "count": 5,
-      "brand_color": "#000000",
-      "logo_url": "/assets/logos/moog_logo.png",
-      "file": "moog.json",
-      "data_file": "moog.json",
-      "product_count": 5,
-      "verified_count": 5,
-      "last_updated": "2026-01-26T06:43:38.609001+00:00"
+      "last_updated": "2026-01-26T12:55:22.638596+00:00"
     },
     {
       "id": "warm-audio",
@@ -887,20 +835,33 @@
       "data_file": "warm-audio.json",
       "product_count": 44,
       "verified_count": 44,
-      "last_updated": "2026-01-26T06:43:38.619867+00:00"
+      "last_updated": "2026-01-26T12:55:22.640188+00:00"
     },
     {
-      "id": "oberheim",
-      "name": "Oberheim",
-      "slug": "oberheim",
-      "count": 0,
+      "id": "drumdots",
+      "name": "Drumdots",
+      "slug": "drumdots",
+      "count": 2,
       "brand_color": null,
-      "logo_url": "/assets/logos/oberheim_logo.png",
-      "file": "oberheim.json",
-      "data_file": "oberheim.json",
-      "product_count": 0,
-      "verified_count": 0,
-      "last_updated": "2026-01-26T06:43:38.628472+00:00"
+      "logo_url": "/assets/logos/drumdots_logo.png",
+      "file": "drumdots.json",
+      "data_file": "drumdots.json",
+      "product_count": 2,
+      "verified_count": 2,
+      "last_updated": "2026-01-26T12:55:22.644667+00:00"
+    },
+    {
+      "id": "turkish",
+      "name": "Turkish",
+      "slug": "turkish",
+      "count": 10,
+      "brand_color": null,
+      "logo_url": "/assets/logos/turkish_logo.jpg",
+      "file": "turkish.json",
+      "data_file": "turkish.json",
+      "product_count": 10,
+      "verified_count": 10,
+      "last_updated": "2026-01-26T12:55:22.648955+00:00"
     },
     {
       "id": "magma",
@@ -913,33 +874,7 @@
       "data_file": "magma.json",
       "product_count": 29,
       "verified_count": 29,
-      "last_updated": "2026-01-26T06:43:38.641916+00:00"
-    },
-    {
-      "id": "antigua",
-      "name": "Antigua",
-      "slug": "antigua",
-      "count": 17,
-      "brand_color": null,
-      "logo_url": "/assets/logos/antigua_logo.jpg",
-      "file": "antigua.json",
-      "data_file": "antigua.json",
-      "product_count": 17,
-      "verified_count": 17,
-      "last_updated": "2026-01-26T06:43:38.660028+00:00"
-    },
-    {
-      "id": "headliner-la-equipment-stands",
-      "name": "Headliner La Equipment Stands ",
-      "slug": "headliner-la-equipment-stands",
-      "count": 12,
-      "brand_color": null,
-      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
-      "file": "headliner-la-equipment-stands.json",
-      "data_file": "headliner-la-equipment-stands.json",
-      "product_count": 12,
-      "verified_count": 12,
-      "last_updated": "2026-01-26T06:43:38.664618+00:00"
+      "last_updated": "2026-01-26T12:55:22.695805+00:00"
     },
     {
       "id": "gon-bops-percussion",
@@ -952,33 +887,7 @@
       "data_file": "gon-bops-percussion.json",
       "product_count": 41,
       "verified_count": 41,
-      "last_updated": "2026-01-26T06:43:38.681133+00:00"
-    },
-    {
-      "id": "pearl",
-      "name": "Pearl",
-      "slug": "pearl",
-      "count": 263,
-      "brand_color": null,
-      "logo_url": "/assets/logos/pearl_logo.jpg",
-      "file": "pearl.json",
-      "data_file": "pearl.json",
-      "product_count": 263,
-      "verified_count": 263,
-      "last_updated": "2026-01-26T06:43:38.795321+00:00"
-    },
-    {
-      "id": "solar-guitars",
-      "name": "Solar Guitars",
-      "slug": "solar-guitars",
-      "count": 2,
-      "brand_color": null,
-      "logo_url": "/assets/logos/solar-guitars_logo.jpg",
-      "file": "solar-guitars.json",
-      "data_file": "solar-guitars.json",
-      "product_count": 2,
-      "verified_count": 2,
-      "last_updated": "2026-01-26T06:43:38.804297+00:00"
+      "last_updated": "2026-01-26T12:55:22.745215+00:00"
     },
     {
       "id": "presonus",
@@ -991,20 +900,72 @@
       "data_file": "presonus.json",
       "product_count": 71,
       "verified_count": 71,
-      "last_updated": "2026-01-26T06:43:38.805857+00:00"
+      "last_updated": "2026-01-26T12:55:22.745678+00:00"
     },
     {
-      "id": "universal-audio",
-      "name": "Universal Audio",
-      "slug": "universal-audio",
-      "count": 70,
-      "brand_color": "#1f2937",
-      "logo_url": "/assets/logos/universal-audio_logo.svg",
-      "file": "universal-audio.json",
-      "data_file": "universal-audio.json",
-      "product_count": 70,
-      "verified_count": 70,
-      "last_updated": "2026-01-26T06:43:38.820021+00:00"
+      "id": "pearl",
+      "name": "Pearl",
+      "slug": "pearl",
+      "count": 263,
+      "brand_color": null,
+      "logo_url": "/assets/logos/pearl_logo.jpg",
+      "file": "pearl.json",
+      "data_file": "pearl.json",
+      "product_count": 263,
+      "verified_count": 263,
+      "last_updated": "2026-01-26T12:55:22.760217+00:00"
+    },
+    {
+      "id": "moog",
+      "name": "Moog",
+      "slug": "moog",
+      "count": 5,
+      "brand_color": "#000000",
+      "logo_url": "/assets/logos/moog_logo.png",
+      "file": "moog.json",
+      "data_file": "moog.json",
+      "product_count": 5,
+      "verified_count": 5,
+      "last_updated": "2026-01-26T12:55:22.899870+00:00"
+    },
+    {
+      "id": "oberheim",
+      "name": "Oberheim",
+      "slug": "oberheim",
+      "count": 0,
+      "brand_color": null,
+      "logo_url": "/assets/logos/oberheim_logo.png",
+      "file": "oberheim.json",
+      "data_file": "oberheim.json",
+      "product_count": 0,
+      "verified_count": 0,
+      "last_updated": "2026-01-26T12:55:22.911227+00:00"
+    },
+    {
+      "id": "headliner-la-equipment-stands",
+      "name": "Headliner La Equipment Stands ",
+      "slug": "headliner-la-equipment-stands",
+      "count": 12,
+      "brand_color": null,
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "file": "headliner-la-equipment-stands.json",
+      "data_file": "headliner-la-equipment-stands.json",
+      "product_count": 12,
+      "verified_count": 12,
+      "last_updated": "2026-01-26T12:55:22.932864+00:00"
+    },
+    {
+      "id": "antigua",
+      "name": "Antigua",
+      "slug": "antigua",
+      "count": 17,
+      "brand_color": null,
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "file": "antigua.json",
+      "data_file": "antigua.json",
+      "product_count": 17,
+      "verified_count": 17,
+      "last_updated": "2026-01-26T12:55:22.954752+00:00"
     },
     {
       "id": "rcf",
@@ -1017,7 +978,46 @@
       "data_file": "rcf.json",
       "product_count": 162,
       "verified_count": 162,
-      "last_updated": "2026-01-26T06:43:38.839946+00:00"
+      "last_updated": "2026-01-26T12:55:22.960430+00:00"
+    },
+    {
+      "id": "solar-guitars",
+      "name": "Solar Guitars",
+      "slug": "solar-guitars",
+      "count": 2,
+      "brand_color": null,
+      "logo_url": "/assets/logos/solar-guitars_logo.jpg",
+      "file": "solar-guitars.json",
+      "data_file": "solar-guitars.json",
+      "product_count": 2,
+      "verified_count": 2,
+      "last_updated": "2026-01-26T12:55:22.966839+00:00"
+    },
+    {
+      "id": "universal-audio",
+      "name": "Universal Audio",
+      "slug": "universal-audio",
+      "count": 70,
+      "brand_color": "#1f2937",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "file": "universal-audio.json",
+      "data_file": "universal-audio.json",
+      "product_count": 70,
+      "verified_count": 70,
+      "last_updated": "2026-01-26T12:55:23.057697+00:00"
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "slug": "nord",
+      "count": 5,
+      "brand_color": "#e31e24",
+      "logo_url": "/assets/logos/nord_logo.png",
+      "file": "nord.json",
+      "data_file": "nord.json",
+      "product_count": 5,
+      "verified_count": 5,
+      "last_updated": "2026-01-26T12:55:23.124716+00:00"
     },
     {
       "id": "roland-commercial",
@@ -1030,7 +1030,7 @@
       "data_file": "roland-commercial.json",
       "product_count": 399,
       "verified_count": 399,
-      "last_updated": "2026-01-26T06:43:38.857292+00:00"
+      "last_updated": "2026-01-26T12:55:23.130049+00:00"
     }
   ],
   "total_brands": 79

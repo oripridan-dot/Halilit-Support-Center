@@ -114,9 +114,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.391733",
+  "generated_at": "2026-01-26T12:55:21.579535",
   "brand_slug": "maton-guitars",
-  "refined_at": "2026-01-26T06:43:37.417646+00:00",
+  "refined_at": "2026-01-26T12:55:21.614246+00:00",
   "brand_identity": {
     "id": "maton-guitars",
     "name": "Maton Guitars",
@@ -126,7 +126,8 @@
       "validated": 4,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 4
   },
   "hierarchy": {
     "accessories": {

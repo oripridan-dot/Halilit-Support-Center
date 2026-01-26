@@ -142,9 +142,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.077309",
+  "generated_at": "2026-01-26T12:55:22.191052",
   "brand_slug": "esp",
-  "refined_at": "2026-01-26T06:43:38.450367+00:00",
+  "refined_at": "2026-01-26T12:55:22.385315+00:00",
   "brand_identity": {
     "id": "esp",
     "name": "Esp",
@@ -154,7 +154,8 @@
       "validated": 5,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 5
   },
   "hierarchy": {
     "accessories": {

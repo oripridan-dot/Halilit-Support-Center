@@ -478,9 +478,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.628789",
+  "generated_at": "2026-01-26T12:55:22.746393",
   "brand_slug": "antigua",
-  "refined_at": "2026-01-26T06:43:38.639488+00:00",
+  "refined_at": "2026-01-26T12:55:22.908856+00:00",
   "brand_identity": {
     "id": "antigua",
     "name": "Antigua",
@@ -490,7 +490,8 @@
       "validated": 17,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 17
   },
   "hierarchy": {
     "accessories": {

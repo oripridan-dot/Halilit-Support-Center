@@ -226,9 +226,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.542471",
+  "generated_at": "2026-01-26T12:55:21.936277",
   "brand_slug": "rogers",
-  "refined_at": "2026-01-26T06:43:37.549676+00:00",
+  "refined_at": "2026-01-26T12:55:21.946346+00:00",
   "brand_identity": {
     "id": "rogers",
     "name": "Rogers",
@@ -238,7 +238,8 @@
       "validated": 8,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 8
   },
   "hierarchy": {
     "accessories": {

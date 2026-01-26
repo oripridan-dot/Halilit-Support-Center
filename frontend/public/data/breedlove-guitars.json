@@ -1,9 +1,9 @@
 {
   "brand_name": "Breedlove Guitars",
   "products": [],
-  "generated_at": "2026-01-26T06:43:37.562063",
+  "generated_at": "2026-01-26T12:55:21.961368",
   "brand_slug": "breedlove-guitars",
-  "refined_at": "2026-01-26T06:43:37.703467+00:00",
+  "refined_at": "2026-01-26T12:55:21.977759+00:00",
   "brand_identity": {
     "id": "breedlove-guitars",
     "name": "Breedlove Guitars",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

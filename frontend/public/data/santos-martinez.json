@@ -1,9 +1,9 @@
 {
   "brand_name": "Santos Martinez",
   "products": [],
-  "generated_at": "2026-01-26T06:43:37.531964",
+  "generated_at": "2026-01-26T12:55:21.916832",
   "brand_slug": "santos-martinez",
-  "refined_at": "2026-01-26T06:43:37.539248+00:00",
+  "refined_at": "2026-01-26T12:55:21.928245+00:00",
   "brand_identity": {
     "id": "santos-martinez",
     "name": "Santos Martinez",
@@ -13,7 +13,8 @@
       "validated": 0,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 0
   },
   "hierarchy": {}
 }

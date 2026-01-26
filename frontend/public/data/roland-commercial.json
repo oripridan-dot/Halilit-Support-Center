@@ -7922,36 +7922,6 @@
       "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952910/original/0d61a7051473da6cb7b3fabf6fb0f3ef.jpg"
     },
     {
-      "id": "roland_87-mh",
-      "name": "Roland MH-2",
-      "url": "https://www.halilit.com/items/671004-roland-mh-2",
-      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/930335/original/923ecd869a286545d4c4371ccf298a5c.jpg",
-      "halilit_id": "87-MH",
-      "sku": "87-MH",
-      "pricing": {
-        "currency": "ILS",
-        "regular_price": null,
-        "eilat_price": null,
-        "sale_price": null
-      },
-      "description": "Roland MH-2",
-      "category": "accessories",
-      "brand": "Roland Commercial",
-      "logo_url": "/assets/logos/roland-commercial_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/product_images/roland-commercial/roland_87-mh_thumb.webp",
-        "thumbnail": "/data/product_images/roland-commercial/roland_87-mh_thumb.webp",
-        "high_res": "/data/product_images/roland-commercial/roland_87-mh_inspect.webp",
-        "original": "https://d3m9l0v76dty0.cloudfront.net/system/photos/930335/original/923ecd869a286545d4c4371ccf298a5c.jpg",
-        "srcset": {}
-      },
-      "category_hierarchy": [
-        "accessories"
-      ],
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/930335/original/923ecd869a286545d4c4371ccf298a5c.jpg"
-    },
-    {
       "id": "roland_87-vh14d",
       "name": "Roland VH-14D",
       "url": "https://www.halilit.com/items/7713313-roland-vh-14d-hi-hat-cymbal",
@@ -11972,9 +11942,9 @@
       "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7090526/original/7a8fd6b9f513c66f52db7f75e39d8a44.jpg"
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.737030",
+  "generated_at": "2026-01-26T12:55:22.052854",
   "brand_slug": "roland-commercial",
-  "refined_at": "2026-01-26T06:43:37.739705+00:00",
+  "refined_at": "2026-01-26T12:55:22.057879+00:00",
   "brand_identity": {
     "id": "roland-commercial",
     "name": "Roland Commercial",
@@ -11984,7 +11954,8 @@
       "validated": 399,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 398
   },
   "hierarchy": {
     "accessories": {
@@ -15684,20 +15655,6 @@
           },
           "model_number": null,
           "sku": "87-CBBSPDSX"
-        },
-        {
-          "id": "roland_87-mh",
-          "name": "Roland MH-2",
-          "description": "Roland MH-2",
-          "images": {
-            "main": "/data/product_images/roland-commercial/roland_87-mh_thumb.webp",
-            "thumbnail": "/data/product_images/roland-commercial/roland_87-mh_thumb.webp",
-            "high_res": "/data/product_images/roland-commercial/roland_87-mh_inspect.webp",
-            "original": "https://d3m9l0v76dty0.cloudfront.net/system/photos/930335/original/923ecd869a286545d4c4371ccf298a5c.jpg",
-            "srcset": {}
-          },
-          "model_number": null,
-          "sku": "87-MH"
         },
         {
           "id": "roland_87-vh14d",

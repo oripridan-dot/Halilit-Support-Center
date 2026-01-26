@@ -282,9 +282,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:38.458025",
+  "generated_at": "2026-01-26T12:55:22.617135",
   "brand_slug": "turkish",
-  "refined_at": "2026-01-26T06:43:38.479319+00:00",
+  "refined_at": "2026-01-26T12:55:22.622071+00:00",
   "brand_identity": {
     "id": "turkish",
     "name": "Turkish",
@@ -294,7 +294,8 @@
       "validated": 10,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 10
   },
   "hierarchy": {
     "accessories": {

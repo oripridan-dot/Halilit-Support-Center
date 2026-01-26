@@ -4818,9 +4818,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.530133",
+  "generated_at": "2026-01-26T12:55:21.901050",
   "brand_slug": "mackie",
-  "refined_at": "2026-01-26T06:43:37.770908+00:00",
+  "refined_at": "2026-01-26T12:55:22.072177+00:00",
   "brand_identity": {
     "id": "mackie",
     "name": "Mackie",
@@ -4836,7 +4836,8 @@
       "validated": 172,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 172
   },
   "hierarchy": {
     "accessories": {

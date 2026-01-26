@@ -898,31 +898,6 @@
       ]
     },
     {
-      "id": "allen_heath_40_dt02",
-      "name": "Allen & Heath DT02",
-      "description": "Allen & Heath DT02",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/allen_heath_40_dt02.jpg",
-      "product_url": "https://www.halilit.com/items/5264738-allen-health-dt02",
-      "is_sold": true,
-      "price": 0.0,
-      "halilit_url": "https://www.halilit.com/items/5264738-allen-health-dt02",
-      "status": "IN_STOCK",
-      "pricing": {},
-      "brand": "Allen Heath",
-      "logo_url": "/assets/logos/allen-heath_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/allen_heath_40_dt02.jpg",
-        "thumbnail": "/data/thumbnails/allen_heath_40_dt02.jpg",
-        "high_res": "/data/thumbnails/allen_heath_40_dt02.jpg",
-        "original": "/data/thumbnails/allen_heath_40_dt02.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
       "id": "allen_heath_40_ar84",
       "name": "Allen & Heath AR84",
       "description": "Allen & Heath AR84",
@@ -2939,9 +2914,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.232120",
+  "generated_at": "2026-01-26T12:55:21.089048",
   "brand_slug": "allen-heath",
-  "refined_at": "2026-01-26T06:43:37.331638+00:00",
+  "refined_at": "2026-01-26T12:55:21.167734+00:00",
   "brand_identity": {
     "id": "allen-heath",
     "name": "Allen Heath",
@@ -2951,7 +2926,8 @@
       "validated": 105,
       "normalized": 0,
       "uncategorized": 0
-    }
+    },
+    "total_products": 104
   },
   "hierarchy": {
     "accessories": {
@@ -3368,19 +3344,6 @@
             "thumbnail": "/data/thumbnails/allen_heath_40_dt20.jpg",
             "high_res": "/data/thumbnails/allen_heath_40_dt20.jpg",
             "original": "/data/thumbnails/allen_heath_40_dt20.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "allen_heath_40_dt02",
-          "name": "Allen & Heath DT02",
-          "description": "Allen & Heath DT02",
-          "images": {
-            "main": "/data/thumbnails/allen_heath_40_dt02.jpg",
-            "thumbnail": "/data/thumbnails/allen_heath_40_dt02.jpg",
-            "high_res": "/data/thumbnails/allen_heath_40_dt02.jpg",
-            "original": "/data/thumbnails/allen_heath_40_dt02.jpg"
           },
           "model_number": null,
           "sku": null

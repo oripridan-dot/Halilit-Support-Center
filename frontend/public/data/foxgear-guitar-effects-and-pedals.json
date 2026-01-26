@@ -590,9 +590,9 @@
       ]
     }
   ],
-  "generated_at": "2026-01-26T06:43:37.335474",
+  "generated_at": "2026-01-26T12:55:21.200703",
   "brand_slug": "foxgear-guitar-effects-and-pedals",
-  "refined_at": "2026-01-26T06:43:37.352064+00:00",
+  "refined_at": "2026-01-26T12:55:21.510209+00:00",
   "brand_identity": {
     "id": "foxgear-guitar-effects-and-pedals",
     "name": "Foxgear Guitar Effects And Pedals",
@@ -603,6 +603,7 @@
       "normalized": 0,
       "uncategorized": 0
     },
+    "total_products": 21,
     "categories": [
       {
         "id": "keys",
