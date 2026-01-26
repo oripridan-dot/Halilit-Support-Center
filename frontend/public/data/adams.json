@@ -1,0 +1,669 @@
+{
+  "brand_name": "Adams",
+  "products": [
+    {
+      "id": "adams_97_4mltr3",
+      "name": "Adams Timpani Mallets soft",
+      "description": "Adams Timpani Mallets soft",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_4mltr3.jpg",
+      "product_url": "https://www.halilit.com/items/531201-adams-timpani-mallets-soft",
+      "is_sold": true,
+      "price": 279.0,
+      "halilit_url": "https://www.halilit.com/items/531201-adams-timpani-mallets-soft",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 279.0,
+        "original_price": 279.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_4mltr3.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_4mltr3.jpg",
+        "high_res": "/data/thumbnails/adams_97_4mltr3.jpg",
+        "original": "/data/thumbnails/adams_97_4mltr3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_4mltr1",
+      "name": "Adams Timpani Mallets Hard",
+      "description": "Adams Timpani Mallets Hard",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_4mltr1.jpg",
+      "product_url": "https://www.halilit.com/items/531187-adams-timpani-mallets-hard",
+      "is_sold": true,
+      "price": 279.0,
+      "halilit_url": "https://www.halilit.com/items/531187-adams-timpani-mallets-hard",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 279.0,
+        "original_price": 279.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_4mltr1.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_4mltr1.jpg",
+        "high_res": "/data/thumbnails/adams_97_4mltr1.jpg",
+        "original": "/data/thumbnails/adams_97_4mltr1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_4mltr2",
+      "name": "Adams Timpani Mallets Medium",
+      "description": "Adams Timpani Mallets Medium",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_4mltr2.jpg",
+      "product_url": "https://www.halilit.com/items/531191-adams-timpani-mallets-medium",
+      "is_sold": true,
+      "price": 279.0,
+      "halilit_url": "https://www.halilit.com/items/531191-adams-timpani-mallets-medium",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 279.0,
+        "original_price": 279.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_4mltr2.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_4mltr2.jpg",
+        "high_res": "/data/thumbnails/adams_97_4mltr2.jpg",
+        "original": "/data/thumbnails/adams_97_4mltr2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2xs235ha00000",
+      "name": "Adams Solist Marimba",
+      "description": "Adams Solist Marimba",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+      "product_url": "https://www.halilit.com/items/446475-adams-solist-marimba",
+      "is_sold": true,
+      "price": 16721.0,
+      "halilit_url": "https://www.halilit.com/items/446475-adams-solist-marimba",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 16721.0,
+        "original_price": 16721.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+        "high_res": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+        "original": "/data/thumbnails/adams_97_2xs235ha00000.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_447606_adams_symphonic_timpani_",
+      "name": "Adams Symphonic Timpani",
+      "description": "Adams Symphonic Timpani",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+      "product_url": "https://www.halilit.com/items/447606-adams-symphonic-timpani-",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/447606-adams-symphonic-timpani-",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+        "thumbnail": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+        "high_res": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+        "original": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_447608_baroque_timpani_adams",
+      "name": "Adams Baroque Timpani",
+      "description": "Adams Baroque Timpani",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+      "product_url": "https://www.halilit.com/items/447608-baroque-timpani-adams",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/447608-baroque-timpani-adams",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+        "thumbnail": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+        "high_res": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+        "original": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_solist_3_5",
+      "name": "Adams Solist Xylophones",
+      "description": "Adams Solist Xylophones",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_solist_3_5.jpg",
+      "product_url": "https://www.halilit.com/items/447609-adams-solist-xylophones",
+      "is_sold": true,
+      "price": 12921.0,
+      "halilit_url": "https://www.halilit.com/items/447609-adams-solist-xylophones",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 12921.0,
+        "original_price": 12921.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_solist_3_5.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_solist_3_5.jpg",
+        "high_res": "/data/thumbnails/adams_97_solist_3_5.jpg",
+        "original": "/data/thumbnails/adams_97_solist_3_5.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2vbc2alwv30",
+      "name": "Adams Solist Vibraphone",
+      "description": "Adams Solist Vibraphone",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+      "product_url": "https://www.halilit.com/items/447610-adams-solist-vibraphone",
+      "is_sold": true,
+      "price": 32620.0,
+      "halilit_url": "https://www.halilit.com/items/447610-adams-solist-vibraphone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 32620.0,
+        "original_price": 32620.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+        "high_res": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+        "original": "/data/thumbnails/adams_97_2vbc2alwv30.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2parfkg",
+      "name": "Adams Revolution Timpani",
+      "description": "Adams Revolution Timpani",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2parfkg.jpg",
+      "product_url": "https://www.halilit.com/items/531123-adams-revolution-timpani",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/531123-adams-revolution-timpani",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2parfkg.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2parfkg.jpg",
+        "high_res": "/data/thumbnails/adams_97_2parfkg.jpg",
+        "original": "/data/thumbnails/adams_97_2parfkg.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2paufkg",
+      "name": "Adams Universal Timpani",
+      "description": "Adams Universal Timpani",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2paufkg.jpg",
+      "product_url": "https://www.halilit.com/items/531128-adams-universal-timpani",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/531128-adams-universal-timpani",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2paufkg.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2paufkg.jpg",
+        "high_res": "/data/thumbnails/adams_97_2paufkg.jpg",
+        "original": "/data/thumbnails/adams_97_2paufkg.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2xfs2lrd35",
+      "name": "Adams Xylophone Academy",
+      "description": "Adams Xylophone Academy",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+      "product_url": "https://www.halilit.com/items/531157-adams-xylophone-academy",
+      "is_sold": true,
+      "price": 11.0,
+      "halilit_url": "https://www.halilit.com/items/531157-adams-xylophone-academy",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11.0,
+        "original_price": 11.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+        "high_res": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+        "original": "/data/thumbnails/adams_97_2xfs2lrd35.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_xb24mlxb5",
+      "name": "Adams Xylophone Mallets Soft",
+      "description": "Adams Xylophone Mallets Soft",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+      "product_url": "https://www.halilit.com/items/531178-adams-xylophone-mallets-soft",
+      "is_sold": true,
+      "price": 242.0,
+      "halilit_url": "https://www.halilit.com/items/531178-adams-xylophone-mallets-soft",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 242.0,
+        "original_price": 242.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+        "high_res": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+        "original": "/data/thumbnails/adams_97_xb24mlxb5.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_xb24mlxb4",
+      "name": "Adams Xylophone Mallets Medium",
+      "description": "Adams Xylophone Mallets Medium",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+      "product_url": "https://www.halilit.com/items/531182-adams-xylophone-mallets-medium",
+      "is_sold": true,
+      "price": 242.0,
+      "halilit_url": "https://www.halilit.com/items/531182-adams-xylophone-mallets-medium",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 242.0,
+        "original_price": 242.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+        "high_res": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+        "original": "/data/thumbnails/adams_97_xb24mlxb4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_xb24mlxb2",
+      "name": "Adams Xylophone Mallets Hard",
+      "description": "Adams Xylophone Mallets Hard",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+      "product_url": "https://www.halilit.com/items/531184-adams-xylophone-mallets-hard",
+      "is_sold": true,
+      "price": 242.0,
+      "halilit_url": "https://www.halilit.com/items/531184-adams-xylophone-mallets-hard",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 242.0,
+        "original_price": 242.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+        "high_res": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+        "original": "/data/thumbnails/adams_97_xb24mlxb2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2bd32",
+      "name": "Adams Concert 32\" Bass Drum",
+      "description": "Adams Concert 32\" Bass Drum",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2bd32.jpg",
+      "product_url": "https://www.halilit.com/items/447600-adams-concert-32-bass-drum-",
+      "is_sold": true,
+      "price": 13384.0,
+      "halilit_url": "https://www.halilit.com/items/447600-adams-concert-32-bass-drum-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 13384.0,
+        "original_price": 13384.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2bd32.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2bd32.jpg",
+        "high_res": "/data/thumbnails/adams_97_2bd32.jpg",
+        "original": "/data/thumbnails/adams_97_2bd32.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "adams_97_2bdiif4022",
+      "name": "Adams Concert 40\" Bass Drum",
+      "description": "Adams Concert 40\" Bass Drum",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+      "product_url": "https://www.halilit.com/items/447601-adams-concert-40-bass-drum",
+      "is_sold": true,
+      "price": 16206.0,
+      "halilit_url": "https://www.halilit.com/items/447601-adams-concert-40-bass-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 16206.0,
+        "original_price": 16206.0
+      },
+      "brand": "Adams",
+      "logo_url": "/assets/logos/adams_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+        "thumbnail": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+        "high_res": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+        "original": "/data/thumbnails/adams_97_2bdiif4022.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.456587",
+  "brand_slug": "adams",
+  "refined_at": "2026-01-26T06:43:37.463943+00:00",
+  "brand_identity": {
+    "id": "adams",
+    "name": "Adams",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/adams_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 16,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "adams_97_4mltr3",
+          "name": "Adams Timpani Mallets soft",
+          "description": "Adams Timpani Mallets soft",
+          "images": {
+            "main": "/data/thumbnails/adams_97_4mltr3.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_4mltr3.jpg",
+            "high_res": "/data/thumbnails/adams_97_4mltr3.jpg",
+            "original": "/data/thumbnails/adams_97_4mltr3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_4mltr1",
+          "name": "Adams Timpani Mallets Hard",
+          "description": "Adams Timpani Mallets Hard",
+          "images": {
+            "main": "/data/thumbnails/adams_97_4mltr1.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_4mltr1.jpg",
+            "high_res": "/data/thumbnails/adams_97_4mltr1.jpg",
+            "original": "/data/thumbnails/adams_97_4mltr1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_4mltr2",
+          "name": "Adams Timpani Mallets Medium",
+          "description": "Adams Timpani Mallets Medium",
+          "images": {
+            "main": "/data/thumbnails/adams_97_4mltr2.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_4mltr2.jpg",
+            "high_res": "/data/thumbnails/adams_97_4mltr2.jpg",
+            "original": "/data/thumbnails/adams_97_4mltr2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2xs235ha00000",
+          "name": "Adams Solist Marimba",
+          "description": "Adams Solist Marimba",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+            "high_res": "/data/thumbnails/adams_97_2xs235ha00000.jpg",
+            "original": "/data/thumbnails/adams_97_2xs235ha00000.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_447606_adams_symphonic_timpani_",
+          "name": "Adams Symphonic Timpani",
+          "description": "Adams Symphonic Timpani",
+          "images": {
+            "main": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+            "thumbnail": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+            "high_res": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+            "original": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_447608_baroque_timpani_adams",
+          "name": "Adams Baroque Timpani",
+          "description": "Adams Baroque Timpani",
+          "images": {
+            "main": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+            "thumbnail": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+            "high_res": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg",
+            "original": "/data/thumbnails/adams_447608_baroque_timpani_adams.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_solist_3_5",
+          "name": "Adams Solist Xylophones",
+          "description": "Adams Solist Xylophones",
+          "images": {
+            "main": "/data/thumbnails/adams_97_solist_3_5.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_solist_3_5.jpg",
+            "high_res": "/data/thumbnails/adams_97_solist_3_5.jpg",
+            "original": "/data/thumbnails/adams_97_solist_3_5.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2vbc2alwv30",
+          "name": "Adams Solist Vibraphone",
+          "description": "Adams Solist Vibraphone",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+            "high_res": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+            "original": "/data/thumbnails/adams_97_2vbc2alwv30.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2parfkg",
+          "name": "Adams Revolution Timpani",
+          "description": "Adams Revolution Timpani",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2parfkg.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2parfkg.jpg",
+            "high_res": "/data/thumbnails/adams_97_2parfkg.jpg",
+            "original": "/data/thumbnails/adams_97_2parfkg.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2paufkg",
+          "name": "Adams Universal Timpani",
+          "description": "Adams Universal Timpani",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2paufkg.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2paufkg.jpg",
+            "high_res": "/data/thumbnails/adams_97_2paufkg.jpg",
+            "original": "/data/thumbnails/adams_97_2paufkg.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2xfs2lrd35",
+          "name": "Adams Xylophone Academy",
+          "description": "Adams Xylophone Academy",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+            "high_res": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+            "original": "/data/thumbnails/adams_97_2xfs2lrd35.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_xb24mlxb5",
+          "name": "Adams Xylophone Mallets Soft",
+          "description": "Adams Xylophone Mallets Soft",
+          "images": {
+            "main": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+            "high_res": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+            "original": "/data/thumbnails/adams_97_xb24mlxb5.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_xb24mlxb4",
+          "name": "Adams Xylophone Mallets Medium",
+          "description": "Adams Xylophone Mallets Medium",
+          "images": {
+            "main": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+            "high_res": "/data/thumbnails/adams_97_xb24mlxb4.jpg",
+            "original": "/data/thumbnails/adams_97_xb24mlxb4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_xb24mlxb2",
+          "name": "Adams Xylophone Mallets Hard",
+          "description": "Adams Xylophone Mallets Hard",
+          "images": {
+            "main": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+            "high_res": "/data/thumbnails/adams_97_xb24mlxb2.jpg",
+            "original": "/data/thumbnails/adams_97_xb24mlxb2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2bd32",
+          "name": "Adams Concert 32\" Bass Drum",
+          "description": "Adams Concert 32\" Bass Drum",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2bd32.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2bd32.jpg",
+            "high_res": "/data/thumbnails/adams_97_2bd32.jpg",
+            "original": "/data/thumbnails/adams_97_2bd32.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "adams_97_2bdiif4022",
+          "name": "Adams Concert 40\" Bass Drum",
+          "description": "Adams Concert 40\" Bass Drum",
+          "images": {
+            "main": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+            "thumbnail": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+            "high_res": "/data/thumbnails/adams_97_2bdiif4022.jpg",
+            "original": "/data/thumbnails/adams_97_2bdiif4022.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

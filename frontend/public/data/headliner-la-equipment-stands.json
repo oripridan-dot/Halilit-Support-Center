@@ -1,0 +1,517 @@
+{
+  "brand_name": "Headliner La Equipment Stands ",
+  "products": [
+    {
+      "id": "headliner_la_equipment_stands__95_hl_covinastand",
+      "name": "Headliner Covina Controller Stand",
+      "description": "Headliner Covina Controller Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+      "product_url": "https://www.halilit.com/items/5721613-headliner-covina-controller-stand",
+      "is_sold": true,
+      "price": 250.0,
+      "halilit_url": "https://www.halilit.com/items/5721613-headliner-covina-controller-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 250.0,
+        "original_price": 250.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_3tierstand",
+      "name": "Headliner 3Tier Desktop Synth Stand",
+      "description": "Headliner 3Tier Desktop Synth Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+      "product_url": "https://www.halilit.com/items/5722130-headliner-3-tier-desktop-synth-stand",
+      "is_sold": true,
+      "price": 477.0,
+      "halilit_url": "https://www.halilit.com/items/5722130-headliner-3-tier-desktop-synth-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 477.0,
+        "original_price": 477.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_labrea_lpbrack",
+      "name": "Headliner La Brea Laptop Brackets",
+      "description": "Headliner La Brea Laptop Brackets",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+      "product_url": "https://www.halilit.com/items/5721117-headliner-la-brea-laptop-brackets",
+      "is_sold": true,
+      "price": 214.0,
+      "halilit_url": "https://www.halilit.com/items/5721117-headliner-la-brea-laptop-brackets",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 214.0,
+        "original_price": 214.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_noho_lpstand",
+      "name": "Headliner Noho Laptop Stand",
+      "description": "Headliner Noho Laptop Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+      "product_url": "https://www.halilit.com/items/5720622-headliner-noho-laptop-stand",
+      "is_sold": true,
+      "price": 228.0,
+      "halilit_url": "https://www.halilit.com/items/5720622-headliner-noho-laptop-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 228.0,
+        "original_price": 228.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_gigastand",
+      "name": "Headliner Gigastand",
+      "description": "Headliner Gigastand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+      "product_url": "https://www.halilit.com/items/5721151-headliner-gigastand",
+      "is_sold": true,
+      "price": 643.0,
+      "halilit_url": "https://www.halilit.com/items/5721151-headliner-gigastand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 643.0,
+        "original_price": 643.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_tabletholder",
+      "name": "Headliner Paramount Tablet Holder",
+      "description": "Headliner Paramount Tablet Holder",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+      "product_url": "https://www.halilit.com/items/5722175-headliner-paramount-tablet-holder",
+      "is_sold": true,
+      "price": 238.0,
+      "halilit_url": "https://www.halilit.com/items/5722175-headliner-paramount-tablet-holder",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 238.0,
+        "original_price": 238.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_digistandpro",
+      "name": "Headliner Digistand Pro Laptop Stand",
+      "description": "Headliner Digistand Pro Laptop Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+      "product_url": "https://www.halilit.com/items/5722215-headliner-digistand-pro-laptop-stand",
+      "is_sold": true,
+      "price": 477.0,
+      "halilit_url": "https://www.halilit.com/items/5722215-headliner-digistand-pro-laptop-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 477.0,
+        "original_price": 477.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_gigastandusb",
+      "name": "Headliner Gigastand USB",
+      "description": "Headliner Gigastand USB",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+      "product_url": "https://www.halilit.com/items/5721456-headliner-gigastand-usb",
+      "is_sold": true,
+      "price": 858.0,
+      "halilit_url": "https://www.halilit.com/items/5721456-headliner-gigastand-usb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 858.0,
+        "original_price": 858.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_avaloncdj",
+      "name": "Headliner Avalon CDJ Stand",
+      "description": "Headliner Avalon CDJ Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+      "product_url": "https://www.halilit.com/items/5721802-headliner-avalon-cdj-stand",
+      "is_sold": true,
+      "price": 883.0,
+      "halilit_url": "https://www.halilit.com/items/5721802-headliner-avalon-cdj-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 883.0,
+        "original_price": 883.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_modstand",
+      "name": "Headliner Mod Base Desktop Production Stand",
+      "description": "Headliner Mod Base Desktop Production Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+      "product_url": "https://www.halilit.com/items/5722075-headliner-mod-base-desktop-production-stand",
+      "is_sold": true,
+      "price": 358.0,
+      "halilit_url": "https://www.halilit.com/items/5722075-headliner-mod-base-desktop-production-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 358.0,
+        "original_price": 358.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_modriser",
+      "name": "Headliner Mod Riser Desktop Production Stand",
+      "description": "Headliner Mod Riser Desktop Production Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+      "product_url": "https://www.halilit.com/items/5722103-headliner-mod-riser-desktop-production-stand",
+      "is_sold": true,
+      "price": 477.0,
+      "halilit_url": "https://www.halilit.com/items/5722103-headliner-mod-riser-desktop-production-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 477.0,
+        "original_price": 477.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_2tierstand",
+      "name": "Headliner 2Tier Desktop Synth Stand",
+      "description": "Headliner 2Tier Desktop Synth Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+      "product_url": "https://www.halilit.com/items/5722115-headliner-2-tier-desktop-synth-stand",
+      "is_sold": true,
+      "price": 358.0,
+      "halilit_url": "https://www.halilit.com/items/5722115-headliner-2-tier-desktop-synth-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 358.0,
+        "original_price": 358.0
+      },
+      "brand": "Headliner La Equipment Stands ",
+      "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.642309",
+  "brand_slug": "headliner-la-equipment-stands",
+  "refined_at": "2026-01-26T06:43:38.649606+00:00",
+  "brand_identity": {
+    "id": "headliner-la-equipment-stands",
+    "name": "Headliner La Equipment Stands ",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/headliner-la-equipment-stands_logo.png",
+    "taxonomy_stats": {
+      "validated": 12,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "headliner_la_equipment_stands__95_hl_covinastand",
+          "name": "Headliner Covina Controller Stand",
+          "description": "Headliner Covina Controller Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_3tierstand",
+          "name": "Headliner 3Tier Desktop Synth Stand",
+          "description": "Headliner 3Tier Desktop Synth Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_labrea_lpbrack",
+          "name": "Headliner La Brea Laptop Brackets",
+          "description": "Headliner La Brea Laptop Brackets",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_labrea_lpbrack.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_noho_lpstand",
+          "name": "Headliner Noho Laptop Stand",
+          "description": "Headliner Noho Laptop Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_noho_lpstand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_gigastand",
+          "name": "Headliner Gigastand",
+          "description": "Headliner Gigastand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_tabletholder",
+          "name": "Headliner Paramount Tablet Holder",
+          "description": "Headliner Paramount Tablet Holder",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_digistandpro",
+          "name": "Headliner Digistand Pro Laptop Stand",
+          "description": "Headliner Digistand Pro Laptop Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_digistandpro.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_gigastandusb",
+          "name": "Headliner Gigastand USB",
+          "description": "Headliner Gigastand USB",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_gigastandusb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_avaloncdj",
+          "name": "Headliner Avalon CDJ Stand",
+          "description": "Headliner Avalon CDJ Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_avaloncdj.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_modstand",
+          "name": "Headliner Mod Base Desktop Production Stand",
+          "description": "Headliner Mod Base Desktop Production Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modstand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_modriser",
+          "name": "Headliner Mod Riser Desktop Production Stand",
+          "description": "Headliner Mod Riser Desktop Production Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_modriser.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headliner_la_equipment_stands__95_hl_2tierstand",
+          "name": "Headliner 2Tier Desktop Synth Stand",
+          "description": "Headliner 2Tier Desktop Synth Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_2tierstand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

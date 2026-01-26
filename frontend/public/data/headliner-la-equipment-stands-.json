@@ -1,0 +1,98 @@
+{
+  "brand_identity": {
+    "id": "headliner-la-equipment-stands-",
+    "name": "HEADLINER-LA-EQUIPMENT-STANDS-",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/headliner-la-equipment-stands-_logo.png",
+    "taxonomy_stats": {
+      "validated": 2,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "products": [
+    {
+      "id": "headliner_la_equipment_stands__95_hl_covinastand",
+      "name": "Headliner Covina Controller Stand",
+      "brand": "headliner-la-equipment-stands-",
+      "category": "drums",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+      "description": "Headliner Covina Controller Stand",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "drums",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg"
+      },
+      "category_hierarchy": [
+        "drums"
+      ]
+    },
+    {
+      "id": "headliner_la_equipment_stands__95_hl_3tierstand",
+      "name": "Headliner 3Tier Desktop Synth Stand",
+      "brand": "headliner-la-equipment-stands-",
+      "category": "keys",
+      "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+      "description": "Headliner 3Tier Desktop Synth Stand",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "keys",
+      "images": {
+        "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+        "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+        "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+        "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg"
+      },
+      "category_hierarchy": [
+        "keys"
+      ]
+    }
+  ],
+  "brand_name": "Headliner-La-Equipment-Stands-",
+  "brand_slug": "headliner-la-equipment-stands-",
+  "refined_at": "2026-01-25T09:02:28.268975+00:00",
+  "hierarchy": {
+    "drums": {
+      "General": [
+        {
+          "id": "headliner_la_equipment_stands__95_hl_covinastand",
+          "name": "Headliner Covina Controller Stand",
+          "description": "Headliner Covina Controller Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_covinastand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "keys": {
+      "General": [
+        {
+          "id": "headliner_la_equipment_stands__95_hl_3tierstand",
+          "name": "Headliner 3Tier Desktop Synth Stand",
+          "description": "Headliner 3Tier Desktop Synth Stand",
+          "images": {
+            "main": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+            "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+            "high_res": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg",
+            "original": "/data/thumbnails/headliner_la_equipment_stands__95_hl_3tierstand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

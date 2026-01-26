@@ -1,0 +1,230 @@
+{
+  "brand_name": "Austrian Audio",
+  "products": [
+    {
+      "id": "austrian_audio_47_hix20",
+      "name": "Austrian Audio Hi-X20",
+      "description": "Austrian Audio Hi-X20",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+      "product_url": "https://www.halilit.com/items/7530730-austrian-audio-hi-x20-headphones",
+      "is_sold": true,
+      "price": 540.0,
+      "halilit_url": "https://www.halilit.com/items/7530730-austrian-audio-hi-x20-headphones",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 540.0,
+        "original_price": 540.0
+      },
+      "brand": "Austrian Audio",
+      "logo_url": "/assets/logos/austrian-audio_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+        "thumbnail": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+        "high_res": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+        "original": "/data/thumbnails/austrian_audio_47_hix20.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "austrian_audio_47_hxcb3",
+      "name": "Austrian Audio HXCB3",
+      "description": "Austrian Audio HXCB3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+      "product_url": "https://www.halilit.com/items/7944879-austrian-audio-hxcb3-headphones-cable",
+      "is_sold": true,
+      "price": 111.0,
+      "halilit_url": "https://www.halilit.com/items/7944879-austrian-audio-hxcb3-headphones-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 111.0,
+        "original_price": 111.0
+      },
+      "brand": "Austrian Audio",
+      "logo_url": "/assets/logos/austrian-audio_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+        "thumbnail": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+        "high_res": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+        "original": "/data/thumbnails/austrian_audio_47_hxcb3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "austrian_audio_47_pb17",
+      "name": "Austrian Audio PB17 Professional Business Headset",
+      "description": "Austrian Audio PB17 Professional Business Headset",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+      "product_url": "https://www.halilit.com/items/4937138-austrian-audio-pb17-professional-business-headset",
+      "is_sold": true,
+      "price": 559.0,
+      "halilit_url": "https://www.halilit.com/items/4937138-austrian-audio-pb17-professional-business-headset",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 559.0,
+        "original_price": 559.0
+      },
+      "brand": "Austrian Audio",
+      "logo_url": "/assets/logos/austrian-audio_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+        "thumbnail": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+        "high_res": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+        "original": "/data/thumbnails/austrian_audio_47_pb17.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "austrian_audio_47_ocr8btremote",
+      "name": "Austrian Audio OCR8 Bluetooth Dongle",
+      "description": "Austrian Audio OCR8 Bluetooth Dongle",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+      "product_url": "https://www.halilit.com/items/3239809-austrian-audio-ocr8-bluetooth-dongle-remote-control-module-",
+      "is_sold": true,
+      "price": 739.0,
+      "halilit_url": "https://www.halilit.com/items/3239809-austrian-audio-ocr8-bluetooth-dongle-remote-control-module-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 739.0,
+        "original_price": 739.0
+      },
+      "brand": "Austrian Audio",
+      "logo_url": "/assets/logos/austrian-audio_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+        "thumbnail": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+        "high_res": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+        "original": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "austrian_audio_47_ocp8popfilter",
+      "name": "Austrian Audio OCP8 Pop Filter",
+      "description": "Austrian Audio OCP8 Pop Filter",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+      "product_url": "https://www.halilit.com/items/3334402-austrian-audio-ocp8-pop-filter",
+      "is_sold": true,
+      "price": 140.0,
+      "halilit_url": "https://www.halilit.com/items/3334402-austrian-audio-ocp8-pop-filter",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 140.0,
+        "original_price": 140.0
+      },
+      "brand": "Austrian Audio",
+      "logo_url": "/assets/logos/austrian-audio_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+        "thumbnail": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+        "high_res": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+        "original": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.328085",
+  "brand_slug": "austrian-audio",
+  "refined_at": "2026-01-26T06:43:37.353095+00:00",
+  "brand_identity": {
+    "id": "austrian-audio",
+    "name": "Austrian Audio",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/austrian-audio_logo.png",
+    "taxonomy_stats": {
+      "validated": 5,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "austrian_audio_47_hix20",
+          "name": "Austrian Audio Hi-X20",
+          "description": "Austrian Audio Hi-X20",
+          "images": {
+            "main": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+            "thumbnail": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+            "high_res": "/data/thumbnails/austrian_audio_47_hix20.jpg",
+            "original": "/data/thumbnails/austrian_audio_47_hix20.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "austrian_audio_47_hxcb3",
+          "name": "Austrian Audio HXCB3",
+          "description": "Austrian Audio HXCB3",
+          "images": {
+            "main": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+            "thumbnail": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+            "high_res": "/data/thumbnails/austrian_audio_47_hxcb3.jpg",
+            "original": "/data/thumbnails/austrian_audio_47_hxcb3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "austrian_audio_47_pb17",
+          "name": "Austrian Audio PB17 Professional Business Headset",
+          "description": "Austrian Audio PB17 Professional Business Headset",
+          "images": {
+            "main": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+            "thumbnail": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+            "high_res": "/data/thumbnails/austrian_audio_47_pb17.jpg",
+            "original": "/data/thumbnails/austrian_audio_47_pb17.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "austrian_audio_47_ocr8btremote",
+          "name": "Austrian Audio OCR8 Bluetooth Dongle",
+          "description": "Austrian Audio OCR8 Bluetooth Dongle",
+          "images": {
+            "main": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+            "thumbnail": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+            "high_res": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg",
+            "original": "/data/thumbnails/austrian_audio_47_ocr8btremote.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "austrian_audio_47_ocp8popfilter",
+          "name": "Austrian Audio OCP8 Pop Filter",
+          "description": "Austrian Audio OCP8 Pop Filter",
+          "images": {
+            "main": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+            "thumbnail": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+            "high_res": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg",
+            "original": "/data/thumbnails/austrian_audio_47_ocp8popfilter.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

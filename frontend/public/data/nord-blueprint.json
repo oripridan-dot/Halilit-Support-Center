@@ -1,0 +1,2021 @@
+{
+  "brand_identity": {
+    "id": "nord",
+    "name": "Nord Keyboards",
+    "website": "https://www.nordkeyboards.com",
+    "logo_url": "/assets/logos/nord-blueprint_logo.png",
+    "brand_colors": {},
+    "taxonomy_stats": {
+      "validated": 3,
+      "normalized": 6,
+      "uncategorized": 0
+    }
+  },
+  "products": [
+    {
+      "id": "nord-nord-drum-3p",
+      "brand": "Nord",
+      "name": "Nord Drum 3P",
+      "sku": null,
+      "main_category": "drums",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The super compact Nord Drum 3P combines stunning playability with unlimited sound design possibilities. New features include integrated multi-pad, Reverb and Delay effects, a simplified sound selection mode and new Sound Banks for quickly creating custom kits on the fly. The Drum Select feature lets you browse a wide selection of great sounding drums sounds, simply assigned to each pad individually. Easily replace toms, cymbals or kicks in seconds by selecting from our new preset library. The Drum Select banks feature 9 categories of great preset sounds that can be easily assigned to any of the six pads/channels - and is a great starting point in rehearsal situations when you need to find the right sounds in a matter of seconds. The categories include Bass drums, Snare drums, Toms, Hi-hats, Cymbals, Percussion, Bells, Tuned Percussion and Effects. The Sound generation takes place in the three sections Tone, Noise and Click. The sounds of the Nord Drum 3P are all synthesized in real-time - allowing you to both sculpt and play sounds with a unique dynamic response, regardless if you prefer to play with drum sticks or from a sequencer. The Tone Section is specialized for creating tonal and harmonically complex sound spectras and has four synthesis modes – Resonant synthesis, Subtractive Synthesis, Frequency Modulation and Ring Modulation synthesis. The Resonant synthesis mode offers a wide range of complex spectras inspired by materials like drum heads, marimba, vibraphone, tines and cymbals. A unique feature includes the possibility to tune harmonic spectra. The Subtractive Wave types include Sine, Saw, Square, Pulse waveforms and T-Bridge Oscillators and are brilliant for creating classic synth-type drum sounds and effects. The FM Synthesis mode features 6 different FM algorithms where the Frequency parameter controls modulation amount and Spectra controls modulation frequency. The Ring Modulation mode features 2 different types of Ring Modulation. The Nord Drum 3P offers great control over the dynamic response of the harmonic spectras. When using Resonant synthesis waveforms the upper parts of the harmonic spectra be controlled with velocity, giving it a brighter timbre when played hard. When using the Subtractive synthesis mode, the Frequency parameter controls the cut-off frequency of a Low-Pass filter and the Dyn Filter controls how much the filter should respond to velocity . The Decay controls the decay of the whole spectra, with a choice of Linear and Exponential decay envelopes. A Dynamic Decay mode lets you set different Decay lengths for soft and hard strokes. The Punch Decay adds more attack to the Tone by giving the fundamental pitch an ultra-fast envelope at the very beginning of the sound. The Bend parameter provides a powerful, velocity sensitive pitch envelope. Use it to create attack-like effects but also more radical bending sounds that travel up or down when played such as the sound of a raindrop, tablas or the classic 80’s “pioouw” tom-sound. The Noise section is all about producing noise and is very powerful. Create anything from silky smooth hiss to gritty gravel to give the Tone part of the sound more texture. The Noise can be sculpted with Low-Pass, High-Pass or Band-Pass filters with Cut-Off and Resonance controls. Once you've found the noise of your choice, it can be adjusted to respond dynamically to velocity in the same manner as with the Tone section with the Dyn Filter control. The Decay control is just as powerful, with a choice of Linear, Exponential and Gated decay types. A Dynamic Decay mode lets you set different Decay lengths for soft and hard strokes. Combine this with the equally powerful dynamic controls of the Tone Section and it won’t take long before realizing the potential for creating complex sounds with fascinating material-like behaviors! The Click-section is a specialized section for an ultra-short attack to the sound. A wide range of different click types are available as well as a level control for finding the sweet spot where the Click merges with the other elements and becomes one coherent sound. Each of the 6 channels of the Nord Drum 3P has its own powerful effects – Drive, EQ and Ring Modulation. Adding just a touch of Drive to your sounds can make a huge difference in terms of realism, while the Sample-Rate reduction is perfect for Lo-fi crackling effects. Ring Modulation can be used for slow tremolo-like effects to total atonal mayhem. A flexible parametric Equalizer with selectable band and amount is also available for each channel, brilliant for adding some finish or attitude to your sounds. The Nord Drum 3 features two new Master Effects, Reverb and Delay. The Reverb features 5 room algorithms (Tiled Room, Room, Plate, Stage and Hall) with controls for tonal color. The Delay effect features a Tap Tempo-mode and adjustable feedback amount. The amount of Reverb and Delay can be set individually for each of the 6 channels of the Nord Drum 3P. The Mute Group gives you the option to create sounds that can cancel each other out. Only one of the members of the group can sound at a time, and can be used for creating a close/open hi-hat behavior and emulating muting techniques from hand percussion. Tuned Percussion kits can be created instantly by selecting one of the Scale Presets, which include Chord Scales, Pentatonic, Hang Tunings and Hexatonic. The handy Edit All mode let’s you edit all 6 channels simultaneously, for example reverb, distortion or delay. MIDI in/out is also available for using the Nord Drum 3P with any kind of MIDI pads or sequence it from an external MIDI Sequencer. All of the Nord Drum 3P sound parameters can be controlled via CC-controls over MIDI. If you own an iPad don't miss our free iPad app Nord Beat, specifically designed for sequencing the Nord Drum 3P via MIDI. The Channel Mixer sets the level for each channel and also features a Pan control for creating a lush stereo image. If you like to send the kick to a separate output, just pan that channel all the way to the left and the other channels to the right. Everything you play when using the multipads and external input is automatically output to the MIDI output, making the Nord Drum 3 a brilliant controller for other sound sources via MIDI.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FDrum_3P_hero.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Drum 3P hero"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Drum_3P_-_Panel.width-500.jpg",
+          "type": "gallery",
+          "alt_text": "Drum 3P - Panel 1"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Drum_3P_-_Panel-sound_creation.width-500.jpg",
+          "type": "gallery",
+          "alt_text": "Drum 3P - Panel-sound creation"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Drum_3P_-_Panel_effects.width-500.jpg",
+          "type": "gallery",
+          "alt_text": "Drum 3P - Panel effects"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FDrum_3P_hero.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Drum 3P hero"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-drum-3p/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "drums",
+      "category_hierarchy": [
+        "drums"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FDrum_3P_hero.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FDrum_3P_hero.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-lead-a1",
+      "brand": "Nord",
+      "name": "Nord Lead A1",
+      "sku": null,
+      "main_category": "Lead",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Lead A1 is a 4-part multitimbral synth with a classic layout, extensive filter options and effects. With its powerful panel interface and pre-programmed modulation matrix, creating unique and exciting sounds is very inspirational and quick. At the heart of the Lead A1 is our new analog modeling engine. Taking our virtual analog synthesis to the next level, this modeling recreates a total analog signal path with uncanny realism, and is capable of immense sonic variety. With 26-voice polyphony and four simultaneous synthesizer parts, the Lead A1 is a true synthesizer powerhouse that goes far beyond the current trend for limited capability analog reissues. Fundamental to the design of the Lead A1 is a brand new simple yet sophisticated front panel interface. The design is in fact the result of requests from professional players – even the most experienced programmers - who need to create the perfect sound as quickly as possible for today's live or studio time demands. The Lead A1 allows easy patch creation and experimentation thanks to a new and unique oscillator section, pre-programmed modulation matrix, and simplified ADR envelopes. Dive in and create incredible patches far quicker than would normally be possible with a synthesizer of such power. The Lead A1's new Oscillator section generates 47 different waveforms from classic analog to digital harmonic and inharmonic waves, whilst unique Oscillator Configuration Shortcuts make programming more immediate than ever. Start with a single Oscillator waveform select an Oscillator Configuration Shortcut - Pitch, Detune, Shape, Sync, Sub Mix, FM, AM or Noise - and use the Adjust knob to adjust the settings of the configuration. The end result is high speed programming without the need for the usual complexity of routing and patching, and with the opportunity for ready experimentation. A fast track to stunning sound design for both advanced and less experienced programmers. Pitch - adjusts the pitch of the original oscillator. DeTune - adds a second oscillator, with control over its pitch. Sub Mix - adds a second oscillator, with a choice of waveform shapes and pitches. Shape - The shaping of the Analog, Extended Analog and Fixed Pulse waveforms uses a traditional waveshaping method, the other waveforms are changed with a spectral shaping process. Sync - emulates Hard sync by adding an additional oscillator that is the sync reference. FM - Oscillator 1 will be modulated by a sine wave from oscillator 2 at high frequencies. There are several different pitch offsets for oscillator 2 (-12 to +48 semitones). AM - uses a second oscillator to create Amplitude Modulation. Noise - adds a Noise element to the original oscillator, Osc Control sets the mix. The Lead A1's filter section features classic 12 and 24 dB Low Pass, a High Pass and a Band Pass filter, together with stunning emulations of the diode and ladder filters from the legendary Mini and the TB-303 synthesizers as used in the Lead 4. The Lead A1's modeling of these filters capture the true character and response of the originals, allowing supremely flexible and precise sound design. The filters are super-smooth with a warm analog character. The Lead A1's effects section features two stunning brand new analog models of an Ensemble and Chorus, modeled on specific vintage synths and adding classic warmth and analog feel. Alongside these, choose from great-sounding Ring Modulation, Phaser, Flanger, or Drive per slot, and in addition a separate Delay and Reverb for each slot. A classic Nord feature, the Morph function via Mod Wheel, Velocity or pedal, allows you to control multiple parameters of the Lead A1 simultaneously. Morph is exceptionally easy to set-up and use - just hold the Morph button and adjust any desired knob. The Lead A1 features four separate Arpeggiators with Up/Down and Random modes and a 4-octave range. Any or all can be sync'd to the Lead A1's master clock. The Master Clock function of the Lead A1 allows the LFO, Arpeggiator and Delay to be synchronized, either internally or slaved to external MIDI clock. A Tap Tempo button allows you to easily tap to the tempo of a drummer or to playback tracks. Having four identical, equally powerful synthesizers at once opens breathtaking layering possibilities. The Split-mode gives you two 2 slots on each side of the split. A flexible Hold functionality lets you latch and hold slots independently in the background while playing something else on top. New in the Lead A1 is the Multi-Focus Mode that allows editing and control of all four slots simultaneously. Save this mode as part of a Performance and you have live realtime control over all four slots of the Lead A1. The Lead A1 features four independent audio outputs with the ability to route each slot to a different output. Plus control of Pan via the front panel knob is a welcome new addition in the Lead A1. Unique to the Nord Lead A1 is the new 'Like' function, a simple and brilliant practical feature to use during patch creation. When programming a patch it's often not clear if it's yet perfect. Now with the Lead A1 you can simply 'Like' what you've done into a temporary location and continue editing. You can Like up to 50 variations, with the ability to scroll between them to compare your favourites or go back to a specific Liked version to edit in a different way. When you're ready, save your favourite patch or patches to the Lead A1's memory. A popular feature of the Lead 4, the Mutator function allows variations of a patch to be created by adjusting one, some, or all elements of a patch by set percentages. There's also a wild Randomize mode to create an entirely new patch with all parameters randomized. A newly designed \"Fat-As-Fat-Can-Be\" Unison Mode let's the Lead A1 challenge any vintage analog instrument.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FA1_-_Top.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Lead-A1-top"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FLead-A1-oscillator.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Lead A1"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FA1_-_Top.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Lead-A1-top"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FLead-A1-oscillator.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Lead A1"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-lead-a1/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "Lead",
+      "_taxonomy_warning": "Category 'Lead' not in official taxonomy",
+      "category_hierarchy": [
+        "Lead"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FA1_-_Top.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FA1_-_Top.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-piano-6",
+      "brand": "Nord",
+      "name": "Nord Piano 6",
+      "sku": null,
+      "main_category": "keys",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The latest generation of the Nord Piano series features a new panel design with LED faders, dual layers for Piano and Synth with independent effects and a premium Triple Sensor keybed. Combined with excellent portability and our world-class sounds, the Nord Piano 6 offers great flexibility for performance and sound creation. 88-key Triple Sensor Hammer Action Keybed The Nord Piano 6 has a new panel design with dedicated LED faders for Piano and Synth sections as well as knobs and buttons for all essential features, offering great flexibility when performing and designing sounds. The dual Piano and Synth engines can be layered together or split across the keyboard, with each layer featuring its own dedicated Effects section. The Nord Piano 6 contains a large selection of Grands, Uprights and Electric Pianos from our exclusive Nord Piano Library along with new features such as Dynamic Compression and Unison. Our state-of-the-art sampling technique captures the extraordinary nuances and real character of the source instruments. The new included Nord Triple Pedal 2 enables our unique ‘Advanced String Resonance’ and Dynamic Pedal Noise features, delivering stunning realism and expressiveness. The Sample Synth features two independent layers and comes with a broad collection of new and updated sounds, ranging from strings, wind, brass, basses and guitars to classic analog leads and basses. The factory bank includes exclusive high-end samples from the acclaimed Spitfire, Symphobia and Swing libraries. The Sample Synth section provides two fully-featured and independent Layers equipped with intuitive controls for attack, decay/sustain, release and dynamic velocity response. Additional Sample Synth features include Unison, which blends multiple sample voices for rich, ensemble-like sounds and “Tru-Vibrato”, capturing the unique vibrato characteristics of various acoustic instruments. The advanced Round-Robin feature allows for a natural sound when repeating notes. The Nord Piano 6 has an expanded new Effects section per Layer. The wide range of Effects includes brand new types of Reverb, Delay, Amps and Modulation effects.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Nord - NP6 - Top 88 - 250113 - crop"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/U5q0hJBR/Nord%20-%20NP6%20-%20Program%20Panel.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Piano 6 Program panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/bRd257mB/NP6%20Piano-1.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NP6 Piano-1"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/icH96OG4/NP6%20Piano%23.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NP6 Piano#"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/9P2irFNP/NP6%20Effects.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NP6 Effects"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord - NP6 - Top 88 - 250113 - crop"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord - NP6 - Top 88 - 250113 - crop"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-piano-6/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "keys",
+      "category_hierarchy": [
+        "keys"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-stage-4",
+      "brand": "Nord",
+      "name": "Nord Stage 4",
+      "sku": null,
+      "main_category": "Stage",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The latest generation of our iconic flagship series – the Nord Stage 4 features a new intuitive panel design, a premium triple sensor keybed, and complete effect sections for each layer. With significant enhancements to our award-winning technologies - the Stage 4 sets a new standard for live performance stage keyboards. 88-key weighted triple sensor keybed with aftertouch and physical drawbars with LED The Nord Stage 4 features a brand new panel design with dedicated LED faders for each Layer, providing exceptional overview and flexibility when creating sounds and performing live. The new Preset Library is packed with inspiring ready-to-use Piano, Synth and Organ sounds for quick and smooth patch creation. The Layer Scene lets you seamlessly switch between two different sound setups at the touch of a button. Adding a powerful new Effect section coupled with versatile pedal options and a premium Triple Sensor keybed, the Nord Stage 4 offers a new level of musical expression. The Nord Stage 4 comes with a new enhanced collection of Grands, Uprights and Electric Pianos from our exclusive Nord Piano Library combined with new features such as Dynamic compression and Unison. Nord’s state-of-the-art sampling techniques capture the extraordinary nuances and real character of the source instruments. Our unique ‘Advanced String Resonance’ and Dynamic Pedal Noise features deliver breathtaking realism and an unsurpassed level of expressiveness. The Synth section with its three independent Layers is based on the powerful Nord Wave 2 Synth Engine, including Virtual Analog synthesis, Samples, FM and Wavetable. An extensive new collection of samples from the Nord Sample Library offers a broad sonic palette of Strings, Bass, Choirs, Guitars and much more. The advanced Arpeggiator features new Polyphonic, Gate and Pattern modes and can be used for a huge variety of rhythmic applications with customizable patterns. The Organ section features our award-winning simulations of B3 Tonewheel, B3 Bass, classic Vox and Farfisa as well as two Pipe Organ models. All Stage 4 models are equipped with our new Physical drawbars with LED indicators for optimal hands-on experience and overview. The Nord Stage 4 has a powerful new Effect section offering a complete setup of Effects for each Layer. The extensive range of Effects includes a new Pump effect for side chain simulation, a new Spin effect and brand new variations of Reverb, Delay, Amps and Modulation effects.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Nord Stage 4 88"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/QGeXFM5V/NS4_TecAwards.width-500.jpg",
+          "type": "gallery",
+          "alt_text": "NS4_TecAwards"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Jl7f4ELM/NS4-Panel-piano.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Stage 4 piano panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/45uiE0kc/NS4-Panel-synth.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Stage 4 synth panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/2UvfOZaA/NS4-Panel-organ.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Stage 4 organ panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/L0rPACoR/NS4-Panel-effects.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Stage 4 effects panel"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Stage 4 88"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Stage 4 88"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-stage-4/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/embed/nJ6SsRPLCfo?feature=oembed",
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "Stage",
+      "_taxonomy_warning": "Category 'Stage' not in official taxonomy",
+      "category_hierarchy": [
+        "Stage"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-electro-6",
+      "brand": "Nord",
+      "name": "Nord Electro 6",
+      "sku": null,
+      "main_category": "Electro",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic. 73-note Semi-Weighted Waterfall keybed *All specifications subject to change without further notice The new streamlined Program section features a handy Organize mode including Copy/Paste and Move functionality for quickly arranging your Programs to your desired order. A new Page View lets you easily sort and organize pages as a song list. All Programs, Pianos and Synth Samples are easily navigated using the new List View that offers alphabetical, numerical and category sorting options. The panel has three independent sound sections; Organ, Piano and Sample Synth that can be used simultaneously as a layer or a split. It features 6 Split Points and the new Split Point Crossfade functionality introduced with the Stage 3 for smooth transitions between two split zones. Choose from 3 different crossfade widths (Small, Large or Off) as indicated by different LED colors. The Nord Electro 6 features automatically seamless transitions when changing sounds or programs while playing. The Nord Electro 6 features our award-winning Nord C2D Organ simulations of B3 Tonewheel, B3 Bass and Vintage Transistor Organs plus two Pipe Organ models. The Organ section features our acclaimed Nord C2D Organ engine including the extremely authentic B3 Tonewheel simulation with four different tone wheel settings, ranging from factory new clean to leaky old vintage. An improved dedicated Bass mode simulating the Pedal Bass Tonewheels are available for either splitting with a Piano or Synth or with a B3 Upper Manual in Dual Organ Mode. Our impeccable simulations of the classic 1960’s Transistor Organs, Vox Continental and Farfisa Compact with all the classic settings, are also included in the Organ section. The Organ section now contains two different Pipe Organ models. The new Pipe 1 is a pure Organ with few harmonics. The Pipe 2, introduced with the Electro 5, is a recreation of metal pipes that commonly make up the backbone of a pipe or church organ, and now includes a special new detune mode when enabling Vibrato/Chorus. The Nord Electro 6 has the latest generation of our vintage 122 Rotary Speaker simulation adding an essential character to a live organ performance and features Slow, Fast and Stop mode as well as a Drive control. The Electro 6D 61 and 73 support the Nord Half-moon Switch (optional accessory). The dedicated new Dual Organ mode provides quick access to dual manual setups and offers great overview and control of the drawbar settings for both the Lower and Upper manual. The Electro 6D 61 and 73 feature Physical Drawbars offering ultimate hands-on experience for the dedicated organ players. The Electro 6 HP features Digital LED Drawbars, offering excellent overview over current settings. The Piano section has a wide selection of acoustic, electric and digital pianos from the exclusive Nord Piano Library, extended voice polyphony and creative new Piano Filters. The Nord Electro 6 factory bank contains an extensive selection of our latest Grands, Uprights, Electric Pianos and Digital Pianos from the exclusive Nord Piano Library - all handpicked for their unique characters! The Piano section also features our new “Layer” category with rich dynamic layered patches. Nord’s state-of-the-art sampling techniques capture the extraordinary nuances and real character of the source instruments and unique ‘Advanced String Resonance’ delivers breathtaking realism and an unsurpassed level of expressiveness. The Factory Bank features a great selection from the Nord Piano Library but you can easily add or replace any of these sounds using the Nord Sound Manager. Our exclusive Nord Piano Library is constantly updated with new exclusive world class sounds, and always free of charge. Providing an additional level of sonic control, the Piano Section now features dedicated piano filters for accentuating softness, mid or brilliance. A Soft Release-mode adds a slightly longer release, more suitable for legato playing, emulating a looser damper tension in an acoustic or an electromechanical instrument. 4 dynamic curves are available to suit your playing style, from soft to hard. The enhanced Sample Synth Section features expanded memory for the Nord Sample Library 3.0 and extended polyphony. The Sample Synth Section contains a broad selection of high quality sounds from the Nord Sample Library 3.0 including the exclusively licensed sounds of the legendary Mellotron and Chamberlin. The Sample Synth is equipped with essential controls for attack, decay/release and dynamics (filter/velocity). A unique Nord feature allows you to create your own samples using the free Nord Sample Editor software for WIndows and Mac. The powerful Effect section features a wide range of instantly tweakable high quality effects modelled after classic stomp boxes. All effects are stereo and can be assigned freely to the Organ, Piano or Synth sections. Here you can choose from Tremolo, two Wahs, an Auto-Wah, and an AutoPan. Use the AutoWah with a Clavinet for raw funk licks, create a psychedelic vibe with an Electric Piano on AutoPan, or give a Wurlitzer some body using the Tremolo. There is also a Ring Modulator on board, an effect used by many experimental and electronic musicians. The two Phasers, two Choruses, the Flanger and a Vibe effect are modeled from the classic analog stomp boxes that define the sound of popular music. Features authentic JC, Twin and Small speaker simulations with adjustable Drive, plus a separate Tube Drive simulation and a Compressor. A 3-band Equalizer with sweepable mid. The Delay effect features a Tap Tempo, Feedback and Mix (Dry/Wet), as well as controls for Ping-Pong mode and Tap Tempo. The Nord Electro 6 has three different Reverb types (Hall, Stage and Room) for adding some ambience to your sounds. All Reverb types also has a Bright mode.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNord_Electro6D_73_Large_60.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "models-electro6-73"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6-performance.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6D-Organ-Section_1.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6-Dual-Organ-Mode_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_piano-section-angle.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_synth-section.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_img3.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNord_Electro6D_73_Large_60.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "models-electro6-73"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6-performance.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6D-Organ-Section_1.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6-Dual-Organ-Mode_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_piano-section-angle.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_synth-section.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_img3.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Electro 6"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-electro-6/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "Electro",
+      "_taxonomy_warning": "Category 'Electro' not in official taxonomy",
+      "category_hierarchy": [
+        "Electro"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNord_Electro6D_73_Large_60.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNord_Electro6D_73_Large_60.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-wave-2",
+      "brand": "Nord",
+      "name": "Nord Wave 2",
+      "sku": null,
+      "main_category": "Wave",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Wave 2 is a powerful 4-part performance synthesizer combining Virtual Analog synthesis, Samples, FM and Wavetable with an intuitive layer-focused interface. With 48 voice polyphony, innovative performance features and hands-on controls, the Nord Wave 2 offers outstanding sonic possibilities with advanced layering and tweaking on the fly. With 4 independent synthesizers in one the Nord Wave 2 offers exceptional possibilities for layering both classic waveforms and samples. Dedicated OLED displays for Program and Oscillator sections provide an excellent overview when shaping your sounds. The wide range of performance features and instantly tweakable hands-on effects makes the Wave 2 our most versatile performance synthesizer ever. The new Monitor mode displays your settings for Amp Envelope and Filters in the Program display for better overview and control. The Wave 2 features a Program Layer section with faders for easily controlling the volume or pan for all 4 layer parts at once. The Layer section also provides handy features for quick layer focus, pan control, solo and multi-editing. The Split mode offers three split points providing up to 4 zones with optional crossfades. The flexible Hold functionality lets you latch and hold slots independently in the background while playing something else on top. The new Group feature allows you to group 2, 3 or 4 layers and lets them share the same Filter, Envelope, Arpeggiator, LFO and Effect-settings - perfect when creating complex multi-layered sounds that can be edited as one coherent sound. The Oscillator section for each of the 4 layers offers 4 modes: Analog, Wavetable, FM and Samples and is easily browsed with our new direct category mode. The Oscillator Control features additional control over shape, sync or detune. Analog: an extensive range of waveforms from classic analog to extended, harmonically rich new additions. Samples: include high-quality samples from our Nord Sample Library 3.0 as well as the possibility to add your own custom samples using the Nord Sample Editor 3. Use the embedded sample presets for instantly playable dynamic sounds or sculpt your own sound from scratch with the \"Raw Samp\" mode. Wavetable: A large number of advanced wavetables covering a wide range of tonal characteristics. FM 2, 3 and 4 operator configurations with harmonic and inharmonic variations. The Wave 2 features a powerful multi-oscillator Unison effect with true Superwaves simultaneously generating hundreds of waveforms for extremely thick and fat sounds. The Sample section comes loaded with a wide selection of quality samples including Strings, Brass, Guitars, Choirs, Chromatic Percussion as well as the exclusively licensed sounds of the legendary Mellotron and Chamberlin. All sounds are easily replaceable using the Nord Sound Manager. Adding your own custom sample instruments has never been easier thanks to the new streamlined Nord Sample Editor 3 for Mac and Windows that lets you map, loop and transfer samples to your Nord Wave 2 in a breeze. The Filter section has 6 Filter types featuring classic 12 and 24 dB Low Pass, a High Pass, High Pass/Low Pass and a Band Pass filter, together with a stunning emulation of the transistor ladder filter from the legendary Mini. The unique modeling of these filters captures the true character and response of the classic analog instruments, allowing for flexible and precise sound design. The Filter section is equippied with full ADSR envelope. The Wave 2 features a dedicated LFO for each layer with a choice of waveforms plus AD/AR Modulation Envelope with dedicated velocity setting and Invert mode. The LFO has several morphable parameters and the rate can be synchronized to the Master Clock. The Amp Section is equipped with a full ADSR envelope featuring a powerful new Transient Attack mode for adding more punch to your sounds. The Wave 2 features an extensive range of morphable parameters that can be controlled from four different sources: Velocity, Aftertouch, Wheel and Control Pedal. All morph sources can be quickly assigned to control multiple parameters simultaneously and the powerful Impulse Morph feature lets you instantly change any parameter of your sound. Instantly assign LFO, Oscillator Control or Filter to the Modulation Wheel. The Nord Wave 2 is truly a rhythmical powerhouse with both a classic arpeggiator and a polyphonic mode with directly editable patterns. The Poly mode is a polyphonic Arpeggiator that will retrig all held keys either straight or patterned featuring different inversions for exciting harmonic variations. The brand new Gate mode chops your sound up in a rhythmic pattern with adjustable depth. The Pattern mode contains a wide selection of Rhythmic Patterns allows easy editing for creating your own custom patterns. The Master Clock of the Wave 2 allows the LFO, Arpeggiator and various effects to be synchronized, either internally or by an external MIDI clock. With Master Clock synchronization you can synchronize 4 layers with individual patterns, all perfectly in sync with Delays and LFO's. A Tap Tempo allows you to easily tap to the tempo of a drummer or to playback tracks. A separate Effect section for each layer featuring a great selection of instantly tweakable high quality stereo effects modelled after classic stomp boxes. Tremolo, Pan, Ring Modulator, Chorus, Ensemble and Vibe effects with Rate and Amount control. All effects are controllable via Control Pedal (or other Morph sources) and can also be synchronized to the Master Clock for rhythmic effects. EQ with Bass and Treble control - or 1 Band Sweepable EQ. A sparkling Tube Drive emulation is also available. Advanced stereo Delay effect with Ping Pong mode, Analog Mode and Tap Tempo. New features include creative new Feedback options for adding Ensemble, Chorus, Vibe as well as HP/LP and BP filter in the Feedback loop. The Reverb section has five different Reverb sizes (Booth, Room, Stage, Hall and new Cathedral) for adding some ambience to your sounds, and the amount is now morphable. New features include Bright and Dark modes for either extended or reduced treble. The new Chorale effect adds a lush modulation effect.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Top.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Wave 2 - Top 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Angled_Side_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Layer_Angled_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Oscillator_Section_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FSample_Editor_4.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Envelopes_Angled_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_Section_Angled_2Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Top.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Wave 2 - Top 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Angled_Side_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Layer_Angled_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Oscillator_Section_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FSample_Editor_4.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Envelopes_Angled_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_Section_Angled_2Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_1Wave_2.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord Wave 2"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-wave-2/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "Wave",
+      "_taxonomy_warning": "Category 'Wave' not in official taxonomy",
+      "category_hierarchy": [
+        "Wave"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Top.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Top.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-grand-2",
+      "brand": "Nord",
+      "name": "Nord Grand",
+      "sku": null,
+      "main_category": "Grand",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Grand 2 features the latest generation premium Hammer Action keyboard from Kawai. Combining the responsive feel of an acoustic grand piano with our world renowned Sound Libraries and a tactile user interface, the sleek and elegant Nord Grand 2 offers a genuinely unique experience. The Nord Grand 2 features a new and improved Kawai responsive hammer keyboard with triple sensors for accurate tracking of hammer movement. Maintaining the ease of use of the original Nord Grand while adding dual layers of Piano and Synth, the Nord Grand 2 offers great flexibility for performance and sound creation. The well balanced and responsive triple sensor keybed features an advanced hammer mechanism providing extraordinary control through the entire dynamic range. The Nord Grand 2 features dedicated LED faders for each layer, as well as knobs and buttons for all essential functions required in a live performance. Performing tasks such as Creating Layers and Splits, adding effects or transposing the instrument can be performed instantly. The dual Piano and Synth engines can be combined in a layer or split across the keyboard. Each layer has a dedicated effects section. The Nord Grand 2 has 10 Split Points indicated with LED lights and the Split Point Crossfades offer smooth transitions between two split zones. Choose from 3 different crossfade widths (Small, Large or Off) as indicated by different LED colors. The Nord Grand 2 comes with an extensive collection of Grands, Uprights and Electric Pianos from our exclusive Nord Piano Library combined with new features such as Dynamic Compression and Unison. Our state-of-the-art sampling technique captures the extraordinary nuances and real character of the source instruments. The unique ‘Advanced String Resonance’ and Dynamic Pedal Noise features deliver stunning realism and an unsurpassed level of expressiveness. Two independent Sample Synths with greatly expanded memory and a large variety of new and updated sounds, ranging from wind, brass, strings, basses and guitars to classic analog leads and basses. Also included is a selection of samples from the Symphobia and Swing libraries by ProjectSAM. The Sample Synth section provides two fully-featured and independent Layers and is equipped with intuitive controls for attack, decay/release and dynamic velocity response. The Soft and Bright settings provide a quick way of shaping the tone of the sound. The Grand 2 Sample synth engine offers several new features. Unison creatively blends several sample voices for rich, ensemble-like sounds. “Tru-Vibrato” accurately models the unique vibrato characteristics of a wide variety of acoustic instruments and round robin allows natural sounding fast repetitions. The Nord Grand 2 has a powerful new Effect section per Layer. The extensive range of Effects includes brand new types of Reverb, Delay, Amps and Modulation effects.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Nord_Grand-2_Panel_240419_crop"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/kpkjlgqI/TecAward25.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "TecAward25"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/s4xxkRQI/NG2%20piano.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NG2 piano"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/SuU2Biwy/NG2%20synth.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NG2 synth"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/JqwgWqLn/NG2%20fx1.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NG2 fx1"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/g4ldLlLM/NG2%20fx2.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NG2 fx2"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord_Grand-2_Panel_240419_crop"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord_Grand-2_Panel_240419_crop"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-grand-2/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/embed/9IffvY8aKWM?start=1&feature=oembed",
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "Grand",
+      "_taxonomy_warning": "Category 'Grand' not in official taxonomy",
+      "category_hierarchy": [
+        "Grand"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-electro-7",
+      "brand": "Nord",
+      "name": "Nord Electro 7",
+      "sku": null,
+      "main_category": "Electro",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Electro 7 elevates the Electro series with a powerful new Synth Section, dedicated per-section effects and a refined panel design with a high-resolution color display. Combining our latest piano features with the Organ and Rotary Speaker from the acclaimed Nord Organ 3, the Nord Electro 7 offers exceptional versatility in a lightweight, stage-ready instrument. 73-note Semi-Weighted Waterfall keybed *All specifications and product images subject to change without further notice The new panel design, paired with a high-resolution color display enhances ease of use. Sound selection, settings and performance controls are easily accessible for a quick and intuitive workflow. ► Pitch Stick and Modulation Wheel on 73 and HP models The Electro 7 73 and HP models feature Pitch Stick and Modulation Wheel for additional real time control. ► Physical Drawbars with LEDs on all models All Electro 7 models feature Physical Drawbars with LED indicators for both visual and tactile feedback and hands-on experience. ► New HP model with Kawai Hammer Action The Electro 7 HP model introduces a new lightweight triple sensor keybed developed in collaboration with Kawai. Carefully balanced for playability and portability, the new Kawai keybed delivers excellent responsiveness for acoustic and electric pianos. The Organ Section is based on the Nord Organ 3 engine and features stunning recreations of classic tonewheel, transistor, and pipe organs as well as the latest generation of our acclaimed Rotary Speaker emulation with multiple microphone perspectives. The B3 model features three different tone wheel modes ranging from the clean sound of a factory new unit to a road worn vintage character with increased tone wheel cross talk and leakage. The B3 Percussion effect includes a Poly mode, which enables polyphonic use of the Percussion even when holding chords or playing legato. The iconic sound of the Vox organ has been refined even further for the Nord Electro 7, with revamped waveform shapes and filters as well as updates to both the key click and vibrato character. The new generation Farfisa model conveys the character of the original tone generators and filters with great precision, including the complex filter interactions when combining registers. The Soft B3 model is based on the B3 tone wheel organ, but without the key click and other artifacts, for a softer and more mellow sound. The Pipe model faithfully recreates a set of principal pipe organ ranks. The new vibrato and chorus captures the unique qualities of the original instruments, offering either the gentle character of a '50s B3 chorus scanner or the deep modulation of a '70s instrument. With a brand new approach to recreating not only the classic rotary sound, but also the characteristics of both the amp and speakers, the Nord Electro 7 features the exceptional Rotary Speaker emulation from the Nord Organ 3. The Nord Electro 7 offers three microphone positioning options corresponding to popular ways of reproducing the classic rotary speaker sound, both on stage and in the studio. These variations in microphone placement affect both the perceived movement as well as the tonal character of the rotary speaker, ranging from punchy and present to smooth and open. The illustration below shows the selectable configurations for the Nord Electro 7 “Mic Pos” feature. The Nord Electro 7 contains a large selection of Grands, Uprights and Electric Pianos from the exclusive Nord Piano Library along with new features such as Dynamic Compression, Unison and Timbre. Our state-of-the-art sampling technique captures the extraordinary nuances and real character of the source instruments. In addition to the factory sounds, all sounds in the Nord Piano Library can be easily transferred to your instrument using the Nord Sound Manager software. A brand new Synth Section introducing Analog Waveforms and FM synthesis alongside high-quality Samples from the Nord Sample Library. The Synth Section includes Mono, Legato and Glide modes for expressive performance control. Low-Pass Filter with resonance and dual ADR envelopes for Amp and Filter/FM Amount designed for exceptional real time control. The Nord Sample Library is an extensive collection of premium samples, including Spitfire Strings, Supreme Horns, Mellotron and Symphobia. Samples can be easily downloaded and transferred to your instrument using the Nord Sound Manager software. The Nord Electro 7 has an expanded new Effects section per Layer. The wide range of Effects includes brand new types of Reverb, Delay, Amps and Modulation effects. The Nord Electro 7 comes with a new authentic Spring Reverb, Brit and Suitcase amplifier models and a Delay effect including a vintage-style Analog mode with three selectable feedback filters for creative control. The Modulation effects include classics such as Chorus, Phaser and Flanger, each modeled after legendary hardware units, along with Ring Modulation for a variety of creative and experimental sounds and a versatile Tremolo effect.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FmSmnuxC6%2FNE7%252073-pitch.png&w=1920&q=75",
+          "type": "main",
+          "alt_text": "NE7 73-pitch"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/P9j9CaqW/NE7%20%20-%20Organ%20-%20260108.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NE7  - Organ - 260108"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/9JKVdn0m/Organ.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Organ"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/j4AS3AGc/NE7%20Rotor%20Mic%20Pos.width-800.svg",
+          "type": "gallery",
+          "alt_text": "NE7 Rotor Mic Pos"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/HgfCafPP/NE7%20%20-%20Piano%20-%20260113.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NE7  - Piano - 260113"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/r3ulKfFT/Piano.Program.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Piano.Program"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/rJia9PUl/%20NE7%2073%20-%20%20Synth%20-%20260113.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "NE7 73 -  Synth - 260113"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/1Kaa1Qkc/Synth.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Synth"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/c41JAT42/Nord%20-%20NE7%2073%20-%20Section-05%20Effects%20-%20260113.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord - NE7 73 - Section-05 Effects - 260113"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Fd3LqqMW/Effects.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Effects"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FmSmnuxC6%2FNE7%252073-pitch.png&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "NE7 73-pitch"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-electro-7/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "Electro",
+      "_taxonomy_warning": "Category 'Electro' not in official taxonomy",
+      "category_hierarchy": [
+        "Electro"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FmSmnuxC6%2FNE7%252073-pitch.png&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FmSmnuxC6%2FNE7%252073-pitch.png&w=1920&q=75"
+    },
+    {
+      "id": "nord-nord-organ-3",
+      "brand": "Nord",
+      "name": "Nord Organ 3",
+      "sku": null,
+      "main_category": "keys",
+      "subcategory": null,
+      "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The acclaimed Nord Organ is back - reborn and reimagined as the all-new Nord Organ 3. The latest generation of our Organ series featuring massive improvements to sound, design and performance. With a greatly enhanced organ engine, added modulation effects and a new exceptional-sounding rotary speaker emulation, the Nord Organ 3 offers an unsurpassed level of detail and realism. Transistor and Pipe Organs Rotary and Amp modeling The Nord Organ 3 features meticulously crafted emulations of iconic tonewheel and transistor organs with hands-on controls. Each model is the result of detailed analysis of carefully selected vintage instruments, capturing every nuance of the legendary organ sounds. The B3 model features three different tone wheel modes ranging from the clean sound of a factory new unit to a road worn vintage character with increased tone wheel cross talk and leakage. Key Click is an important characteristic of the B3 sound and is recreated in great detail on the Nord Organ 3. The three options are selectable from the panel and allows for quick fine tuning of the Key Click level. The B3 Percussion effect includes a Poly mode, which enables polyphonic use of the Percussion even when holding chords or playing legato. The DB9 Cancel setting allows for deactivating the 9th drawbar when Percussion is turned on, as on the original instrument. The iconic sound of the Vox organ has been refined even further for the Nord Organ 3, with revamped waveform shapes and filters as well as updates to both the key click and vibrato character. The new generation Farfisa model conveys the character of the original tone generators and filters with great precision, including the complex filter interactions when combining registers. The Soft B3 model is based on the B3 tone wheel organ, but without the key click and other artifacts, for a softer and more mellow sound. The Pipe model faithfully recreates a set of principal pipe organ ranks; the metal pipe registers that commonly make up the foundational sound of a pipe organ. The Pipe organ chorus mode switches to a model tuned with less precision, adding further realism to the sound. Reworked from the ground up, the new vibrato and chorus captures the unique qualities of the original instruments, offering either the gentle character of a '50s B3 chorus scanner or the deep modulation of a '70s instrument. The Bass Model section of the Nord Organ 3 provides matching bass models for all the organ types and includes a range of classic synth bass sounds, greatly expanding the sonic possibilities of the instrument. The bass can optionally be routed to a dedicated audio output, for separate treatment of organ and bass manuals on stage or in the studio. With a brand new approach to recreating not only the classic rotary sound, but also the characteristics of both the amp and speakers, the Nord Organ 3 features an exceptional Rotary Speaker emulation with multiple microphone perspectives. Choose from three distinct Drive types capturing the various aspects of Rotary Speaker overdrive with a great deal of nuance and variation. Rotor speed and acceleration rates can be customized and the Sound menu offers a wide range of settings enabling even more detailed and nuanced sound shaping. The Fixed Stop Angle feature allows fine tuning of the exact stop position of the rotary horn. The Nord Organ 3 offers several microphone positioning options corresponding to popular ways of reproducing the classic rotary speaker sound, both on stage and in the studio. These variations in microphone placement affect both the perceived movement as well as the tonal character of the rotary speaker, ranging from punchy and present to smooth and open. Close microphone placement gives a direct and detailed tone, while adding more distance slightly softens the treble and adds body. With microphones placed further apart, for example on the corner or even opposite sides of the cabinet, the sense of rotation becomes more apparent, creating a rich, immersive stereo image. In contrast, a tight microphone placement creates a highly focused sound with a narrower stereo field. In addition, the bass rotor has a wide setting for low end stereo effect. The illustration below shows the selectable configurations for the Nord Organ 3 “Mic Pos” feature. The Reverb section features 6 different types including a brand new Spring Reverb as well as Booth, Room, Stage, Hall and Cathedral options. The Pre-Rotary setting allows the reverb to be placed before the Rotary Speaker, like a reverb equipped organ connected to a Rotary Speaker. With Pre-Rotary turned off, the reverb is placed after the Rotary Speaker emulating a room or other ambient environment. The Delay Effect includes a vintage-style Analog mode as well as three different feedback filters for creative shaping of the delay feedback tail. Optionally, the delay can be set to Upper Manual only. The Modulation effects include classics such as Chorus, Phaser and Flanger - all modeled on legendary hardware units - as well as Ring Modulation for a variety of creative and experimental sounds and a versatile Tremolo effect. The Modulation effect can be assigned to the upper manual only, keeping the lower and pedal manuals clean.",
+      "features": [
+        "Accessories",
+        "Distributors",
+        "Nord Electro 7",
+        "Nord Stage 4",
+        "Nord Piano 6",
+        "Nord Organ 3",
+        "Nord Grand 2",
+        "Nord Electro 6",
+        "Nord Wave 2",
+        "Nord Lead A1",
+        "Nord Drum 3P",
+        "Legacy products",
+        "Compare Products",
+        "ProductsMinusAll ProductsNord Electro 7Nord Stage 4Nord Piano 6Nord Organ 3Nord Grand 2Nord Electro 6Nord Wave 2Nord Lead A1Nord Drum 3PLegacy productsCompare Products",
+        "All Products"
+      ],
+      "specifications": [
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "csrftoken",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "productTooltip",
+          "value": "www.nordkeyboards.com"
+        },
+        {
+          "key": "CookieScriptConsent",
+          "value": "CookieScript\nwww.nordkeyboards.com"
+        },
+        {
+          "key": "VISITOR_PRIVACY_METADATA",
+          "value": "YouTube\n.youtube.com"
+        },
+        {
+          "key": "__cflb",
+          "value": "Cloudflare, Inc.\napi2.hcaptcha.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "_ga_GL2X1VT0CK",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "_ga",
+          "value": "Google LLC\n.nordkeyboards.com"
+        },
+        {
+          "key": "_ga_S8Z6NRNNEV",
+          "value": ".nordkeyboards.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "VISITOR_INFO1_LIVE",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "YSC",
+          "value": "Google LLC\n.youtube.com"
+        },
+        {
+          "key": "Name",
+          "value": "Provider / Domain"
+        },
+        {
+          "key": "__Secure-ROLLOUT_TOKEN",
+          "value": ".youtube.com"
+        }
+      ],
+      "images": [
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+          "type": "main",
+          "alt_text": "Nord - NO3 - Top - 250110_Crop"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/sx8hmLko/NO3-panel-Organ-models.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Organ 3 panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/h7kC23J8/NO3-panel-rotary.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Organ 3 Rotary panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Uq9kJ6wK/NO3%20Mic%20Pos%20%23%23.width-800.svg",
+          "type": "gallery",
+          "alt_text": "NO3 Mic Pos ##"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/XWiagGDS/NO3-panel-Rev-Del.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Organ 3 Reverb Belay effects panel"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/qSusjjlB/NO3-panel-modFX.width-800.jpg",
+          "type": "gallery",
+          "alt_text": "Nord Organ 3 Modulation effects panel"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord - NO3 - Top - 250110_Crop"
+        },
+        {
+          "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+          "type": "gallery",
+          "alt_text": "Nord - NO3 - Top - 250110_Crop"
+        }
+      ],
+      "pricing": {},
+      "status": "in_stock",
+      "manual_urls": [
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/downloads/",
+        "https://www.nordkeyboards.com/products/nord-organ-3/downloads/",
+        "https://www.nordkeyboards.com/downloads/"
+      ],
+      "support_url": null,
+      "video_urls": [
+        "https://www.youtube.com/nordkeyboards"
+      ],
+      "accessories": [],
+      "related_products": [],
+      "relationships": [],
+      "connectivity": null,
+      "tier": null,
+      "source": "official",
+      "data_sources": [
+        "official"
+      ],
+      "tribe_assignment": null,
+      "logo_url": "/assets/logos/nord-blueprint_logo.png",
+      "category": "keys",
+      "category_hierarchy": [
+        "keys"
+      ],
+      "image": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+      "image_url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75"
+    }
+  ],
+  "total_products": 9,
+  "last_updated": "2026-01-25T21:32:08.860669",
+  "brand_name": "Nord Blueprint",
+  "brand_slug": "nord-blueprint",
+  "refined_at": "2026-01-25T21:32:52.066072+00:00",
+  "hierarchy": {
+    "drums": {
+      "null": [
+        {
+          "id": "nord-nord-drum-3p",
+          "name": "Nord Drum 3P",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The super compact Nord Drum 3P combines stunning playability with unlimited sound design possibilities. New features include integrated multi-pad, Reverb and Delay effects, a simplified sound selection mode and new Sound Banks for quickly creating custom kits on the fly. The Drum Select feature lets you browse a wide selection of great sounding drums sounds, simply assigned to each pad individually. Easily replace toms, cymbals or kicks in seconds by selecting from our new preset library. The Drum Select banks feature 9 categories of great preset sounds that can be easily assigned to any of the six pads/channels - and is a great starting point in rehearsal situations when you need to find the right sounds in a matter of seconds. The categories include Bass drums, Snare drums, Toms, Hi-hats, Cymbals, Percussion, Bells, Tuned Percussion and Effects. The Sound generation takes place in the three sections Tone, Noise and Click. The sounds of the Nord Drum 3P are all synthesized in real-time - allowing you to both sculpt and play sounds with a unique dynamic response, regardless if you prefer to play with drum sticks or from a sequencer. The Tone Section is specialized for creating tonal and harmonically complex sound spectras and has four synthesis modes – Resonant synthesis, Subtractive Synthesis, Frequency Modulation and Ring Modulation synthesis. The Resonant synthesis mode offers a wide range of complex spectras inspired by materials like drum heads, marimba, vibraphone, tines and cymbals. A unique feature includes the possibility to tune harmonic spectra. The Subtractive Wave types include Sine, Saw, Square, Pulse waveforms and T-Bridge Oscillators and are brilliant for creating classic synth-type drum sounds and effects. The FM Synthesis mode features 6 different FM algorithms where the Frequency parameter controls modulation amount and Spectra controls modulation frequency. The Ring Modulation mode features 2 different types of Ring Modulation. The Nord Drum 3P offers great control over the dynamic response of the harmonic spectras. When using Resonant synthesis waveforms the upper parts of the harmonic spectra be controlled with velocity, giving it a brighter timbre when played hard. When using the Subtractive synthesis mode, the Frequency parameter controls the cut-off frequency of a Low-Pass filter and the Dyn Filter controls how much the filter should respond to velocity . The Decay controls the decay of the whole spectra, with a choice of Linear and Exponential decay envelopes. A Dynamic Decay mode lets you set different Decay lengths for soft and hard strokes. The Punch Decay adds more attack to the Tone by giving the fundamental pitch an ultra-fast envelope at the very beginning of the sound. The Bend parameter provides a powerful, velocity sensitive pitch envelope. Use it to create attack-like effects but also more radical bending sounds that travel up or down when played such as the sound of a raindrop, tablas or the classic 80’s “pioouw” tom-sound. The Noise section is all about producing noise and is very powerful. Create anything from silky smooth hiss to gritty gravel to give the Tone part of the sound more texture. The Noise can be sculpted with Low-Pass, High-Pass or Band-Pass filters with Cut-Off and Resonance controls. Once you've found the noise of your choice, it can be adjusted to respond dynamically to velocity in the same manner as with the Tone section with the Dyn Filter control. The Decay control is just as powerful, with a choice of Linear, Exponential and Gated decay types. A Dynamic Decay mode lets you set different Decay lengths for soft and hard strokes. Combine this with the equally powerful dynamic controls of the Tone Section and it won’t take long before realizing the potential for creating complex sounds with fascinating material-like behaviors! The Click-section is a specialized section for an ultra-short attack to the sound. A wide range of different click types are available as well as a level control for finding the sweet spot where the Click merges with the other elements and becomes one coherent sound. Each of the 6 channels of the Nord Drum 3P has its own powerful effects – Drive, EQ and Ring Modulation. Adding just a touch of Drive to your sounds can make a huge difference in terms of realism, while the Sample-Rate reduction is perfect for Lo-fi crackling effects. Ring Modulation can be used for slow tremolo-like effects to total atonal mayhem. A flexible parametric Equalizer with selectable band and amount is also available for each channel, brilliant for adding some finish or attitude to your sounds. The Nord Drum 3 features two new Master Effects, Reverb and Delay. The Reverb features 5 room algorithms (Tiled Room, Room, Plate, Stage and Hall) with controls for tonal color. The Delay effect features a Tap Tempo-mode and adjustable feedback amount. The amount of Reverb and Delay can be set individually for each of the 6 channels of the Nord Drum 3P. The Mute Group gives you the option to create sounds that can cancel each other out. Only one of the members of the group can sound at a time, and can be used for creating a close/open hi-hat behavior and emulating muting techniques from hand percussion. Tuned Percussion kits can be created instantly by selecting one of the Scale Presets, which include Chord Scales, Pentatonic, Hang Tunings and Hexatonic. The handy Edit All mode let’s you edit all 6 channels simultaneously, for example reverb, distortion or delay. MIDI in/out is also available for using the Nord Drum 3P with any kind of MIDI pads or sequence it from an external MIDI Sequencer. All of the Nord Drum 3P sound parameters can be controlled via CC-controls over MIDI. If you own an iPad don't miss our free iPad app Nord Beat, specifically designed for sequencing the Nord Drum 3P via MIDI. The Channel Mixer sets the level for each channel and also features a Pan control for creating a lush stereo image. If you like to send the kick to a separate output, just pan that channel all the way to the left and the other channels to the right. Everything you play when using the multipads and external input is automatically output to the MIDI output, making the Nord Drum 3 a brilliant controller for other sound sources via MIDI.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FDrum_3P_hero.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Drum 3P hero"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Drum_3P_-_Panel.width-500.jpg",
+              "type": "gallery",
+              "alt_text": "Drum 3P - Panel 1"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Drum_3P_-_Panel-sound_creation.width-500.jpg",
+              "type": "gallery",
+              "alt_text": "Drum 3P - Panel-sound creation"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Drum_3P_-_Panel_effects.width-500.jpg",
+              "type": "gallery",
+              "alt_text": "Drum 3P - Panel effects"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FDrum_3P_hero.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Drum 3P hero"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "Lead": {
+      "null": [
+        {
+          "id": "nord-nord-lead-a1",
+          "name": "Nord Lead A1",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Lead A1 is a 4-part multitimbral synth with a classic layout, extensive filter options and effects. With its powerful panel interface and pre-programmed modulation matrix, creating unique and exciting sounds is very inspirational and quick. At the heart of the Lead A1 is our new analog modeling engine. Taking our virtual analog synthesis to the next level, this modeling recreates a total analog signal path with uncanny realism, and is capable of immense sonic variety. With 26-voice polyphony and four simultaneous synthesizer parts, the Lead A1 is a true synthesizer powerhouse that goes far beyond the current trend for limited capability analog reissues. Fundamental to the design of the Lead A1 is a brand new simple yet sophisticated front panel interface. The design is in fact the result of requests from professional players – even the most experienced programmers - who need to create the perfect sound as quickly as possible for today's live or studio time demands. The Lead A1 allows easy patch creation and experimentation thanks to a new and unique oscillator section, pre-programmed modulation matrix, and simplified ADR envelopes. Dive in and create incredible patches far quicker than would normally be possible with a synthesizer of such power. The Lead A1's new Oscillator section generates 47 different waveforms from classic analog to digital harmonic and inharmonic waves, whilst unique Oscillator Configuration Shortcuts make programming more immediate than ever. Start with a single Oscillator waveform select an Oscillator Configuration Shortcut - Pitch, Detune, Shape, Sync, Sub Mix, FM, AM or Noise - and use the Adjust knob to adjust the settings of the configuration. The end result is high speed programming without the need for the usual complexity of routing and patching, and with the opportunity for ready experimentation. A fast track to stunning sound design for both advanced and less experienced programmers. Pitch - adjusts the pitch of the original oscillator. DeTune - adds a second oscillator, with control over its pitch. Sub Mix - adds a second oscillator, with a choice of waveform shapes and pitches. Shape - The shaping of the Analog, Extended Analog and Fixed Pulse waveforms uses a traditional waveshaping method, the other waveforms are changed with a spectral shaping process. Sync - emulates Hard sync by adding an additional oscillator that is the sync reference. FM - Oscillator 1 will be modulated by a sine wave from oscillator 2 at high frequencies. There are several different pitch offsets for oscillator 2 (-12 to +48 semitones). AM - uses a second oscillator to create Amplitude Modulation. Noise - adds a Noise element to the original oscillator, Osc Control sets the mix. The Lead A1's filter section features classic 12 and 24 dB Low Pass, a High Pass and a Band Pass filter, together with stunning emulations of the diode and ladder filters from the legendary Mini and the TB-303 synthesizers as used in the Lead 4. The Lead A1's modeling of these filters capture the true character and response of the originals, allowing supremely flexible and precise sound design. The filters are super-smooth with a warm analog character. The Lead A1's effects section features two stunning brand new analog models of an Ensemble and Chorus, modeled on specific vintage synths and adding classic warmth and analog feel. Alongside these, choose from great-sounding Ring Modulation, Phaser, Flanger, or Drive per slot, and in addition a separate Delay and Reverb for each slot. A classic Nord feature, the Morph function via Mod Wheel, Velocity or pedal, allows you to control multiple parameters of the Lead A1 simultaneously. Morph is exceptionally easy to set-up and use - just hold the Morph button and adjust any desired knob. The Lead A1 features four separate Arpeggiators with Up/Down and Random modes and a 4-octave range. Any or all can be sync'd to the Lead A1's master clock. The Master Clock function of the Lead A1 allows the LFO, Arpeggiator and Delay to be synchronized, either internally or slaved to external MIDI clock. A Tap Tempo button allows you to easily tap to the tempo of a drummer or to playback tracks. Having four identical, equally powerful synthesizers at once opens breathtaking layering possibilities. The Split-mode gives you two 2 slots on each side of the split. A flexible Hold functionality lets you latch and hold slots independently in the background while playing something else on top. New in the Lead A1 is the Multi-Focus Mode that allows editing and control of all four slots simultaneously. Save this mode as part of a Performance and you have live realtime control over all four slots of the Lead A1. The Lead A1 features four independent audio outputs with the ability to route each slot to a different output. Plus control of Pan via the front panel knob is a welcome new addition in the Lead A1. Unique to the Nord Lead A1 is the new 'Like' function, a simple and brilliant practical feature to use during patch creation. When programming a patch it's often not clear if it's yet perfect. Now with the Lead A1 you can simply 'Like' what you've done into a temporary location and continue editing. You can Like up to 50 variations, with the ability to scroll between them to compare your favourites or go back to a specific Liked version to edit in a different way. When you're ready, save your favourite patch or patches to the Lead A1's memory. A popular feature of the Lead 4, the Mutator function allows variations of a patch to be created by adjusting one, some, or all elements of a patch by set percentages. There's also a wild Randomize mode to create an entirely new patch with all parameters randomized. A newly designed \"Fat-As-Fat-Can-Be\" Unison Mode let's the Lead A1 challenge any vintage analog instrument.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FA1_-_Top.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Lead-A1-top"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FLead-A1-oscillator.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Lead A1"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FA1_-_Top.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Lead-A1-top"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FLead-A1-oscillator.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Lead A1"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "keys": {
+      "null": [
+        {
+          "id": "nord-nord-piano-6",
+          "name": "Nord Piano 6",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The latest generation of the Nord Piano series features a new panel design with LED faders, dual layers for Piano and Synth with independent effects and a premium Triple Sensor keybed. Combined with excellent portability and our world-class sounds, the Nord Piano 6 offers great flexibility for performance and sound creation. 88-key Triple Sensor Hammer Action Keybed The Nord Piano 6 has a new panel design with dedicated LED faders for Piano and Synth sections as well as knobs and buttons for all essential features, offering great flexibility when performing and designing sounds. The dual Piano and Synth engines can be layered together or split across the keyboard, with each layer featuring its own dedicated Effects section. The Nord Piano 6 contains a large selection of Grands, Uprights and Electric Pianos from our exclusive Nord Piano Library along with new features such as Dynamic Compression and Unison. Our state-of-the-art sampling technique captures the extraordinary nuances and real character of the source instruments. The new included Nord Triple Pedal 2 enables our unique ‘Advanced String Resonance’ and Dynamic Pedal Noise features, delivering stunning realism and expressiveness. The Sample Synth features two independent layers and comes with a broad collection of new and updated sounds, ranging from strings, wind, brass, basses and guitars to classic analog leads and basses. The factory bank includes exclusive high-end samples from the acclaimed Spitfire, Symphobia and Swing libraries. The Sample Synth section provides two fully-featured and independent Layers equipped with intuitive controls for attack, decay/sustain, release and dynamic velocity response. Additional Sample Synth features include Unison, which blends multiple sample voices for rich, ensemble-like sounds and “Tru-Vibrato”, capturing the unique vibrato characteristics of various acoustic instruments. The advanced Round-Robin feature allows for a natural sound when repeating notes. The Nord Piano 6 has an expanded new Effects section per Layer. The wide range of Effects includes brand new types of Reverb, Delay, Amps and Modulation effects.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Nord - NP6 - Top 88 - 250113 - crop"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/U5q0hJBR/Nord%20-%20NP6%20-%20Program%20Panel.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Piano 6 Program panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/bRd257mB/NP6%20Piano-1.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NP6 Piano-1"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/icH96OG4/NP6%20Piano%23.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NP6 Piano#"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/9P2irFNP/NP6%20Effects.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NP6 Effects"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord - NP6 - Top 88 - 250113 - crop"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FRkIccHIA%2FNord%2520-%2520NP6%2520-%2520Top%252088%2520-%2520250116%2520-%2520crop.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord - NP6 - Top 88 - 250113 - crop"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "nord-nord-organ-3",
+          "name": "Nord Organ 3",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The acclaimed Nord Organ is back - reborn and reimagined as the all-new Nord Organ 3. The latest generation of our Organ series featuring massive improvements to sound, design and performance. With a greatly enhanced organ engine, added modulation effects and a new exceptional-sounding rotary speaker emulation, the Nord Organ 3 offers an unsurpassed level of detail and realism. Transistor and Pipe Organs Rotary and Amp modeling The Nord Organ 3 features meticulously crafted emulations of iconic tonewheel and transistor organs with hands-on controls. Each model is the result of detailed analysis of carefully selected vintage instruments, capturing every nuance of the legendary organ sounds. The B3 model features three different tone wheel modes ranging from the clean sound of a factory new unit to a road worn vintage character with increased tone wheel cross talk and leakage. Key Click is an important characteristic of the B3 sound and is recreated in great detail on the Nord Organ 3. The three options are selectable from the panel and allows for quick fine tuning of the Key Click level. The B3 Percussion effect includes a Poly mode, which enables polyphonic use of the Percussion even when holding chords or playing legato. The DB9 Cancel setting allows for deactivating the 9th drawbar when Percussion is turned on, as on the original instrument. The iconic sound of the Vox organ has been refined even further for the Nord Organ 3, with revamped waveform shapes and filters as well as updates to both the key click and vibrato character. The new generation Farfisa model conveys the character of the original tone generators and filters with great precision, including the complex filter interactions when combining registers. The Soft B3 model is based on the B3 tone wheel organ, but without the key click and other artifacts, for a softer and more mellow sound. The Pipe model faithfully recreates a set of principal pipe organ ranks; the metal pipe registers that commonly make up the foundational sound of a pipe organ. The Pipe organ chorus mode switches to a model tuned with less precision, adding further realism to the sound. Reworked from the ground up, the new vibrato and chorus captures the unique qualities of the original instruments, offering either the gentle character of a '50s B3 chorus scanner or the deep modulation of a '70s instrument. The Bass Model section of the Nord Organ 3 provides matching bass models for all the organ types and includes a range of classic synth bass sounds, greatly expanding the sonic possibilities of the instrument. The bass can optionally be routed to a dedicated audio output, for separate treatment of organ and bass manuals on stage or in the studio. With a brand new approach to recreating not only the classic rotary sound, but also the characteristics of both the amp and speakers, the Nord Organ 3 features an exceptional Rotary Speaker emulation with multiple microphone perspectives. Choose from three distinct Drive types capturing the various aspects of Rotary Speaker overdrive with a great deal of nuance and variation. Rotor speed and acceleration rates can be customized and the Sound menu offers a wide range of settings enabling even more detailed and nuanced sound shaping. The Fixed Stop Angle feature allows fine tuning of the exact stop position of the rotary horn. The Nord Organ 3 offers several microphone positioning options corresponding to popular ways of reproducing the classic rotary speaker sound, both on stage and in the studio. These variations in microphone placement affect both the perceived movement as well as the tonal character of the rotary speaker, ranging from punchy and present to smooth and open. Close microphone placement gives a direct and detailed tone, while adding more distance slightly softens the treble and adds body. With microphones placed further apart, for example on the corner or even opposite sides of the cabinet, the sense of rotation becomes more apparent, creating a rich, immersive stereo image. In contrast, a tight microphone placement creates a highly focused sound with a narrower stereo field. In addition, the bass rotor has a wide setting for low end stereo effect. The illustration below shows the selectable configurations for the Nord Organ 3 “Mic Pos” feature. The Reverb section features 6 different types including a brand new Spring Reverb as well as Booth, Room, Stage, Hall and Cathedral options. The Pre-Rotary setting allows the reverb to be placed before the Rotary Speaker, like a reverb equipped organ connected to a Rotary Speaker. With Pre-Rotary turned off, the reverb is placed after the Rotary Speaker emulating a room or other ambient environment. The Delay Effect includes a vintage-style Analog mode as well as three different feedback filters for creative shaping of the delay feedback tail. Optionally, the delay can be set to Upper Manual only. The Modulation effects include classics such as Chorus, Phaser and Flanger - all modeled on legendary hardware units - as well as Ring Modulation for a variety of creative and experimental sounds and a versatile Tremolo effect. The Modulation effect can be assigned to the upper manual only, keeping the lower and pedal manuals clean.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Nord - NO3 - Top - 250110_Crop"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/sx8hmLko/NO3-panel-Organ-models.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Organ 3 panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/h7kC23J8/NO3-panel-rotary.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Organ 3 Rotary panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Uq9kJ6wK/NO3%20Mic%20Pos%20%23%23.width-800.svg",
+              "type": "gallery",
+              "alt_text": "NO3 Mic Pos ##"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/XWiagGDS/NO3-panel-Rev-Del.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Organ 3 Reverb Belay effects panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/qSusjjlB/NO3-panel-modFX.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Organ 3 Modulation effects panel"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord - NO3 - Top - 250110_Crop"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FKX0ZHvl5%2FNord%2520-%2520NO3%2520-%2520Top%2520-%2520250610_crop.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord - NO3 - Top - 250110_Crop"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "Stage": {
+      "null": [
+        {
+          "id": "nord-nord-stage-4",
+          "name": "Nord Stage 4",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The latest generation of our iconic flagship series – the Nord Stage 4 features a new intuitive panel design, a premium triple sensor keybed, and complete effect sections for each layer. With significant enhancements to our award-winning technologies - the Stage 4 sets a new standard for live performance stage keyboards. 88-key weighted triple sensor keybed with aftertouch and physical drawbars with LED The Nord Stage 4 features a brand new panel design with dedicated LED faders for each Layer, providing exceptional overview and flexibility when creating sounds and performing live. The new Preset Library is packed with inspiring ready-to-use Piano, Synth and Organ sounds for quick and smooth patch creation. The Layer Scene lets you seamlessly switch between two different sound setups at the touch of a button. Adding a powerful new Effect section coupled with versatile pedal options and a premium Triple Sensor keybed, the Nord Stage 4 offers a new level of musical expression. The Nord Stage 4 comes with a new enhanced collection of Grands, Uprights and Electric Pianos from our exclusive Nord Piano Library combined with new features such as Dynamic compression and Unison. Nord’s state-of-the-art sampling techniques capture the extraordinary nuances and real character of the source instruments. Our unique ‘Advanced String Resonance’ and Dynamic Pedal Noise features deliver breathtaking realism and an unsurpassed level of expressiveness. The Synth section with its three independent Layers is based on the powerful Nord Wave 2 Synth Engine, including Virtual Analog synthesis, Samples, FM and Wavetable. An extensive new collection of samples from the Nord Sample Library offers a broad sonic palette of Strings, Bass, Choirs, Guitars and much more. The advanced Arpeggiator features new Polyphonic, Gate and Pattern modes and can be used for a huge variety of rhythmic applications with customizable patterns. The Organ section features our award-winning simulations of B3 Tonewheel, B3 Bass, classic Vox and Farfisa as well as two Pipe Organ models. All Stage 4 models are equipped with our new Physical drawbars with LED indicators for optimal hands-on experience and overview. The Nord Stage 4 has a powerful new Effect section offering a complete setup of Effects for each Layer. The extensive range of Effects includes a new Pump effect for side chain simulation, a new Spin effect and brand new variations of Reverb, Delay, Amps and Modulation effects.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Nord Stage 4 88"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/QGeXFM5V/NS4_TecAwards.width-500.jpg",
+              "type": "gallery",
+              "alt_text": "NS4_TecAwards"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Jl7f4ELM/NS4-Panel-piano.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Stage 4 piano panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/45uiE0kc/NS4-Panel-synth.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Stage 4 synth panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/2UvfOZaA/NS4-Panel-organ.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Stage 4 organ panel"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/L0rPACoR/NS4-Panel-effects.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord Stage 4 effects panel"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Stage 4 88"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FlyDePXcG%2FNS4_HA88_TopDown-01_241008.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Stage 4 88"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "Electro": {
+      "null": [
+        {
+          "id": "nord-nord-electro-6",
+          "name": "Nord Electro 6",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic. 73-note Semi-Weighted Waterfall keybed *All specifications subject to change without further notice The new streamlined Program section features a handy Organize mode including Copy/Paste and Move functionality for quickly arranging your Programs to your desired order. A new Page View lets you easily sort and organize pages as a song list. All Programs, Pianos and Synth Samples are easily navigated using the new List View that offers alphabetical, numerical and category sorting options. The panel has three independent sound sections; Organ, Piano and Sample Synth that can be used simultaneously as a layer or a split. It features 6 Split Points and the new Split Point Crossfade functionality introduced with the Stage 3 for smooth transitions between two split zones. Choose from 3 different crossfade widths (Small, Large or Off) as indicated by different LED colors. The Nord Electro 6 features automatically seamless transitions when changing sounds or programs while playing. The Nord Electro 6 features our award-winning Nord C2D Organ simulations of B3 Tonewheel, B3 Bass and Vintage Transistor Organs plus two Pipe Organ models. The Organ section features our acclaimed Nord C2D Organ engine including the extremely authentic B3 Tonewheel simulation with four different tone wheel settings, ranging from factory new clean to leaky old vintage. An improved dedicated Bass mode simulating the Pedal Bass Tonewheels are available for either splitting with a Piano or Synth or with a B3 Upper Manual in Dual Organ Mode. Our impeccable simulations of the classic 1960’s Transistor Organs, Vox Continental and Farfisa Compact with all the classic settings, are also included in the Organ section. The Organ section now contains two different Pipe Organ models. The new Pipe 1 is a pure Organ with few harmonics. The Pipe 2, introduced with the Electro 5, is a recreation of metal pipes that commonly make up the backbone of a pipe or church organ, and now includes a special new detune mode when enabling Vibrato/Chorus. The Nord Electro 6 has the latest generation of our vintage 122 Rotary Speaker simulation adding an essential character to a live organ performance and features Slow, Fast and Stop mode as well as a Drive control. The Electro 6D 61 and 73 support the Nord Half-moon Switch (optional accessory). The dedicated new Dual Organ mode provides quick access to dual manual setups and offers great overview and control of the drawbar settings for both the Lower and Upper manual. The Electro 6D 61 and 73 feature Physical Drawbars offering ultimate hands-on experience for the dedicated organ players. The Electro 6 HP features Digital LED Drawbars, offering excellent overview over current settings. The Piano section has a wide selection of acoustic, electric and digital pianos from the exclusive Nord Piano Library, extended voice polyphony and creative new Piano Filters. The Nord Electro 6 factory bank contains an extensive selection of our latest Grands, Uprights, Electric Pianos and Digital Pianos from the exclusive Nord Piano Library - all handpicked for their unique characters! The Piano section also features our new “Layer” category with rich dynamic layered patches. Nord’s state-of-the-art sampling techniques capture the extraordinary nuances and real character of the source instruments and unique ‘Advanced String Resonance’ delivers breathtaking realism and an unsurpassed level of expressiveness. The Factory Bank features a great selection from the Nord Piano Library but you can easily add or replace any of these sounds using the Nord Sound Manager. Our exclusive Nord Piano Library is constantly updated with new exclusive world class sounds, and always free of charge. Providing an additional level of sonic control, the Piano Section now features dedicated piano filters for accentuating softness, mid or brilliance. A Soft Release-mode adds a slightly longer release, more suitable for legato playing, emulating a looser damper tension in an acoustic or an electromechanical instrument. 4 dynamic curves are available to suit your playing style, from soft to hard. The enhanced Sample Synth Section features expanded memory for the Nord Sample Library 3.0 and extended polyphony. The Sample Synth Section contains a broad selection of high quality sounds from the Nord Sample Library 3.0 including the exclusively licensed sounds of the legendary Mellotron and Chamberlin. The Sample Synth is equipped with essential controls for attack, decay/release and dynamics (filter/velocity). A unique Nord feature allows you to create your own samples using the free Nord Sample Editor software for WIndows and Mac. The powerful Effect section features a wide range of instantly tweakable high quality effects modelled after classic stomp boxes. All effects are stereo and can be assigned freely to the Organ, Piano or Synth sections. Here you can choose from Tremolo, two Wahs, an Auto-Wah, and an AutoPan. Use the AutoWah with a Clavinet for raw funk licks, create a psychedelic vibe with an Electric Piano on AutoPan, or give a Wurlitzer some body using the Tremolo. There is also a Ring Modulator on board, an effect used by many experimental and electronic musicians. The two Phasers, two Choruses, the Flanger and a Vibe effect are modeled from the classic analog stomp boxes that define the sound of popular music. Features authentic JC, Twin and Small speaker simulations with adjustable Drive, plus a separate Tube Drive simulation and a Compressor. A 3-band Equalizer with sweepable mid. The Delay effect features a Tap Tempo, Feedback and Mix (Dry/Wet), as well as controls for Ping-Pong mode and Tap Tempo. The Nord Electro 6 has three different Reverb types (Hall, Stage and Room) for adding some ambience to your sounds. All Reverb types also has a Bright mode.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNord_Electro6D_73_Large_60.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "models-electro6-73"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6-performance.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6D-Organ-Section_1.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6-Dual-Organ-Mode_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_piano-section-angle.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_synth-section.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_img3.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNord_Electro6D_73_Large_60.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "models-electro6-73"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6-performance.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6D-Organ-Section_1.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNE6-Dual-Organ-Mode_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_piano-section-angle.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_synth-section.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FElectro6_img3.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Electro 6"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "nord-nord-electro-7",
+          "name": "Nord Electro 7",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Electro 7 elevates the Electro series with a powerful new Synth Section, dedicated per-section effects and a refined panel design with a high-resolution color display. Combining our latest piano features with the Organ and Rotary Speaker from the acclaimed Nord Organ 3, the Nord Electro 7 offers exceptional versatility in a lightweight, stage-ready instrument. 73-note Semi-Weighted Waterfall keybed *All specifications and product images subject to change without further notice The new panel design, paired with a high-resolution color display enhances ease of use. Sound selection, settings and performance controls are easily accessible for a quick and intuitive workflow. ► Pitch Stick and Modulation Wheel on 73 and HP models The Electro 7 73 and HP models feature Pitch Stick and Modulation Wheel for additional real time control. ► Physical Drawbars with LEDs on all models All Electro 7 models feature Physical Drawbars with LED indicators for both visual and tactile feedback and hands-on experience. ► New HP model with Kawai Hammer Action The Electro 7 HP model introduces a new lightweight triple sensor keybed developed in collaboration with Kawai. Carefully balanced for playability and portability, the new Kawai keybed delivers excellent responsiveness for acoustic and electric pianos. The Organ Section is based on the Nord Organ 3 engine and features stunning recreations of classic tonewheel, transistor, and pipe organs as well as the latest generation of our acclaimed Rotary Speaker emulation with multiple microphone perspectives. The B3 model features three different tone wheel modes ranging from the clean sound of a factory new unit to a road worn vintage character with increased tone wheel cross talk and leakage. The B3 Percussion effect includes a Poly mode, which enables polyphonic use of the Percussion even when holding chords or playing legato. The iconic sound of the Vox organ has been refined even further for the Nord Electro 7, with revamped waveform shapes and filters as well as updates to both the key click and vibrato character. The new generation Farfisa model conveys the character of the original tone generators and filters with great precision, including the complex filter interactions when combining registers. The Soft B3 model is based on the B3 tone wheel organ, but without the key click and other artifacts, for a softer and more mellow sound. The Pipe model faithfully recreates a set of principal pipe organ ranks. The new vibrato and chorus captures the unique qualities of the original instruments, offering either the gentle character of a '50s B3 chorus scanner or the deep modulation of a '70s instrument. With a brand new approach to recreating not only the classic rotary sound, but also the characteristics of both the amp and speakers, the Nord Electro 7 features the exceptional Rotary Speaker emulation from the Nord Organ 3. The Nord Electro 7 offers three microphone positioning options corresponding to popular ways of reproducing the classic rotary speaker sound, both on stage and in the studio. These variations in microphone placement affect both the perceived movement as well as the tonal character of the rotary speaker, ranging from punchy and present to smooth and open. The illustration below shows the selectable configurations for the Nord Electro 7 “Mic Pos” feature. The Nord Electro 7 contains a large selection of Grands, Uprights and Electric Pianos from the exclusive Nord Piano Library along with new features such as Dynamic Compression, Unison and Timbre. Our state-of-the-art sampling technique captures the extraordinary nuances and real character of the source instruments. In addition to the factory sounds, all sounds in the Nord Piano Library can be easily transferred to your instrument using the Nord Sound Manager software. A brand new Synth Section introducing Analog Waveforms and FM synthesis alongside high-quality Samples from the Nord Sample Library. The Synth Section includes Mono, Legato and Glide modes for expressive performance control. Low-Pass Filter with resonance and dual ADR envelopes for Amp and Filter/FM Amount designed for exceptional real time control. The Nord Sample Library is an extensive collection of premium samples, including Spitfire Strings, Supreme Horns, Mellotron and Symphobia. Samples can be easily downloaded and transferred to your instrument using the Nord Sound Manager software. The Nord Electro 7 has an expanded new Effects section per Layer. The wide range of Effects includes brand new types of Reverb, Delay, Amps and Modulation effects. The Nord Electro 7 comes with a new authentic Spring Reverb, Brit and Suitcase amplifier models and a Delay effect including a vintage-style Analog mode with three selectable feedback filters for creative control. The Modulation effects include classics such as Chorus, Phaser and Flanger, each modeled after legendary hardware units, along with Ring Modulation for a variety of creative and experimental sounds and a versatile Tremolo effect.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FmSmnuxC6%2FNE7%252073-pitch.png&w=1920&q=75",
+              "type": "main",
+              "alt_text": "NE7 73-pitch"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/P9j9CaqW/NE7%20%20-%20Organ%20-%20260108.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NE7  - Organ - 260108"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/9JKVdn0m/Organ.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Organ"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/j4AS3AGc/NE7%20Rotor%20Mic%20Pos.width-800.svg",
+              "type": "gallery",
+              "alt_text": "NE7 Rotor Mic Pos"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/HgfCafPP/NE7%20%20-%20Piano%20-%20260113.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NE7  - Piano - 260113"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/r3ulKfFT/Piano.Program.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Piano.Program"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/rJia9PUl/%20NE7%2073%20-%20%20Synth%20-%20260113.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NE7 73 -  Synth - 260113"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/1Kaa1Qkc/Synth.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Synth"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/c41JAT42/Nord%20-%20NE7%2073%20-%20Section-05%20Effects%20-%20260113.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Nord - NE7 73 - Section-05 Effects - 260113"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/Fd3LqqMW/Effects.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "Effects"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FmSmnuxC6%2FNE7%252073-pitch.png&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "NE7 73-pitch"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "Wave": {
+      "null": [
+        {
+          "id": "nord-nord-wave-2",
+          "name": "Nord Wave 2",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Wave 2 is a powerful 4-part performance synthesizer combining Virtual Analog synthesis, Samples, FM and Wavetable with an intuitive layer-focused interface. With 48 voice polyphony, innovative performance features and hands-on controls, the Nord Wave 2 offers outstanding sonic possibilities with advanced layering and tweaking on the fly. With 4 independent synthesizers in one the Nord Wave 2 offers exceptional possibilities for layering both classic waveforms and samples. Dedicated OLED displays for Program and Oscillator sections provide an excellent overview when shaping your sounds. The wide range of performance features and instantly tweakable hands-on effects makes the Wave 2 our most versatile performance synthesizer ever. The new Monitor mode displays your settings for Amp Envelope and Filters in the Program display for better overview and control. The Wave 2 features a Program Layer section with faders for easily controlling the volume or pan for all 4 layer parts at once. The Layer section also provides handy features for quick layer focus, pan control, solo and multi-editing. The Split mode offers three split points providing up to 4 zones with optional crossfades. The flexible Hold functionality lets you latch and hold slots independently in the background while playing something else on top. The new Group feature allows you to group 2, 3 or 4 layers and lets them share the same Filter, Envelope, Arpeggiator, LFO and Effect-settings - perfect when creating complex multi-layered sounds that can be edited as one coherent sound. The Oscillator section for each of the 4 layers offers 4 modes: Analog, Wavetable, FM and Samples and is easily browsed with our new direct category mode. The Oscillator Control features additional control over shape, sync or detune. Analog: an extensive range of waveforms from classic analog to extended, harmonically rich new additions. Samples: include high-quality samples from our Nord Sample Library 3.0 as well as the possibility to add your own custom samples using the Nord Sample Editor 3. Use the embedded sample presets for instantly playable dynamic sounds or sculpt your own sound from scratch with the \"Raw Samp\" mode. Wavetable: A large number of advanced wavetables covering a wide range of tonal characteristics. FM 2, 3 and 4 operator configurations with harmonic and inharmonic variations. The Wave 2 features a powerful multi-oscillator Unison effect with true Superwaves simultaneously generating hundreds of waveforms for extremely thick and fat sounds. The Sample section comes loaded with a wide selection of quality samples including Strings, Brass, Guitars, Choirs, Chromatic Percussion as well as the exclusively licensed sounds of the legendary Mellotron and Chamberlin. All sounds are easily replaceable using the Nord Sound Manager. Adding your own custom sample instruments has never been easier thanks to the new streamlined Nord Sample Editor 3 for Mac and Windows that lets you map, loop and transfer samples to your Nord Wave 2 in a breeze. The Filter section has 6 Filter types featuring classic 12 and 24 dB Low Pass, a High Pass, High Pass/Low Pass and a Band Pass filter, together with a stunning emulation of the transistor ladder filter from the legendary Mini. The unique modeling of these filters captures the true character and response of the classic analog instruments, allowing for flexible and precise sound design. The Filter section is equippied with full ADSR envelope. The Wave 2 features a dedicated LFO for each layer with a choice of waveforms plus AD/AR Modulation Envelope with dedicated velocity setting and Invert mode. The LFO has several morphable parameters and the rate can be synchronized to the Master Clock. The Amp Section is equipped with a full ADSR envelope featuring a powerful new Transient Attack mode for adding more punch to your sounds. The Wave 2 features an extensive range of morphable parameters that can be controlled from four different sources: Velocity, Aftertouch, Wheel and Control Pedal. All morph sources can be quickly assigned to control multiple parameters simultaneously and the powerful Impulse Morph feature lets you instantly change any parameter of your sound. Instantly assign LFO, Oscillator Control or Filter to the Modulation Wheel. The Nord Wave 2 is truly a rhythmical powerhouse with both a classic arpeggiator and a polyphonic mode with directly editable patterns. The Poly mode is a polyphonic Arpeggiator that will retrig all held keys either straight or patterned featuring different inversions for exciting harmonic variations. The brand new Gate mode chops your sound up in a rhythmic pattern with adjustable depth. The Pattern mode contains a wide selection of Rhythmic Patterns allows easy editing for creating your own custom patterns. The Master Clock of the Wave 2 allows the LFO, Arpeggiator and various effects to be synchronized, either internally or by an external MIDI clock. With Master Clock synchronization you can synchronize 4 layers with individual patterns, all perfectly in sync with Delays and LFO's. A Tap Tempo allows you to easily tap to the tempo of a drummer or to playback tracks. A separate Effect section for each layer featuring a great selection of instantly tweakable high quality stereo effects modelled after classic stomp boxes. Tremolo, Pan, Ring Modulator, Chorus, Ensemble and Vibe effects with Rate and Amount control. All effects are controllable via Control Pedal (or other Morph sources) and can also be synchronized to the Master Clock for rhythmic effects. EQ with Bass and Treble control - or 1 Band Sweepable EQ. A sparkling Tube Drive emulation is also available. Advanced stereo Delay effect with Ping Pong mode, Analog Mode and Tap Tempo. New features include creative new Feedback options for adding Ensemble, Chorus, Vibe as well as HP/LP and BP filter in the Feedback loop. The Reverb section has five different Reverb sizes (Booth, Room, Stage, Hall and new Cathedral) for adding some ambience to your sounds, and the amount is now morphable. New features include Bright and Dark modes for either extended or reduced treble. The new Chorale effect adds a lush modulation effect.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Top.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Wave 2 - Top 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Angled_Side_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Layer_Angled_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Oscillator_Section_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FSample_Editor_4.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Envelopes_Angled_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_Section_Angled_2Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Top.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Wave 2 - Top 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Angled_Side_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Layer_Angled_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Oscillator_Section_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FSample_Editor_4.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Envelopes_Angled_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_Section_Angled_2Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FNW2_-_Effects_1Wave_2.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord Wave 2"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "Grand": {
+      "null": [
+        {
+          "id": "nord-nord-grand-2",
+          "name": "Nord Grand",
+          "description": "Strictly necessary cookies allow core website functionality such as user login and account management. The website cannot be used properly without strictly necessary cookies. Performance cookies are used to see how visitors use the website, eg. analytics cookies. Those cookies cannot be used to directly identify a certain visitor. Targeting cookies are used to identify visitors between different websites, eg. content partners, banner networks. Those cookies may be used by companies to build a profile of visitor interests or show relevant ads on other websites. Unclassified cookies are cookies that do not belong to any other category or are in the process of categorization. The Nord Grand 2 features the latest generation premium Hammer Action keyboard from Kawai. Combining the responsive feel of an acoustic grand piano with our world renowned Sound Libraries and a tactile user interface, the sleek and elegant Nord Grand 2 offers a genuinely unique experience. The Nord Grand 2 features a new and improved Kawai responsive hammer keyboard with triple sensors for accurate tracking of hammer movement. Maintaining the ease of use of the original Nord Grand while adding dual layers of Piano and Synth, the Nord Grand 2 offers great flexibility for performance and sound creation. The well balanced and responsive triple sensor keybed features an advanced hammer mechanism providing extraordinary control through the entire dynamic range. The Nord Grand 2 features dedicated LED faders for each layer, as well as knobs and buttons for all essential functions required in a live performance. Performing tasks such as Creating Layers and Splits, adding effects or transposing the instrument can be performed instantly. The dual Piano and Synth engines can be combined in a layer or split across the keyboard. Each layer has a dedicated effects section. The Nord Grand 2 has 10 Split Points indicated with LED lights and the Split Point Crossfades offer smooth transitions between two split zones. Choose from 3 different crossfade widths (Small, Large or Off) as indicated by different LED colors. The Nord Grand 2 comes with an extensive collection of Grands, Uprights and Electric Pianos from our exclusive Nord Piano Library combined with new features such as Dynamic Compression and Unison. Our state-of-the-art sampling technique captures the extraordinary nuances and real character of the source instruments. The unique ‘Advanced String Resonance’ and Dynamic Pedal Noise features deliver stunning realism and an unsurpassed level of expressiveness. Two independent Sample Synths with greatly expanded memory and a large variety of new and updated sounds, ranging from wind, brass, strings, basses and guitars to classic analog leads and basses. Also included is a selection of samples from the Symphobia and Swing libraries by ProjectSAM. The Sample Synth section provides two fully-featured and independent Layers and is equipped with intuitive controls for attack, decay/release and dynamic velocity response. The Soft and Bright settings provide a quick way of shaping the tone of the sound. The Grand 2 Sample synth engine offers several new features. Unison creatively blends several sample voices for rich, ensemble-like sounds. “Tru-Vibrato” accurately models the unique vibrato characteristics of a wide variety of acoustic instruments and round robin allows natural sounding fast repetitions. The Nord Grand 2 has a powerful new Effect section per Layer. The extensive range of Effects includes brand new types of Reverb, Delay, Amps and Modulation effects.",
+          "images": [
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+              "type": "main",
+              "alt_text": "Nord_Grand-2_Panel_240419_crop"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/kpkjlgqI/TecAward25.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "TecAward25"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/s4xxkRQI/NG2%20piano.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NG2 piano"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/SuU2Biwy/NG2%20synth.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NG2 synth"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/JqwgWqLn/NG2%20fx1.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NG2 fx1"
+            },
+            {
+              "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/images/g4ldLlLM/NG2%20fx2.width-800.jpg",
+              "type": "gallery",
+              "alt_text": "NG2 fx2"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord_Grand-2_Panel_240419_crop"
+            },
+            {
+              "url": "https://www.nordkeyboards.com/_next/image/?url=https%3A%2F%2Fassets.nordkeyboards.com%2Fnord-assets-prod%2Fmedia%2Foriginal_images%2FqUd3HXpt%2FNord_Grand-2_Panel_240419_crop.jpg&w=1920&q=75",
+              "type": "gallery",
+              "alt_text": "Nord_Grand-2_Panel_240419_crop"
+            }
+          ],
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

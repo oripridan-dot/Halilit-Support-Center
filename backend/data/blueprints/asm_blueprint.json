@@ -1,0 +1,50 @@
+[
+  {
+    "id": "asm_85_hskb",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Keyboard",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Keyboard",
+    "category": "general",
+    "image_url": "/data/thumbnails/asm_85_hskb.jpg",
+    "product_url": "https://www.halilit.com/items/3712385-asm-hydrasynth-keyboard",
+    "is_sold": true,
+    "price": 5610.0,
+    "halilit_url": "https://www.halilit.com/items/3712385-asm-hydrasynth-keyboard",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "asm_85_hsdr",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Desktop",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Desktop",
+    "category": "general",
+    "image_url": "/data/thumbnails/asm_85_hsdr.jpg",
+    "product_url": "https://www.halilit.com/items/3725985-asm-hydrasynth-desktop-synthesizer",
+    "is_sold": true,
+    "price": 3436.0,
+    "halilit_url": "https://www.halilit.com/items/3725985-asm-hydrasynth-desktop-synthesizer",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "asm_85_hsmk",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Explorer",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Explorer",
+    "category": "general",
+    "image_url": "/data/thumbnails/asm_85_hsmk.jpg",
+    "product_url": "https://www.halilit.com/items/5663419-asm-hydrasynth-explorer-synthesizer",
+    "is_sold": true,
+    "price": 2609.0,
+    "halilit_url": "https://www.halilit.com/items/5663419-asm-hydrasynth-explorer-synthesizer",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "asm_85_hslx",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Deluxe",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Deluxe",
+    "category": "general",
+    "image_url": "/data/thumbnails/asm_85_hslx.jpg",
+    "product_url": "https://www.halilit.com/items/5664734-asm-hydrasynth-deluxe-synthesizer",
+    "is_sold": true,
+    "price": 7785.0,
+    "halilit_url": "https://www.halilit.com/items/5664734-asm-hydrasynth-deluxe-synthesizer",
+    "status": "IN_STOCK"
+  }
+]

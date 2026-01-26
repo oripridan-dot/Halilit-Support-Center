@@ -1,0 +1,66 @@
+{
+  "brand_name": "Spector",
+  "products": [
+    {
+      "id": "spector_69_euro5lxexpop",
+      "name": "Spector Euro 5 LX EX Poplar Burl",
+      "description": "Spector Euro 5 LX EX Poplar Burl",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+      "product_url": "https://www.halilit.com/items/7773852-spector-euro-5-lx-ex-poplar-burl",
+      "is_sold": true,
+      "price": 6697.0,
+      "halilit_url": "https://www.halilit.com/items/7773852-spector-euro-5-lx-ex-poplar-burl",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6697.0,
+        "original_price": 6697.0
+      },
+      "brand": "Spector",
+      "logo_url": "/assets/logos/spector_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+        "thumbnail": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+        "high_res": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+        "original": "/data/thumbnails/spector_69_euro5lxexpop.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.238741",
+  "brand_slug": "spector",
+  "refined_at": "2026-01-26T06:43:37.305152+00:00",
+  "brand_identity": {
+    "id": "spector",
+    "name": "Spector",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/spector_logo.png",
+    "taxonomy_stats": {
+      "validated": 1,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "spector_69_euro5lxexpop",
+          "name": "Spector Euro 5 LX EX Poplar Burl",
+          "description": "Spector Euro 5 LX EX Poplar Burl",
+          "images": {
+            "main": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+            "thumbnail": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+            "high_res": "/data/thumbnails/spector_69_euro5lxexpop.jpg",
+            "original": "/data/thumbnails/spector_69_euro5lxexpop.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

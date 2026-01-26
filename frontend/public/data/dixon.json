@@ -1,0 +1,435 @@
+{
+  "brand_name": "Dixon",
+  "products": [
+    {
+      "id": "dixon_36_pdsan654bng",
+      "name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+      "description": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+      "product_url": "https://www.halilit.com/items/3960840-dixon-zebra-wood-red-silkwood-14-snare",
+      "is_sold": true,
+      "price": 1403.0,
+      "halilit_url": "https://www.halilit.com/items/3960840-dixon-zebra-wood-red-silkwood-14-snare",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1403.0,
+        "original_price": 1403.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+        "original": "/data/thumbnails/dixon_36_pdsan654bng.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_pdsan654cbrg",
+      "name": "Dixon Australian Rose Gum 14\" Snare",
+      "description": "Dixon Australian Rose Gum 14\" Snare",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+      "product_url": "https://www.halilit.com/items/3960896-dixon-australian-rose-gum-14-snare",
+      "is_sold": true,
+      "price": 1944.0,
+      "halilit_url": "https://www.halilit.com/items/3960896-dixon-australian-rose-gum-14-snare",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1944.0,
+        "original_price": 1944.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+        "original": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_pdpc81sp",
+      "name": "Dixon Practice 6\" Pad",
+      "description": "Dixon Practice 6\" Pad",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+      "product_url": "https://www.halilit.com/items/7617651-dixon-practice-8-pad",
+      "is_sold": true,
+      "price": 93.0,
+      "halilit_url": "https://www.halilit.com/items/7617651-dixon-practice-8-pad",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 93.0,
+        "original_price": 93.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+        "original": "/data/thumbnails/dixon_36_pdpc81sp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_ppcpp",
+      "name": "Dixon Cajon Pedal Plus",
+      "description": "Dixon Cajon Pedal Plus",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_ppcpp.jpg",
+      "product_url": "https://www.halilit.com/items/3961038-dixon-cajon-pedal-plus",
+      "is_sold": true,
+      "price": 522.0,
+      "halilit_url": "https://www.halilit.com/items/3961038-dixon-cajon-pedal-plus",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 522.0,
+        "original_price": 522.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_ppcpp.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_ppcpp.jpg",
+        "high_res": "/data/thumbnails/dixon_36_ppcpp.jpg",
+        "original": "/data/thumbnails/dixon_36_ppcpp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_pahcmsp",
+      "name": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+      "description": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+      "product_url": "https://www.halilit.com/items/448348-dixon-pa-hcm-sp-cymbal-mount",
+      "is_sold": true,
+      "price": 90.0,
+      "halilit_url": "https://www.halilit.com/items/448348-dixon-pa-hcm-sp-cymbal-mount",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 90.0,
+        "original_price": 90.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+        "original": "/data/thumbnails/dixon_36_pahcmsp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_pahmmsp",
+      "name": "Dixon PA-HMM-SP Microphone Clamp",
+      "description": "Dixon PA-HMM-SP Microphone Clamp",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+      "product_url": "https://www.halilit.com/items/448350-dixon-pa-hmm-sp-microphone-clamp",
+      "is_sold": true,
+      "price": 85.0,
+      "halilit_url": "https://www.halilit.com/items/448350-dixon-pa-hmm-sp-microphone-clamp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 85.0,
+        "original_price": 85.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+        "original": "/data/thumbnails/dixon_36_pahmmsp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_pdpc8",
+      "name": "Dixon Practice 4\" Pad",
+      "description": "Dixon Practice 4\" Pad",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pdpc8.jpg",
+      "product_url": "https://www.halilit.com/items/446137-dixon-practice-4-pad",
+      "is_sold": true,
+      "price": 88.0,
+      "halilit_url": "https://www.halilit.com/items/446137-dixon-practice-4-pad",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 88.0,
+        "original_price": 88.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pdpc8.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pdpc8.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pdpc8.jpg",
+        "original": "/data/thumbnails/dixon_36_pdpc8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_prwbds",
+      "name": "Dixon PRWBDS Rock Block Set",
+      "description": "Dixon PRWBDS Rock Block Set",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_prwbds.jpg",
+      "product_url": "https://www.halilit.com/items/448360-dixon-prwbds-rock-block-set",
+      "is_sold": true,
+      "price": 433.0,
+      "halilit_url": "https://www.halilit.com/items/448360-dixon-prwbds-rock-block-set",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 433.0,
+        "original_price": 433.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_prwbds.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_prwbds.jpg",
+        "high_res": "/data/thumbnails/dixon_36_prwbds.jpg",
+        "original": "/data/thumbnails/dixon_36_prwbds.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_pdmtr16bl",
+      "name": "Dixon Tambourine 16 Jingle",
+      "description": "Dixon Tambourine 16 Jingle",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+      "product_url": "https://www.halilit.com/items/460375-dixon-tambourine-16-jingle",
+      "is_sold": true,
+      "price": 52.0,
+      "halilit_url": "https://www.halilit.com/items/460375-dixon-tambourine-16-jingle",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 52.0,
+        "original_price": 52.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+        "high_res": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+        "original": "/data/thumbnails/dixon_36_pdmtr16bl.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "dixon_36_psg9000",
+      "name": "Dixon PSG9000 Bongo Stand",
+      "description": "Dixon PSG9000 Bongo Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_psg9000.jpg",
+      "product_url": "https://www.halilit.com/items/448346-dixon-psg9000-bongo-stand-",
+      "is_sold": true,
+      "price": 393.0,
+      "halilit_url": "https://www.halilit.com/items/448346-dixon-psg9000-bongo-stand-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 393.0,
+        "original_price": 393.0
+      },
+      "brand": "Dixon",
+      "logo_url": "/assets/logos/dixon_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/dixon_36_psg9000.jpg",
+        "thumbnail": "/data/thumbnails/dixon_36_psg9000.jpg",
+        "high_res": "/data/thumbnails/dixon_36_psg9000.jpg",
+        "original": "/data/thumbnails/dixon_36_psg9000.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.446513",
+  "brand_slug": "dixon",
+  "refined_at": "2026-01-26T06:43:37.452744+00:00",
+  "brand_identity": {
+    "id": "dixon",
+    "name": "Dixon",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/dixon_logo.png",
+    "taxonomy_stats": {
+      "validated": 10,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "dixon_36_pdsan654bng",
+          "name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+          "description": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+            "original": "/data/thumbnails/dixon_36_pdsan654bng.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_pdsan654cbrg",
+          "name": "Dixon Australian Rose Gum 14\" Snare",
+          "description": "Dixon Australian Rose Gum 14\" Snare",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+            "original": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_pdpc81sp",
+          "name": "Dixon Practice 6\" Pad",
+          "description": "Dixon Practice 6\" Pad",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+            "original": "/data/thumbnails/dixon_36_pdpc81sp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_ppcpp",
+          "name": "Dixon Cajon Pedal Plus",
+          "description": "Dixon Cajon Pedal Plus",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_ppcpp.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_ppcpp.jpg",
+            "high_res": "/data/thumbnails/dixon_36_ppcpp.jpg",
+            "original": "/data/thumbnails/dixon_36_ppcpp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_pahcmsp",
+          "name": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+          "description": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+            "original": "/data/thumbnails/dixon_36_pahcmsp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_pahmmsp",
+          "name": "Dixon PA-HMM-SP Microphone Clamp",
+          "description": "Dixon PA-HMM-SP Microphone Clamp",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+            "original": "/data/thumbnails/dixon_36_pahmmsp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_pdpc8",
+          "name": "Dixon Practice 4\" Pad",
+          "description": "Dixon Practice 4\" Pad",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pdpc8.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pdpc8.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pdpc8.jpg",
+            "original": "/data/thumbnails/dixon_36_pdpc8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_prwbds",
+          "name": "Dixon PRWBDS Rock Block Set",
+          "description": "Dixon PRWBDS Rock Block Set",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_prwbds.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_prwbds.jpg",
+            "high_res": "/data/thumbnails/dixon_36_prwbds.jpg",
+            "original": "/data/thumbnails/dixon_36_prwbds.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_pdmtr16bl",
+          "name": "Dixon Tambourine 16 Jingle",
+          "description": "Dixon Tambourine 16 Jingle",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+            "high_res": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+            "original": "/data/thumbnails/dixon_36_pdmtr16bl.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "dixon_36_psg9000",
+          "name": "Dixon PSG9000 Bongo Stand",
+          "description": "Dixon PSG9000 Bongo Stand",
+          "images": {
+            "main": "/data/thumbnails/dixon_36_psg9000.jpg",
+            "thumbnail": "/data/thumbnails/dixon_36_psg9000.jpg",
+            "high_res": "/data/thumbnails/dixon_36_psg9000.jpg",
+            "original": "/data/thumbnails/dixon_36_psg9000.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

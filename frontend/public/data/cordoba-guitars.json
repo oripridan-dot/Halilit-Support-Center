@@ -1,0 +1,558 @@
+{
+  "brand_name": "Cordoba Guitars",
+  "products": [
+    {
+      "id": "cordoba_guitars_76_musicstand",
+      "name": "Cordoba Music Stand",
+      "description": "Cordoba Music Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+      "product_url": "https://www.halilit.com/items/5089573-cordoba-aluminum-music-stand",
+      "is_sold": true,
+      "price": 139.0,
+      "halilit_url": "https://www.halilit.com/items/5089573-cordoba-aluminum-music-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 139.0,
+        "original_price": 139.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_gb1_2",
+      "name": "Cordoba Gig Bag 1/2 size",
+      "description": "Cordoba Gig Bag 1/2 size",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+      "product_url": "https://www.halilit.com/items/3506827-gig-bag-1-2-size-cordoba-guitars",
+      "is_sold": true,
+      "price": 146.0,
+      "halilit_url": "https://www.halilit.com/items/3506827-gig-bag-1-2-size-cordoba-guitars",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 146.0,
+        "original_price": 146.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_gb3_4",
+      "name": "Cordoba Gig Bag 3/4 size",
+      "description": "Cordoba Gig Bag 3/4 size",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+      "product_url": "https://www.halilit.com/items/3934883-gig-bag-3-4-size-cordoba-guitars",
+      "is_sold": true,
+      "price": 146.0,
+      "halilit_url": "https://www.halilit.com/items/3934883-gig-bag-3-4-size-cordoba-guitars",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 146.0,
+        "original_price": 146.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_gb1_4",
+      "name": "Cordoba Gig Bag 1/4 size",
+      "description": "Cordoba Gig Bag 1/4 size",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+      "product_url": "https://www.halilit.com/items/5092801-gig-bag-1-4-size-cordoba-guitars",
+      "is_sold": true,
+      "price": 146.0,
+      "halilit_url": "https://www.halilit.com/items/5092801-gig-bag-1-4-size-cordoba-guitars",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 146.0,
+        "original_price": 146.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_gigbagfullsize",
+      "name": "Cordoba Standard Gig Bag",
+      "description": "Cordoba Standard Gig Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+      "product_url": "https://www.halilit.com/items/3934979-gig-bag-full-size-cordoba-guitars",
+      "is_sold": true,
+      "price": 146.0,
+      "halilit_url": "https://www.halilit.com/items/3934979-gig-bag-full-size-cordoba-guitars",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 146.0,
+        "original_price": 146.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_stool",
+      "name": "Cordoba Rustic Bar Stool",
+      "description": "Cordoba Rustic Bar Stool",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+      "product_url": "https://www.halilit.com/items/3258636-cordoba-rustic-bar-stool",
+      "is_sold": true,
+      "price": 536.0,
+      "halilit_url": "https://www.halilit.com/items/3258636-cordoba-rustic-bar-stool",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 536.0,
+        "original_price": 536.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_stool.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_string_hard",
+      "name": "Cordoba Nylon Guitar Strings - Hard",
+      "description": "Cordoba Nylon Guitar Strings - Hard",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+      "product_url": "https://www.halilit.com/items/4714055-cordoba-nylon-guitar-strings-hard-",
+      "is_sold": true,
+      "price": 56.0,
+      "halilit_url": "https://www.halilit.com/items/4714055-cordoba-nylon-guitar-strings-hard-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 56.0,
+        "original_price": 56.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_digtunerclip",
+      "name": "Cordoba Digital Clip-on Tuner",
+      "description": "Cordoba Digital Clip-on Tuner",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+      "product_url": "https://www.halilit.com/items/3934838-digital-tuner-clip-on-cordoba",
+      "is_sold": true,
+      "price": 61.0,
+      "halilit_url": "https://www.halilit.com/items/3934838-digital-tuner-clip-on-cordoba",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 61.0,
+        "original_price": 61.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_soundholecover",
+      "name": "Cordoba Soundhole Cover",
+      "description": "Cordoba Soundhole Cover",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+      "product_url": "https://www.halilit.com/items/3933335-cordoba-soundhole-cover",
+      "is_sold": true,
+      "price": 65.0,
+      "halilit_url": "https://www.halilit.com/items/3933335-cordoba-soundhole-cover",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 65.0,
+        "original_price": 65.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_string_med",
+      "name": "Cordoba Nylon Guitar Strings - Medium",
+      "description": "Cordoba Nylon Guitar Strings - Medium",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+      "product_url": "https://www.halilit.com/items/4714136-cordoba-nylon-guitar-strings-medium-",
+      "is_sold": true,
+      "price": 56.0,
+      "halilit_url": "https://www.halilit.com/items/4714136-cordoba-nylon-guitar-strings-medium-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 56.0,
+        "original_price": 56.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_string_med.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_string_fusion",
+      "name": "Cordoba Nylon Guitar Strings - Fusion",
+      "description": "Cordoba Nylon Guitar Strings - Fusion",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+      "product_url": "https://www.halilit.com/items/4694726-cordoba-nylon-guitar-strings-fusion-",
+      "is_sold": true,
+      "price": 70.0,
+      "halilit_url": "https://www.halilit.com/items/4694726-cordoba-nylon-guitar-strings-fusion-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 70.0,
+        "original_price": 70.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_gbdelux1_4",
+      "name": "Cordoba Deluxe Gig Bag 1/4",
+      "description": "Cordoba Deluxe Gig Bag 1/4",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+      "product_url": "https://www.halilit.com/items/3958556-deluxe-gig-bag-1-4-cordoba-guitars",
+      "is_sold": true,
+      "price": 252.0,
+      "halilit_url": "https://www.halilit.com/items/3958556-deluxe-gig-bag-1-4-cordoba-guitars",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 252.0,
+        "original_price": 252.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "cordoba_guitars_76_gbdelux1_2_3_4",
+      "name": "Cordoba Deluxe Gig Bag 1/2-3/4 size",
+      "description": "Cordoba Deluxe Gig Bag 1/2-3/4 size",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+      "product_url": "https://www.halilit.com/items/5802621-deluxe-gig-bag-1-4-cordoba-guitars",
+      "is_sold": true,
+      "price": 252.0,
+      "halilit_url": "https://www.halilit.com/items/5802621-deluxe-gig-bag-1-4-cordoba-guitars",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 252.0,
+        "original_price": 252.0
+      },
+      "brand": "Cordoba Guitars",
+      "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+        "thumbnail": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+        "high_res": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+        "original": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.382153",
+  "brand_slug": "cordoba-guitars",
+  "refined_at": "2026-01-26T06:43:37.491372+00:00",
+  "brand_identity": {
+    "id": "cordoba-guitars",
+    "name": "Cordoba Guitars",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/cordoba-guitars_logo.gif",
+    "taxonomy_stats": {
+      "validated": 13,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "cordoba_guitars_76_musicstand",
+          "name": "Cordoba Music Stand",
+          "description": "Cordoba Music Stand",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_musicstand.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_gb1_2",
+          "name": "Cordoba Gig Bag 1/2 size",
+          "description": "Cordoba Gig Bag 1/2 size",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_gb1_2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_gb3_4",
+          "name": "Cordoba Gig Bag 3/4 size",
+          "description": "Cordoba Gig Bag 3/4 size",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_gb3_4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_gb1_4",
+          "name": "Cordoba Gig Bag 1/4 size",
+          "description": "Cordoba Gig Bag 1/4 size",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_gb1_4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_gigbagfullsize",
+          "name": "Cordoba Standard Gig Bag",
+          "description": "Cordoba Standard Gig Bag",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_gigbagfullsize.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_stool",
+          "name": "Cordoba Rustic Bar Stool",
+          "description": "Cordoba Rustic Bar Stool",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_stool.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_stool.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_string_hard",
+          "name": "Cordoba Nylon Guitar Strings - Hard",
+          "description": "Cordoba Nylon Guitar Strings - Hard",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_string_hard.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_digtunerclip",
+          "name": "Cordoba Digital Clip-on Tuner",
+          "description": "Cordoba Digital Clip-on Tuner",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_digtunerclip.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_soundholecover",
+          "name": "Cordoba Soundhole Cover",
+          "description": "Cordoba Soundhole Cover",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_soundholecover.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_string_med",
+          "name": "Cordoba Nylon Guitar Strings - Medium",
+          "description": "Cordoba Nylon Guitar Strings - Medium",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_string_med.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_string_med.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_string_fusion",
+          "name": "Cordoba Nylon Guitar Strings - Fusion",
+          "description": "Cordoba Nylon Guitar Strings - Fusion",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_string_fusion.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_gbdelux1_4",
+          "name": "Cordoba Deluxe Gig Bag 1/4",
+          "description": "Cordoba Deluxe Gig Bag 1/4",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_gbdelux1_4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "cordoba_guitars_76_gbdelux1_2_3_4",
+          "name": "Cordoba Deluxe Gig Bag 1/2-3/4 size",
+          "description": "Cordoba Deluxe Gig Bag 1/2-3/4 size",
+          "images": {
+            "main": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+            "thumbnail": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+            "high_res": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg",
+            "original": "/data/thumbnails/cordoba_guitars_76_gbdelux1_2_3_4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

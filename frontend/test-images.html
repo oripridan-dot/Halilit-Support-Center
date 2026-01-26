@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Test</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: monospace;
+      padding: 20px;
+    }
+    .test {
+      margin: 20px;
+      border: 1px solid #666;
+      padding: 20px;
+    }
+    img {
+      border: 2px solid red;
+      max-width: 200px;
+      max-height: 200px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Loading Test</h1>
+  
+  <div class="test">
+    <h2>Test 1: /data/thumbnails/ path</h2>
+    <img src="/data/thumbnails/gon_bops_percussion_82_aacj.jpg" alt="Test 1" onload="log('Test 1 loaded')" onerror="log('Test 1 FAILED')">
+  </div>
+
+  <div class="test">
+    <h2>Test 2: /public/data/thumbnails/ path</h2>
+    <img src="/public/data/thumbnails/gon_bops_percussion_82_aacj.jpg" alt="Test 2" onload="log('Test 2 loaded')" onerror="log('Test 2 FAILED')">
+  </div>
+
+  <div class="test">
+    <h2>Test 3: /assets/logos/ path</h2>
+    <img src="/assets/logos/gon-bops-percussion_logo.jpg" alt="Test 3" onload="log('Test 3 loaded')" onerror="log('Test 3 FAILED')">
+  </div>
+
+  <div id="log" style="margin-top: 40px; background: #1a1a1a; padding: 20px; min-height: 200px;">
+    <h3>Log:</h3>
+  </div>
+
+  <script>
+    function log(msg) {
+      const logDiv = document.getElementById('log');
+      const p = document.createElement('p');
+      p.textContent = msg + ' @ ' + new Date().toLocaleTimeString();
+      logDiv.appendChild(p);
+    }
+    
+    log('Page loaded');
+  </script>
+</body>
+</html>

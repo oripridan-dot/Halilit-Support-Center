@@ -1,0 +1,66 @@
+{
+  "brand_name": "Studio Logic",
+  "products": [
+    {
+      "id": "studio_logic_14_numacompact_case",
+      "name": "Studiologic Soft Case",
+      "description": "Studiologic Soft Case",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+      "product_url": "https://www.halilit.com/items/1969983-studiologic-soft-case",
+      "is_sold": true,
+      "price": 258.0,
+      "halilit_url": "https://www.halilit.com/items/1969983-studiologic-soft-case",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 258.0,
+        "original_price": 258.0
+      },
+      "brand": "Studio Logic",
+      "logo_url": "/assets/logos/studio-logic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+        "thumbnail": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+        "high_res": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+        "original": "/data/thumbnails/studio_logic_14_numacompact_case.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.228053",
+  "brand_slug": "studio-logic",
+  "refined_at": "2026-01-26T06:43:37.235743+00:00",
+  "brand_identity": {
+    "id": "studio-logic",
+    "name": "Studio Logic",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/studio-logic_logo.png",
+    "taxonomy_stats": {
+      "validated": 1,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "studio_logic_14_numacompact_case",
+          "name": "Studiologic Soft Case",
+          "description": "Studiologic Soft Case",
+          "images": {
+            "main": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+            "thumbnail": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+            "high_res": "/data/thumbnails/studio_logic_14_numacompact_case.jpg",
+            "original": "/data/thumbnails/studio_logic_14_numacompact_case.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

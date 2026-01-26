@@ -1,0 +1,107 @@
+{
+  "brand_name": "Ampeg",
+  "products": [
+    {
+      "id": "ampeg_63_scraemblarbass",
+      "name": "Ampeg Scrambler Bass Overdrive",
+      "description": "Ampeg Scrambler Bass Overdrive",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+      "product_url": "https://www.halilit.com/items/1390181-ampeg-scrambler-bass-overdrive",
+      "is_sold": true,
+      "price": 367.0,
+      "halilit_url": "https://www.halilit.com/items/1390181-ampeg-scrambler-bass-overdrive",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 367.0,
+        "original_price": 367.0
+      },
+      "brand": "Ampeg",
+      "logo_url": "/assets/logos/ampeg_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+        "thumbnail": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+        "high_res": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+        "original": "/data/thumbnails/ampeg_63_scraemblarbass.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "ampeg_63_liquifier",
+      "name": "Ampeg Liquifier Analog Chorus",
+      "description": "Ampeg Liquifier Analog Chorus",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/ampeg_63_liquifier.jpg",
+      "product_url": "https://www.halilit.com/items/3909033-ampeg-liquifier-analog-chorus",
+      "is_sold": true,
+      "price": 367.0,
+      "halilit_url": "https://www.halilit.com/items/3909033-ampeg-liquifier-analog-chorus",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 367.0,
+        "original_price": 367.0
+      },
+      "brand": "Ampeg",
+      "logo_url": "/assets/logos/ampeg_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/ampeg_63_liquifier.jpg",
+        "thumbnail": "/data/thumbnails/ampeg_63_liquifier.jpg",
+        "high_res": "/data/thumbnails/ampeg_63_liquifier.jpg",
+        "original": "/data/thumbnails/ampeg_63_liquifier.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.367603",
+  "brand_slug": "ampeg",
+  "refined_at": "2026-01-26T06:43:37.372882+00:00",
+  "brand_identity": {
+    "id": "ampeg",
+    "name": "Ampeg",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/ampeg_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 2,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "ampeg_63_scraemblarbass",
+          "name": "Ampeg Scrambler Bass Overdrive",
+          "description": "Ampeg Scrambler Bass Overdrive",
+          "images": {
+            "main": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+            "thumbnail": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+            "high_res": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+            "original": "/data/thumbnails/ampeg_63_scraemblarbass.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "ampeg_63_liquifier",
+          "name": "Ampeg Liquifier Analog Chorus",
+          "description": "Ampeg Liquifier Analog Chorus",
+          "images": {
+            "main": "/data/thumbnails/ampeg_63_liquifier.jpg",
+            "thumbnail": "/data/thumbnails/ampeg_63_liquifier.jpg",
+            "high_res": "/data/thumbnails/ampeg_63_liquifier.jpg",
+            "original": "/data/thumbnails/ampeg_63_liquifier.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "brand_identity": {
+    "id": "moog",
+    "name": "Moog Music",
+    "website": "https://www.moogmusic.com",
+    "logo_url": "/assets/logos/moog-blueprint_logo.png",
+    "brand_colors": {},
+    "taxonomy_stats": {
+      "validated": 0,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "products": [],
+  "total_products": 0,
+  "last_updated": "2026-01-25T21:32:21.119343",
+  "brand_name": "Moog Blueprint",
+  "brand_slug": "moog-blueprint",
+  "refined_at": "2026-01-25T21:32:52.579659+00:00",
+  "hierarchy": {}
+}

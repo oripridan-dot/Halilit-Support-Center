@@ -1,0 +1,927 @@
+{
+  "brand_name": "Medeli",
+  "products": [
+    {
+      "id": "medeli_85_dd225",
+      "name": "Medeli DD225",
+      "description": "Medeli DD225",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dd225.jpg",
+      "product_url": "https://www.halilit.com/items/7192603-medeli-dd225-portable-drum",
+      "is_sold": true,
+      "price": 740.0,
+      "halilit_url": "https://www.halilit.com/items/7192603-medeli-dd225-portable-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 740.0,
+        "original_price": 740.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dd225.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dd225.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dd225.jpg",
+        "original": "/data/thumbnails/medeli_85_dd225.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dd112",
+      "name": "Medeli DD112",
+      "description": "Medeli DD112",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dd112.jpg",
+      "product_url": "https://www.halilit.com/items/7186769-medeli-dd112-portable-drum",
+      "is_sold": true,
+      "price": 287.0,
+      "halilit_url": "https://www.halilit.com/items/7186769-medeli-dd112-portable-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 287.0,
+        "original_price": 287.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dd112.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dd112.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dd112.jpg",
+        "original": "/data/thumbnails/medeli_85_dd112.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_tp110",
+      "name": "Medeli TP110",
+      "description": "Medeli TP110",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_tp110.jpg",
+      "product_url": "https://www.halilit.com/items/8608879-medeli-tp110-portable-drum",
+      "is_sold": true,
+      "price": 347.0,
+      "halilit_url": "https://www.halilit.com/items/8608879-medeli-tp110-portable-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 347.0,
+        "original_price": 347.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_tp110.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_tp110.jpg",
+        "high_res": "/data/thumbnails/medeli_85_tp110.jpg",
+        "original": "/data/thumbnails/medeli_85_tp110.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dante_zen",
+      "name": "Medeli Dante ZEN",
+      "description": "Medeli Dante ZEN",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dante_zen.jpg",
+      "product_url": "https://www.halilit.com/items/5812618-medeli-dante-zen-oriental-workstation",
+      "is_sold": true,
+      "price": 3627.0,
+      "halilit_url": "https://www.halilit.com/items/5812618-medeli-dante-zen-oriental-workstation",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3627.0,
+        "original_price": 3627.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dante_zen.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dante_zen.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dante_zen.jpg",
+        "original": "/data/thumbnails/medeli_85_dante_zen.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dd325",
+      "name": "Medeli DD325",
+      "description": "Medeli DD325",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dd325.jpg",
+      "product_url": "https://www.halilit.com/items/7193743-medeli-dd325-portable-drum",
+      "is_sold": true,
+      "price": 913.0,
+      "halilit_url": "https://www.halilit.com/items/7193743-medeli-dd325-portable-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 913.0,
+        "original_price": 913.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dd325.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dd325.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dd325.jpg",
+        "original": "/data/thumbnails/medeli_85_dd325.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_akx10",
+      "name": "Medeli AKX10",
+      "description": "Medeli AKX10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_akx10.jpg",
+      "product_url": "https://www.halilit.com/items/4629762-medeli-akx10-digital-workstation",
+      "is_sold": true,
+      "price": 3064.0,
+      "halilit_url": "https://www.halilit.com/items/4629762-medeli-akx10-digital-workstation",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3064.0,
+        "original_price": 3064.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_akx10.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_akx10.jpg",
+        "high_res": "/data/thumbnails/medeli_85_akx10.jpg",
+        "original": "/data/thumbnails/medeli_85_akx10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp388",
+      "name": "Medeli DP388",
+      "description": "Medeli DP388",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp388.jpg",
+      "product_url": "https://www.halilit.com/items/444693-medeli-dp388",
+      "is_sold": true,
+      "price": 2972.0,
+      "halilit_url": "https://www.halilit.com/items/444693-medeli-dp388",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2972.0,
+        "original_price": 2972.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp388.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp388.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp388.jpg",
+        "original": "/data/thumbnails/medeli_85_dp388.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_mr101",
+      "name": "Medeli Rhythm Machine MR101",
+      "description": "Medeli Rhythm Machine MR101",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_mr101.jpg",
+      "product_url": "https://www.halilit.com/items/7568173-medeli-rhythm-machine-mr101",
+      "is_sold": true,
+      "price": 309.0,
+      "halilit_url": "https://www.halilit.com/items/7568173-medeli-rhythm-machine-mr101",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 309.0,
+        "original_price": 309.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_mr101.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_mr101.jpg",
+        "high_res": "/data/thumbnails/medeli_85_mr101.jpg",
+        "original": "/data/thumbnails/medeli_85_mr101.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_mr101s",
+      "name": "Medeli Rhythm Machine MR101S",
+      "description": "Medeli Rhythm Machine MR101S",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_mr101s.jpg",
+      "product_url": "https://www.halilit.com/items/8600691-medeli-rhythm-machine-mr101s",
+      "is_sold": true,
+      "price": 322.0,
+      "halilit_url": "https://www.halilit.com/items/8600691-medeli-rhythm-machine-mr101s",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 322.0,
+        "original_price": 322.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_mr101s.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_mr101s.jpg",
+        "high_res": "/data/thumbnails/medeli_85_mr101s.jpg",
+        "original": "/data/thumbnails/medeli_85_mr101s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_ak603",
+      "name": "Medeli AK603",
+      "description": "Medeli AK603",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_ak603.jpg",
+      "product_url": "https://www.halilit.com/items/8599243-medeli-ak603-digital-workstation",
+      "is_sold": true,
+      "price": 1624.0,
+      "halilit_url": "https://www.halilit.com/items/8599243-medeli-ak603-digital-workstation",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1624.0,
+        "original_price": 1624.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_ak603.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_ak603.jpg",
+        "high_res": "/data/thumbnails/medeli_85_ak603.jpg",
+        "original": "/data/thumbnails/medeli_85_ak603.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp460k",
+      "name": "Medeli DP460K",
+      "description": "Medeli DP460K",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp460k.jpg",
+      "product_url": "https://www.halilit.com/items/4955603-medeli-dp460k",
+      "is_sold": true,
+      "price": 3509.0,
+      "halilit_url": "https://www.halilit.com/items/4955603-medeli-dp460k",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3509.0,
+        "original_price": 3509.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp460k.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp460k.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp460k.jpg",
+        "original": "/data/thumbnails/medeli_85_dp460k.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp460k_wh",
+      "name": "Medeli DP460K",
+      "description": "Medeli DP460K",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+      "product_url": "https://www.halilit.com/items/7717594-medeli-dp460k-digital-piano",
+      "is_sold": true,
+      "price": 3535.0,
+      "halilit_url": "https://www.halilit.com/items/7717594-medeli-dp460k-digital-piano",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3535.0,
+        "original_price": 3535.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+        "original": "/data/thumbnails/medeli_85_dp460k_wh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp250rb",
+      "name": "Medeli DP250",
+      "description": "Medeli DP250",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp250rb.jpg",
+      "product_url": "https://www.halilit.com/items/444694-medeli-dp250",
+      "is_sold": true,
+      "price": 2309.0,
+      "halilit_url": "https://www.halilit.com/items/444694-medeli-dp250",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2309.0,
+        "original_price": 2309.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp250rb.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp250rb.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp250rb.jpg",
+        "original": "/data/thumbnails/medeli_85_dp250rb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_st450_wh",
+      "name": "Medeli ST450 Three Pedals Stand",
+      "description": "Medeli ST450 Three Pedals Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_st450_wh.jpg",
+      "product_url": "https://www.halilit.com/items/7717467-medeli-st450-three-pedals-stand",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/7717467-medeli-st450-three-pedals-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_st450_wh.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_st450_wh.jpg",
+        "high_res": "/data/thumbnails/medeli_85_st450_wh.jpg",
+        "original": "/data/thumbnails/medeli_85_st450_wh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_st430",
+      "name": "Medeli ST430 Three Pedals Stand",
+      "description": "Medeli ST430 Three Pedals Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_st430.jpg",
+      "product_url": "https://www.halilit.com/items/5502086-medeli-st430-three-pedals-stand",
+      "is_sold": true,
+      "price": 410.0,
+      "halilit_url": "https://www.halilit.com/items/5502086-medeli-st430-three-pedals-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 410.0,
+        "original_price": 410.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_st430.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_st430.jpg",
+        "high_res": "/data/thumbnails/medeli_85_st430.jpg",
+        "original": "/data/thumbnails/medeli_85_st430.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_st430_wh",
+      "name": "Medeli ST430 Three Pedals Stand",
+      "description": "Medeli ST430 Three Pedals Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_st430_wh.jpg",
+      "product_url": "https://www.halilit.com/items/7717528-medeli-st430-three-pedals-stand",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/7717528-medeli-st430-three-pedals-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_st430_wh.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_st430_wh.jpg",
+        "high_res": "/data/thumbnails/medeli_85_st430_wh.jpg",
+        "original": "/data/thumbnails/medeli_85_st430_wh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp260",
+      "name": "Medeli DP260",
+      "description": "Medeli DP260",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp260.jpg",
+      "product_url": "https://www.halilit.com/items/2150368-medeli-dp260",
+      "is_sold": true,
+      "price": 2494.0,
+      "halilit_url": "https://www.halilit.com/items/2150368-medeli-dp260",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2494.0,
+        "original_price": 2494.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp260.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp260.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp260.jpg",
+        "original": "/data/thumbnails/medeli_85_dp260.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp280k",
+      "name": "Medeli DP280K",
+      "description": "Medeli DP280K",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp280k.jpg",
+      "product_url": "https://www.halilit.com/items/4439788-medeli-dp280k-",
+      "is_sold": true,
+      "price": 2771.0,
+      "halilit_url": "https://www.halilit.com/items/4439788-medeli-dp280k-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2771.0,
+        "original_price": 2771.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp280k.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp280k.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp280k.jpg",
+        "original": "/data/thumbnails/medeli_85_dp280k.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_st450",
+      "name": "Medeli ST450 Three Pedals Stand",
+      "description": "Medeli ST450 Three Pedals Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_st450.jpg",
+      "product_url": "https://www.halilit.com/items/7194869-medeli-st450-three-pedals-stand",
+      "is_sold": true,
+      "price": 387.0,
+      "halilit_url": "https://www.halilit.com/items/7194869-medeli-st450-three-pedals-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 387.0,
+        "original_price": 387.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_st450.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_st450.jpg",
+        "high_res": "/data/thumbnails/medeli_85_st450.jpg",
+        "original": "/data/thumbnails/medeli_85_st450.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_dp740k",
+      "name": "Medeli DP740K",
+      "description": "Medeli DP740K",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_dp740k.jpg",
+      "product_url": "https://www.halilit.com/items/1213173-medeli-dp740k-piano",
+      "is_sold": true,
+      "price": 3953.0,
+      "halilit_url": "https://www.halilit.com/items/1213173-medeli-dp740k-piano",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3953.0,
+        "original_price": 3953.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_dp740k.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_dp740k.jpg",
+        "high_res": "/data/thumbnails/medeli_85_dp740k.jpg",
+        "original": "/data/thumbnails/medeli_85_dp740k.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_ap30b",
+      "name": "Medeli AP30",
+      "description": "Medeli AP30",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_ap30b.jpg",
+      "product_url": "https://www.halilit.com/items/7588096-medeli-ap30-drum-amplifier",
+      "is_sold": true,
+      "price": 729.0,
+      "halilit_url": "https://www.halilit.com/items/7588096-medeli-ap30-drum-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 729.0,
+        "original_price": 729.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_ap30b.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_ap30b.jpg",
+        "high_res": "/data/thumbnails/medeli_85_ap30b.jpg",
+        "original": "/data/thumbnails/medeli_85_ap30b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "medeli_85_ap33",
+      "name": "Medeli AP33",
+      "description": "Medeli AP33",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/medeli_85_ap33.jpg",
+      "product_url": "https://www.halilit.com/items/8363418-medeli-ap33-drum-monitor",
+      "is_sold": true,
+      "price": 882.0,
+      "halilit_url": "https://www.halilit.com/items/8363418-medeli-ap33-drum-monitor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 882.0,
+        "original_price": 882.0
+      },
+      "brand": "Medeli",
+      "logo_url": "/assets/logos/medeli_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/medeli_85_ap33.jpg",
+        "thumbnail": "/data/thumbnails/medeli_85_ap33.jpg",
+        "high_res": "/data/thumbnails/medeli_85_ap33.jpg",
+        "original": "/data/thumbnails/medeli_85_ap33.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.232542",
+  "brand_slug": "medeli",
+  "refined_at": "2026-01-26T06:43:37.289374+00:00",
+  "brand_identity": {
+    "id": "medeli",
+    "name": "Medeli",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/medeli_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 22,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "medeli_85_dd225",
+          "name": "Medeli DD225",
+          "description": "Medeli DD225",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dd225.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dd225.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dd225.jpg",
+            "original": "/data/thumbnails/medeli_85_dd225.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dd112",
+          "name": "Medeli DD112",
+          "description": "Medeli DD112",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dd112.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dd112.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dd112.jpg",
+            "original": "/data/thumbnails/medeli_85_dd112.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_tp110",
+          "name": "Medeli TP110",
+          "description": "Medeli TP110",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_tp110.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_tp110.jpg",
+            "high_res": "/data/thumbnails/medeli_85_tp110.jpg",
+            "original": "/data/thumbnails/medeli_85_tp110.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dante_zen",
+          "name": "Medeli Dante ZEN",
+          "description": "Medeli Dante ZEN",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dante_zen.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dante_zen.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dante_zen.jpg",
+            "original": "/data/thumbnails/medeli_85_dante_zen.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dd325",
+          "name": "Medeli DD325",
+          "description": "Medeli DD325",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dd325.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dd325.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dd325.jpg",
+            "original": "/data/thumbnails/medeli_85_dd325.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_akx10",
+          "name": "Medeli AKX10",
+          "description": "Medeli AKX10",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_akx10.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_akx10.jpg",
+            "high_res": "/data/thumbnails/medeli_85_akx10.jpg",
+            "original": "/data/thumbnails/medeli_85_akx10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp388",
+          "name": "Medeli DP388",
+          "description": "Medeli DP388",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp388.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp388.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp388.jpg",
+            "original": "/data/thumbnails/medeli_85_dp388.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_mr101",
+          "name": "Medeli Rhythm Machine MR101",
+          "description": "Medeli Rhythm Machine MR101",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_mr101.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_mr101.jpg",
+            "high_res": "/data/thumbnails/medeli_85_mr101.jpg",
+            "original": "/data/thumbnails/medeli_85_mr101.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_mr101s",
+          "name": "Medeli Rhythm Machine MR101S",
+          "description": "Medeli Rhythm Machine MR101S",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_mr101s.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_mr101s.jpg",
+            "high_res": "/data/thumbnails/medeli_85_mr101s.jpg",
+            "original": "/data/thumbnails/medeli_85_mr101s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_ak603",
+          "name": "Medeli AK603",
+          "description": "Medeli AK603",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_ak603.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_ak603.jpg",
+            "high_res": "/data/thumbnails/medeli_85_ak603.jpg",
+            "original": "/data/thumbnails/medeli_85_ak603.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp460k",
+          "name": "Medeli DP460K",
+          "description": "Medeli DP460K",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp460k.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp460k.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp460k.jpg",
+            "original": "/data/thumbnails/medeli_85_dp460k.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp460k_wh",
+          "name": "Medeli DP460K",
+          "description": "Medeli DP460K",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp460k_wh.jpg",
+            "original": "/data/thumbnails/medeli_85_dp460k_wh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp250rb",
+          "name": "Medeli DP250",
+          "description": "Medeli DP250",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp250rb.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp250rb.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp250rb.jpg",
+            "original": "/data/thumbnails/medeli_85_dp250rb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_st450_wh",
+          "name": "Medeli ST450 Three Pedals Stand",
+          "description": "Medeli ST450 Three Pedals Stand",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_st450_wh.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_st450_wh.jpg",
+            "high_res": "/data/thumbnails/medeli_85_st450_wh.jpg",
+            "original": "/data/thumbnails/medeli_85_st450_wh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_st430",
+          "name": "Medeli ST430 Three Pedals Stand",
+          "description": "Medeli ST430 Three Pedals Stand",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_st430.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_st430.jpg",
+            "high_res": "/data/thumbnails/medeli_85_st430.jpg",
+            "original": "/data/thumbnails/medeli_85_st430.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_st430_wh",
+          "name": "Medeli ST430 Three Pedals Stand",
+          "description": "Medeli ST430 Three Pedals Stand",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_st430_wh.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_st430_wh.jpg",
+            "high_res": "/data/thumbnails/medeli_85_st430_wh.jpg",
+            "original": "/data/thumbnails/medeli_85_st430_wh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp260",
+          "name": "Medeli DP260",
+          "description": "Medeli DP260",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp260.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp260.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp260.jpg",
+            "original": "/data/thumbnails/medeli_85_dp260.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp280k",
+          "name": "Medeli DP280K",
+          "description": "Medeli DP280K",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp280k.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp280k.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp280k.jpg",
+            "original": "/data/thumbnails/medeli_85_dp280k.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_st450",
+          "name": "Medeli ST450 Three Pedals Stand",
+          "description": "Medeli ST450 Three Pedals Stand",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_st450.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_st450.jpg",
+            "high_res": "/data/thumbnails/medeli_85_st450.jpg",
+            "original": "/data/thumbnails/medeli_85_st450.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_dp740k",
+          "name": "Medeli DP740K",
+          "description": "Medeli DP740K",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_dp740k.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_dp740k.jpg",
+            "high_res": "/data/thumbnails/medeli_85_dp740k.jpg",
+            "original": "/data/thumbnails/medeli_85_dp740k.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_ap30b",
+          "name": "Medeli AP30",
+          "description": "Medeli AP30",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_ap30b.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_ap30b.jpg",
+            "high_res": "/data/thumbnails/medeli_85_ap30b.jpg",
+            "original": "/data/thumbnails/medeli_85_ap30b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "medeli_85_ap33",
+          "name": "Medeli AP33",
+          "description": "Medeli AP33",
+          "images": {
+            "main": "/data/thumbnails/medeli_85_ap33.jpg",
+            "thumbnail": "/data/thumbnails/medeli_85_ap33.jpg",
+            "high_res": "/data/thumbnails/medeli_85_ap33.jpg",
+            "original": "/data/thumbnails/medeli_85_ap33.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

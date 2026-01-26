@@ -1,0 +1,19 @@
+{
+  "brand_name": "Maybach",
+  "products": [],
+  "generated_at": "2026-01-26T06:43:37.512912",
+  "brand_slug": "maybach",
+  "refined_at": "2026-01-26T06:43:37.537811+00:00",
+  "brand_identity": {
+    "id": "maybach",
+    "name": "Maybach",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/maybach_logo.png",
+    "taxonomy_stats": {
+      "validated": 0,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {}
+}

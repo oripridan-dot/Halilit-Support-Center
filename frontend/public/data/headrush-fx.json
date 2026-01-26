@@ -1,0 +1,189 @@
+{
+  "brand_name": "Headrush Fx",
+  "products": [
+    {
+      "id": "headrush_fx_52_sheeranlooperx",
+      "name": "HeadRush Sheeran Looper X",
+      "description": "HeadRush Sheeran Looper X",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+      "product_url": "https://www.halilit.com/items/7456924-headrush-sheeran-looper-x",
+      "is_sold": true,
+      "price": 6096.0,
+      "halilit_url": "https://www.halilit.com/items/7456924-headrush-sheeran-looper-x",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6096.0,
+        "original_price": 6096.0
+      },
+      "brand": "Headrush Fx",
+      "logo_url": "/assets/logos/headrush-fx_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+        "thumbnail": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+        "high_res": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+        "original": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headrush_fx_52_sheeranlooper_",
+      "name": "+ HeadRush Sheeran Looper",
+      "description": "+ HeadRush Sheeran Looper",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+      "product_url": "https://www.halilit.com/items/6644810--headrush-sheeran-looper",
+      "is_sold": true,
+      "price": 1416.0,
+      "halilit_url": "https://www.halilit.com/items/6644810--headrush-sheeran-looper",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1416.0,
+        "original_price": 1416.0
+      },
+      "brand": "Headrush Fx",
+      "logo_url": "/assets/logos/headrush-fx_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+        "thumbnail": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+        "high_res": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+        "original": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headrush_fx_52_looperboard",
+      "name": "HeadRush Looperboard",
+      "description": "HeadRush Looperboard",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+      "product_url": "https://www.halilit.com/items/2495029-headrush-looperboard",
+      "is_sold": true,
+      "price": 4390.0,
+      "halilit_url": "https://www.halilit.com/items/2495029-headrush-looperboard",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4390.0,
+        "original_price": 4390.0
+      },
+      "brand": "Headrush Fx",
+      "logo_url": "/assets/logos/headrush-fx_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+        "thumbnail": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+        "high_res": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+        "original": "/data/thumbnails/headrush_fx_52_looperboard.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "headrush_fx_52_hrexpression",
+      "name": "HeadRush Expression Pedal",
+      "description": "HeadRush Expression Pedal",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+      "product_url": "https://www.halilit.com/items/3180636-headrush-expression-pedal",
+      "is_sold": true,
+      "price": 684.0,
+      "halilit_url": "https://www.halilit.com/items/3180636-headrush-expression-pedal",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 684.0,
+        "original_price": 684.0
+      },
+      "brand": "Headrush Fx",
+      "logo_url": "/assets/logos/headrush-fx_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+        "thumbnail": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+        "high_res": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+        "original": "/data/thumbnails/headrush_fx_52_hrexpression.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.055075",
+  "brand_slug": "headrush-fx",
+  "refined_at": "2026-01-26T06:43:38.068245+00:00",
+  "brand_identity": {
+    "id": "headrush-fx",
+    "name": "Headrush Fx",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/headrush-fx_logo.png",
+    "taxonomy_stats": {
+      "validated": 4,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "headrush_fx_52_sheeranlooperx",
+          "name": "HeadRush Sheeran Looper X",
+          "description": "HeadRush Sheeran Looper X",
+          "images": {
+            "main": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+            "thumbnail": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+            "high_res": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg",
+            "original": "/data/thumbnails/headrush_fx_52_sheeranlooperx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headrush_fx_52_sheeranlooper_",
+          "name": "+ HeadRush Sheeran Looper",
+          "description": "+ HeadRush Sheeran Looper",
+          "images": {
+            "main": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+            "thumbnail": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+            "high_res": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+            "original": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headrush_fx_52_looperboard",
+          "name": "HeadRush Looperboard",
+          "description": "HeadRush Looperboard",
+          "images": {
+            "main": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+            "thumbnail": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+            "high_res": "/data/thumbnails/headrush_fx_52_looperboard.jpg",
+            "original": "/data/thumbnails/headrush_fx_52_looperboard.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "headrush_fx_52_hrexpression",
+          "name": "HeadRush Expression Pedal",
+          "description": "HeadRush Expression Pedal",
+          "images": {
+            "main": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+            "thumbnail": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+            "high_res": "/data/thumbnails/headrush_fx_52_hrexpression.jpg",
+            "original": "/data/thumbnails/headrush_fx_52_hrexpression.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

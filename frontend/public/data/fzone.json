@@ -1,0 +1,435 @@
+{
+  "brand_name": "Fzone",
+  "products": [
+    {
+      "id": "fzone_35_fm310",
+      "name": "FZONE FM-310",
+      "description": "FZONE FM-310",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_fm310.jpg",
+      "product_url": "https://www.halilit.com/items/4202993-fzone-fm-310",
+      "is_sold": true,
+      "price": 122.0,
+      "halilit_url": "https://www.halilit.com/items/4202993-fzone-fm-310",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 122.0,
+        "original_price": 122.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_fm310.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_fm310.jpg",
+        "high_res": "/data/thumbnails/fzone_35_fm310.jpg",
+        "original": "/data/thumbnails/fzone_35_fm310.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_s2",
+      "name": "FZONE S2",
+      "description": "FZONE S2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_s2.jpg",
+      "product_url": "https://www.halilit.com/items/4202828-fzone-s-2",
+      "is_sold": true,
+      "price": 57.0,
+      "halilit_url": "https://www.halilit.com/items/4202828-fzone-s-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 57.0,
+        "original_price": 57.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_s2.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_s2.jpg",
+        "high_res": "/data/thumbnails/fzone_35_s2.jpg",
+        "original": "/data/thumbnails/fzone_35_s2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_fzpc351",
+      "name": "FZone FZP-C351 Pick",
+      "description": "FZone FZP-C351 Pick",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_fzpc351.jpg",
+      "product_url": "https://www.halilit.com/items/7811671-fzone-fzp-c351-pick",
+      "is_sold": true,
+      "price": 2.0,
+      "halilit_url": "https://www.halilit.com/items/7811671-fzone-fzp-c351-pick",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2.0,
+        "original_price": 2.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_fzpc351.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_fzpc351.jpg",
+        "high_res": "/data/thumbnails/fzone_35_fzpc351.jpg",
+        "original": "/data/thumbnails/fzone_35_fzpc351.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_fzpn351",
+      "name": "FZone FZP-N351 Pick",
+      "description": "FZone FZP-N351 Pick",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_fzpn351.jpg",
+      "product_url": "https://www.halilit.com/items/7922800-fzone-fzp-n351-pick",
+      "is_sold": true,
+      "price": 2.0,
+      "halilit_url": "https://www.halilit.com/items/7922800-fzone-fzp-n351-pick",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2.0,
+        "original_price": 2.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_fzpn351.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_fzpn351.jpg",
+        "high_res": "/data/thumbnails/fzone_35_fzpn351.jpg",
+        "original": "/data/thumbnails/fzone_35_fzpn351.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_s3",
+      "name": "FZONE S3",
+      "description": "FZONE S3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_s3.jpg",
+      "product_url": "https://www.halilit.com/items/3233932-fzone-s-3",
+      "is_sold": true,
+      "price": 41.0,
+      "halilit_url": "https://www.halilit.com/items/3233932-fzone-s-3",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 41.0,
+        "original_price": 41.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_s3.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_s3.jpg",
+        "high_res": "/data/thumbnails/fzone_35_s3.jpg",
+        "original": "/data/thumbnails/fzone_35_s3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_sw1",
+      "name": "FZONE SW-1",
+      "description": "FZONE SW-1",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_sw1.jpg",
+      "product_url": "https://www.halilit.com/items/4204747-fzone-sw-1",
+      "is_sold": true,
+      "price": 8.0,
+      "halilit_url": "https://www.halilit.com/items/4204747-fzone-sw-1",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8.0,
+        "original_price": 8.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_sw1.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_sw1.jpg",
+        "high_res": "/data/thumbnails/fzone_35_sw1.jpg",
+        "original": "/data/thumbnails/fzone_35_sw1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_fc71_gold",
+      "name": "FC-71 capo FZONE",
+      "description": "FC-71 capo FZONE",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+      "product_url": "https://www.halilit.com/items/7811610-fc-71-capo",
+      "is_sold": true,
+      "price": 38.0,
+      "halilit_url": "https://www.halilit.com/items/7811610-fc-71-capo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 38.0,
+        "original_price": 38.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+        "high_res": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+        "original": "/data/thumbnails/fzone_35_fc71_gold.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_fc71_blue",
+      "name": "FC-71 capo FZONE",
+      "description": "FC-71 capo FZONE",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+      "product_url": "https://www.halilit.com/items/7922739-fc-71-capo",
+      "is_sold": true,
+      "price": 38.0,
+      "halilit_url": "https://www.halilit.com/items/7922739-fc-71-capo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 38.0,
+        "original_price": 38.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+        "high_res": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+        "original": "/data/thumbnails/fzone_35_fc71_blue.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_fc82",
+      "name": "FZONE FC-82 Ukulele Capo",
+      "description": "FZONE FC-82 Ukulele Capo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_fc82.jpg",
+      "product_url": "https://www.halilit.com/items/4241577-fzone-fc-82-ukulele-capo",
+      "is_sold": true,
+      "price": 41.0,
+      "halilit_url": "https://www.halilit.com/items/4241577-fzone-fc-82-ukulele-capo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 41.0,
+        "original_price": 41.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_fc82.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_fc82.jpg",
+        "high_res": "/data/thumbnails/fzone_35_fc82.jpg",
+        "original": "/data/thumbnails/fzone_35_fc82.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "fzone_35_lk1",
+      "name": "FZONE LK-1",
+      "description": "FZONE LK-1",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/fzone_35_lk1.jpg",
+      "product_url": "https://www.halilit.com/items/4204739-fzone-lk-1",
+      "is_sold": true,
+      "price": 24.0,
+      "halilit_url": "https://www.halilit.com/items/4204739-fzone-lk-1",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 24.0,
+        "original_price": 24.0
+      },
+      "brand": "Fzone",
+      "logo_url": "/assets/logos/fzone_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/fzone_35_lk1.jpg",
+        "thumbnail": "/data/thumbnails/fzone_35_lk1.jpg",
+        "high_res": "/data/thumbnails/fzone_35_lk1.jpg",
+        "original": "/data/thumbnails/fzone_35_lk1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.346018",
+  "brand_slug": "fzone",
+  "refined_at": "2026-01-26T06:43:37.369965+00:00",
+  "brand_identity": {
+    "id": "fzone",
+    "name": "Fzone",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/fzone_logo.png",
+    "taxonomy_stats": {
+      "validated": 10,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "fzone_35_fm310",
+          "name": "FZONE FM-310",
+          "description": "FZONE FM-310",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_fm310.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_fm310.jpg",
+            "high_res": "/data/thumbnails/fzone_35_fm310.jpg",
+            "original": "/data/thumbnails/fzone_35_fm310.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_s2",
+          "name": "FZONE S2",
+          "description": "FZONE S2",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_s2.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_s2.jpg",
+            "high_res": "/data/thumbnails/fzone_35_s2.jpg",
+            "original": "/data/thumbnails/fzone_35_s2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_fzpc351",
+          "name": "FZone FZP-C351 Pick",
+          "description": "FZone FZP-C351 Pick",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_fzpc351.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_fzpc351.jpg",
+            "high_res": "/data/thumbnails/fzone_35_fzpc351.jpg",
+            "original": "/data/thumbnails/fzone_35_fzpc351.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_fzpn351",
+          "name": "FZone FZP-N351 Pick",
+          "description": "FZone FZP-N351 Pick",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_fzpn351.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_fzpn351.jpg",
+            "high_res": "/data/thumbnails/fzone_35_fzpn351.jpg",
+            "original": "/data/thumbnails/fzone_35_fzpn351.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_s3",
+          "name": "FZONE S3",
+          "description": "FZONE S3",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_s3.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_s3.jpg",
+            "high_res": "/data/thumbnails/fzone_35_s3.jpg",
+            "original": "/data/thumbnails/fzone_35_s3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_sw1",
+          "name": "FZONE SW-1",
+          "description": "FZONE SW-1",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_sw1.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_sw1.jpg",
+            "high_res": "/data/thumbnails/fzone_35_sw1.jpg",
+            "original": "/data/thumbnails/fzone_35_sw1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_fc71_gold",
+          "name": "FC-71 capo FZONE",
+          "description": "FC-71 capo FZONE",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+            "high_res": "/data/thumbnails/fzone_35_fc71_gold.jpg",
+            "original": "/data/thumbnails/fzone_35_fc71_gold.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_fc71_blue",
+          "name": "FC-71 capo FZONE",
+          "description": "FC-71 capo FZONE",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+            "high_res": "/data/thumbnails/fzone_35_fc71_blue.jpg",
+            "original": "/data/thumbnails/fzone_35_fc71_blue.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_fc82",
+          "name": "FZONE FC-82 Ukulele Capo",
+          "description": "FZONE FC-82 Ukulele Capo",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_fc82.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_fc82.jpg",
+            "high_res": "/data/thumbnails/fzone_35_fc82.jpg",
+            "original": "/data/thumbnails/fzone_35_fc82.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "fzone_35_lk1",
+          "name": "FZONE LK-1",
+          "description": "FZONE LK-1",
+          "images": {
+            "main": "/data/thumbnails/fzone_35_lk1.jpg",
+            "thumbnail": "/data/thumbnails/fzone_35_lk1.jpg",
+            "high_res": "/data/thumbnails/fzone_35_lk1.jpg",
+            "original": "/data/thumbnails/fzone_35_lk1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

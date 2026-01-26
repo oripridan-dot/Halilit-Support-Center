@@ -1,0 +1,2936 @@
+{
+  "brand_name": "Presonus",
+  "products": [
+    {
+      "id": "presonus_70_quantumhd2eu",
+      "name": "PreSonus Quantum HD 2 USB-C Audio Interface",
+      "description": "PreSonus Quantum HD 2 USB-C Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+      "product_url": "https://www.halilit.com/items/7099544-presonus-quantum-hd-2-usb-c-audio-interface",
+      "is_sold": true,
+      "price": 2351.0,
+      "halilit_url": "https://www.halilit.com/items/7099544-presonus-quantum-hd-2-usb-c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2351.0,
+        "original_price": 2351.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+        "original": "/data/thumbnails/presonus_70_quantumhd2eu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantumes2",
+      "name": "PreSonus Quantum ES 2 USB-C Audio Interface",
+      "description": "PreSonus Quantum ES 2 USB-C Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantumes2.jpg",
+      "product_url": "https://www.halilit.com/items/6864555-presonus-quantum-es-2-usb-c-audio-interface",
+      "is_sold": true,
+      "price": 934.0,
+      "halilit_url": "https://www.halilit.com/items/6864555-presonus-quantum-es-2-usb-c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 934.0,
+        "original_price": 934.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantumes2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantumes2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantumes2.jpg",
+        "original": "/data/thumbnails/presonus_70_quantumes2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_audioboxgocre",
+      "name": "PreSonus AudioBox Go Creator Bundle",
+      "description": "PreSonus AudioBox Go Creator Bundle",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+      "product_url": "https://www.halilit.com/items/8030220-presonus-audiobox-go-creator-bundle",
+      "is_sold": true,
+      "price": 895.0,
+      "halilit_url": "https://www.halilit.com/items/8030220-presonus-audiobox-go-creator-bundle",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 895.0,
+        "original_price": 895.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+        "high_res": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+        "original": "/data/thumbnails/presonus_70_audioboxgocre.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio24c",
+      "name": "PreSonus Studio 24C Audio Interface",
+      "description": "PreSonus Studio 24C Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio24c.jpg",
+      "product_url": "https://www.halilit.com/items/2326296-presonus-studio-24c-audio-interface",
+      "is_sold": true,
+      "price": 748.0,
+      "halilit_url": "https://www.halilit.com/items/2326296-presonus-studio-24c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 748.0,
+        "original_price": 748.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio24c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio24c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio24c.jpg",
+        "original": "/data/thumbnails/presonus_70_studio24c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantumhd8eu",
+      "name": "PreSonus Quantum HD 8 USB-C Audio Interface",
+      "description": "PreSonus Quantum HD 8 USB-C Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+      "product_url": "https://www.halilit.com/items/6864925-presonus-quantum-hd-8-usb-c-audio-interface",
+      "is_sold": true,
+      "price": 4703.0,
+      "halilit_url": "https://www.halilit.com/items/6864925-presonus-quantum-hd-8-usb-c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4703.0,
+        "original_price": 4703.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+        "original": "/data/thumbnails/presonus_70_quantumhd8eu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantumes4",
+      "name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+      "description": "PreSonus Quantum ES 4 USB-C Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantumes4.jpg",
+      "product_url": "https://www.halilit.com/items/6864687-presonus-quantum-es-4-usb-c-audio-interface",
+      "is_sold": true,
+      "price": 1557.0,
+      "halilit_url": "https://www.halilit.com/items/6864687-presonus-quantum-es-4-usb-c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1557.0,
+        "original_price": 1557.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantumes4.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantumes4.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantumes4.jpg",
+        "original": "/data/thumbnails/presonus_70_quantumes4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_abusb96cb",
+      "name": "PreSonus AudioBox 96 Complete Bundle",
+      "description": "PreSonus AudioBox 96 Complete Bundle",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+      "product_url": "https://www.halilit.com/items/7963955-presonus-audiobox-96-complete-bundle",
+      "is_sold": true,
+      "price": 1492.0,
+      "halilit_url": "https://www.halilit.com/items/7963955-presonus-audiobox-96-complete-bundle",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1492.0,
+        "original_price": 1492.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+        "high_res": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+        "original": "/data/thumbnails/presonus_70_abusb96cb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio1810c",
+      "name": "PreSonus Studio 1810C",
+      "description": "PreSonus Studio 1810C",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio1810c.jpg",
+      "product_url": "https://www.halilit.com/items/2327617-presonus-studio-1810c-audio-interface",
+      "is_sold": true,
+      "price": 1901.0,
+      "halilit_url": "https://www.halilit.com/items/2327617-presonus-studio-1810c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1901.0,
+        "original_price": 1901.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio1810c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio1810c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio1810c.jpg",
+        "original": "/data/thumbnails/presonus_70_studio1810c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_ar16c",
+      "name": "PreSonus StudioLive AR16c",
+      "description": "PreSonus StudioLive AR16c",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+      "product_url": "https://www.halilit.com/items/2680904-presonus-studiolive-ar16c",
+      "is_sold": true,
+      "price": 3371.0,
+      "halilit_url": "https://www.halilit.com/items/2680904-presonus-studiolive-ar16c",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3371.0,
+        "original_price": 3371.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_ar16c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio26c",
+      "name": "PreSonus Studio 26C USB Audio Interface",
+      "description": "PreSonus Studio 26C USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio26c.jpg",
+      "product_url": "https://www.halilit.com/items/2326876-presonus-studio-26c-audio-interface",
+      "is_sold": true,
+      "price": 995.0,
+      "halilit_url": "https://www.halilit.com/items/2326876-presonus-studio-26c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 995.0,
+        "original_price": 995.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio26c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio26c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio26c.jpg",
+        "original": "/data/thumbnails/presonus_70_studio26c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantumesult",
+      "name": "PreSonus Quantum ES Ultimate Bundle",
+      "description": "PreSonus Quantum ES Ultimate Bundle",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantumesult.jpg",
+      "product_url": "https://www.halilit.com/items/7964009-presonus-quantum-es-ultimate-bundle",
+      "is_sold": true,
+      "price": 2141.0,
+      "halilit_url": "https://www.halilit.com/items/7964009-presonus-quantum-es-ultimate-bundle",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2141.0,
+        "original_price": 2141.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantumesult.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantumesult.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantumesult.jpg",
+        "original": "/data/thumbnails/presonus_70_quantumesult.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_audioboxgo",
+      "name": "PreSonus AudioBox GO",
+      "description": "PreSonus AudioBox GO",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+      "product_url": "https://www.halilit.com/items/4606838-presonus-audiobox-go",
+      "is_sold": true,
+      "price": 379.0,
+      "halilit_url": "https://www.halilit.com/items/4606838-presonus-audiobox-go",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 379.0,
+        "original_price": 379.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+        "high_res": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+        "original": "/data/thumbnails/presonus_70_audioboxgo.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_atomsq",
+      "name": "PreSonus ATOM SQ",
+      "description": "PreSonus ATOM SQ",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_atomsq.jpg",
+      "product_url": "https://www.halilit.com/items/3521406-presonus-atom-sq",
+      "is_sold": true,
+      "price": 1095.0,
+      "halilit_url": "https://www.halilit.com/items/3521406-presonus-atom-sq",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1095.0,
+        "original_price": 1095.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_atomsq.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_atomsq.jpg",
+        "high_res": "/data/thumbnails/presonus_70_atomsq.jpg",
+        "original": "/data/thumbnails/presonus_70_atomsq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_ar12c",
+      "name": "PreSonus StudioLive AR12c",
+      "description": "PreSonus StudioLive AR12c",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+      "product_url": "https://www.halilit.com/items/2759045-presonus-studiolive-ar12c",
+      "is_sold": true,
+      "price": 2886.0,
+      "halilit_url": "https://www.halilit.com/items/2759045-presonus-studiolive-ar12c",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2886.0,
+        "original_price": 2886.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_ar12c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_atom",
+      "name": "PreSonus ATOM",
+      "description": "PreSonus ATOM",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_atom.jpg",
+      "product_url": "https://www.halilit.com/items/2127752-presonus-atom",
+      "is_sold": true,
+      "price": 766.0,
+      "halilit_url": "https://www.halilit.com/items/2127752-presonus-atom",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 766.0,
+        "original_price": 766.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_atom.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_atom.jpg",
+        "high_res": "/data/thumbnails/presonus_70_atom.jpg",
+        "original": "/data/thumbnails/presonus_70_atom.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_ar8c",
+      "name": "PreSonus StudioLive AR8c",
+      "description": "PreSonus StudioLive AR8c",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+      "product_url": "https://www.halilit.com/items/2759071-presonus-studiolive-ar8c-",
+      "is_sold": true,
+      "price": 1886.0,
+      "halilit_url": "https://www.halilit.com/items/2759071-presonus-studiolive-ar8c-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1886.0,
+        "original_price": 1886.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_ar8c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_revelatorio44",
+      "name": "PreSonus Revelator io44",
+      "description": "PreSonus Revelator io44",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+      "product_url": "https://www.halilit.com/items/5170352-presonus-revelator-io44-",
+      "is_sold": true,
+      "price": 880.0,
+      "halilit_url": "https://www.halilit.com/items/5170352-presonus-revelator-io44-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 880.0,
+        "original_price": 880.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+        "high_res": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+        "original": "/data/thumbnails/presonus_70_revelatorio44.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_faderportv2",
+      "name": "PreSonus Faderport V2",
+      "description": "PreSonus Faderport V2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_faderportv2.jpg",
+      "product_url": "https://www.halilit.com/items/2421943-presonus-faderport-v2",
+      "is_sold": true,
+      "price": 986.0,
+      "halilit_url": "https://www.halilit.com/items/2421943-presonus-faderport-v2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 986.0,
+        "original_price": 986.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_faderportv2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_faderportv2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_faderportv2.jpg",
+        "original": "/data/thumbnails/presonus_70_faderportv2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_abitwo",
+      "name": "PreSonus AudioBox iTwo",
+      "description": "PreSonus AudioBox iTwo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_abitwo.jpg",
+      "product_url": "https://www.halilit.com/items/1556418-presonus-audiobox-itwo-audio-interface",
+      "is_sold": true,
+      "price": 475.0,
+      "halilit_url": "https://www.halilit.com/items/1556418-presonus-audiobox-itwo-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 475.0,
+        "original_price": 475.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_abitwo.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_abitwo.jpg",
+        "high_res": "/data/thumbnails/presonus_70_abitwo.jpg",
+        "original": "/data/thumbnails/presonus_70_abitwo.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_revelatorio24",
+      "name": "PreSonus Revelator io24 USB Audio Interface",
+      "description": "PreSonus Revelator io24 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+      "product_url": "https://www.halilit.com/items/4475594-presonus-revelator-io24-usb-audio-interface",
+      "is_sold": true,
+      "price": 571.0,
+      "halilit_url": "https://www.halilit.com/items/4475594-presonus-revelator-io24-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 571.0,
+        "original_price": 571.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+        "high_res": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+        "original": "/data/thumbnails/presonus_70_revelatorio24.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_rml_16ai",
+      "name": "PreSonus StudioLive RML16AI",
+      "description": "PreSonus StudioLive RML16AI",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+      "product_url": "https://www.halilit.com/items/5769949-presonus-studiolive-rml16ai",
+      "is_sold": true,
+      "price": 2862.0,
+      "halilit_url": "https://www.halilit.com/items/5769949-presonus-studiolive-rml16ai",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2862.0,
+        "original_price": 2862.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_ispd4",
+      "name": "PreSonus ISPD-4A Isolation Pads",
+      "description": "PreSonus ISPD-4A Isolation Pads",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_ispd4.jpg",
+      "product_url": "https://www.halilit.com/items/1570294-presonus-ispd-4a-isolation-pads",
+      "is_sold": true,
+      "price": 158.0,
+      "halilit_url": "https://www.halilit.com/items/1570294-presonus-ispd-4a-isolation-pads",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 158.0,
+        "original_price": 158.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_ispd4.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_ispd4.jpg",
+        "high_res": "/data/thumbnails/presonus_70_ispd4.jpg",
+        "original": "/data/thumbnails/presonus_70_ispd4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio68c",
+      "name": "PreSonus Studio 68C USB Audio Interface",
+      "description": "PreSonus Studio 68C USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio68c.jpg",
+      "product_url": "https://www.halilit.com/items/2327075-presonus-studio-68c-usb-audio-interface",
+      "is_sold": true,
+      "price": 1399.0,
+      "halilit_url": "https://www.halilit.com/items/2327075-presonus-studio-68c-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1399.0,
+        "original_price": 1399.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio68c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio68c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio68c.jpg",
+        "original": "/data/thumbnails/presonus_70_studio68c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantum2626",
+      "name": "PreSonus Quantum 2626",
+      "description": "PreSonus Quantum 2626",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantum2626.jpg",
+      "product_url": "https://www.halilit.com/items/2680970-presonus-quantum-2626",
+      "is_sold": true,
+      "price": 3088.0,
+      "halilit_url": "https://www.halilit.com/items/2680970-presonus-quantum-2626",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3088.0,
+        "original_price": 3088.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantum2626.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantum2626.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantum2626.jpg",
+        "original": "/data/thumbnails/presonus_70_quantum2626.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio1824c",
+      "name": "PreSonus Studio 1824C",
+      "description": "PreSonus Studio 1824C",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio1824c.jpg",
+      "product_url": "https://www.halilit.com/items/2327692-presonus-studio-1824c-audio-interface",
+      "is_sold": true,
+      "price": 2402.0,
+      "halilit_url": "https://www.halilit.com/items/2327692-presonus-studio-1824c-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2402.0,
+        "original_price": 2402.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio1824c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio1824c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio1824c.jpg",
+        "original": "/data/thumbnails/presonus_70_studio1824c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_iostation24c",
+      "name": "PreSonus ioStation 24c",
+      "description": "PreSonus ioStation 24c",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_iostation24c.jpg",
+      "product_url": "https://www.halilit.com/items/4130200-presonus-iostation-24c",
+      "is_sold": true,
+      "price": 1426.0,
+      "halilit_url": "https://www.halilit.com/items/4130200-presonus-iostation-24c",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1426.0,
+        "original_price": 1426.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_iostation24c.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_iostation24c.jpg",
+        "high_res": "/data/thumbnails/presonus_70_iostation24c.jpg",
+        "original": "/data/thumbnails/presonus_70_iostation24c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantum2",
+      "name": "PreSonus Quantum 2",
+      "description": "PreSonus Quantum 2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantum2.jpg",
+      "product_url": "https://www.halilit.com/items/1740276-presonus-quantum-2",
+      "is_sold": true,
+      "price": 2542.0,
+      "halilit_url": "https://www.halilit.com/items/1740276-presonus-quantum-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2542.0,
+        "original_price": 2542.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantum2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantum2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantum2.jpg",
+        "original": "/data/thumbnails/presonus_70_quantum2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_tubeprev2",
+      "name": "PreSonus TubePre V2",
+      "description": "PreSonus TubePre V2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+      "product_url": "https://www.halilit.com/items/1567063-presonus-tubepre-v2-preamplifier",
+      "is_sold": true,
+      "price": 704.0,
+      "halilit_url": "https://www.halilit.com/items/1567063-presonus-tubepre-v2-preamplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 704.0,
+        "original_price": 704.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+        "original": "/data/thumbnails/presonus_70_tubeprev2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_quantum4848",
+      "name": "PreSonus Quantum 4848",
+      "description": "PreSonus Quantum 4848",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_quantum4848.jpg",
+      "product_url": "https://www.halilit.com/items/2687175-presonus-quantum-4848",
+      "is_sold": true,
+      "price": 6663.0,
+      "halilit_url": "https://www.halilit.com/items/2687175-presonus-quantum-4848",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6663.0,
+        "original_price": 6663.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_quantum4848.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_quantum4848.jpg",
+        "high_res": "/data/thumbnails/presonus_70_quantum4848.jpg",
+        "original": "/data/thumbnails/presonus_70_quantum4848.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_bluetubedpv2",
+      "name": "PreSonus BlueTube DP v2",
+      "description": "PreSonus BlueTube DP v2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+      "product_url": "https://www.halilit.com/items/1928839-presonus-bluetube-dp-v2-",
+      "is_sold": true,
+      "price": 1197.0,
+      "halilit_url": "https://www.halilit.com/items/1928839-presonus-bluetube-dp-v2-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1197.0,
+        "original_price": 1197.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+        "original": "/data/thumbnails/presonus_70_bluetubedpv2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studioch",
+      "name": "PreSonus Studio Channel",
+      "description": "PreSonus Studio Channel",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studioch.jpg",
+      "product_url": "https://www.halilit.com/items/1697315-presonus-studio-channel",
+      "is_sold": true,
+      "price": 1707.0,
+      "halilit_url": "https://www.halilit.com/items/1697315-presonus-studio-channel",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1707.0,
+        "original_price": 1707.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studioch.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studioch.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studioch.jpg",
+        "original": "/data/thumbnails/presonus_70_studioch.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio1_7pro",
+      "name": "PreSonus Studio One Pro 7",
+      "description": "PreSonus Studio One Pro 7",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+      "product_url": "https://www.halilit.com/items/7790666-presonus-studio-one-pro-7-daw",
+      "is_sold": true,
+      "price": 742.0,
+      "halilit_url": "https://www.halilit.com/items/7790666-presonus-studio-one-pro-7-daw",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 742.0,
+        "original_price": 742.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+        "original": "/data/thumbnails/presonus_70_studio1_7pro.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_studio1_7pro_e",
+      "name": "PreSonus Studio One Pro 7 - Academic",
+      "description": "PreSonus Studio One Pro 7 - Academic",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+      "product_url": "https://www.halilit.com/items/7831373-presonus-studio-one-pro-7-academic",
+      "is_sold": true,
+      "price": 559.0,
+      "halilit_url": "https://www.halilit.com/items/7831373-presonus-studio-one-pro-7-academic",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 559.0,
+        "original_price": 559.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+        "high_res": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+        "original": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air15s",
+      "name": "PreSonus AIR15s",
+      "description": "PreSonus AIR15s",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air15s.jpg",
+      "product_url": "https://www.halilit.com/items/2420519-presonus-air15s",
+      "is_sold": true,
+      "price": 2804.0,
+      "halilit_url": "https://www.halilit.com/items/2420519-presonus-air15s",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2804.0,
+        "original_price": 2804.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air15s.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air15s.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air15s.jpg",
+        "original": "/data/thumbnails/presonus_70_air15s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sw5e",
+      "name": "PreSonus SW5E",
+      "description": "PreSonus SW5E",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sw5e.jpg",
+      "product_url": "https://www.halilit.com/items/3352120-presonus-sw5e",
+      "is_sold": true,
+      "price": 1509.0,
+      "halilit_url": "https://www.halilit.com/items/3352120-presonus-sw5e",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1509.0,
+        "original_price": 1509.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sw5e.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sw5e.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sw5e.jpg",
+        "original": "/data/thumbnails/presonus_70_sw5e.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_32s",
+      "name": "PreSonus StudioLive 32S",
+      "description": "PreSonus StudioLive 32S",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+      "product_url": "https://www.halilit.com/items/2295866-presonus-studiolive-32s",
+      "is_sold": true,
+      "price": 13960.0,
+      "halilit_url": "https://www.halilit.com/items/2295866-presonus-studiolive-32s",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 13960.0,
+        "original_price": 13960.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_32s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_monitorstatv2",
+      "name": "PreSonus Monitor Station V2",
+      "description": "PreSonus Monitor Station V2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+      "product_url": "https://www.halilit.com/items/1558901-presonus-monitor-station-v2",
+      "is_sold": true,
+      "price": 1540.0,
+      "halilit_url": "https://www.halilit.com/items/1558901-presonus-monitor-station-v2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1540.0,
+        "original_price": 1540.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+        "original": "/data/thumbnails/presonus_70_monitorstatv2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air10",
+      "name": "PreSonus AIR10",
+      "description": "PreSonus AIR10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air10.jpg",
+      "product_url": "https://www.halilit.com/items/2419321-presonus-air10",
+      "is_sold": true,
+      "price": 2024.0,
+      "halilit_url": "https://www.halilit.com/items/2419321-presonus-air10",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2024.0,
+        "original_price": 2024.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air10.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air10.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air10.jpg",
+        "original": "/data/thumbnails/presonus_70_air10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_32sc",
+      "name": "PreSonus StudioLive 32SC",
+      "description": "PreSonus StudioLive 32SC",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+      "product_url": "https://www.halilit.com/items/2414996-presonus-studiolive-32sc",
+      "is_sold": true,
+      "price": 7437.0,
+      "halilit_url": "https://www.halilit.com/items/2414996-presonus-studiolive-32sc",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7437.0,
+        "original_price": 7437.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_32sc.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_centstation_",
+      "name": "PreSonus Central Station PLUS",
+      "description": "PreSonus Central Station PLUS",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_centstation_.jpg",
+      "product_url": "https://www.halilit.com/items/1558949-presonus-centralstation-plus",
+      "is_sold": true,
+      "price": 3298.0,
+      "halilit_url": "https://www.halilit.com/items/1558949-presonus-centralstation-plus",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3298.0,
+        "original_price": 3298.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_centstation_.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_centstation_.jpg",
+        "high_res": "/data/thumbnails/presonus_70_centstation_.jpg",
+        "original": "/data/thumbnails/presonus_70_centstation_.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air12",
+      "name": "PreSonus AIR12",
+      "description": "PreSonus AIR12",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air12.jpg",
+      "product_url": "https://www.halilit.com/items/2420393-presonus-air12",
+      "is_sold": true,
+      "price": 1660.0,
+      "halilit_url": "https://www.halilit.com/items/2420393-presonus-air12",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1660.0,
+        "original_price": 1660.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air12.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air12.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air12.jpg",
+        "original": "/data/thumbnails/presonus_70_air12.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_nsb16_8",
+      "name": "PreSonus NSB 16.8",
+      "description": "PreSonus NSB 16.8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+      "product_url": "https://www.halilit.com/items/2291717-presonus-nsb-16-8",
+      "is_sold": true,
+      "price": 4092.0,
+      "halilit_url": "https://www.halilit.com/items/2291717-presonus-nsb-16-8",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4092.0,
+        "original_price": 4092.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+        "high_res": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+        "original": "/data/thumbnails/presonus_70_nsb16_8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_cdl18s",
+      "name": "PreSonus CDL18s",
+      "description": "PreSonus CDL18s",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_cdl18s.jpg",
+      "product_url": "https://www.halilit.com/items/2537567-presonus-cdl18s",
+      "is_sold": true,
+      "price": 5657.0,
+      "halilit_url": "https://www.halilit.com/items/2537567-presonus-cdl18s",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5657.0,
+        "original_price": 5657.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_cdl18s.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_cdl18s.jpg",
+        "high_res": "/data/thumbnails/presonus_70_cdl18s.jpg",
+        "original": "/data/thumbnails/presonus_70_cdl18s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_nsb8_8",
+      "name": "PreSonus NSB 8.8",
+      "description": "PreSonus NSB 8.8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+      "product_url": "https://www.halilit.com/items/3352060-presonus-nsb-8-8",
+      "is_sold": true,
+      "price": 3379.0,
+      "halilit_url": "https://www.halilit.com/items/3352060-presonus-nsb-8-8",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3379.0,
+        "original_price": 3379.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+        "high_res": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+        "original": "/data/thumbnails/presonus_70_nsb8_8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_faderport",
+      "name": "PreSonus FaderPort",
+      "description": "PreSonus FaderPort",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_faderport.jpg",
+      "product_url": "https://www.halilit.com/items/1559056-presonus-faderport",
+      "is_sold": true,
+      "price": 977.0,
+      "halilit_url": "https://www.halilit.com/items/1559056-presonus-faderport",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 977.0,
+        "original_price": 977.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_faderport.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_faderport.jpg",
+        "high_res": "/data/thumbnails/presonus_70_faderport.jpg",
+        "original": "/data/thumbnails/presonus_70_faderport.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_hp2",
+      "name": "PreSonus HP2",
+      "description": "PreSonus HP2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_hp2.jpg",
+      "product_url": "https://www.halilit.com/items/1566226-presonus-hp2-headphones-amplifier",
+      "is_sold": true,
+      "price": 502.0,
+      "halilit_url": "https://www.halilit.com/items/1566226-presonus-hp2-headphones-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 502.0,
+        "original_price": 502.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_hp2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_hp2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_hp2.jpg",
+        "original": "/data/thumbnails/presonus_70_hp2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_32_4_2_ipadst",
+      "name": "PreSonus Mixer iPad Stand",
+      "description": "PreSonus Mixer iPad Stand",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+      "product_url": "https://www.halilit.com/items/3352083-presonus-mixer-ipad-stand",
+      "is_sold": true,
+      "price": 326.0,
+      "halilit_url": "https://www.halilit.com/items/3352083-presonus-mixer-ipad-stand",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 326.0,
+        "original_price": 326.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_hp4",
+      "name": "PreSonus HP4",
+      "description": "PreSonus HP4",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_hp4.jpg",
+      "product_url": "https://www.halilit.com/items/1740569-presonus-hp4",
+      "is_sold": true,
+      "price": 695.0,
+      "halilit_url": "https://www.halilit.com/items/1740569-presonus-hp4",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 695.0,
+        "original_price": 695.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_hp4.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_hp4.jpg",
+        "high_res": "/data/thumbnails/presonus_70_hp4.jpg",
+        "original": "/data/thumbnails/presonus_70_hp4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air12tote",
+      "name": "PreSonus AIR12 Tote Bag",
+      "description": "PreSonus AIR12 Tote Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air12tote.jpg",
+      "product_url": "https://www.halilit.com/items/3351602-presonus-air12-tote-bag",
+      "is_sold": true,
+      "price": 308.0,
+      "halilit_url": "https://www.halilit.com/items/3351602-presonus-air12-tote-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 308.0,
+        "original_price": 308.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air12tote.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air12tote.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air12tote.jpg",
+        "original": "/data/thumbnails/presonus_70_air12tote.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_faderport16",
+      "name": "PreSonus FaderPort 16",
+      "description": "PreSonus FaderPort 16",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_faderport16.jpg",
+      "product_url": "https://www.halilit.com/items/1740612-presonus-faderport-16",
+      "is_sold": true,
+      "price": 4549.0,
+      "halilit_url": "https://www.halilit.com/items/1740612-presonus-faderport-16",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4549.0,
+        "original_price": 4549.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_faderport16.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_faderport16.jpg",
+        "high_res": "/data/thumbnails/presonus_70_faderport16.jpg",
+        "original": "/data/thumbnails/presonus_70_faderport16.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_32r",
+      "name": "PreSonus StudioLive 32R",
+      "description": "PreSonus StudioLive 32R",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+      "product_url": "https://www.halilit.com/items/2293829-presonus-studiolive-32r",
+      "is_sold": true,
+      "price": 6625.0,
+      "halilit_url": "https://www.halilit.com/items/2293829-presonus-studiolive-32r",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6625.0,
+        "original_price": 6625.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_32r.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_ar8_bag",
+      "name": "PreSonus StudioLive AR8 Bag",
+      "description": "PreSonus StudioLive AR8 Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+      "product_url": "https://www.halilit.com/items/3195726-presonus-studiolive-ar8-bag",
+      "is_sold": true,
+      "price": 185.0,
+      "halilit_url": "https://www.halilit.com/items/3195726-presonus-studiolive-ar8-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 185.0,
+        "original_price": 185.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_ab96studio",
+      "name": "PreSonus AudioBox 96 Studio",
+      "description": "PreSonus AudioBox 96 Studio",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_ab96studio.jpg",
+      "product_url": "https://www.halilit.com/items/1557077-presonus-audiobox-usb-96-audio-interface",
+      "is_sold": true,
+      "price": 933.0,
+      "halilit_url": "https://www.halilit.com/items/1557077-presonus-audiobox-usb-96-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 933.0,
+        "original_price": 933.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_ab96studio.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_ab96studio.jpg",
+        "high_res": "/data/thumbnails/presonus_70_ab96studio.jpg",
+        "original": "/data/thumbnails/presonus_70_ab96studio.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air15s_cover",
+      "name": "PreSonus AIR15s Subwoofer Cover",
+      "description": "PreSonus AIR15s Subwoofer Cover",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+      "product_url": "https://www.halilit.com/items/6276447-presonus-air15s-subwoofer-cover",
+      "is_sold": true,
+      "price": 245.0,
+      "halilit_url": "https://www.halilit.com/items/6276447-presonus-air15s-subwoofer-cover",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 245.0,
+        "original_price": 245.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+        "original": "/data/thumbnails/presonus_70_air15s_cover.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_ult12",
+      "name": "PreSonus ULT12",
+      "description": "PreSonus ULT12",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_ult12.jpg",
+      "product_url": "https://www.halilit.com/items/3138911-presonus-ult12",
+      "is_sold": true,
+      "price": 5150.0,
+      "halilit_url": "https://www.halilit.com/items/3138911-presonus-ult12",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5150.0,
+        "original_price": 5150.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_ult12.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_ult12.jpg",
+        "high_res": "/data/thumbnails/presonus_70_ult12.jpg",
+        "original": "/data/thumbnails/presonus_70_ult12.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_16_0_2",
+      "name": "PreSonus StudioLive 16.0.2 USB",
+      "description": "PreSonus StudioLive 16.0.2 USB",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+      "product_url": "https://www.halilit.com/items/2293349-presonus-sl16-0-2",
+      "is_sold": true,
+      "price": 3583.0,
+      "halilit_url": "https://www.halilit.com/items/2293349-presonus-sl16-0-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3583.0,
+        "original_price": 3583.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_16_0_2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_ar12_16_bag",
+      "name": "PreSonus StudoLive AR12 or AR16 Backpack",
+      "description": "PreSonus StudoLive AR12 or AR16 Backpack",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+      "product_url": "https://www.halilit.com/items/3195752-presonus-studolive-ar12-or-ar16",
+      "is_sold": true,
+      "price": 273.0,
+      "halilit_url": "https://www.halilit.com/items/3195752-presonus-studolive-ar12-or-ar16",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 273.0,
+        "original_price": 273.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air10tote",
+      "name": "PreSonus AIR10 Tote Bag",
+      "description": "PreSonus AIR10 Tote Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air10tote.jpg",
+      "product_url": "https://www.halilit.com/items/3351664-presonus-air10-tote-bag",
+      "is_sold": true,
+      "price": 387.0,
+      "halilit_url": "https://www.halilit.com/items/3351664-presonus-air10-tote-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 387.0,
+        "original_price": 387.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air10tote.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air10tote.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air10tote.jpg",
+        "original": "/data/thumbnails/presonus_70_air10tote.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_hp60",
+      "name": "PreSonus HP60",
+      "description": "PreSonus HP60",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_hp60.jpg",
+      "product_url": "https://www.halilit.com/items/1566333-presonus-hp60-headphones-amplifier",
+      "is_sold": true,
+      "price": 1540.0,
+      "halilit_url": "https://www.halilit.com/items/1566333-presonus-hp60-headphones-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1540.0,
+        "original_price": 1540.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_hp60.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_hp60.jpg",
+        "high_res": "/data/thumbnails/presonus_70_hp60.jpg",
+        "original": "/data/thumbnails/presonus_70_hp60.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_hp4bundle",
+      "name": "PreSonus HD9/HP4 Pack",
+      "description": "PreSonus HD9/HP4 Pack",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+      "product_url": "https://www.halilit.com/items/2004865-presonus-hd9-hp4-pack",
+      "is_sold": true,
+      "price": 1697.0,
+      "halilit_url": "https://www.halilit.com/items/2004865-presonus-hd9-hp4-pack",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1697.0,
+        "original_price": 1697.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+        "high_res": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+        "original": "/data/thumbnails/presonus_70_hp4bundle.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_32sx",
+      "name": "PreSonus StudioLive 32SX",
+      "description": "PreSonus StudioLive 32SX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+      "product_url": "https://www.halilit.com/items/2296470-presonus-studiolive-32sx",
+      "is_sold": true,
+      "price": 9780.0,
+      "halilit_url": "https://www.halilit.com/items/2296470-presonus-studiolive-32sx",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 9780.0,
+        "original_price": 9780.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_32sx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sl_32_4_2ai",
+      "name": "PreSonus StudioLive 32.4.2AI",
+      "description": "PreSonus StudioLive 32.4.2AI",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+      "product_url": "https://www.halilit.com/items/2300841-presonus-studiolive-32-4-2ai",
+      "is_sold": true,
+      "price": 6473.0,
+      "halilit_url": "https://www.halilit.com/items/2300841-presonus-studiolive-32-4-2ai",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6473.0,
+        "original_price": 6473.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+        "original": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_64s",
+      "name": "PreSonus StudioLive 64S",
+      "description": "PreSonus StudioLive 64S",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+      "product_url": "https://www.halilit.com/items/2296239-presonus-studiolive-64s",
+      "is_sold": true,
+      "price": 21700.0,
+      "halilit_url": "https://www.halilit.com/items/2296239-presonus-studiolive-64s",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 21700.0,
+        "original_price": 21700.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_64s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_cdl18s_cover",
+      "name": "PreSonus CDL18s Padded Dust Cover",
+      "description": "PreSonus CDL18s Padded Dust Cover",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+      "product_url": "https://www.halilit.com/items/2538423-presonus-cdl18s-padded-dust-cover",
+      "is_sold": true,
+      "price": 332.0,
+      "halilit_url": "https://www.halilit.com/items/2538423-presonus-cdl18s-padded-dust-cover",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 332.0,
+        "original_price": 332.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+        "high_res": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+        "original": "/data/thumbnails/presonus_70_cdl18s_cover.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_16r",
+      "name": "PreSonus StudioLive 16R",
+      "description": "PreSonus StudioLive 16R",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+      "product_url": "https://www.halilit.com/items/2293688-presonus-studiolive-16r",
+      "is_sold": true,
+      "price": 4476.0,
+      "halilit_url": "https://www.halilit.com/items/2293688-presonus-studiolive-16r",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4476.0,
+        "original_price": 4476.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_16r.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_earmix16m",
+      "name": "PreSonus EarMix 16M",
+      "description": "PreSonus EarMix 16M",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_earmix16m.jpg",
+      "product_url": "https://www.halilit.com/items/2283971-presonus-earmix-16m",
+      "is_sold": true,
+      "price": 1918.0,
+      "halilit_url": "https://www.halilit.com/items/2283971-presonus-earmix-16m",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1918.0,
+        "original_price": 1918.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_earmix16m.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_earmix16m.jpg",
+        "high_res": "/data/thumbnails/presonus_70_earmix16m.jpg",
+        "original": "/data/thumbnails/presonus_70_earmix16m.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air18s",
+      "name": "PreSonus AIR18s",
+      "description": "PreSonus AIR18s",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air18s.jpg",
+      "product_url": "https://www.halilit.com/items/3351758-presonus-air18s-active-subwoofer",
+      "is_sold": true,
+      "price": 3099.0,
+      "halilit_url": "https://www.halilit.com/items/3351758-presonus-air18s-active-subwoofer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3099.0,
+        "original_price": 3099.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air18s.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air18s.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air18s.jpg",
+        "original": "/data/thumbnails/presonus_70_air18s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_air15",
+      "name": "PreSonus AIR15",
+      "description": "PreSonus AIR15",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_air15.jpg",
+      "product_url": "https://www.halilit.com/items/2420433-presonus-air15",
+      "is_sold": true,
+      "price": 1949.0,
+      "halilit_url": "https://www.halilit.com/items/2420433-presonus-air15",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1949.0,
+        "original_price": 1949.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_air15.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_air15.jpg",
+        "high_res": "/data/thumbnails/presonus_70_air15.jpg",
+        "original": "/data/thumbnails/presonus_70_air15.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_ult10",
+      "name": "PreSonus ULT10",
+      "description": "PreSonus ULT10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_ult10.jpg",
+      "product_url": "https://www.halilit.com/items/3138786-presonus-ult10",
+      "is_sold": true,
+      "price": 2801.0,
+      "halilit_url": "https://www.halilit.com/items/3138786-presonus-ult10",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2801.0,
+        "original_price": 2801.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_ult10.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_ult10.jpg",
+        "high_res": "/data/thumbnails/presonus_70_ult10.jpg",
+        "original": "/data/thumbnails/presonus_70_ult10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_faderport8",
+      "name": "PreSonus FaderPort 8",
+      "description": "PreSonus FaderPort 8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_faderport8.jpg",
+      "product_url": "https://www.halilit.com/items/1562863-presonus-faderport-8-daw-controller",
+      "is_sold": true,
+      "price": 2649.0,
+      "halilit_url": "https://www.halilit.com/items/1562863-presonus-faderport-8-daw-controller",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2649.0,
+        "original_price": 2649.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_faderport8.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_faderport8.jpg",
+        "high_res": "/data/thumbnails/presonus_70_faderport8.jpg",
+        "original": "/data/thumbnails/presonus_70_faderport8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "presonus_70_sls3_24r",
+      "name": "PreSonus StudioLive 24R",
+      "description": "PreSonus StudioLive 24R",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+      "product_url": "https://www.halilit.com/items/2293784-presonus-studiolive-24r",
+      "is_sold": true,
+      "price": 5682.0,
+      "halilit_url": "https://www.halilit.com/items/2293784-presonus-studiolive-24r",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5682.0,
+        "original_price": 5682.0
+      },
+      "brand": "Presonus",
+      "logo_url": "/assets/logos/presonus_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+        "thumbnail": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+        "high_res": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+        "original": "/data/thumbnails/presonus_70_sls3_24r.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.451013",
+  "brand_slug": "presonus",
+  "refined_at": "2026-01-26T06:43:38.667636+00:00",
+  "brand_identity": {
+    "id": "presonus",
+    "name": "Presonus",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/presonus_logo.png",
+    "taxonomy_stats": {
+      "validated": 71,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "presonus_70_quantumhd2eu",
+          "name": "PreSonus Quantum HD 2 USB-C Audio Interface",
+          "description": "PreSonus Quantum HD 2 USB-C Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+            "original": "/data/thumbnails/presonus_70_quantumhd2eu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantumes2",
+          "name": "PreSonus Quantum ES 2 USB-C Audio Interface",
+          "description": "PreSonus Quantum ES 2 USB-C Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantumes2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantumes2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantumes2.jpg",
+            "original": "/data/thumbnails/presonus_70_quantumes2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_audioboxgocre",
+          "name": "PreSonus AudioBox Go Creator Bundle",
+          "description": "PreSonus AudioBox Go Creator Bundle",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+            "high_res": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+            "original": "/data/thumbnails/presonus_70_audioboxgocre.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio24c",
+          "name": "PreSonus Studio 24C Audio Interface",
+          "description": "PreSonus Studio 24C Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio24c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio24c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio24c.jpg",
+            "original": "/data/thumbnails/presonus_70_studio24c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantumhd8eu",
+          "name": "PreSonus Quantum HD 8 USB-C Audio Interface",
+          "description": "PreSonus Quantum HD 8 USB-C Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+            "original": "/data/thumbnails/presonus_70_quantumhd8eu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantumes4",
+          "name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+          "description": "PreSonus Quantum ES 4 USB-C Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantumes4.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantumes4.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantumes4.jpg",
+            "original": "/data/thumbnails/presonus_70_quantumes4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_abusb96cb",
+          "name": "PreSonus AudioBox 96 Complete Bundle",
+          "description": "PreSonus AudioBox 96 Complete Bundle",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+            "high_res": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+            "original": "/data/thumbnails/presonus_70_abusb96cb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio1810c",
+          "name": "PreSonus Studio 1810C",
+          "description": "PreSonus Studio 1810C",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio1810c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio1810c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio1810c.jpg",
+            "original": "/data/thumbnails/presonus_70_studio1810c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_ar16c",
+          "name": "PreSonus StudioLive AR16c",
+          "description": "PreSonus StudioLive AR16c",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_ar16c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio26c",
+          "name": "PreSonus Studio 26C USB Audio Interface",
+          "description": "PreSonus Studio 26C USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio26c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio26c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio26c.jpg",
+            "original": "/data/thumbnails/presonus_70_studio26c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantumesult",
+          "name": "PreSonus Quantum ES Ultimate Bundle",
+          "description": "PreSonus Quantum ES Ultimate Bundle",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantumesult.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantumesult.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantumesult.jpg",
+            "original": "/data/thumbnails/presonus_70_quantumesult.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_audioboxgo",
+          "name": "PreSonus AudioBox GO",
+          "description": "PreSonus AudioBox GO",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+            "high_res": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+            "original": "/data/thumbnails/presonus_70_audioboxgo.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_atomsq",
+          "name": "PreSonus ATOM SQ",
+          "description": "PreSonus ATOM SQ",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_atomsq.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_atomsq.jpg",
+            "high_res": "/data/thumbnails/presonus_70_atomsq.jpg",
+            "original": "/data/thumbnails/presonus_70_atomsq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_ar12c",
+          "name": "PreSonus StudioLive AR12c",
+          "description": "PreSonus StudioLive AR12c",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_ar12c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_atom",
+          "name": "PreSonus ATOM",
+          "description": "PreSonus ATOM",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_atom.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_atom.jpg",
+            "high_res": "/data/thumbnails/presonus_70_atom.jpg",
+            "original": "/data/thumbnails/presonus_70_atom.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_ar8c",
+          "name": "PreSonus StudioLive AR8c",
+          "description": "PreSonus StudioLive AR8c",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_ar8c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_revelatorio44",
+          "name": "PreSonus Revelator io44",
+          "description": "PreSonus Revelator io44",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+            "high_res": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+            "original": "/data/thumbnails/presonus_70_revelatorio44.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_faderportv2",
+          "name": "PreSonus Faderport V2",
+          "description": "PreSonus Faderport V2",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_faderportv2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_faderportv2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_faderportv2.jpg",
+            "original": "/data/thumbnails/presonus_70_faderportv2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_abitwo",
+          "name": "PreSonus AudioBox iTwo",
+          "description": "PreSonus AudioBox iTwo",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_abitwo.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_abitwo.jpg",
+            "high_res": "/data/thumbnails/presonus_70_abitwo.jpg",
+            "original": "/data/thumbnails/presonus_70_abitwo.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_revelatorio24",
+          "name": "PreSonus Revelator io24 USB Audio Interface",
+          "description": "PreSonus Revelator io24 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+            "high_res": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+            "original": "/data/thumbnails/presonus_70_revelatorio24.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_rml_16ai",
+          "name": "PreSonus StudioLive RML16AI",
+          "description": "PreSonus StudioLive RML16AI",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_ispd4",
+          "name": "PreSonus ISPD-4A Isolation Pads",
+          "description": "PreSonus ISPD-4A Isolation Pads",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_ispd4.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_ispd4.jpg",
+            "high_res": "/data/thumbnails/presonus_70_ispd4.jpg",
+            "original": "/data/thumbnails/presonus_70_ispd4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio68c",
+          "name": "PreSonus Studio 68C USB Audio Interface",
+          "description": "PreSonus Studio 68C USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio68c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio68c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio68c.jpg",
+            "original": "/data/thumbnails/presonus_70_studio68c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantum2626",
+          "name": "PreSonus Quantum 2626",
+          "description": "PreSonus Quantum 2626",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantum2626.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantum2626.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantum2626.jpg",
+            "original": "/data/thumbnails/presonus_70_quantum2626.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio1824c",
+          "name": "PreSonus Studio 1824C",
+          "description": "PreSonus Studio 1824C",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio1824c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio1824c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio1824c.jpg",
+            "original": "/data/thumbnails/presonus_70_studio1824c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_iostation24c",
+          "name": "PreSonus ioStation 24c",
+          "description": "PreSonus ioStation 24c",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_iostation24c.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_iostation24c.jpg",
+            "high_res": "/data/thumbnails/presonus_70_iostation24c.jpg",
+            "original": "/data/thumbnails/presonus_70_iostation24c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantum2",
+          "name": "PreSonus Quantum 2",
+          "description": "PreSonus Quantum 2",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantum2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantum2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantum2.jpg",
+            "original": "/data/thumbnails/presonus_70_quantum2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_tubeprev2",
+          "name": "PreSonus TubePre V2",
+          "description": "PreSonus TubePre V2",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+            "original": "/data/thumbnails/presonus_70_tubeprev2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_quantum4848",
+          "name": "PreSonus Quantum 4848",
+          "description": "PreSonus Quantum 4848",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_quantum4848.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_quantum4848.jpg",
+            "high_res": "/data/thumbnails/presonus_70_quantum4848.jpg",
+            "original": "/data/thumbnails/presonus_70_quantum4848.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_bluetubedpv2",
+          "name": "PreSonus BlueTube DP v2",
+          "description": "PreSonus BlueTube DP v2",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+            "original": "/data/thumbnails/presonus_70_bluetubedpv2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studioch",
+          "name": "PreSonus Studio Channel",
+          "description": "PreSonus Studio Channel",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studioch.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studioch.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studioch.jpg",
+            "original": "/data/thumbnails/presonus_70_studioch.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio1_7pro",
+          "name": "PreSonus Studio One Pro 7",
+          "description": "PreSonus Studio One Pro 7",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+            "original": "/data/thumbnails/presonus_70_studio1_7pro.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_studio1_7pro_e",
+          "name": "PreSonus Studio One Pro 7 - Academic",
+          "description": "PreSonus Studio One Pro 7 - Academic",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+            "high_res": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+            "original": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air15s",
+          "name": "PreSonus AIR15s",
+          "description": "PreSonus AIR15s",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air15s.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air15s.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air15s.jpg",
+            "original": "/data/thumbnails/presonus_70_air15s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sw5e",
+          "name": "PreSonus SW5E",
+          "description": "PreSonus SW5E",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sw5e.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sw5e.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sw5e.jpg",
+            "original": "/data/thumbnails/presonus_70_sw5e.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_32s",
+          "name": "PreSonus StudioLive 32S",
+          "description": "PreSonus StudioLive 32S",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_32s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_monitorstatv2",
+          "name": "PreSonus Monitor Station V2",
+          "description": "PreSonus Monitor Station V2",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_monitorstatv2.jpg",
+            "original": "/data/thumbnails/presonus_70_monitorstatv2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air10",
+          "name": "PreSonus AIR10",
+          "description": "PreSonus AIR10",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air10.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air10.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air10.jpg",
+            "original": "/data/thumbnails/presonus_70_air10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_32sc",
+          "name": "PreSonus StudioLive 32SC",
+          "description": "PreSonus StudioLive 32SC",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_32sc.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_centstation_",
+          "name": "PreSonus Central Station PLUS",
+          "description": "PreSonus Central Station PLUS",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_centstation_.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_centstation_.jpg",
+            "high_res": "/data/thumbnails/presonus_70_centstation_.jpg",
+            "original": "/data/thumbnails/presonus_70_centstation_.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air12",
+          "name": "PreSonus AIR12",
+          "description": "PreSonus AIR12",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air12.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air12.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air12.jpg",
+            "original": "/data/thumbnails/presonus_70_air12.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_nsb16_8",
+          "name": "PreSonus NSB 16.8",
+          "description": "PreSonus NSB 16.8",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+            "high_res": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+            "original": "/data/thumbnails/presonus_70_nsb16_8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_cdl18s",
+          "name": "PreSonus CDL18s",
+          "description": "PreSonus CDL18s",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_cdl18s.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_cdl18s.jpg",
+            "high_res": "/data/thumbnails/presonus_70_cdl18s.jpg",
+            "original": "/data/thumbnails/presonus_70_cdl18s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_nsb8_8",
+          "name": "PreSonus NSB 8.8",
+          "description": "PreSonus NSB 8.8",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+            "high_res": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+            "original": "/data/thumbnails/presonus_70_nsb8_8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_faderport",
+          "name": "PreSonus FaderPort",
+          "description": "PreSonus FaderPort",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_faderport.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_faderport.jpg",
+            "high_res": "/data/thumbnails/presonus_70_faderport.jpg",
+            "original": "/data/thumbnails/presonus_70_faderport.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_hp2",
+          "name": "PreSonus HP2",
+          "description": "PreSonus HP2",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_hp2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_hp2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_hp2.jpg",
+            "original": "/data/thumbnails/presonus_70_hp2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_32_4_2_ipadst",
+          "name": "PreSonus Mixer iPad Stand",
+          "description": "PreSonus Mixer iPad Stand",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_hp4",
+          "name": "PreSonus HP4",
+          "description": "PreSonus HP4",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_hp4.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_hp4.jpg",
+            "high_res": "/data/thumbnails/presonus_70_hp4.jpg",
+            "original": "/data/thumbnails/presonus_70_hp4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air12tote",
+          "name": "PreSonus AIR12 Tote Bag",
+          "description": "PreSonus AIR12 Tote Bag",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air12tote.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air12tote.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air12tote.jpg",
+            "original": "/data/thumbnails/presonus_70_air12tote.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_faderport16",
+          "name": "PreSonus FaderPort 16",
+          "description": "PreSonus FaderPort 16",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_faderport16.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_faderport16.jpg",
+            "high_res": "/data/thumbnails/presonus_70_faderport16.jpg",
+            "original": "/data/thumbnails/presonus_70_faderport16.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_32r",
+          "name": "PreSonus StudioLive 32R",
+          "description": "PreSonus StudioLive 32R",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_32r.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_ar8_bag",
+          "name": "PreSonus StudioLive AR8 Bag",
+          "description": "PreSonus StudioLive AR8 Bag",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_ab96studio",
+          "name": "PreSonus AudioBox 96 Studio",
+          "description": "PreSonus AudioBox 96 Studio",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_ab96studio.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_ab96studio.jpg",
+            "high_res": "/data/thumbnails/presonus_70_ab96studio.jpg",
+            "original": "/data/thumbnails/presonus_70_ab96studio.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air15s_cover",
+          "name": "PreSonus AIR15s Subwoofer Cover",
+          "description": "PreSonus AIR15s Subwoofer Cover",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air15s_cover.jpg",
+            "original": "/data/thumbnails/presonus_70_air15s_cover.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_ult12",
+          "name": "PreSonus ULT12",
+          "description": "PreSonus ULT12",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_ult12.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_ult12.jpg",
+            "high_res": "/data/thumbnails/presonus_70_ult12.jpg",
+            "original": "/data/thumbnails/presonus_70_ult12.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_16_0_2",
+          "name": "PreSonus StudioLive 16.0.2 USB",
+          "description": "PreSonus StudioLive 16.0.2 USB",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_16_0_2.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_16_0_2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_ar12_16_bag",
+          "name": "PreSonus StudoLive AR12 or AR16 Backpack",
+          "description": "PreSonus StudoLive AR12 or AR16 Backpack",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_ar12_16_bag.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air10tote",
+          "name": "PreSonus AIR10 Tote Bag",
+          "description": "PreSonus AIR10 Tote Bag",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air10tote.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air10tote.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air10tote.jpg",
+            "original": "/data/thumbnails/presonus_70_air10tote.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_hp60",
+          "name": "PreSonus HP60",
+          "description": "PreSonus HP60",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_hp60.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_hp60.jpg",
+            "high_res": "/data/thumbnails/presonus_70_hp60.jpg",
+            "original": "/data/thumbnails/presonus_70_hp60.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_hp4bundle",
+          "name": "PreSonus HD9/HP4 Pack",
+          "description": "PreSonus HD9/HP4 Pack",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+            "high_res": "/data/thumbnails/presonus_70_hp4bundle.jpg",
+            "original": "/data/thumbnails/presonus_70_hp4bundle.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_32sx",
+          "name": "PreSonus StudioLive 32SX",
+          "description": "PreSonus StudioLive 32SX",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_32sx.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_32sx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sl_32_4_2ai",
+          "name": "PreSonus StudioLive 32.4.2AI",
+          "description": "PreSonus StudioLive 32.4.2AI",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg",
+            "original": "/data/thumbnails/presonus_70_sl_32_4_2ai.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_64s",
+          "name": "PreSonus StudioLive 64S",
+          "description": "PreSonus StudioLive 64S",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_64s.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_64s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_cdl18s_cover",
+          "name": "PreSonus CDL18s Padded Dust Cover",
+          "description": "PreSonus CDL18s Padded Dust Cover",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+            "high_res": "/data/thumbnails/presonus_70_cdl18s_cover.jpg",
+            "original": "/data/thumbnails/presonus_70_cdl18s_cover.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_16r",
+          "name": "PreSonus StudioLive 16R",
+          "description": "PreSonus StudioLive 16R",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_16r.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_16r.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_earmix16m",
+          "name": "PreSonus EarMix 16M",
+          "description": "PreSonus EarMix 16M",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_earmix16m.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_earmix16m.jpg",
+            "high_res": "/data/thumbnails/presonus_70_earmix16m.jpg",
+            "original": "/data/thumbnails/presonus_70_earmix16m.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air18s",
+          "name": "PreSonus AIR18s",
+          "description": "PreSonus AIR18s",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air18s.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air18s.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air18s.jpg",
+            "original": "/data/thumbnails/presonus_70_air18s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_air15",
+          "name": "PreSonus AIR15",
+          "description": "PreSonus AIR15",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_air15.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_air15.jpg",
+            "high_res": "/data/thumbnails/presonus_70_air15.jpg",
+            "original": "/data/thumbnails/presonus_70_air15.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_ult10",
+          "name": "PreSonus ULT10",
+          "description": "PreSonus ULT10",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_ult10.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_ult10.jpg",
+            "high_res": "/data/thumbnails/presonus_70_ult10.jpg",
+            "original": "/data/thumbnails/presonus_70_ult10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_faderport8",
+          "name": "PreSonus FaderPort 8",
+          "description": "PreSonus FaderPort 8",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_faderport8.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_faderport8.jpg",
+            "high_res": "/data/thumbnails/presonus_70_faderport8.jpg",
+            "original": "/data/thumbnails/presonus_70_faderport8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "presonus_70_sls3_24r",
+          "name": "PreSonus StudioLive 24R",
+          "description": "PreSonus StudioLive 24R",
+          "images": {
+            "main": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+            "thumbnail": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+            "high_res": "/data/thumbnails/presonus_70_sls3_24r.jpg",
+            "original": "/data/thumbnails/presonus_70_sls3_24r.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

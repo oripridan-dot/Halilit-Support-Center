@@ -1,0 +1,230 @@
+{
+  "brand_name": "Esp",
+  "products": [
+    {
+      "id": "esp_67_lte401blks",
+      "name": "ESP TE-401 Black Satin",
+      "description": "ESP TE-401 Black Satin",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/esp_67_lte401blks.jpg",
+      "product_url": "https://www.halilit.com/items/8433458-esp-te-401-black-satin-electric-guitar",
+      "is_sold": true,
+      "price": 3774.0,
+      "halilit_url": "https://www.halilit.com/items/8433458-esp-te-401-black-satin-electric-guitar",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3774.0,
+        "original_price": 3774.0
+      },
+      "brand": "Esp",
+      "logo_url": "/assets/logos/esp_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/esp_67_lte401blks.jpg",
+        "thumbnail": "/data/thumbnails/esp_67_lte401blks.jpg",
+        "high_res": "/data/thumbnails/esp_67_lte401blks.jpg",
+        "original": "/data/thumbnails/esp_67_lte401blks.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "esp_67_lec256carslh",
+      "name": "ESP LTD EC-256CARS LH",
+      "description": "ESP LTD EC-256CARS LH",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/esp_67_lec256carslh.jpg",
+      "product_url": "https://www.halilit.com/items/7786703-esp-ltd-ec-256cars-lh",
+      "is_sold": true,
+      "price": 2681.0,
+      "halilit_url": "https://www.halilit.com/items/7786703-esp-ltd-ec-256cars-lh",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2681.0,
+        "original_price": 2681.0
+      },
+      "brand": "Esp",
+      "logo_url": "/assets/logos/esp_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/esp_67_lec256carslh.jpg",
+        "thumbnail": "/data/thumbnails/esp_67_lec256carslh.jpg",
+        "high_res": "/data/thumbnails/esp_67_lec256carslh.jpg",
+        "original": "/data/thumbnails/esp_67_lec256carslh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "esp_67_lec256vnlh",
+      "name": "ESP LTD EC-256VN LH",
+      "description": "ESP LTD EC-256VN LH",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+      "product_url": "https://www.halilit.com/items/3715796-esp-ltd-ec-256vn-lh",
+      "is_sold": true,
+      "price": 2265.0,
+      "halilit_url": "https://www.halilit.com/items/3715796-esp-ltd-ec-256vn-lh",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2265.0,
+        "original_price": 2265.0
+      },
+      "brand": "Esp",
+      "logo_url": "/assets/logos/esp_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+        "thumbnail": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+        "high_res": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+        "original": "/data/thumbnails/esp_67_lec256vnlh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "esp_67_lh200fmstplh",
+      "name": "ESP LTD H-200FM LH",
+      "description": "ESP LTD H-200FM LH",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+      "product_url": "https://www.halilit.com/items/3715852-esp-ltd-h-200fm-lh",
+      "is_sold": true,
+      "price": 2204.0,
+      "halilit_url": "https://www.halilit.com/items/3715852-esp-ltd-h-200fm-lh",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2204.0,
+        "original_price": 2204.0
+      },
+      "brand": "Esp",
+      "logo_url": "/assets/logos/esp_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+        "thumbnail": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+        "high_res": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+        "original": "/data/thumbnails/esp_67_lh200fmstplh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "esp_67_lkhwz",
+      "name": "LTD KH-WZ Kirk Hammett Signature ESP",
+      "description": "LTD KH-WZ Kirk Hammett Signature ESP",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/esp_67_lkhwz.jpg",
+      "product_url": "https://www.halilit.com/items/1975038-esp-ltd-kh-wz-kirk-hammett-signature-series-white-zombie",
+      "is_sold": true,
+      "price": 8061.0,
+      "halilit_url": "https://www.halilit.com/items/1975038-esp-ltd-kh-wz-kirk-hammett-signature-series-white-zombie",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8061.0,
+        "original_price": 8061.0
+      },
+      "brand": "Esp",
+      "logo_url": "/assets/logos/esp_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/esp_67_lkhwz.jpg",
+        "thumbnail": "/data/thumbnails/esp_67_lkhwz.jpg",
+        "high_res": "/data/thumbnails/esp_67_lkhwz.jpg",
+        "original": "/data/thumbnails/esp_67_lkhwz.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.077309",
+  "brand_slug": "esp",
+  "refined_at": "2026-01-26T06:43:38.450367+00:00",
+  "brand_identity": {
+    "id": "esp",
+    "name": "Esp",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/esp_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 5,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "esp_67_lte401blks",
+          "name": "ESP TE-401 Black Satin",
+          "description": "ESP TE-401 Black Satin",
+          "images": {
+            "main": "/data/thumbnails/esp_67_lte401blks.jpg",
+            "thumbnail": "/data/thumbnails/esp_67_lte401blks.jpg",
+            "high_res": "/data/thumbnails/esp_67_lte401blks.jpg",
+            "original": "/data/thumbnails/esp_67_lte401blks.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "esp_67_lec256carslh",
+          "name": "ESP LTD EC-256CARS LH",
+          "description": "ESP LTD EC-256CARS LH",
+          "images": {
+            "main": "/data/thumbnails/esp_67_lec256carslh.jpg",
+            "thumbnail": "/data/thumbnails/esp_67_lec256carslh.jpg",
+            "high_res": "/data/thumbnails/esp_67_lec256carslh.jpg",
+            "original": "/data/thumbnails/esp_67_lec256carslh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "esp_67_lec256vnlh",
+          "name": "ESP LTD EC-256VN LH",
+          "description": "ESP LTD EC-256VN LH",
+          "images": {
+            "main": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+            "thumbnail": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+            "high_res": "/data/thumbnails/esp_67_lec256vnlh.jpg",
+            "original": "/data/thumbnails/esp_67_lec256vnlh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "esp_67_lh200fmstplh",
+          "name": "ESP LTD H-200FM LH",
+          "description": "ESP LTD H-200FM LH",
+          "images": {
+            "main": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+            "thumbnail": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+            "high_res": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+            "original": "/data/thumbnails/esp_67_lh200fmstplh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "esp_67_lkhwz",
+          "name": "LTD KH-WZ Kirk Hammett Signature ESP",
+          "description": "LTD KH-WZ Kirk Hammett Signature ESP",
+          "images": {
+            "main": "/data/thumbnails/esp_67_lkhwz.jpg",
+            "thumbnail": "/data/thumbnails/esp_67_lkhwz.jpg",
+            "high_res": "/data/thumbnails/esp_67_lkhwz.jpg",
+            "original": "/data/thumbnails/esp_67_lkhwz.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "brand_name": "Maton Guitars",
+  "products": [
+    {
+      "id": "maton_guitars_74_strap_bl",
+      "name": "Maton Standard Guitar Strap",
+      "description": "Maton Standard Guitar Strap",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+      "product_url": "https://www.halilit.com/items/4338001-maton-standard-guitar-strap",
+      "is_sold": true,
+      "price": 294.0,
+      "halilit_url": "https://www.halilit.com/items/4338001-maton-standard-guitar-strap",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 294.0,
+        "original_price": 294.0
+      },
+      "brand": "Maton Guitars",
+      "logo_url": "/assets/logos/maton-guitars_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+        "thumbnail": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+        "high_res": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+        "original": "/data/thumbnails/maton_guitars_74_strap_bl.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "maton_guitars_74_strap_br",
+      "name": "Maton Standard Guitar Strap",
+      "description": "Maton Standard Guitar Strap",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+      "product_url": "https://www.halilit.com/items/4338023-maton-standard-guitar-strap",
+      "is_sold": true,
+      "price": 294.0,
+      "halilit_url": "https://www.halilit.com/items/4338023-maton-standard-guitar-strap",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 294.0,
+        "original_price": 294.0
+      },
+      "brand": "Maton Guitars",
+      "logo_url": "/assets/logos/maton-guitars_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+        "thumbnail": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+        "high_res": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+        "original": "/data/thumbnails/maton_guitars_74_strap_br.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "maton_guitars_74_strap_dlx_bl",
+      "name": "Maton Deluxe Guitar Strap",
+      "description": "Maton Deluxe Guitar Strap",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+      "product_url": "https://www.halilit.com/items/4338037-maton-deluxe-guitar-strap",
+      "is_sold": true,
+      "price": 338.0,
+      "halilit_url": "https://www.halilit.com/items/4338037-maton-deluxe-guitar-strap",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 338.0,
+        "original_price": 338.0
+      },
+      "brand": "Maton Guitars",
+      "logo_url": "/assets/logos/maton-guitars_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+        "thumbnail": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+        "high_res": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+        "original": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "maton_guitars_74_strap_dlx_br",
+      "name": "Maton Deluxe Guitar Strap",
+      "description": "Maton Deluxe Guitar Strap",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+      "product_url": "https://www.halilit.com/items/4338046-maton-deluxe-guitar-strap",
+      "is_sold": true,
+      "price": 338.0,
+      "halilit_url": "https://www.halilit.com/items/4338046-maton-deluxe-guitar-strap",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 338.0,
+        "original_price": 338.0
+      },
+      "brand": "Maton Guitars",
+      "logo_url": "/assets/logos/maton-guitars_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+        "thumbnail": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+        "high_res": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+        "original": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.391733",
+  "brand_slug": "maton-guitars",
+  "refined_at": "2026-01-26T06:43:37.417646+00:00",
+  "brand_identity": {
+    "id": "maton-guitars",
+    "name": "Maton Guitars",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/maton-guitars_logo.png",
+    "taxonomy_stats": {
+      "validated": 4,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "maton_guitars_74_strap_bl",
+          "name": "Maton Standard Guitar Strap",
+          "description": "Maton Standard Guitar Strap",
+          "images": {
+            "main": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+            "thumbnail": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+            "high_res": "/data/thumbnails/maton_guitars_74_strap_bl.jpg",
+            "original": "/data/thumbnails/maton_guitars_74_strap_bl.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "maton_guitars_74_strap_br",
+          "name": "Maton Standard Guitar Strap",
+          "description": "Maton Standard Guitar Strap",
+          "images": {
+            "main": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+            "thumbnail": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+            "high_res": "/data/thumbnails/maton_guitars_74_strap_br.jpg",
+            "original": "/data/thumbnails/maton_guitars_74_strap_br.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "maton_guitars_74_strap_dlx_bl",
+          "name": "Maton Deluxe Guitar Strap",
+          "description": "Maton Deluxe Guitar Strap",
+          "images": {
+            "main": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+            "thumbnail": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+            "high_res": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg",
+            "original": "/data/thumbnails/maton_guitars_74_strap_dlx_bl.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "maton_guitars_74_strap_dlx_br",
+          "name": "Maton Deluxe Guitar Strap",
+          "description": "Maton Deluxe Guitar Strap",
+          "images": {
+            "main": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+            "thumbnail": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+            "high_res": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg",
+            "original": "/data/thumbnails/maton_guitars_74_strap_dlx_br.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

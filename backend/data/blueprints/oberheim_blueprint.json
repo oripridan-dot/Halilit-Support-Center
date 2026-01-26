@@ -1,0 +1,74 @@
+[
+  {
+    "id": "oberheim_sq_teo5",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim TEO-5 Synthesizer",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim TEO-5 Synthesizer",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_teo5.jpg",
+    "product_url": "https://www.halilit.com/items/7579741-oberheim-teo-5-synthesizer",
+    "is_sold": true,
+    "price": 7177.0,
+    "halilit_url": "https://www.halilit.com/items/7579741-oberheim-teo-5-synthesizer",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "oberheim_sq_teo5module",
+    "name": "\u05de\u05d5\u05d3\u05d5\u05dc \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05e9\u05d5\u05dc\u05d7\u05e0\u05d9 Oberheim TEO-5",
+    "description": "\u05de\u05d5\u05d3\u05d5\u05dc \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05e9\u05d5\u05dc\u05d7\u05e0\u05d9 Oberheim TEO-5",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_teo5module.jpg",
+    "product_url": "https://www.halilit.com/items/8623225-oberheim-teo-5-desktop-poly-synth-module",
+    "is_sold": true,
+    "price": 5818.0,
+    "halilit_url": "https://www.halilit.com/items/8623225-oberheim-teo-5-desktop-poly-synth-module",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "oberheim_sq_ob6keys",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Keyboard",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Keyboard",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_ob6keys.jpg",
+    "product_url": "https://www.halilit.com/items/6364998-oberheim-ob-6-6-voice-polyphonic-analog-synthesizer",
+    "is_sold": true,
+    "price": 16752.0,
+    "halilit_url": "https://www.halilit.com/items/6364998-oberheim-ob-6-6-voice-polyphonic-analog-synthesizer",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "oberheim_sq_ob6module",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_ob6module.jpg",
+    "product_url": "https://www.halilit.com/items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer",
+    "is_sold": true,
+    "price": 11487.0,
+    "halilit_url": "https://www.halilit.com/items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "oberheim_sq_obx8keys",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-X8 Keyboard",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-X8 Keyboard",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_obx8keys.jpg",
+    "product_url": "https://www.halilit.com/items/6365110-oberheim-ob-x8-keyboard",
+    "is_sold": true,
+    "price": 23943.0,
+    "halilit_url": "https://www.halilit.com/items/6365110-oberheim-ob-x8-keyboard",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "oberheim_sq_obx8moudle",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-X8 Desktop",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-X8 Desktop",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_obx8moudle.jpg",
+    "product_url": "https://www.halilit.com/items/6365130-oberheim-ob-x8-desktop",
+    "is_sold": true,
+    "price": 16752.0,
+    "halilit_url": "https://www.halilit.com/items/6365130-oberheim-ob-x8-desktop",
+    "status": "IN_STOCK"
+  }
+]

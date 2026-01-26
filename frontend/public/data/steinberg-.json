@@ -1,0 +1,203 @@
+{
+  "brand_identity": {
+    "id": "steinberg-",
+    "name": "STEINBERG-",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/steinberg-_logo.png",
+    "taxonomy_stats": {
+      "validated": 5,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "products": [
+    {
+      "id": "steinberg__45_ixo12_w",
+      "name": "Steinberg IXO12 USB Audio Interface",
+      "brand": "steinberg-",
+      "category": "studio",
+      "image_url": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+      "description": "Steinberg IXO12 USB Audio Interface",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "studio",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+        "original": "/data/thumbnails/steinberg__45_ixo12_w.jpg"
+      },
+      "category_hierarchy": [
+        "studio"
+      ]
+    },
+    {
+      "id": "steinberg__45_ixo22_b",
+      "name": "Steinberg IXO22 USB Audio Interface",
+      "brand": "steinberg-",
+      "category": "studio",
+      "image_url": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+      "description": "Steinberg IXO22 USB Audio Interface",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "studio",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+        "original": "/data/thumbnails/steinberg__45_ixo22_b.jpg"
+      },
+      "category_hierarchy": [
+        "studio"
+      ]
+    },
+    {
+      "id": "steinberg__45_dac_cubase_pro_ee",
+      "name": "Steinberg Cubase Pro 15 - בהנחה אקדמית",
+      "brand": "steinberg-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+      "description": "Steinberg Cubase Pro 15 - בהנחה אקדמית",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+        "original": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_dac_cubase_art_ee",
+      "name": "Steinberg Cubase Artist 15 - בהנחה אקדמית",
+      "brand": "steinberg-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+      "description": "Steinberg Cubase Artist 15 - בהנחה אקדמית",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+        "original": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_dac_cubase_elem_e",
+      "name": "Steinberg Cubase Elements 15 - בהנחה אקדמית",
+      "brand": "steinberg-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+      "description": "Steinberg Cubase Elements 15 - בהנחה אקדמית",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+        "original": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "brand_name": "Steinberg-",
+  "brand_slug": "steinberg-",
+  "refined_at": "2026-01-25T09:02:28.570974+00:00",
+  "hierarchy": {
+    "studio": {
+      "General": [
+        {
+          "id": "steinberg__45_ixo12_w",
+          "name": "Steinberg IXO12 USB Audio Interface",
+          "description": "Steinberg IXO12 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+            "original": "/data/thumbnails/steinberg__45_ixo12_w.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_ixo22_b",
+          "name": "Steinberg IXO22 USB Audio Interface",
+          "description": "Steinberg IXO22 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+            "original": "/data/thumbnails/steinberg__45_ixo22_b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    },
+    "accessories": {
+      "General": [
+        {
+          "id": "steinberg__45_dac_cubase_pro_ee",
+          "name": "Steinberg Cubase Pro 15 - בהנחה אקדמית",
+          "description": "Steinberg Cubase Pro 15 - בהנחה אקדמית",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg",
+            "original": "/data/thumbnails/steinberg__45_dac_cubase_pro_ee.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_dac_cubase_art_ee",
+          "name": "Steinberg Cubase Artist 15 - בהנחה אקדמית",
+          "description": "Steinberg Cubase Artist 15 - בהנחה אקדמית",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg",
+            "original": "/data/thumbnails/steinberg__45_dac_cubase_art_ee.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_dac_cubase_elem_e",
+          "name": "Steinberg Cubase Elements 15 - בהנחה אקדמית",
+          "description": "Steinberg Cubase Elements 15 - בהנחה אקדמית",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg",
+            "original": "/data/thumbnails/steinberg__45_dac_cubase_elem_e.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "brand_name": "Vintage",
+  "products": [
+    {
+      "id": "vintage_20_vsa500cr",
+      "name": "Vintage VSA500 Semi Acoustic",
+      "description": "Vintage VSA500 Semi Acoustic",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+      "product_url": "https://www.halilit.com/items/1621126-vintage-vsa500-semi-acoustic",
+      "is_sold": true,
+      "price": 2065.0,
+      "halilit_url": "https://www.halilit.com/items/1621126-vintage-vsa500-semi-acoustic",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2065.0,
+        "original_price": 2065.0
+      },
+      "brand": "Vintage",
+      "logo_url": "/assets/logos/vintage_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+        "thumbnail": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+        "high_res": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+        "original": "/data/thumbnails/vintage_20_vsa500cr.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "vintage_20_vuk30n",
+      "name": "Vintage VUK30N Concert Ukulele",
+      "description": "Vintage VUK30N Concert Ukulele",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/vintage_20_vuk30n.jpg",
+      "product_url": "https://www.halilit.com/items/4110558-vintage-vuk30n-concert-ukulele",
+      "is_sold": true,
+      "price": 293.0,
+      "halilit_url": "https://www.halilit.com/items/4110558-vintage-vuk30n-concert-ukulele",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 293.0,
+        "original_price": 293.0
+      },
+      "brand": "Vintage",
+      "logo_url": "/assets/logos/vintage_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/vintage_20_vuk30n.jpg",
+        "thumbnail": "/data/thumbnails/vintage_20_vuk30n.jpg",
+        "high_res": "/data/thumbnails/vintage_20_vuk30n.jpg",
+        "original": "/data/thumbnails/vintage_20_vuk30n.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "vintage_20_ps02",
+      "name": "Vintage PS02",
+      "description": "Vintage PS02",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/vintage_20_ps02.jpg",
+      "product_url": "https://www.halilit.com/items/2491808-vintage-ps02",
+      "is_sold": true,
+      "price": 32.0,
+      "halilit_url": "https://www.halilit.com/items/2491808-vintage-ps02",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 32.0,
+        "original_price": 32.0
+      },
+      "brand": "Vintage",
+      "logo_url": "/assets/logos/vintage_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/vintage_20_ps02.jpg",
+        "thumbnail": "/data/thumbnails/vintage_20_ps02.jpg",
+        "high_res": "/data/thumbnails/vintage_20_ps02.jpg",
+        "original": "/data/thumbnails/vintage_20_ps02.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "vintage_20_v6mfr",
+      "name": "Vintage V6M Reissued Firenza Red",
+      "description": "Vintage V6M Reissued Firenza Red",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/vintage_20_v6mfr.jpg",
+      "product_url": "https://www.halilit.com/items/2057397-vintage-v6m-reissued-firenza-red-electric-guitar",
+      "is_sold": true,
+      "price": 1839.0,
+      "halilit_url": "https://www.halilit.com/items/2057397-vintage-v6m-reissued-firenza-red-electric-guitar",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1839.0,
+        "original_price": 1839.0
+      },
+      "brand": "Vintage",
+      "logo_url": "/assets/logos/vintage_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/vintage_20_v6mfr.jpg",
+        "thumbnail": "/data/thumbnails/vintage_20_v6mfr.jpg",
+        "high_res": "/data/thumbnails/vintage_20_v6mfr.jpg",
+        "original": "/data/thumbnails/vintage_20_v6mfr.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.233935",
+  "brand_slug": "vintage",
+  "refined_at": "2026-01-26T06:43:37.384295+00:00",
+  "brand_identity": {
+    "id": "vintage",
+    "name": "Vintage",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/vintage_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 4,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "vintage_20_vsa500cr",
+          "name": "Vintage VSA500 Semi Acoustic",
+          "description": "Vintage VSA500 Semi Acoustic",
+          "images": {
+            "main": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+            "thumbnail": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+            "high_res": "/data/thumbnails/vintage_20_vsa500cr.jpg",
+            "original": "/data/thumbnails/vintage_20_vsa500cr.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "vintage_20_vuk30n",
+          "name": "Vintage VUK30N Concert Ukulele",
+          "description": "Vintage VUK30N Concert Ukulele",
+          "images": {
+            "main": "/data/thumbnails/vintage_20_vuk30n.jpg",
+            "thumbnail": "/data/thumbnails/vintage_20_vuk30n.jpg",
+            "high_res": "/data/thumbnails/vintage_20_vuk30n.jpg",
+            "original": "/data/thumbnails/vintage_20_vuk30n.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "vintage_20_ps02",
+          "name": "Vintage PS02",
+          "description": "Vintage PS02",
+          "images": {
+            "main": "/data/thumbnails/vintage_20_ps02.jpg",
+            "thumbnail": "/data/thumbnails/vintage_20_ps02.jpg",
+            "high_res": "/data/thumbnails/vintage_20_ps02.jpg",
+            "original": "/data/thumbnails/vintage_20_ps02.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "vintage_20_v6mfr",
+          "name": "Vintage V6M Reissued Firenza Red",
+          "description": "Vintage V6M Reissued Firenza Red",
+          "images": {
+            "main": "/data/thumbnails/vintage_20_v6mfr.jpg",
+            "thumbnail": "/data/thumbnails/vintage_20_v6mfr.jpg",
+            "high_res": "/data/thumbnails/vintage_20_v6mfr.jpg",
+            "original": "/data/thumbnails/vintage_20_v6mfr.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

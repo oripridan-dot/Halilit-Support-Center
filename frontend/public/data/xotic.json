@@ -1,0 +1,640 @@
+{
+  "brand_name": "Xotic",
+  "products": [
+    {
+      "id": "xotic_30_bbpv1_5",
+      "name": "Xotic BB PREAMP V1.5",
+      "description": "Xotic BB PREAMP V1.5",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+      "product_url": "https://www.halilit.com/items/4812617-xotic-bb-preamp-v1-5",
+      "is_sold": true,
+      "price": 949.0,
+      "halilit_url": "https://www.halilit.com/items/4812617-xotic-bb-preamp-v1-5",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 949.0,
+        "original_price": 949.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+        "high_res": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+        "original": "/data/thumbnails/xotic_30_bbpv1_5.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_xvp250k",
+      "name": "Xotic XVP-250K Volume Pedal",
+      "description": "Xotic XVP-250K Volume Pedal",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_xvp250k.jpg",
+      "product_url": "https://www.halilit.com/items/4821404-xotic-xvp-250k-volume-pedal",
+      "is_sold": true,
+      "price": 794.0,
+      "halilit_url": "https://www.halilit.com/items/4821404-xotic-xvp-250k-volume-pedal",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 794.0,
+        "original_price": 794.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_xvp250k.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_xvp250k.jpg",
+        "high_res": "/data/thumbnails/xotic_30_xvp250k.jpg",
+        "original": "/data/thumbnails/xotic_30_xvp250k.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rt2",
+      "name": "Xotic Robotalk 2",
+      "description": "Xotic Robotalk 2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rt2.jpg",
+      "product_url": "https://www.halilit.com/items/4820910-xotic-robotalk-2",
+      "is_sold": true,
+      "price": 1184.0,
+      "halilit_url": "https://www.halilit.com/items/4820910-xotic-robotalk-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1184.0,
+        "original_price": 1184.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rt2.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rt2.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rt2.jpg",
+        "original": "/data/thumbnails/xotic_30_rt2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_spc",
+      "name": "Xotic SP Compressor",
+      "description": "Xotic SP Compressor",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_spc.jpg",
+      "product_url": "https://www.halilit.com/items/4819890-xotic-sp-compressor",
+      "is_sold": true,
+      "price": 772.0,
+      "halilit_url": "https://www.halilit.com/items/4819890-xotic-sp-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 772.0,
+        "original_price": 772.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_spc.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_spc.jpg",
+        "high_res": "/data/thumbnails/xotic_30_spc.jpg",
+        "original": "/data/thumbnails/xotic_30_spc.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_sld",
+      "name": "Xotic SL DRIVE",
+      "description": "Xotic SL DRIVE",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_sld.jpg",
+      "product_url": "https://www.halilit.com/items/4819966-xotic-sl-drive",
+      "is_sold": true,
+      "price": 728.0,
+      "halilit_url": "https://www.halilit.com/items/4819966-xotic-sl-drive",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 728.0,
+        "original_price": 728.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_sld.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_sld.jpg",
+        "high_res": "/data/thumbnails/xotic_30_sld.jpg",
+        "original": "/data/thumbnails/xotic_30_sld.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_xw1",
+      "name": "Xotic XW-1 WAH",
+      "description": "Xotic XW-1 WAH",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_xw1.jpg",
+      "product_url": "https://www.halilit.com/items/4823056-xotic-xw-1-wah",
+      "is_sold": true,
+      "price": 1464.0,
+      "halilit_url": "https://www.halilit.com/items/4823056-xotic-xw-1-wah",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1464.0,
+        "original_price": 1464.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_xw1.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_xw1.jpg",
+        "high_res": "/data/thumbnails/xotic_30_xw1.jpg",
+        "original": "/data/thumbnails/xotic_30_xw1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rv60n",
+      "name": "Xotic RV-60 Neck Pick Up",
+      "description": "Xotic RV-60 Neck Pick Up",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rv60n.jpg",
+      "product_url": "https://www.halilit.com/items/4828436-xotic-rv-60-neck-pick-up",
+      "is_sold": true,
+      "price": 434.0,
+      "halilit_url": "https://www.halilit.com/items/4828436-xotic-rv-60-neck-pick-up",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 434.0,
+        "original_price": 434.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rv60n.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rv60n.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rv60n.jpg",
+        "original": "/data/thumbnails/xotic_30_rv60n.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rv50set",
+      "name": "Xotic RV-50 Single Coil Pick Up set",
+      "description": "Xotic RV-50 Single Coil Pick Up set",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rv50set.jpg",
+      "product_url": "https://www.halilit.com/items/4836208-xotic-rv-50-single-coil-pick-up-set",
+      "is_sold": true,
+      "price": 1161.0,
+      "halilit_url": "https://www.halilit.com/items/4836208-xotic-rv-50-single-coil-pick-up-set",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1161.0,
+        "original_price": 1161.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rv50set.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rv50set.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rv50set.jpg",
+        "original": "/data/thumbnails/xotic_30_rv50set.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rv50m",
+      "name": "Xotic RV-50 Middle Pick Up",
+      "description": "Xotic RV-50 Middle Pick Up",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rv50m.jpg",
+      "product_url": "https://www.halilit.com/items/4823413-xotic-rv-50-middle-pick-up",
+      "is_sold": true,
+      "price": 434.0,
+      "halilit_url": "https://www.halilit.com/items/4823413-xotic-rv-50-middle-pick-up",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 434.0,
+        "original_price": 434.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rv50m.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rv50m.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rv50m.jpg",
+        "original": "/data/thumbnails/xotic_30_rv50m.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rv60b",
+      "name": "Xotic RV-60 Bridge Pick Up",
+      "description": "Xotic RV-60 Bridge Pick Up",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rv60b.jpg",
+      "product_url": "https://www.halilit.com/items/4827790-xotic-rv-60-bridge-pick-up",
+      "is_sold": true,
+      "price": 434.0,
+      "halilit_url": "https://www.halilit.com/items/4827790-xotic-rv-60-bridge-pick-up",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 434.0,
+        "original_price": 434.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rv60b.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rv60b.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rv60b.jpg",
+        "original": "/data/thumbnails/xotic_30_rv60b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rvpaffs",
+      "name": "Xotic RV-60 Middle Pick Up Paf",
+      "description": "Xotic RV-60 Middle Pick Up Paf",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+      "product_url": "https://www.halilit.com/items/4825523-xotic-rv-60-middle-pick-up-paf",
+      "is_sold": true,
+      "price": 846.0,
+      "halilit_url": "https://www.halilit.com/items/4825523-xotic-rv-60-middle-pick-up-paf",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 846.0,
+        "original_price": 846.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+        "original": "/data/thumbnails/xotic_30_rvpaffs.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rv60m",
+      "name": "Xotic RV-60 Middle Pick Up",
+      "description": "Xotic RV-60 Middle Pick Up",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rv60m.jpg",
+      "product_url": "https://www.halilit.com/items/4836301-xotic-rv-60-middle-pick-up",
+      "is_sold": true,
+      "price": 434.0,
+      "halilit_url": "https://www.halilit.com/items/4836301-xotic-rv-60-middle-pick-up",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 434.0,
+        "original_price": 434.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rv60m.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rv60m.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rv60m.jpg",
+        "original": "/data/thumbnails/xotic_30_rv60m.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_rv50nb",
+      "name": "Xotic RV-50 Neck and BRIDGE Pick Up",
+      "description": "Xotic RV-50 Neck and BRIDGE Pick Up",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_rv50nb.jpg",
+      "product_url": "https://www.halilit.com/items/4826347-xotic-rv-50-neck-and-bridge-pick-up",
+      "is_sold": true,
+      "price": 434.0,
+      "halilit_url": "https://www.halilit.com/items/4826347-xotic-rv-50-neck-and-bridge-pick-up",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 434.0,
+        "original_price": 434.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_rv50nb.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_rv50nb.jpg",
+        "high_res": "/data/thumbnails/xotic_30_rv50nb.jpg",
+        "original": "/data/thumbnails/xotic_30_rv50nb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_xpc12x2",
+      "name": "Xotic All-Brass Patch Cable 12 inch",
+      "description": "Xotic All-Brass Patch Cable 12 inch",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+      "product_url": "https://www.halilit.com/items/4830815-xotic-all-brass-patch-cable-12-inch",
+      "is_sold": true,
+      "price": 169.0,
+      "halilit_url": "https://www.halilit.com/items/4830815-xotic-all-brass-patch-cable-12-inch",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 169.0,
+        "original_price": 169.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+        "high_res": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+        "original": "/data/thumbnails/xotic_30_xpc12x2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "xotic_30_xpc6x2",
+      "name": "Xotic All-Brass Patch Cable 6 inch",
+      "description": "Xotic All-Brass Patch Cable 6 inch",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+      "product_url": "https://www.halilit.com/items/4830921-xotic-all-brass-patch-cable-6-inch",
+      "is_sold": true,
+      "price": 154.0,
+      "halilit_url": "https://www.halilit.com/items/4830921-xotic-all-brass-patch-cable-6-inch",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 154.0,
+        "original_price": 154.0
+      },
+      "brand": "Xotic",
+      "logo_url": "/assets/logos/xotic_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+        "thumbnail": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+        "high_res": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+        "original": "/data/thumbnails/xotic_30_xpc6x2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.360834",
+  "brand_slug": "xotic",
+  "refined_at": "2026-01-26T06:43:37.388362+00:00",
+  "brand_identity": {
+    "id": "xotic",
+    "name": "Xotic",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/xotic_logo.png",
+    "taxonomy_stats": {
+      "validated": 15,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "xotic_30_bbpv1_5",
+          "name": "Xotic BB PREAMP V1.5",
+          "description": "Xotic BB PREAMP V1.5",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+            "high_res": "/data/thumbnails/xotic_30_bbpv1_5.jpg",
+            "original": "/data/thumbnails/xotic_30_bbpv1_5.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_xvp250k",
+          "name": "Xotic XVP-250K Volume Pedal",
+          "description": "Xotic XVP-250K Volume Pedal",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_xvp250k.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_xvp250k.jpg",
+            "high_res": "/data/thumbnails/xotic_30_xvp250k.jpg",
+            "original": "/data/thumbnails/xotic_30_xvp250k.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rt2",
+          "name": "Xotic Robotalk 2",
+          "description": "Xotic Robotalk 2",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rt2.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rt2.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rt2.jpg",
+            "original": "/data/thumbnails/xotic_30_rt2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_spc",
+          "name": "Xotic SP Compressor",
+          "description": "Xotic SP Compressor",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_spc.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_spc.jpg",
+            "high_res": "/data/thumbnails/xotic_30_spc.jpg",
+            "original": "/data/thumbnails/xotic_30_spc.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_sld",
+          "name": "Xotic SL DRIVE",
+          "description": "Xotic SL DRIVE",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_sld.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_sld.jpg",
+            "high_res": "/data/thumbnails/xotic_30_sld.jpg",
+            "original": "/data/thumbnails/xotic_30_sld.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_xw1",
+          "name": "Xotic XW-1 WAH",
+          "description": "Xotic XW-1 WAH",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_xw1.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_xw1.jpg",
+            "high_res": "/data/thumbnails/xotic_30_xw1.jpg",
+            "original": "/data/thumbnails/xotic_30_xw1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rv60n",
+          "name": "Xotic RV-60 Neck Pick Up",
+          "description": "Xotic RV-60 Neck Pick Up",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rv60n.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rv60n.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rv60n.jpg",
+            "original": "/data/thumbnails/xotic_30_rv60n.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rv50set",
+          "name": "Xotic RV-50 Single Coil Pick Up set",
+          "description": "Xotic RV-50 Single Coil Pick Up set",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rv50set.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rv50set.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rv50set.jpg",
+            "original": "/data/thumbnails/xotic_30_rv50set.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rv50m",
+          "name": "Xotic RV-50 Middle Pick Up",
+          "description": "Xotic RV-50 Middle Pick Up",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rv50m.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rv50m.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rv50m.jpg",
+            "original": "/data/thumbnails/xotic_30_rv50m.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rv60b",
+          "name": "Xotic RV-60 Bridge Pick Up",
+          "description": "Xotic RV-60 Bridge Pick Up",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rv60b.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rv60b.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rv60b.jpg",
+            "original": "/data/thumbnails/xotic_30_rv60b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rvpaffs",
+          "name": "Xotic RV-60 Middle Pick Up Paf",
+          "description": "Xotic RV-60 Middle Pick Up Paf",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rvpaffs.jpg",
+            "original": "/data/thumbnails/xotic_30_rvpaffs.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rv60m",
+          "name": "Xotic RV-60 Middle Pick Up",
+          "description": "Xotic RV-60 Middle Pick Up",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rv60m.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rv60m.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rv60m.jpg",
+            "original": "/data/thumbnails/xotic_30_rv60m.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_rv50nb",
+          "name": "Xotic RV-50 Neck and BRIDGE Pick Up",
+          "description": "Xotic RV-50 Neck and BRIDGE Pick Up",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_rv50nb.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_rv50nb.jpg",
+            "high_res": "/data/thumbnails/xotic_30_rv50nb.jpg",
+            "original": "/data/thumbnails/xotic_30_rv50nb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_xpc12x2",
+          "name": "Xotic All-Brass Patch Cable 12 inch",
+          "description": "Xotic All-Brass Patch Cable 12 inch",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+            "high_res": "/data/thumbnails/xotic_30_xpc12x2.jpg",
+            "original": "/data/thumbnails/xotic_30_xpc12x2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "xotic_30_xpc6x2",
+          "name": "Xotic All-Brass Patch Cable 6 inch",
+          "description": "Xotic All-Brass Patch Cable 6 inch",
+          "images": {
+            "main": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+            "thumbnail": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+            "high_res": "/data/thumbnails/xotic_30_xpc6x2.jpg",
+            "original": "/data/thumbnails/xotic_30_xpc6x2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,722 @@
+{
+  "brand_name": "Topp Pro",
+  "products": [
+    {
+      "id": "topp_pro_01_sohov4___01_sohos10",
+      "name": "Topp Pro SOHO V4 + 10S",
+      "description": "Topp Pro SOHO V4 + 10S",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+      "product_url": "https://www.halilit.com/items/533423-topp-pro-soho-v4",
+      "is_sold": true,
+      "price": 2708.0,
+      "halilit_url": "https://www.halilit.com/items/533423-topp-pro-soho-v4",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2708.0,
+        "original_price": 2708.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+        "original": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_mxi_12fx",
+      "name": "Topp Pro MXI.12FX",
+      "description": "Topp Pro MXI.12FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+      "product_url": "https://www.halilit.com/items/3176970-topp-pro-mxi-12fx-12-channel-audio-mixer-with-efx-processor",
+      "is_sold": true,
+      "price": 830.0,
+      "halilit_url": "https://www.halilit.com/items/3176970-topp-pro-mxi-12fx-12-channel-audio-mixer-with-efx-processor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 830.0,
+        "original_price": 830.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+        "original": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_mxi_1222cfx",
+      "name": "Topp Pro MXI.1222CFX",
+      "description": "Topp Pro MXI.1222CFX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+      "product_url": "https://www.halilit.com/items/3167790-topp-pro-mxi-1222cfx",
+      "is_sold": true,
+      "price": 1966.0,
+      "halilit_url": "https://www.halilit.com/items/3167790-topp-pro-mxi-1222cfx",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1966.0,
+        "original_price": 1966.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+        "original": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_mxi_1422cfx",
+      "name": "Topp Pro MXI.1422CFX",
+      "description": "Topp Pro MXI.1422CFX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+      "product_url": "https://www.halilit.com/items/3168660-topp-pro-mxi-1422cfx",
+      "is_sold": true,
+      "price": 2264.0,
+      "halilit_url": "https://www.halilit.com/items/3168660-topp-pro-mxi-1422cfx",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2264.0,
+        "original_price": 2264.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+        "original": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_tap20a",
+      "name": "Topp Pro TAP20A",
+      "description": "Topp Pro TAP20A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+      "product_url": "https://www.halilit.com/items/444256-topp-pro-tap20a",
+      "is_sold": true,
+      "price": 240.0,
+      "halilit_url": "https://www.halilit.com/items/444256-topp-pro-tap20a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 240.0,
+        "original_price": 240.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_tap20a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_tap40bt",
+      "name": "Topp Pro TAP 40BT",
+      "description": "Topp Pro TAP 40BT",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+      "product_url": "https://www.halilit.com/items/6271090-topp-pro-tap-40bt",
+      "is_sold": true,
+      "price": 516.0,
+      "halilit_url": "https://www.halilit.com/items/6271090-topp-pro-tap-40bt",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 516.0,
+        "original_price": 516.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+        "original": "/data/thumbnails/topp_pro_01_tap40bt.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_kscs8a",
+      "name": "Topp Pro KS CS8A",
+      "description": "Topp Pro KS CS8A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+      "product_url": "https://www.halilit.com/items/3163434-topp-pro-ks-cs8a",
+      "is_sold": true,
+      "price": 2526.0,
+      "halilit_url": "https://www.halilit.com/items/3163434-topp-pro-ks-cs8a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2526.0,
+        "original_price": 2526.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_kscs8a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_kshd12a",
+      "name": "Topp Pro KS HD12A",
+      "description": "Topp Pro KS HD12A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+      "product_url": "https://www.halilit.com/items/3163462-topp-pro-ks-hd12a",
+      "is_sold": true,
+      "price": 3452.0,
+      "halilit_url": "https://www.halilit.com/items/3163462-topp-pro-ks-hd12a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3452.0,
+        "original_price": 3452.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_kshd12a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_kshd15a",
+      "name": "Topp Pro KS HD15A",
+      "description": "Topp Pro KS HD15A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+      "product_url": "https://www.halilit.com/items/3163511-topp-pro-ks-hd15a",
+      "is_sold": true,
+      "price": 3670.0,
+      "halilit_url": "https://www.halilit.com/items/3163511-topp-pro-ks-hd15a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3670.0,
+        "original_price": 3670.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_kshd15a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_kscs10a",
+      "name": "Topp Pro KS CS10A",
+      "description": "Topp Pro KS CS10A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+      "product_url": "https://www.halilit.com/items/3142524-topp-pro-ks-cs10a",
+      "is_sold": true,
+      "price": 2710.0,
+      "halilit_url": "https://www.halilit.com/items/3142524-topp-pro-ks-cs10a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2710.0,
+        "original_price": 2710.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_kscs10a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_x15a",
+      "name": "Topp Pro X15A",
+      "description": "Topp Pro X15A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_x15a.jpg",
+      "product_url": "https://www.halilit.com/items/538533-topp-pro-x15a",
+      "is_sold": true,
+      "price": 1442.0,
+      "halilit_url": "https://www.halilit.com/items/538533-topp-pro-x15a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1442.0,
+        "original_price": 1442.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_x15a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_x15a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_x15a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_x15a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_maxx10asub",
+      "name": "Topp Pro MAXX 10A SUB",
+      "description": "Topp Pro MAXX 10A SUB",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+      "product_url": "https://www.halilit.com/items/3166634-topp-pro-maxx-10a-sub",
+      "is_sold": true,
+      "price": 1530.0,
+      "halilit_url": "https://www.halilit.com/items/3166634-topp-pro-maxx-10a-sub",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1530.0,
+        "original_price": 1530.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+        "original": "/data/thumbnails/topp_pro_01_maxx10asub.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_tpsi8h_b",
+      "name": "Topp Pro TPS I8H",
+      "description": "Topp Pro TPS I8H",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+      "product_url": "https://www.halilit.com/items/671197-topp-pro-tps-i8h",
+      "is_sold": true,
+      "price": 795.0,
+      "halilit_url": "https://www.halilit.com/items/671197-topp-pro-tps-i8h",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 795.0,
+        "original_price": 795.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+        "original": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_kshd8a",
+      "name": "Topp Pro KS HD8A",
+      "description": "Topp Pro KS HD8A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+      "product_url": "https://www.halilit.com/items/3163616-topp-pro-ks-hd8a",
+      "is_sold": true,
+      "price": 2866.0,
+      "halilit_url": "https://www.halilit.com/items/3163616-topp-pro-ks-hd8a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2866.0,
+        "original_price": 2866.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_kshd8a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_kshd10a",
+      "name": "Topp Pro KS HD10A",
+      "description": "Topp Pro KS HD10A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+      "product_url": "https://www.halilit.com/items/3163643-topp-pro-ks-hd10a",
+      "is_sold": true,
+      "price": 3050.0,
+      "halilit_url": "https://www.halilit.com/items/3163643-topp-pro-ks-hd10a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3050.0,
+        "original_price": 3050.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+        "original": "/data/thumbnails/topp_pro_01_kshd10a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_hva4_150",
+      "name": "Topp Pro HVA4.150",
+      "description": "Topp Pro HVA4.150",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+      "product_url": "https://www.halilit.com/items/3166584-topp-pro-hva4-150",
+      "is_sold": true,
+      "price": 2089.0,
+      "halilit_url": "https://www.halilit.com/items/3166584-topp-pro-hva4-150",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2089.0,
+        "original_price": 2089.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+        "original": "/data/thumbnails/topp_pro_01_hva4_150.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "topp_pro_01_lva8_150",
+      "name": "Topp Pro LVA8.150",
+      "description": "Topp Pro LVA8.150",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+      "product_url": "https://www.halilit.com/items/3166604-topp-pro-lva8-150",
+      "is_sold": true,
+      "price": 2254.0,
+      "halilit_url": "https://www.halilit.com/items/3166604-topp-pro-lva8-150",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2254.0,
+        "original_price": 2254.0
+      },
+      "brand": "Topp Pro",
+      "logo_url": "/assets/logos/topp-pro_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+        "thumbnail": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+        "high_res": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+        "original": "/data/thumbnails/topp_pro_01_lva8_150.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.691807",
+  "brand_slug": "topp-pro",
+  "refined_at": "2026-01-26T06:43:37.703869+00:00",
+  "brand_identity": {
+    "id": "topp-pro",
+    "name": "Topp Pro",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/topp-pro_logo.png",
+    "taxonomy_stats": {
+      "validated": 17,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "topp_pro_01_sohov4___01_sohos10",
+          "name": "Topp Pro SOHO V4 + 10S",
+          "description": "Topp Pro SOHO V4 + 10S",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg",
+            "original": "/data/thumbnails/topp_pro_01_sohov4___01_sohos10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_mxi_12fx",
+          "name": "Topp Pro MXI.12FX",
+          "description": "Topp Pro MXI.12FX",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+            "original": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_mxi_1222cfx",
+          "name": "Topp Pro MXI.1222CFX",
+          "description": "Topp Pro MXI.1222CFX",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg",
+            "original": "/data/thumbnails/topp_pro_01_mxi_1222cfx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_mxi_1422cfx",
+          "name": "Topp Pro MXI.1422CFX",
+          "description": "Topp Pro MXI.1422CFX",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+            "original": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_tap20a",
+          "name": "Topp Pro TAP20A",
+          "description": "Topp Pro TAP20A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_tap20a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_tap40bt",
+          "name": "Topp Pro TAP 40BT",
+          "description": "Topp Pro TAP 40BT",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+            "original": "/data/thumbnails/topp_pro_01_tap40bt.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_kscs8a",
+          "name": "Topp Pro KS CS8A",
+          "description": "Topp Pro KS CS8A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_kscs8a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_kscs8a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_kshd12a",
+          "name": "Topp Pro KS HD12A",
+          "description": "Topp Pro KS HD12A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_kshd12a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_kshd12a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_kshd15a",
+          "name": "Topp Pro KS HD15A",
+          "description": "Topp Pro KS HD15A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_kshd15a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_kshd15a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_kscs10a",
+          "name": "Topp Pro KS CS10A",
+          "description": "Topp Pro KS CS10A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_kscs10a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_kscs10a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_x15a",
+          "name": "Topp Pro X15A",
+          "description": "Topp Pro X15A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_x15a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_x15a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_x15a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_x15a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_maxx10asub",
+          "name": "Topp Pro MAXX 10A SUB",
+          "description": "Topp Pro MAXX 10A SUB",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+            "original": "/data/thumbnails/topp_pro_01_maxx10asub.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_tpsi8h_b",
+          "name": "Topp Pro TPS I8H",
+          "description": "Topp Pro TPS I8H",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg",
+            "original": "/data/thumbnails/topp_pro_01_tpsi8h_b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_kshd8a",
+          "name": "Topp Pro KS HD8A",
+          "description": "Topp Pro KS HD8A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_kshd8a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_kshd8a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_kshd10a",
+          "name": "Topp Pro KS HD10A",
+          "description": "Topp Pro KS HD10A",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+            "original": "/data/thumbnails/topp_pro_01_kshd10a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_hva4_150",
+          "name": "Topp Pro HVA4.150",
+          "description": "Topp Pro HVA4.150",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_hva4_150.jpg",
+            "original": "/data/thumbnails/topp_pro_01_hva4_150.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "topp_pro_01_lva8_150",
+          "name": "Topp Pro LVA8.150",
+          "description": "Topp Pro LVA8.150",
+          "images": {
+            "main": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+            "thumbnail": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+            "high_res": "/data/thumbnails/topp_pro_01_lva8_150.jpg",
+            "original": "/data/thumbnails/topp_pro_01_lva8_150.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

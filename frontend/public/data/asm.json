@@ -1,0 +1,19 @@
+{
+  "brand_name": "Asm",
+  "products": [],
+  "generated_at": "2026-01-26T06:43:37.337765",
+  "brand_slug": "asm",
+  "refined_at": "2026-01-26T06:43:37.343266+00:00",
+  "brand_identity": {
+    "id": "asm",
+    "name": "Asm",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/asm_logo.png",
+    "taxonomy_stats": {
+      "validated": 0,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {}
+}

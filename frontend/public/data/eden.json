@@ -1,0 +1,66 @@
+{
+  "brand_name": "Eden",
+  "products": [
+    {
+      "id": "eden_04_i90chorus",
+      "name": "Eden I90 Chorus",
+      "description": "Eden I90 Chorus",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/eden_04_i90chorus.jpg",
+      "product_url": "https://www.halilit.com/items/444697-eden-i90-chorus",
+      "is_sold": true,
+      "price": 514.0,
+      "halilit_url": "https://www.halilit.com/items/444697-eden-i90-chorus",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 514.0,
+        "original_price": 514.0
+      },
+      "brand": "Eden",
+      "logo_url": "/assets/logos/eden_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/eden_04_i90chorus.jpg",
+        "thumbnail": "/data/thumbnails/eden_04_i90chorus.jpg",
+        "high_res": "/data/thumbnails/eden_04_i90chorus.jpg",
+        "original": "/data/thumbnails/eden_04_i90chorus.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.440492",
+  "brand_slug": "eden",
+  "refined_at": "2026-01-26T06:43:38.448588+00:00",
+  "brand_identity": {
+    "id": "eden",
+    "name": "Eden",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/eden_logo.png",
+    "taxonomy_stats": {
+      "validated": 1,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "eden_04_i90chorus",
+          "name": "Eden I90 Chorus",
+          "description": "Eden I90 Chorus",
+          "images": {
+            "main": "/data/thumbnails/eden_04_i90chorus.jpg",
+            "thumbnail": "/data/thumbnails/eden_04_i90chorus.jpg",
+            "high_res": "/data/thumbnails/eden_04_i90chorus.jpg",
+            "original": "/data/thumbnails/eden_04_i90chorus.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "brand_name": "Adam Audio",
+  "products": [
+    {
+      "id": "adam_audio_aa_h200",
+      "name": "Adam Audio H-200",
+      "description": "Adam Audio H-200",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/adam_audio_aa_h200.jpg",
+      "product_url": "https://www.halilit.com/items/7679723-adam-audio-h-200-headphones",
+      "is_sold": true,
+      "price": 703.0,
+      "halilit_url": "https://www.halilit.com/items/7679723-adam-audio-h-200-headphones",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 703.0,
+        "original_price": 703.0
+      },
+      "brand": "Adam Audio",
+      "logo_url": "/assets/logos/adam-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/adam_audio_aa_h200.jpg",
+        "thumbnail": "/data/thumbnails/adam_audio_aa_h200.jpg",
+        "high_res": "/data/thumbnails/adam_audio_aa_h200.jpg",
+        "original": "/data/thumbnails/adam_audio_aa_h200.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.478047",
+  "brand_slug": "adam-audio",
+  "refined_at": "2026-01-26T06:43:37.508823+00:00",
+  "brand_identity": {
+    "id": "adam-audio",
+    "name": "Adam Audio",
+    "brand_colors": {
+      "primary": "#000000",
+      "secondary": "#1c1917",
+      "accent": "#fee2e2",
+      "background": "#000000",
+      "text": "#ffffff"
+    },
+    "logo_url": "/assets/logos/adam-audio_logo.svg",
+    "taxonomy_stats": {
+      "validated": 1,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "adam_audio_aa_h200",
+          "name": "Adam Audio H-200",
+          "description": "Adam Audio H-200",
+          "images": {
+            "main": "/data/thumbnails/adam_audio_aa_h200.jpg",
+            "thumbnail": "/data/thumbnails/adam_audio_aa_h200.jpg",
+            "high_res": "/data/thumbnails/adam_audio_aa_h200.jpg",
+            "original": "/data/thumbnails/adam_audio_aa_h200.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

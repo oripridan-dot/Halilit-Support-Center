@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+frontend/dist/
+frontend/node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+test_output.log
+harvest.log
+
+# Docker
+
+# Redis
+dump.rdb
+*.rdb
+
+# Backups
+backups/
+*.backup
+
+# Image cache
+backend/app/static/assets/cache/
+
+# V3.7 Specific
+backend/data/catalogs/*.json
+!backend/data/catalogs/.gitkeep
+frontend/public/data/catalogs_brand/*.json
+backend/logs/*.log
+backend/backend.log
+*.pyc
+__pycache__/
+.pytest_cache/
+venv/
+node_modules/
+.vite/
+
+# Playwright browsers (too large for GitHub)
+.playwright-browsers/

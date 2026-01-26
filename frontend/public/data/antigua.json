@@ -1,0 +1,722 @@
+{
+  "brand_name": "Antigua",
+  "products": [
+    {
+      "id": "antigua_36_as1203lq",
+      "name": "Antigua AS-1203LQ Alto Saxophone",
+      "description": "Antigua AS-1203LQ Alto Saxophone",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_as1203lq.jpg",
+      "product_url": "https://www.halilit.com/items/446754-antigua-as-1203lq-alto-saxophone",
+      "is_sold": true,
+      "price": 2524.0,
+      "halilit_url": "https://www.halilit.com/items/446754-antigua-as-1203lq-alto-saxophone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2524.0,
+        "original_price": 2524.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_as1203lq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_as1203lq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_as1203lq.jpg",
+        "original": "/data/thumbnails/antigua_36_as1203lq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_tr1501lq",
+      "name": "Antigua TR1501LQ Trumpet",
+      "description": "Antigua TR1501LQ Trumpet",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+      "product_url": "https://www.halilit.com/items/446773-antigua-tr1501lq-trumpet",
+      "is_sold": true,
+      "price": 1248.0,
+      "halilit_url": "https://www.halilit.com/items/446773-antigua-tr1501lq-trumpet",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1248.0,
+        "original_price": 1248.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+        "original": "/data/thumbnails/antigua_36_tr1501lq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_tr2561lq",
+      "name": "Antigua TR2561LQ Trumpet",
+      "description": "Antigua TR2561LQ Trumpet",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+      "product_url": "https://www.halilit.com/items/3055872-antigua-tr2561lq-trumpet",
+      "is_sold": true,
+      "price": 1701.0,
+      "halilit_url": "https://www.halilit.com/items/3055872-antigua-tr2561lq-trumpet",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1701.0,
+        "original_price": 1701.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+        "original": "/data/thumbnails/antigua_36_tr2561lq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_wfl2210br1",
+      "name": "Antigua Vosi WFL2210 Side Flute",
+      "description": "Antigua Vosi WFL2210 Side Flute",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+      "product_url": "https://www.halilit.com/items/2512130-antigua-vosi-wfl2210-side-flute-",
+      "is_sold": true,
+      "price": 2058.0,
+      "halilit_url": "https://www.halilit.com/items/2512130-antigua-vosi-wfl2210-side-flute-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2058.0,
+        "original_price": 2058.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+        "high_res": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+        "original": "/data/thumbnails/antigua_36_wfl2210br1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_ts1203lq",
+      "name": "Antigua X/P TS1203LQ Bb Tenor Saxophone",
+      "description": "Antigua X/P TS1203LQ Bb Tenor Saxophone",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+      "product_url": "https://www.halilit.com/items/446753-antigua-x-p-ts1203lq-bb-tenor-saxophone",
+      "is_sold": true,
+      "price": 3135.0,
+      "halilit_url": "https://www.halilit.com/items/446753-antigua-x-p-ts1203lq-bb-tenor-saxophone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3135.0,
+        "original_price": 3135.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+        "original": "/data/thumbnails/antigua_36_ts1203lq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_cl1211a",
+      "name": "Antigua CL1211A XP Clarinet",
+      "description": "Antigua CL1211A XP Clarinet",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_cl1211a.jpg",
+      "product_url": "https://www.halilit.com/items/458375-antigua-cl1211a-xp-clarinet",
+      "is_sold": true,
+      "price": 892.0,
+      "halilit_url": "https://www.halilit.com/items/458375-antigua-cl1211a-xp-clarinet",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 892.0,
+        "original_price": 892.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_cl1211a.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_cl1211a.jpg",
+        "high_res": "/data/thumbnails/antigua_36_cl1211a.jpg",
+        "original": "/data/thumbnails/antigua_36_cl1211a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_cl2220",
+      "name": "Antigua Vosi CL2220 Clarinet",
+      "description": "Antigua Vosi CL2220 Clarinet",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_cl2220.jpg",
+      "product_url": "https://www.halilit.com/items/458376-antigua-vosi-cl2220-clarinet",
+      "is_sold": true,
+      "price": 1905.0,
+      "halilit_url": "https://www.halilit.com/items/458376-antigua-vosi-cl2220-clarinet",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1905.0,
+        "original_price": 1905.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_cl2220.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_cl2220.jpg",
+        "high_res": "/data/thumbnails/antigua_36_cl2220.jpg",
+        "original": "/data/thumbnails/antigua_36_cl2220.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_ss6200vlq",
+      "name": "Antigua SS6200 Vintage Gold",
+      "description": "Antigua SS6200 Vintage Gold",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+      "product_url": "https://www.halilit.com/items/1425299-antigua-ss6200-vintage-gold-soprano-saxophone",
+      "is_sold": true,
+      "price": 11500.0,
+      "halilit_url": "https://www.halilit.com/items/1425299-antigua-ss6200-vintage-gold-soprano-saxophone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11500.0,
+        "original_price": 11500.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+        "original": "/data/thumbnails/antigua_36_ss6200vlq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_as4240lqsh",
+      "name": "Antigua AS4240LQSH Alto Saxophone",
+      "description": "Antigua AS4240LQSH Alto Saxophone",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+      "product_url": "https://www.halilit.com/items/3124116-antigua-as4240lqsh-alto-saxophone",
+      "is_sold": true,
+      "price": 5628.0,
+      "halilit_url": "https://www.halilit.com/items/3124116-antigua-as4240lqsh-alto-saxophone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5628.0,
+        "original_price": 5628.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+        "high_res": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+        "original": "/data/thumbnails/antigua_36_as4240lqsh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_as6200vlq",
+      "name": "Antigua AS6200 Vintage Gold",
+      "description": "Antigua AS6200 Vintage Gold",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+      "product_url": "https://www.halilit.com/items/1424535-antigua-as6200-vintage-gold",
+      "is_sold": true,
+      "price": 10751.0,
+      "halilit_url": "https://www.halilit.com/items/1424535-antigua-as6200-vintage-gold",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10751.0,
+        "original_price": 10751.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+        "original": "/data/thumbnails/antigua_36_as6200vlq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_tb1203lq",
+      "name": "Antigua TB1203LQ Trombone",
+      "description": "Antigua TB1203LQ Trombone",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+      "product_url": "https://www.halilit.com/items/447900-antigua-tb1203lq-trombone-",
+      "is_sold": true,
+      "price": 1264.0,
+      "halilit_url": "https://www.halilit.com/items/447900-antigua-tb1203lq-trombone-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1264.0,
+        "original_price": 1264.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+        "original": "/data/thumbnails/antigua_36_tb1203lq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_ep1120lq",
+      "name": "Antigua EP1120LQ Baritone",
+      "description": "Antigua EP1120LQ Baritone",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+      "product_url": "https://www.halilit.com/items/447902-antigua-ep1120lq-baritone",
+      "is_sold": true,
+      "price": 2281.0,
+      "halilit_url": "https://www.halilit.com/items/447902-antigua-ep1120lq-baritone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2281.0,
+        "original_price": 2281.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+        "original": "/data/thumbnails/antigua_36_ep1120lq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_bb1120lqa",
+      "name": "Antigua BB1120LQ Tube",
+      "description": "Antigua BB1120LQ Tube",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+      "product_url": "https://www.halilit.com/items/447903-antigua-bb1120lq-tube",
+      "is_sold": true,
+      "price": 6686.0,
+      "halilit_url": "https://www.halilit.com/items/447903-antigua-bb1120lq-tube",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6686.0,
+        "original_price": 6686.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+        "high_res": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+        "original": "/data/thumbnails/antigua_36_bb1120lqa.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_wst30b",
+      "name": "Antigua ST-30B Neckstrap",
+      "description": "Antigua ST-30B Neckstrap",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_wst30b.jpg",
+      "product_url": "https://www.halilit.com/items/3240406-antigua-winds-st-30b-neckstrap",
+      "is_sold": true,
+      "price": 37.0,
+      "halilit_url": "https://www.halilit.com/items/3240406-antigua-winds-st-30b-neckstrap",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 37.0,
+        "original_price": 37.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_wst30b.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_wst30b.jpg",
+        "high_res": "/data/thumbnails/antigua_36_wst30b.jpg",
+        "original": "/data/thumbnails/antigua_36_wst30b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_wcl3233sb",
+      "name": "Antigua CL3233 Clarinet",
+      "description": "Antigua CL3233 Clarinet",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+      "product_url": "https://www.halilit.com/items/1425375-antigua-cl3233-clarinet",
+      "is_sold": true,
+      "price": 5775.0,
+      "halilit_url": "https://www.halilit.com/items/1425375-antigua-cl3233-clarinet",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5775.0,
+        "original_price": 5775.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+        "high_res": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+        "original": "/data/thumbnails/antigua_36_wcl3233sb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_ts6200vlq",
+      "name": "Antigua TS6200 Vintage Gold",
+      "description": "Antigua TS6200 Vintage Gold",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+      "product_url": "https://www.halilit.com/items/1424622-antigua-ts6200-vintage-gold",
+      "is_sold": true,
+      "price": 13866.0,
+      "halilit_url": "https://www.halilit.com/items/1424622-antigua-ts6200-vintage-gold",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 13866.0,
+        "original_price": 13866.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+        "high_res": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+        "original": "/data/thumbnails/antigua_36_ts6200vlq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "antigua_36_fl1210",
+      "name": "Antigua FL1210 Side Flute",
+      "description": "Antigua FL1210 Side Flute",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/antigua_36_fl1210.jpg",
+      "product_url": "https://www.halilit.com/items/446967-antigua-fl1210-side-flute",
+      "is_sold": true,
+      "price": 1152.0,
+      "halilit_url": "https://www.halilit.com/items/446967-antigua-fl1210-side-flute",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1152.0,
+        "original_price": 1152.0
+      },
+      "brand": "Antigua",
+      "logo_url": "/assets/logos/antigua_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/antigua_36_fl1210.jpg",
+        "thumbnail": "/data/thumbnails/antigua_36_fl1210.jpg",
+        "high_res": "/data/thumbnails/antigua_36_fl1210.jpg",
+        "original": "/data/thumbnails/antigua_36_fl1210.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.628789",
+  "brand_slug": "antigua",
+  "refined_at": "2026-01-26T06:43:38.639488+00:00",
+  "brand_identity": {
+    "id": "antigua",
+    "name": "Antigua",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/antigua_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 17,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "antigua_36_as1203lq",
+          "name": "Antigua AS-1203LQ Alto Saxophone",
+          "description": "Antigua AS-1203LQ Alto Saxophone",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_as1203lq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_as1203lq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_as1203lq.jpg",
+            "original": "/data/thumbnails/antigua_36_as1203lq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_tr1501lq",
+          "name": "Antigua TR1501LQ Trumpet",
+          "description": "Antigua TR1501LQ Trumpet",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_tr1501lq.jpg",
+            "original": "/data/thumbnails/antigua_36_tr1501lq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_tr2561lq",
+          "name": "Antigua TR2561LQ Trumpet",
+          "description": "Antigua TR2561LQ Trumpet",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_tr2561lq.jpg",
+            "original": "/data/thumbnails/antigua_36_tr2561lq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_wfl2210br1",
+          "name": "Antigua Vosi WFL2210 Side Flute",
+          "description": "Antigua Vosi WFL2210 Side Flute",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+            "high_res": "/data/thumbnails/antigua_36_wfl2210br1.jpg",
+            "original": "/data/thumbnails/antigua_36_wfl2210br1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_ts1203lq",
+          "name": "Antigua X/P TS1203LQ Bb Tenor Saxophone",
+          "description": "Antigua X/P TS1203LQ Bb Tenor Saxophone",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_ts1203lq.jpg",
+            "original": "/data/thumbnails/antigua_36_ts1203lq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_cl1211a",
+          "name": "Antigua CL1211A XP Clarinet",
+          "description": "Antigua CL1211A XP Clarinet",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_cl1211a.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_cl1211a.jpg",
+            "high_res": "/data/thumbnails/antigua_36_cl1211a.jpg",
+            "original": "/data/thumbnails/antigua_36_cl1211a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_cl2220",
+          "name": "Antigua Vosi CL2220 Clarinet",
+          "description": "Antigua Vosi CL2220 Clarinet",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_cl2220.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_cl2220.jpg",
+            "high_res": "/data/thumbnails/antigua_36_cl2220.jpg",
+            "original": "/data/thumbnails/antigua_36_cl2220.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_ss6200vlq",
+          "name": "Antigua SS6200 Vintage Gold",
+          "description": "Antigua SS6200 Vintage Gold",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_ss6200vlq.jpg",
+            "original": "/data/thumbnails/antigua_36_ss6200vlq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_as4240lqsh",
+          "name": "Antigua AS4240LQSH Alto Saxophone",
+          "description": "Antigua AS4240LQSH Alto Saxophone",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+            "high_res": "/data/thumbnails/antigua_36_as4240lqsh.jpg",
+            "original": "/data/thumbnails/antigua_36_as4240lqsh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_as6200vlq",
+          "name": "Antigua AS6200 Vintage Gold",
+          "description": "Antigua AS6200 Vintage Gold",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_as6200vlq.jpg",
+            "original": "/data/thumbnails/antigua_36_as6200vlq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_tb1203lq",
+          "name": "Antigua TB1203LQ Trombone",
+          "description": "Antigua TB1203LQ Trombone",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_tb1203lq.jpg",
+            "original": "/data/thumbnails/antigua_36_tb1203lq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_ep1120lq",
+          "name": "Antigua EP1120LQ Baritone",
+          "description": "Antigua EP1120LQ Baritone",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_ep1120lq.jpg",
+            "original": "/data/thumbnails/antigua_36_ep1120lq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_bb1120lqa",
+          "name": "Antigua BB1120LQ Tube",
+          "description": "Antigua BB1120LQ Tube",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+            "high_res": "/data/thumbnails/antigua_36_bb1120lqa.jpg",
+            "original": "/data/thumbnails/antigua_36_bb1120lqa.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_wst30b",
+          "name": "Antigua ST-30B Neckstrap",
+          "description": "Antigua ST-30B Neckstrap",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_wst30b.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_wst30b.jpg",
+            "high_res": "/data/thumbnails/antigua_36_wst30b.jpg",
+            "original": "/data/thumbnails/antigua_36_wst30b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_wcl3233sb",
+          "name": "Antigua CL3233 Clarinet",
+          "description": "Antigua CL3233 Clarinet",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+            "high_res": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+            "original": "/data/thumbnails/antigua_36_wcl3233sb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_ts6200vlq",
+          "name": "Antigua TS6200 Vintage Gold",
+          "description": "Antigua TS6200 Vintage Gold",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+            "high_res": "/data/thumbnails/antigua_36_ts6200vlq.jpg",
+            "original": "/data/thumbnails/antigua_36_ts6200vlq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "antigua_36_fl1210",
+          "name": "Antigua FL1210 Side Flute",
+          "description": "Antigua FL1210 Side Flute",
+          "images": {
+            "main": "/data/thumbnails/antigua_36_fl1210.jpg",
+            "thumbnail": "/data/thumbnails/antigua_36_fl1210.jpg",
+            "high_res": "/data/thumbnails/antigua_36_fl1210.jpg",
+            "original": "/data/thumbnails/antigua_36_fl1210.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

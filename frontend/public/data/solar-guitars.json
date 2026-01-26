@@ -1,0 +1,107 @@
+{
+  "brand_name": "Solar Guitars",
+  "products": [
+    {
+      "id": "solar_guitars_24_gc16c",
+      "name": "Solar GC1.6C",
+      "description": "Solar GC1.6C",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+      "product_url": "https://www.halilit.com/items/3677616-solar-gc1-6c",
+      "is_sold": true,
+      "price": 4558.0,
+      "halilit_url": "https://www.halilit.com/items/3677616-solar-gc1-6c",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4558.0,
+        "original_price": 4558.0
+      },
+      "brand": "Solar Guitars",
+      "logo_url": "/assets/logos/solar-guitars_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+        "thumbnail": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+        "high_res": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+        "original": "/data/thumbnails/solar_guitars_24_gc16c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "solar_guitars_24_s16pb",
+      "name": "Solar S1.6PB",
+      "description": "Solar S1.6PB",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+      "product_url": "https://www.halilit.com/items/2792405-solar-s1-6pb",
+      "is_sold": true,
+      "price": 6243.0,
+      "halilit_url": "https://www.halilit.com/items/2792405-solar-s1-6pb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6243.0,
+        "original_price": 6243.0
+      },
+      "brand": "Solar Guitars",
+      "logo_url": "/assets/logos/solar-guitars_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+        "thumbnail": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+        "high_res": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+        "original": "/data/thumbnails/solar_guitars_24_s16pb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.660609",
+  "brand_slug": "solar-guitars",
+  "refined_at": "2026-01-26T06:43:38.798030+00:00",
+  "brand_identity": {
+    "id": "solar-guitars",
+    "name": "Solar Guitars",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/solar-guitars_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 2,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "solar_guitars_24_gc16c",
+          "name": "Solar GC1.6C",
+          "description": "Solar GC1.6C",
+          "images": {
+            "main": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+            "thumbnail": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+            "high_res": "/data/thumbnails/solar_guitars_24_gc16c.jpg",
+            "original": "/data/thumbnails/solar_guitars_24_gc16c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "solar_guitars_24_s16pb",
+          "name": "Solar S1.6PB",
+          "description": "Solar S1.6PB",
+          "images": {
+            "main": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+            "thumbnail": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+            "high_res": "/data/thumbnails/solar_guitars_24_s16pb.jpg",
+            "original": "/data/thumbnails/solar_guitars_24_s16pb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

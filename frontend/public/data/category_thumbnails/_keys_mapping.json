@@ -1,0 +1,46 @@
+{
+  "keys": {
+    "synths": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "source_url": "https://static.roland.com/assets/promos/png/menu_tr-1000.png",
+      "thumbnail": "/data/category_thumbnails/keys-synths_thumb.webp"
+    },
+    "stage-pianos": {
+      "product_id": "roland-gopiano_go-88p",
+      "product_name": "GO:PIANO88",
+      "brand": "Roland",
+      "source_url": "https://static.roland.com/assets/images/products/main/go-88p_main.jpg",
+      "thumbnail": "/data/category_thumbnails/keys-stage-pianos_thumb.webp"
+    },
+    "controllers": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "source_url": "https://static.roland.com/products/a-88mk2/images/a-88mk2_hero.jpg",
+      "thumbnail": "/data/category_thumbnails/keys-controllers_thumb.webp"
+    },
+    "arrangers": {
+      "product_id": "roland-e-x50",
+      "product_name": "E-X50",
+      "brand": "Roland",
+      "source_url": "https://static.roland.com/products/e-x50/images/e-x50_hero_poster.jpg",
+      "thumbnail": "/data/category_thumbnails/keys-arrangers_thumb.webp"
+    },
+    "organs": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "source_url": "https://static.roland.com/assets/promos/png/menu_tr-1000.png",
+      "thumbnail": "/data/category_thumbnails/keys-organs_thumb.webp"
+    },
+    "workstations": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "source_url": "https://static.roland.com/assets/promos/png/menu_tr-1000.png",
+      "thumbnail": "/data/category_thumbnails/keys-workstations_thumb.webp"
+    }
+  }
+}

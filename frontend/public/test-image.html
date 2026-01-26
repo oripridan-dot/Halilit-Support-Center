@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Load Test</title>
+</head>
+<body>
+    <h1>Image Load Test</h1>
+    
+    <h2>Test 1: Direct thumbnail</h2>
+    <img src="/data/thumbnails/guild_77_bagacudeluxe.jpg" width="200" alt="Test 1" />
+    
+    <h2>Test 2: Logo</h2>
+    <img src="/assets/logos/guild_logo.jpg" width="200" alt="Test 2" />
+    
+    <h2>Test 3: Different thumbnail</h2>
+    <img src="/data/thumbnails/medeli_85_st450_wh.jpg" width="200" alt="Test 3" />
+    
+    <p>Check browser console for any errors.</p>
+    
+    <script>
+        // Log all image load events
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', () => {
+                console.log('Loaded:', img.src);
+            });
+            img.addEventListener('error', (e) => {
+                console.error('Failed to load:', img.src, e);
+            });
+        });
+    </script>
+</body>
+</html>

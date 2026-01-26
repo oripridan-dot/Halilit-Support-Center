@@ -1,0 +1,119 @@
+{
+  "version": "1.0",
+  "exported_at": "2026-01-26T06:43:37.226517+00:00",
+  "universal_categories": [
+    {
+      "id": "keys",
+      "label": "Keys & Pianos",
+      "icon": "\ud83c\udfb9",
+      "description": "Keyboards and pianos"
+    },
+    {
+      "id": "drums",
+      "label": "Drums & Percussion",
+      "icon": "\ud83e\udd41",
+      "description": "Drums and percussion"
+    },
+    {
+      "id": "guitars",
+      "label": "Guitars & Amps",
+      "icon": "\ud83c\udfb8",
+      "description": "Guitars and amplifiers"
+    },
+    {
+      "id": "studio",
+      "label": "Studio & Recording",
+      "icon": "\ud83c\udf99\ufe0f",
+      "description": "Studio and recording gear"
+    },
+    {
+      "id": "live",
+      "label": "Live Sound",
+      "icon": "\ud83d\udd0a",
+      "description": "Live sound equipment"
+    },
+    {
+      "id": "dj",
+      "label": "DJ & Production",
+      "icon": "\ud83c\udfa7",
+      "description": "DJ and production gear"
+    },
+    {
+      "id": "software",
+      "label": "Software & Cloud",
+      "icon": "\ud83d\udcbb",
+      "description": "Software and cloud services"
+    },
+    {
+      "id": "accessories",
+      "label": "Accessories",
+      "icon": "\ud83d\udd27",
+      "description": "Accessories and add-ons"
+    }
+  ],
+  "brand_mappings": {
+    "roland": {
+      "Production": "studio",
+      "Drums": "drums",
+      "Keys": "keys",
+      "Keyboards": "keys",
+      "Synthesizers": "keys",
+      "Pianos": "keys",
+      "Controllers": "accessories",
+      "Interfaces": "studio",
+      "Software": "software",
+      "Effects": "studio",
+      "Amplifiers": "live",
+      "Speakers": "live",
+      "Uncategorized": "accessories"
+    },
+    "nord": {
+      "Keyboards": "keys",
+      "Synthesizers": "keys",
+      "Controllers": "keys",
+      "Pedals": "accessories",
+      "Accessories": "accessories",
+      "Software": "software",
+      "Uncategorized": "accessories"
+    },
+    "boss": {
+      "Effects": "studio",
+      "Guitars": "guitars",
+      "Drums": "drums",
+      "Keyboards": "keys",
+      "Controllers": "accessories",
+      "Interfaces": "studio",
+      "Uncategorized": "accessories"
+    },
+    "moog": {
+      "Synthesizers": "keys",
+      "Controllers": "keys",
+      "Effects": "studio",
+      "Accessories": "accessories",
+      "Software": "software",
+      "Uncategorized": "accessories"
+    },
+    "universal-audio": {
+      "Plugins": "software",
+      "Hardware": "studio",
+      "Interfaces": "studio",
+      "Accessories": "accessories",
+      "Software": "software",
+      "Uncategorized": "accessories"
+    },
+    "bespeco": {
+      "Stands": "accessories",
+      "Cables": "accessories",
+      "Connectors": "accessories",
+      "Bags": "accessories",
+      "Accessories": "accessories",
+      "keys": "accessories",
+      "Keys": "accessories"
+    },
+    "foxgear-guitar-effects-and-pedals": {
+      "general": "guitars",
+      "pedals": "guitars",
+      "effects": "guitars"
+    }
+  }
+}

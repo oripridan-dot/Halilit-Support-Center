@@ -1,0 +1,794 @@
+{
+  "brand_identity": {
+    "id": "oscar-schmidt-acoustic-guitars-",
+    "name": "OSCAR-SCHMIDT-ACOUSTIC-GUITARS-",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/oscar-schmidt-acoustic-guitars-_logo.png",
+    "taxonomy_stats": {
+      "validated": 22,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "products": [
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_ochs",
+      "name": "גיטרה קלאסית חצי נפח Oscar Schmidt OCHS 1/2",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+      "description": "גיטרה קלאסית חצי נפח Oscar Schmidt OCHS 1/2",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_of2ots",
+      "name": "גיטרה אקוסטית Oscar Schmidt OF2OTS",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OF2OTS",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_oc01n",
+      "name": "גיטרה קלאסית Oscar Schmidt OC1 3/4",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+      "description": "גיטרה קלאסית Oscar Schmidt OC1 3/4",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_oacefn",
+      "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFN",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+      "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFN",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2nlh",
+      "name": "גיטרה אקוסטית שמאלית Oscar Schmidt OG2N LH",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+      "description": "גיטרה אקוסטית שמאלית Oscar Schmidt OG2N LH",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2n",
+      "name": "גיטרה אקוסטית Oscar Schmidt OG2N",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OG2N",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_of2sm",
+      "name": "גיטרה אקוסטית Oscar Schmidt OF2SM",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OF2SM",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_oaceftb",
+      "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTB",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+      "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTB",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2b",
+      "name": "גיטרה אקוסטית Oscar Schmidt OG2B",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OG2B",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_oaceftbl",
+      "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTBL",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+      "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTBL",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_od312",
+      "name": "גיטרה אקוסטית 12 מיתרים Oscar Schmidt OD312",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+      "description": "גיטרה אקוסטית 12 מיתרים Oscar Schmidt OD312",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_oc11cen",
+      "name": "גיטרה קלאסית מוגברת Oscar Schmidt OC11CEN",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+      "description": "גיטרה קלאסית מוגברת Oscar Schmidt OC11CEN",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_oc11n",
+      "name": "גיטרה קלאסית Oscar Schmidt OC11",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+      "description": "גיטרה קלאסית Oscar Schmidt OC11",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2sm",
+      "name": "גיטרה אקוסטית Oscar Schmidt OG2SM",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OG2SM",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2ce",
+      "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+      "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2wh",
+      "name": "גיטרה אקוסטית Oscar Schmidt OG2-WH",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OG2-WH",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2koa",
+      "name": "גיטרה אקוסטית Oscar Schmidt OG2 KOA",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OG2 KOA",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_ob100n",
+      "name": "גיטרה בס אקוסטית מוגברת Oscar Schmidt OB100N",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+      "description": "גיטרה בס אקוסטית מוגברת Oscar Schmidt OB100N",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_of2",
+      "name": "גיטרה אקוסטית Oscar Schmidt OF2",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+      "description": "גיטרה אקוסטית Oscar Schmidt OF2",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_og2cemfsm",
+      "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE MFSM",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+      "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE MFSM",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_ou2e",
+      "name": "יוקללה קונצרט מוגברת Oscar Schmidt OU2E",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+      "description": "יוקללה קונצרט מוגברת Oscar Schmidt OU2E",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "oscar_schmidt_acoustic_guitars__04_ou7tk",
+      "name": "יוקללה טנור Oscar Schmidt OU7TK Spalted Mango",
+      "brand": "oscar-schmidt-acoustic-guitars-",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+      "description": "יוקללה טנור Oscar Schmidt OU7TK Spalted Mango",
+      "pricing": {},
+      "sku": null,
+      "halilit_id": null,
+      "halilit_url": null,
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+        "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+        "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+        "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "brand_name": "Oscar-Schmidt-Acoustic-Guitars-",
+  "brand_slug": "oscar-schmidt-acoustic-guitars-",
+  "refined_at": "2026-01-25T09:02:28.631917+00:00",
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_ochs",
+          "name": "גיטרה קלאסית חצי נפח Oscar Schmidt OCHS 1/2",
+          "description": "גיטרה קלאסית חצי נפח Oscar Schmidt OCHS 1/2",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ochs.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_of2ots",
+          "name": "גיטרה אקוסטית Oscar Schmidt OF2OTS",
+          "description": "גיטרה אקוסטית Oscar Schmidt OF2OTS",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2ots.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_oc01n",
+          "name": "גיטרה קלאסית Oscar Schmidt OC1 3/4",
+          "description": "גיטרה קלאסית Oscar Schmidt OC1 3/4",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc01n.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_oacefn",
+          "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFN",
+          "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFN",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oacefn.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2nlh",
+          "name": "גיטרה אקוסטית שמאלית Oscar Schmidt OG2N LH",
+          "description": "גיטרה אקוסטית שמאלית Oscar Schmidt OG2N LH",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2nlh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2n",
+          "name": "גיטרה אקוסטית Oscar Schmidt OG2N",
+          "description": "גיטרה אקוסטית Oscar Schmidt OG2N",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2n.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_of2sm",
+          "name": "גיטרה אקוסטית Oscar Schmidt OF2SM",
+          "description": "גיטרה אקוסטית Oscar Schmidt OF2SM",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2sm.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_oaceftb",
+          "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTB",
+          "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTB",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2b",
+          "name": "גיטרה אקוסטית Oscar Schmidt OG2B",
+          "description": "גיטרה אקוסטית Oscar Schmidt OG2B",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_oaceftbl",
+          "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTBL",
+          "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OACEFTBL",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oaceftbl.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_od312",
+          "name": "גיטרה אקוסטית 12 מיתרים Oscar Schmidt OD312",
+          "description": "גיטרה אקוסטית 12 מיתרים Oscar Schmidt OD312",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_od312.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_oc11cen",
+          "name": "גיטרה קלאסית מוגברת Oscar Schmidt OC11CEN",
+          "description": "גיטרה קלאסית מוגברת Oscar Schmidt OC11CEN",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11cen.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_oc11n",
+          "name": "גיטרה קלאסית Oscar Schmidt OC11",
+          "description": "גיטרה קלאסית Oscar Schmidt OC11",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_oc11n.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2sm",
+          "name": "גיטרה אקוסטית Oscar Schmidt OG2SM",
+          "description": "גיטרה אקוסטית Oscar Schmidt OG2SM",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2sm.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2ce",
+          "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE",
+          "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2ce.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2wh",
+          "name": "גיטרה אקוסטית Oscar Schmidt OG2-WH",
+          "description": "גיטרה אקוסטית Oscar Schmidt OG2-WH",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2wh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2koa",
+          "name": "גיטרה אקוסטית Oscar Schmidt OG2 KOA",
+          "description": "גיטרה אקוסטית Oscar Schmidt OG2 KOA",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2koa.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_ob100n",
+          "name": "גיטרה בס אקוסטית מוגברת Oscar Schmidt OB100N",
+          "description": "גיטרה בס אקוסטית מוגברת Oscar Schmidt OB100N",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ob100n.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_of2",
+          "name": "גיטרה אקוסטית Oscar Schmidt OF2",
+          "description": "גיטרה אקוסטית Oscar Schmidt OF2",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_of2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_og2cemfsm",
+          "name": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE MFSM",
+          "description": "גיטרה אקוסטית מוגברת Oscar Schmidt OG2CE MFSM",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_og2cemfsm.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_ou2e",
+          "name": "יוקללה קונצרט מוגברת Oscar Schmidt OU2E",
+          "description": "יוקללה קונצרט מוגברת Oscar Schmidt OU2E",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou2e.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "oscar_schmidt_acoustic_guitars__04_ou7tk",
+          "name": "יוקללה טנור Oscar Schmidt OU7TK Spalted Mango",
+          "description": "יוקללה טנור Oscar Schmidt OU7TK Spalted Mango",
+          "images": {
+            "main": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+            "thumbnail": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+            "high_res": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg",
+            "original": "/data/thumbnails/oscar_schmidt_acoustic_guitars__04_ou7tk.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

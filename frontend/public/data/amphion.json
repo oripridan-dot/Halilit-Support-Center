@@ -1,0 +1,309 @@
+{
+  "brand_name": "Amphion",
+  "products": [
+    {
+      "id": "amphion_06_amp400_12",
+      "name": "Amphion Amp400.12",
+      "description": "Amphion Amp400.12",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_amp400_12.jpg",
+      "product_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_amp400_12.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_amp400_12.jpg",
+        "high_res": "/data/thumbnails/amphion_06_amp400_12.jpg",
+        "original": "/data/thumbnails/amphion_06_amp400_12.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "amphion_06_amp700",
+      "name": "Amphion Amp700",
+      "description": "Amphion Amp700",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_amp700.jpg",
+      "product_url": "https://www.halilit.com/items/5115518-amphion-amp700",
+      "is_sold": true,
+      "price": 9711.0,
+      "halilit_url": "https://www.halilit.com/items/5115518-amphion-amp700",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 9711.0,
+        "original_price": 9711.0
+      },
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_amp700.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_amp700.jpg",
+        "high_res": "/data/thumbnails/amphion_06_amp700.jpg",
+        "original": "/data/thumbnails/amphion_06_amp700.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "amphion_06_amp100mono",
+      "name": "Amphion Amp100 Mono",
+      "description": "Amphion Amp100 Mono",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_amp100mono.jpg",
+      "product_url": "https://www.halilit.com/items/2124973-amphion-amp100-mono-",
+      "is_sold": true,
+      "price": 2647.0,
+      "halilit_url": "https://www.halilit.com/items/2124973-amphion-amp100-mono-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2647.0,
+        "original_price": 2647.0
+      },
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_amp100mono.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_amp100mono.jpg",
+        "high_res": "/data/thumbnails/amphion_06_amp100mono.jpg",
+        "original": "/data/thumbnails/amphion_06_amp100mono.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "amphion_06_amp500",
+      "name": "Amphion Amp500",
+      "description": "Amphion Amp500",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_amp500.jpg",
+      "product_url": "https://www.halilit.com/items/2124853-amphion-amp500",
+      "is_sold": true,
+      "price": 7281.0,
+      "halilit_url": "https://www.halilit.com/items/2124853-amphion-amp500",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7281.0,
+        "original_price": 7281.0
+      },
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_amp500.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_amp500.jpg",
+        "high_res": "/data/thumbnails/amphion_06_amp500.jpg",
+        "original": "/data/thumbnails/amphion_06_amp500.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "amphion_06_amp400_8",
+      "name": "Amphion Amp400.8",
+      "description": "Amphion Amp400.8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_amp400_8.jpg",
+      "product_url": "https://www.halilit.com/items/5115687-amphion-amp400-8",
+      "is_sold": true,
+      "price": 21847.0,
+      "halilit_url": "https://www.halilit.com/items/5115687-amphion-amp400-8",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 21847.0,
+        "original_price": 21847.0
+      },
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_amp400_8.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_amp400_8.jpg",
+        "high_res": "/data/thumbnails/amphion_06_amp400_8.jpg",
+        "original": "/data/thumbnails/amphion_06_amp400_8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "amphion_06_basetwo25",
+      "name": "Amphion BaseTwo25 System",
+      "description": "Amphion BaseTwo25 System",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_basetwo25.jpg",
+      "product_url": "https://www.halilit.com/items/5115577-amphion-basetwo25-system",
+      "is_sold": true,
+      "price": 58244.0,
+      "halilit_url": "https://www.halilit.com/items/5115577-amphion-basetwo25-system",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 58244.0,
+        "original_price": 58244.0
+      },
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_basetwo25.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_basetwo25.jpg",
+        "high_res": "/data/thumbnails/amphion_06_basetwo25.jpg",
+        "original": "/data/thumbnails/amphion_06_basetwo25.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "amphion_06_flexbase25",
+      "name": "Amphion FlexBase25",
+      "description": "Amphion FlexBase25",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/amphion_06_flexbase25.jpg",
+      "product_url": "https://www.halilit.com/items/5115632-amphion-flexbase25",
+      "is_sold": true,
+      "price": 34417.0,
+      "halilit_url": "https://www.halilit.com/items/5115632-amphion-flexbase25",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 34417.0,
+        "original_price": 34417.0
+      },
+      "brand": "Amphion",
+      "logo_url": "/assets/logos/amphion_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/amphion_06_flexbase25.jpg",
+        "thumbnail": "/data/thumbnails/amphion_06_flexbase25.jpg",
+        "high_res": "/data/thumbnails/amphion_06_flexbase25.jpg",
+        "original": "/data/thumbnails/amphion_06_flexbase25.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.386431",
+  "brand_slug": "amphion",
+  "refined_at": "2026-01-26T06:43:37.397042+00:00",
+  "brand_identity": {
+    "id": "amphion",
+    "name": "Amphion",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/amphion_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 7,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "amphion_06_amp400_12",
+          "name": "Amphion Amp400.12",
+          "description": "Amphion Amp400.12",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_amp400_12.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_amp400_12.jpg",
+            "high_res": "/data/thumbnails/amphion_06_amp400_12.jpg",
+            "original": "/data/thumbnails/amphion_06_amp400_12.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "amphion_06_amp700",
+          "name": "Amphion Amp700",
+          "description": "Amphion Amp700",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_amp700.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_amp700.jpg",
+            "high_res": "/data/thumbnails/amphion_06_amp700.jpg",
+            "original": "/data/thumbnails/amphion_06_amp700.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "amphion_06_amp100mono",
+          "name": "Amphion Amp100 Mono",
+          "description": "Amphion Amp100 Mono",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_amp100mono.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_amp100mono.jpg",
+            "high_res": "/data/thumbnails/amphion_06_amp100mono.jpg",
+            "original": "/data/thumbnails/amphion_06_amp100mono.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "amphion_06_amp500",
+          "name": "Amphion Amp500",
+          "description": "Amphion Amp500",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_amp500.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_amp500.jpg",
+            "high_res": "/data/thumbnails/amphion_06_amp500.jpg",
+            "original": "/data/thumbnails/amphion_06_amp500.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "amphion_06_amp400_8",
+          "name": "Amphion Amp400.8",
+          "description": "Amphion Amp400.8",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_amp400_8.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_amp400_8.jpg",
+            "high_res": "/data/thumbnails/amphion_06_amp400_8.jpg",
+            "original": "/data/thumbnails/amphion_06_amp400_8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "amphion_06_basetwo25",
+          "name": "Amphion BaseTwo25 System",
+          "description": "Amphion BaseTwo25 System",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_basetwo25.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_basetwo25.jpg",
+            "high_res": "/data/thumbnails/amphion_06_basetwo25.jpg",
+            "original": "/data/thumbnails/amphion_06_basetwo25.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "amphion_06_flexbase25",
+          "name": "Amphion FlexBase25",
+          "description": "Amphion FlexBase25",
+          "images": {
+            "main": "/data/thumbnails/amphion_06_flexbase25.jpg",
+            "thumbnail": "/data/thumbnails/amphion_06_flexbase25.jpg",
+            "high_res": "/data/thumbnails/amphion_06_flexbase25.jpg",
+            "original": "/data/thumbnails/amphion_06_flexbase25.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

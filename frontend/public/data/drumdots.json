@@ -1,0 +1,107 @@
+{
+  "brand_name": "Drumdots",
+  "products": [
+    {
+      "id": "drumdots_75_dd6m",
+      "name": "Drumdots DD6M",
+      "description": "Drumdots DD6M",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/drumdots_75_dd6m.jpg",
+      "product_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+      "is_sold": true,
+      "price": 50.0,
+      "halilit_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 50.0,
+        "original_price": 50.0
+      },
+      "brand": "Drumdots",
+      "logo_url": "/assets/logos/drumdots_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/drumdots_75_dd6m.jpg",
+        "thumbnail": "/data/thumbnails/drumdots_75_dd6m.jpg",
+        "high_res": "/data/thumbnails/drumdots_75_dd6m.jpg",
+        "original": "/data/thumbnails/drumdots_75_dd6m.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "drumdots_75_dd4",
+      "name": "Drumdots DD4",
+      "description": "Drumdots DD4",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/drumdots_75_dd4.jpg",
+      "product_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+      "is_sold": true,
+      "price": 46.0,
+      "halilit_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 46.0,
+        "original_price": 46.0
+      },
+      "brand": "Drumdots",
+      "logo_url": "/assets/logos/drumdots_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/drumdots_75_dd4.jpg",
+        "thumbnail": "/data/thumbnails/drumdots_75_dd4.jpg",
+        "high_res": "/data/thumbnails/drumdots_75_dd4.jpg",
+        "original": "/data/thumbnails/drumdots_75_dd4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.477908",
+  "brand_slug": "drumdots",
+  "refined_at": "2026-01-26T06:43:38.482752+00:00",
+  "brand_identity": {
+    "id": "drumdots",
+    "name": "Drumdots",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/drumdots_logo.png",
+    "taxonomy_stats": {
+      "validated": 2,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "drumdots_75_dd6m",
+          "name": "Drumdots DD6M",
+          "description": "Drumdots DD6M",
+          "images": {
+            "main": "/data/thumbnails/drumdots_75_dd6m.jpg",
+            "thumbnail": "/data/thumbnails/drumdots_75_dd6m.jpg",
+            "high_res": "/data/thumbnails/drumdots_75_dd6m.jpg",
+            "original": "/data/thumbnails/drumdots_75_dd6m.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "drumdots_75_dd4",
+          "name": "Drumdots DD4",
+          "description": "Drumdots DD4",
+          "images": {
+            "main": "/data/thumbnails/drumdots_75_dd4.jpg",
+            "thumbnail": "/data/thumbnails/drumdots_75_dd4.jpg",
+            "high_res": "/data/thumbnails/drumdots_75_dd4.jpg",
+            "original": "/data/thumbnails/drumdots_75_dd4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

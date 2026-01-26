@@ -1,0 +1,944 @@
+{
+  "brand_name": "Foxgear Guitar Effects And Pedals",
+  "products": [
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxmts",
+      "name": "Foxgear Maitresse Vintage Analog Flanger",
+      "description": "Foxgear Maitresse Vintage Analog Flanger",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+      "product_url": "https://www.halilit.com/items/4923935-foxgear-maitresse-vintage-analog-flanger",
+      "is_sold": true,
+      "price": 443.0,
+      "halilit_url": "https://www.halilit.com/items/4923935-foxgear-maitresse-vintage-analog-flanger",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 443.0,
+        "original_price": 443.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxxyz",
+      "name": "Foxgear XYZ Waves Modulation Pedal",
+      "description": "Foxgear XYZ Waves Modulation Pedal",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+      "product_url": "https://www.halilit.com/items/4923680-foxgear-xyz-waves-modulation-pedal",
+      "is_sold": true,
+      "price": 669.0,
+      "halilit_url": "https://www.halilit.com/items/4923680-foxgear-xyz-waves-modulation-pedal",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 669.0,
+        "original_price": 669.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxesb",
+      "name": "Foxgear Echosex Baby - Vintage Italian Echo",
+      "description": "Foxgear Echosex Baby - Vintage Italian Echo",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+      "product_url": "https://www.halilit.com/items/4920098-foxgear-echosex-baby-vintage-italian-echo",
+      "is_sold": true,
+      "price": 580.0,
+      "halilit_url": "https://www.halilit.com/items/4920098-foxgear-echosex-baby-vintage-italian-echo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 580.0,
+        "original_price": 580.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxrts",
+      "name": "Foxgear Rats Classic Distortion Pedal",
+      "description": "Foxgear Rats Classic Distortion Pedal",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+      "product_url": "https://www.halilit.com/items/4924195-foxgear-rats-classic-distortion-pedal",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/4924195-foxgear-rats-classic-distortion-pedal",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxsqz",
+      "name": "Foxgear Squeeze Optical Compressor",
+      "description": "Foxgear Squeeze Optical Compressor",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+      "product_url": "https://www.halilit.com/items/4923967-foxgear-squeeze-optical-compressor",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/4923967-foxgear-squeeze-optical-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxdla200",
+      "name": "Foxgear Baroni Mini Amp Doug Aldrich Signature",
+      "description": "Foxgear Baroni Mini Amp Doug Aldrich Signature",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+      "product_url": "https://www.halilit.com/items/4919366-foxgear-baroni-mini-amp-doug-aldrich-signature",
+      "is_sold": true,
+      "price": 1746.0,
+      "halilit_url": "https://www.halilit.com/items/4919366-foxgear-baroni-mini-amp-doug-aldrich-signature",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1746.0,
+        "original_price": 1746.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxrbw",
+      "name": "Foxgear Rainbow Digital Reverb",
+      "description": "Foxgear Rainbow Digital Reverb",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+      "product_url": "https://www.halilit.com/items/4924249-foxgear-rainbow-digital-reverb",
+      "is_sold": true,
+      "price": 669.0,
+      "halilit_url": "https://www.halilit.com/items/4924249-foxgear-rainbow-digital-reverb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 669.0,
+        "original_price": 669.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxktr",
+      "name": "Foxgear Knee Trembler Guy Pratt Signature Tremolo",
+      "description": "Foxgear Knee Trembler Guy Pratt Signature Tremolo",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+      "product_url": "https://www.halilit.com/items/4922733-foxgear-knee-trembler-guy-pratt-signature-tremolo",
+      "is_sold": true,
+      "price": 443.0,
+      "halilit_url": "https://www.halilit.com/items/4922733-foxgear-knee-trembler-guy-pratt-signature-tremolo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 443.0,
+        "original_price": 443.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxaab",
+      "name": "Foxgear Anubi Ambient Box",
+      "description": "Foxgear Anubi Ambient Box",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+      "product_url": "https://www.halilit.com/items/4910970-foxgear-anubi-ambient-box",
+      "is_sold": true,
+      "price": 1342.0,
+      "halilit_url": "https://www.halilit.com/items/4910970-foxgear-anubi-ambient-box",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1342.0,
+        "original_price": 1342.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxt7eb",
+      "name": "Foxgear T7E BABY",
+      "description": "Foxgear T7E BABY",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+      "product_url": "https://www.halilit.com/items/4923776-foxgear-t7e-baby",
+      "is_sold": true,
+      "price": 979.0,
+      "halilit_url": "https://www.halilit.com/items/4923776-foxgear-t7e-baby",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 979.0,
+        "original_price": 979.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxmnc",
+      "name": "Foxgear Manic Vintage Fuzz",
+      "description": "Foxgear Manic Vintage Fuzz",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+      "product_url": "https://www.halilit.com/items/4923777-foxgear-manic-vintage-fuzz",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/4923777-foxgear-manic-vintage-fuzz",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxsin",
+      "name": "Foxgear Sinister Metal Distortion",
+      "description": "Foxgear Sinister Metal Distortion",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+      "product_url": "https://www.halilit.com/items/4924044-foxgear-sinister-metal-distortion",
+      "is_sold": true,
+      "price": 443.0,
+      "halilit_url": "https://www.halilit.com/items/4924044-foxgear-sinister-metal-distortion",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 443.0,
+        "original_price": 443.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxp55",
+      "name": "Foxgear Plex 55 - MiniAmp 55W rms British Tone",
+      "description": "Foxgear Plex 55 - MiniAmp 55W rms British Tone",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+      "product_url": "https://www.halilit.com/items/4924063-foxgear-plex-55-miniamp-55w-rms-british-tone",
+      "is_sold": true,
+      "price": 713.0,
+      "halilit_url": "https://www.halilit.com/items/4924063-foxgear-plex-55-miniamp-55w-rms-british-tone",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 713.0,
+        "original_price": 713.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxech",
+      "name": "Foxgear Echoes Classic Analog Delay",
+      "description": "Foxgear Echoes Classic Analog Delay",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+      "product_url": "https://www.halilit.com/items/4919477-foxgear-echoes-classic-analog-delay",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/4919477-foxgear-echoes-classic-analog-delay",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxjee",
+      "name": "Foxgear Jeenie Analog Guitar Interface",
+      "description": "Foxgear Jeenie Analog Guitar Interface",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+      "product_url": "https://www.halilit.com/items/4920251-foxgear-jeenie-analog-guitar-interface",
+      "is_sold": true,
+      "price": 669.0,
+      "halilit_url": "https://www.halilit.com/items/4920251-foxgear-jeenie-analog-guitar-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 669.0,
+        "original_price": 669.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxryd",
+      "name": "Foxgear Ryder Doug Aldrich’s Signature Distortion",
+      "description": "Foxgear Ryder Doug Aldrich’s Signature Distortion",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+      "product_url": "https://www.halilit.com/items/4924108-foxgear-ryder-doug-aldrich-s-signature-distortion",
+      "is_sold": true,
+      "price": 443.0,
+      "halilit_url": "https://www.halilit.com/items/4924108-foxgear-ryder-doug-aldrich-s-signature-distortion",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 443.0,
+        "original_price": 443.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxes2t7e",
+      "name": "Foxgear Gurus Echosex 2 T7E",
+      "description": "Foxgear Gurus Echosex 2 T7E",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+      "product_url": "https://www.halilit.com/items/4920013-foxgear-gurus-echosex-2-t7e",
+      "is_sold": true,
+      "price": 2685.0,
+      "halilit_url": "https://www.halilit.com/items/4920013-foxgear-gurus-echosex-2-t7e",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2685.0,
+        "original_price": 2685.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxmff",
+      "name": "Foxgear Muffin Gilmourish Russian Muff Distortion",
+      "description": "Foxgear Muffin Gilmourish Russian Muff Distortion",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+      "product_url": "https://www.halilit.com/items/4923618-foxgear-muffin-gilmourish-russian-muff-distortion",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/4923618-foxgear-muffin-gilmourish-russian-muff-distortion",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxt55",
+      "name": "Foxgear Tweed 55 MiniAmp",
+      "description": "Foxgear Tweed 55 MiniAmp",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+      "product_url": "https://www.halilit.com/items/4923906-foxgear-tweed-55-miniamp",
+      "is_sold": true,
+      "price": 713.0,
+      "halilit_url": "https://www.halilit.com/items/4923906-foxgear-tweed-55-miniamp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 713.0,
+        "original_price": 713.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxkrs",
+      "name": "Foxgear Korus Vintage Analog Chorus",
+      "description": "Foxgear Korus Vintage Analog Chorus",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+      "product_url": "https://www.halilit.com/items/4921884-foxgear-korus-vintage-analog-chorus",
+      "is_sold": true,
+      "price": 399.0,
+      "halilit_url": "https://www.halilit.com/items/4921884-foxgear-korus-vintage-analog-chorus",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 399.0,
+        "original_price": 399.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    },
+    {
+      "id": "foxgear_guitar_effects_and_pedals_20_fxamb",
+      "name": "Foxgear Anubi Modulation Box",
+      "description": "Foxgear Anubi Modulation Box",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+      "product_url": "https://www.halilit.com/items/4916884-foxgear-anubi-modulation-box",
+      "is_sold": true,
+      "price": 1342.0,
+      "halilit_url": "https://www.halilit.com/items/4916884-foxgear-anubi-modulation-box",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1342.0,
+        "original_price": 1342.0
+      },
+      "brand": "Foxgear Guitar Effects And Pedals",
+      "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+      "main_category": "guitars",
+      "images": {
+        "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+        "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+        "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+        "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg"
+      },
+      "category_hierarchy": [
+        "guitars"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.335474",
+  "brand_slug": "foxgear-guitar-effects-and-pedals",
+  "refined_at": "2026-01-26T06:43:37.352064+00:00",
+  "brand_identity": {
+    "id": "foxgear-guitar-effects-and-pedals",
+    "name": "Foxgear Guitar Effects And Pedals",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/foxgear-guitar-effects-and-pedals_logo.png",
+    "taxonomy_stats": {
+      "validated": 21,
+      "normalized": 0,
+      "uncategorized": 0
+    },
+    "categories": [
+      {
+        "id": "keys",
+        "label": "Keys & Pianos",
+        "icon": "🎹",
+        "description": "Keyboards and pianos",
+        "children": []
+      },
+      {
+        "id": "drums",
+        "label": "Drums & Percussion",
+        "icon": "🥁",
+        "description": "Drums and percussion",
+        "children": []
+      },
+      {
+        "id": "guitars",
+        "label": "Guitars & Amps",
+        "icon": "🎸",
+        "description": "Guitars and amplifiers",
+        "children": []
+      },
+      {
+        "id": "studio",
+        "label": "Studio & Recording",
+        "icon": "🎙️",
+        "description": "Studio and recording gear",
+        "children": []
+      },
+      {
+        "id": "live",
+        "label": "Live Sound",
+        "icon": "🔊",
+        "description": "Live sound equipment",
+        "children": []
+      },
+      {
+        "id": "dj",
+        "label": "DJ & Production",
+        "icon": "🎧",
+        "description": "DJ and production gear",
+        "children": []
+      },
+      {
+        "id": "software",
+        "label": "Software & Cloud",
+        "icon": "💻",
+        "description": "Software and cloud services",
+        "children": []
+      },
+      {
+        "id": "accessories",
+        "label": "Accessories",
+        "icon": "🔧",
+        "description": "Accessories and add-ons",
+        "children": []
+      }
+    ]
+  },
+  "hierarchy": {
+    "guitars": {
+      "General": [
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxmts",
+          "name": "Foxgear Maitresse Vintage Analog Flanger",
+          "description": "Foxgear Maitresse Vintage Analog Flanger",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmts.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxxyz",
+          "name": "Foxgear XYZ Waves Modulation Pedal",
+          "description": "Foxgear XYZ Waves Modulation Pedal",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxxyz.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxesb",
+          "name": "Foxgear Echosex Baby - Vintage Italian Echo",
+          "description": "Foxgear Echosex Baby - Vintage Italian Echo",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxesb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxrts",
+          "name": "Foxgear Rats Classic Distortion Pedal",
+          "description": "Foxgear Rats Classic Distortion Pedal",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrts.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxsqz",
+          "name": "Foxgear Squeeze Optical Compressor",
+          "description": "Foxgear Squeeze Optical Compressor",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxdla200",
+          "name": "Foxgear Baroni Mini Amp Doug Aldrich Signature",
+          "description": "Foxgear Baroni Mini Amp Doug Aldrich Signature",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxdla200.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxrbw",
+          "name": "Foxgear Rainbow Digital Reverb",
+          "description": "Foxgear Rainbow Digital Reverb",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxktr",
+          "name": "Foxgear Knee Trembler Guy Pratt Signature Tremolo",
+          "description": "Foxgear Knee Trembler Guy Pratt Signature Tremolo",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxktr.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxaab",
+          "name": "Foxgear Anubi Ambient Box",
+          "description": "Foxgear Anubi Ambient Box",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxt7eb",
+          "name": "Foxgear T7E BABY",
+          "description": "Foxgear T7E BABY",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt7eb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxmnc",
+          "name": "Foxgear Manic Vintage Fuzz",
+          "description": "Foxgear Manic Vintage Fuzz",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmnc.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxsin",
+          "name": "Foxgear Sinister Metal Distortion",
+          "description": "Foxgear Sinister Metal Distortion",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxp55",
+          "name": "Foxgear Plex 55 - MiniAmp 55W rms British Tone",
+          "description": "Foxgear Plex 55 - MiniAmp 55W rms British Tone",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxech",
+          "name": "Foxgear Echoes Classic Analog Delay",
+          "description": "Foxgear Echoes Classic Analog Delay",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxech.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxjee",
+          "name": "Foxgear Jeenie Analog Guitar Interface",
+          "description": "Foxgear Jeenie Analog Guitar Interface",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxjee.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxryd",
+          "name": "Foxgear Ryder Doug Aldrich’s Signature Distortion",
+          "description": "Foxgear Ryder Doug Aldrich’s Signature Distortion",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxryd.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxes2t7e",
+          "name": "Foxgear Gurus Echosex 2 T7E",
+          "description": "Foxgear Gurus Echosex 2 T7E",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxes2t7e.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxmff",
+          "name": "Foxgear Muffin Gilmourish Russian Muff Distortion",
+          "description": "Foxgear Muffin Gilmourish Russian Muff Distortion",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxmff.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxt55",
+          "name": "Foxgear Tweed 55 MiniAmp",
+          "description": "Foxgear Tweed 55 MiniAmp",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxt55.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxkrs",
+          "name": "Foxgear Korus Vintage Analog Chorus",
+          "description": "Foxgear Korus Vintage Analog Chorus",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxkrs.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "foxgear_guitar_effects_and_pedals_20_fxamb",
+          "name": "Foxgear Anubi Modulation Box",
+          "description": "Foxgear Anubi Modulation Box",
+          "images": {
+            "main": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+            "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+            "high_res": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg",
+            "original": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxamb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

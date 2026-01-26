@@ -1,0 +1,4327 @@
+{
+  "brand_name": "Allen Heath",
+  "products": [
+    {
+      "id": "allen_heath_40_ap11332",
+      "name": "Allen & Heath AP11332 SQ5 Dust Cover",
+      "description": "Allen & Heath AP11332 SQ5 Dust Cover",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+      "product_url": "https://www.halilit.com/items/6595847-allen-heath-ap11332-sq5-dust-cover",
+      "is_sold": true,
+      "price": 205.0,
+      "halilit_url": "https://www.halilit.com/items/6595847-allen-heath-ap11332-sq5-dust-cover",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 205.0,
+        "original_price": 205.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ap11332.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq12t_case",
+      "name": "Allen & Heath CQ-12T Soft Case",
+      "description": "Allen & Heath CQ-12T Soft Case",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+      "product_url": "https://www.halilit.com/items/6405897-allen-heath-cq-12t-soft-case",
+      "is_sold": true,
+      "price": 590.0,
+      "halilit_url": "https://www.halilit.com/items/6405897-allen-heath-cq-12t-soft-case",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 590.0,
+        "original_price": 590.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq12t_case.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq18t",
+      "name": "Allen & Heath CQ-18T",
+      "description": "Allen & Heath CQ-18T",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+      "product_url": "https://www.halilit.com/items/6169364-allen-heath-cq18t-ultra-compact-18in-8out-digital-mixer-with-wi-fi",
+      "is_sold": true,
+      "price": 5858.0,
+      "halilit_url": "https://www.halilit.com/items/6169364-allen-heath-cq18t-ultra-compact-18in-8out-digital-mixer-with-wi-fi",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5858.0,
+        "original_price": 5858.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq18t.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq18t_case",
+      "name": "Allen & Heath CQ-18T Soft Case",
+      "description": "Allen & Heath CQ-18T Soft Case",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+      "product_url": "https://www.halilit.com/items/6405915-allen-heath-cq-18t-soft-case",
+      "is_sold": true,
+      "price": 590.0,
+      "halilit_url": "https://www.halilit.com/items/6405915-allen-heath-cq-18t-soft-case",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 590.0,
+        "original_price": 590.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq18t_case.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq20b_case",
+      "name": "Allen & Heath CQ-20B Soft Case",
+      "description": "Allen & Heath CQ-20B Soft Case",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+      "product_url": "https://www.halilit.com/items/6405923-allen-heath-cq-20b-soft-case",
+      "is_sold": true,
+      "price": 612.0,
+      "halilit_url": "https://www.halilit.com/items/6405923-allen-heath-cq-20b-soft-case",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 612.0,
+        "original_price": 612.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq20b_case.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_w41442",
+      "name": "Allen & Heath WZ4 14:4:2",
+      "description": "Allen & Heath WZ4 14:4:2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_w41442.jpg",
+      "product_url": "https://www.halilit.com/items/6515492-allen-heath-wz4-14-4-2",
+      "is_sold": true,
+      "price": 7874.0,
+      "halilit_url": "https://www.halilit.com/items/6515492-allen-heath-wz4-14-4-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7874.0,
+        "original_price": 7874.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_w41442.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_w41442.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_w41442.jpg",
+        "original": "/data/thumbnails/allen_heath_40_w41442.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ap11333",
+      "name": "Allen & Heath AP11333 SQ6 Dust Cover",
+      "description": "Allen & Heath AP11333 SQ6 Dust Cover",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+      "product_url": "https://www.halilit.com/items/6595879-allen-heath-ap11333-sq6-dust-cover",
+      "is_sold": true,
+      "price": 217.0,
+      "halilit_url": "https://www.halilit.com/items/6595879-allen-heath-ap11333-sq6-dust-cover",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 217.0,
+        "original_price": 217.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ap11333.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ap9932",
+      "name": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+      "description": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+      "product_url": "https://www.halilit.com/items/6597928-allen-heath-ap9932-ab168-dx168-carry-bag",
+      "is_sold": true,
+      "price": 448.0,
+      "halilit_url": "https://www.halilit.com/items/6597928-allen-heath-ap9932-ab168-dx168-carry-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 448.0,
+        "original_price": 448.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ap9932.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ap11334",
+      "name": "Allen & Heath AP11334 SQ7 Dust Cover",
+      "description": "Allen & Heath AP11334 SQ7 Dust Cover",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+      "product_url": "https://www.halilit.com/items/6595889-allen-heath-ap11334-sq7-dust-cover-",
+      "is_sold": true,
+      "price": 229.0,
+      "halilit_url": "https://www.halilit.com/items/6595889-allen-heath-ap11334-sq7-dust-cover-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 229.0,
+        "original_price": 229.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ap11334.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ap9933",
+      "name": "Allen & Heath AP9933 QU-PAC Carry Bag",
+      "description": "Allen & Heath AP9933 QU-PAC Carry Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+      "product_url": "https://www.halilit.com/items/6597959-allen-heath-ap9933-qu-pac-carry-bag",
+      "is_sold": true,
+      "price": 746.0,
+      "halilit_url": "https://www.halilit.com/items/6597959-allen-heath-ap9933-qu-pac-carry-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 746.0,
+        "original_price": 746.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ap9933.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu6",
+      "name": "Allen & Heath Qu-6",
+      "description": "Allen & Heath Qu-6",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu6.jpg",
+      "product_url": "https://www.halilit.com/items/8524878-allen-heath-qu-6-compact-digital-mixer",
+      "is_sold": true,
+      "price": 12947.0,
+      "halilit_url": "https://www.halilit.com/items/8524878-allen-heath-qu-6-compact-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 12947.0,
+        "original_price": 12947.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu6.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu6.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu6.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu6.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ahm32",
+      "name": "Allen & Heath AHM-32",
+      "description": "Allen & Heath AHM-32",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+      "product_url": "https://www.halilit.com/items/5461838-allen-heath-ahm-32",
+      "is_sold": true,
+      "price": 8570.0,
+      "halilit_url": "https://www.halilit.com/items/5461838-allen-heath-ahm-32",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8570.0,
+        "original_price": 8570.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ahm32.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu5",
+      "name": "Allen & Heath Qu-5",
+      "description": "Allen & Heath Qu-5",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu5.jpg",
+      "product_url": "https://www.halilit.com/items/8078171-allen-heath-qu-5-compact-digital-mixer",
+      "is_sold": true,
+      "price": 11884.0,
+      "halilit_url": "https://www.halilit.com/items/8078171-allen-heath-qu-5-compact-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11884.0,
+        "original_price": 11884.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu5.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu5.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu5.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu5.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq_rack",
+      "name": "Allen & Heath SQ-Rack",
+      "description": "Allen & Heath SQ-Rack",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+      "product_url": "https://www.halilit.com/items/7687519-allen-heath-sq-rack-digital-mixer",
+      "is_sold": true,
+      "price": 11680.0,
+      "halilit_url": "https://www.halilit.com/items/7687519-allen-heath-sq-rack-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11680.0,
+        "original_price": 11680.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq_rack.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq12t",
+      "name": "Allen & Heath CQ-12T",
+      "description": "Allen & Heath CQ-12T",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+      "product_url": "https://www.halilit.com/items/6168951-allen-heath-cq-12t-ultra-compact-12in-8out-digital-mixer",
+      "is_sold": true,
+      "price": 4523.0,
+      "halilit_url": "https://www.halilit.com/items/6168951-allen-heath-cq-12t-ultra-compact-12in-8out-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4523.0,
+        "original_price": 4523.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq12t.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ahm64",
+      "name": "Allen & Heath AHM-64",
+      "description": "Allen & Heath AHM-64",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+      "product_url": "https://www.halilit.com/items/6595713-allen-heath-ahm-64",
+      "is_sold": true,
+      "price": 16736.0,
+      "halilit_url": "https://www.halilit.com/items/6595713-allen-heath-ahm-64",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 16736.0,
+        "original_price": 16736.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ahm64.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zedi10",
+      "name": "Allen & Heath ZEDi-10",
+      "description": "Allen & Heath ZEDi-10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+      "product_url": "https://www.halilit.com/items/7473552-allen-heath-zedi-10-analog-mixer",
+      "is_sold": true,
+      "price": 1418.0,
+      "halilit_url": "https://www.halilit.com/items/7473552-allen-heath-zedi-10-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1418.0,
+        "original_price": 1418.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zedi10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_w4122",
+      "name": "Allen & Heath WZ4 12:2",
+      "description": "Allen & Heath WZ4 12:2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_w4122.jpg",
+      "product_url": "https://www.halilit.com/items/6515604-allen-heath-wz4-12-2",
+      "is_sold": true,
+      "price": 6468.0,
+      "halilit_url": "https://www.halilit.com/items/6515604-allen-heath-wz4-12-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6468.0,
+        "original_price": 6468.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_w4122.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_w4122.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_w4122.jpg",
+        "original": "/data/thumbnails/allen_heath_40_w4122.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_w41622",
+      "name": "Allen & Heath WZ4 16:2",
+      "description": "Allen & Heath WZ4 16:2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_w41622.jpg",
+      "product_url": "https://www.halilit.com/items/6515357-allen-heath-wz4-16-2",
+      "is_sold": true,
+      "price": 6903.0,
+      "halilit_url": "https://www.halilit.com/items/6515357-allen-heath-wz4-16-2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6903.0,
+        "original_price": 6903.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_w41622.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_w41622.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_w41622.jpg",
+        "original": "/data/thumbnails/allen_heath_40_w41622.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ahm16",
+      "name": "Allen & Heath AHM-16",
+      "description": "Allen & Heath AHM-16",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+      "product_url": "https://www.halilit.com/items/6593193-allen-heath-ahm-16",
+      "is_sold": true,
+      "price": 5922.0,
+      "halilit_url": "https://www.halilit.com/items/6593193-allen-heath-ahm-16",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5922.0,
+        "original_price": 5922.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ahm16.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_avantis_s",
+      "name": "Allen & Heath Avantis Solo",
+      "description": "Allen & Heath Avantis Solo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+      "product_url": "https://www.halilit.com/items/7196080-allen-heath-avantis-solo",
+      "is_sold": true,
+      "price": 38659.0,
+      "halilit_url": "https://www.halilit.com/items/7196080-allen-heath-avantis-solo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 38659.0,
+        "original_price": 38659.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+        "original": "/data/thumbnails/allen_heath_40_avantis_s.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu7",
+      "name": "Allen & Heath Qu-7",
+      "description": "Allen & Heath Qu-7",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu7.jpg",
+      "product_url": "https://www.halilit.com/items/8082876-allen-heath-qu-7-compact-digital-mixer",
+      "is_sold": true,
+      "price": 18682.0,
+      "halilit_url": "https://www.halilit.com/items/8082876-allen-heath-qu-7-compact-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 18682.0,
+        "original_price": 18682.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu7.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu7.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu7.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu7.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq20b",
+      "name": "Allen & Heath CQ-20B",
+      "description": "Allen & Heath CQ-20B",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+      "product_url": "https://www.halilit.com/items/6169552-allen-heath-cq20b-ultra-compact-20in-8out-digital-mixer-with-wi-fi",
+      "is_sold": true,
+      "price": 5002.0,
+      "halilit_url": "https://www.halilit.com/items/6169552-allen-heath-cq20b-ultra-compact-20in-8out-digital-mixer-with-wi-fi",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5002.0,
+        "original_price": 5002.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq20b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dx88p",
+      "name": "Allen & Heath DX88-P",
+      "description": "Allen & Heath DX88-P",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+      "product_url": "https://www.halilit.com/items/7597063-allen-heath-dx88-p-expander",
+      "is_sold": true,
+      "price": 5010.0,
+      "halilit_url": "https://www.halilit.com/items/7597063-allen-heath-dx88-p-expander",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5010.0,
+        "original_price": 5010.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dx88p.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_c1500",
+      "name": "Allen & Heath dLive C1500",
+      "description": "Allen & Heath dLive C1500",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+      "product_url": "https://www.halilit.com/items/6542088-allen-heath-dlive-c1500-",
+      "is_sold": true,
+      "price": 43946.0,
+      "halilit_url": "https://www.halilit.com/items/6542088-allen-heath-dlive-c1500-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 43946.0,
+        "original_price": 43946.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_me500",
+      "name": "Allen & Heath ME-500",
+      "description": "Allen & Heath ME-500",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_me500.jpg",
+      "product_url": "https://www.halilit.com/items/5262628-allen-health-me-500",
+      "is_sold": true,
+      "price": 2481.0,
+      "halilit_url": "https://www.halilit.com/items/5262628-allen-health-me-500",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2481.0,
+        "original_price": 2481.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_me500.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_me500.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_me500.jpg",
+        "original": "/data/thumbnails/allen_heath_40_me500.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_meu",
+      "name": "Allen & Heath ME-U",
+      "description": "Allen & Heath ME-U",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_meu.jpg",
+      "product_url": "https://www.halilit.com/items/5262120-allen-health-me-u",
+      "is_sold": true,
+      "price": 10137.0,
+      "halilit_url": "https://www.halilit.com/items/5262120-allen-health-me-u",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10137.0,
+        "original_price": 10137.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_meu.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_meu.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_meu.jpg",
+        "original": "/data/thumbnails/allen_heath_40_meu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_pac",
+      "name": "Allen & Heath QU-PAC",
+      "description": "Allen & Heath QU-PAC",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+      "product_url": "https://www.halilit.com/items/5275434-allen-health-qu-pac",
+      "is_sold": true,
+      "price": 9933.0,
+      "halilit_url": "https://www.halilit.com/items/5275434-allen-health-qu-pac",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 9933.0,
+        "original_price": 9933.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_pac.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dt22m",
+      "name": "Allen & Heath DT22",
+      "description": "Allen & Heath DT22",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+      "product_url": "https://www.halilit.com/items/7292721-allen-heath-dt22-dante-interface",
+      "is_sold": true,
+      "price": 1910.0,
+      "halilit_url": "https://www.halilit.com/items/7292721-allen-heath-dt22-dante-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1910.0,
+        "original_price": 1910.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dt22m.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_gr4",
+      "name": "Allen & Heath GR4",
+      "description": "Allen & Heath GR4",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_gr4.jpg",
+      "product_url": "https://www.halilit.com/items/2240820-allen-heath-gr4",
+      "is_sold": true,
+      "price": 3334.0,
+      "halilit_url": "https://www.halilit.com/items/2240820-allen-heath-gr4",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3334.0,
+        "original_price": 3334.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_gr4.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_gr4.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_gr4.jpg",
+        "original": "/data/thumbnails/allen_heath_40_gr4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_me1",
+      "name": "Allen & Heath ME-1",
+      "description": "Allen & Heath ME-1",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_me1.jpg",
+      "product_url": "https://www.halilit.com/items/5262159-allen-health-me-1",
+      "is_sold": true,
+      "price": 3356.0,
+      "halilit_url": "https://www.halilit.com/items/5262159-allen-health-me-1",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3356.0,
+        "original_price": 3356.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_me1.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_me1.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_me1.jpg",
+        "original": "/data/thumbnails/allen_heath_40_me1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dt20",
+      "name": "Allen & Heath DT20",
+      "description": "Allen & Heath DT20",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dt20.jpg",
+      "product_url": "https://www.halilit.com/items/5275230-allen-health-dt20",
+      "is_sold": true,
+      "price": 1503.0,
+      "halilit_url": "https://www.halilit.com/items/5275230-allen-health-dt20",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1503.0,
+        "original_price": 1503.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dt20.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dt20.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dt20.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dt20.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dt02",
+      "name": "Allen & Heath DT02",
+      "description": "Allen & Heath DT02",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dt02.jpg",
+      "product_url": "https://www.halilit.com/items/5264738-allen-health-dt02",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/5264738-allen-health-dt02",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dt02.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dt02.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dt02.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dt02.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ar84",
+      "name": "Allen & Heath AR84",
+      "description": "Allen & Heath AR84",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ar84.jpg",
+      "product_url": "https://www.halilit.com/items/2507643-allen-heath-ar84",
+      "is_sold": true,
+      "price": 4474.0,
+      "halilit_url": "https://www.halilit.com/items/2507643-allen-heath-ar84",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4474.0,
+        "original_price": 4474.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ar84.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ar84.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ar84.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ar84.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone922",
+      "name": "Allen & Heath Xone:92 MK2",
+      "description": "Allen & Heath Xone:92 MK2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone922.jpg",
+      "product_url": "https://www.halilit.com/items/7446144-allen-heath-xone-92-mk2",
+      "is_sold": true,
+      "price": 8158.0,
+      "halilit_url": "https://www.halilit.com/items/7446144-allen-heath-xone-92-mk2",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8158.0,
+        "original_price": 8158.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone922.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone922.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone922.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone922.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ip4_wh",
+      "name": "Allen & Heath IP4 (White)",
+      "description": "Allen & Heath IP4 (White)",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+      "product_url": "https://www.halilit.com/items/8064410-allen-heath-ip4-white-",
+      "is_sold": true,
+      "price": 1466.0,
+      "halilit_url": "https://www.halilit.com/items/8064410-allen-heath-ip4-white-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1466.0,
+        "original_price": 1466.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ip4_wh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ip1_wh",
+      "name": "Allen & Heath IP1 Wallplate Controller",
+      "description": "Allen & Heath IP1 Wallplate Controller",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+      "product_url": "https://www.halilit.com/items/7597995-allen-heath-ip1-wallplate-controller",
+      "is_sold": true,
+      "price": 1778.0,
+      "halilit_url": "https://www.halilit.com/items/7597995-allen-heath-ip1-wallplate-controller",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1778.0,
+        "original_price": 1778.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ip1_wh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cc7",
+      "name": "Allen & Heath CC-7",
+      "description": "Allen & Heath CC-7",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cc7.jpg",
+      "product_url": "https://www.halilit.com/items/7246031-allen-heath-cc-7",
+      "is_sold": true,
+      "price": 4810.0,
+      "halilit_url": "https://www.halilit.com/items/7246031-allen-heath-cc-7",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4810.0,
+        "original_price": 4810.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cc7.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cc7.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cc7.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cc7.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_c3500",
+      "name": "Allen & Heath dLive C3500",
+      "description": "Allen & Heath dLive C3500",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+      "product_url": "https://www.halilit.com/items/3775952-allen-heath-dlive-c3500-",
+      "is_sold": true,
+      "price": 67072.0,
+      "halilit_url": "https://www.halilit.com/items/3775952-allen-heath-dlive-c3500-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 67072.0,
+        "original_price": 67072.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone92a",
+      "name": "Allen & Heath Xone:92 Limited Edition",
+      "description": "Allen & Heath Xone:92 Limited Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+      "product_url": "https://www.halilit.com/items/7263442-allen-heath-xone-92-limited-edition",
+      "is_sold": true,
+      "price": 8875.0,
+      "halilit_url": "https://www.halilit.com/items/7263442-allen-heath-xone-92-limited-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8875.0,
+        "original_price": 8875.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone92a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ip4",
+      "name": "Allen & Heath IP4 (Black)",
+      "description": "Allen & Heath IP4 (Black)",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ip4.jpg",
+      "product_url": "https://www.halilit.com/items/8063704-allen-heath-ip4-black-",
+      "is_sold": true,
+      "price": 1466.0,
+      "halilit_url": "https://www.halilit.com/items/8063704-allen-heath-ip4-black-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1466.0,
+        "original_price": 1466.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ip4.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ip4.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ip4.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ip4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cc10",
+      "name": "Allen & Heath CC-10",
+      "description": "Allen & Heath CC-10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cc10.jpg",
+      "product_url": "https://www.halilit.com/items/5245146-allen-heath-cc-10",
+      "is_sold": true,
+      "price": 5736.0,
+      "halilit_url": "https://www.halilit.com/items/5245146-allen-heath-cc-10",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5736.0,
+        "original_price": 5736.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cc10.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cc10.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cc10.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cc10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_avantis",
+      "name": "Allen & Heath Avantis",
+      "description": "Allen & Heath Avantis",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_avantis.jpg",
+      "product_url": "https://www.halilit.com/items/3775736-allen-heath-avantis",
+      "is_sold": true,
+      "price": 63115.0,
+      "halilit_url": "https://www.halilit.com/items/3775736-allen-heath-avantis",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 63115.0,
+        "original_price": 63115.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_avantis.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_avantis.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_avantis.jpg",
+        "original": "/data/thumbnails/allen_heath_40_avantis.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed10_rk",
+      "name": "Allen & Heath ZED 10-RK19",
+      "description": "Allen & Heath ZED 10-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+      "product_url": "https://www.halilit.com/items/2536211-allen-heath-zed-10-rk19",
+      "is_sold": true,
+      "price": 433.0,
+      "halilit_url": "https://www.halilit.com/items/2536211-allen-heath-zed-10-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 433.0,
+        "original_price": 433.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed10_rk.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_sb_rk19",
+      "name": "Allen & Heath QU-SB-RK19",
+      "description": "Allen & Heath QU-SB-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/6602261-allen-heath-qu-sb-rk19",
+      "is_sold": true,
+      "price": 190.0,
+      "halilit_url": "https://www.halilit.com/items/6602261-allen-heath-qu-sb-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 190.0,
+        "original_price": 190.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dx_hub",
+      "name": "Allen & Heath DX Hub",
+      "description": "Allen & Heath DX Hub",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+      "product_url": "https://www.halilit.com/items/2537275-allen-heath-dx-hub",
+      "is_sold": true,
+      "price": 4438.0,
+      "halilit_url": "https://www.halilit.com/items/2537275-allen-heath-dx-hub",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4438.0,
+        "original_price": 4438.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dx_hub.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq_bracket",
+      "name": "Allen & Heath SQ Tablet Bracket",
+      "description": "Allen & Heath SQ Tablet Bracket",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+      "product_url": "https://www.halilit.com/items/6602597-allen-heath-sq-tablet-bracket",
+      "is_sold": true,
+      "price": 253.0,
+      "halilit_url": "https://www.halilit.com/items/6602597-allen-heath-sq-tablet-bracket",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 253.0,
+        "original_price": 253.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq_bracket.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed6014fx_rk",
+      "name": "Allen & Heath ZED 6014FX-RK19",
+      "description": "Allen & Heath ZED 6014FX-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+      "product_url": "https://www.halilit.com/items/2525847-allen-heath-zed-6014fx-rk19",
+      "is_sold": true,
+      "price": 295.0,
+      "halilit_url": "https://www.halilit.com/items/2525847-allen-heath-zed-6014fx-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 295.0,
+        "original_price": 295.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq18t_rk19",
+      "name": "Allen & Heath CQ-18T Rack Ears",
+      "description": "Allen & Heath CQ-18T Rack Ears",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/7460760-allen-heath-cq-18t-rack-ears",
+      "is_sold": true,
+      "price": 355.0,
+      "halilit_url": "https://www.halilit.com/items/7460760-allen-heath-cq-18t-rack-ears",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 355.0,
+        "original_price": 355.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed6010fx_rk",
+      "name": "Allen & Heath ZED 6010FX-RK19",
+      "description": "Allen & Heath ZED 6010FX-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+      "product_url": "https://www.halilit.com/items/2525852-allen-heath-zed-6010fx-rk19",
+      "is_sold": true,
+      "price": 442.0,
+      "halilit_url": "https://www.halilit.com/items/2525852-allen-heath-zed-6010fx-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 442.0,
+        "original_price": 442.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq12t_rk19",
+      "name": "Allen & Heath CQ-12T Rack Ears",
+      "description": "Allen & Heath CQ-12T Rack Ears",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/7461547-allen-heath-cq-12t-rack-ears",
+      "is_sold": true,
+      "price": 355.0,
+      "halilit_url": "https://www.halilit.com/items/7461547-allen-heath-cq-12t-rack-ears",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 355.0,
+        "original_price": 355.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ab168",
+      "name": "Allen & Heath AB168",
+      "description": "Allen & Heath AB168",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ab168.jpg",
+      "product_url": "https://www.halilit.com/items/2507705-allen-heath-ab168",
+      "is_sold": true,
+      "price": 6421.0,
+      "halilit_url": "https://www.halilit.com/items/2507705-allen-heath-ab168",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6421.0,
+        "original_price": 6421.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ab168.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ab168.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ab168.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ab168.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_cq20b_rk19",
+      "name": "Allen & Heath CQ-20B Rack Ears",
+      "description": "Allen & Heath CQ-20B Rack Ears",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/7461562-allen-heath-cq-20b-rack-ears",
+      "is_sold": true,
+      "price": 230.0,
+      "halilit_url": "https://www.halilit.com/items/7461562-allen-heath-cq-20b-rack-ears",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 230.0,
+        "original_price": 230.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_bracket",
+      "name": "Allen & Heath QU Tablet Bracket",
+      "description": "Allen & Heath QU Tablet Bracket",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+      "product_url": "https://www.halilit.com/items/8218811-allen-heath-qu-tablet-bracket",
+      "is_sold": true,
+      "price": 162.0,
+      "halilit_url": "https://www.halilit.com/items/8218811-allen-heath-qu-tablet-bracket",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 162.0,
+        "original_price": 162.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_bracket.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed14_rk",
+      "name": "Allen & Heath ZED 14-RK19",
+      "description": "Allen & Heath ZED 14-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+      "product_url": "https://www.halilit.com/items/6602180-allen-heath-zed-14-rk19",
+      "is_sold": true,
+      "price": 304.0,
+      "halilit_url": "https://www.halilit.com/items/6602180-allen-heath-zed-14-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 304.0,
+        "original_price": 304.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed14_rk.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq5_rk19",
+      "name": "Allen & Heath SQ-5-RK19",
+      "description": "Allen & Heath SQ-5-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/6602220-allen-heath-sq-5-rk19",
+      "is_sold": true,
+      "price": 404.0,
+      "halilit_url": "https://www.halilit.com/items/6602220-allen-heath-sq-5-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 404.0,
+        "original_price": 404.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ar2412",
+      "name": "Allen & Heath AR2412",
+      "description": "Allen & Heath AR2412",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+      "product_url": "https://www.halilit.com/items/2507760-allen-heath-ar2412",
+      "is_sold": true,
+      "price": 7381.0,
+      "halilit_url": "https://www.halilit.com/items/2507760-allen-heath-ar2412",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7381.0,
+        "original_price": 7381.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ar2412.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu16_rk19",
+      "name": "Allen & Heath QU-16-RK19",
+      "description": "Allen & Heath QU-16-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/6602483-allen-heath-qu-16-rk19",
+      "is_sold": true,
+      "price": 253.0,
+      "halilit_url": "https://www.halilit.com/items/6602483-allen-heath-qu-16-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 253.0,
+        "original_price": 253.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone92",
+      "name": "Allen & Heath XONE:92",
+      "description": "Allen & Heath XONE:92",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone92.jpg",
+      "product_url": "https://www.halilit.com/items/1461496-allen-heath-xone-92",
+      "is_sold": true,
+      "price": 7867.0,
+      "halilit_url": "https://www.halilit.com/items/1461496-allen-heath-xone-92",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7867.0,
+        "original_price": 7867.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone92.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone92.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone92.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone92.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zedi8",
+      "name": "Allen & Heath ZEDi-8",
+      "description": "Allen & Heath ZEDi-8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+      "product_url": "https://www.halilit.com/items/5461040-allen-heath-zedi-8-analog-mixer",
+      "is_sold": true,
+      "price": 1066.0,
+      "halilit_url": "https://www.halilit.com/items/5461040-allen-heath-zedi-8-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1066.0,
+        "original_price": 1066.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zedi8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone43",
+      "name": "Allen & Heath XONE:43",
+      "description": "Allen & Heath XONE:43",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone43.jpg",
+      "product_url": "https://www.halilit.com/items/1461580-allen-heath-xone-43-dj-mixer",
+      "is_sold": true,
+      "price": 3991.0,
+      "halilit_url": "https://www.halilit.com/items/1461580-allen-heath-xone-43-dj-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3991.0,
+        "original_price": 3991.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone43.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone43.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone43.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone43.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone96",
+      "name": "Allen & Heath XONE:96",
+      "description": "Allen & Heath XONE:96",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone96.jpg",
+      "product_url": "https://www.halilit.com/items/2113877-allen-heath-xone-96",
+      "is_sold": true,
+      "price": 11204.0,
+      "halilit_url": "https://www.halilit.com/items/2113877-allen-heath-xone-96",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11204.0,
+        "original_price": 11204.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone96.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone96.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone96.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone96.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zedi10fx",
+      "name": "Allen & Heath ZEDi-10FX",
+      "description": "Allen & Heath ZEDi-10FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+      "product_url": "https://www.halilit.com/items/1460821-allen-heath-zedi-10fx-analog-mixer",
+      "is_sold": true,
+      "price": 1782.0,
+      "halilit_url": "https://www.halilit.com/items/1460821-allen-heath-zedi-10fx-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1782.0,
+        "original_price": 1782.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zedi10fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed6014fx",
+      "name": "Allen & Heath ZED60-14FX",
+      "description": "Allen & Heath ZED60-14FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+      "product_url": "https://www.halilit.com/items/1722218-allen-heath-zed60-14fx-portable-mixer",
+      "is_sold": true,
+      "price": 2786.0,
+      "halilit_url": "https://www.halilit.com/items/1722218-allen-heath-zed60-14fx-portable-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2786.0,
+        "original_price": 2786.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed6014fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed12fx",
+      "name": "Allen & Heath ZED-12FX",
+      "description": "Allen & Heath ZED-12FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+      "product_url": "https://www.halilit.com/items/1461106-allen-heath-zed-12fx-analog-mixer",
+      "is_sold": true,
+      "price": 3327.0,
+      "halilit_url": "https://www.halilit.com/items/1461106-allen-heath-zed-12fx-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3327.0,
+        "original_price": 3327.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed12fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone43_c",
+      "name": "Allen & Heath XONE:43C",
+      "description": "Allen & Heath XONE:43C",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+      "product_url": "https://www.halilit.com/items/1833335-allen-heath-xone-43c",
+      "is_sold": true,
+      "price": 5066.0,
+      "halilit_url": "https://www.halilit.com/items/1833335-allen-heath-xone-43c",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5066.0,
+        "original_price": 5066.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone43_c.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed16fx",
+      "name": "Allen & Heath ZED-16FX",
+      "description": "Allen & Heath ZED-16FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+      "product_url": "https://www.halilit.com/items/1461380-allen-heath-zed-16fx-analog-mixer",
+      "is_sold": true,
+      "price": 4154.0,
+      "halilit_url": "https://www.halilit.com/items/1461380-allen-heath-zed-16fx-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4154.0,
+        "original_price": 4154.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed16fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed10fx",
+      "name": "Allen & Heath ZED-10FX",
+      "description": "Allen & Heath ZED-10FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+      "product_url": "https://www.halilit.com/items/1722249-allen-heath-zed-10fx-analog-mixer",
+      "is_sold": true,
+      "price": 1847.0,
+      "halilit_url": "https://www.halilit.com/items/1722249-allen-heath-zed-10fx-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1847.0,
+        "original_price": 1847.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed10fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed22fx",
+      "name": "Allen & Heath ZED-22FX",
+      "description": "Allen & Heath ZED-22FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+      "product_url": "https://www.halilit.com/items/1461418-allen-heath-zed-22fx-analog-mixer",
+      "is_sold": true,
+      "price": 4890.0,
+      "halilit_url": "https://www.halilit.com/items/1461418-allen-heath-zed-22fx-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4890.0,
+        "original_price": 4890.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed22fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed6010fx",
+      "name": "Allen & Heath ZED60-10FX",
+      "description": "Allen & Heath ZED60-10FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+      "product_url": "https://www.halilit.com/items/1461464-allen-heath-zed60-10fx-portable-mixer",
+      "is_sold": true,
+      "price": 2176.0,
+      "halilit_url": "https://www.halilit.com/items/1461464-allen-heath-zed60-10fx-portable-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2176.0,
+        "original_price": 2176.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed6010fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_xone_px5",
+      "name": "Allen & Heath XONE:PX5",
+      "description": "Allen & Heath XONE:PX5",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+      "product_url": "https://www.halilit.com/items/1729516-allen-heath-xone-px5",
+      "is_sold": true,
+      "price": 7394.0,
+      "halilit_url": "https://www.halilit.com/items/1729516-allen-heath-xone-px5",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7394.0,
+        "original_price": 7394.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+        "original": "/data/thumbnails/allen_heath_40_xone_px5.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_zed6fx",
+      "name": "Allen & Heath ZED-6FX",
+      "description": "Allen & Heath ZED-6FX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+      "product_url": "https://www.halilit.com/items/1451761-allen-heath-zed-6fx-analog-mixer",
+      "is_sold": true,
+      "price": 1066.0,
+      "halilit_url": "https://www.halilit.com/items/1451761-allen-heath-zed-6fx-analog-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1066.0,
+        "original_price": 1066.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+        "original": "/data/thumbnails/allen_heath_40_zed6fx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dx168",
+      "name": "Allen & Heath DX168",
+      "description": "Allen & Heath DX168",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dx168.jpg",
+      "product_url": "https://www.halilit.com/items/2507785-allen-heath-dx168",
+      "is_sold": true,
+      "price": 8274.0,
+      "halilit_url": "https://www.halilit.com/items/2507785-allen-heath-dx168",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8274.0,
+        "original_price": 8274.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dx168.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dx168.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dx168.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dx168.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dt168",
+      "name": "Allen & Heath DT168",
+      "description": "Allen & Heath DT168",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dt168.jpg",
+      "product_url": "https://www.halilit.com/items/2537302-allen-heath-dt168",
+      "is_sold": true,
+      "price": 10824.0,
+      "halilit_url": "https://www.halilit.com/items/2537302-allen-heath-dt168",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10824.0,
+        "original_price": 10824.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dt168.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dt168.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dt168.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dt168.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq_slink",
+      "name": "Allen & Heath SQ SLink",
+      "description": "Allen & Heath SQ SLink",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+      "product_url": "https://www.halilit.com/items/2419115-allen-heath-sq-slink",
+      "is_sold": true,
+      "price": 1125.0,
+      "halilit_url": "https://www.halilit.com/items/2419115-allen-heath-sq-slink",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1125.0,
+        "original_price": 1125.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq_slink.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq_waves3",
+      "name": "Allen & Heath SQ WAVES 3",
+      "description": "Allen & Heath SQ WAVES 3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+      "product_url": "https://www.halilit.com/items/2525876-allen-heath-sq-waves-3",
+      "is_sold": true,
+      "price": 4306.0,
+      "halilit_url": "https://www.halilit.com/items/2525876-allen-heath-sq-waves-3",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4306.0,
+        "original_price": 4306.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq_waves3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_mdlultrafxax",
+      "name": "Allen & Heath dLive RackUltra FX Card",
+      "description": "Allen & Heath dLive RackUltra FX Card",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+      "product_url": "https://www.halilit.com/items/7424701-allen-heath-dlive-rackultra-fx-card",
+      "is_sold": true,
+      "price": 11182.0,
+      "halilit_url": "https://www.halilit.com/items/7424701-allen-heath-dlive-rackultra-fx-card",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11182.0,
+        "original_price": 11182.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+        "original": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_gr3",
+      "name": "Allen & Heath GR3",
+      "description": "Allen & Heath GR3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_gr3.jpg",
+      "product_url": "https://www.halilit.com/items/2239837-allen-heath-gr3",
+      "is_sold": true,
+      "price": 2511.0,
+      "halilit_url": "https://www.halilit.com/items/2239837-allen-heath-gr3",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2511.0,
+        "original_price": 2511.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_gr3.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_gr3.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_gr3.jpg",
+        "original": "/data/thumbnails/allen_heath_40_gr3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq5",
+      "name": "Allen & Heath SQ-5",
+      "description": "Allen & Heath SQ-5",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq5.jpg",
+      "product_url": "https://www.halilit.com/items/1500329-allen-heath-sq5-digital-mixer",
+      "is_sold": true,
+      "price": 17844.0,
+      "halilit_url": "https://www.halilit.com/items/1500329-allen-heath-sq5-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 17844.0,
+        "original_price": 17844.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq5.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq5.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq5.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq5.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq6",
+      "name": "Allen & Heath SQ-6",
+      "description": "Allen & Heath SQ-6",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq6.jpg",
+      "product_url": "https://www.halilit.com/items/1500378-allen-heath-sq-6-digital-mixer",
+      "is_sold": true,
+      "price": 22450.0,
+      "halilit_url": "https://www.halilit.com/items/1500378-allen-heath-sq-6-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 22450.0,
+        "original_price": 22450.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq6.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq6.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq6.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq6.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_sq7",
+      "name": "Allen & Heath SQ-7",
+      "description": "Allen & Heath SQ-7",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_sq7.jpg",
+      "product_url": "https://www.halilit.com/items/2052974-allen-heath-sq7-digital-mixer",
+      "is_sold": true,
+      "price": 29291.0,
+      "halilit_url": "https://www.halilit.com/items/2052974-allen-heath-sq7-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 29291.0,
+        "original_price": 29291.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_sq7.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_sq7.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_sq7.jpg",
+        "original": "/data/thumbnails/allen_heath_40_sq7.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_s5000_flc",
+      "name": "Allen & Heath dLive Flightcases",
+      "description": "Allen & Heath dLive Flightcases",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+      "product_url": "https://www.halilit.com/items/1462470-allen-heath-dlive-flightcases",
+      "is_sold": true,
+      "price": 10926.0,
+      "halilit_url": "https://www.halilit.com/items/1462470-allen-heath-dlive-flightcases",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10926.0,
+        "original_price": 10926.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_gx4816",
+      "name": "Allen & Heath GX4816",
+      "description": "Allen & Heath GX4816",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+      "product_url": "https://www.halilit.com/items/2536674-allen-heath-gx4816",
+      "is_sold": true,
+      "price": 21674.0,
+      "halilit_url": "https://www.halilit.com/items/2536674-allen-heath-gx4816",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 21674.0,
+        "original_price": 21674.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+        "original": "/data/thumbnails/allen_heath_40_gx4816.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dx012",
+      "name": "Allen & Heath DX012",
+      "description": "Allen & Heath DX012",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dx012.jpg",
+      "product_url": "https://www.halilit.com/items/5245418-allen-heath-dx012-",
+      "is_sold": true,
+      "price": 7326.0,
+      "halilit_url": "https://www.halilit.com/items/5245418-allen-heath-dx012-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7326.0,
+        "original_price": 7326.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dx012.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dx012.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dx012.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dx012.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_c2500",
+      "name": "Allen & Heath dLive C2500",
+      "description": "Allen & Heath dLive C2500",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+      "product_url": "https://www.halilit.com/items/2237976-allen-heath-dlive-c2500-",
+      "is_sold": true,
+      "price": 51594.0,
+      "halilit_url": "https://www.halilit.com/items/2237976-allen-heath-dlive-c2500-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 51594.0,
+        "original_price": 51594.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_s5000",
+      "name": "Allen & Heath dLIVE S5000",
+      "description": "Allen & Heath dLIVE S5000",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+      "product_url": "https://www.halilit.com/items/1440826-allen-heath-dlive-s500",
+      "is_sold": true,
+      "price": 106224.0,
+      "halilit_url": "https://www.halilit.com/items/1440826-allen-heath-dlive-s500",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 106224.0,
+        "original_price": 106224.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_s7000",
+      "name": "Allen & Heath dLIVE S7000",
+      "description": "Allen & Heath dLIVE S7000",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+      "product_url": "https://www.halilit.com/items/5460362-allen-heath-dlive-s7000",
+      "is_sold": true,
+      "price": 115329.0,
+      "halilit_url": "https://www.halilit.com/items/5460362-allen-heath-dlive-s7000",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 115329.0,
+        "original_price": 115329.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_s3000",
+      "name": "Allen & Heath dLive S3000",
+      "description": "Allen & Heath dLive S3000",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+      "product_url": "https://www.halilit.com/items/6059721-allen-heath-dlive-s3000",
+      "is_sold": true,
+      "price": 81944.0,
+      "halilit_url": "https://www.halilit.com/items/6059721-allen-heath-dlive-s3000",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 81944.0,
+        "original_price": 81944.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ip8",
+      "name": "Allen & Heath IP8",
+      "description": "Allen & Heath IP8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ip8.jpg",
+      "product_url": "https://www.halilit.com/items/2419165-allen-heath-ip8",
+      "is_sold": true,
+      "price": 7154.0,
+      "halilit_url": "https://www.halilit.com/items/2419165-allen-heath-ip8",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7154.0,
+        "original_price": 7154.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ip8.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ip8.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ip8.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ip8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ip6",
+      "name": "Allen & Heath IP6",
+      "description": "Allen & Heath IP6",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ip6.jpg",
+      "product_url": "https://www.halilit.com/items/6602723-allen-heath-ip6",
+      "is_sold": true,
+      "price": 4188.0,
+      "halilit_url": "https://www.halilit.com/items/6602723-allen-heath-ip6",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4188.0,
+        "original_price": 4188.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ip6.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ip6.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ip6.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ip6.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_mdl_dante128",
+      "name": "Allen & Heath dLive Dante 128×128",
+      "description": "Allen & Heath dLive Dante 128×128",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+      "product_url": "https://www.halilit.com/items/2418696-allen-heath-dante-128-128-",
+      "is_sold": true,
+      "price": 11252.0,
+      "halilit_url": "https://www.halilit.com/items/2418696-allen-heath-dante-128-128-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11252.0,
+        "original_price": 11252.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+        "original": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_mdl_gigaace",
+      "name": "Allen & Heath dLive gigaACE",
+      "description": "Allen & Heath dLive gigaACE",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+      "product_url": "https://www.halilit.com/items/2536246-allen-heath-gigaace",
+      "is_sold": true,
+      "price": 6640.0,
+      "halilit_url": "https://www.halilit.com/items/2536246-allen-heath-gigaace",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6640.0,
+        "original_price": 6640.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+        "original": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_32",
+      "name": "Allen & Heath Qu-32",
+      "description": "Allen & Heath Qu-32",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+      "product_url": "https://www.halilit.com/items/1449798-allen-heath-qu-32-digital-mixer",
+      "is_sold": true,
+      "price": 18714.0,
+      "halilit_url": "https://www.halilit.com/items/1449798-allen-heath-qu-32-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 18714.0,
+        "original_price": 18714.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_32.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_sb",
+      "name": "Allen & Heath QU-SB",
+      "description": "Allen & Heath QU-SB",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+      "product_url": "https://www.halilit.com/items/1451424-allen-heath-qu-sb-digital-mixer",
+      "is_sold": true,
+      "price": 6814.0,
+      "halilit_url": "https://www.halilit.com/items/1451424-allen-heath-qu-sb-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6814.0,
+        "original_price": 6814.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_sb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_mdl_smadi",
+      "name": "Allen & Heath superMADI",
+      "description": "Allen & Heath superMADI",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+      "product_url": "https://www.halilit.com/items/2525867-allen-heath-supermadi",
+      "is_sold": true,
+      "price": 9352.0,
+      "halilit_url": "https://www.halilit.com/items/2525867-allen-heath-supermadi",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 9352.0,
+        "original_price": 9352.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+        "original": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_16",
+      "name": "Allen & Heath Qu-16",
+      "description": "Allen & Heath Qu-16",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+      "product_url": "https://www.halilit.com/items/1446324-allen-heath-qu-16-digital-mixer",
+      "is_sold": true,
+      "price": 11229.0,
+      "halilit_url": "https://www.halilit.com/items/1446324-allen-heath-qu-16-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11229.0,
+        "original_price": 11229.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_16.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_mdl_dante64",
+      "name": "Allen & Heath dLive Dante 64×64",
+      "description": "Allen & Heath dLive Dante 64×64",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+      "product_url": "https://www.halilit.com/items/7311031-allen-heath-dlive-dante-64-64",
+      "is_sold": true,
+      "price": 7920.0,
+      "halilit_url": "https://www.halilit.com/items/7311031-allen-heath-dlive-dante-64-64",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7920.0,
+        "original_price": 7920.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+        "original": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu_24",
+      "name": "Allen & Heath Qu-24",
+      "description": "Allen & Heath Qu-24",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+      "product_url": "https://www.halilit.com/items/1449663-allen-heath-qu-24-digital-mixer",
+      "is_sold": true,
+      "price": 14971.0,
+      "halilit_url": "https://www.halilit.com/items/1449663-allen-heath-qu-24-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 14971.0,
+        "original_price": 14971.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu_24.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_cdm32",
+      "name": "Allen & Heath dLive CDM32",
+      "description": "Allen & Heath dLive CDM32",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+      "product_url": "https://www.halilit.com/items/2238486-allen-heath-dlive-cdm32",
+      "is_sold": true,
+      "price": 39022.0,
+      "halilit_url": "https://www.halilit.com/items/2238486-allen-heath-dlive-cdm32",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 39022.0,
+        "original_price": 39022.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_cdm64",
+      "name": "Allen & Heath dLive CDM64",
+      "description": "Allen & Heath dLive CDM64",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+      "product_url": "https://www.halilit.com/items/2239772-allen-heath-dlive-cdm64-",
+      "is_sold": true,
+      "price": 44067.0,
+      "halilit_url": "https://www.halilit.com/items/2239772-allen-heath-dlive-cdm64-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 44067.0,
+        "original_price": 44067.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_dm0",
+      "name": "Allen & Heath dLive DM0",
+      "description": "Allen & Heath dLive DM0",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+      "product_url": "https://www.halilit.com/items/2536104-allen-heath-dlive-dm0-mixrack",
+      "is_sold": true,
+      "price": 30326.0,
+      "halilit_url": "https://www.halilit.com/items/2536104-allen-heath-dlive-dm0-mixrack",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 30326.0,
+        "original_price": 30326.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_dlive_dm48",
+      "name": "Allen & Heath dLIVE DM48",
+      "description": "Allen & Heath dLIVE DM48",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+      "product_url": "https://www.halilit.com/items/1445823-allen-heath-dlive-dm-48-mixrack",
+      "is_sold": true,
+      "price": 58878.0,
+      "halilit_url": "https://www.halilit.com/items/1445823-allen-heath-dlive-dm-48-mixrack",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 58878.0,
+        "original_price": 58878.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+        "original": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_ab168_rk19",
+      "name": "Allen & Heath AB168-RK19",
+      "description": "Allen & Heath AB168-RK19",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/2525844-allen-heath-ab168-rk19",
+      "is_sold": true,
+      "price": 164.0,
+      "halilit_url": "https://www.halilit.com/items/2525844-allen-heath-ab168-rk19",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 164.0,
+        "original_price": 164.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_qu5_rk19",
+      "name": "Allen & Heath Rackmount for Qu-5 Compact Digital Mixer",
+      "description": "Allen & Heath Rackmount for Qu-5 Compact Digital Mixer",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+      "product_url": "https://www.halilit.com/items/8083113-allen-heath-rackmount-for-qu-5-compact-digital-mixer",
+      "is_sold": true,
+      "price": 260.0,
+      "halilit_url": "https://www.halilit.com/items/8083113-allen-heath-rackmount-for-qu-5-compact-digital-mixer",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 260.0,
+        "original_price": 260.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+        "original": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "allen_heath_40_msqmadiax",
+      "name": "Allen & Heath SQ MADI",
+      "description": "Allen & Heath SQ MADI",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+      "product_url": "https://www.halilit.com/items/5275563-allen-heath-sq-madi",
+      "is_sold": true,
+      "price": 3410.0,
+      "halilit_url": "https://www.halilit.com/items/5275563-allen-heath-sq-madi",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3410.0,
+        "original_price": 3410.0
+      },
+      "brand": "Allen Heath",
+      "logo_url": "/assets/logos/allen-heath_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+        "thumbnail": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+        "high_res": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+        "original": "/data/thumbnails/allen_heath_40_msqmadiax.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.232120",
+  "brand_slug": "allen-heath",
+  "refined_at": "2026-01-26T06:43:37.331638+00:00",
+  "brand_identity": {
+    "id": "allen-heath",
+    "name": "Allen Heath",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/allen-heath_logo.png",
+    "taxonomy_stats": {
+      "validated": 105,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "allen_heath_40_ap11332",
+          "name": "Allen & Heath AP11332 SQ5 Dust Cover",
+          "description": "Allen & Heath AP11332 SQ5 Dust Cover",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ap11332.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ap11332.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq12t_case",
+          "name": "Allen & Heath CQ-12T Soft Case",
+          "description": "Allen & Heath CQ-12T Soft Case",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq12t_case.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq12t_case.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq18t",
+          "name": "Allen & Heath CQ-18T",
+          "description": "Allen & Heath CQ-18T",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq18t.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq18t.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq18t_case",
+          "name": "Allen & Heath CQ-18T Soft Case",
+          "description": "Allen & Heath CQ-18T Soft Case",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq18t_case.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq20b_case",
+          "name": "Allen & Heath CQ-20B Soft Case",
+          "description": "Allen & Heath CQ-20B Soft Case",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq20b_case.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq20b_case.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_w41442",
+          "name": "Allen & Heath WZ4 14:4:2",
+          "description": "Allen & Heath WZ4 14:4:2",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_w41442.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_w41442.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_w41442.jpg",
+            "original": "/data/thumbnails/allen_heath_40_w41442.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ap11333",
+          "name": "Allen & Heath AP11333 SQ6 Dust Cover",
+          "description": "Allen & Heath AP11333 SQ6 Dust Cover",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ap11333.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ap11333.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ap9932",
+          "name": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+          "description": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ap9932.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ap11334",
+          "name": "Allen & Heath AP11334 SQ7 Dust Cover",
+          "description": "Allen & Heath AP11334 SQ7 Dust Cover",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ap11334.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ap11334.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ap9933",
+          "name": "Allen & Heath AP9933 QU-PAC Carry Bag",
+          "description": "Allen & Heath AP9933 QU-PAC Carry Bag",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ap9933.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ap9933.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu6",
+          "name": "Allen & Heath Qu-6",
+          "description": "Allen & Heath Qu-6",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu6.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu6.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu6.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu6.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ahm32",
+          "name": "Allen & Heath AHM-32",
+          "description": "Allen & Heath AHM-32",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ahm32.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu5",
+          "name": "Allen & Heath Qu-5",
+          "description": "Allen & Heath Qu-5",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu5.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu5.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu5.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu5.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq_rack",
+          "name": "Allen & Heath SQ-Rack",
+          "description": "Allen & Heath SQ-Rack",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq_rack.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq_rack.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq12t",
+          "name": "Allen & Heath CQ-12T",
+          "description": "Allen & Heath CQ-12T",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq12t.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq12t.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ahm64",
+          "name": "Allen & Heath AHM-64",
+          "description": "Allen & Heath AHM-64",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ahm64.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ahm64.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zedi10",
+          "name": "Allen & Heath ZEDi-10",
+          "description": "Allen & Heath ZEDi-10",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zedi10.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zedi10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_w4122",
+          "name": "Allen & Heath WZ4 12:2",
+          "description": "Allen & Heath WZ4 12:2",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_w4122.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_w4122.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_w4122.jpg",
+            "original": "/data/thumbnails/allen_heath_40_w4122.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_w41622",
+          "name": "Allen & Heath WZ4 16:2",
+          "description": "Allen & Heath WZ4 16:2",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_w41622.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_w41622.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_w41622.jpg",
+            "original": "/data/thumbnails/allen_heath_40_w41622.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ahm16",
+          "name": "Allen & Heath AHM-16",
+          "description": "Allen & Heath AHM-16",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ahm16.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ahm16.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_avantis_s",
+          "name": "Allen & Heath Avantis Solo",
+          "description": "Allen & Heath Avantis Solo",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_avantis_s.jpg",
+            "original": "/data/thumbnails/allen_heath_40_avantis_s.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu7",
+          "name": "Allen & Heath Qu-7",
+          "description": "Allen & Heath Qu-7",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu7.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu7.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu7.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu7.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq20b",
+          "name": "Allen & Heath CQ-20B",
+          "description": "Allen & Heath CQ-20B",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq20b.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq20b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dx88p",
+          "name": "Allen & Heath DX88-P",
+          "description": "Allen & Heath DX88-P",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dx88p.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dx88p.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_c1500",
+          "name": "Allen & Heath dLive C1500",
+          "description": "Allen & Heath dLive C1500",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_c1500.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_me500",
+          "name": "Allen & Heath ME-500",
+          "description": "Allen & Heath ME-500",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_me500.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_me500.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_me500.jpg",
+            "original": "/data/thumbnails/allen_heath_40_me500.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_meu",
+          "name": "Allen & Heath ME-U",
+          "description": "Allen & Heath ME-U",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_meu.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_meu.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_meu.jpg",
+            "original": "/data/thumbnails/allen_heath_40_meu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_pac",
+          "name": "Allen & Heath QU-PAC",
+          "description": "Allen & Heath QU-PAC",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_pac.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_pac.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dt22m",
+          "name": "Allen & Heath DT22",
+          "description": "Allen & Heath DT22",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dt22m.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dt22m.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_gr4",
+          "name": "Allen & Heath GR4",
+          "description": "Allen & Heath GR4",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_gr4.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_gr4.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_gr4.jpg",
+            "original": "/data/thumbnails/allen_heath_40_gr4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_me1",
+          "name": "Allen & Heath ME-1",
+          "description": "Allen & Heath ME-1",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_me1.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_me1.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_me1.jpg",
+            "original": "/data/thumbnails/allen_heath_40_me1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dt20",
+          "name": "Allen & Heath DT20",
+          "description": "Allen & Heath DT20",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dt20.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dt20.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dt20.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dt20.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dt02",
+          "name": "Allen & Heath DT02",
+          "description": "Allen & Heath DT02",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dt02.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dt02.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dt02.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dt02.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ar84",
+          "name": "Allen & Heath AR84",
+          "description": "Allen & Heath AR84",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ar84.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ar84.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ar84.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ar84.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone922",
+          "name": "Allen & Heath Xone:92 MK2",
+          "description": "Allen & Heath Xone:92 MK2",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone922.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone922.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone922.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone922.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ip4_wh",
+          "name": "Allen & Heath IP4 (White)",
+          "description": "Allen & Heath IP4 (White)",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ip4_wh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ip1_wh",
+          "name": "Allen & Heath IP1 Wallplate Controller",
+          "description": "Allen & Heath IP1 Wallplate Controller",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ip1_wh.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ip1_wh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cc7",
+          "name": "Allen & Heath CC-7",
+          "description": "Allen & Heath CC-7",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cc7.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cc7.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cc7.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cc7.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_c3500",
+          "name": "Allen & Heath dLive C3500",
+          "description": "Allen & Heath dLive C3500",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_c3500.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone92a",
+          "name": "Allen & Heath Xone:92 Limited Edition",
+          "description": "Allen & Heath Xone:92 Limited Edition",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone92a.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone92a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ip4",
+          "name": "Allen & Heath IP4 (Black)",
+          "description": "Allen & Heath IP4 (Black)",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ip4.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ip4.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ip4.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ip4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cc10",
+          "name": "Allen & Heath CC-10",
+          "description": "Allen & Heath CC-10",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cc10.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cc10.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cc10.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cc10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_avantis",
+          "name": "Allen & Heath Avantis",
+          "description": "Allen & Heath Avantis",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_avantis.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_avantis.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_avantis.jpg",
+            "original": "/data/thumbnails/allen_heath_40_avantis.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed10_rk",
+          "name": "Allen & Heath ZED 10-RK19",
+          "description": "Allen & Heath ZED 10-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed10_rk.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed10_rk.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_sb_rk19",
+          "name": "Allen & Heath QU-SB-RK19",
+          "description": "Allen & Heath QU-SB-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_sb_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dx_hub",
+          "name": "Allen & Heath DX Hub",
+          "description": "Allen & Heath DX Hub",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dx_hub.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dx_hub.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq_bracket",
+          "name": "Allen & Heath SQ Tablet Bracket",
+          "description": "Allen & Heath SQ Tablet Bracket",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq_bracket.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq_bracket.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed6014fx_rk",
+          "name": "Allen & Heath ZED 6014FX-RK19",
+          "description": "Allen & Heath ZED 6014FX-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed6014fx_rk.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq18t_rk19",
+          "name": "Allen & Heath CQ-18T Rack Ears",
+          "description": "Allen & Heath CQ-18T Rack Ears",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq18t_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed6010fx_rk",
+          "name": "Allen & Heath ZED 6010FX-RK19",
+          "description": "Allen & Heath ZED 6010FX-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed6010fx_rk.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq12t_rk19",
+          "name": "Allen & Heath CQ-12T Rack Ears",
+          "description": "Allen & Heath CQ-12T Rack Ears",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq12t_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ab168",
+          "name": "Allen & Heath AB168",
+          "description": "Allen & Heath AB168",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ab168.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ab168.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ab168.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ab168.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_cq20b_rk19",
+          "name": "Allen & Heath CQ-20B Rack Ears",
+          "description": "Allen & Heath CQ-20B Rack Ears",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_cq20b_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_bracket",
+          "name": "Allen & Heath QU Tablet Bracket",
+          "description": "Allen & Heath QU Tablet Bracket",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_bracket.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_bracket.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed14_rk",
+          "name": "Allen & Heath ZED 14-RK19",
+          "description": "Allen & Heath ZED 14-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed14_rk.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed14_rk.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq5_rk19",
+          "name": "Allen & Heath SQ-5-RK19",
+          "description": "Allen & Heath SQ-5-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq5_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ar2412",
+          "name": "Allen & Heath AR2412",
+          "description": "Allen & Heath AR2412",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ar2412.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ar2412.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu16_rk19",
+          "name": "Allen & Heath QU-16-RK19",
+          "description": "Allen & Heath QU-16-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone92",
+          "name": "Allen & Heath XONE:92",
+          "description": "Allen & Heath XONE:92",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone92.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone92.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone92.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone92.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zedi8",
+          "name": "Allen & Heath ZEDi-8",
+          "description": "Allen & Heath ZEDi-8",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zedi8.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zedi8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone43",
+          "name": "Allen & Heath XONE:43",
+          "description": "Allen & Heath XONE:43",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone43.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone43.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone43.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone43.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone96",
+          "name": "Allen & Heath XONE:96",
+          "description": "Allen & Heath XONE:96",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone96.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone96.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone96.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone96.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zedi10fx",
+          "name": "Allen & Heath ZEDi-10FX",
+          "description": "Allen & Heath ZEDi-10FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zedi10fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed6014fx",
+          "name": "Allen & Heath ZED60-14FX",
+          "description": "Allen & Heath ZED60-14FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed6014fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed6014fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed12fx",
+          "name": "Allen & Heath ZED-12FX",
+          "description": "Allen & Heath ZED-12FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed12fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed12fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone43_c",
+          "name": "Allen & Heath XONE:43C",
+          "description": "Allen & Heath XONE:43C",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone43_c.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed16fx",
+          "name": "Allen & Heath ZED-16FX",
+          "description": "Allen & Heath ZED-16FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed16fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed16fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed10fx",
+          "name": "Allen & Heath ZED-10FX",
+          "description": "Allen & Heath ZED-10FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed10fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed10fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed22fx",
+          "name": "Allen & Heath ZED-22FX",
+          "description": "Allen & Heath ZED-22FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed22fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed6010fx",
+          "name": "Allen & Heath ZED60-10FX",
+          "description": "Allen & Heath ZED60-10FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed6010fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_xone_px5",
+          "name": "Allen & Heath XONE:PX5",
+          "description": "Allen & Heath XONE:PX5",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_xone_px5.jpg",
+            "original": "/data/thumbnails/allen_heath_40_xone_px5.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_zed6fx",
+          "name": "Allen & Heath ZED-6FX",
+          "description": "Allen & Heath ZED-6FX",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_zed6fx.jpg",
+            "original": "/data/thumbnails/allen_heath_40_zed6fx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dx168",
+          "name": "Allen & Heath DX168",
+          "description": "Allen & Heath DX168",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dx168.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dx168.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dx168.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dx168.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dt168",
+          "name": "Allen & Heath DT168",
+          "description": "Allen & Heath DT168",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dt168.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dt168.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dt168.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dt168.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq_slink",
+          "name": "Allen & Heath SQ SLink",
+          "description": "Allen & Heath SQ SLink",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq_slink.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq_slink.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq_waves3",
+          "name": "Allen & Heath SQ WAVES 3",
+          "description": "Allen & Heath SQ WAVES 3",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq_waves3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_mdlultrafxax",
+          "name": "Allen & Heath dLive RackUltra FX Card",
+          "description": "Allen & Heath dLive RackUltra FX Card",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+            "original": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_gr3",
+          "name": "Allen & Heath GR3",
+          "description": "Allen & Heath GR3",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_gr3.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_gr3.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_gr3.jpg",
+            "original": "/data/thumbnails/allen_heath_40_gr3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq5",
+          "name": "Allen & Heath SQ-5",
+          "description": "Allen & Heath SQ-5",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq5.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq5.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq5.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq5.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq6",
+          "name": "Allen & Heath SQ-6",
+          "description": "Allen & Heath SQ-6",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq6.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq6.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq6.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq6.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_sq7",
+          "name": "Allen & Heath SQ-7",
+          "description": "Allen & Heath SQ-7",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_sq7.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_sq7.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_sq7.jpg",
+            "original": "/data/thumbnails/allen_heath_40_sq7.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_s5000_flc",
+          "name": "Allen & Heath dLive Flightcases",
+          "description": "Allen & Heath dLive Flightcases",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_s5000_flc.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_gx4816",
+          "name": "Allen & Heath GX4816",
+          "description": "Allen & Heath GX4816",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_gx4816.jpg",
+            "original": "/data/thumbnails/allen_heath_40_gx4816.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dx012",
+          "name": "Allen & Heath DX012",
+          "description": "Allen & Heath DX012",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dx012.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dx012.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dx012.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dx012.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_c2500",
+          "name": "Allen & Heath dLive C2500",
+          "description": "Allen & Heath dLive C2500",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_c2500.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_s5000",
+          "name": "Allen & Heath dLIVE S5000",
+          "description": "Allen & Heath dLIVE S5000",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_s5000.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_s7000",
+          "name": "Allen & Heath dLIVE S7000",
+          "description": "Allen & Heath dLIVE S7000",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_s7000.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_s3000",
+          "name": "Allen & Heath dLive S3000",
+          "description": "Allen & Heath dLive S3000",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_s3000.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ip8",
+          "name": "Allen & Heath IP8",
+          "description": "Allen & Heath IP8",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ip8.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ip8.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ip8.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ip8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ip6",
+          "name": "Allen & Heath IP6",
+          "description": "Allen & Heath IP6",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ip6.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ip6.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ip6.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ip6.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_mdl_dante128",
+          "name": "Allen & Heath dLive Dante 128×128",
+          "description": "Allen & Heath dLive Dante 128×128",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+            "original": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_mdl_gigaace",
+          "name": "Allen & Heath dLive gigaACE",
+          "description": "Allen & Heath dLive gigaACE",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+            "original": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_32",
+          "name": "Allen & Heath Qu-32",
+          "description": "Allen & Heath Qu-32",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_32.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_32.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_sb",
+          "name": "Allen & Heath QU-SB",
+          "description": "Allen & Heath QU-SB",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_sb.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_sb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_mdl_smadi",
+          "name": "Allen & Heath superMADI",
+          "description": "Allen & Heath superMADI",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg",
+            "original": "/data/thumbnails/allen_heath_40_mdl_smadi.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_16",
+          "name": "Allen & Heath Qu-16",
+          "description": "Allen & Heath Qu-16",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_16.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_16.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_mdl_dante64",
+          "name": "Allen & Heath dLive Dante 64×64",
+          "description": "Allen & Heath dLive Dante 64×64",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg",
+            "original": "/data/thumbnails/allen_heath_40_mdl_dante64.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu_24",
+          "name": "Allen & Heath Qu-24",
+          "description": "Allen & Heath Qu-24",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu_24.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu_24.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_cdm32",
+          "name": "Allen & Heath dLive CDM32",
+          "description": "Allen & Heath dLive CDM32",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_cdm32.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_cdm64",
+          "name": "Allen & Heath dLive CDM64",
+          "description": "Allen & Heath dLive CDM64",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_cdm64.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_dm0",
+          "name": "Allen & Heath dLive DM0",
+          "description": "Allen & Heath dLive DM0",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_dm0.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_dlive_dm48",
+          "name": "Allen & Heath dLIVE DM48",
+          "description": "Allen & Heath dLIVE DM48",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg",
+            "original": "/data/thumbnails/allen_heath_40_dlive_dm48.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_ab168_rk19",
+          "name": "Allen & Heath AB168-RK19",
+          "description": "Allen & Heath AB168-RK19",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_ab168_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_qu5_rk19",
+          "name": "Allen & Heath Rackmount for Qu-5 Compact Digital Mixer",
+          "description": "Allen & Heath Rackmount for Qu-5 Compact Digital Mixer",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg",
+            "original": "/data/thumbnails/allen_heath_40_qu5_rk19.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "allen_heath_40_msqmadiax",
+          "name": "Allen & Heath SQ MADI",
+          "description": "Allen & Heath SQ MADI",
+          "images": {
+            "main": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+            "thumbnail": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+            "high_res": "/data/thumbnails/allen_heath_40_msqmadiax.jpg",
+            "original": "/data/thumbnails/allen_heath_40_msqmadiax.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1835 @@
+{
+  "brand_name": "Warm Audio",
+  "products": [
+    {
+      "id": "warm_audio_80_wamba",
+      "name": "Warm Audio WA-MBA",
+      "description": "Warm Audio WA-MBA",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wamba.jpg",
+      "product_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
+      "is_sold": true,
+      "price": 668.0,
+      "halilit_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 668.0,
+        "original_price": 668.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wamba.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wamba.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wamba.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wamba.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa76_d2",
+      "name": "Warm Audio WA76-D2",
+      "description": "Warm Audio WA76-D2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+      "product_url": "https://www.halilit.com/items/7670561-warm-audio-wa76-d2-compressor",
+      "is_sold": true,
+      "price": 5640.0,
+      "halilit_url": "https://www.halilit.com/items/7670561-warm-audio-wa76-d2-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5640.0,
+        "original_price": 5640.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa76_d2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa1b",
+      "name": "Warm Audio WA-1B",
+      "description": "Warm Audio WA-1B",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+      "product_url": "https://www.halilit.com/items/6312276-warm-audio-wa-1b-tube-optical-compressor",
+      "is_sold": true,
+      "price": 5494.0,
+      "halilit_url": "https://www.halilit.com/items/6312276-warm-audio-wa-1b-tube-optical-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5494.0,
+        "original_price": 5494.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa1b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa76_a2",
+      "name": "Warm Audio WA76-A2",
+      "description": "Warm Audio WA76-A2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+      "product_url": "https://www.halilit.com/items/7665551-warm-audio-wa76-a2-compressor",
+      "is_sold": true,
+      "price": 5640.0,
+      "halilit_url": "https://www.halilit.com/items/7665551-warm-audio-wa76-a2-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5640.0,
+        "original_price": 5640.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa76_a2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wadia",
+      "name": "Warm Audio WA-DI-A Active Direct Box",
+      "description": "Warm Audio WA-DI-A Active Direct Box",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wadia.jpg",
+      "product_url": "https://www.halilit.com/items/7205544-warm-audio-wa-di-a-active-direct-box",
+      "is_sold": true,
+      "price": 877.0,
+      "halilit_url": "https://www.halilit.com/items/7205544-warm-audio-wa-di-a-active-direct-box",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 877.0,
+        "original_price": 877.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wadia.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wadia.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wadia.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wadia.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa76_a",
+      "name": "Warm Audio WA76-A",
+      "description": "Warm Audio WA76-A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+      "product_url": "https://www.halilit.com/items/7665341-warm-audio-wa76-a-compressor",
+      "is_sold": true,
+      "price": 3502.0,
+      "halilit_url": "https://www.halilit.com/items/7665341-warm-audio-wa76-a-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3502.0,
+        "original_price": 3502.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa76_a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa76_d",
+      "name": "Warm Audio WA76-D",
+      "description": "Warm Audio WA76-D",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+      "product_url": "https://www.halilit.com/items/7669979-warm-audio-wa76-d-compressor",
+      "is_sold": true,
+      "price": 3502.0,
+      "halilit_url": "https://www.halilit.com/items/7669979-warm-audio-wa76-d-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3502.0,
+        "original_price": 3502.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa76_d.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wadip",
+      "name": "Warm Audio WA-DI-P Passive Direct Box",
+      "description": "Warm Audio WA-DI-P Passive Direct Box",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wadip.jpg",
+      "product_url": "https://www.halilit.com/items/7205864-warm-audio-wa-di-p-passive-direct-box",
+      "is_sold": true,
+      "price": 664.0,
+      "halilit_url": "https://www.halilit.com/items/7205864-warm-audio-wa-di-p-passive-direct-box",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 664.0,
+        "original_price": 664.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wadip.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wadip.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wadip.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wadip.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_warb",
+      "name": "Warm Audio RingerBringer Ring Modulator",
+      "description": "Warm Audio RingerBringer Ring Modulator",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_warb.jpg",
+      "product_url": "https://www.halilit.com/items/6893845-warm-audio-ringerbringer-ring-modulator",
+      "is_sold": true,
+      "price": 974.0,
+      "halilit_url": "https://www.halilit.com/items/6893845-warm-audio-ringerbringer-ring-modulator",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 974.0,
+        "original_price": 974.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_warb.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_warb.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_warb.jpg",
+        "original": "/data/thumbnails/warm_audio_80_warb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wacv",
+      "name": "Warm Audio Centavo",
+      "description": "Warm Audio Centavo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wacv.jpg",
+      "product_url": "https://www.halilit.com/items/6043976-warm-audio-centavo-professional-overdrive-pedal",
+      "is_sold": true,
+      "price": 783.0,
+      "halilit_url": "https://www.halilit.com/items/6043976-warm-audio-centavo-professional-overdrive-pedal",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 783.0,
+        "original_price": 783.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wacv.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wacv.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wacv.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wacv.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa73eq",
+      "name": "Warm Audio WA73-EQ",
+      "description": "Warm Audio WA73-EQ",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+      "product_url": "https://www.halilit.com/items/4303757-warm-audio-wa73-eq",
+      "is_sold": true,
+      "price": 3756.0,
+      "halilit_url": "https://www.halilit.com/items/4303757-warm-audio-wa73-eq",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3756.0,
+        "original_price": 3756.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa73eq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wampx",
+      "name": "Warm Audio WA-MPX",
+      "description": "Warm Audio WA-MPX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wampx.jpg",
+      "product_url": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
+      "is_sold": true,
+      "price": 3587.0,
+      "halilit_url": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3587.0,
+        "original_price": 3587.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wampx.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wampx.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wampx.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wampx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wawl",
+      "name": "Warm Audio Warm Lifter",
+      "description": "Warm Audio Warm Lifter",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wawl.jpg",
+      "product_url": "https://www.halilit.com/items/6893491-warm-audio-warm-lifter",
+      "is_sold": true,
+      "price": 664.0,
+      "halilit_url": "https://www.halilit.com/items/6893491-warm-audio-warm-lifter",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 664.0,
+        "original_price": 664.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wawl.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wawl.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wawl.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wawl.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa12mk2_bk",
+      "name": "Warm Audio WA12 MKII - Black",
+      "description": "Warm Audio WA12 MKII - Black",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+      "product_url": "https://www.halilit.com/items/4276404-warm-audio-wa12-mkii-",
+      "is_sold": true,
+      "price": 2280.0,
+      "halilit_url": "https://www.halilit.com/items/4276404-warm-audio-wa12-mkii-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2280.0,
+        "original_price": 2280.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa2mpx",
+      "name": "Warm Audio WA-2MPX",
+      "description": "Warm Audio WA-2MPX",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+      "product_url": "https://www.halilit.com/items/6043838-warm-audio-wa-2mpx-",
+      "is_sold": true,
+      "price": 6703.0,
+      "halilit_url": "https://www.halilit.com/items/6043838-warm-audio-wa-2mpx-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6703.0,
+        "original_price": 6703.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa2mpx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa12mk2_or",
+      "name": "Warm Audio WA12 MKII - Orange",
+      "description": "Warm Audio WA12 MKII - Orange",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+      "product_url": "https://www.halilit.com/items/4276431-warm-audio-wa12-mkii-",
+      "is_sold": true,
+      "price": 2146.0,
+      "halilit_url": "https://www.halilit.com/items/4276431-warm-audio-wa12-mkii-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2146.0,
+        "original_price": 2146.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa73",
+      "name": "Warm Audio WA-73",
+      "description": "Warm Audio WA-73",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa73.jpg",
+      "product_url": "https://www.halilit.com/items/3989208-warm-audio-wa-73-preamp",
+      "is_sold": true,
+      "price": 3040.0,
+      "halilit_url": "https://www.halilit.com/items/3989208-warm-audio-wa-73-preamp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3040.0,
+        "original_price": 3040.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa73.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa73.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa73.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa73.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa273",
+      "name": "Warm Audio WA273",
+      "description": "Warm Audio WA273",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa273.jpg",
+      "product_url": "https://www.halilit.com/items/3989243-warm-audio-wa-273-preamp",
+      "is_sold": true,
+      "price": 5186.0,
+      "halilit_url": "https://www.halilit.com/items/3989243-warm-audio-wa-273-preamp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5186.0,
+        "original_price": 5186.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa273.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa273.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa273.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa273.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_eqpwa",
+      "name": "Warm Audio EQP-WA",
+      "description": "Warm Audio EQP-WA",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+      "product_url": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
+      "is_sold": true,
+      "price": 3532.0,
+      "halilit_url": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3532.0,
+        "original_price": 3532.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+        "original": "/data/thumbnails/warm_audio_80_eqpwa.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa273_eq",
+      "name": "Warm Audio WA273-EQ",
+      "description": "Warm Audio WA273-EQ",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+      "product_url": "https://www.halilit.com/items/4276537-warm-audio-wa273-eq",
+      "is_sold": true,
+      "price": 7798.0,
+      "halilit_url": "https://www.halilit.com/items/4276537-warm-audio-wa273-eq",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7798.0,
+        "original_price": 7798.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa273_eq.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_db25trsm10",
+      "name": "Warm Audio DB25TRS",
+      "description": "Warm Audio DB25TRS",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+      "product_url": "https://www.halilit.com/items/8759397-warm-audio-db25trs",
+      "is_sold": true,
+      "price": 700.0,
+      "halilit_url": "https://www.halilit.com/items/8759397-warm-audio-db25trs",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 700.0,
+        "original_price": 700.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+        "original": "/data/thumbnails/warm_audio_80_db25trsm10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_db25xlrf10",
+      "name": "Warm Audio DB25XLR-Female",
+      "description": "Warm Audio DB25XLR-Female",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+      "product_url": "https://www.halilit.com/items/8758641-warm-audio-db25xlrf",
+      "is_sold": true,
+      "price": 686.0,
+      "halilit_url": "https://www.halilit.com/items/8758641-warm-audio-db25xlrf",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 686.0,
+        "original_price": 686.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+        "original": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_tb12_b",
+      "name": "Warm Audio TB12 Tone Beast",
+      "description": "Warm Audio TB12 Tone Beast",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+      "product_url": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
+      "is_sold": true,
+      "price": 3040.0,
+      "halilit_url": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3040.0,
+        "original_price": 3040.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+        "original": "/data/thumbnails/warm_audio_80_tb12_b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_db25xlrm10",
+      "name": "Warm Audio DB25XLR-Male",
+      "description": "Warm Audio DB25XLR-Male",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+      "product_url": "https://www.halilit.com/items/8758656-warm-audio-db25xlrm",
+      "is_sold": true,
+      "price": 644.0,
+      "halilit_url": "https://www.halilit.com/items/8758656-warm-audio-db25xlrm",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 644.0,
+        "original_price": 644.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+        "original": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_xlrm_trs",
+      "name": "Warm Audio Prem-XLRm-TRSm-6",
+      "description": "Warm Audio Prem-XLRm-TRSm-6",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+      "product_url": "https://www.halilit.com/items/4026009-warm-audio-xlrm-trs-cable",
+      "is_sold": true,
+      "price": 121.0,
+      "halilit_url": "https://www.halilit.com/items/4026009-warm-audio-xlrm-trs-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 121.0,
+        "original_price": 121.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+        "original": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlrmtrsm3",
+      "name": "Warm Audio Prem-XLRm-TRSm-3",
+      "description": "Warm Audio Prem-XLRm-TRSm-3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+      "product_url": "https://www.halilit.com/items/5247174-warm-audio-prem-xlrm-trsm-3",
+      "is_sold": true,
+      "price": 62.0,
+      "halilit_url": "https://www.halilit.com/items/5247174-warm-audio-prem-xlrm-trsm-3",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 62.0,
+        "original_price": 62.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_buscomp",
+      "name": "Warm Audio BUS-COMP",
+      "description": "Warm Audio BUS-COMP",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+      "product_url": "https://www.halilit.com/items/3992353-warm-audio-bus-comp-",
+      "is_sold": true,
+      "price": 3622.0,
+      "halilit_url": "https://www.halilit.com/items/3992353-warm-audio-bus-comp-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3622.0,
+        "original_price": 3622.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+        "original": "/data/thumbnails/warm_audio_80_buscomp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa76",
+      "name": "Warm Audio WA76",
+      "description": "Warm Audio WA76",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa76.jpg",
+      "product_url": "https://www.halilit.com/items/3989273-warm-audio-wa-76-compressor",
+      "is_sold": true,
+      "price": 3264.0,
+      "halilit_url": "https://www.halilit.com/items/3989273-warm-audio-wa-76-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3264.0,
+        "original_price": 3264.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa76.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa76.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa76.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa76.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_wa412",
+      "name": "Warm Audio WA-412",
+      "description": "Warm Audio WA-412",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_wa412.jpg",
+      "product_url": "https://www.halilit.com/items/3989141-warm-audio-wa-412-4-channel-microphone-preamp",
+      "is_sold": true,
+      "price": 6349.0,
+      "halilit_url": "https://www.halilit.com/items/3989141-warm-audio-wa-412-4-channel-microphone-preamp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6349.0,
+        "original_price": 6349.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_wa412.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_wa412.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_wa412.jpg",
+        "original": "/data/thumbnails/warm_audio_80_wa412.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr20",
+      "name": "Warm Audio PRO XLR 20",
+      "description": "Warm Audio PRO XLR 20",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+      "product_url": "https://www.halilit.com/items/7320093-warm-audio-pro-xlr-20-cable",
+      "is_sold": true,
+      "price": 104.0,
+      "halilit_url": "https://www.halilit.com/items/7320093-warm-audio-pro-xlr-20-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 104.0,
+        "original_price": 104.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr20.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr100",
+      "name": "Warm Audio PRO XLR 100",
+      "description": "Warm Audio PRO XLR 100",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+      "product_url": "https://www.halilit.com/items/8071976-warm-audio-pro-xlr-100-cable",
+      "is_sold": true,
+      "price": 424.0,
+      "halilit_url": "https://www.halilit.com/items/8071976-warm-audio-pro-xlr-100-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 424.0,
+        "original_price": 424.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr100.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr15",
+      "name": "Warm Audio PRO XLR 15",
+      "description": "Warm Audio PRO XLR 15",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+      "product_url": "https://www.halilit.com/items/4936233-warm-audio-pro-xlr-15-microphone-cable",
+      "is_sold": true,
+      "price": 96.0,
+      "halilit_url": "https://www.halilit.com/items/4936233-warm-audio-pro-xlr-15-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 96.0,
+        "original_price": 96.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr15.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr50",
+      "name": "Warm Audio PRO XLR 50",
+      "description": "Warm Audio PRO XLR 50",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+      "product_url": "https://www.halilit.com/items/7320123-warm-audio-pro-xlr-50-cable",
+      "is_sold": true,
+      "price": 199.0,
+      "halilit_url": "https://www.halilit.com/items/7320123-warm-audio-pro-xlr-50-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 199.0,
+        "original_price": 199.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr50.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_protrs3",
+      "name": "Warm Audio Pro TRS 10",
+      "description": "Warm Audio Pro TRS 10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+      "product_url": "https://www.halilit.com/items/7320135-warm-audio-pro-trs-10-microphone-cable",
+      "is_sold": true,
+      "price": 67.0,
+      "halilit_url": "https://www.halilit.com/items/7320135-warm-audio-pro-trs-10-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 67.0,
+        "original_price": 67.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+        "original": "/data/thumbnails/warm_audio_80_protrs3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr10",
+      "name": "Warm Audio PRO XLR 10",
+      "description": "Warm Audio PRO XLR 10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+      "product_url": "https://www.halilit.com/items/4936017-warm-audio-proxlr10-microphone-cable",
+      "is_sold": true,
+      "price": 80.0,
+      "halilit_url": "https://www.halilit.com/items/4936017-warm-audio-proxlr10-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 80.0,
+        "original_price": 80.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_protrs20",
+      "name": "Warm Audio Pro TRS 20",
+      "description": "Warm Audio Pro TRS 20",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+      "product_url": "https://www.halilit.com/items/7320150-warm-audio-pro-trs-120-microphone-cable",
+      "is_sold": true,
+      "price": 124.0,
+      "halilit_url": "https://www.halilit.com/items/7320150-warm-audio-pro-trs-120-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 124.0,
+        "original_price": 124.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+        "original": "/data/thumbnails/warm_audio_80_protrs20.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_xlr10",
+      "name": "Warm Audio Prem-XLR-10",
+      "description": "Warm Audio Prem-XLR-10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+      "product_url": "https://www.halilit.com/items/4025967-warm-audio-prem-xlr-10-cable",
+      "is_sold": true,
+      "price": 134.0,
+      "halilit_url": "https://www.halilit.com/items/4025967-warm-audio-prem-xlr-10-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 134.0,
+        "original_price": 134.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+        "original": "/data/thumbnails/warm_audio_80_xlr10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_xlr15",
+      "name": "Warm Audio Prem-XLR-15",
+      "description": "Warm Audio Prem-XLR-15",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+      "product_url": "https://www.halilit.com/items/4026000-warm-audio-prem-xlr-15-cable",
+      "is_sold": true,
+      "price": 150.0,
+      "halilit_url": "https://www.halilit.com/items/4026000-warm-audio-prem-xlr-15-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 150.0,
+        "original_price": 150.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+        "original": "/data/thumbnails/warm_audio_80_xlr15.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_xlr25",
+      "name": "Warm Audio Prem-XLR-25",
+      "description": "Warm Audio Prem-XLR-25",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+      "product_url": "https://www.halilit.com/items/4026003-warm-audio-prem-xlr-25-cable",
+      "is_sold": true,
+      "price": 194.0,
+      "halilit_url": "https://www.halilit.com/items/4026003-warm-audio-prem-xlr-25-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 194.0,
+        "original_price": 194.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+        "original": "/data/thumbnails/warm_audio_80_xlr25.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlrmtrsm6",
+      "name": "Warm Audio PRO XLR TRSM 6",
+      "description": "Warm Audio PRO XLR TRSM 6",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+      "product_url": "https://www.halilit.com/items/4936601-warm-audio-pro-xlr-trsm-6-microphone-cable",
+      "is_sold": true,
+      "price": 67.0,
+      "halilit_url": "https://www.halilit.com/items/4936601-warm-audio-pro-xlr-trsm-6-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 67.0,
+        "original_price": 67.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr3",
+      "name": "Warm Audio Pro XLR 3",
+      "description": "Warm Audio Pro XLR 3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+      "product_url": "https://www.halilit.com/items/5247151-warm-audio-pro-xlr-3-microphone-cable",
+      "is_sold": true,
+      "price": 54.0,
+      "halilit_url": "https://www.halilit.com/items/5247151-warm-audio-pro-xlr-3-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 54.0,
+        "original_price": 54.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlr25",
+      "name": "Warm Audio Pro XLR 25",
+      "description": "Warm Audio Pro XLR 25",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+      "product_url": "https://www.halilit.com/items/5247153-warm-audio-pro-xlr-25-microphone-cable",
+      "is_sold": true,
+      "price": 121.0,
+      "halilit_url": "https://www.halilit.com/items/5247153-warm-audio-pro-xlr-25-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 121.0,
+        "original_price": 121.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlr25.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_proxlrftrsm3",
+      "name": "Warm Audio PRO XLRF TRSM 3",
+      "description": "Warm Audio PRO XLRF TRSM 3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+      "product_url": "https://www.halilit.com/items/4936411-warm-audio-pro-xlrf-trsm-3-microphone-cable",
+      "is_sold": true,
+      "price": 62.0,
+      "halilit_url": "https://www.halilit.com/items/4936411-warm-audio-pro-xlrf-trsm-3-microphone-cable",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 62.0,
+        "original_price": 62.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+        "original": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "warm_audio_80_prots10",
+      "name": "Warm Audio Pro-TS-10",
+      "description": "Warm Audio Pro-TS-10",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/warm_audio_80_prots10.jpg",
+      "product_url": "https://www.halilit.com/items/4276707-warm-audio-pro-ts-10",
+      "is_sold": true,
+      "price": 80.0,
+      "halilit_url": "https://www.halilit.com/items/4276707-warm-audio-pro-ts-10",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 80.0,
+        "original_price": 80.0
+      },
+      "brand": "Warm Audio",
+      "logo_url": "/assets/logos/warm-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/warm_audio_80_prots10.jpg",
+        "thumbnail": "/data/thumbnails/warm_audio_80_prots10.jpg",
+        "high_res": "/data/thumbnails/warm_audio_80_prots10.jpg",
+        "original": "/data/thumbnails/warm_audio_80_prots10.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.350675",
+  "brand_slug": "warm-audio",
+  "refined_at": "2026-01-26T06:43:38.479718+00:00",
+  "brand_identity": {
+    "id": "warm-audio",
+    "name": "Warm Audio",
+    "brand_colors": {
+      "primary": "#ea580c",
+      "secondary": "#431407",
+      "accent": "#fb923c",
+      "background": "#2a150d",
+      "text": "#ffedd5"
+    },
+    "logo_url": "/assets/logos/warm-audio_logo.svg",
+    "taxonomy_stats": {
+      "validated": 44,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "warm_audio_80_wamba",
+          "name": "Warm Audio WA-MBA",
+          "description": "Warm Audio WA-MBA",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wamba.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wamba.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wamba.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wamba.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa76_d2",
+          "name": "Warm Audio WA76-D2",
+          "description": "Warm Audio WA76-D2",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa76_d2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa1b",
+          "name": "Warm Audio WA-1B",
+          "description": "Warm Audio WA-1B",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa1b.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa1b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa76_a2",
+          "name": "Warm Audio WA76-A2",
+          "description": "Warm Audio WA76-A2",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa76_a2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wadia",
+          "name": "Warm Audio WA-DI-A Active Direct Box",
+          "description": "Warm Audio WA-DI-A Active Direct Box",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wadia.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wadia.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wadia.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wadia.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa76_a",
+          "name": "Warm Audio WA76-A",
+          "description": "Warm Audio WA76-A",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa76_a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa76_d",
+          "name": "Warm Audio WA76-D",
+          "description": "Warm Audio WA76-D",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa76_d.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wadip",
+          "name": "Warm Audio WA-DI-P Passive Direct Box",
+          "description": "Warm Audio WA-DI-P Passive Direct Box",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wadip.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wadip.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wadip.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wadip.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_warb",
+          "name": "Warm Audio RingerBringer Ring Modulator",
+          "description": "Warm Audio RingerBringer Ring Modulator",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_warb.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_warb.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_warb.jpg",
+            "original": "/data/thumbnails/warm_audio_80_warb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wacv",
+          "name": "Warm Audio Centavo",
+          "description": "Warm Audio Centavo",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wacv.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wacv.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wacv.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wacv.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa73eq",
+          "name": "Warm Audio WA73-EQ",
+          "description": "Warm Audio WA73-EQ",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa73eq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wampx",
+          "name": "Warm Audio WA-MPX",
+          "description": "Warm Audio WA-MPX",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wampx.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wampx.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wampx.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wampx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wawl",
+          "name": "Warm Audio Warm Lifter",
+          "description": "Warm Audio Warm Lifter",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wawl.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wawl.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wawl.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wawl.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa12mk2_bk",
+          "name": "Warm Audio WA12 MKII - Black",
+          "description": "Warm Audio WA12 MKII - Black",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa2mpx",
+          "name": "Warm Audio WA-2MPX",
+          "description": "Warm Audio WA-2MPX",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa2mpx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa12mk2_or",
+          "name": "Warm Audio WA12 MKII - Orange",
+          "description": "Warm Audio WA12 MKII - Orange",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa73",
+          "name": "Warm Audio WA-73",
+          "description": "Warm Audio WA-73",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa73.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa73.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa73.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa73.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa273",
+          "name": "Warm Audio WA273",
+          "description": "Warm Audio WA273",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa273.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa273.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa273.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa273.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_eqpwa",
+          "name": "Warm Audio EQP-WA",
+          "description": "Warm Audio EQP-WA",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+            "original": "/data/thumbnails/warm_audio_80_eqpwa.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa273_eq",
+          "name": "Warm Audio WA273-EQ",
+          "description": "Warm Audio WA273-EQ",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa273_eq.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_db25trsm10",
+          "name": "Warm Audio DB25TRS",
+          "description": "Warm Audio DB25TRS",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
+            "original": "/data/thumbnails/warm_audio_80_db25trsm10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_db25xlrf10",
+          "name": "Warm Audio DB25XLR-Female",
+          "description": "Warm Audio DB25XLR-Female",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
+            "original": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_tb12_b",
+          "name": "Warm Audio TB12 Tone Beast",
+          "description": "Warm Audio TB12 Tone Beast",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+            "original": "/data/thumbnails/warm_audio_80_tb12_b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_db25xlrm10",
+          "name": "Warm Audio DB25XLR-Male",
+          "description": "Warm Audio DB25XLR-Male",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
+            "original": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_xlrm_trs",
+          "name": "Warm Audio Prem-XLRm-TRSm-6",
+          "description": "Warm Audio Prem-XLRm-TRSm-6",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
+            "original": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlrmtrsm3",
+          "name": "Warm Audio Prem-XLRm-TRSm-3",
+          "description": "Warm Audio Prem-XLRm-TRSm-3",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_buscomp",
+          "name": "Warm Audio BUS-COMP",
+          "description": "Warm Audio BUS-COMP",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_buscomp.jpg",
+            "original": "/data/thumbnails/warm_audio_80_buscomp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa76",
+          "name": "Warm Audio WA76",
+          "description": "Warm Audio WA76",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa76.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa76.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa76.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa76.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_wa412",
+          "name": "Warm Audio WA-412",
+          "description": "Warm Audio WA-412",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_wa412.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_wa412.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_wa412.jpg",
+            "original": "/data/thumbnails/warm_audio_80_wa412.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr20",
+          "name": "Warm Audio PRO XLR 20",
+          "description": "Warm Audio PRO XLR 20",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr20.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr100",
+          "name": "Warm Audio PRO XLR 100",
+          "description": "Warm Audio PRO XLR 100",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr100.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr15",
+          "name": "Warm Audio PRO XLR 15",
+          "description": "Warm Audio PRO XLR 15",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr15.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr50",
+          "name": "Warm Audio PRO XLR 50",
+          "description": "Warm Audio PRO XLR 50",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr50.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_protrs3",
+          "name": "Warm Audio Pro TRS 10",
+          "description": "Warm Audio Pro TRS 10",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_protrs3.jpg",
+            "original": "/data/thumbnails/warm_audio_80_protrs3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr10",
+          "name": "Warm Audio PRO XLR 10",
+          "description": "Warm Audio PRO XLR 10",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_protrs20",
+          "name": "Warm Audio Pro TRS 20",
+          "description": "Warm Audio Pro TRS 20",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_protrs20.jpg",
+            "original": "/data/thumbnails/warm_audio_80_protrs20.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_xlr10",
+          "name": "Warm Audio Prem-XLR-10",
+          "description": "Warm Audio Prem-XLR-10",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_xlr10.jpg",
+            "original": "/data/thumbnails/warm_audio_80_xlr10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_xlr15",
+          "name": "Warm Audio Prem-XLR-15",
+          "description": "Warm Audio Prem-XLR-15",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_xlr15.jpg",
+            "original": "/data/thumbnails/warm_audio_80_xlr15.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_xlr25",
+          "name": "Warm Audio Prem-XLR-25",
+          "description": "Warm Audio Prem-XLR-25",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_xlr25.jpg",
+            "original": "/data/thumbnails/warm_audio_80_xlr25.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlrmtrsm6",
+          "name": "Warm Audio PRO XLR TRSM 6",
+          "description": "Warm Audio PRO XLR TRSM 6",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr3",
+          "name": "Warm Audio Pro XLR 3",
+          "description": "Warm Audio Pro XLR 3",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlr25",
+          "name": "Warm Audio Pro XLR 25",
+          "description": "Warm Audio Pro XLR 25",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlr25.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_proxlrftrsm3",
+          "name": "Warm Audio PRO XLRF TRSM 3",
+          "description": "Warm Audio PRO XLRF TRSM 3",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
+            "original": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "warm_audio_80_prots10",
+          "name": "Warm Audio Pro-TS-10",
+          "description": "Warm Audio Pro-TS-10",
+          "images": {
+            "main": "/data/thumbnails/warm_audio_80_prots10.jpg",
+            "thumbnail": "/data/thumbnails/warm_audio_80_prots10.jpg",
+            "high_res": "/data/thumbnails/warm_audio_80_prots10.jpg",
+            "original": "/data/thumbnails/warm_audio_80_prots10.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

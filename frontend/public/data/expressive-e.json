@@ -1,0 +1,107 @@
+{
+  "brand_name": "Expressive E",
+  "products": [
+    {
+      "id": "expressive_e_22_touche",
+      "name": "Expressive E Touché",
+      "description": "Expressive E Touché",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/expressive_e_22_touche.jpg",
+      "product_url": "https://www.halilit.com/items/1310046-expressive-e-touch-",
+      "is_sold": true,
+      "price": 1728.0,
+      "halilit_url": "https://www.halilit.com/items/1310046-expressive-e-touch-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1728.0,
+        "original_price": 1728.0
+      },
+      "brand": "Expressive E",
+      "logo_url": "/assets/logos/expressive-e_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/expressive_e_22_touche.jpg",
+        "thumbnail": "/data/thumbnails/expressive_e_22_touche.jpg",
+        "high_res": "/data/thumbnails/expressive_e_22_touche.jpg",
+        "original": "/data/thumbnails/expressive_e_22_touche.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "expressive_e_22_touchese",
+      "name": "Expressive E Touché SE",
+      "description": "Expressive E Touché SE",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/expressive_e_22_touchese.jpg",
+      "product_url": "https://www.halilit.com/items/3180487-expressive-e-touch-se",
+      "is_sold": true,
+      "price": 1659.0,
+      "halilit_url": "https://www.halilit.com/items/3180487-expressive-e-touch-se",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1659.0,
+        "original_price": 1659.0
+      },
+      "brand": "Expressive E",
+      "logo_url": "/assets/logos/expressive-e_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/expressive_e_22_touchese.jpg",
+        "thumbnail": "/data/thumbnails/expressive_e_22_touchese.jpg",
+        "high_res": "/data/thumbnails/expressive_e_22_touchese.jpg",
+        "original": "/data/thumbnails/expressive_e_22_touchese.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.323889",
+  "brand_slug": "expressive-e",
+  "refined_at": "2026-01-26T06:43:37.330232+00:00",
+  "brand_identity": {
+    "id": "expressive-e",
+    "name": "Expressive E",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/expressive-e_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 2,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "expressive_e_22_touche",
+          "name": "Expressive E Touché",
+          "description": "Expressive E Touché",
+          "images": {
+            "main": "/data/thumbnails/expressive_e_22_touche.jpg",
+            "thumbnail": "/data/thumbnails/expressive_e_22_touche.jpg",
+            "high_res": "/data/thumbnails/expressive_e_22_touche.jpg",
+            "original": "/data/thumbnails/expressive_e_22_touche.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "expressive_e_22_touchese",
+          "name": "Expressive E Touché SE",
+          "description": "Expressive E Touché SE",
+          "images": {
+            "main": "/data/thumbnails/expressive_e_22_touchese.jpg",
+            "thumbnail": "/data/thumbnails/expressive_e_22_touchese.jpg",
+            "high_res": "/data/thumbnails/expressive_e_22_touchese.jpg",
+            "original": "/data/thumbnails/expressive_e_22_touchese.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

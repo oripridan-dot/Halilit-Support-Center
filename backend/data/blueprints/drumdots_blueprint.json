@@ -1,0 +1,26 @@
+[
+  {
+    "id": "drumdots_75_dd6m",
+    "name": "Drumdots DD6M",
+    "description": "Drumdots DD6M",
+    "category": "general",
+    "image_url": "/data/thumbnails/drumdots_75_dd6m.jpg",
+    "product_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+    "is_sold": true,
+    "price": 50.0,
+    "halilit_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "drumdots_75_dd4",
+    "name": "Drumdots DD4",
+    "description": "Drumdots DD4",
+    "category": "general",
+    "image_url": "/data/thumbnails/drumdots_75_dd4.jpg",
+    "product_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+    "is_sold": true,
+    "price": 46.0,
+    "halilit_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+    "status": "IN_STOCK"
+  }
+]

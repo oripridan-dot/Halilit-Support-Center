@@ -1,0 +1,62 @@
+[
+  {
+    "id": "marimba_one_izzy_frame",
+    "name": "Marimba One Izzy Frame",
+    "description": "Marimba One Izzy Frame",
+    "category": "general",
+    "image_url": "/data/thumbnails/marimba_one_izzy_frame.jpg",
+    "product_url": "https://www.halilit.com/items/1287593-marimba-one-izzy-frame",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/1287593-marimba-one-izzy-frame",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "marimba_one_3100_frame",
+    "name": "Marimba One 3100 Frame",
+    "description": "Marimba One 3100 Frame",
+    "category": "general",
+    "image_url": "/data/thumbnails/marimba_one_3100_frame.jpg",
+    "product_url": "https://www.halilit.com/items/1287857-marimba-one-3100-frame",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/1287857-marimba-one-3100-frame",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "marimba_one_1036154_marimba_one_one_vibe_silver_no_motor",
+    "name": "Marimba One One Vibe Silver no motor",
+    "description": "Marimba One One Vibe Silver no motor",
+    "category": "general",
+    "image_url": "/data/thumbnails/marimba_one_1036154_marimba_one_one_vibe_silver_no_motor.jpg",
+    "product_url": "https://www.halilit.com/items/1036154-marimba-one-one-vibe-silver-no-motor",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/1036154-marimba-one-one-vibe-silver-no-motor",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "marimba_one_1036176_marimba_one_one_vibe_gold_no_motor",
+    "name": "Marimba One One Vibe Gold no motor",
+    "description": "Marimba One One Vibe Gold no motor",
+    "category": "general",
+    "image_url": "/data/thumbnails/marimba_one_1036176_marimba_one_one_vibe_gold_no_motor.jpg",
+    "product_url": "https://www.halilit.com/items/1036176-marimba-one-one-vibe-gold-no-motor",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/1036176-marimba-one-one-vibe-gold-no-motor",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "marimba_one_1036186_marimba_one_one_vibe_silver_with_motor",
+    "name": "Marimba One One Vibe Silver with motor",
+    "description": "Marimba One One Vibe Silver with motor",
+    "category": "general",
+    "image_url": "/data/thumbnails/marimba_one_1036186_marimba_one_one_vibe_silver_with_motor.jpg",
+    "product_url": "https://www.halilit.com/items/1036186-marimba-one-one-vibe-silver-with-motor",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/1036186-marimba-one-one-vibe-silver-with-motor",
+    "status": "IN_STOCK"
+  }
+]

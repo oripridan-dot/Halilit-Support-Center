@@ -1,0 +1,353 @@
+{
+  "brand_name": "Rogers",
+  "products": [
+    {
+      "id": "rogers_36_twr26srm",
+      "name": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+      "description": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_twr26srm.jpg",
+      "product_url": "https://www.halilit.com/items/7615512-roger-s-tower-series-14x6-5-snare-drum",
+      "is_sold": true,
+      "price": 2864.0,
+      "halilit_url": "https://www.halilit.com/items/7615512-roger-s-tower-series-14x6-5-snare-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2864.0,
+        "original_price": 2864.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_twr26srm.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_twr26srm.jpg",
+        "high_res": "/data/thumbnails/rogers_36_twr26srm.jpg",
+        "original": "/data/thumbnails/rogers_36_twr26srm.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_twr24srm",
+      "name": "Roger's Tower Series 14x5\" Snare Drum Rogers",
+      "description": "Roger's Tower Series 14x5\" Snare Drum Rogers",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_twr24srm.jpg",
+      "product_url": "https://www.halilit.com/items/7615119-roger-s-tower-series-14x5-snare-drum",
+      "is_sold": true,
+      "price": 2659.0,
+      "halilit_url": "https://www.halilit.com/items/7615119-roger-s-tower-series-14x5-snare-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2659.0,
+        "original_price": 2659.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_twr24srm.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_twr24srm.jpg",
+        "high_res": "/data/thumbnails/rogers_36_twr24srm.jpg",
+        "original": "/data/thumbnails/rogers_36_twr24srm.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_37_bp",
+      "name": "Rogers Dyna-Sonic Snare NO.37-BP",
+      "description": "Rogers Dyna-Sonic Snare NO.37-BP",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_37_bp.jpg",
+      "product_url": "https://www.halilit.com/items/3412121-rogers-beavertail-snare-drum-no-37-bp",
+      "is_sold": true,
+      "price": 3576.0,
+      "halilit_url": "https://www.halilit.com/items/3412121-rogers-beavertail-snare-drum-no-37-bp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3576.0,
+        "original_price": 3576.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_37_bp.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_37_bp.jpg",
+        "high_res": "/data/thumbnails/rogers_36_37_bp.jpg",
+        "original": "/data/thumbnails/rogers_36_37_bp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_twr23sbv",
+      "name": "Roger's Tower Series 13x6\" Snare Drum Rogers",
+      "description": "Roger's Tower Series 13x6\" Snare Drum Rogers",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+      "product_url": "https://www.halilit.com/items/7615723-roger-s-tower-series-13x6-snare-drum",
+      "is_sold": true,
+      "price": 2454.0,
+      "halilit_url": "https://www.halilit.com/items/7615723-roger-s-tower-series-13x6-snare-drum",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2454.0,
+        "original_price": 2454.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+        "high_res": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+        "original": "/data/thumbnails/rogers_36_twr23sbv.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_37_rr",
+      "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-RR",
+      "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-RR",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_37_rr.jpg",
+      "product_url": "https://www.halilit.com/items/3412519-rogers-beavertail-dyna-sonic-snare-no-37-rr",
+      "is_sold": true,
+      "price": 3576.0,
+      "halilit_url": "https://www.halilit.com/items/3412519-rogers-beavertail-dyna-sonic-snare-no-37-rr",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3576.0,
+        "original_price": 3576.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_37_rr.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_37_rr.jpg",
+        "high_res": "/data/thumbnails/rogers_36_37_rr.jpg",
+        "original": "/data/thumbnails/rogers_36_37_rr.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_37_bsl",
+      "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-BSL",
+      "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-BSL",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_37_bsl.jpg",
+      "product_url": "https://www.halilit.com/items/3412430-rogers-beavertail-dyna-sonic-snare-no-37-bsl",
+      "is_sold": true,
+      "price": 4320.0,
+      "halilit_url": "https://www.halilit.com/items/3412430-rogers-beavertail-dyna-sonic-snare-no-37-bsl",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4320.0,
+        "original_price": 4320.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_37_bsl.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_37_bsl.jpg",
+        "high_res": "/data/thumbnails/rogers_36_37_bsl.jpg",
+        "original": "/data/thumbnails/rogers_36_37_bsl.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_37_blo",
+      "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+      "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_37_blo.jpg",
+      "product_url": "https://www.halilit.com/items/2510023-rogers-beavertail-dyna-sonic-snare-no-37-blo",
+      "is_sold": true,
+      "price": 3576.0,
+      "halilit_url": "https://www.halilit.com/items/2510023-rogers-beavertail-dyna-sonic-snare-no-37-blo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3576.0,
+        "original_price": 3576.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_37_blo.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_37_blo.jpg",
+        "high_res": "/data/thumbnails/rogers_36_37_blo.jpg",
+        "original": "/data/thumbnails/rogers_36_37_blo.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "rogers_36_37_wmp",
+      "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-WMP",
+      "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-WMP",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/rogers_36_37_wmp.jpg",
+      "product_url": "https://www.halilit.com/items/2510053-rogers-beavertail-dyna-sonic-snare-no-37-wmp",
+      "is_sold": true,
+      "price": 3576.0,
+      "halilit_url": "https://www.halilit.com/items/2510053-rogers-beavertail-dyna-sonic-snare-no-37-wmp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3576.0,
+        "original_price": 3576.0
+      },
+      "brand": "Rogers",
+      "logo_url": "/assets/logos/rogers_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/rogers_36_37_wmp.jpg",
+        "thumbnail": "/data/thumbnails/rogers_36_37_wmp.jpg",
+        "high_res": "/data/thumbnails/rogers_36_37_wmp.jpg",
+        "original": "/data/thumbnails/rogers_36_37_wmp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.542471",
+  "brand_slug": "rogers",
+  "refined_at": "2026-01-26T06:43:37.549676+00:00",
+  "brand_identity": {
+    "id": "rogers",
+    "name": "Rogers",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/rogers_logo.png",
+    "taxonomy_stats": {
+      "validated": 8,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "rogers_36_twr26srm",
+          "name": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+          "description": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_twr26srm.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_twr26srm.jpg",
+            "high_res": "/data/thumbnails/rogers_36_twr26srm.jpg",
+            "original": "/data/thumbnails/rogers_36_twr26srm.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_twr24srm",
+          "name": "Roger's Tower Series 14x5\" Snare Drum Rogers",
+          "description": "Roger's Tower Series 14x5\" Snare Drum Rogers",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_twr24srm.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_twr24srm.jpg",
+            "high_res": "/data/thumbnails/rogers_36_twr24srm.jpg",
+            "original": "/data/thumbnails/rogers_36_twr24srm.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_37_bp",
+          "name": "Rogers Dyna-Sonic Snare NO.37-BP",
+          "description": "Rogers Dyna-Sonic Snare NO.37-BP",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_37_bp.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_37_bp.jpg",
+            "high_res": "/data/thumbnails/rogers_36_37_bp.jpg",
+            "original": "/data/thumbnails/rogers_36_37_bp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_twr23sbv",
+          "name": "Roger's Tower Series 13x6\" Snare Drum Rogers",
+          "description": "Roger's Tower Series 13x6\" Snare Drum Rogers",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+            "high_res": "/data/thumbnails/rogers_36_twr23sbv.jpg",
+            "original": "/data/thumbnails/rogers_36_twr23sbv.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_37_rr",
+          "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-RR",
+          "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-RR",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_37_rr.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_37_rr.jpg",
+            "high_res": "/data/thumbnails/rogers_36_37_rr.jpg",
+            "original": "/data/thumbnails/rogers_36_37_rr.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_37_bsl",
+          "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-BSL",
+          "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-BSL",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_37_bsl.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_37_bsl.jpg",
+            "high_res": "/data/thumbnails/rogers_36_37_bsl.jpg",
+            "original": "/data/thumbnails/rogers_36_37_bsl.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_37_blo",
+          "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+          "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_37_blo.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_37_blo.jpg",
+            "high_res": "/data/thumbnails/rogers_36_37_blo.jpg",
+            "original": "/data/thumbnails/rogers_36_37_blo.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "rogers_36_37_wmp",
+          "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-WMP",
+          "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-WMP",
+          "images": {
+            "main": "/data/thumbnails/rogers_36_37_wmp.jpg",
+            "thumbnail": "/data/thumbnails/rogers_36_37_wmp.jpg",
+            "high_res": "/data/thumbnails/rogers_36_37_wmp.jpg",
+            "original": "/data/thumbnails/rogers_36_37_wmp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,517 @@
+{
+  "brand_name": "Guild",
+  "products": [
+    {
+      "id": "guild_77_gbajj",
+      "name": "Guild Acoustic Gig Bag Jumbo Junior",
+      "description": "Guild Acoustic Gig Bag Jumbo Junior",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_gbajj.jpg",
+      "product_url": "https://www.halilit.com/items/2697139-guild-acoustic-gig-bag-jumbo-junior",
+      "is_sold": true,
+      "price": 295.0,
+      "halilit_url": "https://www.halilit.com/items/2697139-guild-acoustic-gig-bag-jumbo-junior",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 295.0,
+        "original_price": 295.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_gbajj.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_gbajj.jpg",
+        "high_res": "/data/thumbnails/guild_77_gbajj.jpg",
+        "original": "/data/thumbnails/guild_77_gbajj.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_bagacojumbo",
+      "name": "Guild Premium Acoustic Gig Bag Jumbo",
+      "description": "Guild Premium Acoustic Gig Bag Jumbo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+      "product_url": "https://www.halilit.com/items/7708880-guild-premium-acoustic-gig-bag-jumbo",
+      "is_sold": true,
+      "price": 386.0,
+      "halilit_url": "https://www.halilit.com/items/7708880-guild-premium-acoustic-gig-bag-jumbo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 386.0,
+        "original_price": 386.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+        "high_res": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+        "original": "/data/thumbnails/guild_77_bagacojumbo.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_gbad",
+      "name": "Guild Acoustic Gig Bag Orchestra/Dreadnough",
+      "description": "Guild Acoustic Gig Bag Orchestra/Dreadnough",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_gbad.jpg",
+      "product_url": "https://www.halilit.com/items/2697085-guild-acoustic-gig-bag-orchestra-dreadnough-%D7%AA%D7%99%D7%A7%D7%99%D7%9D-%D7%9C%D7%92%D7%99%D7%98%D7%A8%D7%95%D7%AA",
+      "is_sold": true,
+      "price": 337.0,
+      "halilit_url": "https://www.halilit.com/items/2697085-guild-acoustic-gig-bag-orchestra-dreadnough-%D7%AA%D7%99%D7%A7%D7%99%D7%9D-%D7%9C%D7%92%D7%99%D7%98%D7%A8%D7%95%D7%AA",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 337.0,
+        "original_price": 337.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_gbad.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_gbad.jpg",
+        "high_res": "/data/thumbnails/guild_77_gbad.jpg",
+        "original": "/data/thumbnails/guild_77_gbad.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_bagacudeluxe",
+      "name": "Guild Premium Acoustic Guitar Gig Bag",
+      "description": "Guild Premium Acoustic Guitar Gig Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+      "product_url": "https://www.halilit.com/items/7708930-guild-premium-acoustic-guitar-gig-bag",
+      "is_sold": true,
+      "price": 295.0,
+      "halilit_url": "https://www.halilit.com/items/7708930-guild-premium-acoustic-guitar-gig-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 295.0,
+        "original_price": 295.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+        "high_res": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+        "original": "/data/thumbnails/guild_77_bagacudeluxe.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_gbabb",
+      "name": "Guild Acoustic Gig Bag Bass",
+      "description": "Guild Acoustic Gig Bag Bass",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_gbabb.jpg",
+      "product_url": "https://www.halilit.com/items/2692401-guild-acoustic-gig-bag-bass",
+      "is_sold": true,
+      "price": 337.0,
+      "halilit_url": "https://www.halilit.com/items/2692401-guild-acoustic-gig-bag-bass",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 337.0,
+        "original_price": 337.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_gbabb.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_gbabb.jpg",
+        "high_res": "/data/thumbnails/guild_77_gbabb.jpg",
+        "original": "/data/thumbnails/guild_77_gbabb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_bagacobass",
+      "name": "Guild Premium Acoustic Bass Gig Bag",
+      "description": "Guild Premium Acoustic Bass Gig Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_bagacobass.jpg",
+      "product_url": "https://www.halilit.com/items/7708907-guild-premium-acoustic-gig-bag-bass",
+      "is_sold": true,
+      "price": 416.0,
+      "halilit_url": "https://www.halilit.com/items/7708907-guild-premium-acoustic-gig-bag-bass",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 416.0,
+        "original_price": 416.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_bagacobass.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_bagacobass.jpg",
+        "high_res": "/data/thumbnails/guild_77_bagacobass.jpg",
+        "original": "/data/thumbnails/guild_77_bagacobass.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_ebgst",
+      "name": "Guild Starfire Premium Electric Gig Bag",
+      "description": "Guild Starfire Premium Electric Gig Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_ebgst.jpg",
+      "product_url": "https://www.halilit.com/items/2697273-guild-starfire-premium-electric-gig-bag-",
+      "is_sold": true,
+      "price": 429.0,
+      "halilit_url": "https://www.halilit.com/items/2697273-guild-starfire-premium-electric-gig-bag-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 429.0,
+        "original_price": 429.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_ebgst.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_ebgst.jpg",
+        "high_res": "/data/thumbnails/guild_77_ebgst.jpg",
+        "original": "/data/thumbnails/guild_77_ebgst.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_gb_m75_polora",
+      "name": "Guild Deluxe Electric Gig Bag - BB/M-75/Polara",
+      "description": "Guild Deluxe Electric Gig Bag - BB/M-75/Polara",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+      "product_url": "https://www.halilit.com/items/6619926-guild-deluxe-electric-gig-bag-bb-m-75-polara",
+      "is_sold": true,
+      "price": 302.0,
+      "halilit_url": "https://www.halilit.com/items/6619926-guild-deluxe-electric-gig-bag-bb-m-75-polara",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 302.0,
+        "original_price": 302.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+        "high_res": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+        "original": "/data/thumbnails/guild_77_gb_m75_polora.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_jumbobag",
+      "name": "Guild Deluxe Humidified Archtop Wood Case",
+      "description": "Guild Deluxe Humidified Archtop Wood Case",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_jumbobag.jpg",
+      "product_url": "https://www.halilit.com/items/5088110-guild-deluxe-humidified-archtop-wood-case",
+      "is_sold": true,
+      "price": 759.0,
+      "halilit_url": "https://www.halilit.com/items/5088110-guild-deluxe-humidified-archtop-wood-case",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 759.0,
+        "original_price": 759.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_jumbobag.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_jumbobag.jpg",
+        "high_res": "/data/thumbnails/guild_77_jumbobag.jpg",
+        "original": "/data/thumbnails/guild_77_jumbobag.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_premiumbag",
+      "name": "Guild Acoustic Premium Gig Bag",
+      "description": "Guild Acoustic Premium Gig Bag",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_premiumbag.jpg",
+      "product_url": "https://www.halilit.com/items/6619806-guild-acoustic-premium-gig-bag",
+      "is_sold": true,
+      "price": 442.0,
+      "halilit_url": "https://www.halilit.com/items/6619806-guild-acoustic-premium-gig-bag",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 442.0,
+        "original_price": 442.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_premiumbag.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_premiumbag.jpg",
+        "high_res": "/data/thumbnails/guild_77_premiumbag.jpg",
+        "original": "/data/thumbnails/guild_77_premiumbag.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_ebbstf",
+      "name": "Guild Premium Electric Gig Bag Starfire",
+      "description": "Guild Premium Electric Gig Bag Starfire",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_ebbstf.jpg",
+      "product_url": "https://www.halilit.com/items/5666930-guild-premium-electric-gig-bag-starfire-",
+      "is_sold": true,
+      "price": 429.0,
+      "halilit_url": "https://www.halilit.com/items/5666930-guild-premium-electric-gig-bag-starfire-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 429.0,
+        "original_price": 429.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_ebbstf.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_ebbstf.jpg",
+        "high_res": "/data/thumbnails/guild_77_ebbstf.jpg",
+        "original": "/data/thumbnails/guild_77_ebbstf.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "guild_77_gbajb",
+      "name": "Guild Acoustic Gig Bag Jumbo-Size",
+      "description": "Guild Acoustic Gig Bag Jumbo-Size",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/guild_77_gbajb.jpg",
+      "product_url": "https://www.halilit.com/items/2697148-guild-acoustic-gig-bag-jumbo-size",
+      "is_sold": true,
+      "price": 337.0,
+      "halilit_url": "https://www.halilit.com/items/2697148-guild-acoustic-gig-bag-jumbo-size",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 337.0,
+        "original_price": 337.0
+      },
+      "brand": "Guild",
+      "logo_url": "/assets/logos/guild_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/guild_77_gbajb.jpg",
+        "thumbnail": "/data/thumbnails/guild_77_gbajb.jpg",
+        "high_res": "/data/thumbnails/guild_77_gbajb.jpg",
+        "original": "/data/thumbnails/guild_77_gbajb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.229713",
+  "brand_slug": "guild",
+  "refined_at": "2026-01-26T06:43:37.307188+00:00",
+  "brand_identity": {
+    "id": "guild",
+    "name": "Guild",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/guild_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 12,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "guild_77_gbajj",
+          "name": "Guild Acoustic Gig Bag Jumbo Junior",
+          "description": "Guild Acoustic Gig Bag Jumbo Junior",
+          "images": {
+            "main": "/data/thumbnails/guild_77_gbajj.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_gbajj.jpg",
+            "high_res": "/data/thumbnails/guild_77_gbajj.jpg",
+            "original": "/data/thumbnails/guild_77_gbajj.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_bagacojumbo",
+          "name": "Guild Premium Acoustic Gig Bag Jumbo",
+          "description": "Guild Premium Acoustic Gig Bag Jumbo",
+          "images": {
+            "main": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+            "high_res": "/data/thumbnails/guild_77_bagacojumbo.jpg",
+            "original": "/data/thumbnails/guild_77_bagacojumbo.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_gbad",
+          "name": "Guild Acoustic Gig Bag Orchestra/Dreadnough",
+          "description": "Guild Acoustic Gig Bag Orchestra/Dreadnough",
+          "images": {
+            "main": "/data/thumbnails/guild_77_gbad.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_gbad.jpg",
+            "high_res": "/data/thumbnails/guild_77_gbad.jpg",
+            "original": "/data/thumbnails/guild_77_gbad.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_bagacudeluxe",
+          "name": "Guild Premium Acoustic Guitar Gig Bag",
+          "description": "Guild Premium Acoustic Guitar Gig Bag",
+          "images": {
+            "main": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+            "high_res": "/data/thumbnails/guild_77_bagacudeluxe.jpg",
+            "original": "/data/thumbnails/guild_77_bagacudeluxe.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_gbabb",
+          "name": "Guild Acoustic Gig Bag Bass",
+          "description": "Guild Acoustic Gig Bag Bass",
+          "images": {
+            "main": "/data/thumbnails/guild_77_gbabb.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_gbabb.jpg",
+            "high_res": "/data/thumbnails/guild_77_gbabb.jpg",
+            "original": "/data/thumbnails/guild_77_gbabb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_bagacobass",
+          "name": "Guild Premium Acoustic Bass Gig Bag",
+          "description": "Guild Premium Acoustic Bass Gig Bag",
+          "images": {
+            "main": "/data/thumbnails/guild_77_bagacobass.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_bagacobass.jpg",
+            "high_res": "/data/thumbnails/guild_77_bagacobass.jpg",
+            "original": "/data/thumbnails/guild_77_bagacobass.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_ebgst",
+          "name": "Guild Starfire Premium Electric Gig Bag",
+          "description": "Guild Starfire Premium Electric Gig Bag",
+          "images": {
+            "main": "/data/thumbnails/guild_77_ebgst.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_ebgst.jpg",
+            "high_res": "/data/thumbnails/guild_77_ebgst.jpg",
+            "original": "/data/thumbnails/guild_77_ebgst.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_gb_m75_polora",
+          "name": "Guild Deluxe Electric Gig Bag - BB/M-75/Polara",
+          "description": "Guild Deluxe Electric Gig Bag - BB/M-75/Polara",
+          "images": {
+            "main": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+            "high_res": "/data/thumbnails/guild_77_gb_m75_polora.jpg",
+            "original": "/data/thumbnails/guild_77_gb_m75_polora.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_jumbobag",
+          "name": "Guild Deluxe Humidified Archtop Wood Case",
+          "description": "Guild Deluxe Humidified Archtop Wood Case",
+          "images": {
+            "main": "/data/thumbnails/guild_77_jumbobag.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_jumbobag.jpg",
+            "high_res": "/data/thumbnails/guild_77_jumbobag.jpg",
+            "original": "/data/thumbnails/guild_77_jumbobag.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_premiumbag",
+          "name": "Guild Acoustic Premium Gig Bag",
+          "description": "Guild Acoustic Premium Gig Bag",
+          "images": {
+            "main": "/data/thumbnails/guild_77_premiumbag.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_premiumbag.jpg",
+            "high_res": "/data/thumbnails/guild_77_premiumbag.jpg",
+            "original": "/data/thumbnails/guild_77_premiumbag.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_ebbstf",
+          "name": "Guild Premium Electric Gig Bag Starfire",
+          "description": "Guild Premium Electric Gig Bag Starfire",
+          "images": {
+            "main": "/data/thumbnails/guild_77_ebbstf.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_ebbstf.jpg",
+            "high_res": "/data/thumbnails/guild_77_ebbstf.jpg",
+            "original": "/data/thumbnails/guild_77_ebbstf.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "guild_77_gbajb",
+          "name": "Guild Acoustic Gig Bag Jumbo-Size",
+          "description": "Guild Acoustic Gig Bag Jumbo-Size",
+          "images": {
+            "main": "/data/thumbnails/guild_77_gbajb.jpg",
+            "thumbnail": "/data/thumbnails/guild_77_gbajb.jpg",
+            "high_res": "/data/thumbnails/guild_77_gbajb.jpg",
+            "original": "/data/thumbnails/guild_77_gbajb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

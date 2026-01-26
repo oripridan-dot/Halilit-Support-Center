@@ -1,0 +1,19 @@
+{
+  "brand_name": "Encore",
+  "products": [],
+  "generated_at": "2026-01-26T06:43:37.475397",
+  "brand_slug": "encore",
+  "refined_at": "2026-01-26T06:43:37.490924+00:00",
+  "brand_identity": {
+    "id": "encore",
+    "name": "Encore",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/encore_logo.png",
+    "taxonomy_stats": {
+      "validated": 0,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {}
+}

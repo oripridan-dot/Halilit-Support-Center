@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ampeg_63_classic",
+    "name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+    "description": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+    "category": "general",
+    "image_url": "/data/thumbnails/ampeg_63_classic.jpg",
+    "product_url": "https://www.halilit.com/items/1439842-ampeg-classic-analog-bass-preamp-pedal",
+    "is_sold": true,
+    "price": 367.0,
+    "halilit_url": "https://www.halilit.com/items/1439842-ampeg-classic-analog-bass-preamp-pedal",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "ampeg_63_scraemblarbass",
+    "name": "Ampeg Scrambler Bass Overdrive",
+    "description": "Ampeg Scrambler Bass Overdrive",
+    "category": "general",
+    "image_url": "/data/thumbnails/ampeg_63_scraemblarbass.jpg",
+    "product_url": "https://www.halilit.com/items/1390181-ampeg-scrambler-bass-overdrive",
+    "is_sold": true,
+    "price": 367.0,
+    "halilit_url": "https://www.halilit.com/items/1390181-ampeg-scrambler-bass-overdrive",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "ampeg_63_liquifier",
+    "name": "Ampeg Liquifier Analog Chorus",
+    "description": "Ampeg Liquifier Analog Chorus",
+    "category": "general",
+    "image_url": "/data/thumbnails/ampeg_63_liquifier.jpg",
+    "product_url": "https://www.halilit.com/items/3909033-ampeg-liquifier-analog-chorus",
+    "is_sold": true,
+    "price": 367.0,
+    "halilit_url": "https://www.halilit.com/items/3909033-ampeg-liquifier-analog-chorus",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "ampeg_63_svtvr",
+    "name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+    "description": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+    "category": "general",
+    "image_url": "/data/thumbnails/ampeg_63_svtvr.jpg",
+    "product_url": "https://www.halilit.com/items/6484227-ampeg-classic-svt-vr-bass-amplifier",
+    "is_sold": true,
+    "price": 8069.0,
+    "halilit_url": "https://www.halilit.com/items/6484227-ampeg-classic-svt-vr-bass-amplifier",
+    "status": "IN_STOCK"
+  },
+  {
+    "id": "ampeg_63_pf210he",
+    "name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+    "description": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+    "category": "general",
+    "image_url": "/data/thumbnails/ampeg_63_pf210he.jpg",
+    "product_url": "https://www.halilit.com/items/446821-ampeg-pf-210he-portaflex",
+    "is_sold": true,
+    "price": 1467.0,
+    "halilit_url": "https://www.halilit.com/items/446821-ampeg-pf-210he-portaflex",
+    "status": "IN_STOCK"
+  }
+]

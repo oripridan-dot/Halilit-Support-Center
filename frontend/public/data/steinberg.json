@@ -1,0 +1,517 @@
+{
+  "brand_name": "Steinberg ",
+  "products": [
+    {
+      "id": "steinberg__45_ixo12_w",
+      "name": "Steinberg IXO12 USB Audio Interface",
+      "description": "Steinberg IXO12 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+      "product_url": "https://www.halilit.com/items/6605471-steinberg-ixo12-usb-audio-interface",
+      "is_sold": true,
+      "price": 530.0,
+      "halilit_url": "https://www.halilit.com/items/6605471-steinberg-ixo12-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 530.0,
+        "original_price": 530.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+        "original": "/data/thumbnails/steinberg__45_ixo12_w.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_ixo22_b",
+      "name": "Steinberg IXO22 USB Audio Interface",
+      "description": "Steinberg IXO22 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+      "product_url": "https://www.halilit.com/items/6606350-steinberg-ixo22-usb-audio-interface",
+      "is_sold": true,
+      "price": 751.0,
+      "halilit_url": "https://www.halilit.com/items/6606350-steinberg-ixo22-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 751.0,
+        "original_price": 751.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+        "original": "/data/thumbnails/steinberg__45_ixo22_b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_dac_cubase_pro",
+      "name": "Steinberg Cubase Pro 15",
+      "description": "Steinberg Cubase Pro 15",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+      "product_url": "https://www.halilit.com/items/8582159-steinberg-cubase-pro-15",
+      "is_sold": true,
+      "price": 2200.0,
+      "halilit_url": "https://www.halilit.com/items/8582159-steinberg-cubase-pro-15",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2200.0,
+        "original_price": 2200.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+        "original": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_ixo22_w",
+      "name": "Steinberg IXO22 USB Audio Interface",
+      "description": "Steinberg IXO22 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+      "product_url": "https://www.halilit.com/items/6606402-steinberg-ixo22-usb-audio-interface",
+      "is_sold": true,
+      "price": 751.0,
+      "halilit_url": "https://www.halilit.com/items/6606402-steinberg-ixo22-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 751.0,
+        "original_price": 751.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+        "original": "/data/thumbnails/steinberg__45_ixo22_w.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_dac_cubase_art",
+      "name": "Steinberg Cubase Artist 15",
+      "description": "Steinberg Cubase Artist 15",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+      "product_url": "https://www.halilit.com/items/8582810-steinberg-cubase-artist-15",
+      "is_sold": true,
+      "price": 1250.0,
+      "halilit_url": "https://www.halilit.com/items/8582810-steinberg-cubase-artist-15",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1250.0,
+        "original_price": 1250.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+        "original": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_dac_cubase_elem",
+      "name": "Steinberg Cubase Elements 15",
+      "description": "Steinberg Cubase Elements 15",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+      "product_url": "https://www.halilit.com/items/8582859-steinberg-cubase-elements-15-",
+      "is_sold": true,
+      "price": 380.0,
+      "halilit_url": "https://www.halilit.com/items/8582859-steinberg-cubase-elements-15-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 380.0,
+        "original_price": 380.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+        "original": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_ur242",
+      "name": "Steinberg UR242",
+      "description": "Steinberg UR242",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_ur242.jpg",
+      "product_url": "https://www.halilit.com/items/502311-steinberg-ur242",
+      "is_sold": true,
+      "price": 877.0,
+      "halilit_url": "https://www.halilit.com/items/502311-steinberg-ur242",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 877.0,
+        "original_price": 877.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ur242.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ur242.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ur242.jpg",
+        "original": "/data/thumbnails/steinberg__45_ur242.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_wavelabpro11",
+      "name": "Steinberg WaveLab Pro",
+      "description": "Steinberg WaveLab Pro",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+      "product_url": "https://www.halilit.com/items/4296520-steinberg-wavelab-pro-mastering-suite",
+      "is_sold": true,
+      "price": 2012.0,
+      "halilit_url": "https://www.halilit.com/items/4296520-steinberg-wavelab-pro-mastering-suite",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2012.0,
+        "original_price": 2012.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+        "original": "/data/thumbnails/steinberg__45_wavelabpro11.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_ur44",
+      "name": "Steinberg UR-44",
+      "description": "Steinberg UR-44",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_ur44.jpg",
+      "product_url": "https://www.halilit.com/items/444459-steinberg-ur-44",
+      "is_sold": true,
+      "price": 1445.0,
+      "halilit_url": "https://www.halilit.com/items/444459-steinberg-ur-44",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1445.0,
+        "original_price": 1445.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_ur44.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_ur44.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_ur44.jpg",
+        "original": "/data/thumbnails/steinberg__45_ur44.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_guitar_rec_kit",
+      "name": "Steinberg The Guitar Recording Kit",
+      "description": "Steinberg The Guitar Recording Kit",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+      "product_url": "https://www.halilit.com/items/3318059-steinberg-the-guitar-recording-kit",
+      "is_sold": true,
+      "price": 1975.0,
+      "halilit_url": "https://www.halilit.com/items/3318059-steinberg-the-guitar-recording-kit",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1975.0,
+        "original_price": 1975.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+        "original": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_urrt4",
+      "name": "Steinberg UR-RT4",
+      "description": "Steinberg UR-RT4",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_urrt4.jpg",
+      "product_url": "https://www.halilit.com/items/1943731-steinberg-ur-rt4-audio-interface",
+      "is_sold": true,
+      "price": 2894.0,
+      "halilit_url": "https://www.halilit.com/items/1943731-steinberg-ur-rt4-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2894.0,
+        "original_price": 2894.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_urrt4.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_urrt4.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_urrt4.jpg",
+        "original": "/data/thumbnails/steinberg__45_urrt4.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "steinberg__45_urrt2",
+      "name": "Steinberg UR-RT2",
+      "description": "Steinberg UR-RT2",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/steinberg__45_urrt2.jpg",
+      "product_url": "https://www.halilit.com/items/1833439-steinberg-ur-rt2-audio-interface",
+      "is_sold": true,
+      "price": 1687.0,
+      "halilit_url": "https://www.halilit.com/items/1833439-steinberg-ur-rt2-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1687.0,
+        "original_price": 1687.0
+      },
+      "brand": "Steinberg ",
+      "logo_url": "/assets/logos/steinberg_logo.png",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/steinberg__45_urrt2.jpg",
+        "thumbnail": "/data/thumbnails/steinberg__45_urrt2.jpg",
+        "high_res": "/data/thumbnails/steinberg__45_urrt2.jpg",
+        "original": "/data/thumbnails/steinberg__45_urrt2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.419076",
+  "brand_slug": "steinberg",
+  "refined_at": "2026-01-26T06:43:37.431289+00:00",
+  "brand_identity": {
+    "id": "steinberg",
+    "name": "Steinberg ",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/steinberg_logo.png",
+    "taxonomy_stats": {
+      "validated": 12,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "steinberg__45_ixo12_w",
+          "name": "Steinberg IXO12 USB Audio Interface",
+          "description": "Steinberg IXO12 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ixo12_w.jpg",
+            "original": "/data/thumbnails/steinberg__45_ixo12_w.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_ixo22_b",
+          "name": "Steinberg IXO22 USB Audio Interface",
+          "description": "Steinberg IXO22 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ixo22_b.jpg",
+            "original": "/data/thumbnails/steinberg__45_ixo22_b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_dac_cubase_pro",
+          "name": "Steinberg Cubase Pro 15",
+          "description": "Steinberg Cubase Pro 15",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+            "original": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_ixo22_w",
+          "name": "Steinberg IXO22 USB Audio Interface",
+          "description": "Steinberg IXO22 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+            "original": "/data/thumbnails/steinberg__45_ixo22_w.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_dac_cubase_art",
+          "name": "Steinberg Cubase Artist 15",
+          "description": "Steinberg Cubase Artist 15",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg",
+            "original": "/data/thumbnails/steinberg__45_dac_cubase_art.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_dac_cubase_elem",
+          "name": "Steinberg Cubase Elements 15",
+          "description": "Steinberg Cubase Elements 15",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg",
+            "original": "/data/thumbnails/steinberg__45_dac_cubase_elem.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_ur242",
+          "name": "Steinberg UR242",
+          "description": "Steinberg UR242",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ur242.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ur242.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ur242.jpg",
+            "original": "/data/thumbnails/steinberg__45_ur242.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_wavelabpro11",
+          "name": "Steinberg WaveLab Pro",
+          "description": "Steinberg WaveLab Pro",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_wavelabpro11.jpg",
+            "original": "/data/thumbnails/steinberg__45_wavelabpro11.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_ur44",
+          "name": "Steinberg UR-44",
+          "description": "Steinberg UR-44",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_ur44.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_ur44.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_ur44.jpg",
+            "original": "/data/thumbnails/steinberg__45_ur44.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_guitar_rec_kit",
+          "name": "Steinberg The Guitar Recording Kit",
+          "description": "Steinberg The Guitar Recording Kit",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg",
+            "original": "/data/thumbnails/steinberg__45_guitar_rec_kit.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_urrt4",
+          "name": "Steinberg UR-RT4",
+          "description": "Steinberg UR-RT4",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_urrt4.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_urrt4.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_urrt4.jpg",
+            "original": "/data/thumbnails/steinberg__45_urrt4.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "steinberg__45_urrt2",
+          "name": "Steinberg UR-RT2",
+          "description": "Steinberg UR-RT2",
+          "images": {
+            "main": "/data/thumbnails/steinberg__45_urrt2.jpg",
+            "thumbnail": "/data/thumbnails/steinberg__45_urrt2.jpg",
+            "high_res": "/data/thumbnails/steinberg__45_urrt2.jpg",
+            "original": "/data/thumbnails/steinberg__45_urrt2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

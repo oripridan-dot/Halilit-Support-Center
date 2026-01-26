@@ -1,0 +1,2956 @@
+{
+  "brand_name": "Universal Audio",
+  "products": [
+    {
+      "id": "universal_audio_44_volt1",
+      "name": "Universal Audio Volt 1 USB Audio Interface",
+      "description": "Universal Audio Volt 1 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt1.jpg",
+      "product_url": "https://www.halilit.com/items/4186883-universal-audio-volt-1-usb-audio-interface",
+      "is_sold": true,
+      "price": 603.0,
+      "halilit_url": "https://www.halilit.com/items/4186883-universal-audio-volt-1-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 603.0,
+        "original_price": 603.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt1.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt1.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt1.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt1.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx16g2_ess",
+      "name": "Universal Audio Apollo x16 Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo x16 Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7808516-universal-audio-apollo-x16-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 15039.0,
+      "halilit_url": "https://www.halilit.com/items/7808516-universal-audio-apollo-x16-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 15039.0,
+        "original_price": 15039.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_ape2m",
+      "name": "Universal Audio Apollo e2m",
+      "description": "Universal Audio Apollo e2m",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+      "product_url": "https://www.halilit.com/items/7874850-apollo-e2m-stereo-headphone-amp-and-line-interface",
+      "is_sold": true,
+      "price": 1950.0,
+      "halilit_url": "https://www.halilit.com/items/7874850-apollo-e2m-stereo-headphone-amp-and-line-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1950.0,
+        "original_price": 1950.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+        "original": "/data/thumbnails/universal_audio_44_ape2m.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_ape1x",
+      "name": "Universal Audio Apollo e1x",
+      "description": "Universal Audio Apollo e1x",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+      "product_url": "https://www.halilit.com/items/7873631-universal-audio-apollo-e1x-remote-control-preamp",
+      "is_sold": true,
+      "price": 1559.0,
+      "halilit_url": "https://www.halilit.com/items/7873631-universal-audio-apollo-e1x-remote-control-preamp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1559.0,
+        "original_price": 1559.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+        "original": "/data/thumbnails/universal_audio_44_ape1x.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx6g2_ess",
+      "name": "Universal Audio Apollo x6 Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo x6 Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7443708-universal-audio-apollo-x6-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 9398.0,
+      "halilit_url": "https://www.halilit.com/items/7443708-universal-audio-apollo-x6-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 9398.0,
+        "original_price": 9398.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_aptxdg2_ess",
+      "name": "Universal Audio Apollo Twin X Duo Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo Twin X Duo Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7442686-universal-audio-apollo-twin-x-duo-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 4226.0,
+      "halilit_url": "https://www.halilit.com/items/7442686-universal-audio-apollo-twin-x-duo-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4226.0,
+        "original_price": 4226.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmknuc",
+      "name": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+      "description": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+      "product_url": "https://www.halilit.com/items/7461636-universal-audio-uafx-knuckles-92-dual-rec-amplifier",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/7461636-universal-audio-uafx-knuckles-92-dual-rec-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmknuc.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_volt276",
+      "name": "Universal Audio Volt 276 USB Audio Interface",
+      "description": "Universal Audio Volt 276 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt276.jpg",
+      "product_url": "https://www.halilit.com/items/4186634-universal-audio-volt-276-usb-audio-interface",
+      "is_sold": true,
+      "price": 1180.0,
+      "halilit_url": "https://www.halilit.com/items/4186634-universal-audio-volt-276-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1180.0,
+        "original_price": 1180.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt276.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt276.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt276.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt276.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_volt2",
+      "name": "Universal Audio Volt 2 USB Audio Interface",
+      "description": "Universal Audio Volt 2 USB Audio Interface",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt2.jpg",
+      "product_url": "https://www.halilit.com/items/4186896-universal-audio-volt-2-usb-audio-interface",
+      "is_sold": true,
+      "price": 785.0,
+      "halilit_url": "https://www.halilit.com/items/4186896-universal-audio-volt-2-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 785.0,
+        "original_price": 785.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt2.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt2.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt2.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_aptxqg2_ess",
+      "name": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7443486-universal-audio-apollo-twin-x-quad-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 5495.0,
+      "halilit_url": "https://www.halilit.com/items/7443486-universal-audio-apollo-twin-x-quad-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5495.0,
+        "original_price": 5495.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpm_lion",
+      "name": "Universal Audio UAFX Lion '68 Super Lead Amp",
+      "description": "Universal Audio UAFX Lion '68 Super Lead Amp",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+      "product_url": "https://www.halilit.com/items/6310432-universal-audio-uafx-lion-68-super-lead-amp",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/6310432-universal-audio-uafx-lion-68-super-lead-amp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpm_lion.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmdrm",
+      "name": "Universal Audio UAFX Dream '65 Reverb Amplifier",
+      "description": "Universal Audio UAFX Dream '65 Reverb Amplifier",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+      "product_url": "https://www.halilit.com/items/4871457-universal-audio-uafx-dream-65-reverb-amplifier",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/4871457-universal-audio-uafx-dream-65-reverb-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmdrm.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmwdr",
+      "name": "Universal Audio UAFX Woodrow '55 Instrument Amplifier",
+      "description": "Universal Audio UAFX Woodrow '55 Instrument Amplifier",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+      "product_url": "https://www.halilit.com/items/4872999-universal-audio-uafx-woodrow-55-instrument-amplifier",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/4872999-universal-audio-uafx-woodrow-55-instrument-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmwdr.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpsbrgd",
+      "name": "Universal Audio UAFX Brigade Chorus & Vibrato",
+      "description": "Universal Audio UAFX Brigade Chorus & Vibrato",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+      "product_url": "https://www.halilit.com/items/6311977-universal-audio-uafx-brigade-chorus-vibrato",
+      "is_sold": true,
+      "price": 685.0,
+      "halilit_url": "https://www.halilit.com/items/6311977-universal-audio-uafx-brigade-chorus-vibrato",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 685.0,
+        "original_price": 685.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmdlvrb",
+      "name": "Universal Audio UAFX Del-Verb Ambience Companion",
+      "description": "Universal Audio UAFX Del-Verb Ambience Companion",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+      "product_url": "https://www.halilit.com/items/5885995-universal-audio-uafx-del-verb-ambience-companion",
+      "is_sold": true,
+      "price": 1312.0,
+      "halilit_url": "https://www.halilit.com/items/5885995-universal-audio-uafx-del-verb-ambience-companion",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1312.0,
+        "original_price": 1312.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_volt876",
+      "name": "Universal Audio Volt 876",
+      "description": "Universal Audio Volt 876",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt876.jpg",
+      "product_url": "https://www.halilit.com/items/8516151-universal-audio-volt-876",
+      "is_sold": true,
+      "price": 4046.0,
+      "halilit_url": "https://www.halilit.com/items/8516151-universal-audio-volt-876",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4046.0,
+        "original_price": 4046.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt876.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt876.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt876.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt876.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_uad2_osat_tb3",
+      "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+      "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+      "product_url": "https://www.halilit.com/items/2699580-universal-audio-uad-2-satellite-thunderbolt-3-octo-core",
+      "is_sold": true,
+      "price": 4856.0,
+      "halilit_url": "https://www.halilit.com/items/2699580-universal-audio-uad-2-satellite-thunderbolt-3-octo-core",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4856.0,
+        "original_price": 4856.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+        "original": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmruby",
+      "name": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+      "description": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+      "product_url": "https://www.halilit.com/items/4872776-universal-audio-uafx-ruby-63-top-boost-amplifier",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/4872776-universal-audio-uafx-ruby-63-top-boost-amplifier",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmruby.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmenig",
+      "name": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+      "description": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+      "product_url": "https://www.halilit.com/items/7425354-universal-audio-uafx-enigmatic-82-overdrive-special-amp",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/7425354-universal-audio-uafx-enigmatic-82-overdrive-special-amp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmenig.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmoxstp",
+      "name": "Universal Audio UAFX OX Stomp",
+      "description": "Universal Audio UAFX OX Stomp",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+      "product_url": "https://www.halilit.com/items/6229347-universal-audio-uafx-ox-stomp",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/6229347-universal-audio-uafx-ox-stomp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_aptxqg2_stu",
+      "name": "Universal Audio Apollo Twin X Quad Gen 2 - Studio+ Edition",
+      "description": "Universal Audio Apollo Twin X Quad Gen 2 - Studio+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+      "product_url": "https://www.halilit.com/items/7443561-universal-audio-apollo-twin-x-quad-gen-2-studio-edition",
+      "is_sold": true,
+      "price": 6342.0,
+      "halilit_url": "https://www.halilit.com/items/7443561-universal-audio-apollo-twin-x-quad-gen-2-studio-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6342.0,
+        "original_price": 6342.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+        "original": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8g2_stu",
+      "name": "Universal Audio Apollo x8 Gen 2 - Studio+ Edition",
+      "description": "Universal Audio Apollo x8 Gen 2 - Studio+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+      "product_url": "https://www.halilit.com/items/7444337-universal-audio-apollo-x8-gen-2-studio-edition",
+      "is_sold": true,
+      "price": 12031.0,
+      "halilit_url": "https://www.halilit.com/items/7444337-universal-audio-apollo-x8-gen-2-studio-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 12031.0,
+        "original_price": 12031.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8pg2_ess",
+      "name": "Universal Audio Apollo x8p Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo x8p Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7444354-universal-audio-apollo-x8p-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 13159.0,
+      "halilit_url": "https://www.halilit.com/items/7444354-universal-audio-apollo-x8p-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 13159.0,
+        "original_price": 13159.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_aptxdg2_stu",
+      "name": "Universal Audio Apollo Twin X Duo Gen 2 - Studio+ Edition",
+      "description": "Universal Audio Apollo Twin X Duo Gen 2 - Studio+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+      "product_url": "https://www.halilit.com/items/7442824-universal-audio-apollo-twin-x-duo-gen-2-studio-edition",
+      "is_sold": true,
+      "price": 5072.0,
+      "halilit_url": "https://www.halilit.com/items/7442824-universal-audio-apollo-twin-x-duo-gen-2-studio-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5072.0,
+        "original_price": 5072.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+        "original": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx4g2_ess",
+      "name": "Universal Audio Apollo x4 Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo x4 Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7443594-universal-audio-apollo-x4-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 7188.0,
+      "halilit_url": "https://www.halilit.com/items/7443594-universal-audio-apollo-x4-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 7188.0,
+        "original_price": 7188.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_uad2_qsat_tb3",
+      "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+      "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+      "product_url": "https://www.halilit.com/items/2699686-universal-audio-uad-2-satellite-thunderbolt-3-quad-core",
+      "is_sold": true,
+      "price": 3641.0,
+      "halilit_url": "https://www.halilit.com/items/2699686-universal-audio-uad-2-satellite-thunderbolt-3-quad-core",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3641.0,
+        "original_price": 3641.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+        "original": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpm_astra",
+      "name": "Universal Audio UAFX Astra Modulation Machine",
+      "description": "Universal Audio UAFX Astra Modulation Machine",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+      "product_url": "https://www.halilit.com/items/3618728-universal-audio-uafx-astra-modulation-machine",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/3618728-universal-audio-uafx-astra-modulation-machine",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpm_astra.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_volt476p",
+      "name": "Universal Audio VOLT 476P",
+      "description": "Universal Audio VOLT 476P",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+      "product_url": "https://www.halilit.com/items/5095085-universal-audio-volt-476p-usb-audio-interface",
+      "is_sold": true,
+      "price": 1838.0,
+      "halilit_url": "https://www.halilit.com/items/5095085-universal-audio-volt-476p-usb-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1838.0,
+        "original_price": 1838.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt476p.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gps1176",
+      "name": "Universal Audio UAFX 1176 Studio Compressor",
+      "description": "Universal Audio UAFX 1176 Studio Compressor",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+      "product_url": "https://www.halilit.com/items/6134704-universal-audio-uafx-1176-studio-compressor",
+      "is_sold": true,
+      "price": 566.0,
+      "halilit_url": "https://www.halilit.com/items/6134704-universal-audio-uafx-1176-studio-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 566.0,
+        "original_price": 566.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gps1176.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpm_gold",
+      "name": "Universal Audio UAFX Golden Reverberator",
+      "description": "Universal Audio UAFX Golden Reverberator",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+      "product_url": "https://www.halilit.com/items/3618742-universal-audio-uafx-golden-reverberator",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/3618742-universal-audio-uafx-golden-reverberator",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpm_gold.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpm_star",
+      "name": "Universal Audio UAFX Starlight Echo Station",
+      "description": "Universal Audio UAFX Starlight Echo Station",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+      "product_url": "https://www.halilit.com/items/3618748-universal-audio-uafx-starlight-echo-station",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/3618748-universal-audio-uafx-starlight-echo-station",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpm_star.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmglxy",
+      "name": "Universal Audio UAFX Galaxy '74 Tape Echo & Reverb",
+      "description": "Universal Audio UAFX Galaxy '74 Tape Echo & Reverb",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+      "product_url": "https://www.halilit.com/items/5885893-universal-audio-uafx-galaxy-74-tape-echo-reverb",
+      "is_sold": true,
+      "price": 1413.0,
+      "halilit_url": "https://www.halilit.com/items/5885893-universal-audio-uafx-galaxy-74-tape-echo-reverb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1413.0,
+        "original_price": 1413.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmglxy.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpsflow",
+      "name": "Universal Audio UAFX Flow Vintage Tremolo",
+      "description": "Universal Audio UAFX Flow Vintage Tremolo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+      "product_url": "https://www.halilit.com/items/6311886-universal-audio-uafx-flow-vintage-tremolo",
+      "is_sold": true,
+      "price": 685.0,
+      "halilit_url": "https://www.halilit.com/items/6311886-universal-audio-uafx-flow-vintage-tremolo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 685.0,
+        "original_price": 685.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpsflow.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_volt476",
+      "name": "Universal Audio Volt 476",
+      "description": "Universal Audio Volt 476",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt476.jpg",
+      "product_url": "https://www.halilit.com/items/4186830-universal-audio-volt-476",
+      "is_sold": true,
+      "price": 1399.0,
+      "halilit_url": "https://www.halilit.com/items/4186830-universal-audio-volt-476",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1399.0,
+        "original_price": 1399.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt476.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt476.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt476.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt476.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpsevmr",
+      "name": "Universal Audio UAFX Evermore Studio Reverb",
+      "description": "Universal Audio UAFX Evermore Studio Reverb",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+      "product_url": "https://www.halilit.com/items/6134995-universal-audio-uafx-evermore-studio-reverb",
+      "is_sold": true,
+      "price": 566.0,
+      "halilit_url": "https://www.halilit.com/items/6134995-universal-audio-uafx-evermore-studio-reverb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 566.0,
+        "original_price": 566.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpsevmr.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx16dg2_ess",
+      "name": "Universal Audio Apollo x16D Essentials+ Edition",
+      "description": "Universal Audio Apollo x16D Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7198933-universal-audio-apollo-x16d-essentials-edition",
+      "is_sold": true,
+      "price": 11279.0,
+      "halilit_url": "https://www.halilit.com/items/7198933-universal-audio-apollo-x16d-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11279.0,
+        "original_price": 11279.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpshvnly",
+      "name": "Universal Audio UAFX Heavenly Plate Reverb",
+      "description": "Universal Audio UAFX Heavenly Plate Reverb",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+      "product_url": "https://www.halilit.com/items/6135006-universal-audio-uafx-heavenly-plate-reverb",
+      "is_sold": true,
+      "price": 685.0,
+      "halilit_url": "https://www.halilit.com/items/6135006-universal-audio-uafx-heavenly-plate-reverb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 685.0,
+        "original_price": 685.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpshvnly.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpsla2a",
+      "name": "Universal Audio UAFX Teletronix LA-2A Studio Compressor",
+      "description": "Universal Audio UAFX Teletronix LA-2A Studio Compressor",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+      "product_url": "https://www.halilit.com/items/6311647-universal-audio-uafx-teletronix-la-2a-studio-compressor",
+      "is_sold": true,
+      "price": 566.0,
+      "halilit_url": "https://www.halilit.com/items/6311647-universal-audio-uafx-teletronix-la-2a-studio-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 566.0,
+        "original_price": 566.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpsla2a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_volt176",
+      "name": "Universal Audio Volt 176",
+      "description": "Universal Audio Volt 176",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_volt176.jpg",
+      "product_url": "https://www.halilit.com/items/4186847-universal-audio-volt-176",
+      "is_sold": true,
+      "price": 785.0,
+      "halilit_url": "https://www.halilit.com/items/4186847-universal-audio-volt-176",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 785.0,
+        "original_price": 785.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_volt176.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_volt176.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_volt176.jpg",
+        "original": "/data/thumbnails/universal_audio_44_volt176.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx4g2_stu",
+      "name": "Universal Audio Apollo x4 Gen 2 - Studio+ Edition",
+      "description": "Universal Audio Apollo x4 Gen 2 - Studio+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+      "product_url": "https://www.halilit.com/items/7443683-universal-audio-apollo-x4-gen-2-studio-edition",
+      "is_sold": true,
+      "price": 8457.0,
+      "halilit_url": "https://www.halilit.com/items/7443683-universal-audio-apollo-x4-gen-2-studio-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8457.0,
+        "original_price": 8457.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpsorn",
+      "name": "Universal Audio UAFX Orion Tape Echo",
+      "description": "Universal Audio UAFX Orion Tape Echo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+      "product_url": "https://www.halilit.com/items/6140132-universal-audio-uafx-orion-tape-echo",
+      "is_sold": true,
+      "price": 566.0,
+      "halilit_url": "https://www.halilit.com/items/6140132-universal-audio-uafx-orion-tape-echo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 566.0,
+        "original_price": 566.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpsorn.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmmax",
+      "name": "Universal Audio UAFX MAX Preamp & Dual Compressor",
+      "description": "Universal Audio UAFX MAX Preamp & Dual Compressor",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+      "product_url": "https://www.halilit.com/items/5885927-universal-audio-uafx-max-preamp-dual-compressor",
+      "is_sold": true,
+      "price": 1413.0,
+      "halilit_url": "https://www.halilit.com/items/5885927-universal-audio-uafx-max-preamp-dual-compressor",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1413.0,
+        "original_price": 1413.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmmax.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apltwdu_he",
+      "name": "Universal Audio Apollo Twin DUO Heritage Edition",
+      "description": "Universal Audio Apollo Twin DUO Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+      "product_url": "https://www.halilit.com/items/3446764-universal-audio-apollo-twin-duo-usb-heritage-edition",
+      "is_sold": true,
+      "price": 3381.0,
+      "halilit_url": "https://www.halilit.com/items/3446764-universal-audio-apollo-twin-duo-usb-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3381.0,
+        "original_price": 3381.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx6g2_stu",
+      "name": "Universal Audio Apollo x6 Gen 2 - Studio+ Edition",
+      "description": "Universal Audio Apollo x6 Gen 2 - Studio+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+      "product_url": "https://www.halilit.com/items/7444207-universal-audio-apollo-x6-gen-2-studio-edition",
+      "is_sold": true,
+      "price": 10526.0,
+      "halilit_url": "https://www.halilit.com/items/7444207-universal-audio-apollo-x6-gen-2-studio-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10526.0,
+        "original_price": 10526.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8pg2_stu",
+      "name": "Universal Audio Apollo x8p Gen 2 - Studio+ Edition",
+      "description": "Universal Audio Apollo x8p Gen 2 - Studio+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+      "product_url": "https://www.halilit.com/items/7445754-universal-audio-apollo-x8p-gen-2-studio-edition",
+      "is_sold": true,
+      "price": 14287.0,
+      "halilit_url": "https://www.halilit.com/items/7445754-universal-audio-apollo-x8p-gen-2-studio-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 14287.0,
+        "original_price": 14287.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8g2_ess",
+      "name": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+      "description": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+      "product_url": "https://www.halilit.com/items/7444219-universal-audio-apollo-x8-gen-2-essentials-edition",
+      "is_sold": true,
+      "price": 10902.0,
+      "halilit_url": "https://www.halilit.com/items/7444219-universal-audio-apollo-x8-gen-2-essentials-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10902.0,
+        "original_price": 10902.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_gpmanti",
+      "name": "Universal Audio UAFX ANTI 1992 High Gain Amp",
+      "description": "Universal Audio UAFX ANTI 1992 High Gain Amp",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+      "product_url": "https://www.halilit.com/items/7404030-universal-audio-uafx-anti-1992-high-gain-amp",
+      "is_sold": true,
+      "price": 1531.0,
+      "halilit_url": "https://www.halilit.com/items/7404030-universal-audio-uafx-anti-1992-high-gain-amp",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1531.0,
+        "original_price": 1531.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+        "original": "/data/thumbnails/universal_audio_44_gpmanti.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apls_he",
+      "name": "Universal Audio Apollo Solo TB3 Heritage Edition",
+      "description": "Universal Audio Apollo Solo TB3 Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+      "product_url": "https://www.halilit.com/items/4204820-universal-audio-apollo-solo-tb3-heritage-edition",
+      "is_sold": true,
+      "price": 2629.0,
+      "halilit_url": "https://www.halilit.com/items/4204820-universal-audio-apollo-solo-tb3-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2629.0,
+        "original_price": 2629.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apls_he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_aplsu_he",
+      "name": "Universal Audio Apollo Solo USB Heritage Edition",
+      "description": "Universal Audio Apollo Solo USB Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+      "product_url": "https://www.halilit.com/items/3446553-universal-audio-apollo-solo-usb-heritage-edition",
+      "is_sold": true,
+      "price": 2629.0,
+      "halilit_url": "https://www.halilit.com/items/3446553-universal-audio-apollo-solo-usb-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 2629.0,
+        "original_price": 2629.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_aplsu_he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx4he",
+      "name": "Universal Audio Apollo X4 Heritage Edition",
+      "description": "Universal Audio Apollo X4 Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+      "product_url": "https://www.halilit.com/items/3447578-universal-audio-apollo-x4-heritage-edition",
+      "is_sold": true,
+      "price": 9158.0,
+      "halilit_url": "https://www.halilit.com/items/3447578-universal-audio-apollo-x4-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 9158.0,
+        "original_price": 9158.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx4he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apltwxdu_he",
+      "name": "Universal Audio Apollo Twin X DUO USB Heritage Edition",
+      "description": "Universal Audio Apollo Twin X DUO USB Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+      "product_url": "https://www.halilit.com/items/6169920-universal-audio-apollo-twin-x-duo-usb-heritage-edition",
+      "is_sold": true,
+      "price": 3757.0,
+      "halilit_url": "https://www.halilit.com/items/6169920-universal-audio-apollo-twin-x-duo-usb-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3757.0,
+        "original_price": 3757.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_ox",
+      "name": "Universal Audio OX Amp Top Box",
+      "description": "Universal Audio OX Amp Top Box",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_ox.jpg",
+      "product_url": "https://www.halilit.com/items/1645337-universal-audio-ox-amp-top-box",
+      "is_sold": true,
+      "price": 6071.0,
+      "halilit_url": "https://www.halilit.com/items/1645337-universal-audio-ox-amp-top-box",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 6071.0,
+        "original_price": 6071.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_ox.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_ox.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_ox.jpg",
+        "original": "/data/thumbnails/universal_audio_44_ox.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8",
+      "name": "Universal Audio Apollo X8",
+      "description": "Universal Audio Apollo X8",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8.jpg",
+      "product_url": "https://www.halilit.com/items/1956612-universal-audio-apollo-x8-audio-interface",
+      "is_sold": true,
+      "price": 12211.0,
+      "halilit_url": "https://www.halilit.com/items/1956612-universal-audio-apollo-x8-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 12211.0,
+        "original_price": 12211.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8he",
+      "name": "Universal Audio Apollo X8 Heritage Edition",
+      "description": "Universal Audio Apollo X8 Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+      "product_url": "https://www.halilit.com/items/3447558-universal-audio-apollo-x8-heritage-edition-",
+      "is_sold": true,
+      "price": 14248.0,
+      "halilit_url": "https://www.halilit.com/items/3447558-universal-audio-apollo-x8-heritage-edition-",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 14248.0,
+        "original_price": 14248.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx6",
+      "name": "Universal Audio Apollo X6",
+      "description": "Universal Audio Apollo X6",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6.jpg",
+      "product_url": "https://www.halilit.com/items/1956371-universal-audio-apollo-x6-audio-interface",
+      "is_sold": true,
+      "price": 10101.0,
+      "halilit_url": "https://www.halilit.com/items/1956371-universal-audio-apollo-x6-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 10101.0,
+        "original_price": 10101.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx6.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx6.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx6.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx6.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx6he",
+      "name": "Universal Audio Apollo X6 Heritage Edition",
+      "description": "Universal Audio Apollo X6 Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+      "product_url": "https://www.halilit.com/items/3447574-universal-audio-apollo-x6-heritage-edition",
+      "is_sold": true,
+      "price": 11617.0,
+      "halilit_url": "https://www.halilit.com/items/3447574-universal-audio-apollo-x6-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11617.0,
+        "original_price": 11617.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx6he.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8p",
+      "name": "Universal Audio Apollo X8P",
+      "description": "Universal Audio Apollo X8P",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+      "product_url": "https://www.halilit.com/items/1956638-universal-audio-apollo-x8p-audio-interface",
+      "is_sold": true,
+      "price": 15154.0,
+      "halilit_url": "https://www.halilit.com/items/1956638-universal-audio-apollo-x8p-audio-interface",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 15154.0,
+        "original_price": 15154.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8p.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_uad2_sat_usb_q",
+      "name": "Universal Audio UAD-2 Satellite USB QUAD Core",
+      "description": "Universal Audio UAD-2 Satellite USB QUAD Core",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+      "product_url": "https://www.halilit.com/items/819751-universal-audio-uad-2-satellite-usb-quad-core",
+      "is_sold": true,
+      "price": 3558.0,
+      "halilit_url": "https://www.halilit.com/items/819751-universal-audio-uad-2-satellite-usb-quad-core",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 3558.0,
+        "original_price": 3558.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+        "original": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_uad2_osat_usb",
+      "name": "Universal Audio UAD-2 Satellite USB Octo",
+      "description": "Universal Audio UAD-2 Satellite USB Octo",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+      "product_url": "https://www.halilit.com/items/819776-universal-audio-uad-2-satellite-usb-octo",
+      "is_sold": true,
+      "price": 4856.0,
+      "halilit_url": "https://www.halilit.com/items/819776-universal-audio-uad-2-satellite-usb-octo",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4856.0,
+        "original_price": 4856.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+        "original": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_apx8phe",
+      "name": "Universal Audio Apollo X8P Heritage Edition",
+      "description": "Universal Audio Apollo X8P Heritage Edition",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+      "product_url": "https://www.halilit.com/items/3447477-universal-audio-apollo-x8p-heritage-edition",
+      "is_sold": true,
+      "price": 17302.0,
+      "halilit_url": "https://www.halilit.com/items/3447477-universal-audio-apollo-x8p-heritage-edition",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 17302.0,
+        "original_price": 17302.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+        "original": "/data/thumbnails/universal_audio_44_apx8phe.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_710",
+      "name": "Universal Audio Twin-Finity 710",
+      "description": "Universal Audio Twin-Finity 710",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_710.jpg",
+      "product_url": "https://www.halilit.com/items/446598-universal-audio-twin-finity-710",
+      "is_sold": true,
+      "price": 4046.0,
+      "halilit_url": "https://www.halilit.com/items/446598-universal-audio-twin-finity-710",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 4046.0,
+        "original_price": 4046.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_710.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_710.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_710.jpg",
+        "original": "/data/thumbnails/universal_audio_44_710.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_solo610",
+      "name": "Universal Audio SOLO 610",
+      "description": "Universal Audio SOLO 610",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_solo610.jpg",
+      "product_url": "https://www.halilit.com/items/470242-universal-audio-solo-610",
+      "is_sold": true,
+      "price": 5298.0,
+      "halilit_url": "https://www.halilit.com/items/470242-universal-audio-solo-610",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 5298.0,
+        "original_price": 5298.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_solo610.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_solo610.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_solo610.jpg",
+        "original": "/data/thumbnails/universal_audio_44_solo610.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_la610mk2",
+      "name": "Universal Audio LA-610 MkII",
+      "description": "Universal Audio LA-610 MkII",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+      "product_url": "https://www.halilit.com/items/446079-universal-audio-la-610-mkii",
+      "is_sold": true,
+      "price": 8832.0,
+      "halilit_url": "https://www.halilit.com/items/446079-universal-audio-la-610-mkii",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8832.0,
+        "original_price": 8832.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+        "original": "/data/thumbnails/universal_audio_44_la610mk2.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_thunderbolt3",
+      "name": "Universal Audio Thunderbolt 3",
+      "description": "Universal Audio Thunderbolt 3",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+      "product_url": "https://www.halilit.com/items/4976919-universal-audio-thunderbolt-3",
+      "is_sold": true,
+      "price": 1211.0,
+      "halilit_url": "https://www.halilit.com/items/4976919-universal-audio-thunderbolt-3",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 1211.0,
+        "original_price": 1211.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+        "original": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_2_610",
+      "name": "Universal Audio 2-610",
+      "description": "Universal Audio 2-610",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_2_610.jpg",
+      "product_url": "https://www.halilit.com/items/444671-universal-audio-2-610",
+      "is_sold": true,
+      "price": 11189.0,
+      "halilit_url": "https://www.halilit.com/items/444671-universal-audio-2-610",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 11189.0,
+        "original_price": 11189.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_2_610.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_2_610.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_2_610.jpg",
+        "original": "/data/thumbnails/universal_audio_44_2_610.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_4_710d",
+      "name": "Universal Audio 4-710D",
+      "description": "Universal Audio 4-710D",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+      "product_url": "https://www.halilit.com/items/446599-universal-audio-4-710d",
+      "is_sold": true,
+      "price": 8096.0,
+      "halilit_url": "https://www.halilit.com/items/446599-universal-audio-4-710d",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 8096.0,
+        "original_price": 8096.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+        "original": "/data/thumbnails/universal_audio_44_4_710d.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_1176ln",
+      "name": "Universal Audio 1176LN",
+      "description": "Universal Audio 1176LN",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+      "product_url": "https://www.halilit.com/items/1896528-universal-audio-1176ln-classic-limiting-amplifire",
+      "is_sold": true,
+      "price": 13250.0,
+      "halilit_url": "https://www.halilit.com/items/1896528-universal-audio-1176ln-classic-limiting-amplifire",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 13250.0,
+        "original_price": 13250.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+        "original": "/data/thumbnails/universal_audio_44_1176ln.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_6176",
+      "name": "Universal Audio 6176",
+      "description": "Universal Audio 6176",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_6176.jpg",
+      "product_url": "https://www.halilit.com/items/446597-universal-audio-6176",
+      "is_sold": true,
+      "price": 13250.0,
+      "halilit_url": "https://www.halilit.com/items/446597-universal-audio-6176",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 13250.0,
+        "original_price": 13250.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_6176.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_6176.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_6176.jpg",
+        "original": "/data/thumbnails/universal_audio_44_6176.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_la2a",
+      "name": "Universal Audio LA-2A",
+      "description": "Universal Audio LA-2A",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_la2a.jpg",
+      "product_url": "https://www.halilit.com/items/444670-universal-audio-la-2a",
+      "is_sold": true,
+      "price": 22086.0,
+      "halilit_url": "https://www.halilit.com/items/444670-universal-audio-la-2a",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 22086.0,
+        "original_price": 22086.0
+      },
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_la2a.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_la2a.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_la2a.jpg",
+        "original": "/data/thumbnails/universal_audio_44_la2a.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "universal_audio_44_lunarecordingsystem",
+      "name": "Universal Audio LUNA Recording System",
+      "description": "Universal Audio LUNA Recording System",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+      "product_url": "https://www.halilit.com/items/2687467-universal-audio-luna-recording-system",
+      "is_sold": true,
+      "price": 0.0,
+      "halilit_url": "https://www.halilit.com/items/2687467-universal-audio-luna-recording-system",
+      "status": "IN_STOCK",
+      "pricing": {},
+      "brand": "Universal Audio",
+      "logo_url": "/assets/logos/universal-audio_logo.svg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+        "thumbnail": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+        "high_res": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+        "original": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:38.609586",
+  "brand_slug": "universal-audio",
+  "refined_at": "2026-01-26T06:43:38.687174+00:00",
+  "brand_identity": {
+    "id": "universal-audio",
+    "name": "Universal Audio",
+    "brand_colors": {
+      "primary": "#1f2937",
+      "secondary": "#111827",
+      "accent": "#3b82f6",
+      "background": "#000000",
+      "text": "#f3f4f6"
+    },
+    "logo_url": "/assets/logos/universal-audio_logo.svg",
+    "taxonomy_stats": {
+      "validated": 70,
+      "normalized": 0,
+      "uncategorized": 0
+    },
+    "categories": [
+      {
+        "id": "keys",
+        "label": "Keys & Pianos",
+        "icon": "🎹",
+        "description": "Keyboards and pianos",
+        "children": []
+      },
+      {
+        "id": "drums",
+        "label": "Drums & Percussion",
+        "icon": "🥁",
+        "description": "Drums and percussion",
+        "children": []
+      },
+      {
+        "id": "guitars",
+        "label": "Guitars & Amps",
+        "icon": "🎸",
+        "description": "Guitars and amplifiers",
+        "children": []
+      },
+      {
+        "id": "studio",
+        "label": "Studio & Recording",
+        "icon": "🎙️",
+        "description": "Studio and recording gear",
+        "children": []
+      },
+      {
+        "id": "live",
+        "label": "Live Sound",
+        "icon": "🔊",
+        "description": "Live sound equipment",
+        "children": []
+      },
+      {
+        "id": "dj",
+        "label": "DJ & Production",
+        "icon": "🎧",
+        "description": "DJ and production gear",
+        "children": []
+      },
+      {
+        "id": "software",
+        "label": "Software & Cloud",
+        "icon": "💻",
+        "description": "Software and cloud services",
+        "children": []
+      },
+      {
+        "id": "accessories",
+        "label": "Accessories",
+        "icon": "🔧",
+        "description": "Accessories and add-ons",
+        "children": []
+      }
+    ]
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "universal_audio_44_volt1",
+          "name": "Universal Audio Volt 1 USB Audio Interface",
+          "description": "Universal Audio Volt 1 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt1.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt1.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt1.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt1.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx16g2_ess",
+          "name": "Universal Audio Apollo x16 Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo x16 Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_ape2m",
+          "name": "Universal Audio Apollo e2m",
+          "description": "Universal Audio Apollo e2m",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+            "original": "/data/thumbnails/universal_audio_44_ape2m.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_ape1x",
+          "name": "Universal Audio Apollo e1x",
+          "description": "Universal Audio Apollo e1x",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+            "original": "/data/thumbnails/universal_audio_44_ape1x.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx6g2_ess",
+          "name": "Universal Audio Apollo x6 Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo x6 Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_aptxdg2_ess",
+          "name": "Universal Audio Apollo Twin X Duo Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo Twin X Duo Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmknuc",
+          "name": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+          "description": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmknuc.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_volt276",
+          "name": "Universal Audio Volt 276 USB Audio Interface",
+          "description": "Universal Audio Volt 276 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt276.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt276.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt276.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt276.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_volt2",
+          "name": "Universal Audio Volt 2 USB Audio Interface",
+          "description": "Universal Audio Volt 2 USB Audio Interface",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt2.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt2.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt2.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_aptxqg2_ess",
+          "name": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpm_lion",
+          "name": "Universal Audio UAFX Lion '68 Super Lead Amp",
+          "description": "Universal Audio UAFX Lion '68 Super Lead Amp",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpm_lion.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmdrm",
+          "name": "Universal Audio UAFX Dream '65 Reverb Amplifier",
+          "description": "Universal Audio UAFX Dream '65 Reverb Amplifier",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmdrm.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmwdr",
+          "name": "Universal Audio UAFX Woodrow '55 Instrument Amplifier",
+          "description": "Universal Audio UAFX Woodrow '55 Instrument Amplifier",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmwdr.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpsbrgd",
+          "name": "Universal Audio UAFX Brigade Chorus & Vibrato",
+          "description": "Universal Audio UAFX Brigade Chorus & Vibrato",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmdlvrb",
+          "name": "Universal Audio UAFX Del-Verb Ambience Companion",
+          "description": "Universal Audio UAFX Del-Verb Ambience Companion",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_volt876",
+          "name": "Universal Audio Volt 876",
+          "description": "Universal Audio Volt 876",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt876.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt876.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt876.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt876.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_uad2_osat_tb3",
+          "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+          "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+            "original": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmruby",
+          "name": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+          "description": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmruby.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmenig",
+          "name": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+          "description": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmenig.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmoxstp",
+          "name": "Universal Audio UAFX OX Stomp",
+          "description": "Universal Audio UAFX OX Stomp",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_aptxqg2_stu",
+          "name": "Universal Audio Apollo Twin X Quad Gen 2 - Studio+ Edition",
+          "description": "Universal Audio Apollo Twin X Quad Gen 2 - Studio+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+            "original": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8g2_stu",
+          "name": "Universal Audio Apollo x8 Gen 2 - Studio+ Edition",
+          "description": "Universal Audio Apollo x8 Gen 2 - Studio+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8pg2_ess",
+          "name": "Universal Audio Apollo x8p Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo x8p Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_aptxdg2_stu",
+          "name": "Universal Audio Apollo Twin X Duo Gen 2 - Studio+ Edition",
+          "description": "Universal Audio Apollo Twin X Duo Gen 2 - Studio+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+            "original": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx4g2_ess",
+          "name": "Universal Audio Apollo x4 Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo x4 Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_uad2_qsat_tb3",
+          "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+          "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+            "original": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpm_astra",
+          "name": "Universal Audio UAFX Astra Modulation Machine",
+          "description": "Universal Audio UAFX Astra Modulation Machine",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpm_astra.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpm_astra.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_volt476p",
+          "name": "Universal Audio VOLT 476P",
+          "description": "Universal Audio VOLT 476P",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt476p.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gps1176",
+          "name": "Universal Audio UAFX 1176 Studio Compressor",
+          "description": "Universal Audio UAFX 1176 Studio Compressor",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gps1176.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gps1176.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpm_gold",
+          "name": "Universal Audio UAFX Golden Reverberator",
+          "description": "Universal Audio UAFX Golden Reverberator",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpm_gold.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpm_gold.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpm_star",
+          "name": "Universal Audio UAFX Starlight Echo Station",
+          "description": "Universal Audio UAFX Starlight Echo Station",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpm_star.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpm_star.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmglxy",
+          "name": "Universal Audio UAFX Galaxy '74 Tape Echo & Reverb",
+          "description": "Universal Audio UAFX Galaxy '74 Tape Echo & Reverb",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmglxy.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmglxy.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpsflow",
+          "name": "Universal Audio UAFX Flow Vintage Tremolo",
+          "description": "Universal Audio UAFX Flow Vintage Tremolo",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpsflow.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpsflow.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_volt476",
+          "name": "Universal Audio Volt 476",
+          "description": "Universal Audio Volt 476",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt476.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt476.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt476.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt476.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpsevmr",
+          "name": "Universal Audio UAFX Evermore Studio Reverb",
+          "description": "Universal Audio UAFX Evermore Studio Reverb",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpsevmr.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpsevmr.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx16dg2_ess",
+          "name": "Universal Audio Apollo x16D Essentials+ Edition",
+          "description": "Universal Audio Apollo x16D Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpshvnly",
+          "name": "Universal Audio UAFX Heavenly Plate Reverb",
+          "description": "Universal Audio UAFX Heavenly Plate Reverb",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpshvnly.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpshvnly.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpsla2a",
+          "name": "Universal Audio UAFX Teletronix LA-2A Studio Compressor",
+          "description": "Universal Audio UAFX Teletronix LA-2A Studio Compressor",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpsla2a.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpsla2a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_volt176",
+          "name": "Universal Audio Volt 176",
+          "description": "Universal Audio Volt 176",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_volt176.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_volt176.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_volt176.jpg",
+            "original": "/data/thumbnails/universal_audio_44_volt176.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx4g2_stu",
+          "name": "Universal Audio Apollo x4 Gen 2 - Studio+ Edition",
+          "description": "Universal Audio Apollo x4 Gen 2 - Studio+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpsorn",
+          "name": "Universal Audio UAFX Orion Tape Echo",
+          "description": "Universal Audio UAFX Orion Tape Echo",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpsorn.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpsorn.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmmax",
+          "name": "Universal Audio UAFX MAX Preamp & Dual Compressor",
+          "description": "Universal Audio UAFX MAX Preamp & Dual Compressor",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmmax.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmmax.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apltwdu_he",
+          "name": "Universal Audio Apollo Twin DUO Heritage Edition",
+          "description": "Universal Audio Apollo Twin DUO Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx6g2_stu",
+          "name": "Universal Audio Apollo x6 Gen 2 - Studio+ Edition",
+          "description": "Universal Audio Apollo x6 Gen 2 - Studio+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8pg2_stu",
+          "name": "Universal Audio Apollo x8p Gen 2 - Studio+ Edition",
+          "description": "Universal Audio Apollo x8p Gen 2 - Studio+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8g2_ess",
+          "name": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+          "description": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_gpmanti",
+          "name": "Universal Audio UAFX ANTI 1992 High Gain Amp",
+          "description": "Universal Audio UAFX ANTI 1992 High Gain Amp",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_gpmanti.jpg",
+            "original": "/data/thumbnails/universal_audio_44_gpmanti.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apls_he",
+          "name": "Universal Audio Apollo Solo TB3 Heritage Edition",
+          "description": "Universal Audio Apollo Solo TB3 Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apls_he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_aplsu_he",
+          "name": "Universal Audio Apollo Solo USB Heritage Edition",
+          "description": "Universal Audio Apollo Solo USB Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_aplsu_he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx4he",
+          "name": "Universal Audio Apollo X4 Heritage Edition",
+          "description": "Universal Audio Apollo X4 Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx4he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apltwxdu_he",
+          "name": "Universal Audio Apollo Twin X DUO USB Heritage Edition",
+          "description": "Universal Audio Apollo Twin X DUO USB Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_ox",
+          "name": "Universal Audio OX Amp Top Box",
+          "description": "Universal Audio OX Amp Top Box",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_ox.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_ox.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_ox.jpg",
+            "original": "/data/thumbnails/universal_audio_44_ox.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8",
+          "name": "Universal Audio Apollo X8",
+          "description": "Universal Audio Apollo X8",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8he",
+          "name": "Universal Audio Apollo X8 Heritage Edition",
+          "description": "Universal Audio Apollo X8 Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx6",
+          "name": "Universal Audio Apollo X6",
+          "description": "Universal Audio Apollo X6",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx6.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx6.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx6.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx6.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx6he",
+          "name": "Universal Audio Apollo X6 Heritage Edition",
+          "description": "Universal Audio Apollo X6 Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx6he.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8p",
+          "name": "Universal Audio Apollo X8P",
+          "description": "Universal Audio Apollo X8P",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8p.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_uad2_sat_usb_q",
+          "name": "Universal Audio UAD-2 Satellite USB QUAD Core",
+          "description": "Universal Audio UAD-2 Satellite USB QUAD Core",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+            "original": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_uad2_osat_usb",
+          "name": "Universal Audio UAD-2 Satellite USB Octo",
+          "description": "Universal Audio UAD-2 Satellite USB Octo",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+            "original": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_apx8phe",
+          "name": "Universal Audio Apollo X8P Heritage Edition",
+          "description": "Universal Audio Apollo X8P Heritage Edition",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+            "original": "/data/thumbnails/universal_audio_44_apx8phe.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_710",
+          "name": "Universal Audio Twin-Finity 710",
+          "description": "Universal Audio Twin-Finity 710",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_710.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_710.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_710.jpg",
+            "original": "/data/thumbnails/universal_audio_44_710.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_solo610",
+          "name": "Universal Audio SOLO 610",
+          "description": "Universal Audio SOLO 610",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_solo610.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_solo610.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_solo610.jpg",
+            "original": "/data/thumbnails/universal_audio_44_solo610.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_la610mk2",
+          "name": "Universal Audio LA-610 MkII",
+          "description": "Universal Audio LA-610 MkII",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_la610mk2.jpg",
+            "original": "/data/thumbnails/universal_audio_44_la610mk2.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_thunderbolt3",
+          "name": "Universal Audio Thunderbolt 3",
+          "description": "Universal Audio Thunderbolt 3",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg",
+            "original": "/data/thumbnails/universal_audio_44_thunderbolt3.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_2_610",
+          "name": "Universal Audio 2-610",
+          "description": "Universal Audio 2-610",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_2_610.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_2_610.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_2_610.jpg",
+            "original": "/data/thumbnails/universal_audio_44_2_610.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_4_710d",
+          "name": "Universal Audio 4-710D",
+          "description": "Universal Audio 4-710D",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_4_710d.jpg",
+            "original": "/data/thumbnails/universal_audio_44_4_710d.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_1176ln",
+          "name": "Universal Audio 1176LN",
+          "description": "Universal Audio 1176LN",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_1176ln.jpg",
+            "original": "/data/thumbnails/universal_audio_44_1176ln.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_6176",
+          "name": "Universal Audio 6176",
+          "description": "Universal Audio 6176",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_6176.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_6176.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_6176.jpg",
+            "original": "/data/thumbnails/universal_audio_44_6176.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_la2a",
+          "name": "Universal Audio LA-2A",
+          "description": "Universal Audio LA-2A",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_la2a.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_la2a.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_la2a.jpg",
+            "original": "/data/thumbnails/universal_audio_44_la2a.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "universal_audio_44_lunarecordingsystem",
+          "name": "Universal Audio LUNA Recording System",
+          "description": "Universal Audio LUNA Recording System",
+          "images": {
+            "main": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+            "thumbnail": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+            "high_res": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg",
+            "original": "/data/thumbnails/universal_audio_44_lunarecordingsystem.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}

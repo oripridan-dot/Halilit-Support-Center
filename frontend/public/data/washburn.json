@@ -1,0 +1,271 @@
+{
+  "brand_name": "Washburn",
+  "products": [
+    {
+      "id": "washburn_04_sb1pts",
+      "name": "Washburn Sonamaster SB1P",
+      "description": "Washburn Sonamaster SB1P",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/washburn_04_sb1pts.jpg",
+      "product_url": "https://www.halilit.com/items/3202206-Washburn-Sonamaster-SB1P-Bass-Guitar",
+      "is_sold": true,
+      "price": 811.0,
+      "halilit_url": "https://www.halilit.com/items/3202206-Washburn-Sonamaster-SB1P-Bass-Guitar",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 811.0,
+        "original_price": 811.0
+      },
+      "brand": "Washburn",
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/washburn_04_sb1pts.jpg",
+        "thumbnail": "/data/thumbnails/washburn_04_sb1pts.jpg",
+        "high_res": "/data/thumbnails/washburn_04_sb1pts.jpg",
+        "original": "/data/thumbnails/washburn_04_sb1pts.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "washburn_04_gcdndlx",
+      "name": "Washburn Deluxe Dreadnought Acoustic Guitar Case",
+      "description": "Washburn Deluxe Dreadnought Acoustic Guitar Case",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+      "product_url": "https://www.halilit.com/items/4274685-washburn-deluxe-dreadnought-acoustic-guitar-case",
+      "is_sold": true,
+      "price": 458.0,
+      "halilit_url": "https://www.halilit.com/items/4274685-washburn-deluxe-dreadnought-acoustic-guitar-case",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 458.0,
+        "original_price": 458.0
+      },
+      "brand": "Washburn",
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+        "thumbnail": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+        "high_res": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+        "original": "/data/thumbnails/washburn_04_gcdndlx.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "washburn_04_ws300hwh",
+      "name": "Washburn WS300HWH",
+      "description": "Washburn WS300HWH",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+      "product_url": "https://www.halilit.com/items/7773708-washburn-ws300hwh",
+      "is_sold": true,
+      "price": 680.0,
+      "halilit_url": "https://www.halilit.com/items/7773708-washburn-ws300hwh",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 680.0,
+        "original_price": 680.0
+      },
+      "brand": "Washburn",
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+        "thumbnail": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+        "high_res": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+        "original": "/data/thumbnails/washburn_04_ws300hwh.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "washburn_04_ws300b",
+      "name": "Washburn WS300B",
+      "description": "Washburn WS300B",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/washburn_04_ws300b.jpg",
+      "product_url": "https://www.halilit.com/items/7773499-washburn-ws300b",
+      "is_sold": true,
+      "price": 595.0,
+      "halilit_url": "https://www.halilit.com/items/7773499-washburn-ws300b",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 595.0,
+        "original_price": 595.0
+      },
+      "brand": "Washburn",
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/washburn_04_ws300b.jpg",
+        "thumbnail": "/data/thumbnails/washburn_04_ws300b.jpg",
+        "high_res": "/data/thumbnails/washburn_04_ws300b.jpg",
+        "original": "/data/thumbnails/washburn_04_ws300b.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "washburn_04_ws300ts",
+      "name": "Washburn WS300TS",
+      "description": "Washburn WS300TS",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/washburn_04_ws300ts.jpg",
+      "product_url": "https://www.halilit.com/items/7773652-washburn-ws300ts",
+      "is_sold": true,
+      "price": 680.0,
+      "halilit_url": "https://www.halilit.com/items/7773652-washburn-ws300ts",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 680.0,
+        "original_price": 680.0
+      },
+      "brand": "Washburn",
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/washburn_04_ws300ts.jpg",
+        "thumbnail": "/data/thumbnails/washburn_04_ws300ts.jpg",
+        "high_res": "/data/thumbnails/washburn_04_ws300ts.jpg",
+        "original": "/data/thumbnails/washburn_04_ws300ts.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    },
+    {
+      "id": "washburn_04_ws300hb",
+      "name": "Washburn WS300HB",
+      "description": "Washburn WS300HB",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/washburn_04_ws300hb.jpg",
+      "product_url": "https://www.halilit.com/items/7773674-washburn-ws300hb",
+      "is_sold": true,
+      "price": 680.0,
+      "halilit_url": "https://www.halilit.com/items/7773674-washburn-ws300hb",
+      "status": "IN_STOCK",
+      "pricing": {
+        "regular_price": 680.0,
+        "original_price": 680.0
+      },
+      "brand": "Washburn",
+      "logo_url": "/assets/logos/washburn_logo.jpg",
+      "main_category": "accessories",
+      "images": {
+        "main": "/data/thumbnails/washburn_04_ws300hb.jpg",
+        "thumbnail": "/data/thumbnails/washburn_04_ws300hb.jpg",
+        "high_res": "/data/thumbnails/washburn_04_ws300hb.jpg",
+        "original": "/data/thumbnails/washburn_04_ws300hb.jpg"
+      },
+      "category_hierarchy": [
+        "accessories"
+      ]
+    }
+  ],
+  "generated_at": "2026-01-26T06:43:37.230853",
+  "brand_slug": "washburn",
+  "refined_at": "2026-01-26T06:43:37.267176+00:00",
+  "brand_identity": {
+    "id": "washburn",
+    "name": "Washburn",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/washburn_logo.jpg",
+    "taxonomy_stats": {
+      "validated": 6,
+      "normalized": 0,
+      "uncategorized": 0
+    }
+  },
+  "hierarchy": {
+    "accessories": {
+      "General": [
+        {
+          "id": "washburn_04_sb1pts",
+          "name": "Washburn Sonamaster SB1P",
+          "description": "Washburn Sonamaster SB1P",
+          "images": {
+            "main": "/data/thumbnails/washburn_04_sb1pts.jpg",
+            "thumbnail": "/data/thumbnails/washburn_04_sb1pts.jpg",
+            "high_res": "/data/thumbnails/washburn_04_sb1pts.jpg",
+            "original": "/data/thumbnails/washburn_04_sb1pts.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "washburn_04_gcdndlx",
+          "name": "Washburn Deluxe Dreadnought Acoustic Guitar Case",
+          "description": "Washburn Deluxe Dreadnought Acoustic Guitar Case",
+          "images": {
+            "main": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+            "thumbnail": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+            "high_res": "/data/thumbnails/washburn_04_gcdndlx.jpg",
+            "original": "/data/thumbnails/washburn_04_gcdndlx.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "washburn_04_ws300hwh",
+          "name": "Washburn WS300HWH",
+          "description": "Washburn WS300HWH",
+          "images": {
+            "main": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+            "thumbnail": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+            "high_res": "/data/thumbnails/washburn_04_ws300hwh.jpg",
+            "original": "/data/thumbnails/washburn_04_ws300hwh.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "washburn_04_ws300b",
+          "name": "Washburn WS300B",
+          "description": "Washburn WS300B",
+          "images": {
+            "main": "/data/thumbnails/washburn_04_ws300b.jpg",
+            "thumbnail": "/data/thumbnails/washburn_04_ws300b.jpg",
+            "high_res": "/data/thumbnails/washburn_04_ws300b.jpg",
+            "original": "/data/thumbnails/washburn_04_ws300b.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "washburn_04_ws300ts",
+          "name": "Washburn WS300TS",
+          "description": "Washburn WS300TS",
+          "images": {
+            "main": "/data/thumbnails/washburn_04_ws300ts.jpg",
+            "thumbnail": "/data/thumbnails/washburn_04_ws300ts.jpg",
+            "high_res": "/data/thumbnails/washburn_04_ws300ts.jpg",
+            "original": "/data/thumbnails/washburn_04_ws300ts.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        },
+        {
+          "id": "washburn_04_ws300hb",
+          "name": "Washburn WS300HB",
+          "description": "Washburn WS300HB",
+          "images": {
+            "main": "/data/thumbnails/washburn_04_ws300hb.jpg",
+            "thumbnail": "/data/thumbnails/washburn_04_ws300hb.jpg",
+            "high_res": "/data/thumbnails/washburn_04_ws300hb.jpg",
+            "original": "/data/thumbnails/washburn_04_ws300hb.jpg"
+          },
+          "model_number": null,
+          "sku": null
+        }
+      ]
+    }
+  }
+}
