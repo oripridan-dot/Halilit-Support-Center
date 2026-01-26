@@ -1,0 +1,74 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: ./frontend
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v3
+      with:
+        version: 9
+        run_install: false
+
+    - name: Get pnpm store directory
+      shell: bash
+      run: |
+        echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+    - name: Setup pnpm cache
+      uses: actions/cache@v3
+      with:
+        path: ${{ env.STORE_PATH }}
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Type check
+      run: pnpm run tsc -b
+
+    - name: Build
+      run: pnpm run build
+
+    # Optional: Deploy to Netlify (requires secrets)
+    # To enable:
+    # 1. Get a NETLIFY_AUTH_TOKEN from your User Settings
+    # 2. PROD: Create a new site in Netlify, get Site ID, add as NETLIFY_SITE_ID secret
+    # 3. PREVIEW: No Site ID needed for drafts usually, or use the same one
+    
+    #- name: Deploy to Netlify
+    #  uses: nwtgck/actions-netlify@v2.0
+    #  if: success()
+    #  with:
+    #    publish-dir: './frontend/dist'
+    #    production-branch: main
+    #    github-token: ${{ secrets.GITHUB_TOKEN }}
+    #    deploy-message: "Deploy from GitHub Actions"
+    #    enable-pull-request-comment: true
+    #    enable-commit-comment: true
+    #    overwrites-pull-request-comment: true
+    #  env:
+    #    NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+    #    NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

@@ -1,0 +1,19 @@
+[build]
+  # Directory to change to before running the build command
+  base = "frontend"
+  # Directory where the build output is located (relative to 'base')
+  publish = "dist"
+  # Command to build your site
+  command = "pnpm install && pnpm run build"
+
+[context.production]
+  environment = { NODE_VERSION = "20" }
+
+[context.deploy-preview]
+  environment = { NODE_VERSION = "20" }
+
+# Handle Single Page Application (SPA) routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
