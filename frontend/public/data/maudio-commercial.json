@@ -1,0 +1,20 @@
+{
+  "brand_slug": "maudio-commercial",
+  "source": "halilit_commercial_scan",
+  "products": [],
+  "brand_name": "Maudio Commercial",
+  "refined_at": "2026-01-27T08:20:47.697285+00:00",
+  "brand_identity": {
+    "id": "maudio-commercial",
+    "name": "Maudio Commercial",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/maudio-commercial_logo.png",
+    "taxonomy_stats": {
+      "validated": 22,
+      "normalized": 0,
+      "uncategorized": 0
+    },
+    "total_products": 0
+  },
+  "hierarchy": {}
+}

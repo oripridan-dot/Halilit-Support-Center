@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-bluetubedpv2",
+  "name": "PreSonus BlueTube DP v2",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus BlueTube DP v2",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/1928839-presonus-bluetube-dp-v2-",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_bluetubedpv2",
+    "name": "PreSonus BlueTube DP v2",
+    "description": "PreSonus BlueTube DP v2",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+    "product_url": "https://www.halilit.com/items/1928839-presonus-bluetube-dp-v2-",
+    "is_sold": true,
+    "price": 1197.0,
+    "halilit_url": "https://www.halilit.com/items/1928839-presonus-bluetube-dp-v2-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.059886Z"
+  }
+}

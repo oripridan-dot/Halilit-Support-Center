@@ -1,0 +1,39 @@
+{
+  "id": "magma_95_riotdj_bp",
+  "name": "Magma Riot DJ-Backpack",
+  "brand": "magma",
+  "category": "dj",
+  "description": "Magma Riot DJ-Backpack",
+  "media": {
+    "thumbnail": "/data/thumbnails/magma_95_riotdj_bp.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "magma_95_riotdj_bp",
+    "name": "Magma Riot DJ-Backpack",
+    "description": "Magma Riot DJ-Backpack",
+    "category": "general",
+    "image_url": "/data/thumbnails/magma_95_riotdj_bp.jpg",
+    "product_url": "https://www.halilit.com/items/2001589-magma-riot-dj-backpack",
+    "is_sold": true,
+    "price": 803.0,
+    "halilit_url": "https://www.halilit.com/items/2001589-magma-riot-dj-backpack",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.082129Z"
+  }
+}

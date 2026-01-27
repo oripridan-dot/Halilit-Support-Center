@@ -17,7 +17,7 @@ export const useCategoryCatalog = (category: string | null) => {
 
       try {
         const catId = category.toLowerCase();
-        const res = await fetch(`/data/categories/${catId}.json`);
+        const res = await fetch(`/data/${catId}.json`);
         
         if (res.ok) {
           const data: CategoryPayload = await res.json();

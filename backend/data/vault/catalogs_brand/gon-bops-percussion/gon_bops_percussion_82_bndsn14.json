@@ -1,0 +1,39 @@
+{
+  "id": "gon_bops_percussion_82_bndsn14",
+  "name": "Gon Bops 14\u2033 Banda Snare Drum",
+  "brand": "gon-bops-percussion",
+  "category": "drums",
+  "description": "Gon Bops 14\u2033 Banda Snare Drum",
+  "media": {
+    "thumbnail": "/data/thumbnails/gon_bops_percussion_82_bndsn14.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "gon_bops_percussion_82_bndsn14",
+    "name": "Gon Bops 14\u2033 Banda Snare Drum",
+    "description": "Gon Bops 14\u2033 Banda Snare Drum",
+    "category": "general",
+    "image_url": "/data/thumbnails/gon_bops_percussion_82_bndsn14.jpg",
+    "product_url": "https://www.halilit.com/items/7965166-gon-bops-14-banda-snare-drum",
+    "is_sold": true,
+    "price": 2570.0,
+    "halilit_url": "https://www.halilit.com/items/7965166-gon-bops-14-banda-snare-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.105661Z"
+  }
+}

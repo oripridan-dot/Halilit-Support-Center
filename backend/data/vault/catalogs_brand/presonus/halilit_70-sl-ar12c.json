@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-sl-ar12c",
+  "name": "PreSonus StudioLive AR12c",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus StudioLive AR12c",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2759045-presonus-studiolive-ar12c",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_sl_ar12c",
+    "name": "PreSonus StudioLive AR12c",
+    "description": "PreSonus StudioLive AR12c",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+    "product_url": "https://www.halilit.com/items/2759045-presonus-studiolive-ar12c",
+    "is_sold": true,
+    "price": 2886.0,
+    "halilit_url": "https://www.halilit.com/items/2759045-presonus-studiolive-ar12c",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.062702Z"
+  }
+}

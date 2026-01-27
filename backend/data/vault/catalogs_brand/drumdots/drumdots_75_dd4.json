@@ -1,0 +1,39 @@
+{
+  "id": "drumdots_75_dd4",
+  "name": "Drumdots DD4",
+  "brand": "drumdots",
+  "category": "drums",
+  "description": "Drumdots DD4",
+  "media": {
+    "thumbnail": "/data/thumbnails/drumdots_75_dd4.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "drumdots_75_dd4",
+    "name": "Drumdots DD4",
+    "description": "Drumdots DD4",
+    "category": "general",
+    "image_url": "/data/thumbnails/drumdots_75_dd4.jpg",
+    "product_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+    "is_sold": true,
+    "price": 46.0,
+    "halilit_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.075480Z"
+  }
+}

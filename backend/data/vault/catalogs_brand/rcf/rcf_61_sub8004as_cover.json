@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_sub8004as_cover",
+  "name": "RCF SUB 8004-AS COVER",
+  "brand": "rcf",
+  "category": "accessories",
+  "description": "RCF SUB 8004-AS COVER",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_sub8004as_cover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_sub8004as_cover",
+    "name": "RCF SUB 8004-AS COVER",
+    "description": "RCF SUB 8004-AS COVER",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_sub8004as_cover.jpg",
+    "product_url": "https://www.halilit.com/items/1612702-rcf-cover-sub-8004-as",
+    "is_sold": true,
+    "price": 590.0,
+    "halilit_url": "https://www.halilit.com/items/1612702-rcf-cover-sub-8004-as",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.517537Z"
+  }
+}

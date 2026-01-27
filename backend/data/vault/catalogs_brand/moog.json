@@ -1,0 +1,280 @@
+{
+  "brand_identity": {
+    "id": "moog",
+    "name": "MOOG"
+  },
+  "products": [
+    {
+      "id": "halilit_29-theremini",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-THEREMINI",
+      "halilit_url": "https://www.halilit.com/items/8676603-moog-theremini-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-subsequent37",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-SUBSEQUENT37",
+      "halilit_url": "https://www.halilit.com/items/8674471-moog-subsequent-37-analog-2-voices-bass-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-spectravox",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-SPECTRAVOX",
+      "halilit_url": "https://www.halilit.com/items/8670732-moog-spectravox-analog-semi-modular-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-subharmonicon",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-SUBHARMONICON",
+      "halilit_url": "https://www.halilit.com/items/8670731-moog-subharmonicon-analog-subharmonic-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-muse",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MUSE",
+      "halilit_url": "https://www.halilit.com/items/8670434-moog-muse-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-mother32",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MOTHER32",
+      "halilit_url": "https://www.halilit.com/items/8669288-moog-mother-32-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-minmoogd0406",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MINMOOGD0406",
+      "halilit_url": "https://www.halilit.com/items/8669133-moog-minimoog-model-d-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-minitaur",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MINITAUR",
+      "halilit_url": "https://www.halilit.com/items/8663409-moog-minitaur-analog-bass-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-messenger",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MESSENGER",
+      "halilit_url": "https://www.halilit.com/items/8662251-moog-messenger-analog-synthesizer-with-keyboard",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-mavis",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MAVIS",
+      "halilit_url": "https://www.halilit.com/items/8662023-moog-mavis-semi-modular-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-matriarch",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MATRIARCH",
+      "halilit_url": "https://www.halilit.com/items/8661547-moog-matriarch-semi-modular-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-labyrinth",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-LABYRINTH",
+      "halilit_url": "https://www.halilit.com/items/8637794-moog-labyrinth-semi-modular-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-grandmother",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-GRANDMOTHER",
+      "halilit_url": "https://www.halilit.com/items/8636862-moog-grandmother-semi-modular-analog-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-dfam",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-DFAM",
+      "halilit_url": "https://www.halilit.com/items/8636373-moog-dfam-semi-modular-analog-percussive-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-dsr-case",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-DSR-CASE",
+      "halilit_url": "https://www.halilit.com/items/8679188-moog-model-d-sr-series-case",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-2tier-dcover",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-2TIER-DCOVER",
+      "halilit_url": "https://www.halilit.com/items/8638605-moog-2-tier-dust-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_29-mssacckit",
+      "name": "Unknown Model",
+      "brand": "moog",
+      "category": "keys",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "29-MSSACCKIT",
+      "halilit_url": "https://www.halilit.com/items/8679326-moog-sound-studio-accessory-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

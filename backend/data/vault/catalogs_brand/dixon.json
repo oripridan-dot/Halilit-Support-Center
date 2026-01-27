@@ -3,5 +3,214 @@
     "id": "dixon",
     "name": "DIXON"
   },
-  "products": []
+  "products": [
+    {
+      "id": "dixon_36_pdsan654bng",
+      "name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+      "brand": "dixon",
+      "category": "drums",
+      "image_url": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+      "description": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_pdsan654cbrg",
+      "name": "Dixon Australian Rose Gum 14\" Snare",
+      "brand": "dixon",
+      "category": "drums",
+      "image_url": "/data/thumbnails/dixon_36_pdsan654cbrg.jpg",
+      "description": "Dixon Australian Rose Gum 14\" Snare",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_pdpc81sp",
+      "name": "Dixon Practice 6\" Pad",
+      "brand": "dixon",
+      "category": "drums",
+      "image_url": "/data/thumbnails/dixon_36_pdpc81sp.jpg",
+      "description": "Dixon Practice 6\" Pad",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_ppcpp",
+      "name": "Dixon Cajon Pedal Plus",
+      "brand": "dixon",
+      "category": "drums",
+      "image_url": "/data/thumbnails/dixon_36_ppcpp.jpg",
+      "description": "Dixon Cajon Pedal Plus",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_pahcmsp",
+      "name": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+      "brand": "dixon",
+      "category": "drums",
+      "image_url": "/data/thumbnails/dixon_36_pahcmsp.jpg",
+      "description": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_pahmmsp",
+      "name": "Dixon PA-HMM-SP Microphone Clamp",
+      "brand": "dixon",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/dixon_36_pahmmsp.jpg",
+      "description": "Dixon PA-HMM-SP Microphone Clamp",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_pdpc8",
+      "name": "Dixon Practice 4\" Pad",
+      "brand": "dixon",
+      "category": "drums",
+      "image_url": "/data/thumbnails/dixon_36_pdpc8.jpg",
+      "description": "Dixon Practice 4\" Pad",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_prwbds",
+      "name": "Dixon PRWBDS Rock Block Set",
+      "brand": "dixon",
+      "category": "general",
+      "image_url": "/data/thumbnails/dixon_36_prwbds.jpg",
+      "description": "Dixon PRWBDS Rock Block Set",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_pdmtr16bl",
+      "name": "Dixon Tambourine 16 Jingle",
+      "brand": "dixon",
+      "category": "general",
+      "image_url": "/data/thumbnails/dixon_36_pdmtr16bl.jpg",
+      "description": "Dixon Tambourine 16 Jingle",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_psg9000",
+      "name": "Dixon PSG9000 Bongo Stand",
+      "brand": "dixon",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/dixon_36_psg9000.jpg",
+      "description": "Dixon PSG9000 Bongo Stand",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_artisan",
+      "name": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd Dixon Artisan",
+      "brand": "dixon",
+      "category": "general",
+      "image_url": "/data/thumbnails/dixon_36_artisan.jpg",
+      "description": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd Dixon Artisan",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_fuse",
+      "name": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd Dixon Fuse",
+      "brand": "dixon",
+      "category": "general",
+      "image_url": "/data/thumbnails/dixon_36_fuse.jpg",
+      "description": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd Dixon Fuse",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "dixon_36_spark",
+      "name": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd Dixon Spark",
+      "brand": "dixon",
+      "category": "general",
+      "image_url": "/data/thumbnails/dixon_36_spark.jpg",
+      "description": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd Dixon Spark",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

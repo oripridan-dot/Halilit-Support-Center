@@ -1,0 +1,39 @@
+{
+  "id": "maestro_guitar_pedals_and_effects_92_mocftp",
+  "name": "Maestro Fuzz-Tone FZ-M Pedal",
+  "brand": "maestro-guitar-pedals-and-effects",
+  "category": "guitars",
+  "description": "Maestro Fuzz-Tone FZ-M Pedal",
+  "media": {
+    "thumbnail": "/data/thumbnails/maestro_guitar_pedals_and_effects_92_mocftp.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "maestro_guitar_pedals_and_effects_92_mocftp",
+    "name": "Maestro Fuzz-Tone FZ-M Pedal",
+    "description": "Maestro Fuzz-Tone FZ-M Pedal",
+    "category": "general",
+    "image_url": "/data/thumbnails/maestro_guitar_pedals_and_effects_92_mocftp.jpg",
+    "product_url": "https://www.halilit.com/items/4899319-maestro-fuzz-tone-fz-m-pedal",
+    "is_sold": true,
+    "price": 586.0,
+    "halilit_url": "https://www.halilit.com/items/4899319-maestro-fuzz-tone-fz-m-pedal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.546736Z"
+  }
+}

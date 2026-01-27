@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-apls-he",
+  "name": "Universal Audio Apollo Solo TB3 Heritage Edition",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio Apollo Solo TB3 Heritage Edition",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/4204820-universal-audio-apollo-solo-tb3-heritage-edition",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_apls_he",
+    "name": "Universal Audio Apollo Solo TB3 Heritage Edition",
+    "description": "Universal Audio Apollo Solo TB3 Heritage Edition",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+    "product_url": "https://www.halilit.com/items/4204820-universal-audio-apollo-solo-tb3-heritage-edition",
+    "is_sold": true,
+    "price": 2629.0,
+    "halilit_url": "https://www.halilit.com/items/4204820-universal-audio-apollo-solo-tb3-heritage-edition",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.593302Z"
+  }
+}

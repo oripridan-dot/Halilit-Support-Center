@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_evox12",
+  "name": "RCF EVOX 12",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF EVOX 12",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_evox12.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_evox12",
+    "name": "RCF EVOX 12",
+    "description": "RCF EVOX 12",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_evox12.jpg",
+    "product_url": "https://www.halilit.com/items/827279-rcf-evox-12",
+    "is_sold": true,
+    "price": 11802.0,
+    "halilit_url": "https://www.halilit.com/items/827279-rcf-evox-12",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.504252Z"
+  }
+}

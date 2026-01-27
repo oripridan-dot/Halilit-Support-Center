@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_st15sma_mk2",
+  "name": "RCF ST 15-SMA II",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF ST 15-SMA II",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_st15sma_mk2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_st15sma_mk2",
+    "name": "RCF ST 15-SMA II",
+    "description": "RCF ST 15-SMA II",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_st15sma_mk2.jpg",
+    "product_url": "https://www.halilit.com/items/7583409-rcf-st-15-sma-ii-active-stage-monitor",
+    "is_sold": true,
+    "price": 4029.0,
+    "halilit_url": "https://www.halilit.com/items/7583409-rcf-st-15-sma-ii-active-stage-monitor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.492958Z"
+  }
+}

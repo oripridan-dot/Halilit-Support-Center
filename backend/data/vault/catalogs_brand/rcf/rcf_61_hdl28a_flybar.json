@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_hdl28a_flybar",
+  "name": "RCF FLY BAR HDL 28-A",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF FLY BAR HDL 28-A",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_hdl28a_flybar.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_hdl28a_flybar",
+    "name": "RCF FLY BAR HDL 28-A",
+    "description": "RCF FLY BAR HDL 28-A",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_hdl28a_flybar.jpg",
+    "product_url": "https://www.halilit.com/items/2236660-rcf-fly-bar-hdl-28-a",
+    "is_sold": true,
+    "price": 5802.0,
+    "halilit_url": "https://www.halilit.com/items/2236660-rcf-fly-bar-hdl-28-a",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.522099Z"
+  }
+}

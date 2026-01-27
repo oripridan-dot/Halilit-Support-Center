@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_sub9007_as",
+  "name": "RCF SUB 9007-AS",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF SUB 9007-AS",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_sub9007_as.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_sub9007_as",
+    "name": "RCF SUB 9007-AS",
+    "description": "RCF SUB 9007-AS",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_sub9007_as.jpg",
+    "product_url": "https://www.halilit.com/items/1354813-rcf-sub-9007-as",
+    "is_sold": true,
+    "price": 23630.0,
+    "halilit_url": "https://www.halilit.com/items/1354813-rcf-sub-9007-as",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.508412Z"
+  }
+}

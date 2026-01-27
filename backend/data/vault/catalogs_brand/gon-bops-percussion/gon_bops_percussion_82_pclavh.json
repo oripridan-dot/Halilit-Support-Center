@@ -1,0 +1,39 @@
+{
+  "id": "gon_bops_percussion_82_pclavh",
+  "name": "Gon Bops Hickory Claves",
+  "brand": "gon-bops-percussion",
+  "category": "general",
+  "description": "Gon Bops Hickory Claves",
+  "media": {
+    "thumbnail": "/data/thumbnails/gon_bops_percussion_82_pclavh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "gon_bops_percussion_82_pclavh",
+    "name": "Gon Bops Hickory Claves",
+    "description": "Gon Bops Hickory Claves",
+    "category": "general",
+    "image_url": "/data/thumbnails/gon_bops_percussion_82_pclavh.jpg",
+    "product_url": "https://www.halilit.com/items/2668082-gon-bops-hickory-claves",
+    "is_sold": true,
+    "price": 125.0,
+    "halilit_url": "https://www.halilit.com/items/2668082-gon-bops-hickory-claves",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.109146Z"
+  }
+}

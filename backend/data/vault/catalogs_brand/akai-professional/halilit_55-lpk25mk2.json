@@ -1,0 +1,39 @@
+{
+  "id": "halilit_55-lpk25mk2",
+  "name": "Akai Professional LPK25 MKII",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional LPK25 MKII",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_lpk25mk2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5585034-akai-professional-lpk25-mkii",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_lpk25mk2",
+    "name": "Akai Professional LPK25 MKII",
+    "description": "Akai Professional LPK25 MKII",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_lpk25mk2.jpg",
+    "product_url": "https://www.halilit.com/items/5585034-akai-professional-lpk25-mkii",
+    "is_sold": true,
+    "price": 279.0,
+    "halilit_url": "https://www.halilit.com/items/5585034-akai-professional-lpk25-mkii",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:26.933885Z"
+  }
+}

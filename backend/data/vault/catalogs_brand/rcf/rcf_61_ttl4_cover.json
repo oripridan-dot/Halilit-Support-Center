@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_ttl4_cover",
+  "name": "RCF CVR TT 4 Protection Cover",
+  "brand": "rcf",
+  "category": "accessories",
+  "description": "RCF CVR TT 4 Protection Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_ttl4_cover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_ttl4_cover",
+    "name": "RCF CVR TT 4 Protection Cover",
+    "description": "RCF CVR TT 4 Protection Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_ttl4_cover.jpg",
+    "product_url": "https://www.halilit.com/items/7892973-rcf-cvr-tt-4-protection-cover",
+    "is_sold": true,
+    "price": 432.0,
+    "halilit_url": "https://www.halilit.com/items/7892973-rcf-cvr-tt-4-protection-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.486566Z"
+  }
+}

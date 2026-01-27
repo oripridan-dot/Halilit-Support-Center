@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_f10xr",
+  "name": "RCF F 10XR",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF F 10XR",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_f10xr.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_f10xr",
+    "name": "RCF F 10XR",
+    "description": "RCF F 10XR",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_f10xr.jpg",
+    "product_url": "https://www.halilit.com/items/2266924-rcf-f-10xr",
+    "is_sold": true,
+    "price": 1450.0,
+    "halilit_url": "https://www.halilit.com/items/2266924-rcf-f-10xr",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.473971Z"
+  }
+}

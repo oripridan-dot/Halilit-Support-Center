@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-gpmruby",
+  "name": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+  "brand": "universal-audio",
+  "category": "guitars",
+  "description": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/4872776-universal-audio-uafx-ruby-63-top-boost-amplifier",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_gpmruby",
+    "name": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+    "description": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+    "product_url": "https://www.halilit.com/items/4872776-universal-audio-uafx-ruby-63-top-boost-amplifier",
+    "is_sold": true,
+    "price": 1531.0,
+    "halilit_url": "https://www.halilit.com/items/4872776-universal-audio-uafx-ruby-63-top-boost-amplifier",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.583661Z"
+  }
+}

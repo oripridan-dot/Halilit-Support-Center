@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-thump15bst",
+  "name": "Mackie Thump 15\" Boosted",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie Thump 15\" Boosted",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_thump15bst.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/1650001-mackie-thump-15-bst-active-speaker",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_thump15bst",
+    "name": "Mackie Thump 15\" Boosted",
+    "description": "Mackie Thump 15\" Boosted",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_thump15bst.jpg",
+    "product_url": "https://www.halilit.com/items/1650001-mackie-thump-15-bst-active-speaker",
+    "is_sold": true,
+    "price": 3135.0,
+    "halilit_url": "https://www.halilit.com/items/1650001-mackie-thump-15-bst-active-speaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.692386Z"
+  }
+}

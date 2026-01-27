@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-quantum2626",
+  "name": "PreSonus Quantum 2626",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus Quantum 2626",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_quantum2626.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2680970-presonus-quantum-2626",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_quantum2626",
+    "name": "PreSonus Quantum 2626",
+    "description": "PreSonus Quantum 2626",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_quantum2626.jpg",
+    "product_url": "https://www.halilit.com/items/2680970-presonus-quantum-2626",
+    "is_sold": true,
+    "price": 3088.0,
+    "halilit_url": "https://www.halilit.com/items/2680970-presonus-quantum-2626",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.057163Z"
+  }
+}

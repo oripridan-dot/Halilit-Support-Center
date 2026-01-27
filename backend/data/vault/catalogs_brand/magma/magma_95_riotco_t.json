@@ -1,0 +1,39 @@
+{
+  "id": "magma_95_riotco_t",
+  "name": "Magma Riot Carry-On Trolley",
+  "brand": "magma",
+  "category": "general",
+  "description": "Magma Riot Carry-On Trolley",
+  "media": {
+    "thumbnail": "/data/thumbnails/magma_95_riotco_t.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "magma_95_riotco_t",
+    "name": "Magma Riot Carry-On Trolley",
+    "description": "Magma Riot Carry-On Trolley",
+    "category": "general",
+    "image_url": "/data/thumbnails/magma_95_riotco_t.jpg",
+    "product_url": "https://www.halilit.com/items/2312949-magma-riot-carry-on-trolley",
+    "is_sold": true,
+    "price": 1321.0,
+    "halilit_url": "https://www.halilit.com/items/2312949-magma-riot-carry-on-trolley",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.083432Z"
+  }
+}

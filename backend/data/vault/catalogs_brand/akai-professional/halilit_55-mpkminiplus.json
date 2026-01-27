@@ -1,0 +1,39 @@
+{
+  "id": "halilit_55-mpkminiplus",
+  "name": "Akai Professional MPK mini Plus",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional MPK mini Plus",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_mpkminiplus.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5537570-akai-professional-mpk-mini-plus",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_mpkminiplus",
+    "name": "Akai Professional MPK mini Plus",
+    "description": "Akai Professional MPK mini Plus",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_mpkminiplus.jpg",
+    "product_url": "https://www.halilit.com/items/5537570-akai-professional-mpk-mini-plus",
+    "is_sold": true,
+    "price": 905.0,
+    "halilit_url": "https://www.halilit.com/items/5537570-akai-professional-mpk-mini-plus",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:26.932022Z"
+  }
+}

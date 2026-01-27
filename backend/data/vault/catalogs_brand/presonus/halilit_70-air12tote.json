@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-air12tote",
+  "name": "PreSonus AIR12 Tote Bag",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus AIR12 Tote Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_air12tote.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/3351602-presonus-air12-tote-bag",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_air12tote",
+    "name": "PreSonus AIR12 Tote Bag",
+    "description": "PreSonus AIR12 Tote Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_air12tote.jpg",
+    "product_url": "https://www.halilit.com/items/3351602-presonus-air12-tote-bag",
+    "is_sold": true,
+    "price": 308.0,
+    "halilit_url": "https://www.halilit.com/items/3351602-presonus-air12-tote-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.066315Z"
+  }
+}

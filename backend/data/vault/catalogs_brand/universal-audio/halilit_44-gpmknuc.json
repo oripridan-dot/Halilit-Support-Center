@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-gpmknuc",
+  "name": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+  "brand": "universal-audio",
+  "category": "guitars",
+  "description": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7461636-universal-audio-uafx-knuckles-92-dual-rec-amplifier",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_gpmknuc",
+    "name": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+    "description": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+    "product_url": "https://www.halilit.com/items/7461636-universal-audio-uafx-knuckles-92-dual-rec-amplifier",
+    "is_sold": true,
+    "price": 1531.0,
+    "halilit_url": "https://www.halilit.com/items/7461636-universal-audio-uafx-knuckles-92-dual-rec-amplifier",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.581499Z"
+  }
+}

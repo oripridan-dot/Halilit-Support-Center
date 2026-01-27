@@ -1,0 +1,39 @@
+{
+  "id": "solar_guitars_24_vb46c",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar VB4.6C",
+  "brand": "solar-guitars",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar VB4.6C",
+  "media": {
+    "thumbnail": "/data/thumbnails/solar_guitars_24_vb46c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "solar_guitars_24_vb46c",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar VB4.6C",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar VB4.6C",
+    "category": "general",
+    "image_url": "/data/thumbnails/solar_guitars_24_vb46c.jpg",
+    "product_url": "https://www.halilit.com/items/8511910-Solar-VB4-6C-Electric-Guitar",
+    "is_sold": true,
+    "price": 1217.0,
+    "halilit_url": "https://www.halilit.com/items/8511910-Solar-VB4-6C-Electric-Guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.632972Z"
+  }
+}

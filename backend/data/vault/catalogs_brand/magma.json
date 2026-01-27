@@ -1,0 +1,472 @@
+{
+  "brand_identity": {
+    "id": "magma",
+    "name": "MAGMA"
+  },
+  "products": [
+    {
+      "id": "magma_95_multiformatcases",
+      "name": "Magma Multi-Format Case Player/Mixer-Set BB",
+      "brand": "magma",
+      "category": "live",
+      "image_url": "/data/thumbnails/magma_95_multiformatcases.jpg",
+      "description": "Magma Multi-Format Case Player/Mixer-Set BB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_solidblaze_p180",
+      "name": "Magma Solid Blaze Pack 180",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_solidblaze_p180.jpg",
+      "description": "Magma Solid Blaze Pack 180",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_headphone_c",
+      "name": "Magma Headphone Case II",
+      "brand": "magma",
+      "category": "drums",
+      "image_url": "/data/thumbnails/magma_95_headphone_c.jpg",
+      "description": "Magma Headphone Case II",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_xxlplusii",
+      "name": "Magma CTRL Case XXL Plus II",
+      "brand": "magma",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/magma_95_ctrl_xxlplusii.jpg",
+      "description": "Magma CTRL Case XXL Plus II",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riotlp50_br",
+      "name": "Magma Riot LP Bag 50",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_riotlp50_br.jpg",
+      "description": "Magma Riot LP Bag 50",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_solidblaze_p80",
+      "name": "Magma Solid Blaze Pack 80",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_solidblaze_p80.jpg",
+      "description": "Magma Solid Blaze Pack 80",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_cdj_mixerii",
+      "name": "Magma CTRL Case CDJ/Mixer II",
+      "brand": "magma",
+      "category": "live",
+      "image_url": "/data/thumbnails/magma_95_ctrl_cdj_mixerii.jpg",
+      "description": "Magma CTRL Case CDJ/Mixer II",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_sp404",
+      "name": "Magma CTRL Case SP-404",
+      "brand": "magma",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/magma_95_ctrl_sp404.jpg",
+      "description": "Magma CTRL Case SP-404",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_bitflashlp_trol50",
+      "name": "Magma BITFLASH LP-Trolley 50 Limited Edition",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_bitflashlp_trol50.jpg",
+      "description": "Magma BITFLASH LP-Trolley 50 Limited Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_ddjsr_rr",
+      "name": "Magma CTRL Case DDJ-SR/RR",
+      "brand": "magma",
+      "category": "dj",
+      "image_url": "/data/thumbnails/magma_95_ctrl_ddjsr_rr.jpg",
+      "description": "Magma CTRL Case DDJ-SR/RR",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_btq_d",
+      "name": "Magma CTRL Case Boutique Dock",
+      "brand": "magma",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/magma_95_ctrl_btq_d.jpg",
+      "description": "Magma CTRL Case Boutique Dock",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_amx",
+      "name": "Magma CTRL Case AMX/AFX",
+      "brand": "magma",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/magma_95_ctrl_amx.jpg",
+      "description": "Magma CTRL Case AMX/AFX",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_btq_key",
+      "name": "Magma CTRL Case Boutique Key",
+      "brand": "magma",
+      "category": "keys",
+      "image_url": "/data/thumbnails/magma_95_ctrl_btq_key.jpg",
+      "description": "Magma CTRL Case Boutique Key",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riotdj_cpl",
+      "name": "Magma Riot Control-Pack Lite",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_riotdj_cpl.jpg",
+      "description": "Magma Riot Control-Pack Lite",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl__xxlplus",
+      "name": "Magma CTRL Case XXL Plus",
+      "brand": "magma",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/magma_95_ctrl__xxlplus.jpg",
+      "description": "Magma CTRL Case XXL Plus",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_lp_bag100_b",
+      "name": "Magma LP Bag 100 Trolley",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_lp_bag100_b.jpg",
+      "description": "Magma LP Bag 100 Trolley",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_phase",
+      "name": "Magma CTRL Case Phase",
+      "brand": "magma",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/magma_95_ctrl_phase.jpg",
+      "description": "Magma CTRL Case Phase",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_bitflashdj_tote",
+      "name": "Magma BITFLASH DJ-Tote Limited Edition",
+      "brand": "magma",
+      "category": "dj",
+      "image_url": "/data/thumbnails/magma_95_bitflashdj_tote.jpg",
+      "description": "Magma BITFLASH DJ-Tote Limited Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_ctrl_xdj_rx3",
+      "name": "Magma CTRL Case XDJ-RX3/RX2",
+      "brand": "magma",
+      "category": "dj",
+      "image_url": "/data/thumbnails/magma_95_ctrl_xdj_rx3.jpg",
+      "description": "Magma CTRL Case XDJ-RX3/RX2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_lp_bag40_ii",
+      "name": "Magma LP-Bag 40 II",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_lp_bag40_ii.jpg",
+      "description": "Magma LP-Bag 40 II",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_roll_bpiii",
+      "name": "Magma Rolltop Backpack III",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_roll_bpiii.jpg",
+      "description": "Magma Rolltop Backpack III",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riotdj_bp",
+      "name": "Magma Riot DJ-Backpack",
+      "brand": "magma",
+      "category": "dj",
+      "image_url": "/data/thumbnails/magma_95_riotdj_bp.jpg",
+      "description": "Magma Riot DJ-Backpack",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_solidblaze_p120",
+      "name": "Magma Solid Blaze Pack 120",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_solidblaze_p120.jpg",
+      "description": "Magma Solid Blaze Pack 120",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_digi_beatpack_xl",
+      "name": "Magma DIGI Beatpack XL",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_digi_beatpack_xl.jpg",
+      "description": "Magma DIGI Beatpack XL",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riotdj_sp_xl_",
+      "name": "Magma Riot DJ-Stashpack XL Plus",
+      "brand": "magma",
+      "category": "dj",
+      "image_url": "/data/thumbnails/magma_95_riotdj_sp_xl_.jpg",
+      "description": "Magma Riot DJ-Stashpack XL Plus",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riotdj_bp_xl",
+      "name": "Magma Riot DJ-Backpack XL",
+      "brand": "magma",
+      "category": "dj",
+      "image_url": "/data/thumbnails/magma_95_riotdj_bp_xl.jpg",
+      "description": "Magma Riot DJ-Backpack XL",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riotco_t",
+      "name": "Magma Riot Carry-On Trolley",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_riotco_t.jpg",
+      "description": "Magma Riot Carry-On Trolley",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_riot_lp_t50",
+      "name": "Magma Riot LP-Trolley 50",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_riot_lp_t50.jpg",
+      "description": "Magma Riot LP-Trolley 50",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "magma_95_digi_beatpack_l",
+      "name": "Magma DIGI Beatpack L",
+      "brand": "magma",
+      "category": "general",
+      "image_url": "/data/thumbnails/magma_95_digi_beatpack_l.jpg",
+      "description": "Magma DIGI Beatpack L",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

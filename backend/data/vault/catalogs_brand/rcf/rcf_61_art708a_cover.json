@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_art708a_cover",
+  "name": "RCF ART cover for ART 7 series 8",
+  "brand": "rcf",
+  "category": "accessories",
+  "description": "RCF ART cover for ART 7 series 8",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_art708a_cover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_art708a_cover",
+    "name": "RCF ART cover for ART 7 series 8",
+    "description": "RCF ART cover for ART 7 series 8",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_art708a_cover.jpg",
+    "product_url": "https://www.halilit.com/items/3908316-rcf-art-cover-for-art-7-series-8",
+    "is_sold": true,
+    "price": 289.0,
+    "halilit_url": "https://www.halilit.com/items/3908316-rcf-art-cover-for-art-7-series-8",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.525439Z"
+  }
+}

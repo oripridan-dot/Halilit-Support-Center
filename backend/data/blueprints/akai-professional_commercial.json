@@ -1,0 +1,422 @@
+{
+  "brand_slug": "akai-professional",
+  "source": "halilit_commercial_scan",
+  "products": [
+    {
+      "id": "halilit_55-mpckey37",
+      "name": "AKAI Professional MPC Key 37",
+      "url": "https://www.halilit.com/items/6624745-akai-professional-mpc-key-37-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13922142/original/33428d68430d1afdbd85fe61372b46e3.jpg",
+      "halilit_id": "55-MPCKEY37",
+      "sku": "55-MPCKEY37",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "AKAI Professional MPC Key 37",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpd218",
+      "name": "Akai Professional MPD218",
+      "url": "https://www.halilit.com/items/983330-akai-professional-mpd218-pad-controller",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1458412/original/024c96fb5494f428fd699d944c338e09.jpg",
+      "halilit_id": "55-MPD218",
+      "sku": "55-MPD218",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPD218",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-lpd8mk2",
+      "name": "Akai Professional LPD8 MKII",
+      "url": "https://www.halilit.com/items/5585698-akai-professional-lpd8-mkii",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11209992/original/a1f86d9c3cc29df89d1fb808ca51ff64.jpg",
+      "halilit_id": "55-LPD8MK2",
+      "sku": "55-LPD8MK2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional LPD8 MKII",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-apckey25mk2",
+      "name": "Akai Professional APC KEY 25 MKII",
+      "url": "https://www.halilit.com/items/5569832-akai-professional-apc-key-25-mkii",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11174065/original/6989c8fc9f0a2fa4779bc3ca8c36db9b.jpg",
+      "halilit_id": "55-APCKEY25MK2",
+      "sku": "55-APCKEY25MK2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional APC KEY 25 MKII",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpcone",
+      "name": "Akai Professional MPC One",
+      "url": "https://www.halilit.com/items/2872200-akai-professional-mpc-one",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4856293/original/fddd34672141191760b3a800d3ab3719.jpg",
+      "halilit_id": "55-MPCONE",
+      "sku": "55-MPCONE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPC One",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini4-bk",
+      "name": "Akai Professional MPK Mini mk4",
+      "url": "https://www.halilit.com/items/8529812-Akai-Professional-MPK-Mini-Mk4",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/18512466/original/919298ad44ad8797c7e70b3e61365bdb.jpg",
+      "halilit_id": "55-MPKMINI4-BK",
+      "sku": "55-MPKMINI4-BK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK Mini mk4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-apc64",
+      "name": "Akai Professional APC64",
+      "url": "https://www.halilit.com/items/6552727-akai-professional-apc64",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13769347/original/fdae788d3c3833b6b68cc6ea90921c6a.jpg",
+      "halilit_id": "55-APC64",
+      "sku": "55-APC64",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional APC64",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini3",
+      "name": "Akai Professional MPK Mini mk3",
+      "url": "https://www.halilit.com/items/3126463-akai-professional-mpk-mini-mk3",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5366067/original/5cb54186894b26978173b2d130733309.jpg",
+      "halilit_id": "55-MPKMINI3",
+      "sku": "55-MPKMINI3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK Mini mk3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini4-wh",
+      "name": "Akai Professional MPK Mini mk4",
+      "url": "https://www.halilit.com/items/8529872-Akai-Professional-MPK-Mini-Mk4",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/18512753/original/e9dea3e8ec78ed0455fe9d0837c2bece.jpg",
+      "halilit_id": "55-MPKMINI4-WH",
+      "sku": "55-MPKMINI4-WH",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK Mini mk4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpconemk2",
+      "name": "+Akai Professional MPC ONE",
+      "url": "https://www.halilit.com/items/6072810--akai-professional-mpc-one",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12731978/original/52986ed06a7e939dbc39f32c199e9ec8.jpg",
+      "halilit_id": "55-MPCONEMK2",
+      "sku": "55-MPCONEMK2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "+Akai Professional MPC ONE",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini3g",
+      "name": "Akai Professional MPK mini mk3 Grey",
+      "url": "https://www.halilit.com/items/4748295-akai-professional-mpk-mini-mk3-grey",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9085464/original/2aa0ac60dec37fbe21f7da8b5ea39acb.jpg",
+      "halilit_id": "55-MPKMINI3G",
+      "sku": "55-MPKMINI3G",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK mini mk3 Grey",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpclive2",
+      "name": "Akai Professional MPC Live II",
+      "url": "https://www.halilit.com/items/3125769-akai-professional-mpc-live-ii",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5364278/original/1f551ce705aacd0718e924139c1fa05c.jpg",
+      "halilit_id": "55-MPCLIVE2",
+      "sku": "55-MPCLIVE2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPC Live II",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-fire",
+      "name": "Akai Professional Fire",
+      "url": "https://www.halilit.com/items/2102296-akai-professional-fire",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3396904/original/fd62dbb0733bdd2fcd51ad7ddc2372c9.jpg",
+      "halilit_id": "55-FIRE",
+      "sku": "55-FIRE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional Fire",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkminiplus",
+      "name": "Akai Professional MPK mini Plus",
+      "url": "https://www.halilit.com/items/5537570-akai-professional-mpk-mini-plus",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11089580/original/a68989bbcc11c4b076f1c8e9fc7d213b.jpg",
+      "halilit_id": "55-MPKMINIPLUS",
+      "sku": "55-MPKMINIPLUS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK mini Plus",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpk225",
+      "name": "Akai Professional MPK-225",
+      "url": "https://www.halilit.com/items/444463-akai-professional-mpk-225",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557634/original/7c68150ca92e42a6f47fde3332b035e7.jpg",
+      "halilit_id": "55-MPK225",
+      "sku": "55-MPK225",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK-225",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-apcmini2",
+      "name": "Akai Professional APC Mini MK2",
+      "url": "https://www.halilit.com/items/5582657-akai-professional-apc-mini-mk2",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11205704/original/483ab8e7ba90e652bfebfb51eb15304d.jpg",
+      "halilit_id": "55-APCMINI2",
+      "sku": "55-APCMINI2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional APC Mini MK2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkminiplaymk3",
+      "name": "Akai Professional MPK mini Play mk3",
+      "url": "https://www.halilit.com/items/5322849-akai-professional-mpk-mini-play-mk3",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10517292/original/5f5e65f84f00bc2d92dce2986f79d928.jpg",
+      "halilit_id": "55-MPKMINIPLAYMK3",
+      "sku": "55-MPKMINIPLAYMK3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK mini Play mk3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpcstudio2",
+      "name": "Akai Professional MPC Studio 2",
+      "url": "https://www.halilit.com/items/4322657-akai-professional-mpc-studio-2",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8014768/original/5e68cb8ad2d38b186a2cb82bbed9aff6.jpg",
+      "halilit_id": "55-MPCSTUDIO2",
+      "sku": "55-MPCSTUDIO2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPC Studio 2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpd226",
+      "name": "Akai Professional MPD226",
+      "url": "https://www.halilit.com/items/742024-akai-professional-mpd226",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1055518/original/80f9a427b4596b60153f38a2d1689e64.jpg",
+      "halilit_id": "55-MPD226",
+      "sku": "55-MPD226",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPD226",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-lpk25mk2",
+      "name": "Akai Professional LPK25 MKII",
+      "url": "https://www.halilit.com/items/5585034-akai-professional-lpk25-mkii",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11208748/original/c942f26b84a81f3d29ed7dc8f3654b5d.jpg",
+      "halilit_id": "55-LPK25MK2",
+      "sku": "55-LPK25MK2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional LPK25 MKII",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini3r",
+      "name": "Akai Professional MPK Mini mk3 Red",
+      "url": "https://www.halilit.com/items/3996084-akai-professional-mpk-mini-mk3-red",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7965772/original/005544b04953d66f2a9d846bdb532bef.jpg",
+      "halilit_id": "55-MPKMINI3R",
+      "sku": "55-MPKMINI3R",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK Mini mk3 Red",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini3bk",
+      "name": "Akai Professional MPK Mini mk3 black",
+      "url": "https://www.halilit.com/items/3181019-akai-professional-mpk-mini-mk3-black",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7195364/original/34867a562d2b316a0376d240f2eb9f7a.jpg",
+      "halilit_id": "55-MPKMINI3BK",
+      "sku": "55-MPKMINI3BK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK Mini mk3 black",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpkmini3wh",
+      "name": "Akai Professional MPK Mini mk3 white",
+      "url": "https://www.halilit.com/items/3181029-akai-professional-mpk-mini-mk3-white",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7195369/original/d7fe6795aa68f6d08971cce5a0f99b1a.jpg",
+      "halilit_id": "55-MPKMINI3WH",
+      "sku": "55-MPKMINI3WH",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK Mini mk3 white",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpd232",
+      "name": "Akai Professional MPD232",
+      "url": "https://www.halilit.com/items/983289-akai-professional-mpd232",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1458357/original/4decaa5728caa4ba2bb4933e7ae1af05.jpg",
+      "halilit_id": "55-MPD232",
+      "sku": "55-MPD232",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPD232",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpclive3",
+      "name": "Akai Professional MPC Live III",
+      "url": "https://www.halilit.com/items/8517373-akai-professional-mpc-live-iii",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/18419214/original/053a611c0b9ab89d3ef397b7d03fecbe.jpg",
+      "halilit_id": "55-MPCLIVE3",
+      "sku": "55-MPCLIVE3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPC Live III",
+      "category": "general"
+    },
+    {
+      "id": "halilit_55-mpk261",
+      "name": "Akai Professional MPK-261",
+      "url": "https://www.halilit.com/items/444461-akai-professional-mpk-261",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9085727/original/1e2ad77a03ff77b75548639400d9f07d.jpg",
+      "halilit_id": "55-MPK261",
+      "sku": "55-MPK261",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Akai Professional MPK-261",
+      "category": "general"
+    }
+  ]
+}

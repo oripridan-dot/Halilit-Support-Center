@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_tt808_cover",
+  "name": "RCF CVR TT 808 Protection Cover",
+  "brand": "rcf",
+  "category": "accessories",
+  "description": "RCF CVR TT 808 Protection Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_tt808_cover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_tt808_cover",
+    "name": "RCF CVR TT 808 Protection Cover",
+    "description": "RCF CVR TT 808 Protection Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_tt808_cover.jpg",
+    "product_url": "https://www.halilit.com/items/6405775-rcf-cvr-tt-808-protection-cover",
+    "is_sold": true,
+    "price": 354.0,
+    "halilit_url": "https://www.halilit.com/items/6405775-rcf-cvr-tt-808-protection-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.482562Z"
+  }
+}

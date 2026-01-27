@@ -1,0 +1,180 @@
+{
+  "id": "guitars",
+  "generated_at": "2026-01-27T08:43:55.911893",
+  "metadata": {
+    "total_products": 10,
+    "available_brands": [
+      "AMPEG",
+      "MJC-IRONWORKS"
+    ],
+    "available_filters": [
+      "Acoustic",
+      "Bass",
+      "Electric"
+    ]
+  },
+  "products": [
+    {
+      "id": "mjc_ironworks_65_mjcabrst1356",
+      "brand": "MJC-IRONWORKS",
+      "name": "MJC Ironworks MED Acoustic Guitar",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [
+        "Acoustic"
+      ],
+      "description": "MJC Ironworks MED Acoustic Guitar",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/mjc-ironworks_logo.png"
+    },
+    {
+      "id": "mjc_ironworks_65_mjcabrst1254",
+      "brand": "MJC-IRONWORKS",
+      "name": "MJC Ironworks ML Acoustic Guitar",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [
+        "Acoustic"
+      ],
+      "description": "MJC Ironworks ML Acoustic Guitar",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/mjc-ironworks_logo.png"
+    },
+    {
+      "id": "mjc_ironworks_65_mjcabrst1048",
+      "brand": "MJC-IRONWORKS",
+      "name": "MJC Ironworks XL Acoustic Guitar",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [
+        "Acoustic"
+      ],
+      "description": "MJC Ironworks XL Acoustic Guitar",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/mjc-ironworks_logo.png"
+    },
+    {
+      "id": "mjc_ironworks_65_mjcmed1152",
+      "brand": "MJC-IRONWORKS",
+      "name": "MJC Ironworks MED Electric Guitar",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [
+        "Electric"
+      ],
+      "description": "MJC Ironworks MED Electric Guitar",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/mjc-ironworks_logo.png"
+    },
+    {
+      "id": "mjc_ironworks_65_mjcxmed1254",
+      "brand": "MJC-IRONWORKS",
+      "name": "MJC Ironworks MEDX Electric Guitar",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [
+        "Electric"
+      ],
+      "description": "MJC Ironworks MEDX Electric Guitar",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/mjc-ironworks_logo.png"
+    },
+    {
+      "id": "ampeg_63_classic",
+      "brand": "AMPEG",
+      "name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [],
+      "description": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/ampeg_logo.png"
+    },
+    {
+      "id": "ampeg_63_scraemblarbass",
+      "brand": "AMPEG",
+      "name": "Ampeg Scrambler Bass Overdrive",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [
+        "Bass"
+      ],
+      "description": "Ampeg Scrambler Bass Overdrive",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/ampeg_logo.png"
+    },
+    {
+      "id": "ampeg_63_liquifier",
+      "brand": "AMPEG",
+      "name": "Ampeg Liquifier Analog Chorus",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [],
+      "description": "Ampeg Liquifier Analog Chorus",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/ampeg_logo.png"
+    },
+    {
+      "id": "ampeg_63_svtvr",
+      "brand": "AMPEG",
+      "name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [],
+      "description": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/ampeg_logo.png"
+    },
+    {
+      "id": "ampeg_63_pf210he",
+      "brand": "AMPEG",
+      "name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+      "sku": "N/A",
+      "price": 0,
+      "status": "ACTIVE",
+      "tribe_id": "guitars",
+      "tags": [],
+      "description": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+      "specs_preview": [],
+      "downloads": [],
+      "image_url": "/assets/placeholders/no-img.png",
+      "logo_url": "/assets/logos/ampeg_logo.png"
+    }
+  ]
+}

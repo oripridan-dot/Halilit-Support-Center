@@ -1,0 +1,39 @@
+{
+  "id": "eden_04_wtx264",
+  "name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Eden WTX-264",
+  "brand": "eden",
+  "category": "general",
+  "description": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Eden WTX-264",
+  "media": {
+    "thumbnail": "/data/thumbnails/eden_04_wtx264.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "eden_04_wtx264",
+    "name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Eden WTX-264",
+    "description": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Eden WTX-264",
+    "category": "general",
+    "image_url": "/data/thumbnails/eden_04_wtx264.jpg",
+    "product_url": "https://www.halilit.com/items/446484-eden-wtx-264",
+    "is_sold": true,
+    "price": 2545.0,
+    "halilit_url": "https://www.halilit.com/items/446484-eden-wtx-264",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.542602Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "magma_95_riot_lp_t50",
+  "name": "Magma Riot LP-Trolley 50",
+  "brand": "magma",
+  "category": "general",
+  "description": "Magma Riot LP-Trolley 50",
+  "media": {
+    "thumbnail": "/data/thumbnails/magma_95_riot_lp_t50.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "magma_95_riot_lp_t50",
+    "name": "Magma Riot LP-Trolley 50",
+    "description": "Magma Riot LP-Trolley 50",
+    "category": "general",
+    "image_url": "/data/thumbnails/magma_95_riot_lp_t50.jpg",
+    "product_url": "https://www.halilit.com/items/2003702-magma-riot-lp-trolley-50",
+    "is_sold": true,
+    "price": 921.0,
+    "halilit_url": "https://www.halilit.com/items/2003702-magma-riot-lp-trolley-50",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.083692Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-uad2-qsat-tb3",
+  "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2699686-universal-audio-uad-2-satellite-thunderbolt-3-quad-core",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_uad2_qsat_tb3",
+    "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+    "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+    "product_url": "https://www.halilit.com/items/2699686-universal-audio-uad-2-satellite-thunderbolt-3-quad-core",
+    "is_sold": true,
+    "price": 3641.0,
+    "halilit_url": "https://www.halilit.com/items/2699686-universal-audio-uad-2-satellite-thunderbolt-3-quad-core",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.589320Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "oberheim_sq_ob6module",
+  "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+  "brand": "oberheim",
+  "category": "keys",
+  "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+  "media": {
+    "thumbnail": "/data/thumbnails/oberheim_sq_ob6module.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "oberheim_sq_ob6module",
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+    "category": "general",
+    "image_url": "/data/thumbnails/oberheim_sq_ob6module.jpg",
+    "product_url": "https://www.halilit.com/items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer",
+    "is_sold": true,
+    "price": 11487.0,
+    "halilit_url": "https://www.halilit.com/items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.604241Z"
+  }
+}

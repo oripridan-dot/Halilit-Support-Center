@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-gpmenig",
+  "name": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+  "brand": "universal-audio",
+  "category": "guitars",
+  "description": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7425354-universal-audio-uafx-enigmatic-82-overdrive-special-amp",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_gpmenig",
+    "name": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+    "description": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+    "product_url": "https://www.halilit.com/items/7425354-universal-audio-uafx-enigmatic-82-overdrive-special-amp",
+    "is_sold": true,
+    "price": 1531.0,
+    "halilit_url": "https://www.halilit.com/items/7425354-universal-audio-uafx-enigmatic-82-overdrive-special-amp",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.583928Z"
+  }
+}

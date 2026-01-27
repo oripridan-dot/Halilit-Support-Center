@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-apx8g2-ess",
+  "name": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7444219-universal-audio-apollo-x8-gen-2-essentials-edition",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_apx8g2_ess",
+    "name": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+    "description": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+    "product_url": "https://www.halilit.com/items/7444219-universal-audio-apollo-x8-gen-2-essentials-edition",
+    "is_sold": true,
+    "price": 10902.0,
+    "halilit_url": "https://www.halilit.com/items/7444219-universal-audio-apollo-x8-gen-2-essentials-edition",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.592570Z"
+  }
+}

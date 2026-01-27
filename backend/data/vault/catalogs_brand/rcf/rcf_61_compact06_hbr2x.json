@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_compact06_hbr2x",
+  "name": "RCF H-BR 2X COMPACT M 06",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF H-BR 2X COMPACT M 06",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_compact06_hbr2x.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_compact06_hbr2x",
+    "name": "RCF H-BR 2X COMPACT M 06",
+    "description": "RCF H-BR 2X COMPACT M 06",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_compact06_hbr2x.jpg",
+    "product_url": "https://www.halilit.com/items/4958483-rcf-h-br-2x-compact-m-06",
+    "is_sold": true,
+    "price": 333.0,
+    "halilit_url": "https://www.halilit.com/items/4958483-rcf-h-br-2x-compact-m-06",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.472485Z"
+  }
+}

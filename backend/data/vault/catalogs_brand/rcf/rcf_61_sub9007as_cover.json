@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_sub9007as_cover",
+  "name": "RCF SUB 9007-AS Protection Cover",
+  "brand": "rcf",
+  "category": "accessories",
+  "description": "RCF SUB 9007-AS Protection Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_sub9007as_cover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_sub9007as_cover",
+    "name": "RCF SUB 9007-AS Protection Cover",
+    "description": "RCF SUB 9007-AS Protection Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_sub9007as_cover.jpg",
+    "product_url": "https://www.halilit.com/items/1354826-rcf-sub-9007-as-protection-cover",
+    "is_sold": true,
+    "price": 665.0,
+    "halilit_url": "https://www.halilit.com/items/1354826-rcf-sub-9007-as-protection-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.503956Z"
+  }
+}

@@ -3,5 +3,326 @@
     "id": "show",
     "name": "SHOW"
   },
-  "products": []
+  "products": [
+    {
+      "id": "show_03_wa320_vxm298",
+      "name": "Show WA-320",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_wa320_vxm298.jpg",
+      "description": "Show WA-320",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_wjp21r_vxm298",
+      "name": "Show WJP-21R",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_wjp21r_vxm298.jpg",
+      "description": "Show WJP-21R",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_wap10",
+      "name": "Show WAP-10",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_wap10.jpg",
+      "description": "Show WAP-10",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_sc35a",
+      "name": "Show SC35A",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_sc35a.jpg",
+      "description": "Show SC35A",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_sc25p",
+      "name": "Show SC-25P",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_sc25p.jpg",
+      "description": "Show SC-25P",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csp220wp",
+      "name": "Show CSP-220WP",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csp220wp.jpg",
+      "description": "Show CSP-220WP",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csl6120",
+      "name": "Show CSL-6120",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csl6120.jpg",
+      "description": "Show CSL-6120",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csl810t",
+      "name": "Show CSL-810T",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csl810t.jpg",
+      "description": "Show CSL-810T",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csr_205",
+      "name": "Show CSR-205",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csr_205.jpg",
+      "description": "Show CSR-205",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csr_306y",
+      "name": "Show CSR-306Y",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csr_306y.jpg",
+      "description": "Show CSR-306Y",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_b2000_2",
+      "name": "Show B-2000.2",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_b2000_2.jpg",
+      "description": "Show B-2000.2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_tu80ml",
+      "name": "Show TU-80ML",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_tu80ml.jpg",
+      "description": "Show TU-80ML",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_ta506m",
+      "name": "Show TA-506M",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_ta506m.jpg",
+      "description": "Show TA-506M",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csb175cv",
+      "name": "Show CSB-175CV",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csb175cv.jpg",
+      "description": "Show CSB-175CV",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_cs640",
+      "name": "Show CS-640",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_cs640.jpg",
+      "description": "Show CS-640",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csr_306",
+      "name": "Show CSR-306",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csr_306.jpg",
+      "description": "Show CSR-306",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_sa450m",
+      "name": "Show SA-450M",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_sa450m.jpg",
+      "description": "Show SA-450M",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csb175",
+      "name": "Show CSB175",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csb175.jpg",
+      "description": "Show CSB175",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_csl150cv",
+      "name": "Show CSL-150CV",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_csl150cv.jpg",
+      "description": "Show CSL-150CV",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "show_03_tu150",
+      "name": "Show TU-150",
+      "brand": "show",
+      "category": "general",
+      "image_url": "/data/thumbnails/show_03_tu150.jpg",
+      "description": "Show TU-150",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

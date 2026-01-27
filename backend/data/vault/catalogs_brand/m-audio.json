@@ -3,5 +3,518 @@
     "id": "m-audio",
     "name": "M-AUDIO"
   },
-  "products": []
+  "products": [
+    {
+      "id": "m_audio_52_ubemic",
+      "name": "M-Audio Uber Mic USB Microphone",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_ubemic.jpg",
+      "description": "M-Audio Uber Mic USB Microphone",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_mtrackduohdpack",
+      "name": "M-Audio M-Track Duo HD Producer Pack",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_mtrackduohdpack.jpg",
+      "description": "M-Audio M-Track Duo HD Producer Pack",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_fortyeighty",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Eighty",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_fortyeighty.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Eighty",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_air192x4spro",
+      "name": "M-Audio AIR 192|4 Vocal Studio Pro",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_air192x4spro.jpg",
+      "description": "M-Audio AIR 192|4 Vocal Studio Pro",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygen49mkv",
+      "name": "M-Audio Oxygen 49 MKV",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygen49mkv.jpg",
+      "description": "M-Audio Oxygen 49 MKV",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_mtrackduohd",
+      "name": "M-Audio M-Track Duo HD Audio Interface",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_mtrackduohd.jpg",
+      "description": "M-Audio M-Track Duo HD Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygenpromini",
+      "name": "M-Audio Oxygen Pro Mini",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygenpromini.jpg",
+      "description": "M-Audio Oxygen Pro Mini",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_fortysixty",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Sixty",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_fortysixty.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Sixty",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygenpro61",
+      "name": "M-Audio Oxygen Pro 61",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygenpro61.jpg",
+      "description": "M-Audio Oxygen Pro 61",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygen61mkv",
+      "name": "M-Audio Oxygen 61 MKV",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygen61mkv.jpg",
+      "description": "M-Audio Oxygen 61 MKV",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygen25mkv",
+      "name": "M-Audio Oxygen 25 MKV",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygen25mkv.jpg",
+      "description": "M-Audio Oxygen 25 MKV",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygenpro25",
+      "name": "M-Audio Oxygen Pro 25",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygenpro25.jpg",
+      "description": "M-Audio Oxygen Pro 25",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_air192x14",
+      "name": "M-Audio AIR 192|14",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_air192x14.jpg",
+      "description": "M-Audio AIR 192|14",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_air192x6",
+      "name": "M-Audio AIR 192|6",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_air192x6.jpg",
+      "description": "M-Audio AIR 192|6",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_air192x8",
+      "name": "M-Audio AIR 192|8",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_air192x8.jpg",
+      "description": "M-Audio AIR 192|8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_bx4pair",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd M-Audio BX4",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_bx4pair.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd M-Audio BX4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_oxygenpro49",
+      "name": "M-Audio Oxygen Pro 49",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_oxygenpro49.jpg",
+      "description": "M-Audio Oxygen Pro 49",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_mtrack_solo2",
+      "name": "M-Audio M-Track Solo",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_mtrack_solo2.jpg",
+      "description": "M-Audio M-Track Solo",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_mgamergbdual",
+      "name": "M-Audio M-Game RGB Dual",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_mgamergbdual.jpg",
+      "description": "M-Audio M-Game RGB Dual",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_airxhub",
+      "name": "M-Audio AIR Hub",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_airxhub.jpg",
+      "description": "M-Audio AIR Hub",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_mgamesolo",
+      "name": "M-Audio M-Game Solo",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_mgamesolo.jpg",
+      "description": "M-Audio M-Game Solo",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_mtrack_duo",
+      "name": "M-Audio M-Track Duo",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_mtrack_duo.jpg",
+      "description": "M-Audio M-Track Duo",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_ks_mini32iii",
+      "name": "M-Audio Keystation Mini 32 MK3",
+      "brand": "m-audio",
+      "category": "keys",
+      "image_url": "/data/thumbnails/m_audio_52_ks_mini32iii.jpg",
+      "description": "M-Audio Keystation Mini 32 MK3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_hammer88",
+      "name": "M-Audio Hammer 88",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_hammer88.jpg",
+      "description": "M-Audio Hammer 88",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_ks61iii",
+      "name": "M-Audio Keystation 61 MK3",
+      "brand": "m-audio",
+      "category": "keys",
+      "image_url": "/data/thumbnails/m_audio_52_ks61iii.jpg",
+      "description": "M-Audio Keystation 61 MK3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_ks88iii",
+      "name": "M-Audio Keystation 88 mk3",
+      "brand": "m-audio",
+      "category": "keys",
+      "image_url": "/data/thumbnails/m_audio_52_ks88iii.jpg",
+      "description": "M-Audio Keystation 88 mk3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_ks49iii",
+      "name": "M-Audio Keystation 49 MK3",
+      "brand": "m-audio",
+      "category": "keys",
+      "image_url": "/data/thumbnails/m_audio_52_ks49iii.jpg",
+      "description": "M-Audio Keystation 49 MK3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_sp2",
+      "name": "\u05e4\u05d3\u05dc \u05e1\u05e1\u05d8\u05d9\u05d9\u05df M-Audio SP-2",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_sp2.jpg",
+      "description": "\u05e4\u05d3\u05dc \u05e1\u05e1\u05d8\u05d9\u05d9\u05df M-Audio SP-2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_bx3pairbt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd M-Audio BX3 BT",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_bx3pairbt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd M-Audio BX3 BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_bx4pairbt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd M-Audio BX4 BT",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_bx4pairbt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd M-Audio BX4 BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_bx5d3",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio BX5-D3",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_bx5d3.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio BX5-D3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "m_audio_52_hammer88pro",
+      "name": "M-Audio Hammer 88 Pro",
+      "brand": "m-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/m_audio_52_hammer88pro.jpg",
+      "description": "M-Audio Hammer 88 Pro",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

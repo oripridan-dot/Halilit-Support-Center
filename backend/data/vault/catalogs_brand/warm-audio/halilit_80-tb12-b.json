@@ -1,0 +1,39 @@
+{
+  "id": "halilit_80-tb12-b",
+  "name": "Warm Audio TB12 Tone Beast",
+  "brand": "warm-audio",
+  "category": "studio",
+  "description": "Warm Audio TB12 Tone Beast",
+  "media": {
+    "thumbnail": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "warm_audio_80_tb12_b",
+    "name": "Warm Audio TB12 Tone Beast",
+    "description": "Warm Audio TB12 Tone Beast",
+    "category": "general",
+    "image_url": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
+    "product_url": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
+    "is_sold": true,
+    "price": 3040.0,
+    "halilit_url": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.462515Z"
+  }
+}

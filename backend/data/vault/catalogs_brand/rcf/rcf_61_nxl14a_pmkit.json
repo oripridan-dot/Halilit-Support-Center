@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_nxl14a_pmkit",
+  "name": "RCF PM-KIT NXL 14-A",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF PM-KIT NXL 14-A",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_nxl14a_pmkit.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_nxl14a_pmkit",
+    "name": "RCF PM-KIT NXL 14-A",
+    "description": "RCF PM-KIT NXL 14-A",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_nxl14a_pmkit.jpg",
+    "product_url": "https://www.halilit.com/items/8501067-rcf-pm-kit-nxl-14-a-stand-adapter",
+    "is_sold": true,
+    "price": 126.0,
+    "halilit_url": "https://www.halilit.com/items/8501067-rcf-pm-kit-nxl-14-a-stand-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.514495Z"
+  }
+}

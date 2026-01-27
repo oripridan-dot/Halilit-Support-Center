@@ -26,7 +26,7 @@ class FrontendNormalizer:
                 product.get('name') or "Unknown Model")
 
         # 2. Smart Categorization (Tribe)
-        tribe_id = product.get('category', 'general').lower()
+        tribe_id = product.get('tribe_id') or product.get('category', 'general').lower()
 
         # 3. Rich Content Extraction
         description = get_val(product, 'official_knowledge.description') or product.get('description', '')
@@ -92,30 +92,37 @@ class FrontendNormalizer:
         if "bluetooth" in text: tags.add("Bluetooth")
         
         # --- Category Specific ---
-        if cat == "keys":
+        if "keys" in cat: # keys-production
             if "analog" in text: tags.add("Analog")
             if "digital" in text: tags.add("Digital")
             if "synth" in text: tags.add("Synthesizer")
             if "stage piano" in text: tags.add("Stage Piano")
             if "weighted" in text: tags.add("Weighted Keys")
             
-        elif cat == "drums":
+        elif "drums" in cat: # drums-percussion
             if "electronic" in text: tags.add("Electronic")
             if "acoustic" in text: tags.add("Acoustic")
             if "snare" in text: tags.add("Snare")
             if "mesh" in text: tags.add("Mesh Head")
 
-        elif cat == "guitars":
+        elif "guitars" in cat: # guitars-bass
             if "electric" in text: tags.add("Electric")
             if "acoustic" in text: tags.add("Acoustic")
             if "bass" in text: tags.add("Bass")
             if "pedal" in text: tags.add("Pedals")
+            if "amp" in text: tags.add("Amps")
 
-        elif cat == "studio":
+        elif "studio" in cat: # studio-recording
             if "monitor" in text: tags.add("Monitors")
             if "interface" in text: tags.add("Audio Interface")
             if "condenser" in text: tags.add("Condenser Mic")
             if "dynamic" in text: tags.add("Dynamic Mic")
+            
+        elif "live" in cat or "dj" in cat: # live-dj
+            if "mixer" in text: tags.add("Mixer")
+            if "monitor" in text: tags.add("Stage Monitor")
+            if "pa" in text: tags.add("PA System")
+            if "controller" in text: tags.add("DJ Controller")
 
         return sorted(list(tags))
 

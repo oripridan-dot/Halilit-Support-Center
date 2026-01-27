@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-erisstudio4",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 4",
+  "brand": "presonus",
+  "category": "general",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 4",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_erisstudio4.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6201103-presonus-eris-studio-4",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_erisstudio4",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 4",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 4",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_erisstudio4.jpg",
+    "product_url": "https://www.halilit.com/items/6201103-presonus-eris-studio-4",
+    "is_sold": true,
+    "price": 585.0,
+    "halilit_url": "https://www.halilit.com/items/6201103-presonus-eris-studio-4",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.049182Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_hdm45a",
+  "name": "RCF HDM 45-A",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF HDM 45-A",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_hdm45a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_hdm45a",
+    "name": "RCF HDM 45-A",
+    "description": "RCF HDM 45-A",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_hdm45a.jpg",
+    "product_url": "https://www.halilit.com/items/2417229-rcf-hdm45-a",
+    "is_sold": true,
+    "price": 9062.0,
+    "halilit_url": "https://www.halilit.com/items/2417229-rcf-hdm45-a",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.508756Z"
+  }
+}

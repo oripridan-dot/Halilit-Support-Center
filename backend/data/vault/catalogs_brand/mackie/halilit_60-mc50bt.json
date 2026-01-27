@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-mc50bt",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-50BT",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-50BT",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_mc50bt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5398429-mackie-mc-50bt-wireless-noise-cancelling-headphones",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_mc50bt",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-50BT",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-50BT",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_mc50bt.jpg",
+    "product_url": "https://www.halilit.com/items/5398429-mackie-mc-50bt-wireless-noise-cancelling-headphones",
+    "is_sold": true,
+    "price": 1026.0,
+    "halilit_url": "https://www.halilit.com/items/5398429-mackie-mc-50bt-wireless-noise-cancelling-headphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.669593Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-hd9",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD9",
+  "brand": "presonus",
+  "category": "general",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD9",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_hd9.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2005012-presonus-hd9-professional-monitoring-headphones",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_hd9",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD9",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD9",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_hd9.jpg",
+    "product_url": "https://www.halilit.com/items/2005012-presonus-hd9-professional-monitoring-headphones",
+    "is_sold": true,
+    "price": 317.0,
+    "halilit_url": "https://www.halilit.com/items/2005012-presonus-hd9-professional-monitoring-headphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.049454Z"
+  }
+}

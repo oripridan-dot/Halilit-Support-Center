@@ -1,0 +1,172 @@
+{
+  "id": "halilit_87-sta95",
+  "name": "ST-A95",
+  "brand": "roland",
+  "category": "keys",
+  "description": "COMPANION SPEAKER STAND FOR ROLAND AMPLIFIERS\n\nFor optimal projection, compatible Roland amplifiers can be mounted on this companion speaker stand, which telescopes for custom height adjustment. A carrying bag with shoulder strap is included.",
+  "media": {
+    "thumbnail": "/assets/placeholder_gear.png",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5779664-roland-st-a95-guitar-amp-stand",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "roland-st-a95",
+    "brand": "Roland",
+    "name": "ST-A95",
+    "sku": null,
+    "main_category": "Accessories",
+    "subcategory": null,
+    "description": "COMPANION SPEAKER STAND FOR ROLAND AMPLIFIERS\n\nFor optimal projection, compatible Roland amplifiers can be mounted on this companion speaker stand, which telescopes for custom height adjustment. A carrying bag with shoulder strap is included.",
+    "features": [],
+    "specifications": [
+      {
+        "key": "Material",
+        "value": "Aluminum"
+      },
+      {
+        "key": "Weight",
+        "value": "2.3kg / 5 lbs 2 oz"
+      },
+      {
+        "key": "Load capacity",
+        "value": "40kg / 88 lbs 3 oz"
+      },
+      {
+        "key": "Height adjustment",
+        "value": "925 to 1,425mm / 36-7/16 to 56-1/8 inches"
+      },
+      {
+        "key": "Shaft",
+        "value": "38mm / 1-1/2 inches (compatible with CUBE-STEX, BA-330, KC-220/200/80, AC-90/60, SA-300 top unit)"
+      },
+      {
+        "key": "Accessories",
+        "value": "Carrying bag, Cable tie x 2"
+      }
+    ],
+    "images": [
+      {
+        "url": "https://static.roland.com/assets/images/products/main/st-a95_front_main.jpg",
+        "type": "main",
+        "alt_text": "ST-A95"
+      },
+      {
+        "url": "https://static.roland.com/assets/images/products/gallery/st-a95_front_gal.jpg",
+        "type": "gallery",
+        "alt_text": "ST-A95"
+      },
+      {
+        "url": "https://static.roland.com/assets/images/products/gallery/st-a95_bag_gal.jpg",
+        "type": "gallery",
+        "alt_text": "ST-A95"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/jpg/promo_roland_featured_products.jpg",
+        "type": "gallery",
+        "alt_text": "Roland Featured Products"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/png/menu_tr-1000.png",
+        "type": "gallery",
+        "alt_text": "TR-1000"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/png/menu_bridge_cast.png",
+        "type": "gallery",
+        "alt_text": "BRIDGE CAST"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/png/menu_facebook.png",
+        "type": "gallery",
+        "alt_text": "Facebook"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/png/menu_youtube.png",
+        "type": "gallery",
+        "alt_text": "YouTube Channel"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/png/menu_social_media.png",
+        "type": "gallery",
+        "alt_text": "Worldwide Social Network"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/jpg/menu_support.jpg",
+        "type": "gallery",
+        "alt_text": "Support by Product"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/jpg/menu_quickstart.jpg",
+        "type": "gallery",
+        "alt_text": "Quick Start"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/jpg/promo_roland_international.jpg",
+        "type": "gallery",
+        "alt_text": "Roland International"
+      },
+      {
+        "url": "https://static.roland.com/assets/promos/jpg/promo_worldwide_social_network.jpg",
+        "type": "gallery",
+        "alt_text": "Worldwide Social Network"
+      },
+      {
+        "url": "https://static.roland.com/global/images/promo_boss_title.png",
+        "type": "gallery",
+        "alt_text": "BOSS"
+      },
+      {
+        "url": "https://static.roland.com/global/images/promo_boss.jpg",
+        "type": "gallery",
+        "alt_text": "BOSS"
+      },
+      {
+        "url": "https://static.roland.com/global/images/promo_v-moda.png",
+        "type": "gallery",
+        "alt_text": "V-MODA"
+      }
+    ],
+    "pricing": null,
+    "status": "in_stock",
+    "manual_urls": [
+      "https://www.roland.com/global/support/owners_manuals/",
+      "https://www.roland.com/global/support/owners_manuals/",
+      "https://www.roland.com/global/support/owners_manuals/",
+      "https://www.roland.com/global/sustainability/compliance_guideline/"
+    ],
+    "support_url": "https://www.roland.com/global/support/",
+    "video_urls": [
+      "https://www.youtube.com/user/RolandChannel",
+      "https://www.youtube.com/c/RolandSupportChannel"
+    ],
+    "accessories": [],
+    "related_products": [],
+    "relationships": [],
+    "connectivity": null,
+    "tier": {
+      "level": "Entry",
+      "grade_factors": [],
+      "target_audience": "Student"
+    },
+    "source": "official",
+    "data_sources": [
+      "official"
+    ],
+    "tribe_assignment": null
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.063418Z"
+  }
+}

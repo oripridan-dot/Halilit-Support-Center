@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-mp20tws",
+  "name": "Mackie MP-20TWS Wireless Earphones",
+  "brand": "mackie",
+  "category": "live",
+  "description": "Mackie MP-20TWS Wireless Earphones",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_mp20tws.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5403660-mackie-mp-20tws-wireless-earphones",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_mp20tws",
+    "name": "Mackie MP-20TWS Wireless Earphones",
+    "description": "Mackie MP-20TWS Wireless Earphones",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_mp20tws.jpg",
+    "product_url": "https://www.halilit.com/items/5403660-mackie-mp-20tws-wireless-earphones",
+    "is_sold": true,
+    "price": 641.0,
+    "halilit_url": "https://www.halilit.com/items/5403660-mackie-mp-20tws-wireless-earphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.671848Z"
+  }
+}

@@ -1,0 +1,1848 @@
+{
+  "brand_identity": {
+    "id": "boss",
+    "name": "BOSS"
+  },
+  "products": [
+    {
+      "id": "halilit_87-cbv61",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CBV61",
+      "halilit_url": "https://www.halilit.com/items/8242685-boss-cb-v61-carrying-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-fv30h",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-FV30H",
+      "halilit_url": "https://www.halilit.com/items/480562-boss-fv30h-volume-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-fv30l",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-FV30L",
+      "halilit_url": "https://www.halilit.com/items/7525216-boss-fv30l-volume-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ev1wl",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-EV1WL",
+      "halilit_url": "https://www.halilit.com/items/5286283-boss-ev-1-wl-wireless-midi-expression-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ev30",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-EV30",
+      "halilit_url": "https://www.halilit.com/items/1248114-boss-ev-30-expression-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-wl20l",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-WL20L",
+      "halilit_url": "https://www.halilit.com/items/3583895-boss-wl-20l-wireless-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-db90",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DB90",
+      "halilit_url": "https://www.halilit.com/items/447069-boss-db-90",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ktnminix",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KTNMINIX",
+      "halilit_url": "https://www.halilit.com/items/7532833-boss-katana-mini-x-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bsc20brn",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSC20BRN",
+      "halilit_url": "https://www.halilit.com/items/6226225-boss-bsc-20-brn",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bsc20nat",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSC20NAT",
+      "halilit_url": "https://www.halilit.com/items/6226228-boss-bsc-20-nat",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-cbve22",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CBVE22",
+      "halilit_url": "https://www.halilit.com/items/6795836-boss-cb-ve22-carrying-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana50ex-mk3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA50EX-MK3",
+      "halilit_url": "https://www.halilit.com/items/7286080-boss-katana-50-ex-gen-3-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bsm20bw",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSM20BW",
+      "halilit_url": "https://www.halilit.com/items/5448023-boss-bsm-20-bw",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ktngo2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KTNGO2",
+      "halilit_url": "https://www.halilit.com/items/6768740-boss-katana-go2-mini-guitar-headphone-amp",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ir2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-IR2",
+      "halilit_url": "https://www.halilit.com/items/6607204-boss-ir-2-amp-ir-cabinet-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bp1w",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BP1W",
+      "halilit_url": "https://www.halilit.com/items/6315888-boss-bp-1w-waza-craft-booster-preamp-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bsc20blk",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSC20BLK",
+      "halilit_url": "https://www.halilit.com/items/3653557-boss-bsc-20-blk",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-acslivelt",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-ACSLIVELT",
+      "halilit_url": "https://www.halilit.com/items/2954428-boss-acoustic-singer-live-lt-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bsm20bb",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSM20BB",
+      "halilit_url": "https://www.halilit.com/items/5447886-boss-bsm-20-bb",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana50-mk3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA50-MK3",
+      "halilit_url": "https://www.halilit.com/items/7211751-boss-katana-50-gen-3-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-cbbu10",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CBBU10",
+      "halilit_url": "https://www.halilit.com/items/5076719-boss-cb-bu10-utility-gig-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-dm101",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DM101",
+      "halilit_url": "https://www.halilit.com/items/6120952-boss-dm-101-delay-machine",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bb1x",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BB1X",
+      "halilit_url": "https://www.halilit.com/items/460288-boss-bb-1x-bass-driver",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve20",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE20",
+      "halilit_url": "https://www.halilit.com/items/444416-boss-ve-20-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve5rd",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE5RD",
+      "halilit_url": "https://www.halilit.com/items/444417-boss-ve-5-vocal-performer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-me90",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-ME90",
+      "halilit_url": "https://www.halilit.com/items/6099715-boss-me-90-guitar-multiple-effects",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rc5",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RC5",
+      "halilit_url": "https://www.halilit.com/items/3375107-boss-rc-5-loop-station",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ds1-wh",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DS1-WH",
+      "halilit_url": "https://www.halilit.com/items/7605766-boss-ds-1-limited-edition-distortion-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bd2b50a",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BD2B50A",
+      "halilit_url": "https://www.halilit.com/items/6555403-boss-bd-2-b50a-50th-anniversary",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-od200",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-OD200",
+      "halilit_url": "https://www.halilit.com/items/2724367-boss-od-200-hybrid-drive-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-gt1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-GT1",
+      "halilit_url": "https://www.halilit.com/items/1020178-boss-gt-1-guitar-effect-processor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-xs100",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-XS100",
+      "halilit_url": "https://www.halilit.com/items/8334357-boss-xs-100-poly-shifter",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana100-mk3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA100-MK3",
+      "halilit_url": "https://www.halilit.com/items/7207191-boss-katana-100-gen-3-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-tu02",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-TU02",
+      "halilit_url": "https://www.halilit.com/items/3856920-boss-tu-02",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rc202",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RC202",
+      "halilit_url": "https://www.halilit.com/items/818970-boss-rc-202-loop-station",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sde3000-evh",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SDE3000-EVH",
+      "halilit_url": "https://www.halilit.com/items/6070810-boss-sde-3000evh-dual-digital-delay",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve22",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE22",
+      "halilit_url": "https://www.halilit.com/items/6609434-boss-ve-22-vocal-performer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-te2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-TE2",
+      "halilit_url": "https://www.halilit.com/items/445723-boss-te-2-terra-echo",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana500hdbass",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA500HDBASS",
+      "halilit_url": "https://www.halilit.com/items/7286559-boss-katana-500-bass-head",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rv500",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RV500",
+      "halilit_url": "https://www.halilit.com/items/1366819-boss-rv-500-reverb",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rc1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RC1",
+      "halilit_url": "https://www.halilit.com/items/444197-boss-rc-1-loop-station",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rv6",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RV6",
+      "halilit_url": "https://www.halilit.com/items/569895-boss-rv-6-reverb",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana-art-hd-mk3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA-ART-HD-MK3",
+      "halilit_url": "https://www.halilit.com/items/7478317-boss-katana-artist-head-gen-3-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-mo2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-MO2",
+      "halilit_url": "https://www.halilit.com/items/445744-boss-mo-2-multi-overtone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ac3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-AC3",
+      "halilit_url": "https://www.halilit.com/items/445748-boss-ac-3-acoustic-simulator-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-geb7",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-GEB7",
+      "halilit_url": "https://www.halilit.com/items/445750-boss-geb-7-bass-equalizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ce2w",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CE2W",
+      "halilit_url": "https://www.halilit.com/items/1066807-ce-2w-chorus-guitar-effect",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ls2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-LS2",
+      "halilit_url": "https://www.halilit.com/items/445751-boss-ls-2-line-selector-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sy200",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SY200",
+      "halilit_url": "https://www.halilit.com/items/4572985-boss-sy-200-guitar-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-odb3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-ODB3",
+      "halilit_url": "https://www.halilit.com/items/445753-boss-odb-3-bass-overdrive-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-lmb3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-LMB3",
+      "halilit_url": "https://www.halilit.com/items/445754-boss-lmb-3-bass-limiter-enhancer-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-os2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-OS2",
+      "halilit_url": "https://www.halilit.com/items/445755-boss-os-2-overdrive-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bc1x",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BC1X",
+      "halilit_url": "https://www.halilit.com/items/718908-boss-bc-1x-bass-compressor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bf3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BF3",
+      "halilit_url": "https://www.halilit.com/items/445757-boss-bf-3-flanger-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-es5",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-ES5",
+      "halilit_url": "https://www.halilit.com/items/726846-boss-es-5",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-st-2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-ST-2",
+      "halilit_url": "https://www.halilit.com/items/445758-boss-st-2-power-stack-distortion-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana-cab112bass",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA-CAB112BASS",
+      "halilit_url": "https://www.halilit.com/items/7339838-boss-katana-cabinet-112-bass-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-md2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-MD2",
+      "halilit_url": "https://www.halilit.com/items/445759-boss-md-2-mega-distortion-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-dd3t",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DD3T",
+      "halilit_url": "https://www.halilit.com/items/2692160-boss-dd-3t-digital-delay-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sd1b50a",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SD1B50A",
+      "halilit_url": "https://www.halilit.com/items/6555459-boss-sd-1-b50a-50th-anniversary",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-fz5",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-FZ5",
+      "halilit_url": "https://www.halilit.com/items/445763-boss-fz-5-fuzz-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rc600",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RC600",
+      "halilit_url": "https://www.halilit.com/items/4669253-boss-rc-600-loop-station",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-gx10",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-GX10",
+      "halilit_url": "https://www.halilit.com/items/7526725-boss-gx-10-guitar-effects-processor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sy1000",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SY1000",
+      "halilit_url": "https://www.halilit.com/items/3299654-boss-sy-1000-guitar-synthesizer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-od3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-OD3",
+      "halilit_url": "https://www.halilit.com/items/445766-boss-od-3-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ad2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-AD2",
+      "halilit_url": "https://www.halilit.com/items/1074759-boss-ad-2-acoustic-preamp",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ge7",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-GE7",
+      "halilit_url": "https://www.halilit.com/items/445767-boss-ge-7-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ds1w",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DS1W",
+      "halilit_url": "https://www.halilit.com/items/5451080-boss-ds-1w-waza-craft-distortion-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ns2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-NS2",
+      "halilit_url": "https://www.halilit.com/items/445768-boss-ns-2-noise-suppressor-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-fv500h",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-FV500H",
+      "halilit_url": "https://www.halilit.com/items/447048-boss-fv-500h-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ch1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CH1",
+      "halilit_url": "https://www.halilit.com/items/445769-boss-ch-1-super-chorus-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-dc2w",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DC2W",
+      "halilit_url": "https://www.halilit.com/items/2101066-boss-dc-2w",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-cs3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CS3",
+      "halilit_url": "https://www.halilit.com/items/445770-boss-cs-3-compression-sustainer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-fs6",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-FS6",
+      "halilit_url": "https://www.halilit.com/items/447050-boss-fs-6-dual-footswitch",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ds2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DS2",
+      "halilit_url": "https://www.halilit.com/items/445771-boss-ds-2-turbo-distortion-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-mt2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-MT2",
+      "halilit_url": "https://www.halilit.com/items/445772-boss-mt-2-metal-zone-distortion-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-cubest2-r",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CUBEST2-R",
+      "halilit_url": "https://www.halilit.com/items/4207952-boss-cube-street-ii-portable-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-me90b",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-ME90B",
+      "halilit_url": "https://www.halilit.com/items/7270228-boss-me-90b-bass-multiple-effects",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ds1b50a",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DS1B50A",
+      "halilit_url": "https://www.halilit.com/items/6555478-boss-ds-1-b50a-50th-anniversary",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sy1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SY1",
+      "halilit_url": "https://www.halilit.com/items/2562397-boss-sy-1-guitar-synthesizer-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-wl50",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-WL50",
+      "halilit_url": "https://www.halilit.com/items/2014045-boss-wl-50-wireless-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-dcubelx",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DCUBELX",
+      "halilit_url": "https://www.halilit.com/items/5421663-boss-dual-cube-lx",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ktn502ex",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KTN502EX",
+      "halilit_url": "https://www.halilit.com/items/5539683-boss-katana-50-mkii-ex-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-vo1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VO1",
+      "halilit_url": "https://www.halilit.com/items/714083-boss-vo-1-vocoder",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bss25blk",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSS25BLK",
+      "halilit_url": "https://www.halilit.com/items/3669350-boss-bss-25-instrument-strap-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-katana100/212-mk3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-KATANA100/212-MK3",
+      "halilit_url": "https://www.halilit.com/items/7285863-boss-katana-100-212-gen-3-guitar-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-mt23a",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-MT23A",
+      "halilit_url": "https://www.halilit.com/items/5765735-boss-mt-2-3a-metal-zone-30th-anniversary",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sl2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SL2",
+      "halilit_url": "https://www.halilit.com/items/5451371-boss-sl-2-slicer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-wl20",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-WL20",
+      "halilit_url": "https://www.halilit.com/items/2012779-boss-wl-20-wireless-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-dd8",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-DD8",
+      "halilit_url": "https://www.halilit.com/items/2692205-boss-dd-8-digital-delay-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rc10r",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RC10R",
+      "halilit_url": "https://www.halilit.com/items/2721390-boss-rc-10r-rhythm-loop-station",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ac22lx",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-AC22LX",
+      "halilit_url": "https://www.halilit.com/items/6188655-boss-ac-22lx-acoustic-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-rc500",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-RC500",
+      "halilit_url": "https://www.halilit.com/items/3336819-boss-rc-500-loop-station",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-bsm20wb",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-BSM20WB",
+      "halilit_url": "https://www.halilit.com/items/5448057-boss-bsm-20-wb",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-px1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-PX1",
+      "halilit_url": "https://www.halilit.com/items/8330875-boss-plugout-fx-px-1-effect-modulation-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-gp10gk",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-GP10GK",
+      "halilit_url": "https://www.halilit.com/items/444283-boss-gp10gk-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sde3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SDE3",
+      "halilit_url": "https://www.halilit.com/items/7508348-boss-sde-3-dual-digital-delay",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-tu3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-TU3",
+      "halilit_url": "https://www.halilit.com/items/447360-boss-tu-3-chromatic-tuner-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sde3000d",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SDE3000D",
+      "halilit_url": "https://www.halilit.com/items/6067593-boss-sde-3000d-dual-digital-delay",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-tr2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-TR2",
+      "halilit_url": "https://www.halilit.com/items/444299-boss-tr-2-tremolo-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ph3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-PH3",
+      "halilit_url": "https://www.halilit.com/items/444300-boss-ph-3-phase-shifter-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-mt2w",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-MT2W",
+      "halilit_url": "https://www.halilit.com/items/3611021-boss-mt-2w-waza-metal-zone-distortion",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-aw3",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-AW3",
+      "halilit_url": "https://www.halilit.com/items/444303-boss-aw-3-dynamic-wah-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ps-6",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-PS-6",
+      "halilit_url": "https://www.halilit.com/items/444304-boss-ps-6-harmonist-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-cp1x",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CP1X",
+      "halilit_url": "https://www.halilit.com/items/1075346-boss-cp-1x-guitar-compressor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve5wh",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE5WH",
+      "halilit_url": "https://www.halilit.com/items/7110804-boss-ve-5-vocal-performer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ce5",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CE5",
+      "halilit_url": "https://www.halilit.com/items/444308-boss-ce-5-stereo-chorus-ensemble-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-sd1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-SD1",
+      "halilit_url": "https://www.halilit.com/items/444309-boss-sd-1-super-ovedrive-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-wl60",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-WL60",
+      "halilit_url": "https://www.halilit.com/items/4039066-boss-wl-60-wireless-system-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-wl30xlr",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-WL30XLR",
+      "halilit_url": "https://www.halilit.com/items/3697745-boss-wl-30xlr-digital-wireless-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve500",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE500",
+      "halilit_url": "https://www.halilit.com/items/2101187-boss-ve-500",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve2",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE2",
+      "halilit_url": "https://www.halilit.com/items/444414-boss-ve-2",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve8",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE8",
+      "halilit_url": "https://www.halilit.com/items/817924-boss-ve-8",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-cbrc505",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-CBRC505",
+      "halilit_url": "https://www.halilit.com/items/6315311-boss-cb-rc505-carrying-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_87-ve1",
+      "name": "Unknown Model",
+      "brand": "boss",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "87-VE1",
+      "halilit_url": "https://www.halilit.com/items/458346-boss-ve-1-vocal-echo-pedal",
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

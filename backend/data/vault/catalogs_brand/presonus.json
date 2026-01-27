@@ -1,0 +1,1112 @@
+{
+  "brand_identity": {
+    "id": "presonus",
+    "name": "PRESONUS"
+  },
+  "products": [
+    {
+      "id": "halilit_70-erispro6",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Pro 6",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erispro6.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Pro 6",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISPRO6",
+      "halilit_url": "https://www.halilit.com/items/6201345-presonus-eris-pro-6",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-eris3.5-bt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9\u05d9\u05dd PreSonus Eris 3.5 BT 2nd Gen",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_eris3_5_bt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9\u05d9\u05dd PreSonus Eris 3.5 BT 2nd Gen",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERIS3.5-BT",
+      "halilit_url": "https://www.halilit.com/items/6198539-presonus-eris-3-5-bt-2nd-gen-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-eris5-bt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus Eris 5 BT 2nd Gen",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_eris5_bt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus Eris 5 BT 2nd Gen",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERIS5-BT",
+      "halilit_url": "https://www.halilit.com/items/6199629-presonus-eris-5-bt-2nd-gen-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-eris3.5",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus Eris 3.5 2nd Gen",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_eris3_5.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus Eris 3.5 2nd Gen",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERIS3.5",
+      "halilit_url": "https://www.halilit.com/items/6198389-presonus-eris-3-5-2nd-gen-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantumhd2eu",
+      "name": "PreSonus Quantum HD 2 USB-C Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_quantumhd2eu.jpg",
+      "description": "PreSonus Quantum HD 2 USB-C Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUMHD2EU",
+      "halilit_url": "https://www.halilit.com/items/7099544-presonus-quantum-hd-2-usb-c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantumes2",
+      "name": "PreSonus Quantum ES 2 USB-C Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_quantumes2.jpg",
+      "description": "PreSonus Quantum ES 2 USB-C Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUMES2",
+      "halilit_url": "https://www.halilit.com/items/6864555-presonus-quantum-es-2-usb-c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-erispro8",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Pro 8",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erispro8.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Pro 8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISPRO8",
+      "halilit_url": "https://www.halilit.com/items/6201559-presonus-eris-pro-8",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-audioboxgocre",
+      "name": "PreSonus AudioBox Go Creator Bundle",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_audioboxgocre.jpg",
+      "description": "PreSonus AudioBox Go Creator Bundle",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-AUDIOBOXGOCRE",
+      "halilit_url": "https://www.halilit.com/items/8030220-presonus-audiobox-go-creator-bundle",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-erisstudio4",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 4",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erisstudio4.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISSTUDIO4",
+      "halilit_url": "https://www.halilit.com/items/6201103-presonus-eris-studio-4",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-hd9",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD9",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_hd9.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD9",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-HD9",
+      "halilit_url": "https://www.halilit.com/items/2005012-presonus-hd9-professional-monitoring-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio24c",
+      "name": "PreSonus Studio 24C Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_studio24c.jpg",
+      "description": "PreSonus Studio 24C Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO24C",
+      "halilit_url": "https://www.halilit.com/items/2326296-presonus-studio-24c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-erisprosub10",
+      "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Pro Sub 10",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erisprosub10.jpg",
+      "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Pro Sub 10",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISPROSUB10",
+      "halilit_url": "https://www.halilit.com/items/6201626-presonus-eris-pro-sub-10",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantumhd8eu",
+      "name": "PreSonus Quantum HD 8 USB-C Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_quantumhd8eu.jpg",
+      "description": "PreSonus Quantum HD 8 USB-C Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUMHD8EU",
+      "halilit_url": "https://www.halilit.com/items/6864925-presonus-quantum-hd-8-usb-c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-hd10bt",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea PreSonus Eris HD10BT",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_hd10bt.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea PreSonus Eris HD10BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-HD10BT",
+      "halilit_url": "https://www.halilit.com/items/2721055-presonus-eris-hd10bt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-erissub8-bt",
+      "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris SUB 8 BT",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erissub8_bt.jpg",
+      "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris SUB 8 BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISSUB8-BT",
+      "halilit_url": "https://www.halilit.com/items/6200876-presonus-eris-sub-8-bt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantumes4",
+      "name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_quantumes4.jpg",
+      "description": "PreSonus Quantum ES 4 USB-C Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUMES4",
+      "halilit_url": "https://www.halilit.com/items/6864687-presonus-quantum-es-4-usb-c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-abusb96cb",
+      "name": "PreSonus AudioBox 96 Complete Bundle",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_abusb96cb.jpg",
+      "description": "PreSonus AudioBox 96 Complete Bundle",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ABUSB96CB",
+      "halilit_url": "https://www.halilit.com/items/7963955-presonus-audiobox-96-complete-bundle",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-m7mk2",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df PreSonus M7 MKII",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_m7mk2.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df PreSonus M7 MKII",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-M7MK2",
+      "halilit_url": "https://www.halilit.com/items/4599104-presonus-m7-mkii-cardioid-condenser-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio1810c",
+      "name": "PreSonus Studio 1810C",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_studio1810c.jpg",
+      "description": "PreSonus Studio 1810C",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO1810C",
+      "halilit_url": "https://www.halilit.com/items/2327617-presonus-studio-1810c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-erisstudio5",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 5",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erisstudio5.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 5",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISSTUDIO5",
+      "halilit_url": "https://www.halilit.com/items/6201162-presonus-eris-studio-5",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-revelator",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 PreSonus Revelator",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_revelator.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 PreSonus Revelator",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-REVELATOR",
+      "halilit_url": "https://www.halilit.com/items/3544412-presonus-revelator-professional-usb-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio26c",
+      "name": "PreSonus Studio 26C USB Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_studio26c.jpg",
+      "description": "PreSonus Studio 26C USB Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO26C",
+      "halilit_url": "https://www.halilit.com/items/2326876-presonus-studio-26c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantumesult",
+      "name": "PreSonus Quantum ES Ultimate Bundle",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_quantumesult.jpg",
+      "description": "PreSonus Quantum ES Ultimate Bundle",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUMESULT",
+      "halilit_url": "https://www.halilit.com/items/7964009-presonus-quantum-es-ultimate-bundle",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-audioboxgo",
+      "name": "PreSonus AudioBox GO",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_audioboxgo.jpg",
+      "description": "PreSonus AudioBox GO",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-AUDIOBOXGO",
+      "halilit_url": "https://www.halilit.com/items/4606838-presonus-audiobox-go",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-atomsq",
+      "name": "PreSonus ATOM SQ",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_atomsq.jpg",
+      "description": "PreSonus ATOM SQ",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ATOMSQ",
+      "halilit_url": "https://www.halilit.com/items/3521406-presonus-atom-sq",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-atom",
+      "name": "PreSonus ATOM",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_atom.jpg",
+      "description": "PreSonus ATOM",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ATOM",
+      "halilit_url": "https://www.halilit.com/items/2127752-presonus-atom",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-eris4.5-bt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus Eris 4.5 BT 2nd Gen",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_eris4_5_bt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus Eris 4.5 BT 2nd Gen",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERIS4.5-BT",
+      "halilit_url": "https://www.halilit.com/items/6199470-presonus-eris-4-5-bt-2nd-gen-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-revelatorio44",
+      "name": "PreSonus Revelator io44",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_revelatorio44.jpg",
+      "description": "PreSonus Revelator io44",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-REVELATORIO44",
+      "halilit_url": "https://www.halilit.com/items/5170352-presonus-revelator-io44-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-faderportv2",
+      "name": "PreSonus Faderport V2",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_faderportv2.jpg",
+      "description": "PreSonus Faderport V2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-FADERPORTV2",
+      "halilit_url": "https://www.halilit.com/items/2421943-presonus-faderport-v2",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-abitwo",
+      "name": "PreSonus AudioBox iTwo",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_abitwo.jpg",
+      "description": "PreSonus AudioBox iTwo",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ABITWO",
+      "halilit_url": "https://www.halilit.com/items/1556418-presonus-audiobox-itwo-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-hd7",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD7",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_hd7.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 PreSonus HD7",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-HD7",
+      "halilit_url": "https://www.halilit.com/items/1563587-presonus-hd7-studio-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-revelatorio24",
+      "name": "PreSonus Revelator io24 USB Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_revelatorio24.jpg",
+      "description": "PreSonus Revelator io24 USB Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-REVELATORIO24",
+      "halilit_url": "https://www.halilit.com/items/4475594-presonus-revelator-io24-usb-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-erisstudio8",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 8",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_erisstudio8.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris Studio 8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ERISSTUDIO8",
+      "halilit_url": "https://www.halilit.com/items/6201306-presonus-eris-studio-5",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-ispd4",
+      "name": "PreSonus ISPD-4A Isolation Pads",
+      "brand": "presonus",
+      "category": "drums",
+      "image_url": "/data/thumbnails/presonus_70_ispd4.jpg",
+      "description": "PreSonus ISPD-4A Isolation Pads",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-ISPD4",
+      "halilit_url": "https://www.halilit.com/items/1570294-presonus-ispd-4a-isolation-pads",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio68c",
+      "name": "PreSonus Studio 68C USB Audio Interface",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_studio68c.jpg",
+      "description": "PreSonus Studio 68C USB Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO68C",
+      "halilit_url": "https://www.halilit.com/items/2327075-presonus-studio-68c-usb-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-e7xt",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E7 XT",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_e7xt.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E7 XT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-E7XT",
+      "halilit_url": "https://www.halilit.com/items/2972751-presonus-eris-e7-xt-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantum2626",
+      "name": "PreSonus Quantum 2626",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_quantum2626.jpg",
+      "description": "PreSonus Quantum 2626",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUM2626",
+      "halilit_url": "https://www.halilit.com/items/2680970-presonus-quantum-2626",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio1824c",
+      "name": "PreSonus Studio 1824C",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_studio1824c.jpg",
+      "description": "PreSonus Studio 1824C",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO1824C",
+      "halilit_url": "https://www.halilit.com/items/2327692-presonus-studio-1824c-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-iostation24c",
+      "name": "PreSonus ioStation 24c",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_iostation24c.jpg",
+      "description": "PreSonus ioStation 24c",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-IOSTATION24C",
+      "halilit_url": "https://www.halilit.com/items/4130200-presonus-iostation-24c",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantum2",
+      "name": "PreSonus Quantum 2",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_quantum2.jpg",
+      "description": "PreSonus Quantum 2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUM2",
+      "halilit_url": "https://www.halilit.com/items/1740276-presonus-quantum-2",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-microstationbt",
+      "name": "\u05e9\u05dc\u05d8 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus MicroStation BT",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_microstationbt.jpg",
+      "description": "\u05e9\u05dc\u05d8 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd PreSonus MicroStation BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-MICROSTATIONBT",
+      "halilit_url": "https://www.halilit.com/items/2680831-presonus-microstation-bt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-r80v2",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus R80 V2",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_r80v2.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus R80 V2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-R80V2",
+      "halilit_url": "https://www.halilit.com/items/4606236-presonus-r80-v2-powered-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-e8xt",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E8 XT",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_e8xt.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E8 XT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-E8XT",
+      "halilit_url": "https://www.halilit.com/items/2627156-presonus-eris-e8-xt-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-tubeprev2",
+      "name": "PreSonus TubePre V2",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_tubeprev2.jpg",
+      "description": "PreSonus TubePre V2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-TUBEPREV2",
+      "halilit_url": "https://www.halilit.com/items/1567063-presonus-tubepre-v2-preamplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-e44",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E44",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_e44.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E44",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-E44",
+      "halilit_url": "https://www.halilit.com/items/1566369-presonus-eris-e44-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-quantum4848",
+      "name": "PreSonus Quantum 4848",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_quantum4848.jpg",
+      "description": "PreSonus Quantum 4848",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-QUANTUM4848",
+      "halilit_url": "https://www.halilit.com/items/2687175-presonus-quantum-4848",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-bluetubedpv2",
+      "name": "PreSonus BlueTube DP v2",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_bluetubedpv2.jpg",
+      "description": "PreSonus BlueTube DP v2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-BLUETUBEDPV2",
+      "halilit_url": "https://www.halilit.com/items/1928839-presonus-bluetube-dp-v2-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-pd70",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05dc\u05e9\u05d9\u05d3\u05d5\u05e8 PreSonus PD-70",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_pd70.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05dc\u05e9\u05d9\u05d3\u05d5\u05e8 PreSonus PD-70",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-PD70",
+      "halilit_url": "https://www.halilit.com/items/3481022-presonus-pd-70",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studioch",
+      "name": "PreSonus Studio Channel",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_studioch.jpg",
+      "description": "PreSonus Studio Channel",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIOCH",
+      "halilit_url": "https://www.halilit.com/items/1697315-presonus-studio-channel",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio1-7pro",
+      "name": "PreSonus Studio One Pro 7",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+      "description": "PreSonus Studio One Pro 7",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO1-7PRO",
+      "halilit_url": "https://www.halilit.com/items/7790666-presonus-studio-one-pro-7-daw",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-studio1-7pro-e",
+      "name": "PreSonus Studio One Pro 7 - Academic",
+      "brand": "presonus",
+      "category": "studio",
+      "image_url": "/data/thumbnails/presonus_70_studio1_7pro_e.jpg",
+      "description": "PreSonus Studio One Pro 7 - Academic",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-STUDIO1-7PRO-E",
+      "halilit_url": "https://www.halilit.com/items/7831373-presonus-studio-one-pro-7-academic",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-pm-2",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 PreSonus PM-2",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_pm_2.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 PreSonus PM-2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-PM-2",
+      "halilit_url": "https://www.halilit.com/items/2649869-presonus-pm-2-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sl-ar16c",
+      "name": "PreSonus StudioLive AR16c",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+      "description": "PreSonus StudioLive AR16c",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SL-AR16C",
+      "halilit_url": "https://www.halilit.com/items/2680904-presonus-studiolive-ar16c",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sl-ar12c",
+      "name": "PreSonus StudioLive AR12c",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar12c.jpg",
+      "description": "PreSonus StudioLive AR12c",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SL-AR12C",
+      "halilit_url": "https://www.halilit.com/items/2759045-presonus-studiolive-ar12c",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sl-ar8c",
+      "name": "PreSonus StudioLive AR8c",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar8c.jpg",
+      "description": "PreSonus StudioLive AR8c",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SL-AR8C",
+      "halilit_url": "https://www.halilit.com/items/2759071-presonus-studiolive-ar8c-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sl-rml-16ai",
+      "name": "PreSonus StudioLive RML16AI",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sl_rml_16ai.jpg",
+      "description": "PreSonus StudioLive RML16AI",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SL-RML-16AI",
+      "halilit_url": "https://www.halilit.com/items/5769949-presonus-studiolive-rml16ai",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-air15s",
+      "name": "PreSonus AIR15s",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_air15s.jpg",
+      "description": "PreSonus AIR15s",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-AIR15S",
+      "halilit_url": "https://www.halilit.com/items/2420519-presonus-air15s",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sw5e",
+      "name": "PreSonus SW5E",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sw5e.jpg",
+      "description": "PreSonus SW5E",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SW5E",
+      "halilit_url": "https://www.halilit.com/items/3352120-presonus-sw5e",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sls3-32s",
+      "name": "PreSonus StudioLive 32S",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32s.jpg",
+      "description": "PreSonus StudioLive 32S",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SLS3-32S",
+      "halilit_url": "https://www.halilit.com/items/2295866-presonus-studiolive-32s",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-air10",
+      "name": "PreSonus AIR10",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_air10.jpg",
+      "description": "PreSonus AIR10",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-AIR10",
+      "halilit_url": "https://www.halilit.com/items/2419321-presonus-air10",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sls3-32sc",
+      "name": "PreSonus StudioLive 32SC",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32sc.jpg",
+      "description": "PreSonus StudioLive 32SC",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SLS3-32SC",
+      "halilit_url": "https://www.halilit.com/items/2414996-presonus-studiolive-32sc",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-air12",
+      "name": "PreSonus AIR12",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_air12.jpg",
+      "description": "PreSonus AIR12",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-AIR12",
+      "halilit_url": "https://www.halilit.com/items/2420393-presonus-air12",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-nsb16.8",
+      "name": "PreSonus NSB 16.8",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+      "description": "PreSonus NSB 16.8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-NSB16.8",
+      "halilit_url": "https://www.halilit.com/items/2291717-presonus-nsb-16-8",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-cdl18s",
+      "name": "PreSonus CDL18s",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_cdl18s.jpg",
+      "description": "PreSonus CDL18s",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-CDL18S",
+      "halilit_url": "https://www.halilit.com/items/2537567-presonus-cdl18s",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-nsb8.8",
+      "name": "PreSonus NSB 8.8",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_nsb8_8.jpg",
+      "description": "PreSonus NSB 8.8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-NSB8.8",
+      "halilit_url": "https://www.halilit.com/items/3352060-presonus-nsb-8-8",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sl-32.4.2-ipadst",
+      "name": "PreSonus Mixer iPad Stand",
+      "brand": "presonus",
+      "category": "drums",
+      "image_url": "/data/thumbnails/presonus_70_sl_32_4_2_ipadst.jpg",
+      "description": "PreSonus Mixer iPad Stand",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SL-32.4.2-IPADST",
+      "halilit_url": "https://www.halilit.com/items/3352083-presonus-mixer-ipad-stand",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-air12tote",
+      "name": "PreSonus AIR12 Tote Bag",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_air12tote.jpg",
+      "description": "PreSonus AIR12 Tote Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-AIR12TOTE",
+      "halilit_url": "https://www.halilit.com/items/3351602-presonus-air12-tote-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sls3-32r",
+      "name": "PreSonus StudioLive 32R",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sls3_32r.jpg",
+      "description": "PreSonus StudioLive 32R",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SLS3-32R",
+      "halilit_url": "https://www.halilit.com/items/2293829-presonus-studiolive-32r",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_70-sl-ar8-bag",
+      "name": "PreSonus StudioLive AR8 Bag",
+      "brand": "presonus",
+      "category": "general",
+      "image_url": "/data/thumbnails/presonus_70_sl_ar8_bag.jpg",
+      "description": "PreSonus StudioLive AR8 Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "70-SL-AR8-BAG",
+      "halilit_url": "https://www.halilit.com/items/3195726-presonus-studiolive-ar8-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

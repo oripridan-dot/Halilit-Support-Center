@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-aptxqg2-ess",
+  "name": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7443486-universal-audio-apollo-twin-x-quad-gen-2-essentials-edition",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_aptxqg2_ess",
+    "name": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+    "description": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+    "product_url": "https://www.halilit.com/items/7443486-universal-audio-apollo-twin-x-quad-gen-2-essentials-edition",
+    "is_sold": true,
+    "price": 5495.0,
+    "halilit_url": "https://www.halilit.com/items/7443486-universal-audio-apollo-twin-x-quad-gen-2-essentials-edition",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.586753Z"
+  }
+}

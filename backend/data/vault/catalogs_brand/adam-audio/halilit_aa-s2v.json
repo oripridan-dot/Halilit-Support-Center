@@ -1,0 +1,39 @@
+{
+  "id": "halilit_aa-s2v",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio S2V",
+  "brand": "adam-audio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio S2V",
+  "media": {
+    "thumbnail": "/data/thumbnails/adam_audio_aa_s2v.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2280832-adam-audio-s2v",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "adam_audio_aa_s2v",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio S2V",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio S2V",
+    "category": "general",
+    "image_url": "/data/thumbnails/adam_audio_aa_s2v.jpg",
+    "product_url": "https://www.halilit.com/items/2280832-adam-audio-s2v",
+    "is_sold": true,
+    "price": 7056.0,
+    "halilit_url": "https://www.halilit.com/items/2280832-adam-audio-s2v",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:28.244432Z"
+  }
+}

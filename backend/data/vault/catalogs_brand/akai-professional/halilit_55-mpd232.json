@@ -1,0 +1,39 @@
+{
+  "id": "halilit_55-mpd232",
+  "name": "Akai Professional MPD232",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional MPD232",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_mpd232.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/983289-akai-professional-mpd232",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_mpd232",
+    "name": "Akai Professional MPD232",
+    "description": "Akai Professional MPD232",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_mpd232.jpg",
+    "product_url": "https://www.halilit.com/items/983289-akai-professional-mpd232",
+    "is_sold": true,
+    "price": 1308.0,
+    "halilit_url": "https://www.halilit.com/items/983289-akai-professional-mpd232",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:26.935278Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-quantum2",
+  "name": "PreSonus Quantum 2",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus Quantum 2",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_quantum2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/1740276-presonus-quantum-2",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_quantum2",
+    "name": "PreSonus Quantum 2",
+    "description": "PreSonus Quantum 2",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_quantum2.jpg",
+    "product_url": "https://www.halilit.com/items/1740276-presonus-quantum-2",
+    "is_sold": true,
+    "price": 2542.0,
+    "halilit_url": "https://www.halilit.com/items/1740276-presonus-quantum-2",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.057961Z"
+  }
+}

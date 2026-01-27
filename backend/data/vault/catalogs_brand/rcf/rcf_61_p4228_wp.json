@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_p4228_wp",
+  "name": "RCF P 4228 Weatherproof",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF P 4228 Weatherproof",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_p4228_wp.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_p4228_wp",
+    "name": "RCF P 4228 Weatherproof",
+    "description": "RCF P 4228 Weatherproof",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_p4228_wp.jpg",
+    "product_url": "https://www.halilit.com/items/7771205-rcf-p-4228-weatherproof-two-way-speaker-",
+    "is_sold": true,
+    "price": 7521.0,
+    "halilit_url": "https://www.halilit.com/items/7771205-rcf-p-4228-weatherproof-two-way-speaker-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.509813Z"
+  }
+}

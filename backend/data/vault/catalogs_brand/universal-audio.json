@@ -1,0 +1,1080 @@
+{
+  "brand_identity": {
+    "id": "universal-audio",
+    "name": "UNIVERSAL-AUDIO"
+  },
+  "products": [
+    {
+      "id": "halilit_65-ksa7500",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "65-KSA7500",
+      "halilit_url": "https://www.halilit.com/items/491601-on-stage-ksa-7500-keyboard-stand",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_65-ksa7575",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "65-KSA7575",
+      "halilit_url": "https://www.halilit.com/items/3069603-on-stage-ksa7575-universal-adapter-for-keyboard-mic",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmknuc",
+      "name": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmknuc.jpg",
+      "description": "Universal Audio UAFX Knuckles '92 Dual Rec Amplifier",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMKNUC",
+      "halilit_url": "https://www.halilit.com/items/7461636-universal-audio-uafx-knuckles-92-dual-rec-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpm-lion",
+      "name": "Universal Audio UAFX Lion '68 Super Lead Amp",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+      "description": "Universal Audio UAFX Lion '68 Super Lead Amp",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPM-LION",
+      "halilit_url": "https://www.halilit.com/items/6310432-universal-audio-uafx-lion-68-super-lead-amp",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmdrm",
+      "name": "Universal Audio UAFX Dream '65 Reverb Amplifier",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmdrm.jpg",
+      "description": "Universal Audio UAFX Dream '65 Reverb Amplifier",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMDRM",
+      "halilit_url": "https://www.halilit.com/items/4871457-universal-audio-uafx-dream-65-reverb-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmwdr",
+      "name": "Universal Audio UAFX Woodrow '55 Instrument Amplifier",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmwdr.jpg",
+      "description": "Universal Audio UAFX Woodrow '55 Instrument Amplifier",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMWDR",
+      "halilit_url": "https://www.halilit.com/items/4872999-universal-audio-uafx-woodrow-55-instrument-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpsbrgd",
+      "name": "Universal Audio UAFX Brigade Chorus & Vibrato",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_gpsbrgd.jpg",
+      "description": "Universal Audio UAFX Brigade Chorus & Vibrato",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPSBRGD",
+      "halilit_url": "https://www.halilit.com/items/6311977-universal-audio-uafx-brigade-chorus-vibrato",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmdlvrb",
+      "name": "Universal Audio UAFX Del-Verb Ambience Companion",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmdlvrb.jpg",
+      "description": "Universal Audio UAFX Del-Verb Ambience Companion",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMDLVRB",
+      "halilit_url": "https://www.halilit.com/items/5885995-universal-audio-uafx-del-verb-ambience-companion",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_20-vrs654bk",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "20-VRS654BK",
+      "halilit_url": "https://www.halilit.com/items/7149618-vintage-revo-surfmaster-quad-electric-guitar",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_20-vrs654mw",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "20-VRS654MW",
+      "halilit_url": "https://www.halilit.com/items/7156019-vintage-revo-surfmaster-quad-electric-guitar",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmruby",
+      "name": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmruby.jpg",
+      "description": "Universal Audio UAFX Ruby '63 Top Boost Amplifier",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMRUBY",
+      "halilit_url": "https://www.halilit.com/items/4872776-universal-audio-uafx-ruby-63-top-boost-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmenig",
+      "name": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmenig.jpg",
+      "description": "Universal Audio UAFX Enigmatic '82 Overdrive Special Amp",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMENIG",
+      "halilit_url": "https://www.halilit.com/items/7425354-universal-audio-uafx-enigmatic-82-overdrive-special-amp",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-gpmoxstp",
+      "name": "Universal Audio UAFX OX Stomp",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+      "description": "Universal Audio UAFX OX Stomp",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-GPMOXSTP",
+      "halilit_url": "https://www.halilit.com/items/6229347-universal-audio-uafx-ox-stomp",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt1",
+      "name": "Universal Audio Volt 1 USB Audio Interface",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt1.jpg",
+      "description": "Universal Audio Volt 1 USB Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT1",
+      "halilit_url": "https://www.halilit.com/items/4186883-universal-audio-volt-1-usb-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx16g2-ess",
+      "name": "Universal Audio Apollo x16 Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx16g2_ess.jpg",
+      "description": "Universal Audio Apollo x16 Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX16G2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7808516-universal-audio-apollo-x16-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-ape2m",
+      "name": "Universal Audio Apollo e2m",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_ape2m.jpg",
+      "description": "Universal Audio Apollo e2m",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APE2M",
+      "halilit_url": "https://www.halilit.com/items/7874850-apollo-e2m-stereo-headphone-amp-and-line-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx6g2-ess",
+      "name": "Universal Audio Apollo x6 Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6g2_ess.jpg",
+      "description": "Universal Audio Apollo x6 Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX6G2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7443708-universal-audio-apollo-x6-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-aptxdg2-ess",
+      "name": "Universal Audio Apollo Twin X Duo Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxdg2_ess.jpg",
+      "description": "Universal Audio Apollo Twin X Duo Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APTXDG2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7442686-universal-audio-apollo-twin-x-duo-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt276",
+      "name": "Universal Audio Volt 276 USB Audio Interface",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt276.jpg",
+      "description": "Universal Audio Volt 276 USB Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT276",
+      "halilit_url": "https://www.halilit.com/items/4186634-universal-audio-volt-276-usb-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micuasd3x3",
+      "name": "\u05e1\u05d8 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd Universal Audio SD-3 Set",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micuasd3x3.jpg",
+      "description": "\u05e1\u05d8 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd Universal Audio SD-3 Set",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUASD3X3",
+      "halilit_url": "https://www.halilit.com/items/7235088-universal-audio-sd-3x3-dynamic-microphones-set",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt2",
+      "name": "Universal Audio Volt 2 USB Audio Interface",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt2.jpg",
+      "description": "Universal Audio Volt 2 USB Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT2",
+      "halilit_url": "https://www.halilit.com/items/4186896-universal-audio-volt-2-usb-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-aptxqg2-ess",
+      "name": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxqg2_ess.jpg",
+      "description": "Universal Audio Apollo Twin X Quad Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APTXQG2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7443486-universal-audio-apollo-twin-x-quad-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_65-tcm1908",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "65-TCM1908",
+      "halilit_url": "https://www.halilit.com/items/966953-on-stage-tcm1908-u-mount-universal-grip-on-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt876",
+      "name": "Universal Audio Volt 876",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt876.jpg",
+      "description": "Universal Audio Volt 876",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT876",
+      "halilit_url": "https://www.halilit.com/items/8516151-universal-audio-volt-876",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-uad2-osat-tb3",
+      "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+      "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-UAD2-OSAT-TB3",
+      "halilit_url": "https://www.halilit.com/items/2699580-universal-audio-uad-2-satellite-thunderbolt-3-octo-core",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_31-jsmnt101",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "31-JSMNT101",
+      "halilit_url": "https://www.halilit.com/items/7101782-ultimate-support-js-mnt101-universal-ipad-holder-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-aptxqg2-stu",
+      "name": "Universal Audio Apollo Twin X Quad Gen 2 - Studio+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxqg2_stu.jpg",
+      "description": "Universal Audio Apollo Twin X Quad Gen 2 - Studio+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APTXQG2-STU",
+      "halilit_url": "https://www.halilit.com/items/7443561-universal-audio-apollo-twin-x-quad-gen-2-studio-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8g2-stu",
+      "name": "Universal Audio Apollo x8 Gen 2 - Studio+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8g2_stu.jpg",
+      "description": "Universal Audio Apollo x8 Gen 2 - Studio+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8G2-STU",
+      "halilit_url": "https://www.halilit.com/items/7444337-universal-audio-apollo-x8-gen-2-studio-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8pg2-ess",
+      "name": "Universal Audio Apollo x8p Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8pg2_ess.jpg",
+      "description": "Universal Audio Apollo x8p Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8PG2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7444354-universal-audio-apollo-x8p-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-aptxdg2-stu",
+      "name": "Universal Audio Apollo Twin X Duo Gen 2 - Studio+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_aptxdg2_stu.jpg",
+      "description": "Universal Audio Apollo Twin X Duo Gen 2 - Studio+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APTXDG2-STU",
+      "halilit_url": "https://www.halilit.com/items/7442824-universal-audio-apollo-twin-x-duo-gen-2-studio-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx4g2-ess",
+      "name": "Universal Audio Apollo x4 Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx4g2_ess.jpg",
+      "description": "Universal Audio Apollo x4 Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX4G2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7443594-universal-audio-apollo-x4-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-uad2-qsat-tb3",
+      "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_qsat_tb3.jpg",
+      "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 QUAD Core",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-UAD2-QSAT-TB3",
+      "halilit_url": "https://www.halilit.com/items/2699686-universal-audio-uad-2-satellite-thunderbolt-3-quad-core",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt476p",
+      "name": "Universal Audio VOLT 476P",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt476p.jpg",
+      "description": "Universal Audio VOLT 476P",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT476P",
+      "halilit_url": "https://www.halilit.com/items/5095085-universal-audio-volt-476p-usb-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt476",
+      "name": "Universal Audio Volt 476",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt476.jpg",
+      "description": "Universal Audio Volt 476",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT476",
+      "halilit_url": "https://www.halilit.com/items/4186830-universal-audio-volt-476",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx16dg2-ess",
+      "name": "Universal Audio Apollo x16D Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx16dg2_ess.jpg",
+      "description": "Universal Audio Apollo x16D Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX16DG2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7198933-universal-audio-apollo-x16d-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-volt176",
+      "name": "Universal Audio Volt 176",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_volt176.jpg",
+      "description": "Universal Audio Volt 176",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-VOLT176",
+      "halilit_url": "https://www.halilit.com/items/4186847-universal-audio-volt-176",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micuasd3",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-3",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micuasd3.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUASD3",
+      "halilit_url": "https://www.halilit.com/items/6888418-universal-audio-sd-3-dynamic-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx4g2-stu",
+      "name": "Universal Audio Apollo x4 Gen 2 - Studio+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx4g2_stu.jpg",
+      "description": "Universal Audio Apollo x4 Gen 2 - Studio+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX4G2-STU",
+      "halilit_url": "https://www.halilit.com/items/7443683-universal-audio-apollo-x4-gen-2-studio-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micuasd5",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-5",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micuasd5.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-5",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUASD5",
+      "halilit_url": "https://www.halilit.com/items/6888427-universal-audio-sd-5-dynamic-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apltwdu-he",
+      "name": "Universal Audio Apollo Twin DUO Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apltwdu_he.jpg",
+      "description": "Universal Audio Apollo Twin DUO Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APLTWDU-HE",
+      "halilit_url": "https://www.halilit.com/items/3446764-universal-audio-apollo-twin-duo-usb-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx6g2-stu",
+      "name": "Universal Audio Apollo x6 Gen 2 - Studio+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6g2_stu.jpg",
+      "description": "Universal Audio Apollo x6 Gen 2 - Studio+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX6G2-STU",
+      "halilit_url": "https://www.halilit.com/items/7444207-universal-audio-apollo-x6-gen-2-studio-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micuasd7",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-7",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micuasd7.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-7",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUASD7",
+      "halilit_url": "https://www.halilit.com/items/6888434-universal-audio-sd-7-dynamic-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8pg2-stu",
+      "name": "Universal Audio Apollo x8p Gen 2 - Studio+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8pg2_stu.jpg",
+      "description": "Universal Audio Apollo x8p Gen 2 - Studio+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8PG2-STU",
+      "halilit_url": "https://www.halilit.com/items/7445754-universal-audio-apollo-x8p-gen-2-studio-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8g2-ess",
+      "name": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8g2_ess.jpg",
+      "description": "Universal Audio Apollo x8 Gen 2 - Essentials+ Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8G2-ESS",
+      "halilit_url": "https://www.halilit.com/items/7444219-universal-audio-apollo-x8-gen-2-essentials-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micua167",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05de\u05e0\u05d5\u05e8\u05d5\u05ea Universal Audio Bock 167",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micua167.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05de\u05e0\u05d5\u05e8\u05d5\u05ea Universal Audio Bock 167",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUA167",
+      "halilit_url": "https://www.halilit.com/items/6312970-universal-audio-bock-167-tube-condenser-mic-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micuadlx",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio Sphere DLX modeling microphone",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micuadlx.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio Sphere DLX modeling microphone",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUADLX",
+      "halilit_url": "https://www.halilit.com/items/5911059-universal-audio-sphere-dlx-modeling-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apls-he",
+      "name": "Universal Audio Apollo Solo TB3 Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apls_he.jpg",
+      "description": "Universal Audio Apollo Solo TB3 Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APLS-HE",
+      "halilit_url": "https://www.halilit.com/items/4204820-universal-audio-apollo-solo-tb3-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-aplsu-he",
+      "name": "Universal Audio Apollo Solo USB Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_aplsu_he.jpg",
+      "description": "Universal Audio Apollo Solo USB Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APLSU-HE",
+      "halilit_url": "https://www.halilit.com/items/3446553-universal-audio-apollo-solo-usb-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx4he",
+      "name": "Universal Audio Apollo X4 Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx4he.jpg",
+      "description": "Universal Audio Apollo X4 Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX4HE",
+      "halilit_url": "https://www.halilit.com/items/3447578-universal-audio-apollo-x4-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apltwxdu-he",
+      "name": "Universal Audio Apollo Twin X DUO USB Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apltwxdu_he.jpg",
+      "description": "Universal Audio Apollo Twin X DUO USB Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APLTWXDU-HE",
+      "halilit_url": "https://www.halilit.com/items/6169920-universal-audio-apollo-twin-x-duo-usb-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micualx",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio Sphere LX modeling microphone",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micualx.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio Sphere LX modeling microphone",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUALX",
+      "halilit_url": "https://www.halilit.com/items/5909849-universal-audio-sphere-lx-modeling-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micua251",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05de\u05e0\u05d5\u05e8\u05d5\u05ea Universal Audio Bock 251",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micua251.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05de\u05e0\u05d5\u05e8\u05d5\u05ea Universal Audio Bock 251",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUA251",
+      "halilit_url": "https://www.halilit.com/items/6312843-universal-audio-bock-251-tube-condenser-mic-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micua187",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio Bock 187",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micua187.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio Bock 187",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUA187",
+      "halilit_url": "https://www.halilit.com/items/5911554-universal-audio-bock-187-fet-condenser-mic-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-ox",
+      "name": "Universal Audio OX Amp Top Box",
+      "brand": "universal-audio",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/universal_audio_44_ox.jpg",
+      "description": "Universal Audio OX Amp Top Box",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-OX",
+      "halilit_url": "https://www.halilit.com/items/1645337-universal-audio-ox-amp-top-box",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8",
+      "name": "Universal Audio Apollo X8",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8.jpg",
+      "description": "Universal Audio Apollo X8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8",
+      "halilit_url": "https://www.halilit.com/items/1956612-universal-audio-apollo-x8-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8he",
+      "name": "Universal Audio Apollo X8 Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+      "description": "Universal Audio Apollo X8 Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8HE",
+      "halilit_url": "https://www.halilit.com/items/3447558-universal-audio-apollo-x8-heritage-edition-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx6",
+      "name": "Universal Audio Apollo X6",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6.jpg",
+      "description": "Universal Audio Apollo X6",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX6",
+      "halilit_url": "https://www.halilit.com/items/1956371-universal-audio-apollo-x6-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx6he",
+      "name": "Universal Audio Apollo X6 Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx6he.jpg",
+      "description": "Universal Audio Apollo X6 Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX6HE",
+      "halilit_url": "https://www.halilit.com/items/3447574-universal-audio-apollo-x6-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8p",
+      "name": "Universal Audio Apollo X8P",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8p.jpg",
+      "description": "Universal Audio Apollo X8P",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8P",
+      "halilit_url": "https://www.halilit.com/items/1956638-universal-audio-apollo-x8p-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-uad2-sat-usb-q",
+      "name": "Universal Audio UAD-2 Satellite USB QUAD\u00a0Core",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+      "description": "Universal Audio UAD-2 Satellite USB QUAD\u00a0Core",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-UAD2-SAT-USB-Q",
+      "halilit_url": "https://www.halilit.com/items/819751-universal-audio-uad-2-satellite-usb-quad-core",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-uad2-osat-usb",
+      "name": "Universal Audio UAD-2 Satellite USB Octo",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_uad2_osat_usb.jpg",
+      "description": "Universal Audio UAD-2 Satellite USB Octo",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-UAD2-OSAT-USB",
+      "halilit_url": "https://www.halilit.com/items/819776-universal-audio-uad-2-satellite-usb-octo",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-micuasc1",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio SC-1",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_micuasc1.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Universal Audio SC-1",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-MICUASC1",
+      "halilit_url": "https://www.halilit.com/items/6296436-universal-audio-sc-1-condenser-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-sd1",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-1",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_sd1.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Universal Audio SD-1",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-SD1",
+      "halilit_url": "https://www.halilit.com/items/4628653-universal-audio-sd-1-standard-dynamic-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-sp1",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Universal Audio SP-1",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_sp1.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Universal Audio SP-1",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-SP1",
+      "halilit_url": "https://www.halilit.com/items/5734576-universal-audio-sp-1-standard-pencil-microphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-apx8phe",
+      "name": "Universal Audio Apollo X8P Heritage Edition",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_apx8phe.jpg",
+      "description": "Universal Audio Apollo X8P Heritage Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APX8PHE",
+      "halilit_url": "https://www.halilit.com/items/3447477-universal-audio-apollo-x8p-heritage-edition",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_44-ape1x",
+      "name": "Universal Audio Apollo e1x",
+      "brand": "universal-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/universal_audio_44_ape1x.jpg",
+      "description": "Universal Audio Apollo e1x",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "44-APE1X",
+      "halilit_url": "https://www.halilit.com/items/7873631-universal-audio-apollo-e1x-remote-control-preamp",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_65-tcm1900",
+      "name": "Unknown Model",
+      "brand": "universal-audio",
+      "category": "general",
+      "image_url": "/assets/placeholder_gear.png",
+      "description": "",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "65-TCM1900",
+      "halilit_url": "https://www.halilit.com/items/966837-on-stage-tcm1900-u-mount-universal-grip-on-system",
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

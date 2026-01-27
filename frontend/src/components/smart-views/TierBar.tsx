@@ -57,40 +57,57 @@ export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarPr
       };
     }).filter(n => n.visible);
 
-    // Collision Resolution (Simple Iterative Nudge)
-    // We do 3 passes to push nodes apart if they are too close
-    const iterations = 3;
-    const thresholdX = 0.03; // ~3% width overlap
-    const thresholdY = 0.10; // ~10% height overlap
+    // Collision Resolution (Iterative Relaxation)
+    // We increase iterations to handle dense stacks (like cheap accessories)
+    const iterations = 12;
+    const thresholdX = 0.04; // ~4% width overlap (slightly wider to force spacing)
+    const thresholdY = 0.12; // ~12% height overlap
 
     for (let i = 0; i < iterations; i++) {
-      // Sort by X to optimize checks
+      // Sort by X to optimize checks - re-sorting helps propagation
       nodes.sort((a, b) => a.x - b.x);
+
+      // We use a slightly stronger push in earlier iterations
+      const alpha = 1.0 - (i / iterations); 
 
       for (let j = 0; j < nodes.length; j++) {
         const nodeA = nodes[j];
         for (let k = j + 1; k < nodes.length; k++) {
           const nodeB = nodes[k];
           
-          // Optimization: If X distance is huge, stop checking this neighbor
           if (nodeB.x - nodeA.x > thresholdX) break;
 
           const diffX = Math.abs(nodeA.x - nodeB.x);
           const diffY = Math.abs(nodeA.y - nodeB.y);
 
           if (diffX < thresholdX && diffY < thresholdY) {
-            // COLLISION DETECTED
-            // Nudge Y apart (preserve X as much as possible because X is Price)
+            // Avoidance Vector
             const overlapY = thresholdY - diffY;
-            const push = overlapY * 0.5;
+            const overlapX = thresholdX - diffX;
+            
+            // Prefer pushing vertically (Score/Y is flexible, Price/X is strict)
+            // But if they are literally stacked (diffX ~ 0), we must push mostly Y.
+            // If they are side-by-side, we can nudge X slightly too to unclump.
+            
+            const pushY = overlapY * 0.5 * alpha;
+            const pushX = overlapX * 0.1 * alpha; // Small X nudge to break perfect stacks
 
-            // Push the higher one up, lower one down
+            // Y Nudge
             if (nodeA.y > nodeB.y) {
-               nodeA.y = Math.min(1 - Y_BUFFER, nodeA.y + push);
-               nodeB.y = Math.max(Y_BUFFER, nodeB.y - push);
+               nodeA.y = Math.min(0.95, nodeA.y + pushY); // 0.95 max
+               nodeB.y = Math.max(0.05, nodeB.y - pushY); // 0.05 min
             } else {
-               nodeB.y = Math.min(1 - Y_BUFFER, nodeB.y + push);
-               nodeA.y = Math.max(Y_BUFFER, nodeA.y - push);
+               nodeB.y = Math.min(0.95, nodeB.y + pushY);
+               nodeA.y = Math.max(0.05, nodeA.y - pushY);
+            }
+
+            // X Nudge (Subtle)
+            if (nodeA.x > nodeB.x) {
+                nodeA.x = Math.min(1, nodeA.x + pushX);
+                nodeB.x = Math.max(0, nodeB.x - pushX);
+            } else {
+                nodeB.x = Math.min(1, nodeB.x + pushX);
+                nodeA.x = Math.max(0, nodeA.x - pushX);
             }
           }
         }
@@ -115,20 +132,48 @@ export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarPr
     <div className="w-full h-full relative group/tierbar select-none overflow-hidden bg-[#0a0a0c]" ref={containerRef}>
       
       {/* --- LAYER 0: THE GRID (Context) --- */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
+      <div className="absolute inset-0 pointer-events-none opacity-40">
+        {/* Y-Axis Background Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-b from-amber-900/5 via-transparent to-transparent pointer-events-none" />
+
         {/* Y-Axis Zones */}
-        <div className="absolute top-[10%] left-0 w-full border-t border-dashed border-amber-500/50 flex items-center">
-            <span className="text-[9px] text-amber-500 font-mono pl-2 bg-[#0a0a0c]">TRENDING</span>
+        <div className="absolute top-[15%] left-0 w-full border-t border-dashed border-zinc-800 flex items-center group/zone">
+            <span className="text-[9px] text-zinc-600 font-mono pl-2">HIGH TIER</span>
         </div>
+        
         <div className="absolute top-[50%] left-0 w-full border-t border-zinc-800" />
-        <div className="absolute bottom-[10%] left-0 w-full border-t border-dashed border-zinc-800 flex items-center">
-            <span className="text-[9px] text-zinc-700 font-mono pl-2 bg-[#0a0a0c]">NICHE</span>
+        
+        <div className="absolute bottom-[15%] left-0 w-full border-t border-dashed border-zinc-800 flex items-center">
+            <span className="text-[9px] text-zinc-700 font-mono pl-2">ENTRY LEVEL</span>
         </div>
 
-        {/* X-Axis Grid (Dynamic) */}
-        {[0.25, 0.5, 0.75].map(pct => (
-          <div key={pct} className="absolute top-0 bottom-0 border-l border-zinc-800" style={{ left: `${pct * 100}%` }} />
-        ))}
+        {/* X-Axis Grid (Price Intervals) */}
+        {Array.from({ length: 9 }).map((_, i) => {
+          const pct = (i + 1) * 0.1;
+          const isMajor = i === 4; // Center line (50%)
+          return (
+            <div 
+              key={pct} 
+              className={`absolute top-0 bottom-0 border-l ${isMajor ? "border-zinc-700" : "border-zinc-800/50"}`} 
+              style={{ left: `${pct * 100}%` }} 
+            >
+              {isMajor && (
+                <div className="absolute bottom-1 right-1 text-[9px] text-zinc-600 font-mono rotate-90 origin-bottom-right">
+                  MEDIAN
+                </div>
+              )}
+            </div>
+          );
+        })}
+        
+        {/* Dynamic Price Labels on Bottom Axis */}
+        <div className="absolute bottom-0 w-full flex justify-between px-4 py-2 text-[10px] text-zinc-400 font-bold font-mono tracking-wider z-20">
+            <span>₪{Math.round(currentMin).toLocaleString()}</span>
+            <span className="opacity-50">₪{Math.round(currentMin + (currentMax - currentMin) * 0.25).toLocaleString()}</span>
+            <span className="text-amber-500">₪{Math.round(currentMin + (currentMax - currentMin) * 0.50).toLocaleString()}</span>
+            <span className="opacity-50">₪{Math.round(currentMin + (currentMax - currentMin) * 0.75).toLocaleString()}</span>
+            <span>₪{Math.round(currentMax).toLocaleString()}</span>
+        </div>
       </div>
 
       {/* --- LAYER 1: THE NODES --- */}
@@ -185,16 +230,16 @@ export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarPr
         {/* Left Curtain */}
         <motion.div 
             animate={{ width: `${dragRange[0] * 100}%` }} 
-            className={`absolute left-0 top-0 bottom-0 bg-black/60 backdrop-blur-[2px] border-r border-amber-500/30 z-40 transition-colors ${
-                pullBackIntent === "left" ? "bg-red-500/10 border-red-500/50" : ""
+            className={`absolute left-0 top-0 bottom-0 bg-black/80 backdrop-blur-sm border-r-2 border-amber-500/50 z-40 transition-colors shadow-[5px_0_20px_rgba(0,0,0,0.5)] ${
+                pullBackIntent === "left" ? "bg-red-950/40 border-red-500/50" : ""
             }`}
         >
            {/* Left Handle */}
            <div
-            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 h-16 min-w-[3rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-xl border transition-all z-50 ${
+            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 h-20 min-w-[3.5rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-2xl border-2 transition-all z-50 ${
               pullBackIntent === "left"
-                ? "bg-red-900/80 border-red-500 text-red-200"
-                : "bg-zinc-800 hover:bg-zinc-700 border-zinc-600 text-white"
+                ? "bg-red-900 border-red-500 text-red-100 scale-110"
+                : "bg-zinc-800 hover:bg-zinc-700 border-amber-500/50 text-white hover:scale-110"
             }`}
              onMouseDown={(e) => {
               const startX = e.clientX;
@@ -255,16 +300,16 @@ export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarPr
         {/* Right Curtain */}
         <motion.div 
             animate={{ width: `${(1 - dragRange[1]) * 100}%` }} 
-            className={`absolute right-0 top-0 bottom-0 bg-black/60 backdrop-blur-[2px] border-l border-amber-500/30 z-40 transition-colors ${
-                pullBackIntent === "right" ? "bg-red-500/10 border-red-500/50" : ""
+            className={`absolute right-0 top-0 bottom-0 bg-black/80 backdrop-blur-sm border-l-2 border-amber-500/50 z-40 transition-colors shadow-[-5px_0_20px_rgba(0,0,0,0.5)] ${
+                pullBackIntent === "right" ? "bg-red-950/40 border-red-500/50" : ""
             }`}
         >
            {/* Right Handle */}
            <div
-            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-16 min-w-[3rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-xl border transition-all z-50 ${
+            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 h-20 min-w-[3.5rem] px-3 rounded-lg flex flex-col items-center justify-center cursor-ew-resize pointer-events-auto shadow-2xl border-2 transition-all z-50 ${
                 pullBackIntent === "right"
-                  ? "bg-red-900/80 border-red-500 text-red-200"
-                  : "bg-zinc-800 hover:bg-zinc-700 border-zinc-600 text-white"
+                  ? "bg-red-900 border-red-500 text-red-100 scale-110"
+                  : "bg-zinc-800 hover:bg-zinc-700 border-amber-500/50 text-white hover:scale-110"
               }`}
              onMouseDown={(e) => {
               const startX = e.clientX;

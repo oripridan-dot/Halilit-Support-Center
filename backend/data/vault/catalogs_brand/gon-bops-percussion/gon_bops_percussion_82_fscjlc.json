@@ -1,0 +1,39 @@
+{
+  "id": "gon_bops_percussion_82_fscjlc",
+  "name": "Gon Bops Fiesta Cajon Lime Crush",
+  "brand": "gon-bops-percussion",
+  "category": "drums",
+  "description": "Gon Bops Fiesta Cajon Lime Crush",
+  "media": {
+    "thumbnail": "/data/thumbnails/gon_bops_percussion_82_fscjlc.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "gon_bops_percussion_82_fscjlc",
+    "name": "Gon Bops Fiesta Cajon Lime Crush",
+    "description": "Gon Bops Fiesta Cajon Lime Crush",
+    "category": "general",
+    "image_url": "/data/thumbnails/gon_bops_percussion_82_fscjlc.jpg",
+    "product_url": "https://www.halilit.com/items/2667902-gon-bops-fiesta-cajon-lime-crush",
+    "is_sold": true,
+    "price": 478.0,
+    "halilit_url": "https://www.halilit.com/items/2667902-gon-bops-fiesta-cajon-lime-crush",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.100199Z"
+  }
+}

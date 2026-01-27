@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+import copy
 import re
 import time
 import logging
@@ -178,13 +179,26 @@ class HalilitDirectScraper:
             main_price_node = price_container.select_one('.price_value, .regular-price')
             if main_price_node:
                  pricing['regular_price'] = self._parse_price_text(main_price_node.get_text())
-            elif not pricing['regular_price']:
+
+            if not pricing['regular_price']:
                 # Dangerous fallback: grabbing all text. 
-                # Be careful not to grab the "Old Price" number by accident.
-                # Usually safer to rely on class selectors.
-                pass 
+                # For this specific retailer, the price is often a direct text node in .price
+                try:
+                    # Clone the node to avoid modifying the soup
+                    container_clone = copy.copy(price_container)
+                    
+                    # Remove eilat price and other children we know contain numbers
+                    for bad_child in container_clone.select('.show_eilat_price, .items_show_price_text, .old-price, strike, del, .eilat-price'):
+                        bad_child.decompose()
+                    
+                    # Now extract what's left
+                    raw_text = container_clone.get_text(strip=True)
+                    pricing['regular_price'] = self._parse_price_text(raw_text)
+                except Exception as e:
+                    logger.error(f"Price fallback failed: {e}")
                 
-        except Exception:
+        except Exception as e:
+            logger.error(f"Pricing extraction error: {e}")
             pass
             
         return pricing
@@ -197,7 +211,7 @@ class HalilitDirectScraper:
             clean = re.sub(r'[^\d.]', '', text.replace(',', ''))
             val = float(clean)
             return val if val > 0 else None
-        except:
+        except Exception as e:
             return None
 
     async def run_full_catalog_scan(self):
@@ -206,24 +220,24 @@ class HalilitDirectScraper:
         """
         print("   🔍 Scanning Halilit Navigation...")
         
-        # 1. Define the Master Category URLs (Hardcoded for stability)
+        # 1. Define the Master Category URLs (Updated to new Konimbo structure)
         # These are the "Tribes" we care about
-        entry_points = [
-            "https://halilit.com/collections/synthesizers",
-            "https://halilit.com/collections/pianos",
-            "https://halilit.com/collections/drums",
-            "https://halilit.com/collections/guitars",
-            "https://halilit.com/collections/studio-equipment",
-            "https://halilit.com/collections/live-sound",
-            "https://halilit.com/collections/dj-equipment"
-        ]
+        entry_points = {
+            "https://www.halilit.com/23648-synth": "keys-production",
+            "https://www.halilit.com/23629-keyboards-pianos-synth": "keys-production",
+            "https://www.halilit.com/23048-electronic-drums": "drums-percussion",
+            "https://www.halilit.com/23045-guitars-amplifires-effects": "guitars-bass",
+            "https://www.halilit.com/23042-studio-equipment-recording": "studio-recording",
+            "https://www.halilit.com/23054-pa-equipment": "live-dj",
+            "https://www.halilit.com/23059-dj-equipment": "live-dj"
+        }
         
         all_products = []
         global_ids = set()
         
-        for url in entry_points:
-            print(f"      > Crawling {url} ...")
-            products = self._scrape_collection_page(url) 
+        for url, tribe_id in entry_points.items():
+            print(f"      > Crawling {url} ({tribe_id}) ...")
+            products = self._scrape_collection_page(url, tribe_id) 
             for p in products:
                 if p['id'] not in global_ids:
                     all_products.append(p)
@@ -233,7 +247,7 @@ class HalilitDirectScraper:
         self._save_to_vault(all_products)
         return all_products
 
-    def _scrape_collection_page(self, url):
+    def _scrape_collection_page(self, url, tribe_id="general"):
         products = []
         page = 1
         max_pages = 25
@@ -256,6 +270,7 @@ class HalilitDirectScraper:
                     # Use 'halilit' to avoid mismatches, we can resolve brand later
                     data = self._parse_node(node, "halilit") 
                     if data:
+                        data['tribe_id'] = tribe_id
                         products.append(data)
                         new_count += 1
                 

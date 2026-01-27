@@ -1,0 +1,39 @@
+{
+  "id": "antigua_36_wcl3233sb",
+  "name": "Antigua CL3233 Clarinet",
+  "brand": "antigua",
+  "category": "general",
+  "description": "Antigua CL3233 Clarinet",
+  "media": {
+    "thumbnail": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "antigua_36_wcl3233sb",
+    "name": "Antigua CL3233 Clarinet",
+    "description": "Antigua CL3233 Clarinet",
+    "category": "general",
+    "image_url": "/data/thumbnails/antigua_36_wcl3233sb.jpg",
+    "product_url": "https://www.halilit.com/items/1425375-antigua-cl3233-clarinet",
+    "is_sold": true,
+    "price": 5775.0,
+    "halilit_url": "https://www.halilit.com/items/1425375-antigua-cl3233-clarinet",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.610179Z"
+  }
+}

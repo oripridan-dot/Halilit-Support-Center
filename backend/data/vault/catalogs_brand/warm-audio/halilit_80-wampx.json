@@ -1,0 +1,39 @@
+{
+  "id": "halilit_80-wampx",
+  "name": "Warm Audio WA-MPX",
+  "brand": "warm-audio",
+  "category": "studio",
+  "description": "Warm Audio WA-MPX",
+  "media": {
+    "thumbnail": "/data/thumbnails/warm_audio_80_wampx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "warm_audio_80_wampx",
+    "name": "Warm Audio WA-MPX",
+    "description": "Warm Audio WA-MPX",
+    "category": "general",
+    "image_url": "/data/thumbnails/warm_audio_80_wampx.jpg",
+    "product_url": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
+    "is_sold": true,
+    "price": 3587.0,
+    "halilit_url": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.457695Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_hdl30a_cover",
+  "name": "RCF HDL30-A Amp Rain Cover",
+  "brand": "rcf",
+  "category": "guitars",
+  "description": "RCF HDL30-A Amp Rain Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_hdl30a_cover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_hdl30a_cover",
+    "name": "RCF HDL30-A Amp Rain Cover",
+    "description": "RCF HDL30-A Amp Rain Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_hdl30a_cover.jpg",
+    "product_url": "https://www.halilit.com/items/7801881-rcf-hdl30-a-amp-rain-cover",
+    "is_sold": true,
+    "price": 1182.0,
+    "halilit_url": "https://www.halilit.com/items/7801881-rcf-hdl30-a-amp-rain-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.487925Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-uad2-sat-usb-q",
+  "name": "Universal Audio UAD-2 Satellite USB QUAD\u00a0Core",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio UAD-2 Satellite USB QUAD\u00a0Core",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/819751-universal-audio-uad-2-satellite-usb-quad-core",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_uad2_sat_usb_q",
+    "name": "Universal Audio UAD-2 Satellite USB QUAD\u00a0Core",
+    "description": "Universal Audio UAD-2 Satellite USB QUAD\u00a0Core",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_uad2_sat_usb_q.jpg",
+    "product_url": "https://www.halilit.com/items/819751-universal-audio-uad-2-satellite-usb-quad-core",
+    "is_sold": true,
+    "price": 3558.0,
+    "halilit_url": "https://www.halilit.com/items/819751-universal-audio-uad-2-satellite-usb-quad-core",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.596885Z"
+  }
+}

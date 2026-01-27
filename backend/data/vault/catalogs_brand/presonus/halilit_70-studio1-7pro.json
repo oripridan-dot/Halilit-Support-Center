@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-studio1-7pro",
+  "name": "PreSonus Studio One Pro 7",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus Studio One Pro 7",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7790666-presonus-studio-one-pro-7-daw",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_studio1_7pro",
+    "name": "PreSonus Studio One Pro 7",
+    "description": "PreSonus Studio One Pro 7",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_studio1_7pro.jpg",
+    "product_url": "https://www.halilit.com/items/7790666-presonus-studio-one-pro-7-daw",
+    "is_sold": true,
+    "price": 742.0,
+    "halilit_url": "https://www.halilit.com/items/7790666-presonus-studio-one-pro-7-daw",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.060675Z"
+  }
+}

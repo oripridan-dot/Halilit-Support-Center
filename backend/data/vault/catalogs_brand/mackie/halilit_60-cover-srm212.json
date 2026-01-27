@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-cover-srm212",
+  "name": "Mackie SRM212 V-Class Speaker Cover",
+  "brand": "mackie",
+  "category": "studio",
+  "description": "Mackie SRM212 V-Class Speaker Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_cover_srm212.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6586827-mackie-srm212-v-class-speaker-cover",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_cover_srm212",
+    "name": "Mackie SRM212 V-Class Speaker Cover",
+    "description": "Mackie SRM212 V-Class Speaker Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_cover_srm212.jpg",
+    "product_url": "https://www.halilit.com/items/6586827-mackie-srm212-v-class-speaker-cover",
+    "is_sold": true,
+    "price": 342.0,
+    "halilit_url": "https://www.halilit.com/items/6586827-mackie-srm212-v-class-speaker-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.695436Z"
+  }
+}

@@ -1,0 +1,2486 @@
+{
+  "brand_slug": "mackie",
+  "source": "halilit_commercial_scan",
+  "products": [
+    {
+      "id": "halilit_60-mring10",
+      "name": "Mackie mRING-10 - 10\" Ring Light",
+      "url": "https://www.halilit.com/items/6590726-mackie-mring-10-10-ring-light-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13831219/original/8092edb0714411f5a41753d71e12f4cc.jpg",
+      "halilit_id": "60-MRING10",
+      "sku": "60-MRING10",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie mRING-10 - 10\" Ring Light",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-db100",
+      "name": "Mackie DB-100",
+      "url": "https://www.halilit.com/items/3365926-mackie-db-100-desktop-microphone-boom-arm",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5885247/original/eb1f427f55b6b7e5ab10469aa9f73c0e.jpg",
+      "halilit_id": "60-DB100",
+      "sku": "60-DB100",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie DB-100",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr8bt",
+      "name": "זוג מוניטורים Mackie CR8BT Gen 3",
+      "url": "https://www.halilit.com/items/7535158-mackie-cr8bt-gen-3-powered-bluetooth-studio-monitors",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15732424/original/c92f8f6721d11c7b58ab243e03d1e980.jpg",
+      "halilit_id": "60-CR8BT",
+      "sku": "60-CR8BT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR8BT Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-chromium",
+      "name": "מיקרופון USB קונדנסר Mackie Chromium",
+      "url": "https://www.halilit.com/items/3365948-mackie-chromium-premium-usb-condenser-mic-2-channel-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5885324/original/9a871bcddf7b58c04fdee8377634b2eb.jpg",
+      "halilit_id": "60-CHROMIUM",
+      "sku": "60-CHROMIUM",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון USB קונדנסר Mackie Chromium",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-showbox",
+      "name": "Mackie ShowBox Gig Bag",
+      "url": "https://www.halilit.com/items/7764029-mackie-showbox-gig-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16218509/original/49fb1fa69aad207938019b02b375b386.jpg",
+      "halilit_id": "60-BAG-SHOWBOX",
+      "sku": "60-BAG-SHOWBOX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ShowBox Gig Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr35bt",
+      "name": "זוג מוניטורים Mackie CR3.5BT Gen 3",
+      "url": "https://www.halilit.com/items/7534910-mackie-cr3-5bt-gen-3-powered-bluetooth-studio",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15731942/original/ae81e10e445c55875bf7d5d8a810f637.jpg",
+      "halilit_id": "60-CR35BT",
+      "sku": "60-CR35BT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR3.5BT Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr8sbt",
+      "name": "סאב וופר Mackie CR8SBT Gen 3",
+      "url": "https://www.halilit.com/items/7535221-mackie-cr8sbt-gen-3-powered-bluetooth-subwoofer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15732592/original/14af765bf0ae28386d603171ff2860c0.jpg",
+      "halilit_id": "60-CR8SBT",
+      "sku": "60-CR8SBT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סאב וופר Mackie CR8SBT Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mring6",
+      "name": "Mackie mRING-6 6\" Battery-powered Ring Light",
+      "url": "https://www.halilit.com/items/6592894-mackie-mring-6-6-battery-powered-ring-light",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13834091/original/0b5b193248010486b7a45a261d83b6a4.jpg",
+      "halilit_id": "60-MRING6",
+      "sku": "60-MRING6",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie mRING-6 6\" Battery-powered Ring Light",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-db200",
+      "name": "Mackie DB-200",
+      "url": "https://www.halilit.com/items/7293848-mackie-db-200-premium-desktop-boom-arm",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15209099/original/8317b33a70cdf7aa27e9791f1f6830e9.jpg",
+      "halilit_id": "60-DB200",
+      "sku": "60-DB200",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie DB-200",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-b-thrash212/go",
+      "name": "\"Mackie bag for Thrash212 Speaker 12",
+      "url": "https://www.halilit.com/items/8252080--mackie-bag-for-thrash212-speaker-12",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17265577/original/fc08d13a2f262cb5d052560dd4c3fd24.jpg",
+      "halilit_id": "60-B-THRASH212/GO",
+      "sku": "60-B-THRASH212/GO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "\"Mackie bag for Thrash212 Speaker 12",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-carbon",
+      "name": "מיקרופון קונדנסר לאולפן Mackie Carbon USB Condenser",
+      "url": "https://www.halilit.com/items/3365558-mackie-carbon-usb-condenser",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5884118/original/b71198c22f5e11320d833002fa791306.jpg",
+      "halilit_id": "60-CARBON",
+      "sku": "60-CARBON",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון קונדנסר לאולפן Mackie Carbon USB Condenser",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-b-thrash215",
+      "name": "\"Mackie bag for Thrash215 Speaker 15",
+      "url": "https://www.halilit.com/items/8252090--mackie-bag-for-thrash215-speaker-15",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17265598/original/5b2ac95ff60a87bcd717b796541935e5.jpg",
+      "halilit_id": "60-B-THRASH215",
+      "sku": "60-B-THRASH215",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "\"Mackie bag for Thrash215 Speaker 15",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr35",
+      "name": "זוג מוניטורים לאולפן Mackie CR3.5 Gen 3",
+      "url": "https://www.halilit.com/items/7534780-mackie-cr3-5-gen-3-studio-monitors",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15731592/original/3032cdf652b4a5cbb1d663a791c15f8c.jpg",
+      "halilit_id": "60-CR35",
+      "sku": "60-CR35",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים לאולפן Mackie CR3.5 Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr45",
+      "name": "זוג מוניטורים Mackie CR4.5 Gen 3",
+      "url": "https://www.halilit.com/items/7535039-mackie-cr4-5-gen-3-powered-studio-monitors",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15732247/original/d3313276da1842163d438ece146a284e.jpg",
+      "halilit_id": "60-CR45",
+      "sku": "60-CR45",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR4.5 Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-em93mk",
+      "name": "ערכת מיקרופון לצילום Mackie EM93MK",
+      "url": "https://www.halilit.com/items/5428428-mackie-em93mk-mobile-recording-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10757425/original/c4eadccbf687502bdc8a242f08808084.jpg",
+      "halilit_id": "60-EM93MK",
+      "sku": "60-EM93MK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "ערכת מיקרופון לצילום Mackie EM93MK",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr45bt",
+      "name": "זוג מוניטורים Mackie CR4.5BT Gen 3",
+      "url": "https://www.halilit.com/items/7535094-mackie-cr4-5bt-gen-3-powered-studio-monitors",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15732341/original/a25056e4dee4cbe76b0373a0e9d193ef.jpg",
+      "halilit_id": "60-CR45BT",
+      "sku": "60-CR45BT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR4.5BT Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-em99b",
+      "name": "מיקרופון דינמי לשידור Mackie EM99B",
+      "url": "https://www.halilit.com/items/5431052-mackie-em99b-dynamic-broadcast-microphone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10762345/original/d93adebf1a8f181406f10de4abc88934.jpg",
+      "halilit_id": "60-EM99B",
+      "sku": "60-EM99B",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון דינמי לשידור Mackie EM99B",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc150",
+      "name": "אוזניות אולפן Mackie MC-150",
+      "url": "https://www.halilit.com/items/2266928-mackie-mc-150-professional-closed-back-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3666579/original/723f2f305c9e19f56aab880d84e5ba58.jpg",
+      "halilit_id": "60-MC150",
+      "sku": "60-MC150",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אולפן Mackie MC-150",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc350",
+      "name": "אוזניות אולפן Mackie MC-350",
+      "url": "https://www.halilit.com/items/2745137-mackie-mc-350-professional-closed-back-studio-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4628894/original/fa39b11d48d54dd543909e87461e055b.jpg",
+      "halilit_id": "60-MC350",
+      "sku": "60-MC350",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אולפן Mackie MC-350",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr8sxbt",
+      "name": "סאבוופר אולפני Mackie CR8S-XBT",
+      "url": "https://www.halilit.com/items/3098368-mackie-cr8s-xbt-subwoofer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5312343/original/f6cd8fc849705d272c87445b74cf698e.jpg",
+      "halilit_id": "60-CR8SXBT",
+      "sku": "60-CR8SXBT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סאבוופר אולפני Mackie CR8S-XBT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr3xltd-wht",
+      "name": "זוג מוניטורים Mackie CR3-X Limited Edition",
+      "url": "https://www.halilit.com/items/3746319-mackie-cr3-x-ltd-arctic-white",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6607882/original/e0cbb83b3fa008122e8c86803ea4e43d.jpg",
+      "halilit_id": "60-CR3XLTD-WHT",
+      "sku": "60-CR3XLTD-WHT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR3-X Limited Edition",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-em89d",
+      "name": "מיקרופון דינמי לשירה Mackie EM-89D",
+      "url": "https://www.halilit.com/items/2746131-mackie-em-89d-dynamic-vocal-microphone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4630831/original/51d8edfdac6f0956b01d512d7efa240d.jpg",
+      "halilit_id": "60-EM89D",
+      "sku": "60-EM89D",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון דינמי לשירה Mackie EM-89D",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mr524",
+      "name": "מוניטור אולפני Mackie MR524",
+      "url": "https://www.halilit.com/items/1464882-mackie-mr524-studio-monitor",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2274816/original/f26fb1f0db124111946b4136f1086411.jpg",
+      "halilit_id": "60-MR524",
+      "sku": "60-MR524",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מוניטור אולפני Mackie MR524",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bigknobstudio",
+      "name": "Mackie Big Knob Studio",
+      "url": "https://www.halilit.com/items/1228097-mackie-big-knob-studio",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1825723/original/44949545e6fe9128c03460373a96cf90.jpg",
+      "halilit_id": "60-BIGKNOBSTUDIO",
+      "sku": "60-BIGKNOBSTUDIO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Big Knob Studio",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mr624",
+      "name": "מוניטור אולפני Mackie MR624",
+      "url": "https://www.halilit.com/items/1464900-mackie-mr624-studio-monitor",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2274863/original/c491abc5dc602661c8ac090ccdc3ca94.jpg",
+      "halilit_id": "60-MR624",
+      "sku": "60-MR624",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מוניטור אולפני Mackie MR624",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr3x",
+      "name": "זוג מוניטורים Mackie CR3-X",
+      "url": "https://www.halilit.com/items/2908502-mackie-cr3x-studio-monitors",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4927280/original/5a25cc92e35bc53c0ab05b5e4b698ddc.jpg",
+      "halilit_id": "60-CR3X",
+      "sku": "60-CR3X",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR3-X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc60bt",
+      "name": "אוזניות אלחוטיות Mackie MC-60BT",
+      "url": "https://www.halilit.com/items/5403478-mackie-mc-60bt-wireless-noise-cancelling-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14317302/original/0ac067cefb0a1a6e6a8f13887d949c22.jpg",
+      "halilit_id": "60-MC60BT",
+      "sku": "60-MC60BT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אלחוטיות Mackie MC-60BT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-elementwave-xlr",
+      "name": "מערכת אלחוטית למיקרופון Mackie EM Wave XLR",
+      "url": "https://www.halilit.com/items/4930402-mackie-em-wave-xlr-wireless-microphone-system",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9556677/original/2c784a8f957f0598e72ee1cb8c34767b.jpg",
+      "halilit_id": "60-ELEMENTWAVE-XLR",
+      "sku": "60-ELEMENTWAVE-XLR",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מערכת אלחוטית למיקרופון Mackie EM Wave XLR",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-emusb",
+      "name": "מיקרופון קונדנסר מקצועי Mackie EM USB",
+      "url": "https://www.halilit.com/items/2814570-mackie-em-usb-cardioid-usb-condenser-microphone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4778307/original/02c9a2316b9e7d69c3c936d8b2ca0acc.jpg",
+      "halilit_id": "60-EMUSB",
+      "sku": "60-EMUSB",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון קונדנסר מקצועי Mackie EM USB",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc100",
+      "name": "אוזניות Mackie MC-100",
+      "url": "https://www.halilit.com/items/3365521-mackie-mc100-studio-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5884021/original/a99f9891573ab2fa227795ab24a90a6e.jpg",
+      "halilit_id": "60-MC100",
+      "sku": "60-MC100",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות Mackie MC-100",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-elementwave-lav",
+      "name": "מערכת מיקרופון אלחוטית Mackie EM Wave LAV",
+      "url": "https://www.halilit.com/items/4924317-mackie-em-wave-lav-wireless-clip-on-microphone-system",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9537623/original/a0a091d7d6217dd9c01aef3e302049a2.jpg",
+      "halilit_id": "60-ELEMENTWAVE-LAV",
+      "sku": "60-ELEMENTWAVE-LAV",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מערכת מיקרופון אלחוטית Mackie EM Wave LAV",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc50bt",
+      "name": "אוזניות אלחוטיות Mackie MC-50BT",
+      "url": "https://www.halilit.com/items/5398429-mackie-mc-50bt-wireless-noise-cancelling-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10707709/original/504606933ca66308c5e057b71cf0b89f.jpg",
+      "halilit_id": "60-MC50BT",
+      "sku": "60-MC50BT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אלחוטיות Mackie MC-50BT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-producebundle",
+      "name": "Mackie Producer Bundle",
+      "url": "https://www.halilit.com/items/3121824-mackie-producer-bundle",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5354802/original/745a8f0d3f3dcce6d17d3fc531ed2a77.jpg",
+      "halilit_id": "60-PRODUCEBUNDLE",
+      "sku": "60-PRODUCEBUNDLE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Producer Bundle",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr4xbt",
+      "name": "זוג מוניטורים Mackie CR4-XBT",
+      "url": "https://www.halilit.com/items/3042215-mackie-cr4-xbt",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5177603/original/8087ea1e57304505be5b04457d28a0eb.jpg",
+      "halilit_id": "60-CR4XBT",
+      "sku": "60-CR4XBT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR4-XBT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-createrbundle",
+      "name": "Mackie Creator Bundle",
+      "url": "https://www.halilit.com/items/3284913-mackie-creator-bundle",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5692359/original/f7ecb1e558376b16a35ff81588042d3c.jpg",
+      "halilit_id": "60-CREATERBUNDLE",
+      "sku": "60-CREATERBUNDLE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Creator Bundle",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-emusbltd-wht",
+      "name": "מיקרופון USB קונדנסר Mackie EM USB Limited Edition",
+      "url": "https://www.halilit.com/items/3746501-mackie-em-usb-ltd-arctic-white-cardioid-usb-condenser-microphone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6608073/original/6f256fdfc711feed669180134731ffb9.jpg",
+      "halilit_id": "60-EMUSBLTD-WHT",
+      "sku": "60-EMUSBLTD-WHT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון USB קונדנסר Mackie EM USB Limited Edition",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr3xbt",
+      "name": "זוג מוניטורים Mackie CR3-XBT",
+      "url": "https://www.halilit.com/items/3283409-mackie-cr3-xbt",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5688376/original/4d18d7573a2137c5e3b1ec40a0165541.jpg",
+      "halilit_id": "60-CR3XBT",
+      "sku": "60-CR3XBT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR3-XBT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-em91c",
+      "name": "מיקרופון קונדנסר לאולפן Mackie EM 91C",
+      "url": "https://www.halilit.com/items/2748384-mackie-em-91c-large-diaphragm-condenser-microphone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4637528/original/3769d35c8bf438e19bb15b76815eb091.jpg",
+      "halilit_id": "60-EM91C",
+      "sku": "60-EM91C",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון קונדנסר לאולפן Mackie EM 91C",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mp20tws",
+      "name": "Mackie MP-20TWS Wireless Earphones",
+      "url": "https://www.halilit.com/items/5403660-mackie-mp-20tws-wireless-earphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10700941/original/ff371f476df2bccda46a1c64b1fcedad.jpg",
+      "halilit_id": "60-MP20TWS",
+      "sku": "60-MP20TWS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MP-20TWS Wireless Earphones",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mp120",
+      "name": "Mackie MP-120 In-Ear Monitors",
+      "url": "https://www.halilit.com/items/1714975-mackie-mp-120-in-ear-monitors",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2717336/original/41e1ae856f1d962447be889c86527c52.jpg",
+      "halilit_id": "60-MP120",
+      "sku": "60-MP120",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MP-120 In-Ear Monitors",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-pf100",
+      "name": "Mackie PF-100",
+      "url": "https://www.halilit.com/items/3365940-mackie-pf-100",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5885295/original/dd5a979a22f14e32ac68b981ed8618ce.jpg",
+      "halilit_id": "60-PF100",
+      "sku": "60-PF100",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie PF-100",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr8xbt",
+      "name": "זוג מוניטורים Mackie CR8-XBT",
+      "url": "https://www.halilit.com/items/2929170-mackie-cr8x-bt",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4973091/original/f2f28f827e8773347fa0e3bf32609488.jpg",
+      "halilit_id": "60-CR8XBT",
+      "sku": "60-CR8XBT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR8-XBT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr6sx",
+      "name": "סאבוופר מוגבר Mackie CR6S-X",
+      "url": "https://www.halilit.com/items/5417035-macike-cr6s-x-powered-floor-standing-subwoofer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10723813/original/74c2041049117d989e062c331760452d.jpg",
+      "halilit_id": "60-CR6SX",
+      "sku": "60-CR6SX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סאבוופר מוגבר Mackie CR6S-X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-em91cu",
+      "name": "מיקרופון USB קונדנסר Mackie EM-91CU",
+      "url": "https://www.halilit.com/items/3357518-mackie-em-91cu-usb-condenser-microphone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5867472/original/a7e40f1305b4f307ac5ad8959bb97648.jpg",
+      "halilit_id": "60-EM91CU",
+      "sku": "60-EM91CU",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיקרופון USB קונדנסר Mackie EM-91CU",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc250",
+      "name": "אוזניות אולפן Mackie MC-250",
+      "url": "https://www.halilit.com/items/2266958-mackie-mc-250-professional-closed-back-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3666685/original/424101b322b1c56cdf583507f0e6c638.jpg",
+      "halilit_id": "60-MC250",
+      "sku": "60-MC250",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אולפן Mackie MC-250",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr2x-cube",
+      "name": "Mackie CR2 X-CUBE",
+      "url": "https://www.halilit.com/items/5406032-mackie-cr2-x-cube",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15254768/original/c8e0bb054df362b33cdb0c0472c75b0d.jpg",
+      "halilit_id": "60-CR2X-CUBE",
+      "sku": "60-CR2X-CUBE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie CR2 X-CUBE",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyxproducer",
+      "name": "Mackie Onyx Producer",
+      "url": "https://www.halilit.com/items/1648728-mackie-onyx-producer-audio-interface",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2599909/original/f6a7e4afa1a182b696cfb0840f561b81.jpg",
+      "halilit_id": "60-ONYXPRODUCER",
+      "sku": "60-ONYXPRODUCER",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx Producer",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr4x",
+      "name": "זוג מוניטורים Mackie CR4-X",
+      "url": "https://www.halilit.com/items/2929004-mackie-cr4x",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4972672/original/d4f2560b0964ea45939aa9dc4c9bd832.jpg",
+      "halilit_id": "60-CR4X",
+      "sku": "60-CR4X",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR4-X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr2x-barpro",
+      "name": "Mackie CR2-X Bar PRO",
+      "url": "https://www.halilit.com/items/5407872-mackie-cr2-x-bar-pro",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10721056/original/e5baa9bbf3be099d4d3a3818d6ca9f82.jpg",
+      "halilit_id": "60-CR2X-BARPRO",
+      "sku": "60-CR2X-BARPRO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie CR2-X Bar PRO",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr5x",
+      "name": "זוג מוניטורים Mackie CR5-X",
+      "url": "https://www.halilit.com/items/2929092-mackie-cr5x",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4972891/original/2baef0fbfc4c19da9c84b6cf524babbb.jpg",
+      "halilit_id": "60-CR5X",
+      "sku": "60-CR5X",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR5-X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-crstealthbar",
+      "name": "Mackie CR StealthBar",
+      "url": "https://www.halilit.com/items/4934089-mackie-cr-stealthbar",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9571553/original/bd9dfe5825f26d286dcb83abbb2e74aa.jpg",
+      "halilit_id": "60-CRSTEALTHBAR",
+      "sku": "60-CRSTEALTHBAR",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie CR StealthBar",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cr5xbt",
+      "name": "זוג מוניטורים Mackie CR5-XBT",
+      "url": "https://www.halilit.com/items/2929120-mackie-cr5x-bt",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4972948/original/b8c179b11260ea989d4b2bbdee37f4d4.jpg",
+      "halilit_id": "60-CR5XBT",
+      "sku": "60-CR5XBT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "זוג מוניטורים Mackie CR5-XBT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc40bt",
+      "name": "אוזניות אלחוטיות Mackie MC-40BT",
+      "url": "https://www.halilit.com/items/4934729-mackie-mc-40bt-wirless-studio-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9620493/original/7a67652e3f6c70e0b4934cf8c32bd709.jpg",
+      "halilit_id": "60-MC40BT",
+      "sku": "60-MC40BT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אלחוטיות Mackie MC-40BT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyxartist",
+      "name": "Mackie Onyx Artist",
+      "url": "https://www.halilit.com/items/1646929-mackie-onyx-artist-audio-interface",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2598625/original/20f6cfe74ee157c2653e4c63a8949519.jpg",
+      "halilit_id": "60-ONYXARTIST",
+      "sku": "60-ONYXARTIST",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx Artist",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mc450",
+      "name": "אוזניות אולפן Mackie MC-450",
+      "url": "https://www.halilit.com/items/2745199-mackie-mc-450-professional-open-back-studio-headphones",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4629041/original/0fa394b14c763bdbed407a128af054fa.jpg",
+      "halilit_id": "60-MC450",
+      "sku": "60-MC450",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אוזניות אולפן Mackie MC-450",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mobilemix",
+      "name": "Mackie MobileMix",
+      "url": "https://www.halilit.com/items/6541090-mackie-mobilemix",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13744155/original/58c6d4c0e654a682c75efb0436bfb184.jpg",
+      "halilit_id": "60-MOBILEMIX",
+      "sku": "60-MOBILEMIX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MobileMix",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx10v3+",
+      "name": "+Mackie ProFX10v3",
+      "url": "https://www.halilit.com/items/6540594-mackie-profx10v3-analog-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13740890/original/d6fbb8fedd68cc916b13aa652bcd9d4d.jpg",
+      "halilit_id": "60-PROFX10V3+",
+      "sku": "60-PROFX10V3+",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "+Mackie ProFX10v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx6v3+",
+      "name": "+Mackie ProFX6v3",
+      "url": "https://www.halilit.com/items/6539843-mackie-profx6v3-analog-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13738041/original/5a1bee28c7cd5e63711fdc3f407736e1.jpg",
+      "halilit_id": "60-PROFX6V3+",
+      "sku": "60-PROFX6V3+",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "+Mackie ProFX6v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-thump10",
+      "name": "תיק לרמקול \"Mackie Bag for Thump Speaker 10",
+      "url": "https://www.halilit.com/items/7766863--mackie-bag-for-thump-speaker-10",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16224540/original/06028f0b852ac36d2f8f5d02c4432210.jpg",
+      "halilit_id": "60-BAG-THUMP10",
+      "sku": "60-BAG-THUMP10",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "תיק לרמקול \"Mackie Bag for Thump Speaker 10",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx12v3+",
+      "name": "+Mackie ProFX12v3",
+      "url": "https://www.halilit.com/items/6540642-mackie-profx12v3-analog-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13741095/original/cba3a94b827bf4fe324a48fa35ad7957.jpg",
+      "halilit_id": "60-PROFX12V3+",
+      "sku": "60-PROFX12V3+",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "+Mackie ProFX12v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-creatorsling",
+      "name": "Mackie CreatorSling - Bag",
+      "url": "https://www.halilit.com/items/5250552-mackie-creatorsling-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10369478/original/683eda87a4a6a5806747c81d42a4656f.jpg",
+      "halilit_id": "60-CREATORSLING",
+      "sku": "60-CREATORSLING",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie CreatorSling - Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx30v3",
+      "name": "Mackie ProFX30 V3",
+      "url": "https://www.halilit.com/items/3788802-mackie-profx30v3",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6709619/original/ab282774d9ee4c9aa594393132ffb9f7.jpg",
+      "halilit_id": "60-PROFX30V3",
+      "sku": "60-PROFX30V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX30 V3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mix8",
+      "name": "Mackie Mix8",
+      "url": "https://www.halilit.com/items/460303-mackie-mix8-8-channel-compact-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/580540/original/06e34b15dbca092dc0a4ec5f059006da.jpg",
+      "halilit_id": "60-MIX8",
+      "sku": "60-MIX8",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Mix8",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mix5",
+      "name": "Mackie Mix5",
+      "url": "https://www.halilit.com/items/460304-mackie-mix5-5-channel-compact-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/580542/original/354d3528d12773b93cf4d7c4ee0fa042.jpg",
+      "halilit_id": "60-MIX5",
+      "sku": "60-MIX5",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Mix5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1604vlz-rack",
+      "name": "Mackie 1604VLZ RotoPod Bracket Set",
+      "url": "https://www.halilit.com/items/6589495-mackie-1604vlz-rotopod-bracket-set",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13827855/original/cc174dca3a4897442fe6cb39e0a2cc83.jpg",
+      "halilit_id": "60-1604VLZ-RACK",
+      "sku": "60-1604VLZ-RACK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1604VLZ RotoPod Bracket Set",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump210xt",
+      "name": "Mackie Thump210XT",
+      "url": "https://www.halilit.com/items/7457591-mackie-thump210xt-enhanced-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15550782/original/639822ad08e30839060cac83db3dcc80.jpg",
+      "halilit_id": "60-THUMP210XT",
+      "sku": "60-THUMP210XT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump210XT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1402vlz-rack",
+      "name": "Mackie 1402VLZ Rack Ear Kit",
+      "url": "https://www.halilit.com/items/6589500-mackie-1402vlz-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13827864/original/3959f525e011acac8472ea08bf655d14.jpg",
+      "halilit_id": "60-1402VLZ-RACK",
+      "sku": "60-1402VLZ-RACK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1402VLZ Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1202vlz-rack",
+      "name": "Mackie 1202VLZ Rack Ear Kit",
+      "url": "https://www.halilit.com/items/6589503-mackie-1202vlz-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13827873/original/0c2f179b4655f222cdb5bdd9b50bab94.jpg",
+      "halilit_id": "60-1202VLZ-RACK",
+      "sku": "60-1202VLZ-RACK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1202VLZ Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mcaster-bag",
+      "name": "Mackie MCaster Live Bag",
+      "url": "https://www.halilit.com/items/6585966-mackie-mcaster-live-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13821704/original/f2aee0ed0d48ba09589a4d8848a3df5d.jpg",
+      "halilit_id": "60-MCASTER-BAG",
+      "sku": "60-MCASTER-BAG",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MCaster Live Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-profx16v3",
+      "name": "Mackie PROFX16V3 Bag",
+      "url": "https://www.halilit.com/items/3098479-mackie-profx16v3-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5312560/original/bcde4673444751be564316d20f798b9c.jpg",
+      "halilit_id": "60-BAG-PROFX16V3",
+      "sku": "60-BAG-PROFX16V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie PROFX16V3 Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump215",
+      "name": "Mackie Thump215",
+      "url": "https://www.halilit.com/items/5241740-mackie-thump215-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10339307/original/4ed8681db683a915102305809e308340.jpg",
+      "halilit_id": "60-THUMP215",
+      "sku": "60-THUMP215",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump215",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thrash212go",
+      "name": "Mackie Thrash212 GO",
+      "url": "https://www.halilit.com/items/6190739-mackie-thrash212-go",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12975558/original/b1fe597ac9f1a95d8bf1d25787ab5869.jpg",
+      "halilit_id": "60-THRASH212GO",
+      "sku": "60-THRASH212GO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thrash212 GO",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx16v3",
+      "name": "Mackie ProFX16 v3",
+      "url": "https://www.halilit.com/items/2708884-mackie-profx16v3-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4555276/original/6646d60b042c27e5830f75f93a1a6488.jpg",
+      "halilit_id": "60-PROFX16V3",
+      "sku": "60-PROFX16V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX16 v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyx16",
+      "name": "Mackie Onyx16",
+      "url": "https://www.halilit.com/items/5715094-mackie-onyx16-16-channel-premium-analog-usb-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11575365/original/51c6088f2923e586868fa725301aa4ae.jpg",
+      "halilit_id": "60-ONYX16",
+      "sku": "60-ONYX16",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx16",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-dl16s",
+      "name": "Mackie DL16S",
+      "url": "https://www.halilit.com/items/2053782-mackie-dl16s",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3320073/original/f994b8722e419c467c07fe0a9aa245ac.jpg",
+      "halilit_id": "60-DL16S",
+      "sku": "60-DL16S",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie DL16S",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyx24",
+      "name": "Mackie Onyx 24",
+      "url": "https://www.halilit.com/items/3366045-mackie-onyx-24-analog-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5885613/original/19de6b6a758d3f75137c1a7c1ca11f8e.jpg",
+      "halilit_id": "60-ONYX24",
+      "sku": "60-ONYX24",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx 24",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mix12fx",
+      "name": "Mackie MIX12FX",
+      "url": "https://www.halilit.com/items/458419-mackie-mix12fx",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/576066/original/06c2ee9dd24fec4d9f744ed292b5c05e.jpg",
+      "halilit_id": "60-MIX12FX",
+      "sku": "60-MIX12FX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MIX12FX",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyx8",
+      "name": "Mackie Onyx 8",
+      "url": "https://www.halilit.com/items/4277172-mackie-onyx-8-8-channel-premium-analog-usb-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7899841/original/b5b8f9590472c54775f6eb811ff9c733.jpg",
+      "halilit_id": "60-ONYX8",
+      "sku": "60-ONYX8",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx 8",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx22v3",
+      "name": "Mackie ProFX22 v3",
+      "url": "https://www.halilit.com/items/5714870-mackie-profx22v3-22-channel-professional-usb-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11574702/original/355fd46d3fce81168d771424cd905678.jpg",
+      "halilit_id": "60-PROFX22V3",
+      "sku": "60-PROFX22V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX22 v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx12-rackears",
+      "name": "Mackie ProFX12v3 Rack Ear Kit",
+      "url": "https://www.halilit.com/items/5240252-mackie-profx12v3-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10333844/original/e6a4f746fcd2a947a4568009a8492d34.jpg",
+      "halilit_id": "60-PROFX12-RACKEARS",
+      "sku": "60-PROFX12-RACKEARS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX12v3 Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx12v3",
+      "name": "Mackie ProFX12 v3",
+      "url": "https://www.halilit.com/items/2708930-mackie-profx12-v3-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4555303/original/3a857d92b0bdab9a58e99dbecf11620a.jpg",
+      "halilit_id": "60-PROFX12V3",
+      "sku": "60-PROFX12V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX12 v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx16-rackears",
+      "name": "Mackie ProFX16v3 Rack Ear Kit",
+      "url": "https://www.halilit.com/items/5240266-mackie-profx16v3-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10333870/original/493f2bf02fdc931b604d79232a80adb1.jpg",
+      "halilit_id": "60-PROFX16-RACKEARS",
+      "sku": "60-PROFX16-RACKEARS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX16v3 Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1642vlz-rack",
+      "name": "Mackie 1642VLZ Rack Ear Kit",
+      "url": "https://www.halilit.com/items/6589387-mackie-1642vlz-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13827793/original/8dbe05d3f7e6748b404d19fad1aa9dc9.jpg",
+      "halilit_id": "60-1642VLZ-RACK",
+      "sku": "60-1642VLZ-RACK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1642VLZ Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srt215",
+      "name": "Mackie SRT215",
+      "url": "https://www.halilit.com/items/3745996-mackie-srt215",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6607622/original/8e207d5b74cd4d285105ad476e6ac45e.jpg",
+      "halilit_id": "60-SRT215",
+      "sku": "60-SRT215",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRT215",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srt212",
+      "name": "Mackie SRT212",
+      "url": "https://www.halilit.com/items/3746515-mackie-srt212",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6608110/original/fb0e56be8e435f265f5da051887682cf.jpg",
+      "halilit_id": "60-SRT212",
+      "sku": "60-SRT212",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRT212",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx10v3",
+      "name": "Mackie ProFX10 v3",
+      "url": "https://www.halilit.com/items/2708960-mackie-profx10-v3-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4555416/original/7c506b4887c5f760a4f18a51417f87e4.jpg",
+      "halilit_id": "60-PROFX10V3",
+      "sku": "60-PROFX10V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX10 v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-profx6v3",
+      "name": "Mackie ProFX6 v3",
+      "url": "https://www.halilit.com/items/2708977-mackie-profx6-v3-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4555468/original/4e5cb1797c75be0883be901ba4509770.jpg",
+      "halilit_id": "60-PROFX6V3",
+      "sku": "60-PROFX6V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX6 v3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1642vlz4",
+      "name": "Mackie 1642VLZ4",
+      "url": "https://www.halilit.com/items/1272832-mackie-1642vlz-4-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1912746/original/3f8a61645223ba860ca523486b0e7a35.jpg",
+      "halilit_id": "60-1642VLZ4",
+      "sku": "60-1642VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1642VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srm212",
+      "name": "Mackie SRM212 V-Class",
+      "url": "https://www.halilit.com/items/3064833-mackie-srm212-v-class-12-2000w-loudspeakers",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5224677/original/14961984ff56a8b938d248141d9251b1.jpg",
+      "halilit_id": "60-SRM212",
+      "sku": "60-SRM212",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM212 V-Class",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-showbox",
+      "name": "Mackie ShowBox All-in-one Performance Rig",
+      "url": "https://www.halilit.com/items/6583813-mackie-showbox-all-in-one-performance-rig",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13815976/original/19af848772459cc93f4a4a466618498d.jpg",
+      "halilit_id": "60-SHOWBOX",
+      "sku": "60-SHOWBOX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ShowBox All-in-one Performance Rig",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump18s-cover",
+      "name": "Mackie Thump18S Speaker Cover",
+      "url": "https://www.halilit.com/items/5240328-mackie-thump18s-speaker-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10334040/original/0ccf9967c6cacb998041d8d5c863a746.jpg",
+      "halilit_id": "60-THUMP18S-COVER",
+      "sku": "60-THUMP18S-COVER",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump18S Speaker Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump212xt",
+      "name": "Mackie Thump212XT",
+      "url": "https://www.halilit.com/items/5241611-mackie-thump212xt-enhanced-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10358638/original/07763cc73ed395603becc6495749db69.jpg",
+      "halilit_id": "60-THUMP212XT",
+      "sku": "60-THUMP212XT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump212XT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thrash215",
+      "name": "Mackie Thrash215",
+      "url": "https://www.halilit.com/items/4946188-mackie-thrash215",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9605251/original/dce1ac9c87642fc4685485ee8c70190b.jpg",
+      "halilit_id": "60-THRASH215",
+      "sku": "60-THRASH215",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thrash215",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-b-thump15a/bst",
+      "name": "Mackie Thump15A & Thump15BST Speaker Bag",
+      "url": "https://www.halilit.com/items/5239057-mackie-thump15a-thump15bst-speaker-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10330083/original/db5777d76312cb4fbc2253e22f6d9398.jpg",
+      "halilit_id": "60-B-THUMP15A/BST",
+      "sku": "60-B-THUMP15A/BST",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump15A & Thump15BST Speaker Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump12bst",
+      "name": "Mackie Thump 12 Boosted",
+      "url": "https://www.halilit.com/items/1649683-mackie-thump-12-bst-active-speaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2601673/original/73af333d71a24aecdcbbf6371b6b71b2.jpg",
+      "halilit_id": "60-THUMP12BST",
+      "sku": "60-THUMP12BST",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump 12 Boosted",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srm210",
+      "name": "Mackie SRM210 V-Class",
+      "url": "https://www.halilit.com/items/3064862-mackie-srm210-v-class-10-2000w-loudspeakers",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5224623/original/7e181744549a53a16f4c46d8d718848d.jpg",
+      "halilit_id": "60-SRM210",
+      "sku": "60-SRM210",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM210 V-Class",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srm215",
+      "name": "Mackie SRM215 V-Class",
+      "url": "https://www.halilit.com/items/3064866-mackie-v-class-srm215-15-2000w-loudspeakers",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5224720/original/f5e646e8763f5659921cc423421dde9e.jpg",
+      "halilit_id": "60-SRM215",
+      "sku": "60-SRM215",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM215 V-Class",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-freeplay-home",
+      "name": "Mackie FreePlay Home",
+      "url": "https://www.halilit.com/items/1984554-mackie-freeplay-home-bluetooth-speaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3183769/original/a284b9cbec292f3e45238b1933b31f6e.jpg",
+      "halilit_id": "60-FREEPLAY-HOME",
+      "sku": "60-FREEPLAY-HOME",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie FreePlay Home",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump212",
+      "name": "Mackie Thump212",
+      "url": "https://www.halilit.com/items/5240366-mackie-thump212-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10334127/original/1df0daaf2d3cbb833f2ed6602a7eadb3.jpg",
+      "halilit_id": "60-THUMP212",
+      "sku": "60-THUMP212",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump212",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump210",
+      "name": "Mackie Thump210",
+      "url": "https://www.halilit.com/items/7460662-mackie-thump210-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15555391/original/a0c1693b66b4efddbaf2d56f99a63259.jpg",
+      "halilit_id": "60-THUMP210",
+      "sku": "60-THUMP210",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump210",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thrash212",
+      "name": "Mackie Thrash212",
+      "url": "https://www.halilit.com/items/4930633-mackie-thrash212",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9557373/original/93fc896f859454310af9f0dff1c59334.jpg",
+      "halilit_id": "60-THRASH212",
+      "sku": "60-THRASH212",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thrash212",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srm-flex",
+      "name": "Mackie SRM-Flex Portable Column",
+      "url": "https://www.halilit.com/items/2748495-mackie-srm-flex-portable-column",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4637799/original/c49a0b18ebb5b2cda32f6ea59eb52c52.jpg",
+      "halilit_id": "60-SRM-FLEX",
+      "sku": "60-SRM-FLEX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM-Flex Portable Column",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump15bst",
+      "name": "Mackie Thump 15\" Boosted",
+      "url": "https://www.halilit.com/items/1650001-mackie-thump-15-bst-active-speaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2602075/original/9bf2ddd72612ce7bc2edb74bf84a63c9.jpg",
+      "halilit_id": "60-THUMP15BST",
+      "sku": "60-THUMP15BST",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump 15\" Boosted",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cover-thsubgo",
+      "name": "Mackie ThumpSub GO Cover",
+      "url": "https://www.halilit.com/items/8780882-mackie-thumpsub-go-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19916572/original/3e5ea0697030aa828f469788ee90907d.jpg",
+      "halilit_id": "60-COVER-THSUBGO",
+      "sku": "60-COVER-THSUBGO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ThumpSub GO Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1202vlz4",
+      "name": "Mackie 1202VLZ4",
+      "url": "https://www.halilit.com/items/1272661-mackie-1202vlz-4-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1912419/original/a51e1530efe5758d0d01ffda73316a9c.jpg",
+      "halilit_id": "60-1202VLZ4",
+      "sku": "60-1202VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1202VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump215xt",
+      "name": "Mackie Thump215XT",
+      "url": "https://www.halilit.com/items/5241944-mackie-thump215xt-enhanced-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10358644/original/4ccc0dcfb904bb606a0d7cbae3a33c14.jpg",
+      "halilit_id": "60-THUMP215XT",
+      "sku": "60-THUMP215XT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump215XT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-thumpgo",
+      "name": "Mackie Thump GO Speaker Bag",
+      "url": "https://www.halilit.com/items/5239899-mackie-thump-go-speaker-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10332624/original/bb26b6496c7eba83d2d1284d2192ea52.jpg",
+      "halilit_id": "60-BAG-THUMPGO",
+      "sku": "60-BAG-THUMPGO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump GO Speaker Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thumpgo8",
+      "name": "רמקול נייד מוגבר Mackie Thump GO 8\" Portable",
+      "url": "https://www.halilit.com/items/4912733-mackie-thump-go-8-portable-bluetooth-battery-powered-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9509116/original/cecdabea939fc99e1627ad50011a351b.jpg",
+      "halilit_id": "60-THUMPGO8",
+      "sku": "60-THUMPGO8",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "רמקול נייד מוגבר Mackie Thump GO 8\" Portable",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump12a",
+      "name": "Mackie Thump 12A",
+      "url": "https://www.halilit.com/items/1531502-mackie-thump-12a-powered-speakers",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2391955/original/0381f5d4a10410999a7a7d44bd009df9.jpg",
+      "halilit_id": "60-THUMP12A",
+      "sku": "60-THUMP12A",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump 12A",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-b-thump15a/bst-w",
+      "name": "Mackie Thump15A & Thump15BST Rolling Bag",
+      "url": "https://www.halilit.com/items/5239164-mackie-thump15a-thump15bst-rolling-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10330473/original/aa4b259a17ee6283c79ebabdbb7be999.jpg",
+      "halilit_id": "60-B-THUMP15A/BST-W",
+      "sku": "60-B-THUMP15A/BST-W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump15A & Thump15BST Rolling Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-b-thump12a/bst",
+      "name": "Mackie Thump12A & Thump12BST Speaker Bag",
+      "url": "https://www.halilit.com/items/4602255-mackie-thump12a-thump12bst-speaker-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8710582/original/fa0821263ca6b384c0864b1a99abcbb4.jpg",
+      "halilit_id": "60-B-THUMP12A/BST",
+      "sku": "60-B-THUMP12A/BST",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump12A & Thump12BST Speaker Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srt210",
+      "name": "Mackie SRT210",
+      "url": "https://www.halilit.com/items/3745957-mackie-srt210",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6607551/original/3eb7f945ffeee67271dede69f0a1fe4d.jpg",
+      "halilit_id": "60-SRT210",
+      "sku": "60-SRT210",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRT210",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-b-thump12a/bst-w",
+      "name": "Mackie Thump12A & Thump12BST Rolling Bag",
+      "url": "https://www.halilit.com/items/4602288-mackie-thump12a-thump12bst-rolling-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8710665/original/dc658203ea923fb2a515d529b55ef62b.jpg",
+      "halilit_id": "60-B-THUMP12A/BST-W",
+      "sku": "60-B-THUMP12A/BST-W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump12A & Thump12BST Rolling Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srm450-v3",
+      "name": "Mackie SRM450 V3",
+      "url": "https://www.halilit.com/items/444359-mackie-srm450-v3-active-2-way-speaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557517/original/69e00896ffc7d2dca3af66b413ce177d.jpg",
+      "halilit_id": "60-SRM450-V3",
+      "sku": "60-SRM450-V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM450 V3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cover-srm212",
+      "name": "Mackie SRM212 V-Class Speaker Cover",
+      "url": "https://www.halilit.com/items/6586827-mackie-srm212-v-class-speaker-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824183/original/73094149abf6be08d5493826912522eb.jpg",
+      "halilit_id": "60-COVER-SRM212",
+      "sku": "60-COVER-SRM212",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM212 V-Class Speaker Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cover-srm215",
+      "name": "Mackie SRM215 V-Class Speaker Cover",
+      "url": "https://www.halilit.com/items/6586857-mackie-srm215-v-class-speaker-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942742/original/e4ed486505b32245209420cc6cb9f61d.jpg",
+      "halilit_id": "60-COVER-SRM215",
+      "sku": "60-COVER-SRM215",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM215 V-Class Speaker Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-ip10",
+      "name": "Mackie iP-10",
+      "url": "https://www.halilit.com/items/3194539-mackie-ip-10-loudspeaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5500335/original/7df234793f24496b3a171dd928545739.jpg",
+      "halilit_id": "60-IP10",
+      "sku": "60-IP10",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie iP-10",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyx16-rack",
+      "name": "Mackie Onyx16 Rack Ear Kit",
+      "url": "https://www.halilit.com/items/5245880-mackie-onyx16-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10353179/original/c4ec29ce765d883e4cf51f59b5bc3cca.jpg",
+      "halilit_id": "60-ONYX16-RACK",
+      "sku": "60-ONYX16-RACK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx16 Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyx12",
+      "name": "Mackie Onyx12",
+      "url": "https://www.halilit.com/items/3357640-mackie-onyx12",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5867725/original/0d93cafa01309e235c4002716b0ebdad.jpg",
+      "halilit_id": "60-ONYX12",
+      "sku": "60-ONYX12",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx12",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-onyx12-rack",
+      "name": "Mackie Onyx12 Rack Ear Kit",
+      "url": "https://www.halilit.com/items/5245911-mackie-onyx12-rack-ear-kit",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10353232/original/e9f13e9bd760fc259d0af7a76055ac86.jpg",
+      "halilit_id": "60-ONYX12-RACK",
+      "sku": "60-ONYX12-RACK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx12 Rack Ear Kit",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump115s",
+      "name": "Mackie Thump115S",
+      "url": "https://www.halilit.com/items/5242210-mackie-thump115s-powered-subwoofer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10340921/original/652a601a4f50344f17f486073f545dce.jpg",
+      "halilit_id": "60-THUMP115S",
+      "sku": "60-THUMP115S",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump115S",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-thump118s",
+      "name": "Mackie Thump118S",
+      "url": "https://www.halilit.com/items/5242297-mackie-thump118s-powered-subwoofer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10341248/original/9a5eae1dd63a9e4505b4bad188d54e85.jpg",
+      "halilit_id": "60-THUMP118S",
+      "sku": "60-THUMP118S",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Thump118S",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-3204vlz4",
+      "name": "Mackie 3204VLZ4",
+      "url": "https://www.halilit.com/items/1272854-mackie-3204vlz-4-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1912786/original/173f235916be6924a3be91d7712f1af2.jpg",
+      "halilit_id": "60-3204VLZ4",
+      "sku": "60-3204VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 3204VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-onyx16",
+      "name": "Mackie Onyx16 Carry Bag",
+      "url": "https://www.halilit.com/items/6486312-mackie-onyx16-carry-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13620358/original/7ce43ef1a2d9c65b2602506ef1b98c3c.jpg",
+      "halilit_id": "60-BAG-ONYX16",
+      "sku": "60-BAG-ONYX16",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx16 Carry Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-onyx12",
+      "name": "Mackie Onyx12 Carry Bag",
+      "url": "https://www.halilit.com/items/6584441-mackie-onyx12-carry-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13817567/original/c43f6629077cc82577b82df07b3cb5e9.jpg",
+      "halilit_id": "60-BAG-ONYX12",
+      "sku": "60-BAG-ONYX12",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie Onyx12 Carry Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1402vlz4",
+      "name": "Mackie 1402VLZ4",
+      "url": "https://www.halilit.com/items/3283101-mackie-1402vlz4-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5687870/original/42415403b53de27670dbb43dca26a4e6.jpg",
+      "halilit_id": "60-1402VLZ4",
+      "sku": "60-1402VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1402VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-802vlz4",
+      "name": "Mackie 802VLZ4",
+      "url": "https://www.halilit.com/items/446128-mackie-802vlz4",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559874/original/1edf2b7bbc1477ad0d3285e1413d34dd.jpg",
+      "halilit_id": "60-802VLZ4",
+      "sku": "60-802VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 802VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-402vlz4",
+      "name": "Mackie 402VLZ4",
+      "url": "https://www.halilit.com/items/446129-mackie-402vlz4",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559875/original/249f3ee8b997845733552fb95986f30e.jpg",
+      "halilit_id": "60-402VLZ4",
+      "sku": "60-402VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 402VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-1604vlz4",
+      "name": "Mackie 1604VLZ4",
+      "url": "https://www.halilit.com/items/1272769-mackie-1604vlz4-mixer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1912644/original/e4292d874f2755604310fa4917fd7df2.jpg",
+      "halilit_id": "60-1604VLZ4",
+      "sku": "60-1604VLZ4",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1604VLZ4",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-dcover-profx16v3",
+      "name": "Mackie ProFX16v3 Dust Cover",
+      "url": "https://www.halilit.com/items/5240018-mackie-profx16v3-dust-cover-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10332943/original/52de1d53d8c3012c9ff426d671ad9a71.jpg",
+      "halilit_id": "60-DCOVER-PROFX16V3",
+      "sku": "60-DCOVER-PROFX16V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX16v3 Dust Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-dcover-profx22v3",
+      "name": "Mackie ProFX22v3 Dust Cover",
+      "url": "https://www.halilit.com/items/5240026-mackie-profx22v3-dust-cover-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10332952/original/ff7b56305e1b3b9c437f360aa46b0c32.jpg",
+      "halilit_id": "60-DCOVER-PROFX22V3",
+      "sku": "60-DCOVER-PROFX22V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX22v3 Dust Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-dcover-profx30v3",
+      "name": "Mackie ProFX30v3 Dust Cover",
+      "url": "https://www.halilit.com/items/5240033-mackie-profx30v3-dust-cover-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10332977/original/1e3ab2be0b300a98bc0925b9917a1df4.jpg",
+      "halilit_id": "60-DCOVER-PROFX30V3",
+      "sku": "60-DCOVER-PROFX30V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX30v3 Dust Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-1604vlz3",
+      "name": "Mackie 1604VLZ3 Mixer Bag",
+      "url": "https://www.halilit.com/items/6586893-mackie-1604vlz3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824390/original/cf12dce652792c228cbb6c8a288fa6aa.jpg",
+      "halilit_id": "60-BAG-1604VLZ3",
+      "sku": "60-BAG-1604VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1604VLZ3 Mixer Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-1402vlz3",
+      "name": "Mackie 1402VLZ3 Mixer Bag",
+      "url": "https://www.halilit.com/items/6586917-mackie-1402vlz3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824463/original/d358f92db91f7f1a604dd9855cc2ff44.jpg",
+      "halilit_id": "60-BAG-1402VLZ3",
+      "sku": "60-BAG-1402VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1402VLZ3 Mixer Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-m48",
+      "name": "Mackie M48",
+      "url": "https://www.halilit.com/items/1713962-mackie-m48-phantom-power",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2715089/original/fe772694d907e3ba264700c1cb28687b.jpg",
+      "halilit_id": "60-M48",
+      "sku": "60-M48",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie M48",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-1202vlz3",
+      "name": "Mackie 1202VLZ3 Mixer Bag",
+      "url": "https://www.halilit.com/items/6586931-mackie-1202vlz3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824483/original/032793bf0ed4ef53b80442b5b4c028ea.jpg",
+      "halilit_id": "60-BAG-1202VLZ3",
+      "sku": "60-BAG-1202VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1202VLZ3 Mixer Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cover-1604vlz3",
+      "name": "Mackie 1604VLZ3 Mixer Cover",
+      "url": "https://www.halilit.com/items/6586469-mackie-1604vlz3-mixer-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13823318/original/ed94fe957aed9b491c86bad044c08e59.jpg",
+      "halilit_id": "60-COVER-1604VLZ3",
+      "sku": "60-COVER-1604VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 1604VLZ3 Mixer Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cover-2404vlz3",
+      "name": "Mackie 2404VLZ3 Mixer Cover",
+      "url": "https://www.halilit.com/items/6586769-mackie-2404vlz3-mixer-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824041/original/a8656e4f2639fdcd8a786a29cf49edc1.jpg",
+      "halilit_id": "60-COVER-2404VLZ3",
+      "sku": "60-COVER-2404VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 2404VLZ3 Mixer Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-cover-3204vlz3",
+      "name": "Mackie 3204VLZ3 Mixer Cover",
+      "url": "https://www.halilit.com/items/6586788-mackie-3204vlz3-mixer-cover",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824147/original/6e8872c06f0761792f04b7787b75e959.jpg",
+      "halilit_id": "60-COVER-3204VLZ3",
+      "sku": "60-COVER-3204VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 3204VLZ3 Mixer Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-402vlz3",
+      "name": "Mackie 402VLZ3 Mixer Bag",
+      "url": "https://www.halilit.com/items/6586882-mackie-402vlz3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13824366/original/a971f99a2009a9d223190abe2b9bf90e.jpg",
+      "halilit_id": "60-BAG-402VLZ3",
+      "sku": "60-BAG-402VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 402VLZ3 Mixer Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-802vlz3",
+      "name": "Mackie 802VLZ3 Mixer Bag",
+      "url": "https://www.halilit.com/items/3283176-mackie-802vlz3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5688069/original/2e4773cf3cc725c1e029e393e6a551bb.jpg",
+      "halilit_id": "60-BAG-802VLZ3",
+      "sku": "60-BAG-802VLZ3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie 802VLZ3 Mixer Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-freeplay-go",
+      "name": "Mackie FreePlay GO",
+      "url": "https://www.halilit.com/items/1984533-mackie-freeplay-go-speaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3183724/original/a80ab293a5a0429714daa7c978cc0175.jpg",
+      "halilit_id": "60-FREEPLAY-GO",
+      "sku": "60-FREEPLAY-GO",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie FreePlay GO",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-srm150",
+      "name": "Mackie SRM150",
+      "url": "https://www.halilit.com/items/447476-mackie-srm150-compact-powered-pa",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/561301/original/6ac73ef6e817aa8f7fa96fd3bfba66cb.jpg",
+      "halilit_id": "60-SRM150",
+      "sku": "60-SRM150",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie SRM150",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-drm212",
+      "name": "Mackie DRM212",
+      "url": "https://www.halilit.com/items/2271502-mackie-drm212-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3678951/original/842aaee6ef1e38741e171340bbb70349.jpg",
+      "halilit_id": "60-DRM212",
+      "sku": "60-DRM212",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie DRM212",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-dcover-profx12v3",
+      "name": "Mackie ProFX12 v3 Dust Cover",
+      "url": "https://www.halilit.com/items/2745104-mackie-profx12-v3-dust-cover-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4628787/original/88a5ca95ad096dc4e546fc3fbc236325.jpg",
+      "halilit_id": "60-DCOVER-PROFX12V3",
+      "sku": "60-DCOVER-PROFX12V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX12 v3 Dust Cover",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-onyx8",
+      "name": "Mackie ONYX8 Carry Bag",
+      "url": "https://www.halilit.com/items/4935190-mackie-onyx8-carry-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9574232/original/9dbc96375ad55d7786b32d7ef81538eb.jpg",
+      "halilit_id": "60-BAG-ONYX8",
+      "sku": "60-BAG-ONYX8",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ONYX8 Carry Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mx3500",
+      "name": "Mackie MX3500",
+      "url": "https://www.halilit.com/items/2274586-mackie-mx3500-power-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3683659/original/1c9f01560b7e4ed9061e2291116ccdcc.jpg",
+      "halilit_id": "60-MX3500",
+      "sku": "60-MX3500",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MX3500",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-drm18s",
+      "name": "Mackie DRM18S",
+      "url": "https://www.halilit.com/items/2271271-mackie-drm18s-18-2000-watt-powered-subwoofer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3678373/original/750b5f0055e998132cf43bed70a784bb.jpg",
+      "halilit_id": "60-DRM18S",
+      "sku": "60-DRM18S",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie DRM18S",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-freeplay-live",
+      "name": "Mackie FreePlay LIVE Speaker Bag",
+      "url": "https://www.halilit.com/items/3799857-mackie-freeplay-live-speaker-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6727937/original/7b78c9bc6c2b27cbc1af4317c0761d2a.jpg",
+      "halilit_id": "60-BAG-FREEPLAY-LIVE",
+      "sku": "60-BAG-FREEPLAY-LIVE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie FreePlay LIVE Speaker Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-dl32s",
+      "name": "Mackie DL32S Bag",
+      "url": "https://www.halilit.com/items/2441272-mackie-dl32s-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601957/original/3a47304b5e3cdf95385bf5e310821843.jpg",
+      "halilit_id": "60-BAG-DL32S",
+      "sku": "60-BAG-DL32S",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie DL32S Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-freeplay-live",
+      "name": "Mackie FreePlay Live",
+      "url": "https://www.halilit.com/items/1984573-mackie-freeplay-live-bluetooth-speaker",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3183811/original/2718b7dc41efd40cd059b502656b913b.jpg",
+      "halilit_id": "60-FREEPLAY-LIVE",
+      "sku": "60-FREEPLAY-LIVE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie FreePlay Live",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-mtest1",
+      "name": "Mackie MTEST-1",
+      "url": "https://www.halilit.com/items/1718079-mackie-mtest-1",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2723744/original/e60c75ed948066cecf00884a6b9f6ce1.jpg",
+      "halilit_id": "60-MTEST1",
+      "sku": "60-MTEST1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie MTEST-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-profx22v3",
+      "name": "Mackie ProFX22v3 Mixer Bag",
+      "url": "https://www.halilit.com/items/5239876-mackie-profx22v3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10332548/original/45bc65311ac6214024dcc6006f44639d.jpg",
+      "halilit_id": "60-BAG-PROFX22V3",
+      "sku": "60-BAG-PROFX22V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX22v3 Mixer Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-tripod",
+      "name": "Mackie T100 Loudspeaker Tripod Stand",
+      "url": "https://www.halilit.com/items/3285832-mackie-t100-loudspeaker-tripod-stand",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5694134/original/658e87445954c7a8f2a290bf4dee267a.jpg",
+      "halilit_id": "60-TRIPOD",
+      "sku": "60-TRIPOD",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie T100 Loudspeaker Tripod Stand",
+      "category": "general"
+    },
+    {
+      "id": "halilit_60-bag-profx10v3",
+      "name": "Mackie ProFX10v3 Mixer Bag",
+      "url": "https://www.halilit.com/items/3194441-mackie-profx10v3-mixer-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5499905/original/974930e8f559b1a631bae27953bf87c3.jpg",
+      "halilit_id": "60-BAG-PROFX10V3",
+      "sku": "60-BAG-PROFX10V3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Mackie ProFX10v3 Mixer Bag",
+      "category": "general"
+    }
+  ]
+}

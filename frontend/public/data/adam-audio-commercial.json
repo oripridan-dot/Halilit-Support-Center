@@ -1,0 +1,20 @@
+{
+  "brand_slug": "adam-audio-commercial",
+  "source": "halilit_commercial_scan",
+  "products": [],
+  "brand_name": "Adam-Audio Commercial",
+  "refined_at": "2026-01-27T08:20:46.182191+00:00",
+  "brand_identity": {
+    "id": "adam-audio-commercial",
+    "name": "Adam-Audio Commercial",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/adam-audio-commercial_logo.png",
+    "taxonomy_stats": {
+      "validated": 1,
+      "normalized": 0,
+      "uncategorized": 0
+    },
+    "total_products": 0
+  },
+  "hierarchy": {}
+}

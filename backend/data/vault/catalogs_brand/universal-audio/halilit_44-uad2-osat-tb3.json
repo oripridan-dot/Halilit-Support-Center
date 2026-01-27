@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-uad2-osat-tb3",
+  "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2699580-universal-audio-uad-2-satellite-thunderbolt-3-octo-core",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_uad2_osat_tb3",
+    "name": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+    "description": "Universal Audio UAD-2 Satellite Thunderbolt 3 OCTO Core",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_uad2_osat_tb3.jpg",
+    "product_url": "https://www.halilit.com/items/2699580-universal-audio-uad-2-satellite-thunderbolt-3-octo-core",
+    "is_sold": true,
+    "price": 4856.0,
+    "halilit_url": "https://www.halilit.com/items/2699580-universal-audio-uad-2-satellite-thunderbolt-3-octo-core",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.587515Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_nx12_sma",
+  "name": "RCF NX 12-SMA",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF NX 12-SMA",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_nx12_sma.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_nx12_sma",
+    "name": "RCF NX 12-SMA",
+    "description": "RCF NX 12-SMA",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_nx12_sma.jpg",
+    "product_url": "https://www.halilit.com/items/447622-rcf-nx-12-sma",
+    "is_sold": true,
+    "price": 8646.0,
+    "halilit_url": "https://www.halilit.com/items/447622-rcf-nx-12-sma",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.501526Z"
+  }
+}

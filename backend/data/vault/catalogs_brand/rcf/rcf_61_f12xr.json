@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_f12xr",
+  "name": "RCF F 12XR",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF F 12XR",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_f12xr.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_f12xr",
+    "name": "RCF F 12XR",
+    "description": "RCF F 12XR",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_f12xr.jpg",
+    "product_url": "https://www.halilit.com/items/2279494-rcf-f-12xr",
+    "is_sold": true,
+    "price": 2041.0,
+    "halilit_url": "https://www.halilit.com/items/2279494-rcf-f-12xr",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.476381Z"
+  }
+}

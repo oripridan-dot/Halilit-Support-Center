@@ -1,0 +1,39 @@
+{
+  "id": "magma_95_ctrl_xxlplusii",
+  "name": "Magma CTRL Case XXL Plus II",
+  "brand": "magma",
+  "category": "accessories",
+  "description": "Magma CTRL Case XXL Plus II",
+  "media": {
+    "thumbnail": "/data/thumbnails/magma_95_ctrl_xxlplusii.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "magma_95_ctrl_xxlplusii",
+    "name": "Magma CTRL Case XXL Plus II",
+    "description": "Magma CTRL Case XXL Plus II",
+    "category": "general",
+    "image_url": "/data/thumbnails/magma_95_ctrl_xxlplusii.jpg",
+    "product_url": "https://www.halilit.com/items/7204962-magma-ctrl-case-xxl-plus-ii",
+    "is_sold": true,
+    "price": 693.0,
+    "halilit_url": "https://www.halilit.com/items/7204962-magma-ctrl-case-xxl-plus-ii",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.077192Z"
+  }
+}

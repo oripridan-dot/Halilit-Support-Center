@@ -1,0 +1,39 @@
+{
+  "id": "turkish_15_jbr21",
+  "name": "Turkish John Blackwell 21\" Ride Cymbal",
+  "brand": "turkish",
+  "category": "drums",
+  "description": "Turkish John Blackwell 21\" Ride Cymbal",
+  "media": {
+    "thumbnail": "/data/thumbnails/turkish_15_jbr21.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "turkish_15_jbr21",
+    "name": "Turkish John Blackwell 21\" Ride Cymbal",
+    "description": "Turkish John Blackwell 21\" Ride Cymbal",
+    "category": "general",
+    "image_url": "/data/thumbnails/turkish_15_jbr21.jpg",
+    "product_url": "https://www.halilit.com/items/2870356-turkish-john-blackwell-21-ride-cymbal",
+    "is_sold": true,
+    "price": 1973.0,
+    "halilit_url": "https://www.halilit.com/items/2870356-turkish-john-blackwell-21-ride-cymbal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.072458Z"
+  }
+}

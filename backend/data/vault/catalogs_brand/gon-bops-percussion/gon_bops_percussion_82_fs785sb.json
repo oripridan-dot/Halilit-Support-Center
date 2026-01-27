@@ -1,0 +1,39 @@
+{
+  "id": "gon_bops_percussion_82_fs785sb",
+  "name": "Gon Bops Fiesta Bongos",
+  "brand": "gon-bops-percussion",
+  "category": "general",
+  "description": "Gon Bops Fiesta Bongos",
+  "media": {
+    "thumbnail": "/data/thumbnails/gon_bops_percussion_82_fs785sb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "gon_bops_percussion_82_fs785sb",
+    "name": "Gon Bops Fiesta Bongos",
+    "description": "Gon Bops Fiesta Bongos",
+    "category": "general",
+    "image_url": "/data/thumbnails/gon_bops_percussion_82_fs785sb.jpg",
+    "product_url": "https://www.halilit.com/items/2667882-gon-bops-fiesta-bongos",
+    "is_sold": true,
+    "price": 434.0,
+    "halilit_url": "https://www.halilit.com/items/2667882-gon-bops-fiesta-bongos",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.104881Z"
+  }
+}

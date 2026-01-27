@@ -3,5 +3,294 @@
     "id": "lynx",
     "name": "LYNX"
   },
-  "products": []
+  "products": [
+    {
+      "id": "lynx_48_mesa",
+      "name": "Lynx Mesa Thunderbolt 3 Audio Interface",
+      "brand": "lynx",
+      "category": "studio",
+      "image_url": "/data/thumbnails/lynx_48_mesa.jpg",
+      "description": "Lynx Mesa Thunderbolt 3 Audio Interface",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_e22",
+      "name": "Lynx E22",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_e22.jpg",
+      "description": "Lynx E22",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran8hd",
+      "name": "Lynx Aurora(n) 8 HD",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran8hd.jpg",
+      "description": "Lynx Aurora(n) 8 HD",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran32dnt",
+      "name": "Lynx Aurora(n) 32 DNT",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran32dnt.jpg",
+      "description": "Lynx Aurora(n) 32 DNT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran8tb",
+      "name": "Lynx Aurora(n) 8 Thunderbolt",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran8tb.jpg",
+      "description": "Lynx Aurora(n) 8 Thunderbolt",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran8usb",
+      "name": "Lynx Aurora(n) 8 USB",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran8usb.jpg",
+      "description": "Lynx Aurora(n) 8 USB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_lt_usb",
+      "name": "Lynx LT-USB",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_lt_usb.jpg",
+      "description": "Lynx LT-USB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran8dnt",
+      "name": "Lynx Aurora(n) 8 DNT",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran8dnt.jpg",
+      "description": "Lynx Aurora(n) 8 DNT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_e44",
+      "name": "Lynx E44",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_e44.jpg",
+      "description": "Lynx E44",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran16usb",
+      "name": "Lynx Aurora(n) 16 USB",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran16usb.jpg",
+      "description": "Lynx Aurora(n) 16 USB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran16hd",
+      "name": "Lynx Aurora(n) 16 HD",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran16hd.jpg",
+      "description": "Lynx Aurora(n) 16 HD",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_aes16_e",
+      "name": "Lynx AES16e",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_aes16_e.jpg",
+      "description": "Lynx AES16e",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran16dnt",
+      "name": "Lynx Aurora(n) 16 Dante",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran16dnt.jpg",
+      "description": "Lynx Aurora(n) 16 Dante",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran24hd",
+      "name": "Lynx Aurora(n) 24 HD",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran24hd.jpg",
+      "description": "Lynx Aurora(n) 24 HD",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_aurora8_tb",
+      "name": "Lynx Aurora 8 Thunderbolt",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_aurora8_tb.jpg",
+      "description": "Lynx Aurora 8 Thunderbolt",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran24tb",
+      "name": "Lynx Aurora(n) 24 Thunderbolt",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran24tb.jpg",
+      "description": "Lynx Aurora(n) 24 Thunderbolt",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran24dnt",
+      "name": "Lynx Aurora(n) 24 Dante",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran24dnt.jpg",
+      "description": "Lynx Aurora(n) 24 Dante",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "lynx_48_auroran32hd",
+      "name": "Lynx Aurora(n) 32 HD",
+      "brand": "lynx",
+      "category": "general",
+      "image_url": "/data/thumbnails/lynx_48_auroran32hd.jpg",
+      "description": "Lynx Aurora(n) 32 HD",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

@@ -3,5 +3,294 @@
     "id": "adam-audio",
     "name": "ADAM-AUDIO"
   },
-  "products": []
+  "products": [
+    {
+      "id": "halilit_aa-d3v",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Adam Audio D3V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_d3v.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Adam Audio D3V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-D3V",
+      "halilit_url": "https://www.halilit.com/items/3418989-adam-audio-d3v-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-t5v",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T5V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_t5v.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T5V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-T5V",
+      "halilit_url": "https://www.halilit.com/items/2276780-adam-audio-t5v",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-d3v-wh",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Adam Audio D3V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_d3v.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Adam Audio D3V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-D3V-WH",
+      "halilit_url": "https://www.halilit.com/items/7749595-adam-audio-d3v-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-h200",
+      "name": "Adam Audio H-200",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_h200.jpg",
+      "description": "Adam Audio H-200",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-H200",
+      "halilit_url": "https://www.halilit.com/items/7679723-adam-audio-h-200-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-t8v",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T8V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_t8v.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T8V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-T8V",
+      "halilit_url": "https://www.halilit.com/items/2867509-adam-audio-t8v-studio-monitor-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a7v",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A7V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a7v.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A7V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A7V",
+      "halilit_url": "https://www.halilit.com/items/4841528-adam-audio-a7v",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a7v-wh",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A7V Arctic White",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a7v_wh.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A7V Arctic White",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A7V-WH",
+      "halilit_url": "https://www.halilit.com/items/8234683-adam-audio-a7v-arctic-white",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-t7v",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T7V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_t7v.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T7V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-T7V",
+      "halilit_url": "https://www.halilit.com/items/2276816-adam-audio-t7v-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a4v-wh",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V Arctic White",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a4v_wh.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V Arctic White",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A4V-WH",
+      "halilit_url": "https://www.halilit.com/items/8233728-adam-audio-a4v-arctic-white",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a4v",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a4v.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A4V",
+      "halilit_url": "https://www.halilit.com/items/4842165-adam-audio-a4v",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a8h-r",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 \u05e6\u05d3 \u05d9\u05de\u05d9\u05df ADAM Audio A8H",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a8h_r.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 \u05e6\u05d3 \u05d9\u05de\u05d9\u05df ADAM Audio A8H",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A8H-R",
+      "halilit_url": "https://www.halilit.com/items/5662285-adam-audio-a8h-3-way-powered-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a8h-l",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 \u05e6\u05d3 \u05e9\u05de\u05d0\u05dc ADAM Audio A8H",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a8h_l.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 \u05e6\u05d3 \u05e9\u05de\u05d0\u05dc ADAM Audio A8H",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A8H-L",
+      "halilit_url": "https://www.halilit.com/items/7949922-adam-audio-a8h-3-way-powered-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-sp5",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea \u05dc\u05d0\u05d5\u05dc\u05e4\u05df ADAM Audio Studio Pro SP-5",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_sp5.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea \u05dc\u05d0\u05d5\u05dc\u05e4\u05df ADAM Audio Studio Pro SP-5",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-SP5",
+      "halilit_url": "https://www.halilit.com/items/2281243-adam-audio-studio-pro-sp-5",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a77h",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A77H",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a77h.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A77H",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A77H",
+      "halilit_url": "https://www.halilit.com/items/5662027-adam-audio-a77h",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-a44h",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A44H",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_a44h.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A44H",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-A44H",
+      "halilit_url": "https://www.halilit.com/items/5661915-adam-audio-a44h",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-sub8",
+      "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio SUB8",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_sub8.jpg",
+      "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio SUB8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-SUB8",
+      "halilit_url": "https://www.halilit.com/items/2273631-adam-audio-sub8",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-t10s",
+      "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T10S",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_t10s.jpg",
+      "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio T10S",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-T10S",
+      "halilit_url": "https://www.halilit.com/items/2518190-adam-audio-t10s",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_aa-s2v",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio S2V",
+      "brand": "adam-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/adam_audio_aa_s2v.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio S2V",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "AA-S2V",
+      "halilit_url": "https://www.halilit.com/items/2280832-adam-audio-s2v",
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

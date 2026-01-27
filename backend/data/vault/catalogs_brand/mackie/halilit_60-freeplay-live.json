@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-freeplay-live",
+  "name": "Mackie FreePlay Live",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie FreePlay Live",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_freeplay_live.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/1984573-mackie-freeplay-live-bluetooth-speaker",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_freeplay_live",
+    "name": "Mackie FreePlay Live",
+    "description": "Mackie FreePlay Live",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_freeplay_live.jpg",
+    "product_url": "https://www.halilit.com/items/1984573-mackie-freeplay-live-bluetooth-speaker",
+    "is_sold": true,
+    "price": 2137.0,
+    "halilit_url": "https://www.halilit.com/items/1984573-mackie-freeplay-live-bluetooth-speaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.707427Z"
+  }
+}

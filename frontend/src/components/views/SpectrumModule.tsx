@@ -129,8 +129,8 @@ export const SpectrumModule = () => {
               <div>
                 <div className="flex items-center gap-3 mb-2">
                   {hoveredProduct.logo_url && <img src={hoveredProduct.logo_url} className="h-4 opacity-60 invert" alt={hoveredProduct.brand} />}
-                  <div className="flex gap-1">
-                    {hoveredProduct.filters?.slice(0, 3).map((f: string) => (
+                  <div className="flex gap-1 flex-wrap">
+                    {hoveredProduct.filters?.map((f: string) => (
                       <span key={f} className="text-[9px] px-1.5 py-0.5 border border-zinc-800 text-zinc-500 rounded font-mono uppercase">
                         {f}
                       </span>
@@ -142,8 +142,8 @@ export const SpectrumModule = () => {
                 </h1>
               </div>
 
-              <div className="grid grid-cols-2 gap-x-12 gap-y-3 border-t border-zinc-900/80 pt-4">
-                {hoveredProduct.specs_preview?.slice(0, 4).map((spec: { key: string; val: string }, idx: number) => (
+              <div className="grid grid-cols-2 gap-x-12 gap-y-3 border-t border-zinc-900/80 pt-4 overflow-y-auto max-h-[140px] pr-2 custom-scrollbar">
+                {hoveredProduct.specs_preview?.map((spec: { key: string; val: string }, idx: number) => (
                   <div key={idx} className="flex justify-between items-baseline group/spec">
                     <span className="text-[10px] text-zinc-600 font-bold uppercase tracking-wider group-hover/spec:text-amber-500 transition-colors">{spec.key}</span>
                     <span className="text-sm text-zinc-300 font-mono truncate text-right">{spec.val}</span>
@@ -181,7 +181,7 @@ export const SpectrumModule = () => {
       </div>
 
       {/* --- BOTTOM: TIER BAR ENGINE --- */}
-      <div className="flex-1 relative bg-gradient-to-b from-[#050505] to-[#0e0e10] p-0 flex flex-col justify-center overflow-hidden">
+      <div className="flex-1 relative bg-gradient-to-b from-[#050505] to-[#0e0e10] p-0 flex flex-col justify-center overflow-hidden px-8">
         {loading ? (
           <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono animate-pulse">
             <Sparkles className="w-4 h-4 mr-2 animate-spin" /> INITIALIZING SPECTRUM...
@@ -199,7 +199,7 @@ export const SpectrumModule = () => {
 
       {/* --- BOTTOM DECK: 1176 FILTER CONTROLS --- */}
       <Surface variant="panel" className="h-16 flex items-center px-4 gap-4 z-30 !bg-zinc-900/90 backdrop-blur-md border-t border-zinc-800 shadow-2xl shrink-0">
-        <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-2 mask-linear-fade flex-1">
+        <div className="flex items-center justify-center gap-1 overflow-x-auto no-scrollbar py-2 mask-linear-fade flex-1">
           <Control variant="1176" label="ALL" active={activeFilter === "ALL"} onClick={() => setActiveFilter("ALL")} />
           <div className="w-px h-4 bg-zinc-800 mx-1" />
           {availableFilters.map((filter) => (

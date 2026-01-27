@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-gpmoxstp",
+  "name": "Universal Audio UAFX OX Stomp",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "Universal Audio UAFX OX Stomp",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6229347-universal-audio-uafx-ox-stomp",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_gpmoxstp",
+    "name": "Universal Audio UAFX OX Stomp",
+    "description": "Universal Audio UAFX OX Stomp",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_gpmoxstp.jpg",
+    "product_url": "https://www.halilit.com/items/6229347-universal-audio-uafx-ox-stomp",
+    "is_sold": true,
+    "price": 1531.0,
+    "halilit_url": "https://www.halilit.com/items/6229347-universal-audio-uafx-ox-stomp",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.584218Z"
+  }
+}

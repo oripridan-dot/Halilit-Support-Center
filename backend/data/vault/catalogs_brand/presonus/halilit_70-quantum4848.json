@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-quantum4848",
+  "name": "PreSonus Quantum 4848",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus Quantum 4848",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_quantum4848.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2687175-presonus-quantum-4848",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_quantum4848",
+    "name": "PreSonus Quantum 4848",
+    "description": "PreSonus Quantum 4848",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_quantum4848.jpg",
+    "product_url": "https://www.halilit.com/items/2687175-presonus-quantum-4848",
+    "is_sold": true,
+    "price": 6663.0,
+    "halilit_url": "https://www.halilit.com/items/2687175-presonus-quantum-4848",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.059629Z"
+  }
+}

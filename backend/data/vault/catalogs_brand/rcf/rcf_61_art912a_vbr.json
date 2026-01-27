@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_art912a_vbr",
+  "name": "RCF V-BR ART 912",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF V-BR ART 912",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_art912a_vbr.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_art912a_vbr",
+    "name": "RCF V-BR ART 912",
+    "description": "RCF V-BR ART 912",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_art912a_vbr.jpg",
+    "product_url": "https://www.halilit.com/items/6615621-rcf-v-br-art-912-vertical-bracket",
+    "is_sold": true,
+    "price": 272.0,
+    "halilit_url": "https://www.halilit.com/items/6615621-rcf-v-br-art-912-vertical-bracket",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.513928Z"
+  }
+}

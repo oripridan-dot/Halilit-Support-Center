@@ -1,0 +1,39 @@
+{
+  "id": "headliner_la_equipment_stands__95_hl_tabletholder",
+  "name": "Headliner Paramount Tablet Holder",
+  "brand": "headliner-la-equipment-stands-",
+  "category": "drums",
+  "description": "Headliner Paramount Tablet Holder",
+  "media": {
+    "thumbnail": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "headliner_la_equipment_stands__95_hl_tabletholder",
+    "name": "Headliner Paramount Tablet Holder",
+    "description": "Headliner Paramount Tablet Holder",
+    "category": "general",
+    "image_url": "/data/thumbnails/headliner_la_equipment_stands__95_hl_tabletholder.jpg",
+    "product_url": "https://www.halilit.com/items/5722175-headliner-paramount-tablet-holder",
+    "is_sold": true,
+    "price": 238.0,
+    "halilit_url": "https://www.halilit.com/items/5722175-headliner-paramount-tablet-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.613930Z"
+  }
+}

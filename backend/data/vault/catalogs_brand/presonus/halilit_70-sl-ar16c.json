@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-sl-ar16c",
+  "name": "PreSonus StudioLive AR16c",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus StudioLive AR16c",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2680904-presonus-studiolive-ar16c",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_sl_ar16c",
+    "name": "PreSonus StudioLive AR16c",
+    "description": "PreSonus StudioLive AR16c",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_sl_ar16c.jpg",
+    "product_url": "https://www.halilit.com/items/2680904-presonus-studiolive-ar16c",
+    "is_sold": true,
+    "price": 3371.0,
+    "halilit_url": "https://www.halilit.com/items/2680904-presonus-studiolive-ar16c",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.062447Z"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "halilit_87-sd1b50a",
+  "name": "Unknown",
+  "brand": "boss",
+  "category": "general",
+  "description": "",
+  "media": {
+    "thumbnail": "/assets/placeholder_gear.png",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6555459-boss-sd-1-b50a-50th-anniversary",
+    "status": "scratch"
+  },
+  "official_knowledge": {},
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.206988Z"
+  }
+}

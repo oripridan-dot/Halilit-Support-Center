@@ -1,0 +1,39 @@
+{
+  "id": "magma_95_ctrl_btq_key",
+  "name": "Magma CTRL Case Boutique Key",
+  "brand": "magma",
+  "category": "keys",
+  "description": "Magma CTRL Case Boutique Key",
+  "media": {
+    "thumbnail": "/data/thumbnails/magma_95_ctrl_btq_key.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "magma_95_ctrl_btq_key",
+    "name": "Magma CTRL Case Boutique Key",
+    "description": "Magma CTRL Case Boutique Key",
+    "category": "general",
+    "image_url": "/data/thumbnails/magma_95_ctrl_btq_key.jpg",
+    "product_url": "https://www.halilit.com/items/2002498-magma-ctrl-case-boutique-key",
+    "is_sold": true,
+    "price": 150.0,
+    "halilit_url": "https://www.halilit.com/items/2002498-magma-ctrl-case-boutique-key",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.079709Z"
+  }
+}

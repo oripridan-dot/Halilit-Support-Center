@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-e7xt",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E7 XT",
+  "brand": "presonus",
+  "category": "general",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E7 XT",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_e7xt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2972751-presonus-eris-e7-xt-studio-monitor",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_e7xt",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E7 XT",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 PreSonus Eris E7 XT",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_e7xt.jpg",
+    "product_url": "https://www.halilit.com/items/2972751-presonus-eris-e7-xt-studio-monitor",
+    "is_sold": true,
+    "price": 813.0,
+    "halilit_url": "https://www.halilit.com/items/2972751-presonus-eris-e7-xt-studio-monitor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.056857Z"
+  }
+}

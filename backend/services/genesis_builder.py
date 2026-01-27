@@ -85,6 +85,9 @@ class GenesisBuilder:
             try:
                 with open(global_path, 'r') as f:
                     global_data = json.load(f)
+                    # Normalize: if it's a wrapper dict, extract the products list
+                    if isinstance(global_data, dict) and 'products' in global_data:
+                        global_data = global_data['products']
             except Exception as e:
                 print(f"   ⚠️ Bad Global Blueprint: {e}")
 
@@ -93,6 +96,9 @@ class GenesisBuilder:
             try:
                  with open(commercial_path, 'r') as f:
                     commercial_data = json.load(f)
+                    # Normalize: if it's a wrapper dict, extract the products list
+                    if isinstance(commercial_data, dict) and 'products' in commercial_data:
+                        commercial_data = commercial_data['products']
             except Exception as e:
                 print(f"   ⚠️ Bad Commercial Blueprint: {e}")
 
@@ -118,14 +124,14 @@ class GenesisBuilder:
         
         # 3. Discover Product Relationships (Optional)
         # If we have the relationship engine, analyze all products for connections
-        if ProductRelationshipEngine and len(blueprint) > 5:
-            print("   🔗 Analyzing product relationships...")
-            try:
-                engine = ProductRelationshipEngine()
-                blueprint = list(engine.analyze_all_blueprints(blueprint).values())
-                print("   ✅ Relationship analysis complete")
-            except Exception as e:
-                print(f"   ⚠️ Relationship analysis skipped: {e}")
+        # if ProductRelationshipEngine and len(blueprint) > 5:
+        #     print("   🔗 Analyzing product relationships...")
+        #     try:
+        #         engine = ProductRelationshipEngine()
+        #         blueprint = list(engine.analyze_all_blueprints(blueprint).values())
+        #         print("   ✅ Relationship analysis complete")
+        #     except Exception as e:
+        #         print(f"   ⚠️ Relationship analysis skipped: {e}")
             
         self._update_catalog_index(blueprint)
         print(f"✨ Genesis Complete for {self.brand}: {len(self.products_built)} products.")
@@ -474,24 +480,97 @@ class GenesisBuilder:
         base_dir = GenesisBuilder.BASE_DIR
         vault_dir = os.path.join(base_dir, "data", "vault", "catalogs_brand")
         frontend_data_dir = os.path.abspath(os.path.join(base_dir, "../frontend/public/data"))
-        cat_dir = os.path.join(frontend_data_dir, "categories")
+        # Fix: Output directly to data root to match frontend loader expectation
+        cat_dir = frontend_data_dir 
         
         os.makedirs(cat_dir, exist_ok=True)
         
         # 1. Load Everything
         all_products = []
+        
+        # A. Load from Brand Catalogs (Standard Vault)
         if os.path.exists(vault_dir):
             files = [f for f in os.listdir(vault_dir) if f.endswith('.json')]
             for f_name in files:
                 try:
                     with open(os.path.join(vault_dir, f_name), 'r') as f:
                         data = json.load(f)
-                        if 'products' in data:
+                        if isinstance(data, dict) and 'products' in data:
                             all_products.extend(data['products'])
+                        elif isinstance(data, list):
+                             all_products.extend(data)
                 except: pass
 
-        # 2. Define Tribes
-        tribes = ["keys", "drums", "guitars", "studio", "live", "dj", "accessories", "general"]
+        # B. Load from Commercial Full Scan (The Real Halilit Data)
+        full_scan_path = os.path.join(base_dir, "data", "vault", "commercial_full_scan.json")
+        if os.path.exists(full_scan_path):
+            try:
+                with open(full_scan_path, 'r') as f:
+                    data = json.load(f)
+                    print(f"   🔍 Loaded Commercial Scan: {len(data)} items")
+                    if isinstance(data, list):
+                        all_products.extend(data)
+                    elif isinstance(data, dict) and 'products' in data:
+                        all_products.extend(data['products'])
+            except Exception as e:
+                print(f"   ⚠️ Failed to load commercial full scan: {e}")
+
+        # DEDUPLICATION LOGIC
+        # Merge products by ID, preferring the one with a price / from commercial scan
+        unique_map = {}
+        for p in all_products:
+            pid = p.get('id')
+            if not pid: continue
+            
+            if pid not in unique_map:
+                unique_map[pid] = p
+            else:
+                existing = unique_map[pid]
+                
+                # Helper to extract price from various structures
+                def _get_p(x):
+                    p = x.get('price')
+                    if p: return float(p)
+                    pricing = x.get('pricing', {})
+                    return float(pricing.get('price') or pricing.get('regular_price') or 0)
+
+                old_p = _get_p(existing)
+                new_p = _get_p(p)
+                
+                # Prefer the new one if existing has no price and new one does
+                
+                # Also prefer commercial scan source if possible (usually loaded last in 'all_products' so it naturally overrides if we just used dict override, 
+                # but 'all_products' is a list and we are iterating.
+                # Since we iterate sequentially, later items (Commercial Scan) encounter 'existing'.
+                # So if we want Commercial Scan to win, we should update.
+                if new_p > 0 or (new_p >= old_p):
+                     # Merge Meta from Existing (Vault) into New (Scan)
+                     # because Scan often lacks Brand/Description/Specs
+                     merged = p.copy()
+                     
+                     # 1. Restore Brand
+                     if merged.get('brand') in [None, 'UNKNOWN'] and existing.get('brand') not in [None, 'UNKNOWN']:
+                         merged['brand'] = existing['brand']
+                         
+                     # 2. Restore Specs if missing in new
+                     if not merged.get('specs_preview') and existing.get('specs_preview'):
+                         merged['specs_preview'] = existing['specs_preview']
+                         
+                     unique_map[pid] = merged
+        
+        all_products = list(unique_map.values())
+        print(f"   🔍 Consolidated to {len(all_products)} unique products after deduplication")
+
+        # 2. Define Tribes (Updated to match SpectrumModule IDs)
+        tribes = [
+            "guitars-bass", 
+            "drums-percussion", 
+            "keys-production", 
+            "studio-recording", 
+            "live-dj", 
+            "accessories", 
+            "general"
+        ]
         buckets = {t: [] for t in tribes}
         
         # 3. Search Index Accumulator

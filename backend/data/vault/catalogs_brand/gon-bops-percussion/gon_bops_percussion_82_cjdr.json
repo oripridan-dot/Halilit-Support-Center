@@ -1,0 +1,39 @@
+{
+  "id": "gon_bops_percussion_82_cjdr",
+  "name": "Gon Bops Daniel De Los Reyes Cajon",
+  "brand": "gon-bops-percussion",
+  "category": "drums",
+  "description": "Gon Bops Daniel De Los Reyes Cajon",
+  "media": {
+    "thumbnail": "/data/thumbnails/gon_bops_percussion_82_cjdr.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "gon_bops_percussion_82_cjdr",
+    "name": "Gon Bops Daniel De Los Reyes Cajon",
+    "description": "Gon Bops Daniel De Los Reyes Cajon",
+    "category": "general",
+    "image_url": "/data/thumbnails/gon_bops_percussion_82_cjdr.jpg",
+    "product_url": "https://www.halilit.com/items/1239673-gon-bops-daniel-de-los-reyes-cajon",
+    "is_sold": true,
+    "price": 1170.0,
+    "halilit_url": "https://www.halilit.com/items/1239673-gon-bops-daniel-de-los-reyes-cajon",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.101535Z"
+  }
+}

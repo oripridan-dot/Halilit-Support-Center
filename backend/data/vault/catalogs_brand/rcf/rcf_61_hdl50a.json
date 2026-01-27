@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_hdl50a",
+  "name": "RCF HDL 50-A",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF HDL 50-A",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_hdl50a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_hdl50a",
+    "name": "RCF HDL 50-A",
+    "description": "RCF HDL 50-A",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_hdl50a.jpg",
+    "product_url": "https://www.halilit.com/items/1454306-rcf-hdl-50-a-line-array-module",
+    "is_sold": true,
+    "price": 24709.0,
+    "halilit_url": "https://www.halilit.com/items/1454306-rcf-hdl-50-a-line-array-module",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.525702Z"
+  }
+}

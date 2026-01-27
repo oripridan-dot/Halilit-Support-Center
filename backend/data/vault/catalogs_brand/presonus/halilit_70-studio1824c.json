@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-studio1824c",
+  "name": "PreSonus Studio 1824C",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus Studio 1824C",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_studio1824c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2327692-presonus-studio-1824c-audio-interface",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_studio1824c",
+    "name": "PreSonus Studio 1824C",
+    "description": "PreSonus Studio 1824C",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_studio1824c.jpg",
+    "product_url": "https://www.halilit.com/items/2327692-presonus-studio-1824c-audio-interface",
+    "is_sold": true,
+    "price": 2402.0,
+    "halilit_url": "https://www.halilit.com/items/2327692-presonus-studio-1824c-audio-interface",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.057424Z"
+  }
+}

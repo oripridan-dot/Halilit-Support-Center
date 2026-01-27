@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-gpm-lion",
+  "name": "Universal Audio UAFX Lion '68 Super Lead Amp",
+  "brand": "universal-audio",
+  "category": "guitars",
+  "description": "Universal Audio UAFX Lion '68 Super Lead Amp",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6310432-universal-audio-uafx-lion-68-super-lead-amp",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_gpm_lion",
+    "name": "Universal Audio UAFX Lion '68 Super Lead Amp",
+    "description": "Universal Audio UAFX Lion '68 Super Lead Amp",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_gpm_lion.jpg",
+    "product_url": "https://www.halilit.com/items/6310432-universal-audio-uafx-lion-68-super-lead-amp",
+    "is_sold": true,
+    "price": 1531.0,
+    "halilit_url": "https://www.halilit.com/items/6310432-universal-audio-uafx-lion-68-super-lead-amp",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.581774Z"
+  }
+}

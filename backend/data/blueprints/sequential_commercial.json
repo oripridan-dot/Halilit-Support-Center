@@ -1,0 +1,310 @@
+{
+  "brand_slug": "sequential",
+  "source": "halilit_commercial_scan",
+  "products": [
+    {
+      "id": "halilit_sq-take5module",
+      "name": "מודול סינתיסייזר שולחני Sequential Take 5",
+      "url": "https://www.halilit.com/items/8621783-sequential-take-5-desktop-compact-poly-synth-module",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19129838/original/6407589366e75f80161c843e84f0b54a.jpg",
+      "halilit_id": "SQ-TAKE5MODULE",
+      "sku": "SQ-TAKE5MODULE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מודול סינתיסייזר שולחני Sequential Take 5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-trigon6keys",
+      "name": "סינתיסייזר Sequential Trigon-6",
+      "url": "https://www.halilit.com/items/6301037-sequential-trigon-6-polyphonic-synthesizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13181255/original/5396e95e1169f20a50d31a4b96b06ed2.jpg",
+      "halilit_id": "SQ-TRIGON6KEYS",
+      "sku": "SQ-TRIGON6KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Trigon-6",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-fourm",
+      "name": "סינתיסייזר אנלוגי Sequential Fourm",
+      "url": "https://www.halilit.com/items/8602430-sequential-fourm-4-voice-analog-poly-synth",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19013237/original/374c1b902d2e9672f404fa12df016fba.jpg",
+      "halilit_id": "SQ-FOURM",
+      "sku": "SQ-FOURM",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר אנלוגי Sequential Fourm",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-ob6module",
+      "name": "סינתיסייזר Sequential OB-6 Desktop",
+      "url": "https://www.halilit.com/items/6350584-sequential-ob-6-desktop-6-voice-polyphonic-analog-synthesizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942727/original/dc98799f9545e66156b566e084885fef.jpg",
+      "halilit_id": "SQ-OB6MODULE",
+      "sku": "SQ-OB6MODULE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential OB-6 Desktop",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-prophet10-se",
+      "name": "סינתיסייזר Sequential Prophet-10 Special Edition",
+      "url": "https://www.halilit.com/items/8233546-sequential-prophet-10-special-edition",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17216933/original/87df161a1ea5bb1f7d7aeaf8f6d081d4.jpg",
+      "halilit_id": "SQ-PROPHET10-SE",
+      "sku": "SQ-PROPHET10-SE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-10 Special Edition",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-take5keys",
+      "name": "סינתיסייזר Sequential Take 5",
+      "url": "https://www.halilit.com/items/6304060-sequential-take-5-compact-poly-synth",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188102/original/73e1e1a405fea7815b560ee984e89e6d.jpg",
+      "halilit_id": "SQ-TAKE5KEYS",
+      "sku": "SQ-TAKE5KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Take 5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-pro3se",
+      "name": "סינתיסייזר Sequential Pro 3 SE",
+      "url": "https://www.halilit.com/items/6304203-sequential-pro-3-se",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188324/original/83b4b12ea08c5ea007855cdeca9227be.jpg",
+      "halilit_id": "SQ-PRO3SE",
+      "sku": "SQ-PRO3SE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Pro 3 SE",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-pro3",
+      "name": "סינתיסייזר Sequential Pro 3",
+      "url": "https://www.halilit.com/items/6304393-sequential-pro-3",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190118/original/399eb4ef82df3878288ee45e15dd5372.jpg",
+      "halilit_id": "SQ-PRO3",
+      "sku": "SQ-PRO3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Pro 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-proph10keys",
+      "name": "סינתיסייזר Sequential Prophet-10",
+      "url": "https://www.halilit.com/items/6304892-sequential-prophet-10-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190318/original/fa6c58e64f67566ba8583e3dd4436856.jpg",
+      "halilit_id": "SQ-PROPH10KEYS",
+      "sku": "SQ-PROPH10KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-10",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-proph5keys",
+      "name": "סינתיסייזר Sequential Prophet-5",
+      "url": "https://www.halilit.com/items/6305024-sequential-prophet-5-legendary-5-voice-analog-poly-synth",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190600/original/bd0702045336b46ce8d4f9434a07830b.jpg",
+      "halilit_id": "SQ-PROPH5KEYS",
+      "sku": "SQ-PROPH5KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-pr2voice16keys",
+      "name": "סינתיסייזר Sequential Prophet Rev2 16-Voice Keyboard",
+      "url": "https://www.halilit.com/items/6320521-sequential-prophet-rev2-16-voice-polyphonic-analog-synthesizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225788/original/6f0fbd321baba76ee4e7577fc5c259a7.jpg",
+      "halilit_id": "SQ-PR2VOICE16KEYS",
+      "sku": "SQ-PR2VOICE16KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet Rev2 16-Voice Keyboard",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-pr2voice8keys",
+      "name": "סינתיסייזר Sequential Prophet Rev2 8-Voice Keyboard",
+      "url": "https://www.halilit.com/items/6320598-sequential-prophet-rev2-8-voice-polyphonic-analog-synthesizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225905/original/65220d7642e3ae66668b090855580156.jpg",
+      "halilit_id": "SQ-PR2VOICE8KEYS",
+      "sku": "SQ-PR2VOICE8KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet Rev2 8-Voice Keyboard",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-pr2voice16mod",
+      "name": "סינתיסייזר Sequential Prophet Rev2 Desktop 16-Voice",
+      "url": "https://www.halilit.com/items/6320751-sequential-prophet-rev2-desktop-16-voice-polyphonic-analog-module",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13226576/original/b1d0226f33e31ce8d41f0a6d5f778127.jpg",
+      "halilit_id": "SQ-PR2VOICE16MOD",
+      "sku": "SQ-PR2VOICE16MOD",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet Rev2 Desktop 16-Voice",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-pr2voice8mod",
+      "name": "סינתיסייזר Sequential Prophet Rev2 Desktop 8-Voice",
+      "url": "https://www.halilit.com/items/6321052-sequential-prophet-rev2-desktop-8-voice-polyphonic-analog-module",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13227041/original/09ce84bcf2beef7113015f923d64a771.jpg",
+      "halilit_id": "SQ-PR2VOICE8MOD",
+      "sku": "SQ-PR2VOICE8MOD",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet Rev2 Desktop 8-Voice",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-proph10module",
+      "name": "סינתיסייזר Sequential Prophet-10 Desktop Module",
+      "url": "https://www.halilit.com/items/6348410-sequential-prophet-10-desktop-module",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323758/original/05746f2baa705d48c9ab5758b9cb374d.jpg",
+      "halilit_id": "SQ-PROPH10MODULE",
+      "sku": "SQ-PROPH10MODULE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-10 Desktop Module",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-proph6keys",
+      "name": "סינתיסייזר Sequential Prophet-6",
+      "url": "https://www.halilit.com/items/6348963-sequential-prophet-6-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325485/original/f84c482bcc3a6dd2eb942bf85bab612a.jpg",
+      "halilit_id": "SQ-PROPH6KEYS",
+      "sku": "SQ-PROPH6KEYS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-6",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-proph6module",
+      "name": "סינתיסייזר Sequential Prophet-6 Desktop",
+      "url": "https://www.halilit.com/items/6349147-sequential-prophet-6-desktop-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325993/original/bb571518b45e3ea20b6379f05f52ae2a.jpg",
+      "halilit_id": "SQ-PROPH6MODULE",
+      "sku": "SQ-PROPH6MODULE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-6 Desktop",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-proph5module",
+      "name": "סינתיסייזר Sequential Prophet-5 Desktop Module",
+      "url": "https://www.halilit.com/items/6349287-sequential-prophet-5-desktop-module",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942724/original/76ede51b83858c76de060a1fc1a5cd72.jpg",
+      "halilit_id": "SQ-PROPH5MODULE",
+      "sku": "SQ-PROPH5MODULE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Prophet-5 Desktop Module",
+      "category": "general"
+    },
+    {
+      "id": "halilit_sq-trigon6module",
+      "name": "סינתיסייזר Sequential Trigon-6 Desktop Module",
+      "url": "https://www.halilit.com/items/6348512-sequential-trigon-6-desktop-module",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323993/original/a7e6a3ab7e5b86d6d2f4a37162ec8fa4.jpg",
+      "halilit_id": "SQ-TRIGON6MODULE",
+      "sku": "SQ-TRIGON6MODULE",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "סינתיסייזר Sequential Trigon-6 Desktop Module",
+      "category": "general"
+    }
+  ]
+}

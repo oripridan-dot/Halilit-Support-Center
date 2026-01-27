@@ -1,0 +1,39 @@
+{
+  "id": "halilit_80-eqpwa",
+  "name": "Warm Audio EQP-WA",
+  "brand": "warm-audio",
+  "category": "studio",
+  "description": "Warm Audio EQP-WA",
+  "media": {
+    "thumbnail": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "warm_audio_80_eqpwa",
+    "name": "Warm Audio EQP-WA",
+    "description": "Warm Audio EQP-WA",
+    "category": "general",
+    "image_url": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
+    "product_url": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
+    "is_sold": true,
+    "price": 3532.0,
+    "halilit_url": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.461845Z"
+  }
+}

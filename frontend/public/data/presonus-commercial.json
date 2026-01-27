@@ -1,0 +1,20 @@
+{
+  "brand_slug": "presonus-commercial",
+  "source": "halilit_commercial_scan",
+  "products": [],
+  "brand_name": "Presonus Commercial",
+  "refined_at": "2026-01-27T08:20:47.199674+00:00",
+  "brand_identity": {
+    "id": "presonus-commercial",
+    "name": "Presonus Commercial",
+    "brand_colors": {},
+    "logo_url": "/assets/logos/presonus-commercial_logo.png",
+    "taxonomy_stats": {
+      "validated": 46,
+      "normalized": 0,
+      "uncategorized": 0
+    },
+    "total_products": 0
+  },
+  "hierarchy": {}
+}

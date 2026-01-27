@@ -1,0 +1,39 @@
+{
+  "id": "magma_95_riotlp50_br",
+  "name": "Magma Riot LP Bag 50",
+  "brand": "magma",
+  "category": "general",
+  "description": "Magma Riot LP Bag 50",
+  "media": {
+    "thumbnail": "/data/thumbnails/magma_95_riotlp50_br.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "magma_95_riotlp50_br",
+    "name": "Magma Riot LP Bag 50",
+    "description": "Magma Riot LP Bag 50",
+    "category": "general",
+    "image_url": "/data/thumbnails/magma_95_riotlp50_br.jpg",
+    "product_url": "https://www.halilit.com/items/4741377-magma-riot-lp-bag-50",
+    "is_sold": true,
+    "price": 558.0,
+    "halilit_url": "https://www.halilit.com/items/4741377-magma-riot-lp-bag-50",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.077459Z"
+  }
+}

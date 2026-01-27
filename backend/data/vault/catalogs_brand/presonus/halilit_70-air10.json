@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-air10",
+  "name": "PreSonus AIR10",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus AIR10",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_air10.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2419321-presonus-air10",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_air10",
+    "name": "PreSonus AIR10",
+    "description": "PreSonus AIR10",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_air10.jpg",
+    "product_url": "https://www.halilit.com/items/2419321-presonus-air10",
+    "is_sold": true,
+    "price": 2024.0,
+    "halilit_url": "https://www.halilit.com/items/2419321-presonus-air10",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.064466Z"
+  }
+}

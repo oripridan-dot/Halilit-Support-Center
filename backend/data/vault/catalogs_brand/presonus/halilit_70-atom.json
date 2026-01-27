@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-atom",
+  "name": "PreSonus ATOM",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus ATOM",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_atom.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2127752-presonus-atom",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_atom",
+    "name": "PreSonus ATOM",
+    "description": "PreSonus ATOM",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_atom.jpg",
+    "product_url": "https://www.halilit.com/items/2127752-presonus-atom",
+    "is_sold": true,
+    "price": 766.0,
+    "halilit_url": "https://www.halilit.com/items/2127752-presonus-atom",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.053927Z"
+  }
+}

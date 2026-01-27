@@ -1,0 +1,39 @@
+{
+  "id": "halilit_44-sp1",
+  "name": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Universal Audio SP-1",
+  "brand": "universal-audio",
+  "category": "studio",
+  "description": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Universal Audio SP-1",
+  "media": {
+    "thumbnail": "/data/thumbnails/universal_audio_44_sp1.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5734576-universal-audio-sp-1-standard-pencil-microphones",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "universal_audio_44_sp1",
+    "name": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Universal Audio SP-1",
+    "description": "\u05d6\u05d5\u05d2 \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05e0\u05d9\u05dd \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Universal Audio SP-1",
+    "category": "general",
+    "image_url": "/data/thumbnails/universal_audio_44_sp1.jpg",
+    "product_url": "https://www.halilit.com/items/5734576-universal-audio-sp-1-standard-pencil-microphones",
+    "is_sold": true,
+    "price": 1531.0,
+    "halilit_url": "https://www.halilit.com/items/5734576-universal-audio-sp-1-standard-pencil-microphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.598120Z"
+  }
+}

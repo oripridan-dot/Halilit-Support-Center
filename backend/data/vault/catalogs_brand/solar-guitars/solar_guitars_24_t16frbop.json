@@ -1,0 +1,39 @@
+{
+  "id": "solar_guitars_24_t16frbop",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar T1.6FRBOP",
+  "brand": "solar-guitars",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar T1.6FRBOP",
+  "media": {
+    "thumbnail": "/data/thumbnails/solar_guitars_24_t16frbop.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "solar_guitars_24_t16frbop",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar T1.6FRBOP",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Solar T1.6FRBOP",
+    "category": "general",
+    "image_url": "/data/thumbnails/solar_guitars_24_t16frbop.jpg",
+    "product_url": "https://www.halilit.com/items/5652195-solar-t1-6frbop-",
+    "is_sold": true,
+    "price": 5015.0,
+    "halilit_url": "https://www.halilit.com/items/5652195-solar-t1-6frbop-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.635595Z"
+  }
+}

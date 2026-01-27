@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-thump118s",
+  "name": "Mackie Thump118S",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie Thump118S",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_thump118s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/5242297-mackie-thump118s-powered-subwoofer",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_thump118s",
+    "name": "Mackie Thump118S",
+    "description": "Mackie Thump118S",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_thump118s.jpg",
+    "product_url": "https://www.halilit.com/items/5242297-mackie-thump118s-powered-subwoofer",
+    "is_sold": true,
+    "price": 3634.0,
+    "halilit_url": "https://www.halilit.com/items/5242297-mackie-thump118s-powered-subwoofer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.697574Z"
+  }
+}

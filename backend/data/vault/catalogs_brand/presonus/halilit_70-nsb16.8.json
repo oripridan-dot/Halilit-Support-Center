@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-nsb16.8",
+  "name": "PreSonus NSB 16.8",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus NSB 16.8",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/2291717-presonus-nsb-16-8",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_nsb16_8",
+    "name": "PreSonus NSB 16.8",
+    "description": "PreSonus NSB 16.8",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_nsb16_8.jpg",
+    "product_url": "https://www.halilit.com/items/2291717-presonus-nsb-16-8",
+    "is_sold": true,
+    "price": 4092.0,
+    "halilit_url": "https://www.halilit.com/items/2291717-presonus-nsb-16-8",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.065281Z"
+  }
+}

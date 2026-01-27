@@ -3,5 +3,406 @@
     "id": "heritage-audio",
     "name": "HERITAGE-AUDIO"
   },
-  "products": []
+  "products": [
+    {
+      "id": "heritage_audio_27_ha73jrii",
+      "name": "Heritage Audio 73 JR II",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha73jrii.jpg",
+      "description": "Heritage Audio 73 JR II",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha73x2elite",
+      "name": "Heritage Audio HA-73X2 Elite",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha73x2elite.jpg",
+      "description": "Heritage Audio HA-73X2 Elite",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha73eqx2elite",
+      "name": "Heritage Audio HA-73 EQX2 Elite",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha73eqx2elite.jpg",
+      "description": "Heritage Audio HA-73 EQX2 Elite",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha73elite",
+      "name": "Heritage Audio HA-73 Elite",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha73elite.jpg",
+      "description": "Heritage Audio HA-73 Elite",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_hadtt73",
+      "name": "Heritage Audio DTT-73",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_hadtt73.jpg",
+      "description": "Heritage Audio DTT-73",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha81aelite",
+      "name": "Heritage Audio HA-81A EQ Elite",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha81aelite.jpg",
+      "description": "Heritage Audio HA-81A EQ Elite",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha73eqjr",
+      "name": "Heritage Audio 73EQ JR",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha73eqjr.jpg",
+      "description": "Heritage Audio 73EQ JR",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_hasuccessor",
+      "name": "Heritage Audio Successor",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_hasuccessor.jpg",
+      "description": "Heritage Audio Successor",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_grandchild670",
+      "name": "Heritage Audio Grandchild 670",
+      "brand": "heritage-audio",
+      "category": "keys",
+      "image_url": "/data/thumbnails/heritage_audio_27_grandchild670.jpg",
+      "description": "Heritage Audio Grandchild 670",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha_p_lane436",
+      "name": "Heritage Audio P.LANE Type 436",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha_p_lane436.jpg",
+      "description": "Heritage Audio P.LANE Type 436",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_hasuper8",
+      "name": "Heritage Audio Super 8",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_hasuper8.jpg",
+      "description": "Heritage Audio Super 8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_i73proone",
+      "name": "Heritage Audio i73 PRO ONE",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_i73proone.jpg",
+      "description": "Heritage Audio i73 PRO ONE",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_hatt73",
+      "name": "Heritage Audio TT-73",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_hatt73.jpg",
+      "description": "Heritage Audio TT-73",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha609aelite",
+      "name": "Heritage Audio HA-609A",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha609aelite.jpg",
+      "description": "Heritage Audio HA-609A",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_ha73eqelite",
+      "name": "Heritage Audio HA-73 EQ Elite",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_ha73eqelite.jpg",
+      "description": "Heritage Audio HA-73 EQ Elite",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_habritstrip",
+      "name": "Heritage Audio BritStrip",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_habritstrip.jpg",
+      "description": "Heritage Audio BritStrip",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_i73pro2",
+      "name": "Heritage Audio i73 PRO 2",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_i73pro2.jpg",
+      "description": "Heritage Audio i73 PRO 2",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_hababyram",
+      "name": "Heritage Audio Baby RAM",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_hababyram.jpg",
+      "description": "Heritage Audio Baby RAM",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_i73proedge",
+      "name": "Heritage Audio i73 PRO EDGE",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_i73proedge.jpg",
+      "description": "Heritage Audio i73 PRO EDGE",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_haram2000",
+      "name": "Heritage Audio RAM System 2000",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_haram2000.jpg",
+      "description": "Heritage Audio RAM System 2000",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_haram1000",
+      "name": "Heritage Audio R.A.M 1000",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_haram1000.jpg",
+      "description": "Heritage Audio R.A.M 1000",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_73dione",
+      "name": "Heritage Audio 73 Active DI Box",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_73dione.jpg",
+      "description": "Heritage Audio 73 Active DI Box",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_73pditwo",
+      "name": "Heritage Audio 73 P DI2 - DI Box",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_73pditwo.jpg",
+      "description": "Heritage Audio 73 P DI2 - DI Box",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_73ditwo",
+      "name": "Heritage Audio 73 DI 2 - Active DI Box",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
+      "description": "Heritage Audio 73 DI 2 - Active DI Box",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "heritage_audio_27_73pdione",
+      "name": "Heritage Audio 73 P DI One - DI Box",
+      "brand": "heritage-audio",
+      "category": "studio",
+      "image_url": "/data/thumbnails/heritage_audio_27_73pdione.jpg",
+      "description": "Heritage Audio 73 P DI One - DI Box",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

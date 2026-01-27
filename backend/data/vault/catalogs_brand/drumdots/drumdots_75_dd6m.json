@@ -1,0 +1,39 @@
+{
+  "id": "drumdots_75_dd6m",
+  "name": "Drumdots DD6M",
+  "brand": "drumdots",
+  "category": "drums",
+  "description": "Drumdots DD6M",
+  "media": {
+    "thumbnail": "/data/thumbnails/drumdots_75_dd6m.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "drumdots_75_dd6m",
+    "name": "Drumdots DD6M",
+    "description": "Drumdots DD6M",
+    "category": "general",
+    "image_url": "/data/thumbnails/drumdots_75_dd6m.jpg",
+    "product_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+    "is_sold": true,
+    "price": 50.0,
+    "halilit_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.075209Z"
+  }
+}

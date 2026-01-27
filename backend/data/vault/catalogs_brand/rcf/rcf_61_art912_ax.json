@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_art912_ax",
+  "name": "RCF ART 912-AX",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF ART 912-AX",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_art912_ax.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_art912_ax",
+    "name": "RCF ART 912-AX",
+    "description": "RCF ART 912-AX",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_art912_ax.jpg",
+    "product_url": "https://www.halilit.com/items/5497450-rcf-art-912-ax-",
+    "is_sold": true,
+    "price": 3846.0,
+    "halilit_url": "https://www.halilit.com/items/5497450-rcf-art-912-ax-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.479957Z"
+  }
+}

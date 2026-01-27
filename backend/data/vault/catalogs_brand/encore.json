@@ -3,5 +3,166 @@
     "id": "encore",
     "name": "ENCORE"
   },
-  "products": []
+  "products": [
+    {
+      "id": "encore_20_e2sb",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2SB",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_e2sb.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2SB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_lh_ew100n",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e9\u05de\u05d0\u05dc\u05d9\u05ea Encore EW100N LH",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_lh_ew100n.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e9\u05de\u05d0\u05dc\u05d9\u05ea Encore EW100N LH",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_ewp100n",
+      "name": "\u05e2\u05e8\u05db\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EWP100N",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_ewp100n.jpg",
+      "description": "\u05e2\u05e8\u05db\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EWP100N",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_ewp100sb",
+      "name": "\u05e2\u05e8\u05db\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EWP100SB",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_ewp100sb.jpg",
+      "description": "\u05e2\u05e8\u05db\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EWP100SB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_ewp100bk",
+      "name": "\u05e2\u05e8\u05db\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EWP100BK",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_ewp100bk.jpg",
+      "description": "\u05e2\u05e8\u05db\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EWP100BK",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_e2blk",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2BLK",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_e2blk.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2BLK",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_e6vw",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E6 Vintage White",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_e6vw.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E6 Vintage White",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_ew100sb",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EW100SB",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_ew100sb.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EW100SB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_ew100bk",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EW100BK",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_ew100bk.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EW100BK",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "encore_20_ew100n",
+      "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EW100N",
+      "brand": "encore",
+      "category": "general",
+      "image_url": "/data/thumbnails/encore_20_ew100n.jpg",
+      "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Encore EW100N",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

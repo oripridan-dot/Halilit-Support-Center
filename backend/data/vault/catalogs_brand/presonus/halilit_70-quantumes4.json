@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-quantumes4",
+  "name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+  "brand": "presonus",
+  "category": "studio",
+  "description": "PreSonus Quantum ES 4 USB-C Audio Interface",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_quantumes4.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/6864687-presonus-quantum-es-4-usb-c-audio-interface",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_quantumes4",
+    "name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+    "description": "PreSonus Quantum ES 4 USB-C Audio Interface",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_quantumes4.jpg",
+    "product_url": "https://www.halilit.com/items/6864687-presonus-quantum-es-4-usb-c-audio-interface",
+    "is_sold": true,
+    "price": 1557.0,
+    "halilit_url": "https://www.halilit.com/items/6864687-presonus-quantum-es-4-usb-c-audio-interface",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.051268Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "halilit_60-cover-thsubgo",
+  "name": "Mackie ThumpSub GO Cover",
+  "brand": "mackie",
+  "category": "accessories",
+  "description": "Mackie ThumpSub GO Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_cover_thsubgo.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/8780882-mackie-thumpsub-go-cover",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_cover_thsubgo",
+    "name": "Mackie ThumpSub GO Cover",
+    "description": "Mackie ThumpSub GO Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_cover_thsubgo.jpg",
+    "product_url": "https://www.halilit.com/items/8780882-mackie-thumpsub-go-cover",
+    "is_sold": true,
+    "price": 261.0,
+    "halilit_url": "https://www.halilit.com/items/8780882-mackie-thumpsub-go-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:30.692670Z"
+  }
+}

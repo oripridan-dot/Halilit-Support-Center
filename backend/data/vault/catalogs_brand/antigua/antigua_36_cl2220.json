@@ -1,0 +1,39 @@
+{
+  "id": "antigua_36_cl2220",
+  "name": "Antigua Vosi CL2220 Clarinet",
+  "brand": "antigua",
+  "category": "general",
+  "description": "Antigua Vosi CL2220 Clarinet",
+  "media": {
+    "thumbnail": "/data/thumbnails/antigua_36_cl2220.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "antigua_36_cl2220",
+    "name": "Antigua Vosi CL2220 Clarinet",
+    "description": "Antigua Vosi CL2220 Clarinet",
+    "category": "general",
+    "image_url": "/data/thumbnails/antigua_36_cl2220.jpg",
+    "product_url": "https://www.halilit.com/items/458376-antigua-vosi-cl2220-clarinet",
+    "is_sold": true,
+    "price": 1905.0,
+    "halilit_url": "https://www.halilit.com/items/458376-antigua-vosi-cl2220-clarinet",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.607942Z"
+  }
+}

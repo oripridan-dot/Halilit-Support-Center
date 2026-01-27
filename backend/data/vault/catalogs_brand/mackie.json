@@ -3,5 +3,2486 @@
     "id": "mackie",
     "name": "MACKIE"
   },
-  "products": []
+  "products": [
+    {
+      "id": "halilit_60-mring10",
+      "name": "Mackie mRING-10 - 10\" Ring Light",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mring10.jpg",
+      "description": "Mackie mRING-10 - 10\" Ring Light",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MRING10",
+      "halilit_url": "https://www.halilit.com/items/6590726-mackie-mring-10-10-ring-light-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-db100",
+      "name": "Mackie DB-100",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_db100.jpg",
+      "description": "Mackie DB-100",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DB100",
+      "halilit_url": "https://www.halilit.com/items/3365926-mackie-db-100-desktop-microphone-boom-arm",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr8bt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR8BT Gen 3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr8bt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR8BT Gen 3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR8BT",
+      "halilit_url": "https://www.halilit.com/items/7535158-mackie-cr8bt-gen-3-powered-bluetooth-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-chromium",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Mackie Chromium",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_chromium.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Mackie Chromium",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CHROMIUM",
+      "halilit_url": "https://www.halilit.com/items/3365948-mackie-chromium-premium-usb-condenser-mic-2-channel-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-showbox",
+      "name": "Mackie ShowBox Gig Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bag_showbox.jpg",
+      "description": "Mackie ShowBox Gig Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-SHOWBOX",
+      "halilit_url": "https://www.halilit.com/items/7764029-mackie-showbox-gig-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr35bt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3.5BT Gen 3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr35bt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3.5BT Gen 3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR35BT",
+      "halilit_url": "https://www.halilit.com/items/7534910-mackie-cr3-5bt-gen-3-powered-bluetooth-studio",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr8sbt",
+      "name": "\u05e1\u05d0\u05d1 \u05d5\u05d5\u05e4\u05e8 Mackie CR8SBT Gen 3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr8sbt.jpg",
+      "description": "\u05e1\u05d0\u05d1 \u05d5\u05d5\u05e4\u05e8 Mackie CR8SBT Gen 3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR8SBT",
+      "halilit_url": "https://www.halilit.com/items/7535221-mackie-cr8sbt-gen-3-powered-bluetooth-subwoofer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mring6",
+      "name": "Mackie mRING-6 6\" Battery-powered Ring Light",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mring6.jpg",
+      "description": "Mackie mRING-6 6\" Battery-powered Ring Light",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MRING6",
+      "halilit_url": "https://www.halilit.com/items/6592894-mackie-mring-6-6-battery-powered-ring-light",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-db200",
+      "name": "Mackie DB-200",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_db200.jpg",
+      "description": "Mackie DB-200",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DB200",
+      "halilit_url": "https://www.halilit.com/items/7293848-mackie-db-200-premium-desktop-boom-arm",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-b-thrash212/go",
+      "name": "\"Mackie bag for Thrash212 Speaker 12",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_b_thrash212_go.jpg",
+      "description": "\"Mackie bag for Thrash212 Speaker 12",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-B-THRASH212/GO",
+      "halilit_url": "https://www.halilit.com/items/8252080--mackie-bag-for-thrash212-speaker-12",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-carbon",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie Carbon USB Condenser",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_carbon.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie Carbon USB Condenser",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CARBON",
+      "halilit_url": "https://www.halilit.com/items/3365558-mackie-carbon-usb-condenser",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-b-thrash215",
+      "name": "\"Mackie bag for Thrash215 Speaker 15",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_b_thrash215.jpg",
+      "description": "\"Mackie bag for Thrash215 Speaker 15",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-B-THRASH215",
+      "halilit_url": "https://www.halilit.com/items/8252090--mackie-bag-for-thrash215-speaker-15",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr35",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie CR3.5 Gen 3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr35.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie CR3.5 Gen 3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR35",
+      "halilit_url": "https://www.halilit.com/items/7534780-mackie-cr3-5-gen-3-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr45",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4.5 Gen 3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr45.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4.5 Gen 3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR45",
+      "halilit_url": "https://www.halilit.com/items/7535039-mackie-cr4-5-gen-3-powered-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-em93mk",
+      "name": "\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05dc\u05e6\u05d9\u05dc\u05d5\u05dd Mackie EM93MK",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_em93mk.jpg",
+      "description": "\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05dc\u05e6\u05d9\u05dc\u05d5\u05dd Mackie EM93MK",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EM93MK",
+      "halilit_url": "https://www.halilit.com/items/5428428-mackie-em93mk-mobile-recording-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr45bt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4.5BT Gen 3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr45bt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4.5BT Gen 3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR45BT",
+      "halilit_url": "https://www.halilit.com/items/7535094-mackie-cr4-5bt-gen-3-powered-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-em99b",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05dc\u05e9\u05d9\u05d3\u05d5\u05e8 Mackie EM99B",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_em99b.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05dc\u05e9\u05d9\u05d3\u05d5\u05e8 Mackie EM99B",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EM99B",
+      "halilit_url": "https://www.halilit.com/items/5431052-mackie-em99b-dynamic-broadcast-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc150",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-150",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc150.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-150",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC150",
+      "halilit_url": "https://www.halilit.com/items/2266928-mackie-mc-150-professional-closed-back-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc350",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-350",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc350.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-350",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC350",
+      "halilit_url": "https://www.halilit.com/items/2745137-mackie-mc-350-professional-closed-back-studio-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr8sxbt",
+      "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie CR8S-XBT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr8sxbt.jpg",
+      "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie CR8S-XBT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR8SXBT",
+      "halilit_url": "https://www.halilit.com/items/3098368-mackie-cr8s-xbt-subwoofer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr3xltd-wht",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X Limited Edition",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr3xltd_wht.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X Limited Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR3XLTD-WHT",
+      "halilit_url": "https://www.halilit.com/items/3746319-mackie-cr3-x-ltd-arctic-white",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-em89d",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05dc\u05e9\u05d9\u05e8\u05d4 Mackie EM-89D",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_em89d.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d3\u05d9\u05e0\u05de\u05d9 \u05dc\u05e9\u05d9\u05e8\u05d4 Mackie EM-89D",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EM89D",
+      "halilit_url": "https://www.halilit.com/items/2746131-mackie-em-89d-dynamic-vocal-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mr524",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR524",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mr524.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR524",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MR524",
+      "halilit_url": "https://www.halilit.com/items/1464882-mackie-mr524-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bigknobstudio",
+      "name": "Mackie Big Knob Studio",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bigknobstudio.jpg",
+      "description": "Mackie Big Knob Studio",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BIGKNOBSTUDIO",
+      "halilit_url": "https://www.halilit.com/items/1228097-mackie-big-knob-studio",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mr624",
+      "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR624",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mr624.jpg",
+      "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR624",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MR624",
+      "halilit_url": "https://www.halilit.com/items/1464900-mackie-mr624-studio-monitor",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr3x",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr3x.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR3X",
+      "halilit_url": "https://www.halilit.com/items/2908502-mackie-cr3x-studio-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc60bt",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-60BT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc60bt.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-60BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC60BT",
+      "halilit_url": "https://www.halilit.com/items/5403478-mackie-mc-60bt-wireless-noise-cancelling-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-elementwave-xlr",
+      "name": "\u05de\u05e2\u05e8\u05db\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea \u05dc\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df Mackie EM Wave XLR",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_elementwave_xlr.jpg",
+      "description": "\u05de\u05e2\u05e8\u05db\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea \u05dc\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df Mackie EM Wave XLR",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ELEMENTWAVE-XLR",
+      "halilit_url": "https://www.halilit.com/items/4930402-mackie-em-wave-xlr-wireless-microphone-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-emusb",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Mackie EM USB",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_emusb.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 Mackie EM USB",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EMUSB",
+      "halilit_url": "https://www.halilit.com/items/2814570-mackie-em-usb-cardioid-usb-condenser-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc100",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea Mackie MC-100",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc100.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea Mackie MC-100",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC100",
+      "halilit_url": "https://www.halilit.com/items/3365521-mackie-mc100-studio-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-elementwave-lav",
+      "name": "\u05de\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea Mackie EM Wave LAV",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_elementwave_lav.jpg",
+      "description": "\u05de\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea Mackie EM Wave LAV",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ELEMENTWAVE-LAV",
+      "halilit_url": "https://www.halilit.com/items/4924317-mackie-em-wave-lav-wireless-clip-on-microphone-system",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc50bt",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-50BT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc50bt.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-50BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC50BT",
+      "halilit_url": "https://www.halilit.com/items/5398429-mackie-mc-50bt-wireless-noise-cancelling-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-producebundle",
+      "name": "Mackie Producer Bundle",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_producebundle.jpg",
+      "description": "Mackie Producer Bundle",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PRODUCEBUNDLE",
+      "halilit_url": "https://www.halilit.com/items/3121824-mackie-producer-bundle",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr4xbt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4-XBT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr4xbt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4-XBT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR4XBT",
+      "halilit_url": "https://www.halilit.com/items/3042215-mackie-cr4-xbt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-createrbundle",
+      "name": "Mackie Creator Bundle",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_createrbundle.jpg",
+      "description": "Mackie Creator Bundle",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CREATERBUNDLE",
+      "halilit_url": "https://www.halilit.com/items/3284913-mackie-creator-bundle",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-emusbltd-wht",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Mackie EM USB Limited Edition",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_emusbltd_wht.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Mackie EM USB Limited Edition",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EMUSBLTD-WHT",
+      "halilit_url": "https://www.halilit.com/items/3746501-mackie-em-usb-ltd-arctic-white-cardioid-usb-condenser-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr3xbt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-XBT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr3xbt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-XBT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR3XBT",
+      "halilit_url": "https://www.halilit.com/items/3283409-mackie-cr3-xbt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-em91c",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie EM 91C",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_em91c.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie EM 91C",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EM91C",
+      "halilit_url": "https://www.halilit.com/items/2748384-mackie-em-91c-large-diaphragm-condenser-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mp20tws",
+      "name": "Mackie MP-20TWS Wireless Earphones",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_mp20tws.jpg",
+      "description": "Mackie MP-20TWS Wireless Earphones",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MP20TWS",
+      "halilit_url": "https://www.halilit.com/items/5403660-mackie-mp-20tws-wireless-earphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mp120",
+      "name": "Mackie MP-120 In-Ear Monitors",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_mp120.jpg",
+      "description": "Mackie MP-120 In-Ear Monitors",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MP120",
+      "halilit_url": "https://www.halilit.com/items/1714975-mackie-mp-120-in-ear-monitors",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-pf100",
+      "name": "Mackie PF-100",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_pf100.jpg",
+      "description": "Mackie PF-100",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PF100",
+      "halilit_url": "https://www.halilit.com/items/3365940-mackie-pf-100",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr8xbt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR8-XBT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr8xbt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR8-XBT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR8XBT",
+      "halilit_url": "https://www.halilit.com/items/2929170-mackie-cr8x-bt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr6sx",
+      "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05de\u05d5\u05d2\u05d1\u05e8 Mackie CR6S-X",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr6sx.jpg",
+      "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05de\u05d5\u05d2\u05d1\u05e8 Mackie CR6S-X",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR6SX",
+      "halilit_url": "https://www.halilit.com/items/5417035-macike-cr6s-x-powered-floor-standing-subwoofer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-em91cu",
+      "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Mackie EM-91CU",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_em91cu.jpg",
+      "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df USB \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 Mackie EM-91CU",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-EM91CU",
+      "halilit_url": "https://www.halilit.com/items/3357518-mackie-em-91cu-usb-condenser-microphone",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc250",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-250",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc250.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-250",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC250",
+      "halilit_url": "https://www.halilit.com/items/2266958-mackie-mc-250-professional-closed-back-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr2x-cube",
+      "name": "Mackie CR2 X-CUBE",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr2x_cube.jpg",
+      "description": "Mackie CR2 X-CUBE",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR2X-CUBE",
+      "halilit_url": "https://www.halilit.com/items/5406032-mackie-cr2-x-cube",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyxproducer",
+      "name": "Mackie Onyx Producer",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyxproducer.jpg",
+      "description": "Mackie Onyx Producer",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYXPRODUCER",
+      "halilit_url": "https://www.halilit.com/items/1648728-mackie-onyx-producer-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr4x",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4-X",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr4x.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR4-X",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR4X",
+      "halilit_url": "https://www.halilit.com/items/2929004-mackie-cr4x",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr2x-barpro",
+      "name": "Mackie CR2-X Bar PRO",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr2x_barpro.jpg",
+      "description": "Mackie CR2-X Bar PRO",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR2X-BARPRO",
+      "halilit_url": "https://www.halilit.com/items/5407872-mackie-cr2-x-bar-pro",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr5x",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR5-X",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr5x.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR5-X",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR5X",
+      "halilit_url": "https://www.halilit.com/items/2929092-mackie-cr5x",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-crstealthbar",
+      "name": "Mackie CR StealthBar",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_crstealthbar.jpg",
+      "description": "Mackie CR StealthBar",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CRSTEALTHBAR",
+      "halilit_url": "https://www.halilit.com/items/4934089-mackie-cr-stealthbar",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cr5xbt",
+      "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR5-XBT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_cr5xbt.jpg",
+      "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR5-XBT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CR5XBT",
+      "halilit_url": "https://www.halilit.com/items/2929120-mackie-cr5x-bt",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc40bt",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-40BT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc40bt.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea Mackie MC-40BT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC40BT",
+      "halilit_url": "https://www.halilit.com/items/4934729-mackie-mc-40bt-wirless-studio-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyxartist",
+      "name": "Mackie Onyx Artist",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyxartist.jpg",
+      "description": "Mackie Onyx Artist",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYXARTIST",
+      "halilit_url": "https://www.halilit.com/items/1646929-mackie-onyx-artist-audio-interface",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mc450",
+      "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-450",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mc450.jpg",
+      "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Mackie MC-450",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MC450",
+      "halilit_url": "https://www.halilit.com/items/2745199-mackie-mc-450-professional-open-back-studio-headphones",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mobilemix",
+      "name": "Mackie MobileMix",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mobilemix.jpg",
+      "description": "Mackie MobileMix",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MOBILEMIX",
+      "halilit_url": "https://www.halilit.com/items/6541090-mackie-mobilemix",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx10v3+",
+      "name": "+Mackie ProFX10v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx10v3_.jpg",
+      "description": "+Mackie ProFX10v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX10V3+",
+      "halilit_url": "https://www.halilit.com/items/6540594-mackie-profx10v3-analog-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx6v3+",
+      "name": "+Mackie ProFX6v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx6v3_.jpg",
+      "description": "+Mackie ProFX6v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX6V3+",
+      "halilit_url": "https://www.halilit.com/items/6539843-mackie-profx6v3-analog-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-thump10",
+      "name": "\u05ea\u05d9\u05e7 \u05dc\u05e8\u05de\u05e7\u05d5\u05dc \"Mackie Bag for Thump Speaker 10",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_bag_thump10.jpg",
+      "description": "\u05ea\u05d9\u05e7 \u05dc\u05e8\u05de\u05e7\u05d5\u05dc \"Mackie Bag for Thump Speaker 10",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-THUMP10",
+      "halilit_url": "https://www.halilit.com/items/7766863--mackie-bag-for-thump-speaker-10",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx12v3+",
+      "name": "+Mackie ProFX12v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx12v3_.jpg",
+      "description": "+Mackie ProFX12v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX12V3+",
+      "halilit_url": "https://www.halilit.com/items/6540642-mackie-profx12v3-analog-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-creatorsling",
+      "name": "Mackie CreatorSling - Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_creatorsling.jpg",
+      "description": "Mackie CreatorSling - Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-CREATORSLING",
+      "halilit_url": "https://www.halilit.com/items/5250552-mackie-creatorsling-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx30v3",
+      "name": "Mackie ProFX30 V3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx30v3.jpg",
+      "description": "Mackie ProFX30 V3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX30V3",
+      "halilit_url": "https://www.halilit.com/items/3788802-mackie-profx30v3",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mix8",
+      "name": "Mackie Mix8",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mix8.jpg",
+      "description": "Mackie Mix8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MIX8",
+      "halilit_url": "https://www.halilit.com/items/460303-mackie-mix8-8-channel-compact-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mix5",
+      "name": "Mackie Mix5",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mix5.jpg",
+      "description": "Mackie Mix5",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MIX5",
+      "halilit_url": "https://www.halilit.com/items/460304-mackie-mix5-5-channel-compact-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1604vlz-rack",
+      "name": "Mackie 1604VLZ RotoPod Bracket Set",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1604vlz_rack.jpg",
+      "description": "Mackie 1604VLZ RotoPod Bracket Set",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1604VLZ-RACK",
+      "halilit_url": "https://www.halilit.com/items/6589495-mackie-1604vlz-rotopod-bracket-set",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump210xt",
+      "name": "Mackie Thump210XT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump210xt.jpg",
+      "description": "Mackie Thump210XT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP210XT",
+      "halilit_url": "https://www.halilit.com/items/7457591-mackie-thump210xt-enhanced-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1402vlz-rack",
+      "name": "Mackie 1402VLZ Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1402vlz_rack.jpg",
+      "description": "Mackie 1402VLZ Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1402VLZ-RACK",
+      "halilit_url": "https://www.halilit.com/items/6589500-mackie-1402vlz-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1202vlz-rack",
+      "name": "Mackie 1202VLZ Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1202vlz_rack.jpg",
+      "description": "Mackie 1202VLZ Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1202VLZ-RACK",
+      "halilit_url": "https://www.halilit.com/items/6589503-mackie-1202vlz-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mcaster-bag",
+      "name": "Mackie MCaster Live Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mcaster_bag.jpg",
+      "description": "Mackie MCaster Live Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MCASTER-BAG",
+      "halilit_url": "https://www.halilit.com/items/6585966-mackie-mcaster-live-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-profx16v3",
+      "name": "Mackie PROFX16V3 Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bag_profx16v3.jpg",
+      "description": "Mackie PROFX16V3 Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-PROFX16V3",
+      "halilit_url": "https://www.halilit.com/items/3098479-mackie-profx16v3-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump215",
+      "name": "Mackie Thump215",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump215.jpg",
+      "description": "Mackie Thump215",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP215",
+      "halilit_url": "https://www.halilit.com/items/5241740-mackie-thump215-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thrash212go",
+      "name": "Mackie Thrash212 GO",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thrash212go.jpg",
+      "description": "Mackie Thrash212 GO",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THRASH212GO",
+      "halilit_url": "https://www.halilit.com/items/6190739-mackie-thrash212-go",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx16v3",
+      "name": "Mackie ProFX16 v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx16v3.jpg",
+      "description": "Mackie ProFX16 v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX16V3",
+      "halilit_url": "https://www.halilit.com/items/2708884-mackie-profx16v3-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyx16",
+      "name": "Mackie Onyx16",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyx16.jpg",
+      "description": "Mackie Onyx16",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYX16",
+      "halilit_url": "https://www.halilit.com/items/5715094-mackie-onyx16-16-channel-premium-analog-usb-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-dl16s",
+      "name": "Mackie DL16S",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_dl16s.jpg",
+      "description": "Mackie DL16S",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DL16S",
+      "halilit_url": "https://www.halilit.com/items/2053782-mackie-dl16s",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyx24",
+      "name": "Mackie Onyx 24",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyx24.jpg",
+      "description": "Mackie Onyx 24",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYX24",
+      "halilit_url": "https://www.halilit.com/items/3366045-mackie-onyx-24-analog-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mix12fx",
+      "name": "Mackie MIX12FX",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mix12fx.jpg",
+      "description": "Mackie MIX12FX",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MIX12FX",
+      "halilit_url": "https://www.halilit.com/items/458419-mackie-mix12fx",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyx8",
+      "name": "Mackie Onyx 8",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyx8.jpg",
+      "description": "Mackie Onyx 8",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYX8",
+      "halilit_url": "https://www.halilit.com/items/4277172-mackie-onyx-8-8-channel-premium-analog-usb-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx22v3",
+      "name": "Mackie ProFX22 v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx22v3.jpg",
+      "description": "Mackie ProFX22 v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX22V3",
+      "halilit_url": "https://www.halilit.com/items/5714870-mackie-profx22v3-22-channel-professional-usb-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx12-rackears",
+      "name": "Mackie ProFX12v3 Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx12_rackears.jpg",
+      "description": "Mackie ProFX12v3 Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX12-RACKEARS",
+      "halilit_url": "https://www.halilit.com/items/5240252-mackie-profx12v3-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx12v3",
+      "name": "Mackie ProFX12 v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx12v3.jpg",
+      "description": "Mackie ProFX12 v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX12V3",
+      "halilit_url": "https://www.halilit.com/items/2708930-mackie-profx12-v3-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx16-rackears",
+      "name": "Mackie ProFX16v3 Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx16_rackears.jpg",
+      "description": "Mackie ProFX16v3 Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX16-RACKEARS",
+      "halilit_url": "https://www.halilit.com/items/5240266-mackie-profx16v3-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1642vlz-rack",
+      "name": "Mackie 1642VLZ Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1642vlz_rack.jpg",
+      "description": "Mackie 1642VLZ Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1642VLZ-RACK",
+      "halilit_url": "https://www.halilit.com/items/6589387-mackie-1642vlz-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srt215",
+      "name": "Mackie SRT215",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srt215.jpg",
+      "description": "Mackie SRT215",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRT215",
+      "halilit_url": "https://www.halilit.com/items/3745996-mackie-srt215",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srt212",
+      "name": "Mackie SRT212",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srt212.jpg",
+      "description": "Mackie SRT212",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRT212",
+      "halilit_url": "https://www.halilit.com/items/3746515-mackie-srt212",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx10v3",
+      "name": "Mackie ProFX10 v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx10v3.jpg",
+      "description": "Mackie ProFX10 v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX10V3",
+      "halilit_url": "https://www.halilit.com/items/2708960-mackie-profx10-v3-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-profx6v3",
+      "name": "Mackie ProFX6 v3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_profx6v3.jpg",
+      "description": "Mackie ProFX6 v3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-PROFX6V3",
+      "halilit_url": "https://www.halilit.com/items/2708977-mackie-profx6-v3-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1642vlz4",
+      "name": "Mackie 1642VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1642vlz4.jpg",
+      "description": "Mackie 1642VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1642VLZ4",
+      "halilit_url": "https://www.halilit.com/items/1272832-mackie-1642vlz-4-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srm212",
+      "name": "Mackie SRM212 V-Class",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srm212.jpg",
+      "description": "Mackie SRM212 V-Class",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRM212",
+      "halilit_url": "https://www.halilit.com/items/3064833-mackie-srm212-v-class-12-2000w-loudspeakers",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-showbox",
+      "name": "Mackie ShowBox All-in-one Performance Rig",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_showbox.jpg",
+      "description": "Mackie ShowBox All-in-one Performance Rig",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SHOWBOX",
+      "halilit_url": "https://www.halilit.com/items/6583813-mackie-showbox-all-in-one-performance-rig",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump18s-cover",
+      "name": "Mackie Thump18S Speaker Cover",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_thump18s_cover.jpg",
+      "description": "Mackie Thump18S Speaker Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP18S-COVER",
+      "halilit_url": "https://www.halilit.com/items/5240328-mackie-thump18s-speaker-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump212xt",
+      "name": "Mackie Thump212XT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump212xt.jpg",
+      "description": "Mackie Thump212XT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP212XT",
+      "halilit_url": "https://www.halilit.com/items/5241611-mackie-thump212xt-enhanced-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thrash215",
+      "name": "Mackie Thrash215",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thrash215.jpg",
+      "description": "Mackie Thrash215",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THRASH215",
+      "halilit_url": "https://www.halilit.com/items/4946188-mackie-thrash215",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-b-thump15a/bst",
+      "name": "Mackie Thump15A & Thump15BST Speaker Bag",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_b_thump15a_bst.jpg",
+      "description": "Mackie Thump15A & Thump15BST Speaker Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-B-THUMP15A/BST",
+      "halilit_url": "https://www.halilit.com/items/5239057-mackie-thump15a-thump15bst-speaker-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump12bst",
+      "name": "Mackie Thump 12 Boosted",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump12bst.jpg",
+      "description": "Mackie Thump 12 Boosted",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP12BST",
+      "halilit_url": "https://www.halilit.com/items/1649683-mackie-thump-12-bst-active-speaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srm210",
+      "name": "Mackie SRM210 V-Class",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srm210.jpg",
+      "description": "Mackie SRM210 V-Class",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRM210",
+      "halilit_url": "https://www.halilit.com/items/3064862-mackie-srm210-v-class-10-2000w-loudspeakers",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srm215",
+      "name": "Mackie SRM215 V-Class",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srm215.jpg",
+      "description": "Mackie SRM215 V-Class",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRM215",
+      "halilit_url": "https://www.halilit.com/items/3064866-mackie-v-class-srm215-15-2000w-loudspeakers",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-freeplay-home",
+      "name": "Mackie FreePlay Home",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_freeplay_home.jpg",
+      "description": "Mackie FreePlay Home",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-FREEPLAY-HOME",
+      "halilit_url": "https://www.halilit.com/items/1984554-mackie-freeplay-home-bluetooth-speaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump212",
+      "name": "Mackie Thump212",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump212.jpg",
+      "description": "Mackie Thump212",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP212",
+      "halilit_url": "https://www.halilit.com/items/5240366-mackie-thump212-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump210",
+      "name": "Mackie Thump210",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump210.jpg",
+      "description": "Mackie Thump210",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP210",
+      "halilit_url": "https://www.halilit.com/items/7460662-mackie-thump210-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thrash212",
+      "name": "Mackie Thrash212",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thrash212.jpg",
+      "description": "Mackie Thrash212",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THRASH212",
+      "halilit_url": "https://www.halilit.com/items/4930633-mackie-thrash212",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srm-flex",
+      "name": "Mackie SRM-Flex Portable Column",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_srm_flex.jpg",
+      "description": "Mackie SRM-Flex Portable Column",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRM-FLEX",
+      "halilit_url": "https://www.halilit.com/items/2748495-mackie-srm-flex-portable-column",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump15bst",
+      "name": "Mackie Thump 15\" Boosted",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump15bst.jpg",
+      "description": "Mackie Thump 15\" Boosted",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP15BST",
+      "halilit_url": "https://www.halilit.com/items/1650001-mackie-thump-15-bst-active-speaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cover-thsubgo",
+      "name": "Mackie ThumpSub GO Cover",
+      "brand": "mackie",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/mackie_60_cover_thsubgo.jpg",
+      "description": "Mackie ThumpSub GO Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-COVER-THSUBGO",
+      "halilit_url": "https://www.halilit.com/items/8780882-mackie-thumpsub-go-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1202vlz4",
+      "name": "Mackie 1202VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1202vlz4.jpg",
+      "description": "Mackie 1202VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1202VLZ4",
+      "halilit_url": "https://www.halilit.com/items/1272661-mackie-1202vlz-4-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump215xt",
+      "name": "Mackie Thump215XT",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump215xt.jpg",
+      "description": "Mackie Thump215XT",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP215XT",
+      "halilit_url": "https://www.halilit.com/items/5241944-mackie-thump215xt-enhanced-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-thumpgo",
+      "name": "Mackie Thump GO Speaker Bag",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_bag_thumpgo.jpg",
+      "description": "Mackie Thump GO Speaker Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-THUMPGO",
+      "halilit_url": "https://www.halilit.com/items/5239899-mackie-thump-go-speaker-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thumpgo8",
+      "name": "\u05e8\u05de\u05e7\u05d5\u05dc \u05e0\u05d9\u05d9\u05d3 \u05de\u05d5\u05d2\u05d1\u05e8 Mackie Thump GO 8\" Portable",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thumpgo8.jpg",
+      "description": "\u05e8\u05de\u05e7\u05d5\u05dc \u05e0\u05d9\u05d9\u05d3 \u05de\u05d5\u05d2\u05d1\u05e8 Mackie Thump GO 8\" Portable",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMPGO8",
+      "halilit_url": "https://www.halilit.com/items/4912733-mackie-thump-go-8-portable-bluetooth-battery-powered-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump12a",
+      "name": "Mackie Thump 12A",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump12a.jpg",
+      "description": "Mackie Thump 12A",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP12A",
+      "halilit_url": "https://www.halilit.com/items/1531502-mackie-thump-12a-powered-speakers",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-b-thump15a/bst-w",
+      "name": "Mackie Thump15A & Thump15BST Rolling Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_b_thump15a_bst_w.jpg",
+      "description": "Mackie Thump15A & Thump15BST Rolling Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-B-THUMP15A/BST-W",
+      "halilit_url": "https://www.halilit.com/items/5239164-mackie-thump15a-thump15bst-rolling-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-b-thump12a/bst",
+      "name": "Mackie Thump12A & Thump12BST Speaker Bag",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_b_thump12a_bst.jpg",
+      "description": "Mackie Thump12A & Thump12BST Speaker Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-B-THUMP12A/BST",
+      "halilit_url": "https://www.halilit.com/items/4602255-mackie-thump12a-thump12bst-speaker-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srt210",
+      "name": "Mackie SRT210",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srt210.jpg",
+      "description": "Mackie SRT210",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRT210",
+      "halilit_url": "https://www.halilit.com/items/3745957-mackie-srt210",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-b-thump12a/bst-w",
+      "name": "Mackie Thump12A & Thump12BST Rolling Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_b_thump12a_bst_w.jpg",
+      "description": "Mackie Thump12A & Thump12BST Rolling Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-B-THUMP12A/BST-W",
+      "halilit_url": "https://www.halilit.com/items/4602288-mackie-thump12a-thump12bst-rolling-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srm450-v3",
+      "name": "Mackie SRM450 V3",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srm450_v3.jpg",
+      "description": "Mackie SRM450 V3",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRM450-V3",
+      "halilit_url": "https://www.halilit.com/items/444359-mackie-srm450-v3-active-2-way-speaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cover-srm212",
+      "name": "Mackie SRM212 V-Class Speaker Cover",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_cover_srm212.jpg",
+      "description": "Mackie SRM212 V-Class Speaker Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-COVER-SRM212",
+      "halilit_url": "https://www.halilit.com/items/6586827-mackie-srm212-v-class-speaker-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cover-srm215",
+      "name": "Mackie SRM215 V-Class Speaker Cover",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_cover_srm215.jpg",
+      "description": "Mackie SRM215 V-Class Speaker Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-COVER-SRM215",
+      "halilit_url": "https://www.halilit.com/items/6586857-mackie-srm215-v-class-speaker-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-ip10",
+      "name": "Mackie iP-10",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_ip10.jpg",
+      "description": "Mackie iP-10",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-IP10",
+      "halilit_url": "https://www.halilit.com/items/3194539-mackie-ip-10-loudspeaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyx16-rack",
+      "name": "Mackie Onyx16 Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyx16_rack.jpg",
+      "description": "Mackie Onyx16 Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYX16-RACK",
+      "halilit_url": "https://www.halilit.com/items/5245880-mackie-onyx16-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyx12",
+      "name": "Mackie Onyx12",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyx12.jpg",
+      "description": "Mackie Onyx12",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYX12",
+      "halilit_url": "https://www.halilit.com/items/3357640-mackie-onyx12",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-onyx12-rack",
+      "name": "Mackie Onyx12 Rack Ear Kit",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_onyx12_rack.jpg",
+      "description": "Mackie Onyx12 Rack Ear Kit",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-ONYX12-RACK",
+      "halilit_url": "https://www.halilit.com/items/5245911-mackie-onyx12-rack-ear-kit",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump115s",
+      "name": "Mackie Thump115S",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump115s.jpg",
+      "description": "Mackie Thump115S",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP115S",
+      "halilit_url": "https://www.halilit.com/items/5242210-mackie-thump115s-powered-subwoofer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-thump118s",
+      "name": "Mackie Thump118S",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_thump118s.jpg",
+      "description": "Mackie Thump118S",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-THUMP118S",
+      "halilit_url": "https://www.halilit.com/items/5242297-mackie-thump118s-powered-subwoofer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-3204vlz4",
+      "name": "Mackie 3204VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_3204vlz4.jpg",
+      "description": "Mackie 3204VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-3204VLZ4",
+      "halilit_url": "https://www.halilit.com/items/1272854-mackie-3204vlz-4-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-onyx16",
+      "name": "Mackie Onyx16 Carry Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bag_onyx16.jpg",
+      "description": "Mackie Onyx16 Carry Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-ONYX16",
+      "halilit_url": "https://www.halilit.com/items/6486312-mackie-onyx16-carry-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-onyx12",
+      "name": "Mackie Onyx12 Carry Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bag_onyx12.jpg",
+      "description": "Mackie Onyx12 Carry Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-ONYX12",
+      "halilit_url": "https://www.halilit.com/items/6584441-mackie-onyx12-carry-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1402vlz4",
+      "name": "Mackie 1402VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1402vlz4.jpg",
+      "description": "Mackie 1402VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1402VLZ4",
+      "halilit_url": "https://www.halilit.com/items/3283101-mackie-1402vlz4-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-802vlz4",
+      "name": "Mackie 802VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_802vlz4.jpg",
+      "description": "Mackie 802VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-802VLZ4",
+      "halilit_url": "https://www.halilit.com/items/446128-mackie-802vlz4",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-402vlz4",
+      "name": "Mackie 402VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_402vlz4.jpg",
+      "description": "Mackie 402VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-402VLZ4",
+      "halilit_url": "https://www.halilit.com/items/446129-mackie-402vlz4",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-1604vlz4",
+      "name": "Mackie 1604VLZ4",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_1604vlz4.jpg",
+      "description": "Mackie 1604VLZ4",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-1604VLZ4",
+      "halilit_url": "https://www.halilit.com/items/1272769-mackie-1604vlz4-mixer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-dcover-profx16v3",
+      "name": "Mackie ProFX16v3 Dust Cover",
+      "brand": "mackie",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/mackie_60_dcover_profx16v3.jpg",
+      "description": "Mackie ProFX16v3 Dust Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DCOVER-PROFX16V3",
+      "halilit_url": "https://www.halilit.com/items/5240018-mackie-profx16v3-dust-cover-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-dcover-profx22v3",
+      "name": "Mackie ProFX22v3 Dust Cover",
+      "brand": "mackie",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/mackie_60_dcover_profx22v3.jpg",
+      "description": "Mackie ProFX22v3 Dust Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DCOVER-PROFX22V3",
+      "halilit_url": "https://www.halilit.com/items/5240026-mackie-profx22v3-dust-cover-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-dcover-profx30v3",
+      "name": "Mackie ProFX30v3 Dust Cover",
+      "brand": "mackie",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/mackie_60_dcover_profx30v3.jpg",
+      "description": "Mackie ProFX30v3 Dust Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DCOVER-PROFX30V3",
+      "halilit_url": "https://www.halilit.com/items/5240033-mackie-profx30v3-dust-cover-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-1604vlz3",
+      "name": "Mackie 1604VLZ3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_1604vlz3.jpg",
+      "description": "Mackie 1604VLZ3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-1604VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586893-mackie-1604vlz3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-1402vlz3",
+      "name": "Mackie 1402VLZ3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_1402vlz3.jpg",
+      "description": "Mackie 1402VLZ3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-1402VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586917-mackie-1402vlz3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-m48",
+      "name": "Mackie M48",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_m48.jpg",
+      "description": "Mackie M48",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-M48",
+      "halilit_url": "https://www.halilit.com/items/1713962-mackie-m48-phantom-power",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-1202vlz3",
+      "name": "Mackie 1202VLZ3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_1202vlz3.jpg",
+      "description": "Mackie 1202VLZ3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-1202VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586931-mackie-1202vlz3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cover-1604vlz3",
+      "name": "Mackie 1604VLZ3 Mixer Cover",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_cover_1604vlz3.jpg",
+      "description": "Mackie 1604VLZ3 Mixer Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-COVER-1604VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586469-mackie-1604vlz3-mixer-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cover-2404vlz3",
+      "name": "Mackie 2404VLZ3 Mixer Cover",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_cover_2404vlz3.jpg",
+      "description": "Mackie 2404VLZ3 Mixer Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-COVER-2404VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586769-mackie-2404vlz3-mixer-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-cover-3204vlz3",
+      "name": "Mackie 3204VLZ3 Mixer Cover",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_cover_3204vlz3.jpg",
+      "description": "Mackie 3204VLZ3 Mixer Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-COVER-3204VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586788-mackie-3204vlz3-mixer-cover",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-402vlz3",
+      "name": "Mackie 402VLZ3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_402vlz3.jpg",
+      "description": "Mackie 402VLZ3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-402VLZ3",
+      "halilit_url": "https://www.halilit.com/items/6586882-mackie-402vlz3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-802vlz3",
+      "name": "Mackie 802VLZ3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_802vlz3.jpg",
+      "description": "Mackie 802VLZ3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-802VLZ3",
+      "halilit_url": "https://www.halilit.com/items/3283176-mackie-802vlz3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-freeplay-go",
+      "name": "Mackie FreePlay GO",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_freeplay_go.jpg",
+      "description": "Mackie FreePlay GO",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-FREEPLAY-GO",
+      "halilit_url": "https://www.halilit.com/items/1984533-mackie-freeplay-go-speaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-srm150",
+      "name": "Mackie SRM150",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_srm150.jpg",
+      "description": "Mackie SRM150",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-SRM150",
+      "halilit_url": "https://www.halilit.com/items/447476-mackie-srm150-compact-powered-pa",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-drm212",
+      "name": "Mackie DRM212",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_drm212.jpg",
+      "description": "Mackie DRM212",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DRM212",
+      "halilit_url": "https://www.halilit.com/items/2271502-mackie-drm212-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-dcover-profx12v3",
+      "name": "Mackie ProFX12 v3 Dust Cover",
+      "brand": "mackie",
+      "category": "accessories",
+      "image_url": "/data/thumbnails/mackie_60_dcover_profx12v3.jpg",
+      "description": "Mackie ProFX12 v3 Dust Cover",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DCOVER-PROFX12V3",
+      "halilit_url": "https://www.halilit.com/items/2745104-mackie-profx12-v3-dust-cover-",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-onyx8",
+      "name": "Mackie ONYX8 Carry Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bag_onyx8.jpg",
+      "description": "Mackie ONYX8 Carry Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-ONYX8",
+      "halilit_url": "https://www.halilit.com/items/4935190-mackie-onyx8-carry-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mx3500",
+      "name": "Mackie MX3500",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mx3500.jpg",
+      "description": "Mackie MX3500",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MX3500",
+      "halilit_url": "https://www.halilit.com/items/2274586-mackie-mx3500-power-amplifier",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-drm18s",
+      "name": "Mackie DRM18S",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_drm18s.jpg",
+      "description": "Mackie DRM18S",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-DRM18S",
+      "halilit_url": "https://www.halilit.com/items/2271271-mackie-drm18s-18-2000-watt-powered-subwoofer",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-freeplay-live",
+      "name": "Mackie FreePlay LIVE Speaker Bag",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_bag_freeplay_live.jpg",
+      "description": "Mackie FreePlay LIVE Speaker Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-FREEPLAY-LIVE",
+      "halilit_url": "https://www.halilit.com/items/3799857-mackie-freeplay-live-speaker-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-dl32s",
+      "name": "Mackie DL32S Bag",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_bag_dl32s.jpg",
+      "description": "Mackie DL32S Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-DL32S",
+      "halilit_url": "https://www.halilit.com/items/2441272-mackie-dl32s-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-freeplay-live",
+      "name": "Mackie FreePlay Live",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_freeplay_live.jpg",
+      "description": "Mackie FreePlay Live",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-FREEPLAY-LIVE",
+      "halilit_url": "https://www.halilit.com/items/1984573-mackie-freeplay-live-bluetooth-speaker",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-mtest1",
+      "name": "Mackie MTEST-1",
+      "brand": "mackie",
+      "category": "general",
+      "image_url": "/data/thumbnails/mackie_60_mtest1.jpg",
+      "description": "Mackie MTEST-1",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-MTEST1",
+      "halilit_url": "https://www.halilit.com/items/1718079-mackie-mtest-1",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-profx22v3",
+      "name": "Mackie ProFX22v3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_profx22v3.jpg",
+      "description": "Mackie ProFX22v3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-PROFX22V3",
+      "halilit_url": "https://www.halilit.com/items/5239876-mackie-profx22v3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-tripod",
+      "name": "Mackie T100 Loudspeaker Tripod Stand",
+      "brand": "mackie",
+      "category": "studio",
+      "image_url": "/data/thumbnails/mackie_60_tripod.jpg",
+      "description": "Mackie T100 Loudspeaker Tripod Stand",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-TRIPOD",
+      "halilit_url": "https://www.halilit.com/items/3285832-mackie-t100-loudspeaker-tripod-stand",
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "halilit_60-bag-profx10v3",
+      "name": "Mackie ProFX10v3 Mixer Bag",
+      "brand": "mackie",
+      "category": "live",
+      "image_url": "/data/thumbnails/mackie_60_bag_profx10v3.jpg",
+      "description": "Mackie ProFX10v3 Mixer Bag",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": false,
+      "sku": "60-BAG-PROFX10V3",
+      "halilit_url": "https://www.halilit.com/items/3194441-mackie-profx10v3-mixer-bag",
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
 }

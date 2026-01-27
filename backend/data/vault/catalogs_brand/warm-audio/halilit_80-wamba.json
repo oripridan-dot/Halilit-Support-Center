@@ -1,0 +1,39 @@
+{
+  "id": "halilit_80-wamba",
+  "name": "Warm Audio WA-MBA",
+  "brand": "warm-audio",
+  "category": "studio",
+  "description": "Warm Audio WA-MBA",
+  "media": {
+    "thumbnail": "/data/thumbnails/warm_audio_80_wamba.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "warm_audio_80_wamba",
+    "name": "Warm Audio WA-MBA",
+    "description": "Warm Audio WA-MBA",
+    "category": "general",
+    "image_url": "/data/thumbnails/warm_audio_80_wamba.jpg",
+    "product_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
+    "is_sold": true,
+    "price": 668.0,
+    "halilit_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.445824Z"
+  }
+}

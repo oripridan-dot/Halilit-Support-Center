@@ -1,0 +1,1846 @@
+{
+  "brand_slug": "boss",
+  "source": "halilit_commercial_scan",
+  "products": [
+    {
+      "id": "halilit_87-cbv61",
+      "name": "Boss CB-V61 Carrying Bag",
+      "url": "https://www.halilit.com/items/8242685-boss-cb-v61-carrying-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17235038/original/a92182305f16c5d16fc6f05e176746fe.jpg",
+      "halilit_id": "87-CBV61",
+      "sku": "87-CBV61",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss CB-V61 Carrying Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-fv30h",
+      "name": "Boss FV30H",
+      "url": "https://www.halilit.com/items/480562-boss-fv30h-volume-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/610797/original/ef8dfa298b5625c7f7556fdd053a1c61.jpg",
+      "halilit_id": "87-FV30H",
+      "sku": "87-FV30H",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss FV30H",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-fv30l",
+      "name": "Boss FV30L",
+      "url": "https://www.halilit.com/items/7525216-boss-fv30l-volume-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15704743/original/f3005aafd76c8680ebfe5d55e12c4125.jpg",
+      "halilit_id": "87-FV30L",
+      "sku": "87-FV30L",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss FV30L",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ev1wl",
+      "name": "Boss EV-1-WL",
+      "url": "https://www.halilit.com/items/5286283-boss-ev-1-wl-wireless-midi-expression-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10435577/original/10a3b265db1c0d96345ad0619d911c87.jpg",
+      "halilit_id": "87-EV1WL",
+      "sku": "87-EV1WL",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss EV-1-WL",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ev30",
+      "name": "Boss EV-30",
+      "url": "https://www.halilit.com/items/1248114-boss-ev-30-expression-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1861869/original/6353054228b073b518bb99ad7af785c6.jpg",
+      "halilit_id": "87-EV30",
+      "sku": "87-EV30",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss EV-30",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-wl20l",
+      "name": "Boss WL-20L Wireless System",
+      "url": "https://www.halilit.com/items/3583895-boss-wl-20l-wireless-system",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13316500/original/de4cdd7299ab80a7be40bd84d6eefa8b.jpg",
+      "halilit_id": "87-WL20L",
+      "sku": "87-WL20L",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss WL-20L Wireless System",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-db90",
+      "name": "Boss DB-90",
+      "url": "https://www.halilit.com/items/447069-boss-db-90",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560898/original/f0858c3e85f33a9cd8a37bff3edcfe8a.jpg",
+      "halilit_id": "87-DB90",
+      "sku": "87-DB90",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss DB-90",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ktnminix",
+      "name": "מגבר לגיטרה חשמלית Boss Katana-Mini X",
+      "url": "https://www.halilit.com/items/7532833-boss-katana-mini-x-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15727844/original/863f249369fdd8fe3a569ea5c4eb31e2.jpg",
+      "halilit_id": "87-KTNMINIX",
+      "sku": "87-KTNMINIX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה חשמלית Boss Katana-Mini X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bsc20brn",
+      "name": "Boss BSC-20-BRN",
+      "url": "https://www.halilit.com/items/6226225-boss-bsc-20-brn",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13047893/original/168ecd6192dba0077f40d251997f4a03.jpg",
+      "halilit_id": "87-BSC20BRN",
+      "sku": "87-BSC20BRN",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSC-20-BRN",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bsc20nat",
+      "name": "Boss BSC-20-NAT",
+      "url": "https://www.halilit.com/items/6226228-boss-bsc-20-nat",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13047900/original/1b0bfa199051a30225fb5839716d0ba7.jpg",
+      "halilit_id": "87-BSC20NAT",
+      "sku": "87-BSC20NAT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSC-20-NAT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-cbve22",
+      "name": "Boss CB-VE22 Carrying Bag",
+      "url": "https://www.halilit.com/items/6795836-boss-cb-ve22-carrying-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14283277/original/ac6e585add421ed246c6e14e235e25a8.jpg",
+      "halilit_id": "87-CBVE22",
+      "sku": "87-CBVE22",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss CB-VE22 Carrying Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana50ex-mk3",
+      "name": "מגבר לגיטרה חשמלית Boss Katana-50 EX Gen 3",
+      "url": "https://www.halilit.com/items/7286080-boss-katana-50-ex-gen-3-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15188688/original/425a245f483bddcff03312339f1204d8.jpg",
+      "halilit_id": "87-KATANA50EX-MK3",
+      "sku": "87-KATANA50EX-MK3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה חשמלית Boss Katana-50 EX Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bsm20bw",
+      "name": "Boss BSM-20-BW",
+      "url": "https://www.halilit.com/items/5448023-boss-bsm-20-bw",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14233493/original/17d14db61f2005a1642fbfdd79db281c.jpg",
+      "halilit_id": "87-BSM20BW",
+      "sku": "87-BSM20BW",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSM-20-BW",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ktngo2",
+      "name": "מיני מגבר אוזניות לגיטרה Boss Katana:GO2",
+      "url": "https://www.halilit.com/items/6768740-boss-katana-go2-mini-guitar-headphone-amp",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14227327/original/c31fc1f11766753dcac52b3f48a52214.jpg",
+      "halilit_id": "87-KTNGO2",
+      "sku": "87-KTNGO2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מיני מגבר אוזניות לגיטרה Boss Katana:GO2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ir2",
+      "name": "פדל אפקט Boss IR-2",
+      "url": "https://www.halilit.com/items/6607204-boss-ir-2-amp-ir-cabinet-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13871032/original/719df91b58f224193052a92a6a5f0dfc.jpg",
+      "halilit_id": "87-IR2",
+      "sku": "87-IR2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אפקט Boss IR-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bp1w",
+      "name": "פדל בוסטר/פראמפ Boss BP-1W",
+      "url": "https://www.halilit.com/items/6315888-boss-bp-1w-waza-craft-booster-preamp-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13217356/original/81dd22bf1db07166a3e38688e2eaad87.jpg",
+      "halilit_id": "87-BP1W",
+      "sku": "87-BP1W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל בוסטר/פראמפ Boss BP-1W",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bsc20blk",
+      "name": "Boss BSC-20-BLK",
+      "url": "https://www.halilit.com/items/3653557-boss-bsc-20-blk",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6416126/original/5fefb5cf894f8fd13ae483722960e139.jpg",
+      "halilit_id": "87-BSC20BLK",
+      "sku": "87-BSC20BLK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSC-20-BLK",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-acslivelt",
+      "name": "מגבר לגיטרה אקוסטית Boss Acoustic Singer Live LT",
+      "url": "https://www.halilit.com/items/2954428-boss-acoustic-singer-live-lt-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942417/original/d3d28d33ed756282879047c464da4316.jpg",
+      "halilit_id": "87-ACSLIVELT",
+      "sku": "87-ACSLIVELT",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה אקוסטית Boss Acoustic Singer Live LT",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bsm20bb",
+      "name": "Boss BSM-20-BB",
+      "url": "https://www.halilit.com/items/5447886-boss-bsm-20-bb",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14233492/original/e1fcc08037847888edf8406100899bcc.jpg",
+      "halilit_id": "87-BSM20BB",
+      "sku": "87-BSM20BB",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSM-20-BB",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana50-mk3",
+      "name": "מגבר לגיטרה חשמלית Boss Katana-50 Gen 3",
+      "url": "https://www.halilit.com/items/7211751-boss-katana-50-gen-3-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15038624/original/b2c869bcb3bb546a1b7f2f5b23414beb.jpg",
+      "halilit_id": "87-KATANA50-MK3",
+      "sku": "87-KATANA50-MK3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה חשמלית Boss Katana-50 Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-cbbu10",
+      "name": "Boss CB-BU10",
+      "url": "https://www.halilit.com/items/5076719-boss-cb-bu10-utility-gig-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9923573/original/621418b389fe2cc0224133f95c42e656.jpg",
+      "halilit_id": "87-CBBU10",
+      "sku": "87-CBBU10",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss CB-BU10",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-dm101",
+      "name": "פדל דיליי Boss DM-101",
+      "url": "https://www.halilit.com/items/6120952-boss-dm-101-delay-machine",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12813707/original/24036c5e37c671638a1386ad7b272c33.jpg",
+      "halilit_id": "87-DM101",
+      "sku": "87-DM101",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיליי Boss DM-101",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bb1x",
+      "name": "Boss BB-1X",
+      "url": "https://www.halilit.com/items/460288-boss-bb-1x-bass-driver",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/580512/original/a05105910982924e0c1d5e33fd9f9860.jpg",
+      "halilit_id": "87-BB1X",
+      "sku": "87-BB1X",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BB-1X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve20",
+      "name": "אפקט לשירה Boss VE-20",
+      "url": "https://www.halilit.com/items/444416-boss-ve-20-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557584/original/0be15311ede7ec72f15770c918535723.jpg",
+      "halilit_id": "87-VE20",
+      "sku": "87-VE20",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לשירה Boss VE-20",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve5rd",
+      "name": "אפקט לשירה Boss VE-5",
+      "url": "https://www.halilit.com/items/444417-boss-ve-5-vocal-performer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557585/original/e58d3ee966aee6b18e082ca7d34547c6.jpg",
+      "halilit_id": "87-VE5RD",
+      "sku": "87-VE5RD",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לשירה Boss VE-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-me90",
+      "name": "מולטי אפקט Boss ME-90",
+      "url": "https://www.halilit.com/items/6099715-boss-me-90-guitar-multiple-effects",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12768725/original/b364d4f4e16afe65867c19adbdf23458.jpg",
+      "halilit_id": "87-ME90",
+      "sku": "87-ME90",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מולטי אפקט Boss ME-90",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rc5",
+      "name": "פדל לופר Boss RC-5",
+      "url": "https://www.halilit.com/items/3375107-boss-rc-5-loop-station",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5902692/original/7b1d6f48e2d07447f68f6baf27cf43f1.jpg",
+      "halilit_id": "87-RC5",
+      "sku": "87-RC5",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל לופר Boss RC-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ds1-wh",
+      "name": "פדל דיסטורשן Boss DS-1 Limited Edition",
+      "url": "https://www.halilit.com/items/7605766-boss-ds-1-limited-edition-distortion-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15888284/original/158bd04776a437bb985038752196f315.jpg",
+      "halilit_id": "87-DS1-WH",
+      "sku": "87-DS1-WH",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיסטורשן Boss DS-1 Limited Edition",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bd2b50a",
+      "name": "Boss BD-2-B50A 50th Anniversary",
+      "url": "https://www.halilit.com/items/6555403-boss-bd-2-b50a-50th-anniversary",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13775203/original/71160213467e05f75b0ff3a0e72d7f49.jpg",
+      "halilit_id": "87-BD2B50A",
+      "sku": "87-BD2B50A",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BD-2-B50A 50th Anniversary",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-od200",
+      "name": "Boss OD-200 Hybrid Drive",
+      "url": "https://www.halilit.com/items/2724367-boss-od-200-hybrid-drive-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4585585/original/e97de30a7b7e433cf10160902204e108.jpg",
+      "halilit_id": "87-OD200",
+      "sku": "87-OD200",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss OD-200 Hybrid Drive",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-gt1",
+      "name": "מולטי אפקט Boss GT-1",
+      "url": "https://www.halilit.com/items/1020178-boss-gt-1-guitar-effect-processor",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1517290/original/587d8dd3113dcb2c8a7905cd119c2405.jpg",
+      "halilit_id": "87-GT1",
+      "sku": "87-GT1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מולטי אפקט Boss GT-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-xs100",
+      "name": "פדל פולי-שיפטר Boss XS-100",
+      "url": "https://www.halilit.com/items/8334357-boss-xs-100-poly-shifter",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17573091/original/27df8238f654d33cb6659a71b826ceb0.jpg",
+      "halilit_id": "87-XS100",
+      "sku": "87-XS100",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל פולי-שיפטר Boss XS-100",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana100-mk3",
+      "name": "מגבר לגיטרה חשמלית Boss Katana-100 Gen 3",
+      "url": "https://www.halilit.com/items/7207191-boss-katana-100-gen-3-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15030731/original/7121bb1a289791e138b24bbce41bedec.jpg",
+      "halilit_id": "87-KATANA100-MK3",
+      "sku": "87-KATANA100-MK3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה חשמלית Boss Katana-100 Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-tu02",
+      "name": "Boss TU-02",
+      "url": "https://www.halilit.com/items/3856920-boss-tu-02",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6851374/original/84183a1c60cda9baea4b41edd0fe28ab.jpg",
+      "halilit_id": "87-TU02",
+      "sku": "87-TU02",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss TU-02",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rc202",
+      "name": "Boss RC-202",
+      "url": "https://www.halilit.com/items/818970-boss-rc-202-loop-station",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1206084/original/ea79ceac8716c56be279ecf30d1177f4.jpg",
+      "halilit_id": "87-RC202",
+      "sku": "87-RC202",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss RC-202",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sde3000-evh",
+      "name": "Boss SDE-3000EVH",
+      "url": "https://www.halilit.com/items/6070810-boss-sde-3000evh-dual-digital-delay",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12696215/original/1c0a19f94d2ef7e387f3e754974794f9.jpg",
+      "halilit_id": "87-SDE3000-EVH",
+      "sku": "87-SDE3000-EVH",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss SDE-3000EVH",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve22",
+      "name": "אפקט לשירה Boss VE-22",
+      "url": "https://www.halilit.com/items/6609434-boss-ve-22-vocal-performer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13871059/original/e96080a266ce9222a808b37afb5b7651.jpg",
+      "halilit_id": "87-VE22",
+      "sku": "87-VE22",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לשירה Boss VE-22",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-te2",
+      "name": "Boss TE-2 Terra Echo",
+      "url": "https://www.halilit.com/items/445723-boss-te-2-terra-echo",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559461/original/23e0e816bbb87f1eb3c2304d09f36b9d.jpg",
+      "halilit_id": "87-TE2",
+      "sku": "87-TE2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss TE-2 Terra Echo",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana500hdbass",
+      "name": "ראש מגבר לגיטרה בס Boss Katana-500 Bass Head",
+      "url": "https://www.halilit.com/items/7286559-boss-katana-500-bass-head",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15190373/original/44a475404c5de2be92c07aa438d1f67c.jpg",
+      "halilit_id": "87-KATANA500HDBASS",
+      "sku": "87-KATANA500HDBASS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "ראש מגבר לגיטרה בס Boss Katana-500 Bass Head",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rv500",
+      "name": "Boss RV-500 Reverb",
+      "url": "https://www.halilit.com/items/1366819-boss-rv-500-reverb",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2091902/original/ae80ef0a17bba2de3c6211a747050062.jpg",
+      "halilit_id": "87-RV500",
+      "sku": "87-RV500",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss RV-500 Reverb",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rc1",
+      "name": "פדל לופר Boss RC-1",
+      "url": "https://www.halilit.com/items/444197-boss-rc-1-loop-station",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557328/original/aa65d36cb9116f76b2e2fa289a5596ef.jpg",
+      "halilit_id": "87-RC1",
+      "sku": "87-RC1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל לופר Boss RC-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rv6",
+      "name": "פדל ריברב Boss RV-6",
+      "url": "https://www.halilit.com/items/569895-boss-rv-6-reverb",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/754889/original/ed0a275e8808d35cb20cb056ca9be7a5.jpg",
+      "halilit_id": "87-RV6",
+      "sku": "87-RV6",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל ריברב Boss RV-6",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana-art-hd-mk3",
+      "name": "מגבר ראש לגיטרה חשמלית Boss Katana Artist Head Gen 3",
+      "url": "https://www.halilit.com/items/7478317-boss-katana-artist-head-gen-3-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15606505/original/8fb50a1ed833c007c654448273b21d61.jpg",
+      "halilit_id": "87-KATANA-ART-HD-MK3",
+      "sku": "87-KATANA-ART-HD-MK3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר ראש לגיטרה חשמלית Boss Katana Artist Head Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-mo2",
+      "name": "פדל אפקט Boss MO-2",
+      "url": "https://www.halilit.com/items/445744-boss-mo-2-multi-overtone",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559483/original/71a247143103631abeadf392a5c59f07.jpg",
+      "halilit_id": "87-MO2",
+      "sku": "87-MO2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אפקט Boss MO-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ac3",
+      "name": "Boss AC-3",
+      "url": "https://www.halilit.com/items/445748-boss-ac-3-acoustic-simulator-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559487/original/65ac7c68f5ba6c806fd1034c726668e6.jpg",
+      "halilit_id": "87-AC3",
+      "sku": "87-AC3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss AC-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-geb7",
+      "name": "פדל אקולייזר לבס Boss GEB-7",
+      "url": "https://www.halilit.com/items/445750-boss-geb-7-bass-equalizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559489/original/dfa0489ea4bee8fede293de056e2bcdf.jpg",
+      "halilit_id": "87-GEB7",
+      "sku": "87-GEB7",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אקולייזר לבס Boss GEB-7",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ce2w",
+      "name": "פדל קורוס Boss CE-2W",
+      "url": "https://www.halilit.com/items/1066807-ce-2w-chorus-guitar-effect",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1560610/original/d5c2c2151d0a5fe56c577231d3bffc0f.jpg",
+      "halilit_id": "87-CE2W",
+      "sku": "87-CE2W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל קורוס Boss CE-2W",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ls2",
+      "name": "Boss LS-2",
+      "url": "https://www.halilit.com/items/445751-boss-ls-2-line-selector-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5547604/original/34eb1e31ef47bdc10efb1d16f8f86ffe.jpg",
+      "halilit_id": "87-LS2",
+      "sku": "87-LS2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss LS-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sy200",
+      "name": "אפקט סינתיסייזר לגיטרה Boss SY-200",
+      "url": "https://www.halilit.com/items/4572985-boss-sy-200-guitar-synthesizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8605675/original/057f619c990f3580b82853a758b5ffdf.jpg",
+      "halilit_id": "87-SY200",
+      "sku": "87-SY200",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט סינתיסייזר לגיטרה Boss SY-200",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-odb3",
+      "name": "פדל אוברדרייב לבס Boss ODB-3",
+      "url": "https://www.halilit.com/items/445753-boss-odb-3-bass-overdrive-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559492/original/3d77ca754ca6b2234fee46709751564a.jpg",
+      "halilit_id": "87-ODB3",
+      "sku": "87-ODB3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אוברדרייב לבס Boss ODB-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-lmb3",
+      "name": "פדל לימיטר לגיטרה בס Boss LMB-3",
+      "url": "https://www.halilit.com/items/445754-boss-lmb-3-bass-limiter-enhancer-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6042832/original/ffe403ceb6bc47356ef5bb23d551640f.jpg",
+      "halilit_id": "87-LMB3",
+      "sku": "87-LMB3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל לימיטר לגיטרה בס Boss LMB-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-os2",
+      "name": "פדל אוברדרייב/דיסטורשן Boss OS-2",
+      "url": "https://www.halilit.com/items/445755-boss-os-2-overdrive-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559494/original/610cf557d39115f8d5acc60f35b5984a.jpg",
+      "halilit_id": "87-OS2",
+      "sku": "87-OS2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אוברדרייב/דיסטורשן Boss OS-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bc1x",
+      "name": "פדל קומפרסור לגיטרה בס Boss BC-1X",
+      "url": "https://www.halilit.com/items/718908-boss-bc-1x-bass-compressor",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1015104/original/c1e709a68eee97134ec3ae0a020131ae.jpg",
+      "halilit_id": "87-BC1X",
+      "sku": "87-BC1X",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל קומפרסור לגיטרה בס Boss BC-1X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bf3",
+      "name": "פדל פלנג'ר Boss BF-3",
+      "url": "https://www.halilit.com/items/445757-boss-bf-3-flanger-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559496/original/b7622b05f7e2f5155c96d47a8646dba7.jpg",
+      "halilit_id": "87-BF3",
+      "sku": "87-BF3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל פלנג'ר Boss BF-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-es5",
+      "name": "Boss ES-5",
+      "url": "https://www.halilit.com/items/726846-boss-es-5",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1031021/original/1a7ae6fe5197b15e7dc1991bbbd6877c.jpg",
+      "halilit_id": "87-ES5",
+      "sku": "87-ES5",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss ES-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-st-2",
+      "name": "Boss ST-2",
+      "url": "https://www.halilit.com/items/445758-boss-st-2-power-stack-distortion-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559497/original/51d16e0e1ddc736715f66fe6d127e32d.jpg",
+      "halilit_id": "87-ST-2",
+      "sku": "87-ST-2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss ST-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana-cab112bass",
+      "name": "קבינה לבס Boss Katana Cabinet 112 Bass",
+      "url": "https://www.halilit.com/items/7339838-boss-katana-cabinet-112-bass-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15301494/original/8b28f66e83eebb05bd9caf5339f2e11a.jpg",
+      "halilit_id": "87-KATANA-CAB112BASS",
+      "sku": "87-KATANA-CAB112BASS",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "קבינה לבס Boss Katana Cabinet 112 Bass",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-md2",
+      "name": "פדל דיסטורשן Boss MD-2",
+      "url": "https://www.halilit.com/items/445759-boss-md-2-mega-distortion-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559498/original/983cb6373f695de6788a20bf7ddb906b.jpg",
+      "halilit_id": "87-MD2",
+      "sku": "87-MD2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיסטורשן Boss MD-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-dd3t",
+      "name": "פדל דיליי דיגיטלי Boss DD-3T",
+      "url": "https://www.halilit.com/items/2692160-boss-dd-3t-digital-delay-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4524623/original/01a8c81645f7acc86dda71d88e32d431.jpg",
+      "halilit_id": "87-DD3T",
+      "sku": "87-DD3T",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיליי דיגיטלי Boss DD-3T",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sd1b50a",
+      "name": "Boss SD-1-B50A 50th Anniversary",
+      "url": "https://www.halilit.com/items/6555459-boss-sd-1-b50a-50th-anniversary",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13775354/original/906e4003689b21485cb5ee34d92c6137.jpg",
+      "halilit_id": "87-SD1B50A",
+      "sku": "87-SD1B50A",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss SD-1-B50A 50th Anniversary",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-fz5",
+      "name": "פדל פאז Boss FZ-5",
+      "url": "https://www.halilit.com/items/445763-boss-fz-5-fuzz-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559502/original/6e6abaf5dfc59262478f2425c7d48337.jpg",
+      "halilit_id": "87-FZ5",
+      "sku": "87-FZ5",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל פאז Boss FZ-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rc600",
+      "name": "Boss RC-600",
+      "url": "https://www.halilit.com/items/4669253-boss-rc-600-loop-station",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8875360/original/38cd4df416e693c6a23fbfcbc0fc0009.jpg",
+      "halilit_id": "87-RC600",
+      "sku": "87-RC600",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss RC-600",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-gx10",
+      "name": "מולטי אפקט Boss GX-10",
+      "url": "https://www.halilit.com/items/7526725-boss-gx-10-guitar-effects-processor",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15709575/original/6a9652821720288c83386b2ad01514b8.jpg",
+      "halilit_id": "87-GX10",
+      "sku": "87-GX10",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מולטי אפקט Boss GX-10",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sy1000",
+      "name": "אפקט סינתיסייזר לגיטרה Boss SY-1000",
+      "url": "https://www.halilit.com/items/3299654-boss-sy-1000-guitar-synthesizer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5732626/original/c84078022bae3762c3241230bb6a9e46.jpg",
+      "halilit_id": "87-SY1000",
+      "sku": "87-SY1000",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט סינתיסייזר לגיטרה Boss SY-1000",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-od3",
+      "name": "פדל אוברדרייב Boss OD-3",
+      "url": "https://www.halilit.com/items/445766-boss-od-3-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559505/original/1489e3ee6eb98f42800fd0ab81190067.jpg",
+      "halilit_id": "87-OD3",
+      "sku": "87-OD3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אוברדרייב Boss OD-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ad2",
+      "name": "פדל פראמפ אקוסטי Boss AD-2",
+      "url": "https://www.halilit.com/items/1074759-boss-ad-2-acoustic-preamp",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1575940/original/6b445ae6f663e710bbf58e49cc4d232a.jpg",
+      "halilit_id": "87-AD2",
+      "sku": "87-AD2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל פראמפ אקוסטי Boss AD-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ge7",
+      "name": "פדל אקולייזר Boss GE-7",
+      "url": "https://www.halilit.com/items/445767-boss-ge-7-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559506/original/87c7e933ae11ca53f5e17e9a459a724a.jpg",
+      "halilit_id": "87-GE7",
+      "sku": "87-GE7",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אקולייזר Boss GE-7",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ds1w",
+      "name": "פדל דיסטורשן Boss DS-1W",
+      "url": "https://www.halilit.com/items/5451080-boss-ds-1w-waza-craft-distortion-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10822690/original/007957924d95defd310e2ee582701801.jpg",
+      "halilit_id": "87-DS1W",
+      "sku": "87-DS1W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיסטורשן Boss DS-1W",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ns2",
+      "name": "פדל נויז גייט Boss NS-2",
+      "url": "https://www.halilit.com/items/445768-boss-ns-2-noise-suppressor-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559507/original/c1bf4a6a1467483e7c4f855041b34f9c.jpg",
+      "halilit_id": "87-NS2",
+      "sku": "87-NS2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל נויז גייט Boss NS-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-fv500h",
+      "name": "Boss FV-500H",
+      "url": "https://www.halilit.com/items/447048-boss-fv-500h-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560879/original/c370668083006d0881cef8376536f489.jpg",
+      "halilit_id": "87-FV500H",
+      "sku": "87-FV500H",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss FV-500H",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ch1",
+      "name": "פדל קורוס Boss CH-1",
+      "url": "https://www.halilit.com/items/445769-boss-ch-1-super-chorus-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559508/original/91ba0d4b485071dbc1b081d8c202f736.jpg",
+      "halilit_id": "87-CH1",
+      "sku": "87-CH1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל קורוס Boss CH-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-dc2w",
+      "name": "Boss DC-2W",
+      "url": "https://www.halilit.com/items/2101066-boss-dc-2w",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3394813/original/b0277cdfab2575c15e3753f465bf6804.jpg",
+      "halilit_id": "87-DC2W",
+      "sku": "87-DC2W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss DC-2W",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-cs3",
+      "name": "פדל קומפרסור Boss CS-3",
+      "url": "https://www.halilit.com/items/445770-boss-cs-3-compression-sustainer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559509/original/35da28bb9a0b9b1aa90ae845b005ce25.jpg",
+      "halilit_id": "87-CS3",
+      "sku": "87-CS3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל קומפרסור Boss CS-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-fs6",
+      "name": "Boss FS-6",
+      "url": "https://www.halilit.com/items/447050-boss-fs-6-dual-footswitch",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560881/original/d5babb821a79f98f55be3344252e8f18.jpg",
+      "halilit_id": "87-FS6",
+      "sku": "87-FS6",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss FS-6",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ds2",
+      "name": "פדל דיסטורשן Boss DS-2",
+      "url": "https://www.halilit.com/items/445771-boss-ds-2-turbo-distortion-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6042830/original/db7d56630f11c0960d69a4391721d1c7.jpg",
+      "halilit_id": "87-DS2",
+      "sku": "87-DS2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיסטורשן Boss DS-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-mt2",
+      "name": "פדל דיסטורשן Boss MT-2",
+      "url": "https://www.halilit.com/items/445772-boss-mt-2-metal-zone-distortion-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6042831/original/c530e1c1089d079305d247a8d0ec0572.jpg",
+      "halilit_id": "87-MT2",
+      "sku": "87-MT2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיסטורשן Boss MT-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-cubest2-r",
+      "name": "מגבר סטריאופוני נייד Boss CUBE Street II",
+      "url": "https://www.halilit.com/items/4207952-boss-cube-street-ii-portable-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7736493/original/9c44c7da702a6c8e461bbfa6eaa1cda3.jpg",
+      "halilit_id": "87-CUBEST2-R",
+      "sku": "87-CUBEST2-R",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר סטריאופוני נייד Boss CUBE Street II",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-me90b",
+      "name": "מולטי אפקט בס Boss ME-90B",
+      "url": "https://www.halilit.com/items/7270228-boss-me-90b-bass-multiple-effects",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15190710/original/dccf169c8db2e03132295a2835fe6366.jpg",
+      "halilit_id": "87-ME90B",
+      "sku": "87-ME90B",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מולטי אפקט בס Boss ME-90B",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ds1b50a",
+      "name": "Boss DS-1-B50A 50th Anniversary",
+      "url": "https://www.halilit.com/items/6555478-boss-ds-1-b50a-50th-anniversary",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13775419/original/2e883dd70529cab4201006c3e24095b0.jpg",
+      "halilit_id": "87-DS1B50A",
+      "sku": "87-DS1B50A",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss DS-1-B50A 50th Anniversary",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sy1",
+      "name": "פדל אפקט Boss SY-1",
+      "url": "https://www.halilit.com/items/2562397-boss-sy-1-guitar-synthesizer-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4250277/original/e47ebc773dd6a7783f66b2b091194c96.jpg",
+      "halilit_id": "87-SY1",
+      "sku": "87-SY1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אפקט Boss SY-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-wl50",
+      "name": "Boss WL-50 Wireless System",
+      "url": "https://www.halilit.com/items/2014045-boss-wl-50-wireless-system",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3238217/original/4f5f44251bfa42b194f5216ea0d497ce.jpg",
+      "halilit_id": "87-WL50",
+      "sku": "87-WL50",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss WL-50 Wireless System",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-dcubelx",
+      "name": "מגבר נייד לגיטרה חשמלית Boss Dual Cube LX",
+      "url": "https://www.halilit.com/items/5421663-boss-dual-cube-lx",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10737966/original/9419379557710353883bac65f4db3914.jpg",
+      "halilit_id": "87-DCUBELX",
+      "sku": "87-DCUBELX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר נייד לגיטרה חשמלית Boss Dual Cube LX",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ktn502ex",
+      "name": "מגבר לגיטרה חשמלית Boss Katana-50 MkII EX",
+      "url": "https://www.halilit.com/items/5539683-boss-katana-50-mkii-ex-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11095413/original/7d401cb40e5c8a90e3fbcdf8fdf75341.jpg",
+      "halilit_id": "87-KTN502EX",
+      "sku": "87-KTN502EX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה חשמלית Boss Katana-50 MkII EX",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-vo1",
+      "name": "Boss VO-1",
+      "url": "https://www.halilit.com/items/714083-boss-vo-1-vocoder",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1005811/original/9d4fa3efcc915e8142377436717bc4b7.jpg",
+      "halilit_id": "87-VO1",
+      "sku": "87-VO1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss VO-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bss25blk",
+      "name": "Boss BSS-25",
+      "url": "https://www.halilit.com/items/3669350-boss-bss-25-instrument-strap-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6454941/original/8fa2040bb2cba825ad1652617e048916.jpg",
+      "halilit_id": "87-BSS25BLK",
+      "sku": "87-BSS25BLK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSS-25",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-katana100/212-mk3",
+      "name": "מגבר לגיטרה חשמלית Boss Katana-100/212 Gen 3",
+      "url": "https://www.halilit.com/items/7285863-boss-katana-100-212-gen-3-guitar-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15187943/original/311a007d3904fb9f51fca7e1a3b4a123.jpg",
+      "halilit_id": "87-KATANA100/212-MK3",
+      "sku": "87-KATANA100/212-MK3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה חשמלית Boss Katana-100/212 Gen 3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-mt23a",
+      "name": "Boss MT-2-3A",
+      "url": "https://www.halilit.com/items/5765735-boss-mt-2-3a-metal-zone-30th-anniversary",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11732582/original/f8764aae88f17ac9f1800d104c8b5f39.jpg",
+      "halilit_id": "87-MT23A",
+      "sku": "87-MT23A",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss MT-2-3A",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sl2",
+      "name": "Boss SL-2",
+      "url": "https://www.halilit.com/items/5451371-boss-sl-2-slicer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10823307/original/dbd18492940ca611377f02f96195d773.jpg",
+      "halilit_id": "87-SL2",
+      "sku": "87-SL2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss SL-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-wl20",
+      "name": "Boss WL-20 Wireless System",
+      "url": "https://www.halilit.com/items/2012779-boss-wl-20-wireless-system",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3234991/original/f45f60d6adbd35236d5516560752f746.jpg",
+      "halilit_id": "87-WL20",
+      "sku": "87-WL20",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss WL-20 Wireless System",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-dd8",
+      "name": "פדל דיליי Boss DD-8",
+      "url": "https://www.halilit.com/items/2692205-boss-dd-8-digital-delay-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4524845/original/23a2e8d38f5285c0f674ff08e2e82f0a.jpg",
+      "halilit_id": "87-DD8",
+      "sku": "87-DD8",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיליי Boss DD-8",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rc10r",
+      "name": "פדל לופר Boss RC-10R",
+      "url": "https://www.halilit.com/items/2721390-boss-rc-10r-rhythm-loop-station",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4577569/original/844fa9fc918c3fad58408342ca4a00c7.jpg",
+      "halilit_id": "87-RC10R",
+      "sku": "87-RC10R",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל לופר Boss RC-10R",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ac22lx",
+      "name": "מגבר לגיטרה אקוסטית Boss AC-22LX",
+      "url": "https://www.halilit.com/items/6188655-boss-ac-22lx-acoustic-amplifier",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13012965/original/16203ab7acd28fa7ddd0afc760f0d224.jpg",
+      "halilit_id": "87-AC22LX",
+      "sku": "87-AC22LX",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מגבר לגיטרה אקוסטית Boss AC-22LX",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-rc500",
+      "name": "אפקט לופר Boss RC-500",
+      "url": "https://www.halilit.com/items/3336819-boss-rc-500-loop-station",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5818618/original/3eef5081699cdfa3a8a588e147dd91a2.jpg",
+      "halilit_id": "87-RC500",
+      "sku": "87-RC500",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לופר Boss RC-500",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-bsm20wb",
+      "name": "Boss BSM-20-WB",
+      "url": "https://www.halilit.com/items/5448057-boss-bsm-20-wb",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14233494/original/12f991341226a8bb119fbd7d6b558f77.jpg",
+      "halilit_id": "87-BSM20WB",
+      "sku": "87-BSM20WB",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss BSM-20-WB",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-px1",
+      "name": "פדל מדמה אפקטים Boss plugout FX PX-1",
+      "url": "https://www.halilit.com/items/8330875-boss-plugout-fx-px-1-effect-modulation-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17546810/original/e9f80979d76e8f8e0df1c78bfee0b17b.jpg",
+      "halilit_id": "87-PX1",
+      "sku": "87-PX1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל מדמה אפקטים Boss plugout FX PX-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-gp10gk",
+      "name": "Boss GP10GK",
+      "url": "https://www.halilit.com/items/444283-boss-gp10gk-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/11804690/original/2918f5774fb5bbd66db50cba9e788339.jpg",
+      "halilit_id": "87-GP10GK",
+      "sku": "87-GP10GK",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss GP10GK",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sde3",
+      "name": "פדל דיליי Boss SDE-3",
+      "url": "https://www.halilit.com/items/7508348-boss-sde-3-dual-digital-delay",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15669770/original/b10b0776e6674d5dac361ea18635fe85.jpg",
+      "halilit_id": "87-SDE3",
+      "sku": "87-SDE3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל דיליי Boss SDE-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-tu3",
+      "name": "טיונר כרומטי Boss TU-3",
+      "url": "https://www.halilit.com/items/447360-boss-tu-3-chromatic-tuner-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/561193/original/03f40bac46dce6eb645fddd7edc0e26c.jpg",
+      "halilit_id": "87-TU3",
+      "sku": "87-TU3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "טיונר כרומטי Boss TU-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sde3000d",
+      "name": "Boss SDE-3000D",
+      "url": "https://www.halilit.com/items/6067593-boss-sde-3000d-dual-digital-delay",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12686716/original/e6a1d7b643b118818f77125eed622dd5.jpg",
+      "halilit_id": "87-SDE3000D",
+      "sku": "87-SDE3000D",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss SDE-3000D",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-tr2",
+      "name": "פדל אפקט Boss TR-2",
+      "url": "https://www.halilit.com/items/444299-boss-tr-2-tremolo-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/595149/original/8c50d1f37dafb86507237dbb967a8f18.jpg",
+      "halilit_id": "87-TR2",
+      "sku": "87-TR2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אפקט Boss TR-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ph3",
+      "name": "פדל פייזר Boss PH-3",
+      "url": "https://www.halilit.com/items/444300-boss-ph-3-phase-shifter-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557447/original/5df65057675ba1443cf150f7b3521e71.jpg",
+      "halilit_id": "87-PH3",
+      "sku": "87-PH3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל פייזר Boss PH-3",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-mt2w",
+      "name": "Boss MT-2W",
+      "url": "https://www.halilit.com/items/3611021-boss-mt-2w-waza-metal-zone-distortion",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6336727/original/e6d768f33033bf29eb2267c53a5d5317.jpg",
+      "halilit_id": "87-MT2W",
+      "sku": "87-MT2W",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss MT-2W",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-aw3",
+      "name": "Boss AW-3 Dynamic Wah",
+      "url": "https://www.halilit.com/items/444303-boss-aw-3-dynamic-wah-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557450/original/84067b1b629219ad2cda20f081d3a480.jpg",
+      "halilit_id": "87-AW3",
+      "sku": "87-AW3",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss AW-3 Dynamic Wah",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ps-6",
+      "name": "פדל הרמונייזר Boss PS-6",
+      "url": "https://www.halilit.com/items/444304-boss-ps-6-harmonist-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557451/original/b5ffa34f566ff42b94fbf66ea7c06e14.jpg",
+      "halilit_id": "87-PS-6",
+      "sku": "87-PS-6",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל הרמונייזר Boss PS-6",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-cp1x",
+      "name": "פדל קומפרסור Boss CP-1X",
+      "url": "https://www.halilit.com/items/1075346-boss-cp-1x-guitar-compressor",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1577032/original/e5b19143ba4933fc056e334d74572fd6.jpg",
+      "halilit_id": "87-CP1X",
+      "sku": "87-CP1X",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל קומפרסור Boss CP-1X",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve5wh",
+      "name": "אפקט לשירה Boss VE-5",
+      "url": "https://www.halilit.com/items/7110804-boss-ve-5-vocal-performer",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14815815/original/d2f869d6ab502b66ede320a1904f68a0.jpg",
+      "halilit_id": "87-VE5WH",
+      "sku": "87-VE5WH",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לשירה Boss VE-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ce5",
+      "name": "פדל קורוס Boss CE-5",
+      "url": "https://www.halilit.com/items/444308-boss-ce-5-stereo-chorus-ensemble-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557459/original/ae258665551a35097a9a15e475a544ec.jpg",
+      "halilit_id": "87-CE5",
+      "sku": "87-CE5",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל קורוס Boss CE-5",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-sd1",
+      "name": "פדל אוברדרייב Boss SD-1",
+      "url": "https://www.halilit.com/items/444309-boss-sd-1-super-ovedrive-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557460/original/e6db8be1f712e66c7bfde43236b7e94b.jpg",
+      "halilit_id": "87-SD1",
+      "sku": "87-SD1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "פדל אוברדרייב Boss SD-1",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-wl60",
+      "name": "Boss WL-60 Wireless System",
+      "url": "https://www.halilit.com/items/4039066-boss-wl-60-wireless-system-",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7303902/original/4e87269be80d061c5e2e374b70a0230c.jpg",
+      "halilit_id": "87-WL60",
+      "sku": "87-WL60",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss WL-60 Wireless System",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-wl30xlr",
+      "name": "מערכת אלחוטית למיקרופון Boss WL-30XLR",
+      "url": "https://www.halilit.com/items/3697745-boss-wl-30xlr-digital-wireless-system",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/6515041/original/0cd9b45bec375ec58b64de004673bb7b.jpg",
+      "halilit_id": "87-WL30XLR",
+      "sku": "87-WL30XLR",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "מערכת אלחוטית למיקרופון Boss WL-30XLR",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve500",
+      "name": "אפקט לשירה Boss VE-500",
+      "url": "https://www.halilit.com/items/2101187-boss-ve-500",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3395100/original/e4dc6b6074ffc7e7945a68117857261c.jpg",
+      "halilit_id": "87-VE500",
+      "sku": "87-VE500",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לשירה Boss VE-500",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve2",
+      "name": "אפקט לשירה Boss VE-2",
+      "url": "https://www.halilit.com/items/444414-boss-ve-2",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557582/original/d432ddad9e4f4fbe123a6f7e42c0efdd.jpg",
+      "halilit_id": "87-VE2",
+      "sku": "87-VE2",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "אפקט לשירה Boss VE-2",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve8",
+      "name": "Boss VE-8",
+      "url": "https://www.halilit.com/items/817924-boss-ve-8",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1203905/original/d413adb39c06fea2c1b5288396d59e09.jpg",
+      "halilit_id": "87-VE8",
+      "sku": "87-VE8",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss VE-8",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-cbrc505",
+      "name": "Boss CB-RC505 Carrying Bag",
+      "url": "https://www.halilit.com/items/6315311-boss-cb-rc505-carrying-bag",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13215041/original/b1d773ee60b87482ea39483df740cc1d.jpg",
+      "halilit_id": "87-CBRC505",
+      "sku": "87-CBRC505",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss CB-RC505 Carrying Bag",
+      "category": "general"
+    },
+    {
+      "id": "halilit_87-ve1",
+      "name": "Boss VE-1 Vocal Echo",
+      "url": "https://www.halilit.com/items/458346-boss-ve-1-vocal-echo-pedal",
+      "image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/575990/original/1f5c0a49a23de6bc6fd432d9dee051e5.jpg",
+      "halilit_id": "87-VE1",
+      "sku": "87-VE1",
+      "pricing": {
+        "currency": "ILS",
+        "regular_price": null,
+        "eilat_price": null,
+        "sale_price": null
+      },
+      "description": "Boss VE-1 Vocal Echo",
+      "category": "general"
+    }
+  ]
+}

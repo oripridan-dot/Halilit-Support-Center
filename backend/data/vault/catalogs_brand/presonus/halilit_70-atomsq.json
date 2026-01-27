@@ -1,0 +1,39 @@
+{
+  "id": "halilit_70-atomsq",
+  "name": "PreSonus ATOM SQ",
+  "brand": "presonus",
+  "category": "general",
+  "description": "PreSonus ATOM SQ",
+  "media": {
+    "thumbnail": "/data/thumbnails/presonus_70_atomsq.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/3521406-presonus-atom-sq",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "presonus_70_atomsq",
+    "name": "PreSonus ATOM SQ",
+    "description": "PreSonus ATOM SQ",
+    "category": "general",
+    "image_url": "/data/thumbnails/presonus_70_atomsq.jpg",
+    "product_url": "https://www.halilit.com/items/3521406-presonus-atom-sq",
+    "is_sold": true,
+    "price": 1095.0,
+    "halilit_url": "https://www.halilit.com/items/3521406-presonus-atom-sq",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.053661Z"
+  }
+}

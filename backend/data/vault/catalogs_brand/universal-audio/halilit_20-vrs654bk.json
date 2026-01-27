@@ -1,0 +1,28 @@
+{
+  "id": "halilit_20-vrs654bk",
+  "name": "Unknown",
+  "brand": "universal-audio",
+  "category": "general",
+  "description": "",
+  "media": {
+    "thumbnail": "/assets/placeholder_gear.png",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/7149618-vintage-revo-surfmaster-quad-electric-guitar",
+    "status": "scratch"
+  },
+  "official_knowledge": {},
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:33.583158Z"
+  }
+}

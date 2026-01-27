@@ -1,0 +1,39 @@
+{
+  "id": "halilit_55-mpd218",
+  "name": "Akai Professional MPD218",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional MPD218",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_mpd218.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": "https://www.halilit.com/items/983330-akai-professional-mpd218-pad-controller",
+    "status": "scratch"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_mpd218",
+    "name": "Akai Professional MPD218",
+    "description": "Akai Professional MPD218",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_mpd218.jpg",
+    "product_url": "https://www.halilit.com/items/983330-akai-professional-mpd218-pad-controller",
+    "is_sold": true,
+    "price": 453.0,
+    "halilit_url": "https://www.halilit.com/items/983330-akai-professional-mpd218-pad-controller",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "HALILIT_CERTIFIED"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:26.924757Z"
+  }
+}

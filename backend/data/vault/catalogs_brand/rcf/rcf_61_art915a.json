@@ -1,0 +1,39 @@
+{
+  "id": "rcf_61_art915a",
+  "name": "RCF ART 915-A",
+  "brand": "rcf",
+  "category": "general",
+  "description": "RCF ART 915-A",
+  "media": {
+    "thumbnail": "/data/thumbnails/rcf_61_art915a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rcf_61_art915a",
+    "name": "RCF ART 915-A",
+    "description": "RCF ART 915-A",
+    "category": "general",
+    "image_url": "/data/thumbnails/rcf_61_art915a.jpg",
+    "product_url": "https://www.halilit.com/items/4424447-rcf-art-915-a-",
+    "is_sold": true,
+    "price": 4557.0,
+    "halilit_url": "https://www.halilit.com/items/4424447-rcf-art-915-a-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T10:08:32.494072Z"
+  }
+}
