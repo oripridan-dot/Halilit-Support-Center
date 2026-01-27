@@ -1,6 +1,6 @@
-# HSC Mission Control v3.7.5 - Frontend
+# HSC Frontend v4.1 - Galaxy Edition
 
-Modern React + TypeScript frontend with clean, production-ready architecture.
+Modern React + TypeScript frontend with theatrical 3D slot lighting.
 
 ## 🏗️ Architecture: Static First (ONE SOURCE OF TRUTH)
 
@@ -8,23 +8,25 @@ Modern React + TypeScript frontend with clean, production-ready architecture.
 - **No Backend**: Zero runtime API calls, no database, no server dependency
 - **State Management**: Zustand for navigation state
 - **Search**: Fuse.js for client-side fuzzy search (<50ms)
-- **Type Safety**: TypeScript 5 with strict mode + Zod runtime validation
+- **Type Safety**: TypeScript 5 with strict mode
+- **Animation**: Framer Motion 12 for 3D theatrical effects
 
 ## 🎨 Key Features
 
-- ✅ **40 Products** across 3 brands (Roland, Boss, Nord)
-- ✅ **7 Categories** with hierarchical navigation
+- ✅ **Galaxy Dashboard**: 40+ category slots with 3D room geometry
+- ✅ **Theatrical Lighting**: Sharp god's beams from angled origins (175°)
+- ✅ **Separated Color Origins**: Natural color mixing in 3D space
+- ✅ **Depth Perception**: Vignettes, side shadows, perspective floors
 - ✅ **Instant Search** with fuzzy matching
-- ✅ **Brand Theming** with CSS variables (WCAG AA)
-- ✅ **Error Boundaries** for graceful error handling
-- ✅ **Type Safe** end-to-end with TypeScript + Zod
+- ✅ **Type Safe** end-to-end with TypeScript
 
 ## 🚀 Tech Stack
 
 - **React 19.2** - Latest React with improved performance
 - **TypeScript 5.9** - Strict type checking
-- **Vite 7.3** - Lightning-fast dev server & build
+- **Vite 7** - Lightning-fast dev server with SWC & pre-bundling
 - **Tailwind CSS 3.4** - Utility-first styling
+- **Framer Motion 12** - 3D animations and lighting effects
 - **Zustand 5.0** - Minimal state management
 - **Fuse.js 7.1** - Fuzzy search
 - **Lucide React** - Icon system

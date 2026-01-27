@@ -1,110 +1,94 @@
-# Halilit Support Center - Galaxy Edition (v4)
+# Halilit Support Center - Galaxy Edition (v4.1)
 
-[![Status](https://img.shields.io/badge/status-production%20ready-brightgreen)](https://img.shields.io/badge/status-production%20ready-brightgreen)
-[![TypeScript](https://img.shields.io/badge/typescript-%235.0+-blue)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/react-18+-blue)](https://react.dev)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Status](https://img.shields.io/badge/status-production-brightgreen)](https://img.shields.io/badge/status-production-brightgreen)
+[![TypeScript](https://img.shields.io/badge/typescript-5.9+-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/react-19.2-blue)](https://react.dev)
 
-**The specialized static catalog for Halilit support center.** A lightning-fast, single-screen interface for browsing 5,000+ products.
+**Ultra-fast static catalog for Halilit Support Center.** Browse 5,000+ products in a single-screen immersive interface.
 
-- 🌌 **Galaxy Dashboard** - Unified visual interface for all product categories.
-- 🎹 **5,268 Products** - Roland, Boss, Nord, Moog, and 75+ brands.
-- 🚀 **Lightning Fast** - Static JSON architecture, <50ms load time.
-- 📱 **Responsive Design** - Optimized for support center kiosks and devices.
+- 🌌 **Galaxy Dashboard** - 3D room slots with theatrical stage lighting
+- 🎹 **5,268 Products** - Roland, Boss, Nord, Moog, and 75+ brands
+- ⚡ **Lightning Fast** - Static JSON, <50ms load time, no API calls
+- 📱 **Responsive** - Optimized for support center kiosks
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Codespaces)
+
+Your devcontainer will auto-install everything. Just:
 
 ```bash
-# Clone and enter
-git clone [repo-url]
-cd Halilit-Support-Center
-
-# Run the setup script (installs everything)
-./setup_fresh_env.sh
-
-# Start development server
 cd frontend && pnpm dev
 ```
 
-Open **http://localhost:5173** in your browser.
+Open **http://localhost:5173**
 
 ---
 
 ## 🏗️ Architecture
 
-### "Static First" Design
+### Static-First Design
 
 ```
-Data Generation (Offline)
+Raw Data (brands/halilit websites)
     ↓
-Scrapers (Backend Services)
+Backend Pipeline (forge_backbone.py)
     ↓
-forge_backbone.py (Data pipeline)
+Static JSON (frontend/public/data/)
     ↓
-Static JSON Files (frontend/public/data/)
+React App (pure frontend, no backend)
     ↓
-Frontend (React + TypeScript)
-    ↓
-Browser (No API calls, instant load)
+Browser (instant load)
 ```
 
-**Key Principle**: All data is pre-built. The frontend is a pure React application consuming static JSON assets.
+**No runtime API.** Everything is pre-built.
 
 ### Tech Stack
 
-| Layer        | Technology              | Why                                    |
-| ------------ | ----------------------- | -------------------------------------- |
-| **Frontend** | React 18 + TypeScript 5 | Type-safe, modern, fast                |
-| **Build**    | Vite 7                  | Lightning-fast dev & production builds |
-| **Styling**  | Tailwind CSS            | Utility-first, responsive              |
-| **State**    | Zustand                 | Lightweight logic                      |
-| **Search**   | Fuse.js                 | Fast client-side fuzzy search          |
+| Layer        | Technology              |
+| ------------ | ----------------------- |
+| **Frontend** | React 19 + TypeScript 5 |
+| **Build**    | Vite 7 (SWC)           |
+| **Styling**  | Tailwind CSS           |
+| **State**    | Zustand                |
+| **Search**   | Fuse.js                |
 
 ---
 
-## 📂 Project Structure
+## 📂 Structure
 
 ```
-Halilit-Support-Center/
-├── frontend/                 ← React app
-│   ├── src/
-│   │   ├── components/      
-│   │   │   ├── views/       ← Main Views (GalaxyDashboard, SpectrumModule)
-│   │   │   └── ui/          ← Reusable atomic components
-│   │   ├── lib/             ← Utilities (catalogLoader, search)
-│   │   └── store/           ← Global state
-│   └── public/data/         ← Generated static JSON catalogs
-│
-├── backend/                  ← Data pipeline
-│   ├── forge_backbone.py     ← Main coordinator
-│   └── services/             ← Ingestion scripts
-│
-└── docs/                     ← Documentation
+frontend/
+├── src/
+│   ├── components/views/  ← GalaxyDashboard, SpectrumModule
+│   ├── lib/              ← Utilities
+│   └── store/            ← State
+└── public/data/          ← Static JSON catalogs
+
+backend/
+├── forge_backbone.py     ← Main pipeline
+├── mass_ingest_protocol.py
+├── services/            ← Brand scrapers
+├── models/              ← Data models
+└── data/
+    ├── blueprints/      ← Raw brand data (KEEP)
+    ├── vault/           ← Raw Halilit data (KEEP)
+    └── catalogs_brand/  ← Processed (git-ignored)
 ```
 
 ---
 
 ## 🔧 Maintenance
 
-### Regenerating Data
-To update the product catalog:
+### Regenerate Catalog
 
 ```bash
 cd backend
 python3 forge_backbone.py
 ```
 
-### Verification
-Run the verification suite to ensure system health:
-
-```bash
-./verify_workspace.sh
-```
+Output goes to `frontend/public/data/`
 
 ---
 
-**Made with ❤️ for Halilit Support Center.**
-
-**Version**: 4.0.0 | **Status**: Production Ready | **Updated**: January 2026
+**Version**: 4.1.0 | **Status**: Production | **Updated**: January 27, 2026

@@ -20,7 +20,7 @@ export const useCategoryCatalog = (category: string | null) => {
         const res = await fetch(`/data/${catId}.json`);
         
         if (res.ok) {
-          const data: CategoryPayload = await res.json();
+          const data = (await res.json()) as CategoryPayload;
           setProducts(data.products || []);
           // Dynamically set the 1176 buttons based on actual content
           setAvailableFilters(data.metadata?.available_filters || []);

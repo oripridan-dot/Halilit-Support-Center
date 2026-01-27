@@ -1,5 +1,5 @@
 import { Activity, ArrowLeft, Maximize2, ScanLine, Search, Sparkles } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
@@ -55,7 +55,10 @@ export const SpectrumModule = () => {
   const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null);
   const [imageLoadError, setImageLoadError] = useState(false);
 
-  useEffect(() => { setImageLoadError(false); }, [hoveredProduct]);
+  const handleHoverProduct = (product: Product | null) => {
+    setHoveredProduct(product);
+    setImageLoadError(false);
+  };
 
   const filteredProducts = useMemo(() => {
     let base = rawProducts;
@@ -190,7 +193,7 @@ export const SpectrumModule = () => {
           <div className="w-full h-full relative z-10">
             <TierBar
               products={filteredProducts}
-              onHoverProduct={setHoveredProduct}
+              onHoverProduct={handleHoverProduct}
               onSelectProduct={openProductPop}
             />
           </div>

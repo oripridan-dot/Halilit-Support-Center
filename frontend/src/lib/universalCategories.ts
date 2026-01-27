@@ -29,66 +29,52 @@ export interface UniversalCategoryDef extends Omit<
 // Map Spectrum ID -> Thumbnail Path
 const SPECTRUM_IMAGES: Record<string, string> = {
   // GUITARS
-  "electric-guitars":
-    "/data/category_thumbnails/guitars-electric-guitars_thumb.webp",
-  "acoustic-guitars":
-    "/data/category_thumbnails/guitars-acoustic-guitars_thumb.webp",
-  "bass-guitars": "/data/category_thumbnails/guitars-bass-guitars_thumb.webp",
-  "guitar-amps": "/data/category_thumbnails/guitars-guitar-amps_thumb.webp",
-  "guitar-pedals": "/data/category_thumbnails/guitars-guitar-pedals_thumb.webp",
-  "folk-instruments":
-    "/data/category_thumbnails/guitars-folk-instruments_thumb.webp",
-  "guitar-accessories":
-    "/data/category_thumbnails/guitars-guitar-accessories_thumb.webp",
+  "electric-guitars": "/data/thumbnails/esp_67_eiihorfrqmrdb.jpg",
+  "acoustic-guitars": "/data/thumbnails/breedlove_guitars_17_dscn01euam.jpg",
+  "bass-guitars": "/data/thumbnails/spector_69_euro4lx_dw.jpg",
+  "guitar-amps": "/data/thumbnails/roland_87-jc120p.jpg",
+  "guitar-pedals": "/data/thumbnails/warm_audio_80_wajpjetphaser.jpg",
+  "folk-instruments": "/data/thumbnails/cordoba_guitars_76_20tm.jpg",
+  "guitar-accessories": "/data/thumbnails/perri_s_leathers_57_1333.jpg",
 
   // DRUMS
-  "acoustic-drums": "/data/category_thumbnails/drums-acoustic-drums_thumb.webp",
-  "electronic-drums":
-    "/data/category_thumbnails/drums-electronic-drums_thumb.webp",
-  cymbals: "/data/category_thumbnails/drums-cymbals_thumb.webp",
-  snares: "/data/category_thumbnails/drums-snares_thumb.webp",
-  "sticks-heads": "/data/category_thumbnails/drums-sticks-heads_thumb.webp",
-  percussion: "/data/category_thumbnails/drums-percussion_thumb.webp",
-  "drum-hardware": "/data/category_thumbnails/drums-drum-hardware_thumb.webp",
+  "acoustic-drums": "/data/thumbnails/pearl_88_mct924xedpc_348.jpg",
+  "electronic-drums": "/data/thumbnails/roland_87-vad716sw.jpg",
+  cymbals: "/data/thumbnails/paiste_cymbals_90_1061418.jpg",
+  snares: "/data/thumbnails/pearl_88_mwa1465s_c.jpg",
+  "sticks-heads": "/data/thumbnails/remo_19_am14c.jpg",
+  percussion: "/data/thumbnails/gon_bops_percussion_82_aacj.jpg",
+  "drum-hardware": "/data/thumbnails/pearl_88_p930.jpg",
 
   // KEYS
-  synthesizers: "/data/category_thumbnails/keys-synthesizers_thumb.webp",
-  "stage-pianos": "/data/category_thumbnails/keys-stage-pianos_thumb.webp",
-  "midi-controllers":
-    "/data/category_thumbnails/keys-midi-controllers_thumb.webp",
-  grooveboxes: "/data/category_thumbnails/keys-grooveboxes_thumb.webp",
-  eurorack: "/data/category_thumbnails/keys-eurorack_thumb.webp",
-  "keys-accessories":
-    "/data/category_thumbnails/keys-keys-accessories_thumb.webp",
+  synthesizers: "/data/thumbnails/moog_29_matriarch.jpg",
+  "stage-pianos": "/data/thumbnails/roland_87-rd2000.jpg",
+  "midi-controllers": "/data/thumbnails/roland_87-a88mk2.jpg",
+  grooveboxes: "/data/thumbnails/roland_87-mc707.jpg",
+  eurorack: "/data/thumbnails/moog_29_mother32.jpg",
+  "keys-accessories": "/data/thumbnails/roland_87-ks10z.jpg",
 
   // STUDIO
-  "audio-interfaces":
-    "/data/category_thumbnails/studio-audio-interfaces_thumb.webp",
-  "studio-monitors":
-    "/data/category_thumbnails/studio-studio-monitors_thumb.webp",
-  "studio-microphones":
-    "/data/category_thumbnails/studio-studio-microphones_thumb.webp",
-  "outboard-gear": "/data/category_thumbnails/studio-outboard-gear_thumb.webp",
-  "software-plugins":
-    "/data/category_thumbnails/studio-software-plugins_thumb.webp",
-  "studio-accessories":
-    "/data/category_thumbnails/studio-studio-accessories_thumb.webp",
+  "audio-interfaces": "/data/thumbnails/universal_audio_44_apx8he.jpg",
+  "studio-monitors": "/data/thumbnails/krk_systems_21_rp5g5.jpg",
+  "studio-microphones": "/data/thumbnails/warm_audio_80_wa87r2.jpg",
+  "outboard-gear": "/data/thumbnails/warm_audio_80_wa76.jpg",
+  "software-plugins": "/data/thumbnails/steinberg__45_dac_cubase_pro.jpg",
+  "studio-accessories": "/data/thumbnails/on_stage_65_ms7701b.jpg",
 
   // LIVE
-  "pa-systems": "/data/category_thumbnails/live-pa-systems_thumb.webp",
-  "live-mixers": "/data/category_thumbnails/live-live-mixers_thumb.webp",
-  "dj-equipment": "/data/category_thumbnails/live-dj-equipment_thumb.webp",
-  lighting: "/data/category_thumbnails/live-lighting_thumb.webp",
-  "live-mics": "/data/category_thumbnails/live-live-mics_thumb.webp",
-  "live-accessories":
-    "/data/category_thumbnails/live-live-accessories_thumb.webp",
+  "pa-systems": "/data/thumbnails/rcf_61_art912a.jpg",
+  "live-mixers": "/data/thumbnails/mackie_60_onyx16.jpg",
+  "dj-equipment": "/data/thumbnails/roland_87-dj707m.jpg",
+  lighting: "/data/thumbnails/show_03_csb175.jpg",
+  "live-mics": "/data/thumbnails/mackie_60_em91c.jpg",
+  "live-accessories": "/data/thumbnails/on_stage_65_db200.jpg",
 
   // UTILITY
-  cables: "/data/category_thumbnails/accessories-cables_thumb.webp",
-  stands: "/data/category_thumbnails/accessories-stands_thumb.webp",
-  "cases-bags": "/data/category_thumbnails/accessories-cases-bags_thumb.webp",
-  "power-supplies":
-    "/data/category_thumbnails/accessories-power-supplies_thumb.webp",
+  cables: "/data/thumbnails/roland_87-rcc10trtr.jpg",
+  stands: "/data/thumbnails/on_stage_65_ks7191.jpg",
+  "cases-bags": "/data/thumbnails/fusion_78_ub01bk.jpg",
+  "power-supplies": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxp55.jpg",
 };
 
 // Brand Colors
@@ -168,7 +154,7 @@ export const UNIVERSAL_CATEGORIES: UniversalCategoryDef[] =
       ...spec,
       image:
         SPECTRUM_IMAGES[spec.id] ||
-        "/data/category_thumbnails/default_thumb.webp",
+        "/assets/thumbs/electric.svg",
       glowColor: SPECTRUM_GLOW[spec.id] || GLOW_COLORS.roland, // Default to Roland Orange
     })),
   }));

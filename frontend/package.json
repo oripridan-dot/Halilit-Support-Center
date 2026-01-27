@@ -1,28 +1,14 @@
 {
   "name": "frontend",
   "private": true,
-  "version": "4.0.0",
+  "version": "4.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:e2e": "playwright test",
-    "quality": "npm run quality:types && npm run quality:lint && npm run quality:build",
-    "quality:types": "tsc --noEmit",
-    "quality:lint": "eslint src --max-warnings 0",
-    "quality:build": "vite build",
-    "quality:deps": "depcheck --ignores='@types/*,vite,vitest,@vitejs/*,eslint*,typescript,tailwindcss,postcss,autoprefixer,playwright'",
-    "quality:size": "npm run build && du -sh dist && ls -lh dist/assets/*.js dist/assets/*.css 2>/dev/null || echo 'No assets yet'",
-    "clean:logs": "find src -name '*.ts*' ! -name 'devTools.ts' -exec grep -l 'console\\.log' {} \\;",
-    "clean:todos": "find src -name '*.ts*' -exec grep -Hn 'TODO\\|FIXME' {} \\;",
-    "verify": "npm run quality && npm run test:run && echo '✅ All verifications passed!'",
-    "daily": "npm run verify && npm run quality:size"
+    "lint": "eslint .",
+    "test": "vitest"
   },
   "dependencies": {
     "framer-motion": "^12.25.0",

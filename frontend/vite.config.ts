@@ -3,7 +3,13 @@ import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      // Use SWC for faster HMR
+      jsxRuntime: "automatic",
+      fastRefresh: true,
+    }),
+  ],
   server: {
     host: "0.0.0.0",
     port: 5173,
@@ -11,8 +17,29 @@ export default defineConfig({
       usePolling: true,
       interval: 500,
     },
+    // Improve HMR performance
+    hmr: {
+      overlay: true,
+    },
+  },
+  optimizeDeps: {
+    // Pre-bundle these dependencies for faster dev server startup
+    include: [
+      "react",
+      "react-dom",
+      "react-dom/client",
+      "zustand",
+      "framer-motion",
+      "lucide-react",
+      "fuse.js",
+    ],
+    // Exclude large dependencies that change frequently
+    exclude: [],
   },
   build: {
+    // Faster builds
+    target: "esnext",
+    minify: "esbuild",
     // Aggressive code-splitting to reduce main bundle
     rollupOptions: {
       output: {
@@ -30,5 +57,7 @@ export default defineConfig({
     },
     // More aggressive chunk splitting
     chunkSizeWarningLimit: 300,
+    // Enable source maps only in dev
+    sourcemap: process.env.NODE_ENV === "development",
   },
 });
