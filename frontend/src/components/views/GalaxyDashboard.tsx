@@ -24,12 +24,6 @@ const galaxy = UNIVERSAL_CATEGORIES.map(cat => ({
 // All slots have uniform base structure - differences only in brand colors
 // KEYS MUST MATCH: ${galaxy_id}-${spectrum_id}
 const SLOT_SCENES: Record<string, SlotScene> = {
-  // Standard stage floor and back wall (used for all slots)
-  "standard": {
-    floorMat: "radial-gradient(ellipse at bottom, transparent 0%, transparent 70%)",
-    bgMat: "linear-gradient(180deg, #0a0a0a 0%, #000000 100%)"
-  },
-
   // --- 🎹 KEYS SECTOR (keys-production) ---
   "keys-production-synthesizers": {
     themeColors: ["#ff8c00", "#00d2d3"],
