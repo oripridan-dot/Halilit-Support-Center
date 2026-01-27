@@ -1,0 +1,39 @@
+{
+  "id": "eve_audio_54_sc408",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC408",
+  "brand": "eve-audio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC408",
+  "media": {
+    "thumbnail": "/data/thumbnails/eve_audio_54_sc408.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "eve_audio_54_sc408",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC408",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC408",
+    "category": "general",
+    "image_url": "/data/thumbnails/eve_audio_54_sc408.jpg",
+    "product_url": "https://www.halilit.com/items/1396566-eve-audio-sc408-monitor",
+    "is_sold": true,
+    "price": 15166.0,
+    "halilit_url": "https://www.halilit.com/items/1396566-eve-audio-sc408-monitor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.669735Z"
+  }
+}

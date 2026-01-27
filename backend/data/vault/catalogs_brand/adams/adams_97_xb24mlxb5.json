@@ -1,0 +1,39 @@
+{
+  "id": "adams_97_xb24mlxb5",
+  "name": "Adams Xylophone Mallets Soft",
+  "brand": "adams",
+  "category": "general",
+  "description": "Adams Xylophone Mallets Soft",
+  "media": {
+    "thumbnail": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adams_97_xb24mlxb5",
+    "name": "Adams Xylophone Mallets Soft",
+    "description": "Adams Xylophone Mallets Soft",
+    "category": "general",
+    "image_url": "/data/thumbnails/adams_97_xb24mlxb5.jpg",
+    "product_url": "https://www.halilit.com/items/531178-adams-xylophone-mallets-soft",
+    "is_sold": true,
+    "price": 242.0,
+    "halilit_url": "https://www.halilit.com/items/531178-adams-xylophone-mallets-soft",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.267915Z"
+  }
+}

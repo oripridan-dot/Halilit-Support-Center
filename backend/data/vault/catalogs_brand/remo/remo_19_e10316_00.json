@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_e10316_00",
+  "name": "Remo Buffalo Drum",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Buffalo Drum",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_e10316_00.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_e10316_00",
+    "name": "Remo Buffalo Drum",
+    "description": "Remo Buffalo Drum",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_e10316_00.jpg",
+    "product_url": "https://www.halilit.com/items/448560-remo-buffalo-drum",
+    "is_sold": true,
+    "price": 487.0,
+    "halilit_url": "https://www.halilit.com/items/448560-remo-buffalo-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.155327Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_db100",
+  "name": "Mackie DB-100",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie DB-100",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_db100.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_db100",
+    "name": "Mackie DB-100",
+    "description": "Mackie DB-100",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_db100.jpg",
+    "product_url": "https://www.halilit.com/items/3365926-mackie-db-100-desktop-microphone-boom-arm",
+    "is_sold": true,
+    "price": 214.0,
+    "halilit_url": "https://www.halilit.com/items/3365926-mackie-db-100-desktop-microphone-boom-arm",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.690917Z"
+  }
+}

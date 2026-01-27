@@ -22,23 +22,16 @@ GOAL: Extract ALL available data from Moog website for JIT RAG system
 
 from models.product_hierarchy import (
     ProductCore, ProductCatalog, BrandIdentity,
-    ProductImage, ProductSpecification, SourceType, ProductRelationship, RelationshipType,
-    ProductStatus
-)
-from services.scraper_enhancements import (
-    SupportArticleExtractor, ProductImageEnhancer, BrandLogoDownloader
+    ProductImage, ProductSpecification, SourceType, ProductStatus
 )
 import asyncio
 import logging
-from typing import List, Dict, Optional, Set, Any
+from typing import List, Dict, Optional, Any
 from datetime import datetime
 from playwright.async_api import async_playwright, Page, TimeoutError as PlaywrightTimeoutError
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, AsyncRetrying
+from tenacity import stop_after_attempt, wait_exponential, AsyncRetrying
 from pathlib import Path
-import json
 import sys
-import re
-import os
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -197,7 +190,7 @@ class MoogScraper:
         """
         logger.info(
             f"🎹 Starting COMPREHENSIVE Moog scrape (max: {'ALL' if max_products is None else max_products})")
-        logger.info(f"   Goal: Extract ALL available data for JIT RAG system")
+        logger.info("   Goal: Extract ALL available data for JIT RAG system")
 
         async with async_playwright() as p:
             browser = await p.chromium.launch(
@@ -249,7 +242,7 @@ class MoogScraper:
                         logger.error(f"   Error scraping {url}: {e}")
                         continue
 
-                logger.info(f"\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
+                logger.info("\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
                 logger.info(f"   Products: {len(products)}")
                 logger.info(f"   Total Images: {total_images}")
                 logger.info(f"   Total Videos: {total_videos}")
@@ -311,7 +304,7 @@ class MoogScraper:
 
     async def _get_product_urls(self, page: Page, max_products: int = None) -> List[str]:
         """Get all product URLs by navigating through categories"""
-        logger.info(f"📄 Discovering Moog products through category navigation")
+        logger.info("📄 Discovering Moog products through category navigation")
 
         all_urls = set()
 
@@ -456,7 +449,6 @@ class MoogScraper:
 
             # Extract category from URL or breadcrumb
             main_category = "synthesizers"  # Default Moog category
-            categories = ["Moog Synthesizers"]
             try:
                 breadcrumbs = await asyncio.wait_for(
                     page.locator('[class*="breadcrumb"] a, nav a').all(),
@@ -466,7 +458,7 @@ class MoogScraper:
                     cat_text = await breadcrumbs[1].text_content()
                     if cat_text:
                         main_category = cat_text.strip().lower().replace(' ', '_').replace('-', '_')
-                        categories = [cat_text.strip()]
+                        [cat_text.strip()]
             except:
                 # Try to extract from URL
                 if '/products/' in url:
@@ -474,7 +466,7 @@ class MoogScraper:
                     if len(url_parts) > 1:
                         cat_from_url = url_parts[0]
                         main_category = cat_from_url.replace('-', '_')
-                        categories = [cat_from_url.replace('-', ' ').title()]
+                        [cat_from_url.replace('-', ' ').title()]
 
             # Extract specifications
             specifications = []

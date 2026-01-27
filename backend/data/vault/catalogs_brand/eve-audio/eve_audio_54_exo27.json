@@ -1,0 +1,39 @@
+{
+  "id": "eve_audio_54_exo27",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio EXO 27",
+  "brand": "eve-audio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio EXO 27",
+  "media": {
+    "thumbnail": "/data/thumbnails/eve_audio_54_exo27.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "eve_audio_54_exo27",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio EXO 27",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio EXO 27",
+    "category": "general",
+    "image_url": "/data/thumbnails/eve_audio_54_exo27.jpg",
+    "product_url": "https://www.halilit.com/items/7971211-eve-audio-exo-27",
+    "is_sold": true,
+    "price": 3438.0,
+    "halilit_url": "https://www.halilit.com/items/7971211-eve-audio-exo-27",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.667241Z"
+  }
+}

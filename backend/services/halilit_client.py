@@ -11,7 +11,6 @@ we use simulated responses.
 """
 
 import requests
-from bs4 import BeautifulSoup
 import re
 from typing import Dict, Optional
 

@@ -1,183 +1,136 @@
-# backend/services/frontend_normalizer.py
-from typing import List, Dict, Any, Optional
-from models.product_hierarchy import ProductCore
-from models.category_consolidator import consolidate_category
+from typing import List, Dict, Any
 import os
-import glob
 
 class FrontendNormalizer:
     
     @staticmethod
-    def _resolve_logo_url(brand: str) -> str:
+    def normalize_product(product: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Find the correct logo file for a brand.
-        Handles brand name variations (spaces -> hyphens, etc.)
+        Transforms Backend Product -> Premium Frontend Payload
         """
-        # Convert brand name to potential filename patterns
-        brand_slug = brand.lower().replace(" ", "-").replace("_", "-")
-        
-        # Try to find logo in assets/logos directory
-        logos_dir = "frontend/public/assets/logos"
-        
-        # Try exact match with different extensions
-        for ext in ['png', 'svg', 'jpg', 'gif', 'webp']:
-            # Try with _logo suffix
-            logo_path = f"{logos_dir}/{brand_slug}_logo.{ext}"
-            if os.path.exists(logo_path):
-                return f"/assets/logos/{brand_slug}_logo.{ext}"
-            
-            # Try without _logo suffix
-            logo_path = f"{logos_dir}/{brand_slug}.{ext}"
-            if os.path.exists(logo_path):
-                return f"/assets/logos/{brand_slug}.{ext}"
-        
-        # Try partial matches (handles brands with slightly different names)
-        try:
-            # List all files and try fuzzy matching
-            if os.path.exists(logos_dir):
-                for filename in os.listdir(logos_dir):
-                    if filename.lower().startswith(brand_slug):
-                        return f"/assets/logos/{filename}"
-        except:
-            pass
-        
-        # Fallback to generic logo path
-        return f"/assets/logos/{brand_slug}_logo.png"
-    
+        # --- Helper to safely get deep values ---
+        def get_val(obj, path, default=None):
+            try:
+                for key in path.split('.'):
+                    obj = obj.get(key, {})
+                return obj if obj else default
+            except:
+                return default
 
-    @staticmethod
-    def normalize_product(product: ProductCore) -> Dict[str, Any]:
-        """
-        Transforms Backend Product -> Frontend UI Payload
-        """
-        # 1. Determine Tribe
-        # Prefer explicit manual assignment if available, else infer
-        raw_cat = product.subcategory or product.main_category
-        tribe_id = product.tribe_assignment or consolidate_category(raw_cat)
-        
-        # IMPROVED INFERENCE: If Accessories (fallback), try to guess from Name + Brand
-        if tribe_id == "accessories":
-             # Construct a rich string to test against keywords logic in consolidator
-             # We reuse the consolidate_category function but pass it the product name/brand
-             rich_text = f"{product.brand} {product.name} {product.main_category}"
-             better_tribe = consolidate_category(rich_text)
-             # Only override if it found something specific (not accessories again)
-             if better_tribe != "accessories":
-                 tribe_id = better_tribe
+        # 1. Core Identity
+        p_id = product.get('id')
+        brand = product.get('brand', 'Unknown').upper()
+        # Prefer "Official" name, fallback to commercial
+        name = (get_val(product, 'official_knowledge.name') or 
+                get_val(product, 'commercial.name') or 
+                product.get('name') or "Unknown Model")
 
-        # 2. Generate Filters (Layer 3)
-        filters = FrontendNormalizer._generate_layer3_filters(product, tribe_id)
+        # 2. Smart Categorization (Tribe)
+        tribe_id = product.get('category', 'general').lower()
+
+        # 3. Rich Content Extraction
+        description = get_val(product, 'official_knowledge.description') or product.get('description', '')
         
-        # 3. Generate Specs Preview (For the Hover Screen)
-        specs_preview = FrontendNormalizer._generate_preview_specs(product, tribe_id)
-        
-        # 4. Resolve Image
+        # --- NEW: Document Extraction (PDFs) ---
+        downloads = []
+        raw_manuals = get_val(product, 'official_knowledge.official_manuals') or []
+        # If it's a simple list of strings
+        if isinstance(raw_manuals, list):
+            for m in raw_manuals:
+                if isinstance(m, str) and m.lower().endswith('.pdf'):
+                    downloads.append({"title": "User Manual", "url": m})
+                elif isinstance(m, dict):
+                    downloads.append(m)
+
+        # 4. Intelligence (Filters & Tags)
+        # We generate tags that the frontend uses for the 1176 buttons
+        tags = FrontendNormalizer._generate_smart_tags(name, description, tribe_id)
+
+        # 5. Visuals (High Res Priority)
         image_url = "/assets/placeholders/no-img.png"
-        if product.images:
-             # Find first main image or just take the first one
-             image_url = product.images[0].url
+        media_thumb = get_val(product, 'media.thumbnail')
+        official_img = get_val(product, 'official_knowledge.image_url')
+        
+        if official_img: 
+            image_url = official_img
+        elif media_thumb and "placeholder" not in media_thumb:
+            image_url = media_thumb
+
+        # 6. Pricing (The Halilit Connection)
+        price = get_val(product, 'commercial.price') or get_val(product, 'pricing.regular_price') or 0
 
         return {
-            "id": product.id,
-            "brand": product.brand.upper(),
-            "name": product.name,
-            "sku": product.sku or "N/A",
-            "price": product.pricing.regular_price if product.pricing else 0,
-            "status": product.status.value.upper(),
-            
-            # Navigation Data
+            "id": p_id,
+            "brand": brand,
+            "name": name,
+            "sku": get_val(product, 'commercial.sku') or "N/A",
+            "price": price,
+            "status": "ACTIVE",
             "tribe_id": tribe_id,
-            "subcategory_id": product.subcategory or "general", # Used for finer sorting if needed
-            "filters": filters, # The 1176 Buttons!
+            
+            # THE BRAIN: Tags for filtering
+            "tags": tags, 
+            
+            # Content
+            "description": description,
+            "specs_preview": FrontendNormalizer._generate_preview_specs(product, tribe_id),
+            "downloads": downloads, # <--- NEW: Docs for the UI
             
             # Visuals
             "image_url": image_url,
-            "logo_url": FrontendNormalizer._resolve_logo_url(product.brand),
-            
-            # UX Data
-            "specs_preview": specs_preview,
-            
-            # Full Data for 'Flight Case' Modal
-            "description": product.description,
-            "features": product.features,
-            "tech_specs": [s.model_dump() for s in product.specifications],
-            "manuals": product.manual_urls,
-            "drivers": product.support_url,
-
-            # Rich Data Extensions (Added for v3.9.0)
-            "relationships": [r.model_dump() for r in product.relationships] if hasattr(product, 'relationships') and product.relationships else [],
-            "connectivity": product.connectivity.model_dump() if hasattr(product, 'connectivity') and product.connectivity else None,
-            "tier": product.tier.model_dump() if hasattr(product, 'tier') and product.tier else None,
-            "video_urls": product.video_urls if hasattr(product, 'video_urls') else []
+            "logo_url": f"/assets/logos/{brand.lower().replace(' ', '-')}_logo.png"
         }
 
     @staticmethod
-    def _generate_layer3_filters(product: ProductCore, tribe_id: str) -> List[str]:
-        """Auto-tags products with filter keywords based on their metadata"""
-        filters = set()
-        text = (product.name + " " + product.description).lower()
+    def _generate_smart_tags(name: str, desc: str, cat: str) -> List[str]:
+        """Scans text to apply intelligent filter tags."""
+        tags = set()
+        text = (str(name) + " " + str(desc)).lower()
         
-        # Add Brand
-        filters.add(product.brand.title())
-
-        # Tribe-Specific Logic
-        if tribe_id == "guitars-bass":
-            if "electric" in text: filters.add("Electric")
-            if "acoustic" in text: filters.add("Acoustic")
-            if "bass" in text: filters.add("Bass")
-            if "strat" in text: filters.add("Strat")
-            if "tele" in text: filters.add("Tele")
-            if "les paul" in text: filters.add("LP Style")
+        # --- Universal Tags ---
+        if "usb" in text: tags.add("USB")
+        if "bluetooth" in text: tags.add("Bluetooth")
+        
+        # --- Category Specific ---
+        if cat == "keys":
+            if "analog" in text: tags.add("Analog")
+            if "digital" in text: tags.add("Digital")
+            if "synth" in text: tags.add("Synthesizer")
+            if "stage piano" in text: tags.add("Stage Piano")
+            if "weighted" in text: tags.add("Weighted Keys")
             
-        elif tribe_id == "drums-percussion":
-            if "snare" in text: filters.add("Snare")
-            if "ride" in text: filters.add("Ride")
-            if "crash" in text: filters.add("Crash")
-            if "electronic" in text: filters.add("Electronic")
-            if "kit" in text: filters.add("Kits")
+        elif cat == "drums":
+            if "electronic" in text: tags.add("Electronic")
+            if "acoustic" in text: tags.add("Acoustic")
+            if "snare" in text: tags.add("Snare")
+            if "mesh" in text: tags.add("Mesh Head")
 
-        elif tribe_id == "keys-production":
-            if "analog" in text: filters.add("Analog")
-            if "digital" in text: filters.add("Digital")
-            if "synth" in text: filters.add("Synthesizers")
-            if "piano" in text: filters.add("Pianos")
-            if "88" in text: filters.add("88-Key")
-            
-        elif tribe_id == "studio-recording":
-            if "interface" in text: filters.add("Interfaces")
-            if "monitor" in text: filters.add("Monitors")
-            if "condenser" in text: filters.add("Condenser")
-            if "dynamic" in text: filters.add("Dynamic")
+        elif cat == "guitars":
+            if "electric" in text: tags.add("Electric")
+            if "acoustic" in text: tags.add("Acoustic")
+            if "bass" in text: tags.add("Bass")
+            if "pedal" in text: tags.add("Pedals")
 
-        return list(filters)
+        elif cat == "studio":
+            if "monitor" in text: tags.add("Monitors")
+            if "interface" in text: tags.add("Audio Interface")
+            if "condenser" in text: tags.add("Condenser Mic")
+            if "dynamic" in text: tags.add("Dynamic Mic")
+
+        return sorted(list(tags))
 
     @staticmethod
-    def _generate_preview_specs(product: ProductCore, tribe_id: str) -> List[Dict[str, str]]:
-        """Extracts the top 4 specs for the spectrum hover display"""
+    def _generate_preview_specs(product, category):
+        # Returns [ {"key": "Type", "val": "Analog"}, ... ]
         specs = []
-        # Convert list of objs to dict for easy lookup
-        spec_map = {s.key.lower(): s.value for s in product.specifications}
+        raw = product.get('official_knowledge', {}).get('specs', {})
+        if not raw: return []
         
-        keys_to_find = []
-        if tribe_id == "guitars-bass":
-            keys_to_find = ["body", "neck", "fretboard", "pickups"]
-        elif tribe_id == "drums-percussion":
-            keys_to_find = ["shell", "size", "material", "finish"]
-        elif tribe_id == "keys-production":
-            keys_to_find = ["keys", "polyphony", "engine", "io"]
-        else:
-            keys_to_find = ["type", "freq response", "inputs", "outputs"]
-            
-        for k in keys_to_find:
-            # Fuzzy find key
-            found = next((val for key, val in spec_map.items() if k in key), None)
-            if found:
-                specs.append({"key": k.upper(), "val": found[:20]}) # Truncate for UI
-        
-        # Fill remaining slots if specific keys weren't found
-        if len(specs) < 4:
-            for k, v in spec_map.items():
-                if len(specs) >= 4: break
-                specs.append({"key": k.upper()[:10], "val": v[:20]})
-                
+        # Simple extraction of top 3 items
+        count = 0
+        for k, v in raw.items():
+            if count >= 3: break
+            if isinstance(v, (str, int, float)) and len(str(v)) < 20:
+                specs.append({"key": k.upper(), "val": str(v)})
+                count += 1
         return specs

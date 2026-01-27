@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_ahm32",
+  "name": "Allen & Heath AHM-32",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath AHM-32",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_ahm32",
+    "name": "Allen & Heath AHM-32",
+    "description": "Allen & Heath AHM-32",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_ahm32.jpg",
+    "product_url": "https://www.halilit.com/items/5461838-allen-heath-ahm-32",
+    "is_sold": true,
+    "price": 8570.0,
+    "halilit_url": "https://www.halilit.com/items/5461838-allen-heath-ahm-32",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.366162Z"
+  }
+}

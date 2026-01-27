@@ -1,0 +1,39 @@
+{
+  "id": "austrian_audio_47_hix65",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Austrian Audio Hi-X65 Over Ear",
+  "brand": "austrian-audio",
+  "category": "studio",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Austrian Audio Hi-X65 Over Ear",
+  "media": {
+    "thumbnail": "/data/thumbnails/austrian_audio_47_hix65.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "austrian_audio_47_hix65",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Austrian Audio Hi-X65 Over Ear",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df Austrian Audio Hi-X65 Over Ear",
+    "category": "general",
+    "image_url": "/data/thumbnails/austrian_audio_47_hix65.jpg",
+    "product_url": "https://www.halilit.com/items/4131162-austrian-audio-hi-x65-over-ear",
+    "is_sold": true,
+    "price": 1391.0,
+    "halilit_url": "https://www.halilit.com/items/4131162-austrian-audio-hi-x65-over-ear",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.686710Z"
+  }
+}

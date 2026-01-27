@@ -1,0 +1,39 @@
+{
+  "id": "akai_professional_55_mpd226",
+  "name": "Akai Professional MPD226",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional MPD226",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_mpd226.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_mpd226",
+    "name": "Akai Professional MPD226",
+    "description": "Akai Professional MPD226",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_mpd226.jpg",
+    "product_url": "https://www.halilit.com/items/742024-akai-professional-mpd226",
+    "is_sold": true,
+    "price": 1103.0,
+    "halilit_url": "https://www.halilit.com/items/742024-akai-professional-mpd226",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.270000Z"
+  }
+}

@@ -2,7 +2,7 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime
-from typing import List, Dict, Optional
+from typing import List
 from models.product_hierarchy import ProductCore, ProductCatalog
 
 logger = logging.getLogger(__name__)

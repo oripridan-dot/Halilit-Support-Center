@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_tdp1612_155",
+  "name": "Pearl TDP-1612",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl TDP-1612",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_tdp1612_155.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_tdp1612_155",
+    "name": "Pearl TDP-1612",
+    "description": "Pearl TDP-1612",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_tdp1612_155.jpg",
+    "product_url": "https://www.halilit.com/items/567497-pearl-tdp-1612",
+    "is_sold": true,
+    "price": 2587.0,
+    "halilit_url": "https://www.halilit.com/items/567497-pearl-tdp-1612",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.507876Z"
+  }
+}

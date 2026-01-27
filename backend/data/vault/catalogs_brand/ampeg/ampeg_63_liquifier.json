@@ -1,0 +1,39 @@
+{
+  "id": "ampeg_63_liquifier",
+  "name": "Ampeg Liquifier Analog Chorus",
+  "brand": "ampeg",
+  "category": "guitars",
+  "description": "Ampeg Liquifier Analog Chorus",
+  "media": {
+    "thumbnail": "/data/thumbnails/ampeg_63_liquifier.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "ampeg_63_liquifier",
+    "name": "Ampeg Liquifier Analog Chorus",
+    "description": "Ampeg Liquifier Analog Chorus",
+    "category": "general",
+    "image_url": "/data/thumbnails/ampeg_63_liquifier.jpg",
+    "product_url": "https://www.halilit.com/items/3909033-ampeg-liquifier-analog-chorus",
+    "is_sold": true,
+    "price": 367.0,
+    "halilit_url": "https://www.halilit.com/items/3909033-ampeg-liquifier-analog-chorus",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.807006Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_hm400",
+  "name": "Mackie HM-400",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie HM-400",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_hm400.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_hm400",
+    "name": "Mackie HM-400",
+    "description": "Mackie HM-400",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_hm400.jpg",
+    "product_url": "https://www.halilit.com/items/1749197-mackie-hm-400-headphones-amplifier",
+    "is_sold": true,
+    "price": 855.0,
+    "halilit_url": "https://www.halilit.com/items/1749197-mackie-hm-400-headphones-amplifier",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.919081Z"
+  }
+}

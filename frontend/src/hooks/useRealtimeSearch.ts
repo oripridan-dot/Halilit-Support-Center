@@ -22,6 +22,7 @@ export function useRealtimeSearch(query: string, options?: SearchOptions) {
     }, 150);
 
     return () => clearTimeout(timeoutId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, isReady, options?.brand, options?.category]);
 
   return {

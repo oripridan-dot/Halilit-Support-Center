@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pcf110hv_644",
+  "name": "Pearl Havana PCF-110HV Conga - Quinto",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Havana PCF-110HV Conga - Quinto",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pcf110hv_644.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pcf110hv_644",
+    "name": "Pearl Havana PCF-110HV Conga - Quinto",
+    "description": "Pearl Havana PCF-110HV Conga - Quinto",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pcf110hv_644.jpg",
+    "product_url": "https://www.halilit.com/items/8278669-pearl-havana-pcf-110hv-conga-quinto",
+    "is_sold": true,
+    "price": 1400.0,
+    "halilit_url": "https://www.halilit.com/items/8278669-pearl-havana-pcf-110hv-conga-quinto",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.399996Z"
+  }
+}

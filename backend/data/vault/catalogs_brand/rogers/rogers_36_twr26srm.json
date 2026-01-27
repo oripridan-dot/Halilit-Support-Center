@@ -1,0 +1,39 @@
+{
+  "id": "rogers_36_twr26srm",
+  "name": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+  "brand": "rogers",
+  "category": "drums",
+  "description": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+  "media": {
+    "thumbnail": "/data/thumbnails/rogers_36_twr26srm.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rogers_36_twr26srm",
+    "name": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+    "description": "Roger's Tower Series 14x6.5\" Snare Drum Rogers",
+    "category": "general",
+    "image_url": "/data/thumbnails/rogers_36_twr26srm.jpg",
+    "product_url": "https://www.halilit.com/items/7615512-roger-s-tower-series-14x6-5-snare-drum",
+    "is_sold": true,
+    "price": 2864.0,
+    "halilit_url": "https://www.halilit.com/items/7615512-roger-s-tower-series-14x6-5-snare-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.017972Z"
+  }
+}

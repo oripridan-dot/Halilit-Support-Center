@@ -14,7 +14,6 @@ Usage:
 """
 
 import json
-import asyncio
 import logging
 import sys
 from pathlib import Path
@@ -364,7 +363,7 @@ class AIImageValidator:
             return False, "Image file too large (needs optimization)"
         
         # Check extension
-        if not image_path.suffix.lower() in ['.webp', '.jpg', '.jpeg', '.png']:
+        if image_path.suffix.lower() not in ['.webp', '.jpg', '.jpeg', '.png']:
             return False, f"Unsupported image format: {image_path.suffix}"
         
         # Future: Add vision model validation here
@@ -449,7 +448,7 @@ class AIPipeline:
         print(f"  ❌ Errors: {report.error_count}")
         
         if report.issues:
-            print(f"\n📋 Issues:")
+            print("\n📋 Issues:")
             for issue in report.issues[:10]:  # Show first 10
                 icon = "⚠️" if issue.severity == ValidationStatus.WARNING else "❌"
                 print(f"  {icon} [{issue.product_id}] {issue.field}: {issue.message}")

@@ -1,0 +1,39 @@
+{
+  "id": "fusion_78_ub01bk",
+  "name": "Fusion Urban Cornet Bag",
+  "brand": "fusion",
+  "category": "general",
+  "description": "Fusion Urban Cornet Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/fusion_78_ub01bk.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "fusion_78_ub01bk",
+    "name": "Fusion Urban Cornet Bag",
+    "description": "Fusion Urban Cornet Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/fusion_78_ub01bk.jpg",
+    "product_url": "https://www.halilit.com/items/5070083-fusion-urban-cornet-bag",
+    "is_sold": true,
+    "price": 573.0,
+    "halilit_url": "https://www.halilit.com/items/5070083-fusion-urban-cornet-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.648835Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pta1412s",
+  "name": "Pearl PTA Concert Toms 14*12",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl PTA Concert Toms 14*12",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pta1412s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pta1412s",
+    "name": "Pearl PTA Concert Toms 14*12",
+    "description": "Pearl PTA Concert Toms 14*12",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pta1412s.jpg",
+    "product_url": "https://www.halilit.com/items/2740464-pearl-pta-concert-toms-14x12-single-head",
+    "is_sold": true,
+    "price": 1737.0,
+    "halilit_url": "https://www.halilit.com/items/2740464-pearl-pta-concert-toms-14x12-single-head",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.609801Z"
+  }
+}

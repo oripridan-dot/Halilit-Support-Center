@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_cs12p",
+  "name": "Remo Controlled Sound 12\" Coated Black Dot",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Controlled Sound 12\" Coated Black Dot",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_cs12p.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_cs12p",
+    "name": "Remo Controlled Sound 12\" Coated Black Dot",
+    "description": "Remo Controlled Sound 12\" Coated Black Dot",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_cs12p.jpg",
+    "product_url": "https://www.halilit.com/items/1393872-remo-controlled-sound-12-coated-black-dot",
+    "is_sold": true,
+    "price": 80.0,
+    "halilit_url": "https://www.halilit.com/items/1393872-remo-controlled-sound-12-coated-black-dot",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.125098Z"
+  }
+}

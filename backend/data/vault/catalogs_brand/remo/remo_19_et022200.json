@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_et022200",
+  "name": "Remo \u05ea\u05d5\u05e3 \u05d0\u05d5\u05e7\u05d9\u05d0\u05e0\u05d5\u05e1 \"22",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo \u05ea\u05d5\u05e3 \u05d0\u05d5\u05e7\u05d9\u05d0\u05e0\u05d5\u05e1 \"22",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_et022200.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_et022200",
+    "name": "Remo \u05ea\u05d5\u05e3 \u05d0\u05d5\u05e7\u05d9\u05d0\u05e0\u05d5\u05e1 \"22",
+    "description": "Remo \u05ea\u05d5\u05e3 \u05d0\u05d5\u05e7\u05d9\u05d0\u05e0\u05d5\u05e1 \"22",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_et022200.jpg",
+    "product_url": "https://www.halilit.com/items/448564-remo-22-ocean-drum",
+    "is_sold": true,
+    "price": 549.0,
+    "halilit_url": "https://www.halilit.com/items/448564-remo-22-ocean-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.162637Z"
+  }
+}

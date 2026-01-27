@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_mdl_gigaace",
+  "name": "Allen & Heath dLive gigaACE",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath dLive gigaACE",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_mdl_gigaace",
+    "name": "Allen & Heath dLive gigaACE",
+    "description": "Allen & Heath dLive gigaACE",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_mdl_gigaace.jpg",
+    "product_url": "https://www.halilit.com/items/2536246-allen-heath-gigaace",
+    "is_sold": true,
+    "price": 6640.0,
+    "halilit_url": "https://www.halilit.com/items/2536246-allen-heath-gigaace",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.409154Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "mjc_ironworks_65_mjcabrst1254",
+  "name": "MJC Ironworks ML Acoustic Guitar",
+  "brand": "mjc-ironworks",
+  "category": "guitars",
+  "description": "MJC Ironworks ML Acoustic Guitar",
+  "media": {
+    "thumbnail": "/data/thumbnails/mjc_ironworks_65_mjcabrst1254.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mjc_ironworks_65_mjcabrst1254",
+    "name": "MJC Ironworks ML Acoustic Guitar",
+    "description": "MJC Ironworks ML Acoustic Guitar",
+    "category": "general",
+    "image_url": "/data/thumbnails/mjc_ironworks_65_mjcabrst1254.jpg",
+    "product_url": "https://www.halilit.com/items/1732400-mjc-ironworks-ml-acoustic-guitar-strings",
+    "is_sold": true,
+    "price": 62.0,
+    "halilit_url": "https://www.halilit.com/items/1732400-mjc-ironworks-ml-acoustic-guitar-strings",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.616323Z"
+  }
+}

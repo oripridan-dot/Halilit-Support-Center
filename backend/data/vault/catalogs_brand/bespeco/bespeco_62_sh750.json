@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_sh750",
+  "name": "\u05de\u05ea\u05dc\u05d4 \u05e7\u05d9\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 Bespeco SH750",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "\u05de\u05ea\u05dc\u05d4 \u05e7\u05d9\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 Bespeco SH750",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_sh750.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_sh750",
+    "name": "\u05de\u05ea\u05dc\u05d4 \u05e7\u05d9\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 Bespeco SH750",
+    "description": "\u05de\u05ea\u05dc\u05d4 \u05e7\u05d9\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 Bespeco SH750",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_sh750.jpg",
+    "product_url": "https://www.halilit.com/items/7269471-bespeco-sh750-guitar-wall-hanger",
+    "is_sold": true,
+    "price": 86.0,
+    "halilit_url": "https://www.halilit.com/items/7269471-bespeco-sh750-guitar-wall-hanger",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.550852Z"
+  }
+}

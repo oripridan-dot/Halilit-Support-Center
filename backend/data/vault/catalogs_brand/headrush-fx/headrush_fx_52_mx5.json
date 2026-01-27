@@ -1,0 +1,39 @@
+{
+  "id": "headrush_fx_52_mx5",
+  "name": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush MX5",
+  "brand": "headrush-fx",
+  "category": "drums",
+  "description": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush MX5",
+  "media": {
+    "thumbnail": "/data/thumbnails/headrush_fx_52_mx5.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "headrush_fx_52_mx5",
+    "name": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush MX5",
+    "description": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush MX5",
+    "category": "general",
+    "image_url": "/data/thumbnails/headrush_fx_52_mx5.jpg",
+    "product_url": "https://www.halilit.com/items/4147422-headrush-mx5-the-most-powerful-compact-guitar-fx-and-amp-modeling-processor-",
+    "is_sold": true,
+    "price": 2300.0,
+    "halilit_url": "https://www.halilit.com/items/4147422-headrush-mx5-the-most-powerful-compact-guitar-fx-and-amp-modeling-processor-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.510665Z"
+  }
+}

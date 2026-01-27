@@ -1,0 +1,39 @@
+{
+  "id": "adams_97_2xfs2lrd35",
+  "name": "Adams Xylophone Academy",
+  "brand": "adams",
+  "category": "general",
+  "description": "Adams Xylophone Academy",
+  "media": {
+    "thumbnail": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adams_97_2xfs2lrd35",
+    "name": "Adams Xylophone Academy",
+    "description": "Adams Xylophone Academy",
+    "category": "general",
+    "image_url": "/data/thumbnails/adams_97_2xfs2lrd35.jpg",
+    "product_url": "https://www.halilit.com/items/531157-adams-xylophone-academy",
+    "is_sold": true,
+    "price": 11.0,
+    "halilit_url": "https://www.halilit.com/items/531157-adams-xylophone-academy",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.257925Z"
+  }
+}

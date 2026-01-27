@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_rfp1450sc_483",
+  "name": "Pearl Reference Pure Snare",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Reference Pure Snare",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_rfp1450sc_483.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_rfp1450sc_483",
+    "name": "Pearl Reference Pure Snare",
+    "description": "Pearl Reference Pure Snare",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_rfp1450sc_483.jpg",
+    "product_url": "https://www.halilit.com/items/1390385-pearl-reference-pure-snare-483-vintage-marine",
+    "is_sold": true,
+    "price": 2342.0,
+    "halilit_url": "https://www.halilit.com/items/1390385-pearl-reference-pure-snare-483-vintage-marine",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.571508Z"
+  }
+}

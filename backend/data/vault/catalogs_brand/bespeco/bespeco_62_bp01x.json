@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_bp01x",
+  "name": "Bespeco BP01X",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco BP01X",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_bp01x.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_bp01x",
+    "name": "Bespeco BP01X",
+    "description": "Bespeco BP01X",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_bp01x.jpg",
+    "product_url": "https://www.halilit.com/items/1475255-bespeco-bp01x-music-stand",
+    "is_sold": true,
+    "price": 69.0,
+    "halilit_url": "https://www.halilit.com/items/1475255-bespeco-bp01x-music-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.610099Z"
+  }
+}

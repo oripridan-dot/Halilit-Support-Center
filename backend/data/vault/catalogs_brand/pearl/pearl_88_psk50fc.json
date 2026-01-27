@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_psk50fc",
+  "name": "Pearl PSK-50FC",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl PSK-50FC",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_psk50fc.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_psk50fc",
+    "name": "Pearl PSK-50FC",
+    "description": "Pearl PSK-50FC",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_psk50fc.jpg",
+    "product_url": "https://www.halilit.com/items/460380-pearl-psk-50fc",
+    "is_sold": true,
+    "price": 370.0,
+    "halilit_url": "https://www.halilit.com/items/460380-pearl-psk-50fc",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.513359Z"
+  }
+}

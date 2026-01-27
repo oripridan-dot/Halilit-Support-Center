@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_402vlz4",
+  "name": "Mackie 402VLZ4",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie 402VLZ4",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_402vlz4.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_402vlz4",
+    "name": "Mackie 402VLZ4",
+    "description": "Mackie 402VLZ4",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_402vlz4.jpg",
+    "product_url": "https://www.halilit.com/items/446129-mackie-402vlz4",
+    "is_sold": true,
+    "price": 556.0,
+    "halilit_url": "https://www.halilit.com/items/446129-mackie-402vlz4",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.811509Z"
+  }
+}

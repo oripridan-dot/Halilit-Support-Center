@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_th88i",
+  "name": "Pearl TH88i Tom Holder",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl TH88i Tom Holder",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_th88i.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_th88i",
+    "name": "Pearl TH88i Tom Holder",
+    "description": "Pearl TH88i Tom Holder",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_th88i.jpg",
+    "product_url": "https://www.halilit.com/items/1216790-pearl-th-88i-tom-holder",
+    "is_sold": true,
+    "price": 119.0,
+    "halilit_url": "https://www.halilit.com/items/1216790-pearl-th-88i-tom-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.467449Z"
+  }
+}

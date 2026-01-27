@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_dta1088",
+  "name": "On Stage DTA1088 Drum Set Dust Cover",
+  "brand": "on-stage",
+  "category": "drums",
+  "description": "On Stage DTA1088 Drum Set Dust Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_dta1088.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_dta1088",
+    "name": "On Stage DTA1088 Drum Set Dust Cover",
+    "description": "On Stage DTA1088 Drum Set Dust Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_dta1088.jpg",
+    "product_url": "https://www.halilit.com/items/445988-on-stage-dta1088-drum-set-dust-cover",
+    "is_sold": true,
+    "price": 212.0,
+    "halilit_url": "https://www.halilit.com/items/445988-on-stage-dta1088-drum-set-dust-cover",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.870771Z"
+  }
+}

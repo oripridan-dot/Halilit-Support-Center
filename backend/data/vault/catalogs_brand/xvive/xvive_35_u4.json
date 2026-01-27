@@ -1,0 +1,39 @@
+{
+  "id": "xvive_35_u4",
+  "name": "Xvive U4 In-Ear Monitor Wireless System",
+  "brand": "xvive",
+  "category": "studio",
+  "description": "Xvive U4 In-Ear Monitor Wireless System",
+  "media": {
+    "thumbnail": "/data/thumbnails/xvive_35_u4.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xvive_35_u4",
+    "name": "Xvive U4 In-Ear Monitor Wireless System",
+    "description": "Xvive U4 In-Ear Monitor Wireless System",
+    "category": "general",
+    "image_url": "/data/thumbnails/xvive_35_u4.jpg",
+    "product_url": "https://www.halilit.com/items/5622287-xvive-u4-in-ear-monitor-wireless-system",
+    "is_sold": true,
+    "price": 1044.0,
+    "halilit_url": "https://www.halilit.com/items/5622287-xvive-u4-in-ear-monitor-wireless-system",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.680147Z"
+  }
+}

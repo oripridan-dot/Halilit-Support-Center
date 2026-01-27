@@ -1,0 +1,39 @@
+{
+  "id": "innovative_percussion_28_ipl3a",
+  "name": "Innovative Percussion IP-L3A",
+  "brand": "innovative-percussion",
+  "category": "drums",
+  "description": "Innovative Percussion IP-L3A",
+  "media": {
+    "thumbnail": "/data/thumbnails/innovative_percussion_28_ipl3a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "innovative_percussion_28_ipl3a",
+    "name": "Innovative Percussion IP-L3A",
+    "description": "Innovative Percussion IP-L3A",
+    "category": "general",
+    "image_url": "/data/thumbnails/innovative_percussion_28_ipl3a.jpg",
+    "product_url": "https://www.halilit.com/items/1652684-innovative-percussion-ip-l3a-drumsticks",
+    "is_sold": true,
+    "price": 54.0,
+    "halilit_url": "https://www.halilit.com/items/1652684-innovative-percussion-ip-l3a-drumsticks",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.255461Z"
+  }
+}

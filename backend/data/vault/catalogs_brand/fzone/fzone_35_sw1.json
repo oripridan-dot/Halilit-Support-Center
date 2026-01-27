@@ -1,0 +1,39 @@
+{
+  "id": "fzone_35_sw1",
+  "name": "FZONE SW-1",
+  "brand": "fzone",
+  "category": "general",
+  "description": "FZONE SW-1",
+  "media": {
+    "thumbnail": "/data/thumbnails/fzone_35_sw1.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "fzone_35_sw1",
+    "name": "FZONE SW-1",
+    "description": "FZONE SW-1",
+    "category": "general",
+    "image_url": "/data/thumbnails/fzone_35_sw1.jpg",
+    "product_url": "https://www.halilit.com/items/4204747-fzone-sw-1",
+    "is_sold": true,
+    "price": 8.0,
+    "halilit_url": "https://www.halilit.com/items/4204747-fzone-sw-1",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.762949Z"
+  }
+}

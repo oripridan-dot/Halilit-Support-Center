@@ -1,0 +1,39 @@
+{
+  "id": "lag_guitars_38_glutku10s",
+  "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e1\u05d5\u05e4\u05e8\u05df Lag Tiki Uku 10",
+  "brand": "lag-guitars",
+  "category": "general",
+  "description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e1\u05d5\u05e4\u05e8\u05df Lag Tiki Uku 10",
+  "media": {
+    "thumbnail": "/data/thumbnails/lag_guitars_38_glutku10s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "lag_guitars_38_glutku10s",
+    "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e1\u05d5\u05e4\u05e8\u05df Lag Tiki Uku 10",
+    "description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e1\u05d5\u05e4\u05e8\u05df Lag Tiki Uku 10",
+    "category": "general",
+    "image_url": "/data/thumbnails/lag_guitars_38_glutku10s.jpg",
+    "product_url": "https://www.halilit.com/items/8559179-Lag-Tiki-Uku-10-Soprano-Ukulele",
+    "is_sold": true,
+    "price": 333.0,
+    "halilit_url": "https://www.halilit.com/items/8559179-Lag-Tiki-Uku-10-Soprano-Ukulele",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.198307Z"
+  }
+}

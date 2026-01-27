@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_p31326ctbu",
+  "name": "Remo Powerstroke P3 Colortone 26\" Blue",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Powerstroke P3 Colortone 26\" Blue",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_p31326ctbu.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_p31326ctbu",
+    "name": "Remo Powerstroke P3 Colortone 26\" Blue",
+    "description": "Remo Powerstroke P3 Colortone 26\" Blue",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_p31326ctbu.jpg",
+    "product_url": "https://www.halilit.com/items/2142689-remo-powerstroke-p3-colortone-26-blue",
+    "is_sold": true,
+    "price": 301.0,
+    "halilit_url": "https://www.halilit.com/items/2142689-remo-powerstroke-p3-colortone-26-blue",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.143520Z"
+  }
+}

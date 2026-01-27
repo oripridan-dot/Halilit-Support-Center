@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1061420",
+  "name": "Paiste Crash 2002 20\" Cymbal",
+  "brand": "paiste-cymbals",
+  "category": "drums",
+  "description": "Paiste Crash 2002 20\" Cymbal",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1061420.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1061420",
+    "name": "Paiste Crash 2002 20\" Cymbal",
+    "description": "Paiste Crash 2002 20\" Cymbal",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1061420.jpg",
+    "product_url": "https://www.halilit.com/items/3749511-paiste-crash-2002-20-cymbal",
+    "is_sold": true,
+    "price": 1303.0,
+    "halilit_url": "https://www.halilit.com/items/3749511-paiste-crash-2002-20-cymbal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.436688Z"
+  }
+}

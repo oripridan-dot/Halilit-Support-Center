@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_1202vlz_rack",
+  "name": "Mackie 1202VLZ Rack Ear Kit",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie 1202VLZ Rack Ear Kit",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_1202vlz_rack.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_1202vlz_rack",
+    "name": "Mackie 1202VLZ Rack Ear Kit",
+    "description": "Mackie 1202VLZ Rack Ear Kit",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_1202vlz_rack.jpg",
+    "product_url": "https://www.halilit.com/items/6589503-mackie-1202vlz-rack-ear-kit",
+    "is_sold": true,
+    "price": 256.0,
+    "halilit_url": "https://www.halilit.com/items/6589503-mackie-1202vlz-rack-ear-kit",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.713136Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_be0313ctog",
+  "name": "Remo Emperor Colortone 13\" Orange",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Emperor Colortone 13\" Orange",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_be0313ctog.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_be0313ctog",
+    "name": "Remo Emperor Colortone 13\" Orange",
+    "description": "Remo Emperor Colortone 13\" Orange",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_be0313ctog.jpg",
+    "product_url": "https://www.halilit.com/items/2136003-remo-emperor-colortone-13-orange",
+    "is_sold": true,
+    "price": 84.0,
+    "halilit_url": "https://www.halilit.com/items/2136003-remo-emperor-colortone-13-orange",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.139186Z"
+  }
+}

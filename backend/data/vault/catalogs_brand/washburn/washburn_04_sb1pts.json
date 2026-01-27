@@ -1,0 +1,39 @@
+{
+  "id": "washburn_04_sb1pts",
+  "name": "Washburn Sonamaster SB1P",
+  "brand": "washburn",
+  "category": "guitars",
+  "description": "Washburn Sonamaster SB1P",
+  "media": {
+    "thumbnail": "/data/thumbnails/washburn_04_sb1pts.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "washburn_04_sb1pts",
+    "name": "Washburn Sonamaster SB1P",
+    "description": "Washburn Sonamaster SB1P",
+    "category": "general",
+    "image_url": "/data/thumbnails/washburn_04_sb1pts.jpg",
+    "product_url": "https://www.halilit.com/items/3202206-Washburn-Sonamaster-SB1P-Bass-Guitar",
+    "is_sold": true,
+    "price": 811.0,
+    "halilit_url": "https://www.halilit.com/items/3202206-Washburn-Sonamaster-SB1P-Bass-Guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.324497Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1013714",
+  "name": "Paiste Giant Beat Hi-Hat 14\" Cymbal",
+  "brand": "paiste-cymbals",
+  "category": "drums",
+  "description": "Paiste Giant Beat Hi-Hat 14\" Cymbal",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1013714.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1013714",
+    "name": "Paiste Giant Beat Hi-Hat 14\" Cymbal",
+    "description": "Paiste Giant Beat Hi-Hat 14\" Cymbal",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1013714.jpg",
+    "product_url": "https://www.halilit.com/items/4012164-paiste-giant-beat-hi-hat-14-cymbal",
+    "is_sold": true,
+    "price": 1518.0,
+    "halilit_url": "https://www.halilit.com/items/4012164-paiste-giant-beat-hi-hat-14-cymbal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.459758Z"
+  }
+}

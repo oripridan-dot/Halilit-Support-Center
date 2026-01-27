@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_am14s",
+  "name": "Remo Ambassador 14\" Resonant Drumhead",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Ambassador 14\" Resonant Drumhead",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_am14s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_am14s",
+    "name": "Remo Ambassador 14\" Resonant Drumhead",
+    "description": "Remo Ambassador 14\" Resonant Drumhead",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_am14s.jpg",
+    "product_url": "https://www.halilit.com/items/447873-remo-ambassador-14-resonant-drumhead",
+    "is_sold": true,
+    "price": 71.0,
+    "halilit_url": "https://www.halilit.com/items/447873-remo-ambassador-14-resonant-drumhead",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.123022Z"
+  }
+}

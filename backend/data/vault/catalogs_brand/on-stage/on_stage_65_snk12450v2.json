@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_snk12450v2",
+  "name": "On Stage SNK12450V2 50' 12-Channel/4-Return Stage Snake",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage SNK12450V2 50' 12-Channel/4-Return Stage Snake",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_snk12450v2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_snk12450v2",
+    "name": "On Stage SNK12450V2 50' 12-Channel/4-Return Stage Snake",
+    "description": "On Stage SNK12450V2 50' 12-Channel/4-Return Stage Snake",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_snk12450v2.jpg",
+    "product_url": "https://www.halilit.com/items/6561696-on-stage-snk12450v2-50-12-channel-4-return-stage-snake",
+    "is_sold": true,
+    "price": 921.0,
+    "halilit_url": "https://www.halilit.com/items/6561696-on-stage-snk12450v2-50-12-channel-4-return-stage-snake",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.843124Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_bc150s",
+  "name": "Pearl BC150S",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl BC150S",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_bc150s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_bc150s",
+    "name": "Pearl BC150S",
+    "description": "Pearl BC150S",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_bc150s.jpg",
+    "product_url": "https://www.halilit.com/items/868213-pearl-bc150s",
+    "is_sold": true,
+    "price": 386.0,
+    "halilit_url": "https://www.halilit.com/items/868213-pearl-bc150s",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.430930Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_am24c",
+  "name": "Remo Ambassador 24\" Coated Drumhead",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Ambassador 24\" Coated Drumhead",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_am24c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_am24c",
+    "name": "Remo Ambassador 24\" Coated Drumhead",
+    "description": "Remo Ambassador 24\" Coated Drumhead",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_am24c.jpg",
+    "product_url": "https://www.halilit.com/items/6546266-remo-ambassador-24-coated-drumhead",
+    "is_sold": true,
+    "price": 153.0,
+    "halilit_url": "https://www.halilit.com/items/6546266-remo-ambassador-24-coated-drumhead",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.120691Z"
+  }
+}

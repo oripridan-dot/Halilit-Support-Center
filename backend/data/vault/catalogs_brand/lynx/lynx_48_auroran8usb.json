@@ -1,0 +1,39 @@
+{
+  "id": "lynx_48_auroran8usb",
+  "name": "Lynx Aurora(n) 8 USB",
+  "brand": "lynx",
+  "category": "general",
+  "description": "Lynx Aurora(n) 8 USB",
+  "media": {
+    "thumbnail": "/data/thumbnails/lynx_48_auroran8usb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "lynx_48_auroran8usb",
+    "name": "Lynx Aurora(n) 8 USB",
+    "description": "Lynx Aurora(n) 8 USB",
+    "category": "general",
+    "image_url": "/data/thumbnails/lynx_48_auroran8usb.jpg",
+    "product_url": "https://www.halilit.com/items/1378886-lynx-aurora-n-8-usb",
+    "is_sold": true,
+    "price": 16727.0,
+    "halilit_url": "https://www.halilit.com/items/1378886-lynx-aurora-n-8-usb",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.651955Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_m211k",
+  "name": "\u05d0\u05d5\u05e8\u05d2\u05df Medeli M211K",
+  "brand": "medeli",
+  "category": "general",
+  "description": "\u05d0\u05d5\u05e8\u05d2\u05df Medeli M211K",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_m211k.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_m211k",
+    "name": "\u05d0\u05d5\u05e8\u05d2\u05df Medeli M211K",
+    "description": "\u05d0\u05d5\u05e8\u05d2\u05df Medeli M211K",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_m211k.jpg",
+    "product_url": "https://www.halilit.com/items/2146389-medeli-m211k",
+    "is_sold": true,
+    "price": 582.0,
+    "halilit_url": "https://www.halilit.com/items/2146389-medeli-m211k",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.358997Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_p31318ctgn",
+  "name": "Remo Powerstroke P3 Colortone 18\" Green",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Powerstroke P3 Colortone 18\" Green",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_p31318ctgn.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_p31318ctgn",
+    "name": "Remo Powerstroke P3 Colortone 18\" Green",
+    "description": "Remo Powerstroke P3 Colortone 18\" Green",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_p31318ctgn.jpg",
+    "product_url": "https://www.halilit.com/items/2142573-remo-powerstroke-p3-colortone-18-green",
+    "is_sold": true,
+    "price": 235.0,
+    "halilit_url": "https://www.halilit.com/items/2142573-remo-powerstroke-p3-colortone-18-green",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.130915Z"
+  }
+}

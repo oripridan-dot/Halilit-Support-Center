@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_lpt8000",
+  "name": "On Stage LPT8000 Laptop Stand with USB Hub",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage LPT8000 Laptop Stand with USB Hub",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_lpt8000.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_lpt8000",
+    "name": "On Stage LPT8000 Laptop Stand with USB Hub",
+    "description": "On Stage LPT8000 Laptop Stand with USB Hub",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_lpt8000.jpg",
+    "product_url": "https://www.halilit.com/items/8051248-on-stage-lpt8000-laptop-stand-with-usb-hub",
+    "is_sold": true,
+    "price": 237.0,
+    "halilit_url": "https://www.halilit.com/items/8051248-on-stage-lpt8000-laptop-stand-with-usb-hub",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.815579Z"
+  }
+}

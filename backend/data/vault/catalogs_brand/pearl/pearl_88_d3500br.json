@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_d3500br",
+  "name": "Pearl D-3500BR",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl D-3500BR",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_d3500br.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_d3500br",
+    "name": "Pearl D-3500BR",
+    "description": "Pearl D-3500BR",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_d3500br.jpg",
+    "product_url": "https://www.halilit.com/items/3082558-pearl-d-3500br-drum-throne-with-a-backrest",
+    "is_sold": true,
+    "price": 1394.0,
+    "halilit_url": "https://www.halilit.com/items/3082558-pearl-d-3500br-drum-throne-with-a-backrest",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.424584Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_asws58b9",
+  "name": "On Stage ASWS58B9 Windscreen",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage ASWS58B9 Windscreen",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_asws58b9.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_asws58b9",
+    "name": "On Stage ASWS58B9 Windscreen",
+    "description": "On Stage ASWS58B9 Windscreen",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_asws58b9.jpg",
+    "product_url": "https://www.halilit.com/items/6552947-on-stage-asws58b9-windscreen",
+    "is_sold": true,
+    "price": 53.0,
+    "halilit_url": "https://www.halilit.com/items/6552947-on-stage-asws58b9-windscreen",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.879978Z"
+  }
+}

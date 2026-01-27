@@ -22,29 +22,28 @@ Philosophy: If it's there to take, we take it as-is.
 """
 
 from models.product_hierarchy import (
-    ProductCore, ProductCatalog, BrandIdentity,
-    ProductImage, ProductSpecification, SourceType, ProductRelationship, RelationshipType,
+    ProductCore, ProductCatalog, ProductImage, ProductSpecification, SourceType, ProductRelationship, RelationshipType,
     ConnectivityDNA, ProductTier
 )
 from models.brand_taxonomy import (
-    ROLAND_TAXONOMY, normalize_category, validate_category, get_brand_taxonomy
+    normalize_category, validate_category
 )
 from services.scraper_enhancements import (
-    SupportArticleExtractor, ProductImageEnhancer, BrandLogoDownloader
+    SupportArticleExtractor, BrandLogoDownloader
 )
 from services.catalog_manager import MasterCatalogManager
-from services.parsers.cable_parser import normalize_connector, calculate_tier, extract_connectivity
+from services.parsers.cable_parser import calculate_tier, extract_connectivity
+from bs4 import BeautifulSoup
 import asyncio
 import logging
 from typing import List, Dict, Optional, Set, Any
 from datetime import datetime
 from playwright.async_api import async_playwright, Page, TimeoutError as PlaywrightTimeoutError
-from  tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, AsyncRetrying
+from  tenacity import stop_after_attempt, wait_exponential, AsyncRetrying
 from pathlib import Path
 import json
 import sys
 import re
-import os
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -149,12 +148,49 @@ class RolandScraper:
                 
             return raw_items
 
+    async def scrape_all(self):
+         data = await self.scrape_and_return_raw()
+         # Save to Vault for Relationship Engine
+         output_path = "backend/data/vault/roland_official_full.json"
+         import os
+         os.makedirs(os.path.dirname(output_path), exist_ok=True)
+         with open(output_path, 'w', encoding='utf-8') as f:
+             json.dump(data, f, indent=2, default=str)
+         return data
+
+    def _resolve_url(self, href):
+        if not href: return ""
+        if href.startswith('http'): return href
+        if href.startswith('//'): return f"https:{href}"
+        if href.startswith('/'): return f"https://www.roland.com{href}"
+        return href
+
+    def _extract_downloads(self, soup):
+        downloads = []
+        links = soup.find_all('a', href=True)
+        for link in links:
+            href = link['href']
+            text = link.get_text().lower()
+            if href.endswith('.pdf') or 'manual' in text or 'guide' in text:
+                if "owner" in text or "reference" in text:
+                    downloads.append({
+                        "title": link.get_text().strip(),
+                        "url": self._resolve_url(href),
+                        "type": "manual"
+                    })
+        return downloads
+
     async def _scrape_raw_page(self, page: Page, url: str) -> Dict[str, Any]:
         """
         Extracts raw data elements without cleaning.
         """
         await self._navigate(page, url)
         await asyncio.sleep(1) # Wait for JS
+        
+        # Capture HTML for BS4 processing
+        html_content = await page.content()
+        soup = BeautifulSoup(html_content, 'html.parser')
+        manuals = self._extract_downloads(soup)
         
         # 1. Basic Metadata
         try:
@@ -219,7 +255,8 @@ class RolandScraper:
             "images": images,
             "videos": videos,
             "features": features,
-            "manuals": [], # Simplified for this pass
+            "official_manuals": manuals,
+            "manuals": manuals, # Backwards compatibility
             "support_url": url,
             "hierarchy": {},
             "metadata": {"raw_capture": True}
@@ -249,7 +286,7 @@ class RolandScraper:
         """
         logger.info(
             f"🎹 Starting COMPREHENSIVE Roland scrape (max: {'ALL' if max_products is None else max_products})")
-        logger.info(f"   Goal: Extract ALL available data for JIT RAG system")
+        logger.info("   Goal: Extract ALL available data for JIT RAG system")
 
         async with async_playwright() as p:
             # Use --disable-dev-shm-usage to prevent crashes in containerized environments
@@ -318,7 +355,7 @@ class RolandScraper:
                             logger.error(f"   Error scraping {url}: {e}")
                             continue
 
-                    logger.info(f"\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
+                    logger.info("\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
                     logger.info(f"   Products: {len(products)}")
                     logger.info(f"   Total Images: {total_images}")
                     logger.info(f"   Total Videos: {total_videos}")
@@ -370,7 +407,7 @@ class RolandScraper:
         # TEMPORARY: Return hardcoded list only for testing parser
         return set(self.category_urls)
 
-        discovered_categories = set(self.category_urls)
+        set(self.category_urls)
 
         # Visit each known category to find more subcategories
     #     for cat_url in list(self.category_urls):
@@ -411,7 +448,7 @@ class RolandScraper:
     async def _get_product_urls(self, page: Page, max_products: int = None) -> List[str]:
         """Get all product URLs by navigating through categories and subcategories"""
         logger.info(
-            f"📄 Discovering products through category/subcategory navigation")
+            "📄 Discovering products through category/subcategory navigation")
 
         # First, discover all categories dynamically
         all_category_urls = await self._discover_all_categories(page)
@@ -452,7 +489,7 @@ class RolandScraper:
         # logger.info(f"   Found {len(all_urls)} products from main page")
 
         # Method 2: Navigate through all discovered category pages
-        logger.info(f"   Exploring all category pages...")
+        logger.info("   Exploring all category pages...")
 
         # Track visited pages to avoid duplicates
         visited_pages = set()
@@ -787,11 +824,6 @@ class RolandScraper:
                             if 'spec' in src.lower() or 'diagram' in src.lower():
                                 img_type = "technical"
 
-                            img_dict = {
-                                'url': src,
-                                'type': img_type,
-                                'alt_text': alt
-                            }
                             
                             # Add background type info (for thumbnail selection)
                             # ProductImageEnhancer.tag_images_with_background_info([img_dict])
@@ -811,7 +843,7 @@ class RolandScraper:
             # 3b. IDENTIFY WHITE BACKGROUND PRODUCT IMAGE FOR THUMBNAIL
             # ============================================================
             # Convert to dicts for processing
-            images_dicts = [{'url': img.url, 'type': img.type, 'alt_text': img.alt_text} 
+            [{'url': img.url, 'type': img.type, 'alt_text': img.alt_text} 
                            for img in images]
             
             # Tag with background info and find best white bg image
@@ -1005,7 +1037,6 @@ class RolandScraper:
             # 8b. EXTRACT SUPPORT ARTICLES & KNOWLEDGE BASE CONTENT
             # ============================================================
             support_articles = []
-            documentation_snippets = []
             
             try:
                 support_data = await SupportArticleExtractor.extract_roland_support_articles(
@@ -1261,7 +1292,7 @@ class RolandScraper:
                     # Catch Execution context destroyed and other navigation errors
                     error_msg = str(e)
                     if "Execution context was destroyed" in error_msg:
-                        logger.debug(f"   Execution context destroyed while extracting related products, continuing")
+                        logger.debug("   Execution context destroyed while extracting related products, continuing")
                         break  # Stop trying more selectors
                     # Otherwise continue to next selector
                     continue
@@ -1314,7 +1345,7 @@ class RolandScraper:
             logger.info(
                 f"     └─ Features: {len(features)} | Manuals: {len(manual_urls)} | Accessories: {len(accessories)}")
             if support_url:
-                logger.info(f"     └─ Support URL: ✓")
+                logger.info("     └─ Support URL: ✓")
 
             return product
 
@@ -1340,13 +1371,13 @@ async def test_scraper():
     # Scrape ALL products (no limit) - or set limit for testing
     catalog = await scraper.scrape_all_products(max_products=3)
 
-    print(f"\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
-    print(f"\n📊 CATALOG STATISTICS:")
+    print("\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
+    print("\n📊 CATALOG STATISTICS:")
     print(f"   Total Products: {catalog.total_products}")
     print(f"   Brand: {catalog.brand_identity.name}")
     print(f"   Version: {catalog.catalog_version}")
 
-    print(f"\n📈 DATA COVERAGE:")
+    print("\n📈 DATA COVERAGE:")
     stats = catalog.coverage_stats
     print(f"   Total Images: {stats.get('total_images', 0)}")
     print(f"   Total Videos: {stats.get('total_videos', 0)}")
@@ -1371,7 +1402,7 @@ async def test_scraper():
         print(f"      └─ Description: {p.description[:100]}..." if len(
             p.description) > 100 else f"      └─ Description: {p.description}")
         if p.support_url:
-            print(f"      └─ Support: ✓")
+            print("      └─ Support: ✓")
 
     # Save comprehensive output
     output_dir = Path(__file__).parent.parent / "data" / "catalogs_brand"
@@ -1382,7 +1413,7 @@ async def test_scraper():
         json.dump(catalog.model_dump(), f, indent=2,
                   ensure_ascii=False, default=str)
 
-    print(f"\n💾 COMPREHENSIVE CATALOG SAVED:")
+    print("\n💾 COMPREHENSIVE CATALOG SAVED:")
     print(f"   {output_file}")
     print(f"   Size: {output_file.stat().st_size / 1024:.2f} KB")
 

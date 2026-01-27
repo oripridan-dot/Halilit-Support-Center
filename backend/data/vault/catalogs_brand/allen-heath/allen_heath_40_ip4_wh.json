@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_ip4_wh",
+  "name": "Allen & Heath IP4 (White)",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath IP4 (White)",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_ip4_wh",
+    "name": "Allen & Heath IP4 (White)",
+    "description": "Allen & Heath IP4 (White)",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_ip4_wh.jpg",
+    "product_url": "https://www.halilit.com/items/8064410-allen-heath-ip4-white-",
+    "is_sold": true,
+    "price": 1466.0,
+    "halilit_url": "https://www.halilit.com/items/8064410-allen-heath-ip4-white-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.377373Z"
+  }
+}

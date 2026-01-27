@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_m20_n",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild M-20 USA",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild M-20 USA",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_m20_n.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_m20_n",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild M-20 USA",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild M-20 USA",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_m20_n.jpg",
+    "product_url": "https://www.halilit.com/items/5765678-guild-m-20-usa",
+    "is_sold": true,
+    "price": 5757.0,
+    "halilit_url": "https://www.halilit.com/items/5765678-guild-m-20-usa",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.300649Z"
+  }
+}

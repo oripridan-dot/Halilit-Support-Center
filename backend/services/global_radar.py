@@ -343,7 +343,7 @@ class GlobalRadar:
 
         print(f"\n✅ MANIFEST SAVED TO: {manifest_path}")
         print(f"📊 TOTAL PRODUCTS DISCOVERED: {total_discovered}")
-        print(f"\n📈 BREAKDOWN BY BRAND:")
+        print("\n📈 BREAKDOWN BY BRAND:")
         for brand, stats in brand_stats.items():
             print(f"  {brand.upper()}: {stats['total_discovered']} products")
             for tier, count in stats['by_tier'].items():

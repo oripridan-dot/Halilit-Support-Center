@@ -1,8 +1,7 @@
 # backend/analyze_gaps.py
 import json
 import os
-from typing import List, Dict, Set
-import difflib
+from typing import List, Dict
 
 class GapAnalyzer:
     def __init__(self, brand: str):
@@ -68,7 +67,7 @@ class GapAnalyzer:
         with open(self.output_path, 'w', encoding='utf-8') as f:
             json.dump(report, f, indent=2)
 
-        print(f"✅ Gap Analysis Complete!")
+        print("✅ Gap Analysis Complete!")
         print(f"   Found {len(missing_products)} products missing from Halilit inventory.")
         print(f"   Report saved to: {self.output_path}")
         

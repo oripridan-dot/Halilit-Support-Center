@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_dt02",
+  "name": "Allen & Heath DT02",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath DT02",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_dt02.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_dt02",
+    "name": "Allen & Heath DT02",
+    "description": "Allen & Heath DT02",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_dt02.jpg",
+    "product_url": "https://www.halilit.com/items/5264738-allen-health-dt02",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/5264738-allen-health-dt02",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.375547Z"
+  }
+}

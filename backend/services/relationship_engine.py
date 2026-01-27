@@ -9,7 +9,7 @@ Discovers and maps product relationships:
 
 import json
 import logging
-from typing import List, Dict, Set, Optional
+from typing import List, Dict
 from dataclasses import dataclass, asdict
 
 logger = logging.getLogger(__name__)
@@ -121,9 +121,9 @@ class ProductRelationshipEngine:
         }
         
         sku = product.get("sku")
-        category = product.get("category", "").lower()
-        name = product.get("name", "").lower()
-        specs = product.get("specs", {})
+        product.get("category", "").lower()
+        product.get("name", "").lower()
+        product.get("specs", {})
         
         for candidate_sku, candidate in self.all_products.items():
             if candidate_sku == sku:

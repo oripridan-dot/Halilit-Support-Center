@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_dp740k",
+  "name": "Medeli DP740K",
+  "brand": "medeli",
+  "category": "general",
+  "description": "Medeli DP740K",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_dp740k.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_dp740k",
+    "name": "Medeli DP740K",
+    "description": "Medeli DP740K",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_dp740k.jpg",
+    "product_url": "https://www.halilit.com/items/1213173-medeli-dp740k-piano",
+    "is_sold": true,
+    "price": 3953.0,
+    "halilit_url": "https://www.halilit.com/items/1213173-medeli-dp740k-piano",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.355183Z"
+  }
+}

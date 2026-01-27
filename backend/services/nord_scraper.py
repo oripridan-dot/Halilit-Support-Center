@@ -22,23 +22,16 @@ GOAL: Extract ALL available data from Nord website for JIT RAG system
 
 from models.product_hierarchy import (
     ProductCore, ProductCatalog, BrandIdentity,
-    ProductImage, ProductSpecification, SourceType, ProductRelationship, RelationshipType,
-    ProductStatus
-)
-from services.scraper_enhancements import (
-    SupportArticleExtractor, ProductImageEnhancer, BrandLogoDownloader
+    ProductImage, ProductSpecification, SourceType, ProductStatus
 )
 import asyncio
 import logging
 from typing import List, Dict, Optional, Set, Any
 from datetime import datetime
 from playwright.async_api import async_playwright, Page, TimeoutError as PlaywrightTimeoutError
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, AsyncRetrying
+from tenacity import stop_after_attempt, wait_exponential, AsyncRetrying
 from pathlib import Path
-import json
 import sys
-import re
-import os
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -204,8 +197,8 @@ class NordScraper:
         """
         logger.info(
             f"🎹 Starting COMPREHENSIVE Nord scrape (max: {'ALL' if max_products is None else max_products})")
-        logger.info(f"   Goal: Extract ALL available data for JIT RAG system")
-        logger.info(f"   Note: Nord is known for exceptional product pages with rich specs")
+        logger.info("   Goal: Extract ALL available data for JIT RAG system")
+        logger.info("   Note: Nord is known for exceptional product pages with rich specs")
 
         async with async_playwright() as p:
             browser = await p.chromium.launch(
@@ -257,7 +250,7 @@ class NordScraper:
                         logger.error(f"   Error scraping {url}: {e}")
                         continue
 
-                logger.info(f"\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
+                logger.info("\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
                 logger.info(f"   Products: {len(products)}")
                 logger.info(f"   Total Images: {total_images}")
                 logger.info(f"   Total Videos: {total_videos}")
@@ -319,7 +312,7 @@ class NordScraper:
 
     async def _get_product_urls(self, page: Page, max_products: int = None) -> List[str]:
         """Get all product URLs by navigating through categories"""
-        logger.info(f"📄 Discovering Nord products through category navigation")
+        logger.info("📄 Discovering Nord products through category navigation")
 
         all_urls = set()
 
@@ -674,13 +667,11 @@ class NordScraper:
             # 8. DETERMINE HIERARCHY (BREADCRUMBS & CATEGORIES)
             # ============================================================
             main_category = "Keyboards"
-            categories = ["Nord Keyboards"]
             
             # Determine category from URL and keywords
             for keyword in self.meta_keywords:
                 if keyword.lower() in url.lower() or keyword.lower() in name.lower():
                     main_category = keyword
-                    categories = [f"Nord {keyword}"]
                     break
             
             try:
@@ -692,7 +683,7 @@ class NordScraper:
                     cat_text = await breadcrumbs[1].text_content()
                     if cat_text:
                         main_category = cat_text.strip()
-                        categories = [cat_text.strip()]
+                        [cat_text.strip()]
             except:
                 pass
 

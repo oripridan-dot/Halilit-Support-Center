@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_sh14net",
+  "name": "Bespeco SH14NET",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco SH14NET",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_sh14net.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_sh14net",
+    "name": "Bespeco SH14NET",
+    "description": "Bespeco SH14NET",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_sh14net.jpg",
+    "product_url": "https://www.halilit.com/items/1601785-bespeco-sh14net-microphone-stand",
+    "is_sold": true,
+    "price": 227.0,
+    "halilit_url": "https://www.halilit.com/items/1601785-bespeco-sh14net-microphone-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.559627Z"
+  }
+}

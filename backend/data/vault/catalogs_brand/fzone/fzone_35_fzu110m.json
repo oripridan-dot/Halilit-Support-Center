@@ -1,0 +1,39 @@
+{
+  "id": "fzone_35_fzu110m",
+  "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 FZONE FZU-110",
+  "brand": "fzone",
+  "category": "general",
+  "description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 FZONE FZU-110",
+  "media": {
+    "thumbnail": "/data/thumbnails/fzone_35_fzu110m.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "fzone_35_fzu110m",
+    "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 FZONE FZU-110",
+    "description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 FZONE FZU-110",
+    "category": "general",
+    "image_url": "/data/thumbnails/fzone_35_fzu110m.jpg",
+    "product_url": "https://www.halilit.com/items/7922840-fzone-fzu-110-ukelele",
+    "is_sold": true,
+    "price": 172.0,
+    "halilit_url": "https://www.halilit.com/items/7922840-fzone-fzu-110-ukelele",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.760625Z"
+  }
+}

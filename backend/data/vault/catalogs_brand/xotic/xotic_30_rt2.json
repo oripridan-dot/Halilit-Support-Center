@@ -1,0 +1,39 @@
+{
+  "id": "xotic_30_rt2",
+  "name": "Xotic Robotalk 2",
+  "brand": "xotic",
+  "category": "general",
+  "description": "Xotic Robotalk 2",
+  "media": {
+    "thumbnail": "/data/thumbnails/xotic_30_rt2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xotic_30_rt2",
+    "name": "Xotic Robotalk 2",
+    "description": "Xotic Robotalk 2",
+    "category": "general",
+    "image_url": "/data/thumbnails/xotic_30_rt2.jpg",
+    "product_url": "https://www.halilit.com/items/4820910-xotic-robotalk-2",
+    "is_sold": true,
+    "price": 1184.0,
+    "halilit_url": "https://www.halilit.com/items/4820910-xotic-robotalk-2",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.789394Z"
+  }
+}

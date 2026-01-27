@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_sta1450pb",
+  "name": "Pearl SensiTone Premium 14x5\" Beaded Phosphor Bronze",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl SensiTone Premium 14x5\" Beaded Phosphor Bronze",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_sta1450pb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_sta1450pb",
+    "name": "Pearl SensiTone Premium 14x5\" Beaded Phosphor Bronze",
+    "description": "Pearl SensiTone Premium 14x5\" Beaded Phosphor Bronze",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_sta1450pb.jpg",
+    "product_url": "https://www.halilit.com/items/449380-pearl-sensitone-premium-14x5-beaded-phosphor-bronze",
+    "is_sold": true,
+    "price": 1897.0,
+    "halilit_url": "https://www.halilit.com/items/449380-pearl-sensitone-premium-14x5-beaded-phosphor-bronze",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.579628Z"
+  }
+}

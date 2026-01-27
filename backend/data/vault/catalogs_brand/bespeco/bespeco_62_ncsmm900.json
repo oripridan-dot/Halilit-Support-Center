@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_ncsmm900",
+  "name": "Bespeco NCSMM900",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco NCSMM900",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_ncsmm900.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_ncsmm900",
+    "name": "Bespeco NCSMM900",
+    "description": "Bespeco NCSMM900",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_ncsmm900.jpg",
+    "product_url": "https://www.halilit.com/items/3540843-bespeco-ncsmm900",
+    "is_sold": true,
+    "price": 214.0,
+    "halilit_url": "https://www.halilit.com/items/3540843-bespeco-ncsmm900",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.552423Z"
+  }
+}

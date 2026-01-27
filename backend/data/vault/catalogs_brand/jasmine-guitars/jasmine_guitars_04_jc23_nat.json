@@ -1,0 +1,39 @@
+{
+  "id": "jasmine_guitars_04_jc23_nat",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea 3/4 Jasmine JC-23",
+  "brand": "jasmine-guitars",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea 3/4 Jasmine JC-23",
+  "media": {
+    "thumbnail": "/data/thumbnails/jasmine_guitars_04_jc23_nat.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "jasmine_guitars_04_jc23_nat",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea 3/4 Jasmine JC-23",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea 3/4 Jasmine JC-23",
+    "category": "general",
+    "image_url": "/data/thumbnails/jasmine_guitars_04_jc23_nat.jpg",
+    "product_url": "https://www.halilit.com/items/5170762-jasmine-jc-23-classical-3-4-size",
+    "is_sold": true,
+    "price": 571.0,
+    "halilit_url": "https://www.halilit.com/items/5170762-jasmine-jc-23-classical-3-4-size",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.172802Z"
+  }
+}

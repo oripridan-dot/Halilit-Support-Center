@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_f250e",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Guild F-250E Deluxe",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Guild F-250E Deluxe",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_f250e.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_f250e",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Guild F-250E Deluxe",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Guild F-250E Deluxe",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_f250e.jpg",
+    "product_url": "https://www.halilit.com/items/3970476-guild-f-250e-deluxe",
+    "is_sold": true,
+    "price": 2443.0,
+    "halilit_url": "https://www.halilit.com/items/3970476-guild-f-250e-deluxe",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.283200Z"
+  }
+}

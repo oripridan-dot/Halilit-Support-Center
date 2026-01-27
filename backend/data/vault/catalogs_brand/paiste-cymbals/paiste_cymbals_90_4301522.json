@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_4301522",
+  "name": "Paiste Traditionals 22\" Ride",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste Traditionals 22\" Ride",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_4301522.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_4301522",
+    "name": "Paiste Traditionals 22\" Ride",
+    "description": "Paiste Traditionals 22\" Ride",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_4301522.jpg",
+    "product_url": "https://www.halilit.com/items/447714-paiste-traditionals-22-ride",
+    "is_sold": true,
+    "price": 2597.0,
+    "halilit_url": "https://www.halilit.com/items/447714-paiste-traditionals-22-ride",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.378412Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_ar84",
+  "name": "Allen & Heath AR84",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath AR84",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_ar84.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_ar84",
+    "name": "Allen & Heath AR84",
+    "description": "Allen & Heath AR84",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_ar84.jpg",
+    "product_url": "https://www.halilit.com/items/2507643-allen-heath-ar84",
+    "is_sold": true,
+    "price": 4474.0,
+    "halilit_url": "https://www.halilit.com/items/2507643-allen-heath-ar84",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.376848Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_kb8802w",
+  "name": "On Stage KB8802W Piano/Keyboard Bench",
+  "brand": "on-stage",
+  "category": "keys",
+  "description": "On Stage KB8802W Piano/Keyboard Bench",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_kb8802w.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_kb8802w",
+    "name": "On Stage KB8802W Piano/Keyboard Bench",
+    "description": "On Stage KB8802W Piano/Keyboard Bench",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_kb8802w.jpg",
+    "product_url": "https://www.halilit.com/items/8045101-on-stage-kb8802w-piano-keyboard-bench",
+    "is_sold": true,
+    "price": 306.0,
+    "halilit_url": "https://www.halilit.com/items/8045101-on-stage-kb8802w-piano-keyboard-bench",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.886189Z"
+  }
+}

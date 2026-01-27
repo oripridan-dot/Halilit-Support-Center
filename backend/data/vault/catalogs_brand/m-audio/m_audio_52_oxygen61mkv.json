@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_oxygen61mkv",
+  "name": "M-Audio Oxygen 61 MKV",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio Oxygen 61 MKV",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_oxygen61mkv.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_oxygen61mkv",
+    "name": "M-Audio Oxygen 61 MKV",
+    "description": "M-Audio Oxygen 61 MKV",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_oxygen61mkv.jpg",
+    "product_url": "https://www.halilit.com/items/4632581-m-audio-oxygen-61-mkv",
+    "is_sold": true,
+    "price": 1022.0,
+    "halilit_url": "https://www.halilit.com/items/4632581-m-audio-oxygen-61-mkv",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.626192Z"
+  }
+}

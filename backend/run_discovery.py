@@ -1,8 +1,6 @@
 # backend/run_discovery.py
 from services.gap_analyzer import GapAnalyzer
 from services.global_radar import GlobalRadar
-import sys
-import os
 
 # Add backend to path for imports to work if running as script from backend/
 # sys.path.append(os.path.dirname(os.path.abspath(__file__)))

@@ -1,0 +1,39 @@
+{
+  "id": "rogers_36_37_blo",
+  "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+  "brand": "rogers",
+  "category": "drums",
+  "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+  "media": {
+    "thumbnail": "/data/thumbnails/rogers_36_37_blo.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rogers_36_37_blo",
+    "name": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+    "description": "Rogers Beavertail Dyna-Sonic Snare NO.37-BLO",
+    "category": "general",
+    "image_url": "/data/thumbnails/rogers_36_37_blo.jpg",
+    "product_url": "https://www.halilit.com/items/2510023-rogers-beavertail-dyna-sonic-snare-no-37-blo",
+    "is_sold": true,
+    "price": 3576.0,
+    "halilit_url": "https://www.halilit.com/items/2510023-rogers-beavertail-dyna-sonic-snare-no-37-blo",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.032487Z"
+  }
+}

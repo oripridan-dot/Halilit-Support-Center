@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_pm2418mp",
+  "name": "Remo Bass 18\" Ebony Powerstroke",
+  "brand": "remo",
+  "category": "guitars",
+  "description": "Remo Bass 18\" Ebony Powerstroke",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_pm2418mp.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_pm2418mp",
+    "name": "Remo Bass 18\" Ebony Powerstroke",
+    "description": "Remo Bass 18\" Ebony Powerstroke",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_pm2418mp.jpg",
+    "product_url": "https://www.halilit.com/items/444430-remo-bass-18-ebony-powerstroke",
+    "is_sold": true,
+    "price": 226.0,
+    "halilit_url": "https://www.halilit.com/items/444430-remo-bass-18-ebony-powerstroke",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.145274Z"
+  }
+}

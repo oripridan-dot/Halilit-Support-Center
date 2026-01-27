@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_en10c",
+  "name": "Remo Encore 10\" Ambassador Coated",
+  "brand": "remo",
+  "category": "guitars",
+  "description": "Remo Encore 10\" Ambassador Coated",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_en10c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_en10c",
+    "name": "Remo Encore 10\" Ambassador Coated",
+    "description": "Remo Encore 10\" Ambassador Coated",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_en10c.jpg",
+    "product_url": "https://www.halilit.com/items/447823-remo-encore-10-ambassador-coated-drumhead-",
+    "is_sold": true,
+    "price": 18.0,
+    "halilit_url": "https://www.halilit.com/items/447823-remo-encore-10-ambassador-coated-drumhead-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.080535Z"
+  }
+}

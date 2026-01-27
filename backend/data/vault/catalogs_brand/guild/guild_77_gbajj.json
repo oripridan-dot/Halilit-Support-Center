@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_gbajj",
+  "name": "Guild Acoustic Gig Bag Jumbo Junior",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "Guild Acoustic Gig Bag Jumbo Junior",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_gbajj.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_gbajj",
+    "name": "Guild Acoustic Gig Bag Jumbo Junior",
+    "description": "Guild Acoustic Gig Bag Jumbo Junior",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_gbajj.jpg",
+    "product_url": "https://www.halilit.com/items/2697139-guild-acoustic-gig-bag-jumbo-junior",
+    "is_sold": true,
+    "price": 295.0,
+    "halilit_url": "https://www.halilit.com/items/2697139-guild-acoustic-gig-bag-jumbo-junior",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.283439Z"
+  }
+}

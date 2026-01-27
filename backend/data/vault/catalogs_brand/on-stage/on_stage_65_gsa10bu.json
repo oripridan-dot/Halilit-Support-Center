@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_gsa10bu",
+  "name": "On Stage GSA10BU Guitar Strap with Leather Ends",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage GSA10BU Guitar Strap with Leather Ends",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_gsa10bu.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_gsa10bu",
+    "name": "On Stage GSA10BU Guitar Strap with Leather Ends",
+    "description": "On Stage GSA10BU Guitar Strap with Leather Ends",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_gsa10bu.jpg",
+    "product_url": "https://www.halilit.com/items/3464906-on-stage-gsa10bu-guitar-strap-with-leather-ends",
+    "is_sold": true,
+    "price": 17.0,
+    "halilit_url": "https://www.halilit.com/items/3464906-on-stage-gsa10bu-guitar-strap-with-leather-ends",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.849913Z"
+  }
+}

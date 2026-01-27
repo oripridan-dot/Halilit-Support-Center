@@ -1,0 +1,39 @@
+{
+  "id": "esp_67_lec256carslh",
+  "name": "ESP LTD EC-256CARS LH",
+  "brand": "esp",
+  "category": "guitars",
+  "description": "ESP LTD EC-256CARS LH",
+  "media": {
+    "thumbnail": "/data/thumbnails/esp_67_lec256carslh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "esp_67_lec256carslh",
+    "name": "ESP LTD EC-256CARS LH",
+    "description": "ESP LTD EC-256CARS LH",
+    "category": "general",
+    "image_url": "/data/thumbnails/esp_67_lec256carslh.jpg",
+    "product_url": "https://www.halilit.com/items/7786703-esp-ltd-ec-256cars-lh",
+    "is_sold": true,
+    "price": 2681.0,
+    "halilit_url": "https://www.halilit.com/items/7786703-esp-ltd-ec-256cars-lh",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.534577Z"
+  }
+}

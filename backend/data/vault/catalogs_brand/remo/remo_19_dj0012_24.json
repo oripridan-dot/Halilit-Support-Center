@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_dj0012_24",
+  "name": "Remo Mondo Djembe 12\" Adinkra",
+  "brand": "remo",
+  "category": "dj",
+  "description": "Remo Mondo Djembe 12\" Adinkra",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_dj0012_24.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_dj0012_24",
+    "name": "Remo Mondo Djembe 12\" Adinkra",
+    "description": "Remo Mondo Djembe 12\" Adinkra",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_dj0012_24.jpg",
+    "product_url": "https://www.halilit.com/items/2311921-remo-mondo-djembe-12-adinkra",
+    "is_sold": true,
+    "price": 1964.0,
+    "halilit_url": "https://www.halilit.com/items/2311921-remo-mondo-djembe-12-adinkra",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.151215Z"
+  }
+}

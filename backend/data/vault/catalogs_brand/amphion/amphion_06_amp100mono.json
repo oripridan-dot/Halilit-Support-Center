@@ -1,0 +1,39 @@
+{
+  "id": "amphion_06_amp100mono",
+  "name": "Amphion Amp100 Mono",
+  "brand": "amphion",
+  "category": "guitars",
+  "description": "Amphion Amp100 Mono",
+  "media": {
+    "thumbnail": "/data/thumbnails/amphion_06_amp100mono.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "amphion_06_amp100mono",
+    "name": "Amphion Amp100 Mono",
+    "description": "Amphion Amp100 Mono",
+    "category": "general",
+    "image_url": "/data/thumbnails/amphion_06_amp100mono.jpg",
+    "product_url": "https://www.halilit.com/items/2124973-amphion-amp100-mono-",
+    "is_sold": true,
+    "price": 2647.0,
+    "halilit_url": "https://www.halilit.com/items/2124973-amphion-amp100-mono-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.046527Z"
+  }
+}

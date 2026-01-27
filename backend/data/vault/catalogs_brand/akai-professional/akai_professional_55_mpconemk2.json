@@ -1,0 +1,39 @@
+{
+  "id": "akai_professional_55_mpconemk2",
+  "name": "+Akai Professional MPC ONE",
+  "brand": "akai-professional",
+  "category": "dj",
+  "description": "+Akai Professional MPC ONE",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_mpconemk2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_mpconemk2",
+    "name": "+Akai Professional MPC ONE",
+    "description": "+Akai Professional MPC ONE",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_mpconemk2.jpg",
+    "product_url": "https://www.halilit.com/items/6072810--akai-professional-mpc-one",
+    "is_sold": true,
+    "price": 4024.0,
+    "halilit_url": "https://www.halilit.com/items/6072810--akai-professional-mpc-one",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.267730Z"
+  }
+}

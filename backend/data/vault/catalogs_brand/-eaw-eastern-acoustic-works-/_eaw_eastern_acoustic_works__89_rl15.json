@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_rl15",
+  "name": "EAW RL15",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW RL15",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_rl15.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_rl15",
+    "name": "EAW RL15",
+    "description": "EAW RL15",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_rl15.jpg",
+    "product_url": "https://www.halilit.com/items/3399508-eaw-rl15-two-way-active-trapezoidal-enclosure",
+    "is_sold": true,
+    "price": 12201.0,
+    "halilit_url": "https://www.halilit.com/items/3399508-eaw-rl15-two-way-active-trapezoidal-enclosure",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.963050Z"
+  }
+}

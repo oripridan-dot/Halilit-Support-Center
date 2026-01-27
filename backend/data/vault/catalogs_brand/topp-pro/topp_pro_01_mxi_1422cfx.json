@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_mxi_1422cfx",
+  "name": "Topp Pro MXI.1422CFX",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro MXI.1422CFX",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_mxi_1422cfx",
+    "name": "Topp Pro MXI.1422CFX",
+    "description": "Topp Pro MXI.1422CFX",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_mxi_1422cfx.jpg",
+    "product_url": "https://www.halilit.com/items/3168660-topp-pro-mxi-1422cfx",
+    "is_sold": true,
+    "price": 2264.0,
+    "halilit_url": "https://www.halilit.com/items/3168660-topp-pro-mxi-1422cfx",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.111255Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "heritage_audio_27_ha73jrii",
+  "name": "Heritage Audio 73 JR II",
+  "brand": "heritage-audio",
+  "category": "studio",
+  "description": "Heritage Audio 73 JR II",
+  "media": {
+    "thumbnail": "/data/thumbnails/heritage_audio_27_ha73jrii.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "heritage_audio_27_ha73jrii",
+    "name": "Heritage Audio 73 JR II",
+    "description": "Heritage Audio 73 JR II",
+    "category": "general",
+    "image_url": "/data/thumbnails/heritage_audio_27_ha73jrii.jpg",
+    "product_url": "https://www.halilit.com/items/7454232-heritage-audio-73-jr-ii-mic-preamp",
+    "is_sold": true,
+    "price": 4344.0,
+    "halilit_url": "https://www.halilit.com/items/7454232-heritage-audio-73-jr-ii-mic-preamp",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.768539Z"
+  }
+}

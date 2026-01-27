@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_bag488kby",
+  "name": "Bespeco BAG488KBY Keyboard Bag",
+  "brand": "bespeco",
+  "category": "keys",
+  "description": "Bespeco BAG488KBY Keyboard Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_bag488kby.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_bag488kby",
+    "name": "Bespeco BAG488KBY Keyboard Bag",
+    "description": "Bespeco BAG488KBY Keyboard Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_bag488kby.jpg",
+    "product_url": "https://www.halilit.com/items/7920486-bespeco-bag488kby-keyboard-bag",
+    "is_sold": true,
+    "price": 361.0,
+    "halilit_url": "https://www.halilit.com/items/7920486-bespeco-bag488kby-keyboard-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.551906Z"
+  }
+}

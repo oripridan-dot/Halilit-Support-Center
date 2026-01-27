@@ -1,0 +1,39 @@
+{
+  "id": "v_moda_87_m200anc",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea V-MODA M-200 ANC",
+  "brand": "v-moda",
+  "category": "general",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea V-MODA M-200 ANC",
+  "media": {
+    "thumbnail": "/data/thumbnails/v_moda_87_m200anc.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "v_moda_87_m200anc",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea V-MODA M-200 ANC",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05d5\u05ea V-MODA M-200 ANC",
+    "category": "general",
+    "image_url": "/data/thumbnails/v_moda_87_m200anc.jpg",
+    "product_url": "https://www.halilit.com/items/6092728-v-moda-m-200-anc",
+    "is_sold": true,
+    "price": 2650.0,
+    "halilit_url": "https://www.halilit.com/items/6092728-v-moda-m-200-anc",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.185845Z"
+  }
+}

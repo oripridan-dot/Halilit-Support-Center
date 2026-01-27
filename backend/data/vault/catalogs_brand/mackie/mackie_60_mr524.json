@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_mr524",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR524",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR524",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_mr524.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_mr524",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR524",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Mackie MR524",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_mr524.jpg",
+    "product_url": "https://www.halilit.com/items/1464882-mackie-mr524-studio-monitor",
+    "is_sold": true,
+    "price": 770.0,
+    "halilit_url": "https://www.halilit.com/items/1464882-mackie-mr524-studio-monitor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.747812Z"
+  }
+}

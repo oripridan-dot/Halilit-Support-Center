@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_ftbb1435_320",
+  "name": "Pearl Free Floating 14X3.5",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Free Floating 14X3.5",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_ftbb1435_320.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_ftbb1435_320",
+    "name": "Pearl Free Floating 14X3.5",
+    "description": "Pearl Free Floating 14X3.5",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_ftbb1435_320.jpg",
+    "product_url": "https://www.halilit.com/items/444292-pearl-free-floating-14x3-5",
+    "is_sold": true,
+    "price": 2063.0,
+    "halilit_url": "https://www.halilit.com/items/444292-pearl-free-floating-14x3-5",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.586437Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ma1435",
+  "name": "On Stage MA1435 Wireless Transmitter Body Pack",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage MA1435 Wireless Transmitter Body Pack",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ma1435.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ma1435",
+    "name": "On Stage MA1435 Wireless Transmitter Body Pack",
+    "description": "On Stage MA1435 Wireless Transmitter Body Pack",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ma1435.jpg",
+    "product_url": "https://www.halilit.com/items/5370056-on-stage-ma1435-wireless-transmitter-body-pack-",
+    "is_sold": true,
+    "price": 35.0,
+    "halilit_url": "https://www.halilit.com/items/5370056-on-stage-ma1435-wireless-transmitter-body-pack-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.848934Z"
+  }
+}

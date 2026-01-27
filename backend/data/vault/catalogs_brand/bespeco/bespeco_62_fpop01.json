@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_fpop01",
+  "name": "Bespeco FPOP01 Nylon screen pop filter",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco FPOP01 Nylon screen pop filter",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_fpop01.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_fpop01",
+    "name": "Bespeco FPOP01 Nylon screen pop filter",
+    "description": "Bespeco FPOP01 Nylon screen pop filter",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_fpop01.jpg",
+    "product_url": "https://www.halilit.com/items/3788551-bespeco-fpop01-nylon-screen-pop-filter",
+    "is_sold": true,
+    "price": 159.0,
+    "halilit_url": "https://www.halilit.com/items/3788551-bespeco-fpop01-nylon-screen-pop-filter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.561225Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_asfss6_gb",
+  "name": "On Stage Dual-Screen Pop Blocker",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage Dual-Screen Pop Blocker",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_asfss6_gb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_asfss6_gb",
+    "name": "On Stage Dual-Screen Pop Blocker",
+    "description": "On Stage Dual-Screen Pop Blocker",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_asfss6_gb.jpg",
+    "product_url": "https://www.halilit.com/items/507205-on-stage-dual-screen-pop-blocker",
+    "is_sold": true,
+    "price": 99.0,
+    "halilit_url": "https://www.halilit.com/items/507205-on-stage-dual-screen-pop-blocker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.830004Z"
+  }
+}

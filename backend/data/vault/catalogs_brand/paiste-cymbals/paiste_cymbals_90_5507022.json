@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_5507022",
+  "name": "Paiste Masters 22\" Dark Ride",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste Masters 22\" Dark Ride",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_5507022.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_5507022",
+    "name": "Paiste Masters 22\" Dark Ride",
+    "description": "Paiste Masters 22\" Dark Ride",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_5507022.jpg",
+    "product_url": "https://www.halilit.com/items/1220700-paiste-masters-22-dark-ride",
+    "is_sold": true,
+    "price": 1852.0,
+    "halilit_url": "https://www.halilit.com/items/1220700-paiste-masters-22-dark-ride",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.354015Z"
+  }
+}

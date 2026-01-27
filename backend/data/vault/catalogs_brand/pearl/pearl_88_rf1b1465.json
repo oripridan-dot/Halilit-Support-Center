@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_rf1b1465",
+  "name": "Pearl Reference One Brass 14\"x6.5\" Snare Drum",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Reference One Brass 14\"x6.5\" Snare Drum",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_rf1b1465.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_rf1b1465",
+    "name": "Pearl Reference One Brass 14\"x6.5\" Snare Drum",
+    "description": "Pearl Reference One Brass 14\"x6.5\" Snare Drum",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_rf1b1465.jpg",
+    "product_url": "https://www.halilit.com/items/7555332-pearl-reference-one-brass-14-x6-5-snare-drum",
+    "is_sold": true,
+    "price": 4843.0,
+    "halilit_url": "https://www.halilit.com/items/7555332-pearl-reference-one-brass-14-x6-5-snare-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.385827Z"
+  }
+}

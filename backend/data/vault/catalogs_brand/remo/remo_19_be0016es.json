@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_be0016es",
+  "name": "Remo 16\" Ebony Emperor",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo 16\" Ebony Emperor",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_be0016es.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_be0016es",
+    "name": "Remo 16\" Ebony Emperor",
+    "description": "Remo 16\" Ebony Emperor",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_be0016es.jpg",
+    "product_url": "https://www.halilit.com/items/444432-remo-16-ebony-emperor",
+    "is_sold": true,
+    "price": 139.0,
+    "halilit_url": "https://www.halilit.com/items/444432-remo-16-ebony-emperor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.146003Z"
+  }
+}

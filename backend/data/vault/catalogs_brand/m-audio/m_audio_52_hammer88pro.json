@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_hammer88pro",
+  "name": "M-Audio Hammer 88 Pro",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio Hammer 88 Pro",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_hammer88pro.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_hammer88pro",
+    "name": "M-Audio Hammer 88 Pro",
+    "description": "M-Audio Hammer 88 Pro",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_hammer88pro.jpg",
+    "product_url": "https://www.halilit.com/items/3971936-m-audio-hammer-88-pro",
+    "is_sold": true,
+    "price": 3184.0,
+    "halilit_url": "https://www.halilit.com/items/3971936-m-audio-hammer-88-pro",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.642175Z"
+  }
+}

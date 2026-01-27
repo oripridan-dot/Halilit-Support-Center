@@ -1,0 +1,39 @@
+{
+  "id": "v_moda_87_m100pro",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea V-MODA M-100 Pro",
+  "brand": "v-moda",
+  "category": "general",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea V-MODA M-100 Pro",
+  "media": {
+    "thumbnail": "/data/thumbnails/v_moda_87_m100pro.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "v_moda_87_m100pro",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea V-MODA M-100 Pro",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea V-MODA M-100 Pro",
+    "category": "general",
+    "image_url": "/data/thumbnails/v_moda_87_m100pro.jpg",
+    "product_url": "https://www.halilit.com/items/8119456-v-moda-m-100-pro-headphones",
+    "is_sold": true,
+    "price": 1698.0,
+    "halilit_url": "https://www.halilit.com/items/8119456-v-moda-m-100-pro-headphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.185203Z"
+  }
+}

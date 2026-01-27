@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_rsx12m",
+  "name": "EAW RSX12M",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW RSX12M",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_rsx12m.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_rsx12m",
+    "name": "EAW RSX12M",
+    "description": "EAW RSX12M",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_rsx12m.jpg",
+    "product_url": "https://www.halilit.com/items/3965845-eaw-rsx12m-2-way-self-powered-stage-monitor-",
+    "is_sold": true,
+    "price": 11950.0,
+    "halilit_url": "https://www.halilit.com/items/3965845-eaw-rsx12m-2-way-self-powered-stage-monitor-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.011693Z"
+  }
+}

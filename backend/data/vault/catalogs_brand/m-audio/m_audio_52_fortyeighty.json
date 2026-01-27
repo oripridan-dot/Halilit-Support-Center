@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_fortyeighty",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Eighty",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Eighty",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_fortyeighty.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_fortyeighty",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Eighty",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 M-Audio Forty Eighty",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_fortyeighty.jpg",
+    "product_url": "https://www.halilit.com/items/7589745-m-audio-forty-eighty-studio-monitor",
+    "is_sold": true,
+    "price": 1065.0,
+    "halilit_url": "https://www.halilit.com/items/7589745-m-audio-forty-eighty-studio-monitor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.621578Z"
+  }
+}

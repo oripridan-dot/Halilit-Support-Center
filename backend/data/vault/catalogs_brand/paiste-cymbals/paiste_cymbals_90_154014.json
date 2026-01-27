@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_154014",
+  "name": "Paiste Hi-Hat 14\" Bronze 201",
+  "brand": "paiste-cymbals",
+  "category": "drums",
+  "description": "Paiste Hi-Hat 14\" Bronze 201",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_154014.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_154014",
+    "name": "Paiste Hi-Hat 14\" Bronze 201",
+    "description": "Paiste Hi-Hat 14\" Bronze 201",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_154014.jpg",
+    "product_url": "https://www.halilit.com/items/446367-paiste-hi-hat-14-bronze-201-%D7%9E%D7%A6%D7%99%D7%9C%D7%95%D7%AA",
+    "is_sold": true,
+    "price": 481.0,
+    "halilit_url": "https://www.halilit.com/items/446367-paiste-hi-hat-14-bronze-201-%D7%9E%D7%A6%D7%99%D7%9C%D7%95%D7%AA",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.318922Z"
+  }
+}

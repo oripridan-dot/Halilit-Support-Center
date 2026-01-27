@@ -1,8 +1,7 @@
 # backend/services/processors/moog_processor.py
-from typing import Dict, Any, List
+from typing import Dict, Any
 from models.product_hierarchy import (
-    ProductCore, ProductSpecification, ProductImage, 
-    SourceType, ProductStatus, ProductTier
+    SourceType, ProductStatus
 )
 
 class MoogProcessor:

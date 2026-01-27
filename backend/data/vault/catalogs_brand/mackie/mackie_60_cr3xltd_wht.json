@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_cr3xltd_wht",
+  "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X Limited Edition",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X Limited Edition",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_cr3xltd_wht.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_cr3xltd_wht",
+    "name": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X Limited Edition",
+    "description": "\u05d6\u05d5\u05d2 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie CR3-X Limited Edition",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_cr3xltd_wht.jpg",
+    "product_url": "https://www.halilit.com/items/3746319-mackie-cr3-x-ltd-arctic-white",
+    "is_sold": true,
+    "price": 570.0,
+    "halilit_url": "https://www.halilit.com/items/3746319-mackie-cr3-x-ltd-arctic-white",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.737803Z"
+  }
+}

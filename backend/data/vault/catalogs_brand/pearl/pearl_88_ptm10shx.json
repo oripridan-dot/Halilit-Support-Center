@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_ptm10shx",
+  "name": "Pearl PTM10SHX Quickmount Tambourine",
+  "brand": "pearl",
+  "category": "accessories",
+  "description": "Pearl PTM10SHX Quickmount Tambourine",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_ptm10shx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_ptm10shx",
+    "name": "Pearl PTM10SHX Quickmount Tambourine",
+    "description": "Pearl PTM10SHX Quickmount Tambourine",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_ptm10shx.jpg",
+    "product_url": "https://www.halilit.com/items/7196444-pearl-ptm10shx-quickmount-tambourine",
+    "is_sold": true,
+    "price": 179.0,
+    "halilit_url": "https://www.halilit.com/items/7196444-pearl-ptm10shx-quickmount-tambourine",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.519054Z"
+  }
+}

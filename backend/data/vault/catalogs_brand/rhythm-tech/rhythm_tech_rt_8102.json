@@ -1,0 +1,39 @@
+{
+  "id": "rhythm_tech_rt_8102",
+  "name": "Rhythm Tech BAR CHIMES (DOUBLE ROW)",
+  "brand": "rhythm-tech",
+  "category": "general",
+  "description": "Rhythm Tech BAR CHIMES (DOUBLE ROW)",
+  "media": {
+    "thumbnail": "/data/thumbnails/rhythm_tech_rt_8102.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "rhythm_tech_rt_8102",
+    "name": "Rhythm Tech BAR CHIMES (DOUBLE ROW)",
+    "description": "Rhythm Tech BAR CHIMES (DOUBLE ROW)",
+    "category": "general",
+    "image_url": "/data/thumbnails/rhythm_tech_rt_8102.jpg",
+    "product_url": "https://www.halilit.com/items/4340008-rhythm-tech-bar-chimes-double-row-",
+    "is_sold": true,
+    "price": 444.0,
+    "halilit_url": "https://www.halilit.com/items/4340008-rhythm-tech-bar-chimes-double-row-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.278759Z"
+  }
+}

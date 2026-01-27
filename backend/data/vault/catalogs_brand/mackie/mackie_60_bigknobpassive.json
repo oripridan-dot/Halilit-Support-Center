@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_bigknobpassive",
+  "name": "\u05e9\u05dc\u05d8 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie Big Knob Passive",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05e9\u05dc\u05d8 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie Big Knob Passive",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_bigknobpassive.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_bigknobpassive",
+    "name": "\u05e9\u05dc\u05d8 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie Big Knob Passive",
+    "description": "\u05e9\u05dc\u05d8 \u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd Mackie Big Knob Passive",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_bigknobpassive.jpg",
+    "product_url": "https://www.halilit.com/items/1227930-mackie-big-knob-passive",
+    "is_sold": true,
+    "price": 299.0,
+    "halilit_url": "https://www.halilit.com/items/1227930-mackie-big-knob-passive",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.897872Z"
+  }
+}

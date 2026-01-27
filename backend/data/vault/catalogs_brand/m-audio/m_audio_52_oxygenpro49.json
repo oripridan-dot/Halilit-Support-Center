@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_oxygenpro49",
+  "name": "M-Audio Oxygen Pro 49",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio Oxygen Pro 49",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_oxygenpro49.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_oxygenpro49",
+    "name": "M-Audio Oxygen Pro 49",
+    "description": "M-Audio Oxygen Pro 49",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_oxygenpro49.jpg",
+    "product_url": "https://www.halilit.com/items/3968441-m-audio-oxygen-pro-49",
+    "is_sold": true,
+    "price": 1007.0,
+    "halilit_url": "https://www.halilit.com/items/3968441-m-audio-oxygen-pro-49",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.631186Z"
+  }
+}

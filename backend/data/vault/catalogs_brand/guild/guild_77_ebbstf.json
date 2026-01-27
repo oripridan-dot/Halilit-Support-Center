@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_ebbstf",
+  "name": "Guild Premium Electric Gig Bag Starfire",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "Guild Premium Electric Gig Bag Starfire",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_ebbstf.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_ebbstf",
+    "name": "Guild Premium Electric Gig Bag Starfire",
+    "description": "Guild Premium Electric Gig Bag Starfire",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_ebbstf.jpg",
+    "product_url": "https://www.halilit.com/items/5666930-guild-premium-electric-gig-bag-starfire-",
+    "is_sold": true,
+    "price": 429.0,
+    "halilit_url": "https://www.halilit.com/items/5666930-guild-premium-electric-gig-bag-starfire-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.315667Z"
+  }
+}

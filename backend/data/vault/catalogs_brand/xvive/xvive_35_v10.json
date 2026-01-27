@@ -1,0 +1,39 @@
+{
+  "id": "xvive_35_v10",
+  "name": "\u05e4\u05d3\u05dc \u05d1\u05d5\u05e1\u05d8\u05e8 Xvive V10 Amp Litone",
+  "brand": "xvive",
+  "category": "guitars",
+  "description": "\u05e4\u05d3\u05dc \u05d1\u05d5\u05e1\u05d8\u05e8 Xvive V10 Amp Litone",
+  "media": {
+    "thumbnail": "/data/thumbnails/xvive_35_v10.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xvive_35_v10",
+    "name": "\u05e4\u05d3\u05dc \u05d1\u05d5\u05e1\u05d8\u05e8 Xvive V10 Amp Litone",
+    "description": "\u05e4\u05d3\u05dc \u05d1\u05d5\u05e1\u05d8\u05e8 Xvive V10 Amp Litone",
+    "category": "general",
+    "image_url": "/data/thumbnails/xvive_35_v10.jpg",
+    "product_url": "https://www.halilit.com/items/4339377-xvive-maxverb",
+    "is_sold": true,
+    "price": 190.0,
+    "halilit_url": "https://www.halilit.com/items/4339377-xvive-maxverb",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.673704Z"
+  }
+}

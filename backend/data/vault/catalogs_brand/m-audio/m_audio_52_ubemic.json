@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_ubemic",
+  "name": "M-Audio Uber Mic USB Microphone",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio Uber Mic USB Microphone",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_ubemic.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_ubemic",
+    "name": "M-Audio Uber Mic USB Microphone",
+    "description": "M-Audio Uber Mic USB Microphone",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_ubemic.jpg",
+    "product_url": "https://www.halilit.com/items/1576253-m-audio-uber-mic-professional-usb-microphone",
+    "is_sold": true,
+    "price": 552.0,
+    "halilit_url": "https://www.halilit.com/items/1576253-m-audio-uber-mic-professional-usb-microphone",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.620877Z"
+  }
+}

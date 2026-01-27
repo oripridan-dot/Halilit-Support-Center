@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_msa7011",
+  "name": "On Stage MSA7011 Bookplate Clamp",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage MSA7011 Bookplate Clamp",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_msa7011.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_msa7011",
+    "name": "On Stage MSA7011 Bookplate Clamp",
+    "description": "On Stage MSA7011 Bookplate Clamp",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_msa7011.jpg",
+    "product_url": "https://www.halilit.com/items/966627-on-stage-msa7011-bookplate-clamp",
+    "is_sold": true,
+    "price": 106.0,
+    "halilit_url": "https://www.halilit.com/items/966627-on-stage-msa7011-bookplate-clamp",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.945577Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "innovative_percussion_28_ip5ab",
+  "name": "Innovative Percussion IP-5AB",
+  "brand": "innovative-percussion",
+  "category": "drums",
+  "description": "Innovative Percussion IP-5AB",
+  "media": {
+    "thumbnail": "/data/thumbnails/innovative_percussion_28_ip5ab.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "innovative_percussion_28_ip5ab",
+    "name": "Innovative Percussion IP-5AB",
+    "description": "Innovative Percussion IP-5AB",
+    "category": "general",
+    "image_url": "/data/thumbnails/innovative_percussion_28_ip5ab.jpg",
+    "product_url": "https://www.halilit.com/items/1652622-innovative-percussion-ip-5ab-drumsticks",
+    "is_sold": true,
+    "price": 67.0,
+    "halilit_url": "https://www.halilit.com/items/1652622-innovative-percussion-ip-5ab-drumsticks",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.253924Z"
+  }
+}

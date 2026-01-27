@@ -1,0 +1,39 @@
+{
+  "id": "lynx_48_auroran24tb",
+  "name": "Lynx Aurora(n) 24 Thunderbolt",
+  "brand": "lynx",
+  "category": "general",
+  "description": "Lynx Aurora(n) 24 Thunderbolt",
+  "media": {
+    "thumbnail": "/data/thumbnails/lynx_48_auroran24tb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "lynx_48_auroran24tb",
+    "name": "Lynx Aurora(n) 24 Thunderbolt",
+    "description": "Lynx Aurora(n) 24 Thunderbolt",
+    "category": "general",
+    "image_url": "/data/thumbnails/lynx_48_auroran24tb.jpg",
+    "product_url": "https://www.halilit.com/items/1384903-lynx-aurora-n-24-thunderbolt",
+    "is_sold": true,
+    "price": 26081.0,
+    "halilit_url": "https://www.halilit.com/items/1384903-lynx-aurora-n-24-thunderbolt",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.658403Z"
+  }
+}

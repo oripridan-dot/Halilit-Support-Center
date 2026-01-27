@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_p1030r",
+  "name": "Pearl Eliminator Solo P1030R",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Eliminator Solo P1030R",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_p1030r.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_p1030r",
+    "name": "Pearl Eliminator Solo P1030R",
+    "description": "Pearl Eliminator Solo P1030R",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_p1030r.jpg",
+    "product_url": "https://www.halilit.com/items/3084518-pearl-eliminator-solo-p1030r-bassdrum-pedal",
+    "is_sold": true,
+    "price": 628.0,
+    "halilit_url": "https://www.halilit.com/items/3084518-pearl-eliminator-solo-p1030r-bassdrum-pedal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.462603Z"
+  }
+}

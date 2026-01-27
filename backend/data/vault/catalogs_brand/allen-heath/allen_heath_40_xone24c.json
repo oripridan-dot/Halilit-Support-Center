@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_xone24c",
+  "name": "\u05de\u05d9\u05e7\u05e1\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Allen & Heath XONE:24C",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "\u05de\u05d9\u05e7\u05e1\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Allen & Heath XONE:24C",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_xone24c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_xone24c",
+    "name": "\u05de\u05d9\u05e7\u05e1\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Allen & Heath XONE:24C",
+    "description": "\u05de\u05d9\u05e7\u05e1\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Allen & Heath XONE:24C",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_xone24c.jpg",
+    "product_url": "https://www.halilit.com/items/8511063-Allen-Heath-XONE-24C-Analog-Mixer",
+    "is_sold": true,
+    "price": 2763.0,
+    "halilit_url": "https://www.halilit.com/items/8511063-Allen-Heath-XONE-24C-Analog-Mixer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.396547Z"
+  }
+}

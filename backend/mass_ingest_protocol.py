@@ -92,32 +92,32 @@ class MassIngestProtocol:
         print(f"✅ [COMPLETE] {brand_name} Official Pipeline Finished.")
 
     def run_commercial_sync(self):
-        """
-        Runs the Commercial Pipeline (Halilit Scraper)
-        """
-        if self.mode != "commercial_sync":
-            return
+        if self.mode != "commercial_sync": return
 
         print("🚀 Starting COMMERCIAL Pipeline (Halilit Sync)")
         try:
             from services.halilit_direct_scraper import HalilitDirectScraper
-            # Assuming HalilitScraper has a main or run method
-            # For now, triggering the logic we can infer or creating a placeholder
+            
+            # --- MAP YOUR BRANDS HERE ---
+            brand_map = {
+                "roland": "https://www.halilit.com/brands/62-Roland",
+                "moog": "https://www.halilit.com/brands/750-Moog",
+                "nord": "https://www.halilit.com/brands/743-Nord"
+            }
+            
             scraper = HalilitDirectScraper()
-            print("🕵️ [COMMERCIAL] Scraper initialized (HalilitDirectScraper)")
-            # In a real scenario: asyncio.run(scraper.run())
-            # Resulting data should be saved to backend/data/blueprints/{brand}_commercial.json
-            print("⚠️ Commercial sync execution logic would go here.")
-        except ImportError:
-            print("❌ HalilitDirectScraper not found.")
+            
+            for brand_slug, url in brand_map.items():
+                scraper.scrape_brand(brand_slug, url)
+                
+        except Exception as e:
+            print(f"❌ Sync Failed: {e}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Mass Ingestion Protocol")
     parser.add_argument("--mode", choices=["official_only", "commercial_sync"], default="official_only", help="Ingestion Mode")
     args = parser.parse_args()
 
-    from services.roland_scraper import RolandScraper
-    from services.processors.roland_processor import RolandProcessor
     from services.nord_scraper import NordScraper
     from services.processors.nord_processor import NordProcessor
     from services.moog_scraper import MoogScraper

@@ -1,0 +1,39 @@
+{
+  "id": "xvive_35_o2",
+  "name": "Xvive O2 SWEET LEO Overdrive",
+  "brand": "xvive",
+  "category": "general",
+  "description": "Xvive O2 SWEET LEO Overdrive",
+  "media": {
+    "thumbnail": "/data/thumbnails/xvive_35_o2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xvive_35_o2",
+    "name": "Xvive O2 SWEET LEO Overdrive",
+    "description": "Xvive O2 SWEET LEO Overdrive",
+    "category": "general",
+    "image_url": "/data/thumbnails/xvive_35_o2.jpg",
+    "product_url": "https://www.halilit.com/items/3908573-xvive-o2-sweet-leo-overdrive",
+    "is_sold": true,
+    "price": 231.0,
+    "halilit_url": "https://www.halilit.com/items/3908573-xvive-o2-sweet-leo-overdrive",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.677083Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_mr101",
+  "name": "Medeli Rhythm Machine MR101",
+  "brand": "medeli",
+  "category": "general",
+  "description": "Medeli Rhythm Machine MR101",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_mr101.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_mr101",
+    "name": "Medeli Rhythm Machine MR101",
+    "description": "Medeli Rhythm Machine MR101",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_mr101.jpg",
+    "product_url": "https://www.halilit.com/items/7568173-medeli-rhythm-machine-mr101",
+    "is_sold": true,
+    "price": 309.0,
+    "halilit_url": "https://www.halilit.com/items/7568173-medeli-rhythm-machine-mr101",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.338545Z"
+  }
+}

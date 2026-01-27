@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_tm01",
+  "name": "On Stage TM01 Table/Stand Microphone Clamp",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage TM01 Table/Stand Microphone Clamp",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_tm01.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_tm01",
+    "name": "On Stage TM01 Table/Stand Microphone Clamp",
+    "description": "On Stage TM01 Table/Stand Microphone Clamp",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_tm01.jpg",
+    "product_url": "https://www.halilit.com/items/3075772-on-stage-tm01-table-stand-microphone-clamp",
+    "is_sold": true,
+    "price": 84.0,
+    "halilit_url": "https://www.halilit.com/items/3075772-on-stage-tm01-table-stand-microphone-clamp",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.873067Z"
+  }
+}

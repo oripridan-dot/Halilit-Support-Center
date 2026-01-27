@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_sg101wlvb",
+  "name": "Bespeco SG101WLVB",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco SG101WLVB",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_sg101wlvb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_sg101wlvb",
+    "name": "Bespeco SG101WLVB",
+    "description": "Bespeco SG101WLVB",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_sg101wlvb.jpg",
+    "product_url": "https://www.halilit.com/items/3541180-bespeco-sg101wlvb",
+    "is_sold": true,
+    "price": 1007.0,
+    "halilit_url": "https://www.halilit.com/items/3541180-bespeco-sg101wlvb",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.610369Z"
+  }
+}

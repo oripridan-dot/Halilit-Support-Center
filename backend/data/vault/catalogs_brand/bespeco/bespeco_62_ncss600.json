@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_ncss600",
+  "name": "Bespeco NCSS600",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco NCSS600",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_ncss600.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_ncss600",
+    "name": "Bespeco NCSS600",
+    "description": "Bespeco NCSS600",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_ncss600.jpg",
+    "product_url": "https://www.halilit.com/items/8597550-bespeco-ncss600",
+    "is_sold": true,
+    "price": 207.0,
+    "halilit_url": "https://www.halilit.com/items/8597550-bespeco-ncss600",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.545906Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_75x",
+  "name": "Pearl 75X Tilting Cowbell Holder",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl 75X Tilting Cowbell Holder",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_75x.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_75x",
+    "name": "Pearl 75X Tilting Cowbell Holder",
+    "description": "Pearl 75X Tilting Cowbell Holder",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_75x.jpg",
+    "product_url": "https://www.halilit.com/items/448006-pearl-75x-tilting-cowbell-holder",
+    "is_sold": true,
+    "price": 184.0,
+    "halilit_url": "https://www.halilit.com/items/448006-pearl-75x-tilting-cowbell-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.495197Z"
+  }
+}

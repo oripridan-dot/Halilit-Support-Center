@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_5505024",
+  "name": "Paiste Masters 24\" Deep Ride",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste Masters 24\" Deep Ride",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_5505024.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_5505024",
+    "name": "Paiste Masters 24\" Deep Ride",
+    "description": "Paiste Masters 24\" Deep Ride",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_5505024.jpg",
+    "product_url": "https://www.halilit.com/items/1225349-paiste-masters-24-deep-ride",
+    "is_sold": true,
+    "price": 1991.0,
+    "halilit_url": "https://www.halilit.com/items/1225349-paiste-masters-24-deep-ride",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.360675Z"
+  }
+}

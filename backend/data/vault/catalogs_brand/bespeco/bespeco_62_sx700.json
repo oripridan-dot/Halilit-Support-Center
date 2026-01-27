@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_sx700",
+  "name": "Bespeco SX700",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco SX700",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_sx700.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_sx700",
+    "name": "Bespeco SX700",
+    "description": "Bespeco SX700",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_sx700.jpg",
+    "product_url": "https://www.halilit.com/items/3348950-bespeco-sx700",
+    "is_sold": true,
+    "price": 149.0,
+    "halilit_url": "https://www.halilit.com/items/3348950-bespeco-sx700",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.628127Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "eve_audio_54_sc205",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC205",
+  "brand": "eve-audio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC205",
+  "media": {
+    "thumbnail": "/data/thumbnails/eve_audio_54_sc205.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "eve_audio_54_sc205",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC205",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 EVE Audio SC205",
+    "category": "general",
+    "image_url": "/data/thumbnails/eve_audio_54_sc205.jpg",
+    "product_url": "https://www.halilit.com/items/446338-eve-audio-sc205",
+    "is_sold": true,
+    "price": 1764.0,
+    "halilit_url": "https://www.halilit.com/items/446338-eve-audio-sc205",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.666858Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "heritage_audio_27_ha609aelite",
+  "name": "Heritage Audio HA-609A",
+  "brand": "heritage-audio",
+  "category": "studio",
+  "description": "Heritage Audio HA-609A",
+  "media": {
+    "thumbnail": "/data/thumbnails/heritage_audio_27_ha609aelite.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "heritage_audio_27_ha609aelite",
+    "name": "Heritage Audio HA-609A",
+    "description": "Heritage Audio HA-609A",
+    "category": "general",
+    "image_url": "/data/thumbnails/heritage_audio_27_ha609aelite.jpg",
+    "product_url": "https://www.halilit.com/items/7451042-heritage-audio-ha-609a-elite",
+    "is_sold": true,
+    "price": 9132.0,
+    "halilit_url": "https://www.halilit.com/items/7451042-heritage-audio-ha-609a-elite",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.775723Z"
+  }
+}

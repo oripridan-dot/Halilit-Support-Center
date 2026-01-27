@@ -1,0 +1,39 @@
+{
+  "id": "dynaudio_83_core7",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Dynaudio Core 7",
+  "brand": "dynaudio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Dynaudio Core 7",
+  "media": {
+    "thumbnail": "/data/thumbnails/dynaudio_83_core7.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "dynaudio_83_core7",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Dynaudio Core 7",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 Dynaudio Core 7",
+    "category": "general",
+    "image_url": "/data/thumbnails/dynaudio_83_core7.jpg",
+    "product_url": "https://www.halilit.com/items/2516842-dynaudio-core-7-monitor",
+    "is_sold": true,
+    "price": 8265.0,
+    "halilit_url": "https://www.halilit.com/items/2516842-dynaudio-core-7-monitor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.356547Z"
+  }
+}

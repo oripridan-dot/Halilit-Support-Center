@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_s100polara_chr",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Guild S-100 Polara Cherry Red",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Guild S-100 Polara Cherry Red",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_s100polara_chr.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_s100polara_chr",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Guild S-100 Polara Cherry Red",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Guild S-100 Polara Cherry Red",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_s100polara_chr.jpg",
+    "product_url": "https://www.halilit.com/items/5173380-guild-s-100-polara-cherry-red",
+    "is_sold": true,
+    "price": 3441.0,
+    "halilit_url": "https://www.halilit.com/items/5173380-guild-s-100-polara-cherry-red",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.301408Z"
+  }
+}

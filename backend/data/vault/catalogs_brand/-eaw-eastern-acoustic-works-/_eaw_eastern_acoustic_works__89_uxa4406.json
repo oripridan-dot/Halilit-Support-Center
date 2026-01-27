@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_uxa4406",
+  "name": "EAW UXA4406",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW UXA4406",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_uxa4406.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_uxa4406",
+    "name": "EAW UXA4406",
+    "description": "EAW UXA4406",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_uxa4406.jpg",
+    "product_url": "https://www.halilit.com/items/3403607-eaw-uxa4406",
+    "is_sold": true,
+    "price": 35643.0,
+    "halilit_url": "https://www.halilit.com/items/3403607-eaw-uxa4406",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.981635Z"
+  }
+}

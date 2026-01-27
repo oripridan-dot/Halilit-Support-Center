@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_sp201_wh",
+  "name": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP201",
+  "brand": "medeli",
+  "category": "general",
+  "description": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP201",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_sp201_wh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_sp201_wh",
+    "name": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP201",
+    "description": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP201",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_sp201_wh.jpg",
+    "product_url": "https://www.halilit.com/items/7717579-medeli-sp201-digital-piano",
+    "is_sold": true,
+    "price": 1798.0,
+    "halilit_url": "https://www.halilit.com/items/7717579-medeli-sp201-digital-piano",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.357197Z"
+  }
+}

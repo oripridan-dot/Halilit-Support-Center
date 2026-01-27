@@ -1,0 +1,39 @@
+{
+  "id": "perri_s_leathers_57_8172",
+  "name": "Perri's Leathers UKNWSP-8172",
+  "brand": "perri-s-leathers",
+  "category": "general",
+  "description": "Perri's Leathers UKNWSP-8172",
+  "media": {
+    "thumbnail": "/data/thumbnails/perri_s_leathers_57_8172.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "perri_s_leathers_57_8172",
+    "name": "Perri's Leathers UKNWSP-8172",
+    "description": "Perri's Leathers UKNWSP-8172",
+    "category": "general",
+    "image_url": "/data/thumbnails/perri_s_leathers_57_8172.jpg",
+    "product_url": "https://www.halilit.com/items/3740839-perri-s-leathers-uknwsp-8172",
+    "is_sold": true,
+    "price": 67.0,
+    "halilit_url": "https://www.halilit.com/items/3740839-perri-s-leathers-uknwsp-8172",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.493751Z"
+  }
+}

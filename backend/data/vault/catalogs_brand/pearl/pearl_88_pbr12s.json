@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pbr12s",
+  "name": "Pearl Repinique 12\" pearl",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Repinique 12\" pearl",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pbr12s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pbr12s",
+    "name": "Pearl Repinique 12\" pearl",
+    "description": "Pearl Repinique 12\" pearl",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pbr12s.jpg",
+    "product_url": "https://www.halilit.com/items/447982-pearl-repinique-12-pearl",
+    "is_sold": true,
+    "price": 539.0,
+    "halilit_url": "https://www.halilit.com/items/447982-pearl-repinique-12-pearl",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.524072Z"
+  }
+}

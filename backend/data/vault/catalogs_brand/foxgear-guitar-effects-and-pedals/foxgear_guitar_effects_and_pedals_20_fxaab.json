@@ -1,0 +1,39 @@
+{
+  "id": "foxgear_guitar_effects_and_pedals_20_fxaab",
+  "name": "Foxgear Anubi Ambient Box",
+  "brand": "foxgear-guitar-effects-and-pedals",
+  "category": "general",
+  "description": "Foxgear Anubi Ambient Box",
+  "media": {
+    "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "foxgear_guitar_effects_and_pedals_20_fxaab",
+    "name": "Foxgear Anubi Ambient Box",
+    "description": "Foxgear Anubi Ambient Box",
+    "category": "general",
+    "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxaab.jpg",
+    "product_url": "https://www.halilit.com/items/4910970-foxgear-anubi-ambient-box",
+    "is_sold": true,
+    "price": 1342.0,
+    "halilit_url": "https://www.halilit.com/items/4910970-foxgear-anubi-ambient-box",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.703346Z"
+  }
+}

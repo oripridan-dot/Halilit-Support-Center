@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_zed6010fx",
+  "name": "Allen & Heath ZED60-10FX",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath ZED60-10FX",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_zed6010fx",
+    "name": "Allen & Heath ZED60-10FX",
+    "description": "Allen & Heath ZED60-10FX",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_zed6010fx.jpg",
+    "product_url": "https://www.halilit.com/items/1461464-allen-heath-zed60-10fx-portable-mixer",
+    "is_sold": true,
+    "price": 2176.0,
+    "halilit_url": "https://www.halilit.com/items/1461464-allen-heath-zed60-10fx-portable-mixer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.399728Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "heritage_audio_27_73ditwo",
+  "name": "Heritage Audio 73 DI 2 - Active DI Box",
+  "brand": "heritage-audio",
+  "category": "studio",
+  "description": "Heritage Audio 73 DI 2 - Active DI Box",
+  "media": {
+    "thumbnail": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "heritage_audio_27_73ditwo",
+    "name": "Heritage Audio 73 DI 2 - Active DI Box",
+    "description": "Heritage Audio 73 DI 2 - Active DI Box",
+    "category": "general",
+    "image_url": "/data/thumbnails/heritage_audio_27_73ditwo.jpg",
+    "product_url": "https://www.halilit.com/items/8518739-heritage-audio-73-di-2-dual-channel-active-di-box-",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/8518739-heritage-audio-73-di-2-dual-channel-active-di-box-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.783168Z"
+  }
+}

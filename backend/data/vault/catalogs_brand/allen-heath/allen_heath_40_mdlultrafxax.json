@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_mdlultrafxax",
+  "name": "Allen & Heath dLive RackUltra FX Card",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath dLive RackUltra FX Card",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_mdlultrafxax",
+    "name": "Allen & Heath dLive RackUltra FX Card",
+    "description": "Allen & Heath dLive RackUltra FX Card",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_mdlultrafxax.jpg",
+    "product_url": "https://www.halilit.com/items/7424701-allen-heath-dlive-rackultra-fx-card",
+    "is_sold": true,
+    "price": 11182.0,
+    "halilit_url": "https://www.halilit.com/items/7424701-allen-heath-dlive-rackultra-fx-card",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.401529Z"
+  }
+}

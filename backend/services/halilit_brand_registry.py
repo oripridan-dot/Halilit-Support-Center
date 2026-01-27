@@ -134,7 +134,7 @@ class HalilitBrandRegistry:
                             f.write(response.content)
                     else:
                          print(f"     ⚪ Logo skipped (Status {response.status_code})")
-                except Exception as e:
+                except Exception:
                     # Log as info/debug rather than warning if it's just a connection blip
                     print(f"     ⚪ Logo skipped for {brand['name']}")
 

@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_rf1814bxc_102",
+  "name": "Pearl Bass Drum 18x14",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Bass Drum 18x14",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_rf1814bxc_102.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_rf1814bxc_102",
+    "name": "Pearl Bass Drum 18x14",
+    "description": "Pearl Bass Drum 18x14",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_rf1814bxc_102.jpg",
+    "product_url": "https://www.halilit.com/items/1923048-pearl-bass-drum-18x14-",
+    "is_sold": true,
+    "price": 4083.0,
+    "halilit_url": "https://www.halilit.com/items/1923048-pearl-bass-drum-18x14-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.607584Z"
+  }
+}

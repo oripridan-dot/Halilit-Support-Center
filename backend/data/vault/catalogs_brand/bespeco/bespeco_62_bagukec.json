@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_bagukec",
+  "name": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 Bespeco BAGUKEC",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 Bespeco BAGUKEC",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_bagukec.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_bagukec",
+    "name": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 Bespeco BAGUKEC",
+    "description": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 Bespeco BAGUKEC",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_bagukec.jpg",
+    "product_url": "https://www.halilit.com/items/3541022-bespeco-bagukec-concert-ukulele-bag",
+    "is_sold": true,
+    "price": 173.0,
+    "halilit_url": "https://www.halilit.com/items/3541022-bespeco-bagukec-concert-ukulele-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.559917Z"
+  }
+}

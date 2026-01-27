@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_my650",
+  "name": "On Stage MY650 Dual-Microphone Bar for Amplifier",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage MY650 Dual-Microphone Bar for Amplifier",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_my650.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_my650",
+    "name": "On Stage MY650 Dual-Microphone Bar for Amplifier",
+    "description": "On Stage MY650 Dual-Microphone Bar for Amplifier",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_my650.jpg",
+    "product_url": "https://www.halilit.com/items/1346249-on-stage-my650-dual-microphone-bar-for-amplifier",
+    "is_sold": true,
+    "price": 143.0,
+    "halilit_url": "https://www.halilit.com/items/1346249-on-stage-my650-dual-microphone-bar-for-amplifier",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.885088Z"
+  }
+}

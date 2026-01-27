@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_ncsma450",
+  "name": "Bespeco NCSMA450",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco NCSMA450",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_ncsma450.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_ncsma450",
+    "name": "Bespeco NCSMA450",
+    "description": "Bespeco NCSMA450",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_ncsma450.jpg",
+    "product_url": "https://www.halilit.com/items/8597453-bespeco-ncsma450-microphone-cable",
+    "is_sold": true,
+    "price": 174.0,
+    "halilit_url": "https://www.halilit.com/items/8597453-bespeco-ncsma450-microphone-cable",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.611673Z"
+  }
+}

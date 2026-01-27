@@ -1,0 +1,39 @@
+{
+  "id": "fusion_78_uw03bk",
+  "name": "Fusion UW-03 BK",
+  "brand": "fusion",
+  "category": "general",
+  "description": "Fusion UW-03 BK",
+  "media": {
+    "thumbnail": "/data/thumbnails/fusion_78_uw03bk.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "fusion_78_uw03bk",
+    "name": "Fusion UW-03 BK",
+    "description": "Fusion UW-03 BK",
+    "category": "general",
+    "image_url": "/data/thumbnails/fusion_78_uw03bk.jpg",
+    "product_url": "https://www.halilit.com/items/836021-fusion-bags-uw-03-bk",
+    "is_sold": true,
+    "price": 559.0,
+    "halilit_url": "https://www.halilit.com/items/836021-fusion-bags-uw-03-bk",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.651479Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_mtrack_duo",
+  "name": "M-Audio M-Track Duo",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio M-Track Duo",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_mtrack_duo.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_mtrack_duo",
+    "name": "M-Audio M-Track Duo",
+    "description": "M-Audio M-Track Duo",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_mtrack_duo.jpg",
+    "product_url": "https://www.halilit.com/items/3676914-m-audio-m-track-duo",
+    "is_sold": true,
+    "price": 287.0,
+    "halilit_url": "https://www.halilit.com/items/3676914-m-audio-m-track-duo",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.634486Z"
+  }
+}

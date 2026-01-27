@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_spc120",
+  "name": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP-C120",
+  "brand": "medeli",
+  "category": "general",
+  "description": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP-C120",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_spc120.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_spc120",
+    "name": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP-C120",
+    "description": "\u05e4\u05e1\u05e0\u05ea\u05e8 \u05d7\u05e9\u05de\u05dc\u05d9 Medeli SP-C120",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_spc120.jpg",
+    "product_url": "https://www.halilit.com/items/7194412-medeli-sp-c120-digital-piano",
+    "is_sold": true,
+    "price": 1438.0,
+    "halilit_url": "https://www.halilit.com/items/7194412-medeli-sp-c120-digital-piano",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.357434Z"
+  }
+}

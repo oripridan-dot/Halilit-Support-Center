@@ -1,7 +1,7 @@
 """
 Minimal Taxonomy Registry for Halilit Catalog
 """
-from typing import Dict, List, Optional
+from typing import List, Optional
 from pathlib import Path
 import json
 from datetime import datetime, timezone

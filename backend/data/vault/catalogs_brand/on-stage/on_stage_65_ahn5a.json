@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ahn5a",
+  "name": "On Stage 5A Hickory Nylon Tip (1 Pair)",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage 5A Hickory Nylon Tip (1 Pair)",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ahn5a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ahn5a",
+    "name": "On Stage 5A Hickory Nylon Tip (1 Pair)",
+    "description": "On Stage 5A Hickory Nylon Tip (1 Pair)",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ahn5a.jpg",
+    "product_url": "https://www.halilit.com/items/446623-on-stage-5a-hickory-nylon-tip-1-pair-",
+    "is_sold": true,
+    "price": 18.0,
+    "halilit_url": "https://www.halilit.com/items/446623-on-stage-5a-hickory-nylon-tip-1-pair-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.884050Z"
+  }
+}

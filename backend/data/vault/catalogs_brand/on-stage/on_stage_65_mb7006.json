@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_mb7006",
+  "name": "On Stage MB7006 6-Space Microphone Bag",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage MB7006 6-Space Microphone Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_mb7006.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_mb7006",
+    "name": "On Stage MB7006 6-Space Microphone Bag",
+    "description": "On Stage MB7006 6-Space Microphone Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_mb7006.jpg",
+    "product_url": "https://www.halilit.com/items/3464166-on-stage-mb7006-6-space-microphone-bag",
+    "is_sold": true,
+    "price": 153.0,
+    "halilit_url": "https://www.halilit.com/items/3464166-on-stage-mb7006-6-space-microphone-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.887434Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_sp1450",
+  "name": "On Stage SP14-50 Speaker Cable",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage SP14-50 Speaker Cable",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_sp1450.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_sp1450",
+    "name": "On Stage SP14-50 Speaker Cable",
+    "description": "On Stage SP14-50 Speaker Cable",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_sp1450.jpg",
+    "product_url": "https://www.halilit.com/items/5420286-on-stage-sp14-50-speaker-cable",
+    "is_sold": true,
+    "price": 101.0,
+    "halilit_url": "https://www.halilit.com/items/5420286-on-stage-sp14-50-speaker-cable",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.870519Z"
+  }
+}

@@ -4,6 +4,7 @@ import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
 import type { Product } from "../../types";
+import { useCategoryCatalog } from "../../hooks/useCategoryCatalog";
 import { TierBar } from "../smart-views/TierBar";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
@@ -38,37 +39,14 @@ export const SpectrumModule = () => {
   // --------------------------------------------------------------------------
   // 1. DATA INGESTION
   // --------------------------------------------------------------------------
-  const [rawProducts, setRawProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { products: fetchedProducts, availableFilters, loading } = useCategoryCatalog(activeTribeId);
 
-  useEffect(() => {
-    const loadCatalog = async () => {
-      setLoading(true);
-      try {
-        const { catalogLoader } = await import("../../lib/catalogLoader");
-        if (!activeTribeId) {
-          setRawProducts([]);
-          setLoading(false);
-          return;
-        }
-        const products = await catalogLoader.loadProductsByCategory(activeTribeId);
-        
-        // Enrich products with calculated score immediately on load
-        const scoredProducts = (Array.isArray(products) ? products : []).map(p => ({
-          ...p,
-          score: calculateRelevance(p)
-        }));
-
-        setRawProducts(scoredProducts);
-      } catch {
-        setRawProducts([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-    if (activeTribeId) loadCatalog();
-    else setLoading(false);
-  }, [activeTribeId]);
+  const rawProducts = useMemo(() => {
+    return fetchedProducts.map(p => ({
+      ...p,
+      score: calculateRelevance(p)
+    }));
+  }, [fetchedProducts]);
 
   // --------------------------------------------------------------------------
   // 2. THE 1176 ENGINE (Filtering)
@@ -77,20 +55,12 @@ export const SpectrumModule = () => {
   const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null);
   const [imageLoadError, setImageLoadError] = useState(false);
 
-  const availableFilters = useMemo(() => {
-    const filterSet = new Set<string>();
-    rawProducts.forEach((p) => {
-      if (p.filters) p.filters.forEach((f: string) => filterSet.add(f));
-    });
-    return Array.from(filterSet).sort();
-  }, [rawProducts]);
-
   useEffect(() => { setImageLoadError(false); }, [hoveredProduct]);
 
   const filteredProducts = useMemo(() => {
     let base = rawProducts;
     if (activeFilter !== "ALL") {
-      base = rawProducts.filter((p) => p.filters?.includes(activeFilter));
+      base = rawProducts.filter((p) => (p.tags || p.filters)?.includes(activeFilter));
     }
     // Sort primarily by Price (X-Axis), secondary by Score (Y-Axis)
     return base.sort((a, b) => getPriceValue(a) - getPriceValue(b));

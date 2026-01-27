@@ -1,0 +1,39 @@
+{
+  "id": "adams_97_2vbc2alwv30",
+  "name": "Adams Solist Vibraphone",
+  "brand": "adams",
+  "category": "general",
+  "description": "Adams Solist Vibraphone",
+  "media": {
+    "thumbnail": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adams_97_2vbc2alwv30",
+    "name": "Adams Solist Vibraphone",
+    "description": "Adams Solist Vibraphone",
+    "category": "general",
+    "image_url": "/data/thumbnails/adams_97_2vbc2alwv30.jpg",
+    "product_url": "https://www.halilit.com/items/447610-adams-solist-vibraphone",
+    "is_sold": true,
+    "price": 32620.0,
+    "halilit_url": "https://www.halilit.com/items/447610-adams-solist-vibraphone",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.252947Z"
+  }
+}

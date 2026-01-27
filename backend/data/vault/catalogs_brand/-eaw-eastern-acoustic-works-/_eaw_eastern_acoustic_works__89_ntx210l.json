@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_ntx210l",
+  "name": "EAW NTX210L",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW NTX210L",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_ntx210l.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_ntx210l",
+    "name": "EAW NTX210L",
+    "description": "EAW NTX210L",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_ntx210l.jpg",
+    "product_url": "https://www.halilit.com/items/4959877-eaw-ntx210l-2-way-powered-10-line-array",
+    "is_sold": true,
+    "price": 31704.0,
+    "halilit_url": "https://www.halilit.com/items/4959877-eaw-ntx210l-2-way-powered-10-line-array",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.957357Z"
+  }
+}

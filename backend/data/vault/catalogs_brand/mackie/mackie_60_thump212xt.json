@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_thump212xt",
+  "name": "Mackie Thump212XT",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie Thump212XT",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_thump212xt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_thump212xt",
+    "name": "Mackie Thump212XT",
+    "description": "Mackie Thump212XT",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_thump212xt.jpg",
+    "product_url": "https://www.halilit.com/items/5241611-mackie-thump212xt-enhanced-powered-loudspeaker",
+    "is_sold": true,
+    "price": 1924.0,
+    "halilit_url": "https://www.halilit.com/items/5241611-mackie-thump212xt-enhanced-powered-loudspeaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.737318Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_cq18t_case",
+  "name": "Allen & Heath CQ-18T Soft Case",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath CQ-18T Soft Case",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_cq18t_case",
+    "name": "Allen & Heath CQ-18T Soft Case",
+    "description": "Allen & Heath CQ-18T Soft Case",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_cq18t_case.jpg",
+    "product_url": "https://www.halilit.com/items/6405915-allen-heath-cq-18t-soft-case",
+    "is_sold": true,
+    "price": 590.0,
+    "halilit_url": "https://www.halilit.com/items/6405915-allen-heath-cq-18t-soft-case",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.363519Z"
+  }
+}

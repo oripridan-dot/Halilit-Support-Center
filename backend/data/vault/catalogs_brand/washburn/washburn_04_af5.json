@@ -1,0 +1,39 @@
+{
+  "id": "washburn_04_af5",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Washburn Apprentice F5",
+  "brand": "washburn",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Washburn Apprentice F5",
+  "media": {
+    "thumbnail": "/data/thumbnails/washburn_04_af5.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "washburn_04_af5",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Washburn Apprentice F5",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Washburn Apprentice F5",
+    "category": "general",
+    "image_url": "/data/thumbnails/washburn_04_af5.jpg",
+    "product_url": "https://www.halilit.com/items/7773741-washburn-apprentice-f5",
+    "is_sold": true,
+    "price": 636.0,
+    "halilit_url": "https://www.halilit.com/items/7773741-washburn-apprentice-f5",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.321275Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_th1030i",
+  "name": "Pearl TH-1030I GyroLock Tom Holder",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl TH-1030I GyroLock Tom Holder",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_th1030i.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_th1030i",
+    "name": "Pearl TH-1030I GyroLock Tom Holder",
+    "description": "Pearl TH-1030I GyroLock Tom Holder",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_th1030i.jpg",
+    "product_url": "https://www.halilit.com/items/3010073-pearl-th-1030i-gyrolock-tom-holder",
+    "is_sold": true,
+    "price": 366.0,
+    "halilit_url": "https://www.halilit.com/items/3010073-pearl-th-1030i-gyrolock-tom-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.467985Z"
+  }
+}

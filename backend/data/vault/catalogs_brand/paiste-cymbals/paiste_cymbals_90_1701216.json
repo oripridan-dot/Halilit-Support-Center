@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1701216",
+  "name": "Paiste PST 7 16\" Thin Crash",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste PST 7 16\" Thin Crash",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1701216.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1701216",
+    "name": "Paiste PST 7 16\" Thin Crash",
+    "description": "Paiste PST 7 16\" Thin Crash",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1701216.jpg",
+    "product_url": "https://www.halilit.com/items/444297-paiste-pst-7-16-thin-crash-cymbal",
+    "is_sold": true,
+    "price": 407.0,
+    "halilit_url": "https://www.halilit.com/items/444297-paiste-pst-7-16-thin-crash-cymbal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.303129Z"
+  }
+}

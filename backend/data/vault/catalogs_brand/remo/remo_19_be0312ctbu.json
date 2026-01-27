@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_be0312ctbu",
+  "name": "Remo Emperor Colortone 12\" Blue",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Emperor Colortone 12\" Blue",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_be0312ctbu.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_be0312ctbu",
+    "name": "Remo Emperor Colortone 12\" Blue",
+    "description": "Remo Emperor Colortone 12\" Blue",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_be0312ctbu.jpg",
+    "product_url": "https://www.halilit.com/items/2127532-remo-emperor-colortone-12-blue",
+    "is_sold": true,
+    "price": 82.0,
+    "halilit_url": "https://www.halilit.com/items/2127532-remo-emperor-colortone-12-blue",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.134985Z"
+  }
+}

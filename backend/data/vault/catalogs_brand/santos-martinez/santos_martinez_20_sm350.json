@@ -1,0 +1,39 @@
+{
+  "id": "santos_martinez_20_sm350",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Santos Martinez Estuduiante",
+  "brand": "santos-martinez",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Santos Martinez Estuduiante",
+  "media": {
+    "thumbnail": "/data/thumbnails/santos_martinez_20_sm350.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "santos_martinez_20_sm350",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Santos Martinez Estuduiante",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Santos Martinez Estuduiante",
+    "category": "general",
+    "image_url": "/data/thumbnails/santos_martinez_20_sm350.jpg",
+    "product_url": "https://www.halilit.com/items/3846308-santos-martinez-estuduiante-classical-guitar",
+    "is_sold": true,
+    "price": 1183.0,
+    "halilit_url": "https://www.halilit.com/items/3846308-santos-martinez-estuduiante-classical-guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.941253Z"
+  }
+}

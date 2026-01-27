@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1704314",
+  "name": "Paiste PST 7 14\" Light Hi-Hat",
+  "brand": "paiste-cymbals",
+  "category": "drums",
+  "description": "Paiste PST 7 14\" Light Hi-Hat",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1704314.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1704314",
+    "name": "Paiste PST 7 14\" Light Hi-Hat",
+    "description": "Paiste PST 7 14\" Light Hi-Hat",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1704314.jpg",
+    "product_url": "https://www.halilit.com/items/444618-paiste-pst-7-14-light-hi-hat",
+    "is_sold": true,
+    "price": 652.0,
+    "halilit_url": "https://www.halilit.com/items/444618-paiste-pst-7-14-light-hi-hat",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.305575Z"
+  }
+}

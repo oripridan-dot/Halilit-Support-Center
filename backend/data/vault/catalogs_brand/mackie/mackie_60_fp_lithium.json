@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_fp_lithium",
+  "name": "Mackie Lithium Ion Battery",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie Lithium Ion Battery",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_fp_lithium.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_fp_lithium",
+    "name": "Mackie Lithium Ion Battery",
+    "description": "Mackie Lithium Ion Battery",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_fp_lithium.jpg",
+    "product_url": "https://www.halilit.com/items/1467040-mackie-thump-12a-powered-speaker",
+    "is_sold": true,
+    "price": 399.0,
+    "halilit_url": "https://www.halilit.com/items/1467040-mackie-thump-12a-powered-speaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.898164Z"
+  }
+}

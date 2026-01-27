@@ -1,0 +1,39 @@
+{
+  "id": "spector_69_nspulse4cinderlh",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea Spector NS Pulse 4 LH",
+  "brand": "spector",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea Spector NS Pulse 4 LH",
+  "media": {
+    "thumbnail": "/data/thumbnails/spector_69_nspulse4cinderlh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "spector_69_nspulse4cinderlh",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea Spector NS Pulse 4 LH",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea Spector NS Pulse 4 LH",
+    "category": "general",
+    "image_url": "/data/thumbnails/spector_69_nspulse4cinderlh.jpg",
+    "product_url": "https://www.halilit.com/items/5929148-spector-ns-pulse-4-left-handed-bass-guitar",
+    "is_sold": true,
+    "price": 2978.0,
+    "halilit_url": "https://www.halilit.com/items/5929148-spector-ns-pulse-4-left-handed-bass-guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.512759Z"
+  }
+}

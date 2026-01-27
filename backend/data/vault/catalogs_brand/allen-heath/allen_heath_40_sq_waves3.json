@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_sq_waves3",
+  "name": "Allen & Heath SQ WAVES 3",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath SQ WAVES 3",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_sq_waves3",
+    "name": "Allen & Heath SQ WAVES 3",
+    "description": "Allen & Heath SQ WAVES 3",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_sq_waves3.jpg",
+    "product_url": "https://www.halilit.com/items/2525876-allen-heath-sq-waves-3",
+    "is_sold": true,
+    "price": 4306.0,
+    "halilit_url": "https://www.halilit.com/items/2525876-allen-heath-sq-waves-3",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.401305Z"
+  }
+}

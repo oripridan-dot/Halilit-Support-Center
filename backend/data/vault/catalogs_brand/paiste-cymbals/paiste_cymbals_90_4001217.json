@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_4001217",
+  "name": "Paiste Signature 17\" M Crash",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste Signature 17\" M Crash",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_4001217.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_4001217",
+    "name": "Paiste Signature 17\" M Crash",
+    "description": "Paiste Signature 17\" M Crash",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_4001217.jpg",
+    "product_url": "https://www.halilit.com/items/447735-paiste-signature-17-m-crash",
+    "is_sold": true,
+    "price": 1157.0,
+    "halilit_url": "https://www.halilit.com/items/447735-paiste-signature-17-m-crash",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.393601Z"
+  }
+}

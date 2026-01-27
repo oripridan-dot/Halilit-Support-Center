@@ -1,0 +1,39 @@
+{
+  "id": "foxgear_guitar_effects_and_pedals_20_fxsin",
+  "name": "Foxgear Sinister Metal Distortion",
+  "brand": "foxgear-guitar-effects-and-pedals",
+  "category": "general",
+  "description": "Foxgear Sinister Metal Distortion",
+  "media": {
+    "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "foxgear_guitar_effects_and_pedals_20_fxsin",
+    "name": "Foxgear Sinister Metal Distortion",
+    "description": "Foxgear Sinister Metal Distortion",
+    "category": "general",
+    "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsin.jpg",
+    "product_url": "https://www.halilit.com/items/4924044-foxgear-sinister-metal-distortion",
+    "is_sold": true,
+    "price": 443.0,
+    "halilit_url": "https://www.halilit.com/items/4924044-foxgear-sinister-metal-distortion",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.705612Z"
+  }
+}

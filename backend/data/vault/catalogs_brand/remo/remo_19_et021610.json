@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_et021610",
+  "name": "Remo 16\" Fish Graphic Ocean Drum",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo 16\" Fish Graphic Ocean Drum",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_et021610.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_et021610",
+    "name": "Remo 16\" Fish Graphic Ocean Drum",
+    "description": "Remo 16\" Fish Graphic Ocean Drum",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_et021610.jpg",
+    "product_url": "https://www.halilit.com/items/448569-Remo-16-Fish-Graphic-Ocean-Drum",
+    "is_sold": true,
+    "price": 437.0,
+    "halilit_url": "https://www.halilit.com/items/448569-Remo-16-Fish-Graphic-Ocean-Drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.159377Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "perri_s_leathers_57_8092",
+  "name": "Perri's Leathers LPCP-8092",
+  "brand": "perri-s-leathers",
+  "category": "general",
+  "description": "Perri's Leathers LPCP-8092",
+  "media": {
+    "thumbnail": "/data/thumbnails/perri_s_leathers_57_8092.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "perri_s_leathers_57_8092",
+    "name": "Perri's Leathers LPCP-8092",
+    "description": "Perri's Leathers LPCP-8092",
+    "category": "general",
+    "image_url": "/data/thumbnails/perri_s_leathers_57_8092.jpg",
+    "product_url": "https://www.halilit.com/items/3740380-perri-s-leathers-lpcp-8092",
+    "is_sold": true,
+    "price": 101.0,
+    "halilit_url": "https://www.halilit.com/items/3740380-perri-s-leathers-lpcp-8092",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.502973Z"
+  }
+}

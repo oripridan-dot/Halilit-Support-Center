@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_onyxproducer",
+  "name": "Mackie Onyx Producer",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie Onyx Producer",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_onyxproducer.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_onyxproducer",
+    "name": "Mackie Onyx Producer",
+    "description": "Mackie Onyx Producer",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_onyxproducer.jpg",
+    "product_url": "https://www.halilit.com/items/1648728-mackie-onyx-producer-audio-interface",
+    "is_sold": true,
+    "price": 683.0,
+    "halilit_url": "https://www.halilit.com/items/1648728-mackie-onyx-producer-audio-interface",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.797362Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_slad645",
+  "name": "Bespeco DVI to HDMI adapter",
+  "brand": "bespeco",
+  "category": "accessories",
+  "description": "Bespeco DVI to HDMI adapter",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_slad645.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_slad645",
+    "name": "Bespeco DVI to HDMI adapter",
+    "description": "Bespeco DVI to HDMI adapter",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_slad645.jpg",
+    "product_url": "https://www.halilit.com/items/1960965-bespeco-dvi-to-hdmi-adapter",
+    "is_sold": true,
+    "price": 51.0,
+    "halilit_url": "https://www.halilit.com/items/1960965-bespeco-dvi-to-hdmi-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.583819Z"
+  }
+}

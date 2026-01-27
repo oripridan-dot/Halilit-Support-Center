@@ -1,0 +1,39 @@
+{
+  "id": "innovative_percussion_28_cw1",
+  "name": "Innovative Percussion CW-1",
+  "brand": "innovative-percussion",
+  "category": "drums",
+  "description": "Innovative Percussion CW-1",
+  "media": {
+    "thumbnail": "/data/thumbnails/innovative_percussion_28_cw1.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "innovative_percussion_28_cw1",
+    "name": "Innovative Percussion CW-1",
+    "description": "Innovative Percussion CW-1",
+    "category": "general",
+    "image_url": "/data/thumbnails/innovative_percussion_28_cw1.jpg",
+    "product_url": "https://www.halilit.com/items/1657377-innovative-percussion-cw-1-drumsticks",
+    "is_sold": true,
+    "price": 59.0,
+    "halilit_url": "https://www.halilit.com/items/1657377-innovative-percussion-cw-1-drumsticks",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.256909Z"
+  }
+}

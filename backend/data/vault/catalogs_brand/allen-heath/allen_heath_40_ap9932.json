@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_ap9932",
+  "name": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_ap9932",
+    "name": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+    "description": "Allen & Heath AP9932 AB168 & DX168 Carry Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_ap9932.jpg",
+    "product_url": "https://www.halilit.com/items/6597928-allen-heath-ap9932-ab168-dx168-carry-bag",
+    "is_sold": true,
+    "price": 448.0,
+    "halilit_url": "https://www.halilit.com/items/6597928-allen-heath-ap9932-ab168-dx168-carry-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.364618Z"
+  }
+}

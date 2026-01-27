@@ -1,0 +1,39 @@
+{
+  "id": "headrush_fx_52_hrprime",
+  "name": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush Prime",
+  "brand": "headrush-fx",
+  "category": "drums",
+  "description": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush Prime",
+  "media": {
+    "thumbnail": "/data/thumbnails/headrush_fx_52_hrprime.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "headrush_fx_52_hrprime",
+    "name": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush Prime",
+    "description": "\u05de\u05d5\u05dc\u05d8\u05d9 \u05d0\u05e4\u05e7\u05d8 HeadRush Prime",
+    "category": "general",
+    "image_url": "/data/thumbnails/headrush_fx_52_hrprime.jpg",
+    "product_url": "https://www.halilit.com/items/6000997-headrush-prime-",
+    "is_sold": true,
+    "price": 4952.0,
+    "halilit_url": "https://www.halilit.com/items/6000997-headrush-prime-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.513042Z"
+  }
+}

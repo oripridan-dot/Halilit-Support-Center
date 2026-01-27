@@ -1,0 +1,39 @@
+{
+  "id": "xvive_35_d3",
+  "name": "Xvive D3 Duet Looper",
+  "brand": "xvive",
+  "category": "general",
+  "description": "Xvive D3 Duet Looper",
+  "media": {
+    "thumbnail": "/data/thumbnails/xvive_35_d3.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xvive_35_d3",
+    "name": "Xvive D3 Duet Looper",
+    "description": "Xvive D3 Duet Looper",
+    "category": "general",
+    "image_url": "/data/thumbnails/xvive_35_d3.jpg",
+    "product_url": "https://www.halilit.com/items/4339433-xvive-d3-duet-looper",
+    "is_sold": true,
+    "price": 397.0,
+    "halilit_url": "https://www.halilit.com/items/4339433-xvive-d3-duet-looper",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.683615Z"
+  }
+}

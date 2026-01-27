@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1041722",
+  "name": "Paiste Formula 602 Classic Medium Ride 22\" Cymbal",
+  "brand": "paiste-cymbals",
+  "category": "drums",
+  "description": "Paiste Formula 602 Classic Medium Ride 22\" Cymbal",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1041722.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1041722",
+    "name": "Paiste Formula 602 Classic Medium Ride 22\" Cymbal",
+    "description": "Paiste Formula 602 Classic Medium Ride 22\" Cymbal",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1041722.jpg",
+    "product_url": "https://www.halilit.com/items/4012163-paiste-formula-602-classic-medium-ride-22-cymbal",
+    "is_sold": true,
+    "price": 2597.0,
+    "halilit_url": "https://www.halilit.com/items/4012163-paiste-formula-602-classic-medium-ride-22-cymbal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.334342Z"
+  }
+}

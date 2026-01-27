@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_spm200",
+  "name": "Mackie SPM200",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie SPM200",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_spm200.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_spm200",
+    "name": "Mackie SPM200",
+    "description": "Mackie SPM200",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_spm200.jpg",
+    "product_url": "https://www.halilit.com/items/3285439-mackie-spm200-speaker-pole",
+    "is_sold": true,
+    "price": 171.0,
+    "halilit_url": "https://www.halilit.com/items/3285439-mackie-spm200-speaker-pole",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.915380Z"
+  }
+}

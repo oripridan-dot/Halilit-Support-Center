@@ -1,0 +1,39 @@
+{
+  "id": "dixon_36_pdsan654bng",
+  "name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+  "brand": "dixon",
+  "category": "drums",
+  "description": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+  "media": {
+    "thumbnail": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "dixon_36_pdsan654bng",
+    "name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+    "description": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+    "category": "general",
+    "image_url": "/data/thumbnails/dixon_36_pdsan654bng.jpg",
+    "product_url": "https://www.halilit.com/items/3960840-dixon-zebra-wood-red-silkwood-14-snare",
+    "is_sold": true,
+    "price": 1403.0,
+    "halilit_url": "https://www.halilit.com/items/3960840-dixon-zebra-wood-red-silkwood-14-snare",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.205623Z"
+  }
+}

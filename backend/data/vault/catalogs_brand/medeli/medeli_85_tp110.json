@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_tp110",
+  "name": "Medeli TP110",
+  "brand": "medeli",
+  "category": "general",
+  "description": "Medeli TP110",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_tp110.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_tp110",
+    "name": "Medeli TP110",
+    "description": "Medeli TP110",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_tp110.jpg",
+    "product_url": "https://www.halilit.com/items/8608879-medeli-tp110-portable-drum",
+    "is_sold": true,
+    "price": 347.0,
+    "halilit_url": "https://www.halilit.com/items/8608879-medeli-tp110-portable-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.334543Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "lynx_48_e22",
+  "name": "Lynx E22",
+  "brand": "lynx",
+  "category": "general",
+  "description": "Lynx E22",
+  "media": {
+    "thumbnail": "/data/thumbnails/lynx_48_e22.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "lynx_48_e22",
+    "name": "Lynx E22",
+    "description": "Lynx E22",
+    "category": "general",
+    "image_url": "/data/thumbnails/lynx_48_e22.jpg",
+    "product_url": "https://www.halilit.com/items/458334-lynx-e22",
+    "is_sold": true,
+    "price": 4719.0,
+    "halilit_url": "https://www.halilit.com/items/458334-lynx-e22",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.649198Z"
+  }
+}

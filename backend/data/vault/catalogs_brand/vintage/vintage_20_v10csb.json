@@ -1,0 +1,39 @@
+{
+  "id": "vintage_20_v10csb",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage V10 Coaster",
+  "brand": "vintage",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage V10 Coaster",
+  "media": {
+    "thumbnail": "/data/thumbnails/vintage_20_v10csb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "vintage_20_v10csb",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage V10 Coaster",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage V10 Coaster",
+    "category": "general",
+    "image_url": "/data/thumbnails/vintage_20_v10csb.jpg",
+    "product_url": "https://www.halilit.com/items/7130084-vintage-v10-coaster-series-electric-guitar",
+    "is_sold": true,
+    "price": 1169.0,
+    "halilit_url": "https://www.halilit.com/items/7130084-vintage-v10-coaster-series-electric-guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.417209Z"
+  }
+}

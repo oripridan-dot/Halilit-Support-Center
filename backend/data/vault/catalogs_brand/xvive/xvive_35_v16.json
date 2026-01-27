@@ -1,0 +1,39 @@
+{
+  "id": "xvive_35_v16",
+  "name": "Xvive V16 Undulator Tremolo",
+  "brand": "xvive",
+  "category": "general",
+  "description": "Xvive V16 Undulator Tremolo",
+  "media": {
+    "thumbnail": "/data/thumbnails/xvive_35_v16.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xvive_35_v16",
+    "name": "Xvive V16 Undulator Tremolo",
+    "description": "Xvive V16 Undulator Tremolo",
+    "category": "general",
+    "image_url": "/data/thumbnails/xvive_35_v16.jpg",
+    "product_url": "https://www.halilit.com/items/4339395-xvive-v16-undulator-tremolo",
+    "is_sold": true,
+    "price": 279.0,
+    "halilit_url": "https://www.halilit.com/items/4339395-xvive-v16-undulator-tremolo",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.678434Z"
+  }
+}

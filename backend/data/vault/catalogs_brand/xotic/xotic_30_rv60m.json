@@ -1,0 +1,39 @@
+{
+  "id": "xotic_30_rv60m",
+  "name": "Xotic RV-60 Middle Pick Up",
+  "brand": "xotic",
+  "category": "accessories",
+  "description": "Xotic RV-60 Middle Pick Up",
+  "media": {
+    "thumbnail": "/data/thumbnails/xotic_30_rv60m.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xotic_30_rv60m",
+    "name": "Xotic RV-60 Middle Pick Up",
+    "description": "Xotic RV-60 Middle Pick Up",
+    "category": "general",
+    "image_url": "/data/thumbnails/xotic_30_rv60m.jpg",
+    "product_url": "https://www.halilit.com/items/4836301-xotic-rv-60-middle-pick-up",
+    "is_sold": true,
+    "price": 434.0,
+    "halilit_url": "https://www.halilit.com/items/4836301-xotic-rv-60-middle-pick-up",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.799927Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "bohemian_ukuleles_guitars_basses_20_bg25tnt",
+  "name": "Bohemian Oil Can Guitar - 2 P90's - TNT",
+  "brand": "bohemian-ukuleles-guitars-basses",
+  "category": "guitars",
+  "description": "Bohemian Oil Can Guitar - 2 P90's - TNT",
+  "media": {
+    "thumbnail": "/data/thumbnails/bohemian_ukuleles_guitars_basses_20_bg25tnt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bohemian_ukuleles_guitars_basses_20_bg25tnt",
+    "name": "Bohemian Oil Can Guitar - 2 P90's - TNT",
+    "description": "Bohemian Oil Can Guitar - 2 P90's - TNT",
+    "category": "general",
+    "image_url": "/data/thumbnails/bohemian_ukuleles_guitars_basses_20_bg25tnt.jpg",
+    "product_url": "https://www.halilit.com/items/4907164-bohemian-oil-can-guitar-2-p90-s-tnt",
+    "is_sold": true,
+    "price": 1462.0,
+    "halilit_url": "https://www.halilit.com/items/4907164-bohemian-oil-can-guitar-2-p90-s-tnt",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.228484Z"
+  }
+}

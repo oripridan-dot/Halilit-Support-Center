@@ -1,0 +1,39 @@
+{
+  "id": "esp_67_lwawarbirdf",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea ESP LTD WA Warbird",
+  "brand": "esp",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea ESP LTD WA Warbird",
+  "media": {
+    "thumbnail": "/data/thumbnails/esp_67_lwawarbirdf.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "esp_67_lwawarbirdf",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea ESP LTD WA Warbird",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea ESP LTD WA Warbird",
+    "category": "general",
+    "image_url": "/data/thumbnails/esp_67_lwawarbirdf.jpg",
+    "product_url": "https://www.halilit.com/items/3093987-esp-ltd-wa-warbird",
+    "is_sold": true,
+    "price": 6132.0,
+    "halilit_url": "https://www.halilit.com/items/3093987-esp-ltd-wa-warbird",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.590433Z"
+  }
+}

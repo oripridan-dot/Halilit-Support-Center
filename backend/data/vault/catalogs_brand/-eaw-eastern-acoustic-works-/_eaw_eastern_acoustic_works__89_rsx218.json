@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_rsx218",
+  "name": "EAW RSX218",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW RSX218",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_rsx218.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_rsx218",
+    "name": "EAW RSX218",
+    "description": "EAW RSX218",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_rsx218.jpg",
+    "product_url": "https://www.halilit.com/items/3965870-eaw-rsx218",
+    "is_sold": true,
+    "price": 18221.0,
+    "halilit_url": "https://www.halilit.com/items/3965870-eaw-rsx218",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.962619Z"
+  }
+}

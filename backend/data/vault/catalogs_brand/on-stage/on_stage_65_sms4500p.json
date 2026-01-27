@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_sms4500p",
+  "name": "On Stage SMS4500-P Monitor Stands",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage SMS4500-P Monitor Stands",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_sms4500p.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_sms4500p",
+    "name": "On Stage SMS4500-P Monitor Stands",
+    "description": "On Stage SMS4500-P Monitor Stands",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_sms4500p.jpg",
+    "product_url": "https://www.halilit.com/items/3003096-on-stage-sms4500-p-monitor-stands",
+    "is_sold": true,
+    "price": 369.0,
+    "halilit_url": "https://www.halilit.com/items/3003096-on-stage-sms4500-p-monitor-stands",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.878702Z"
+  }
+}

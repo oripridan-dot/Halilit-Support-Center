@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_maxx10asub",
+  "name": "Topp Pro MAXX 10A SUB",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro MAXX 10A SUB",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_maxx10asub",
+    "name": "Topp Pro MAXX 10A SUB",
+    "description": "Topp Pro MAXX 10A SUB",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_maxx10asub.jpg",
+    "product_url": "https://www.halilit.com/items/3166634-topp-pro-maxx-10a-sub",
+    "is_sold": true,
+    "price": 1530.0,
+    "halilit_url": "https://www.halilit.com/items/3166634-topp-pro-maxx-10a-sub",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.122461Z"
+  }
+}

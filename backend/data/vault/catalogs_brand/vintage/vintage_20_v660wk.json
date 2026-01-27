@@ -1,0 +1,39 @@
+{
+  "id": "vintage_20_v660wk",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Vintage V660WK",
+  "brand": "vintage",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Vintage V660WK",
+  "media": {
+    "thumbnail": "/data/thumbnails/vintage_20_v660wk.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "vintage_20_v660wk",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Vintage V660WK",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Vintage V660WK",
+    "category": "general",
+    "image_url": "/data/thumbnails/vintage_20_v660wk.jpg",
+    "product_url": "https://www.halilit.com/items/3715798-vintage-v660wk",
+    "is_sold": true,
+    "price": 568.0,
+    "halilit_url": "https://www.halilit.com/items/3715798-vintage-v660wk",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.470235Z"
+  }
+}

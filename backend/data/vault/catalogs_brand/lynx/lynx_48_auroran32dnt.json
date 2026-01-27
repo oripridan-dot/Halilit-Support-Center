@@ -1,0 +1,39 @@
+{
+  "id": "lynx_48_auroran32dnt",
+  "name": "Lynx Aurora(n) 32 DNT",
+  "brand": "lynx",
+  "category": "general",
+  "description": "Lynx Aurora(n) 32 DNT",
+  "media": {
+    "thumbnail": "/data/thumbnails/lynx_48_auroran32dnt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "lynx_48_auroran32dnt",
+    "name": "Lynx Aurora(n) 32 DNT",
+    "description": "Lynx Aurora(n) 32 DNT",
+    "category": "general",
+    "image_url": "/data/thumbnails/lynx_48_auroran32dnt.jpg",
+    "product_url": "https://www.halilit.com/items/1384977-lynx-aurora-n-32-dnt",
+    "is_sold": true,
+    "price": 35570.0,
+    "halilit_url": "https://www.halilit.com/items/1384977-lynx-aurora-n-32-dnt",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.649631Z"
+  }
+}

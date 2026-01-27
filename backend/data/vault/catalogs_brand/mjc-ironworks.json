@@ -1,0 +1,88 @@
+{
+  "brand_identity": {
+    "id": "mjc-ironworks",
+    "name": "MJC-IRONWORKS"
+  },
+  "products": [
+    {
+      "id": "mjc_ironworks_65_mjcabrst1356",
+      "name": "MJC Ironworks MED Acoustic Guitar",
+      "brand": "mjc-ironworks",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/mjc_ironworks_65_mjcabrst1356.jpg",
+      "description": "MJC Ironworks MED Acoustic Guitar",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "mjc_ironworks_65_mjcabrst1254",
+      "name": "MJC Ironworks ML Acoustic Guitar",
+      "brand": "mjc-ironworks",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/mjc_ironworks_65_mjcabrst1254.jpg",
+      "description": "MJC Ironworks ML Acoustic Guitar",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "mjc_ironworks_65_mjcabrst1048",
+      "name": "MJC Ironworks XL Acoustic Guitar",
+      "brand": "mjc-ironworks",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/mjc_ironworks_65_mjcabrst1048.jpg",
+      "description": "MJC Ironworks XL Acoustic Guitar",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "mjc_ironworks_65_mjcmed1152",
+      "name": "MJC Ironworks MED Electric Guitar",
+      "brand": "mjc-ironworks",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/mjc_ironworks_65_mjcmed1152.jpg",
+      "description": "MJC Ironworks MED Electric Guitar",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "mjc_ironworks_65_mjcxmed1254",
+      "name": "MJC Ironworks MEDX Electric Guitar",
+      "brand": "mjc-ironworks",
+      "category": "guitars",
+      "image_url": "/data/thumbnails/mjc_ironworks_65_mjcxmed1254.jpg",
+      "description": "MJC Ironworks MEDX Electric Guitar",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

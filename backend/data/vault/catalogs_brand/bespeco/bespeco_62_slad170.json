@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_slad170",
+  "name": "Bespeco SLAD170",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco SLAD170",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_slad170.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_slad170",
+    "name": "Bespeco SLAD170",
+    "description": "Bespeco SLAD170",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_slad170.jpg",
+    "product_url": "https://www.halilit.com/items/7426690-bespeco-slad170-adapter",
+    "is_sold": true,
+    "price": 51.0,
+    "halilit_url": "https://www.halilit.com/items/7426690-bespeco-slad170-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.554363Z"
+  }
+}

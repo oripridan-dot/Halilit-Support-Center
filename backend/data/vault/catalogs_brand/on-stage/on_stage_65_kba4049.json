@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_kba4049",
+  "name": "On Stage KBA4049 49 Key Keyboard Bag",
+  "brand": "on-stage",
+  "category": "keys",
+  "description": "On Stage KBA4049 49 Key Keyboard Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_kba4049.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_kba4049",
+    "name": "On Stage KBA4049 49 Key Keyboard Bag",
+    "description": "On Stage KBA4049 49 Key Keyboard Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_kba4049.jpg",
+    "product_url": "https://www.halilit.com/items/7989985-on-stage-kba4049-49-key-keyboard-bag",
+    "is_sold": true,
+    "price": 167.0,
+    "halilit_url": "https://www.halilit.com/items/7989985-on-stage-kba4049-49-key-keyboard-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.851548Z"
+  }
+}

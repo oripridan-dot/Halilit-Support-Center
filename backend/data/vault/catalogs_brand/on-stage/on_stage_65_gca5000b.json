@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_gca5000b",
+  "name": "On Stage GCA5000B Hardshell Acoustic Guitar Case",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage GCA5000B Hardshell Acoustic Guitar Case",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_gca5000b.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_gca5000b",
+    "name": "On Stage GCA5000B Hardshell Acoustic Guitar Case",
+    "description": "On Stage GCA5000B Hardshell Acoustic Guitar Case",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_gca5000b.jpg",
+    "product_url": "https://www.halilit.com/items/2765952-on-stage-gca5000b-hardshell-acoustic-guitar-case",
+    "is_sold": true,
+    "price": 386.0,
+    "halilit_url": "https://www.halilit.com/items/2765952-on-stage-gca5000b-hardshell-acoustic-guitar-case",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.952493Z"
+  }
+}

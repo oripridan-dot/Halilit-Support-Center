@@ -436,3 +436,16 @@ export type ValidateResult = {
   valid: boolean;
   errors: string[];
 };
+
+export interface CatalogMetadata {
+  total_products: number;
+  available_brands: string[];
+  available_filters: string[]; // The dynamic tags
+}
+
+export interface CategoryPayload {
+  id: string;
+  generated_at: string;
+  metadata: CatalogMetadata;
+  products: Product[];
+}

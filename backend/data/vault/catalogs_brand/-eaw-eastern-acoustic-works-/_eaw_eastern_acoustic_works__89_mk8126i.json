@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_mk8126i",
+  "name": "EAW MK8126i",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW MK8126i",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_mk8126i.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_mk8126i",
+    "name": "EAW MK8126i",
+    "description": "EAW MK8126i",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_mk8126i.jpg",
+    "product_url": "https://www.halilit.com/items/3398755-eaw-mk8126i-passive-2-way-full-range-loudspeaker",
+    "is_sold": true,
+    "price": 6446.0,
+    "halilit_url": "https://www.halilit.com/items/3398755-eaw-mk8126i-passive-2-way-full-range-loudspeaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.990704Z"
+  }
+}

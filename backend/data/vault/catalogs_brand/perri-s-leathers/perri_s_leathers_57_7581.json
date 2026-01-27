@@ -1,0 +1,39 @@
+{
+  "id": "perri_s_leathers_57_7581",
+  "name": "Perri's Leathers TWS-7581",
+  "brand": "perri-s-leathers",
+  "category": "general",
+  "description": "Perri's Leathers TWS-7581",
+  "media": {
+    "thumbnail": "/data/thumbnails/perri_s_leathers_57_7581.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "perri_s_leathers_57_7581",
+    "name": "Perri's Leathers TWS-7581",
+    "description": "Perri's Leathers TWS-7581",
+    "category": "general",
+    "image_url": "/data/thumbnails/perri_s_leathers_57_7581.jpg",
+    "product_url": "https://www.halilit.com/items/3740180-perri-s-leathers-tws-7581",
+    "is_sold": true,
+    "price": 101.0,
+    "halilit_url": "https://www.halilit.com/items/3740180-perri-s-leathers-tws-7581",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.492830Z"
+  }
+}

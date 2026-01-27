@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_asws58r",
+  "name": "On Stage ASWS58-R Foam Windscreen",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage ASWS58-R Foam Windscreen",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_asws58r.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_asws58r",
+    "name": "On Stage ASWS58-R Foam Windscreen",
+    "description": "On Stage ASWS58-R Foam Windscreen",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_asws58r.jpg",
+    "product_url": "https://www.halilit.com/items/6071559-on-stage-asws58-r-foam-windscreen",
+    "is_sold": true,
+    "price": 11.0,
+    "halilit_url": "https://www.halilit.com/items/6071559-on-stage-asws58-r-foam-windscreen",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.877953Z"
+  }
+}

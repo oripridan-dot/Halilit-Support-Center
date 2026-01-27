@@ -1,0 +1,39 @@
+{
+  "id": "fzone_35_std8i11n_green",
+  "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Green",
+  "brand": "fzone",
+  "category": "general",
+  "description": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Green",
+  "media": {
+    "thumbnail": "/data/thumbnails/fzone_35_std8i11n_green.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "fzone_35_std8i11n_green",
+    "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Green",
+    "description": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Green",
+    "category": "general",
+    "image_url": "/data/thumbnails/fzone_35_std8i11n_green.jpg",
+    "product_url": "https://www.halilit.com/items/7820935-fzone-std8i11n-green-steel-tongue-drum",
+    "is_sold": true,
+    "price": 301.0,
+    "halilit_url": "https://www.halilit.com/items/7820935-fzone-std8i11n-green-steel-tongue-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.742193Z"
+  }
+}

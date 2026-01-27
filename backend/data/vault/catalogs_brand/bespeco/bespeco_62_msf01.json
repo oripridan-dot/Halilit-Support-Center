@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_msf01",
+  "name": "Bespeco MSF01 Microphone Boom stand",
+  "brand": "bespeco",
+  "category": "studio",
+  "description": "Bespeco MSF01 Microphone Boom stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_msf01.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_msf01",
+    "name": "Bespeco MSF01 Microphone Boom stand",
+    "description": "Bespeco MSF01 Microphone Boom stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_msf01.jpg",
+    "product_url": "https://www.halilit.com/items/445783-bespeco-msf01-microphone-boom-stand",
+    "is_sold": true,
+    "price": 256.0,
+    "halilit_url": "https://www.halilit.com/items/445783-bespeco-msf01-microphone-boom-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.549390Z"
+  }
+}

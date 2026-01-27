@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_em10",
+  "name": "Remo Emperor Clear 10\" Drumhead",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Emperor Clear 10\" Drumhead",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_em10.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_em10",
+    "name": "Remo Emperor Clear 10\" Drumhead",
+    "description": "Remo Emperor Clear 10\" Drumhead",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_em10.jpg",
+    "product_url": "https://www.halilit.com/items/447864-remo-emperor-clear-10-drumhead",
+    "is_sold": true,
+    "price": 64.0,
+    "halilit_url": "https://www.halilit.com/items/447864-remo-emperor-clear-10-drumhead",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.102563Z"
+  }
+}

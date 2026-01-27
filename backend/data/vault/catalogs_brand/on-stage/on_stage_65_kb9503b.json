@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_kb9503b",
+  "name": "On Stage KB9503B Height-Adjustable Piano Bench",
+  "brand": "on-stage",
+  "category": "keys",
+  "description": "On Stage KB9503B Height-Adjustable Piano Bench",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_kb9503b.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_kb9503b",
+    "name": "On Stage KB9503B Height-Adjustable Piano Bench",
+    "description": "On Stage KB9503B Height-Adjustable Piano Bench",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_kb9503b.jpg",
+    "product_url": "https://www.halilit.com/items/1972871-on-stage-kb9503b-height-adjustable-piano-bench",
+    "is_sold": true,
+    "price": 906.0,
+    "halilit_url": "https://www.halilit.com/items/1972871-on-stage-kb9503b-height-adjustable-piano-bench",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.886711Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_zed22fx",
+  "name": "Allen & Heath ZED-22FX",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath ZED-22FX",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_zed22fx",
+    "name": "Allen & Heath ZED-22FX",
+    "description": "Allen & Heath ZED-22FX",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_zed22fx.jpg",
+    "product_url": "https://www.halilit.com/items/1461418-allen-heath-zed-22fx-analog-mixer",
+    "is_sold": true,
+    "price": 4890.0,
+    "halilit_url": "https://www.halilit.com/items/1461418-allen-heath-zed-22fx-analog-mixer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.399250Z"
+  }
+}

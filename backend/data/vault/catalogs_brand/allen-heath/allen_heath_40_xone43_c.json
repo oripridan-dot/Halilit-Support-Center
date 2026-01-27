@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_xone43_c",
+  "name": "Allen & Heath XONE:43C",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath XONE:43C",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_xone43_c",
+    "name": "Allen & Heath XONE:43C",
+    "description": "Allen & Heath XONE:43C",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_xone43_c.jpg",
+    "product_url": "https://www.halilit.com/items/1833335-allen-heath-xone-43c",
+    "is_sold": true,
+    "price": 5066.0,
+    "halilit_url": "https://www.halilit.com/items/1833335-allen-heath-xone-43c",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.397460Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_fa12",
+  "name": "Remo Ambassador Fiberskyn 12\" Drumhead",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Ambassador Fiberskyn 12\" Drumhead",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_fa12.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_fa12",
+    "name": "Remo Ambassador Fiberskyn 12\" Drumhead",
+    "description": "Remo Ambassador Fiberskyn 12\" Drumhead",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_fa12.jpg",
+    "product_url": "https://www.halilit.com/items/447848-remo-ambassador-fiberskyn-12-drumhead",
+    "is_sold": true,
+    "price": 108.0,
+    "halilit_url": "https://www.halilit.com/items/447848-remo-ambassador-fiberskyn-12-drumhead",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.156410Z"
+  }
+}

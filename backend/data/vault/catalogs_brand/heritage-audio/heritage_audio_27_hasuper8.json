@@ -1,0 +1,39 @@
+{
+  "id": "heritage_audio_27_hasuper8",
+  "name": "Heritage Audio Super 8",
+  "brand": "heritage-audio",
+  "category": "studio",
+  "description": "Heritage Audio Super 8",
+  "media": {
+    "thumbnail": "/data/thumbnails/heritage_audio_27_hasuper8.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "heritage_audio_27_hasuper8",
+    "name": "Heritage Audio Super 8",
+    "description": "Heritage Audio Super 8",
+    "category": "general",
+    "image_url": "/data/thumbnails/heritage_audio_27_hasuper8.jpg",
+    "product_url": "https://www.halilit.com/items/7149179-heritage-audio-super-8",
+    "is_sold": true,
+    "price": 23148.0,
+    "halilit_url": "https://www.halilit.com/items/7149179-heritage-audio-super-8",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.773491Z"
+  }
+}

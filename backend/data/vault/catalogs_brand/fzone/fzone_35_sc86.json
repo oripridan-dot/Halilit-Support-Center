@@ -1,0 +1,39 @@
+{
+  "id": "fzone_35_sc86",
+  "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d2\u05d5\u05de\u05d9 \u05dc\u05e4\u05ea\u05d7 \u05d4\u05ea\u05d4\u05d5\u05d3\u05d4 Fzone SC-86",
+  "brand": "fzone",
+  "category": "general",
+  "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d2\u05d5\u05de\u05d9 \u05dc\u05e4\u05ea\u05d7 \u05d4\u05ea\u05d4\u05d5\u05d3\u05d4 Fzone SC-86",
+  "media": {
+    "thumbnail": "/data/thumbnails/fzone_35_sc86.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "fzone_35_sc86",
+    "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d2\u05d5\u05de\u05d9 \u05dc\u05e4\u05ea\u05d7 \u05d4\u05ea\u05d4\u05d5\u05d3\u05d4 Fzone SC-86",
+    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d2\u05d5\u05de\u05d9 \u05dc\u05e4\u05ea\u05d7 \u05d4\u05ea\u05d4\u05d5\u05d3\u05d4 Fzone SC-86",
+    "category": "general",
+    "image_url": "/data/thumbnails/fzone_35_sc86.jpg",
+    "product_url": "https://www.halilit.com/items/7811745-fzone-sc-86",
+    "is_sold": true,
+    "price": 15.0,
+    "halilit_url": "https://www.halilit.com/items/7811745-fzone-sc-86",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.761872Z"
+  }
+}

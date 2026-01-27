@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_led2224",
+  "name": "On Stage LED2224 Dual USB Rechargeable Sheet Music Light",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage LED2224 Dual USB Rechargeable Sheet Music Light",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_led2224.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_led2224",
+    "name": "On Stage LED2224 Dual USB Rechargeable Sheet Music Light",
+    "description": "On Stage LED2224 Dual USB Rechargeable Sheet Music Light",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_led2224.jpg",
+    "product_url": "https://www.halilit.com/items/3069814-on-stage-led2224-dual-usb-rechargeable-sheet-music-light",
+    "is_sold": true,
+    "price": 126.0,
+    "halilit_url": "https://www.halilit.com/items/3069814-on-stage-led2224-dual-usb-rechargeable-sheet-music-light",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.914867Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_qu16_rk19",
+  "name": "Allen & Heath QU-16-RK19",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath QU-16-RK19",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_qu16_rk19",
+    "name": "Allen & Heath QU-16-RK19",
+    "description": "Allen & Heath QU-16-RK19",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_qu16_rk19.jpg",
+    "product_url": "https://www.halilit.com/items/6602483-allen-heath-qu-16-rk19",
+    "is_sold": true,
+    "price": 253.0,
+    "halilit_url": "https://www.halilit.com/items/6602483-allen-heath-qu-16-rk19",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.394887Z"
+  }
+}

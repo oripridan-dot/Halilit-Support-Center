@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_dp280k",
+  "name": "Medeli DP280K",
+  "brand": "medeli",
+  "category": "general",
+  "description": "Medeli DP280K",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_dp280k.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_dp280k",
+    "name": "Medeli DP280K",
+    "description": "Medeli DP280K",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_dp280k.jpg",
+    "product_url": "https://www.halilit.com/items/4439788-medeli-dp280k-",
+    "is_sold": true,
+    "price": 2771.0,
+    "halilit_url": "https://www.halilit.com/items/4439788-medeli-dp280k-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.348354Z"
+  }
+}

@@ -2,7 +2,7 @@
 import json
 import os
 from datetime import datetime
-from typing import Dict, List, Set, Any
+from typing import Dict, List, Set
 
 class DeltaAuditor:
     def __init__(self, report_dir="backend/data/reports/audit"):

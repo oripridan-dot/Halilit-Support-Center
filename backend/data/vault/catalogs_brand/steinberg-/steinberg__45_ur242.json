@@ -1,0 +1,39 @@
+{
+  "id": "steinberg__45_ur242",
+  "name": "Steinberg UR242",
+  "brand": "steinberg-",
+  "category": "general",
+  "description": "Steinberg UR242",
+  "media": {
+    "thumbnail": "/data/thumbnails/steinberg__45_ur242.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "steinberg__45_ur242",
+    "name": "Steinberg UR242",
+    "description": "Steinberg UR242",
+    "category": "general",
+    "image_url": "/data/thumbnails/steinberg__45_ur242.jpg",
+    "product_url": "https://www.halilit.com/items/502311-steinberg-ur242",
+    "is_sold": true,
+    "price": 877.0,
+    "halilit_url": "https://www.halilit.com/items/502311-steinberg-ur242",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.175762Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_meu",
+  "name": "Allen & Heath ME-U",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath ME-U",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_meu.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_meu",
+    "name": "Allen & Heath ME-U",
+    "description": "Allen & Heath ME-U",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_meu.jpg",
+    "product_url": "https://www.halilit.com/items/5262120-allen-health-me-u",
+    "is_sold": true,
+    "price": 10137.0,
+    "halilit_url": "https://www.halilit.com/items/5262120-allen-health-me-u",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.370562Z"
+  }
+}

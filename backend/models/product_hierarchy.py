@@ -1,5 +1,5 @@
 # backend/models/product_hierarchy.py
-from typing import List, Dict, Optional, Any, Literal, Union
+from typing import List, Dict, Optional, Any, Union
 from pydantic import BaseModel, Field, validator
 from datetime import datetime
 from enum import Enum

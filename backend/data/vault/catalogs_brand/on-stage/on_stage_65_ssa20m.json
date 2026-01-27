@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ssa20m",
+  "name": "On Stage SSA20M M20 Speaker Cabinet Adapter",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage SSA20M M20 Speaker Cabinet Adapter",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ssa20m.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ssa20m",
+    "name": "On Stage SSA20M M20 Speaker Cabinet Adapter",
+    "description": "On Stage SSA20M M20 Speaker Cabinet Adapter",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ssa20m.jpg",
+    "product_url": "https://www.halilit.com/items/4279664-on-stage-ssa20m-m20-speaker-cabinet-adapter",
+    "is_sold": true,
+    "price": 41.0,
+    "halilit_url": "https://www.halilit.com/items/4279664-on-stage-ssa20m-m20-speaker-cabinet-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.866769Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_x15a",
+  "name": "Topp Pro X15A",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro X15A",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_x15a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_x15a",
+    "name": "Topp Pro X15A",
+    "description": "Topp Pro X15A",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_x15a.jpg",
+    "product_url": "https://www.halilit.com/items/538533-topp-pro-x15a",
+    "is_sold": true,
+    "price": 1442.0,
+    "halilit_url": "https://www.halilit.com/items/538533-topp-pro-x15a",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.122197Z"
+  }
+}

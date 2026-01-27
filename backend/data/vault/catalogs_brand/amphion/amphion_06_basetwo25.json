@@ -1,0 +1,39 @@
+{
+  "id": "amphion_06_basetwo25",
+  "name": "Amphion BaseTwo25 System",
+  "brand": "amphion",
+  "category": "guitars",
+  "description": "Amphion BaseTwo25 System",
+  "media": {
+    "thumbnail": "/data/thumbnails/amphion_06_basetwo25.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "amphion_06_basetwo25",
+    "name": "Amphion BaseTwo25 System",
+    "description": "Amphion BaseTwo25 System",
+    "category": "general",
+    "image_url": "/data/thumbnails/amphion_06_basetwo25.jpg",
+    "product_url": "https://www.halilit.com/items/5115577-amphion-basetwo25-system",
+    "is_sold": true,
+    "price": 58244.0,
+    "halilit_url": "https://www.halilit.com/items/5115577-amphion-basetwo25-system",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.053550Z"
+  }
+}

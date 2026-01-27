@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_cfs3000",
+  "name": "On Stage CFS3000 Microfiber swab",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage CFS3000 Microfiber swab",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_cfs3000.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_cfs3000",
+    "name": "On Stage CFS3000 Microfiber swab",
+    "description": "On Stage CFS3000 Microfiber swab",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_cfs3000.jpg",
+    "product_url": "https://www.halilit.com/items/1727124-on-stage-cfs3000-microfiber-swab",
+    "is_sold": true,
+    "price": 31.0,
+    "halilit_url": "https://www.halilit.com/items/1727124-on-stage-cfs3000-microfiber-swab",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.928589Z"
+  }
+}

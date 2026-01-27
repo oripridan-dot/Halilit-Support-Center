@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ss7748",
+  "name": "On Stage SS7748 Air Lift Speaker Pole",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage SS7748 Air Lift Speaker Pole",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ss7748.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ss7748",
+    "name": "On Stage SS7748 Air Lift Speaker Pole",
+    "description": "On Stage SS7748 Air Lift Speaker Pole",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ss7748.jpg",
+    "product_url": "https://www.halilit.com/items/4279611-on-stage-ss7748-air-lift-speaker-pole",
+    "is_sold": true,
+    "price": 195.0,
+    "halilit_url": "https://www.halilit.com/items/4279611-on-stage-ss7748-air-lift-speaker-pole",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.865155Z"
+  }
+}

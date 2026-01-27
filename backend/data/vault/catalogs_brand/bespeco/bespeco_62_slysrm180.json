@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_slysrm180",
+  "name": "Bespeco SLYSRM180",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco SLYSRM180",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_slysrm180.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_slysrm180",
+    "name": "Bespeco SLYSRM180",
+    "description": "Bespeco SLYSRM180",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_slysrm180.jpg",
+    "product_url": "https://www.halilit.com/items/3745314-bespeco-slysrm180",
+    "is_sold": true,
+    "price": 52.0,
+    "halilit_url": "https://www.halilit.com/items/3745314-bespeco-slysrm180",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.589951Z"
+  }
+}

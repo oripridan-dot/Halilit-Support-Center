@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1256014",
+  "name": "Paiste PST X 14\" Swiss Hats",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste PST X 14\" Swiss Hats",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1256014.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1256014",
+    "name": "Paiste PST X 14\" Swiss Hats",
+    "description": "Paiste PST X 14\" Swiss Hats",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1256014.jpg",
+    "product_url": "https://www.halilit.com/items/825097-paiste-pst-x-14-swiss-hats",
+    "is_sold": true,
+    "price": 632.0,
+    "halilit_url": "https://www.halilit.com/items/825097-paiste-pst-x-14-swiss-hats",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.326932Z"
+  }
+}

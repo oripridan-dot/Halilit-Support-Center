@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_kshd10a",
+  "name": "Topp Pro KS HD10A",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro KS HD10A",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_kshd10a",
+    "name": "Topp Pro KS HD10A",
+    "description": "Topp Pro KS HD10A",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_kshd10a.jpg",
+    "product_url": "https://www.halilit.com/items/3163643-topp-pro-ks-hd10a",
+    "is_sold": true,
+    "price": 3050.0,
+    "halilit_url": "https://www.halilit.com/items/3163643-topp-pro-ks-hd10a",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.127832Z"
+  }
+}

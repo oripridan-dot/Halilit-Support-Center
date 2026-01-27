@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_bp100tn",
+  "name": "Bespeco BP100TN Keyboard Stand",
+  "brand": "bespeco",
+  "category": "keys",
+  "description": "Bespeco BP100TN Keyboard Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_bp100tn.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_bp100tn",
+    "name": "Bespeco BP100TN Keyboard Stand",
+    "description": "Bespeco BP100TN Keyboard Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_bp100tn.jpg",
+    "product_url": "https://www.halilit.com/items/7923083-bespeco-bp100tn-keyboard-stand",
+    "is_sold": true,
+    "price": 711.0,
+    "halilit_url": "https://www.halilit.com/items/7923083-bespeco-bp100tn-keyboard-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.538444Z"
+  }
+}

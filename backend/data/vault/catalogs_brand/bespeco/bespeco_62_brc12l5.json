@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_brc12l5",
+  "name": "Bespeco BRC12L5",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco BRC12L5",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_brc12l5.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_brc12l5",
+    "name": "Bespeco BRC12L5",
+    "description": "Bespeco BRC12L5",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_brc12l5.jpg",
+    "product_url": "https://www.halilit.com/items/3343409-bespeco-brc12l5",
+    "is_sold": true,
+    "price": 954.0,
+    "halilit_url": "https://www.halilit.com/items/3343409-bespeco-brc12l5",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.591296Z"
+  }
+}

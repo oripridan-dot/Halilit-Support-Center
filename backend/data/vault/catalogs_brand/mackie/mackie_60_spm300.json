@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_spm300",
+  "name": "Mackie SPM300",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie SPM300",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_spm300.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_spm300",
+    "name": "Mackie SPM300",
+    "description": "Mackie SPM300",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_spm300.jpg",
+    "product_url": "https://www.halilit.com/items/446397-mackie-spm300-speaker-pole-for-dlm-series",
+    "is_sold": true,
+    "price": 192.0,
+    "halilit_url": "https://www.halilit.com/items/446397-mackie-spm300-speaker-pole-for-dlm-series",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.912425Z"
+  }
+}

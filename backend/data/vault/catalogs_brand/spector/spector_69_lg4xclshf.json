@@ -1,0 +1,39 @@
+{
+  "id": "spector_69_lg4xclshf",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Spector Legend 4X Classic",
+  "brand": "spector",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Spector Legend 4X Classic",
+  "media": {
+    "thumbnail": "/data/thumbnails/spector_69_lg4xclshf.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "spector_69_lg4xclshf",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Spector Legend 4X Classic",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Spector Legend 4X Classic",
+    "category": "general",
+    "image_url": "/data/thumbnails/spector_69_lg4xclshf.jpg",
+    "product_url": "https://www.halilit.com/items/2651263-spector-legend-4x-classic-bass-guitar",
+    "is_sold": true,
+    "price": 1915.0,
+    "halilit_url": "https://www.halilit.com/items/2651263-spector-legend-4x-classic-bass-guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.504808Z"
+  }
+}

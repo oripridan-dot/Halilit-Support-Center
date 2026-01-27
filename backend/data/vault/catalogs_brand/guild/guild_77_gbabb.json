@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_gbabb",
+  "name": "Guild Acoustic Gig Bag Bass",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "Guild Acoustic Gig Bag Bass",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_gbabb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_gbabb",
+    "name": "Guild Acoustic Gig Bag Bass",
+    "description": "Guild Acoustic Gig Bag Bass",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_gbabb.jpg",
+    "product_url": "https://www.halilit.com/items/2692401-guild-acoustic-gig-bag-bass",
+    "is_sold": true,
+    "price": 337.0,
+    "halilit_url": "https://www.halilit.com/items/2692401-guild-acoustic-gig-bag-bass",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.294711Z"
+  }
+}

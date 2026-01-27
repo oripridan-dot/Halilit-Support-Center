@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_kba4088",
+  "name": "On Stage KBA4088 88 Key Keyboard Bag",
+  "brand": "on-stage",
+  "category": "keys",
+  "description": "On Stage KBA4088 88 Key Keyboard Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_kba4088.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_kba4088",
+    "name": "On Stage KBA4088 88 Key Keyboard Bag",
+    "description": "On Stage KBA4088 88 Key Keyboard Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_kba4088.jpg",
+    "product_url": "https://www.halilit.com/items/7990070-on-stage-kba4088-8-key-keyboard-bag",
+    "is_sold": true,
+    "price": 362.0,
+    "halilit_url": "https://www.halilit.com/items/7990070-on-stage-kba4088-8-key-keyboard-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.826816Z"
+  }
+}

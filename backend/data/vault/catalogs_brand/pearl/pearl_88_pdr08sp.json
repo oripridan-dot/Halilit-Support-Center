@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pdr08sp",
+  "name": "Pearl PDR-08SP Practice Drum Pad",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl PDR-08SP Practice Drum Pad",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pdr08sp.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pdr08sp",
+    "name": "Pearl PDR-08SP Practice Drum Pad",
+    "description": "Pearl PDR-08SP Practice Drum Pad",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pdr08sp.jpg",
+    "product_url": "https://www.halilit.com/items/4725562-pearl-pdr-08sp-practice-drum-pad",
+    "is_sold": true,
+    "price": 197.0,
+    "halilit_url": "https://www.halilit.com/items/4725562-pearl-pdr-08sp-practice-drum-pad",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.470335Z"
+  }
+}

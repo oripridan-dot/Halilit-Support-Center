@@ -8,15 +8,11 @@ Enhancements for all brand scrapers to capture:
 This module provides utility functions used by all scrapers.
 """
 
-import asyncio
 import logging
-from typing import List, Dict, Optional, Set, Tuple
+from typing import List, Dict, Optional
 from pathlib import Path
-import re
 from playwright.async_api import Page
-from datetime import datetime
 import aiohttp
-import os
 
 logger = logging.getLogger(__name__)
 
@@ -284,7 +280,7 @@ class ProductImageEnhancer:
             
             for img in images_found:
                 url = img.get('url', '')
-                alt_text = img.get('alt_text', '').lower()
+                img.get('alt_text', '').lower()
                 img_type = img.get('type', '')
                 
                 # Check filename for white/product indicators

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ms7801w",
+  "name": "On Stage MS7801W Euro Boom Mic Stand",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage MS7801W Euro Boom Mic Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ms7801w.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ms7801w",
+    "name": "On Stage MS7801W Euro Boom Mic Stand",
+    "description": "On Stage MS7801W Euro Boom Mic Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ms7801w.jpg",
+    "product_url": "https://www.halilit.com/items/723698-on-stage-ms7801w-euro-boom-mic-stand",
+    "is_sold": true,
+    "price": 153.0,
+    "halilit_url": "https://www.halilit.com/items/723698-on-stage-ms7801w-euro-boom-mic-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.853664Z"
+  }
+}

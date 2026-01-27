@@ -1,0 +1,39 @@
+{
+  "id": "encore_20_e2blk",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2BLK",
+  "brand": "encore",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2BLK",
+  "media": {
+    "thumbnail": "/data/thumbnails/encore_20_e2blk.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "encore_20_e2blk",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2BLK",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Encore E2BLK",
+    "category": "general",
+    "image_url": "/data/thumbnails/encore_20_e2blk.jpg",
+    "product_url": "https://www.halilit.com/items/3219829-encore-e2-electric-guitar-gloss-black",
+    "is_sold": true,
+    "price": 884.0,
+    "halilit_url": "https://www.halilit.com/items/3219829-encore-e2-electric-guitar-gloss-black",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.306997Z"
+  }
+}

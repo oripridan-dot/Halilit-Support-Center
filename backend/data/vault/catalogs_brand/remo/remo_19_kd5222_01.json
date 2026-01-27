@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_kd5222_01",
+  "name": "Remo Gathering Drum 22\"",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Gathering Drum 22\"",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_kd5222_01.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_kd5222_01",
+    "name": "Remo Gathering Drum 22\"",
+    "description": "Remo Gathering Drum 22\"",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_kd5222_01.jpg",
+    "product_url": "https://www.halilit.com/items/448559-remo-22-gathering-drum",
+    "is_sold": true,
+    "price": 634.0,
+    "halilit_url": "https://www.halilit.com/items/448559-remo-22-gathering-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.162365Z"
+  }
+}

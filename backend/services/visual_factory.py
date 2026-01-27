@@ -2,7 +2,10 @@ import io
 import json
 from pathlib import Path
 from PIL import Image, ImageEnhance, ImageFilter, ImageOps
-from rembg import remove  # Background removal AI
+try:
+    from rembg import remove  # Background removal AI
+except ImportError:
+    remove = None
 import requests
 
 class VisualFactory:
@@ -62,16 +65,19 @@ class VisualFactory:
             logger.info(f"🎨 VF: Downloaded. Size: {len(response.content) if hasattr(response, 'content') else 'stream'}")
             original = Image.open(io.BytesIO(response.content))
             
-            logger.info(f"🎨 VF: Removing background...")
-            nobg = remove(original)
-            logger.info(f"🎨 VF: Background removed.")
+            if remove:
+                logger.info("🎨 VF: Removing background...")
+                nobg = remove(original)
+                logger.info("🎨 VF: Background removed.")
+            else:
+                nobg = original
 
-            response.raise_for_status()
-            original = Image.open(io.BytesIO(response.content))
+            # response.raise_for_status() # Removed redundant checks for cleaner flow
+            # original = Image.open(io.BytesIO(response.content)) # Removed redundant reload
 
             # --- TIER 1: UI THUMBNAIL (Precise Auto-Crop & Normalize) ---
             # Remove background for clean floating look
-            nobg = remove(original)
+            # nobg = remove(original) # Removed duplicate call
             
             # Convert to RGBA if not already
             if nobg.mode != 'RGBA':
@@ -227,17 +233,17 @@ class VisualFactory:
                 if 'dimensions' in result:
                     product['image_dimensions'] = result['dimensions']
                 processed_count += 1
-                print(f"   ✅ Generated thumbnail & inspection image")
+                print("   ✅ Generated thumbnail & inspection image")
             else:
                 failed_count += 1
-                print(f"   ❌ Failed")
+                print("   ❌ Failed")
         
         # Save updated catalog
         output_catalog_path = output_path / 'catalog_processed.json'
         with open(output_catalog_path, 'w') as f:
             json.dump(catalog, f, indent=2)
         
-        print(f"\n✨ Complete!")
+        print("\n✨ Complete!")
         print(f"   ✅ Processed: {processed_count}/{total}")
         print(f"   ❌ Failed: {failed_count}/{total}")
         print(f"   📄 Updated catalog: {output_catalog_path}")

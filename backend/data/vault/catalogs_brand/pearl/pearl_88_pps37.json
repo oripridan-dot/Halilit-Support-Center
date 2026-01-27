@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pps37",
+  "name": "Pearl PPS-37 Cowbell Holder",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl PPS-37 Cowbell Holder",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pps37.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pps37",
+    "name": "Pearl PPS-37 Cowbell Holder",
+    "description": "Pearl PPS-37 Cowbell Holder",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pps37.jpg",
+    "product_url": "https://www.halilit.com/items/447987-pearl-pps-37-cowbell-holder",
+    "is_sold": true,
+    "price": 252.0,
+    "halilit_url": "https://www.halilit.com/items/447987-pearl-pps-37-cowbell-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.494627Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_tap40bt",
+  "name": "Topp Pro TAP 40BT",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro TAP 40BT",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_tap40bt",
+    "name": "Topp Pro TAP 40BT",
+    "description": "Topp Pro TAP 40BT",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_tap40bt.jpg",
+    "product_url": "https://www.halilit.com/items/6271090-topp-pro-tap-40bt",
+    "is_sold": true,
+    "price": 516.0,
+    "halilit_url": "https://www.halilit.com/items/6271090-topp-pro-tap-40bt",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.113441Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_gs7655",
+  "name": "On Stage GS765  Wire Folding Guitar Stand",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage GS765  Wire Folding Guitar Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_gs7655.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_gs7655",
+    "name": "On Stage GS765  Wire Folding Guitar Stand",
+    "description": "On Stage GS765  Wire Folding Guitar Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_gs7655.jpg",
+    "product_url": "https://www.halilit.com/items/3179125-on-stage-gs765-wire-folding-guitar-stand",
+    "is_sold": true,
+    "price": 53.0,
+    "halilit_url": "https://www.halilit.com/items/3179125-on-stage-gs765-wire-folding-guitar-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.914394Z"
+  }
+}

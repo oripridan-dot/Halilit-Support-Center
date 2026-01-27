@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_jg16",
+  "name": "Pearl Jungle Gig Adapter",
+  "brand": "pearl",
+  "category": "accessories",
+  "description": "Pearl Jungle Gig Adapter",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_jg16.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_jg16",
+    "name": "Pearl Jungle Gig Adapter",
+    "description": "Pearl Jungle Gig Adapter",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_jg16.jpg",
+    "product_url": "https://www.halilit.com/items/4273618-pearl-jungle-gig-adapter",
+    "is_sold": true,
+    "price": 249.0,
+    "halilit_url": "https://www.halilit.com/items/4273618-pearl-jungle-gig-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.489796Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "esp_67_lap204blks",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP LTD AP-204 Black Satin",
+  "brand": "esp",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP LTD AP-204 Black Satin",
+  "media": {
+    "thumbnail": "/data/thumbnails/esp_67_lap204blks.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "esp_67_lap204blks",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP LTD AP-204 Black Satin",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP LTD AP-204 Black Satin",
+    "category": "general",
+    "image_url": "/data/thumbnails/esp_67_lap204blks.jpg",
+    "product_url": "https://www.halilit.com/items/1973787-esp-ltd-ap-204",
+    "is_sold": true,
+    "price": 2353.0,
+    "halilit_url": "https://www.halilit.com/items/1973787-esp-ltd-ap-204",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.527522Z"
+  }
+}

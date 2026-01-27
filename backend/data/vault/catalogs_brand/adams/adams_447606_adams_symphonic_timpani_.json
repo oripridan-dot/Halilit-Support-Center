@@ -1,0 +1,39 @@
+{
+  "id": "adams_447606_adams_symphonic_timpani_",
+  "name": "Adams Symphonic Timpani",
+  "brand": "adams",
+  "category": "general",
+  "description": "Adams Symphonic Timpani",
+  "media": {
+    "thumbnail": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adams_447606_adams_symphonic_timpani_",
+    "name": "Adams Symphonic Timpani",
+    "description": "Adams Symphonic Timpani",
+    "category": "general",
+    "image_url": "/data/thumbnails/adams_447606_adams_symphonic_timpani_.jpg",
+    "product_url": "https://www.halilit.com/items/447606-adams-symphonic-timpani-",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/447606-adams-symphonic-timpani-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.244982Z"
+  }
+}

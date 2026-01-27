@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_ch830s",
+  "name": "Pearl CH830S",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl CH830S",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_ch830s.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_ch830s",
+    "name": "Pearl CH830S",
+    "description": "Pearl CH830S",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_ch830s.jpg",
+    "product_url": "https://www.halilit.com/items/868236-pearl-ch830s",
+    "is_sold": true,
+    "price": 184.0,
+    "halilit_url": "https://www.halilit.com/items/868236-pearl-ch830s",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.437722Z"
+  }
+}

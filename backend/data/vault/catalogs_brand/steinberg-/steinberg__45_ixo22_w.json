@@ -1,0 +1,39 @@
+{
+  "id": "steinberg__45_ixo22_w",
+  "name": "Steinberg IXO22 USB Audio Interface",
+  "brand": "steinberg-",
+  "category": "studio",
+  "description": "Steinberg IXO22 USB Audio Interface",
+  "media": {
+    "thumbnail": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "steinberg__45_ixo22_w",
+    "name": "Steinberg IXO22 USB Audio Interface",
+    "description": "Steinberg IXO22 USB Audio Interface",
+    "category": "general",
+    "image_url": "/data/thumbnails/steinberg__45_ixo22_w.jpg",
+    "product_url": "https://www.halilit.com/items/6606402-steinberg-ixo22-usb-audio-interface",
+    "is_sold": true,
+    "price": 751.0,
+    "halilit_url": "https://www.halilit.com/items/6606402-steinberg-ixo22-usb-audio-interface",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.172500Z"
+  }
+}

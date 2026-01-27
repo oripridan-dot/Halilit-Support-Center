@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_air192x14",
+  "name": "M-Audio AIR 192|14",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio AIR 192|14",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_air192x14.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_air192x14",
+    "name": "M-Audio AIR 192|14",
+    "description": "M-Audio AIR 192|14",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_air192x14.jpg",
+    "product_url": "https://www.halilit.com/items/2737250-m-audio-air-192-14",
+    "is_sold": true,
+    "price": 1441.0,
+    "halilit_url": "https://www.halilit.com/items/2737250-m-audio-air-192-14",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.629872Z"
+  }
+}

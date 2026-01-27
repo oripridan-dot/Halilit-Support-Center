@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_shg3",
+  "name": "\u05e1\u05d8\u05e0\u05d3 \u05dc\u05e9\u05dc\u05d5\u05e9 \u05d2\u05d9\u05d8\u05e8\u05d5\u05ea Bespeco KANGAU",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "\u05e1\u05d8\u05e0\u05d3 \u05dc\u05e9\u05dc\u05d5\u05e9 \u05d2\u05d9\u05d8\u05e8\u05d5\u05ea Bespeco KANGAU",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_shg3.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_shg3",
+    "name": "\u05e1\u05d8\u05e0\u05d3 \u05dc\u05e9\u05dc\u05d5\u05e9 \u05d2\u05d9\u05d8\u05e8\u05d5\u05ea Bespeco KANGAU",
+    "description": "\u05e1\u05d8\u05e0\u05d3 \u05dc\u05e9\u05dc\u05d5\u05e9 \u05d2\u05d9\u05d8\u05e8\u05d5\u05ea Bespeco KANGAU",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_shg3.jpg",
+    "product_url": "https://www.halilit.com/items/7322302-bespeco-shg3-universal-triple-guitar-stand",
+    "is_sold": true,
+    "price": 205.0,
+    "halilit_url": "https://www.halilit.com/items/7322302-bespeco-shg3-universal-triple-guitar-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.557144Z"
+  }
+}

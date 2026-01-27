@@ -1,0 +1,39 @@
+{
+  "id": "adam_audio_aa_sub15",
+  "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio SUB15",
+  "brand": "adam-audio",
+  "category": "studio",
+  "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio SUB15",
+  "media": {
+    "thumbnail": "/data/thumbnails/adam_audio_aa_sub15.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adam_audio_aa_sub15",
+    "name": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio SUB15",
+    "description": "\u05e1\u05d0\u05d1\u05d5\u05d5\u05e4\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio SUB15",
+    "category": "general",
+    "image_url": "/data/thumbnails/adam_audio_aa_sub15.jpg",
+    "product_url": "https://www.halilit.com/items/2273663-adam-audio-sub15",
+    "is_sold": true,
+    "price": 12197.0,
+    "halilit_url": "https://www.halilit.com/items/2273663-adam-audio-sub15",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.331706Z"
+  }
+}

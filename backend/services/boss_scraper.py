@@ -23,23 +23,19 @@ GOAL: Extract ALL available data from Boss website for JIT RAG system
 
 from models.product_hierarchy import (
     ProductCore, ProductCatalog, BrandIdentity,
-    ProductImage, ProductSpecification, SourceType, ProductRelationship, RelationshipType,
-    ProductStatus
+    ProductImage, ProductSpecification, SourceType, ProductStatus
 )
 from services.scraper_enhancements import (
     SupportArticleExtractor, ProductImageEnhancer, BrandLogoDownloader
 )
 import asyncio
 import logging
-from typing import List, Dict, Optional, Set
+from typing import List, Optional, Set
 from datetime import datetime
 from playwright.async_api import async_playwright, Page, TimeoutError as PlaywrightTimeoutError
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, AsyncRetrying
+from tenacity import stop_after_attempt, wait_exponential, AsyncRetrying
 from pathlib import Path
-import json
 import sys
-import re
-import os
 
 # Add parent directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -109,8 +105,8 @@ class BossScraper:
         """
         logger.info(
             f"🎸 Starting COMPREHENSIVE Boss scrape (max: {'ALL' if max_products is None else max_products})")
-        logger.info(f"   Goal: Extract ALL available data for JIT RAG system")
-        logger.info(f"   Note: Boss uses same CMS as Roland (parent company)")
+        logger.info("   Goal: Extract ALL available data for JIT RAG system")
+        logger.info("   Note: Boss uses same CMS as Roland (parent company)")
 
         async with async_playwright() as p:
             browser = await p.chromium.launch(
@@ -175,7 +171,7 @@ class BossScraper:
                             logger.error(f"   Error scraping {url}: {e}")
                             continue
 
-                    logger.info(f"\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
+                    logger.info("\n✅ COMPREHENSIVE SCRAPING COMPLETE!")
                     logger.info(f"   Products: {len(products)}")
                     logger.info(f"   Total Images: {total_images}")
                     logger.info(f"   Total Videos: {total_videos}")
@@ -243,7 +239,7 @@ class BossScraper:
 
     async def _get_product_urls(self, page: Page, max_products: int = None) -> List[str]:
         """Get all product URLs by navigating through categories"""
-        logger.info(f"📄 Discovering Boss products through category navigation")
+        logger.info("📄 Discovering Boss products through category navigation")
 
         all_urls = set()
 
@@ -605,7 +601,6 @@ class BossScraper:
             # 7b. EXTRACT SUPPORT ARTICLES & KNOWLEDGE BASE CONTENT
             # ============================================================
             support_articles = []
-            documentation_snippets = []
             
             try:
                 support_data = await SupportArticleExtractor.extract_boss_support_articles(
@@ -626,7 +621,6 @@ class BossScraper:
             # 8. DETERMINE HIERARCHY (BREADCRUMBS & CATEGORIES)
             # ============================================================
             main_category = "Guitar Effects"
-            categories = ["Boss Products"]
             
             try:
                 breadcrumbs = await asyncio.wait_for(
@@ -637,13 +631,12 @@ class BossScraper:
                     cat_text = await breadcrumbs[1].text_content()
                     if cat_text:
                         main_category = cat_text.strip()
-                        categories = [cat_text.strip()]
+                        [cat_text.strip()]
             except:
                 # Try to extract from URL
                 if '/products/' in url:
                     cat_from_url = url.split('/products/')[1].split('/')[0]
                     main_category = cat_from_url.replace('-', ' ').title()
-                    categories = [main_category]
 
             # Create product object
             product = ProductCore(
@@ -672,6 +665,22 @@ class BossScraper:
         except Exception as e:
             logger.error(f"   Error scraping {url}: {e}")
             return None
+
+    async def scrape_all(self):
+        catalog = await self.scrape_all_products()
+        # Convert Pydantic model to dict if needed
+        data = catalog.model_dump() if hasattr(catalog, 'model_dump') else catalog.dict()
+        
+        # Save to Vault
+        output_path = "backend/data/vault/boss_official_full.json"
+        import os
+        import json
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, default=str)
+            
+        print(f"      💾 Saved Boss Catalog to Vault: {output_path}")
+        return data
 
 
 async def scrape_boss_products(max_products: int = None) -> ProductCatalog:

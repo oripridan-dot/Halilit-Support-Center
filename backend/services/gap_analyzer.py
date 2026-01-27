@@ -1,7 +1,7 @@
 # backend/services/gap_analyzer.py
 import json
 import os
-from typing import List, Dict, Set, Any
+from typing import List, Dict, Any
 from datetime import datetime
 
 class GapAnalyzer:

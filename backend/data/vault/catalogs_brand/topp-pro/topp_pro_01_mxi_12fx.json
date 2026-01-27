@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_mxi_12fx",
+  "name": "Topp Pro MXI.12FX",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro MXI.12FX",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_mxi_12fx",
+    "name": "Topp Pro MXI.12FX",
+    "description": "Topp Pro MXI.12FX",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_mxi_12fx.jpg",
+    "product_url": "https://www.halilit.com/items/3176970-topp-pro-mxi-12fx-12-channel-audio-mixer-with-efx-processor",
+    "is_sold": true,
+    "price": 830.0,
+    "halilit_url": "https://www.halilit.com/items/3176970-topp-pro-mxi-12fx-12-channel-audio-mixer-with-efx-processor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.109624Z"
+  }
+}

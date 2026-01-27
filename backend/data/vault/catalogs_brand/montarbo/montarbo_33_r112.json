@@ -1,0 +1,39 @@
+{
+  "id": "montarbo_33_r112",
+  "name": "Montarbo R112",
+  "brand": "montarbo",
+  "category": "general",
+  "description": "Montarbo R112",
+  "media": {
+    "thumbnail": "/data/thumbnails/montarbo_33_r112.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "montarbo_33_r112",
+    "name": "Montarbo R112",
+    "description": "Montarbo R112",
+    "category": "general",
+    "image_url": "/data/thumbnails/montarbo_33_r112.jpg",
+    "product_url": "https://www.halilit.com/items/5619797-montarbo-r112",
+    "is_sold": true,
+    "price": 4250.0,
+    "halilit_url": "https://www.halilit.com/items/5619797-montarbo-r112",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.073288Z"
+  }
+}

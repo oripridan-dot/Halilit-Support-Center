@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_iromb100pbl",
+  "name": "\u05db\u05d1\u05dc \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df Bespeco IROMB100PBL",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "\u05db\u05d1\u05dc \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df Bespeco IROMB100PBL",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_iromb100pbl.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_iromb100pbl",
+    "name": "\u05db\u05d1\u05dc \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df Bespeco IROMB100PBL",
+    "description": "\u05db\u05d1\u05dc \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df Bespeco IROMB100PBL",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_iromb100pbl.jpg",
+    "product_url": "https://www.halilit.com/items/7262294-bespeco-iromb100pbl",
+    "is_sold": true,
+    "price": 59.0,
+    "halilit_url": "https://www.halilit.com/items/7262294-bespeco-iromb100pbl",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.548879Z"
+  }
+}

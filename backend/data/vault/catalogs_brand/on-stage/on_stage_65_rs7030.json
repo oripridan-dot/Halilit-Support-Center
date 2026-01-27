@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_rs7030",
+  "name": "On Stage RS7030 Table Top Rack Stand",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage RS7030 Table Top Rack Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_rs7030.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_rs7030",
+    "name": "On Stage RS7030 Table Top Rack Stand",
+    "description": "On Stage RS7030 Table Top Rack Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_rs7030.jpg",
+    "product_url": "https://www.halilit.com/items/3075291-on-stage-rs7030-table-top-rack-stand",
+    "is_sold": true,
+    "price": 124.0,
+    "halilit_url": "https://www.halilit.com/items/3075291-on-stage-rs7030-table-top-rack-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.873540Z"
+  }
+}

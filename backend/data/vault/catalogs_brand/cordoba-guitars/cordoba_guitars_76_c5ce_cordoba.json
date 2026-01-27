@@ -1,0 +1,39 @@
+{
+  "id": "cordoba_guitars_76_c5ce_cordoba",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Cordoba C5-CE",
+  "brand": "cordoba-guitars",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Cordoba C5-CE",
+  "media": {
+    "thumbnail": "/data/thumbnails/cordoba_guitars_76_c5ce_cordoba.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "cordoba_guitars_76_c5ce_cordoba",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Cordoba C5-CE",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea Cordoba C5-CE",
+    "category": "general",
+    "image_url": "/data/thumbnails/cordoba_guitars_76_c5ce_cordoba.jpg",
+    "product_url": "https://www.halilit.com/items/444198-cordoba-c5-ce-",
+    "is_sold": true,
+    "price": 1824.0,
+    "halilit_url": "https://www.halilit.com/items/444198-cordoba-c5-ce-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.994794Z"
+  }
+}

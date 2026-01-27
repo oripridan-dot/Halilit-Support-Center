@@ -1,0 +1,39 @@
+{
+  "id": "lynx_48_auroran16dnt",
+  "name": "Lynx Aurora(n) 16 Dante",
+  "brand": "lynx",
+  "category": "general",
+  "description": "Lynx Aurora(n) 16 Dante",
+  "media": {
+    "thumbnail": "/data/thumbnails/lynx_48_auroran16dnt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "lynx_48_auroran16dnt",
+    "name": "Lynx Aurora(n) 16 Dante",
+    "description": "Lynx Aurora(n) 16 Dante",
+    "category": "general",
+    "image_url": "/data/thumbnails/lynx_48_auroran16dnt.jpg",
+    "product_url": "https://www.halilit.com/items/1384844-lynx-aurora-n-16-dante",
+    "is_sold": true,
+    "price": 24995.0,
+    "halilit_url": "https://www.halilit.com/items/1384844-lynx-aurora-n-16-dante",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.656506Z"
+  }
+}

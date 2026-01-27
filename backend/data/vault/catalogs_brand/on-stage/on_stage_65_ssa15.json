@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ssa15",
+  "name": "On Stage SSA1.5 Speaker Cabinet Insert",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage SSA1.5 Speaker Cabinet Insert",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ssa15.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ssa15",
+    "name": "On Stage SSA1.5 Speaker Cabinet Insert",
+    "description": "On Stage SSA1.5 Speaker Cabinet Insert",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ssa15.jpg",
+    "product_url": "https://www.halilit.com/items/6560425-on-stage-ssa1-5-speaker-cabinet-insert",
+    "is_sold": true,
+    "price": 30.0,
+    "halilit_url": "https://www.halilit.com/items/6560425-on-stage-ssa1-5-speaker-cabinet-insert",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.868417Z"
+  }
+}

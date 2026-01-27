@@ -1,0 +1,39 @@
+{
+  "id": "maybach_59_telem54_2tsb_ag",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Maybach Teleman T54",
+  "brand": "maybach",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Maybach Teleman T54",
+  "media": {
+    "thumbnail": "/data/thumbnails/maybach_59_telem54_2tsb_ag.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "maybach_59_telem54_2tsb_ag",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Maybach Teleman T54",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Maybach Teleman T54",
+    "category": "general",
+    "image_url": "/data/thumbnails/maybach_59_telem54_2tsb_ag.jpg",
+    "product_url": "https://www.halilit.com/items/4253025-maybach-teleman-t54",
+    "is_sold": true,
+    "price": 5976.0,
+    "halilit_url": "https://www.halilit.com/items/4253025-maybach-teleman-t54",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.656892Z"
+  }
+}

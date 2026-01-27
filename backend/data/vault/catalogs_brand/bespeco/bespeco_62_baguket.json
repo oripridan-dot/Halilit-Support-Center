@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_baguket",
+  "name": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05d8\u05e0\u05d5\u05e8 Bespeco BAGUKET",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05d8\u05e0\u05d5\u05e8 Bespeco BAGUKET",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_baguket.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_baguket",
+    "name": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05d8\u05e0\u05d5\u05e8 Bespeco BAGUKET",
+    "description": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05d8\u05e0\u05d5\u05e8 Bespeco BAGUKET",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_baguket.jpg",
+    "product_url": "https://www.halilit.com/items/3541066-bespeco-baguket-tenor-ukulele-gig-bag",
+    "is_sold": true,
+    "price": 179.0,
+    "halilit_url": "https://www.halilit.com/items/3541066-bespeco-baguket-tenor-ukulele-gig-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.565187Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pk910c",
+  "name": "Pearl PK910C",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl PK910C",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pk910c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pk910c",
+    "name": "Pearl PK910C",
+    "description": "Pearl PK910C",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pk910c.jpg",
+    "product_url": "https://www.halilit.com/items/1755186-pearl-pk910c-kit",
+    "is_sold": true,
+    "price": 1464.0,
+    "halilit_url": "https://www.halilit.com/items/1755186-pearl-pk910c-kit",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.556176Z"
+  }
+}

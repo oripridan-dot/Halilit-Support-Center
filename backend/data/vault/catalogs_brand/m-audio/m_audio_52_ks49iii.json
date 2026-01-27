@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_ks49iii",
+  "name": "M-Audio Keystation 49 MK3",
+  "brand": "m-audio",
+  "category": "keys",
+  "description": "M-Audio Keystation 49 MK3",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_ks49iii.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_ks49iii",
+    "name": "M-Audio Keystation 49 MK3",
+    "description": "M-Audio Keystation 49 MK3",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_ks49iii.jpg",
+    "product_url": "https://www.halilit.com/items/2115501-m-audio-keystation-49-mk3",
+    "is_sold": true,
+    "price": 456.0,
+    "halilit_url": "https://www.halilit.com/items/2115501-m-audio-keystation-49-mk3",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.637247Z"
+  }
+}

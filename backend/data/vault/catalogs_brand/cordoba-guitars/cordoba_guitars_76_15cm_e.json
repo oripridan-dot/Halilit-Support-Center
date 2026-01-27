@@ -1,0 +1,39 @@
+{
+  "id": "cordoba_guitars_76_15cm_e",
+  "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Cordoba 15CM-E",
+  "brand": "cordoba-guitars",
+  "category": "general",
+  "description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Cordoba 15CM-E",
+  "media": {
+    "thumbnail": "/data/thumbnails/cordoba_guitars_76_15cm_e.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "cordoba_guitars_76_15cm_e",
+    "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Cordoba 15CM-E",
+    "description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Cordoba 15CM-E",
+    "category": "general",
+    "image_url": "/data/thumbnails/cordoba_guitars_76_15cm_e.jpg",
+    "product_url": "https://www.halilit.com/items/2317759-cordoba-15cm-e",
+    "is_sold": true,
+    "price": 543.0,
+    "halilit_url": "https://www.halilit.com/items/2317759-cordoba-15cm-e",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.024889Z"
+  }
+}

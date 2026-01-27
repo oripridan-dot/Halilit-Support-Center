@@ -15,10 +15,10 @@ waiting for heavy scrapers to fill in detailed specs in the background.
 import json
 import os
 import requests
-import shutil
-from typing import Dict, List, Optional
-from pathlib import Path
+from typing import Dict, List
 import sys
+import datetime
+from services.frontend_normalizer import FrontendNormalizer
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -119,11 +119,11 @@ class GenesisBuilder:
         # 3. Discover Product Relationships (Optional)
         # If we have the relationship engine, analyze all products for connections
         if ProductRelationshipEngine and len(blueprint) > 5:
-            print(f"   🔗 Analyzing product relationships...")
+            print("   🔗 Analyzing product relationships...")
             try:
                 engine = ProductRelationshipEngine()
                 blueprint = list(engine.analyze_all_blueprints(blueprint).values())
-                print(f"   ✅ Relationship analysis complete")
+                print("   ✅ Relationship analysis complete")
             except Exception as e:
                 print(f"   ⚠️ Relationship analysis skipped: {e}")
             
@@ -304,7 +304,7 @@ class GenesisBuilder:
             # 2. Acquire Asset (Download Thumbnail)
             # STRICT RULE: Only Official Images
             local_image_name = f"{safe_id}_thumb.jpg"
-            local_image_full_path = os.path.join(image_folder, local_image_name)
+            os.path.join(image_folder, local_image_name)
             
             public_url = "/assets/placeholder_gear.png"
             if official.get('image_url') and "placeholder" not in official['image_url']:
@@ -467,6 +467,95 @@ class GenesisBuilder:
         
         return results
 
+    @staticmethod
+    def construct_category_catalogs():
+        print("\n⚡ IGNITING SMART CATALOG ENGINE...")
+        
+        base_dir = GenesisBuilder.BASE_DIR
+        vault_dir = os.path.join(base_dir, "data", "vault", "catalogs_brand")
+        frontend_data_dir = os.path.abspath(os.path.join(base_dir, "../frontend/public/data"))
+        cat_dir = os.path.join(frontend_data_dir, "categories")
+        
+        os.makedirs(cat_dir, exist_ok=True)
+        
+        # 1. Load Everything
+        all_products = []
+        if os.path.exists(vault_dir):
+            files = [f for f in os.listdir(vault_dir) if f.endswith('.json')]
+            for f_name in files:
+                try:
+                    with open(os.path.join(vault_dir, f_name), 'r') as f:
+                        data = json.load(f)
+                        if 'products' in data:
+                            all_products.extend(data['products'])
+                except: pass
+
+        # 2. Define Tribes
+        tribes = ["keys", "drums", "guitars", "studio", "live", "dj", "accessories", "general"]
+        buckets = {t: [] for t in tribes}
+        
+        # 3. Search Index Accumulator
+        search_index = []
+
+        # 4. Process & Sort
+        for p in all_products:
+            ui_prod = FrontendNormalizer.normalize_product(p)
+            
+            # Bucket assignment
+            tid = ui_prod.get('tribe_id', 'general')
+            if tid not in buckets: tid = 'general'
+            buckets[tid].append(ui_prod)
+            
+            # Add to Global Search Index (Lightweight)
+            search_index.append({
+                "id": ui_prod['id'],
+                "n": ui_prod['name'],       # Short key for size
+                "b": ui_prod['brand'],      # Brand
+                "c": tid,                   # Category
+                "img": ui_prod['image_url'],
+                "p": ui_prod['price']
+            })
+
+        # 5. Build Smart Category Files
+        for tribe, products in buckets.items():
+            if not products: continue
+            
+            # Sort by price desc (Premium feel)
+            products.sort(key=lambda x: float(x['price'] or 0), reverse=True)
+            
+            # -- CALCULATE METADATA --
+            # Find all unique tags and brands actually present in this category
+            unique_tags = set()
+            unique_brands = set()
+            
+            for p in products:
+                unique_brands.add(p['brand'])
+                for t in p.get('tags', []):
+                    unique_tags.add(t)
+            
+            payload = {
+                "id": tribe,
+                "generated_at": datetime.datetime.utcnow().isoformat(),
+                "metadata": {
+                    "total_products": len(products),
+                    "available_brands": sorted(list(unique_brands)),
+                    "available_filters": sorted(list(unique_tags)) # <--- DYNAMIC FILTERS
+                },
+                "products": products
+            }
+            
+            out_path = os.path.join(cat_dir, f"{tribe}.json")
+            with open(out_path, 'w') as f:
+                json.dump(payload, f, indent=2)
+                
+            print(f"   ✅ Built Smart Catalog: {tribe.upper()} ({len(products)} items, {len(unique_tags)} filters)")
+
+        # 6. Write Global Search Index
+        idx_path = os.path.join(frontend_data_dir, "global_search_index.json")
+        with open(idx_path, 'w') as f:
+            json.dump(search_index, f)
+        print(f"   🔍 Built Global Search Index: {len(search_index)} items -> {idx_path}")
+
 
 if __name__ == "__main__":
     # Example: Build a single brand
@@ -477,7 +566,7 @@ if __name__ == "__main__":
     builder = GenesisBuilder("")  # Dummy instance
     results = builder.construct_all_brands()
     
-    print(f"\n📊 Genesis Summary:")
+    print("\n📊 Genesis Summary:")
     for brand, success in results.items():
         status = "✅" if success else "❌"
         print(f"   {status} {brand}")

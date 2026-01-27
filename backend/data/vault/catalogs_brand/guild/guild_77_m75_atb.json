@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_m75_atb",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e8\u05d1\u05e2 \u05e0\u05e4\u05d7 Guild M-75 Aristocrat",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e8\u05d1\u05e2 \u05e0\u05e4\u05d7 Guild M-75 Aristocrat",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_m75_atb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_m75_atb",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e8\u05d1\u05e2 \u05e0\u05e4\u05d7 Guild M-75 Aristocrat",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e8\u05d1\u05e2 \u05e0\u05e4\u05d7 Guild M-75 Aristocrat",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_m75_atb.jpg",
+    "product_url": "https://www.halilit.com/items/2249027-guild-m-75-aristocrat",
+    "is_sold": true,
+    "price": 4693.0,
+    "halilit_url": "https://www.halilit.com/items/2249027-guild-m-75-aristocrat",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.309361Z"
+  }
+}

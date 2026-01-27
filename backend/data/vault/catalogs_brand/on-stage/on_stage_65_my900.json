@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_my900",
+  "name": "On Stage MY900 Ceiling Bar for Mics and Lights",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage MY900 Ceiling Bar for Mics and Lights",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_my900.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_my900",
+    "name": "On Stage MY900 Ceiling Bar for Mics and Lights",
+    "description": "On Stage MY900 Ceiling Bar for Mics and Lights",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_my900.jpg",
+    "product_url": "https://www.halilit.com/items/6560749-on-stage-my900-ceiling-bar-for-mics-and-lights",
+    "is_sold": true,
+    "price": 180.0,
+    "halilit_url": "https://www.halilit.com/items/6560749-on-stage-my900-ceiling-bar-for-mics-and-lights",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.853189Z"
+  }
+}

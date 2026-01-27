@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1068518",
+  "name": "Paiste Big Beat 2002",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste Big Beat 2002",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1068518.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1068518",
+    "name": "Paiste Big Beat 2002",
+    "description": "Paiste Big Beat 2002",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1068518.jpg",
+    "product_url": "https://www.halilit.com/items/943180-paiste-big-beat-2002",
+    "is_sold": true,
+    "price": 1124.0,
+    "halilit_url": "https://www.halilit.com/items/943180-paiste-big-beat-2002",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.402957Z"
+  }
+}

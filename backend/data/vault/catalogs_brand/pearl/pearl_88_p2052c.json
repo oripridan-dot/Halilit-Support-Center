@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_p2052c",
+  "name": "Pearl P2052C",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl P2052C",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_p2052c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_p2052c",
+    "name": "Pearl P2052C",
+    "description": "Pearl P2052C",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_p2052c.jpg",
+    "product_url": "https://www.halilit.com/items/868280-pearl-p2052c",
+    "is_sold": true,
+    "price": 2162.0,
+    "halilit_url": "https://www.halilit.com/items/868280-pearl-p2052c",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.449697Z"
+  }
+}

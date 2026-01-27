@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_am18t_tt",
+  "name": "Remo Ambassador Clear 18\" Drumhead",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Ambassador Clear 18\" Drumhead",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_am18t_tt.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_am18t_tt",
+    "name": "Remo Ambassador Clear 18\" Drumhead",
+    "description": "Remo Ambassador Clear 18\" Drumhead",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_am18t_tt.jpg",
+    "product_url": "https://www.halilit.com/items/6552420-remo-ambassador-clear-18-drumhead",
+    "is_sold": true,
+    "price": 111.0,
+    "halilit_url": "https://www.halilit.com/items/6552420-remo-ambassador-clear-18-drumhead",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.087371Z"
+  }
+}

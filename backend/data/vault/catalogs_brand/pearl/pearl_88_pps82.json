@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pps82",
+  "name": "Pearl PPS-82 Percussion Rack",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl PPS-82 Percussion Rack",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pps82.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pps82",
+    "name": "Pearl PPS-82 Percussion Rack",
+    "description": "Pearl PPS-82 Percussion Rack",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pps82.jpg",
+    "product_url": "https://www.halilit.com/items/445843-pearl-pps-82-percussion-rack",
+    "is_sold": true,
+    "price": 269.0,
+    "halilit_url": "https://www.halilit.com/items/445843-pearl-pps-82-percussion-rack",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.507320Z"
+  }
+}

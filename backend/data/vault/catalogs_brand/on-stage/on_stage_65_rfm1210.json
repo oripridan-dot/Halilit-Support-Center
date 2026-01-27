@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_rfm1210",
+  "name": "On Stage RFM1210 Antenna Rack Mount Kit",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage RFM1210 Antenna Rack Mount Kit",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_rfm1210.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_rfm1210",
+    "name": "On Stage RFM1210 Antenna Rack Mount Kit",
+    "description": "On Stage RFM1210 Antenna Rack Mount Kit",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_rfm1210.jpg",
+    "product_url": "https://www.halilit.com/items/6564359-on-stage-rfm1210-antenna-rack-mount-kit",
+    "is_sold": true,
+    "price": 203.0,
+    "halilit_url": "https://www.halilit.com/items/6564359-on-stage-rfm1210-antenna-rack-mount-kit",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.859393Z"
+  }
+}

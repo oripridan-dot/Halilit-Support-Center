@@ -1,0 +1,39 @@
+{
+  "id": "esp_67_eiij4qmstblk",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP E-II J-4 BLK",
+  "brand": "esp",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP E-II J-4 BLK",
+  "media": {
+    "thumbnail": "/data/thumbnails/esp_67_eiij4qmstblk.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "esp_67_eiij4qmstblk",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP E-II J-4 BLK",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 ESP E-II J-4 BLK",
+    "category": "general",
+    "image_url": "/data/thumbnails/esp_67_eiij4qmstblk.jpg",
+    "product_url": "https://www.halilit.com/items/3612138-esp-e-ii-j-4-blk",
+    "is_sold": true,
+    "price": 6397.0,
+    "halilit_url": "https://www.halilit.com/items/3612138-esp-e-ii-j-4-blk",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.550817Z"
+  }
+}

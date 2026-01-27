@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ms9312",
+  "name": "On Stage MS9312 Three-Section Microphone Stand",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage MS9312 Three-Section Microphone Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ms9312.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ms9312",
+    "name": "On Stage MS9312 Three-Section Microphone Stand",
+    "description": "On Stage MS9312 Three-Section Microphone Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ms9312.jpg",
+    "product_url": "https://www.halilit.com/items/3071461-on-stage-ms9312-three-section-microphone-stand",
+    "is_sold": true,
+    "price": 280.0,
+    "halilit_url": "https://www.halilit.com/items/3071461-on-stage-ms9312-three-section-microphone-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.873818Z"
+  }
+}

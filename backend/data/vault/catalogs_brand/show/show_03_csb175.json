@@ -1,0 +1,39 @@
+{
+  "id": "show_03_csb175",
+  "name": "Show CSB175",
+  "brand": "show",
+  "category": "general",
+  "description": "Show CSB175",
+  "media": {
+    "thumbnail": "/data/thumbnails/show_03_csb175.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "show_03_csb175",
+    "name": "Show CSB175",
+    "description": "Show CSB175",
+    "category": "general",
+    "image_url": "/data/thumbnails/show_03_csb175.jpg",
+    "product_url": "https://www.halilit.com/items/448243-show-csb175",
+    "is_sold": true,
+    "price": 428.0,
+    "halilit_url": "https://www.halilit.com/items/448243-show-csb175",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.664087Z"
+  }
+}

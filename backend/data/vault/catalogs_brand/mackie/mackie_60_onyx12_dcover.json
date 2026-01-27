@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_onyx12_dcover",
+  "name": "Mackie Onyx12 Dust Cover",
+  "brand": "mackie",
+  "category": "accessories",
+  "description": "Mackie Onyx12 Dust Cover",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_onyx12_dcover.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_onyx12_dcover",
+    "name": "Mackie Onyx12 Dust Cover",
+    "description": "Mackie Onyx12 Dust Cover",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_onyx12_dcover.jpg",
+    "product_url": "https://www.halilit.com/items/6584013-mackie-onyx12-dust-cover-",
+    "is_sold": true,
+    "price": 107.0,
+    "halilit_url": "https://www.halilit.com/items/6584013-mackie-onyx12-dust-cover-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.918815Z"
+  }
+}

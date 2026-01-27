@@ -1,0 +1,39 @@
+{
+  "id": "guild_77_om320_nat",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild OM-320 Natural",
+  "brand": "guild",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild OM-320 Natural",
+  "media": {
+    "thumbnail": "/data/thumbnails/guild_77_om320_nat.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "guild_77_om320_nat",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild OM-320 Natural",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Guild OM-320 Natural",
+    "category": "general",
+    "image_url": "/data/thumbnails/guild_77_om320_nat.jpg",
+    "product_url": "https://www.halilit.com/items/7449116-guild-om-320-natural-acoustic-guitar",
+    "is_sold": true,
+    "price": 1177.0,
+    "halilit_url": "https://www.halilit.com/items/7449116-guild-om-320-natural-acoustic-guitar",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.276732Z"
+  }
+}

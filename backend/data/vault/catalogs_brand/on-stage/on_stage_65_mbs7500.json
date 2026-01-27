@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_mbs7500",
+  "name": "MBS7500 On Stage",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "MBS7500 On Stage",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_mbs7500.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_mbs7500",
+    "name": "MBS7500 On Stage",
+    "description": "MBS7500 On Stage",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_mbs7500.jpg",
+    "product_url": "https://www.halilit.com/items/1170296-on-stage-mbs7500-broadcast-mic-stand",
+    "is_sold": true,
+    "price": 397.0,
+    "halilit_url": "https://www.halilit.com/items/1170296-on-stage-mbs7500-broadcast-mic-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.921204Z"
+  }
+}

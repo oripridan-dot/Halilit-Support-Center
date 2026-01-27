@@ -1,0 +1,39 @@
+{
+  "id": "montarbo_33_b115",
+  "name": "Montarbo B115",
+  "brand": "montarbo",
+  "category": "general",
+  "description": "Montarbo B115",
+  "media": {
+    "thumbnail": "/data/thumbnails/montarbo_33_b115.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "montarbo_33_b115",
+    "name": "Montarbo B115",
+    "description": "Montarbo B115",
+    "category": "general",
+    "image_url": "/data/thumbnails/montarbo_33_b115.jpg",
+    "product_url": "https://www.halilit.com/items/4157035-montarbo-b115",
+    "is_sold": true,
+    "price": 3660.0,
+    "halilit_url": "https://www.halilit.com/items/4157035-montarbo-b115",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.072266Z"
+  }
+}

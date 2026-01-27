@@ -13,9 +13,8 @@ Halilit (Commercial) + Official Brand Site (Knowledge/Media) → ProductBlueprin
 import json
 import os
 import sys
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Tuple
 from datetime import datetime
-from pathlib import Path
 from pydantic import BaseModel, Field
 
 # Add parent directory to path for imports

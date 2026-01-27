@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_msa9502",
+  "name": "On Stage MSA-9502 7\" Posi-Lok Mini Boom",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage MSA-9502 7\" Posi-Lok Mini Boom",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_msa9502.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_msa9502",
+    "name": "On Stage MSA-9502 7\" Posi-Lok Mini Boom",
+    "description": "On Stage MSA-9502 7\" Posi-Lok Mini Boom",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_msa9502.jpg",
+    "product_url": "https://www.halilit.com/items/3071573-on-stage-msa-9502-7-posi-lok-mini-boom",
+    "is_sold": true,
+    "price": 54.0,
+    "halilit_url": "https://www.halilit.com/items/3071573-on-stage-msa-9502-7-posi-lok-mini-boom",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.871890Z"
+  }
+}

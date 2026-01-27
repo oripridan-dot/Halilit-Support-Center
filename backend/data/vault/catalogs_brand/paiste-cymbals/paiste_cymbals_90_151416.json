@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_151416",
+  "name": "Paiste Crash 16\"- Bronze 201",
+  "brand": "paiste-cymbals",
+  "category": "general",
+  "description": "Paiste Crash 16\"- Bronze 201",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_151416.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_151416",
+    "name": "Paiste Crash 16\"- Bronze 201",
+    "description": "Paiste Crash 16\"- Bronze 201",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_151416.jpg",
+    "product_url": "https://www.halilit.com/items/446368-paiste-crash-16-bronze-201-%D7%9E%D7%A6%D7%99%D7%9C%D7%95%D7%AA",
+    "is_sold": true,
+    "price": 320.0,
+    "halilit_url": "https://www.halilit.com/items/446368-paiste-crash-16-bronze-201-%D7%9E%D7%A6%D7%99%D7%9C%D7%95%D7%AA",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.324745Z"
+  }
+}

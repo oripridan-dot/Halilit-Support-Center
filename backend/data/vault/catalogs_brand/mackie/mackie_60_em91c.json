@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_em91c",
+  "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie EM 91C",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie EM 91C",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_em91c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_em91c",
+    "name": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie EM 91C",
+    "description": "\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05e7\u05d5\u05e0\u05d3\u05e0\u05e1\u05e8 \u05dc\u05d0\u05d5\u05dc\u05e4\u05df Mackie EM 91C",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_em91c.jpg",
+    "product_url": "https://www.halilit.com/items/2748384-mackie-em-91c-large-diaphragm-condenser-microphone",
+    "is_sold": true,
+    "price": 192.0,
+    "halilit_url": "https://www.halilit.com/items/2748384-mackie-em-91c-large-diaphragm-condenser-microphone",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.786381Z"
+  }
+}

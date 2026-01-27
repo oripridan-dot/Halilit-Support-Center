@@ -1,0 +1,39 @@
+{
+  "id": "hiwatt_75_hb115nh",
+  "name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1 \"Hiwatt HB115HN 1x15",
+  "brand": "hiwatt",
+  "category": "general",
+  "description": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1 \"Hiwatt HB115HN 1x15",
+  "media": {
+    "thumbnail": "/data/thumbnails/hiwatt_75_hb115nh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "hiwatt_75_hb115nh",
+    "name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1 \"Hiwatt HB115HN 1x15",
+    "description": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1 \"Hiwatt HB115HN 1x15",
+    "category": "general",
+    "image_url": "/data/thumbnails/hiwatt_75_hb115nh.jpg",
+    "product_url": "https://www.halilit.com/items/7649971-hiwatt-hb115hn-speaker-cabinet-w-1x15-speaker",
+    "is_sold": true,
+    "price": 2293.0,
+    "halilit_url": "https://www.halilit.com/items/7649971-hiwatt-hb115hn-speaker-cabinet-w-1x15-speaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.373656Z"
+  }
+}

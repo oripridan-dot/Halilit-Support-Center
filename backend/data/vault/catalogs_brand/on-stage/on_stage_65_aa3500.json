@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_aa3500",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05e7\u05e9\u05ea On Stage AA3500",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05e7\u05e9\u05ea On Stage AA3500",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_aa3500.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_aa3500",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05e7\u05e9\u05ea On Stage AA3500",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea \u05e7\u05e9\u05ea On Stage AA3500",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_aa3500.jpg",
+    "product_url": "https://www.halilit.com/items/8057618-on-stage-aa3500-accurate-audio-headphones",
+    "is_sold": true,
+    "price": 60.0,
+    "halilit_url": "https://www.halilit.com/items/8057618-on-stage-aa3500-accurate-audio-headphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.894546Z"
+  }
+}

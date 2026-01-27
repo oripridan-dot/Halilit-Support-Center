@@ -1,0 +1,39 @@
+{
+  "id": "adam_audio_aa_a4v_wh",
+  "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V Arctic White",
+  "brand": "adam-audio",
+  "category": "studio",
+  "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V Arctic White",
+  "media": {
+    "thumbnail": "/data/thumbnails/adam_audio_aa_a4v_wh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adam_audio_aa_a4v_wh",
+    "name": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V Arctic White",
+    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 ADAM Audio A4V Arctic White",
+    "category": "general",
+    "image_url": "/data/thumbnails/adam_audio_aa_a4v_wh.jpg",
+    "product_url": "https://www.halilit.com/items/8233728-adam-audio-a4v-arctic-white",
+    "is_sold": true,
+    "price": 2293.0,
+    "halilit_url": "https://www.halilit.com/items/8233728-adam-audio-a4v-arctic-white",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.321745Z"
+  }
+}

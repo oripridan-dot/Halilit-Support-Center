@@ -18,20 +18,15 @@ Result:
 """
 
 import json
-import os
 from pathlib import Path
 from datetime import datetime, timezone
-from typing import Dict, List, Any
+from typing import Dict, List
 import logging
 import requests
-import urllib.request
-import urllib.error
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from io import BytesIO
-import base64
 from services.visual_factory import VisualFactory
-from models.taxonomy_registry import TaxonomyRegistry, get_registry
+from models.taxonomy_registry import get_registry
 from services.catalog_verifier import CatalogVerifier
 
 # --- SETUP LOGGING ---
@@ -42,8 +37,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # --- CONFIGURATION ---
-SOURCE_DIR = Path("data/blueprints")  # Where scraper outputs live (Data Vault)
-PUBLIC_DATA_PATH = Path("../frontend/public/data")  # The "Live" destination
+SOURCE_DIR = Path(__file__).parent / "data/blueprints"  # Where scraper outputs live (Data Vault)
+PUBLIC_DATA_PATH = Path(__file__).parent.parent / "frontend/public/data"  # The "Live" destination
 LOGOS_DIR = PUBLIC_DATA_PATH / "logos"  # Logo destination
 CATALOG_VERSION = "3.9.0"
 
@@ -322,7 +317,7 @@ class HalilitCatalog:
             self.output_dir.mkdir(parents=True)
             logger.info(f"      Created {self.output_dir}")
         
-        logger.info(f"      ✓ Catalog workspace ready")
+        logger.info("      ✓ Catalog workspace ready")
     
     def _forge_brands(self):
         """Process each brand catalog and generate static files."""
@@ -436,7 +431,7 @@ class HalilitCatalog:
                          logger.warning(f"Failed to fix price for {p.get('name')}: {e}")
 
                 # 1. Commercial Validity: Has Price OR Halilit ID/URL
-                is_commercial_valid = (
+                (
                     p.get('halilit_url') is not None or 
                     p.get('halilit_id') is not None or
                     (p.get('pricing') and p['pricing'].get('regular_price') is not None)
@@ -900,6 +895,47 @@ class HalilitCatalog:
         # Add taxonomy stats to brand_identity for frontend reference
         refined['brand_identity']['taxonomy_stats'] = taxonomy_stats
         
+        # --- STRICT ENFORCEMENT: FILTER UNVERIFIED DATA ---
+        fully_enriched_products = []
+        for p in refined.get('products', []):
+            is_verified = True
+             
+            # 1. Must have Images
+            # We trust 'images' object more, but 'image'/'image_url' is backup
+            has_image = p.get('images') or p.get('image') or p.get('image_url')
+            if not has_image:
+                 is_verified = False
+            
+            # 2. Must NOT be Uncategorized
+            cat = p.get('main_category')
+            if not cat or cat.lower() == 'uncategorized':
+                 is_verified = False
+
+            # 3. Must have a Price (Commercial Requirement)
+            price = None
+            if p.get('pricing'):
+                price = p['pricing'].get('regular_price')
+            
+            # Legacy fallback
+            if price is None:
+                 price = p.get('price')
+
+            if not price or float(price) <= 0:
+                 is_verified = False
+
+            if is_verified:
+                fully_enriched_products.append(p)
+        
+        original_count = len(refined.get('products', []))
+        refined['products'] = fully_enriched_products
+        rejected_count = original_count - len(fully_enriched_products)
+        if rejected_count > 0:
+            logger.info(f"      🛡️  Strict Filter Applied: Dropped {rejected_count} incomplete products. Kept {len(fully_enriched_products)}.")
+
+        # Update Brand Counts based on filtered list
+        if 'brand_identity' in refined:
+             refined['brand_identity']['total_products'] = len(fully_enriched_products)
+
         # Add available categories from taxonomy registry for this brand
         brand_taxonomy = self.taxonomy_registry.get_brand(slug)
         if brand_taxonomy:
@@ -1041,12 +1077,12 @@ class HalilitCatalog:
             for error in self.stats['errors'][:3]:
                 logger.warning(f"         - {error}")
         else:
-            logger.info(f"      ✅ Zero Errors")
+            logger.info("      ✅ Zero Errors")
         
         logger.info("")
         logger.info("🎯 HALILIT CATALOG IS READY")
-        logger.info(f"   Frontend can now fetch /data/index.json")
-        logger.info(f"   Each brand lazy-loads from /data/<slug>.json")
+        logger.info("   Frontend can now fetch /data/index.json")
+        logger.info("   Each brand lazy-loads from /data/<slug>.json")
 
 
 if __name__ == "__main__":

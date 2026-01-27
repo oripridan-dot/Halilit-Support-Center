@@ -42,7 +42,7 @@ class InstantSearch {
       const response = await fetch(`/data/search_index.json?v=${Date.now()}`);
       if (!response.ok)
         throw new Error(`Failed to load search index: ${response.status}`);
-      this.items = await response.json();
+      this.items = (await response.json()) as SearchItem[];
 
       // Configure Fuse.js for fuzzy search
       this.fuse = new Fuse(this.items, {

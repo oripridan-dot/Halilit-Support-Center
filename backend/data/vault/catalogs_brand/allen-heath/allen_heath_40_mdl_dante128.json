@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_mdl_dante128",
+  "name": "Allen & Heath dLive Dante 128\u00d7128",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath dLive Dante 128\u00d7128",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_mdl_dante128",
+    "name": "Allen & Heath dLive Dante 128\u00d7128",
+    "description": "Allen & Heath dLive Dante 128\u00d7128",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_mdl_dante128.jpg",
+    "product_url": "https://www.halilit.com/items/2418696-allen-heath-dante-128-128-",
+    "is_sold": true,
+    "price": 11252.0,
+    "halilit_url": "https://www.halilit.com/items/2418696-allen-heath-dante-128-128-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.408877Z"
+  }
+}

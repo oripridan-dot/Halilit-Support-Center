@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_onyxgomic",
+  "name": "Mackie OnyxGO Wireless Clip-On Microphone",
+  "brand": "mackie",
+  "category": "studio",
+  "description": "Mackie OnyxGO Wireless Clip-On Microphone",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_onyxgomic.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_onyxgomic",
+    "name": "Mackie OnyxGO Wireless Clip-On Microphone",
+    "description": "Mackie OnyxGO Wireless Clip-On Microphone",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_onyxgomic.jpg",
+    "product_url": "https://www.halilit.com/items/5240079-mackie-onyxgo-wireless-clip-on-microphone-",
+    "is_sold": true,
+    "price": 570.0,
+    "halilit_url": "https://www.halilit.com/items/5240079-mackie-onyxgo-wireless-clip-on-microphone-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.803540Z"
+  }
+}

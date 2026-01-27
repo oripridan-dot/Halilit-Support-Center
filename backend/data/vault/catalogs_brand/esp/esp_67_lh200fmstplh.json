@@ -1,0 +1,39 @@
+{
+  "id": "esp_67_lh200fmstplh",
+  "name": "ESP LTD H-200FM LH",
+  "brand": "esp",
+  "category": "guitars",
+  "description": "ESP LTD H-200FM LH",
+  "media": {
+    "thumbnail": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "esp_67_lh200fmstplh",
+    "name": "ESP LTD H-200FM LH",
+    "description": "ESP LTD H-200FM LH",
+    "category": "general",
+    "image_url": "/data/thumbnails/esp_67_lh200fmstplh.jpg",
+    "product_url": "https://www.halilit.com/items/3715852-esp-ltd-h-200fm-lh",
+    "is_sold": true,
+    "price": 2204.0,
+    "halilit_url": "https://www.halilit.com/items/3715852-esp-ltd-h-200fm-lh",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.623834Z"
+  }
+}

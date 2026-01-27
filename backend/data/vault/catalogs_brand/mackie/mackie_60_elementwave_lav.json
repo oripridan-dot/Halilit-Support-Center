@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_elementwave_lav",
+  "name": "\u05de\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea Mackie EM Wave LAV",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05de\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea Mackie EM Wave LAV",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_elementwave_lav.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_elementwave_lav",
+    "name": "\u05de\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea Mackie EM Wave LAV",
+    "description": "\u05de\u05e2\u05e8\u05db\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d0\u05dc\u05d7\u05d5\u05d8\u05d9\u05ea Mackie EM Wave LAV",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_elementwave_lav.jpg",
+    "product_url": "https://www.halilit.com/items/4924317-mackie-em-wave-lav-wireless-clip-on-microphone-system",
+    "is_sold": true,
+    "price": 770.0,
+    "halilit_url": "https://www.halilit.com/items/4924317-mackie-em-wave-lav-wireless-clip-on-microphone-system",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.775758Z"
+  }
+}

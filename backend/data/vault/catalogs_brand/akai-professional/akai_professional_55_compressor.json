@@ -1,0 +1,39 @@
+{
+  "id": "akai_professional_55_compressor",
+  "name": "Akai Professional Compressor",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional Compressor",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_compressor.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_compressor",
+    "name": "Akai Professional Compressor",
+    "description": "Akai Professional Compressor",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_compressor.jpg",
+    "product_url": "https://www.halilit.com/items/445720-akai-professional-compressor",
+    "is_sold": true,
+    "price": 440.0,
+    "halilit_url": "https://www.halilit.com/items/445720-akai-professional-compressor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.273229Z"
+  }
+}

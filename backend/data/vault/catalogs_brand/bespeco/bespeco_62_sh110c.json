@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_sh110c",
+  "name": "Bespeco SH110C",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco SH110C",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_sh110c.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_sh110c",
+    "name": "Bespeco SH110C",
+    "description": "Bespeco SH110C",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_sh110c.jpg",
+    "product_url": "https://www.halilit.com/items/3349335-bespeco-sh110c",
+    "is_sold": true,
+    "price": 82.0,
+    "halilit_url": "https://www.halilit.com/items/3349335-bespeco-sh110c",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.568245Z"
+  }
+}

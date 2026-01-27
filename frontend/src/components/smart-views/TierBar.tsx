@@ -11,7 +11,6 @@ interface TierBarProps {
 }
 
 // Visual constants
-const NODE_SIZE = 48; // Size of the product orb (px)
 const X_BUFFER = 0.05; // 5% padding on sides
 const Y_BUFFER = 0.15; // 15% padding top/bottom
 
@@ -38,7 +37,7 @@ export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarPr
     const rangeSpan = currentMax - currentMin || 1;
     
     // Initial Mapping
-    let nodes = products.map(p => {
+    const nodes = products.map(p => {
       const price = getPriceValue(p);
       const score = p.score || 50; // Use calculated score or default
 
@@ -107,6 +106,7 @@ export const TierBar = ({ products, onHoverProduct, onSelectProduct }: TierBarPr
 
   // Reset logic
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setZoomDomain(null);
     setDragRange([0, 1]);
   }, [products.length]); // Reset on category change

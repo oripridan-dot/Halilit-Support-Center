@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_mtrackduohd",
+  "name": "M-Audio M-Track Duo HD Audio Interface",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio M-Track Duo HD Audio Interface",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_mtrackduohd.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_mtrackduohd",
+    "name": "M-Audio M-Track Duo HD Audio Interface",
+    "description": "M-Audio M-Track Duo HD Audio Interface",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_mtrackduohd.jpg",
+    "product_url": "https://www.halilit.com/items/7990475-m-audio-m-track-duo-hd-audio-interface",
+    "is_sold": true,
+    "price": 428.0,
+    "halilit_url": "https://www.halilit.com/items/7990475-m-audio-m-track-duo-hd-audio-interface",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.624149Z"
+  }
+}

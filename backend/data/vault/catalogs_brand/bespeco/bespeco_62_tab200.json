@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_tab200",
+  "name": "Bespeco TAB200",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco TAB200",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_tab200.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_tab200",
+    "name": "Bespeco TAB200",
+    "description": "Bespeco TAB200",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_tab200.jpg",
+    "product_url": "https://www.halilit.com/items/6100731-bespeco-tab200-tablet-holder",
+    "is_sold": true,
+    "price": 169.0,
+    "halilit_url": "https://www.halilit.com/items/6100731-bespeco-tab200-tablet-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.582076Z"
+  }
+}

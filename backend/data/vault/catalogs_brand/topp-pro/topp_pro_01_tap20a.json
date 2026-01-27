@@ -1,0 +1,39 @@
+{
+  "id": "topp_pro_01_tap20a",
+  "name": "Topp Pro TAP20A",
+  "brand": "topp-pro",
+  "category": "general",
+  "description": "Topp Pro TAP20A",
+  "media": {
+    "thumbnail": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "topp_pro_01_tap20a",
+    "name": "Topp Pro TAP20A",
+    "description": "Topp Pro TAP20A",
+    "category": "general",
+    "image_url": "/data/thumbnails/topp_pro_01_tap20a.jpg",
+    "product_url": "https://www.halilit.com/items/444256-topp-pro-tap20a",
+    "is_sold": true,
+    "price": 240.0,
+    "halilit_url": "https://www.halilit.com/items/444256-topp-pro-tap20a",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.112328Z"
+  }
+}

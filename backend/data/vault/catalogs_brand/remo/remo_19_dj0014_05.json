@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_dj0014_05",
+  "name": "Remo Mondo Djembe 14\" Earth",
+  "brand": "remo",
+  "category": "dj",
+  "description": "Remo Mondo Djembe 14\" Earth",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_dj0014_05.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_dj0014_05",
+    "name": "Remo Mondo Djembe 14\" Earth",
+    "description": "Remo Mondo Djembe 14\" Earth",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_dj0014_05.jpg",
+    "product_url": "https://www.halilit.com/items/2311940-remo-mondo-djembe-14-earth",
+    "is_sold": true,
+    "price": 2236.0,
+    "halilit_url": "https://www.halilit.com/items/2311940-remo-mondo-djembe-14-earth",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.147586Z"
+  }
+}

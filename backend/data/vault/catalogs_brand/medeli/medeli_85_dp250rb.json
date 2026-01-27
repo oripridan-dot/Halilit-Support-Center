@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_dp250rb",
+  "name": "Medeli DP250",
+  "brand": "medeli",
+  "category": "general",
+  "description": "Medeli DP250",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_dp250rb.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_dp250rb",
+    "name": "Medeli DP250",
+    "description": "Medeli DP250",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_dp250rb.jpg",
+    "product_url": "https://www.halilit.com/items/444694-medeli-dp250",
+    "is_sold": true,
+    "price": 2309.0,
+    "halilit_url": "https://www.halilit.com/items/444694-medeli-dp250",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.346357Z"
+  }
+}

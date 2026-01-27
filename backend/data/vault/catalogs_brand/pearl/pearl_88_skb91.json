@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_skb91",
+  "name": "Pearl SKB 91",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl SKB 91",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_skb91.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_skb91",
+    "name": "Pearl SKB 91",
+    "description": "Pearl SKB 91",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_skb91.jpg",
+    "product_url": "https://www.halilit.com/items/2269573-pearl-skb-91",
+    "is_sold": true,
+    "price": 291.0,
+    "halilit_url": "https://www.halilit.com/items/2269573-pearl-skb-91",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.500604Z"
+  }
+}

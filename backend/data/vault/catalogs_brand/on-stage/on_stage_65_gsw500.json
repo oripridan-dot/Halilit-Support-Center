@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_gsw500",
+  "name": "On Stage GSW500 Guitar String Winder",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage GSW500 Guitar String Winder",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_gsw500.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_gsw500",
+    "name": "On Stage GSW500 Guitar String Winder",
+    "description": "On Stage GSW500 Guitar String Winder",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_gsw500.jpg",
+    "product_url": "https://www.halilit.com/items/6561364-on-stage-gsw500-guitar-string-winder",
+    "is_sold": true,
+    "price": 10.0,
+    "halilit_url": "https://www.halilit.com/items/6561364-on-stage-gsw500-guitar-string-winder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.909491Z"
+  }
+}

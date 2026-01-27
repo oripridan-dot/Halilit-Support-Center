@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ma200",
+  "name": "On Stage MA200 Mic Adapter",
+  "brand": "on-stage",
+  "category": "studio",
+  "description": "On Stage MA200 Mic Adapter",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ma200.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ma200",
+    "name": "On Stage MA200 Mic Adapter",
+    "description": "On Stage MA200 Mic Adapter",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ma200.jpg",
+    "product_url": "https://www.halilit.com/items/967541-on-stage-ma200-mic-adapter",
+    "is_sold": true,
+    "price": 12.0,
+    "halilit_url": "https://www.halilit.com/items/967541-on-stage-ma200-mic-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.914627Z"
+  }
+}

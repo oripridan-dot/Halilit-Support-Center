@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_ms11",
+  "name": "Bespeco MS11 Microphone Boom Stand",
+  "brand": "bespeco",
+  "category": "studio",
+  "description": "Bespeco MS11 Microphone Boom Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_ms11.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_ms11",
+    "name": "Bespeco MS11 Microphone Boom Stand",
+    "description": "Bespeco MS11 Microphone Boom Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_ms11.jpg",
+    "product_url": "https://www.halilit.com/items/444543-bespeco-ms11-microphone-boom-stand",
+    "is_sold": true,
+    "price": 414.0,
+    "halilit_url": "https://www.halilit.com/items/444543-bespeco-ms11-microphone-boom-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.554061Z"
+  }
+}

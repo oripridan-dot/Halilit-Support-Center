@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_cis400",
+  "name": "EAW CIS400",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW CIS400",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_cis400.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_cis400",
+    "name": "EAW CIS400",
+    "description": "EAW CIS400",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_cis400.jpg",
+    "product_url": "https://www.halilit.com/items/3399417-eaw-cis400-ceiling-mounted-two-way-loudspeaker",
+    "is_sold": true,
+    "price": 1238.0,
+    "halilit_url": "https://www.halilit.com/items/3399417-eaw-cis400-ceiling-mounted-two-way-loudspeaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.014429Z"
+  }
+}

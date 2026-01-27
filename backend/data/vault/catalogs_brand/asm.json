@@ -1,0 +1,72 @@
+{
+  "brand_identity": {
+    "id": "asm",
+    "name": "ASM"
+  },
+  "products": [
+    {
+      "id": "asm_85_hskb",
+      "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Keyboard",
+      "brand": "asm",
+      "category": "keys",
+      "image_url": "/data/thumbnails/asm_85_hskb.jpg",
+      "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Keyboard",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "asm_85_hsdr",
+      "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Desktop",
+      "brand": "asm",
+      "category": "keys",
+      "image_url": "/data/thumbnails/asm_85_hsdr.jpg",
+      "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Desktop",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "asm_85_hsmk",
+      "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Explorer",
+      "brand": "asm",
+      "category": "keys",
+      "image_url": "/data/thumbnails/asm_85_hsmk.jpg",
+      "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Explorer",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    },
+    {
+      "id": "asm_85_hslx",
+      "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Deluxe",
+      "brand": "asm",
+      "category": "keys",
+      "image_url": "/data/thumbnails/asm_85_hslx.jpg",
+      "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 ASM Hydrasynth Deluxe",
+      "pricing": {
+        "price": null
+      },
+      "stock_status": null,
+      "sku": null,
+      "halilit_url": null,
+      "official_manuals": [],
+      "official_gallery": []
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "paiste_cymbals_90_1256016",
+  "name": "Paiste PST X Swiss Hi Hat 16'' Cymbal",
+  "brand": "paiste-cymbals",
+  "category": "drums",
+  "description": "Paiste PST X Swiss Hi Hat 16'' Cymbal",
+  "media": {
+    "thumbnail": "/data/thumbnails/paiste_cymbals_90_1256016.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "paiste_cymbals_90_1256016",
+    "name": "Paiste PST X Swiss Hi Hat 16'' Cymbal",
+    "description": "Paiste PST X Swiss Hi Hat 16'' Cymbal",
+    "category": "general",
+    "image_url": "/data/thumbnails/paiste_cymbals_90_1256016.jpg",
+    "product_url": "https://www.halilit.com/items/1817274-paiste-pst-x-swiss-hi-hat-16-cymbal",
+    "is_sold": true,
+    "price": 865.0,
+    "halilit_url": "https://www.halilit.com/items/1817274-paiste-pst-x-swiss-hi-hat-16-cymbal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.333591Z"
+  }
+}

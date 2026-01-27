@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_mtest1",
+  "name": "Mackie MTEST-1",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie MTEST-1",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_mtest1.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_mtest1",
+    "name": "Mackie MTEST-1",
+    "description": "Mackie MTEST-1",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_mtest1.jpg",
+    "product_url": "https://www.halilit.com/items/1718079-mackie-mtest-1",
+    "is_sold": true,
+    "price": 149.0,
+    "halilit_url": "https://www.halilit.com/items/1718079-mackie-mtest-1",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.850717Z"
+  }
+}

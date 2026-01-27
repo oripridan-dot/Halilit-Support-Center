@@ -1,108 +1,42 @@
 import { useEffect, useState } from "react";
-import { consolidateCategory } from "../lib/categoryConsolidator";
-import type { Product } from "../types";
+import type { Product, CategoryPayload } from "../types";
 
-/**
- * useCategoryCatalog - Category Consolidation-Aware Product Loading
- *
- * This hook loads products and filters them using the CONSOLIDATED category system.
- * Brand categories are translated to universal UI categories for filtering.
- *
- * Flow:
- * 1. User selects consolidated category (e.g., "keys")
- * 2. Hook loads all brand catalogs (discovered via index.json)
- * 3. For each product, consolidate its brand category to UI category
- * 4. Filter products where consolidated category matches selection
- */
-
-interface CatalogIndex {
-  brands: Array<{ slug: string }>;
-}
-
-export const useCategoryCatalog = (
-  category: string | null,
-  brandId?: string | null,
-) => {
+export const useCategoryCatalog = (category: string | null) => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [availableFilters, setAvailableFilters] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchAll = async () => {
+    const fetchCategory = async () => {
       setLoading(true);
-      let aggregated: Product[] = [];
+      if (!category) {
+        setProducts([]);
+        setLoading(false);
+        return;
+      }
 
       try {
-        let brandsToFetch: string[] = [];
-
-        if (brandId) {
-          brandsToFetch = [brandId];
+        const catId = category.toLowerCase();
+        const res = await fetch(`/data/categories/${catId}.json`);
+        
+        if (res.ok) {
+          const data: CategoryPayload = await res.json();
+          setProducts(data.products || []);
+          // Dynamically set the 1176 buttons based on actual content
+          setAvailableFilters(data.metadata?.available_filters || []);
         } else {
-          try {
-            const indexRes = await fetch("/data/index.json");
-            if (indexRes.ok) {
-              const indexData = (await indexRes.json()) as CatalogIndex;
-              brandsToFetch = indexData.brands.map((b) => b.slug);
-            }
-          } catch {
-            // ignore
-          }
+          setProducts([]);
+          setAvailableFilters([]);
         }
-
-        if (brandsToFetch.length === 0) {
-          setLoading(false);
-          return;
-        }
-
-        // Parallel fetch of all Master Files
-        const promises = brandsToFetch.map((brand) =>
-          fetch(`/data/${brand}.json`)
-            .then((res) => {
-              const contentType = res.headers.get("content-type");
-              if (
-                !res.ok ||
-                (contentType && !contentType.includes("application/json"))
-              ) {
-                return null;
-              }
-              return res.json();
-            })
-            .then((data) => {
-              if (!data) return [];
-              return (data as { products: Product[] }).products || [];
-            })
-            .catch((_err) => {
-              return [] as Product[];
-            }),
-        );
-
-        const results = await Promise.all(promises);
-        aggregated = results.flat();
-
-        // Filter by CONSOLIDATED category
-        const filtered = aggregated.filter((p) => {
-          if (!category || category === "All") return true;
-
-          const productBrand = (p.brand || "").toLowerCase();
-          const productCategory = p.main_category || p.category || "";
-
-          const consolidatedId = consolidateCategory(
-            productBrand,
-            productCategory,
-          );
-
-          return consolidatedId === category.toLowerCase();
-        });
-
-        setProducts(filtered);
-      } catch {
-        setProducts([]);
+      } catch (err) {
+        console.error("Catalog load failed", err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchAll();
-  }, [category, brandId]);
+    fetchCategory();
+  }, [category]);
 
-  return { products, loading };
+  return { products, availableFilters, loading };
 };

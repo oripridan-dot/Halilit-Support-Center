@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pcj633bb_630",
+  "name": "Boom Box Pearl",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Boom Box Pearl",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pcj633bb_630.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pcj633bb_630",
+    "name": "Boom Box Pearl",
+    "description": "Boom Box Pearl",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pcj633bb_630.jpg",
+    "product_url": "https://www.halilit.com/items/444528-pearl-boom-box",
+    "is_sold": true,
+    "price": 919.0,
+    "halilit_url": "https://www.halilit.com/items/444528-pearl-boom-box",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.585658Z"
+  }
+}

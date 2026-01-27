@@ -1,0 +1,39 @@
+{
+  "id": "remo_19_be0313ctrd",
+  "name": "Remo Emperor Colortone 13\" Red",
+  "brand": "remo",
+  "category": "drums",
+  "description": "Remo Emperor Colortone 13\" Red",
+  "media": {
+    "thumbnail": "/data/thumbnails/remo_19_be0313ctrd.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "remo_19_be0313ctrd",
+    "name": "Remo Emperor Colortone 13\" Red",
+    "description": "Remo Emperor Colortone 13\" Red",
+    "category": "general",
+    "image_url": "/data/thumbnails/remo_19_be0313ctrd.jpg",
+    "product_url": "https://www.halilit.com/items/2135999-remo-emperor-colortone-13-red",
+    "is_sold": true,
+    "price": 84.0,
+    "halilit_url": "https://www.halilit.com/items/2135999-remo-emperor-colortone-13-red",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.138352Z"
+  }
+}

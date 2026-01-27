@@ -1,0 +1,39 @@
+{
+  "id": "vintage_20_vga990n",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Vintage VGA990N",
+  "brand": "vintage",
+  "category": "general",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Vintage VGA990N",
+  "media": {
+    "thumbnail": "/data/thumbnails/vintage_20_vga990n.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "vintage_20_vga990n",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Vintage VGA990N",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d5\u05d2\u05d1\u05e8\u05ea Vintage VGA990N",
+    "category": "general",
+    "image_url": "/data/thumbnails/vintage_20_vga990n.jpg",
+    "product_url": "https://www.halilit.com/items/3225108-vintage-vga990-electro-acoustic-sweetwater-guitar-natural",
+    "is_sold": true,
+    "price": 1588.0,
+    "halilit_url": "https://www.halilit.com/items/3225108-vintage-vga990-electro-acoustic-sweetwater-guitar-natural",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.461504Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "headrush_fx_52_sheeranlooper_",
+  "name": "+ HeadRush Sheeran Looper",
+  "brand": "headrush-fx",
+  "category": "drums",
+  "description": "+ HeadRush Sheeran Looper",
+  "media": {
+    "thumbnail": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "headrush_fx_52_sheeranlooper_",
+    "name": "+ HeadRush Sheeran Looper",
+    "description": "+ HeadRush Sheeran Looper",
+    "category": "general",
+    "image_url": "/data/thumbnails/headrush_fx_52_sheeranlooper_.jpg",
+    "product_url": "https://www.halilit.com/items/6644810--headrush-sheeran-looper",
+    "is_sold": true,
+    "price": 1416.0,
+    "halilit_url": "https://www.halilit.com/items/6644810--headrush-sheeran-looper",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.506610Z"
+  }
+}

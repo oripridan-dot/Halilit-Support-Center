@@ -1,0 +1,39 @@
+{
+  "id": "medeli_85_dd225",
+  "name": "Medeli DD225",
+  "brand": "medeli",
+  "category": "general",
+  "description": "Medeli DD225",
+  "media": {
+    "thumbnail": "/data/thumbnails/medeli_85_dd225.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "medeli_85_dd225",
+    "name": "Medeli DD225",
+    "description": "Medeli DD225",
+    "category": "general",
+    "image_url": "/data/thumbnails/medeli_85_dd225.jpg",
+    "product_url": "https://www.halilit.com/items/7192603-medeli-dd225-portable-drum",
+    "is_sold": true,
+    "price": 740.0,
+    "halilit_url": "https://www.halilit.com/items/7192603-medeli-dd225-portable-drum",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.333361Z"
+  }
+}

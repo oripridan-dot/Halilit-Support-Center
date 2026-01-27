@@ -1,0 +1,39 @@
+{
+  "id": "esp_67_lap4bkmblkslh",
+  "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea ESP LTD AP-4 Black Metal LH",
+  "brand": "esp",
+  "category": "guitars",
+  "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea ESP LTD AP-4 Black Metal LH",
+  "media": {
+    "thumbnail": "/data/thumbnails/esp_67_lap4bkmblkslh.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "esp_67_lap4bkmblkslh",
+    "name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea ESP LTD AP-4 Black Metal LH",
+    "description": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05e9\u05de\u05d0\u05dc\u05d9\u05ea ESP LTD AP-4 Black Metal LH",
+    "category": "general",
+    "image_url": "/data/thumbnails/esp_67_lap4bkmblkslh.jpg",
+    "product_url": "https://www.halilit.com/items/3715718-esp-ltd-ap-4-black-metal-lh",
+    "is_sold": true,
+    "price": 3498.0,
+    "halilit_url": "https://www.halilit.com/items/3715718-esp-ltd-ap-4-black-metal-lh",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:06.538119Z"
+  }
+}

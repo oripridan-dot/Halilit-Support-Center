@@ -1,0 +1,39 @@
+{
+  "id": "akai_professional_55_ewisolo",
+  "name": "Akai Professional EWI Solo",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional EWI Solo",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_ewisolo.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_ewisolo",
+    "name": "Akai Professional EWI Solo",
+    "description": "Akai Professional EWI Solo",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_ewisolo.jpg",
+    "product_url": "https://www.halilit.com/items/3137103-akai-professional-ewi-solo",
+    "is_sold": true,
+    "price": 2364.0,
+    "halilit_url": "https://www.halilit.com/items/3137103-akai-professional-ewi-solo",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.272254Z"
+  }
+}

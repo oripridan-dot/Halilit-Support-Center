@@ -1,0 +1,39 @@
+{
+  "id": "foxgear_guitar_effects_and_pedals_20_fxsqz",
+  "name": "Foxgear Squeeze Optical Compressor",
+  "brand": "foxgear-guitar-effects-and-pedals",
+  "category": "general",
+  "description": "Foxgear Squeeze Optical Compressor",
+  "media": {
+    "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "foxgear_guitar_effects_and_pedals_20_fxsqz",
+    "name": "Foxgear Squeeze Optical Compressor",
+    "description": "Foxgear Squeeze Optical Compressor",
+    "category": "general",
+    "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxsqz.jpg",
+    "product_url": "https://www.halilit.com/items/4923967-foxgear-squeeze-optical-compressor",
+    "is_sold": true,
+    "price": 399.0,
+    "halilit_url": "https://www.halilit.com/items/4923967-foxgear-squeeze-optical-compressor",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.699674Z"
+  }
+}

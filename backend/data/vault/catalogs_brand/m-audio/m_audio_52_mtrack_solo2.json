@@ -1,0 +1,39 @@
+{
+  "id": "m_audio_52_mtrack_solo2",
+  "name": "M-Audio M-Track Solo",
+  "brand": "m-audio",
+  "category": "studio",
+  "description": "M-Audio M-Track Solo",
+  "media": {
+    "thumbnail": "/data/thumbnails/m_audio_52_mtrack_solo2.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "m_audio_52_mtrack_solo2",
+    "name": "M-Audio M-Track Solo",
+    "description": "M-Audio M-Track Solo",
+    "category": "general",
+    "image_url": "/data/thumbnails/m_audio_52_mtrack_solo2.jpg",
+    "product_url": "https://www.halilit.com/items/3674062-m-audio-m-track-solo",
+    "is_sold": true,
+    "price": 228.0,
+    "halilit_url": "https://www.halilit.com/items/3674062-m-audio-m-track-solo",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.632569Z"
+  }
+}

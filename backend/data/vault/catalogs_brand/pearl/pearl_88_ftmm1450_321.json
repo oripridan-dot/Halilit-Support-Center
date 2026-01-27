@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_ftmm1450_321",
+  "name": "Pearl FTMM1450 Maple",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl FTMM1450 Maple",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_ftmm1450_321.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_ftmm1450_321",
+    "name": "Pearl FTMM1450 Maple",
+    "description": "Pearl FTMM1450 Maple",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_ftmm1450_321.jpg",
+    "product_url": "https://www.halilit.com/items/444291-pearl-ftmm1450-maple",
+    "is_sold": true,
+    "price": 2288.0,
+    "halilit_url": "https://www.halilit.com/items/444291-pearl-ftmm1450-maple",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.585954Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_easx300r",
+  "name": "Bespeco EASX300R",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco EASX300R",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_easx300r.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_easx300r",
+    "name": "Bespeco EASX300R",
+    "description": "Bespeco EASX300R",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_easx300r.jpg",
+    "product_url": "https://www.halilit.com/items/7269458-bespeco-easx300r",
+    "is_sold": true,
+    "price": 72.0,
+    "halilit_url": "https://www.halilit.com/items/7269458-bespeco-easx300r",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.547970Z"
+  }
+}

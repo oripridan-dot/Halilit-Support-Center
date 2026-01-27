@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_ws7700b",
+  "name": "On Stage WS7700B Large Workstation",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage WS7700B Large Workstation",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_ws7700b.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_ws7700b",
+    "name": "On Stage WS7700B Large Workstation",
+    "description": "On Stage WS7700B Large Workstation",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_ws7700b.jpg",
+    "product_url": "https://www.halilit.com/items/5360491-on-stage-ws7700b-large-workstation",
+    "is_sold": true,
+    "price": 1379.0,
+    "halilit_url": "https://www.halilit.com/items/5360491-on-stage-ws7700b-large-workstation",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.817204Z"
+  }
+}

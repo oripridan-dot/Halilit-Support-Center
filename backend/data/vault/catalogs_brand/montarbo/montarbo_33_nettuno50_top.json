@@ -1,0 +1,39 @@
+{
+  "id": "montarbo_33_nettuno50_top",
+  "name": "Montarbo Nettuno 50 Top Active Loudspeaker",
+  "brand": "montarbo",
+  "category": "studio",
+  "description": "Montarbo Nettuno 50 Top Active Loudspeaker",
+  "media": {
+    "thumbnail": "/data/thumbnails/montarbo_33_nettuno50_top.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "montarbo_33_nettuno50_top",
+    "name": "Montarbo Nettuno 50 Top Active Loudspeaker",
+    "description": "Montarbo Nettuno 50 Top Active Loudspeaker",
+    "category": "general",
+    "image_url": "/data/thumbnails/montarbo_33_nettuno50_top.jpg",
+    "product_url": "https://www.halilit.com/items/7160956-montarbo-nettuno-50-top-active-loudspeaker",
+    "is_sold": true,
+    "price": 16231.0,
+    "halilit_url": "https://www.halilit.com/items/7160956-montarbo-nettuno-50-top-active-loudspeaker",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.070586Z"
+  }
+}

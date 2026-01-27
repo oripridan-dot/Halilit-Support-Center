@@ -1,0 +1,39 @@
+{
+  "id": "amphion_06_amp400_12",
+  "name": "Amphion Amp400.12",
+  "brand": "amphion",
+  "category": "guitars",
+  "description": "Amphion Amp400.12",
+  "media": {
+    "thumbnail": "/data/thumbnails/amphion_06_amp400_12.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "amphion_06_amp400_12",
+    "name": "Amphion Amp400.12",
+    "description": "Amphion Amp400.12",
+    "category": "general",
+    "image_url": "/data/thumbnails/amphion_06_amp400_12.jpg",
+    "product_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
+    "is_sold": true,
+    "price": 0.0,
+    "halilit_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.043235Z"
+  }
+}

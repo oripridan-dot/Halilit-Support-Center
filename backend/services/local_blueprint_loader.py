@@ -11,8 +11,7 @@ This is much faster and reliable since your data is already rich and validated.
 
 import json
 import os
-from typing import Dict, List, Optional
-from pathlib import Path
+from typing import Dict, Optional
 
 
 class LocalBlueprintLoader:
@@ -181,6 +180,6 @@ if __name__ == "__main__":
     loader = LocalBlueprintLoader()
     results = loader.convert_all()
     
-    print(f"\n📊 Conversion Summary:")
+    print("\n📊 Conversion Summary:")
     for brand, path in results.items():
         print(f"   ✓ {brand}: {path}")

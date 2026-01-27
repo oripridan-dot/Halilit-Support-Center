@@ -19,7 +19,7 @@ from urllib.parse import urljoin
 import json
 import os
 import time
-from typing import Dict, List, Optional
+from typing import Dict, Optional
 import sys
 
 # Add parent directory to path for imports
@@ -73,7 +73,7 @@ class SuperExplorer:
             
             # Logic for grouped lists (like Roland's category pages)
             if config['selectors'].get('group'):
-                print(f"   Mode: Grouped Categories")
+                print("   Mode: Grouped Categories")
                 groups = soup.select(config['selectors']['group'])
                 print(f"   Found {len(groups)} groups")
                 
@@ -90,7 +90,7 @@ class SuperExplorer:
                             blueprint.append(item)
             else:
                 # Logic for flat lists
-                print(f"   Mode: Flat Product List")
+                print("   Mode: Flat Product List")
                 products = soup.select(config['selectors']['product'])
                 print(f"   Found {len(products)} products")
                 
@@ -176,7 +176,7 @@ class SuperExplorer:
             
         except AttributeError:
             return None
-        except Exception as e:
+        except Exception:
             return None
 
     def scan_all_brands(self) -> Dict[str, str]:

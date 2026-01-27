@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_sm7312w",
+  "name": "On Stage SM7312W Music Stand",
+  "brand": "on-stage",
+  "category": "live",
+  "description": "On Stage SM7312W Music Stand",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_sm7312w.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_sm7312w",
+    "name": "On Stage SM7312W Music Stand",
+    "description": "On Stage SM7312W Music Stand",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_sm7312w.jpg",
+    "product_url": "https://www.halilit.com/items/7652839-on-stage-sm7312w-music-stand",
+    "is_sold": true,
+    "price": 225.0,
+    "halilit_url": "https://www.halilit.com/items/7652839-on-stage-sm7312w-music-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.852656Z"
+  }
+}

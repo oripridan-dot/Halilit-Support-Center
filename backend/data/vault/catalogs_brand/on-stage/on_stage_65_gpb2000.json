@@ -1,0 +1,39 @@
+{
+  "id": "on_stage_65_gpb2000",
+  "name": "On Stage GPB2000 Compact Pedalboard with Gig Bag",
+  "brand": "on-stage",
+  "category": "guitars",
+  "description": "On Stage GPB2000 Compact Pedalboard with Gig Bag",
+  "media": {
+    "thumbnail": "/data/thumbnails/on_stage_65_gpb2000.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "on_stage_65_gpb2000",
+    "name": "On Stage GPB2000 Compact Pedalboard with Gig Bag",
+    "description": "On Stage GPB2000 Compact Pedalboard with Gig Bag",
+    "category": "general",
+    "image_url": "/data/thumbnails/on_stage_65_gpb2000.jpg",
+    "product_url": "https://www.halilit.com/items/2765240-on-stage-gpb2000-compact-pedalboard-with-gig-bag",
+    "is_sold": true,
+    "price": 235.0,
+    "halilit_url": "https://www.halilit.com/items/2765240-on-stage-gpb2000-compact-pedalboard-with-gig-bag",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.893779Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "innovative_percussion_28_rs251",
+  "name": "Innovative Percussion RS251",
+  "brand": "innovative-percussion",
+  "category": "drums",
+  "description": "Innovative Percussion RS251",
+  "media": {
+    "thumbnail": "/data/thumbnails/innovative_percussion_28_rs251.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "innovative_percussion_28_rs251",
+    "name": "Innovative Percussion RS251",
+    "description": "Innovative Percussion RS251",
+    "category": "general",
+    "image_url": "/data/thumbnails/innovative_percussion_28_rs251.jpg",
+    "product_url": "https://www.halilit.com/items/4227932-innovative-percussion-rs251",
+    "is_sold": true,
+    "price": 268.0,
+    "halilit_url": "https://www.halilit.com/items/4227932-innovative-percussion-rs251",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.259822Z"
+  }
+}

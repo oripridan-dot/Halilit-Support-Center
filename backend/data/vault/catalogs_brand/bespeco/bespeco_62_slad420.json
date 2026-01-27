@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_slad420",
+  "name": "Bespeco DIN 5-Poles Female Socket Adaptor",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco DIN 5-Poles Female Socket Adaptor",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_slad420.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_slad420",
+    "name": "Bespeco DIN 5-Poles Female Socket Adaptor",
+    "description": "Bespeco DIN 5-Poles Female Socket Adaptor",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_slad420.jpg",
+    "product_url": "https://www.halilit.com/items/1960924-bespeco-midi-female-socket-adapter",
+    "is_sold": true,
+    "price": 20.0,
+    "halilit_url": "https://www.halilit.com/items/1960924-bespeco-midi-female-socket-adapter",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.629256Z"
+  }
+}

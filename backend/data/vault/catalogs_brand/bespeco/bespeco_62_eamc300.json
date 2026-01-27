@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_eamc300",
+  "name": "Bespeco EAMC300",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco EAMC300",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_eamc300.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_eamc300",
+    "name": "Bespeco EAMC300",
+    "description": "Bespeco EAMC300",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_eamc300.jpg",
+    "product_url": "https://www.halilit.com/items/517478-bespeco-eamc300",
+    "is_sold": true,
+    "price": 53.0,
+    "halilit_url": "https://www.halilit.com/items/517478-bespeco-eamc300",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.599806Z"
+  }
+}

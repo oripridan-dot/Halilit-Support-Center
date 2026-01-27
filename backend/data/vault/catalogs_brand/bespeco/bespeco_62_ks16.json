@@ -1,0 +1,39 @@
+{
+  "id": "bespeco_62_ks16",
+  "name": "Bespeco KS16",
+  "brand": "bespeco",
+  "category": "general",
+  "description": "Bespeco KS16",
+  "media": {
+    "thumbnail": "/data/thumbnails/bespeco_62_ks16.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "bespeco_62_ks16",
+    "name": "Bespeco KS16",
+    "description": "Bespeco KS16",
+    "category": "general",
+    "image_url": "/data/thumbnails/bespeco_62_ks16.jpg",
+    "product_url": "https://www.halilit.com/items/2425329-bespeco-ks16-keyboard-stand",
+    "is_sold": true,
+    "price": 873.0,
+    "halilit_url": "https://www.halilit.com/items/2425329-bespeco-ks16-keyboard-stand",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.582322Z"
+  }
+}

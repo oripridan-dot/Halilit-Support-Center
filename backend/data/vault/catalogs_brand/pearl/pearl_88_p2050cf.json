@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_p2050cf",
+  "name": "Pearl P-2050C/F",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl P-2050C/F",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_p2050cf.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_p2050cf",
+    "name": "Pearl P-2050C/F",
+    "description": "Pearl P-2050C/F",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_p2050cf.jpg",
+    "product_url": "https://www.halilit.com/items/4645287-pearl-p-2050c-f-eliminator-redline-light-transport-single-pedal",
+    "is_sold": true,
+    "price": 781.0,
+    "halilit_url": "https://www.halilit.com/items/4645287-pearl-p-2050c-f-eliminator-redline-light-transport-single-pedal",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.444456Z"
+  }
+}

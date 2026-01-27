@@ -1,0 +1,39 @@
+{
+  "id": "xvive_35_v12",
+  "name": "Xvive V12 ABY Mini",
+  "brand": "xvive",
+  "category": "general",
+  "description": "Xvive V12 ABY Mini",
+  "media": {
+    "thumbnail": "/data/thumbnails/xvive_35_v12.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "xvive_35_v12",
+    "name": "Xvive V12 ABY Mini",
+    "description": "Xvive V12 ABY Mini",
+    "category": "general",
+    "image_url": "/data/thumbnails/xvive_35_v12.jpg",
+    "product_url": "https://www.halilit.com/items/4295035-xvive-v12-aby-mini",
+    "is_sold": true,
+    "price": 180.0,
+    "halilit_url": "https://www.halilit.com/items/4295035-xvive-v12-aby-mini",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.681774Z"
+  }
+}

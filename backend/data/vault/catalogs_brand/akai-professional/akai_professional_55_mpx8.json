@@ -1,0 +1,39 @@
+{
+  "id": "akai_professional_55_mpx8",
+  "name": "Akai Professional MPX8",
+  "brand": "akai-professional",
+  "category": "general",
+  "description": "Akai Professional MPX8",
+  "media": {
+    "thumbnail": "/data/thumbnails/akai_professional_55_mpx8.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "akai_professional_55_mpx8",
+    "name": "Akai Professional MPX8",
+    "description": "Akai Professional MPX8",
+    "category": "general",
+    "image_url": "/data/thumbnails/akai_professional_55_mpx8.jpg",
+    "product_url": "https://www.halilit.com/items/444215-akai-professional-mpx8",
+    "is_sold": true,
+    "price": 553.0,
+    "halilit_url": "https://www.halilit.com/items/444215-akai-professional-mpx8",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.272962Z"
+  }
+}

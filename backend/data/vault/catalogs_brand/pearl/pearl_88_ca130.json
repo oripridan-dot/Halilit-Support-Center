@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_ca130",
+  "name": "Pearl CA130 Cowbell Holder",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl CA130 Cowbell Holder",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_ca130.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_ca130",
+    "name": "Pearl CA130 Cowbell Holder",
+    "description": "Pearl CA130 Cowbell Holder",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_ca130.jpg",
+    "product_url": "https://www.halilit.com/items/446188-pearl-ca130-cowbell-holder",
+    "is_sold": true,
+    "price": 138.0,
+    "halilit_url": "https://www.halilit.com/items/446188-pearl-ca130-cowbell-holder",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.491096Z"
+  }
+}

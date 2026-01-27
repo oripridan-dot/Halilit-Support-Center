@@ -1,0 +1,39 @@
+{
+  "id": "washburn_04_ws300b",
+  "name": "Washburn WS300B",
+  "brand": "washburn",
+  "category": "guitars",
+  "description": "Washburn WS300B",
+  "media": {
+    "thumbnail": "/data/thumbnails/washburn_04_ws300b.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "washburn_04_ws300b",
+    "name": "Washburn WS300B",
+    "description": "Washburn WS300B",
+    "category": "general",
+    "image_url": "/data/thumbnails/washburn_04_ws300b.jpg",
+    "product_url": "https://www.halilit.com/items/7773499-washburn-ws300b",
+    "is_sold": true,
+    "price": 595.0,
+    "halilit_url": "https://www.halilit.com/items/7773499-washburn-ws300b",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.330497Z"
+  }
+}

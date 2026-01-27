@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_mc100",
+  "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea Mackie MC-100",
+  "brand": "mackie",
+  "category": "general",
+  "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea Mackie MC-100",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_mc100.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_mc100",
+    "name": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea Mackie MC-100",
+    "description": "\u05d0\u05d5\u05d6\u05e0\u05d9\u05d5\u05ea Mackie MC-100",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_mc100.jpg",
+    "product_url": "https://www.halilit.com/items/3365521-mackie-mc100-studio-headphones",
+    "is_sold": true,
+    "price": 128.0,
+    "halilit_url": "https://www.halilit.com/items/3365521-mackie-mc100-studio-headphones",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.775527Z"
+  }
+}

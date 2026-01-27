@@ -1,0 +1,39 @@
+{
+  "id": "foxgear_guitar_effects_and_pedals_20_fxrbw",
+  "name": "Foxgear Rainbow Digital Reverb",
+  "brand": "foxgear-guitar-effects-and-pedals",
+  "category": "general",
+  "description": "Foxgear Rainbow Digital Reverb",
+  "media": {
+    "thumbnail": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "foxgear_guitar_effects_and_pedals_20_fxrbw",
+    "name": "Foxgear Rainbow Digital Reverb",
+    "description": "Foxgear Rainbow Digital Reverb",
+    "category": "general",
+    "image_url": "/data/thumbnails/foxgear_guitar_effects_and_pedals_20_fxrbw.jpg",
+    "product_url": "https://www.halilit.com/items/4924249-foxgear-rainbow-digital-reverb",
+    "is_sold": true,
+    "price": 669.0,
+    "halilit_url": "https://www.halilit.com/items/4924249-foxgear-rainbow-digital-reverb",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.702788Z"
+  }
+}

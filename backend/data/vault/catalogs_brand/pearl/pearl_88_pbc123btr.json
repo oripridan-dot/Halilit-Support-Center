@@ -1,0 +1,39 @@
+{
+  "id": "pearl_88_pbc123btr",
+  "name": "Pearl Primero Tree of Life Cajon",
+  "brand": "pearl",
+  "category": "drums",
+  "description": "Pearl Primero Tree of Life Cajon",
+  "media": {
+    "thumbnail": "/data/thumbnails/pearl_88_pbc123btr.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "pearl_88_pbc123btr",
+    "name": "Pearl Primero Tree of Life Cajon",
+    "description": "Pearl Primero Tree of Life Cajon",
+    "category": "general",
+    "image_url": "/data/thumbnails/pearl_88_pbc123btr.jpg",
+    "product_url": "https://www.halilit.com/items/3883082-pearl-primero-tree-of-life-cajon",
+    "is_sold": true,
+    "price": 375.0,
+    "halilit_url": "https://www.halilit.com/items/3883082-pearl-primero-tree-of-life-cajon",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.470816Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "adams_97_2bd32",
+  "name": "Adams Concert 32\" Bass Drum",
+  "brand": "adams",
+  "category": "drums",
+  "description": "Adams Concert 32\" Bass Drum",
+  "media": {
+    "thumbnail": "/data/thumbnails/adams_97_2bd32.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "adams_97_2bd32",
+    "name": "Adams Concert 32\" Bass Drum",
+    "description": "Adams Concert 32\" Bass Drum",
+    "category": "general",
+    "image_url": "/data/thumbnails/adams_97_2bd32.jpg",
+    "product_url": "https://www.halilit.com/items/447600-adams-concert-32-bass-drum-",
+    "is_sold": true,
+    "price": 13384.0,
+    "halilit_url": "https://www.halilit.com/items/447600-adams-concert-32-bass-drum-",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.269799Z"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "_eaw_eastern_acoustic_works__89_vfs220i",
+  "name": "EAW VFS220i",
+  "brand": "-eaw-eastern-acoustic-works-",
+  "category": "general",
+  "description": "EAW VFS220i",
+  "media": {
+    "thumbnail": "/data/thumbnails/_eaw_eastern_acoustic_works__89_vfs220i.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "_eaw_eastern_acoustic_works__89_vfs220i",
+    "name": "EAW VFS220i",
+    "description": "EAW VFS220i",
+    "category": "general",
+    "image_url": "/data/thumbnails/_eaw_eastern_acoustic_works__89_vfs220i.jpg",
+    "product_url": "https://www.halilit.com/items/3399127-eaw-vfs220i-subwoofer",
+    "is_sold": true,
+    "price": 7304.0,
+    "halilit_url": "https://www.halilit.com/items/3399127-eaw-vfs220i-subwoofer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.987008Z"
+  }
+}

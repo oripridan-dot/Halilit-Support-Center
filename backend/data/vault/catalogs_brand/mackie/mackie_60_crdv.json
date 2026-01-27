@@ -1,0 +1,39 @@
+{
+  "id": "mackie_60_crdv",
+  "name": "Mackie CRDV",
+  "brand": "mackie",
+  "category": "general",
+  "description": "Mackie CRDV",
+  "media": {
+    "thumbnail": "/data/thumbnails/mackie_60_crdv.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "mackie_60_crdv",
+    "name": "Mackie CRDV",
+    "description": "Mackie CRDV",
+    "category": "general",
+    "image_url": "/data/thumbnails/mackie_60_crdv.jpg",
+    "product_url": "https://www.halilit.com/items/3357418-mackie-crdv",
+    "is_sold": true,
+    "price": 226.0,
+    "halilit_url": "https://www.halilit.com/items/3357418-mackie-crdv",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:05.922709Z"
+  }
+}

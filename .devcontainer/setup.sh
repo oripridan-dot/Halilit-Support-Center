@@ -8,6 +8,12 @@ export PLAYWRIGHT_BROWSERS_PATH
 
 echo "Starting setup..."
 
+# Ensure vscode user exists
+if ! id -u vscode > /dev/null 2>&1; then
+    echo "Creating vscode user..."
+    sudo useradd -m -s /bin/bash vscode
+fi
+
 # 1. System Dependencies
 # Only run update if we haven't recently (implied by fresh container)
 echo "Installing system packages..."

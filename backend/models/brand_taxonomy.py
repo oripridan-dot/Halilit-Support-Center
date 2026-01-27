@@ -16,7 +16,6 @@ as the SOURCE OF TRUTH for product categorization.
 
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional
-from enum import Enum
 
 
 @dataclass

@@ -1,0 +1,39 @@
+{
+  "id": "allen_heath_40_zedi10fx",
+  "name": "Allen & Heath ZEDi-10FX",
+  "brand": "allen-heath",
+  "category": "live",
+  "description": "Allen & Heath ZEDi-10FX",
+  "media": {
+    "thumbnail": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+    "gallery": [],
+    "videos": []
+  },
+  "commercial": {
+    "price": null,
+    "link": null,
+    "status": "unknown"
+  },
+  "official_knowledge": {
+    "id": "allen_heath_40_zedi10fx",
+    "name": "Allen & Heath ZEDi-10FX",
+    "description": "Allen & Heath ZEDi-10FX",
+    "category": "general",
+    "image_url": "/data/thumbnails/allen_heath_40_zedi10fx.jpg",
+    "product_url": "https://www.halilit.com/items/1460821-allen-heath-zedi-10fx-analog-mixer",
+    "is_sold": true,
+    "price": 1782.0,
+    "halilit_url": "https://www.halilit.com/items/1460821-allen-heath-zedi-10fx-analog-mixer",
+    "status": "IN_STOCK"
+  },
+  "specs": {},
+  "official_manuals": [],
+  "official_specs": {},
+  "badges": [
+    "GLOBAL_CATALOG"
+  ],
+  "meta": {
+    "completeness": "SKELETON",
+    "last_scan": "2026-01-27T07:08:04.396323Z"
+  }
+}
