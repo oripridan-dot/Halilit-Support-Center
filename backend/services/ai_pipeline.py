@@ -390,8 +390,8 @@ class AIPipeline:
     """
     
     def __init__(self):
-        self.frontend_data = Path("/workspaces/hsc-jit-v3/frontend/public/data")
-        self.backend_data = Path("/workspaces/hsc-jit-v3/backend/data/catalogs_brand")
+        self.frontend_data = Path("/workspaces/Halilit-Support-Center/frontend/public/data")
+        self.backend_data = Path("/workspaces/Halilit-Support-Center/backend/data/catalogs_brand")
         
         self.checkpoint = DataCheckpoint(
             images_dir=self.frontend_data / "product_images",

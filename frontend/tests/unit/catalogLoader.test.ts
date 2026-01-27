@@ -63,7 +63,7 @@ describe("catalogLoader - Static Catalog Loading", () => {
         json: async () => mockBrandCatalog,
       } as Response);
 
-      const response = await fetch("/data/catalogs_brand/roland_catalog.json");
+      const response = await fetch("/public/data/catalogs_brand/roland_catalog.json");
       const catalog = (await response.json()) as BrandCatalog;
 
       expect(catalog.brand_id).toBe("roland");
@@ -77,7 +77,7 @@ describe("catalogLoader - Static Catalog Loading", () => {
         json: async () => mockBrandCatalog,
       } as Response);
 
-      const response = await fetch("/data/catalogs_brand/roland_catalog.json");
+      const response = await fetch("/public/data/catalogs_brand/roland_catalog.json");
       const catalog = (await response.json()) as BrandCatalog;
 
       catalog.products.forEach((product: Product) => {
