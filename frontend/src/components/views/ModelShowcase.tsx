@@ -5,8 +5,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 
 interface Model {
   name: string;
@@ -15,24 +13,25 @@ interface Model {
   rotation?: { x: number; y: number; z: number };
 }
 
+// Dynamically load loaders to avoid import issues
+let OBJLoader: any;
+let MTLLoader: any;
+
+const loadLoaders = async () => {
+  if (!OBJLoader || !MTLLoader) {
+    const obj = await import("three/examples/jsm/loaders/OBJLoader.js");
+    const mtl = await import("three/examples/jsm/loaders/MTLLoader.js");
+    OBJLoader = obj.OBJLoader;
+    MTLLoader = mtl.MTLLoader;
+  }
+};
+
 const MODELS: Model[] = [
   {
     name: "Electric Guitar - Stratocaster",
     objPath: "/models/guitars/electric/stratocaster.obj",
     mtlPath: "/models/guitars/electric/stratocaster.mtl",
     rotation: { x: 0, y: Math.PI / 4, z: 0 },
-  },
-  {
-    name: "Acoustic Guitar - Dreadnought",
-    objPath: "/models/guitars/acoustic/dreadnought.obj",
-    mtlPath: "/models/guitars/acoustic/dreadnought.mtl",
-    rotation: { x: 0, y: Math.PI / 6, z: 0 },
-  },
-  {
-    name: "Bass Guitar - Fender Precision",
-    objPath: "/models/guitars/bass/fender_precision.obj",
-    mtlPath: "/models/guitars/bass/fender_precision.mtl",
-    rotation: { x: 0, y: Math.PI / 3, z: 0 },
   },
   {
     name: "Synthesizer - Moog Sub Phatty",
@@ -63,7 +62,7 @@ export const ModelShowcase: React.FC = () => {
   const [currentModelIndex, setCurrentModelIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const animationIdRef = useRef<number>();
+  const animationIdRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -80,22 +79,61 @@ export const ModelShowcase: React.FC = () => {
     const width = containerRef.current.clientWidth;
     const height = containerRef.current.clientHeight;
     console.log(`Canvas dimensions: ${width}x${height}`);
-    
-    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    camera.position.set(0, 0, 2);
+
+    // Fallback if dimensions are not available
+    const finalWidth = width > 0 ? width : 800;
+    const finalHeight = height > 0 ? height : 600;
+    console.log(`Final dimensions: ${finalWidth}x${finalHeight}`);
+
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      finalWidth / finalHeight,
+      0.1,
+      1000,
+    );
+    // Position camera further back to see the whole model
+    camera.position.set(0, 0.5, 3);
     cameraRef.current = camera;
-    console.log("✓ Camera created");
+    console.log("✓ Camera created at position:", [
+      camera.position.x,
+      camera.position.y,
+      camera.position.z,
+    ]);
 
     // Renderer setup
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(width, height);
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
+      preserveDrawingBuffer: true,
+    });
+    renderer.setSize(finalWidth, finalHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setClearColor(0x1a1a1a, 1);
     console.log("✓ Renderer created, adding to DOM");
-    
-    containerRef.current.appendChild(renderer.domElement);
+
+    // Ensure canvas is visible
+    renderer.domElement.style.display = "block";
+    renderer.domElement.style.width = "100%";
+    renderer.domElement.style.height = "100%";
+    renderer.domElement.style.position = "absolute";
+    renderer.domElement.style.top = "0";
+    renderer.domElement.style.left = "0";
+
+    // Clear container first
+    const container = containerRef.current;
+    while (container.firstChild) {
+      container.removeChild(container.firstChild);
+    }
+
+    container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
     console.log("✓ Renderer added to DOM");
+    console.log(
+      `Canvas element size: ${renderer.domElement.width}x${renderer.domElement.height}`,
+    );
+    console.log(
+      `Canvas element style size: ${renderer.domElement.style.width} x ${renderer.domElement.style.height}`,
+    );
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
@@ -118,10 +156,15 @@ export const ModelShowcase: React.FC = () => {
         modelRef.current.rotation.y += 0.005;
       }
 
+      // Render the scene
       renderer.render(scene, camera);
     };
 
-    console.log("🎬 Starting animation loop");
+    console.log(
+      "🎬 Starting animation loop - scene has",
+      scene.children.length,
+      "children (lights + models)",
+    );
     animate();
 
     // Handle resize
@@ -141,7 +184,9 @@ export const ModelShowcase: React.FC = () => {
         cancelAnimationFrame(animationIdRef.current);
       }
       renderer.dispose();
-      containerRef.current?.removeChild(renderer.domElement);
+      if (container && renderer.domElement.parentNode === container) {
+        container.removeChild(renderer.domElement);
+      }
     };
   }, []);
 
@@ -150,7 +195,9 @@ export const ModelShowcase: React.FC = () => {
     const loadModel = async () => {
       if (!sceneRef.current || !cameraRef.current) return;
 
-      console.log(`📦 Loading model ${currentModelIndex}: ${MODELS[currentModelIndex].name}`);
+      console.log(
+        `📦 Loading model ${currentModelIndex}: ${MODELS[currentModelIndex].name}`,
+      );
       setIsLoading(true);
       setError(null);
 
@@ -162,23 +209,65 @@ export const ModelShowcase: React.FC = () => {
       }
 
       try {
+        // Load loaders if not already loaded
+        await loadLoaders();
+
         const model = MODELS[currentModelIndex];
+        console.log(`Loading materials from: ${model.mtlPath}`);
+        console.log(`Loading OBJ from: ${model.objPath}`);
+
         const mtlLoader = new MTLLoader();
         const objLoader = new OBJLoader();
 
         // Load MTL first (materials)
         mtlLoader.load(
           model.mtlPath,
-          (materials) => {
-            console.log("✓ Materials loaded");
+          (materials: any) => {
+            console.log("✓ Materials loaded successfully");
+            console.log(
+              `📦 Material library has ${Object.keys(materials.materials).length} materials`,
+            );
             materials.preload();
             objLoader.setMaterials(materials);
 
             // Then load OBJ
             objLoader.load(
               model.objPath,
-              (group) => {
-                console.log("✓ OBJ loaded, processing geometry");
+              (group: any) => {
+                console.log("✓ OBJ loaded successfully, processing geometry");
+                console.log(
+                  `📐 Group children count: ${group.children.length}`,
+                );
+
+                // Make all materials visible - debug mode
+                group.traverse((child: any) => {
+                  if ((child as any).isMesh) {
+                    const mesh = child as THREE.Mesh;
+                    if (Array.isArray(mesh.material)) {
+                      mesh.material.forEach((mat: any) => {
+                        mat.side = THREE.DoubleSide; // Render both sides
+                        if (mat.wireframe !== undefined) {
+                          mat.wireframe = false; // Turn off wireframe for final render
+                        }
+                        console.log(`✓ Material prepared: side=DoubleSide`);
+                      });
+                    } else if (mesh.material) {
+                      (mesh.material as any).side = THREE.DoubleSide;
+                      console.log(`✓ Material prepared: side=DoubleSide`);
+                    }
+                    // If no material or material failed, add fallback
+                    if (!mesh.material) {
+                      mesh.material = new THREE.MeshStandardMaterial({
+                        color: 0x888888,
+                        metalness: 0.5,
+                        roughness: 0.5,
+                        side: THREE.DoubleSide,
+                      });
+                      console.log(`⚠️ Added fallback material to mesh`);
+                    }
+                  }
+                });
+
                 // Center and scale model
                 const box = new THREE.Box3().setFromObject(group);
                 const center = box.getCenter(new THREE.Vector3());
@@ -186,7 +275,16 @@ export const ModelShowcase: React.FC = () => {
                 const maxDim = Math.max(size.x, size.y, size.z);
                 const scale = 1.5 / maxDim;
 
-                group.position.sub(center.multiplyScalar(scale));
+                console.log(
+                  `📐 Model bounds - size: ${size.x.toFixed(4)}x${size.y.toFixed(4)}x${size.z.toFixed(4)}, maxDim: ${maxDim.toFixed(4)}, scale: ${scale.toFixed(4)}`,
+                );
+                console.log(
+                  `📐 Model center: [${center.x.toFixed(4)}, ${center.y.toFixed(4)}, ${center.z.toFixed(4)}]`,
+                );
+
+                // Correct centering: move the group so its center is at origin
+                group.position.copy(center).multiplyScalar(-1);
+                // Then scale
                 group.scale.multiplyScalar(scale);
 
                 // Apply rotation
@@ -199,29 +297,54 @@ export const ModelShowcase: React.FC = () => {
                 }
 
                 console.log(`✓ Model scaled and positioned, adding to scene`);
+                console.log(
+                  `📐 Final position: [${group.position.x.toFixed(4)}, ${group.position.y.toFixed(4)}, ${group.position.z.toFixed(4)}]`,
+                );
+                console.log(
+                  `📐 Final scale: [${group.scale.x.toFixed(4)}, ${group.scale.y.toFixed(4)}, ${group.scale.z.toFixed(4)}]`,
+                );
+
                 sceneRef.current?.add(group);
                 modelRef.current = group;
+
+                // Log scene state
+                console.log(
+                  `🎬 Scene children count: ${sceneRef.current?.children.length || 0}`,
+                );
+                if (cameraRef.current) {
+                  console.log(
+                    `📷 Camera position: [${cameraRef.current.position.x.toFixed(2)}, ${cameraRef.current.position.y.toFixed(2)}, ${cameraRef.current.position.z.toFixed(2)}]`,
+                  );
+                  console.log(`📷 Camera looking at origin`);
+                }
+
                 setIsLoading(false);
-                console.log("🎉 Model ready for display");
+                console.log(
+                  "🎉 Model ready for display - should be visible now!",
+                );
               },
-              (progress) => {
+              (progress: any) => {
                 const percent = (progress.loaded / progress.total) * 100;
                 console.log(`Loading OBJ: ${percent.toFixed(2)}%`);
               },
-              (error) => {
+              (error: any) => {
                 console.error("OBJ load error:", error);
-                setError(`Failed to load model: ${error.message}`);
+                setError(
+                  `Failed to load model: ${error?.message || "Unknown error"}`,
+                );
                 setIsLoading(false);
               },
             );
           },
-          (progress) => {
+          (progress: any) => {
             const percent = (progress.loaded / progress.total) * 100;
             console.log(`Loading MTL: ${percent.toFixed(2)}%`);
           },
-          (error) => {
+          (error: any) => {
             console.error("MTL load error:", error);
-            setError(`Failed to load materials: ${error.message}`);
+            setError(
+              `Failed to load materials: ${error?.message || "Unknown error"}`,
+            );
             setIsLoading(false);
           },
         );
@@ -246,7 +369,11 @@ export const ModelShowcase: React.FC = () => {
   return (
     <div className="w-full h-full flex flex-col bg-black">
       {/* Canvas */}
-      <div ref={containerRef} className="flex-1 relative">
+      <div
+        ref={containerRef}
+        className="flex-1 relative overflow-hidden"
+        style={{ minHeight: 0 }}
+      >
         {/* Loading indicator */}
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/50">

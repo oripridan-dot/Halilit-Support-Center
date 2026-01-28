@@ -18,7 +18,6 @@ export type * from './environment3d.types';
 export {
     ELECTRIC_GUITARS_ENV,
     ACOUSTIC_GUITARS_ENV,
-    BASS_GUITARS_ENV,
     getEnvironmentBySubcategory,
     getAllEnvironments,
     getEnvironmentsByCategory

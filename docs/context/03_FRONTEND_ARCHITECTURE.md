@@ -9,16 +9,20 @@
 ## 🏛️ Core Architecture ("Static Logic")
 
 ### 1. Data Loading (`src/lib/catalogLoader.ts`)
+
 - Fetches static JSON files from `/data/`
 - Types data with Zod schemas
 - **Pattern:** Load once -> Store in State
 
 ### 2. State Management (`src/store/navigationStore.ts`)
+
 - Holds `products`, `activeCategory`, `searchQuery`
 - **Pattern:** Single Source of Truth for Navigation
 
 ## 🧩 Component Registry
+
 ### UI Components
+
 - `frontend/src/components/SystemHud.tsx`
 - `frontend/src/components/smart-views/TierBar.tsx`
 - `frontend/src/components/ui/ContextBadge.tsx`
@@ -30,12 +34,14 @@
 - `frontend/src/components/views/SpectrumModule.tsx`
 
 ### Logic Hooks
+
 - `frontend/src/hooks/useBrandCatalog.ts`
 - `frontend/src/hooks/useCategoryCatalog.ts`
 - `frontend/src/hooks/useCategoryProducts.ts`
 - `frontend/src/hooks/useTaxonomy.ts`
 
 ### Core Libraries
+
 - `frontend/src/lib/brandColors.ts`
 - `frontend/src/lib/brandConstants.ts`
 - `frontend/src/lib/brandTaxonomy.ts`
@@ -55,9 +61,11 @@
 - `frontend/src/lib/utils.ts`
 
 ### State Stores
+
 - `frontend/src/store/navigationStore.ts`
 
 ## 📡 Connectivity Rules
+
 - **NO** WebSockets
 - **NO** REST API Calls to Backend
 - **NO** Server-Side Rendering

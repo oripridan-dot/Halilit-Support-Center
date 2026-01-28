@@ -7,7 +7,6 @@ export default defineConfig({
     react({
       // Use SWC for faster HMR
       jsxRuntime: "automatic",
-      fastRefresh: true,
     }),
   ],
   server: {

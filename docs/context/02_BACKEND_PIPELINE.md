@@ -6,9 +6,11 @@
 **Updated:** January 28, 2026
 
 ## 🏭 The Factory Structure
+
 The backend is strictly for offline data generation. It contains:
 
 ### 🧠 Core Generators
+
 - `backend/analyze_products_for_categories.py`
 - `backend/config/__init__.py`
 - `backend/config/brand_maps.py`
@@ -31,6 +33,7 @@ The backend is strictly for offline data generation. It contains:
 - `backend/update_manifests.py`
 
 ### 🤖 Services & Scrapers
+
 - `backend/services/ai_pipeline.py`
 - `backend/services/boss_scraper.py`
 - `backend/services/catalog_manager.py`
@@ -56,6 +59,7 @@ The backend is strictly for offline data generation. It contains:
 - `backend/services/visual_factory.py`
 
 ### 📦 Data Models
+
 - `backend/models/__init__.py`
 - `backend/models/brand_taxonomy.py`
 - `backend/models/category_consolidator.py`
@@ -63,7 +67,9 @@ The backend is strictly for offline data generation. It contains:
 - `backend/models/taxonomy_registry.py`
 
 ## 📄 Published Production Catalogs
+
 These files are the ONLY source of truth for the frontend:
+
 - `-eaw-eastern-acoustic-works-.json`
 - `accessories.json`
 - `adam-audio.json`
@@ -158,6 +164,7 @@ These files are the ONLY source of truth for the frontend:
 - `xvive.json`
 
 ## ⚠️ Rules
+
 - The backend is **NOT** deployed.
 - `main.py` is for DEV validation only.
 - Frontend MUST read from JSON files, NEVER from localhost API.

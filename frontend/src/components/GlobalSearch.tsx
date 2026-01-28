@@ -6,7 +6,8 @@ import { useNavigationStore } from "../store/navigationStore";
 export const GlobalSearch = () => {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const { results, isReady } = useRealtimeSearch(query, { limit: 10 });
+  const searchResult = useRealtimeSearch(query, { limit: 10 });
+  const { data: results = [], loading, error } = searchResult;
   const { openProductPop } = useNavigationStore();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -41,7 +42,7 @@ export const GlobalSearch = () => {
         <input
           type="text"
           className="block w-full pl-10 pr-3 py-1.5 border border-zinc-800 rounded-md leading-5 bg-zinc-900 text-zinc-300 placeholder-zinc-500 focus:outline-none focus:bg-zinc-950 focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 sm:text-sm transition-all"
-          placeholder={isReady ? "Search catalog..." : "Initializing..."}
+          placeholder={loading ? "Initializing..." : "Search catalog..."}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
@@ -64,13 +65,17 @@ export const GlobalSearch = () => {
 
       {isOpen && query.length > 1 && (
         <div className="absolute mt-1 w-full bg-zinc-900 border border-zinc-800 rounded-md shadow-xl z-50 overflow-hidden max-h-96 overflow-y-auto">
-          {results.length === 0 ? (
+          {error ? (
+            <div className="p-4 text-center text-red-500 text-xs">
+              Search failed: {error.message}
+            </div>
+          ) : (results || []).length === 0 ? (
             <div className="p-4 text-center text-zinc-500 text-xs">
               No products found for "{query}"
             </div>
           ) : (
             <div className="py-1">
-              {results.map((item) => (
+              {(results || []).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleSelect(item.id)}

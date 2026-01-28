@@ -1,32 +1,74 @@
-import { useEffect, useState } from "react";
+/**
+ * useRealtimeSearch - Real-time instant search across product catalog
+ * 
+ * Follows STANDARDIZED COMMUNICATION PROTOCOL v1.0
+ * Returns AsyncResult pattern for consistent error handling and loading states
+ */
+import { useCallback, useEffect, useState } from "react";
 import type { SearchItem, SearchOptions } from "../lib/instantSearch";
 import { instantSearch } from "../lib/instantSearch";
+import { createAsyncResult, type AsyncResult } from "../lib/communicationProtocol";
 
-export function useRealtimeSearch(query: string, options?: SearchOptions) {
+/**
+ * Hook to perform real-time search across the catalog
+ * @param query - Search query string
+ * @param options - Search options (brand filter, category filter, etc.)
+ * @returns AsyncResult with search results, loading, and error states
+ * 
+ * @example
+ * const { data: results, loading, error, isReady } = useRealtimeSearch(searchQuery, { brand: 'roland' })
+ */
+export function useRealtimeSearch(
+  query: string,
+  options?: SearchOptions
+): AsyncResult<SearchItem[]> {
   const [results, setResults] = useState<SearchItem[]>([]);
-  const [isReady, setIsReady] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
-  // Initialize engine once
+  // Initialize search engine once
   useEffect(() => {
-    instantSearch.initialize().then(() => setIsReady(true));
+    const initEngine = async () => {
+      try {
+        await instantSearch.initialize();
+        setLoading(false);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error("Failed to initialize search"));
+        setLoading(false);
+      }
+    };
+
+    initEngine();
   }, []);
 
-  // Compute results
+  const performSearch = useCallback(() => {
+    if (loading || error) return;
+
+    try {
+      // Debounce search slightly to avoid UI flicker
+      const timeoutId = setTimeout(() => {
+        const hits = instantSearch.search(query, options);
+        setResults(hits);
+        setError(null);
+      }, 150);
+
+      return () => clearTimeout(timeoutId);
+    } catch (err) {
+      setError(err instanceof Error ? err : new Error("Search failed"));
+      setResults([]);
+    }
+  }, [query, loading, error, options?.brand, options?.category]);
+
+  // Execute search when query or options change
   useEffect(() => {
-    if (!isReady) return;
+    const cleanup = performSearch();
+    return cleanup;
+  }, [performSearch]);
 
-    // Debounce search slightly to avoid UI flicker
-    const timeoutId = setTimeout(() => {
-      const hits = instantSearch.search(query, options);
-      setResults(hits);
-    }, 150);
+  const retry = useCallback(() => {
+    setError(null);
+    performSearch();
+  }, [performSearch]);
 
-    return () => clearTimeout(timeoutId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, isReady, options?.brand, options?.category]);
-
-  return {
-    results,
-    isReady,
-  };
+  return createAsyncResult(results, loading, error, retry);
 }

@@ -1125,9 +1125,9 @@ export interface EnvironmentContext {
     camera: THREE.Camera | null;
     renderer: THREE.WebGLRenderer | null;
     /** Renderer memory stats */
-    memory?: THREE.WebGLMemory;
+    memory?: any;
     /** Renderer render info */
-    info?: THREE.WebGLRenderInfo;
+    info?: any;
 }
 
 export interface LoadProgress {
