@@ -1,8 +1,10 @@
 # ⚛️ 03_FRONTEND_ARCHITECTURE.md
 
+**Version:** 4.1.0
 **Framework:** React 19 + TypeScript + Vite
 **State:** Zustand
 **Styling:** Tailwind CSS
+**Updated:** January 28, 2026
 
 ## 🏛️ Core Architecture ("Static Logic")
 

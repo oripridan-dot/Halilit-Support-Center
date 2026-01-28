@@ -1,5 +1,7 @@
 # 🎨 04_DESIGN_SYSTEM.md
 
+**Version:** 4.1.0  
+**Updated:** January 28, 2026  
 **Philosophy:** "See Then Read" - Visual First.
 
 ## 🌈 Color Palette (Category Anchors)

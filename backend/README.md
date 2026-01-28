@@ -1,5 +1,9 @@
 # Backend Pipeline v4.1
 
+**Version:** 4.1.0  
+**Updated:** January 28, 2026  
+**Status:** Production Ready
+
 Static-first data processing pipeline for the Halilit Support Center.
 
 ## Purpose

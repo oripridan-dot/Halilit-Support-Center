@@ -1,5 +1,8 @@
 # 🛠️ 05_WORKFLOWS.md
 
+**Version:** 4.1.0  
+**Updated:** January 28, 2026
+
 ## 🔄 Daily Dev Cycle
 
 ### 1. Start Environment

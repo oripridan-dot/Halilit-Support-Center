@@ -1,7 +1,9 @@
 # ⚙️ 02_BACKEND_PIPELINE.md
 
+**Version:** 4.1.0
 **Role:** Offline Data Generation
 **Execution:** `python3 forge_backbone.py`
+**Updated:** January 28, 2026
 
 ## 🏭 The Factory Structure
 The backend is strictly for offline data generation. It contains:

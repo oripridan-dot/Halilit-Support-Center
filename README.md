@@ -69,14 +69,14 @@ Output generated to `frontend/public/data/`
 
 ## 📦 Tech Stack
 
-| Component  | Technology |
-|-----------|-----------|
-| **Frontend** | React 19 + TypeScript 5 + Vite 7 |
-| **Styling** | Tailwind CSS |
-| **State** | Zustand |
-| **Search** | Fuse.js |
-| **Backend** | Python 3.11+ |
-| **Data Models** | Pydantic |
+| Component       | Technology                       |
+| --------------- | -------------------------------- |
+| **Frontend**    | React 19 + TypeScript 5 + Vite 7 |
+| **Styling**     | Tailwind CSS                     |
+| **State**       | Zustand                          |
+| **Search**      | Fuse.js                          |
+| **Backend**     | Python 3.11+                     |
+| **Data Models** | Pydantic                         |
 
 ## 📝 License
 
@@ -84,4 +84,4 @@ See LICENSE file for details.
 
 ---
 
-**Version**: 4.1.0 | **Status**: Production | **Updated**: January 28, 2026
+**Version**: 4.1.0 | **Release**: v4.1 | **Status**: Production | **Updated**: January 28, 2026 | **Branch**: main
