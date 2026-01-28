@@ -4,11 +4,12 @@ import os
 from datetime import datetime
 from typing import Dict, List, Set
 
+
 class DeltaAuditor:
     def __init__(self, report_dir="backend/data/reports/audit"):
         self.report_dir = report_dir
         os.makedirs(self.report_dir, exist_ok=True)
-        
+
         # Define what constitutes a "Perfect" product
         self.required_fields = {
             "commercial": ["price", "sku", "stock_status"],
@@ -33,38 +34,42 @@ class DeltaAuditor:
         # Note: Depending on the pipeline stage, data might be nested or not.
         # Assuming the 'Commercial Quarantine' structure is applied, we check inside 'official_knowledge'.
         # If not yet applied (processed blueprint might be flat), we check root.
-        
+
         official = blueprint.get("official_knowledge", {})
         # If official_knowledge key doesn't exist, maybe it IS the flat blueprint.
         # Let's support both for robustness or check if blueprint structure has changed.
         # The prompt implies we ARE changing the structure.
-        
+
         if not official and "name" in blueprint:
-             # Fallback for flat structure if auditor runs before quarantine or on old data
-             official = blueprint 
-        
-        if not official.get("manuals"):
-            report["missing_critical"].append("No PDF Manuals")
+            # Fallback for flat structure if auditor runs before quarantine or on old data
+            official = blueprint
+
+        # Check for manuals (PDFs or HTML documentation pages)
+        manuals = official.get("manuals") or blueprint.get("manual_urls") or []
+        if not manuals:
+            report["missing_critical"].append("No Documentation (PDF/HTML)")
             report["health_score"] -= 10
-        
+
         if not official.get("images"):
             report["missing_critical"].append("No Images")
             report["health_score"] -= 20
 
-        # Check deep specs
-        specs = official.get("specs", {})
-        if not specs:
-             report["missing_critical"].append("No Technical Specs")
-             report["health_score"] -= 15
+        # Check deep specs (accept both dict and list formats)
+        specs = official.get("specs") or official.get(
+            "specifications") or blueprint.get("specifications") or {}
+        if not specs or (isinstance(specs, (list, dict)) and len(specs) == 0):
+            report["missing_critical"].append("No Technical Specs")
+            report["health_score"] -= 15
 
         # 2. Detect EXTRA Data (Surplus)
         # Flatten raw keys to see what we ignored
         raw_keys = self._get_all_keys(raw_data)
-        
+
         # This is a simplified check: If raw has "360" or "audio_sample"
         # and we didn't use it, flag it.
-        interesting_keywords = ["360", "audio", "sample", "firmware", "driver", "cad", "drawing"]
-        
+        interesting_keywords = ["360", "audio", "sample",
+                                "firmware", "driver", "cad", "drawing"]
+
         for key in raw_keys:
             if any(keyword in key.lower() for keyword in interesting_keywords):
                 # Check if this data made it into the blueprint
@@ -77,10 +82,10 @@ class DeltaAuditor:
         keys = set()
         for k, v in d.items():
             if isinstance(v, (list, tuple)):
-                 # Skip iterating lists for keys unless lists contains dicts? 
-                 # For simplicity, just add the key list name.
-                 new_key = f"{parent_key}.{k}" if parent_key else k
-                 keys.add(new_key)
+                # Skip iterating lists for keys unless lists contains dicts?
+                # For simplicity, just add the key list name.
+                new_key = f"{parent_key}.{k}" if parent_key else k
+                keys.add(new_key)
             else:
                 new_key = f"{parent_key}.{k}" if parent_key else k
                 keys.add(new_key)
@@ -97,7 +102,7 @@ class DeltaAuditor:
         # If I have a raw key "360_view", and I mapped it to "virtual_tour", "360_view" won't be in blueprint keys.
         # But maybe the value is?
         # Let's stick to the prompt's provided heuristic (check if key exists in stringified blueprint is a bit loose but that's what was asked).
-        
+
         blueprint_str = json.dumps(blueprint).lower()
         # Clean the key term to just the last part for better matching?
         # e.g. "downloads.dxf_file". If blueprint has "dxf_file" key or value?
@@ -106,7 +111,7 @@ class DeltaAuditor:
 
     def save_brand_report(self, brand: str, audit_results: List[Dict]):
         path = os.path.join(self.report_dir, f"{brand}_audit_report.json")
-        
+
         summary = {
             "brand": brand,
             "timestamp": datetime.now().isoformat(),
@@ -115,7 +120,7 @@ class DeltaAuditor:
             "average_health": sum(r['health_score'] for r in audit_results) / len(audit_results) if audit_results else 0,
             "details": audit_results
         }
-        
+
         with open(path, 'w') as f:
             json.dump(summary, f, indent=2)
         return path

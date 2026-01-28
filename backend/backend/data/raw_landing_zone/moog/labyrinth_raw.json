@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "scraped_at": "2026-01-28T00:38:37.511972",
+    "source_url": "https://www.moogmusic.com/synthesizers/labyrinth/",
+    "brand": "Moog",
+    "model": "Labyrinth\n"
+  },
+  "raw_payload": {
+    "source_url": "https://www.moogmusic.com/synthesizers/labyrinth/",
+    "brand": "Moog",
+    "model": "Labyrinth\n",
+    "name": "Labyrinth\n",
+    "description": "Synthesizers\nAccessories\nSoftware Store\nThe Wave\nSupport\nSynthesizers\nAccessories\nSoftware Store\nThe Wave\nSupport\nFeatured Products\nMessenger\nSYNTHESIZERS\n\nA New Method Of Sonic Experimentation, Communication, And Connection Has Arrived\n\nDISCOVER\n\nLabyrinth\nSYNTHESIZERS\n\nHow Deep Does The Rabbit Hole Go? Meet Labyrinth, An Idea Machine That Aims To Answer That Very Question.\n\nDISCOVER\n\nGet The Latest Moog News\n\nThis site is protected by reCAPTCHA and the Google\nPrivacy Policy and Terms of Service apply.\n\nHome\n\n/\n\nSynthesizers\n\n/\n\nLabyrinth\n\nLabyrinth\n\n\nFind a Dealer\n\nEndlessly Evolving Soundscapes\n\nHow deep does the rabbit hole go? Meet Labyrinth, an idea machine that aims to answer that very question.\n\nDownload The Manual\n\nIntroduction\n\nOverview\n\nVideo\n\nKey Features\n\nSpecs\n\nResources\n\nWalkthroughs\n\n1\n2\n3\n\nHow Deep Does the Rabbit Hole Go?\n\nLabyrinth, a semi-modular instrument and idea machine, discovers patterns, layers, and textures both familiar and unheard. \n\nTwo generative sequencers bring to life sounds that bloom over time, letting you control their evolution and scale, then play them off of each other for striking polymetric melodies. With parallel analog signal paths, this unique instrument shines when adding color to the static backdrop of a drum pattern or bassline.\n\nFully capable of standing on its own, or adding depth to your existing rack, it’s equally at home in a live set or at the center of a humble bedroom studio. Labyrinth is the lightning in a bottle that drives a studio session deeper into undiscovered creative caverns.\n\nEnter the Moog Labyrinth\n\nStep inside the sonic hall of mirrors of Labyrinth with four distinctive electronic artists. These compositions were written and performed inside each artist’s personal creative space, demonstrating how they use Labyrinth as part of their larger production setups. Follow Satoshi Tomiie, Antenes, Keith Fullerton Whitman, and Gladstone Deluxe down the rabbit hole as they explore the endlessly forking paths of Labyrinth.\n\nFrom Percussive Inspiration to Generative Innovation\n\nInspired by classic percussion synthesizers and modern generative techniques, Labyrinth combines a newly designed voltage-controlled wavefolder with a state-variable filter, allowing for both additive and subtractive synthesis. This approach enables users to create rich, evolving textures and dynamic sequences. The dual sequencers, inspired by shift register sequences commonly found in Eurorack systems, offer intuitive and flexible control over melodic and rhythmic patterns.\n\nTwist and Curve Through a Winding Path of Sound\n\nThe beating heart of Labyrinth is a robust dual sequencer, which uses chance operations to construct two unique eight-step paths which twist and curve around each other, forming a mesmerizing path of sound. With a comprehensive patch bay, Labyrinth can be synced via analog clock or MIDI while processing, directing, and being influenced by other kit.\n\nKey Features\n\nSine wave oscillators, ring modulators, through-zero FM, and saturating mixers give Labyrinth an unconventional yet classic Moog sound\n\nA state-variable filter provides a new twist on the Moog sound, morphing from lowpass to bandpass\n\nA diode-transistor hybrid wavefolder that sounds surprisingly smooth\n\nCreative patching possibilities for performance alongside other instruments\n\nAn infinite spiral of percussive or melodic sequences that bloom over time\n\nLabyrinth Specifications\n\nSOUND SOURCE\n\nVCO, MOD VCO, RING MOD, Noise Generator\n\nSIGNAL PROCESSORS\n\n1x Voltage-Controlled Wavefolder 1x Voltage-Controlled State-Variable Filter 2x Voltage-Controlled Amplifiers\n\nDUAL GENERATIVE SEQUENCER\n\n2x 8-step Generative Digital Sequencers \n\nPATCH BAY JACKS\n\n32 x 3.5mm\n\nINPUTS\n\n20 Input Jacks\n\nOUTPUTS\n\n12 Output Jacks\n\nAUDIO OUT\n\n1⁄4” TRS Headphone or 1⁄4” TS Instrument \n\nSECURITY\n\nKensington Lock slot\n\nPOWER SUPPLY\n\nWall adapter; barrel connection; center-pin positive \n\nINPUT\n\n100 – 240VAC; 50 Hz – 60 Hz\n\nOUTPUT\n\n+12VDC; 1200mA\n\nPOWER CONSUMPTION\n\n4.0 Watts\n\nEURORACK CURRENT DRAW\n\n290 mA (maximum) from +12VDC (10-pin header) \n\nMOUNTING DIMS\n\n60HP (18mm Module Depth)\n\nExplore Labyrinth\n\nSynthesis is a journey, and we hope that these resources help guide your explorations with Labyrinth. On this page, you will find a growing collection of tutorial videos, tips, and other helpful resources. Each artist's relationship with synthesis is unique, and we hope that these guides can help inspire you to discover your own path.\n\nDownload The Labyrinth Manual\n\nDownload The Labyrinth Quickstart Guide\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n\nVideo Walkthroughs\n\nSEQUENCER BASICS\n\nIn this video we explore Labyrinth's unique sequencer and get oriented with its basic operation.\n\nWe begin by clearing out the sequencer (holding BUFFER + RESET) and then build a rhythm using the ADVANCE button to move through the steps and the BIT FLIP buttons for each sequencer to turn steps on or off. We then explore the basics of Labyrinth's generative process and look at how to scale the sequence range, adjust the sequence length, and program rhythms on the fly. Next we explore the CORRUPT control, observing how it introduces everything from gentle mutations to completely random changes to our sequence. Finally we look at how to save snapshots of sequences with BUFFER and how to chain both sequences together.\n\nSEQUENCER BASICS\n\nIn this video we explore Labyrinth's unique sequencer and get oriented with its basic operation.\n\nDUOPHONIC PATCHING\n\nIn this video we explore how to patch Labyrinth duophonically - creating two independent sequences for melodic counterpoint.\n\nPERCUSSION SYNTHESIS AND DRUM MACHINE PATCHING\n\nIn this video we explore how to create percussive sounds with Labyrinth and use it as a flexible drum machine.\n\nSEQUENCERS PLAYING SEQUENCERS\n\nIn this video we look at some unique ways to program Labyrinth's dual sequencers to play off each other.\n\nVOICE ARCHITECTURE\n\nIn this video we dive deep into the voice structure of Labyrinth and the unique synthesis elements that it's comprised of.\n\nEXTERNAL CLOCKS AND MODULATION\n\nIn this video we pair Labyrinth with an external clock and modulation source (in this case ALM's Pamela's New Workout) to alter Labyrinth's behavior.\n\nINTERCONNECTIVITY\n\nIn this video we explore how Messenger and Labyrinth can be interconnected to create a synthesis system that is more than the sum of its parts.\n\nTANGLED TRANSPOSITIONS\n\nIn this video we tie Labyrinth and Subharmonicon's sequencers together for tangled transpositional movement.\n\nSynthesizers\n\nDISCOVER\n\nAccessories\n\nDISCOVER\n\nSoftware Store\n\nSHOP SOFTWARE\n\nSupport\nForum\nHelpdesk\nKnowledge base\nDownloads\nAll Product Downloads\nPresets\nUser Manuals\nPatches\nFirmware Updates\nThe Wave\nView all articles\nRSS Feed\nAbout Us\nCareers\nTerms Of Use\nPrivacy\nFind A Dealer\nGet The Latest Moog News\n\nThis site is protected by reCAPTCHA and the Google\nPrivacy Policy and Terms of Service apply.",
+    "specifications": [],
+    "images": [
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDYiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAxMDYgMzAiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik03MC4yMzY0IDE5LjEzNDNDNjYuMDA0NCAxOS4xMzQzIDYyLjU0NjcgMTUuNjk2IDYyLjU0NjcgMTEuNDUyOUM2Mi41NDY3IDcuMjA5NjcgNjYuMDA0NCAzLjc3MDI0IDcwLjIzNjQgMy43NzAyNEM3NC40Njg0IDMuNzcwMjQgNzcuOTI2MSA3LjIxNzQ4IDc3LjkyNjEgMTEuNDUyOUM3Ny45MjYxIDE1LjY4ODIgNzQuNDcxNCAxOS4xMzQzIDcwLjIzNjQgMTkuMTM0M1pNOTAuMTQ3IDE5LjE2ODZDODYuOTgyNSAxOS4xNjg2IDg0Ljc0MzkgMTcuOTIyIDgzLjQ5MSAxNS40Njg3QzgyLjUxMTIgMTMuNTI4OSA4Mi40NzE0IDExLjQ3MjkgODIuNDcxNCAxMS40NTMyQzgyLjQ3MTQgMTEuNDQxNyA4Mi41MTEyIDkuMzkwNjEgODMuNDkxIDcuNDcxMjZDODQuNzM4MyA1LjAzMzU2IDg2Ljk3NyAzLjc5NzQgOTAuMTQ3IDMuNzk3NEM5My4zMzM3IDMuNzk3NCA5NS41NzgzIDQuOTkzNzQgOTYuODMxMiA3LjM2MTQ5Qzk3Ljc5MzkgOS4yMTgzMiA5Ny44MzkzIDExLjE4NjQgOTcuODM5MyAxMS4yMDc2Qzk3LjgzNCAxMS41MjggOTcuNzE0MiAxOS4xNjg2IDkwLjE0NyAxOS4xNjg2Wk0xOS45MTM1IDEyLjA2OFYyMi44MDgySDIzLjY5NTdWMTIuMDY4QzIzLjY5NTcgMTIuMDU2NCAyMy43MzE0IDkuODk0ODIgMjQuNzY0OCA3Ljg2ODY4QzI2LjA4MDkgNS4yOTk2MiAyOC40MzkgNC4wMDA1OCAzMS43NTk3IDQuMDAwNThDMzUuMDgwNCA0LjAwMDU4IDM3LjQ0NDEgNS4yOTkyNSAzOC43NTE3IDcuODY4NjhDMzkuNzg1NCA5Ljg5NDgyIDM5LjgxOTYgMTIuMDU2NCAzOS44MTk2IDEyLjA2OFYyMi44MDgySDQzLjYxVjE5Ljg2NDFDNDUuNjk3NSAyMS43NTc0IDQ4LjM0NjYgMjIuNzk3NCA1MS4xODg4IDIyLjc5NzRDNTUuMDMwNCAyMi43OTc0IDU4LjYzMzIgMjAuODIwOCA2MC43MTc4IDE3LjYwNjFDNjIuODAyNyAyMC44MjA4IDY2LjM5MSAyMi43OTc0IDcwLjIzNiAyMi43OTc0Qzc0LjMzNzEgMjIuNzk3NCA3OC4xMzYzIDIwLjU0MTcgODAuMTQxMyAxNi45OTA2QzgwLjE0MTMgMTYuOTk2NiA4MC4xNjQgMTcuMDU3NiA4MC4xNjQgMTcuMDU3NkM4MS40ODUzIDE5LjcwNDQgODQuMjkzNyAyMi44NDM2IDkwLjE0NjIgMjIuODQzNkM5My4yNTM0IDIyLjg0MzYgOTUuODc5IDIxLjg5MjEgOTcuODM4NSAyMC4wNjM1VjIzLjM4NDJDOTcuODMzMyAyNC4wNjUyIDk3LjU5OTYgMjYuMzEyNCA5NC45MTExIDI2LjMxMjRINzkuODQ1MVYzMEg5NC45MTExQzk4LjMyODYgMzAgOTkuOTU3NyAyOC4xNDMyIDEwMC43MjQgMjYuNTk5M0MxMDEuNTAxIDI1LjA2NDMgMTAxLjUyNCAyMy41NjA2IDEwMS41MjQgMjMuMzg5OFYxLjE2Njk1SDk3LjgzODVWMi43NjUxN0M5NS44Nzk0IDEuMDI4ODkgOTMuMjUzNCAwLjExNjEwNSA5MC4xNDYyIDAuMTE2MTA1Qzg0LjI5MzMgMC4xMTYxMDUgODEuNDg1MyAzLjI1MjI2IDgwLjE2NCA1Ljg3Mzc5QzgwLjE2NCA1Ljg3Mzc5IDgwLjE1ODQgNS44OTkwOSA4MC4xNDEzIDUuOTM0ODFDNzguMTUzNSAyLjM4NTk4IDc0LjM0MjcgMC4xMTYxMDUgNzAuMjM2IDAuMTE2MTA1QzY2LjM5MSAwLjExNjEwNSA2Mi44MDI3IDIuMDkxNjQgNjAuNzE3OCA1LjMxOTcxQzU5LjE3NDcgMi45NTY4IDU2LjgwNDcgMS4yMDExOCA1NC4wOTkxIDAuNDgzNzUxTDUzLjYyNjUgMC4zNjA5NTRWNC4xNDc1NkM1My42MjY1IDQuMTQ3NTYgNTMuNjMyNCA1LjQ3NiA1My42MzI0IDUuODMyMTFDNTMuMjUxIDYuMDI1NjEgNDcuNjQ1OSA4LjgxNTcgNDcuNjQ1OSA4LjgxNTdWMTIuNTEwOEw1My42MjY1IDkuMzM1NTRWOS42NDE0MUg1My42MzI0VjEwLjA0NzhINTMuNjI2NVYxMC4yODExTDQ3LjY0NTkgMTMuNDUzM1YxNy4xMzMxTDU1Ljg1MzkgMTIuNzVWNS42NTM4N0M1Ny42MDg0IDcuMDYwODIgNTguNjU2MyA5LjE3NjY1IDU4LjY1NjMgMTEuNDUyOUM1OC42NTYzIDE1LjU2NTEgNTUuMzAxMyAxOC45MDk2IDUxLjE4OTEgMTguOTA5NkM0Ny4wNzY5IDE4LjkwOTYgNDMuNzM2MSAxNS41NjUxIDQzLjczNjEgMTEuNDUyOUM0My43MzYxIDcuMzQwNjUgNDcuMDgyMSA0LjAwMDU4IDUxLjE4OTEgNC4wMDA1OEM1MS43Mjk4IDQuMDAwNTggNTIuMjU5NyA0LjA1NjM5IDUyLjc4OTYgNC4xNzI4NlYwLjIxODQzNUM1Mi4yNTk3IDAuMTUxNDU1IDUxLjcyNDYgMC4xMDIzMzcgNTEuMTg5MSAwLjEwMjMzN0M0Ny4zMzg5IDAuMTAyMzM3IDQzLjczNjEgMi4wOTE2NCA0MS42NTk3IDUuMzMzODVDNDAuMTQ0NSAyLjg4MTY0IDM3LjI0NTQgMC4yMTg4MDcgMzEuNzYwMSAwLjIxODgwN0MyNi4yMjM4IDAuMjE4ODA3IDIzLjMxNDYgMi45MzE4NyAyMS44MDk1IDUuNDIyNDFDMjAuMzEzNiAyLjkwNzMxIDE3LjQxNDEgMC4xNTE0NTUgMTEuODc2MyAwLjA4MTg3MDVDOC41NTM3MyAwLjA0MDE5NCA1LjgzODQzIDAuOTk3NjM3IDMuNzc2NTYgMi45MzE1VjEuMzIzOThIMFYyMi44MDgySDMuNzc2NTZWMTIuMDYyQzMuNzc2NTYgMTIuMDQ4MiAzLjgyMDQ3IDkuODk0ODIgNC44NDcxMiA3Ljg2ODNDNi4xNjg0OSA1LjI5OTI1IDguNTIwOTggMy45OTQ2MiAxMS44NDYyIDMuOTk0NjJDMTUuMTcxNCAzLjk5NDYyIDE3LjUzMzkgNS4yOTkyNSAxOC44MzY3IDcuODY4M0MxOS44NzE5IDkuODk0NDUgMTkuOTEzNSAxMi4wNDgyIDE5LjkxMzUgMTIuMDY4WiIgZmlsbD0id2hpdGUiLz4KICA8cGF0aCBkPSJNMTAyLjgxNSAxLjE5NjcxVjEuMTkwMDFDMTAyLjgxNSAwLjU0MjUzOSAxMDMuMzQxIDAgMTA0LjAwOCAwQzEwNC42NzYgMCAxMDUuMTk1IDAuNTM1ODQxIDEwNS4xOTUgMS4xODM2OVYxLjE5MDM4QzEwNS4xOTUgMS44MzgyMyAxMDQuNjY5IDIuMzgwNCAxMDQuMDAyIDIuMzgwNEMxMDMuMzM1IDIuMzgwNCAxMDIuODE1IDEuODQ0NTYgMTAyLjgxNSAxLjE5NjcxWk0xMDUuMDU3IDEuMTkwMDFWMS4xODMzMUMxMDUuMDU3IDAuNjAxMzMyIDEwNC42MDYgMC4xMzEzNTUgMTA0LjAwOCAwLjEzMTM1NUMxMDMuNDA3IDAuMTMxMzU1IDEwMi45NTMgMC42MDgwMyAxMDIuOTUzIDEuMTkwMDFWMS4xOTY3MUMxMDIuOTUzIDEuNzc4NjkgMTAzLjQwMyAyLjI0ODY3IDEwNC4wMDIgMi4yNDg2N0MxMDQuNjAzIDIuMjQ4NjcgMTA1LjA1NyAxLjc3MiAxMDUuMDU3IDEuMTkwMDFaTTEwMy41MTUgMC41MjI4MTdIMTA0LjA3N0MxMDQuMjQ4IDAuNTIyODE3IDEwNC4zOCAwLjU3MjMwOCAxMDQuNDY4IDAuNjYwODdDMTA0LjUzOCAwLjczMDA4MyAxMDQuNTc0IDAuODI1MzQzIDEwNC41NzQgMC45MzY5NzdWMC45NDM2NzVDMTA0LjU3NCAxLjE0NzU5IDEwNC40NjIgMS4yNzU5NyAxMDQuMzAxIDEuMzM0NzZMMTA0LjYxIDEuNzg4MzdIMTA0LjI4NUwxMDQuMDE1IDEuMzgwOTFIMTAzLjc5NVYxLjc4ODM3SDEwMy41MTVWMC41MjI4MTdaTTEwNC4wNzQgMS4xNDA4OUMxMDQuMjE1IDEuMTQwODkgMTA0LjI5MSAxLjA2NTM2IDEwNC4yOTEgMC45NjAwNDhWMC45NTMzNUMxMDQuMjkxIDAuODMxNjY5IDEwNC4yMDYgMC43NjkxNTQgMTA0LjA2NyAwLjc2OTE1NEgxMDMuNzk1VjEuMTQwODlIMTA0LjA3NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "Moog Music"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA4IDkiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0wLjg4ODg4OSA4LjVDMC42NDQ0NDQgOC41IDAuNDM1MTg1IDguNDEyOTYgMC4yNjExMTEgOC4yMzg4OUMwLjA4NzAzNyA4LjA2NDgyIDAgNy44NTU1NiAwIDcuNjExMTFWMS4zODg4OUMwIDEuMTQ0NDQgMC4wODcwMzcgMC45MzUxODUgMC4yNjExMTEgMC43NjExMTFDMC40MzUxODUgMC41ODcwMzcgMC42NDQ0NDQgMC41IDAuODg4ODg5IDAuNUg0VjEuMzg4ODlIMC44ODg4ODlWNy42MTExMUg3LjExMTExVjQuNUg4VjcuNjExMTFDOCA3Ljg1NTU2IDcuOTEyOTYgOC4wNjQ4MiA3LjczODg5IDguMjM4ODlDNy41NjQ4MiA4LjQxMjk2IDcuMzU1NTYgOC41IDcuMTExMTEgOC41SDAuODg4ODg5Wk0yLjk3Nzc4IDYuMTQ0NDRMMi4zNTU1NiA1LjUyMjIyTDYuNDg4ODkgMS4zODg4OUg0Ljg4ODg5VjAuNUg4VjMuNjExMTFINy4xMTExMVYyLjAxMTExTDIuOTc3NzggNi4xNDQ0NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "external link"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMTYuNiAxOEwxMC4zIDExLjdDOS44IDEyLjEgOS4yMjUgMTIuNDE2NyA4LjU3NSAxMi42NUM3LjkyNSAxMi44ODMzIDcuMjMzMzMgMTMgNi41IDEzQzQuNjgzMzMgMTMgMy4xNDU4MyAxMi4zNzA4IDEuODg3NSAxMS4xMTI1QzAuNjI5MTY3IDkuODU0MTcgMCA4LjMxNjY3IDAgNi41QzAgNC42ODMzMyAwLjYyOTE2NyAzLjE0NTgzIDEuODg3NSAxLjg4NzVDMy4xNDU4MyAwLjYyOTE2NyA0LjY4MzMzIDAgNi41IDBDOC4zMTY2NyAwIDkuODU0MTcgMC42MjkxNjcgMTEuMTEyNSAxLjg4NzVDMTIuMzcwOCAzLjE0NTgzIDEzIDQuNjgzMzMgMTMgNi41QzEzIDcuMjMzMzMgMTIuODgzMyA3LjkyNSAxMi42NSA4LjU3NUMxMi40MTY3IDkuMjI1IDEyLjEgOS44IDExLjcgMTAuM0wxOCAxNi42TDE2LjYgMThaTTYuNSAxMUM3Ljc1IDExIDguODEyNSAxMC41NjI1IDkuNjg3NSA5LjY4NzVDMTAuNTYyNSA4LjgxMjUgMTEgNy43NSAxMSA2LjVDMTEgNS4yNSAxMC41NjI1IDQuMTg3NSA5LjY4NzUgMy4zMTI1QzguODEyNSAyLjQzNzUgNy43NSAyIDYuNSAyQzUuMjUgMiA0LjE4NzUgMi40Mzc1IDMuMzEyNSAzLjMxMjVDMi40Mzc1IDQuMTg3NSAyIDUuMjUgMiA2LjVDMiA3Ljc1IDIuNDM3NSA4LjgxMjUgMy4zMTI1IDkuNjg3NUM0LjE4NzUgMTAuNTYyNSA1LjI1IDExIDYuNSAxMVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": ""
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNOCA4QzYuOSA4IDUuOTU4MzMgNy42MDgzMyA1LjE3NSA2LjgyNUM0LjM5MTY3IDYuMDQxNjcgNCA1LjEgNCA0QzQgMi45IDQuMzkxNjcgMS45NTgzMyA1LjE3NSAxLjE3NUM1Ljk1ODMzIDAuMzkxNjY3IDYuOSAwIDggMEM5LjEgMCAxMC4wNDE3IDAuMzkxNjY3IDEwLjgyNSAxLjE3NUMxMS42MDgzIDEuOTU4MzMgMTIgMi45IDEyIDRDMTIgNS4xIDExLjYwODMgNi4wNDE2NyAxMC44MjUgNi44MjVDMTAuMDQxNyA3LjYwODMzIDkuMSA4IDggOFpNMCAxNlYxMy4yQzAgMTIuNjMzMyAwLjE0NTgzMyAxMi4xMTI1IDAuNDM3NSAxMS42Mzc1QzAuNzI5MTY3IDExLjE2MjUgMS4xMTY2NyAxMC44IDEuNiAxMC41NUMyLjYzMzMzIDEwLjAzMzMgMy42ODMzMyA5LjY0NTgzIDQuNzUgOS4zODc1QzUuODE2NjcgOS4xMjkxNyA2LjkgOSA4IDlDOS4xIDkgMTAuMTgzMyA5LjEyOTE3IDExLjI1IDkuMzg3NUMxMi4zMTY3IDkuNjQ1ODMgMTMuMzY2NyAxMC4wMzMzIDE0LjQgMTAuNTVDMTQuODgzMyAxMC44IDE1LjI3MDggMTEuMTYyNSAxNS41NjI1IDExLjYzNzVDMTUuODU0MiAxMi4xMTI1IDE2IDEyLjYzMzMgMTYgMTMuMlYxNkgwWk0yIDE0SDE0VjEzLjJDMTQgMTMuMDE2NyAxMy45NTQyIDEyLjg1IDEzLjg2MjUgMTIuN0MxMy43NzA4IDEyLjU1IDEzLjY1IDEyLjQzMzMgMTMuNSAxMi4zNUMxMi42IDExLjkgMTEuNjkxNyAxMS41NjI1IDEwLjc3NSAxMS4zMzc1QzkuODU4MzMgMTEuMTEyNSA4LjkzMzMzIDExIDggMTFDNy4wNjY2NyAxMSA2LjE0MTY3IDExLjExMjUgNS4yMjUgMTEuMzM3NUM0LjMwODMzIDExLjU2MjUgMy40IDExLjkgMi41IDEyLjM1QzIuMzUgMTIuNDMzMyAyLjIyOTE3IDEyLjU1IDIuMTM3NSAxMi43QzIuMDQ1ODMgMTIuODUgMiAxMy4wMTY3IDIgMTMuMlYxNFpNOCA2QzguNTUgNiA5LjAyMDgzIDUuODA0MTcgOS40MTI1IDUuNDEyNUM5LjgwNDE3IDUuMDIwODMgMTAgNC41NSAxMCA0QzEwIDMuNDUgOS44MDQxNyAyLjk3OTE3IDkuNDEyNSAyLjU4NzVDOS4wMjA4MyAyLjE5NTgzIDguNTUgMiA4IDJDNy40NSAyIDYuOTc5MTcgMi4xOTU4MyA2LjU4NzUgMi41ODc1QzYuMTk1ODMgMi45NzkxNyA2IDMuNDUgNiA0QzYgNC41NSA2LjE5NTgzIDUuMDIwODMgNi41ODc1IDUuNDEyNUM2Ljk3OTE3IDUuODA0MTcgNy40NSA2IDggNloiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "Account"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8bWFzayBpZD0ibWFzazBfMjkxXzM5MTYiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjAiIHk9IjAiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9IiNEOUQ5RDkiLz4KICA8L21hc2s+CiAgPGcgbWFzaz0idXJsKCNtYXNrMF8yOTFfMzkxNikiPgogICAgPHBhdGggZD0iTTMgMThWMTZIMjFWMThIM1pNMyAxM1YxMUgyMVYxM0gzWk0zIDhWNkgyMVY4SDNaIiBmaWxsPSJ3aGl0ZSIvPgogIDwvZz4KPC9zdmc+",
+        "alt_text": "Mobile menu"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgOCAxMCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTQuNzUwMzMgNUwwLjkxNjk5MiAxLjE2NjY3TDIuMDgzNjYgMEw3LjA4MzY2IDVMMi4wODM2NiAxMEwwLjkxNjk5MiA4LjgzMzMzTDQuNzUwMzMgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "chevron right"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgOCAxMCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTQuNzUwMzMgNUwwLjkxNjk5MiAxLjE2NjY3TDIuMDgzNjYgMEw3LjA4MzY2IDVMMi4wODM2NiAxMEwwLjkxNjk5MiA4LjgzMzMzTDQuNzUwMzMgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "chevron right"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgOCAxMCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTQuNzUwMzMgNUwwLjkxNjk5MiAxLjE2NjY3TDIuMDgzNjYgMEw3LjA4MzY2IDVMMi4wODM2NiAxMEwwLjkxNjk5MiA4LjgzMzMzTDQuNzUwMzMgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "chevron right"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgOCAxMCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTQuNzUwMzMgNUwwLjkxNjk5MiAxLjE2NjY3TDIuMDgzNjYgMEw3LjA4MzY2IDVMMi4wODM2NiAxMEwwLjkxNjk5MiA4LjgzMzMzTDQuNzUwMzMgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "chevron right"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjEwIiB2aWV3Qm94PSIwIDAgOCAxMCIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0iTTQuNzUwMzMgNUwwLjkxNjk5MiAxLjE2NjY3TDIuMDgzNjYgMEw3LjA4MzY2IDVMMi4wODM2NiAxMEwwLjkxNjk5MiA4LjgzMzMzTDQuNzUwMzMgNVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "chevron right"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F954645a0433545dc9e85b0f844e79321",
+        "alt_text": "Messenger"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE2IDE3IiBmaWxsPSJub25lIj4KICA8bWFzayBpZD0ibWFzazBfMzQyXzYyNyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE3Ij4KICAgIDxyZWN0IHk9IjAuMzMzMjUyIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IiNEOUQ5RDkiLz4KICA8L21hc2s+CiAgPGcgbWFzaz0idXJsKCNtYXNrMF8zNDJfNjI3KSI+CiAgICA8cGF0aCBkPSJNMTAuNzgzIDguOTk5NzVIMi42NjYzOFY3LjY2NjQySDEwLjc4M0w3LjA0OTcxIDMuOTMzMDlMNy45OTk3MSAyLjk5OTc2TDEzLjMzMyA4LjMzMzA5TDcuOTk5NzEgMTMuNjY2NEw3LjA0OTcxIDEyLjczMzFMMTAuNzgzIDguOTk5NzVaIiBmaWxsPSIjRkNCMDQwIi8+CiAgPC9nPgo8L3N2Zz4=",
+        "alt_text": "Arrow"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc85c3c38cbb94a79b9e5450dbcb4e24f",
+        "alt_text": "Labyrinth"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDE2IDE3IiBmaWxsPSJub25lIj4KICA8bWFzayBpZD0ibWFzazBfMzQyXzYyNyIgc3R5bGU9Im1hc2stdHlwZTphbHBoYSIgbWFza1VuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE3Ij4KICAgIDxyZWN0IHk9IjAuMzMzMjUyIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IiNEOUQ5RDkiLz4KICA8L21hc2s+CiAgPGcgbWFzaz0idXJsKCNtYXNrMF8zNDJfNjI3KSI+CiAgICA8cGF0aCBkPSJNMTAuNzgzIDguOTk5NzVIMi42NjYzOFY3LjY2NjQySDEwLjc4M0w3LjA0OTcxIDMuOTMzMDlMNy45OTk3MSAyLjk5OTc2TDEzLjMzMyA4LjMzMzA5TDcuOTk5NzEgMTMuNjY2NEw3LjA0OTcxIDEyLjczMzFMMTAuNzgzIDguOTk5NzVaIiBmaWxsPSIjRkNCMDQwIi8+CiAgPC9nPgo8L3N2Zz4=",
+        "alt_text": "Arrow"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/56cb27297cb7051aee53684de8470d30/facebook-icon-white.svg",
+        "alt_text": "Facebook"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/067451621524d5f34aa54f0306966fb8/twitter-bird-white.svg",
+        "alt_text": "X"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/b056adcdf3b15b8da26cfda03eb997e1/instagram-icon-white.svg",
+        "alt_text": "Instagram"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/34f1ab23ecd21d5e19a7913fc801e7d6/youtube-icon-white.svg",
+        "alt_text": "Youtube"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/ade14c703a93399766fa242393f499b8/soundcloud-white-icon.svg",
+        "alt_text": "Soundcloud"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F7ad5733227a641d6bf168cf081d60627",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2b629fbddaac467f954cd186ba424f87",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/pixel?apiKey=47c5d023e7b3451a86ac03602c65dce8",
+        "alt_text": ""
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F9bffccc0f2db4c118548c9a9e3c3b4c7",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc171708e09b34817a5001d7e45852894",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F6c84913499e046038dd38a82ceb86902",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fac6025dee362422e9987cf1a892e22d7",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc171708e09b34817a5001d7e45852894",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F6c84913499e046038dd38a82ceb86902",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fac6025dee362422e9987cf1a892e22d7",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc171708e09b34817a5001d7e45852894",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F9bffccc0f2db4c118548c9a9e3c3b4c7",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F46abc426b46442038a5f298165e1079e",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/pixel?apiKey=47c5d023e7b3451a86ac03602c65dce8",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F5b961a2d0a1c4736be8938f3d48bc66d",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fcebeef48b9de4f138291fea3c9b8b739",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fa422025faa99435fac456e56d0029dd9",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fa422025faa99435fac456e56d0029dd9",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2FagZ9n5CUKRfbL9t6CaJOyVSK4Es2%2Fdb2a9827561249aea3817b539aacdcdc",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2efd10498ca74652a00c6aa8b996144b",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F817922c37f194f67abd17cf760719549",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fad8f6d540de649eaa194bca897016640",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fcb54683884c74b0180f4b3890f58c5e4",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F5462ad7d28ed4b06a72bd58be00dd7c1",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc0e2741a64514658a498adce5a6049d3",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F91364a3a6a894054b7447a04023c526c",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F0833281d54324d87a1ea324233d12876",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fecd4fd56ae7f49218fe7ea4af6d87ec5",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2ae6a4d8f53f41bfa475ef38306bcabb",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc78a805e1d6f411abe33ea44d5919a81",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fe6e373c5c64e4b5fa3157850e5cb4cef",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F8e1289eebaf348a3b6276511876d5438",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2cd69289a3ab4c369889f1d3de366487",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fb468eb5dbb1a416cb218d22687ca8822",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2efd10498ca74652a00c6aa8b996144b",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F817922c37f194f67abd17cf760719549",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fad8f6d540de649eaa194bca897016640",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fcb54683884c74b0180f4b3890f58c5e4",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F5462ad7d28ed4b06a72bd58be00dd7c1",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc0e2741a64514658a498adce5a6049d3",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F91364a3a6a894054b7447a04023c526c",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F0833281d54324d87a1ea324233d12876",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fecd4fd56ae7f49218fe7ea4af6d87ec5",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2ae6a4d8f53f41bfa475ef38306bcabb",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fc78a805e1d6f411abe33ea44d5919a81",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fe6e373c5c64e4b5fa3157850e5cb4cef",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F8e1289eebaf348a3b6276511876d5438",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2cd69289a3ab4c369889f1d3de366487",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fb468eb5dbb1a416cb218d22687ca8822",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F2efd10498ca74652a00c6aa8b996144b",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2FagZ9n5CUKRfbL9t6CaJOyVSK4Es2%2Fd909a5b91650499c9e0524cc904eeb77",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fa422025faa99435fac456e56d0029dd9",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Fa422025faa99435fac456e56d0029dd9",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F29c84e0b69304d4c9b19b21fe26daf03",
+        "alt_text": "SEQUENCER BASICS"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F3a8a31e89cf64a1bba4a0923ca472c48",
+        "alt_text": "DUOPHONIC PATCHING"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F0d9d8ab6ec354f0983df58d7ebffaa52",
+        "alt_text": "PERCUSSION SYNTHESIS AND DRUM MACHINE PATCHING"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F5f5ae50516f64f4fbcfa00c51b6ef81f",
+        "alt_text": "SEQUENCERS PLAYING SEQUENCERS"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F551f5273aa2245949654eaceff850a68",
+        "alt_text": "VOICE ARCHITECTURE"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F455f130322cd4e8bb7c006f9d0092b66",
+        "alt_text": "EXTERNAL CLOCKS AND MODULATION"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F20fbb8de786543a09a720d08de9705da",
+        "alt_text": "INTERCONNECTIVITY"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2Ffe1322f643c8431aa8bf4de71be9e21d",
+        "alt_text": "TANGLED TRANSPOSITIONS"
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F6f82509c0f9445c480afc7133079cadf",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F6f82509c0f9445c480afc7133079cadf",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/image/assets%2F47c5d023e7b3451a86ac03602c65dce8%2F6f82509c0f9445c480afc7133079cadf",
+        "alt_text": null
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/pixel?apiKey=47c5d023e7b3451a86ac03602c65dce8",
+        "alt_text": ""
+      },
+      {
+        "url": "https://cdn.builder.io/api/v1/pixel?apiKey=47c5d023e7b3451a86ac03602c65dce8",
+        "alt_text": ""
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDYiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAxMDYgMzAiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik03MC4yMzY0IDE5LjEzNDNDNjYuMDA0NCAxOS4xMzQzIDYyLjU0NjcgMTUuNjk2IDYyLjU0NjcgMTEuNDUyOUM2Mi41NDY3IDcuMjA5NjcgNjYuMDA0NCAzLjc3MDI0IDcwLjIzNjQgMy43NzAyNEM3NC40Njg0IDMuNzcwMjQgNzcuOTI2MSA3LjIxNzQ4IDc3LjkyNjEgMTEuNDUyOUM3Ny45MjYxIDE1LjY4ODIgNzQuNDcxNCAxOS4xMzQzIDcwLjIzNjQgMTkuMTM0M1pNOTAuMTQ3IDE5LjE2ODZDODYuOTgyNSAxOS4xNjg2IDg0Ljc0MzkgMTcuOTIyIDgzLjQ5MSAxNS40Njg3QzgyLjUxMTIgMTMuNTI4OSA4Mi40NzE0IDExLjQ3MjkgODIuNDcxNCAxMS40NTMyQzgyLjQ3MTQgMTEuNDQxNyA4Mi41MTEyIDkuMzkwNjEgODMuNDkxIDcuNDcxMjZDODQuNzM4MyA1LjAzMzU2IDg2Ljk3NyAzLjc5NzQgOTAuMTQ3IDMuNzk3NEM5My4zMzM3IDMuNzk3NCA5NS41NzgzIDQuOTkzNzQgOTYuODMxMiA3LjM2MTQ5Qzk3Ljc5MzkgOS4yMTgzMiA5Ny44MzkzIDExLjE4NjQgOTcuODM5MyAxMS4yMDc2Qzk3LjgzNCAxMS41MjggOTcuNzE0MiAxOS4xNjg2IDkwLjE0NyAxOS4xNjg2Wk0xOS45MTM1IDEyLjA2OFYyMi44MDgySDIzLjY5NTdWMTIuMDY4QzIzLjY5NTcgMTIuMDU2NCAyMy43MzE0IDkuODk0ODIgMjQuNzY0OCA3Ljg2ODY4QzI2LjA4MDkgNS4yOTk2MiAyOC40MzkgNC4wMDA1OCAzMS43NTk3IDQuMDAwNThDMzUuMDgwNCA0LjAwMDU4IDM3LjQ0NDEgNS4yOTkyNSAzOC43NTE3IDcuODY4NjhDMzkuNzg1NCA5Ljg5NDgyIDM5LjgxOTYgMTIuMDU2NCAzOS44MTk2IDEyLjA2OFYyMi44MDgySDQzLjYxVjE5Ljg2NDFDNDUuNjk3NSAyMS43NTc0IDQ4LjM0NjYgMjIuNzk3NCA1MS4xODg4IDIyLjc5NzRDNTUuMDMwNCAyMi43OTc0IDU4LjYzMzIgMjAuODIwOCA2MC43MTc4IDE3LjYwNjFDNjIuODAyNyAyMC44MjA4IDY2LjM5MSAyMi43OTc0IDcwLjIzNiAyMi43OTc0Qzc0LjMzNzEgMjIuNzk3NCA3OC4xMzYzIDIwLjU0MTcgODAuMTQxMyAxNi45OTA2QzgwLjE0MTMgMTYuOTk2NiA4MC4xNjQgMTcuMDU3NiA4MC4xNjQgMTcuMDU3NkM4MS40ODUzIDE5LjcwNDQgODQuMjkzNyAyMi44NDM2IDkwLjE0NjIgMjIuODQzNkM5My4yNTM0IDIyLjg0MzYgOTUuODc5IDIxLjg5MjEgOTcuODM4NSAyMC4wNjM1VjIzLjM4NDJDOTcuODMzMyAyNC4wNjUyIDk3LjU5OTYgMjYuMzEyNCA5NC45MTExIDI2LjMxMjRINzkuODQ1MVYzMEg5NC45MTExQzk4LjMyODYgMzAgOTkuOTU3NyAyOC4xNDMyIDEwMC43MjQgMjYuNTk5M0MxMDEuNTAxIDI1LjA2NDMgMTAxLjUyNCAyMy41NjA2IDEwMS41MjQgMjMuMzg5OFYxLjE2Njk1SDk3LjgzODVWMi43NjUxN0M5NS44Nzk0IDEuMDI4ODkgOTMuMjUzNCAwLjExNjEwNSA5MC4xNDYyIDAuMTE2MTA1Qzg0LjI5MzMgMC4xMTYxMDUgODEuNDg1MyAzLjI1MjI2IDgwLjE2NCA1Ljg3Mzc5QzgwLjE2NCA1Ljg3Mzc5IDgwLjE1ODQgNS44OTkwOSA4MC4xNDEzIDUuOTM0ODFDNzguMTUzNSAyLjM4NTk4IDc0LjM0MjcgMC4xMTYxMDUgNzAuMjM2IDAuMTE2MTA1QzY2LjM5MSAwLjExNjEwNSA2Mi44MDI3IDIuMDkxNjQgNjAuNzE3OCA1LjMxOTcxQzU5LjE3NDcgMi45NTY4IDU2LjgwNDcgMS4yMDExOCA1NC4wOTkxIDAuNDgzNzUxTDUzLjYyNjUgMC4zNjA5NTRWNC4xNDc1NkM1My42MjY1IDQuMTQ3NTYgNTMuNjMyNCA1LjQ3NiA1My42MzI0IDUuODMyMTFDNTMuMjUxIDYuMDI1NjEgNDcuNjQ1OSA4LjgxNTcgNDcuNjQ1OSA4LjgxNTdWMTIuNTEwOEw1My42MjY1IDkuMzM1NTRWOS42NDE0MUg1My42MzI0VjEwLjA0NzhINTMuNjI2NVYxMC4yODExTDQ3LjY0NTkgMTMuNDUzM1YxNy4xMzMxTDU1Ljg1MzkgMTIuNzVWNS42NTM4N0M1Ny42MDg0IDcuMDYwODIgNTguNjU2MyA5LjE3NjY1IDU4LjY1NjMgMTEuNDUyOUM1OC42NTYzIDE1LjU2NTEgNTUuMzAxMyAxOC45MDk2IDUxLjE4OTEgMTguOTA5NkM0Ny4wNzY5IDE4LjkwOTYgNDMuNzM2MSAxNS41NjUxIDQzLjczNjEgMTEuNDUyOUM0My43MzYxIDcuMzQwNjUgNDcuMDgyMSA0LjAwMDU4IDUxLjE4OTEgNC4wMDA1OEM1MS43Mjk4IDQuMDAwNTggNTIuMjU5NyA0LjA1NjM5IDUyLjc4OTYgNC4xNzI4NlYwLjIxODQzNUM1Mi4yNTk3IDAuMTUxNDU1IDUxLjcyNDYgMC4xMDIzMzcgNTEuMTg5MSAwLjEwMjMzN0M0Ny4zMzg5IDAuMTAyMzM3IDQzLjczNjEgMi4wOTE2NCA0MS42NTk3IDUuMzMzODVDNDAuMTQ0NSAyLjg4MTY0IDM3LjI0NTQgMC4yMTg4MDcgMzEuNzYwMSAwLjIxODgwN0MyNi4yMjM4IDAuMjE4ODA3IDIzLjMxNDYgMi45MzE4NyAyMS44MDk1IDUuNDIyNDFDMjAuMzEzNiAyLjkwNzMxIDE3LjQxNDEgMC4xNTE0NTUgMTEuODc2MyAwLjA4MTg3MDVDOC41NTM3MyAwLjA0MDE5NCA1LjgzODQzIDAuOTk3NjM3IDMuNzc2NTYgMi45MzE1VjEuMzIzOThIMFYyMi44MDgySDMuNzc2NTZWMTIuMDYyQzMuNzc2NTYgMTIuMDQ4MiAzLjgyMDQ3IDkuODk0ODIgNC44NDcxMiA3Ljg2ODNDNi4xNjg0OSA1LjI5OTI1IDguNTIwOTggMy45OTQ2MiAxMS44NDYyIDMuOTk0NjJDMTUuMTcxNCAzLjk5NDYyIDE3LjUzMzkgNS4yOTkyNSAxOC44MzY3IDcuODY4M0MxOS44NzE5IDkuODk0NDUgMTkuOTEzNSAxMi4wNDgyIDE5LjkxMzUgMTIuMDY4WiIgZmlsbD0id2hpdGUiLz4KICA8cGF0aCBkPSJNMTAyLjgxNSAxLjE5NjcxVjEuMTkwMDFDMTAyLjgxNSAwLjU0MjUzOSAxMDMuMzQxIDAgMTA0LjAwOCAwQzEwNC42NzYgMCAxMDUuMTk1IDAuNTM1ODQxIDEwNS4xOTUgMS4xODM2OVYxLjE5MDM4QzEwNS4xOTUgMS44MzgyMyAxMDQuNjY5IDIuMzgwNCAxMDQuMDAyIDIuMzgwNEMxMDMuMzM1IDIuMzgwNCAxMDIuODE1IDEuODQ0NTYgMTAyLjgxNSAxLjE5NjcxWk0xMDUuMDU3IDEuMTkwMDFWMS4xODMzMUMxMDUuMDU3IDAuNjAxMzMyIDEwNC42MDYgMC4xMzEzNTUgMTA0LjAwOCAwLjEzMTM1NUMxMDMuNDA3IDAuMTMxMzU1IDEwMi45NTMgMC42MDgwMyAxMDIuOTUzIDEuMTkwMDFWMS4xOTY3MUMxMDIuOTUzIDEuNzc4NjkgMTAzLjQwMyAyLjI0ODY3IDEwNC4wMDIgMi4yNDg2N0MxMDQuNjAzIDIuMjQ4NjcgMTA1LjA1NyAxLjc3MiAxMDUuMDU3IDEuMTkwMDFaTTEwMy41MTUgMC41MjI4MTdIMTA0LjA3N0MxMDQuMjQ4IDAuNTIyODE3IDEwNC4zOCAwLjU3MjMwOCAxMDQuNDY4IDAuNjYwODdDMTA0LjUzOCAwLjczMDA4MyAxMDQuNTc0IDAuODI1MzQzIDEwNC41NzQgMC45MzY5NzdWMC45NDM2NzVDMTA0LjU3NCAxLjE0NzU5IDEwNC40NjIgMS4yNzU5NyAxMDQuMzAxIDEuMzM0NzZMMTA0LjYxIDEuNzg4MzdIMTA0LjI4NUwxMDQuMDE1IDEuMzgwOTFIMTAzLjc5NVYxLjc4ODM3SDEwMy41MTVWMC41MjI4MTdaTTEwNC4wNzQgMS4xNDA4OUMxMDQuMjE1IDEuMTQwODkgMTA0LjI5MSAxLjA2NTM2IDEwNC4yOTEgMC45NjAwNDhWMC45NTMzNUMxMDQuMjkxIDAuODMxNjY5IDEwNC4yMDYgMC43NjkxNTQgMTA0LjA2NyAwLjc2OTE1NEgxMDMuNzk1VjEuMTQwODlIMTA0LjA3NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "Moog Music"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/56cb27297cb7051aee53684de8470d30/facebook-icon-white.svg",
+        "alt_text": "Facebook"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/067451621524d5f34aa54f0306966fb8/twitter-bird-white.svg",
+        "alt_text": "X"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/b056adcdf3b15b8da26cfda03eb997e1/instagram-icon-white.svg",
+        "alt_text": "Instagram"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/34f1ab23ecd21d5e19a7913fc801e7d6/youtube-icon-white.svg",
+        "alt_text": "Youtube"
+      },
+      {
+        "url": "https://www.moogmusic.com/static/ade14c703a93399766fa242393f499b8/soundcloud-white-icon.svg",
+        "alt_text": "Soundcloud"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA4IDkiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0wLjg4ODg4OSA4LjVDMC42NDQ0NDQgOC41IDAuNDM1MTg1IDguNDEyOTYgMC4yNjExMTEgOC4yMzg4OUMwLjA4NzAzNyA4LjA2NDgyIDAgNy44NTU1NiAwIDcuNjExMTFWMS4zODg4OUMwIDEuMTQ0NDQgMC4wODcwMzcgMC45MzUxODUgMC4yNjExMTEgMC43NjExMTFDMC40MzUxODUgMC41ODcwMzcgMC42NDQ0NDQgMC41IDAuODg4ODg5IDAuNUg0VjEuMzg4ODlIMC44ODg4ODlWNy42MTExMUg3LjExMTExVjQuNUg4VjcuNjExMTFDOCA3Ljg1NTU2IDcuOTEyOTYgOC4wNjQ4MiA3LjczODg5IDguMjM4ODlDNy41NjQ4MiA4LjQxMjk2IDcuMzU1NTYgOC41IDcuMTExMTEgOC41SDAuODg4ODg5Wk0yLjk3Nzc4IDYuMTQ0NDRMMi4zNTU1NiA1LjUyMjIyTDYuNDg4ODkgMS4zODg4OUg0Ljg4ODg5VjAuNUg4VjMuNjExMTFINy4xMTExMVYyLjAxMTExTDIuOTc3NzggNi4xNDQ0NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "external link"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA4IDkiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0wLjg4ODg4OSA4LjVDMC42NDQ0NDQgOC41IDAuNDM1MTg1IDguNDEyOTYgMC4yNjExMTEgOC4yMzg4OUMwLjA4NzAzNyA4LjA2NDgyIDAgNy44NTU1NiAwIDcuNjExMTFWMS4zODg4OUMwIDEuMTQ0NDQgMC4wODcwMzcgMC45MzUxODUgMC4yNjExMTEgMC43NjExMTFDMC40MzUxODUgMC41ODcwMzcgMC42NDQ0NDQgMC41IDAuODg4ODg5IDAuNUg0VjEuMzg4ODlIMC44ODg4ODlWNy42MTExMUg3LjExMTExVjQuNUg4VjcuNjExMTFDOCA3Ljg1NTU2IDcuOTEyOTYgOC4wNjQ4MiA3LjczODg5IDguMjM4ODlDNy41NjQ4MiA4LjQxMjk2IDcuMzU1NTYgOC41IDcuMTExMTEgOC41SDAuODg4ODg5Wk0yLjk3Nzc4IDYuMTQ0NDRMMi4zNTU1NiA1LjUyMjIyTDYuNDg4ODkgMS4zODg4OUg0Ljg4ODg5VjAuNUg4VjMuNjExMTFINy4xMTExMVYyLjAxMTExTDIuOTc3NzggNi4xNDQ0NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "external link"
+      },
+      {
+        "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjkiIHZpZXdCb3g9IjAgMCA4IDkiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0wLjg4ODg4OSA4LjVDMC42NDQ0NDQgOC41IDAuNDM1MTg1IDguNDEyOTYgMC4yNjExMTEgOC4yMzg4OUMwLjA4NzAzNyA4LjA2NDgyIDAgNy44NTU1NiAwIDcuNjExMTFWMS4zODg4OUMwIDEuMTQ0NDQgMC4wODcwMzcgMC45MzUxODUgMC4yNjExMTEgMC43NjExMTFDMC40MzUxODUgMC41ODcwMzcgMC42NDQ0NDQgMC41IDAuODg4ODg5IDAuNUg0VjEuMzg4ODlIMC44ODg4ODlWNy42MTExMUg3LjExMTExVjQuNUg4VjcuNjExMTFDOCA3Ljg1NTU2IDcuOTEyOTYgOC4wNjQ4MiA3LjczODg5IDguMjM4ODlDNy41NjQ4MiA4LjQxMjk2IDcuMzU1NTYgOC41IDcuMTExMTEgOC41SDAuODg4ODg5Wk0yLjk3Nzc4IDYuMTQ0NDRMMi4zNTU1NiA1LjUyMjIyTDYuNDg4ODkgMS4zODg4OUg0Ljg4ODg5VjAuNUg4VjMuNjExMTFINy4xMTExMVYyLjAxMTExTDIuOTc3NzggNi4xNDQ0NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==",
+        "alt_text": "external link"
+      }
+    ],
+    "videos": [
+      "https://player.vimeo.com/video/1079445319?muted=1&autoplay=1&loop=1&controls=0",
+      "https://www.youtube.com/embed/kSuY67Jx4Zw?rel=0",
+      "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdPO7kZAAAAABGiIAZYVXsusLHXWuCCvJBJG5YU&co=aHR0cHM6Ly93d3cubW9vZ211c2ljLmNvbTo0NDM.&hl=en&v=N67nZn4AqZkNcbeMu4prBgzg&size=invisible&anchor-ms=20000&execute-ms=30000&cb=tuiaazior4wk",
+      "https://sidebar.bugherd.com/sidebar/embed_html?apikey=b7ripofg3inwukefjnaf2a"
+    ],
+    "features": [],
+    "manuals": [],
+    "support_url": "https://www.moogmusic.com/synthesizers/labyrinth/",
+    "hierarchy": {},
+    "metadata": {
+      "raw_capture": true
+    }
+  }
+}

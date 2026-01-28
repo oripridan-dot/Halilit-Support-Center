@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { useNavigationStore } from "./store/navigationStore";
+import { ModelShowcase } from "./components/views/ModelShowcase";
 
 // Lazy load heavy views for code-splitting
 const GalaxyDashboard = lazy(() =>
@@ -43,7 +44,12 @@ function App() {
           <div className="flex-1 max-w-2xl px-8 flex justify-center">
             <GlobalSearch />
           </div>
-          <div className="w-[80px]" /> {/* Spacer for visual balance */}
+          <button
+            onClick={() => useNavigationStore.getState().showModelShowcase()}
+            className="text-xs bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded text-white"
+          >
+            View 3D Models
+          </button>
         </header>
 
         {/* Main Stage */}
@@ -72,6 +78,19 @@ function App() {
               <Suspense fallback={<LoadingPlaceholder />}>
                 <ProductPopInterface productId={activeProductId} />
               </Suspense>
+            </div>
+          )}
+
+          {/* Layer 4: Model Showcase */}
+          {currentView === "MODEL_SHOWCASE" && (
+            <div className="absolute inset-0 animate-fade-in">
+              <ModelShowcase />
+              <button
+                onClick={() => useNavigationStore.getState().goToGalaxy()}
+                className="absolute top-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded z-10"
+              >
+                Back to Catalog
+              </button>
             </div>
           )}
         </main>

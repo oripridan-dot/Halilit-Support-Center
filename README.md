@@ -1,94 +1,87 @@
-# Halilit Support Center - Galaxy Edition (v4.1)
+# Halilit Support Center
 
 [![Status](https://img.shields.io/badge/status-production-brightgreen)](https://img.shields.io/badge/status-production-brightgreen)
 [![TypeScript](https://img.shields.io/badge/typescript-5.9+-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/react-19.2-blue)](https://react.dev)
+[![Python](https://img.shields.io/badge/python-3.11+-blue)](https://www.python.org/)
 
-**Ultra-fast static catalog for Halilit Support Center.** Browse 5,000+ products in a single-screen immersive interface.
+A fast, static-first support center catalog system. Browse 5,000+ musical instruments and products with zero API overhead.
 
-- 🌌 **Galaxy Dashboard** - 3D room slots with theatrical stage lighting
-- 🎹 **5,268 Products** - Roland, Boss, Nord, Moog, and 75+ brands
-- ⚡ **Lightning Fast** - Static JSON, <50ms load time, no API calls
-- 📱 **Responsive** - Optimized for support center kiosks
-
----
-
-## 🚀 Quick Start (Codespaces)
-
-Your devcontainer will auto-install everything. Just:
+## 🚀 Quick Start
 
 ```bash
-cd frontend && pnpm dev
+# Frontend (React + Vite)
+cd frontend
+pnpm install
+pnpm dev
 ```
 
 Open **http://localhost:5173**
 
----
-
 ## 🏗️ Architecture
 
-### Static-First Design
+**Static-First Design**: Backend generates static JSON catalogs that the frontend consumes directly. No runtime API calls.
 
 ```
-Raw Data (brands/halilit websites)
+Backend Pipeline (Python)
     ↓
-Backend Pipeline (forge_backbone.py)
+Static JSON Assets
     ↓
-Static JSON (frontend/public/data/)
+React Frontend (TypeScript)
     ↓
-React App (pure frontend, no backend)
-    ↓
-Browser (instant load)
+Browser
 ```
 
-**No runtime API.** Everything is pre-built.
-
-### Tech Stack
-
-| Layer        | Technology              |
-| ------------ | ----------------------- |
-| **Frontend** | React 19 + TypeScript 5 |
-| **Build**    | Vite 7 (SWC)           |
-| **Styling**  | Tailwind CSS           |
-| **State**    | Zustand                |
-| **Search**   | Fuse.js                |
-
----
-
-## 📂 Structure
+## 📂 Project Structure
 
 ```
-frontend/
+frontend/                  # React + TypeScript + Tailwind
 ├── src/
-│   ├── components/views/  ← GalaxyDashboard, SpectrumModule
-│   ├── lib/              ← Utilities
-│   └── store/            ← State
-└── public/data/          ← Static JSON catalogs
+│   ├── components/       # React components
+│   ├── lib/             # Utilities
+│   ├── store/           # Zustand state management
+│   └── types/           # TypeScript types
+└── public/data/         # Generated static catalogs (JSON)
 
-backend/
-├── forge_backbone.py     ← Main pipeline
+backend/                  # Python data pipeline
+├── forge_backbone.py    # Main catalog generation
 ├── mass_ingest_protocol.py
-├── services/            ← Brand scrapers
-├── models/              ← Data models
+├── services/            # Data scrapers & processors
+├── models/              # Pydantic data models
 └── data/
-    ├── blueprints/      ← Raw brand data (KEEP)
-    ├── vault/           ← Raw Halilit data (KEEP)
-    └── catalogs_brand/  ← Processed (git-ignored)
+    ├── blueprints/      # Raw brand specifications
+    ├── vault/           # Raw Halilit data
+    └── catalogs_brand/  # Processed data (git-ignored)
+
+docs/                     # Architecture & integration docs
 ```
 
----
+## 🔧 Backend Operations
 
-## 🔧 Maintenance
-
-### Regenerate Catalog
+### Generate Catalogs
 
 ```bash
 cd backend
 python3 forge_backbone.py
 ```
 
-Output goes to `frontend/public/data/`
+Output generated to `frontend/public/data/`
+
+## 📦 Tech Stack
+
+| Component  | Technology |
+|-----------|-----------|
+| **Frontend** | React 19 + TypeScript 5 + Vite 7 |
+| **Styling** | Tailwind CSS |
+| **State** | Zustand |
+| **Search** | Fuse.js |
+| **Backend** | Python 3.11+ |
+| **Data Models** | Pydantic |
+
+## 📝 License
+
+See LICENSE file for details.
 
 ---
 
-**Version**: 4.1.0 | **Status**: Production | **Updated**: January 27, 2026
+**Version**: 4.1.0 | **Status**: Production | **Updated**: January 28, 2026

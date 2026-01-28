@@ -5,12 +5,12 @@
  */
 import { create } from 'zustand';
 
-// The 3 Distinct States
-type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_POP';
+// The Distinct States
+type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_POP' | 'MODEL_SHOWCASE';
 
 interface NavigationState {
   currentView: AppView;
-  
+
   // Context Data
   activeTribeId: string | null;      // e.g., "guitars-bass"
   activeSubcategoryId: string | null; // e.g., "electric-guitars"
@@ -22,6 +22,7 @@ interface NavigationState {
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
   openProductPop: (productId: string) => void;
   closeProductPop: () => void;
+  showModelShowcase: () => void;
 }
 
 export const useNavigationStore = create<NavigationState>((set) => ({
@@ -31,7 +32,7 @@ export const useNavigationStore = create<NavigationState>((set) => ({
   activeProductId: null,
   activeFilters: [],
 
-  goToGalaxy: () => set({ 
+  goToGalaxy: () => set({
     currentView: 'GALAXY',
     activeTribeId: null,
     activeSubcategoryId: null,
@@ -39,7 +40,7 @@ export const useNavigationStore = create<NavigationState>((set) => ({
     activeFilters: []
   }),
 
-  goToSpectrum: (tribeId, subcategoryId, filters) => set({ 
+  goToSpectrum: (tribeId, subcategoryId, filters) => set({
     currentView: 'SPECTRUM',
     activeTribeId: tribeId,
     activeSubcategoryId: subcategoryId,
@@ -47,13 +48,17 @@ export const useNavigationStore = create<NavigationState>((set) => ({
     activeProductId: null
   }),
 
-  openProductPop: (productId) => set({ 
-    currentView: 'PRODUCT_POP', 
-    activeProductId: productId 
+  openProductPop: (productId) => set({
+    currentView: 'PRODUCT_POP',
+    activeProductId: productId
   }),
 
-  closeProductPop: () => set({ 
+  closeProductPop: () => set({
     currentView: 'SPECTRUM', // Return to Workbench, keeping state alive
-    activeProductId: null 
+    activeProductId: null
+  }),
+
+  showModelShowcase: () => set({
+    currentView: 'MODEL_SHOWCASE'
   }),
 }));
