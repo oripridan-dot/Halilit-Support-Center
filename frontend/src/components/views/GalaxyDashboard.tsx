@@ -73,7 +73,7 @@ export const GalaxyDashboard = () => {
          ------------------------------------------------------------------ */}
       <div className="flex-1 p-6 min-h-0 w-full h-full text-[10px]">
         {/* Force 2 rows, 3 columns, fitting height */}
-        <div className="grid grid-cols-3 grid-rows-2 gap-6 h-full w-full max-w-[1920px] mx-auto">
+        <div className="grid grid-cols-3 grid-rows-2 gap-6 h-full w-full mx-auto">
           {galaxy.map((sector) => (
             <div
               key={sector.id}

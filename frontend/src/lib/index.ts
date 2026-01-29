@@ -32,9 +32,3 @@ export {
   getTopProductsByCategory,
 } from "./dynamicThumbnails";
 export type { CategoryThumbnail } from "./dynamicThumbnails";
-// === 3D VISUALIZATION EXPORTS (v4.1) ===
-export { ThreeSceneManager } from "./threeSceneManager";
-export type { SceneConfig } from "./threeSceneManager";
-
-export { ProductModelLoader } from "./productModelLoader";
-export type { ProductModel } from "./productModelLoader";
