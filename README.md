@@ -1,7 +1,7 @@
 # Halilit Support Center
 
-**Version:** 4.5
-**Status:** Ingestion Pipeline V2 (RAW PASS Focus)
+**Version:** 4.6
+**Status:** Data Refinement & Optimization
 
 ## Overview
 
