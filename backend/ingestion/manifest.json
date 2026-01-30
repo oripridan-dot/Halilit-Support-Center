@@ -1,0 +1,988 @@
+{
+  "brands": [
+    {
+      "id": "-eaw-eastern-acoustic-works-",
+      "name": " Eaw Eastern Acoustic Works ",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/273437--EAW-Eastern-Acoustic-Works-",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": null,
+        "status": "missing_url"
+      }
+    },
+    {
+      "id": "adam-audio",
+      "name": "Adam Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/207910-ADAM-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.adam-audio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "adams",
+      "name": "Adams",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33449-Adams",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": null,
+        "status": "missing_url"
+      }
+    },
+    {
+      "id": "akai-professional",
+      "name": "Akai Professional",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33135-Akai-Professional",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.akaipro.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "allen-heath",
+      "name": "Allen Heath",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/144503-Allen-Heath",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.allen-heath.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "ampeg",
+      "name": "Ampeg",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33416-Ampeg",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://ampeg.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "amphion",
+      "name": "Amphion",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/177897-Amphion",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://amphion.fi/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "antigua",
+      "name": "Antigua",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33259-Antigua",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.antiguawinds.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "asm",
+      "name": "Asm",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/290065-ASM",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.ashunsoundmachines.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "austrian-audio",
+      "name": "Austrian Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/262686-Austrian-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://austrian.audio/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "bespeco",
+      "name": "Bespeco",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33189-Bespeco",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://bespeco.it/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "bohemian-ukuleles-guitars-basses",
+      "name": "Bohemian Ukuleles Guitars Basses",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/351671-Bohemian-ukuleles-guitars-basses",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.bohemianguitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "boss",
+      "name": "Boss",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33105-Boss",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.boss.info/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "breedlove-guitars",
+      "name": "Breedlove Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/248322-Breedlove-Guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://breedlovemusic.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "cordoba-guitars",
+      "name": "Cordoba Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33113-Cordoba-Guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.cordobaguitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "dixon",
+      "name": "Dixon",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/dixon",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://playdixon.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "drumdots",
+      "name": "Drumdots",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/165399-Drumdots",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://drumdot.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "dynaudio",
+      "name": "Dynaudio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/92050-Dynaudio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://dynaudio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "eaw-eastern-acoustic-works",
+      "name": "Eaw Eastern Acoustic Works",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/273437--EAW-Eastern-Acoustic-Works-",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://eaw.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "eden",
+      "name": "Eden",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33263-Eden",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://edenamps.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "encore",
+      "name": "Encore",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/230891-Encore",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://jhs.co.uk/collections/encore",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "esp",
+      "name": "Esp",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/esp",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.espguitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "eve-audio",
+      "name": "Eve Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33390-EVE-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://eve-audio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "expressive-e",
+      "name": "Expressive E",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/133791-Expressive-E",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.expressivee.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "foxgear-guitar-effects-and-pedals",
+      "name": "Foxgear Guitar Effects And Pedals",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/351395-Foxgear-Guitar-Effects-and-Pedals",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.foxgearpedals.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "fusion",
+      "name": "Fusion",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/51530-Fusion",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.fusion-bags.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "fzone",
+      "name": "Fzone",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33485-FZONE",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "http://www.fzone.cn/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "gon-bops-percussion",
+      "name": "Gon Bops Percussion",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/96090-Gon-Bops-Percussion",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://gonbops.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "guild",
+      "name": "Guild",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/guild",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://guildguitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "headliner-la-equipment-stands",
+      "name": "Headliner La Equipment Stands",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/390684-Headliner-LA-EQUIPMENT-STANDS-",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://headliner-la.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "headliner-la-equipment-stands-",
+      "name": "Headliner La Equipment Stands ",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/390684-Headliner-LA-EQUIPMENT-STANDS-",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": null,
+        "status": "missing_url"
+      }
+    },
+    {
+      "id": "headrush-fx",
+      "name": "Headrush Fx",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/151043-HeadRush-FX",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.headrushfx.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "heritage-audio",
+      "name": "Heritage Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/448257-Heritage-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://heritageaudio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "hiwatt",
+      "name": "Hiwatt",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/448261-Hiwatt",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.hiwatt.co.uk/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "innovative-percussion",
+      "name": "Innovative Percussion",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/163968-Innovative-Percussion",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.innovativepercussion.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "jasmine-guitars",
+      "name": "Jasmine Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/366996-Jasmine-Guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "http://www.jasmineguitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "krk-systems",
+      "name": "Krk Systems",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/140907-KRK-Systems",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.krkmusic.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "lag-guitars",
+      "name": "Lag Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/176501-Lag-Guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.lagguitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "lynx",
+      "name": "Lynx",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33252-Lynx",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.lynxstudio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "m-audio",
+      "name": "M Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33167-M-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://m-audio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "mackie",
+      "name": "Mackie",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33102-Mackie",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://mackie.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "maestro-guitar-pedals-and-effects",
+      "name": "Maestro Guitar Pedals And Effects",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/351389-Maestro-Guitar-Pedals-and-Effects",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.gibson.com/en-US/Maestro",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "magma",
+      "name": "Magma",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/188104-Magma",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.magma-bags.de/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "marimba-one",
+      "name": "Marimba One",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33461-Marimba-One",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.marimbaone.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "maton-guitars",
+      "name": "Maton Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/318090-Maton-guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://maton.com.au/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "maybach",
+      "name": "Maybach",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/318385-Maybach",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://maybach-guitars.de/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "medeli",
+      "name": "Medeli",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/medeli",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.medeli.com.hk/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "mjc-ironworks",
+      "name": "Mjc Ironworks",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/169400-MJC-Ironworks",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://mjcironworks.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "montarbo",
+      "name": "Montarbo",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/313498-Montarbo",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.montarbo.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "moog",
+      "name": "Moog",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/541634-moog",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.moogmusic.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/nord",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.nordkeyboards.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "oberheim",
+      "name": "Oberheim",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/421719-Oberheim",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://oberheim.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "on-stage",
+      "name": "On Stage",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33234-On-Stage",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://on-stage.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "oscar-schmidt-acoustic-guitars",
+      "name": "Oscar Schmidt Acoustic Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/327743-Oscar-Schmidt-Acoustic-Guitars-",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.oscarschmidt.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "oscar-schmidt-acoustic-guitars-",
+      "name": "Oscar Schmidt Acoustic Guitars ",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/327743-Oscar-Schmidt-Acoustic-Guitars-",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": null,
+        "status": "missing_url"
+      }
+    },
+    {
+      "id": "paiste-cymbals",
+      "name": "Paiste Cymbals",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33187-Paiste-Cymbals",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.paiste.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "pearl",
+      "name": "Pearl",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/pearl",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://pearldrum.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "perri-s-leathers",
+      "name": "Perri S Leathers",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/35738-Perri-s-Leathers",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://perris.ca/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "presonus",
+      "name": "Presonus",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/148566-PreSonus",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.presonus.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "rapier-33-electric-guitars",
+      "name": "Rapier 33 Electric Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/rapier-33-electric-guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://jhs.co.uk/collections/rapier",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "rcf",
+      "name": "Rcf",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33208-RCF",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.rcf.it/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "remo",
+      "name": "Remo",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33220-Remo",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://remo.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "rhythm-tech",
+      "name": "Rhythm Tech",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/89792-Rhythm-Tech",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://rhythmtech.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "rogers",
+      "name": "Rogers",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/rogers",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://rogersdrumsusa.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "roland",
+      "name": "Roland",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33109-Roland",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.roland.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "santos-martinez",
+      "name": "Santos Martinez",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/296057-Santos-Martinez",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://jhs.co.uk/collections/santos-martinez",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "show",
+      "name": "Show",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33409-Show",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": null,
+        "status": "missing_url"
+      }
+    },
+    {
+      "id": "solar-guitars",
+      "name": "Solar Guitars",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/213926-Solar-Guitars",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.solar-guitars.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "spector",
+      "name": "Spector",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33265-Spector",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.spectorbass.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "steinberg",
+      "name": "Steinberg",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33099-Steinberg",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.steinberg.net/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "steinberg-",
+      "name": "Steinberg ",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33099-Steinberg",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": null,
+        "status": "missing_url"
+      }
+    },
+    {
+      "id": "studio-logic",
+      "name": "Studio Logic",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/97977-Studiologic",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://brand.studiologic-music.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "tombo",
+      "name": "Tombo",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33442-Tombo",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "http://www.tombo-m.co.jp/eng/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "topp-pro",
+      "name": "Topp Pro",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33164-Topp-Pro",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "http://www.topppro.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "turkish",
+      "name": "Turkish",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/turkish",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "http://turkishcymbals.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "universal-audio",
+      "name": "Universal Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33152-Universal-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.uaudio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "v-moda",
+      "name": "V Moda",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/177572-V-MODA",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.v-moda.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "vintage",
+      "name": "Vintage",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/158257-Vintage",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://jhs.co.uk/collections/vintage",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "warm-audio",
+      "name": "Warm Audio",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/302235-Warm-Audio",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://warmaudio.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "washburn",
+      "name": "Washburn",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/washburn",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://www.washburn.com/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "xotic",
+      "name": "Xotic",
+      "commercial": {
+        "source_url": "https://www.halilit.com/manufacturer/xotic",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://xotic.us/",
+        "status": "pending"
+      }
+    },
+    {
+      "id": "xvive",
+      "name": "Xvive",
+      "commercial": {
+        "source_url": "https://www.halilit.com/g/5193-Brand/33327-Xvive",
+        "status": "pending"
+      },
+      "technical": {
+        "source_url": "https://xvive.com/",
+        "status": "pending"
+      }
+    }
+  ]
+}

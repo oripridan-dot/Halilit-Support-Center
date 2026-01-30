@@ -1,0 +1,15 @@
+{
+  "brand_id": "warm-audio",
+  "badge_type": "RAW_INGESTION_COMPLETE",
+  "issued_at": "2026-01-30T01:10:23.372535",
+  "status": "READY_FOR_VECTORIZATION",
+  "digest": {
+    "total_products": 25,
+    "commercial_coverage": "100%",
+    "technical_enrichment_rate": "100%",
+    "specification_rate": "0%",
+    "manual_availability": "80%",
+    "categorization_health": "84%"
+  },
+  "pipeline_version": "v1.0"
+}

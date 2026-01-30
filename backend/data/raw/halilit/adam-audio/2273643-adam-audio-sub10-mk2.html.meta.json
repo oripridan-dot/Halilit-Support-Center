@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/2273643-adam-audio-sub10-mk2",
+  "fetched_at": "2026-01-29T14:35:35.997378Z",
+  "content_hash": "68ae41ed295dec9510a4bac09cd192e2e611e6d5ffc050a3935da36f2196f675",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "786674",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:35:32 GMT",
+    "etag": "\"391dd711509da570a3330f17a041df59\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "6KifrZlSWlsVmNIdIkvbCO1j5CQC4RX1EciLCUsBJd8Hq_CCJPTZlQ==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "231",
+    "x-runtime": "221"
+  },
+  "size_bytes": 841844
+}

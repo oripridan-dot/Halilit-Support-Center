@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/8233728-adam-audio-a4v-arctic-white",
+  "fetched_at": "2026-01-29T14:34:09.039631Z",
+  "content_hash": "fc06b5ea730965e44b7c1bb54e4d469c800e393d5df54528eee5f02abf0105a6",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "834837",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:34:05 GMT",
+    "etag": "\"544f1c82843c56cef19c98ff231f308b\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "64l_TCBEPoxwuGQrJ3lnWSx_jueF8KXriwEonjxINufCu3WRWvds-Q==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "272",
+    "x-runtime": "236"
+  },
+  "size_bytes": 894082
+}

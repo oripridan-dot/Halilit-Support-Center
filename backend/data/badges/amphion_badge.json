@@ -1,0 +1,15 @@
+{
+  "brand_id": "amphion",
+  "badge_type": "RAW_INGESTION_COMPLETE",
+  "issued_at": "2026-01-30T01:08:50.433196",
+  "status": "READY_FOR_VECTORIZATION",
+  "digest": {
+    "total_products": 15,
+    "commercial_coverage": "100%",
+    "technical_enrichment_rate": "100%",
+    "specification_rate": "0%",
+    "manual_availability": "73%",
+    "categorization_health": "73%"
+  },
+  "pipeline_version": "v1.0"
+}

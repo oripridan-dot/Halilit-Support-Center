@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/2273631-adam-audio-sub8",
+  "fetched_at": "2026-01-29T14:34:59.540072Z",
+  "content_hash": "320e143a76c68fcf62322f4dbd951db817990fc0a93b50e868ea048e0a8639e3",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "787213",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:34:56 GMT",
+    "etag": "\"13949d669b774d3cbe64643a6e014f03\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "QG_tYsAVBlfNAkOrlwBCutX8ieify1rlJzNeTNKKraCGzY6hmw80DA==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "RefreshHit from cloudfront",
+    "x-envoy-upstream-service-time": "70",
+    "x-runtime": "62"
+  },
+  "size_bytes": 842256
+}

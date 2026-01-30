@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/g/5193-Brand/207910-ADAM-Audio",
+  "fetched_at": "2026-01-30T00:00:53.092485Z",
+  "content_hash": "50f3eb8df6e7e768326bdf33a40796de730d9af05fcb955b8e811dfa3ad182ec",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "746963",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Fri, 30 Jan 2026 00:00:47 GMT",
+    "etag": "\"e20479e05e07b6cf4ca3b1fd4f2838c0\"",
+    "server": "konimbo",
+    "via": "1.1 8428d3ca0a47cd247ba9c371c08ccb6a.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "xVokP5j9NZnYtWn1GJZFXnqjzpDXvK5fakB16vBdoZtEznBXIXREjg==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "RefreshHit from cloudfront",
+    "x-envoy-upstream-service-time": "583",
+    "x-runtime": "570"
+  },
+  "size_bytes": 922439
+}

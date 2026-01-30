@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/5661915-adam-audio-a44h",
+  "fetched_at": "2026-01-29T14:34:31.204342Z",
+  "content_hash": "f88b0a517c4546912e112ce6a389c7edde297d844115081f44ac0dc4fb2b8e1e",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "811796",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:34:27 GMT",
+    "etag": "\"7e855999dee4541f8af4b093da44de8e\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "qkGb61aRsmFw3JyYyWQW94GfjBbXFkSGu-7t1YY46efmV8UOF64kdg==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "268",
+    "x-runtime": "258"
+  },
+  "size_bytes": 868191
+}

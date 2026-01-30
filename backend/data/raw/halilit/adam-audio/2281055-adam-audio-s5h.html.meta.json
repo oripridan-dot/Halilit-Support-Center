@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/2281055-adam-audio-s5h",
+  "fetched_at": "2026-01-29T14:34:26.493223Z",
+  "content_hash": "21290fdeb13cb11a895780615922f1581a2bd08991cf9b71b9c1af41ea3c622d",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "798921",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:34:21 GMT",
+    "etag": "\"f19b1b40f18f6090f40c92278dd39760\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "cDRpdTQSW_cgKVXX3G-d3v5EXyTqJIEx3-AlqaR0pR26IhfPicYizA==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "1920",
+    "x-runtime": "598"
+  },
+  "size_bytes": 854645
+}

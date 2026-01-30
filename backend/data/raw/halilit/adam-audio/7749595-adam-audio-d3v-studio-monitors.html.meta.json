@@ -1,0 +1,23 @@
+{
+  "original_url": "https://www.halilit.com/items/7749595-adam-audio-d3v-studio-monitors",
+  "fetched_at": "2026-01-29T14:35:26.735762Z",
+  "content_hash": "fc4f582f60055c8299ef749035f24242b8e8e5bb8e5cb15782439c125e55e40f",
+  "http_status": 200,
+  "headers": {
+    "age": "1128",
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "812146",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:16:35 GMT",
+    "etag": "\"da5ed30a5b3ae9ecbfff4184c5e879f9\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "TBXm023V4dWE0546_izKzkmh_dtbdWQW4u9zZoKGoHB4IGj571pyDQ==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Hit from cloudfront",
+    "x-envoy-upstream-service-time": "237",
+    "x-runtime": "223"
+  },
+  "size_bytes": 869351
+}

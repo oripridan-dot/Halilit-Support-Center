@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/7679723-adam-audio-h-200-headphones",
+  "fetched_at": "2026-01-29T14:35:03.819950Z",
+  "content_hash": "b41c22310a5548460811664882dbed3e2830ed79a3253dcd3fb9386a0550ac21",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "788741",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:35:00 GMT",
+    "etag": "\"08fef1bb73c7ccbb305d1439d863f088\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "urrqrWjli0mPr7lmZwHNyS_HQrUUCDYUSfHzUIzMzb2E89Bt4x0JMw==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "113",
+    "x-runtime": "83"
+  },
+  "size_bytes": 844329
+}

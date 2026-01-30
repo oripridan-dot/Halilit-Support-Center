@@ -1,0 +1,22 @@
+{
+  "original_url": "https://www.halilit.com/items/5662027-adam-audio-a77h",
+  "fetched_at": "2026-01-29T14:33:55.844430Z",
+  "content_hash": "8e552d57e7f5f4bffbe7f16133975db3e6b5d8607e67e1eebffbc2454105723d",
+  "http_status": 200,
+  "headers": {
+    "cache-control": "max-age=3600, public",
+    "connection": "keep-alive",
+    "content-length": "812338",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Thu, 29 Jan 2026 14:33:51 GMT",
+    "etag": "\"73b608798eecd24c60baeee1ea1beff3\"",
+    "server": "konimbo",
+    "via": "1.1 b038919df048ba1d1a170622840d275e.cloudfront.net (CloudFront)",
+    "x-amz-cf-id": "9V3LljB34OdgN2P2_ngWZ9BP57nYNpbeSytlxgmhA9mvVD589S4JYg==",
+    "x-amz-cf-pop": "AMS58-P3",
+    "x-cache": "Miss from cloudfront",
+    "x-envoy-upstream-service-time": "1623",
+    "x-runtime": "410"
+  },
+  "size_bytes": 868648
+}

@@ -1,47 +1,43 @@
-# 🎹 Halilit Support Center v4.1
+# Halilit Support Center
 
-**Status:** ✅ Production Ready
+**Version:** 4.5
+**Status:** Ingestion Pipeline V2 (RAW PASS Focus)
 
-## What is this?
+## Overview
 
-A **static-first** support center for musical instruments. Pre-generated JSON catalog + React SPA frontend with 3D models.
+The Halilit Support Center is a "Static First" web application designed to showcase musical instruments with high-fidelity visuals, without requiring a dynamic backend at runtime.
 
-## Quick Start
+## Architecture
+
+- **Frontend**: React 18, Vite, TypeScript, Tailwind CSS.
+- **Backend**: Python scripts for data ingestion and static asset generation (HTML/JSON).
+- **Filesystem**: Data is served from `public/data`.
+
+## Key Features
+
+- **Galaxy Dashboard**: 6-sector grid navigation.
+- **Spectrum Module**: Detailed product listing with tier-based sorting.
+
+## Development
+
+### Frontend
 
 ```bash
-# Frontend
-cd frontend && npm install && npm run dev
-
-# Backend (generates data)
-cd backend && pip install -r requirements.txt
+cd frontend
+npm install
+npm run dev
 ```
 
-## Key Tech
+### Backend (Data Generation)
 
-- **Frontend:** React 18 + TypeScript + Tailwind + Three.js
-- **Backend:** Python (data generation only)
-- **Data:** Static JSON in `/frontend/public/data/`
-- **Architecture:** No runtime API, all static
-
-## Core Files
-
-- `frontend/src/hooks/` - Data fetching (AsyncResult pattern)
-- `frontend/src/lib/communicationProtocol.ts` - Type definitions
-- `frontend/src/COMPONENT_STANDARDS.ts` - Dev rules
-- `frontend/QUICK_REFERENCE.md` - Implementation guide
-
-## Pattern Used
-
-All async operations return:
-```typescript
-{ data, loading, error, isReady, retry }
+```bash
+cd backend
+pip install -r requirements.txt
+python generate_backgrounds.py
 ```
 
-## 3D Models
+## Project Structure
 
-- Electric guitars
-- Synthesizers  
-- Drum kits
-- Amplifiers
-
-All powered by Three.js and Blender exports.
+- `frontend/src/components/views`: Main page views (Galaxy, Spectrum, etc).
+- `frontend/src/lib`: Core logic (Category mapping, brand extraction).
+- `frontend/public/data`: Generated catalogs.

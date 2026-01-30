@@ -1,0 +1,14 @@
+{
+  "id": "amphion",
+  "name": "Amphion",
+  "official_website": "https://amphion.fi/",
+  "logo_url": "https://amphion.fi/wp-content/uploads/2025/09/made-by-mika.png",
+  "logo_local_path": "backend/data/brands/amphion_logo.png",
+  "description": "Beautifully honest. Amphion designs innovative loudspeakers recognized for their honest and precise sound reproduction.",
+  "social_links": {
+    "instagram": "https://www.instagram.com/amphion_loudspeakers/",
+    "facebook": "https://www.facebook.com/AmphionLoudspeakers/",
+    "youtube": "https://www.youtube.com/AmphionLoudspeakers"
+  },
+  "last_updated": "2026-01-30T01:08:28.795118"
+}
