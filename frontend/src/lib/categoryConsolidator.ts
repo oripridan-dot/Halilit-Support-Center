@@ -244,6 +244,32 @@ export function getConsolidatedProductCategory(product: Product): {
   galaxyLabel: string;
   originalCategory: string;
 } {
+  // 0. Priority: v4.6.1 Standard (ui_meta directly on root)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if ((product as any).ui_meta?.primary_category) {
+    const primary = (product as any).ui_meta.primary_category;
+    const TAXONOMY_BRIDGE: Record<string, string> = {
+      "STUDIO_MONITORS": "studio-monitors",
+      "AUDIO_INTERFACES": "audio-interfaces",
+      "MICROPHONES": "studio-microphones",
+      "CONDENSER": "studio-microphones",
+      "ACCESSORIES": "accessories-utility",
+      "STANDS": "stands",
+      "TUNING": "accessories-utility",
+      "UNCATEGORIZED": "accessories-utility"
+    };
+
+    const spectrumId = TAXONOMY_BRIDGE[primary] || "accessories-utility";
+    const galaxy = getGalaxyForSpectrum(spectrumId);
+
+    return {
+      spectrumId,
+      galaxyId: galaxy?.id || "accessories-utility",
+      galaxyLabel: galaxy?.label || "Accessories",
+      originalCategory: primary
+    };
+  }
+
   // 1. Priority: Use refined UI Context from "Refinery" v5 (pill_data)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const pillData = (product as any).pill_data;

@@ -2,7 +2,7 @@ import React from "react";
 import { Zap, Gauge, Box, Layers } from "lucide-react";
 
 interface ProductSpecsProps {
-  specs?: Record<string, any>;
+  specs?: Record<string, any> | Array<{ name: string; value: any }>;
   category?: string;
   className?: string;
 }
@@ -17,7 +17,12 @@ export const ProductSpecs: React.FC<ProductSpecsProps> = ({
   category = "STUDIO_MONITORS",
   className = "",
 }) => {
-  if (!specs || Object.keys(specs).length === 0) {
+  if (
+    !specs ||
+    (Array.isArray(specs)
+      ? specs.length === 0
+      : Object.keys(specs).length === 0)
+  ) {
     return (
       <div className={`bg-slate-50 rounded-lg p-6 text-center ${className}`}>
         <p className="text-slate-500 text-sm">No specifications available</p>
@@ -80,7 +85,9 @@ export const ProductSpecs: React.FC<ProductSpecsProps> = ({
       .join(" ");
   };
 
-  const entries = Object.entries(specs);
+  const entries: [string, any][] = Array.isArray(specs)
+    ? specs.map((s): [string, any] => [s.name, s.value])
+    : Object.entries(specs || {});
 
   return (
     <div

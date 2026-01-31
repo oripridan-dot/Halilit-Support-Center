@@ -1,120 +1,311 @@
 {
-  "brand_id": "drumdots",
-  "brand_info": {
-    "id": "drumdots",
-    "name": "Drumdots",
-    "official_website": "https://drumdot.com/",
-    "logo_url": "/assets/logos/drumdots_logo.png",
-    "description": "drumdots, the only drum damper engineered to \"Control the Ring, Keep the Tone\"",
-    "social_links": {
-      "instagram": "https://www.instagram.com/drumdots/",
-      "facebook": "https://www.facebook.com/Drumdot/",
-      "twitter": "https://twitter.com/drumdots",
-      "youtube": "https://www.youtube.com/user/drumdots1"
-    },
-    "last_updated": "2026-01-30T02:38:11.943786"
-  },
+  "brand": "drumdots",
   "products": [
     {
-      "id": "drumdots_1683193",
-      "halilit_id": "1683193",
-      "name": "Drumdots DD4",
-      "brand": "Drumdots",
-      "description": "<div class=\"desc\">\n<div style=\"background-color: #000; width: 100%; border-bottom: 4px dashed #fff;\">\n<p style=\"text-align: center;\"><span style=\"font-size: 18pt;\"><strong><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"164\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/233490/original/593f4e166e9b55aabc0b6a1cef2239ca.jpg?1519718381\" width=\"507\"/></strong></span></p>\n<p style=\"color: #ffffff; text-align: center;\"><span style=\"font-size: 14pt;\"><strong>\u05d4\u05de\u05e9\u05ea\u05d9\u05e7 \u05d4\u05d9\u05d7\u05d9\u05d3\u05d9 \u05dc\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05e4\u05d5\u05d2\u05dd \u05d1\u05e6\u05dc\u05d9\u05dc \u05d4\u05d1\u05e1\u05d9\u05e1\u05d9 \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4!</strong></span></p>\n</div>\n<p>\u00a0<span style=\"font-size: 12pt;\">\u05d4-Drumdots \u05e2\u05e9\u05d5\u05d9\u05d5\u05ea \u05de\u05e4\u05d5\u05dc\u05d9\u05de\u05e8 \u05d9\u05d9\u05d7\u05d3\u05d9 \u05e9\u05e4\u05d5\u05ea\u05d7 \u05d1\u05d1\u05dc\u05e2\u05d3\u05d9\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05de\u05d5\u05e6\u05e8 \u05d6\u05d4.<br/></span><span style=\"font-size: 12pt;\">\u05d0\u05d9\u05d3\u05d9\u05d0\u05dc\u05d9 \u05dc\u05ea\u05d5\u05e4\u05d9 \u05e1\u05e0\u05e8, \u05d8\u05de\u05d8\u05de\u05d9\u05dd, \u05e4\u05dc\u05d5\u05e8 \u05d5\u05de\u05e6\u05d9\u05dc\u05d5\u05ea \u05db\u05d0\u05d7\u05d3 \u05d5\u05de\u05d0\u05e4\u05e9\u05e8 \u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1\u05de\u05e6\u05d5\u05d9\u05d9\u05e0\u05ea \u05d1-Sustain \u05d5\u05d4-Ring.</span>\u00a0\u00a0</p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/tOQLp1U4cLM\" width=\"640\"></iframe></p>\n<table style=\"width: 698px; height: auto; float: right;\">\n<tbody>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1-Ring \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05d4\u05e7\u05e9\u05d4</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/wNxZ8gPepJI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05d4\u05d0\u05dd Drumdots \u05e2\u05de\u05d9\u05d3\u05d5\u05ea?</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/YSNPcsBtpSI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e0\u05d2\u05d9\u05e0\u05d4 \u05e2\u05dd Drumdots \u05e2\u05dc Cowbell</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/sdVit9aYtvQ\" width=\"300\"></iframe></td>\n</tr>\n</tbody>\n</table>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n</div>",
-      "short_description": "\u05e2\u05e8\u05db\u05ea 4 \u05de\u05d3\u05d1\u05e7\u05d5\u05ea \u05d0\u05d8\u05d9\u05de\u05d4 \u05e9\u05e7\u05d5\u05e4\u05d5\u05ea \u05d9\u05d9\u05d7\u05d5\u05d3\u05d9\u05d5\u05ea \u05dc\u05ea\u05d5\u05e4\u05d9\u05dd \u05d5\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05de\u05d1\u05d9\u05ea Drumdots",
-      "category": "UNCATEGORIZED",
-      "price": 46.0,
-      "pricing": {
-        "regular_price": 46.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "drumdots-dd4-1683193",
+      "name": "Drumdots DD4 | אביזרים לתופים וכלי הקשה",
+      "slug": "/drumdots-dd4-|-אביזרים-לתופים-וכלי-הקשה",
+      "brand_id": "drumdots",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "המשתיק היחידי לכלי הקשה שאינו פוגם בצליל הבסיסי של כלי הנגינה! &nbsp;\nה-Drumdots עשויות מפולימר",
+      "description_full": "המשתיק היחידי לכלי הקשה שאינו פוגם בצליל הבסיסי של כלי הנגינה! &nbsp;\nה-Drumdots עשויות מפולימר ייחדי שפותח בבלעדיות עבור מוצר זה. אידיאלי לתופי סנר, טמטמים, פלור ומצילות כאחד ומאפשר שליטה במצויינת ב-Sustain וה-Ring.\n&nbsp;&nbsp; שליטה ב-Ring של כלי ההקשה האם Drumdots עמידות? נגינה עם Drumdots על Co",
+      "price": 11.5,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
-        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
-        "gallery": [
-          "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "75-DD4",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "0W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
-      "features": [],
-      "specs": {
-        "woofer_size_inch": 164.0
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "source_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
-      "generated_at": "2026-01-30T02:38:25.910401",
-      "sub_category": "General",
-      "ui_context": {
-        "primary": "UNCATEGORIZED",
-        "sub": "General"
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": {
-        "woofer_size_inch": 164.0
-      }
+      "search_text": "drumdots dd4 | אביזרים לתופים וכלי הקשה audio equipment  המשתיק היחידי לכלי הקשה שאינו פוגם בצליל הבסיסי של כלי הנגינה! &nbsp;\nה-drumdots עשויות מפולימר",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.323276"
     },
     {
-      "id": "drumdots_1689994",
-      "halilit_id": "1689994",
-      "name": "Drumdots DD6M",
-      "brand": "Drumdots",
-      "description": "<div class=\"desc\">\n<div style=\"background-color: #000; width: 100%; border-bottom: 4px dashed #fff;\">\n<p style=\"text-align: center;\"><span style=\"font-size: 18pt;\"><strong><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"259\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/233490/original/593f4e166e9b55aabc0b6a1cef2239ca.jpg?1519718381\" width=\"800\"/></strong></span></p>\n<p style=\"color: #ffffff; text-align: center;\"><span style=\"font-size: 18pt;\"><strong>\u05d4\u05de\u05e9\u05ea\u05d9\u05e7 \u05d4\u05d9\u05d7\u05d9\u05d3\u05d9 \u05dc\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05e4\u05d5\u05d2\u05dd \u05d1\u05e6\u05dc\u05d9\u05dc \u05d4\u05d1\u05e1\u05d9\u05e1\u05d9 \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4!</strong></span></p>\n</div>\n<p style=\"text-align: center;\">\u00a0\u00a0</p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/tOQLp1U4cLM\" width=\"640\"></iframe></p>\n<p><span style=\"font-size: 12pt;\">\u00a0\u05d4-Drumdots \u05e2\u05e9\u05d5\u05d9\u05d5\u05ea \u05de\u05e4\u05d5\u05dc\u05d9\u05de\u05e8 \u05d9\u05d9\u05d7\u05d3\u05d9 \u05e9\u05e4\u05d5\u05ea\u05d7 \u05d1\u05d1\u05dc\u05e2\u05d3\u05d9\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05de\u05d5\u05e6\u05e8 \u05d6\u05d4.<br/>\u05d0\u05d9\u05d3\u05d9\u05d0\u05dc\u05d9 \u05dc\u05ea\u05d5\u05e4\u05d9 \u05e1\u05e0\u05e8, \u05d8\u05de\u05d8\u05de\u05d9\u05dd, \u05e4\u05dc\u05d5\u05e8 \u05d5\u05de\u05e6\u05d9\u05dc\u05d5\u05ea \u05db\u05d0\u05d7\u05d3 \u05d5\u05de\u05d0\u05e4\u05e9\u05e8 \u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1\u05de\u05e6\u05d5\u05d9\u05d9\u05e0\u05ea \u05d1-Sustain \u05d5\u05d4-Ring.</span></p>\n<table style=\"width: 698px; height: auto; float: right;\">\n<tbody>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1-Ring \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05d4\u05e7\u05e9\u05d4</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/wNxZ8gPepJI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05d4\u05d0\u05dd Drumdots \u05e2\u05de\u05d9\u05d3\u05d5\u05ea?</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/YSNPcsBtpSI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e0\u05d2\u05d9\u05e0\u05d4 \u05e2\u05dd Drumdots \u05e2\u05dc Cowbell</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/sdVit9aYtvQ\" width=\"300\"></iframe></td>\n</tr>\n</tbody>\n</table>\n</div>",
-      "short_description": "\u05e2\u05e8\u05db\u05ea 6 \u05de\u05d9\u05e0\u05d9 \u05de\u05d3\u05d1\u05e7\u05d5\u05ea \u05dc\u05d0\u05d8\u05d9\u05de\u05d4 \u05d9\u05d9\u05d7\u05d5\u05d3\u05d9\u05d5\u05ea \u05dc\u05ea\u05d5\u05e4\u05d9\u05dd \u05d5\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05de\u05d1\u05d9\u05ea Drumdots",
-      "category": "UNCATEGORIZED",
-      "price": 50.0,
-      "pricing": {
-        "regular_price": 50.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "drumdots-dd6m-1689994",
+      "name": "Drumdots DD6m |  אביזרים לתופים וכלי הקשה",
+      "slug": "/drumdots-dd6m-|--אביזרים-לתופים-וכלי-הקשה",
+      "brand_id": "drumdots",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "המשתיק היחידי לכלי הקשה שאינו פוגם בצליל הבסיסי של כלי הנגינה! &nbsp;&nbsp; &nbsp;ה-Drumdots עשויות…",
+      "description_full": "המשתיק היחידי לכלי הקשה שאינו פוגם בצליל הבסיסי של כלי הנגינה! &nbsp;&nbsp; &nbsp;ה-Drumdots עשויות מפולימר ייחדי שפותח בבלעדיות עבור מוצר זה.\nאידיאלי לתופי סנר, טמטמים, פלור ומצילות כאחד ומאפשר שליטה במצויינת ב-Sustain וה-Ring. שליטה ב-Ring של כלי ההקשה האם Drumdots עמידות? נגינה עם Drumdots על Cow",
+      "price": 12.5,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
-        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
-        "gallery": [
-          "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "75-DD6M",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "0W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
-      "features": [],
-      "specs": {
-        "woofer_size_inch": 259.0
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "source_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
-      "generated_at": "2026-01-30T02:38:26.081088",
-      "sub_category": "General",
-      "ui_context": {
-        "primary": "UNCATEGORIZED",
-        "sub": "General"
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": {
-        "woofer_size_inch": 259.0
-      }
+      "search_text": "drumdots dd6m |  אביזרים לתופים וכלי הקשה audio equipment  המשתיק היחידי לכלי הקשה שאינו פוגם בצליל הבסיסי של כלי הנגינה! &nbsp;&nbsp; &nbsp;ה-drumdots עשויות…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.323336"
     }
   ],
-  "processed_badge": {
-    "level": "DIAMOND",
-    "checks": {
-      "commercial_data": true,
-      "official_manual": true,
-      "taxonomy_aligned": true,
-      "context_layer": true,
-      "media_optimized": true
-    },
-    "signature": "refinery-v2-2"
-  },
-  "meta": {
-    "total_count": 2,
-    "refinery_version": "2.0",
-    "tiers": {
-      "DIAMOND": 0,
-      "GOLD": 0,
-      "SILVER": 2,
-      "BRONZE": 0
-    }
-  }
+  "generated": "2026-01-31T20:01:18.323459",
+  "count": 2
 }

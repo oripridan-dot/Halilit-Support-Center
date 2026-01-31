@@ -1,1054 +1,2134 @@
 {
-  "brand_id": "bespeco",
-  "brand_info": {
-    "id": "bespeco",
-    "name": "Bespeco",
-    "official_website": "https://bespeco.it/",
-    "logo_url": "/assets/logos/bespeco_logo.png",
-    "description": "Da quarant\u2019anni al fianco dei musicisti",
-    "social_links": {
-      "instagram": "https://www.instagram.com/bespecoprofessional/",
-      "facebook": "https://www.facebook.com/bespecoprofessional",
-      "youtube": "https://www.youtube.com/user/BespecoProfessional"
-    },
-    "last_updated": "2026-01-30T02:39:34.610775"
-  },
+  "brand": "bespeco",
   "products": [
     {
-      "id": "bespeco_7269897",
-      "halilit_id": "7269897",
-      "name": "Risultati della ricerca - TCCBK",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05e8\u05e6\u05d5\u05e2\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea \u05d4\u05e2\u05e9\u05d5\u05d9\u05d4 \u05de\u05db\u05d5\u05ea\u05e0\u05d4 \u05de\u05d7\u05d5\u05d6\u05e7\u05ea \u05d5\u05e7\u05e6\u05d5\u05d5\u05ea \u05e2\u05d5\u05e8 \u05d6\u05de\u05e9 \u05e2\u05dd \u05d5\u05d5\u05d9 \u05de\u05ea\u05db\u05ea. \u05e8\u05d5\u05d7\u05d1 \u05d4\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d4\u05d9\u05e0\u05d5 5 \u05e1\"\u05de \u05d5\u05d0\u05d5\u05e8\u05db\u05d4 \u05d4\u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05df \u05e0\u05e2 \u05d1\u05d9\u05df 88-156 \u05e1\"\u05de. \u05d4\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d1\u05e6\u05d1\u05e2 \u05e9\u05d7\u05d5\u05e8.</span></p>\n</div>",
-      "short_description": "\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05ea \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05de\u05db\u05d5\u05ea\u05e0\u05d4 \u05de\u05d7\u05d5\u05d6\u05e7\u05ea \u05d1\u05d0\u05d5\u05e8\u05da \u05e9\u05dc \u05e2\u05d3 156 \u05e1\"\u05de \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 83.0,
-      "pricing": {
-        "regular_price": 83.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag60ag-acoustic-guitar-bag-3343276",
+      "name": "תיק לגיטרה אקוסטית Bespeco BAG60AG",
+      "slug": "/תיק-לגיטרה-אקוסטית-bespeco-bag60ag",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 30.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5834082/large/274eddc867f9dee98a786633a9d02067.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7269897/tccbk-tracolla-chitarra-cotone-rinforzato-nero-terminali-pelle-scamosciata-fibbie-metallo-2-220x220.webp",
-        "thumbnail": "/assets/images/bespeco/7269897/tccbk-tracolla-chitarra-cotone-rinforzato-nero-terminali-pelle-scamosciata-fibbie-metallo-2-220x220.webp",
-        "gallery": [
-          "/assets/images/bespeco/7269897/tccbk-tracolla-chitarra-cotone-rinforzato-nero-terminali-pelle-scamosciata-fibbie-metallo-2-220x220.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5834082/large/274eddc867f9dee98a786633a9d02067.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5834082/large/274eddc867f9dee98a786633a9d02067.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG60AG",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7269897/tccbk-tracolla-chitarra-cotone-rinforzato-nero-terminali-pelle-scamosciata-fibbie-metallo-2-220x220.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7269897-bespeco-tccbk-guitar-strap",
-      "generated_at": "2026-01-30T02:43:17.353419",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5834082/large/274eddc867f9dee98a786633a9d02067.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5834082/large/274eddc867f9dee98a786633a9d02067.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5834082/large/274eddc867f9dee98a786633a9d02067.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה אקוסטית bespeco bag60ag audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205235"
     },
     {
-      "id": "bespeco_7923059",
-      "halilit_id": "7923059",
-      "name": "Risultati della ricerca - BP100SN",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05e1\u05d8\u05e0\u05d3 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \u05dc\u05e7\u05dc\u05d9\u05d3\u05d9\u05dd, \u05d1\u05e2\u05dc 4 \u05e8\u05d2\u05dc\u05d9\u05d9\u05dd. \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05df \u05d5\u05de\u05ea\u05e7\u05e4\u05dc, \u05d1\u05e2\u05dc \u05e8\u05d2\u05dc\u05d9\u05d9\u05dd \u05de\u05ea\u05d9\u05d9\u05e9\u05e8\u05d5\u05ea \u05d1\u05d0\u05d5\u05e4\u05df \u05e2\u05e6\u05de\u05d0\u05d9</span></p>\n</div>",
-      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d1\u05de\u05e9\u05e7\u05dc \u05e9\u05dc \u05e2\u05d3 80 \u05e7\"\u05d2, \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05df \u05d5\u05de\u05ea\u05e7\u05e4\u05dc, \u05d7\u05d6\u05e7 \u05d5\u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 489.0,
-      "pricing": {
-        "regular_price": 489.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-sltk300-3363762",
+      "name": "Bespeco SLTK300",
+      "slug": "/bespeco-sltk300",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 22.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7923059/bp100sn-supporto-professionale-in-acciaio-per-tastiera-regolabile-3-220x159.webp",
-        "thumbnail": "/assets/images/bespeco/7923059/bp100sn-supporto-professionale-in-acciaio-per-tastiera-regolabile-3-220x159.webp",
-        "gallery": [
-          "/assets/images/bespeco/7923059/bp100sn-supporto-professionale-in-acciaio-per-tastiera-regolabile-3-220x159.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-SLTK300",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7923059/bp100sn-supporto-professionale-in-acciaio-per-tastiera-regolabile-3-220x159.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7923059-bespeco-bp100sn-keyboard-stand",
-      "generated_at": "2026-01-30T02:43:17.494418",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "bespeco sltk300 audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205289"
     },
     {
-      "id": "bespeco_5245463",
-      "halilit_id": "5245463",
-      "name": "Risultati della ricerca - BAG50CGT",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05e7\u05d9\u05d9\u05e1 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 91.0,
-      "pricing": {
-        "regular_price": 91.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag50cgt-classical-guitar-bag-5245463",
+      "name": "תיק לגיטרה קלאסית Bespeco BAG50CGT",
+      "slug": "/תיק-לגיטרה-קלאסית-bespeco-bag50cgt",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 22.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351405/large/b8f3395f6a9a6e1df4fc13eed4b8c747.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/5245463/bag50cgt-borsa-per-chitarra-antistrappo-rinforzata-nera-5-220x524.webp",
-        "thumbnail": "/assets/images/bespeco/5245463/bag50cgt-borsa-per-chitarra-antistrappo-rinforzata-nera-5-220x524.webp",
-        "gallery": [
-          "/assets/images/bespeco/5245463/bag50cgt-borsa-per-chitarra-antistrappo-rinforzata-nera-5-220x524.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351405/large/b8f3395f6a9a6e1df4fc13eed4b8c747.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351405/large/b8f3395f6a9a6e1df4fc13eed4b8c747.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG50CGT",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/5245463/bag50cgt-borsa-per-chitarra-antistrappo-rinforzata-nera-5-220x524.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/5245463-bespeco-bag50cgt-classical-guitar-bag",
-      "generated_at": "2026-01-30T02:43:17.587883",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351405/large/b8f3395f6a9a6e1df4fc13eed4b8c747.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351405/large/b8f3395f6a9a6e1df4fc13eed4b8c747.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351405/large/b8f3395f6a9a6e1df4fc13eed4b8c747.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה קלאסית bespeco bag50cgt audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205317"
     },
     {
-      "id": "bespeco_7269893",
-      "halilit_id": "7269893",
-      "name": "Risultati della ricerca - TC2PT",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05e8\u05e6\u05d5\u05e2\u05ea \u05d2\u05d9\u05d8\u05e8\u05d4 \u05d4\u05e2\u05e9\u05d5\u05d9\u05d4 \u05de\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05de\u05d7\u05d5\u05d6\u05e7 \u05d5\u05e7\u05e6\u05d5\u05d5\u05ea \u05e2\u05d5\u05e8 \u05e2\u05dd \u05d5\u05d5\u05d9 \u05e4\u05dc\u05e1\u05d8\u05d9\u05e7. \u05e8\u05d5\u05d7\u05d1 \u05d4\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d4\u05d9\u05e0\u05d5 5 \u05e1\"\u05de \u05d5\u05d0\u05d5\u05e8\u05db\u05d4 \u05d4\u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05df \u05e0\u05e2 \u05d1\u05d9\u05df 82-148 \u05e1\"\u05de. \u05d4\u05e8\u05e6\u05d5\u05e2\u05d4 \u05de\u05d2\u05d9\u05e2\u05d4 \u05e2\u05dd \u05ea\u05d1\u05e0\u05d9\u05ea \u05d3\u05e4\u05d5\u05e1 \u05de\u05e7\u05d5\u05e8\u05d9\u05ea \u05e9\u05dc Bespeco.</span></p>\n</div>",
-      "short_description": "\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d7\u05d6\u05e7\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05d0\u05d5\u05e8\u05da \u05e9\u05dc \u05e2\u05d3 148 \u05e1\"\u05de \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 45.0,
-      "pricing": {
-        "regular_price": 45.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag60agt-acoustic-guitar-bag-5245488",
+      "name": "תיק לגיטרה אקוסטית Bespeco BAG60AGT",
+      "slug": "/תיק-לגיטרה-אקוסטית-bespeco-bag60agt",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 21.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351461/large/f8490d1f045621634b732c62353c33e3.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7269893/tc2pt-tracolla-chitarra-nylon-rinforzato-bespeco-pattern-terminali-pelle-fibbie-plastica-2-220x220.webp",
-        "thumbnail": "/assets/images/bespeco/7269893/tc2pt-tracolla-chitarra-nylon-rinforzato-bespeco-pattern-terminali-pelle-fibbie-plastica-2-220x220.webp",
-        "gallery": [
-          "/assets/images/bespeco/7269893/tc2pt-tracolla-chitarra-nylon-rinforzato-bespeco-pattern-terminali-pelle-fibbie-plastica-2-220x220.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351461/large/f8490d1f045621634b732c62353c33e3.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351461/large/f8490d1f045621634b732c62353c33e3.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG60AGT",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7269893/tc2pt-tracolla-chitarra-nylon-rinforzato-bespeco-pattern-terminali-pelle-fibbie-plastica-2-220x220.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7269893-bespeco-tc2pt-guitar-strap",
-      "generated_at": "2026-01-30T02:43:17.669137",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351461/large/f8490d1f045621634b732c62353c33e3.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351461/large/f8490d1f045621634b732c62353c33e3.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10351461/large/f8490d1f045621634b732c62353c33e3.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה אקוסטית bespeco bag60agt audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205341"
     },
     {
-      "id": "bespeco_7263263",
-      "halilit_id": "7263263",
-      "name": "Risultati della ricerca - BAG320EG",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 367.0,
-      "pricing": {
-        "regular_price": 367.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag10ag-acoustic-guitar-bag-7262928",
+      "name": "תיק לגיטרה אקוסטית Bespeco BAG10AG",
+      "slug": "/תיק-לגיטרה-אקוסטית-bespeco-bag10ag",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-\nBAG10AG\n הינו תיק נשיאה רך לגיטרה אקוסטית עם ריפוד בעובי 10 מ\"מ העשוי מ-“בד אוקספורד 600D” חסין…",
+      "description_full": "ה-\nBAG10AG\n הינו תיק נשיאה רך לגיטרה אקוסטית עם ריפוד בעובי 10 מ\"מ העשוי מ-“בד אוקספורד 600D” חסין לקרעים בצבעים שחור וכתום. התיק מתגאה בידית ארגונומית מקצועית, רצועה כפולה מתכווננת, כיס קדמי גדול, רוכסנים חזקים תפורים בניילון נגד קרעים, קולב תלייה אחורי וחיזוקים פנימיים עבור הגנה מוגברת על המיתרים ",
+      "price": 42.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152350/large/fbecef0ade21f4ddafcde75662c5e171.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7263263/bag320eg-borsa-virtuoso-per-chitarra-elettrica-antistrappo-9-220x545.webp",
-        "thumbnail": "/assets/images/bespeco/7263263/bag320eg-borsa-virtuoso-per-chitarra-elettrica-antistrappo-9-220x545.webp",
-        "gallery": [
-          "/assets/images/bespeco/7263263/bag320eg-borsa-virtuoso-per-chitarra-elettrica-antistrappo-9-220x545.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152350/large/fbecef0ade21f4ddafcde75662c5e171.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152350/large/fbecef0ade21f4ddafcde75662c5e171.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG10AG",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7263263/bag320eg-borsa-virtuoso-per-chitarra-elettrica-antistrappo-9-220x545.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7263263-bespeco-bag320eg-electric-guitar-bag",
-      "generated_at": "2026-01-30T02:43:17.747930",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152350/large/fbecef0ade21f4ddafcde75662c5e171.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152350/large/fbecef0ade21f4ddafcde75662c5e171.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152350/large/fbecef0ade21f4ddafcde75662c5e171.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה אקוסטית bespeco bag10ag audio equipment  ה-\nbag10ag\n הינו תיק נשיאה רך לגיטרה אקוסטית עם ריפוד בעובי 10 מ\"מ העשוי מ-“בד אוקספורד 600d” חסין…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205368"
     },
     {
-      "id": "bespeco_3363762",
-      "halilit_id": "3363762",
-      "name": "Risultati della ricerca - SLTK300",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05db\u05d1\u05dc \u05d0\u05d5\u05e4\u05d8\u05d9TOSLINK\u05d1\u05d0\u05d5\u05e8\u05da 3 \u05de\u05d8\u05e8 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 89.0,
-      "pricing": {
-        "regular_price": 89.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag10bg-electric-bass-guitar-bag-7262940",
+      "name": "תיק לגיטרה בס חשמלית Bespeco BAG10BG",
+      "slug": "/תיק-לגיטרה-בס-חשמלית-bespeco-bag10bg",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-\nBAG10BG\n&nbsp;הינו תיק נשיאה רך לגיטרת בס חשמלית עם ריפוד בעובי 10 מ\"מ העשוי מ-“בד אוקספורד",
+      "description_full": "ה-\nBAG10BG\n&nbsp;הינו תיק נשיאה רך לגיטרת בס חשמלית עם ריפוד בעובי 10 מ\"מ העשוי מ-“בד אוקספורד 600D” חסין לקרעים בצבעים שחור וכתום. התיק מתגאה בידית ארגונומית מקצועית, רצועה כפולה מתכווננת, כיס קדמי גדול, רוכסנים חזקים תפורים בניילון נגד קרעים, קולב תלייה אחורי וחיזוקים פנימיים עבור הגנה מוגברת על ה",
+      "price": 42.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152854/large/9f47552062dfb5b50380e631475023c4.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
-        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
-        "gallery": [
-          "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152854/large/9f47552062dfb5b50380e631475023c4.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152854/large/9f47552062dfb5b50380e631475023c4.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG10BG",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "4W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5879822/large/4dde6ad1fd678ded9a1394c5fde71d24.jpg",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/3363762-bespeco-sltk300",
-      "generated_at": "2026-01-30T02:43:17.829429",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152854/large/9f47552062dfb5b50380e631475023c4.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152854/large/9f47552062dfb5b50380e631475023c4.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152854/large/9f47552062dfb5b50380e631475023c4.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה בס חשמלית bespeco bag10bg audio equipment  ה-\nbag10bg\n&nbsp;הינו תיק נשיאה רך לגיטרת בס חשמלית עם ריפוד בעובי 10 מ\"מ העשוי מ-“בד אוקספורד",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205394"
     },
     {
-      "id": "bespeco_7919995",
-      "halilit_id": "7919995",
-      "name": "Risultati della ricerca - BAG420EG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05de\u05e1\u05d3\u05e8\u05ea Famous Line \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea, \u05de\u05e6\u05d9\u05e2 \u05e8\u05d9\u05e4\u05d5\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 35 \u05de\"\u05de \u05e9\u05de\u05e1\u05e4\u05e7 \u05d4\u05d2\u05e0\u05d4 \u05de\u05e6\u05d5\u05d9\u05e0\u05ea. \u05d4\u05d5\u05d0 \u05e2\u05e9\u05d5\u05d9 \u05de\u05d1\u05d3 Oxford 600D \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05e2\u05dd \u05e9\u05d5\u05dc\u05d9\u05d9\u05dd \u05de\u05d7\u05d5\u05d6\u05e7\u05d9\u05dd \u05d1\u05e7\u05e0\u05d1\u05e1 \u05de\u05e8\u05d5\u05e4\u05d3, \u05de\u05d4 \u05e9\u05de\u05d1\u05d8\u05d9\u05d7 \u05e2\u05de\u05d9\u05d3\u05d5\u05ea \u05dc\u05d0\u05d5\u05e8\u05da \u05d6\u05de\u05df. \u05d1\u05e0\u05d5\u05e1\u05e3, \u05d4\u05ea\u05d9\u05e7 \u05db\u05d5\u05dc\u05dc \u05d9\u05d3\u05d9\u05ea \u05de\u05e8\u05d5\u05e4\u05d3\u05ea \u05dc\u05e0\u05d5\u05d7\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea \u05d5\u05e8\u05e6\u05d5\u05e2\u05d5\u05ea \u05db\u05ea\u05e3 \u05db\u05e4\u05d5\u05dc\u05d5\u05ea, \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05d5\u05ea \u05d5\u05e0\u05e9\u05dc\u05e4\u05d5\u05ea \u05e2\u05dd \u05e7\u05e8\u05d1\u05d9\u05e0\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea, \u05db\u05da \u05e9\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05ea\u05d0\u05d9\u05dd \u05d0\u05ea \u05d4\u05ea\u05d9\u05e7 \u05dc\u05db\u05dc \u05e1\u05d5\u05d2 \u05e0\u05e9\u05d9\u05d0\u05d4. \u05d9\u05e9\u05e0\u05dd \u05db\u05d9\u05e1\u05d9\u05dd \u05d2\u05d3\u05d5\u05dc\u05d9\u05dd \u05d1\u05d7\u05dc\u05e7 \u05d4\u05e7\u05d3\u05de\u05d9 \u05d5\u05d4\u05e2\u05dc\u05d9\u05d5\u05df \u05dc\u05d0\u05d7\u05e1\u05d5\u05df \u05e0\u05d5\u05d7 \u05e9\u05dc \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd, \u05d5\u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05e2\u05de\u05d9\u05d3\u05d9\u05dd \u05d5\u05d7\u05d6\u05e7\u05d9\u05dd \u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05e9\u05de\u05e1\u05e4\u05e7\u05d9\u05dd \u05d1\u05d9\u05d8\u05d7\u05d5\u05df \u05de\u05dc\u05d0 \u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d9\u05d5\u05de\u05d9\u05d5\u05de\u05d9. \u05d5\u05d5 \u05ea\u05dc\u05d9\u05d9\u05d4 \u05d0\u05d7\u05d5\u05e8\u05d9 \u05e0\u05d5\u05e1\u05e3 \u05de\u05d9\u05d9\u05e2\u05dc \u05d0\u05ea \u05d4\u05d0\u05d7\u05e1\u05d5\u05df \u05d5\u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea, \u05d5\u05d4\u05d7\u05d9\u05d6\u05d5\u05e7 \u05d4\u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d5\u05d6\u05e8 \u05dc\u05d4\u05d2\u05df \u05e2\u05dc \u05d4\u05de\u05d9\u05ea\u05e8\u05d9\u05dd \u05d5\u05d4\u05d2\u05e9\u05e8 \u05e9\u05dc \u05d4\u05d2\u05d9\u05d8\u05e8\u05d4.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 539.0,
-      "pricing": {
-        "regular_price": 539.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag300cg-classical-guitar-bag-7262976",
+      "name": "תיק לגיטרה קלאסית Bespeco BAG300CG",
+      "slug": "/תיק-לגיטרה-קלאסית-bespeco-bag300cg",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 91.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153209/large/d70e989ee7c341281f62d52a96934d90.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7919995/bag420eg-borsa-per-chitarra-elettrica-imbottita-35-mm-rinforzata-9-220x575.webp",
-        "thumbnail": "/assets/images/bespeco/7919995/bag420eg-borsa-per-chitarra-elettrica-imbottita-35-mm-rinforzata-9-220x575.webp",
-        "gallery": [
-          "/assets/images/bespeco/7919995/bag420eg-borsa-per-chitarra-elettrica-imbottita-35-mm-rinforzata-9-220x575.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153209/large/d70e989ee7c341281f62d52a96934d90.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153209/large/d70e989ee7c341281f62d52a96934d90.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG300CG",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7919995/bag420eg-borsa-per-chitarra-elettrica-imbottita-35-mm-rinforzata-9-220x575.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7919995-bespeco-bag420eg-electric-guitar-bag",
-      "generated_at": "2026-01-30T02:43:17.912677",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153209/large/d70e989ee7c341281f62d52a96934d90.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153209/large/d70e989ee7c341281f62d52a96934d90.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153209/large/d70e989ee7c341281f62d52a96934d90.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה קלאסית bespeco bag300cg audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205486"
     },
     {
-      "id": "bespeco_7262976",
-      "halilit_id": "7262976",
-      "name": "Risultati della ricerca - BAG300CG",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 367.0,
-      "pricing": {
-        "regular_price": 367.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag310ag-acoustic-guitar-bag-7263241",
+      "name": "תיק לגיטרה אקוסטית Bespeco BAG310AG",
+      "slug": "/תיק-לגיטרה-אקוסטית-bespeco-bag310ag",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 91.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151564/large/5b7d28fa6340c3d775cd6ed103ca576b.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7262976/bag300cg-borsa-virtuoso-line-per-chitarra-antistrappo-nera-9-220x514.webp",
-        "thumbnail": "/assets/images/bespeco/7262976/bag300cg-borsa-virtuoso-line-per-chitarra-antistrappo-nera-9-220x514.webp",
-        "gallery": [
-          "/assets/images/bespeco/7262976/bag300cg-borsa-virtuoso-line-per-chitarra-antistrappo-nera-9-220x514.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151564/large/5b7d28fa6340c3d775cd6ed103ca576b.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151564/large/5b7d28fa6340c3d775cd6ed103ca576b.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG310AG",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7262976/bag300cg-borsa-virtuoso-line-per-chitarra-antistrappo-nera-9-220x514.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7262976-bespeco-bag300cg-classical-guitar-bag",
-      "generated_at": "2026-01-30T02:43:18.000494",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151564/large/5b7d28fa6340c3d775cd6ed103ca576b.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151564/large/5b7d28fa6340c3d775cd6ed103ca576b.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151564/large/5b7d28fa6340c3d775cd6ed103ca576b.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה אקוסטית bespeco bag310ag audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205511"
     },
     {
-      "id": "bespeco_7271496",
-      "halilit_id": "7271496",
-      "name": "Risultati della ricerca - BAS100",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05ea\u05d5\u05d5\u05d9\u05dd \u05de\u05ea\u05e7\u05e4\u05dc \u05de\u05e4\u05dc\u05d3\u05d4, \u05e0\u05d9\u05ea\u05df \u05dc\u05db\u05d9\u05d5\u05d5\u05e0\u05d5\u05df \u05d5\u05e7\u05dc \u05de\u05e9\u05e7\u05dc, \u05db\u05d5\u05dc\u05dc \u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 119.0,
-      "pricing": {
-        "regular_price": 119.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bag320eg-electric-guitar-bag-7263263",
+      "name": "תיק לגיטרה חשמלית Bespeco BAG320EG",
+      "slug": "/תיק-לגיטרה-חשמלית-bespeco-bag320eg",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 91.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152109/large/d0240ad5b0632e58f2a394b7df4bb64e.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7271496/bas100-leggio-acciaio-tavola-lamiera-forata-borsa-inclusa-1-220x330.webp",
-        "thumbnail": "/assets/images/bespeco/7271496/bas100-leggio-acciaio-tavola-lamiera-forata-borsa-inclusa-1-220x330.webp",
-        "gallery": [
-          "/assets/images/bespeco/7271496/bas100-leggio-acciaio-tavola-lamiera-forata-borsa-inclusa-1-220x330.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152109/large/d0240ad5b0632e58f2a394b7df4bb64e.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152109/large/d0240ad5b0632e58f2a394b7df4bb64e.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAG320EG",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7271496/bas100-leggio-acciaio-tavola-lamiera-forata-borsa-inclusa-1-220x330.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7271496-bespeco-bas100-music-stand",
-      "generated_at": "2026-01-30T02:43:18.105223",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152109/large/d0240ad5b0632e58f2a394b7df4bb64e.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152109/large/d0240ad5b0632e58f2a394b7df4bb64e.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15152109/large/d0240ad5b0632e58f2a394b7df4bb64e.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "תיק לגיטרה חשמלית bespeco bag320eg audio equipment  professional studio product from halilit",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205534"
     },
     {
-      "id": "bespeco_5245488",
-      "halilit_id": "5245488",
-      "name": "Risultati della ricerca - BAG60AGT",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05e7\u05d9\u05d9\u05e1 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 87.0,
-      "pricing": {
-        "regular_price": 87.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-tc2pt-guitar-strap-7269893",
+      "name": "רצועת גיטרה Bespeco TC2PT",
+      "slug": "/רצועת-גיטרה-bespeco-tc2pt",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "רצועת גיטרה העשויה מניילון מחוזק וקצוות עור עם ווי פלסטיק. רוחב הרצועה הינו 5 ס\"מ ואורכה המתכוונן…",
+      "description_full": "רצועת גיטרה העשויה מניילון מחוזק וקצוות עור עם ווי פלסטיק. רוחב הרצועה הינו 5 ס\"מ ואורכה המתכוונן נע בין 82-148 ס\"מ. הרצועה מגיעה עם תבנית דפוס מקורית של Bespeco.",
+      "price": 11.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151198/large/cfdb500d76dcdd7d975bafdf68b29d39.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/5245488/bag60agt-borsa-per-chitarra-acustica-doppia-tracolla-nera-5-220x548.webp",
-        "thumbnail": "/assets/images/bespeco/5245488/bag60agt-borsa-per-chitarra-acustica-doppia-tracolla-nera-5-220x548.webp",
-        "gallery": [
-          "/assets/images/bespeco/5245488/bag60agt-borsa-per-chitarra-acustica-doppia-tracolla-nera-5-220x548.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151198/large/cfdb500d76dcdd7d975bafdf68b29d39.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151198/large/cfdb500d76dcdd7d975bafdf68b29d39.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-TC2PT",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/5245488/bag60agt-borsa-per-chitarra-acustica-doppia-tracolla-nera-5-220x548.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/5245488-bespeco-bag60agt-acoustic-guitar-bag",
-      "generated_at": "2026-01-30T02:43:18.229898",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151198/large/cfdb500d76dcdd7d975bafdf68b29d39.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151198/large/cfdb500d76dcdd7d975bafdf68b29d39.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151198/large/cfdb500d76dcdd7d975bafdf68b29d39.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "רצועת גיטרה bespeco tc2pt audio equipment  רצועת גיטרה העשויה מניילון מחוזק וקצוות עור עם ווי פלסטיק. רוחב הרצועה הינו 5 ס\"מ ואורכה המתכוונן…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205558"
     },
     {
-      "id": "bespeco_7920960",
-      "halilit_id": "7920960",
-      "name": "Risultati della ricerca - FOAM100CG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05de\u05e1\u05d3\u05e8\u05ea Performer Line \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea, \u05db\u05d5\u05dc\u05dc \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e2\u05e9\u05d5\u05d9 \u05e7\u05e6\u05e3 \u05e2\u05de\u05d9\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 15 \u05de\"\u05de, \u05d4\u05de\u05e6\u05d5\u05e4\u05d4 \u05d1\u05e7\u05d8\u05d9\u05e4\u05d4 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e8\u05d1\u05d9\u05ea. \u05d4\u05ea\u05d9\u05e7 \u05de\u05d9\u05d5\u05e6\u05e8 \u05de\u05d1\u05d3 Oxford 600D \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05e7\u05e8\u05d9\u05e2\u05d4. \u05d9\u05d3\u05d9\u05ea \u05de\u05d7\u05d5\u05d6\u05e7\u05ea \u05e2\u05dd \u05e1\u05d2\u05d9\u05e8\u05ea \u05e1\u05e7\u05d5\u05e5\u2019 \u05de\u05e1\u05e4\u05e7\u05ea \u05d0\u05d7\u05d9\u05d6\u05d4 \u05e0\u05d5\u05d7\u05d4 \u05d5\u05d9\u05e6\u05d9\u05d1\u05d4, \u05d1\u05e2\u05d5\u05d3 \u05e9\u05e8\u05e6\u05d5\u05e2\u05d5\u05ea \u05d4\u05db\u05ea\u05e3 \u05d4\u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05d5\u05ea \u05e2\u05dd \u05e7\u05e8\u05d1\u05d9\u05e0\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea \u05de\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e7\u05dc\u05d4 \u05d5\u05d2\u05de\u05d9\u05e9\u05d4. \u05d1\u05e0\u05d5\u05e1\u05e3, \u05db\u05d9\u05e1 \u05e7\u05d3\u05de\u05d9 \u05d2\u05d3\u05d5\u05dc \u05de\u05e1\u05e4\u05e7 \u05de\u05e7\u05d5\u05dd \u05dc\u05d0\u05d7\u05e1\u05d5\u05df \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd, \u05d5\u05de\u05d2\u05e0\u05d9 \u05d2\u05d5\u05de\u05d9 \u05d8\u05d1\u05e2\u05d9\u05d9\u05dd \u05de\u05d7\u05d6\u05e7\u05d9\u05dd \u05d0\u05ea \u05e2\u05de\u05d9\u05d3\u05d5\u05ea \u05d4\u05ea\u05d9\u05e7. \u05d4\u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05d4\u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05d9\u05dd, \u05d4\u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05de\u05d1\u05d8\u05d9\u05d7\u05d9\u05dd \u05e9\u05d9\u05de\u05d5\u05e9 \u05d0\u05de\u05d9\u05df \u05dc\u05d0\u05d5\u05e8\u05da \u05d6\u05de\u05df.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea \u05e2\u05dd \u05e7\u05d8\u05d9\u05e4\u05d4 \u05d5\u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 779.0,
-      "pricing": {
-        "regular_price": 779.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-tccbk-guitar-strap-7269897",
+      "name": "רצועת גיטרה Bespeco TCCBK",
+      "slug": "/רצועת-גיטרה-bespeco-tccbk",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "רצועת גיטרה מקצועית העשויה מכותנה מחוזקת וקצוות עור זמש עם ווי מתכת. רוחב הרצועה הינו 5 ס\"מ ואורכה…",
+      "description_full": "רצועת גיטרה מקצועית העשויה מכותנה מחוזקת וקצוות עור זמש עם ווי מתכת. רוחב הרצועה הינו 5 ס\"מ ואורכה המתכוונן נע בין 88-156 ס\"מ. הרצועה בצבע שחור.",
+      "price": 20.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151217/large/3de35838fa99177e404e4ea28e7b411e.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7920960/foam100cg-custodia-per-chitarra-classica-antistrappo-regolabile-9-220x520.webp",
-        "thumbnail": "/assets/images/bespeco/7920960/foam100cg-custodia-per-chitarra-classica-antistrappo-regolabile-9-220x520.webp",
-        "gallery": [
-          "/assets/images/bespeco/7920960/foam100cg-custodia-per-chitarra-classica-antistrappo-regolabile-9-220x520.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151217/large/3de35838fa99177e404e4ea28e7b411e.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151217/large/3de35838fa99177e404e4ea28e7b411e.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-TCCBK",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "0W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7920960/foam100cg-custodia-per-chitarra-classica-antistrappo-regolabile-9-220x520.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7920960-bespeco-foam100cg-classical-guitar-bag",
-      "generated_at": "2026-01-30T02:43:18.332882",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151217/large/3de35838fa99177e404e4ea28e7b411e.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151217/large/3de35838fa99177e404e4ea28e7b411e.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15151217/large/3de35838fa99177e404e4ea28e7b411e.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "רצועת גיטרה bespeco tccbk audio equipment  רצועת גיטרה מקצועית העשויה מכותנה מחוזקת וקצוות עור זמש עם ווי מתכת. רוחב הרצועה הינו 5 ס\"מ ואורכה…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205583"
     },
     {
-      "id": "bespeco_7294566",
-      "halilit_id": "7294566",
-      "name": "Risultati della ricerca - XANADUY",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05de\u05e2\u05de\u05d3 \u05d2\u05d9\u05d8\u05e8\u05d4 \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05e2\u05d9\u05dc\u05d4 \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea\u05d9\u05ea (<span class=\"caps\">ABS</span>), \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05d6\u05e2\u05d6\u05d5\u05e2\u05d9\u05dd \u05d5\u05e0\u05d9\u05ea\u05df \u05dc\u05e4\u05d9\u05e8\u05d5\u05e7. \u05d1\u05e2\u05dc \u05e7\u05e6\u05d4 \u05d2\u05d5\u05de\u05d9 \u05d4\u05de\u05d0\u05e4\u05e9\u05e8 \u05d0\u05d7\u05d9\u05d6\u05d4 \u05d9\u05e6\u05d9\u05d1\u05d4 \u05e9\u05dc \u05d4\u05db\u05dc\u05d9.</span></p>\n</div>",
-      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05e8\u05e6\u05e4\u05ea\u05d9 \u05d0\u05d5\u05e0\u05d9\u05d1\u05e8\u05e1\u05dc\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e6\u05d1\u05e2 \u05e6\u05d4\u05d5\u05d1 \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05e2\u05d9\u05dc\u05d4 \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea\u05d9\u05ea (ABS) \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 87.0,
-      "pricing": {
-        "regular_price": 87.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-bas100-music-stand-7271496",
+      "name": "Bespeco BAS100 Music Stand",
+      "slug": "/bespeco-bas100-music-stand",
+      "brand_id": "bespeco",
+      "category": "Accessories",
+      "subcategories": [
+        "stand"
+      ],
+      "tier": "diamond",
+      "tier_score": 83,
+      "description_short": "Professional studio product from Halilit",
+      "description_full": "Professional studio product from Halilit",
+      "price": 29.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153845/large/7cb3bfec56daa58e5e5d1ded8cf62d8d.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7294566/xanaduy-supporto-giallo-per-chitarra-in-abs-antiurto-e-smontabile-1-220x225.webp",
-        "thumbnail": "/assets/images/bespeco/7294566/xanaduy-supporto-giallo-per-chitarra-in-abs-antiurto-e-smontabile-1-220x225.webp",
-        "gallery": [
-          "/assets/images/bespeco/7294566/xanaduy-supporto-giallo-per-chitarra-in-abs-antiurto-e-smontabile-1-220x225.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153845/large/7cb3bfec56daa58e5e5d1ded8cf62d8d.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153845/large/7cb3bfec56daa58e5e5d1ded8cf62d8d.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-BAS100U",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7294566/xanaduy-supporto-giallo-per-chitarra-in-abs-antiurto-e-smontabile-1-220x225.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7294566-bespeco-xanaduy-abs-guitar-stand",
-      "generated_at": "2026-01-30T02:43:18.416388",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153845/large/7cb3bfec56daa58e5e5d1ded8cf62d8d.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153845/large/7cb3bfec56daa58e5e5d1ded8cf62d8d.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15153845/large/7cb3bfec56daa58e5e5d1ded8cf62d8d.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "bespeco bas100 music stand accessories stand professional studio product from halilit",
+      "filter_tags": [
+        "Accessories",
+        "diamond",
+        "stand"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205608"
     },
     {
-      "id": "bespeco_7919918",
-      "halilit_id": "7919918",
-      "name": "Risultati della ricerca - BAG400CG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05de\u05e1\u05d3\u05e8\u05ea Famous Line \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea, \u05de\u05e6\u05d9\u05e2 \u05e8\u05d9\u05e4\u05d5\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 35 \u05de\"\u05de \u05e9\u05de\u05e1\u05e4\u05e7 \u05d4\u05d2\u05e0\u05d4 \u05de\u05e6\u05d5\u05d9\u05e0\u05ea. \u05d4\u05d5\u05d0 \u05e2\u05e9\u05d5\u05d9 \u05de\u05d1\u05d3 Oxford 600D \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05e2\u05dd \u05e9\u05d5\u05dc\u05d9\u05d9\u05dd \u05de\u05d7\u05d5\u05d6\u05e7\u05d9\u05dd \u05d1\u05e7\u05e0\u05d1\u05e1 \u05de\u05e8\u05d5\u05e4\u05d3, \u05de\u05d4 \u05e9\u05de\u05d1\u05d8\u05d9\u05d7 \u05e2\u05de\u05d9\u05d3\u05d5\u05ea \u05dc\u05d0\u05d5\u05e8\u05da \u05d6\u05de\u05df. \u05d1\u05e0\u05d5\u05e1\u05e3, \u05d4\u05ea\u05d9\u05e7 \u05db\u05d5\u05dc\u05dc \u05d9\u05d3\u05d9\u05ea \u05de\u05e8\u05d5\u05e4\u05d3\u05ea \u05dc\u05e0\u05d5\u05d7\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea \u05d5\u05e8\u05e6\u05d5\u05e2\u05d5\u05ea \u05db\u05ea\u05e3 \u05db\u05e4\u05d5\u05dc\u05d5\u05ea, \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05d5\u05ea \u05d5\u05e0\u05e9\u05dc\u05e4\u05d5\u05ea \u05e2\u05dd \u05e7\u05e8\u05d1\u05d9\u05e0\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea, \u05db\u05da \u05e9\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05ea\u05d0\u05d9\u05dd \u05d0\u05ea \u05d4\u05ea\u05d9\u05e7 \u05dc\u05db\u05dc \u05e1\u05d5\u05d2 \u05e0\u05e9\u05d9\u05d0\u05d4. \u05d9\u05e9\u05e0\u05dd \u05db\u05d9\u05e1\u05d9\u05dd \u05d2\u05d3\u05d5\u05dc\u05d9\u05dd \u05d1\u05d7\u05dc\u05e7 \u05d4\u05e7\u05d3\u05de\u05d9 \u05d5\u05d4\u05e2\u05dc\u05d9\u05d5\u05df \u05dc\u05d0\u05d7\u05e1\u05d5\u05df \u05e0\u05d5\u05d7 \u05e9\u05dc \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd, \u05d5\u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05e2\u05de\u05d9\u05d3\u05d9\u05dd \u05d5\u05d7\u05d6\u05e7\u05d9\u05dd \u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05e9\u05de\u05e1\u05e4\u05e7\u05d9\u05dd \u05d1\u05d9\u05d8\u05d7\u05d5\u05df \u05de\u05dc\u05d0 \u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d9\u05d5\u05de\u05d9\u05d5\u05de\u05d9. \u05d5\u05d5 \u05ea\u05dc\u05d9\u05d9\u05d4 \u05d0\u05d7\u05d5\u05e8\u05d9 \u05e0\u05d5\u05e1\u05e3 \u05de\u05d9\u05d9\u05e2\u05dc \u05d0\u05ea \u05d4\u05d0\u05d7\u05e1\u05d5\u05df \u05d5\u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea, \u05d5\u05d4\u05d7\u05d9\u05d6\u05d5\u05e7 \u05d4\u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d5\u05d6\u05e8 \u05dc\u05d4\u05d2\u05df \u05e2\u05dc \u05d4\u05de\u05d9\u05ea\u05e8\u05d9\u05dd \u05d5\u05d4\u05d2\u05e9\u05e8 \u05e9\u05dc \u05d4\u05d2\u05d9\u05d8\u05e8\u05d4.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 539.0,
-      "pricing": {
-        "regular_price": 539.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-xanadub-abs-guitar-stand-7294542",
+      "name": "סטנד אוניברסלי לגיטרה Bespeco XANADUB",
+      "slug": "/סטנד-אוניברסלי-לגיטרה-bespeco-xanadub",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "מעמד גיטרה עם מערכת נעילה בטיחותית (\nABS\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר",
+      "description_full": "מעמד גיטרה עם מערכת נעילה בטיחותית (\nABS\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר אחיזה יציבה של הכלי.",
+      "price": 21.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211121/large/b1ba2a5e5a2800913410ab19851965bc.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7919918/bag400cg-borsa-famous-line-per-chitarra-imbottitura-da-35-mm-9-220x545.webp",
-        "thumbnail": "/assets/images/bespeco/7919918/bag400cg-borsa-famous-line-per-chitarra-imbottitura-da-35-mm-9-220x545.webp",
-        "gallery": [
-          "/assets/images/bespeco/7919918/bag400cg-borsa-famous-line-per-chitarra-imbottitura-da-35-mm-9-220x545.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211121/large/b1ba2a5e5a2800913410ab19851965bc.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211121/large/b1ba2a5e5a2800913410ab19851965bc.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-XANADUB",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7919918/bag400cg-borsa-famous-line-per-chitarra-imbottitura-da-35-mm-9-220x545.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7919918-bespeco-bag400cg-classical-guitar-bag",
-      "generated_at": "2026-01-30T02:43:18.491999",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211121/large/b1ba2a5e5a2800913410ab19851965bc.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211121/large/b1ba2a5e5a2800913410ab19851965bc.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211121/large/b1ba2a5e5a2800913410ab19851965bc.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "סטנד אוניברסלי לגיטרה bespeco xanadub audio equipment  מעמד גיטרה עם מערכת נעילה בטיחותית (\nabs\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205632"
     },
     {
-      "id": "bespeco_7920991",
-      "halilit_id": "7920991",
-      "name": "Risultati della ricerca - FOAM110AG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05de\u05e1\u05d3\u05e8\u05ea Performer Line \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea, \u05db\u05d5\u05dc\u05dc \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e2\u05e9\u05d5\u05d9 \u05e7\u05e6\u05e3 \u05e2\u05de\u05d9\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 15 \u05de\"\u05de, \u05d4\u05de\u05e6\u05d5\u05e4\u05d4 \u05d1\u05e7\u05d8\u05d9\u05e4\u05d4 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e8\u05d1\u05d9\u05ea. \u05d4\u05ea\u05d9\u05e7 \u05de\u05d9\u05d5\u05e6\u05e8 \u05de\u05d1\u05d3 Oxford 600D \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05e7\u05e8\u05d9\u05e2\u05d4. \u05d9\u05d3\u05d9\u05ea \u05de\u05d7\u05d5\u05d6\u05e7\u05ea \u05e2\u05dd \u05e1\u05d2\u05d9\u05e8\u05ea \u05e1\u05e7\u05d5\u05e5\u2019 \u05de\u05e1\u05e4\u05e7\u05ea \u05d0\u05d7\u05d9\u05d6\u05d4 \u05e0\u05d5\u05d7\u05d4 \u05d5\u05d9\u05e6\u05d9\u05d1\u05d4, \u05d1\u05e2\u05d5\u05d3 \u05e9\u05e8\u05e6\u05d5\u05e2\u05d5\u05ea \u05d4\u05db\u05ea\u05e3 \u05d4\u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05d5\u05ea \u05e2\u05dd \u05e7\u05e8\u05d1\u05d9\u05e0\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea \u05de\u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e7\u05dc\u05d4 \u05d5\u05d2\u05de\u05d9\u05e9\u05d4. \u05d1\u05e0\u05d5\u05e1\u05e3, \u05db\u05d9\u05e1 \u05e7\u05d3\u05de\u05d9 \u05d2\u05d3\u05d5\u05dc \u05de\u05e1\u05e4\u05e7 \u05de\u05e7\u05d5\u05dd \u05dc\u05d0\u05d7\u05e1\u05d5\u05df \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd, \u05d5\u05de\u05d2\u05e0\u05d9 \u05d2\u05d5\u05de\u05d9 \u05d8\u05d1\u05e2\u05d9\u05d9\u05dd \u05de\u05d7\u05d6\u05e7\u05d9\u05dd \u05d0\u05ea \u05e2\u05de\u05d9\u05d3\u05d5\u05ea \u05d4\u05ea\u05d9\u05e7. \u05d4\u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05d4\u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05d9\u05dd, \u05d4\u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05de\u05d1\u05d8\u05d9\u05d7\u05d9\u05dd \u05e9\u05d9\u05de\u05d5\u05e9 \u05d0\u05de\u05d9\u05df \u05dc\u05d0\u05d5\u05e8\u05da \u05d6\u05de\u05df.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e2\u05dd \u05e7\u05d8\u05d9\u05e4\u05d4 \u05d5\u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 779.0,
-      "pricing": {
-        "regular_price": 779.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-xanadur-abs-guitar-stand-7294559",
+      "name": "סטנד אוניברסלי לגיטרה Bespeco XANADUR",
+      "slug": "/סטנד-אוניברסלי-לגיטרה-bespeco-xanadur",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "מעמד גיטרה עם מערכת נעילה בטיחותית (\nABS\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר",
+      "description_full": "מעמד גיטרה עם מערכת נעילה בטיחותית (\nABS\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר אחיזה יציבה של הכלי.",
+      "price": 21.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211175/large/6eb6befc7df59e172d706b3e33c6ebee.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7920991/foam110ag-custodia-per-chitarra-acustica-antistrappo-regolabile-9-220x514.webp",
-        "thumbnail": "/assets/images/bespeco/7920991/foam110ag-custodia-per-chitarra-acustica-antistrappo-regolabile-9-220x514.webp",
-        "gallery": [
-          "/assets/images/bespeco/7920991/foam110ag-custodia-per-chitarra-acustica-antistrappo-regolabile-9-220x514.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211175/large/6eb6befc7df59e172d706b3e33c6ebee.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211175/large/6eb6befc7df59e172d706b3e33c6ebee.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-XANADUR",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "0W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/7920991/foam110ag-custodia-per-chitarra-acustica-antistrappo-regolabile-9-220x514.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7920991-bespeco-foam110ag-acoustic-guitar-bag",
-      "generated_at": "2026-01-30T02:43:18.568142",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211175/large/6eb6befc7df59e172d706b3e33c6ebee.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211175/large/6eb6befc7df59e172d706b3e33c6ebee.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211175/large/6eb6befc7df59e172d706b3e33c6ebee.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "סטנד אוניברסלי לגיטרה bespeco xanadur audio equipment  מעמד גיטרה עם מערכת נעילה בטיחותית (\nabs\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205658"
     },
     {
-      "id": "bespeco_3343276",
-      "halilit_id": "3343276",
-      "name": "Risultati della ricerca - BAG60AG",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05ea\u05d9\u05e7 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e0\u05d5\u05d7 \u05d5\u05e2\u05de\u05d9\u05d3 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 121.0,
-      "pricing": {
-        "regular_price": 121.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "bespeco-xanaduy-abs-guitar-stand-7294566",
+      "name": "סטנד אוניברסלי לגיטרה Bespeco XANADUY",
+      "slug": "/סטנד-אוניברסלי-לגיטרה-bespeco-xanaduy",
+      "brand_id": "bespeco",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "מעמד גיטרה עם מערכת נעילה בטיחותית (\nABS\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר",
+      "description_full": "מעמד גיטרה עם מערכת נעילה בטיחותית (\nABS\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר אחיזה יציבה של הכלי.",
+      "price": 21.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211210/large/9621bfefc2760ccc7d15f07c98d49967.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/3343276/bag60ag-borsa-per-chitarra-acustica-in-nylon-rinforzata-nera-6-220x538.webp",
-        "thumbnail": "/assets/images/bespeco/3343276/bag60ag-borsa-per-chitarra-acustica-in-nylon-rinforzata-nera-6-220x538.webp",
-        "gallery": [
-          "/assets/images/bespeco/3343276/bag60ag-borsa-per-chitarra-acustica-in-nylon-rinforzata-nera-6-220x538.webp",
-          "/assets/images/bespeco/3343276/bag60agt-borsa-per-chitarra-acustica-doppia-tracolla-nera-5-220x548.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211210/large/9621bfefc2760ccc7d15f07c98d49967.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211210/large/9621bfefc2760ccc7d15f07c98d49967.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "62-XANADUY",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/bespeco/3343276/bag60ag-borsa-per-chitarra-acustica-in-nylon-rinforzata-nera-6-220x538.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/3343276-bespeco-bag60ag-acoustic-guitar-bag",
-      "generated_at": "2026-01-30T02:43:18.673324",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211210/large/9621bfefc2760ccc7d15f07c98d49967.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211210/large/9621bfefc2760ccc7d15f07c98d49967.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15211210/large/9621bfefc2760ccc7d15f07c98d49967.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
       },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7923083",
-      "halilit_id": "7923083",
-      "name": "Risultati della ricerca - BP100TN",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05e1\u05d8\u05e0\u05d3 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \u05e2\u05dd 4 \u05e8\u05d2\u05dc\u05d9\u05d9\u05dd \u2013 \u05e2\u05de\u05d9\u05d3, \u05de\u05ea\u05e7\u05e4\u05dc \u05d5\u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05df.\u00a0<br/></span><span style=\"font-size: 12pt;\">\u05d4\u05e1\u05d8\u05e0\u05d3 \u05e2\u05e9\u05d5\u05d9 \u05e4\u05dc\u05d3\u05d4 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05ea \u05e2\u05dd 4 \u05e8\u05d2\u05dc\u05d9\u05d9\u05dd \u05dc\u05d9\u05e6\u05d9\u05d1\u05d5\u05ea \u05de\u05d9\u05e8\u05d1\u05d9\u05ea.\u00a0</span><span style=\"font-size: 12pt;\">\u05de\u05ea\u05e7\u05e4\u05dc \u05d1\u05e7\u05dc\u05d5\u05ea \u05dc\u05e0\u05e9\u05d9\u05d0\u05d4 \u05d5\u05d0\u05d7\u05e1\u05d5\u05df \u05e0\u05d5\u05d7\u05d9\u05dd.<br/></span><span style=\"font-size: 12pt;\">\u05db\u05d5\u05dc\u05dc \u05ea\u05de\u05d9\u05db\u05d4 \u05e0\u05d5\u05e1\u05e4\u05ea \u05dc\u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd, \u05e2\u05dd \u05d0\u05e4\u05e9\u05e8\u05d5\u05ea \u05db\u05d9\u05d5\u05d5\u05df \u05d6\u05d5\u05d5\u05d9\u05ea \u05de\u05d3\u05d5\u05d9\u05e7\u05ea \u05d1\u05d0\u05de\u05e6\u05e2\u05d5\u05ea \u05de\u05e2\u05e8\u05db\u05ea \u05d4-<span class=\"caps\">CROCODILE</span>.</span><br/><span style=\"font-size: 12pt;\">\u05e4\u05ea\u05d9\u05d7\u05ea \u05e8\u05d2\u05dc\u05d9\u05d9\u05dd \u05e2\u05dd \u05e0\u05e2\u05d9\u05dc\u05ea \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea, \u05e8\u05d2\u05dc\u05d9\u05d9\u05dd \u05de\u05e6\u05d5\u05e4\u05d5\u05ea \u05db\u05e8\u05d5\u05dd \u05e2\u05dd \u05db\u05e4\u05ea\u05d5\u05e8\u05d9 \u05db\u05d9\u05d5\u05d5\u05df, \u05d5\u05e8\u05d2\u05dc\u05d9\u05d5\u05ea \u05de\u05e1\u05ea\u05d5\u05d1\u05d1\u05d5\u05ea \u05d1\u05e2\u05dc\u05d5\u05ea \u05d0\u05d9\u05d6\u05d5\u05df \u05e2\u05e6\u05de\u05d9 \u05dc\u05db\u05dc \u05de\u05e9\u05d8\u05d7.</span></p>\n</div>",
-      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d1\u05de\u05e9\u05e7\u05dc \u05e9\u05dc \u05e2\u05d3 80 \u05e7\"\u05d2, \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05df \u05d5\u05de\u05ea\u05e7\u05e4\u05dc, \u05d7\u05d6\u05e7 \u05d5\u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 711.0,
-      "pricing": {
-        "regular_price": 711.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7923083/bp100tn-supporto-professionale-per-due-tastiere-regolabile-3-220x158.webp",
-        "thumbnail": "/assets/images/bespeco/7923083/bp100tn-supporto-professionale-per-due-tastiere-regolabile-3-220x158.webp",
-        "gallery": [
-          "/assets/images/bespeco/7923083/bp100tn-supporto-professionale-per-due-tastiere-regolabile-3-220x158.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7923083/bp100tn-supporto-professionale-per-due-tastiere-regolabile-3-220x158.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7923083-bespeco-bp100tn-keyboard-stand",
-      "generated_at": "2026-01-30T02:43:18.749316",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7294542",
-      "halilit_id": "7294542",
-      "name": "Risultati della ricerca - XANADUB",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05de\u05e2\u05de\u05d3 \u05d2\u05d9\u05d8\u05e8\u05d4 \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05e2\u05d9\u05dc\u05d4 \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea\u05d9\u05ea (<span class=\"caps\">ABS</span>), \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05d6\u05e2\u05d6\u05d5\u05e2\u05d9\u05dd \u05d5\u05e0\u05d9\u05ea\u05df \u05dc\u05e4\u05d9\u05e8\u05d5\u05e7. \u05d1\u05e2\u05dc \u05e7\u05e6\u05d4 \u05d2\u05d5\u05de\u05d9 \u05d4\u05de\u05d0\u05e4\u05e9\u05e8 \u05d0\u05d7\u05d9\u05d6\u05d4 \u05d9\u05e6\u05d9\u05d1\u05d4 \u05e9\u05dc \u05d4\u05db\u05dc\u05d9.</span></p>\n</div>",
-      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05e8\u05e6\u05e4\u05ea\u05d9 \u05d0\u05d5\u05e0\u05d9\u05d1\u05e8\u05e1\u05dc\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e6\u05d1\u05e2 \u05db\u05d7\u05d5\u05dc \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05e2\u05d9\u05dc\u05d4 \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea\u05d9\u05ea (ABS) \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 87.0,
-      "pricing": {
-        "regular_price": 87.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7294542/xanadub-supporto-blu-per-chitarra-in-abs-antiurto-e-smontabile-1-220x227.webp",
-        "thumbnail": "/assets/images/bespeco/7294542/xanadub-supporto-blu-per-chitarra-in-abs-antiurto-e-smontabile-1-220x227.webp",
-        "gallery": [
-          "/assets/images/bespeco/7294542/xanadub-supporto-blu-per-chitarra-in-abs-antiurto-e-smontabile-1-220x227.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7294542/xanadub-supporto-blu-per-chitarra-in-abs-antiurto-e-smontabile-1-220x227.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7294542-bespeco-xanadub-abs-guitar-stand",
-      "generated_at": "2026-01-30T02:43:18.877946",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7923001",
-      "halilit_id": "7923001",
-      "name": "Risultati della ricerca - TCJBL",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05e8\u05e6\u05d5\u05e2\u05d4 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4, \u05e2\u05e9\u05d5\u05d9\u05d4 \u05d1\u05d3 \u05d6\u2019\u05e7\u05d0\u05e8\u05d3 \u05e2\u05dd \u05e7\u05e6\u05d5\u05d5\u05ea \u05e2\u05d5\u05e8 \u05d5\u05d0\u05d1\u05d6\u05de\u05d9 \u05de\u05ea\u05db\u05ea</span></p>\n</div>",
-      "short_description": "\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d7\u05d6\u05e7\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05d0\u05d5\u05e8\u05da \u05e9\u05dc \u05e2\u05d3 156 \u05e1\"\u05de \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 75.0,
-      "pricing": {
-        "regular_price": 75.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7923001/01_Metal-1024x576.webp",
-        "thumbnail": "/assets/images/bespeco/7923001/01_Metal-1024x576.webp",
-        "gallery": [
-          "/assets/images/bespeco/7923001/01_Metal-1024x576.webp",
-          "/assets/images/bespeco/7923001/02_cavi_assemblati-1024x576.webp",
-          "/assets/images/bespeco/7923001/03_Cavi_In_Bobina-1024x576.webp",
-          "/assets/images/bespeco/7923001/04_connettori-1024x576.webp",
-          "/assets/images/bespeco/7923001/05_Elettronica-1024x576.webp",
-          "/assets/images/bespeco/7923001/06_Sistemi_Audio-1024x576.webp",
-          "/assets/images/bespeco/7923001/07_Flight_Cases-1024x576.webp",
-          "/assets/images/bespeco/7923001/08_Borse_e_Tracolle-1024x576.webp",
-          "/assets/images/bespeco/7923001/518510580_1301059794912447_5710032966967808257_nthumb.webp",
-          "/assets/images/bespeco/7923001/523139948_1307217280963365_8935429923563415178_nthumb.webp",
-          "/assets/images/bespeco/7923001/524963430_1310933870591706_6728535123206249435_nthumb.webp",
-          "/assets/images/bespeco/7923001/525573871_1311912577160502_998010239053171154_nthumb.webp",
-          "/assets/images/bespeco/7923001/558921182_1370439807974445_7147562788887663451_nthumb.webp",
-          "/assets/images/bespeco/7923001/559015892_1362800648738361_99143046020968726_nthumb.webp",
-          "/assets/images/bespeco/7923001/576562050_18544774696057148_5857431139622932664_nthumb.webp",
-          "/assets/images/bespeco/7923001/581054078_1400294448322314_2632023994995536649_nthumb.webp",
-          "/assets/images/bespeco/7923001/587457349_18549791758057148_2447077273370411719_nthumb.webp",
-          "/assets/images/bespeco/7923001/589551538_18550516255057148_7367567274473365261_nthumb.webp",
-          "/assets/images/bespeco/7923001/598858120_1426515295700229_3378626435213811714_nthumb.webp",
-          "/assets/images/bespeco/7923001/599959730_1424900215861737_3732236315177543935_nthumb.webp",
-          "/assets/images/bespeco/7923001/613103742_18555832822057148_1163047425092618462_nthumb.webp",
-          "/assets/images/bespeco/7923001/615990651_18556143253057148_2002958901931376842_nthumb.webp",
-          "/assets/images/bespeco/7923001/616103935_1448408570177568_6996966569266978090_nthumb.webp",
-          "/assets/images/bespeco/7923001/620860723_18558033844057148_3909882052005039557_nthumb.webp",
-          "/assets/images/bespeco/7923001/620973254_18557772382057148_1601232716065979326_nthumb.webp",
-          "/assets/images/bespeco/7923001/621204488_18558142225057148_7493331934504068613_nthumb.webp",
-          "/assets/images/bespeco/7923001/621464694_18558236284057148_8119356475533180372_nthumb.webp",
-          "/assets/images/bespeco/7923001/AHP450SL_confezione-1.webp",
-          "/assets/images/bespeco/7923001/BAG10AG-1.webp",
-          "/assets/images/bespeco/7923001/BAS200R-1-1.webp",
-          "/assets/images/bespeco/7923001/BP215AP_01-450x450.webp",
-          "/assets/images/bespeco/7923001/CRO11040_NEWS-450x450.webp",
-          "/assets/images/bespeco/7923001/CRO8040_NEWS-450x450.webp",
-          "/assets/images/bespeco/7923001/DBX10C_02-450x450.webp",
-          "/assets/images/bespeco/7923001/DJRP_01-450x450.webp",
-          "/assets/images/bespeco/7923001/DJTABM_01-450x450.webp",
-          "/assets/images/bespeco/7923001/LL190-450x450.webp",
-          "/assets/images/bespeco/7923001/MP250_00-450x450.webp",
-          "/assets/images/bespeco/7923001/MS1NR_00-450x450.webp",
-          "/assets/images/bespeco/7923001/MS1T.webp",
-          "/assets/images/bespeco/7923001/MS1TN-450x450.webp",
-          "/assets/images/bespeco/7923001/NOMA6_06-450x450.webp",
-          "/assets/images/bespeco/7923001/Rock-it-Fluo_new-450x450.webp",
-          "/assets/images/bespeco/7923001/SA24_01-450x450.webp",
-          "/assets/images/bespeco/7923001/SG60NP_01-450x450.webp",
-          "/assets/images/bespeco/7923001/TCDBC_TCDBL_TCDBK-450x450.webp",
-          "/assets/images/bespeco/7923001/TCJBL_01-220x220.webp",
-          "/assets/images/bespeco/7923001/TCJBL_01-450x450.webp",
-          "/assets/images/bespeco/7923001/TCVBK_01-450x450.webp",
-          "/assets/images/bespeco/7923001/ULDC5-450x450.webp",
-          "/assets/images/bespeco/7923001/VM400_01-450x450.webp",
-          "/assets/images/bespeco/7923001/bespecoprofessional.webp",
-          "/assets/images/bespeco/7923001/bg-5.webp",
-          "/assets/images/bespeco/7923001/bg-6.webp",
-          "/assets/images/bespeco/7923001/bg-7.webp",
-          "/assets/images/bespeco/7923001/bg-8.webp",
-          "/assets/images/bespeco/7923001/immagine_news_NAMM_ISE_2025-450x231.webp",
-          "/assets/images/bespeco/7923001/news_guitarshow-450x231.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7923001/01_Metal-1024x576.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7923001-bespeco-tcjbl-guitar-strap",
-      "generated_at": "2026-01-30T02:43:18.969187",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7262940",
-      "halilit_id": "7262940",
-      "name": "Risultati della ricerca - BAG10BG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<div class=\"item_attributes\" id=\"item_content\">\n<div class=\"specifications full_width\">\n<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05d4-<strong>BAG10BG</strong>\u00a0\u05d4\u05d9\u05e0\u05d5 \u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 10 \u05de\"\u05de \u05d4\u05e2\u05e9\u05d5\u05d9 \u05de-\u201c\u05d1\u05d3 \u05d0\u05d5\u05e7\u05e1\u05e4\u05d5\u05e8\u05d3 600D\u201d \u05d7\u05e1\u05d9\u05df \u05dc\u05e7\u05e8\u05e2\u05d9\u05dd \u05d1\u05e6\u05d1\u05e2\u05d9\u05dd \u05e9\u05d7\u05d5\u05e8 \u05d5\u05db\u05ea\u05d5\u05dd. \u05d4\u05ea\u05d9\u05e7 \u05de\u05ea\u05d2\u05d0\u05d4 \u05d1\u05d9\u05d3\u05d9\u05ea \u05d0\u05e8\u05d2\u05d5\u05e0\u05d5\u05de\u05d9\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea, \u05e8\u05e6\u05d5\u05e2\u05d4 \u05db\u05e4\u05d5\u05dc\u05d4 \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05ea, \u05db\u05d9\u05e1 \u05e7\u05d3\u05de\u05d9 \u05d2\u05d3\u05d5\u05dc, \u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05d7\u05d6\u05e7\u05d9\u05dd \u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05e2\u05d9\u05dd, \u05e7\u05d5\u05dc\u05d1 \u05ea\u05dc\u05d9\u05d9\u05d4 \u05d0\u05d7\u05d5\u05e8\u05d9 \u05d5\u05d7\u05d9\u05d6\u05d5\u05e7\u05d9\u05dd \u05e4\u05e0\u05d9\u05de\u05d9\u05d9\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05e2\u05dc \u05d4\u05de\u05d9\u05ea\u05e8\u05d9\u05dd \u05d5\u05d4\u05d2\u05e9\u05e8.</span></p>\n</div>\n</div>\n</div>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05e2\u05dd \u05d9\u05d3\u05d9\u05ea \u05d0\u05e8\u05d2\u05d5\u05e0\u05d5\u05de\u05d9\u05ea \u05d5\u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 171.0,
-      "pricing": {
-        "regular_price": 171.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7262940/BAG10BG-220x220.webp",
-        "thumbnail": "/assets/images/bespeco/7262940/BAG10BG-220x220.webp",
-        "gallery": [
-          "/assets/images/bespeco/7262940/BAG10BG-220x220.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7262940/BAG10BG-220x220.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7262940-bespeco-bag10bg-electric-bass-guitar-bag",
-      "generated_at": "2026-01-30T02:43:19.058719",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7294559",
-      "halilit_id": "7294559",
-      "name": "Risultati della ricerca - XANADUR",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05de\u05e2\u05de\u05d3 \u05d2\u05d9\u05d8\u05e8\u05d4 \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05e2\u05d9\u05dc\u05d4 \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea\u05d9\u05ea (<span class=\"caps\">ABS</span>), \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05d6\u05e2\u05d6\u05d5\u05e2\u05d9\u05dd \u05d5\u05e0\u05d9\u05ea\u05df \u05dc\u05e4\u05d9\u05e8\u05d5\u05e7. \u05d1\u05e2\u05dc \u05e7\u05e6\u05d4 \u05d2\u05d5\u05de\u05d9 \u05d4\u05de\u05d0\u05e4\u05e9\u05e8 \u05d0\u05d7\u05d9\u05d6\u05d4 \u05d9\u05e6\u05d9\u05d1\u05d4 \u05e9\u05dc \u05d4\u05db\u05dc\u05d9.</span></p>\n</div>",
-      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05e8\u05e6\u05e4\u05ea\u05d9 \u05d0\u05d5\u05e0\u05d9\u05d1\u05e8\u05e1\u05dc\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e6\u05d1\u05e2 \u05d0\u05d3\u05d5\u05dd \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05e2\u05d9\u05dc\u05d4 \u05d1\u05d8\u05d9\u05d7\u05d5\u05ea\u05d9\u05ea (ABS) \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 87.0,
-      "pricing": {
-        "regular_price": 87.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7294559/xanadur-supporto-rosso-per-chitarra-in-abs-antiurto-e-smontabile-1-220x217.webp",
-        "thumbnail": "/assets/images/bespeco/7294559/xanadur-supporto-rosso-per-chitarra-in-abs-antiurto-e-smontabile-1-220x217.webp",
-        "gallery": [
-          "/assets/images/bespeco/7294559/xanadur-supporto-rosso-per-chitarra-in-abs-antiurto-e-smontabile-1-220x217.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7294559/xanadur-supporto-rosso-per-chitarra-in-abs-antiurto-e-smontabile-1-220x217.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7294559-bespeco-xanadur-abs-guitar-stand",
-      "generated_at": "2026-01-30T02:43:19.143117",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7263241",
-      "halilit_id": "7263241",
-      "name": "Risultati della ricerca - BAG310AG",
-      "brand": "Bespeco",
-      "description": "",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 367.0,
-      "pricing": {
-        "regular_price": 367.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7263241/bag310ag-borsa-virtuoso-line-per-chitarra-acustica-nera-9-220x557.webp",
-        "thumbnail": "/assets/images/bespeco/7263241/bag310ag-borsa-virtuoso-line-per-chitarra-acustica-nera-9-220x557.webp",
-        "gallery": [
-          "/assets/images/bespeco/7263241/bag310ag-borsa-virtuoso-line-per-chitarra-acustica-nera-9-220x557.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7263241/bag310ag-borsa-virtuoso-line-per-chitarra-acustica-nera-9-220x557.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7263241-bespeco-bag310ag-acoustic-guitar-bag",
-      "generated_at": "2026-01-30T02:43:19.287241",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
-      },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7920015",
-      "halilit_id": "7920015",
-      "name": "BAG430BG Electric Bass Bag",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05de\u05e1\u05d3\u05e8\u05ea Famous Line \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1, \u05de\u05e6\u05d9\u05e2 \u05e8\u05d9\u05e4\u05d5\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 35 \u05de\"\u05de \u05e9\u05de\u05e1\u05e4\u05e7 \u05d4\u05d2\u05e0\u05d4 \u05de\u05e6\u05d5\u05d9\u05e0\u05ea.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05ea \u05d1\u05e1 \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 539.0,
-      "pricing": {
-        "regular_price": 539.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7920015/bag430bg-borsa-per-basso-elettrico-rinforzata-nera-arancione-9-220x594.webp",
-        "thumbnail": "/assets/images/bespeco/7920015/bag430bg-borsa-per-basso-elettrico-rinforzata-nera-arancione-9-220x594.webp",
-        "gallery": [
-          "/assets/images/bespeco/7920015/bag430bg-borsa-per-basso-elettrico-rinforzata-nera-arancione-9-220x594.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7920015/bag430bg-borsa-per-basso-elettrico-rinforzata-nera-arancione-9-220x594.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7920015-bespeco-bag430bg-electric-bass-bag",
-      "generated_at": "2026-01-30T02:43:19.363065",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7919975",
-      "halilit_id": "7919975",
-      "name": "Risultati della ricerca - BAG410AG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05de\u05e1\u05d3\u05e8\u05ea Famous Line \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea, \u05de\u05e6\u05d9\u05e2 \u05e8\u05d9\u05e4\u05d5\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 35 \u05de\"\u05de \u05e9\u05de\u05e1\u05e4\u05e7 \u05d4\u05d2\u05e0\u05d4 \u05de\u05e6\u05d5\u05d9\u05e0\u05ea. \u05d4\u05d5\u05d0 \u05e2\u05e9\u05d5\u05d9 \u05de\u05d1\u05d3 Oxford 600D \u05e2\u05de\u05d9\u05d3 \u05d1\u05e4\u05e0\u05d9 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05e2\u05dd \u05e9\u05d5\u05dc\u05d9\u05d9\u05dd \u05de\u05d7\u05d5\u05d6\u05e7\u05d9\u05dd \u05d1\u05e7\u05e0\u05d1\u05e1 \u05de\u05e8\u05d5\u05e4\u05d3, \u05de\u05d4 \u05e9\u05de\u05d1\u05d8\u05d9\u05d7 \u05e2\u05de\u05d9\u05d3\u05d5\u05ea \u05dc\u05d0\u05d5\u05e8\u05da \u05d6\u05de\u05df. \u05d1\u05e0\u05d5\u05e1\u05e3, \u05d4\u05ea\u05d9\u05e7 \u05db\u05d5\u05dc\u05dc \u05d9\u05d3\u05d9\u05ea \u05de\u05e8\u05d5\u05e4\u05d3\u05ea \u05dc\u05e0\u05d5\u05d7\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea \u05d5\u05e8\u05e6\u05d5\u05e2\u05d5\u05ea \u05db\u05ea\u05e3 \u05db\u05e4\u05d5\u05dc\u05d5\u05ea, \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05d5\u05ea \u05d5\u05e0\u05e9\u05dc\u05e4\u05d5\u05ea \u05e2\u05dd \u05e7\u05e8\u05d1\u05d9\u05e0\u05d5\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea, \u05db\u05da \u05e9\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05ea\u05d0\u05d9\u05dd \u05d0\u05ea \u05d4\u05ea\u05d9\u05e7 \u05dc\u05db\u05dc \u05e1\u05d5\u05d2 \u05e0\u05e9\u05d9\u05d0\u05d4. \u05d9\u05e9\u05e0\u05dd \u05db\u05d9\u05e1\u05d9\u05dd \u05d2\u05d3\u05d5\u05dc\u05d9\u05dd \u05d1\u05d7\u05dc\u05e7 \u05d4\u05e7\u05d3\u05de\u05d9 \u05d5\u05d4\u05e2\u05dc\u05d9\u05d5\u05df \u05dc\u05d0\u05d7\u05e1\u05d5\u05df \u05e0\u05d5\u05d7 \u05e9\u05dc \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd, \u05d5\u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05e2\u05de\u05d9\u05d3\u05d9\u05dd \u05d5\u05d7\u05d6\u05e7\u05d9\u05dd \u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05d9\u05e2\u05d4, \u05e9\u05de\u05e1\u05e4\u05e7\u05d9\u05dd \u05d1\u05d9\u05d8\u05d7\u05d5\u05df \u05de\u05dc\u05d0 \u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05d9\u05d5\u05de\u05d9\u05d5\u05de\u05d9. \u05d5\u05d5 \u05ea\u05dc\u05d9\u05d9\u05d4 \u05d0\u05d7\u05d5\u05e8\u05d9 \u05e0\u05d5\u05e1\u05e3 \u05de\u05d9\u05d9\u05e2\u05dc \u05d0\u05ea \u05d4\u05d0\u05d7\u05e1\u05d5\u05df \u05d5\u05d4\u05e0\u05d2\u05d9\u05e9\u05d5\u05ea, \u05d5\u05d4\u05d7\u05d9\u05d6\u05d5\u05e7 \u05d4\u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d5\u05d6\u05e8 \u05dc\u05d4\u05d2\u05df \u05e2\u05dc \u05d4\u05de\u05d9\u05ea\u05e8\u05d9\u05dd \u05d5\u05d4\u05d2\u05e9\u05e8 \u05e9\u05dc \u05d4\u05d2\u05d9\u05d8\u05e8\u05d4.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05e2\u05d1\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 539.0,
-      "pricing": {
-        "regular_price": 539.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7919975/bag410ag-borsa-famous-line-per-chitarra-acustica-antistrappo-9-220x534.webp",
-        "thumbnail": "/assets/images/bespeco/7919975/bag410ag-borsa-famous-line-per-chitarra-acustica-antistrappo-9-220x534.webp",
-        "gallery": [
-          "/assets/images/bespeco/7919975/bag410ag-borsa-famous-line-per-chitarra-acustica-antistrappo-9-220x534.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7919975/bag410ag-borsa-famous-line-per-chitarra-acustica-antistrappo-9-220x534.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7919975-bespeco-bag410ag-acoustic-guitar-bag",
-      "generated_at": "2026-01-30T02:43:19.440648",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7262928",
-      "halilit_id": "7262928",
-      "name": "Risultati della ricerca - BAG10AG",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05d4-<strong>BAG10AG</strong> \u05d4\u05d9\u05e0\u05d5 \u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05d1\u05e2\u05d5\u05d1\u05d9 10 \u05de\"\u05de \u05d4\u05e2\u05e9\u05d5\u05d9 \u05de-\u201c\u05d1\u05d3 \u05d0\u05d5\u05e7\u05e1\u05e4\u05d5\u05e8\u05d3 600D\u201d \u05d7\u05e1\u05d9\u05df \u05dc\u05e7\u05e8\u05e2\u05d9\u05dd \u05d1\u05e6\u05d1\u05e2\u05d9\u05dd \u05e9\u05d7\u05d5\u05e8 \u05d5\u05db\u05ea\u05d5\u05dd. \u05d4\u05ea\u05d9\u05e7 \u05de\u05ea\u05d2\u05d0\u05d4 \u05d1\u05d9\u05d3\u05d9\u05ea \u05d0\u05e8\u05d2\u05d5\u05e0\u05d5\u05de\u05d9\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea, \u05e8\u05e6\u05d5\u05e2\u05d4 \u05db\u05e4\u05d5\u05dc\u05d4 \u05de\u05ea\u05db\u05d5\u05d5\u05e0\u05e0\u05ea, \u05db\u05d9\u05e1 \u05e7\u05d3\u05de\u05d9 \u05d2\u05d3\u05d5\u05dc, \u05e8\u05d5\u05db\u05e1\u05e0\u05d9\u05dd \u05d7\u05d6\u05e7\u05d9\u05dd \u05ea\u05e4\u05d5\u05e8\u05d9\u05dd \u05d1\u05e0\u05d9\u05d9\u05dc\u05d5\u05df \u05e0\u05d2\u05d3 \u05e7\u05e8\u05e2\u05d9\u05dd, \u05e7\u05d5\u05dc\u05d1 \u05ea\u05dc\u05d9\u05d9\u05d4 \u05d0\u05d7\u05d5\u05e8\u05d9 \u05d5\u05d7\u05d9\u05d6\u05d5\u05e7\u05d9\u05dd \u05e4\u05e0\u05d9\u05de\u05d9\u05d9\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05e2\u05dc \u05d4\u05de\u05d9\u05ea\u05e8\u05d9\u05dd \u05d5\u05d4\u05d2\u05e9\u05e8.</span></p>\n</div>",
-      "short_description": "\u05ea\u05d9\u05e7 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e2\u05dd \u05d9\u05d3\u05d9\u05ea \u05d0\u05e8\u05d2\u05d5\u05e0\u05d5\u05de\u05d9\u05ea \u05d5\u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "CASES_BAGS",
-      "price": 171.0,
-      "pricing": {
-        "regular_price": 171.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7262928/01_Metal-1024x576.webp",
-        "thumbnail": "/assets/images/bespeco/7262928/01_Metal-1024x576.webp",
-        "gallery": [
-          "/assets/images/bespeco/7262928/01_Metal-1024x576.webp",
-          "/assets/images/bespeco/7262928/02_cavi_assemblati-1024x576.webp",
-          "/assets/images/bespeco/7262928/03_Cavi_In_Bobina-1024x576.webp",
-          "/assets/images/bespeco/7262928/04_connettori-1024x576.webp",
-          "/assets/images/bespeco/7262928/05_Elettronica-1024x576.webp",
-          "/assets/images/bespeco/7262928/06_Sistemi_Audio-1024x576.webp",
-          "/assets/images/bespeco/7262928/07_Flight_Cases-1024x576.webp",
-          "/assets/images/bespeco/7262928/08_Borse_e_Tracolle-1024x576.webp",
-          "/assets/images/bespeco/7262928/518510580_1301059794912447_5710032966967808257_nthumb.webp",
-          "/assets/images/bespeco/7262928/523139948_1307217280963365_8935429923563415178_nthumb.webp",
-          "/assets/images/bespeco/7262928/524963430_1310933870591706_6728535123206249435_nthumb.webp",
-          "/assets/images/bespeco/7262928/525573871_1311912577160502_998010239053171154_nthumb.webp",
-          "/assets/images/bespeco/7262928/558921182_1370439807974445_7147562788887663451_nthumb.webp",
-          "/assets/images/bespeco/7262928/559015892_1362800648738361_99143046020968726_nthumb.webp",
-          "/assets/images/bespeco/7262928/576562050_18544774696057148_5857431139622932664_nthumb.webp",
-          "/assets/images/bespeco/7262928/581054078_1400294448322314_2632023994995536649_nthumb.webp",
-          "/assets/images/bespeco/7262928/587457349_18549791758057148_2447077273370411719_nthumb.webp",
-          "/assets/images/bespeco/7262928/589551538_18550516255057148_7367567274473365261_nthumb.webp",
-          "/assets/images/bespeco/7262928/598858120_1426515295700229_3378626435213811714_nthumb.webp",
-          "/assets/images/bespeco/7262928/599959730_1424900215861737_3732236315177543935_nthumb.webp",
-          "/assets/images/bespeco/7262928/613103742_18555832822057148_1163047425092618462_nthumb.webp",
-          "/assets/images/bespeco/7262928/615990651_18556143253057148_2002958901931376842_nthumb.webp",
-          "/assets/images/bespeco/7262928/616103935_1448408570177568_6996966569266978090_nthumb.webp",
-          "/assets/images/bespeco/7262928/620860723_18558033844057148_3909882052005039557_nthumb.webp",
-          "/assets/images/bespeco/7262928/620973254_18557772382057148_1601232716065979326_nthumb.webp",
-          "/assets/images/bespeco/7262928/621204488_18558142225057148_7493331934504068613_nthumb.webp",
-          "/assets/images/bespeco/7262928/621464694_18558236284057148_8119356475533180372_nthumb.webp",
-          "/assets/images/bespeco/7262928/AHP450SL_confezione-1.webp",
-          "/assets/images/bespeco/7262928/BAG10AG-1.webp",
-          "/assets/images/bespeco/7262928/BAG10AG-220x220.webp",
-          "/assets/images/bespeco/7262928/BAS200R-1-1.webp",
-          "/assets/images/bespeco/7262928/BP215AP_01-450x450.webp",
-          "/assets/images/bespeco/7262928/CRO11040_NEWS-450x450.webp",
-          "/assets/images/bespeco/7262928/CRO8040_NEWS-450x450.webp",
-          "/assets/images/bespeco/7262928/DBX10C_02-450x450.webp",
-          "/assets/images/bespeco/7262928/DJRP_01-450x450.webp",
-          "/assets/images/bespeco/7262928/DJTABM_01-450x450.webp",
-          "/assets/images/bespeco/7262928/LL190-450x450.webp",
-          "/assets/images/bespeco/7262928/MP250_00-450x450.webp",
-          "/assets/images/bespeco/7262928/MS1NR_00-450x450.webp",
-          "/assets/images/bespeco/7262928/MS1T.webp",
-          "/assets/images/bespeco/7262928/MS1TN-450x450.webp",
-          "/assets/images/bespeco/7262928/NOMA6_06-450x450.webp",
-          "/assets/images/bespeco/7262928/Rock-it-Fluo_new-450x450.webp",
-          "/assets/images/bespeco/7262928/SA24_01-450x450.webp",
-          "/assets/images/bespeco/7262928/SG60NP_01-450x450.webp",
-          "/assets/images/bespeco/7262928/TCDBC_TCDBL_TCDBK-450x450.webp",
-          "/assets/images/bespeco/7262928/TCJBL_01-450x450.webp",
-          "/assets/images/bespeco/7262928/TCVBK_01-450x450.webp",
-          "/assets/images/bespeco/7262928/ULDC5-450x450.webp",
-          "/assets/images/bespeco/7262928/VM400_01-450x450.webp",
-          "/assets/images/bespeco/7262928/bespecoprofessional.webp",
-          "/assets/images/bespeco/7262928/bg-5.webp",
-          "/assets/images/bespeco/7262928/bg-6.webp",
-          "/assets/images/bespeco/7262928/bg-7.webp",
-          "/assets/images/bespeco/7262928/bg-8.webp",
-          "/assets/images/bespeco/7262928/immagine_news_NAMM_ISE_2025-450x231.webp",
-          "/assets/images/bespeco/7262928/news_guitarshow-450x231.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7262928/01_Metal-1024x576.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7262928-bespeco-bag10ag-acoustic-guitar-bag",
-      "generated_at": "2026-01-30T02:43:19.516157",
-      "sub_category": "Bags",
-      "ui_context": {
-        "primary": "CASES_BAGS",
-        "sub": "Bags"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "bespeco_7923037",
-      "halilit_id": "7923037",
-      "name": "Risultati della ricerca - TCLBK",
-      "brand": "Bespeco",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05e8\u05e6\u05d5\u05e2\u05d4 \u05de\u05e8\u05d5\u05e4\u05d3\u05ea \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4, \u05e2\u05e9\u05d5\u05d9\u05d4 \u05e2\u05d5\u05e8 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9 \u05d1\u05e6\u05d1\u05e2 \u05e9\u05d7\u05d5\u05e8\u00a0</span></p>\n</div>",
-      "short_description": "\u05e8\u05e6\u05d5\u05e2\u05d4 \u05d7\u05d6\u05e7\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e2\u05d5\u05e8 \u05de\u05dc\u05d0\u05db\u05d5\u05ea\u05d9 \u05d1\u05d0\u05d5\u05e8\u05da \u05e9\u05dc \u05e2\u05d3 140 \u05e1\"\u05de \u05de\u05d1\u05d9\u05ea Bespeco",
-      "category": "STUDIO_MONITORS",
-      "price": 266.0,
-      "pricing": {
-        "regular_price": 266.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/bespeco/7923037/tclbk-tracolla-professionale-chitarra-vera-pelle-imbottita-2-220x220.webp",
-        "thumbnail": "/assets/images/bespeco/7923037/tclbk-tracolla-professionale-chitarra-vera-pelle-imbottita-2-220x220.webp",
-        "gallery": [
-          "/assets/images/bespeco/7923037/tclbk-tracolla-professionale-chitarra-vera-pelle-imbottita-2-220x220.webp"
-        ]
-      },
-      "image_url": "/assets/images/bespeco/7923037/tclbk-tracolla-professionale-chitarra-vera-pelle-imbottita-2-220x220.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/7923037-bespeco-tclbk-guitar-strap",
-      "generated_at": "2026-01-30T02:43:19.591669",
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "search_text": "סטנד אוניברסלי לגיטרה bespeco xanaduy audio equipment  מעמד גיטרה עם מערכת נעילה בטיחותית (\nabs\n), עמיד בפני זעזועים וניתן לפירוק. בעל קצה גומי המאפשר",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:18.205682"
     }
   ],
-  "processed_badge": {
-    "level": "DIAMOND",
-    "checks": {
-      "commercial_data": true,
-      "official_manual": true,
-      "taxonomy_aligned": true,
-      "context_layer": true,
-      "media_optimized": true
-    },
-    "signature": "refinery-v2-25"
-  },
-  "meta": {
-    "total_count": 25,
-    "refinery_version": "2.0",
-    "tiers": {
-      "DIAMOND": 0,
-      "GOLD": 17,
-      "SILVER": 8,
-      "BRONZE": 0
-    }
-  }
+  "generated": "2026-01-31T20:01:18.205946",
+  "count": 15
 }

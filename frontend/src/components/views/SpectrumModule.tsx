@@ -10,11 +10,61 @@ import { useMemo, useState } from "react";
 import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
-import type { Product } from "../../types";
+import type { Product, GoldenProduct } from "../../types";
 import { useCategoryCatalog } from "../../hooks/useCategoryCatalog";
 import { TierBar } from "../smart-views/TierBar";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
+
+const ProductCard = ({ product }: { product: GoldenProduct }) => {
+  // sandbox mode: allow all tiers
+  const isRefined = product.processed_badge?.level === "DIAMOND";
+  const isCoal = product.processed_badge?.level === "COAL";
+
+  return (
+    <div
+      className={`card tier-${product.processed_badge?.level?.toLowerCase() || "unknown"} p-4 border rounded-md mb-2 bg-zinc-900 border-zinc-800 relative`}
+    >
+      {!isRefined && (
+        <div
+          className={`warning-banner text-[10px] font-bold px-2 py-1 mb-2 inline-block rounded ${isCoal ? "bg-red-900 text-red-100" : "bg-amber-900 text-amber-100"}`}
+        >
+          {isCoal ? "LOW DATA QUALITY" : "PENDING VERIFICATION"}
+        </div>
+      )}
+
+      {/* HEADER: Identity */}
+      <h3 className="text-lg font-bold text-white mb-1">
+        {product.identity?.name ?? product.name ?? "Unknown Product"}
+      </h3>
+
+      {/* BADGE: Trust Level */}
+      {product.processed_badge?.level === "DIAMOND" && (
+        <span className="badge-diamond inline-flex items-center gap-1 text-xs font-bold text-emerald-400 bg-emerald-950/30 px-2 py-0.5 rounded border border-emerald-500/50 mb-2">
+          💎 Verified & Tested
+        </span>
+      )}
+
+      {/* CONTEXT: Real World Data */}
+      <div className="context-overlay text-sm text-zinc-400">
+        <ul className="space-y-1">
+          {product.context?.verified_pros?.map((pro) => (
+            <li key={pro} className="flex items-start gap-2">
+              <span className="text-emerald-500">✅</span>
+              <span>{pro}</span>
+            </li>
+          ))}
+        </ul>
+        {(product.context?.trusted_sources?.length ?? 0) > 0 && (
+          <div className="sources mt-2 pt-2 border-t border-zinc-800 text-xs text-zinc-500">
+            Verified by:{" "}
+            {product.context?.trusted_sources?.map((s) => s.name).join(", ")}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 // --- RELEVANCE ENGINE ---
 // Calculates a 0-100 score for Y-Axis positioning
@@ -36,7 +86,8 @@ const calculateRelevance = (p: Product): number => {
 
   // 4. Deterministic "Random" spice based on ID (so it stays consistent)
   const idSpice =
-    p.id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % 20;
+    (p.id ?? "").split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
+    20;
 
   return Math.min(100, Math.max(0, score + idSpice));
 };
@@ -181,7 +232,8 @@ export const SpectrumModule = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
                       ID REF:{" "}
-                      {hoveredProduct.id.split("_")[1] || hoveredProduct.id}
+                      {(hoveredProduct.id ?? "").split("_")[1] ||
+                        hoveredProduct.id}
                     </span>
                   </div>
                   <h1 className="text-2xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
@@ -203,19 +255,23 @@ export const SpectrumModule = () => {
 
               {/* Specs Grid */}
               <div className="mt-auto grid grid-cols-2 gap-2 text-[10px] font-mono text-zinc-500">
-                {hoveredProduct.specs?.slice(0, 4).map((spec, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col bg-zinc-900/50 p-2 border border-zinc-800/50 rounded-sm"
-                  >
-                    <span className="text-amber-500/50 uppercase text-[9px] mb-1">
-                      {spec.name}
-                    </span>
-                    <span className="text-zinc-300 truncate">{spec.value}</span>
-                  </div>
-                ))}
+                {Array.isArray(hoveredProduct.specs) &&
+                  hoveredProduct.specs.slice(0, 4).map((spec, i) => (
+                    <div
+                      key={i}
+                      className="flex flex-col bg-zinc-900/50 p-2 border border-zinc-800/50 rounded-sm"
+                    >
+                      <span className="text-amber-500/50 uppercase text-[9px] mb-1">
+                        {spec.name}
+                      </span>
+                      <span className="text-zinc-300 truncate">
+                        {spec.value}
+                      </span>
+                    </div>
+                  ))}
                 {(!hoveredProduct.specs ||
-                  hoveredProduct.specs.length === 0) && (
+                  (Array.isArray(hoveredProduct.specs) &&
+                    hoveredProduct.specs.length === 0)) && (
                   <div className="col-span-2 text-center text-zinc-700 italic py-2">
                     Technical specifications unavailable
                   </div>
@@ -254,7 +310,7 @@ export const SpectrumModule = () => {
               <div className="w-full h-px bg-zinc-800" />
 
               <button
-                onClick={() => openProductPop(hoveredProduct.id)}
+                onClick={() => openProductPop(hoveredProduct.id ?? "")}
                 className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-4 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
               >
                 <Maximize2 className="w-4 h-4" />

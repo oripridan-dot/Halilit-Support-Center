@@ -1,46 +1,68 @@
-# Backend Tools
+# Backend Pipeline v5.0
 
-**Status:** Data Refinement & Synchronization Pipeline (v4.6.1)
+Unified data processing pipeline for the Halilit Support Center.
 
-## Overview
+## Architecture
 
-The backend is a complete data ingestion and refinement system:
-1. Harvests raw data from web sources (Halilit, Official sites)
-2. Processes and cleans the data
-3. Applies strict taxonomy mapping
-4. Assigns quality tiers (Diamond, Gold, Silver, Bronze)
-5. Tracks all operations in SQLite for 100% audit trail
-6. Deploys refined data to frontend cache
-
-## Database & Synchronization
-
-**Location:** `backend/data/ingestion_history.db`
-
-**Optimization:** WAL mode + Indexes + Vacuumed
-**Sync Status:** 100% (All 114+ products synchronized)
-
-## Available Scripts
-
-`ingest_brand.py`: Full pipeline with DB tracking
-
-```bash
-python3 backend/scripts/ingest_brand.py adam-audio
+```
+3 Sources → 3 Layers → Frontend JSON
 ```
 
-`refine_brand.py`: Refine processed data
+### Three Data Sources (Harvesters)
+- **Official**: Manufacturer data (specs, names, images, manuals)
+- **Commercial**: Halilit website (prices, SKUs, stock status)
+- **Contextual**: Expert reviews via web search + AI synthesis
+
+### Three Processing Layers
+1. **Normalize**: Merge & validate with Pydantic schemas
+2. **Enrich**: Taxonomy mapping, tier assignment (Diamond/Gold/Silver/Bronze)
+3. **Optimize**: UI-ready JSON with slugs, search text, render hints
+
+## Quick Start
 
 ```bash
-python3 backend/scripts/refine_brand.py adam-audio
-```
-
-`deploy_badged_catalog.py`: Update frontend index
-
-```bash
-python3 backend/scripts/deploy_badged_catalog.py
-```
-
-## Setup
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
+
+# Run full pipeline
+python -m backend.pipeline run
+
+# Check status
+python -m backend.pipeline status
+
+# Generate TypeScript types
+python -m backend.pipeline types
+```
+
+## CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `run` | Full pipeline (ingest → process → deploy) |
+| `ingest` | Run harvesters only |
+| `process` | Run layers only |
+| `deploy` | Deploy to frontend |
+| `types` | Generate TypeScript types |
+| `status` | Show pipeline status |
+
+## Data Flow
+
+```
+backend/data/
+├── 1_official/     # Raw manufacturer data
+├── 2_commercial/   # Raw commercial data  
+├── 3_contextual/   # Raw contextual data
+├── 4_validated/    # Normalized + enriched
+├── 5_golden/       # Final optimized catalogs
+└── reports/        # Pipeline run reports
+
+frontend/public/data/
+├── index.json      # Catalog index
+└── {brand}.json    # Per-brand catalogs
+```
+
+## Testing
+
+```bash
+python -m pytest backend/tests/test_pipeline_e2e.py -v
 ```

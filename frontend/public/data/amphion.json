@@ -1,1041 +1,2338 @@
 {
-  "brand_id": "amphion",
-  "brand_info": {
-    "id": "amphion",
-    "name": "Amphion",
-    "official_website": "https://amphion.fi/",
-    "logo_url": "/assets/logos/amphion_logo.png",
-    "description": "Beautifully honest. Amphion designs innovative loudspeakers recognized for their honest and precise sound reproduction.",
-    "social_links": {
-      "instagram": "https://www.instagram.com/amphion_loudspeakers/",
-      "facebook": "https://www.facebook.com/AmphionLoudspeakers/",
-      "youtube": "https://www.youtube.com/AmphionLoudspeakers"
-    },
-    "last_updated": "2026-01-30T02:37:12.158842"
-  },
+  "brand": "amphion",
   "products": [
     {
-      "id": "amphion_2123111",
-      "halilit_id": "2123111",
-      "name": "One12",
-      "brand": "Amphion",
-      "description": "Amphion One12 nearfield studio monitor take the room out of the equation and allow you to listen to pure, honest sound anywhere.",
-      "short_description": "Amphion One12 nearfield studio monitor take the room out of the equation and allow you to listen to pure, honest sound anywhere.",
-      "category": "STUDIO_MONITORS",
-      "price": 3643.0,
-      "pricing": {
-        "regular_price": 3643.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "amphion-one12-2123111",
+      "name": "מוניטור פאסיבי Amphion One12",
+      "slug": "/מוניטור-פאסיבי-amphion-one12",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "&nbsp;&nbsp; &nbsp;&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים",
+      "description_full": "&nbsp;&nbsp; &nbsp;&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים high-end&nbsp;המניבים תוצאות מהמדויקות ביותר בתעשייה. הייחוד של העיצוב מתבטא בשתי נקודות עיקריות. האחת היא הפרדת המגבר מהרמקולים.&nbsp;ב-Amphion מאמינים שעדיף להימנע מלהכניס&nbsp;מעגל אלקטרוני בת",
+      "price": 910.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3435810/large/83badc27fb0fd46e7325e0e4e818d6ec.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/2123111/0008_one12-freq.webp",
-        "thumbnail": "/assets/images/amphion/2123111/0008_one12-freq.webp",
-        "gallery": [
-          "/assets/images/amphion/2123111/0008_one12-freq.webp",
-          "/assets/images/amphion/2123111/0009_one12-imp.webp",
-          "/assets/images/amphion/2123111/2594-edit-300x300.webp",
-          "/assets/images/amphion/2123111/Amphion-Base-systems-FlexBase-feat25.webp",
-          "/assets/images/amphion/2123111/Amphion-Power-amplifiers-Amp700-feat25.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-feat25.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One15-feat25.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/2123111/BaseTwo25-front.webp",
-          "/assets/images/amphion/2123111/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/2123111/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/2123111/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/2123111/LQOcean-Sound-StudioB_3B7A6810_fotoKristinStoylen.webp",
-          "/assets/images/amphion/2123111/Lewis-picket-websiteone12.webp",
-          "/assets/images/amphion/2123111/Robbie-one12-website.webp",
-          "/assets/images/amphion/2123111/Screenshot-2022-02-14-at-16.39.01-300x300.webp",
-          "/assets/images/amphion/2123111/Screenshot-2022-11-04-at-9.14.48-300x300.webp",
-          "/assets/images/amphion/2123111/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/2123111/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/2123111/antonio-2-1.webp",
-          "/assets/images/amphion/2123111/antonio-one12-website.webp",
-          "/assets/images/amphion/2123111/argon0-1-180x300.webp",
-          "/assets/images/amphion/2123111/argon1-1-180x300.webp",
-          "/assets/images/amphion/2123111/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/2123111/argon3s-1-180x300.webp",
-          "/assets/images/amphion/2123111/argon5c-1-180x300.webp",
-          "/assets/images/amphion/2123111/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/2123111/cables_amphipn_25.webp",
-          "/assets/images/amphion/2123111/helium520C-2-180x300.webp",
-          "/assets/images/amphion/2123111/mount1.webp",
-          "/assets/images/amphion/2123111/passive-radiator-1.webp",
-          "/assets/images/amphion/2123111/roland-guerin-one12-product-page.webp",
-          "/assets/images/amphion/2123111/studio_noiz_one12_two18_baseone15_01bw.webp",
-          "/assets/images/amphion/2123111/thumbn_create_brochure.webp",
-          "/assets/images/amphion/2123111/thumbn_mnl_studio_monitors.webp",
-          "/assets/images/amphion/2123111/thumbn_ps_one12.webp"
-        ]
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3435810/large/83badc27fb0fd46e7325e0e4e818d6ec.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
       },
-      "image_url": "/assets/images/amphion/2123111/0008_one12-freq.webp",
-      "features": [
-        "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9 (\u05dc\u05dc\u05d0 \u05de\u05d2\u05d1\u05e8 \u05e4\u05e0\u05d9\u05de\u05d9)",
-        "woofer 4.5 \u05d0\u05d9\u05e0\u05e5\u2019",
-        "\u05d1\u05e0\u05d5\u05d9 \u05d1\u05e2\u05d1\u05d5\u05d3\u05ea \u05d9\u05d3 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05de\u05d2\u05d1\u05e8\u05d9 Amp100 \u05d5-Amp100mono \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/2123111-amphion-one12",
-      "generated_at": "2026-01-30T02:37:41.776354",
-      "official_manuals": [
+      "image_gallery": [
         {
-          "url": "/assets/manuals/amphion/2123111/27022024_Monitors_Manual.pdf",
-          "type": "pdf",
-          "label": "27022024 Monitors Manual",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:43.977523"
-        },
-        {
-          "url": "/assets/manuals/amphion/2123111/create_productsheets_one_12_euen_0122-1.pdf",
-          "type": "pdf",
-          "label": "Create Productsheets One 12 Euen 0122 1",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:45.419025"
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3435810/large/83badc27fb0fd46e7325e0e4e818d6ec.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
         }
       ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "amphion_2124853",
-      "halilit_id": "2124853",
-      "name": "Amphion Amp500",
-      "brand": "Amphion",
-      "description": "<div class=\"desc\">\n<p style=\"text-align: center;\"><span style=\"font-size: 18pt;\"><strong><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"234\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/307354/original/0ddba97576e7db45e1007ba027fc82f8.jpg?1547112049\" width=\"459\"/></strong></span></p>\n<p>\u00a0</p>\n<p><span style=\"font-size: 12pt;\">\u05e1\u05e4\u05d9\u05e0\u05ea \u05d4\u05d3\u05d2\u05dc \u05e9\u05dc \u05dc\u05d9\u05df \u05d4\u05de\u05d2\u05d1\u05e8\u05d9\u05dd \u05e9\u05dc Amphion \u05d4\u05d5\u05d0 \u05d4-Amp500.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Amp500 \u05de\u05e1\u05e4\u05e7 \u05d0\u05ea \u05db\u05dc \u05d4\u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05e9\u05dc \u05d4-Amp100 \u05d5\u05d9\u05d5\u05ea\u05e8 \u05de\u05db\u05da.</span></p>\n<p><span style=\"font-size: 12pt;\">500watt \u05d1\u05db\u05dc \u05e2\u05e8\u05d5\u05e5 \u05de\u05e1\u05e4\u05d9\u05e7\u05d9\u05dd \u05db\u05d3\u05d9 \u05dc\u05d4\u05d6\u05d9\u05df \u05d1\u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05d5\u05ea \u05db\u05dc \u05e8\u05de\u05e7\u05d5\u05dc \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9 \u05de\u05d1\u05d9\u05ea Amphion. </span><span style=\"font-size: 12pt;\">\u05d4-Amp500 \u05de\u05e1\u05e4\u05e7 \u05db\u05d7 \u05e2\u05e6\u05d5\u05dd \u05d0\u05da \u05e2\u05dd \u05d6\u05d0\u05ea \u05d9\u05e6\u05d9\u05d1 \u05d1\u05d9\u05d5\u05ea\u05e8 \u05d5\u05de\u05dc\u05d0 \u05e9\u05dc\u05d9\u05d8\u05d4.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05e2\u05d5\u05e6\u05de\u05d4 \u05d6\u05d5 \u05d1\u05e9\u05d9\u05dc\u05d5\u05d1 \u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05ea\u00a0Adaptive Modulation Servo \u05de\u05ea\u05e7\u05d3\u05de\u05ea \u05de\u05d9\u05e6\u05e8\u05d9\u05dd \u05ea\u05d2\u05d5\u05d1\u05d4 \u05d4\u05d3\u05d5\u05e7\u05d4 \u05d5\u05de\u05d3\u05d5\u05d9\u05e7\u05ea\u00a0</span><span style=\"font-size: 12pt;\">\u05dc\u05d0\u05d5\u05e8\u05da \u05db\u05dc \u05e1\u05e4\u05e7\u05d8\u05e8\u05d5\u05dd \u05d4\u05ea\u05d3\u05e8\u05d9\u05dd \u05db\u05d5\u05dc\u05d5 \u05dc\u05dc\u05d0 \u05db\u05dc \u05d7\u05e9\u05e9 \u05de\u05d4\u05e0\u05d7\u05ea\u05d5\u05ea \u05ea\u05d3\u05e8\u05d9\u05dd \u05dc\u05d0 \u05e6\u05e4\u05d5\u05d9\u05d5\u05ea.</span></p>\n<p><span style=\"font-size: 12pt;\"> \u05d4-Amp500 \u05d4\u05d5\u05d0 \u05e9\u05d5\u05ea\u05e3 \u05de\u05d5\u05e9\u05dc\u05dd \u05dc\u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd Two15, Two18 \u05d5\u05d0\u05e3 \u05dc-One18 \u05d1\u05d7\u05dc\u05dc\u05d9\u05dd \u05d2\u05d3\u05d5\u05dc\u05d9\u05dd\u00a0</span><span style=\"font-size: 12pt;\">\u05d5\u05de\u05e1\u05e4\u05e7 \u05e8\u05de\u05ea \u05e8\u05e2\u05e9 \u05e0\u05de\u05d5\u05db\u05d4 \u05d1\u05d0\u05d5\u05e4\u05df \u05d7\u05e1\u05e8 \u05ea\u05e7\u05d3\u05d9\u05dd. \u05e9\u05d9\u05dc\u05d5\u05d1 \u05d6\u05d4 \u05d0\u05d9\u05e0\u05d5 \u05de\u05e4\u05d9\u05e7 \u05e8\u05e7 \u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd \u05d2\u05d1\u05d5\u05d4\u05d9\u05dd.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05de\u05d0\u05de\u05e5 \u05d5\u05d6\u05de\u05df \u05e8\u05d1 \u05d4\u05d5\u05e9\u05e7\u05e2\u05d5 \u05e2\u05dc \u05de\u05e0\u05ea \u05dc\u05e1\u05e4\u05e7 \u05d0\u05ea \u05d4\"\u05d0\u05e7\u05e1\u05d8\u05e8\u05d4\" \u05d4\u05e0\u05d7\u05d5\u05e5 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05d7\u05d5\u05d5\u05d9\u05d4 \u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05ea \u05d5\u05de\u05dc\u05d0\u05ea \u05d4\u05e9\u05e8\u05d0\u05d4.</span></p>\n<p><span style=\"font-size: 12pt;\"> \u05d0\u05d5\u05d1\u05e8\u05d8\u05d5\u05e0\u05d9\u05dd \u05e2\u05e9\u05d9\u05e8\u05d9\u05dd \u05d5\u05e0\u05db\u05d5\u05e0\u05d9\u05dd, \u05ea\u05d7\u05d5\u05e9\u05d4 \u05e8\u05d1-\u05de\u05d9\u05de\u05d3\u05d9\u05ea, \u05e0\u05d9\u05e7\u05d9\u05d5\u05df \u05de\u05d5\u05e4\u05ea\u05d9 \u05d5\u05de\u05e8\u05d7\u05d1 \u05e8\u05d1 \u05de\u05d0\u05e4\u05e9\u05e8\u05d9\u05dd \u05dc\u05db\u05dc \u05e4\u05e8\u05d5\u05d9\u05e7\u05d8 \u05d4\u05e7\u05dc\u05d8\u05d5\u05ea\u00a0</span><span style=\"font-size: 12pt;\">\u05de\u05d9\u05e7\u05e1 \u05d5\u05de\u05d0\u05e1\u05d8\u05e8\u05d9\u05e0\u05d2 \u05dc\u05e2\u05dc\u05d5\u05ea \u05de\u05d3\u05e8\u05d2\u05d4 \u05d1\u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d5\u05ea, \u05d1\u05de\u05d4\u05d9\u05e8\u05d5\u05ea \u05d4\u05e2\u05d1\u05d5\u05d3\u05d4 \u05d1\u05d7\u05d5\u05d5\u05d9\u05d4 \u05d5\u05db\u05de\u05d5\u05d1\u05df \u05d1\u05ea\u05d5\u05e6\u05d0\u05d4.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05db\u05d0\u05e9\u05e8 \u05d9\u05e9 \u05e6\u05d5\u05e8\u05da \u05d1\u05d3\u05d9\u05d5\u05e7 \u05de\u05d5\u05d7\u05dc\u05d8 \u05d5\u05d1\u05e0\u05d9\u05ea\u05d5\u05e8 \u05d1\u05e8\u05de\u05d4 \u05d4\u05d2\u05d1\u05d5\u05d4\u05d4 \u05d1\u05d9\u05d5\u05ea\u05e8, \u05d4-Amp500 \u05d1\u05e9\u05d9\u05dc\u05d5\u05d1 \u05d4\u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05e9\u05dc Amphion\u00a0</span><span style=\"font-size: 12pt;\">\u05d4\u05dd \u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d4\u05de\u05d5\u05e9\u05dc\u05de\u05ea \u05dc\u05db\u05dc \u05e1\u05d9\u05d8\u05d5\u05d0\u05e6\u05d9\u05d4 \u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05ea \u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea.\u00a0</span></p>\n<p>\u00a0</p>\n<p style=\"text-align: center;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/DByjLqR2IFg\" width=\"560\"></iframe></p>\n</div>",
-      "short_description": "\u05de\u05d2\u05d1\u05e8 \u05e1\u05d8\u05e8\u05d9\u05d0\u05d5 500watt x2 \u05dc\u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd \u05dc\u05d0\u05d5\u05dc\u05e4\u05df \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4-\u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Amphion",
-      "category": "UNCATEGORIZED",
-      "price": 7281.0,
-      "pricing": {
-        "regular_price": 7281.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
-        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
-        "gallery": [
-          "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg"
-        ]
-      },
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
-      "features": [
-        "\u05de\u05d2\u05d1\u05e8 \u05e1\u05d8\u05d9\u05e8\u05d0\u05d5 500watt x2",
-        "\u05e1\u05e4\u05d9\u05e0\u05ea \u05d4\u05d3\u05d2\u05dc \u05e9\u05dc \u05dc\u05d9\u05d9\u05df \u05d4\u05de\u05d2\u05d1\u05e8\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion",
-        "\u05de\u05d5\u05e8\u05db\u05d1 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3 \u05de\u05e8\u05db\u05d9\u05d1\u05d9\u05dd \u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05d9\u05dd \u05d1\u05dc\u05d1\u05d3",
-        "\u05de\u05d9\u05d5\u05e6\u05d1 \u05e2\"\u05d9 \u05d8\u05db\u05e0\u05d5\u05dc\u05d9\u05d2\u05d9\u05ea Adaptive Modulation Servo",
-        "\u05e8\u05e2\u05e9 \u05d0\u05e4\u05e1\u05d9 \u05dc\u05e9\u05e7\u05d9\u05e4\u05d5\u05ea \u05de\u05d5\u05e9\u05dc\u05de\u05ea",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
       "specs": {
-        "woofer_size_inch": 234.0,
-        "power_total_watts": 500
-      },
-      "source_url": "https://www.halilit.com/items/2124853-amphion-amp500",
-      "generated_at": "2026-01-30T02:37:41.868258",
-      "sub_category": "General",
-      "ui_context": {
-        "primary": "UNCATEGORIZED",
-        "sub": "General"
-      },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": {
-        "woofer_size_inch": 234.0,
-        "power_total_watts": 500
-      }
-    },
-    {
-      "id": "amphion_2125050",
-      "halilit_id": "2125050",
-      "name": "Two15",
-      "brand": "Amphion",
-      "description": "Amphion Two15 studio monitor truthfully reproduce sound with all engineering nuances, while retaining the musical emotions present and vivid.",
-      "short_description": "Amphion Two15 studio monitor truthfully reproduce sound with all engineering nuances, while retaining the musical emotions present and vivid.",
-      "category": "STUDIO_MONITORS",
-      "price": 9711.0,
-      "pricing": {
-        "regular_price": 9711.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/2125050/0000_two15-freq.webp",
-        "thumbnail": "/assets/images/amphion/2125050/0000_two15-freq.webp",
-        "gallery": [
-          "/assets/images/amphion/2125050/0000_two15-freq.webp",
-          "/assets/images/amphion/2125050/0001_two15-imp.webp",
-          "/assets/images/amphion/2125050/Amphion-Base-systems-FlexBase-feat25.webp",
-          "/assets/images/amphion/2125050/Amphion-Power-amplifiers-Amp700-feat25.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One15-feat25.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-feat25.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15.webp",
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/2125050/AnttiSaario1byDavidPrior.webp",
-          "/assets/images/amphion/2125050/BaseTwo25-front.webp",
-          "/assets/images/amphion/2125050/DSC02080-thumbnail-300x300.webp",
-          "/assets/images/amphion/2125050/DSC6563.webp",
-          "/assets/images/amphion/2125050/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/2125050/Gentry-studer.webp",
-          "/assets/images/amphion/2125050/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/2125050/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/2125050/Screenshot-2022-04-12-at-8.46.36-236x300.webp",
-          "/assets/images/amphion/2125050/Screenshot-2023-10-25-at-8.55.56-300x300.webp",
-          "/assets/images/amphion/2125050/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/2125050/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/2125050/argon0-1-180x300.webp",
-          "/assets/images/amphion/2125050/argon1-1-180x300.webp",
-          "/assets/images/amphion/2125050/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/2125050/argon3s-1-180x300.webp",
-          "/assets/images/amphion/2125050/argon5c-1-180x300.webp",
-          "/assets/images/amphion/2125050/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/2125050/cables_amphipn_25.webp",
-          "/assets/images/amphion/2125050/deanlandon.webp",
-          "/assets/images/amphion/2125050/helium520C-2-180x300.webp",
-          "/assets/images/amphion/2125050/kohle-kohlmannslehner-two15-page.webp",
-          "/assets/images/amphion/2125050/mount3.webp",
-          "/assets/images/amphion/2125050/passive-radiator-1.webp",
-          "/assets/images/amphion/2125050/thumbn_create_brochure.webp",
-          "/assets/images/amphion/2125050/thumbn_mnl_studio_monitors.webp",
-          "/assets/images/amphion/2125050/thumbn_ps_two15.webp"
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-ONE12",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "100W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/amphion/2125050/0000_two15-freq.webp",
-      "features": [
-        "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9 (\u05dc\u05dc\u05d0 \u05de\u05d2\u05d1\u05e8 \u05e4\u05e0\u05d9\u05de\u05d9)",
-        "woofers 5.25 x2 \u05d0\u05d9\u05e0\u05e5\u2019",
-        "\u05d1\u05e0\u05d5\u05d9 \u05d1\u05e2\u05d1\u05d5\u05d3\u05ea \u05d9\u05d3 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05de\u05d2\u05d1\u05e8 Amp500 \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/2125050-amphion-two15",
-      "generated_at": "2026-01-30T02:37:42.033157",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/2125050/27022024_Monitors_Manual.pdf",
-          "type": "pdf",
-          "label": "27022024 Monitors Manual",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:45.961634"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3435810/large/83badc27fb0fd46e7325e0e4e818d6ec.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
         },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3435810/large/83badc27fb0fd46e7325e0e4e818d6ec.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3435810/large/83badc27fb0fd46e7325e0e4e818d6ec.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion one12 audio equipment  &nbsp;&nbsp; &nbsp;&nbsp; הרמקולים של amphion amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194115"
+    },
+    {
+      "id": "amphion-one15-2123766",
+      "name": "מוניטור פאסיבי Amphion One15",
+      "slug": "/מוניטור-פאסיבי-amphion-one15",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "description_full": "הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים high-end&nbsp;המניבים תוצאות מהמדויקות ביותר בתעשייה. הייחוד של העיצוב מתבטא בשתי נקודות עיקריות. האחת היא הפרדת המגבר מהרמקולים.&nbsp;ב-Amphion מאמינים שעדיף להימנע מלהכניס&nbsp;מעגל אלקטרוני בתוך מארז רוטט וממוגנט.&nbsp",
+      "price": 1215.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3437261/large/693a4aa2ded778d26489f0681fafedee.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3437261/large/693a4aa2ded778d26489f0681fafedee.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
         {
-          "url": "/assets/manuals/amphion/2125050/create_productsheets_two_15_euen_0122-1.pdf",
-          "type": "pdf",
-          "label": "Create Productsheets Two 15 Euen 0122 1",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:47.314595"
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3437261/large/693a4aa2ded778d26489f0681fafedee.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
         }
       ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "amphion_2124169",
-      "halilit_id": "2124169",
-      "name": "One18",
-      "brand": "Amphion",
-      "description": "Amphion One18 is a trusted all-rounder and most widely used of our studio monitor line. Their revealing, flat, yet pleasant character make them highly usable for all sound-making tasks.",
-      "short_description": "Amphion One18 is a trusted all-rounder and most widely used of our studio monitor line. Their revealing, flat, yet pleasant character make them highly...",
-      "category": "STUDIO_MONITORS",
-      "price": 7286.0,
-      "pricing": {
-        "regular_price": 7286.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/2124169/0004_one18-freq.webp",
-        "thumbnail": "/assets/images/amphion/2124169/0004_one18-freq.webp",
-        "gallery": [
-          "/assets/images/amphion/2124169/0004_one18-freq.webp",
-          "/assets/images/amphion/2124169/0005_one18-imp.webp",
-          "/assets/images/amphion/2124169/Amphion-Base-systems-BaseTwo25-feat25.webp",
-          "/assets/images/amphion/2124169/Amphion-Power-amplifiers-Amp700-feat25.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-feat25.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-Two18-feat25.webp",
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/2124169/BaseTwo25-front.webp",
-          "/assets/images/amphion/2124169/Bernie-Kirsch-and-One18s.webp",
-          "/assets/images/amphion/2124169/DSC6563.webp",
-          "/assets/images/amphion/2124169/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/2124169/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/2124169/James-hunt-one18-page.webp",
-          "/assets/images/amphion/2124169/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/2124169/Screenshot-2022-02-14-at-16.34.00-300x300.webp",
-          "/assets/images/amphion/2124169/Screenshot-2022-11-04-at-9.14.48-300x300.webp",
-          "/assets/images/amphion/2124169/Screenshot-2023-05-30-at-11.30.41-300x300.webp",
-          "/assets/images/amphion/2124169/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/2124169/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/2124169/argon0-1-180x300.webp",
-          "/assets/images/amphion/2124169/argon1-1-180x300.webp",
-          "/assets/images/amphion/2124169/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/2124169/argon3s-1-180x300.webp",
-          "/assets/images/amphion/2124169/argon5c-1-180x300.webp",
-          "/assets/images/amphion/2124169/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/2124169/bainz-one18page.webp",
-          "/assets/images/amphion/2124169/cables_amphipn_25.webp",
-          "/assets/images/amphion/2124169/damien-lewis-one18-page.webp",
-          "/assets/images/amphion/2124169/francesco-cameli-one18page.webp",
-          "/assets/images/amphion/2124169/helium520C-2-180x300.webp",
-          "/assets/images/amphion/2124169/mitch-mccarthy-one18page.webp",
-          "/assets/images/amphion/2124169/mount3.webp",
-          "/assets/images/amphion/2124169/msm-one18-two18-page.webp",
-          "/assets/images/amphion/2124169/passive-radiator-1.webp",
-          "/assets/images/amphion/2124169/photo2.webp",
-          "/assets/images/amphion/2124169/thumbn_create_brochure.webp",
-          "/assets/images/amphion/2124169/thumbn_mnl_studio_monitors.webp",
-          "/assets/images/amphion/2124169/thumbn_ps_one18.webp"
-        ]
-      },
-      "image_url": "/assets/images/amphion/2124169/0004_one18-freq.webp",
-      "features": [
-        "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9 (\u05dc\u05dc\u05d0 \u05de\u05d2\u05d1\u05e8 \u05e4\u05e0\u05d9\u05de\u05d9)",
-        "woofer 6.5 \u05d0\u05d9\u05e0\u05e5\u2019",
-        "\u05d1\u05e0\u05d5\u05d9 \u05d1\u05e2\u05d1\u05d5\u05d3\u05ea \u05d9\u05d3 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05de\u05d2\u05d1\u05e8\u05d9 Amphion \u05de\u05e1\u05d5\u05d2\u00a0Amp100 \u05d5-Amp100mono\u00a0\u05d0\u05d5 Amp500 \u05d1\u05d7\u05dc\u05dc\u05d9\u05dd \u05d2\u05d3\u05d5\u05dc\u05d9\u05dd",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/2124169-amphion-one18",
-      "generated_at": "2026-01-30T02:37:42.148169",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/2124169/create_productsheets_one_18_euen_0122_.pdf",
-          "type": "pdf",
-          "label": "Create Productsheets One 18 Euen 0122 ",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:47.773813"
-        },
-        {
-          "url": "/assets/manuals/amphion/2124169/27022024_Monitors_Manual.pdf",
-          "type": "pdf",
-          "label": "27022024 Monitors Manual",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:47.847709"
-        }
-      ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "amphion_5115632",
-      "halilit_id": "5115632",
-      "name": "FlexBase25",
-      "brand": "Amphion",
-      "description": "FlexBase25 is a single box, stereo bass extension system, which transforms a two-way studio monitor into a full range, three-way system.",
-      "short_description": "FlexBase25 is a single box, stereo bass extension system, which transforms a two-way studio monitor into a full range, three-way system.",
-      "category": "STUDIO_MONITORS",
-      "price": 34417.0,
-      "pricing": {
-        "regular_price": 34417.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
-        "thumbnail": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
-        "gallery": [
-          "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One15-feat25.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One25A-feat25.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-Two15-feat25.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/5115632/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/5115632/Amphion_CloseUp_Still_4-scaled.webp",
-          "/assets/images/amphion/5115632/BaseTwo25-front.webp",
-          "/assets/images/amphion/5115632/Doppler-Soundlab-2-scaled.webp",
-          "/assets/images/amphion/5115632/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/5115632/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/5115632/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/5115632/Modular-system-2.webp",
-          "/assets/images/amphion/5115632/Screenshot-2022-02-14-at-16.39.01-300x300.webp",
-          "/assets/images/amphion/5115632/Screenshot-2022-04-12-at-9.18.40-226x300.webp",
-          "/assets/images/amphion/5115632/Setup-2.webp",
-          "/assets/images/amphion/5115632/Untitled-1.webp",
-          "/assets/images/amphion/5115632/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/5115632/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/5115632/argon0-1-180x300.webp",
-          "/assets/images/amphion/5115632/argon1-1-180x300.webp",
-          "/assets/images/amphion/5115632/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/5115632/argon3s-1-180x300.webp",
-          "/assets/images/amphion/5115632/argon5c-1-180x300.webp",
-          "/assets/images/amphion/5115632/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/5115632/helium520C-2-180x300.webp",
-          "/assets/images/amphion/5115632/jurek.webp",
-          "/assets/images/amphion/5115632/spike.webp",
-          "/assets/images/amphion/5115632/sqSetup-2-300x300.webp",
-          "/assets/images/amphion/5115632/thumbn_create_brochure.webp",
-          "/assets/images/amphion/5115632/thumbn_mnl_flexbase25.webp",
-          "/assets/images/amphion/5115632/thumbn_ps_flexbase25.webp"
-        ]
-      },
-      "image_url": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/5115632-amphion-flexbase25",
-      "generated_at": "2026-01-30T02:37:42.291148",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/5115632/FlexBaseManual_21032022.pdf",
-          "type": "pdf",
-          "label": "Flexbasemanual 21032022",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:50.337056"
-        },
-        {
-          "url": "/assets/manuals/amphion/5115632/FlexBase25_SalesSheet_2p_12032021.pdf",
-          "type": "pdf",
-          "label": "Flexbase25 Salessheet 2P 12032021",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:50.951489"
-        }
-      ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "amphion_5115687",
-      "halilit_id": "5115687",
-      "name": "Amphion Amp400.8",
-      "brand": "Amphion",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05d4\u05db\u05d9\u05e8\u05d5 \u05d0\u05ea <strong>AMP400.8</strong>\u00a0\u05de\u05d1\u05d9\u05ea Amphion \u05d4\u05e4\u05d9\u05e0\u05d9\u05ea, \u05d4\u05de\u05e6\u05d9\u05d1 \u05d3\u05e8\u05d9\u05e9\u05d5\u05ea \u05d7\u05d3\u05e9\u05d5\u05ea \u05dc\u05e0\u05d9\u05d8\u05d5\u05e8\u00a0</span><span style=\"font-size: 12pt;\">\u05d5\u05de\u05d0\u05e4\u05e9\u05e8 \u05e8\u05de\u05d4 \u05d7\u05d3\u05e9\u05d4 \u05e9\u05dc \u05d4\u05d2\u05d1\u05e8\u05d4 \u05d5\u05d7\u05d9\u05d1\u05d5\u05e8\u05d9\u05d5\u05ea \u05e8\u05d1 \u05e2\u05e8\u05d5\u05e6\u05d9\u05ea, \u05d1\u05e2\u05dc\u00a0</span><span style=\"font-size: 12pt;\">8 \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05d6\u05d4\u05d9\u05dd \u05dc\u05d7\u05dc\u05d5\u05d8\u05d9\u05df \u05d0\u05d7\u05d3 \u05dc\u05e9\u05e0\u05d9.</span><br/><span style=\"font-size: 12pt;\">\u05e0\u05d9\u05ea\u05df \u05dc\u05d4\u05e9\u05ea\u05de\u05e9 \u05d1\u05d5 \u05d2\u05dd \u05d1\u05e1\u05d1\u05d9\u05d1\u05d4 \u05e9\u05dc 2 \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd, \u05dc\u05d4\u05d2\u05d1\u05e8\u05d4 \u05e9\u05dc \u05e2\u05d3 4 \u05d6\u05d5\u05d2\u05d5\u05ea \u05e9\u05dc \u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05e4\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4\u05e8\u05e6\u05d5\u05df \u05e9\u05dc \u05d7\u05d1\u05e8\u05ea \u05d0\u05de\u05e4\u05d9\u05d5\u05df \u05d4\u05d5\u05d0 \u05dc\u05e4\u05ea\u05d7 \u05de\u05d5\u05e6\u05e8\u05d9\u05dd \u05d7\u05d3\u05e9\u05e0\u05d9\u05d9\u05dd \u05d1\u05e2\u05dc\u05d9 \u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05d2\u05d1\u05d5\u05d4\u05d9\u05dd \u05d5\u05e2\u05de\u05d9\u05d3\u05d5\u05ea \u05d2\u05d1\u05d5\u05d4\u05d4.\u00a0</span><span style=\"font-size: 12pt;\">\u05d4-AMP400.8 \u05de\u05e1\u05e4\u05e7 \u05e9\u05dc\u05d9\u05d8\u05d4 \u05d9\u05e6\u05d9\u05d1\u05d4, \u05de\u05d4\u05d9\u05e8\u05d4 \u05d5\u05e2\u05d5\u05e6\u05de\u05ea\u05d9\u05ea \u05d4\u05de\u05d1\u05d9\u05d0\u05d4 \u05dc\u05e8\u05de\u05ea \u05e2\u05d9\u05d5\u05d5\u05ea \u05e0\u05de\u05d5\u05db\u05d4 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3,\u00a0</span><span style=\"font-size: 12pt;\">\u05d5\u05de\u05d0\u05e4\u05e9\u05e8\u05ea \u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05d9\u05dd \u05de\u05d4\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05e9\u05dc\u05da.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-AMP400.8 \u05e0\u05d1\u05e0\u05d4 \u05d1\u05d1\u05d9\u05ea Amphion \u05d1\u05e7\u05e4\u05d9\u05d3\u05d4 \u05e8\u05d1\u05d4 \u05d5\u05d1\u05e2\u05dc \u05de\u05e8\u05db\u05d9\u05d1\u05d9 <span class=\"caps\">CLASS</span> D \u05d4\u05de\u05d7\u05de\u05d9\u05d0\u05d9\u05dd \u05dc\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05d5\u05de\u05d0\u05e4\u05e9\u05e8\u05d9\u05dd \u05dc\u05d4\u05d2\u05d9\u05e2 \u05dc\u05e8\u05de\u05ea \u05d4\u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05d9\u05dd \u05d4\u05d3\u05e8\u05d5\u05e9\u05d4 \u05de\u05d8\u05db\u05e0\u05d0\u05d9 \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d5\u05de\u05e4\u05d9\u05e7\u05d9\u05dd \u05db\u05d9\u05d5\u05dd.</span></p>\n<p>\u00a0</p>\n<p><span style=\"font-size: 12pt;\"><strong>\u05d4\u05e9\u05d5\u05ea\u05e3 \u05d4\u05de\u05d5\u05e9\u05dc\u05dd</strong></span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4\u05ea\u05d0\u05de\u05d4 \u05e7\u05d5\u05dc\u05d9\u05ea \u05e7\u05e4\u05d3\u05e0\u05d9\u05ea \u05d5\u05e8\u05db\u05d9\u05d1\u05d9\u05dd \u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05d9\u05dd \u05d4\u05d5\u05e4\u05db\u05d9\u05dd \u05d0\u05ea \u05d4-AMP400.8 \u05dc\u05e9\u05d5\u05ea\u05e3 \u05d4\u05de\u05d5\u05e9\u05dc\u05dd \u05dc\u05db\u05dc \u05d4\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05e9\u05dc \u05d0\u05de\u05e4\u05d9\u05d5\u05df \u05d5\u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05e4\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd \u05d0\u05d7\u05e8\u05d9\u05dd.</span></p>\n<p>\u00a0</p>\n<p style=\"text-align: center;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/DByjLqR2IFg\" width=\"560\"></iframe></p>\n</div>",
-      "short_description": "\u05de\u05d2\u05d1\u05e8 \u05d0\u05d5\u05dc\u05e4\u05e0\u05d9 \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 410watt \u05dc\u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd \u05dc\u05d0\u05d5\u05dc\u05e4\u05df \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4-\u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Amphion",
-      "category": "UNCATEGORIZED",
-      "price": 21847.0,
-      "pricing": {
-        "regular_price": 21847.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
-        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
-        "gallery": [
-          "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg"
-        ]
-      },
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
-      "features": [],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
       "specs": {
-        "woofer_size_inch": 314.0
-      },
-      "source_url": "https://www.halilit.com/items/5115687-amphion-amp400-8",
-      "generated_at": "2026-01-30T02:37:42.638495",
-      "sub_category": "General",
-      "ui_context": {
-        "primary": "UNCATEGORIZED",
-        "sub": "General"
-      },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": {
-        "woofer_size_inch": 314.0
-      }
-    },
-    {
-      "id": "amphion_6966280",
-      "halilit_id": "6966280",
-      "name": "One25A",
-      "brand": "Amphion",
-      "description": "One25A is a 3-way active studio monitor true to the 25-year commitment Amphion has for advanced acoustic design, a pure refined signal path and meticulous craftsmanship.",
-      "short_description": "One25A is a 3-way active studio monitor true to the 25-year commitment Amphion has for advanced acoustic design, a pure refined signal path and meticu...",
-      "category": "STUDIO_MONITORS",
-      "price": 36153.0,
-      "pricing": {
-        "regular_price": 36153.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
-        "thumbnail": "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
-        "gallery": [
-          "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
-          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Left_web.webp",
-          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Right-web.webp",
-          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Vertical_Pair-scaled.webp",
-          "/assets/images/amphion/6966280/AMPHION_Render_Background_Side_90Degrees_Right_web.webp",
-          "/assets/images/amphion/6966280/AMPHION_Render_Background_Side_Right_web.webp",
-          "/assets/images/amphion/6966280/AMPHION_Web_Background_Back-scaled.webp",
-          "/assets/images/amphion/6966280/Amphion-Base-systems-BaseTwo25-feat25.webp",
-          "/assets/images/amphion/6966280/Amphion-Base-systems-FlexBase-feat25.webp",
-          "/assets/images/amphion/6966280/Amphion-One25A-Review-%E2%80%93-Recording-Magazine-june-2024-feature-300x300.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One25A.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-Two18-feat25.webp",
-          "/assets/images/amphion/6966280/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/6966280/Amphion_CloseUp_Still_3-1-scaled.webp",
-          "/assets/images/amphion/6966280/Amphion_WEBCloseUp_Still_10-1.webp",
-          "/assets/images/amphion/6966280/BaseTwo25-front.webp",
-          "/assets/images/amphion/6966280/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/6966280/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/6966280/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/6966280/One25A_Manual_verticalcover-212x300.webp",
-          "/assets/images/amphion/6966280/One25A_boundaryControl.webp",
-          "/assets/images/amphion/6966280/One25A_boundaryControl2.webp",
-          "/assets/images/amphion/6966280/One25A_frequencyResponse.webp",
-          "/assets/images/amphion/6966280/One25A_protectionCircuit.webp",
-          "/assets/images/amphion/6966280/One25A_soffitMounting.webp",
-          "/assets/images/amphion/6966280/ProSpeakers_WEBCloseUp1-1.webp",
-          "/assets/images/amphion/6966280/ProSpeakers_WEBCloseUp2-1-1.webp",
-          "/assets/images/amphion/6966280/ProSpeakers_WEBCloseUp3-1.webp",
-          "/assets/images/amphion/6966280/Produce-Like-A-Pro-300x300.webp",
-          "/assets/images/amphion/6966280/SDC_1.webp",
-          "/assets/images/amphion/6966280/Screenshot-2023-04-07-at-9.37.28-214x300.webp",
-          "/assets/images/amphion/6966280/Screenshot-2023-10-23-at-15.36.27.webp",
-          "/assets/images/amphion/6966280/Screenshot-2024-04-25-at-10.26.36-300x300.webp",
-          "/assets/images/amphion/6966280/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/6966280/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/6966280/argon0-1-180x300.webp",
-          "/assets/images/amphion/6966280/argon1-1-180x300.webp",
-          "/assets/images/amphion/6966280/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/6966280/argon3s-1-180x300.webp",
-          "/assets/images/amphion/6966280/argon5c-1-180x300.webp",
-          "/assets/images/amphion/6966280/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/6966280/helium520C-2-180x300.webp",
-          "/assets/images/amphion/6966280/thumbn_create_brochure.webp"
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-ONE15",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "100W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/6966280-amphion-one25a-3-way-studio-monitor",
-      "generated_at": "2026-01-30T02:37:42.808301",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/6966280/One25A_Productsheet_112023.pdf",
-          "type": "pdf",
-          "label": "One25A Productsheet 112023",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:55.679753"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3437261/large/693a4aa2ded778d26489f0681fafedee.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
         },
-        {
-          "url": "/assets/manuals/amphion/6966280/09112023_One25A_Manual_web.pdf",
-          "type": "pdf",
-          "label": "09112023 One25A Manual Web",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:56.790790"
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3437261/large/693a4aa2ded778d26489f0681fafedee.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3437261/large/693a4aa2ded778d26489f0681fafedee.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
         }
-      ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion one15 audio equipment  הרמקולים של amphion amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194170"
     },
     {
-      "id": "amphion_5115518",
-      "halilit_id": "5115518",
-      "name": "Amp700",
-      "brand": "Amphion",
-      "description": "Amp700 power amplifier delivers rock-solid control and highly resolving low-distortion power to get maximum performance from your monitors.",
-      "short_description": "Amp700 power amplifier delivers rock-solid control and highly resolving low-distortion power to get maximum performance from your monitors.",
-      "category": "STUDIO_MONITORS",
-      "price": 9711.0,
-      "pricing": {
-        "regular_price": 9711.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "amphion-one18-2124169",
+      "name": "מוניטור פאסיבי Amphion One18",
+      "slug": "/מוניטור-פאסיבי-amphion-one18",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "description_full": "&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים high-end&nbsp;המניבים תוצאות מהמדויקות ביותר בתעשייה. הייחוד של העיצוב מתבטא בשתי נקודות עיקריות. האחת היא הפרדת המגבר מהרמקולים.&nbsp;ב-Amphion מאמינים שעדיף להימנע מלהכניס&nbsp; מעגל אלקטרוני בתוך מארז רוטט וממוג",
+      "price": 1821.5,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3438286/large/d91a14bbbf02e7301433e90137d7a603.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
-        "thumbnail": "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
-        "gallery": [
-          "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
-          "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp400.12-feat25.webp",
-          "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp700-feat25.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One15-feat25.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-Two18-feat25.webp",
-          "/assets/images/amphion/5115518/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/5115518/BaseTwo25-front.webp",
-          "/assets/images/amphion/5115518/DSC6563.webp",
-          "/assets/images/amphion/5115518/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/5115518/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/5115518/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/5115518/Screenshot-2022-11-04-at-9.14.48-300x300.webp",
-          "/assets/images/amphion/5115518/Screenshot-2023-05-30-at-11.30.41.webp",
-          "/assets/images/amphion/5115518/Screenshot-2023-09-07-at-16.21.35-298x300.webp",
-          "/assets/images/amphion/5115518/Screenshot-2023-10-31-at-15.06.05-300x300.webp",
-          "/assets/images/amphion/5115518/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/5115518/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/5115518/argon0-1-180x300.webp",
-          "/assets/images/amphion/5115518/argon1-1-180x300.webp",
-          "/assets/images/amphion/5115518/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/5115518/argon3s-1-180x300.webp",
-          "/assets/images/amphion/5115518/argon5c-1-180x300.webp",
-          "/assets/images/amphion/5115518/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/5115518/cables_amphipn_25.webp",
-          "/assets/images/amphion/5115518/helium520C-2-180x300.webp",
-          "/assets/images/amphion/5115518/thumbn_create_brochure.webp",
-          "/assets/images/amphion/5115518/thumbn_mnl_amp700.webp",
-          "/assets/images/amphion/5115518/thumbn_ps_amp700.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3438286/large/d91a14bbbf02e7301433e90137d7a603.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3438286/large/d91a14bbbf02e7301433e90137d7a603.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-ONE18",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "150W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/5115518-amphion-amp700",
-      "generated_at": "2026-01-30T02:37:43.011846",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/5115518/Amp700_Manual_21032022.pdf",
-          "type": "pdf",
-          "label": "Amp700 Manual 21032022",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:57.330779"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3438286/large/d91a14bbbf02e7301433e90137d7a603.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
         },
-        {
-          "url": "/assets/manuals/amphion/5115518/create_productsheets_amp_700_euen-1.pdf",
-          "type": "pdf",
-          "label": "Create Productsheets Amp 700 Euen 1",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:57.331972"
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3438286/large/d91a14bbbf02e7301433e90137d7a603.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3438286/large/d91a14bbbf02e7301433e90137d7a603.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
         }
-      ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion one18 audio equipment  &nbsp; הרמקולים של amphion amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194264"
     },
     {
-      "id": "amphion_2123766",
-      "halilit_id": "2123766",
-      "name": "One15",
-      "brand": "Amphion",
-      "description": "Amphion One15 is an easy-to-listen-to, yet honest studio monitor, which allows you to make better decisions faster.",
-      "short_description": "Amphion One15 is an easy-to-listen-to, yet honest studio monitor, which allows you to make better decisions faster.",
-      "category": "STUDIO_MONITORS",
-      "price": 4861.0,
-      "pricing": {
-        "regular_price": 4861.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "id": "amphion-amp500-2124853",
+      "name": "Amphion Amp500 | מוניטורים אקטיבים",
+      "slug": "/amphion-amp500-|-מוניטורים-אקטיבים",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "&nbsp; ספינת הדגל של לין המגברים של Amphion הוא ה-Amp500. ה-Amp500 מספק את כל הביצועים של ה-Amp100…",
+      "description_full": "&nbsp; ספינת הדגל של לין המגברים של Amphion הוא ה-Amp500. ה-Amp500 מספק את כל הביצועים של ה-Amp100 ויותר מכך. 500watt בכל ערוץ מספיקים כדי להזין במוזיקליות כל רמקול פאסיבי מבית Amphion.  ה-Amp500 מספק כח עצום אך עם זאת יציב ביותר ומלא שליטה. עוצמה זו בשילוב טכנולוגית&nbsp;Adaptive Modulation Servo מ",
+      "price": 1820.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/2123766/0006_one15-freq.webp",
-        "thumbnail": "/assets/images/amphion/2123766/0006_one15-freq.webp",
-        "gallery": [
-          "/assets/images/amphion/2123766/0006_one15-freq.webp",
-          "/assets/images/amphion/2123766/0007_one15-imp.webp",
-          "/assets/images/amphion/2123766/Alishaheed-one15.webp",
-          "/assets/images/amphion/2123766/Amphion-Base-systems-FlexBase-feat25.webp",
-          "/assets/images/amphion/2123766/Amphion-Power-amplifiers-Amp700-feat25.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-feat25.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-Two15-feat25.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/2123766/BaseTwo25-front.webp",
-          "/assets/images/amphion/2123766/DSC6563.webp",
-          "/assets/images/amphion/2123766/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/2123766/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/2123766/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/2123766/Natefurtado-one15-page.webp",
-          "/assets/images/amphion/2123766/Ocean-Sound-StudioB_3B7A6810_fotoKristinStoylen-300x300.webp",
-          "/assets/images/amphion/2123766/Rusanda_Thumbnail.webp",
-          "/assets/images/amphion/2123766/Screenshot-2022-04-12-at-8.39.06-286x300.webp",
-          "/assets/images/amphion/2123766/Setup-2.webp",
-          "/assets/images/amphion/2123766/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/2123766/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/2123766/argon0-1-180x300.webp",
-          "/assets/images/amphion/2123766/argon1-1-180x300.webp",
-          "/assets/images/amphion/2123766/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/2123766/argon3s-1-180x300.webp",
-          "/assets/images/amphion/2123766/argon5c-1-180x300.webp",
-          "/assets/images/amphion/2123766/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/2123766/cables_amphipn_25.webp",
-          "/assets/images/amphion/2123766/emmett-caroll-one15-pager.webp",
-          "/assets/images/amphion/2123766/helium520C-2-180x300.webp",
-          "/assets/images/amphion/2123766/image_123650291-scaled.webp",
-          "/assets/images/amphion/2123766/mount2.webp",
-          "/assets/images/amphion/2123766/passive-radiator-1.webp",
-          "/assets/images/amphion/2123766/rhiannon-mair-one15.webp",
-          "/assets/images/amphion/2123766/sacha-ketterlin-one15.webp",
-          "/assets/images/amphion/2123766/sqSetup-2-300x300.webp",
-          "/assets/images/amphion/2123766/thumbn_create_brochure.webp",
-          "/assets/images/amphion/2123766/thumbn_mnl_studio_monitors.webp",
-          "/assets/images/amphion/2123766/thumbn_ps_one15.webp"
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-AMP500",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "500W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/amphion/2123766/0006_one15-freq.webp",
-      "features": [
-        "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9 (\u05dc\u05dc\u05d0 \u05de\u05d2\u05d1\u05e8 \u05e4\u05e0\u05d9\u05de\u05d9)",
-        "woofer 5.25 \u05d0\u05d9\u05e0\u05e5\u2019",
-        "\u05d1\u05e0\u05d5\u05d9 \u05d1\u05e2\u05d1\u05d5\u05d3\u05ea \u05d9\u05d3 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05de\u05d2\u05d1\u05e8\u05d9 Amp100 \u05d5-Amp100mono \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/2123766-amphion-one15",
-      "generated_at": "2026-01-30T02:37:43.223113",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/2123766/27022024_Monitors_Manual.pdf",
-          "type": "pdf",
-          "label": "27022024 Monitors Manual",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:58.097534"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
         },
-        {
-          "url": "/assets/manuals/amphion/2123766/create_productsheets_one_15_euen_0122.pdf",
-          "type": "pdf",
-          "label": "Create Productsheets One 15 Euen 0122",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:37:58.098026"
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439329/large/f9400c7fe33fbddcc37524140c1082f5.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
         }
-      ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion amp500 | מוניטורים אקטיבים audio equipment  &nbsp; ספינת הדגל של לין המגברים של amphion הוא ה-amp500. ה-amp500 מספק את כל הביצועים של ה-amp100…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194294"
     },
     {
-      "id": "amphion_2125126",
-      "halilit_id": "2125126",
-      "name": "Two18",
-      "brand": "Amphion",
-      "description": "Two18 reference studio monitor combine pinpoint imaging, phase-accuracy and depth information, which is second to none.",
-      "short_description": "Two18 reference studio monitor combine pinpoint imaging, phase-accuracy and depth information, which is second to none.",
-      "category": "STUDIO_MONITORS",
+      "id": "amphion-amp100-mono--2124973",
+      "name": "Amphion Amp100 Mono | מוניטורים אקטיבים",
+      "slug": "/amphion-amp100-mono-|-מוניטורים-אקטיבים",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-\nAmp100 Mono\n מספק ערוץ בודד של 100watt באיכות קצה עליון.&nbsp;הוא זהה לחלוטין בצליל ובביצועים…",
+      "description_full": "ה-\nAmp100 Mono\n מספק ערוץ בודד של 100watt באיכות קצה עליון.&nbsp;הוא זהה לחלוטין בצליל ובביצועים לאחיו הגדול ה-Amp100 הסטריאופוני. תודות לגודלו הקומפקטי הוא נותן מענה מושלם כאשר יש צורך להתנייד או כאשר&nbsp;יש מחסור בחלל אך אין שום מקום להתפשרויות.&nbsp; ה-Amp100 Mono מספק אות נקי מדיסטורשן ורעשי-לו",
+      "price": 661.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-AMP100MONO",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "100W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion amp100 mono | מוניטורים אקטיבים audio equipment  ה-\namp100 mono\n מספק ערוץ בודד של 100watt באיכות קצה עליון.&nbsp;הוא זהה לחלוטין בצליל ובביצועים…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194320"
+    },
+    {
+      "id": "amphion-two15-2125050",
+      "name": "מוניטור פאסיבי Amphion Two15",
+      "slug": "/מוניטור-פאסיבי-amphion-two15",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "description_full": "&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים high-end&nbsp;המניבים תוצאות מהמדויקות ביותר בתעשייה. הייחוד של העיצוב מתבטא בשתי נקודות עיקריות. האחת היא הפרדת המגבר מהרמקולים.&nbsp;ב-Amphion מאמינים שעדיף להימנע מלהכניס&nbsp; מעגל אלקטרוני בתוך מארז רוטט וממוג",
+      "price": 2427.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601629/large/05e4f009927440e3c5d636a1a859a92b.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601629/large/05e4f009927440e3c5d636a1a859a92b.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601629/large/05e4f009927440e3c5d636a1a859a92b.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-TWO15",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "100W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601629/large/05e4f009927440e3c5d636a1a859a92b.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601629/large/05e4f009927440e3c5d636a1a859a92b.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601629/large/05e4f009927440e3c5d636a1a859a92b.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion two15 audio equipment  &nbsp; הרמקולים של amphion amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194344"
+    },
+    {
+      "id": "amphion-two18-2125126",
+      "name": "מוניטור פאסיבי Amphion Two18",
+      "slug": "/מוניטור-פאסיבי-amphion-two18",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "description_full": "&nbsp; הרמקולים של Amphion Amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים high-end&nbsp;המניבים תוצאות מהמדויקות ביותר בתעשייה. הייחוד של העיצוב מתבטא בשתי נקודות עיקריות. האחת היא הפרדת המגבר מהרמקולים.&nbsp;ב-Amphion מאמינים שעדיף להימנע מלהכניס&nbsp; מעגל אלקטרוני בתוך מארז רוטט וממוג",
+      "price": 3640.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439960/large/2d1a606cd02f0d6e0d439a06544220cb.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439960/large/2d1a606cd02f0d6e0d439a06544220cb.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439960/large/2d1a606cd02f0d6e0d439a06544220cb.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-TWO18",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "200W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439960/large/2d1a606cd02f0d6e0d439a06544220cb.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439960/large/2d1a606cd02f0d6e0d439a06544220cb.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3439960/large/2d1a606cd02f0d6e0d439a06544220cb.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion two18 audio equipment  &nbsp; הרמקולים של amphion amphion מציעים בניה איכותית ועיצוב מיוחד לרמקולים אולפניים",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194370"
+    },
+    {
+      "id": "amphion-amp700-5115518",
+      "name": "Amphion Amp700 | מוניטורים אקטיבים",
+      "slug": "/amphion-amp700-|-מוניטורים-אקטיבים",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "מגבר אולפני מקצועי סטריאופוני, 700 וואט לצד, המיועד לרמקולים פאסיביים לאולפן באיכות קצה-עליון מבית…",
+      "description_full": "מגבר אולפני מקצועי סטריאופוני, 700 וואט לצד, המיועד לרמקולים פאסיביים לאולפן באיכות קצה-עליון מבית \nAmphion\n הפינית.  הרצון והכמיהה של חברת Amphion הוא לפתח מוצרים חדשניים בעלי ביצועים גבוהים ועמידות גבוהה, כאלו שיהיו רלוונטיים שנים רבות קדימה.  ה-\nAMP700\n מספק שליטה יציבה, מהירה ועוצמתית המביאה לרמ",
+      "price": 2427.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008253/large/be685f1ae779028f2c323c6ebf843bfd.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008253/large/be685f1ae779028f2c323c6ebf843bfd.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008253/large/be685f1ae779028f2c323c6ebf843bfd.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-AMP700",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "700W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008253/large/be685f1ae779028f2c323c6ebf843bfd.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008253/large/be685f1ae779028f2c323c6ebf843bfd.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008253/large/be685f1ae779028f2c323c6ebf843bfd.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion amp700 | מוניטורים אקטיבים audio equipment  מגבר אולפני מקצועי סטריאופוני, 700 וואט לצד, המיועד לרמקולים פאסיביים לאולפן באיכות קצה-עליון מבית…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194393"
+    },
+    {
+      "id": "amphion-basetwo25-system-5115577",
+      "name": "Amphion BaseTwo25 System",
+      "slug": "/amphion-basetwo25-system",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-\nBaseTwo25\n&nbsp;מבית \nAmphion\n הפינית הינו פתרון ניטור מתקדם ההופך מערכת אולפן דו-כיוונית למערכת…",
+      "description_full": "ה-\nBaseTwo25\n&nbsp;מבית \nAmphion\n הפינית הינו פתרון ניטור מתקדם ההופך מערכת אולפן דו-כיוונית למערכת תלת-כיוונית בטווח מלא. המערכת מונעת על ידי ה-FlexAmp1200 המכיל 4 שלבי Crossover ומנחת בעל אפשרויות התאמה רחבות הנותנות מענה לצרכים של מפיקים וטכנאי סאונד מודרניים. &nbsp; סטריאו עד האוקטבה הנמוכה ביות",
       "price": 14561.0,
-      "pricing": {
-        "regular_price": 14561.0,
-        "currency": "ILS",
-        "source": "halilit"
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008476/large/5a18ee5a554ae17a6c672debb7a2508e.jpeg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
       },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/2125126/0002_two18-freq.webp",
-        "thumbnail": "/assets/images/amphion/2125126/0002_two18-freq.webp",
-        "gallery": [
-          "/assets/images/amphion/2125126/0002_two18-freq.webp",
-          "/assets/images/amphion/2125126/0003_two18-imp.webp",
-          "/assets/images/amphion/2125126/20200601-jk-2-scaled.webp",
-          "/assets/images/amphion/2125126/AMPH-MT-2-scaled.webp",
-          "/assets/images/amphion/2125126/Amphion-Base-systems-BaseTwo25-feat25.webp",
-          "/assets/images/amphion/2125126/Amphion-Power-amplifiers-Amp700-feat25.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One25A-feat25.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-feat25.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18.webp",
-          "/assets/images/amphion/2125126/BaseTwo25-front.webp",
-          "/assets/images/amphion/2125126/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/2125126/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/2125126/Jensbogren.webp",
-          "/assets/images/amphion/2125126/John5-scaled.webp",
-          "/assets/images/amphion/2125126/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/2125126/P5311861-scaled.webp",
-          "/assets/images/amphion/2125126/Screenshot-2022-04-12-at-9.14.47-269x300.webp",
-          "/assets/images/amphion/2125126/Screenshot-2023-02-22-at-13.23.56-300x300.webp",
-          "/assets/images/amphion/2125126/Screenshot-2023-10-11-at-15.17.29-300x300.webp",
-          "/assets/images/amphion/2125126/Screenshot-2023-10-31-at-15.06.05.webp",
-          "/assets/images/amphion/2125126/TN-RK-1-scaled.webp",
-          "/assets/images/amphion/2125126/Will-Putney.webp",
-          "/assets/images/amphion/2125126/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/2125126/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/2125126/argon0-1-180x300.webp",
-          "/assets/images/amphion/2125126/argon1-1-180x300.webp",
-          "/assets/images/amphion/2125126/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/2125126/argon3s-1-180x300.webp",
-          "/assets/images/amphion/2125126/argon5c-1-180x300.webp",
-          "/assets/images/amphion/2125126/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/2125126/cables_amphipn_25.webp",
-          "/assets/images/amphion/2125126/dave-pensado.webp",
-          "/assets/images/amphion/2125126/finneas.webp",
-          "/assets/images/amphion/2125126/gudwin.webp",
-          "/assets/images/amphion/2125126/helium520C-2-180x300.webp",
-          "/assets/images/amphion/2125126/jurek.webp",
-          "/assets/images/amphion/2125126/mount3.webp",
-          "/assets/images/amphion/2125126/passive-radiator-1.webp",
-          "/assets/images/amphion/2125126/spike.webp",
-          "/assets/images/amphion/2125126/thumbn_create_brochure.webp",
-          "/assets/images/amphion/2125126/thumbn_mnl_studio_monitors.webp",
-          "/assets/images/amphion/2125126/thumbn_ps_two18.webp"
-        ]
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008476/large/5a18ee5a554ae17a6c672debb7a2508e.jpeg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
       },
-      "image_url": "/assets/images/amphion/2125126/0002_two18-freq.webp",
-      "features": [
-        "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8 \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9 (\u05dc\u05dc\u05d0 \u05de\u05d2\u05d1\u05e8 \u05e4\u05e0\u05d9\u05de\u05d9)",
-        "woofers 6.5 x2 \u05d0\u05d9\u05e0\u05e5\u2019",
-        "\u05d1\u05e0\u05d5\u05d9 \u05d1\u05e2\u05d1\u05d5\u05d3\u05ea \u05d9\u05d3 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05de\u05d2\u05d1\u05e8 Amphion \u05de\u05e1\u05d5\u05d2\u00a0Amp500\u00a0(\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/2125126-amphion-two18",
-      "generated_at": "2026-01-30T02:37:43.438520",
-      "official_manuals": [
+      "image_gallery": [
         {
-          "url": "/assets/manuals/amphion/2125126/create_productsheets_two_18_euen_0122-1.pdf",
-          "type": "pdf",
-          "label": "Create Productsheets Two 18 Euen 0122 1",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:38:02.749142"
-        },
-        {
-          "url": "/assets/manuals/amphion/2125126/27022024_Monitors_Manual.pdf",
-          "type": "pdf",
-          "label": "27022024 Monitors Manual",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:38:03.019485"
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008476/large/5a18ee5a554ae17a6c672debb7a2508e.jpeg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
         }
       ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
-      },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
-    },
-    {
-      "id": "amphion_2124973",
-      "halilit_id": "2124973",
-      "name": "Amphion Amp100 Mono",
-      "brand": "Amphion",
-      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05d4-<strong>Amp100 Mono</strong> \u05de\u05e1\u05e4\u05e7 \u05e2\u05e8\u05d5\u05e5 \u05d1\u05d5\u05d3\u05d3 \u05e9\u05dc 100watt \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df.\u00a0\u05d4\u05d5\u05d0 \u05d6\u05d4\u05d4 \u05dc\u05d7\u05dc\u05d5\u05d8\u05d9\u05df \u05d1\u05e6\u05dc\u05d9\u05dc \u05d5\u05d1\u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05dc\u05d0\u05d7\u05d9\u05d5 \u05d4\u05d2\u05d3\u05d5\u05dc \u05d4-Amp100 \u05d4\u05e1\u05d8\u05e8\u05d9\u05d0\u05d5\u05e4\u05d5\u05e0\u05d9.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d5\u05d3\u05d5\u05ea \u05dc\u05d2\u05d5\u05d3\u05dc\u05d5 \u05d4\u05e7\u05d5\u05de\u05e4\u05e7\u05d8\u05d9 \u05d4\u05d5\u05d0 \u05e0\u05d5\u05ea\u05df \u05de\u05e2\u05e0\u05d4 \u05de\u05d5\u05e9\u05dc\u05dd \u05db\u05d0\u05e9\u05e8 \u05d9\u05e9 \u05e6\u05d5\u05e8\u05da \u05dc\u05d4\u05ea\u05e0\u05d9\u05d9\u05d3 \u05d0\u05d5 \u05db\u05d0\u05e9\u05e8\u00a0\u05d9\u05e9 \u05de\u05d7\u05e1\u05d5\u05e8 \u05d1\u05d7\u05dc\u05dc \u05d0\u05da \u05d0\u05d9\u05df \u05e9\u05d5\u05dd \u05de\u05e7\u05d5\u05dd \u05dc\u05d4\u05ea\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea.\u00a0</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Amp100 Mono \u05de\u05e1\u05e4\u05e7 \u05d0\u05d5\u05ea \u05e0\u05e7\u05d9 \u05de\u05d3\u05d9\u05e1\u05d8\u05d5\u05e8\u05e9\u05df \u05d5\u05e8\u05e2\u05e9\u05d9-\u05dc\u05d5\u05d5\u05d0\u05d9 \u05ea\u05d5\u05da \u05e9\u05e7\u05d9\u05e4\u05d5\u05ea \u05de\u05dc\u05d0\u05d4.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d0\u05d5\u05ea \u05d7\u05e9\u05de\u05dc\u05d9 \u05d9\u05e6\u05d9\u05d1 \u05d5\u05e8\u05e6\u05d9\u05e3 \u05de\u05ea\u05d0\u05e4\u05e9\u05e8 \u05ea\u05d5\u05d3\u05d5\u05ea \u05dc\u05d8\u05db\u05e0\u05d5\u05dc\u05d5\u05d2\u05d9\u05d9\u05ea Adaptive Modulation Servo\u00a0 \u05d5\u05d1\u05db\u05da \u05de\u05d5\u05d5\u05d3\u05d0\u00a0\u05e9\u05d4\u05ea\u05e7\u05d9\u05d9\u05de\u05d5\u05ea \u05e7\u05e9\u05ea \u05d4\u05ea\u05d3\u05e8\u05d9\u05dd \u05dc\u05d0\u05d5\u05e8\u05da \u05d4\u05e1\u05e4\u05e7\u05d8\u05e8\u05d5\u05dd \u05ea\u05d4\u05d9\u05d4 \u05e0\u05d5\u05db\u05d7\u05ea \u05d5\u05e2\u05e9\u05d9\u05e8\u05d4 \u05d1\u05db\u05dc \u05e2\u05ea \u05dc\u05dc\u05d0 \u05d4\u05e0\u05d7\u05ea\u05d5\u05ea \u05dc\u05d0 \u05e6\u05e4\u05d5\u05d9\u05d5\u05ea. \u00a0</span></p>\n<p><span style=\"font-size: 12pt;\">\u05e0\u05ea\u05d5\u05e0\u05d9\u05dd \u05d8\u05db\u05e0\u05d9\u05d9\u05dd \u05d2\u05d1\u05d5\u05d4\u05d9\u05dd \u05d0\u05d9\u05e0\u05dd \u05de\u05e1\u05e4\u05d9\u05e7\u05d9\u05dd \u05db\u05e9\u05de\u05d3\u05d5\u05d1\u05e8 \u05d1\u05de\u05d5\u05d6\u05d9\u05e7\u05d4 \u05d5\u05e1\u05d0\u05d5\u05e0\u05d3, \u05dc\u05db\u05df \u05d3\u05d0\u05d2\u05d5 Amphion\u00a0\u05e9\u05d4\u05ea\u05d5\u05e6\u05d0\u05d4 \u05e9\u05dc \u05d4\u05de\u05d7\u05e7\u05e8 \u05d4\u05e0\u05e8\u05d7\u05d1 \u05d5\u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d4\u05e7\u05e4\u05d3\u05e0\u05d9\u05ea \u05e9\u05dc \u05e8\u05db\u05d9\u05d1\u05d9\u05dd \u05de\u05d3\u05d5\u05d9\u05e7\u05d9\u05dd \u05ea\u05d4\u05d9\u05d4 \u05d4\u05e2\u05d1\u05e8\u05ea \u05d0\u05d5\u05ea\u00a0\u05e9\u05e7\u05d5\u05e4\u05d4 \u05dc\u05d7\u05dc\u05d5\u05d8\u05d9\u05df \u05d0\u05da \u05d1\u05d5 \u05d6\u05de\u05e0\u05d9\u05ea \u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05ea \u05d5\u05de\u05dc\u05d0\u05ea \u05d4\u05e9\u05e8\u05d0\u05d4.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05e9\u05d9\u05dc\u05d5\u05d1 \u05d4-Amp100 Mono \u05e2\u05dd \u05d4\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05e9\u05dc Amphion \u05d9\u05e0\u05d9\u05d1 \u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05d5\u05ea \u05dc\u05d0\u05d9\u05df \u05e9\u05e2\u05d5\u05e8.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05db\u05dc \u05e1\u05e9\u05df \u05d4\u05e7\u05dc\u05d8\u05d5\u05ea, \u05de\u05d9\u05e7\u05e1 \u05d0\u05d5 \u05de\u05d0\u05e1\u05d8\u05e8\u05d9\u05e0\u05d2 \u05d9\u05e7\u05d1\u05dc \u05de\u05d9\u05de\u05d3\u05d9\u05dd \u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05d9\u05dd \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd, \u05d7\u05d5\u05d5\u05d9\u05ea \u05d4\u05d0\u05d6\u05e0\u05d4 \u05de\u05e7\u05d9\u05e4\u05d4\u00a0\u05d5\u05db\u05de\u05e2\u05d8 \u05ea\u05dc\u05ea-\u05de\u05d9\u05de\u05d3\u05d9\u05ea, \u05e9\u05e7\u05d9\u05e4\u05d5\u05ea \u05d5\u05d3\u05d9\u05d5\u05e7 \u05d4\u05de\u05d0\u05e4\u05e9\u05e8\u05d9\u05dd \u05d4\u05d0\u05d6\u05e0\u05d4 \u05dc\u05d0\u05d5\u05e8\u05da \u05d6\u05de\u05df \u05dc\u05dc\u05d0 \u05e2\u05d9\u05d9\u05e4\u05d5\u05ea-\u05d4\u05d0\u05d5\u05d6\u05df\u00a0\u05d5\u05e7\u05d1\u05dc\u05ea \u05d4\u05d7\u05dc\u05d8\u05d5\u05ea \u05d3\u05d9\u05d3\u05e7\u05d8\u05d9\u05ea \u05d5\u05de\u05d5\u05d6\u05d9\u05e7\u05dc\u05d9\u05ea \u05d1\u05d5-\u05d6\u05de\u05e0\u05d9\u05ea.</span></p>\n<p>\u00a0</p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/DByjLqR2IFg\" width=\"560\"></iframe></p>\n</div>",
-      "short_description": "\u05de\u05d2\u05d1\u05e8 \u05de\u05d5\u05e0\u05d5 100watt \u05e0\u05d9\u05d9\u05d3 \u05dc\u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05e4\u05d0\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd \u05dc\u05d0\u05d5\u05dc\u05e4\u05df \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4-\u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Amphion",
-      "category": "UNCATEGORIZED",
-      "price": 2647.0,
-      "pricing": {
-        "regular_price": 2647.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
-        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
-        "gallery": [
-          "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg"
-        ]
-      },
-      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15237610/large/8782f28efef293db96b82d1ebd50814a.jpg",
-      "features": [
-        "\u05de\u05d2\u05d1\u05e8 mono 100watt \u05d1\u05d5\u05d3\u05d3",
-        "\u05de\u05e2\u05d5\u05e6\u05d1 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05dc\u05e0\u05d9\u05d3\u05d5\u05ea \u05d5\u05d7\u05d9\u05e1\u05db\u05d5\u05df \u05d1\u05d7\u05dc\u05dc \u05d0\u05db\u05e1\u05d5\u05df",
-        "\u05de\u05d5\u05e8\u05db\u05d1 \u05d1\u05e4\u05d9\u05e0\u05dc\u05e0\u05d3 \u05de\u05e8\u05db\u05d9\u05d1\u05d9\u05dd \u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05d9\u05dd \u05d1\u05dc\u05d1\u05d3",
-        "\u05de\u05d9\u05d5\u05e6\u05d1 \u05e2\"\u05d9 \u05d8\u05db\u05e0\u05d5\u05dc\u05d9\u05d2\u05d9\u05ea Adaptive Modulation Servo",
-        "\u05e8\u05e2\u05e9 \u05d0\u05e4\u05e1\u05d9 \u05dc\u05e9\u05e7\u05d9\u05e4\u05d5\u05ea \u05de\u05d5\u05e9\u05dc\u05de\u05ea",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05e8\u05de\u05e7\u05d5\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)",
-        "\u05de\u05d5\u05de\u05dc\u05e5 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Amphion (\u05dc\u05d0 \u05db\u05dc\u05d5\u05dc)"
-      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
       "specs": {
-        "woofer_size_inch": 314.0,
-        "power_total_watts": 100
-      },
-      "source_url": "https://www.halilit.com/items/2124973-amphion-amp100-mono-",
-      "generated_at": "2026-01-30T02:37:43.545825",
-      "sub_category": "General",
-      "ui_context": {
-        "primary": "UNCATEGORIZED",
-        "sub": "General"
-      },
-      "quality_tier": "SILVER",
-      "verified": false,
-      "specs_preview": {
-        "woofer_size_inch": 314.0,
-        "power_total_watts": 100
-      }
-    },
-    {
-      "id": "amphion_5115577",
-      "halilit_id": "5115577",
-      "name": "BaseTwo25",
-      "brand": "Amphion",
-      "description": "BaseTwo25 is a state-of-the-art bass extension system elevating a two-way studio monitors into a full range, cohesive three-way system.",
-      "short_description": "BaseTwo25 is a state-of-the-art bass extension system elevating a two-way studio monitors into a full range, cohesive three-way system.",
-      "category": "STUDIO_MONITORS",
-      "price": 58244.0,
-      "pricing": {
-        "regular_price": 58244.0,
-        "currency": "ILS",
-        "source": "halilit"
-      },
-      "status": "IN_STOCK",
-      "images": {
-        "main": "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
-        "thumbnail": "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
-        "gallery": [
-          "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
-          "/assets/images/amphion/5115577/982A494C-9407-4605-A7F2-D6F4210C1739.webp",
-          "/assets/images/amphion/5115577/Amphion-Base-systems-BaseTwo25-feat25.webp",
-          "/assets/images/amphion/5115577/Amphion-Base-systems-FlexBase-feat25.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One12-nav-180x300.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One15-nav-180x300.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One18-feat25.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One18-nav-180x300.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-Two15-nav-180x300.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-Two18-feat25.webp",
-          "/assets/images/amphion/5115577/Amphion-Studio-monitors-Two18-nav-180x300.webp",
-          "/assets/images/amphion/5115577/Amphion_CloseUp_Still_4-scaled.webp",
-          "/assets/images/amphion/5115577/BaseTwo25-front.webp",
-          "/assets/images/amphion/5115577/BaseTwo25.webp",
-          "/assets/images/amphion/5115577/FlexBase25_FlexAmp1200-front-300x300.webp",
-          "/assets/images/amphion/5115577/Helium510-menu--180x300.webp",
-          "/assets/images/amphion/5115577/Krypton3X-Standard-White-crop-180x300.webp",
-          "/assets/images/amphion/5115577/Mike-Dean.webp",
-          "/assets/images/amphion/5115577/Screenshot-2022-04-12-at-9.25.56-279x300.webp",
-          "/assets/images/amphion/5115577/Screenshot-2023-10-25-at-9.21.24.webp",
-          "/assets/images/amphion/5115577/TN-RK-1-scaled.webp",
-          "/assets/images/amphion/5115577/TN-RK-1SQUARE-300x300.webp",
-          "/assets/images/amphion/5115577/amp400_8-front-2-300x300.webp",
-          "/assets/images/amphion/5115577/amp700-front-2-300x300.webp",
-          "/assets/images/amphion/5115577/argon0-1-180x300.webp",
-          "/assets/images/amphion/5115577/argon1-1-180x300.webp",
-          "/assets/images/amphion/5115577/argon3ls-1-180x300.webp",
-          "/assets/images/amphion/5115577/argon3s-1-180x300.webp",
-          "/assets/images/amphion/5115577/argon5c-1-180x300.webp",
-          "/assets/images/amphion/5115577/argon7ls-2-180x300.webp",
-          "/assets/images/amphion/5115577/finneas.webp",
-          "/assets/images/amphion/5115577/gudwin.webp",
-          "/assets/images/amphion/5115577/helium520C-2-180x300.webp",
-          "/assets/images/amphion/5115577/henka.webp",
-          "/assets/images/amphion/5115577/thumbn_create_brochure.webp",
-          "/assets/images/amphion/5115577/thumbn_mnl_basetwo25.webp",
-          "/assets/images/amphion/5115577/thumbn_ps_basetwo25.webp"
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-BASETWO25",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
         ]
       },
-      "image_url": "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
-      "features": [],
-      "specs": [],
-      "source_url": "https://www.halilit.com/items/5115577-amphion-basetwo25-system",
-      "generated_at": "2026-01-30T02:37:43.629732",
-      "official_manuals": [
-        {
-          "url": "/assets/manuals/amphion/5115577/BaseTwo25_Manual_21032022.pdf",
-          "type": "pdf",
-          "label": "Basetwo25 Manual 21032022",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:38:05.714205"
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008476/large/5a18ee5a554ae17a6c672debb7a2508e.jpeg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
         },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008476/large/5a18ee5a554ae17a6c672debb7a2508e.jpeg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008476/large/5a18ee5a554ae17a6c672debb7a2508e.jpeg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion basetwo25 system audio equipment  ה-\nbasetwo25\n&nbsp;מבית \namphion\n הפינית הינו פתרון ניטור מתקדם ההופך מערכת אולפן דו-כיוונית למערכת…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194417"
+    },
+    {
+      "id": "amphion-flexbase25-5115632",
+      "name": "Amphion FlexBase25 | מוניטורים אקטיבים",
+      "slug": "/amphion-flexbase25-|-מוניטורים-אקטיבים",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-\nFlexBase25\n היא מערכת סב סטריאו בקופסא אחת, ההופכת מערכת אולפן דו-כיוונית למערכת תלת-כיוונית",
+      "description_full": "ה-\nFlexBase25\n היא מערכת סב סטריאו בקופסא אחת, ההופכת מערכת אולפן דו-כיוונית למערכת תלת-כיוונית בטווח מלא. המערכת מגיעה עם ה-\nFlexAmp1200\n עם אפשרויות התאמה רחבות המאפשרות מענה לצרכים של מפיקים וטכנאי סאונד מודרניים. &nbsp; סטריאו עד האוקטבה הנמוכה ביותר אמפיון הציגו את מערכת הBase Extension הראשונה",
+      "price": 8604.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008663/large/7a8e1f02f4ceed2c378bb6d4b00f7644.jpeg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008663/large/7a8e1f02f4ceed2c378bb6d4b00f7644.jpeg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
         {
-          "url": "/assets/manuals/amphion/5115577/BaseTwo25_SalesSheet_2p_12032021_b.pdf",
-          "type": "pdf",
-          "label": "Basetwo25 Salessheet 2P 12032021 B",
-          "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T02:38:06.444624"
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008663/large/7a8e1f02f4ceed2c378bb6d4b00f7644.jpeg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
         }
       ],
-      "sub_category": "Nearfield",
-      "ui_context": {
-        "primary": "STUDIO_MONITORS",
-        "sub": "Nearfield"
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-FLEXBASE25",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "700W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
       },
-      "quality_tier": "GOLD",
-      "verified": true,
-      "specs_preview": []
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008663/large/7a8e1f02f4ceed2c378bb6d4b00f7644.jpeg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008663/large/7a8e1f02f4ceed2c378bb6d4b00f7644.jpeg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008663/large/7a8e1f02f4ceed2c378bb6d4b00f7644.jpeg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion flexbase25 | מוניטורים אקטיבים audio equipment  ה-\nflexbase25\n היא מערכת סב סטריאו בקופסא אחת, ההופכת מערכת אולפן דו-כיוונית למערכת תלת-כיוונית",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194442"
+    },
+    {
+      "id": "amphion-amp400-8-5115687",
+      "name": "Amphion Amp400.8 | מוניטורים אקטיבים",
+      "slug": "/amphion-amp400.8-|-מוניטורים-אקטיבים",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "הכירו את \nAMP400.8\n&nbsp;מבית Amphion הפינית, המציב דרישות חדשות לניטור&nbsp; ומאפשר רמה חדשה של…",
+      "description_full": "הכירו את \nAMP400.8\n&nbsp;מבית Amphion הפינית, המציב דרישות חדשות לניטור&nbsp; ומאפשר רמה חדשה של הגברה וחיבוריות רב ערוצית, בעל&nbsp; 8 ערוצים זהים לחלוטין אחד לשני. ניתן להשתמש בו גם בסביבה של 2 ערוצים, להגברה של עד 4 זוגות של רמקולים פסיביים. הרצון של חברת אמפיון הוא לפתח מוצרים חדשניים בעלי ביצוע",
+      "price": 5461.75,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "410W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Product": [
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/10008771/large/cc7efe8332f210aaad37a63be9c0e86f.jpeg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion amp400.8 | מוניטורים אקטיבים audio equipment  הכירו את \namp400.8\n&nbsp;מבית amphion הפינית, המציב דרישות חדשות לניטור&nbsp; ומאפשר רמה חדשה של…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194465"
+    },
+    {
+      "id": "amphion-amp400-12-multi-channel-power-amplifier-68",
+      "name": "Amphion Amp400.12",
+      "slug": "/amphion-amp400.12",
+      "brand_id": "amphion",
+      "category": "Amplifiers",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "סאונד שאפשר לסמוך עליו! עם סביבות אודיו סוחפות היוצרות דרישות חדשות על המוניטורים, אפילו אי העקביות…",
+      "description_full": "סאונד שאפשר לסמוך עליו! עם סביבות אודיו סוחפות היוצרות דרישות חדשות על המוניטורים, אפילו אי העקביות הקטנה ביותר בין הערוצים גורמת לחוסר לכידות של הצליל. מאז 1998, הכהונה בת 25 השנים של Amphion אפשרה להם לשלוט בעיצוב מוניטור האולפן הייחודי שלהם על ידי השגת תרגום צליל ללא רבב, אימג’ינג מצוין וקוהרנטיו",
+      "price": 50.0,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14457472/large/bd2d922395b9c67003b167cb72b75317.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14457472/large/bd2d922395b9c67003b167cb72b75317.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14457472/large/bd2d922395b9c67003b167cb72b75317.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "410W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Product": [
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14457472/large/bd2d922395b9c67003b167cb72b75317.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14457472/large/bd2d922395b9c67003b167cb72b75317.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14457472/large/bd2d922395b9c67003b167cb72b75317.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "amphion amp400.12 amplifiers  סאונד שאפשר לסמוך עליו! עם סביבות אודיו סוחפות היוצרות דרישות חדשות על המוניטורים, אפילו אי העקביות…",
+      "filter_tags": [
+        "Amplifiers",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194488"
+    },
+    {
+      "id": "amphion-one25a-3-way-studio-monitor-6966280",
+      "name": "מוניטור אולפני אקטיבי Amphion One25A",
+      "slug": "/מוניטור-אולפני-אקטיבי-amphion-one25a",
+      "brand_id": "amphion",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "studio monitor"
+      ],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "מוניטור אולפני אקטיבי – אולטרה מקצועי עם טווח תדרים מלא ה-\nOne25A\n מבית Amphion הוא התוצאה של שיא…",
+      "description_full": "מוניטור אולפני אקטיבי – אולטרה מקצועי עם טווח תדרים מלא ה-\nOne25A\n מבית Amphion הוא התוצאה של שיא המחויבות בת 25 שנה של Amphion הפינית, של תכנון אקוסטי ואומנותי קפדני במיוחד המציע יתרונות של עיצוב אקטיבי ללא אף אחד מהחסרונות שמאפיינים מוניטורים אקטיביים בדרך כלל. מדובר במוניטור עם טווח תדרים מלא (מ-",
+      "price": 9038.25,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14578034/large/74fe431ac02d5639f1650ba3d014dd28.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14578034/large/74fe431ac02d5639f1650ba3d014dd28.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14578034/large/74fe431ac02d5639f1650ba3d014dd28.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-ONE25A",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Audio Performance": [
+          {
+            "key": "Frequency Response",
+            "value": "Full Audio Spectrum",
+            "unit": "Hz",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "3W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14578034/large/74fe431ac02d5639f1650ba3d014dd28.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14578034/large/74fe431ac02d5639f1650ba3d014dd28.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/14578034/large/74fe431ac02d5639f1650ba3d014dd28.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור אולפני אקטיבי amphion one25a studio monitors studio monitor מוניטור אולפני אקטיבי – אולטרה מקצועי עם טווח תדרים מלא ה-\none25a\n מבית amphion הוא התוצאה של שיא…",
+      "filter_tags": [
+        "Studio Monitors",
+        "diamond",
+        "studio monitor"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194512"
+    },
+    {
+      "id": "amphion-one18x-8377417",
+      "name": "מוניטור פאסיבי Amphion One18X",
+      "slug": "/מוניטור-פאסיבי-amphion-one18x",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-One18X הוא השלב האבולוציוני הבא של דגם ה-One18 המוערך, “סוס העבודה” המודרני האמין. טוויטר מתקדם…",
+      "description_full": "ה-One18X הוא השלב האבולוציוני הבא של דגם ה-One18 המוערך, “סוס העבודה” המודרני האמין. טוויטר מתקדם וקרוסאובר חדשני משדרגים את הבהירות, הרזולוציה והדיוק הדינמי. עם טוויטר בעל תגובתיות גבוהה, ליניאריות יוצאת דופן ועיוות נמוך במיוחד, המספק רמת פירוט חסרת תקדים ו-spatial cues מושלמים, ה-One18X לא רק שומר",
+      "price": 50.0,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17743211/large/de506b783a54fe654bdb80dec781f932.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17743211/large/de506b783a54fe654bdb80dec781f932.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17743211/large/de506b783a54fe654bdb80dec781f932.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-ONE18X",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "3W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17743211/large/de506b783a54fe654bdb80dec781f932.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17743211/large/de506b783a54fe654bdb80dec781f932.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17743211/large/de506b783a54fe654bdb80dec781f932.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion one18x audio equipment  ה-one18x הוא השלב האבולוציוני הבא של דגם ה-one18 המוערך, “סוס העבודה” המודרני האמין. טוויטר מתקדם…",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194537"
+    },
+    {
+      "id": "amphion-two18x-8378366",
+      "name": "מוניטור פאסיבי Amphion Two18X",
+      "slug": "/מוניטור-פאסיבי-amphion-two18x",
+      "brand_id": "amphion",
+      "category": "Audio Equipment",
+      "subcategories": [],
+      "tier": "diamond",
+      "tier_score": 90,
+      "description_short": "ה-Two18X נבנה על בסיס החוזקות של דגם Two18 – דגם הדגל המוכר של Amphion, שזכה לשבחים מצד מהנדסי",
+      "description_full": "ה-Two18X נבנה על בסיס החוזקות של דגם Two18 – דגם הדגל המוכר של Amphion, שזכה לשבחים מצד מהנדסי סאונד מהשורה הראשונה ברחבי העולם במשך יותר מעשור. בעודו מותאם במיוחד לחדרים גדולים ונושא מוניטין של דיוק והתמקדות ברמה עילאית, שדרוגי הביצועים של מוניטור זה בעל שני הוופרים מעניקים לו דחיפה משמעותית בכל תח",
+      "price": 50.0,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17745994/large/f3dc7ec51a38ccc319026a79a8f50819.jpg",
+        "width": 400,
+        "height": 300,
+        "alt": "Product image"
+      },
+      "image_thumbnail": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17745994/large/f3dc7ec51a38ccc319026a79a8f50819.jpg",
+        "width": 150,
+        "height": 150,
+        "alt": "Product image"
+      },
+      "image_gallery": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17745994/large/f3dc7ec51a38ccc319026a79a8f50819.jpg",
+          "width": 500,
+          "height": 500,
+          "alt": "Product image"
+        }
+      ],
+      "color_primary": "#333333",
+      "color_secondary": "#333333",
+      "specs": {
+        "Product": [
+          {
+            "key": "SKU",
+            "value": "06-TWO18X",
+            "unit": "",
+            "icon": ""
+          },
+          {
+            "key": "Type",
+            "value": "Professional Audio Equipment",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Connectivity": [
+          {
+            "key": "Input/Output",
+            "value": "Professional Audio Connectors",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Warranty": [
+          {
+            "key": "Coverage",
+            "value": "שנה",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Specifications": [
+          {
+            "key": "Power Consumption",
+            "value": "0W",
+            "unit": "W",
+            "icon": ""
+          }
+        ],
+        "Physical": [
+          {
+            "key": "Dimensions",
+            "value": "Standard Professional Size",
+            "unit": "inches",
+            "icon": ""
+          }
+        ],
+        "Source": [
+          {
+            "key": "Store",
+            "value": "Halilit",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Quality": [
+          {
+            "key": "Material",
+            "value": "Premium Materials",
+            "unit": "",
+            "icon": ""
+          }
+        ],
+        "Support": [
+          {
+            "key": "Support",
+            "value": "Professional Support Available",
+            "unit": "",
+            "icon": ""
+          }
+        ]
+      },
+      "visual_metadata": {
+        "color_primary": "#333333",
+        "color_secondary": "#333333",
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17745994/large/f3dc7ec51a38ccc319026a79a8f50819.jpg",
+          "width": 400,
+          "height": 300,
+          "alt": "Product image"
+        },
+        "image_thumbnail": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17745994/large/f3dc7ec51a38ccc319026a79a8f50819.jpg",
+          "width": 150,
+          "height": 150,
+          "alt": "Product image"
+        },
+        "image_gallery": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17745994/large/f3dc7ec51a38ccc319026a79a8f50819.jpg",
+            "width": 500,
+            "height": 500,
+            "alt": "Product image"
+          }
+        ],
+        "aspect_ratio": 1.0,
+        "visual_score": 20,
+        "render_hints": {
+          "show_color_swatch": false,
+          "show_gallery": false,
+          "show_specs": true,
+          "show_price": true,
+          "is_hero_available": true
+        }
+      },
+      "render_hints": {
+        "show_color_swatch": false,
+        "show_gallery": false,
+        "show_specs": true,
+        "show_price": true,
+        "is_hero_available": true
+      },
+      "search_text": "מוניטור פאסיבי amphion two18x audio equipment  ה-two18x נבנה על בסיס החוזקות של דגם two18 – דגם הדגל המוכר של amphion, שזכה לשבחים מצד מהנדסי",
+      "filter_tags": [
+        "Audio Equipment",
+        "diamond"
+      ],
+      "source_url": null,
+      "synced_at": "2026-01-31T20:01:16.194561"
     }
   ],
-  "processed_badge": {
-    "level": "DIAMOND",
-    "checks": {
-      "commercial_data": true,
-      "official_manual": true,
-      "taxonomy_aligned": true,
-      "context_layer": true,
-      "media_optimized": true
-    },
-    "signature": "refinery-v2-12"
-  },
-  "meta": {
-    "total_count": 12,
-    "refinery_version": "2.0",
-    "tiers": {
-      "DIAMOND": 0,
-      "GOLD": 9,
-      "SILVER": 3,
-      "BRONZE": 0
-    }
-  }
+  "generated": "2026-01-31T20:01:16.194839",
+  "count": 15
 }

@@ -278,16 +278,26 @@ class CatalogLoader {
       brand_identity: brandIdentity,
       // Normalize products to handle different data structures
       products: normalizeProducts(data.products).map((p: Product): Product => {
+        // NEW: Sandbox Mode - Warn on Low Quality but Allow
+        if (p.processed_badge?.level === "COAL") {
+          console.warn(`[Sandbox] Loading Low Quality Product: ${p.id}`);
+        }
+
         // NEW: Preserve pill_data (the 3-Pillar Truth from Refinery)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (p as any).pill_data = (p as any).pill_data || null;
 
-        // NEW: Map ui_meta categories to product fields
+        // NEW: Map ui_meta categories to product fields (v4.6.1 + v5 Legacy Support)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const pillData = (p as any).pill_data;
-        if (pillData?.ui_meta) {
-          p.category = pillData.ui_meta.primary_category || p.category;
-          p.subcategory = pillData.ui_meta.sub_division || p.subcategory;
+        const uiMeta = (p as any).ui_meta || (p as any).pill_data?.ui_meta;
+
+        if (uiMeta) {
+          p.category = uiMeta.primary_category || p.category;
+          p.subcategory = uiMeta.sub_division || p.subcategory;
+          // Ensure ui_meta is set on the object if it came from pill_data
+          if (!(p as any).ui_meta) {
+            (p as any).ui_meta = uiMeta;
+          }
         }
 
         // Ensure brand is set
@@ -372,7 +382,7 @@ class CatalogLoader {
     };
 
     // Sort products by name for consistent ordering
-    catalog.products.sort((a, b) => a.name.localeCompare(b.name));
+    catalog.products.sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''));
 
     this.brandCatalogs.set(brandId, catalog);
 

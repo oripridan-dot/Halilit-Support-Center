@@ -1,74 +1,202 @@
 # Halilit Support Center
 
-**Version:** 4.6.1
-**Status:** Data Refinement & Optimization Complete (100% Diamond Tier, Fully Synced)
-**Database:** Synchronized & Optimized (WAL mode, Indexed, 100% Audit Trail)
+**Version 5.0** - Unified Data Pipeline Architecture
 
-## Overview
+A modern product catalog and support center for professional audio equipment. Built with a "Static First" architecture where the backend generates optimized JSON files that the frontend consumes directly.
 
-The Halilit Support Center is a "Static First" web application designed to showcase musical instruments with high-fidelity visuals.
+## 🎯 Architecture Overview
 
-**v4.6 Final** delivers the complete "Data Refinery" with full database synchronization and optimization. A strict ingestion pipeline ensures only "Diamond Tier" badged data is loaded, with 100% sync between SQLite history and processed JSON cache. All 114+ products across 6 brands are now fully optimized and visible in the UI.
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         3 DATA SOURCES                                   │
+├─────────────────────────────────────────────────────────────────────────┤
+│  OFFICIAL          │  COMMERCIAL         │  CONTEXTUAL                  │
+│  (Manufacturer)    │  (Halilit Prices)   │  (Expert Reviews)            │
+│  - Product specs   │  - SKU numbers      │  - Pros/Cons                 │
+│  - Names, images   │  - Prices (ILS/USD) │  - Expert tips               │
+│  - Manuals, docs   │  - Stock status     │  - Known issues              │
+└──────────┬─────────┴──────────┬──────────┴──────────┬────────────────────┘
+           │                    │                     │
+           └────────────────────┼─────────────────────┘
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      3 PROCESSING LAYERS                                 │
+├─────────────────────────────────────────────────────────────────────────┤
+│  LAYER 1: NORMALIZE    │  LAYER 2: ENRICH      │  LAYER 3: OPTIMIZE     │
+│  - Pydantic validation │  - Taxonomy mapping   │  - UI constraints      │
+│  - Schema enforcement  │  - Tier assignment    │  - Slug generation     │
+│  - Content hashing     │  - Image selection    │  - Search text         │
+└────────────────────────┴───────────────────────┴────────────────────────┘
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         OUTPUT: frontend/public/data/                    │
+│  index.json        - Brand catalog index                                │
+│  {brand}.json      - Per-brand product catalogs                         │
+└─────────────────────────────────────────────────────────────────────────┘
+                                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                              FRONTEND                                    │
+│  React + Vite + TypeScript + Tailwind                                   │
+│  Loads static JSON → Galaxy Dashboard → Spectrum View → Product Modal   │
+└─────────────────────────────────────────────────────────────────────────┘
+```
 
-## Architecture
+## 🚀 Quick Start
 
-- **Frontend**: React 18, Vite, TypeScript. **Strictly Typed & Gated**.
-- **Backend**: Python Data Refinery & Monitoring.
-  - `ingest_brand.py`: Raw Harvest with DB Tracking.
-  - `refine_brand.py`: Cleaning, Taxonomy Mapping & Tier Assignment.
-  - `deploy_badged_catalog.py`: Index Generation.
-  - `tracker.py` & `db.py`: SQLite History & Sync.
-- **Data**: Static JSONs in `frontend/public/data` (100% synced with SQLite).
-- **Database**: SQLite (WAL mode, indexed) for audit trail and change detection.
+### Prerequisites
 
-## Key Features
+- Python 3.10+
+- Node.js 18+ / pnpm
+- (Optional) Playwright for web scraping: `pip install playwright && playwright install`
 
-- **Galaxy Dashboard**: Context-aware grid that greys out empty categories.
-- **Tier Bar**: Physics-based scatter plot for product visualization.
-- **Smart Filters**: "1176" style buttons that toggle sub-categories instantly.
+### Installation
 
-## Development
+```bash
+# Clone repository
+git clone https://github.com/oripridan-dot/Halilit-Support-Center.git
+cd Halilit-Support-Center
 
-### Frontend
+# Backend setup
+cd backend
+pip install -r requirements.txt
+
+# Frontend setup
+cd ../frontend
+pnpm install
+```
+
+### Running the Pipeline
+
+```bash
+# Run complete pipeline (ingest → process → deploy)
+python -m backend.pipeline run
+
+# Run specific stages
+python -m backend.pipeline ingest    # Only harvest data
+python -m backend.pipeline process   # Only process through layers
+python -m backend.pipeline deploy    # Only deploy to frontend
+
+# Check status
+python -m backend.pipeline status
+
+# Generate TypeScript types
+python -m backend.pipeline types
+```
+
+### Running the Frontend
 
 ```bash
 cd frontend
-npm install
-npm run dev
+pnpm dev    # Development server at http://localhost:5173
+pnpm build  # Production build
 ```
 
-The app will be available at http://localhost:5173/
+## 📁 Project Structure
 
-### Backend (Refinement Pipeline)
+```
+├── backend/
+│   ├── pipeline/              # ⭐ MAIN PIPELINE (v5.0)
+│   │   ├── __main__.py       # CLI entry point
+│   │   ├── config.py         # Configuration
+│   │   ├── models.py         # Pydantic schemas
+│   │   ├── runner.py         # Pipeline orchestrator
+│   │   ├── typescript_generator.py
+│   │   ├── harvesters/       # Data ingestion
+│   │   │   ├── official.py   # Manufacturer data
+│   │   │   ├── commercial.py # Halilit prices
+│   │   │   └── contextual.py # Reviews (real web search + AI)
+│   │   └── layers/           # Processing layers
+│   │       ├── normalize.py  # Layer 1
+│   │       ├── enrich.py     # Layer 2
+│   │       └── optimize.py   # Layer 3
+│   ├── data/
+│   │   ├── 1_official/       # Raw official data
+│   │   ├── 2_commercial/     # Raw commercial data
+│   │   ├── 3_contextual/     # Raw contextual data
+│   │   ├── 4_validated/      # After layer processing
+│   │   ├── 5_golden/         # Production-ready catalogs
+│   │   └── reports/          # Pipeline reports
+│   ├── scripts/              # Utility scripts
+│   └── tests/                # Test suites
+│
+├── frontend/
+│   ├── public/data/          # Static JSON (pipeline output)
+│   ├── src/
+│   │   ├── components/       # React components
+│   │   ├── pages/            # Page views
+│   │   └── types/            # TypeScript types (auto-generated)
+│   └── package.json
+│
+└── docs/                     # Additional documentation
+```
+
+## 🔧 Configuration
+
+### Environment Variables
 
 ```bash
-# 1. Harvest & Refine a brand (Full pipeline with DB tracking)
-python3 backend/scripts/ingest_brand.py adam-audio
+# For real web search in Context Agent
+export SERP_API_KEY=your_serpapi_key
 
-# 2. OR refine already-processed data
-python3 backend/scripts/refine_brand.py adam-audio
+# For AI synthesis of reviews
+export OPENAI_API_KEY=your_openai_key
 
-# 3. Update frontend index
-python3 backend/scripts/deploy_badged_catalog.py
+# Pipeline settings
+export PIPELINE_DEBUG=true
+export PIPELINE_SCRAPER_HEADLESS=false
 ```
 
-### Database Verification
+### Pipeline Configuration
+
+Edit `backend/pipeline/config.py` to customize paths, scraper settings, and tier thresholds.
+
+## 🧪 Testing
 
 ```bash
-python3 -c "
-import json, sqlite3
-from pathlib import Path
+# Run all tests
+python -m pytest backend/tests/ -v
 
-conn = sqlite3.connect('backend/data/ingestion_history.db')
-c = conn.cursor()
-for row in c.execute('SELECT brand_id, COUNT(*) FROM product_snapshots GROUP BY brand_id'):
-    print(f'{row[0]}: {row[1]} snapshots')
-conn.close()
-"
+# Run specific test
+python -m pytest backend/tests/test_pipeline_e2e.py -v
+
+# Frontend tests
+cd frontend && pnpm test
 ```
 
-## Project Structure
+## 📊 Data Quality Tiers
 
-- `frontend/src/components/views`: Main page views (Galaxy, Spectrum, etc).
-- `frontend/src/lib`: Core logic (Category mapping, brand extraction).
-- `frontend/public/data`: Generated catalogs.
+Products are automatically assigned quality tiers based on data completeness:
+
+| Tier       | Score | Requirements                             |
+| ---------- | ----- | ---------------------------------------- |
+| 💎 Diamond | 75+   | Complete data, verified, multiple images |
+| 🥇 Gold    | 60-74 | Good data, minor gaps                    |
+| 🥈 Silver  | 40-59 | Basic data, needs enrichment             |
+| 🥉 Bronze  | 0-39  | Minimal data                             |
+
+## 🔄 Data Flow
+
+1. **Ingest**: Harvesters collect data from 3 sources
+2. **Normalize**: Merge and validate against Pydantic schemas
+3. **Enrich**: Map taxonomy, assign tiers, select images
+4. **Optimize**: Generate slugs, search text, render hints
+5. **Deploy**: Write to `frontend/public/data/`
+6. **Types**: Auto-generate TypeScript types
+
+## 📖 Documentation
+
+- [Architecture Guide](ARCHITECTURE_v5.md)
+- [Getting Started](GETTING_STARTED_v5.md)
+- [Implementation Guide](IMPLEMENTATION_GUIDE_v5.md)
+- [Operations Manual](OPERATIONS.md)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Run tests before committing
+4. Submit a pull request
+
+## 📜 License
+
+MIT License - see LICENSE file for details.

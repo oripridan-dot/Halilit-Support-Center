@@ -266,13 +266,13 @@ export const TierBar = ({
               className="absolute w-12 h-12 -ml-6 -mb-6 flex items-center justify-center pointer-events-auto group/node z-10"
               onMouseEnter={() => {
                 onHoverProduct(node.product);
-                setHoveredProductId(node.id);
+                setHoveredProductId(node.id ?? null);
               }}
               onMouseLeave={() => {
                 onHoverProduct(null);
                 setHoveredProductId(null);
               }}
-              onClick={() => onSelectProduct(node.id)}
+              onClick={() => onSelectProduct(node.id ?? "")}
             >
               {/* Connection Line to Price Axis */}
               <div className="absolute top-1/2 left-1/2 w-px h-[500px] bg-gradient-to-b from-amber-500/20 to-transparent pointer-events-none opacity-0 group-hover/node:opacity-100 transition-opacity origin-top transform rotate-180" />
@@ -288,7 +288,7 @@ export const TierBar = ({
                     // Simple text fallback
                     const parent = e.currentTarget.parentElement;
                     if (parent)
-                      parent.innerHTML = `<span class="text-[8px] font-bold text-zinc-500">${node.product.brand.substring(0, 3)}</span>`;
+                      parent.innerHTML = `<span class="text-[8px] font-bold text-zinc-500">${(node.product.brand ?? "").substring(0, 3)}</span>`;
                   }}
                 />
               </div>
@@ -316,13 +316,13 @@ export const TierBar = ({
               className="absolute w-6 h-6 -ml-3 -mb-3 flex items-center justify-center pointer-events-auto group/outlier z-5"
               onMouseEnter={() => {
                 onHoverProduct(node.product);
-                setHoveredProductId(node.id);
+                setHoveredProductId(node.id ?? null);
               }}
               onMouseLeave={() => {
                 onHoverProduct(null);
                 setHoveredProductId(null);
               }}
-              onClick={() => onSelectProduct(node.id)}
+              onClick={() => onSelectProduct(node.id ?? "")}
             >
               <div className="w-2 h-2 rounded-full bg-zinc-600 group-hover/outlier:bg-amber-500 group-hover/outlier:scale-150 transition-all" />
             </motion.button>

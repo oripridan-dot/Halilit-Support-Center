@@ -1,68 +1,17 @@
 {
-  "build_timestamp": "2026-01-30T13:01:10.680874",
-  "version": "5.0.0-Refinery",
-  "total_products": 114,
-  "total_verified": 114,
+  "build_timestamp": "2026-01-31T12:00:00Z",
+  "version": "4.6.1",
+  "total_products": 3,
+  "total_verified": 3,
   "brands": [
-    {
-      "id": "warm-audio",
-      "name": "Warm Audio",
-      "brand_color": "#333333",
-      "logo_url": "/assets/logos/warm-audio_logo.png",
-      "product_count": 25,
-      "verified_count": 25,
-      "data_file": "warm-audio.json",
-      "count": 25
-    },
     {
       "id": "adam-audio",
       "name": "Adam Audio",
-      "brand_color": "#333333",
-      "logo_url": "/assets/logos/adam-audio_logo.svg",
-      "product_count": 25,
-      "verified_count": 25,
-      "data_file": "adam-audio.json",
-      "count": 25
-    },
-    {
-      "id": "fzone",
-      "name": "Fzone",
-      "brand_color": "#333333",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "product_count": 25,
-      "verified_count": 25,
-      "data_file": "fzone.json",
-      "count": 25
-    },
-    {
-      "id": "drumdots",
-      "name": "Drumdots",
-      "brand_color": "#333333",
-      "logo_url": "/assets/logos/drumdots_logo.png",
-      "product_count": 2,
-      "verified_count": 2,
-      "data_file": "drumdots.json",
-      "count": 2
-    },
-    {
-      "id": "amphion",
-      "name": "Amphion",
-      "brand_color": "#333333",
-      "logo_url": "/assets/logos/amphion_logo.png",
-      "product_count": 12,
-      "verified_count": 12,
-      "data_file": "amphion.json",
-      "count": 12
-    },
-    {
-      "id": "bespeco",
-      "name": "Bespeco",
-      "brand_color": "#333333",
-      "logo_url": "/assets/logos/bespeco_logo.png",
-      "product_count": 25,
-      "verified_count": 25,
-      "data_file": "bespeco.json",
-      "count": 25
+      "brand_color": "#000000",
+      "logo_url": "https://www.adam-audio.com/content/uploads/2016/09/logo.svg",
+      "product_count": 3,
+      "verified_count": 3,
+      "data_file": "adam-audio.json"
     }
   ]
 }

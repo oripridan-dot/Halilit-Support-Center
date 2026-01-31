@@ -23,12 +23,3 @@ export type { BrandTaxonomy, CategoryNode } from "./brandTaxonomy";
 
 // Helper functions for compatibility
 export { getAvailableBrands } from "./brandTaxonomy";
-
-// Dynamic Thumbnails (Most Expensive Product Selection)
-export {
-  buildDynamicThumbnailMap,
-  getMostExpensiveProductImage,
-  getThumbnailForCategory,
-  getTopProductsByCategory,
-} from "./dynamicThumbnails";
-export type { CategoryThumbnail } from "./dynamicThumbnails";

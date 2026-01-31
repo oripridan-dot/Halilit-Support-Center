@@ -67,11 +67,21 @@ export const ProductRelationshipSchema = z.object({
 });
 
 // Core product schema - minimal required fields
+// UPDATED v4.6.1: Supports both Flat (Normal) and Nested (Golden/Refinery) formats
 export const ProductSchema = z
   .object({
     id: z.string().min(1, "Product ID required"),
-    name: z.string().min(1, "Product name required"),
-    brand: z.string().min(1, "Brand name required"),
+    // Name can be at root OR inside identity
+    name: z.string().optional().nullable(),
+    brand: z.string().optional().nullable(),
+
+    // Golden Context Support
+    identity: z.object({
+      name: z.string().optional(),
+      brand: z.string().optional(),
+      images: z.array(z.string()).optional()
+    }).optional().nullable(),
+
     category: z.string().default("Uncategorized"),
     description: z.string().optional().nullable(),
     image_url: z.string().optional().nullable(),

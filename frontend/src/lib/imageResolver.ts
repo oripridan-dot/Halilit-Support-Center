@@ -1,6 +1,6 @@
 /**
  * Image Resolver: Ensures every product has a valid image URL
- * Falls back to brand logo if product image is missing/invalid
+ * Aligned with OptimizedProduct type from pipeline
  */
 
 import type { Product } from "../types";
@@ -12,7 +12,7 @@ export const PLACEHOLDER_COLORS = {
 
 /**
  * Resolve a valid image URL for a product
- * Prioritizes: product image > brand logo > generated placeholder
+ * Uses: image_hero > image_thumbnail > image_gallery > placeholder
  */
 export function resolveProductImage(
   product: Product | null | undefined,
@@ -21,59 +21,42 @@ export function resolveProductImage(
     return generatePlaceholderImage("Unknown");
   }
 
-  // 1. Try product image_url first (normalized)
-  if (product.image_url && isValidImageUrl(product.image_url)) {
-    return product.image_url;
+  // 1. Try hero image
+  if (product.image_hero?.url && isValidImageUrl(product.image_hero.url)) {
+    return product.image_hero.url;
   }
 
-  // 2. Try product image field (alternative format)
-  if (product.image && isValidImageUrl(product.image)) {
-    return product.image;
+  // 2. Try thumbnail image
+  if (product.image_thumbnail?.url && isValidImageUrl(product.image_thumbnail.url)) {
+    return product.image_thumbnail.url;
   }
 
-  // 3. Try nested media thumbnail
-  if (product.media?.thumbnail && isValidImageUrl(product.media.thumbnail)) {
-    return product.media.thumbnail;
-  }
-
-  // 4. Try gallery
-  if (
-    product.media?.gallery &&
-    Array.isArray(product.media.gallery) &&
-    product.media.gallery.length > 0
-  ) {
-    const firstImage = product.media.gallery[0];
-    if (isValidImageUrl(firstImage)) {
-      return firstImage;
+  // 3. Try first gallery image
+  if (product.image_gallery && product.image_gallery.length > 0) {
+    const firstImage = product.image_gallery[0];
+    if (firstImage?.url && isValidImageUrl(firstImage.url)) {
+      return firstImage.url;
     }
   }
 
-  // 5. Fall back to brand logo
-  if (product.logo_url && isValidImageUrl(product.logo_url)) {
-    return product.logo_url;
-  }
-
-  // 6. Return a generic placeholder
-  return generatePlaceholderImage(product.name || product.brand || "Product");
+  // 4. Return placeholder
+  return generatePlaceholderImage(product.name || "Product");
 }
 
 /**
  * Check if image URL looks valid
- * Just checks if it has a valid image extension
  */
 function isValidImageUrl(url: string): boolean {
   if (!url || typeof url !== "string") return false;
-
-  // Should have file extension
+  // Accept URLs with image extensions or cloudfront URLs
   const imageExtensions = /\.(jpg|jpeg|png|gif|svg|webp)$/i;
-  return imageExtensions.test(url);
+  return imageExtensions.test(url) || url.includes("cloudfront.net");
 }
 
 /**
- * Generate a data URL placeholder image for products without images
+ * Generate a data URL placeholder image
  */
 export function generatePlaceholderImage(_productName: string): string {
-  // Create a simple SVG placeholder with product name hint
   const svg = `<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -88,7 +71,6 @@ export function generatePlaceholderImage(_productName: string): string {
       LOADING IMAGE...
     </text>
   </svg>`;
-
   return `data:image/svg+xml;base64,${btoa(svg)}`;
 }
 

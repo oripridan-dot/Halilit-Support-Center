@@ -27,6 +27,7 @@ interface RawProductInput {
   commercial?: {
     link?: string;
     price?: number;
+    description?: string;
   };
   sku?: string;
   halilit_id?: string;
@@ -50,6 +51,16 @@ interface RawProductInput {
   accessories?: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   related?: any;
+
+  // v4.6.1 Standard
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ui_meta?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  processed_badge?: any;
+
+  // Refinery v5 Legacy
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  pill_data?: any;
 }
 
 /**
@@ -59,21 +70,34 @@ interface RawProductInput {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function normalizeProduct(input: any): Product {
   const rawProduct = input as RawProductInput;
+
+  // v4.6.1 Golden Product Extraction
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
+  const identity = (input as any).identity || {};
+
   // Start with a copy of the raw product
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const product: any = {
     id: rawProduct.id || "",
-    name: rawProduct.name || "Unknown Product",
-    brand: rawProduct.brand || "",
+    name: rawProduct.name || identity.name || "Unknown Product",
+    brand: rawProduct.brand || identity.brand || "",
     category:
       rawProduct.category || rawProduct.main_category || "uncategorized",
     main_category:
       rawProduct.main_category || rawProduct.category || "uncategorized",
-    description: rawProduct.description || "",
+    description: rawProduct.description || rawProduct.commercial?.description || "",
+
+    // v4.6.1 CRITICAL: Preserve Refinery Metadata
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    ui_meta: rawProduct.ui_meta || null,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    processed_badge: rawProduct.processed_badge || null,
 
     // Image URL: Try multiple locations
     image_url:
       rawProduct.image_url || // Roland format
+      identity.images?.[0] || // Golden Identity format
+      rawProduct.image || // Alternative format
       rawProduct.image || // Alternative format
       rawProduct.media?.thumbnail || // Boss/Nord nested format
       rawProduct.media?.gallery?.[0] || // Gallery fallback
@@ -96,11 +120,11 @@ export function normalizeProduct(input: any): Product {
       rawProduct.official_gallery || rawProduct.media?.gallery || [],
 
     // Specs and details
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    specifications:
+    specs: normalizeSpecs(
       rawProduct.specifications ||
       rawProduct.specs ||
-      rawProduct.official_specs,
+      rawProduct.official_specs
+    ),
     features: rawProduct.features || [],
 
     // Documentation
@@ -164,11 +188,14 @@ function extractPrice(product: RawProductInput): ProductPricing {
  * Normalize images array to consistent format
  */
 function normalizeImages(product: RawProductInput): ProductImage[] {
-  const images = product.images || [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
+  const identityImages = (product as any).identity?.images;
+  const images = product.images || identityImages || [];
 
   // If empty, try to build from other sources
   if (!Array.isArray(images) || images.length === 0) {
-    const imageUrl = product.image_url || product.image;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
+    const imageUrl = product.image_url || product.image || (product as any).identity?.images?.[0];
     if (imageUrl) {
       return [
         {
@@ -200,4 +227,21 @@ export function normalizeProducts(rawProducts: any[]): Product[] {
       return normalizeProduct({}); // Return empty normalized product
     }
   });
+}
+
+/**
+ * Normalize specs to array format
+ */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function normalizeSpecs(rawSpecs: any): { name: string; value: string }[] {
+  if (!rawSpecs) return [];
+  if (Array.isArray(rawSpecs)) return rawSpecs;
+  if (typeof rawSpecs === "object") {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    return Object.entries(rawSpecs).map(([key, val]) => ({
+      name: key.replace(/_/g, " "),
+      value: String(val),
+    }));
+  }
+  return [];
 }
