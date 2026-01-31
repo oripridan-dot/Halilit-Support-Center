@@ -4,8 +4,10 @@
  * Follows STANDARDIZED COMMUNICATION PROTOCOL v1.0
  */
 import { useCallback, useEffect, useState } from "react";
-import type { Product, CategoryPayload } from "../types";
+import type { Product } from "../types";
 import { createAsyncResult, type AsyncResult } from "../lib/communicationProtocol";
+import { catalogLoader } from "../lib/catalogLoader";
+import { getConsolidatedProductCategory, productMatchesGalaxy, CONSOLIDATED_CATEGORIES } from "../lib/categoryConsolidator";
 
 export interface CategoryCatalogState {
   products: Product[];
@@ -41,16 +43,41 @@ export const useCategoryCatalog = (
     }
 
     try {
-      const catId = category.toLowerCase();
-      const res = await fetch(`/data/${catId}.json`);
+      // 1. Ensure Index is loaded
+      await catalogLoader.loadIndex();
 
-      if (!res.ok) {
-        throw new Error(`Failed to load category: ${res.statusText}`);
-      }
+      // 2. Load all "Badged" Products from the 6 valid brands
+      const allProducts = await catalogLoader.loadAllProducts();
 
-      const data = (await res.json()) as CategoryPayload;
-      setProducts(data.products || []);
-      setAvailableFilters(data.metadata?.available_filters || []);
+      // 3. Filter by Galaxy/Tribe
+      // The 'category' param here corresponds to the 'Galaxy ID' (e.g. 'guitars-bass')
+      const filteredProducts = allProducts.filter(p => productMatchesGalaxy(p, category));
+
+      // 4. Generate Smart Filters based on actual content
+      // Find the Galaxy Definition to get the Spectrum list (order matters)
+      const galaxyDef = CONSOLIDATED_CATEGORIES.find(g => g.id === category);
+
+      const filterSet = new Set<string>();
+
+      filteredProducts.forEach(p => {
+        const { spectrumId } = getConsolidatedProductCategory(p);
+        // Find the label for this spectrumId
+        const specDef = galaxyDef?.spectrum.find(s => s.id === spectrumId);
+        if (specDef) {
+          filterSet.add(specDef.label);
+          // Inject this label as a "filter" tag so SpectrumModule's 1176 engine can use it
+          if (!p.filters) p.filters = [];
+          if (!p.filters.includes(specDef.label)) p.filters.push(specDef.label);
+        }
+      });
+
+      // Sort filters based on Galaxy definition order
+      const sortedFilters = galaxyDef
+        ? galaxyDef.spectrum.map(s => s.label).filter(l => filterSet.has(l))
+        : Array.from(filterSet).sort();
+
+      setProducts(filteredProducts);
+      setAvailableFilters(sortedFilters);
       setError(null);
     } catch (err) {
       const error = err instanceof Error ? err : new Error("Unknown error loading category");

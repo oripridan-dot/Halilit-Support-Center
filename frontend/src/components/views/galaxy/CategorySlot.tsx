@@ -8,6 +8,7 @@ interface CategorySlotProps {
   fallbackGradient?: string;
   icon?: React.ElementType;
   mainColor?: string;
+  count?: number; // Optional product count
   onClick: () => void;
 }
 
@@ -18,17 +19,28 @@ export const CategorySlot = ({
   fallbackGradient,
   icon: Icon,
   mainColor = "#fff",
+  count,
   onClick,
 }: CategorySlotProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imgError, setImgError] = useState(false);
 
+  const hasData = count !== undefined && count > 0;
+  // If count is undefined (loading), we treat it as clickable but maybe show spinner?
+  // For now let's assume if undefined, we don't disable yet.
+
+  const isDisabled = count === 0;
+
   return (
     <motion.div
-      className="relative aspect-square rounded-xl bg-[#030303] overflow-hidden group cursor-pointer w-full flex flex-col transition-all duration-300 ring-1 ring-white/5 shadow-2xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
+      className={`relative aspect-square rounded-xl overflow-hidden group w-full flex flex-col transition-all duration-300 ring-1 shadow-2xl ${
+        isDisabled
+          ? "bg-[#0a0a0a] opacity-40 border border-zinc-900 cursor-not-allowed grayscale pointer-events-none"
+          : "bg-[#030303] cursor-pointer ring-white/5 hover:ring-white/20"
+      }`}
+      onMouseEnter={() => !isDisabled && setIsHovered(true)}
+      onMouseLeave={() => !isDisabled && setIsHovered(false)}
+      onClick={() => !isDisabled && onClick()}
       style={{
         transform: isHovered ? "translateY(1px)" : "translateY(0)",
       }}
@@ -37,7 +49,7 @@ export const CategorySlot = ({
       {/* Container for the "Cave" effect */}
       <div className="flex-[3] relative w-full h-full overflow-hidden bg-[#050505]">
         {/* The "Floor/Background" Image */}
-        {!imgError ? (
+        {!imgError && !isDisabled ? (
           <img
             src={image}
             alt={name}
@@ -50,6 +62,12 @@ export const CategorySlot = ({
               transform: isHovered ? "scale(1.1)" : "scale(1.0)",
             }}
           />
+        ) : isDisabled ? (
+          <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-950 text-zinc-800">
+            <div className="text-2xl opacity-20 selection:bg-none select-none">
+              ∅
+            </div>
+          </div>
         ) : (
           <div className="flex items-center justify-center w-full h-full">
             {Icon &&
@@ -92,7 +110,10 @@ export const CategorySlot = ({
             textShadow: isHovered ? `0 0 10px ${mainColor}66` : "none",
           }}
         >
-          {name}
+          {name}{" "}
+          {count !== undefined && count > 0 && (
+            <span className="ml-1 opacity-50">({count})</span>
+          )}
         </span>
       </div>
     </motion.div>

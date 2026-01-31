@@ -1,0 +1,14 @@
+{
+  "id": "bespeco",
+  "name": "Bespeco",
+  "official_website": "https://bespeco.it/",
+  "logo_url": "https://bespeco.it/wp-content/uploads/2023/09/logo_bespeco.png",
+  "logo_local_path": "backend/data/brands/bespeco_logo.png",
+  "description": "Da quarant’anni al fianco dei musicisti",
+  "social_links": {
+    "instagram": "https://www.instagram.com/bespecoprofessional/",
+    "facebook": "https://www.facebook.com/bespecoprofessional",
+    "youtube": "https://www.youtube.com/user/BespecoProfessional"
+  },
+  "last_updated": "2026-01-30T02:39:34.610775"
+}

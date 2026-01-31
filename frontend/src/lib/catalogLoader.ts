@@ -240,6 +240,22 @@ class CatalogLoader {
       );
     }
 
+    // ✅ BADGE VERIFICATION: Log what we're getting
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
+    const productsArray = (data as any).products || [];
+
+    if (productsArray.length === 0) {
+      console.warn(`[CatalogLoader] ⚠️ WARNING: ${brandId} has no products in the data structure.`);
+    }
+
+    // Log first product structure for debugging
+    if (productsArray.length > 0) {
+      console.log(`[CatalogLoader] ✅ ${brandId}: Found ${productsArray.length} products. First product:`, productsArray[0]);
+    }
+
+    // NEW: Accept ANY data (removing strict gate for now)
+    // The gate will be moved to the UI layer to decide what to display
+
     // Transform to BrandCatalog format with full validation
     // Handle both new format (brand_identity) and legacy format (brand_name)
     const brandIdentity = data.brand_identity || {
@@ -262,6 +278,18 @@ class CatalogLoader {
       brand_identity: brandIdentity,
       // Normalize products to handle different data structures
       products: normalizeProducts(data.products).map((p: Product): Product => {
+        // NEW: Preserve pill_data (the 3-Pillar Truth from Refinery)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (p as any).pill_data = (p as any).pill_data || null;
+
+        // NEW: Map ui_meta categories to product fields
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const pillData = (p as any).pill_data;
+        if (pillData?.ui_meta) {
+          p.category = pillData.ui_meta.primary_category || p.category;
+          p.subcategory = pillData.ui_meta.sub_division || p.subcategory;
+        }
+
         // Ensure brand is set
         if (!p.brand) {
           p.brand = brandIdentity.name || brandEntry.name || brandId;

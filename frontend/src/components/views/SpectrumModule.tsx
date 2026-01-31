@@ -101,6 +101,8 @@ export const SpectrumModule = () => {
   // --------------------------------------------------------------------------
   // 3. THE RENDER
   // --------------------------------------------------------------------------
+  const stripHtml = (html: string) => html.replace(/<[^>]*>?/gm, "");
+
   return (
     <div className="flex flex-col h-full bg-[#0b0c10] text-white overflow-hidden relative">
       {/* --- TOP DECK --- */}
@@ -129,141 +131,137 @@ export const SpectrumModule = () => {
       </Surface>
 
       {/* --- DATA SCREENS (Visualizer) --- */}
-      <div className="h-64 grid grid-cols-12 gap-1 p-1 bg-black border-b border-zinc-800 z-20 shrink-0">
-        {/* LEFT: VISUAL FEED */}
+      <div className="h-[45vh] grid grid-cols-12 gap-1 p-1 bg-black border-b border-zinc-800 z-40 shrink-0 shadow-2xl relative transition-all duration-300">
+        {/* LEFT: VISUAL FEED (IMAGE ONLY) */}
         <Surface
           variant="screen"
           active={!!hoveredProduct}
-          className="col-span-3 bg-zinc-950 flex flex-col justify-center items-center p-4 relative !overflow-visible"
+          className="col-span-4 bg-zinc-950 flex flex-col justify-center items-center p-4 relative overflow-hidden"
         >
           {hoveredProduct ? (
-            <div className="w-full h-full flex items-center justify-center relative">
+            <div className="w-full h-full flex items-center justify-center relative bg-white/5 p-4 rounded-sm">
               {!imageLoadError ? (
                 <img
                   src={resolveProductImage(hoveredProduct)}
-                  className="max-w-[90%] max-h-[90%] object-contain drop-shadow-2xl border-2 border-amber-500"
+                  className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-500 will-change-transform"
                   alt="Preview"
                   onError={() => setImageLoadError(true)}
                 />
               ) : (
-                <div className="flex flex-col items-center gap-3 text-zinc-600 text-center p-2">
+                <div className="flex flex-col items-center gap-2 text-zinc-600 text-center p-2">
                   <ScanLine className="w-8 h-8 opacity-50" />
-                  <div className="text-[10px] font-mono tracking-widest text-zinc-700">
+                  <span className="text-[10px] font-mono uppercase tracking-widest">
                     NO VISUAL
-                  </div>
+                  </span>
                 </div>
               )}
-              {/* Score Badge */}
-              <div className="absolute top-0 right-0 bg-amber-500 text-black text-[10px] font-black px-1.5 py-0.5 rounded-sm shadow-lg">
-                QS: {hoveredProduct.score || 50}
-              </div>
             </div>
           ) : (
-            <div className="flex flex-col items-center gap-2 opacity-30">
-              <ScanLine className="w-8 h-8 text-zinc-500" />
+            <div className="flex flex-col items-center justify-center gap-4 text-zinc-800">
+              <Sparkles className="w-12 h-12 opacity-20" />
+              <div className="text-xs font-mono tracking-[0.2em] uppercase opacity-50">
+                AWAITING SIGNAL
+              </div>
             </div>
           )}
-          <div className="absolute top-2 left-2 text-[9px] text-zinc-600 font-mono tracking-widest">
-            VISUAL_FEED
-          </div>
         </Surface>
 
-        {/* CENTER: DATA STREAM */}
+        {/* MIDDLE: SPECS AND INFO */}
         <Surface
           variant="screen"
           active={!!hoveredProduct}
-          className="col-span-6 bg-zinc-950 p-6 flex flex-col relative overflow-hidden"
+          className="col-span-5 bg-zinc-950 flex flex-col p-6 relative overflow-hidden"
         >
           {hoveredProduct ? (
-            <div className="z-10 animate-fade-in space-y-4 h-full flex flex-col justify-center">
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  {hoveredProduct.logo_url && (
-                    <img
-                      src={hoveredProduct.logo_url}
-                      className="h-4 opacity-60 invert"
-                      alt={hoveredProduct.brand}
-                    />
-                  )}
-                  <div className="flex gap-1 flex-wrap">
-                    {hoveredProduct.filters?.map((f: string) => (
-                      <span
-                        key={f}
-                        className="text-[9px] px-1.5 py-0.5 border border-zinc-800 text-zinc-500 rounded font-mono uppercase"
-                      >
-                        {f}
-                      </span>
-                    ))}
+            <div className="flex flex-col h-full gap-4">
+              {/* Header */}
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-2">
+                <div className="flex flex-col overflow-hidden">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
+                      ID REF:{" "}
+                      {hoveredProduct.id.split("_")[1] || hoveredProduct.id}
+                    </span>
+                  </div>
+                  <h1 className="text-2xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
+                    {hoveredProduct.name}
+                  </h1>
+                  <div className="text-xs text-amber-500 font-bold uppercase tracking-widest">
+                    {hoveredProduct.brand}
                   </div>
                 </div>
-                <h1 className="text-3xl md:text-5xl font-black italic tracking-tighter text-white uppercase line-clamp-2">
-                  {hoveredProduct.name
-                    .replace(/[\u0590-\u05FF]+\s*/g, "")
-                    .trim()}
-                </h1>
               </div>
 
-              <div className="grid grid-cols-2 gap-x-12 gap-y-3 border-t border-zinc-900/80 pt-4 overflow-y-auto max-h-[140px] pr-2 custom-scrollbar">
-                {hoveredProduct.specs_preview?.map(
-                  (spec: { key: string; val: string }, idx: number) => (
-                    <div
-                      key={idx}
-                      className="flex justify-between items-baseline group/spec"
-                    >
-                      <span className="text-[10px] text-zinc-600 font-bold uppercase tracking-wider group-hover/spec:text-amber-500 transition-colors">
-                        {spec.key}
-                      </span>
-                      <span className="text-sm text-zinc-300 font-mono truncate text-right">
-                        {spec.val}
-                      </span>
-                    </div>
-                  ),
+              {/* Description (New) */}
+              <div className="text-xs text-zinc-400 font-sans leading-relaxed line-clamp-4 border-l-2 border-zinc-800 pl-3">
+                {hoveredProduct.short_description ||
+                  stripHtml(
+                    hoveredProduct.description || "No description available.",
+                  )}
+              </div>
+
+              {/* Specs Grid */}
+              <div className="mt-auto grid grid-cols-2 gap-2 text-[10px] font-mono text-zinc-500">
+                {hoveredProduct.specs?.slice(0, 4).map((spec, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col bg-zinc-900/50 p-2 border border-zinc-800/50 rounded-sm"
+                  >
+                    <span className="text-amber-500/50 uppercase text-[9px] mb-1">
+                      {spec.name}
+                    </span>
+                    <span className="text-zinc-300 truncate">{spec.value}</span>
+                  </div>
+                ))}
+                {(!hoveredProduct.specs ||
+                  hoveredProduct.specs.length === 0) && (
+                  <div className="col-span-2 text-center text-zinc-700 italic py-2">
+                    Technical specifications unavailable
+                  </div>
                 )}
               </div>
             </div>
           ) : (
-            <div className="h-full flex flex-col items-center justify-center text-zinc-800 gap-2">
-              <Activity className="w-12 h-12 opacity-20" />
-              <span className="text-xs font-mono tracking-widest">
-                AWAITING SIGNAL INPUT
-              </span>
+            <div className="h-full w-full flex items-center justify-center">
+              <div className="flex items-center gap-2">
+                <Activity className="w-4 h-4 text-zinc-800 animate-pulse" />
+                <span className="text-zinc-800 text-xs font-mono tracking-widest">
+                  NO DATA STREAM
+                </span>
+              </div>
             </div>
           )}
-          <div className="absolute top-2 left-2 text-[9px] text-emerald-800 font-mono tracking-widest flex items-center gap-2">
-            <div
-              className={`w-1.5 h-1.5 rounded-full ${hoveredProduct ? "bg-emerald-500 animate-pulse" : "bg-zinc-800"}`}
-            />
-            DATA_STREAM
-          </div>
         </Surface>
 
-        {/* RIGHT: ACTION */}
+        {/* RIGHT: ACTION & PRICE */}
         <Surface
           variant="screen"
           active={!!hoveredProduct}
           className="col-span-3 bg-zinc-950 flex flex-col justify-center items-center p-6 relative"
         >
           {hoveredProduct ? (
-            <div className="animate-slide-up text-center w-full space-y-4">
+            <div className="animate-slide-up text-center w-full space-y-6">
               <div>
-                <div className="text-4xl font-black text-white tracking-tighter">
+                <div className="text-4xl lg:text-5xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
                   {getPrice(hoveredProduct)}
                 </div>
-                <div className="text-[9px] text-zinc-500 mt-1">
-                  VAT INCLUDED
+                <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase mt-2">
+                  Price (VAT Included)
                 </div>
               </div>
+
+              <div className="w-full h-px bg-zinc-800" />
+
               <button
                 onClick={() => openProductPop(hoveredProduct.id)}
-                className="w-full bg-amber-500 hover:bg-amber-400 text-black font-bold py-3 uppercase text-xs tracking-widest transition-all hover:scale-105 flex items-center justify-center gap-2 clip-corner"
+                className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-4 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
               >
-                <Maximize2 className="w-3 h-3" /> INSPECT
+                <Maximize2 className="w-4 h-4" />
+                <span>Analyze</span>
               </button>
             </div>
           ) : null}
-          <div className="absolute top-2 left-2 text-[9px] text-zinc-600 font-mono tracking-widest">
-            TRANSACTION
-          </div>
         </Surface>
       </div>
 

@@ -1,0 +1,18 @@
+{
+  "manufacturer_sku": "DD-ORG",
+  "official_name": "Drumdots Original Dampening Pads",
+  "official_page": "https://drumdot.com",
+  "specs": {
+    "material": "V-Tem silicone blend",
+    "diameter_inches": 2.4,
+    "thickness_mm": 3,
+    "quantity_per_pack": 4,
+    "color": "Black",
+    "reusable": true,
+    "residue_free": true
+  },
+  "media_assets": {
+    "manual": "https://drumdot.com/docs/guide.pdf",
+    "image_front": "https://drumdot.com/images/drumdots.jpg"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "manufacturer_sku": "AMPH-ONE18",
+  "official_name": "Amphion One18 Passive 3-Way Monitor",
+  "official_page": "https://amphion.fi/one18",
+  "specs": {
+    "woofer_size_inch": 8.0,
+    "midrange_type": "Custom cone driver",
+    "tweeter_type": "25mm silk dome",
+    "frequency_response_low_hz": 35,
+    "frequency_response_high_hz": 22000,
+    "impedance_ohms": 4,
+    "sensitivity_db": 89,
+    "dimensions": "240 x 430 x 280 mm",
+    "weight_kg": 24
+  },
+  "media_assets": {
+    "manual": "https://amphion.fi/docs/one18-manual.pdf",
+    "image_front": "https://amphion.fi/images/one18.jpg"
+  }
+}

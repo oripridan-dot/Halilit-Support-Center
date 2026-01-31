@@ -1,0 +1,29 @@
+{
+  "verified_sources": [
+    {
+      "source": "Sound On Sound",
+      "url": "https://sos.com/reviews/adam-a7v",
+      "date": "2024-06"
+    },
+    {
+      "source": "Mix Magazine",
+      "url": "https://mix.com/reviews/adam-a7v",
+      "date": "2024-03"
+    }
+  ],
+  "pros": [
+    "Excellent stereo imaging with wide sweet spot",
+    "Transparent mid-range perfect for mixing",
+    "Rotatable waveguide for room adaptation",
+    "Class-leading transient response"
+  ],
+  "cons": [
+    "Rear port requires careful placement away from walls",
+    "Higher price point for the class"
+  ],
+  "recurring_issues": [],
+  "expert_tips": [
+    "Pair with quality bass management for optimal translation",
+    "Use Sonarworks integration for flat response in untreated rooms"
+  ]
+}

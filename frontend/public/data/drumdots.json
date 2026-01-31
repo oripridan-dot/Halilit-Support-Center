@@ -1,108 +1,120 @@
 {
-  "brand_name": "Drumdots",
-  "products": [
-    {
-      "id": "drumdots_75_dd6m",
-      "name": "Drumdots DD6M",
-      "description": "Drumdots DD6M",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/drumdots_75_dd6m.jpg",
-      "product_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
-      "is_sold": true,
-      "price": 50.0,
-      "halilit_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 50.0,
-        "original_price": 50.0
-      },
-      "brand": "Drumdots",
-      "logo_url": "/assets/logos/drumdots_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/drumdots_75_dd6m.jpg",
-        "thumbnail": "/data/thumbnails/drumdots_75_dd6m.jpg",
-        "high_res": "/data/thumbnails/drumdots_75_dd6m.jpg",
-        "original": "/data/thumbnails/drumdots_75_dd6m.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "drumdots_75_dd4",
-      "name": "Drumdots DD4",
-      "description": "Drumdots DD4",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/drumdots_75_dd4.jpg",
-      "product_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
-      "is_sold": true,
-      "price": 46.0,
-      "halilit_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 46.0,
-        "original_price": 46.0
-      },
-      "brand": "Drumdots",
-      "logo_url": "/assets/logos/drumdots_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/drumdots_75_dd4.jpg",
-        "thumbnail": "/data/thumbnails/drumdots_75_dd4.jpg",
-        "high_res": "/data/thumbnails/drumdots_75_dd4.jpg",
-        "original": "/data/thumbnails/drumdots_75_dd4.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    }
-  ],
-  "generated_at": "2026-01-27T08:20:48.212828",
-  "brand_slug": "drumdots",
-  "refined_at": "2026-01-27T08:20:48.360352+00:00",
-  "brand_identity": {
+  "brand_id": "drumdots",
+  "brand_info": {
     "id": "drumdots",
     "name": "Drumdots",
-    "brand_colors": {},
+    "official_website": "https://drumdot.com/",
     "logo_url": "/assets/logos/drumdots_logo.png",
-    "taxonomy_stats": {
-      "validated": 2,
-      "normalized": 0,
-      "uncategorized": 0
+    "description": "drumdots, the only drum damper engineered to \"Control the Ring, Keep the Tone\"",
+    "social_links": {
+      "instagram": "https://www.instagram.com/drumdots/",
+      "facebook": "https://www.facebook.com/Drumdot/",
+      "twitter": "https://twitter.com/drumdots",
+      "youtube": "https://www.youtube.com/user/drumdots1"
     },
-    "total_products": 2
+    "last_updated": "2026-01-30T02:38:11.943786"
   },
-  "hierarchy": {
-    "accessories": {
-      "General": [
-        {
-          "id": "drumdots_75_dd6m",
-          "name": "Drumdots DD6M",
-          "description": "Drumdots DD6M",
-          "images": {
-            "main": "/data/thumbnails/drumdots_75_dd6m.jpg",
-            "thumbnail": "/data/thumbnails/drumdots_75_dd6m.jpg",
-            "high_res": "/data/thumbnails/drumdots_75_dd6m.jpg",
-            "original": "/data/thumbnails/drumdots_75_dd6m.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "drumdots_75_dd4",
-          "name": "Drumdots DD4",
-          "description": "Drumdots DD4",
-          "images": {
-            "main": "/data/thumbnails/drumdots_75_dd4.jpg",
-            "thumbnail": "/data/thumbnails/drumdots_75_dd4.jpg",
-            "high_res": "/data/thumbnails/drumdots_75_dd4.jpg",
-            "original": "/data/thumbnails/drumdots_75_dd4.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        }
-      ]
+  "products": [
+    {
+      "id": "drumdots_1683193",
+      "halilit_id": "1683193",
+      "name": "Drumdots DD4",
+      "brand": "Drumdots",
+      "description": "<div class=\"desc\">\n<div style=\"background-color: #000; width: 100%; border-bottom: 4px dashed #fff;\">\n<p style=\"text-align: center;\"><span style=\"font-size: 18pt;\"><strong><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"164\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/233490/original/593f4e166e9b55aabc0b6a1cef2239ca.jpg?1519718381\" width=\"507\"/></strong></span></p>\n<p style=\"color: #ffffff; text-align: center;\"><span style=\"font-size: 14pt;\"><strong>\u05d4\u05de\u05e9\u05ea\u05d9\u05e7 \u05d4\u05d9\u05d7\u05d9\u05d3\u05d9 \u05dc\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05e4\u05d5\u05d2\u05dd \u05d1\u05e6\u05dc\u05d9\u05dc \u05d4\u05d1\u05e1\u05d9\u05e1\u05d9 \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4!</strong></span></p>\n</div>\n<p>\u00a0<span style=\"font-size: 12pt;\">\u05d4-Drumdots \u05e2\u05e9\u05d5\u05d9\u05d5\u05ea \u05de\u05e4\u05d5\u05dc\u05d9\u05de\u05e8 \u05d9\u05d9\u05d7\u05d3\u05d9 \u05e9\u05e4\u05d5\u05ea\u05d7 \u05d1\u05d1\u05dc\u05e2\u05d3\u05d9\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05de\u05d5\u05e6\u05e8 \u05d6\u05d4.<br/></span><span style=\"font-size: 12pt;\">\u05d0\u05d9\u05d3\u05d9\u05d0\u05dc\u05d9 \u05dc\u05ea\u05d5\u05e4\u05d9 \u05e1\u05e0\u05e8, \u05d8\u05de\u05d8\u05de\u05d9\u05dd, \u05e4\u05dc\u05d5\u05e8 \u05d5\u05de\u05e6\u05d9\u05dc\u05d5\u05ea \u05db\u05d0\u05d7\u05d3 \u05d5\u05de\u05d0\u05e4\u05e9\u05e8 \u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1\u05de\u05e6\u05d5\u05d9\u05d9\u05e0\u05ea \u05d1-Sustain \u05d5\u05d4-Ring.</span>\u00a0\u00a0</p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/tOQLp1U4cLM\" width=\"640\"></iframe></p>\n<table style=\"width: 698px; height: auto; float: right;\">\n<tbody>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1-Ring \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05d4\u05e7\u05e9\u05d4</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/wNxZ8gPepJI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05d4\u05d0\u05dd Drumdots \u05e2\u05de\u05d9\u05d3\u05d5\u05ea?</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/YSNPcsBtpSI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e0\u05d2\u05d9\u05e0\u05d4 \u05e2\u05dd Drumdots \u05e2\u05dc Cowbell</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/sdVit9aYtvQ\" width=\"300\"></iframe></td>\n</tr>\n</tbody>\n</table>\n<p>\u00a0</p>\n<p>\u00a0</p>\n<p>\u00a0</p>\n</div>",
+      "short_description": "\u05e2\u05e8\u05db\u05ea 4 \u05de\u05d3\u05d1\u05e7\u05d5\u05ea \u05d0\u05d8\u05d9\u05de\u05d4 \u05e9\u05e7\u05d5\u05e4\u05d5\u05ea \u05d9\u05d9\u05d7\u05d5\u05d3\u05d9\u05d5\u05ea \u05dc\u05ea\u05d5\u05e4\u05d9\u05dd \u05d5\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05de\u05d1\u05d9\u05ea Drumdots",
+      "category": "UNCATEGORIZED",
+      "price": 46.0,
+      "pricing": {
+        "regular_price": 46.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7467128/large/59851fa8fbd31c8f2e33b18039ce5e01.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 164.0
+      },
+      "source_url": "https://www.halilit.com/items/1683193-drumdots-dd4",
+      "generated_at": "2026-01-30T02:38:25.910401",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 164.0
+      }
+    },
+    {
+      "id": "drumdots_1689994",
+      "halilit_id": "1689994",
+      "name": "Drumdots DD6M",
+      "brand": "Drumdots",
+      "description": "<div class=\"desc\">\n<div style=\"background-color: #000; width: 100%; border-bottom: 4px dashed #fff;\">\n<p style=\"text-align: center;\"><span style=\"font-size: 18pt;\"><strong><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"259\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/233490/original/593f4e166e9b55aabc0b6a1cef2239ca.jpg?1519718381\" width=\"800\"/></strong></span></p>\n<p style=\"color: #ffffff; text-align: center;\"><span style=\"font-size: 18pt;\"><strong>\u05d4\u05de\u05e9\u05ea\u05d9\u05e7 \u05d4\u05d9\u05d7\u05d9\u05d3\u05d9 \u05dc\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05e9\u05d0\u05d9\u05e0\u05d5 \u05e4\u05d5\u05d2\u05dd \u05d1\u05e6\u05dc\u05d9\u05dc \u05d4\u05d1\u05e1\u05d9\u05e1\u05d9 \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4!</strong></span></p>\n</div>\n<p style=\"text-align: center;\">\u00a0\u00a0</p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"360\" src=\"https://www.youtube.com/embed/tOQLp1U4cLM\" width=\"640\"></iframe></p>\n<p><span style=\"font-size: 12pt;\">\u00a0\u05d4-Drumdots \u05e2\u05e9\u05d5\u05d9\u05d5\u05ea \u05de\u05e4\u05d5\u05dc\u05d9\u05de\u05e8 \u05d9\u05d9\u05d7\u05d3\u05d9 \u05e9\u05e4\u05d5\u05ea\u05d7 \u05d1\u05d1\u05dc\u05e2\u05d3\u05d9\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05de\u05d5\u05e6\u05e8 \u05d6\u05d4.<br/>\u05d0\u05d9\u05d3\u05d9\u05d0\u05dc\u05d9 \u05dc\u05ea\u05d5\u05e4\u05d9 \u05e1\u05e0\u05e8, \u05d8\u05de\u05d8\u05de\u05d9\u05dd, \u05e4\u05dc\u05d5\u05e8 \u05d5\u05de\u05e6\u05d9\u05dc\u05d5\u05ea \u05db\u05d0\u05d7\u05d3 \u05d5\u05de\u05d0\u05e4\u05e9\u05e8 \u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1\u05de\u05e6\u05d5\u05d9\u05d9\u05e0\u05ea \u05d1-Sustain \u05d5\u05d4-Ring.</span></p>\n<table style=\"width: 698px; height: auto; float: right;\">\n<tbody>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d1-Ring \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05d4\u05e7\u05e9\u05d4</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/wNxZ8gPepJI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05d4\u05d0\u05dd Drumdots \u05e2\u05de\u05d9\u05d3\u05d5\u05ea?</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/YSNPcsBtpSI\" width=\"300\"></iframe></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><span style=\"font-size: 12pt;\"><strong>\u05e0\u05d2\u05d9\u05e0\u05d4 \u05e2\u05dd Drumdots \u05e2\u05dc Cowbell</strong></span></td>\n</tr>\n<tr style=\"text-align: center;\">\n<td style=\"width: 688px;\"><iframe allowfullscreen=\"allowfullscreen\" frameborder=\"0\" height=\"300\" src=\"https://www.youtube.com/embed/sdVit9aYtvQ\" width=\"300\"></iframe></td>\n</tr>\n</tbody>\n</table>\n</div>",
+      "short_description": "\u05e2\u05e8\u05db\u05ea 6 \u05de\u05d9\u05e0\u05d9 \u05de\u05d3\u05d1\u05e7\u05d5\u05ea \u05dc\u05d0\u05d8\u05d9\u05de\u05d4 \u05d9\u05d9\u05d7\u05d5\u05d3\u05d9\u05d5\u05ea \u05dc\u05ea\u05d5\u05e4\u05d9\u05dd \u05d5\u05db\u05dc\u05d9 \u05d4\u05e7\u05e9\u05d4 \u05de\u05d1\u05d9\u05ea Drumdots",
+      "category": "UNCATEGORIZED",
+      "price": 50.0,
+      "pricing": {
+        "regular_price": 50.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2672673/large/63aff6c07cdb4e9bee57793ec75c76bf.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 259.0
+      },
+      "source_url": "https://www.halilit.com/items/1689994-drumdots-dd6m",
+      "generated_at": "2026-01-30T02:38:26.081088",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 259.0
+      }
+    }
+  ],
+  "processed_badge": {
+    "level": "DIAMOND",
+    "checks": {
+      "commercial_data": true,
+      "official_manual": true,
+      "taxonomy_aligned": true,
+      "context_layer": true,
+      "media_optimized": true
+    },
+    "signature": "refinery-v2-2"
+  },
+  "meta": {
+    "total_count": 2,
+    "refinery_version": "2.0",
+    "tiers": {
+      "DIAMOND": 0,
+      "GOLD": 0,
+      "SILVER": 2,
+      "BRONZE": 0
     }
   }
 }

@@ -115,6 +115,10 @@ export function normalizeProduct(input: any): Product {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     related: rawProduct.related,
 
+    // NEW: Refinery v5 Pill Data (The 3 Pillars)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    pill_data: rawProduct.pill_data || null,
+
     // Metadata
     verified: true,
   };

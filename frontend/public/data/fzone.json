@@ -1,436 +1,986 @@
 {
-  "brand_name": "Fzone",
-  "products": [
-    {
-      "id": "fzone_35_fm310",
-      "name": "FZONE FM-310",
-      "description": "FZONE FM-310",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_fm310.jpg",
-      "product_url": "https://www.halilit.com/items/4202993-fzone-fm-310",
-      "is_sold": true,
-      "price": 122.0,
-      "halilit_url": "https://www.halilit.com/items/4202993-fzone-fm-310",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 122.0,
-        "original_price": 122.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_fm310.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_fm310.jpg",
-        "high_res": "/data/thumbnails/fzone_35_fm310.jpg",
-        "original": "/data/thumbnails/fzone_35_fm310.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_s2",
-      "name": "FZONE S2",
-      "description": "FZONE S2",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_s2.jpg",
-      "product_url": "https://www.halilit.com/items/4202828-fzone-s-2",
-      "is_sold": true,
-      "price": 57.0,
-      "halilit_url": "https://www.halilit.com/items/4202828-fzone-s-2",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 57.0,
-        "original_price": 57.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_s2.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_s2.jpg",
-        "high_res": "/data/thumbnails/fzone_35_s2.jpg",
-        "original": "/data/thumbnails/fzone_35_s2.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_fzpc351",
-      "name": "FZone FZP-C351 Pick",
-      "description": "FZone FZP-C351 Pick",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_fzpc351.jpg",
-      "product_url": "https://www.halilit.com/items/7811671-fzone-fzp-c351-pick",
-      "is_sold": true,
-      "price": 2.0,
-      "halilit_url": "https://www.halilit.com/items/7811671-fzone-fzp-c351-pick",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 2.0,
-        "original_price": 2.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_fzpc351.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_fzpc351.jpg",
-        "high_res": "/data/thumbnails/fzone_35_fzpc351.jpg",
-        "original": "/data/thumbnails/fzone_35_fzpc351.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_fzpn351",
-      "name": "FZone FZP-N351 Pick",
-      "description": "FZone FZP-N351 Pick",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_fzpn351.jpg",
-      "product_url": "https://www.halilit.com/items/7922800-fzone-fzp-n351-pick",
-      "is_sold": true,
-      "price": 2.0,
-      "halilit_url": "https://www.halilit.com/items/7922800-fzone-fzp-n351-pick",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 2.0,
-        "original_price": 2.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_fzpn351.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_fzpn351.jpg",
-        "high_res": "/data/thumbnails/fzone_35_fzpn351.jpg",
-        "original": "/data/thumbnails/fzone_35_fzpn351.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_s3",
-      "name": "FZONE S3",
-      "description": "FZONE S3",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_s3.jpg",
-      "product_url": "https://www.halilit.com/items/3233932-fzone-s-3",
-      "is_sold": true,
-      "price": 41.0,
-      "halilit_url": "https://www.halilit.com/items/3233932-fzone-s-3",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 41.0,
-        "original_price": 41.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_s3.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_s3.jpg",
-        "high_res": "/data/thumbnails/fzone_35_s3.jpg",
-        "original": "/data/thumbnails/fzone_35_s3.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_sw1",
-      "name": "FZONE SW-1",
-      "description": "FZONE SW-1",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_sw1.jpg",
-      "product_url": "https://www.halilit.com/items/4204747-fzone-sw-1",
-      "is_sold": true,
-      "price": 8.0,
-      "halilit_url": "https://www.halilit.com/items/4204747-fzone-sw-1",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 8.0,
-        "original_price": 8.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_sw1.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_sw1.jpg",
-        "high_res": "/data/thumbnails/fzone_35_sw1.jpg",
-        "original": "/data/thumbnails/fzone_35_sw1.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_fc71_gold",
-      "name": "FC-71 capo FZONE",
-      "description": "FC-71 capo FZONE",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-      "product_url": "https://www.halilit.com/items/7811610-fc-71-capo",
-      "is_sold": true,
-      "price": 38.0,
-      "halilit_url": "https://www.halilit.com/items/7811610-fc-71-capo",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 38.0,
-        "original_price": 38.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-        "high_res": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-        "original": "/data/thumbnails/fzone_35_fc71_gold.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_fc71_blue",
-      "name": "FC-71 capo FZONE",
-      "description": "FC-71 capo FZONE",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-      "product_url": "https://www.halilit.com/items/7922739-fc-71-capo",
-      "is_sold": true,
-      "price": 38.0,
-      "halilit_url": "https://www.halilit.com/items/7922739-fc-71-capo",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 38.0,
-        "original_price": 38.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-        "high_res": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-        "original": "/data/thumbnails/fzone_35_fc71_blue.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_fc82",
-      "name": "FZONE FC-82 Ukulele Capo",
-      "description": "FZONE FC-82 Ukulele Capo",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_fc82.jpg",
-      "product_url": "https://www.halilit.com/items/4241577-fzone-fc-82-ukulele-capo",
-      "is_sold": true,
-      "price": 41.0,
-      "halilit_url": "https://www.halilit.com/items/4241577-fzone-fc-82-ukulele-capo",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 41.0,
-        "original_price": 41.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_fc82.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_fc82.jpg",
-        "high_res": "/data/thumbnails/fzone_35_fc82.jpg",
-        "original": "/data/thumbnails/fzone_35_fc82.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "fzone_35_lk1",
-      "name": "FZONE LK-1",
-      "description": "FZONE LK-1",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/fzone_35_lk1.jpg",
-      "product_url": "https://www.halilit.com/items/4204739-fzone-lk-1",
-      "is_sold": true,
-      "price": 24.0,
-      "halilit_url": "https://www.halilit.com/items/4204739-fzone-lk-1",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 24.0,
-        "original_price": 24.0
-      },
-      "brand": "Fzone",
-      "logo_url": "/assets/logos/fzone_logo.png",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/fzone_35_lk1.jpg",
-        "thumbnail": "/data/thumbnails/fzone_35_lk1.jpg",
-        "high_res": "/data/thumbnails/fzone_35_lk1.jpg",
-        "original": "/data/thumbnails/fzone_35_lk1.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    }
-  ],
-  "generated_at": "2026-01-27T08:20:46.627072",
-  "brand_slug": "fzone",
-  "refined_at": "2026-01-27T08:20:46.772788+00:00",
-  "brand_identity": {
+  "brand_id": "fzone",
+  "brand_info": {
     "id": "fzone",
     "name": "Fzone",
-    "brand_colors": {},
-    "logo_url": "/assets/logos/fzone_logo.png",
-    "taxonomy_stats": {
-      "validated": 10,
-      "normalized": 0,
-      "uncategorized": 0
-    },
-    "total_products": 10
+    "official_website": "http://www.fzone.cn/",
+    "logo_url": null,
+    "logo_local_path": null,
+    "description": null,
+    "social_links": {},
+    "last_updated": "2026-01-30T02:38:30.313496"
   },
-  "hierarchy": {
-    "accessories": {
-      "General": [
-        {
-          "id": "fzone_35_fm310",
-          "name": "FZONE FM-310",
-          "description": "FZONE FM-310",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_fm310.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_fm310.jpg",
-            "high_res": "/data/thumbnails/fzone_35_fm310.jpg",
-            "original": "/data/thumbnails/fzone_35_fm310.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_s2",
-          "name": "FZONE S2",
-          "description": "FZONE S2",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_s2.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_s2.jpg",
-            "high_res": "/data/thumbnails/fzone_35_s2.jpg",
-            "original": "/data/thumbnails/fzone_35_s2.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_fzpc351",
-          "name": "FZone FZP-C351 Pick",
-          "description": "FZone FZP-C351 Pick",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_fzpc351.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_fzpc351.jpg",
-            "high_res": "/data/thumbnails/fzone_35_fzpc351.jpg",
-            "original": "/data/thumbnails/fzone_35_fzpc351.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_fzpn351",
-          "name": "FZone FZP-N351 Pick",
-          "description": "FZone FZP-N351 Pick",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_fzpn351.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_fzpn351.jpg",
-            "high_res": "/data/thumbnails/fzone_35_fzpn351.jpg",
-            "original": "/data/thumbnails/fzone_35_fzpn351.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_s3",
-          "name": "FZONE S3",
-          "description": "FZONE S3",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_s3.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_s3.jpg",
-            "high_res": "/data/thumbnails/fzone_35_s3.jpg",
-            "original": "/data/thumbnails/fzone_35_s3.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_sw1",
-          "name": "FZONE SW-1",
-          "description": "FZONE SW-1",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_sw1.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_sw1.jpg",
-            "high_res": "/data/thumbnails/fzone_35_sw1.jpg",
-            "original": "/data/thumbnails/fzone_35_sw1.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_fc71_gold",
-          "name": "FC-71 capo FZONE",
-          "description": "FC-71 capo FZONE",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-            "high_res": "/data/thumbnails/fzone_35_fc71_gold.jpg",
-            "original": "/data/thumbnails/fzone_35_fc71_gold.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_fc71_blue",
-          "name": "FC-71 capo FZONE",
-          "description": "FC-71 capo FZONE",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-            "high_res": "/data/thumbnails/fzone_35_fc71_blue.jpg",
-            "original": "/data/thumbnails/fzone_35_fc71_blue.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_fc82",
-          "name": "FZONE FC-82 Ukulele Capo",
-          "description": "FZONE FC-82 Ukulele Capo",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_fc82.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_fc82.jpg",
-            "high_res": "/data/thumbnails/fzone_35_fc82.jpg",
-            "original": "/data/thumbnails/fzone_35_fc82.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "fzone_35_lk1",
-          "name": "FZONE LK-1",
-          "description": "FZONE LK-1",
-          "images": {
-            "main": "/data/thumbnails/fzone_35_lk1.jpg",
-            "thumbnail": "/data/thumbnails/fzone_35_lk1.jpg",
-            "high_res": "/data/thumbnails/fzone_35_lk1.jpg",
-            "original": "/data/thumbnails/fzone_35_lk1.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        }
-      ]
+  "products": [
+    {
+      "id": "fzone_7820935",
+      "halilit_id": "7820935",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Green",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 16px;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p>\u00a0<img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD8I11N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 8 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 11 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"8 \u05d1\u05e2\u05dc 11 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d9\u05e8\u05d5\u05e7 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 301.0,
+      "pricing": {
+        "regular_price": 301.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360533/large/0f992505704b835b1b6ed88629d7298d.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360533/large/0f992505704b835b1b6ed88629d7298d.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360533/large/0f992505704b835b1b6ed88629d7298d.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360533/large/0f992505704b835b1b6ed88629d7298d.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820935-fzone-std8i11n-green-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:25.943853",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7813255",
+      "halilit_id": "7813255",
+      "name": "\u05ea\u05d9\u05e7 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 Fzone CUB-3",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d5\u05e2\u05de\u05d9\u05d3 \u05dc\u05d9\u05e7\u05dc\u05dc\u05d4</span></p>\n</div>",
+      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05e6\u05d1\u05e2 \u05e9\u05d7\u05d5\u05e8 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 58.0,
+      "pricing": {
+        "regular_price": 58.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16353286/large/b4620327cab7d111c9e68f58836c2d1f.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16353286/large/b4620327cab7d111c9e68f58836c2d1f.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16353286/large/b4620327cab7d111c9e68f58836c2d1f.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16353286/large/b4620327cab7d111c9e68f58836c2d1f.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7813255-fzone-cub-3-ukulele-gig-bag",
+      "generated_at": "2026-01-30T02:39:26.092829",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7922804",
+      "halilit_id": "7922804",
+      "name": "\u05d8\u05d9\u05d5\u05e0\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 Fzone MN-5",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05de\u05d7\u05e4\u05e9\u05d9\u05dd \u05d8\u05d9\u05d5\u05e0\u05e8 \u05d0\u05de\u05d9\u05df \u05d5\u05de\u05ea\u05e7\u05d3\u05dd \u05dc\u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4 \u05e9\u05dc\u05db\u05dd? \u05d4-Fzone MN-5 Tuner \u05d4\u05d5\u05d0 \u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d4\u05de\u05d5\u05e9\u05dc\u05de\u05ea \u05e2\u05d1\u05d5\u05e8\u05db\u05dd! <br/>\u05e2\u05dd \u05de\u05e1\u05da Dual color backlit <span class=\"caps\">LCD</span> \u05d1\u05e2\u05dc \u05e0\u05d9\u05d2\u05d5\u05d3\u05d9\u05d5\u05ea \u05d2\u05d1\u05d5\u05d4\u05d4 \u05d5\u05ea\u05e6\u05d5\u05d2\u05d4 \u05d1\u05e8\u05d5\u05e8\u05d4 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3, \u05ea\u05d5\u05db\u05dc\u05d5 \u05dc\u05db\u05d5\u05d5\u05df \u05d0\u05ea \u05d4\u05db\u05dc\u05d9 \u05e9\u05dc\u05db\u05dd \u05d1\u05d3\u05d9\u05d5\u05e7 \u05de\u05e8\u05d1\u05d9 \u05d5\u05d1\u05e7\u05dc\u05d5\u05ea.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05ea\u05db\u05d5\u05e0\u05d5\u05ea \u05e2\u05d9\u05e7\u05e8\u05d9\u05d5\u05ea:</span></p>\n<p><span style=\"font-size: 12pt;\">\u05de\u05e1\u05da Dual color backlit <span class=\"caps\">LCD</span> \u2013 \u05ea\u05e6\u05d5\u05d2\u05d4 \u05d7\u05d3\u05d4 \u05d5\u05d1\u05e8\u05d5\u05e8\u05d4 \u05dc\u05e7\u05e8\u05d9\u05d0\u05d4 \u05e0\u05d5\u05d7\u05d4 \u05d1\u05db\u05dc \u05ea\u05e0\u05d0\u05d9 \u05d4\u05ea\u05d0\u05d5\u05e8\u05d4. \u05de\u05d0\u05d9\u05e8 \u05d1\u05e6\u05d1\u05e2 \u05d9\u05e8\u05d5\u05e7 \u05db\u05d0\u05e9\u05e8 \u05d4\u05db\u05dc\u05d9 \u05de\u05db\u05d5\u05d5\u05df.<br/></span><span style=\"font-size: 12pt;\">\u05e7\u05dc\u05d9\u05e4\u05e1 \u05de\u05e1\u05ea\u05d5\u05d1\u05d1 \u2013 \u05de\u05ea\u05d0\u05d9\u05dd \u05dc\u05de\u05d2\u05d5\u05d5\u05df \u05d6\u05d5\u05d5\u05d9\u05d5\u05ea \u05db\u05d9\u05d5\u05d5\u05df \u05dc\u05e0\u05d5\u05d7\u05d5\u05ea \u05de\u05e8\u05d1\u05d9\u05ea.<br/></span><span style=\"font-size: 12pt;\">\u05db\u05d9\u05d1\u05d5\u05d9 \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9 \u2013 \u05de\u05d0\u05e8\u05d9\u05da \u05d0\u05ea \u05d7\u05d9\u05d9 \u05d4\u05e1\u05d5\u05dc\u05dc\u05d4 \u05d5\u05e9\u05d5\u05de\u05e8 \u05e2\u05dc \u05d9\u05e2\u05d9\u05dc\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea.<br/></span><span style=\"font-size: 12pt;\">\u05d4-Fzone MN-5 Tuner \u05de\u05ea\u05d0\u05d9\u05dd \u05dc\u05db\u05dc\u05d9 \u05e0\u05d2\u05d9\u05e0\u05d4 \u05e9\u05d5\u05e0\u05d9\u05dd, \u05db\u05d5\u05dc\u05dc \u05d2\u05d9\u05d8\u05e8\u05d4, \u05d1\u05e1, \u05db\u05d9\u05e0\u05d5\u05e8, \u05d9\u05d5\u05e7\u05d5\u05dc\u05d9\u05dc\u05d9 \u05d5\u05e2\u05d5\u05d3. \u05d8\u05d9\u05d5\u05e0\u05e8 \u05de\u05d3\u05d5\u05d9\u05e7, \u05e2\u05de\u05d9\u05d3 \u05d5\u05e0\u05d5\u05d7 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05d4\u05d0\u05d9\u05d3\u05d9\u05d0\u05dc\u05d9 \u05dc\u05db\u05dc \u05de\u05d5\u05d6\u05d9\u05e7\u05d0\u05d9!</span></p>\n</div>",
+      "short_description": "\u05d8\u05d9\u05d5\u05e0\u05e8 \u05e0\u05d8\u05e2\u05df \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e2\u05dd \u05ea\u05e6\u05d5\u05d2\u05eaLCD\u05d1\u05d4\u05d9\u05e8\u05d4 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 29.0,
+      "pricing": {
+        "regular_price": 29.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551720/large/d4d9f95cb8d7c0da8ad5e4d35025caab.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551720/large/d4d9f95cb8d7c0da8ad5e4d35025caab.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551720/large/d4d9f95cb8d7c0da8ad5e4d35025caab.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551720/large/d4d9f95cb8d7c0da8ad5e4d35025caab.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7922804-fzone-mn-5-mini-tuner",
+      "generated_at": "2026-01-30T02:39:26.259560",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7820954",
+      "halilit_id": "7820954",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Red",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><span style=\"font-size: 12pt;\"><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD8I11N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 8 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 11 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"8 \u05d1\u05e2\u05dc 11 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d0\u05d3\u05d5\u05dd \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 301.0,
+      "pricing": {
+        "regular_price": 301.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360609/large/c81479a3df55f842adb67a49f839525e.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360609/large/c81479a3df55f842adb67a49f839525e.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360609/large/c81479a3df55f842adb67a49f839525e.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360609/large/c81479a3df55f842adb67a49f839525e.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820954-fzone-std8i11n-red-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:26.409656",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7811726",
+      "halilit_id": "7811726",
+      "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d2\u05d5\u05de\u05d9 \u05dc\u05e4\u05ea\u05d7 \u05d4\u05ea\u05d4\u05d5\u05d3\u05d4 Fzone SC-100",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d2\u05d5\u05de\u05d9 100mm \u05dc\u05e4\u05ea\u05d7 \u05d4\u05ea\u05d4\u05d5\u05d3\u05d4 \u05e9\u05dc \u05d2\u05d9\u05d8\u05e8\u05d4 \u05e7\u05dc\u05d0\u05e1\u05d9\u05ea/\u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 15.0,
+      "pricing": {
+        "regular_price": 15.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16348302/large/2cd5e0d176aeb5b25d1ca0d034110704.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16348302/large/2cd5e0d176aeb5b25d1ca0d034110704.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16348302/large/2cd5e0d176aeb5b25d1ca0d034110704.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16348302/large/2cd5e0d176aeb5b25d1ca0d034110704.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7811726-fzone-sc-100",
+      "generated_at": "2026-01-30T02:39:26.516606",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7811653",
+      "halilit_id": "7811653",
+      "name": "\u05ea\u05d9\u05e7 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea Fzone FGB-121",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea \u05e2\u05dd \u05e8\u05d9\u05e4\u05d5\u05d3 \u05e4\u05e0\u05d9\u05de\u05d9 25mm \u05e2\u05d1\u05d5\u05e8 \u05d4\u05d2\u05e0\u05d4 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 169.0,
+      "pricing": {
+        "regular_price": 169.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16322808/large/91f0b4268dc0dc72cf6a128d13386dcc.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16322808/large/91f0b4268dc0dc72cf6a128d13386dcc.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16322808/large/91f0b4268dc0dc72cf6a128d13386dcc.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16322808/large/91f0b4268dc0dc72cf6a128d13386dcc.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7811653-fzone-fgb-121-acoustic-guitar-bag",
+      "generated_at": "2026-01-30T02:39:26.606529",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7820531",
+      "halilit_id": "7820531",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD6I8N Gold",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 16px;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD6I8N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 6 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 8 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"6 \u05d1\u05e2\u05dc 8 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d6\u05d4\u05d1 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 200.0,
+      "pricing": {
+        "regular_price": 200.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359773/large/d862745a3ff3059426d92dbca44a7e25.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359773/large/d862745a3ff3059426d92dbca44a7e25.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359773/large/d862745a3ff3059426d92dbca44a7e25.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359773/large/d862745a3ff3059426d92dbca44a7e25.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820531-fzone-std6i8n-gold-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:26.683312",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7820496",
+      "halilit_id": "7820496",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD6I8N Blue",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD6I8N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 6 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 8 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"6 \u05d1\u05e2\u05dc 8 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05db\u05d7\u05d5\u05dc \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 200.0,
+      "pricing": {
+        "regular_price": 200.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359634/large/cd9877a5ae66d2e5c96f9677c527a92b.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359634/large/cd9877a5ae66d2e5c96f9677c527a92b.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359634/large/cd9877a5ae66d2e5c96f9677c527a92b.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359634/large/cd9877a5ae66d2e5c96f9677c527a92b.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820496-fzone-std6i8n-blue-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:26.795632",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_4202828",
+      "halilit_id": "4202828",
+      "name": "FZONE S2",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05de\u05d1\u05d9\u05eaFZONE",
+      "category": "UNCATEGORIZED",
+      "price": 57.0,
+      "pricing": {
+        "regular_price": 57.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726385/large/8abbbb387d5f5424a452b60366b3e8cb.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726385/large/8abbbb387d5f5424a452b60366b3e8cb.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726385/large/8abbbb387d5f5424a452b60366b3e8cb.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726385/large/8abbbb387d5f5424a452b60366b3e8cb.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/4202828-fzone-s-2",
+      "generated_at": "2026-01-30T02:39:27.047588",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7820946",
+      "halilit_id": "7820946",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Purple",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><span style=\"font-size: 12pt;\"><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD8I11N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 8 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 11 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"8 \u05d1\u05e2\u05dc 11 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05e1\u05d2\u05d5\u05dc \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 301.0,
+      "pricing": {
+        "regular_price": 301.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360578/large/04b5c0f369666da71abb403604bb90e7.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360578/large/04b5c0f369666da71abb403604bb90e7.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360578/large/04b5c0f369666da71abb403604bb90e7.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360578/large/04b5c0f369666da71abb403604bb90e7.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820946-fzone-std8i11n-purple-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:27.190677",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7820838",
+      "halilit_id": "7820838",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD6I8N Purple",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD6I8N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 6 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 8 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"6 \u05d1\u05e2\u05dc 8 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05e1\u05d2\u05d5\u05dc \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 200.0,
+      "pricing": {
+        "regular_price": 200.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360359/large/b1feac88b43a16ecccd7205b68cc1f46.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360359/large/b1feac88b43a16ecccd7205b68cc1f46.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360359/large/b1feac88b43a16ecccd7205b68cc1f46.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360359/large/b1feac88b43a16ecccd7205b68cc1f46.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820838-fzone-std6i8n-purple-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:27.340213",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7819909",
+      "halilit_id": "7819909",
+      "name": "\u05ea\u05d9\u05e7 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Fzone FGB-125",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d3\u05de\u05d5\u05d9 \u05e2\u05d5\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05ea</span></p>\n</div>",
+      "short_description": "\u05ea\u05d9\u05e7 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d3\u05de\u05d5\u05d9 \u05e2\u05d5\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 105.0,
+      "pricing": {
+        "regular_price": 105.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16358370/large/89de9497235f03e3ab8a0069debeb895.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16358370/large/89de9497235f03e3ab8a0069debeb895.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16358370/large/89de9497235f03e3ab8a0069debeb895.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16358370/large/89de9497235f03e3ab8a0069debeb895.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7819909-fzone-fgb-125-electric-guitar-gig-bag",
+      "generated_at": "2026-01-30T02:39:27.559836",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_4202993",
+      "halilit_id": "4202993",
+      "name": "FZONE FM-310",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05de\u05d9\u05e0\u05d9 \u05de\u05d8\u05e8\u05d5\u05e0\u05d5\u05dd \u05de\u05db\u05d0\u05e0\u05d9 \u05de\u05d1\u05d9\u05eaFZONE",
+      "category": "UNCATEGORIZED",
+      "price": 122.0,
+      "pricing": {
+        "regular_price": 122.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726704/large/1e7c7bf8510b6eba81f20e87375ac98c.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726704/large/1e7c7bf8510b6eba81f20e87375ac98c.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726704/large/1e7c7bf8510b6eba81f20e87375ac98c.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7726704/large/1e7c7bf8510b6eba81f20e87375ac98c.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/4202993-fzone-fm-310",
+      "generated_at": "2026-01-30T02:39:27.681479",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_4242534",
+      "halilit_id": "4242534",
+      "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea FZONE FZU-30EQ",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d9 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05de\u05d5\u05d2\u05d1\u05e8\u05ea \u05d1\u05d2\u05d9\u05de\u05d5\u05e8 Hogback Europe Burl \u05de\u05d1\u05d9\u05eaFZONE",
+      "category": "UNCATEGORIZED",
+      "price": 801.0,
+      "pricing": {
+        "regular_price": 801.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7810202/large/d3ba203bccda3148d2fb7b758d0a83af.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7810202/large/d3ba203bccda3148d2fb7b758d0a83af.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/7810202/large/d3ba203bccda3148d2fb7b758d0a83af.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7810202/large/d3ba203bccda3148d2fb7b758d0a83af.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/4242534-fzone-fzu-30eq",
+      "generated_at": "2026-01-30T02:39:27.759781",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7922800",
+      "halilit_id": "7922800",
+      "name": "FZone FZP-N351 Pick",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05de\u05e4\u05e8\u05d8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 2.0,
+      "pricing": {
+        "regular_price": 2.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551708/large/725914002707bef97943d39b473d9701.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551708/large/725914002707bef97943d39b473d9701.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551708/large/725914002707bef97943d39b473d9701.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551708/large/725914002707bef97943d39b473d9701.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7922800-fzone-fzp-n351-pick",
+      "generated_at": "2026-01-30T02:39:27.869814",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7922826",
+      "halilit_id": "7922826",
+      "name": "\u05d8\u05d9\u05d5\u05e0\u05e8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 Fzone MN-6",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05de\u05d7\u05e4\u05e9\u05d9\u05dd \u05d8\u05d9\u05d5\u05e0\u05e8 \u05d0\u05de\u05d9\u05df \u05d5\u05de\u05ea\u05e7\u05d3\u05dd \u05dc\u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4 \u05e9\u05dc\u05db\u05dd? \u05d4-Fzone MN-6 Tuner \u05d4\u05d5\u05d0 \u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d4\u05de\u05d5\u05e9\u05dc\u05de\u05ea \u05e2\u05d1\u05d5\u05e8\u05db\u05dd! <br/>\u05e2\u05dd \u05de\u05e1\u05da Color <span class=\"caps\">LCD</span> \u05d1\u05e2\u05dc \u05e0\u05d9\u05d2\u05d5\u05d3\u05d9\u05d5\u05ea \u05d2\u05d1\u05d5\u05d4\u05d4 \u05d5\u05ea\u05e6\u05d5\u05d2\u05d4 \u05d1\u05e8\u05d5\u05e8\u05d4 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3, \u05ea\u05d5\u05db\u05dc\u05d5 \u05dc\u05db\u05d5\u05d5\u05df \u05d0\u05ea \u05d4\u05db\u05dc\u05d9 \u05e9\u05dc\u05db\u05dd \u05d1\u05d3\u05d9\u05d5\u05e7 \u05de\u05e8\u05d1\u05d9 \u05d5\u05d1\u05e7\u05dc\u05d5\u05ea.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05ea\u05db\u05d5\u05e0\u05d5\u05ea \u05e2\u05d9\u05e7\u05e8\u05d9\u05d5\u05ea:</span></p>\n<p><span style=\"font-size: 12pt;\">\u05de\u05e1\u05da Color <span class=\"caps\">LCD</span> \u2013 \u05ea\u05e6\u05d5\u05d2\u05d4 \u05d7\u05d3\u05d4 \u05d5\u05d1\u05e8\u05d5\u05e8\u05d4 \u05dc\u05e7\u05e8\u05d9\u05d0\u05d4 \u05e0\u05d5\u05d7\u05d4 \u05d1\u05db\u05dc \u05ea\u05e0\u05d0\u05d9 \u05d4\u05ea\u05d0\u05d5\u05e8\u05d4. \u05de\u05d0\u05d9\u05e8 \u05d1\u05e6\u05d1\u05e2 \u05d9\u05e8\u05d5\u05e7 \u05db\u05d0\u05e9\u05e8 \u05d4\u05db\u05dc\u05d9 \u05de\u05db\u05d5\u05d5\u05df.<br/></span><span style=\"font-size: 12pt;\">\u05e7\u05dc\u05d9\u05e4\u05e1 \u05de\u05e1\u05ea\u05d5\u05d1\u05d1 \u2013 \u05de\u05ea\u05d0\u05d9\u05dd \u05dc\u05de\u05d2\u05d5\u05d5\u05df \u05d6\u05d5\u05d5\u05d9\u05d5\u05ea \u05db\u05d9\u05d5\u05d5\u05df \u05dc\u05e0\u05d5\u05d7\u05d5\u05ea \u05de\u05e8\u05d1\u05d9\u05ea.<br/></span><span style=\"font-size: 12pt;\">\u05db\u05d9\u05d1\u05d5\u05d9 \u05d0\u05d5\u05d8\u05d5\u05de\u05d8\u05d9 \u2013 \u05de\u05d0\u05e8\u05d9\u05da \u05d0\u05ea \u05d7\u05d9\u05d9 \u05d4\u05e1\u05d5\u05dc\u05dc\u05d4 \u05d5\u05e9\u05d5\u05de\u05e8 \u05e2\u05dc \u05d9\u05e2\u05d9\u05dc\u05d5\u05ea \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea.<br/></span><span style=\"font-size: 12pt;\">\u05d4-Fzone MN-6 Tuner \u05de\u05ea\u05d0\u05d9\u05dd \u05dc\u05db\u05dc\u05d9 \u05e0\u05d2\u05d9\u05e0\u05d4 \u05e9\u05d5\u05e0\u05d9\u05dd, \u05db\u05d5\u05dc\u05dc \u05d2\u05d9\u05d8\u05e8\u05d4, \u05d1\u05e1, \u05db\u05d9\u05e0\u05d5\u05e8, \u05d9\u05d5\u05e7\u05d5\u05dc\u05d9\u05dc\u05d9 \u05d5\u05e2\u05d5\u05d3. \u05d8\u05d9\u05d5\u05e0\u05e8 \u05de\u05d3\u05d5\u05d9\u05e7, \u05e2\u05de\u05d9\u05d3 \u05d5\u05e0\u05d5\u05d7 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05d4\u05d0\u05d9\u05d3\u05d9\u05d0\u05dc\u05d9 \u05dc\u05db\u05dc \u05de\u05d5\u05d6\u05d9\u05e7\u05d0\u05d9!</span></p>\n</div>",
+      "short_description": "\u05d8\u05d9\u05d5\u05e0\u05e8 \u05e0\u05d8\u05e2\u05df \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05e2\u05dd \u05ea\u05e6\u05d5\u05d2\u05eaLCD\u05d1\u05d4\u05d9\u05e8\u05d4 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 31.0,
+      "pricing": {
+        "regular_price": 31.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551748/large/bd159c64b46770bac8f4cb0fdc72544a.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551748/large/bd159c64b46770bac8f4cb0fdc72544a.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551748/large/bd159c64b46770bac8f4cb0fdc72544a.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551748/large/bd159c64b46770bac8f4cb0fdc72544a.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7922826-fzone-mn-6-mini-tuner",
+      "generated_at": "2026-01-30T02:39:27.946393",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7820541",
+      "halilit_id": "7820541",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD6I8N Green",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 16px;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD6I8N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 6 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 8 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"6 \u05d1\u05e2\u05dc 8 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d9\u05e8\u05d5\u05e7 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 200.0,
+      "pricing": {
+        "regular_price": 200.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359815/large/b1671812f33ec495d7c35124c99af3c5.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359815/large/b1671812f33ec495d7c35124c99af3c5.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359815/large/b1671812f33ec495d7c35124c99af3c5.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16359815/large/b1671812f33ec495d7c35124c99af3c5.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820541-fzone-std6i8n-green-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:28.021942",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_3233932",
+      "halilit_id": "3233932",
+      "name": "FZONE S3",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05e1\u05d8\u05e0\u05d3 \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4, \u05db\u05d9\u05e0\u05d5\u05e8 \u05d5\u05e2\u05d5\u05d3 \u05de\u05d2\u05d5\u05d5\u05df \u05db\u05dc\u05d9\u05dd \u05de\u05d1\u05d9\u05eaFZONE",
+      "category": "UNCATEGORIZED",
+      "price": 41.0,
+      "pricing": {
+        "regular_price": 41.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5590060/large/8e6fca8b994ba0e2f51e5e5271047573.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5590060/large/8e6fca8b994ba0e2f51e5e5271047573.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/5590060/large/8e6fca8b994ba0e2f51e5e5271047573.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5590060/large/8e6fca8b994ba0e2f51e5e5271047573.jpg",
+      "features": [
+        "\u05de\u05ea\u05d0\u05d9\u05dd \u05dc\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4, \u05db\u05d9\u05e0\u05d5\u05e8 \u05d5\u05e2\u05d5\u05d3",
+        "4 \u05d9\u05d3\u05d9\u05d5\u05ea \u05d0\u05d7\u05d9\u05d6\u05d4",
+        "\u05de\u05e0\u05d2\u05d5\u05df \u05e7\u05d9\u05e4\u05d5\u05dc \u05e4\u05e9\u05d5\u05d8",
+        "\u05d9\u05e6\u05d9\u05d1\u05d5\u05ea \u05e1\u05d8\u05e0\u05d3 \u05de\u05d5\u05e9\u05dc\u05de\u05ea",
+        "\u05e2\u05e9\u05d5\u05d9 \u05de\u05d7\u05d5\u05de\u05e8 \u05e1\u05d9\u05e0\u05d8\u05d8\u05d9 \u05e7\u05dc, \u05d7\u05d6\u05e7 \u05d5\u05e2\u05de\u05d9\u05d3"
+      ],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/3233932-fzone-s-3",
+      "generated_at": "2026-01-30T02:39:28.097492",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7811671",
+      "halilit_id": "7811671",
+      "name": "FZone FZP-C351 Pick",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05de\u05e4\u05e8\u05d8 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e2\u05d5\u05d1\u05d9 0.46 \u05de\"\u05de \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 2.0,
+      "pricing": {
+        "regular_price": 2.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16326436/large/74ea7655af80cf04cded8e648fcdaf69.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16326436/large/74ea7655af80cf04cded8e648fcdaf69.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16326436/large/74ea7655af80cf04cded8e648fcdaf69.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16326436/large/74ea7655af80cf04cded8e648fcdaf69.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7811671-fzone-fzp-c351-pick",
+      "generated_at": "2026-01-30T02:39:28.172159",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7922840",
+      "halilit_id": "7922840",
+      "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 FZONE FZU-110",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d9 \u05e7\u05d5\u05e0\u05e6\u05e8\u05d8 \u05d1\u05d2\u05d9\u05de\u05d5\u05e8 Sapele laminate \u05de\u05d1\u05d9\u05eaFZONE",
+      "category": "UNCATEGORIZED",
+      "price": 172.0,
+      "pricing": {
+        "regular_price": 172.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551799/large/41724fa029b3641872e55f358f18b1ca.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551799/large/41724fa029b3641872e55f358f18b1ca.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551799/large/41724fa029b3641872e55f358f18b1ca.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16551799/large/41724fa029b3641872e55f358f18b1ca.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7922840-fzone-fzu-110-ukelele",
+      "generated_at": "2026-01-30T02:39:28.249520",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7820959",
+      "halilit_id": "7820959",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Gray",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 16px;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><span style=\"font-size: 16px;\"><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD8I11N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 8 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 11 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"8 \u05d1\u05e2\u05dc 11 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d0\u05e4\u05d5\u05e8 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 301.0,
+      "pricing": {
+        "regular_price": 301.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360623/large/36903aaa7d0addf2c3ab43d132a16a19.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360623/large/36903aaa7d0addf2c3ab43d132a16a19.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360623/large/36903aaa7d0addf2c3ab43d132a16a19.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360623/large/36903aaa7d0addf2c3ab43d132a16a19.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820959-fzone-std8i11n-grey-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:28.353488",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_8301183",
+      "halilit_id": "8301183",
+      "name": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 FZONE FZU-14RS",
+      "brand": "Fzone",
+      "description": "",
+      "short_description": "\u05d9\u05d5\u05e7\u05dc\u05dc\u05d4 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9\u05ea \u05d1\u05d2\u05d9\u05de\u05d5\u05e8 Solid Flame Mango \u05de\u05d1\u05d9\u05eaFZONE",
+      "category": "UNCATEGORIZED",
+      "price": 906.0,
+      "pricing": {
+        "regular_price": 906.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17404406/large/b948e8a75ee0c382789542ead1c0fe26.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17404406/large/b948e8a75ee0c382789542ead1c0fe26.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/17404406/large/b948e8a75ee0c382789542ead1c0fe26.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17404406/large/b948e8a75ee0c382789542ead1c0fe26.jpg",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8301183-fzone-fzu-14rs-ukulele",
+      "generated_at": "2026-01-30T02:39:28.432528",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": []
+    },
+    {
+      "id": "fzone_7820843",
+      "halilit_id": "7820843",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD6I8N Red",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD6I8N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 6 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 8 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"6 \u05d1\u05e2\u05dc 8 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d0\u05d3\u05d5\u05dd \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 200.0,
+      "pricing": {
+        "regular_price": 200.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360378/large/8dc906c1865e91bd33afaff149769aa0.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360378/large/8dc906c1865e91bd33afaff149769aa0.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360378/large/8dc906c1865e91bd33afaff149769aa0.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360378/large/8dc906c1865e91bd33afaff149769aa0.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820843-fzone-std6i8n-red-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:28.508876",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7820912",
+      "halilit_id": "7820912",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Blue",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><span style=\"font-size: 12pt;\"><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg?1743924278\" width=\"102\"/></span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD8I11N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 8 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 11 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"8 \u05d1\u05e2\u05dc 11 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05db\u05d7\u05d5\u05dc \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 301.0,
+      "pricing": {
+        "regular_price": 301.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360461/large/3039977ce9c1b691fcee350703f98acb.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360461/large/3039977ce9c1b691fcee350703f98acb.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360461/large/3039977ce9c1b691fcee350703f98acb.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360461/large/3039977ce9c1b691fcee350703f98acb.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820912-fzone-std8i11n-blue-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:28.584069",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    },
+    {
+      "id": "fzone_7820931",
+      "halilit_id": "7820931",
+      "name": "\u05e4\u05d0\u05e0\u05d8\u05dd Fzone STD8I11N Gold",
+      "brand": "Fzone",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 16px;\">\u05ea\u05e6\u05d5\u05e8\u05ea \u05d4\u05ea\u05d5\u05e3:</span></p>\n<p><span style=\"font-size: 16px;\"><img alt=\"\u05ea\u05de\u05d5\u05e0\u05ea \u05d0\u05d5\u05d5\u05d9\u05e8\u05d4\" height=\"112\" src=\"https://d3m9l0v76dty0.cloudfront.net/system/photos/975395/original/a3811d632a44b1796e17fa9f1ddc9ac5.jpg\" width=\"102\"/></span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4-Tongue drums \u05e9\u05d5\u05d0\u05d1\u05d9\u05dd \u05d0\u05ea \u05e9\u05de\u05dd \u05de\u05d4\u05d7\u05dc\u05e7\u05d9\u05dd \u05d1\u05e6\u05d5\u05e8\u05ea \u05d4\u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05e9\u05d1\u05d4\u05dd \u05d0\u05ea\u05dd \u05de\u05db\u05d9\u05dd \u05d1\u05db\u05dc\u05d9 \u05db\u05d3\u05d9 \u05dc\u05e0\u05d2\u05df \u05d1\u05d5. \u05d4\u05ea\u05d5\u05e6\u05d0\u05d5\u05ea \u05d4\u05df \u05e9\u05d9\u05dc\u05d5\u05d1 \u05e7\u05d5\u05e1\u05de\u05d9 \u05e9\u05dc \u05d2\u05d5\u05d5\u05e0\u05d9\u05dd \u05e9\u05db\u05d9\u05e3 \u05dc\u05e9\u05de\u05d5\u05e2 \u05db\u05de\u05d5 \u05dc\u05e0\u05d2\u05df.</span></p>\n<p><span style=\"font-size: 12pt;\">\u05d4<strong>-Fzone STD8I11N\u00a0</strong>\u05db\u05d5\u05dc\u05dc \u05de\u05e2\u05d8\u05e4\u05ea \u05e4\u05dc\u05d3\u05d4 \u05d1\u05d2\u05d5\u05d3\u05dc 8 \u05d0\u05d9\u05e0\u05e5\u2019 \u05e2\u05dd 11 \u05dc\u05e9\u05d5\u05e0\u05d9\u05d5\u05ea \u05d0\u05e9\u05e8 \u05e0\u05d7\u05ea\u05db\u05d5 \u05d1\u05dc\u05d9\u05d9\u05d6\u05e8 \u05d1\u05d0\u05d5\u05e4\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05dc\u05db\u05d5\u05d5\u05e0\u05d5\u05df \u05de\u05d3\u05d5\u05d9\u05e7 \u05d5\u05e2\u05e7\u05d1\u05d9. </span></p>\n</div>",
+      "short_description": "\u05ea\u05d5\u05e3 \u05e4\u05d0\u05e0\u05d8\u05dd \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \"8 \u05d1\u05e2\u05dc 11 \u05dc\u05e9\u05d5\u05e0\u05d5\u05ea \u05d1\u05e6\u05d1\u05e2 \u05d6\u05d4\u05d1 \u05de\u05d1\u05d9\u05ea Fzone",
+      "category": "UNCATEGORIZED",
+      "price": 301.0,
+      "pricing": {
+        "regular_price": 301.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360518/large/9d6f057478b90bd2fca76da94558b383.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360518/large/9d6f057478b90bd2fca76da94558b383.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360518/large/9d6f057478b90bd2fca76da94558b383.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16360518/large/9d6f057478b90bd2fca76da94558b383.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 112.0
+      },
+      "source_url": "https://www.halilit.com/items/7820931-fzone-std8i11n-gold-steel-tongue-drum",
+      "generated_at": "2026-01-30T02:39:28.659452",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 112.0
+      }
+    }
+  ],
+  "processed_badge": {
+    "level": "DIAMOND",
+    "checks": {
+      "commercial_data": true,
+      "official_manual": true,
+      "taxonomy_aligned": true,
+      "context_layer": true,
+      "media_optimized": true
+    },
+    "signature": "refinery-v2-25"
+  },
+  "meta": {
+    "total_count": 25,
+    "refinery_version": "2.0",
+    "tiers": {
+      "DIAMOND": 0,
+      "GOLD": 0,
+      "SILVER": 25,
+      "BRONZE": 0
     }
   }
 }

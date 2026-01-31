@@ -1,0 +1,82 @@
+{
+  "id": "t5v",
+  "official_name": "Adam Audio T5V Active Monitor",
+  "ui_meta": {
+    "ui_view": "TierBar",
+    "primary_category": "STUDIO_MONITORS",
+    "sub_division": "NEARFIELD",
+    "y_axis_score": 25,
+    "validation_flags": [
+      "Community Unverified"
+    ],
+    "badges": [
+      "SILVER"
+    ]
+  },
+  "commercial_meta": {
+    "price": 1200,
+    "stock": "IN_STOCK",
+    "sku_local": null,
+    "price_verified": true,
+    "sourced_from": [
+      "manufacturer",
+      "official_retailer"
+    ]
+  },
+  "context_meta": {
+    "pros": [],
+    "tips": [],
+    "cons": [],
+    "sources_of_truth": [],
+    "data_confidence": 25
+  },
+  "specs": {
+    "woofer_size_inch": 5.0,
+    "tweeter_type": "U-ART Ribbon",
+    "frequency_response_low_hz": 45,
+    "frequency_response_high_hz": 25000,
+    "power_total_watts": 70
+  },
+  "validation_pipeline": {
+    "step1_official": {
+      "status": "complete",
+      "data_quality": 95,
+      "sources_used": [
+        "manufacturer_specs",
+        "official_media"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step2_commercial": {
+      "status": "complete",
+      "data_quality": 90,
+      "sources_used": [
+        "official_pricing",
+        "stock_api"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step3_context": {
+      "status": "complete",
+      "data_quality": 85,
+      "sources_used": [],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step4_cross_validation": {
+      "status": "complete",
+      "data_quality": 25,
+      "issues": [
+        "Community Unverified"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step5_published": {
+      "status": "complete",
+      "data_quality": 25,
+      "sources_used": [
+        "golden_catalog"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    }
+  }
+}

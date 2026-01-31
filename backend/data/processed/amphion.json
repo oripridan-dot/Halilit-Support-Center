@@ -12,7 +12,7 @@
       "facebook": "https://www.facebook.com/AmphionLoudspeakers/",
       "youtube": "https://www.youtube.com/AmphionLoudspeakers"
     },
-    "last_updated": "2026-01-30T01:08:28.795118"
+    "last_updated": "2026-01-30T02:37:12.158842"
   },
   "products": [
     {
@@ -31,13 +31,54 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-feat25.png",
-        "thumbnail": "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-feat25.png",
+        "main": "/assets/images/amphion/2123111/0008_one12-freq.webp",
+        "thumbnail": "/assets/images/amphion/2123111/0008_one12-freq.webp",
         "gallery": [
-          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-feat25.png"
+          "/assets/images/amphion/2123111/0008_one12-freq.webp",
+          "/assets/images/amphion/2123111/0009_one12-imp.webp",
+          "/assets/images/amphion/2123111/2594-edit-300x300.webp",
+          "/assets/images/amphion/2123111/Amphion-Base-systems-FlexBase-feat25.webp",
+          "/assets/images/amphion/2123111/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-feat25.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One15-feat25.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/2123111/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/2123111/BaseTwo25-front.webp",
+          "/assets/images/amphion/2123111/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/2123111/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/2123111/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/2123111/LQOcean-Sound-StudioB_3B7A6810_fotoKristinStoylen.webp",
+          "/assets/images/amphion/2123111/Lewis-picket-websiteone12.webp",
+          "/assets/images/amphion/2123111/Robbie-one12-website.webp",
+          "/assets/images/amphion/2123111/Screenshot-2022-02-14-at-16.39.01-300x300.webp",
+          "/assets/images/amphion/2123111/Screenshot-2022-11-04-at-9.14.48-300x300.webp",
+          "/assets/images/amphion/2123111/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/2123111/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/2123111/antonio-2-1.webp",
+          "/assets/images/amphion/2123111/antonio-one12-website.webp",
+          "/assets/images/amphion/2123111/argon0-1-180x300.webp",
+          "/assets/images/amphion/2123111/argon1-1-180x300.webp",
+          "/assets/images/amphion/2123111/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/2123111/argon3s-1-180x300.webp",
+          "/assets/images/amphion/2123111/argon5c-1-180x300.webp",
+          "/assets/images/amphion/2123111/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/2123111/cables_amphipn_25.webp",
+          "/assets/images/amphion/2123111/helium520C-2-180x300.webp",
+          "/assets/images/amphion/2123111/mount1.webp",
+          "/assets/images/amphion/2123111/passive-radiator-1.webp",
+          "/assets/images/amphion/2123111/roland-guerin-one12-product-page.webp",
+          "/assets/images/amphion/2123111/studio_noiz_one12_two18_baseone15_01bw.webp",
+          "/assets/images/amphion/2123111/thumbn_create_brochure.webp",
+          "/assets/images/amphion/2123111/thumbn_mnl_studio_monitors.webp",
+          "/assets/images/amphion/2123111/thumbn_ps_one12.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/2123111/Amphion-Studio-monitors-One12-feat25.png",
+      "image_url": "/assets/images/amphion/2123111/0008_one12-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofer 4.5 אינץ’",
@@ -47,21 +88,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2123111-amphion-one12",
-      "generated_at": "2026-01-30T01:08:48.624618",
+      "generated_at": "2026-01-30T02:37:41.776354",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/2123111/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:49.985518"
+          "extracted_at": "2026-01-30T02:37:43.977523"
         },
         {
           "url": "/assets/manuals/amphion/2123111/create_productsheets_one_12_euen_0122-1.pdf",
           "type": "pdf",
           "label": "Create Productsheets One 12 Euen 0122 1",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:49.987317"
+          "extracted_at": "2026-01-30T02:37:45.419025"
         }
       ]
     },
@@ -99,7 +140,7 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2124853-amphion-amp500",
-      "generated_at": "2026-01-30T01:08:48.709165"
+      "generated_at": "2026-01-30T02:37:41.868258"
     },
     {
       "id": "amphion_2125050",
@@ -117,13 +158,52 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-feat25.png",
-        "thumbnail": "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-feat25.png",
+        "main": "/assets/images/amphion/2125050/0000_two15-freq.webp",
+        "thumbnail": "/assets/images/amphion/2125050/0000_two15-freq.webp",
         "gallery": [
-          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-feat25.png"
+          "/assets/images/amphion/2125050/0000_two15-freq.webp",
+          "/assets/images/amphion/2125050/0001_two15-imp.webp",
+          "/assets/images/amphion/2125050/Amphion-Base-systems-FlexBase-feat25.webp",
+          "/assets/images/amphion/2125050/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One15-feat25.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-feat25.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15.webp",
+          "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/2125050/AnttiSaario1byDavidPrior.webp",
+          "/assets/images/amphion/2125050/BaseTwo25-front.webp",
+          "/assets/images/amphion/2125050/DSC02080-thumbnail-300x300.webp",
+          "/assets/images/amphion/2125050/DSC6563.webp",
+          "/assets/images/amphion/2125050/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/2125050/Gentry-studer.webp",
+          "/assets/images/amphion/2125050/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/2125050/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/2125050/Screenshot-2022-04-12-at-8.46.36-236x300.webp",
+          "/assets/images/amphion/2125050/Screenshot-2023-10-25-at-8.55.56-300x300.webp",
+          "/assets/images/amphion/2125050/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/2125050/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/2125050/argon0-1-180x300.webp",
+          "/assets/images/amphion/2125050/argon1-1-180x300.webp",
+          "/assets/images/amphion/2125050/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/2125050/argon3s-1-180x300.webp",
+          "/assets/images/amphion/2125050/argon5c-1-180x300.webp",
+          "/assets/images/amphion/2125050/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/2125050/cables_amphipn_25.webp",
+          "/assets/images/amphion/2125050/deanlandon.webp",
+          "/assets/images/amphion/2125050/helium520C-2-180x300.webp",
+          "/assets/images/amphion/2125050/kohle-kohlmannslehner-two15-page.webp",
+          "/assets/images/amphion/2125050/mount3.webp",
+          "/assets/images/amphion/2125050/passive-radiator-1.webp",
+          "/assets/images/amphion/2125050/thumbn_create_brochure.webp",
+          "/assets/images/amphion/2125050/thumbn_mnl_studio_monitors.webp",
+          "/assets/images/amphion/2125050/thumbn_ps_two15.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/2125050/Amphion-Studio-monitors-Two15-feat25.png",
+      "image_url": "/assets/images/amphion/2125050/0000_two15-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofers 5.25 x2 אינץ’",
@@ -133,21 +213,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2125050-amphion-two15",
-      "generated_at": "2026-01-30T01:08:48.820384",
+      "generated_at": "2026-01-30T02:37:42.033157",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/2125050/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.030421"
+          "extracted_at": "2026-01-30T02:37:45.961634"
         },
         {
           "url": "/assets/manuals/amphion/2125050/create_productsheets_two_15_euen_0122-1.pdf",
           "type": "pdf",
           "label": "Create Productsheets Two 15 Euen 0122 1",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.031640"
+          "extracted_at": "2026-01-30T02:37:47.314595"
         }
       ]
     },
@@ -167,13 +247,56 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-feat25.png",
-        "thumbnail": "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-feat25.png",
+        "main": "/assets/images/amphion/2124169/0004_one18-freq.webp",
+        "thumbnail": "/assets/images/amphion/2124169/0004_one18-freq.webp",
         "gallery": [
-          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-feat25.png"
+          "/assets/images/amphion/2124169/0004_one18-freq.webp",
+          "/assets/images/amphion/2124169/0005_one18-imp.webp",
+          "/assets/images/amphion/2124169/Amphion-Base-systems-BaseTwo25-feat25.webp",
+          "/assets/images/amphion/2124169/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-feat25.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-Two18-feat25.webp",
+          "/assets/images/amphion/2124169/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/2124169/BaseTwo25-front.webp",
+          "/assets/images/amphion/2124169/Bernie-Kirsch-and-One18s.webp",
+          "/assets/images/amphion/2124169/DSC6563.webp",
+          "/assets/images/amphion/2124169/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/2124169/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/2124169/James-hunt-one18-page.webp",
+          "/assets/images/amphion/2124169/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/2124169/Screenshot-2022-02-14-at-16.34.00-300x300.webp",
+          "/assets/images/amphion/2124169/Screenshot-2022-11-04-at-9.14.48-300x300.webp",
+          "/assets/images/amphion/2124169/Screenshot-2023-05-30-at-11.30.41-300x300.webp",
+          "/assets/images/amphion/2124169/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/2124169/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/2124169/argon0-1-180x300.webp",
+          "/assets/images/amphion/2124169/argon1-1-180x300.webp",
+          "/assets/images/amphion/2124169/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/2124169/argon3s-1-180x300.webp",
+          "/assets/images/amphion/2124169/argon5c-1-180x300.webp",
+          "/assets/images/amphion/2124169/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/2124169/bainz-one18page.webp",
+          "/assets/images/amphion/2124169/cables_amphipn_25.webp",
+          "/assets/images/amphion/2124169/damien-lewis-one18-page.webp",
+          "/assets/images/amphion/2124169/francesco-cameli-one18page.webp",
+          "/assets/images/amphion/2124169/helium520C-2-180x300.webp",
+          "/assets/images/amphion/2124169/mitch-mccarthy-one18page.webp",
+          "/assets/images/amphion/2124169/mount3.webp",
+          "/assets/images/amphion/2124169/msm-one18-two18-page.webp",
+          "/assets/images/amphion/2124169/passive-radiator-1.webp",
+          "/assets/images/amphion/2124169/photo2.webp",
+          "/assets/images/amphion/2124169/thumbn_create_brochure.webp",
+          "/assets/images/amphion/2124169/thumbn_mnl_studio_monitors.webp",
+          "/assets/images/amphion/2124169/thumbn_ps_one18.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/2124169/Amphion-Studio-monitors-One18-feat25.png",
+      "image_url": "/assets/images/amphion/2124169/0004_one18-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofer 6.5 אינץ’",
@@ -183,21 +306,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2124169-amphion-one18",
-      "generated_at": "2026-01-30T01:08:48.900542",
+      "generated_at": "2026-01-30T02:37:42.148169",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/2124169/create_productsheets_one_18_euen_0122_.pdf",
           "type": "pdf",
           "label": "Create Productsheets One 18 Euen 0122 ",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.067637"
+          "extracted_at": "2026-01-30T02:37:47.773813"
         },
         {
           "url": "/assets/manuals/amphion/2124169/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.070751"
+          "extracted_at": "2026-01-30T02:37:47.847709"
         }
       ]
     },
@@ -217,31 +340,66 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.png",
-        "thumbnail": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.png",
+        "main": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
+        "thumbnail": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
         "gallery": [
-          "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.png"
+          "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One15-feat25.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-One25A-feat25.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-Two15-feat25.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/5115632/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/5115632/Amphion_CloseUp_Still_4-scaled.webp",
+          "/assets/images/amphion/5115632/BaseTwo25-front.webp",
+          "/assets/images/amphion/5115632/Doppler-Soundlab-2-scaled.webp",
+          "/assets/images/amphion/5115632/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/5115632/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/5115632/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/5115632/Modular-system-2.webp",
+          "/assets/images/amphion/5115632/Screenshot-2022-02-14-at-16.39.01-300x300.webp",
+          "/assets/images/amphion/5115632/Screenshot-2022-04-12-at-9.18.40-226x300.webp",
+          "/assets/images/amphion/5115632/Setup-2.webp",
+          "/assets/images/amphion/5115632/Untitled-1.webp",
+          "/assets/images/amphion/5115632/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/5115632/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/5115632/argon0-1-180x300.webp",
+          "/assets/images/amphion/5115632/argon1-1-180x300.webp",
+          "/assets/images/amphion/5115632/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/5115632/argon3s-1-180x300.webp",
+          "/assets/images/amphion/5115632/argon5c-1-180x300.webp",
+          "/assets/images/amphion/5115632/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/5115632/helium520C-2-180x300.webp",
+          "/assets/images/amphion/5115632/jurek.webp",
+          "/assets/images/amphion/5115632/spike.webp",
+          "/assets/images/amphion/5115632/sqSetup-2-300x300.webp",
+          "/assets/images/amphion/5115632/thumbn_create_brochure.webp",
+          "/assets/images/amphion/5115632/thumbn_mnl_flexbase25.webp",
+          "/assets/images/amphion/5115632/thumbn_ps_flexbase25.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.png",
+      "image_url": "/assets/images/amphion/5115632/Amphion-Base-systems-FlexBase-feat25.webp",
       "features": [],
       "specs": [],
       "source_url": "https://www.halilit.com/items/5115632-amphion-flexbase25",
-      "generated_at": "2026-01-30T01:08:49.026611",
+      "generated_at": "2026-01-30T02:37:42.291148",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/5115632/FlexBaseManual_21032022.pdf",
           "type": "pdf",
           "label": "Flexbasemanual 21032022",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.110709"
+          "extracted_at": "2026-01-30T02:37:50.337056"
         },
         {
           "url": "/assets/manuals/amphion/5115632/FlexBase25_SalesSheet_2p_12032021.pdf",
           "type": "pdf",
           "label": "Flexbase25 Salessheet 2P 12032021",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.112295"
+          "extracted_at": "2026-01-30T02:37:50.951489"
         }
       ]
     },
@@ -261,13 +419,60 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/8378366/new-two18x.webp",
-        "thumbnail": "/assets/images/amphion/8378366/new-two18x.webp",
+        "main": "/assets/images/amphion/8378366/0002_two18-freq.webp",
+        "thumbnail": "/assets/images/amphion/8378366/0002_two18-freq.webp",
         "gallery": [
-          "/assets/images/amphion/8378366/new-two18x.webp"
+          "/assets/images/amphion/8378366/0002_two18-freq.webp",
+          "/assets/images/amphion/8378366/0003_two18-imp.webp",
+          "/assets/images/amphion/8378366/20200601-jk-2-scaled.webp",
+          "/assets/images/amphion/8378366/AMPH-MT-2-scaled.webp",
+          "/assets/images/amphion/8378366/Amphion-Base-systems-BaseTwo25-feat25.webp",
+          "/assets/images/amphion/8378366/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-Two18.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-One25A-feat25.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/8378366/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/8378366/BaseTwo25-front.webp",
+          "/assets/images/amphion/8378366/Copy-of-SOS_mag_SoMe_Post-300x300.webp",
+          "/assets/images/amphion/8378366/DSC6563.webp",
+          "/assets/images/amphion/8378366/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/8378366/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/8378366/Jensbogren.webp",
+          "/assets/images/amphion/8378366/John5-scaled.webp",
+          "/assets/images/amphion/8378366/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/8378366/P5311861-scaled.webp",
+          "/assets/images/amphion/8378366/Screenshot-2023-02-22-at-13.23.56-300x300.webp",
+          "/assets/images/amphion/8378366/Screenshot-2023-10-11-at-15.17.29-300x300.webp",
+          "/assets/images/amphion/8378366/Screenshot-2026-01-16-at-01.47.20.webp",
+          "/assets/images/amphion/8378366/TN-RK-1-scaled.webp",
+          "/assets/images/amphion/8378366/Thumbnail_two18x_specs-213x300.webp",
+          "/assets/images/amphion/8378366/Will-Putney.webp",
+          "/assets/images/amphion/8378366/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/8378366/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/8378366/argon0-1-180x300.webp",
+          "/assets/images/amphion/8378366/argon1-1-180x300.webp",
+          "/assets/images/amphion/8378366/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/8378366/argon3s-1-180x300.webp",
+          "/assets/images/amphion/8378366/argon5c-1-180x300.webp",
+          "/assets/images/amphion/8378366/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/8378366/cables_amphipn_25.webp",
+          "/assets/images/amphion/8378366/dave-pensado.webp",
+          "/assets/images/amphion/8378366/finneas.webp",
+          "/assets/images/amphion/8378366/gudwin.webp",
+          "/assets/images/amphion/8378366/helium520C-2-180x300.webp",
+          "/assets/images/amphion/8378366/mount3.webp",
+          "/assets/images/amphion/8378366/new-two18x.webp",
+          "/assets/images/amphion/8378366/passive-radiator-1.webp",
+          "/assets/images/amphion/8378366/spike.webp",
+          "/assets/images/amphion/8378366/thumbn_create_brochure.webp",
+          "/assets/images/amphion/8378366/thumbn_mnl_studio_monitors.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/8378366/new-two18x.webp",
+      "image_url": "/assets/images/amphion/8378366/0002_two18-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofers 6.5 x2 אינץ’",
@@ -277,21 +482,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/8378366-amphion-two18x",
-      "generated_at": "2026-01-30T01:08:49.113578",
+      "generated_at": "2026-01-30T02:37:42.467381",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/8378366/Two18X_productsheet_08_2025.pdf",
           "type": "pdf",
           "label": "Two18X Productsheet 08 2025",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.148493"
+          "extracted_at": "2026-01-30T02:37:51.968354"
         },
         {
           "url": "/assets/manuals/amphion/8378366/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.151725"
+          "extracted_at": "2026-01-30T02:37:51.983723"
         }
       ]
     },
@@ -321,7 +526,7 @@
       "features": [],
       "specs": [],
       "source_url": "https://www.halilit.com/items/5115687-amphion-amp400-8",
-      "generated_at": "2026-01-30T01:08:49.192829"
+      "generated_at": "2026-01-30T02:37:42.638495"
     },
     {
       "id": "amphion_6966280",
@@ -339,31 +544,78 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Left_web.jpg",
-        "thumbnail": "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Left_web.jpg",
+        "main": "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
+        "thumbnail": "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
         "gallery": [
-          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Left_web.jpg"
+          "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
+          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Left_web.webp",
+          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Right-web.webp",
+          "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Vertical_Pair-scaled.webp",
+          "/assets/images/amphion/6966280/AMPHION_Render_Background_Side_90Degrees_Right_web.webp",
+          "/assets/images/amphion/6966280/AMPHION_Render_Background_Side_Right_web.webp",
+          "/assets/images/amphion/6966280/AMPHION_Web_Background_Back-scaled.webp",
+          "/assets/images/amphion/6966280/Amphion-Base-systems-BaseTwo25-feat25.webp",
+          "/assets/images/amphion/6966280/Amphion-Base-systems-FlexBase-feat25.webp",
+          "/assets/images/amphion/6966280/Amphion-One25A-Review-%E2%80%93-Recording-Magazine-june-2024-feature-300x300.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-One25A.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-Two18-feat25.webp",
+          "/assets/images/amphion/6966280/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/6966280/Amphion_CloseUp_Still_3-1-scaled.webp",
+          "/assets/images/amphion/6966280/Amphion_WEBCloseUp_Still_10-1.webp",
+          "/assets/images/amphion/6966280/BaseTwo25-front.webp",
+          "/assets/images/amphion/6966280/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/6966280/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/6966280/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/6966280/One25A_Manual_verticalcover-212x300.webp",
+          "/assets/images/amphion/6966280/One25A_boundaryControl.webp",
+          "/assets/images/amphion/6966280/One25A_boundaryControl2.webp",
+          "/assets/images/amphion/6966280/One25A_frequencyResponse.webp",
+          "/assets/images/amphion/6966280/One25A_protectionCircuit.webp",
+          "/assets/images/amphion/6966280/One25A_soffitMounting.webp",
+          "/assets/images/amphion/6966280/ProSpeakers_WEBCloseUp1-1.webp",
+          "/assets/images/amphion/6966280/ProSpeakers_WEBCloseUp2-1-1.webp",
+          "/assets/images/amphion/6966280/ProSpeakers_WEBCloseUp3-1.webp",
+          "/assets/images/amphion/6966280/Produce-Like-A-Pro-300x300.webp",
+          "/assets/images/amphion/6966280/SDC_1.webp",
+          "/assets/images/amphion/6966280/Screenshot-2023-04-07-at-9.37.28-214x300.webp",
+          "/assets/images/amphion/6966280/Screenshot-2023-10-23-at-15.36.27.webp",
+          "/assets/images/amphion/6966280/Screenshot-2024-04-25-at-10.26.36-300x300.webp",
+          "/assets/images/amphion/6966280/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/6966280/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/6966280/argon0-1-180x300.webp",
+          "/assets/images/amphion/6966280/argon1-1-180x300.webp",
+          "/assets/images/amphion/6966280/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/6966280/argon3s-1-180x300.webp",
+          "/assets/images/amphion/6966280/argon5c-1-180x300.webp",
+          "/assets/images/amphion/6966280/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/6966280/helium520C-2-180x300.webp",
+          "/assets/images/amphion/6966280/thumbn_create_brochure.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/6966280/AMPHION_Render_Background_Front_Left_web.jpg",
+      "image_url": "/assets/images/amphion/6966280/1_Tobias_Menguser_10-scaled.webp",
       "features": [],
       "specs": [],
       "source_url": "https://www.halilit.com/items/6966280-amphion-one25a-3-way-studio-monitor",
-      "generated_at": "2026-01-30T01:08:49.277172",
+      "generated_at": "2026-01-30T02:37:42.808301",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/6966280/One25A_Productsheet_112023.pdf",
           "type": "pdf",
           "label": "One25A Productsheet 112023",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.191706"
+          "extracted_at": "2026-01-30T02:37:55.679753"
         },
         {
           "url": "/assets/manuals/amphion/6966280/09112023_One25A_Manual_web.pdf",
           "type": "pdf",
           "label": "09112023 One25A Manual Web",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.197350"
+          "extracted_at": "2026-01-30T02:37:56.790790"
         }
       ]
     },
@@ -383,31 +635,63 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp700-feat25.png",
-        "thumbnail": "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp700-feat25.png",
+        "main": "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
+        "thumbnail": "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
         "gallery": [
-          "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp700-feat25.png"
+          "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
+          "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp400.12-feat25.webp",
+          "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One15-feat25.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-Two18-feat25.webp",
+          "/assets/images/amphion/5115518/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/5115518/BaseTwo25-front.webp",
+          "/assets/images/amphion/5115518/DSC6563.webp",
+          "/assets/images/amphion/5115518/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/5115518/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/5115518/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/5115518/Screenshot-2022-11-04-at-9.14.48-300x300.webp",
+          "/assets/images/amphion/5115518/Screenshot-2023-05-30-at-11.30.41.webp",
+          "/assets/images/amphion/5115518/Screenshot-2023-09-07-at-16.21.35-298x300.webp",
+          "/assets/images/amphion/5115518/Screenshot-2023-10-31-at-15.06.05-300x300.webp",
+          "/assets/images/amphion/5115518/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/5115518/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/5115518/argon0-1-180x300.webp",
+          "/assets/images/amphion/5115518/argon1-1-180x300.webp",
+          "/assets/images/amphion/5115518/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/5115518/argon3s-1-180x300.webp",
+          "/assets/images/amphion/5115518/argon5c-1-180x300.webp",
+          "/assets/images/amphion/5115518/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/5115518/cables_amphipn_25.webp",
+          "/assets/images/amphion/5115518/helium520C-2-180x300.webp",
+          "/assets/images/amphion/5115518/thumbn_create_brochure.webp",
+          "/assets/images/amphion/5115518/thumbn_mnl_amp700.webp",
+          "/assets/images/amphion/5115518/thumbn_ps_amp700.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/5115518/Amphion-Power-amplifiers-Amp700-feat25.png",
+      "image_url": "/assets/images/amphion/5115518/Amp700_front_back_b.webp",
       "features": [],
       "specs": [],
       "source_url": "https://www.halilit.com/items/5115518-amphion-amp700",
-      "generated_at": "2026-01-30T01:08:49.388144",
+      "generated_at": "2026-01-30T02:37:43.011846",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/5115518/Amp700_Manual_21032022.pdf",
           "type": "pdf",
           "label": "Amp700 Manual 21032022",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.233833"
+          "extracted_at": "2026-01-30T02:37:57.330779"
         },
         {
           "url": "/assets/manuals/amphion/5115518/create_productsheets_amp_700_euen-1.pdf",
           "type": "pdf",
           "label": "Create Productsheets Amp 700 Euen 1",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.235080"
+          "extracted_at": "2026-01-30T02:37:57.331972"
         }
       ]
     },
@@ -437,7 +721,7 @@
       "features": [],
       "specs": [],
       "source_url": "https://www.halilit.com/items/6894165-amphion-amp400-12-multi-channel-power-amplifier",
-      "generated_at": "2026-01-30T01:08:49.470880"
+      "generated_at": "2026-01-30T02:37:43.118562"
     },
     {
       "id": "amphion_2123766",
@@ -455,13 +739,56 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-feat25.png",
-        "thumbnail": "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-feat25.png",
+        "main": "/assets/images/amphion/2123766/0006_one15-freq.webp",
+        "thumbnail": "/assets/images/amphion/2123766/0006_one15-freq.webp",
         "gallery": [
-          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-feat25.png"
+          "/assets/images/amphion/2123766/0006_one15-freq.webp",
+          "/assets/images/amphion/2123766/0007_one15-imp.webp",
+          "/assets/images/amphion/2123766/Alishaheed-one15.webp",
+          "/assets/images/amphion/2123766/Amphion-Base-systems-FlexBase-feat25.webp",
+          "/assets/images/amphion/2123766/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-feat25.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-Two15-feat25.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/2123766/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/2123766/BaseTwo25-front.webp",
+          "/assets/images/amphion/2123766/DSC6563.webp",
+          "/assets/images/amphion/2123766/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/2123766/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/2123766/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/2123766/Natefurtado-one15-page.webp",
+          "/assets/images/amphion/2123766/Ocean-Sound-StudioB_3B7A6810_fotoKristinStoylen-300x300.webp",
+          "/assets/images/amphion/2123766/Rusanda_Thumbnail.webp",
+          "/assets/images/amphion/2123766/Screenshot-2022-04-12-at-8.39.06-286x300.webp",
+          "/assets/images/amphion/2123766/Setup-2.webp",
+          "/assets/images/amphion/2123766/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/2123766/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/2123766/argon0-1-180x300.webp",
+          "/assets/images/amphion/2123766/argon1-1-180x300.webp",
+          "/assets/images/amphion/2123766/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/2123766/argon3s-1-180x300.webp",
+          "/assets/images/amphion/2123766/argon5c-1-180x300.webp",
+          "/assets/images/amphion/2123766/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/2123766/cables_amphipn_25.webp",
+          "/assets/images/amphion/2123766/emmett-caroll-one15-pager.webp",
+          "/assets/images/amphion/2123766/helium520C-2-180x300.webp",
+          "/assets/images/amphion/2123766/image_123650291-scaled.webp",
+          "/assets/images/amphion/2123766/mount2.webp",
+          "/assets/images/amphion/2123766/passive-radiator-1.webp",
+          "/assets/images/amphion/2123766/rhiannon-mair-one15.webp",
+          "/assets/images/amphion/2123766/sacha-ketterlin-one15.webp",
+          "/assets/images/amphion/2123766/sqSetup-2-300x300.webp",
+          "/assets/images/amphion/2123766/thumbn_create_brochure.webp",
+          "/assets/images/amphion/2123766/thumbn_mnl_studio_monitors.webp",
+          "/assets/images/amphion/2123766/thumbn_ps_one15.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/2123766/Amphion-Studio-monitors-One15-feat25.png",
+      "image_url": "/assets/images/amphion/2123766/0006_one15-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofer 5.25 אינץ’",
@@ -471,21 +798,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2123766-amphion-one15",
-      "generated_at": "2026-01-30T01:08:49.553935",
+      "generated_at": "2026-01-30T02:37:43.223113",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/2123766/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.273923"
+          "extracted_at": "2026-01-30T02:37:58.097534"
         },
         {
           "url": "/assets/manuals/amphion/2123766/create_productsheets_one_15_euen_0122.pdf",
           "type": "pdf",
           "label": "Create Productsheets One 15 Euen 0122",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.274378"
+          "extracted_at": "2026-01-30T02:37:58.098026"
         }
       ]
     },
@@ -505,13 +832,56 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/8377417/new-one18x.webp",
-        "thumbnail": "/assets/images/amphion/8377417/new-one18x.webp",
+        "main": "/assets/images/amphion/8377417/0004_one18-freq.webp",
+        "thumbnail": "/assets/images/amphion/8377417/0004_one18-freq.webp",
         "gallery": [
-          "/assets/images/amphion/8377417/new-one18x.webp"
+          "/assets/images/amphion/8377417/0004_one18-freq.webp",
+          "/assets/images/amphion/8377417/0005_one18-imp.webp",
+          "/assets/images/amphion/8377417/Amphion-Base-systems-BaseTwo25-feat25.webp",
+          "/assets/images/amphion/8377417/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-Two18-feat25.webp",
+          "/assets/images/amphion/8377417/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/8377417/BaseTwo25-front.webp",
+          "/assets/images/amphion/8377417/Bernie-Kirsch-and-One18s.webp",
+          "/assets/images/amphion/8377417/Copy-of-SOS_mag_SoMe_Post-300x300.webp",
+          "/assets/images/amphion/8377417/Copy-of-SOS_mag_SoMe_Post.webp",
+          "/assets/images/amphion/8377417/DSC6563.webp",
+          "/assets/images/amphion/8377417/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/8377417/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/8377417/James-hunt-one18-page.webp",
+          "/assets/images/amphion/8377417/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/8377417/One18-Front-diagonally.webp",
+          "/assets/images/amphion/8377417/One18X-specs-image-2025-212x300.webp",
+          "/assets/images/amphion/8377417/Screenshot-2022-02-14-at-16.34.00-300x300.webp",
+          "/assets/images/amphion/8377417/Screenshot-2023-05-30-at-11.30.41-300x300.webp",
+          "/assets/images/amphion/8377417/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/8377417/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/8377417/argon0-1-180x300.webp",
+          "/assets/images/amphion/8377417/argon1-1-180x300.webp",
+          "/assets/images/amphion/8377417/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/8377417/argon3s-1-180x300.webp",
+          "/assets/images/amphion/8377417/argon5c-1-180x300.webp",
+          "/assets/images/amphion/8377417/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/8377417/bainz-one18page.webp",
+          "/assets/images/amphion/8377417/cables_amphipn_25.webp",
+          "/assets/images/amphion/8377417/damien-lewis-one18-page.webp",
+          "/assets/images/amphion/8377417/francesco-cameli-one18page.webp",
+          "/assets/images/amphion/8377417/helium520C-2-180x300.webp",
+          "/assets/images/amphion/8377417/mitch-mccarthy-one18page.webp",
+          "/assets/images/amphion/8377417/mount3.webp",
+          "/assets/images/amphion/8377417/msm-one18-two18-page.webp",
+          "/assets/images/amphion/8377417/new-one18x.webp",
+          "/assets/images/amphion/8377417/passive-radiator-1.webp",
+          "/assets/images/amphion/8377417/thumbn_create_brochure.webp",
+          "/assets/images/amphion/8377417/thumbn_mnl_studio_monitors.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/8377417/new-one18x.webp",
+      "image_url": "/assets/images/amphion/8377417/0004_one18-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofer 6.5 אינץ’",
@@ -521,21 +891,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/8377417-amphion-one18x",
-      "generated_at": "2026-01-30T01:08:49.640757",
+      "generated_at": "2026-01-30T02:37:43.350780",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/8377417/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.312500"
+          "extracted_at": "2026-01-30T02:38:00.346980"
         },
         {
           "url": "/assets/manuals/amphion/8377417/One18X_productsheet_08_2025.pdf",
           "type": "pdf",
           "label": "One18X Productsheet 08 2025",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.315756"
+          "extracted_at": "2026-01-30T02:38:02.106307"
         }
       ]
     },
@@ -555,13 +925,60 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-feat25.png",
-        "thumbnail": "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-feat25.png",
+        "main": "/assets/images/amphion/2125126/0002_two18-freq.webp",
+        "thumbnail": "/assets/images/amphion/2125126/0002_two18-freq.webp",
         "gallery": [
-          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-feat25.png"
+          "/assets/images/amphion/2125126/0002_two18-freq.webp",
+          "/assets/images/amphion/2125126/0003_two18-imp.webp",
+          "/assets/images/amphion/2125126/20200601-jk-2-scaled.webp",
+          "/assets/images/amphion/2125126/AMPH-MT-2-scaled.webp",
+          "/assets/images/amphion/2125126/Amphion-Base-systems-BaseTwo25-feat25.webp",
+          "/assets/images/amphion/2125126/Amphion-Power-amplifiers-Amp700-feat25.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-One25A-feat25.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-feat25.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18.webp",
+          "/assets/images/amphion/2125126/BaseTwo25-front.webp",
+          "/assets/images/amphion/2125126/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/2125126/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/2125126/Jensbogren.webp",
+          "/assets/images/amphion/2125126/John5-scaled.webp",
+          "/assets/images/amphion/2125126/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/2125126/P5311861-scaled.webp",
+          "/assets/images/amphion/2125126/Screenshot-2022-04-12-at-9.14.47-269x300.webp",
+          "/assets/images/amphion/2125126/Screenshot-2023-02-22-at-13.23.56-300x300.webp",
+          "/assets/images/amphion/2125126/Screenshot-2023-10-11-at-15.17.29-300x300.webp",
+          "/assets/images/amphion/2125126/Screenshot-2023-10-31-at-15.06.05.webp",
+          "/assets/images/amphion/2125126/TN-RK-1-scaled.webp",
+          "/assets/images/amphion/2125126/Will-Putney.webp",
+          "/assets/images/amphion/2125126/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/2125126/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/2125126/argon0-1-180x300.webp",
+          "/assets/images/amphion/2125126/argon1-1-180x300.webp",
+          "/assets/images/amphion/2125126/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/2125126/argon3s-1-180x300.webp",
+          "/assets/images/amphion/2125126/argon5c-1-180x300.webp",
+          "/assets/images/amphion/2125126/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/2125126/cables_amphipn_25.webp",
+          "/assets/images/amphion/2125126/dave-pensado.webp",
+          "/assets/images/amphion/2125126/finneas.webp",
+          "/assets/images/amphion/2125126/gudwin.webp",
+          "/assets/images/amphion/2125126/helium520C-2-180x300.webp",
+          "/assets/images/amphion/2125126/jurek.webp",
+          "/assets/images/amphion/2125126/mount3.webp",
+          "/assets/images/amphion/2125126/passive-radiator-1.webp",
+          "/assets/images/amphion/2125126/spike.webp",
+          "/assets/images/amphion/2125126/thumbn_create_brochure.webp",
+          "/assets/images/amphion/2125126/thumbn_mnl_studio_monitors.webp",
+          "/assets/images/amphion/2125126/thumbn_ps_two18.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/2125126/Amphion-Studio-monitors-Two18-feat25.png",
+      "image_url": "/assets/images/amphion/2125126/0002_two18-freq.webp",
       "features": [
         "מוניטור פאסיבי (ללא מגבר פנימי)",
         "woofers 6.5 x2 אינץ’",
@@ -571,21 +988,21 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2125126-amphion-two18",
-      "generated_at": "2026-01-30T01:08:49.727714",
+      "generated_at": "2026-01-30T02:37:43.438520",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/2125126/create_productsheets_two_18_euen_0122-1.pdf",
           "type": "pdf",
           "label": "Create Productsheets Two 18 Euen 0122 1",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.352183"
+          "extracted_at": "2026-01-30T02:38:02.749142"
         },
         {
           "url": "/assets/manuals/amphion/2125126/27022024_Monitors_Manual.pdf",
           "type": "pdf",
           "label": "27022024 Monitors Manual",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.355185"
+          "extracted_at": "2026-01-30T02:38:03.019485"
         }
       ]
     },
@@ -623,7 +1040,7 @@
       ],
       "specs": [],
       "source_url": "https://www.halilit.com/items/2124973-amphion-amp100-mono-",
-      "generated_at": "2026-01-30T01:08:49.839951"
+      "generated_at": "2026-01-30T02:37:43.545825"
     },
     {
       "id": "amphion_5115577",
@@ -641,37 +1058,74 @@
       },
       "status": "IN_STOCK",
       "images": {
-        "main": "/assets/images/amphion/5115577/Amphion-Base-systems-BaseTwo25-feat25.png",
-        "thumbnail": "/assets/images/amphion/5115577/Amphion-Base-systems-BaseTwo25-feat25.png",
+        "main": "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
+        "thumbnail": "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
         "gallery": [
-          "/assets/images/amphion/5115577/Amphion-Base-systems-BaseTwo25-feat25.png"
+          "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
+          "/assets/images/amphion/5115577/982A494C-9407-4605-A7F2-D6F4210C1739.webp",
+          "/assets/images/amphion/5115577/Amphion-Base-systems-BaseTwo25-feat25.webp",
+          "/assets/images/amphion/5115577/Amphion-Base-systems-FlexBase-feat25.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One12-nav-180x300.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One15-nav-180x300.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One18-feat25.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One18-nav-180x300.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-One25A-2-nav-300x217.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-Two15-nav-180x300.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-Two18-feat25.webp",
+          "/assets/images/amphion/5115577/Amphion-Studio-monitors-Two18-nav-180x300.webp",
+          "/assets/images/amphion/5115577/Amphion_CloseUp_Still_4-scaled.webp",
+          "/assets/images/amphion/5115577/BaseTwo25-front.webp",
+          "/assets/images/amphion/5115577/BaseTwo25.webp",
+          "/assets/images/amphion/5115577/FlexBase25_FlexAmp1200-front-300x300.webp",
+          "/assets/images/amphion/5115577/Helium510-menu--180x300.webp",
+          "/assets/images/amphion/5115577/Krypton3X-Standard-White-crop-180x300.webp",
+          "/assets/images/amphion/5115577/Mike-Dean.webp",
+          "/assets/images/amphion/5115577/Screenshot-2022-04-12-at-9.25.56-279x300.webp",
+          "/assets/images/amphion/5115577/Screenshot-2023-10-25-at-9.21.24.webp",
+          "/assets/images/amphion/5115577/TN-RK-1-scaled.webp",
+          "/assets/images/amphion/5115577/TN-RK-1SQUARE-300x300.webp",
+          "/assets/images/amphion/5115577/amp400_8-front-2-300x300.webp",
+          "/assets/images/amphion/5115577/amp700-front-2-300x300.webp",
+          "/assets/images/amphion/5115577/argon0-1-180x300.webp",
+          "/assets/images/amphion/5115577/argon1-1-180x300.webp",
+          "/assets/images/amphion/5115577/argon3ls-1-180x300.webp",
+          "/assets/images/amphion/5115577/argon3s-1-180x300.webp",
+          "/assets/images/amphion/5115577/argon5c-1-180x300.webp",
+          "/assets/images/amphion/5115577/argon7ls-2-180x300.webp",
+          "/assets/images/amphion/5115577/finneas.webp",
+          "/assets/images/amphion/5115577/gudwin.webp",
+          "/assets/images/amphion/5115577/helium520C-2-180x300.webp",
+          "/assets/images/amphion/5115577/henka.webp",
+          "/assets/images/amphion/5115577/thumbn_create_brochure.webp",
+          "/assets/images/amphion/5115577/thumbn_mnl_basetwo25.webp",
+          "/assets/images/amphion/5115577/thumbn_ps_basetwo25.webp"
         ]
       },
-      "image_url": "/assets/images/amphion/5115577/Amphion-Base-systems-BaseTwo25-feat25.png",
+      "image_url": "/assets/images/amphion/5115577/57492B93-90A3-4449-8719-189AE01111AD-1-300x300.webp",
       "features": [],
       "specs": [],
       "source_url": "https://www.halilit.com/items/5115577-amphion-basetwo25-system",
-      "generated_at": "2026-01-30T01:08:49.946923",
+      "generated_at": "2026-01-30T02:37:43.629732",
       "official_manuals": [
         {
           "url": "/assets/manuals/amphion/5115577/BaseTwo25_Manual_21032022.pdf",
           "type": "pdf",
           "label": "Basetwo25 Manual 21032022",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.391635"
+          "extracted_at": "2026-01-30T02:38:05.714205"
         },
         {
           "url": "/assets/manuals/amphion/5115577/BaseTwo25_SalesSheet_2p_12032021_b.pdf",
           "type": "pdf",
           "label": "Basetwo25 Salessheet 2P 12032021 B",
           "source_domain": "brand_official",
-          "extracted_at": "2026-01-30T01:08:50.392359"
+          "extracted_at": "2026-01-30T02:38:06.444624"
         }
       ]
     }
   ],
   "metadata": {
     "count": 15,
-    "processed_at": "2026-01-30T01:08:50.392396"
+    "processed_at": "2026-01-30T02:38:06.888896"
   }
 }
