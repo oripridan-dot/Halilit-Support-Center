@@ -1,0 +1,19 @@
+{
+  "manufacturer_sku": "ADAM-A7V",
+  "official_name": "Adam Audio A7V Active 2-Way Monitor",
+  "official_page": "https://adam-audio.com/a7v",
+  "specs": {
+    "woofer_size_inch": 7.0,
+    "tweeter_type": "X-ART Ribbon",
+    "frequency_response_low_hz": 41,
+    "frequency_response_high_hz": 42000,
+    "power_total_watts": 130,
+    "dimensions": "200 x 290 x 245 mm",
+    "weight_kg": 11.5
+  },
+  "media_assets": {
+    "manual": "https://adam-audio.com/manuals/a7v.pdf",
+    "image_front": "https://adam-audio.com/images/a7v-front.jpg",
+    "image_detail": "https://adam-audio.com/images/a7v-back.jpg"
+  }
+}

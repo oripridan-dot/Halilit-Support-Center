@@ -1,0 +1,16 @@
+{
+  "brand_id": "bespeco",
+  "badge_type": "RAW_PASS",
+  "issued_at": "2026-01-30T02:43:25.874600",
+  "status": "READY_FOR_VECTORIZATION",
+  "digest": {
+    "total_products": 25,
+    "commercial_coverage": "100%",
+    "technical_enrichment_rate": "68%",
+    "specification_rate": "0%",
+    "manual_availability": "0%",
+    "media_coverage": "100%",
+    "categorization_health": "100%"
+  },
+  "pipeline_version": "v1.1"
+}

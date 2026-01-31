@@ -1,1836 +1,1899 @@
 {
-  "brand_name": "Warm Audio",
-  "products": [
-    {
-      "id": "warm_audio_80_wamba",
-      "name": "Warm Audio WA-MBA",
-      "description": "Warm Audio WA-MBA",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wamba.jpg",
-      "product_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
-      "is_sold": true,
-      "price": 668.0,
-      "halilit_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 668.0,
-        "original_price": 668.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wamba.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wamba.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wamba.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wamba.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa76_d2",
-      "name": "Warm Audio WA76-D2",
-      "description": "Warm Audio WA76-D2",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-      "product_url": "https://www.halilit.com/items/7670561-warm-audio-wa76-d2-compressor",
-      "is_sold": true,
-      "price": 5640.0,
-      "halilit_url": "https://www.halilit.com/items/7670561-warm-audio-wa76-d2-compressor",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 5640.0,
-        "original_price": 5640.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa76_d2.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa1b",
-      "name": "Warm Audio WA-1B",
-      "description": "Warm Audio WA-1B",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-      "product_url": "https://www.halilit.com/items/6312276-warm-audio-wa-1b-tube-optical-compressor",
-      "is_sold": true,
-      "price": 5494.0,
-      "halilit_url": "https://www.halilit.com/items/6312276-warm-audio-wa-1b-tube-optical-compressor",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 5494.0,
-        "original_price": 5494.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa1b.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa76_a2",
-      "name": "Warm Audio WA76-A2",
-      "description": "Warm Audio WA76-A2",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-      "product_url": "https://www.halilit.com/items/7665551-warm-audio-wa76-a2-compressor",
-      "is_sold": true,
-      "price": 5640.0,
-      "halilit_url": "https://www.halilit.com/items/7665551-warm-audio-wa76-a2-compressor",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 5640.0,
-        "original_price": 5640.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa76_a2.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wadia",
-      "name": "Warm Audio WA-DI-A Active Direct Box",
-      "description": "Warm Audio WA-DI-A Active Direct Box",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wadia.jpg",
-      "product_url": "https://www.halilit.com/items/7205544-warm-audio-wa-di-a-active-direct-box",
-      "is_sold": true,
-      "price": 877.0,
-      "halilit_url": "https://www.halilit.com/items/7205544-warm-audio-wa-di-a-active-direct-box",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 877.0,
-        "original_price": 877.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wadia.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wadia.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wadia.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wadia.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa76_a",
-      "name": "Warm Audio WA76-A",
-      "description": "Warm Audio WA76-A",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-      "product_url": "https://www.halilit.com/items/7665341-warm-audio-wa76-a-compressor",
-      "is_sold": true,
-      "price": 3502.0,
-      "halilit_url": "https://www.halilit.com/items/7665341-warm-audio-wa76-a-compressor",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3502.0,
-        "original_price": 3502.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa76_a.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa76_d",
-      "name": "Warm Audio WA76-D",
-      "description": "Warm Audio WA76-D",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-      "product_url": "https://www.halilit.com/items/7669979-warm-audio-wa76-d-compressor",
-      "is_sold": true,
-      "price": 3502.0,
-      "halilit_url": "https://www.halilit.com/items/7669979-warm-audio-wa76-d-compressor",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3502.0,
-        "original_price": 3502.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa76_d.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wadip",
-      "name": "Warm Audio WA-DI-P Passive Direct Box",
-      "description": "Warm Audio WA-DI-P Passive Direct Box",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wadip.jpg",
-      "product_url": "https://www.halilit.com/items/7205864-warm-audio-wa-di-p-passive-direct-box",
-      "is_sold": true,
-      "price": 664.0,
-      "halilit_url": "https://www.halilit.com/items/7205864-warm-audio-wa-di-p-passive-direct-box",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 664.0,
-        "original_price": 664.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wadip.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wadip.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wadip.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wadip.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_warb",
-      "name": "Warm Audio RingerBringer Ring Modulator",
-      "description": "Warm Audio RingerBringer Ring Modulator",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_warb.jpg",
-      "product_url": "https://www.halilit.com/items/6893845-warm-audio-ringerbringer-ring-modulator",
-      "is_sold": true,
-      "price": 974.0,
-      "halilit_url": "https://www.halilit.com/items/6893845-warm-audio-ringerbringer-ring-modulator",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 974.0,
-        "original_price": 974.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_warb.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_warb.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_warb.jpg",
-        "original": "/data/thumbnails/warm_audio_80_warb.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wacv",
-      "name": "Warm Audio Centavo",
-      "description": "Warm Audio Centavo",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wacv.jpg",
-      "product_url": "https://www.halilit.com/items/6043976-warm-audio-centavo-professional-overdrive-pedal",
-      "is_sold": true,
-      "price": 783.0,
-      "halilit_url": "https://www.halilit.com/items/6043976-warm-audio-centavo-professional-overdrive-pedal",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 783.0,
-        "original_price": 783.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wacv.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wacv.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wacv.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wacv.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa73eq",
-      "name": "Warm Audio WA73-EQ",
-      "description": "Warm Audio WA73-EQ",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-      "product_url": "https://www.halilit.com/items/4303757-warm-audio-wa73-eq",
-      "is_sold": true,
-      "price": 3756.0,
-      "halilit_url": "https://www.halilit.com/items/4303757-warm-audio-wa73-eq",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3756.0,
-        "original_price": 3756.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa73eq.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wampx",
-      "name": "Warm Audio WA-MPX",
-      "description": "Warm Audio WA-MPX",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wampx.jpg",
-      "product_url": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
-      "is_sold": true,
-      "price": 3587.0,
-      "halilit_url": "https://www.halilit.com/items/6043535-warm-audio-wa-mpx-",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3587.0,
-        "original_price": 3587.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wampx.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wampx.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wampx.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wampx.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wawl",
-      "name": "Warm Audio Warm Lifter",
-      "description": "Warm Audio Warm Lifter",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wawl.jpg",
-      "product_url": "https://www.halilit.com/items/6893491-warm-audio-warm-lifter",
-      "is_sold": true,
-      "price": 664.0,
-      "halilit_url": "https://www.halilit.com/items/6893491-warm-audio-warm-lifter",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 664.0,
-        "original_price": 664.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wawl.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wawl.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wawl.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wawl.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa12mk2_bk",
-      "name": "Warm Audio WA12 MKII - Black",
-      "description": "Warm Audio WA12 MKII - Black",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-      "product_url": "https://www.halilit.com/items/4276404-warm-audio-wa12-mkii-",
-      "is_sold": true,
-      "price": 2280.0,
-      "halilit_url": "https://www.halilit.com/items/4276404-warm-audio-wa12-mkii-",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 2280.0,
-        "original_price": 2280.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa2mpx",
-      "name": "Warm Audio WA-2MPX",
-      "description": "Warm Audio WA-2MPX",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-      "product_url": "https://www.halilit.com/items/6043838-warm-audio-wa-2mpx-",
-      "is_sold": true,
-      "price": 6703.0,
-      "halilit_url": "https://www.halilit.com/items/6043838-warm-audio-wa-2mpx-",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 6703.0,
-        "original_price": 6703.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa2mpx.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa12mk2_or",
-      "name": "Warm Audio WA12 MKII - Orange",
-      "description": "Warm Audio WA12 MKII - Orange",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-      "product_url": "https://www.halilit.com/items/4276431-warm-audio-wa12-mkii-",
-      "is_sold": true,
-      "price": 2146.0,
-      "halilit_url": "https://www.halilit.com/items/4276431-warm-audio-wa12-mkii-",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 2146.0,
-        "original_price": 2146.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa73",
-      "name": "Warm Audio WA-73",
-      "description": "Warm Audio WA-73",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa73.jpg",
-      "product_url": "https://www.halilit.com/items/3989208-warm-audio-wa-73-preamp",
-      "is_sold": true,
-      "price": 3040.0,
-      "halilit_url": "https://www.halilit.com/items/3989208-warm-audio-wa-73-preamp",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3040.0,
-        "original_price": 3040.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa73.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa73.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa73.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa73.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa273",
-      "name": "Warm Audio WA273",
-      "description": "Warm Audio WA273",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa273.jpg",
-      "product_url": "https://www.halilit.com/items/3989243-warm-audio-wa-273-preamp",
-      "is_sold": true,
-      "price": 5186.0,
-      "halilit_url": "https://www.halilit.com/items/3989243-warm-audio-wa-273-preamp",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 5186.0,
-        "original_price": 5186.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa273.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa273.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa273.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa273.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_eqpwa",
-      "name": "Warm Audio EQP-WA",
-      "description": "Warm Audio EQP-WA",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-      "product_url": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
-      "is_sold": true,
-      "price": 3532.0,
-      "halilit_url": "https://www.halilit.com/items/3992361-warm-audio-eqp-wa",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3532.0,
-        "original_price": 3532.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-        "original": "/data/thumbnails/warm_audio_80_eqpwa.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa273_eq",
-      "name": "Warm Audio WA273-EQ",
-      "description": "Warm Audio WA273-EQ",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-      "product_url": "https://www.halilit.com/items/4276537-warm-audio-wa273-eq",
-      "is_sold": true,
-      "price": 7798.0,
-      "halilit_url": "https://www.halilit.com/items/4276537-warm-audio-wa273-eq",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 7798.0,
-        "original_price": 7798.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa273_eq.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_db25trsm10",
-      "name": "Warm Audio DB25TRS",
-      "description": "Warm Audio DB25TRS",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-      "product_url": "https://www.halilit.com/items/8759397-warm-audio-db25trs",
-      "is_sold": true,
-      "price": 700.0,
-      "halilit_url": "https://www.halilit.com/items/8759397-warm-audio-db25trs",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 700.0,
-        "original_price": 700.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-        "original": "/data/thumbnails/warm_audio_80_db25trsm10.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_db25xlrf10",
-      "name": "Warm Audio DB25XLR-Female",
-      "description": "Warm Audio DB25XLR-Female",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-      "product_url": "https://www.halilit.com/items/8758641-warm-audio-db25xlrf",
-      "is_sold": true,
-      "price": 686.0,
-      "halilit_url": "https://www.halilit.com/items/8758641-warm-audio-db25xlrf",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 686.0,
-        "original_price": 686.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-        "original": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_tb12_b",
-      "name": "Warm Audio TB12 Tone Beast",
-      "description": "Warm Audio TB12 Tone Beast",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-      "product_url": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
-      "is_sold": true,
-      "price": 3040.0,
-      "halilit_url": "https://www.halilit.com/items/4276594-warm-audio-tb12-tone-beast",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3040.0,
-        "original_price": 3040.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-        "original": "/data/thumbnails/warm_audio_80_tb12_b.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_db25xlrm10",
-      "name": "Warm Audio DB25XLR-Male",
-      "description": "Warm Audio DB25XLR-Male",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-      "product_url": "https://www.halilit.com/items/8758656-warm-audio-db25xlrm",
-      "is_sold": true,
-      "price": 644.0,
-      "halilit_url": "https://www.halilit.com/items/8758656-warm-audio-db25xlrm",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 644.0,
-        "original_price": 644.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-        "original": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_xlrm_trs",
-      "name": "Warm Audio Prem-XLRm-TRSm-6",
-      "description": "Warm Audio Prem-XLRm-TRSm-6",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-      "product_url": "https://www.halilit.com/items/4026009-warm-audio-xlrm-trs-cable",
-      "is_sold": true,
-      "price": 121.0,
-      "halilit_url": "https://www.halilit.com/items/4026009-warm-audio-xlrm-trs-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 121.0,
-        "original_price": 121.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-        "original": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlrmtrsm3",
-      "name": "Warm Audio Prem-XLRm-TRSm-3",
-      "description": "Warm Audio Prem-XLRm-TRSm-3",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-      "product_url": "https://www.halilit.com/items/5247174-warm-audio-prem-xlrm-trsm-3",
-      "is_sold": true,
-      "price": 62.0,
-      "halilit_url": "https://www.halilit.com/items/5247174-warm-audio-prem-xlrm-trsm-3",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 62.0,
-        "original_price": 62.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_buscomp",
-      "name": "Warm Audio BUS-COMP",
-      "description": "Warm Audio BUS-COMP",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-      "product_url": "https://www.halilit.com/items/3992353-warm-audio-bus-comp-",
-      "is_sold": true,
-      "price": 3622.0,
-      "halilit_url": "https://www.halilit.com/items/3992353-warm-audio-bus-comp-",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3622.0,
-        "original_price": 3622.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-        "original": "/data/thumbnails/warm_audio_80_buscomp.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa76",
-      "name": "Warm Audio WA76",
-      "description": "Warm Audio WA76",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa76.jpg",
-      "product_url": "https://www.halilit.com/items/3989273-warm-audio-wa-76-compressor",
-      "is_sold": true,
-      "price": 3264.0,
-      "halilit_url": "https://www.halilit.com/items/3989273-warm-audio-wa-76-compressor",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 3264.0,
-        "original_price": 3264.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa76.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa76.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa76.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa76.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_wa412",
-      "name": "Warm Audio WA-412",
-      "description": "Warm Audio WA-412",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_wa412.jpg",
-      "product_url": "https://www.halilit.com/items/3989141-warm-audio-wa-412-4-channel-microphone-preamp",
-      "is_sold": true,
-      "price": 6349.0,
-      "halilit_url": "https://www.halilit.com/items/3989141-warm-audio-wa-412-4-channel-microphone-preamp",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 6349.0,
-        "original_price": 6349.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_wa412.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_wa412.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_wa412.jpg",
-        "original": "/data/thumbnails/warm_audio_80_wa412.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr20",
-      "name": "Warm Audio PRO XLR 20",
-      "description": "Warm Audio PRO XLR 20",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-      "product_url": "https://www.halilit.com/items/7320093-warm-audio-pro-xlr-20-cable",
-      "is_sold": true,
-      "price": 104.0,
-      "halilit_url": "https://www.halilit.com/items/7320093-warm-audio-pro-xlr-20-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 104.0,
-        "original_price": 104.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr20.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr100",
-      "name": "Warm Audio PRO XLR 100",
-      "description": "Warm Audio PRO XLR 100",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-      "product_url": "https://www.halilit.com/items/8071976-warm-audio-pro-xlr-100-cable",
-      "is_sold": true,
-      "price": 424.0,
-      "halilit_url": "https://www.halilit.com/items/8071976-warm-audio-pro-xlr-100-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 424.0,
-        "original_price": 424.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr100.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr15",
-      "name": "Warm Audio PRO XLR 15",
-      "description": "Warm Audio PRO XLR 15",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-      "product_url": "https://www.halilit.com/items/4936233-warm-audio-pro-xlr-15-microphone-cable",
-      "is_sold": true,
-      "price": 96.0,
-      "halilit_url": "https://www.halilit.com/items/4936233-warm-audio-pro-xlr-15-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 96.0,
-        "original_price": 96.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr15.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr50",
-      "name": "Warm Audio PRO XLR 50",
-      "description": "Warm Audio PRO XLR 50",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-      "product_url": "https://www.halilit.com/items/7320123-warm-audio-pro-xlr-50-cable",
-      "is_sold": true,
-      "price": 199.0,
-      "halilit_url": "https://www.halilit.com/items/7320123-warm-audio-pro-xlr-50-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 199.0,
-        "original_price": 199.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr50.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_protrs3",
-      "name": "Warm Audio Pro TRS 10",
-      "description": "Warm Audio Pro TRS 10",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-      "product_url": "https://www.halilit.com/items/7320135-warm-audio-pro-trs-10-microphone-cable",
-      "is_sold": true,
-      "price": 67.0,
-      "halilit_url": "https://www.halilit.com/items/7320135-warm-audio-pro-trs-10-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 67.0,
-        "original_price": 67.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-        "original": "/data/thumbnails/warm_audio_80_protrs3.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr10",
-      "name": "Warm Audio PRO XLR 10",
-      "description": "Warm Audio PRO XLR 10",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-      "product_url": "https://www.halilit.com/items/4936017-warm-audio-proxlr10-microphone-cable",
-      "is_sold": true,
-      "price": 80.0,
-      "halilit_url": "https://www.halilit.com/items/4936017-warm-audio-proxlr10-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 80.0,
-        "original_price": 80.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr10.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_protrs20",
-      "name": "Warm Audio Pro TRS 20",
-      "description": "Warm Audio Pro TRS 20",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-      "product_url": "https://www.halilit.com/items/7320150-warm-audio-pro-trs-120-microphone-cable",
-      "is_sold": true,
-      "price": 124.0,
-      "halilit_url": "https://www.halilit.com/items/7320150-warm-audio-pro-trs-120-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 124.0,
-        "original_price": 124.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-        "original": "/data/thumbnails/warm_audio_80_protrs20.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_xlr10",
-      "name": "Warm Audio Prem-XLR-10",
-      "description": "Warm Audio Prem-XLR-10",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-      "product_url": "https://www.halilit.com/items/4025967-warm-audio-prem-xlr-10-cable",
-      "is_sold": true,
-      "price": 134.0,
-      "halilit_url": "https://www.halilit.com/items/4025967-warm-audio-prem-xlr-10-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 134.0,
-        "original_price": 134.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-        "original": "/data/thumbnails/warm_audio_80_xlr10.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_xlr15",
-      "name": "Warm Audio Prem-XLR-15",
-      "description": "Warm Audio Prem-XLR-15",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-      "product_url": "https://www.halilit.com/items/4026000-warm-audio-prem-xlr-15-cable",
-      "is_sold": true,
-      "price": 150.0,
-      "halilit_url": "https://www.halilit.com/items/4026000-warm-audio-prem-xlr-15-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 150.0,
-        "original_price": 150.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-        "original": "/data/thumbnails/warm_audio_80_xlr15.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_xlr25",
-      "name": "Warm Audio Prem-XLR-25",
-      "description": "Warm Audio Prem-XLR-25",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-      "product_url": "https://www.halilit.com/items/4026003-warm-audio-prem-xlr-25-cable",
-      "is_sold": true,
-      "price": 194.0,
-      "halilit_url": "https://www.halilit.com/items/4026003-warm-audio-prem-xlr-25-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 194.0,
-        "original_price": 194.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-        "original": "/data/thumbnails/warm_audio_80_xlr25.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlrmtrsm6",
-      "name": "Warm Audio PRO XLR TRSM 6",
-      "description": "Warm Audio PRO XLR TRSM 6",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-      "product_url": "https://www.halilit.com/items/4936601-warm-audio-pro-xlr-trsm-6-microphone-cable",
-      "is_sold": true,
-      "price": 67.0,
-      "halilit_url": "https://www.halilit.com/items/4936601-warm-audio-pro-xlr-trsm-6-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 67.0,
-        "original_price": 67.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr3",
-      "name": "Warm Audio Pro XLR 3",
-      "description": "Warm Audio Pro XLR 3",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-      "product_url": "https://www.halilit.com/items/5247151-warm-audio-pro-xlr-3-microphone-cable",
-      "is_sold": true,
-      "price": 54.0,
-      "halilit_url": "https://www.halilit.com/items/5247151-warm-audio-pro-xlr-3-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 54.0,
-        "original_price": 54.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr3.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlr25",
-      "name": "Warm Audio Pro XLR 25",
-      "description": "Warm Audio Pro XLR 25",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-      "product_url": "https://www.halilit.com/items/5247153-warm-audio-pro-xlr-25-microphone-cable",
-      "is_sold": true,
-      "price": 121.0,
-      "halilit_url": "https://www.halilit.com/items/5247153-warm-audio-pro-xlr-25-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 121.0,
-        "original_price": 121.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlr25.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_proxlrftrsm3",
-      "name": "Warm Audio PRO XLRF TRSM 3",
-      "description": "Warm Audio PRO XLRF TRSM 3",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-      "product_url": "https://www.halilit.com/items/4936411-warm-audio-pro-xlrf-trsm-3-microphone-cable",
-      "is_sold": true,
-      "price": 62.0,
-      "halilit_url": "https://www.halilit.com/items/4936411-warm-audio-pro-xlrf-trsm-3-microphone-cable",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 62.0,
-        "original_price": 62.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-        "original": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    },
-    {
-      "id": "warm_audio_80_prots10",
-      "name": "Warm Audio Pro-TS-10",
-      "description": "Warm Audio Pro-TS-10",
-      "category": "accessories",
-      "image_url": "/data/thumbnails/warm_audio_80_prots10.jpg",
-      "product_url": "https://www.halilit.com/items/4276707-warm-audio-pro-ts-10",
-      "is_sold": true,
-      "price": 80.0,
-      "halilit_url": "https://www.halilit.com/items/4276707-warm-audio-pro-ts-10",
-      "status": "IN_STOCK",
-      "pricing": {
-        "regular_price": 80.0,
-        "original_price": 80.0
-      },
-      "brand": "Warm Audio",
-      "logo_url": "/assets/logos/warm-audio_logo.svg",
-      "main_category": "accessories",
-      "images": {
-        "main": "/data/thumbnails/warm_audio_80_prots10.jpg",
-        "thumbnail": "/data/thumbnails/warm_audio_80_prots10.jpg",
-        "high_res": "/data/thumbnails/warm_audio_80_prots10.jpg",
-        "original": "/data/thumbnails/warm_audio_80_prots10.jpg"
-      },
-      "category_hierarchy": [
-        "accessories"
-      ]
-    }
-  ],
-  "generated_at": "2026-01-27T08:20:47.967828",
-  "brand_slug": "warm-audio",
-  "refined_at": "2026-01-27T08:20:48.070117+00:00",
-  "brand_identity": {
+  "brand_id": "warm-audio",
+  "brand_info": {
     "id": "warm-audio",
     "name": "Warm Audio",
-    "brand_colors": {
-      "primary": "#ea580c",
-      "secondary": "#431407",
-      "accent": "#fb923c",
-      "background": "#2a150d",
-      "text": "#ffedd5"
+    "official_website": "https://warmaudio.com/",
+    "logo_url": "/favicon/warm-audio-social-cover.jpeg",
+    "logo_local_path": "None",
+    "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+    "social_links": {
+      "facebook": "https://www.facebook.com/warmaudio/",
+      "twitter": "https://x.com/WarmAudio",
+      "youtube": "https://www.youtube.com/c/WarmAudioOfficial",
+      "instagram": "https://www.instagram.com/warmaudio/"
     },
-    "logo_url": "/assets/logos/warm-audio_logo.svg",
-    "taxonomy_stats": {
-      "validated": 44,
-      "normalized": 0,
-      "uncategorized": 0
-    },
-    "total_products": 44
+    "last_updated": "2026-01-30T02:35:17.340389"
   },
-  "hierarchy": {
-    "accessories": {
-      "General": [
+  "products": [
+    {
+      "id": "warm-audio_7665551",
+      "halilit_id": "7665551",
+      "name": "Warm Audio WA76-A2",
+      "brand": "Warm Audio",
+      "description": "<div class=\"desc\">\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df \u05e2\u05dc-\u05d6\u05de\u05e0\u05d9 \u05e2\u05dd \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d5\u05d9\u05e0\u05d8\u05d2\u2019</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05d4-<strong>WA76-A2</strong>\u00a0\u05de\u05e9\u05d7\u05d6\u05e8 \u05e0\u05d0\u05de\u05e0\u05d4 \u05d0\u05ea \u05d0\u05d7\u05d3 \u05de\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8\u05d9 \u05d4\u05d0\u05d5\u05dc\u05e4\u05df \u05d4\u05de\u05d4\u05d9\u05e8\u05d9\u05dd \u05d5\u05d4\u05d7\u05d6\u05e7\u05d9\u05dd \u05d1\u05db\u05dc \u05d4\u05d6\u05de\u05e0\u05d9\u05dd \u05d4\u05d9\u05d3\u05d5\u05e2 \u05d1\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d3\u05d9\u05e0\u05de\u05d9\u05ea \u05ea\u05d2\u05d5\u05d1\u05ea\u05d9\u05ea \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05e1\u05e4\u05e7, \u05db\u05e2\u05ea \u05d2\u05dd \u05e2\u05dd \u05ea\u05db\u05d5\u05e0\u05d5\u05ea \u05d4\u05e7\u05dc\u05d8\u05d4 \u05de\u05d5\u05d3\u05e8\u05e0\u05d9\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea. \u05d9\u05d3\u05d5\u05e2\u05d9\u05dd \u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dc \u05d8\u05e8\u05d0\u05e7\u05d9\u05dd \u05e9\u05dc \u05e9\u05d9\u05e8\u05d4, \u05ea\u05d5\u05e4\u05d9\u05dd, \u05d2\u05d9\u05d8\u05e8\u05d4, \u05d1\u05e1 \u05d5\u05db\u05dc \u05d3\u05d1\u05e8 \u05d1\u05d0\u05d5\u05dc\u05e4\u05df \u05d4\u05d3\u05d5\u05e8\u05e9 \u05d3\u05d9\u05e0\u05de\u05d9\u05e7\u05d4 \u05e0\u05e9\u05dc\u05d8\u05ea \u05d4\u05d9\u05d8\u05d1, \u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8\u05d9 \u05d4-Blue Stripe 76 \u05d4\u05d5\u05d9\u05e0\u05d8\u05d2\u2019\u05d9\u05dd \u05d9\u05d3\u05d5\u05e2\u05d9\u05dd \u05d1\u05e9\u05dc \u05d4\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9\u05d5\u05ea, \u05d4\u05de\u05d4\u05d9\u05e8\u05d5\u05ea \u05d5\u05d4\u05d8\u05d5\u05e0\u05d0\u05dc\u05d9\u05d5\u05ea \u05d4\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9\u05ea \u05d4\u05d4\u05e8\u05de\u05d5\u05e0\u05d9\u05ea \u05e9\u05dc\u05d4\u05dd. \u05d1\u05d3\u05d9\u05d5\u05e7 \u05db\u05de\u05d5 \u05d4\u05de\u05e7\u05d5\u05e8, \u05d4-WA76-A2 \u05de\u05e1\u05e4\u05e7 \u05d0\u05ea \u05d4\u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05d4\u05e7\u05dc\u05d0\u05e1\u05d9\u05d9\u05dd \u05d4\u05d0\u05e4\u05e9\u05e8\u05d9\u05d9\u05dd \u05e9\u05e0\u05d9\u05ea\u05df \u05dc\u05e9\u05de\u05d5\u05e2 \u05d1\u05d4\u05e7\u05dc\u05d8\u05d5\u05ea \u05d0\u05d2\u05d3\u05d9\u05d5\u05ea \u05e9\u05dc \u05d0\u05de\u05e0\u05d9\u05dd \u05db\u05de\u05d5 \u05dc\u05d3 \u05d6\u05e4\u05dc\u05d9\u05df, \u05d4\u05d1\u05d9\u05d8\u05dc\u05e1, \u05db\u05e8\u05d9\u05e1 \u05e1\u05d8\u05d9\u05d9\u05e4\u05dc\u05d8\u05d5\u05df, \u05db\u05e8\u05d9\u05e1 \u05dc\u05d5\u05e8\u05d3-\u05d0\u05dc\u05d2\u2019 \u05d5\u05e2\u05d5\u05d3 \u05e8\u05d1\u05d9\u05dd.</span></p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05e0\u05d0\u05de\u05df \u05dc\u05de\u05e7\u05d5\u05e8, \u05d1\u05ea\u05d5\u05e1\u05e4\u05ea \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05de\u05d5\u05d3\u05e8\u05e0\u05d9\u05d5\u05ea</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e8\u05db\u05d9\u05d1\u05d9 \u05e4\u05e8\u05d9\u05de\u05d9\u05d5\u05dd \u05de\u05d5\u05ea\u05d0\u05de\u05d9\u05dd \u05d0\u05d9\u05e9\u05d9\u05ea \u05db\u05de\u05d5 \u05e9\u05e0\u05d0\u05d9 O-12 (\u05e7\u05dc\u05d8) \u05d5-5002 (\u05e4\u05dc\u05d8) \u05d4-<strong>WA76-A2</strong>\u00a0\u05de\u05e9\u05d9\u05d2 \u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df \u201cBlue Stripe\u201d \u05d0\u05d5\u05ea\u05e0\u05d8\u05d9, \u05d4\u05d9\u05d3\u05d5\u05e2 \u05d1\u05e9\u05dc \u05d4\u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df \u05d4\u05de\u05d4\u05d9\u05e8 \u05e9\u05dc\u05d5 \u05ea\u05d5\u05da \u05d4\u05d5\u05e1\u05e4\u05ea \u05d3\u05d9\u05e1\u05d8\u05d5\u05e8\u05e9\u05df \u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05e2\u05d1\u05d5\u05e8 \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e9\u05d0\u05d9\u05df \u05dc\u05d8\u05e2\u05d5\u05ea \u05d1\u05d5. \u05d1\u05e7\u05dc\u05d5\u05ea \u05d4\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8 \u05d4\u05e2\u05e9\u05d9\u05e8 \u05d1\u05d9\u05d5\u05ea\u05e8 \u05d1\u05ea\u05db\u05d5\u05e0\u05d5\u05ea \u05d1\u05e1\u05d2\u05e0\u05d5\u05df \u05d4-76 \u05e9\u05d9\u05e9 \u05db\u05d9\u05d5\u05dd \u05d1\u05e9\u05d5\u05e7, \u05d4-WA76-A2 \u05de\u05d5\u05e1\u05d9\u05e3 \u05db\u05e4\u05ea\u05d5\u05e8 \u05d9\u05d1\u05e9/\u05e8\u05d8\u05d5\u05d1 \u05e2\u05d1\u05d5\u05e8 \u05e4\u05d0\u05e8\u05dc\u05dc \u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df, \u05e9\u05ea\u05d9 \u05d2\u05e8\u05e1\u05d0\u05d5\u05ea \u05e9\u05dc \u05de\u05e2\u05e7\u05e3 \u05d0\u05e7\u05d8\u05d9\u05d1\u05d9 \u05e2\u05d1\u05d5\u05e8 \u05e6\u05d1\u05e2 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9, \u05d5\u05e2\u05db\u05d1\u05ea \u05db\u05e0\u05d9\u05e1\u05d4 \u05dc\u05d1\u05d7\u05d9\u05e8\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05e2\u05d1\u05d5\u05d3\u05d4 \u05e2\u05dd \u05d0\u05d0\u05d5\u05d8\u05e4\u05d5\u05d8 \u05e9\u05dc \u05de\u05de\u05e9\u05e7\u05d9 \u05d4\u05e7\u05dc\u05d8\u05d4 \u05de\u05d5\u05d3\u05e8\u05e0\u05d9\u05d9\u05dd.</span>\u00a0</p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05dc\u05d5\u05e9\u05d4 \u05de\u05e6\u05d1\u05d9 \u05e4\u05e2\u05d5\u05dc\u05d4</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05dc-WA76-A2 \u05e9\u05e0\u05d9 \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05d5\u05d9\u05e9 \u05dc\u05d5 \u05e9\u05dc\u05d5\u05e9\u05d4 \u05de\u05e6\u05d1\u05d9 \u05e4\u05e2\u05d5\u05dc\u05d4 \u05e9\u05d5\u05e0\u05d9\u05dd \u05e2\u05dc \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05d0\u05dc\u05d5:</span><br/><span style=\"font-size: 12pt;\"><strong>\u05de\u05e6\u05d1 \u05e1\u05d8\u05e8\u05d9\u05d0\u05d5</strong>\u00a0\u05d4\u05de\u05d0\u05e4\u05e9\u05e8 \u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df \u05d0\u05d7\u05d9\u05d3 \u05d1-Sidechain, \u05d1\u05e4\u05d5\u05e7\u05d5\u05e1 \u05e2\u05dc \u05d4-Attack \u05d4\u05de\u05d4\u05d9\u05e8 \u05d1\u05d9\u05d5\u05ea\u05e8, \u05d0\u05d5 \u05d4-Release \u05d4\u05d0\u05d9\u05d8\u05d9 \u05d1\u05d9\u05d5\u05ea\u05e8. </span><br/><span style=\"font-size: 12pt;\"><strong>\u05de\u05e6\u05d1 AB&lt;A</strong> \u05e9\u05d9\u05d9\u05ea\u05df \u05dc\u05e2\u05e8\u05d5\u05e5 \u05d4\u05e9\u05de\u05d0\u05dc\u05d9 \u05dc\u05e9\u05dc\u05d5\u05d8 \u05d1-Attack/Release \u05e9\u05dc \u05d4\u05e2\u05e8\u05d5\u05e5 \u05d4\u05d9\u05de\u05e0\u05d9.\u00a0\u05d4-Sidechains \u05d1\u05de\u05e6\u05d1 A&gt;AB \u05e2\u05d3\u05d9\u05d9\u05df \u05de\u05e7\u05d5\u05e9\u05e8\u05d5\u05ea \u05db\u05e4\u05d9 \u05e9\u05d4\u05df \u05d1\u05de\u05e6\u05d1 \u05d4\u05e1\u05d8\u05e8\u05d9\u05d0\u05d5.</span><br/><span style=\"font-size: 12pt;\">\u05d5\u05d1\u05de\u05e6\u05d1 A|B \u05d4-WA76-A2 \u05e4\u05d5\u05e2\u05dc \u05db\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8 \u05de\u05d5\u05e0\u05d5 \u05db\u05e4\u05d5\u05dc.</span></p>\n<p>\u00a0</p>\n<p><span style=\"font-size: 12pt;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/qhYzTB7bWPg\" width=\"560\"></iframe></span></p>\n<p><span style=\"font-size: 12pt;\"><iframe frameborder=\"no\" height=\"166\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1962388491&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\" width=\"100%\"></iframe></span></p>\n</div>",
+      "short_description": "\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d5\u05de\u05ea\u05e7\u05d3\u05dd \u05d1\u05e2\u05dc \u05e9\u05e0\u05d9 \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Warm Audio",
+      "category": "UNCATEGORIZED",
+      "price": 5640.0,
+      "pricing": {
+        "regular_price": 5640.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16020204/large/11846fb548cff21a135ee0a2e47c1882.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16020204/large/11846fb548cff21a135ee0a2e47c1882.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16020204/large/11846fb548cff21a135ee0a2e47c1882.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16020204/large/11846fb548cff21a135ee0a2e47c1882.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 314.0
+      },
+      "source_url": "https://www.halilit.com/items/7665551-warm-audio-wa76-a2-compressor",
+      "generated_at": "2026-01-30T02:36:18.367242",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 314.0
+      }
+    },
+    {
+      "id": "warm-audio_8044368",
+      "halilit_id": "8044368",
+      "name": "WA-CX24",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 7009.0,
+      "pricing": {
+        "regular_price": 7009.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8044368/10_GALLERY_CX24_still.webp",
+        "thumbnail": "/assets/images/warm-audio/8044368/10_GALLERY_CX24_still.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8044368/10_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/11_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/12_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/13_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/14_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/1_GALLERY_CX24_main.webp",
+          "/assets/images/warm-audio/8044368/273EQ-product-card.webp",
+          "/assets/images/warm-audio/8044368/2_GALLERY_CX24_angles.webp",
+          "/assets/images/warm-audio/8044368/3_GALLERY_CX24_kit.webp",
+          "/assets/images/warm-audio/8044368/4_GALLERY_CX24_case.webp",
+          "/assets/images/warm-audio/8044368/5-year-nav.webp",
+          "/assets/images/warm-audio/8044368/5_GALLERY_CX24_components.webp",
+          "/assets/images/warm-audio/8044368/6_GALLERY_CX24_components2.webp",
+          "/assets/images/warm-audio/8044368/73EQ.webp",
+          "/assets/images/warm-audio/8044368/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8044368/8_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/9_GALLERY_CX24_still.webp",
+          "/assets/images/warm-audio/8044368/VibeSection_CX24.webp",
+          "/assets/images/warm-audio/8044368/VibeSection_Mobile_CX24.webp",
+          "/assets/images/warm-audio/8044368/WA-CX24_Bryce_Overview_web_Thumb.webp",
+          "/assets/images/warm-audio/8044368/WA-CX24_SeanPower_Web_Thumb.webp",
+          "/assets/images/warm-audio/8044368/WA-CX24_Web_Thumb.webp",
+          "/assets/images/warm-audio/8044368/cx24-gallery-new.webp",
+          "/assets/images/warm-audio/8044368/eqp-product-card.webp",
+          "/assets/images/warm-audio/8044368/fluff-thumb.webp",
+          "/assets/images/warm-audio/8044368/headroom-thumb.webp",
+          "/assets/images/warm-audio/8044368/horns.webp",
+          "/assets/images/warm-audio/8044368/namm.webp",
+          "/assets/images/warm-audio/8044368/nav-shadow.webp",
+          "/assets/images/warm-audio/8044368/piano.webp",
+          "/assets/images/warm-audio/8044368/retro64-thumb.webp",
+          "/assets/images/warm-audio/8044368/roommics.webp",
+          "/assets/images/warm-audio/8044368/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8044368/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8044368/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8044368/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8044368/10_GALLERY_CX24_still.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8044368-warm-audio-wa-cx24-tube-condenser-microphone",
+      "generated_at": "2026-01-30T02:36:18.521346",
+      "official_manuals": [
         {
-          "id": "warm_audio_80_wamba",
-          "name": "Warm Audio WA-MBA",
-          "description": "Warm Audio WA-MBA",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wamba.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wamba.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wamba.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wamba.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa76_d2",
-          "name": "Warm Audio WA76-D2",
-          "description": "Warm Audio WA76-D2",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa76_d2.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa76_d2.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa1b",
-          "name": "Warm Audio WA-1B",
-          "description": "Warm Audio WA-1B",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa1b.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa1b.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa76_a2",
-          "name": "Warm Audio WA76-A2",
-          "description": "Warm Audio WA76-A2",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa76_a2.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa76_a2.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wadia",
-          "name": "Warm Audio WA-DI-A Active Direct Box",
-          "description": "Warm Audio WA-DI-A Active Direct Box",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wadia.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wadia.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wadia.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wadia.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa76_a",
-          "name": "Warm Audio WA76-A",
-          "description": "Warm Audio WA76-A",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa76_a.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa76_a.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa76_d",
-          "name": "Warm Audio WA76-D",
-          "description": "Warm Audio WA76-D",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa76_d.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa76_d.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wadip",
-          "name": "Warm Audio WA-DI-P Passive Direct Box",
-          "description": "Warm Audio WA-DI-P Passive Direct Box",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wadip.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wadip.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wadip.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wadip.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_warb",
-          "name": "Warm Audio RingerBringer Ring Modulator",
-          "description": "Warm Audio RingerBringer Ring Modulator",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_warb.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_warb.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_warb.jpg",
-            "original": "/data/thumbnails/warm_audio_80_warb.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wacv",
-          "name": "Warm Audio Centavo",
-          "description": "Warm Audio Centavo",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wacv.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wacv.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wacv.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wacv.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa73eq",
-          "name": "Warm Audio WA73-EQ",
-          "description": "Warm Audio WA73-EQ",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa73eq.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa73eq.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wampx",
-          "name": "Warm Audio WA-MPX",
-          "description": "Warm Audio WA-MPX",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wampx.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wampx.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wampx.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wampx.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wawl",
-          "name": "Warm Audio Warm Lifter",
-          "description": "Warm Audio Warm Lifter",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wawl.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wawl.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wawl.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wawl.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa12mk2_bk",
-          "name": "Warm Audio WA12 MKII - Black",
-          "description": "Warm Audio WA12 MKII - Black",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa12mk2_bk.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa2mpx",
-          "name": "Warm Audio WA-2MPX",
-          "description": "Warm Audio WA-2MPX",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa2mpx.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa2mpx.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa12mk2_or",
-          "name": "Warm Audio WA12 MKII - Orange",
-          "description": "Warm Audio WA12 MKII - Orange",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa12mk2_or.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa73",
-          "name": "Warm Audio WA-73",
-          "description": "Warm Audio WA-73",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa73.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa73.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa73.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa73.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa273",
-          "name": "Warm Audio WA273",
-          "description": "Warm Audio WA273",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa273.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa273.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa273.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa273.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_eqpwa",
-          "name": "Warm Audio EQP-WA",
-          "description": "Warm Audio EQP-WA",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_eqpwa.jpg",
-            "original": "/data/thumbnails/warm_audio_80_eqpwa.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa273_eq",
-          "name": "Warm Audio WA273-EQ",
-          "description": "Warm Audio WA273-EQ",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa273_eq.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa273_eq.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_db25trsm10",
-          "name": "Warm Audio DB25TRS",
-          "description": "Warm Audio DB25TRS",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_db25trsm10.jpg",
-            "original": "/data/thumbnails/warm_audio_80_db25trsm10.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_db25xlrf10",
-          "name": "Warm Audio DB25XLR-Female",
-          "description": "Warm Audio DB25XLR-Female",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg",
-            "original": "/data/thumbnails/warm_audio_80_db25xlrf10.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_tb12_b",
-          "name": "Warm Audio TB12 Tone Beast",
-          "description": "Warm Audio TB12 Tone Beast",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_tb12_b.jpg",
-            "original": "/data/thumbnails/warm_audio_80_tb12_b.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_db25xlrm10",
-          "name": "Warm Audio DB25XLR-Male",
-          "description": "Warm Audio DB25XLR-Male",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg",
-            "original": "/data/thumbnails/warm_audio_80_db25xlrm10.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_xlrm_trs",
-          "name": "Warm Audio Prem-XLRm-TRSm-6",
-          "description": "Warm Audio Prem-XLRm-TRSm-6",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg",
-            "original": "/data/thumbnails/warm_audio_80_xlrm_trs.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlrmtrsm3",
-          "name": "Warm Audio Prem-XLRm-TRSm-3",
-          "description": "Warm Audio Prem-XLRm-TRSm-3",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm3.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_buscomp",
-          "name": "Warm Audio BUS-COMP",
-          "description": "Warm Audio BUS-COMP",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_buscomp.jpg",
-            "original": "/data/thumbnails/warm_audio_80_buscomp.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa76",
-          "name": "Warm Audio WA76",
-          "description": "Warm Audio WA76",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa76.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa76.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa76.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa76.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_wa412",
-          "name": "Warm Audio WA-412",
-          "description": "Warm Audio WA-412",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_wa412.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_wa412.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_wa412.jpg",
-            "original": "/data/thumbnails/warm_audio_80_wa412.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr20",
-          "name": "Warm Audio PRO XLR 20",
-          "description": "Warm Audio PRO XLR 20",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr20.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr20.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr100",
-          "name": "Warm Audio PRO XLR 100",
-          "description": "Warm Audio PRO XLR 100",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr100.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr100.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr15",
-          "name": "Warm Audio PRO XLR 15",
-          "description": "Warm Audio PRO XLR 15",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr15.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr15.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr50",
-          "name": "Warm Audio PRO XLR 50",
-          "description": "Warm Audio PRO XLR 50",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr50.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr50.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_protrs3",
-          "name": "Warm Audio Pro TRS 10",
-          "description": "Warm Audio Pro TRS 10",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_protrs3.jpg",
-            "original": "/data/thumbnails/warm_audio_80_protrs3.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr10",
-          "name": "Warm Audio PRO XLR 10",
-          "description": "Warm Audio PRO XLR 10",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr10.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr10.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_protrs20",
-          "name": "Warm Audio Pro TRS 20",
-          "description": "Warm Audio Pro TRS 20",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_protrs20.jpg",
-            "original": "/data/thumbnails/warm_audio_80_protrs20.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_xlr10",
-          "name": "Warm Audio Prem-XLR-10",
-          "description": "Warm Audio Prem-XLR-10",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_xlr10.jpg",
-            "original": "/data/thumbnails/warm_audio_80_xlr10.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_xlr15",
-          "name": "Warm Audio Prem-XLR-15",
-          "description": "Warm Audio Prem-XLR-15",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_xlr15.jpg",
-            "original": "/data/thumbnails/warm_audio_80_xlr15.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_xlr25",
-          "name": "Warm Audio Prem-XLR-25",
-          "description": "Warm Audio Prem-XLR-25",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_xlr25.jpg",
-            "original": "/data/thumbnails/warm_audio_80_xlr25.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlrmtrsm6",
-          "name": "Warm Audio PRO XLR TRSM 6",
-          "description": "Warm Audio PRO XLR TRSM 6",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlrmtrsm6.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr3",
-          "name": "Warm Audio Pro XLR 3",
-          "description": "Warm Audio Pro XLR 3",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr3.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr3.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlr25",
-          "name": "Warm Audio Pro XLR 25",
-          "description": "Warm Audio Pro XLR 25",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlr25.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlr25.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_proxlrftrsm3",
-          "name": "Warm Audio PRO XLRF TRSM 3",
-          "description": "Warm Audio PRO XLRF TRSM 3",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg",
-            "original": "/data/thumbnails/warm_audio_80_proxlrftrsm3.jpg"
-          },
-          "model_number": null,
-          "sku": null
-        },
-        {
-          "id": "warm_audio_80_prots10",
-          "name": "Warm Audio Pro-TS-10",
-          "description": "Warm Audio Pro-TS-10",
-          "images": {
-            "main": "/data/thumbnails/warm_audio_80_prots10.jpg",
-            "thumbnail": "/data/thumbnails/warm_audio_80_prots10.jpg",
-            "high_res": "/data/thumbnails/warm_audio_80_prots10.jpg",
-            "original": "/data/thumbnails/warm_audio_80_prots10.jpg"
-          },
-          "model_number": null,
-          "sku": null
+          "url": "/assets/manuals/warm-audio/8044368/WA-CX24_Web_Manual-2025.pdf",
+          "type": "pdf",
+          "label": "Wa Cx24 Web Manual 2025",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:23.932471"
         }
-      ]
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_6894014",
+      "halilit_id": "6894014",
+      "name": "\u05e4\u05d3\u05dc \u05e4\u05d0\u05d6 Warm Audio Warm Bender",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 877.0,
+      "pricing": {
+        "regular_price": 877.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/6894014/12mkii-product-card.webp",
+        "thumbnail": "/assets/images/warm-audio/6894014/12mkii-product-card.webp",
+        "gallery": [
+          "/assets/images/warm-audio/6894014/12mkii-product-card.webp",
+          "/assets/images/warm-audio/6894014/14-product-card.webp",
+          "/assets/images/warm-audio/6894014/19_Black.webp",
+          "/assets/images/warm-audio/6894014/19_Nickel.webp",
+          "/assets/images/warm-audio/6894014/1B.webp",
+          "/assets/images/warm-audio/6894014/251-product-card.webp",
+          "/assets/images/warm-audio/6894014/273-product-card.webp",
+          "/assets/images/warm-audio/6894014/273EQ-product-card.webp",
+          "/assets/images/warm-audio/6894014/2a-product-card.webp",
+          "/assets/images/warm-audio/6894014/2mpx-product-card.webp",
+          "/assets/images/warm-audio/6894014/412.webp",
+          "/assets/images/warm-audio/6894014/44.webp",
+          "/assets/images/warm-audio/6894014/47-product-card.webp",
+          "/assets/images/warm-audio/6894014/47T.webp",
+          "/assets/images/warm-audio/6894014/47f-product-card.webp",
+          "/assets/images/warm-audio/6894014/47jr-b-product-card.webp",
+          "/assets/images/warm-audio/6894014/47jr-n-product-card.webp",
+          "/assets/images/warm-audio/6894014/5-year-nav.webp",
+          "/assets/images/warm-audio/6894014/67-product-card.webp",
+          "/assets/images/warm-audio/6894014/73.webp",
+          "/assets/images/warm-audio/6894014/73EQ.webp",
+          "/assets/images/warm-audio/6894014/76-product-card.webp",
+          "/assets/images/warm-audio/6894014/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/6894014/8000-product-card.webp",
+          "/assets/images/warm-audio/6894014/8000g-product-card.webp",
+          "/assets/images/warm-audio/6894014/84-n-product-card.webp",
+          "/assets/images/warm-audio/6894014/84-prem-card.webp",
+          "/assets/images/warm-audio/6894014/84sp-b-product-card.webp",
+          "/assets/images/warm-audio/6894014/84sp-product-card.webp",
+          "/assets/images/warm-audio/6894014/87R2T.webp",
+          "/assets/images/warm-audio/6894014/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/6894014/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/6894014/Bus-Comp.webp",
+          "/assets/images/warm-audio/6894014/CableCard.webp",
+          "/assets/images/warm-audio/6894014/Centavo-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/DI-Active-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/DI-Passive-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/FoxyTone-card.webp",
+          "/assets/images/warm-audio/6894014/JetPhaser-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/Mutation-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/ODDbox-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_BlackoutCentavo.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_Chorus.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_FLF_Teal.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_FLF_White.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_Foxy_WereFox.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_Headroom_Black.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_Headroom_Orange.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_Headroom_Tan.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_Pedal76.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_ThroneofTone.webp",
+          "/assets/images/warm-audio/6894014/ProductCard_TubeSquealer.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_47jrSE_DropShadow_Black.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_47jrSE_DropShadow_Nickel.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_87jrSE_DropShadow_Black.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_87jrSE_DropShadow_Nickel.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_87jr_DropShadow_Black.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_87jr_DropShadow_Nickel.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_CX24_dropshadow.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_Fentone_Single_dropshadow.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_Fentone_StereoPair_dropshadow.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_FindYourOutboard_76A.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_FindYourOutboard_76A2.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_FindYourOutboard_76D.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_FindYourOutboard_76D2.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_R64_Black_DropShadow.webp",
+          "/assets/images/warm-audio/6894014/ProductCards_R64_Chrome_DropShadow.webp",
+          "/assets/images/warm-audio/6894014/RingerBringer-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/TB12.webp",
+          "/assets/images/warm-audio/6894014/WAMBA-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/WarmBender-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/WarmDrive-CatThumb.webp",
+          "/assets/images/warm-audio/6894014/cx12-product-card.webp",
+          "/assets/images/warm-audio/6894014/eqp-product-card.webp",
+          "/assets/images/warm-audio/6894014/fluff-thumb.webp",
+          "/assets/images/warm-audio/6894014/headroom-thumb.webp",
+          "/assets/images/warm-audio/6894014/mpx-product-card.webp",
+          "/assets/images/warm-audio/6894014/namm.webp",
+          "/assets/images/warm-audio/6894014/nav-shadow.webp",
+          "/assets/images/warm-audio/6894014/retro64-thumb.webp",
+          "/assets/images/warm-audio/6894014/sale-flag.webp",
+          "/assets/images/warm-audio/6894014/silver-centavo-product.webp",
+          "/assets/images/warm-audio/6894014/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/6894014/subnavtabshadow.webp",
+          "/assets/images/warm-audio/6894014/wa-14sp-product.webp",
+          "/assets/images/warm-audio/6894014/wa-lifter-pcard.webp",
+          "/assets/images/warm-audio/6894014/wa84b-card.png.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/6894014/12mkii-product-card.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/6894014-warm-audio-warm-bender",
+      "generated_at": "2026-01-30T02:36:18.687016",
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_6977821",
+      "halilit_id": "6977821",
+      "name": "WA-19",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 913.0,
+      "pricing": {
+        "regular_price": 913.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/6977821/19_Black.webp",
+        "thumbnail": "/assets/images/warm-audio/6977821/19_Black.webp",
+        "gallery": [
+          "/assets/images/warm-audio/6977821/19_Black.webp",
+          "/assets/images/warm-audio/6977821/19_Nickel.webp",
+          "/assets/images/warm-audio/6977821/5-year-nav.webp",
+          "/assets/images/warm-audio/6977821/73EQ.webp",
+          "/assets/images/warm-audio/6977821/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/6977821/Bryce_Overview.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_angles.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_components-min.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_kit-min.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_main.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_still_4-min.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_still_5-min.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_still_6-min.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_still_6.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_still_7-min.webp",
+          "/assets/images/warm-audio/6977821/GALLERY_19_still_8-min.webp",
+          "/assets/images/warm-audio/6977821/Introduction.webp",
+          "/assets/images/warm-audio/6977821/Sean_Demo.webp",
+          "/assets/images/warm-audio/6977821/Vibe-19.webp",
+          "/assets/images/warm-audio/6977821/Vibe_Mobile-19.webp",
+          "/assets/images/warm-audio/6977821/acousticguitar.webp",
+          "/assets/images/warm-audio/6977821/drumkit.webp",
+          "/assets/images/warm-audio/6977821/drumoverhead.webp",
+          "/assets/images/warm-audio/6977821/eqp-product-card.webp",
+          "/assets/images/warm-audio/6977821/fluff-thumb.webp",
+          "/assets/images/warm-audio/6977821/headroom-thumb.webp",
+          "/assets/images/warm-audio/6977821/mt-10-featured.webp",
+          "/assets/images/warm-audio/6977821/namm.webp",
+          "/assets/images/warm-audio/6977821/nav-shadow.webp",
+          "/assets/images/warm-audio/6977821/retro64-thumb.webp",
+          "/assets/images/warm-audio/6977821/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/6977821/subnavtabshadow.webp",
+          "/assets/images/warm-audio/6977821/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/6977821/vocal.webp",
+          "/assets/images/warm-audio/6977821/wa-mpx-2mpx-card.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/6977821/19_Black.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/6977821-warm-audio-wa-19-dynamic-studio-microphone",
+      "generated_at": "2026-01-30T02:36:18.864232",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/6977821/WA19_WebManual-EU24.pdf",
+          "type": "pdf",
+          "label": "Wa19 Webmanual Eu24",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:30.127003"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_6889363",
+      "halilit_id": "6889363",
+      "name": "WA-44",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 4607.0,
+      "pricing": {
+        "regular_price": 4607.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/6889363/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/6889363/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/6889363/5-year-nav.webp",
+          "/assets/images/warm-audio/6889363/73EQ.webp",
+          "/assets/images/warm-audio/6889363/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/6889363/Colt_Capperune_Demo.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_angles.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_components.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_kit.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_main.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_still1-min.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_still2-min.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_still3-min.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_still4-min.webp",
+          "/assets/images/warm-audio/6889363/GALLERY_44_still5.webp",
+          "/assets/images/warm-audio/6889363/Introduction.webp",
+          "/assets/images/warm-audio/6889363/Overview.webp",
+          "/assets/images/warm-audio/6889363/Vibe-44.webp",
+          "/assets/images/warm-audio/6889363/Vibe_Mobile-44.webp",
+          "/assets/images/warm-audio/6889363/eqp-product-card.webp",
+          "/assets/images/warm-audio/6889363/fluff-thumb.webp",
+          "/assets/images/warm-audio/6889363/headroom-thumb.webp",
+          "/assets/images/warm-audio/6889363/horns.webp",
+          "/assets/images/warm-audio/6889363/lifter-thumb.webp",
+          "/assets/images/warm-audio/6889363/namm.webp",
+          "/assets/images/warm-audio/6889363/nav-shadow.webp",
+          "/assets/images/warm-audio/6889363/piano.webp",
+          "/assets/images/warm-audio/6889363/retro64-thumb.webp",
+          "/assets/images/warm-audio/6889363/roommics.webp",
+          "/assets/images/warm-audio/6889363/sos-nominee-2025-ft.webp",
+          "/assets/images/warm-audio/6889363/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/6889363/subnavtabshadow.webp",
+          "/assets/images/warm-audio/6889363/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/6889363/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/6889363/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/6889363-warm-audio-wa-44-studio-ribbon-microphone",
+      "generated_at": "2026-01-30T02:36:18.993044",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/6889363/WA44_UserManual_web.pdf",
+          "type": "pdf",
+          "label": "Wa44 Usermanual Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:31.272813"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_3988436",
+      "halilit_id": "3988436",
+      "name": "WA-87 R2",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 2862.0,
+      "pricing": {
+        "regular_price": 2862.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/3988436/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/3988436/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/3988436/5-year-nav.webp",
+          "/assets/images/warm-audio/3988436/67-87-8000_comp-chart.webp",
+          "/assets/images/warm-audio/3988436/73EQ.webp",
+          "/assets/images/warm-audio/3988436/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/3988436/87R2T.webp",
+          "/assets/images/warm-audio/3988436/87R2_NICKEL_STILL_1.webp",
+          "/assets/images/warm-audio/3988436/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/3988436/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/3988436/87r2-video1.webp",
+          "/assets/images/warm-audio/3988436/87r2-video2.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_STILL_2.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_angles.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_main.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_still3.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_still4.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_still5.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_still6.webp",
+          "/assets/images/warm-audio/3988436/GALLERY_87R2_NICKEL_still7.webp",
+          "/assets/images/warm-audio/3988436/Vibe-87R2.webp",
+          "/assets/images/warm-audio/3988436/Vibe_Mobile-87R2.webp",
+          "/assets/images/warm-audio/3988436/WA-87R2T_Thumb.webp",
+          "/assets/images/warm-audio/3988436/acousticguitar.webp",
+          "/assets/images/warm-audio/3988436/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/3988436/electricguitar.webp",
+          "/assets/images/warm-audio/3988436/eqp-product-card.webp",
+          "/assets/images/warm-audio/3988436/fluff-thumb.webp",
+          "/assets/images/warm-audio/3988436/headroom-thumb.webp",
+          "/assets/images/warm-audio/3988436/namm.webp",
+          "/assets/images/warm-audio/3988436/nav-shadow.webp",
+          "/assets/images/warm-audio/3988436/retro64-thumb.webp",
+          "/assets/images/warm-audio/3988436/roommics.webp",
+          "/assets/images/warm-audio/3988436/sos-goty-2021-ft.webp",
+          "/assets/images/warm-audio/3988436/sos-goty-2022-ft.webp",
+          "/assets/images/warm-audio/3988436/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/3988436/subnavtabshadow.webp",
+          "/assets/images/warm-audio/3988436/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/3988436/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/3988436/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/3988436-warm-audio-wa-87-r2",
+      "generated_at": "2026-01-30T02:36:19.089075",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/3988436/Warm-Audio-WA-87r2-NKL-Manual-2020-web.pdf",
+          "type": "pdf",
+          "label": "Warm Audio Wa 87R2 Nkl Manual 2020 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:32.984597"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_7670561",
+      "halilit_id": "7670561",
+      "name": "Warm Audio WA76-D2",
+      "brand": "Warm Audio",
+      "description": "<div class=\"desc\">\n<h2 class=\"\"><span style=\"font-size: 12pt;\"><strong>\u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df \u05e2\u05dc-\u05d6\u05de\u05e0\u05d9 \u05e2\u05dd \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d5\u05d9\u05e0\u05d8\u05d2\u2019</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05d4-<strong>WA76-D2</strong>\u00a0\u05de\u05e9\u05d7\u05d6\u05e8 \u05e0\u05d0\u05de\u05e0\u05d4 \u05d0\u05ea \u05d0\u05d7\u05d3 \u05de\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8\u05d9 \u05d4\u05d0\u05d5\u05dc\u05e4\u05df \u05d4\u05de\u05d4\u05d9\u05e8\u05d9\u05dd \u05d5\u05d4\u05d7\u05d6\u05e7\u05d9\u05dd \u05d1\u05db\u05dc \u05d4\u05d6\u05de\u05e0\u05d9\u05dd \u05d4\u05d9\u05d3\u05d5\u05e2 \u05d1\u05e9\u05dc\u05d9\u05d8\u05d4 \u05d3\u05d9\u05e0\u05de\u05d9\u05ea \u05ea\u05d2\u05d5\u05d1\u05ea\u05d9\u05ea \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e2\u05e9\u05d9\u05e8, \u05db\u05e2\u05ea \u05d2\u05dd \u05e2\u05dd \u05ea\u05db\u05d5\u05e0\u05d5\u05ea \u05d4\u05e7\u05dc\u05d8\u05d4 \u05de\u05d5\u05d3\u05e8\u05e0\u05d9\u05d5\u05ea \u05e0\u05d5\u05e1\u05e4\u05d5\u05ea. \u05d9\u05d3\u05d5\u05e2\u05d9\u05dd \u05d1\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dc \u05d8\u05e8\u05d0\u05e7\u05d9\u05dd \u05e9\u05dc \u05e9\u05d9\u05e8\u05d4, \u05ea\u05d5\u05e4\u05d9\u05dd, \u05d2\u05d9\u05d8\u05e8\u05d4, \u05d1\u05e1 \u05d5\u05db\u05dc \u05d3\u05d1\u05e8 \u05d1\u05d0\u05d5\u05dc\u05e4\u05df \u05d4\u05d3\u05d5\u05e8\u05e9 \u05d3\u05d9\u05e0\u05de\u05d9\u05e7\u05d4 \u05e0\u05e9\u05dc\u05d8\u05ea \u05d4\u05d9\u05d8\u05d1, \u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8\u05d9 \u05d4-Rev D-Style\" 76\" \u05d4\u05d5\u05d9\u05e0\u05d8\u05d2\u2019\u05d9\u05dd \u05d9\u05d3\u05d5\u05e2\u05d9\u05dd \u05d1\u05e9\u05dc \u05d4\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9\u05d5\u05ea, \u05d4\u05de\u05d4\u05d9\u05e8\u05d5\u05ea \u05d5\u05d4\u05d8\u05d5\u05e0\u05d0\u05dc\u05d9\u05d5\u05ea \u05d4\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9\u05ea \u05d4\u05d4\u05e8\u05de\u05d5\u05e0\u05d9\u05ea \u05e9\u05dc\u05d4\u05dd. \u05d1\u05d3\u05d9\u05d5\u05e7 \u05db\u05de\u05d5 \u05d4\u05de\u05e7\u05d5\u05e8, \u05d4-WA76-D2 \u05de\u05e1\u05e4\u05e7 \u05d0\u05ea \u05d4\u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05d4\u05e7\u05dc\u05d0\u05e1\u05d9\u05d9\u05dd \u05d4\u05d0\u05e4\u05e9\u05e8\u05d9\u05d9\u05dd \u05e9\u05e0\u05d9\u05ea\u05df \u05dc\u05e9\u05de\u05d5\u05e2 \u05d1\u05d4\u05e7\u05dc\u05d8\u05d5\u05ea \u05d0\u05d2\u05d3\u05d9\u05d5\u05ea \u05e9\u05dc \u05d0\u05de\u05e0\u05d9\u05dd \u05db\u05de\u05d5 \u05de\u05d9\u05e1\u05d9 \u05d0\u05dc\u05d9\u05d5\u05d8, \u05d3\u05d0\u05e4\u05d8 \u05e4\u05d0\u05e0\u05e7, \u05d8\u05d9\u05de\u05d1\u05dc\u05e0\u05d3, \u05e8\u05d9\u05e7 \u05e8\u05d5\u05d1\u05d9\u05df, \u05db\u05e8\u05d9\u05e1 \u05dc\u05d5\u05e8\u05d3-\u05d0\u05dc\u05d2\u2019 \u05d5\u05e2\u05d5\u05d3 \u05e8\u05d1\u05d9\u05dd.</span></p>\n<p><span style=\"font-size: 12pt;\">\u00a0</span></p>\n<h2 class=\"\"><span style=\"font-size: 12pt;\"><strong>\u05e0\u05d0\u05de\u05df \u05dc\u05de\u05e7\u05d5\u05e8, \u05d1\u05ea\u05d5\u05e1\u05e4\u05ea \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05de\u05d5\u05d3\u05e8\u05e0\u05d9\u05d5\u05ea</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e8\u05db\u05d9\u05d1\u05d9\u05dd \u05de\u05d5\u05d1\u05d7\u05e8\u05d9\u05dd \u05de\u05d5\u05ea\u05d0\u05de\u05d9\u05dd \u05d0\u05d9\u05e9\u05d9\u05ea \u05db\u05de\u05d5 \u05e9\u05e0\u05d0\u05d9 O-12 (\u05e7\u05dc\u05d8) \u05d5-5002 (\u05e4\u05dc\u05d8) \u05d4-WA76-D2 \u05de\u05e9\u05d9\u05d2 \u05e7\u05d5\u05de\u05e4\u05e8\u05e9\u05df \u201cRevision D\u201d \u05d0\u05d5\u05ea\u05e0\u05d8\u05d9, \u05d4\u05d9\u05d3\u05d5\u05e2 \u05db\u05d1\u05e2\u05dc \u05e4\u05e8\u05d4-\u05d0\u05de\u05e4 \u05e2\u05dd \u201c\u05e8\u05e2\u05e9 \u05e0\u05de\u05d5\u05da\u201d. \u05e9\u05dc\u05d1\u05d5 \u05e2\u05dd \u05d6\u05d4 \u05d2\u05dd \u05d0\u05ea \u05d4\u05d9\u05db\u05d5\u05dc\u05ea \u05dc\u05e7\u05de\u05e4\u05e8\u05e1 \u05d1\u05e9\u05e7\u05d9\u05e4\u05d5\u05ea \u05d5\u05d2\u05dd \u05dc\u05d4\u05e7\u05e0\u05d5\u05ea \u05d0\u05d5\u05e4\u05d9 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05e1\u05e4\u05e7.</span></p>\n<p>\u00a0</p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05dc\u05d5\u05e9\u05d4 \u05de\u05e6\u05d1\u05d9 \u05e4\u05e2\u05d5\u05dc\u05d4</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05dc-WA76-D2 \u05e9\u05e0\u05d9 \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05d5\u05d9\u05e9 \u05dc\u05d5 \u05e9\u05dc\u05d5\u05e9\u05d4 \u05de\u05e6\u05d1\u05d9 \u05e4\u05e2\u05d5\u05dc\u05d4 \u05e9\u05d5\u05e0\u05d9\u05dd \u05e2\u05dc \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05d0\u05dc\u05d5:</span><br/><span style=\"font-size: 12pt;\">\u05de\u05e6\u05d1 \u05e1\u05d8\u05e8\u05d9\u05d0\u05d5\u00a0\u05d4\u05de\u05d0\u05e4\u05e9\u05e8 \u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d9\u05d4 \u05d0\u05d7\u05d9\u05d3\u05d4 \u05d1-Sidechain, \u05d1\u05e4\u05d5\u05e7\u05d5\u05e1 \u05e2\u05dc \u05d4-Attack \u05d4\u05de\u05d4\u05d9\u05e8 \u05d1\u05d9\u05d5\u05ea\u05e8, \u05d0\u05d5 \u05d4-Release \u05d4\u05d0\u05d9\u05d8\u05d9 \u05d1\u05d9\u05d5\u05ea\u05e8.</span><br/><span style=\"font-size: 12pt;\">\u05de\u05e6\u05d1 AB&lt;A \u05e9\u05d9\u05d9\u05ea\u05df \u05dc\u05e2\u05e8\u05d5\u05e5 \u05d4\u05e9\u05de\u05d0\u05dc\u05d9 \u05dc\u05e9\u05dc\u05d5\u05d8 \u05d1-Attack/Release \u05e9\u05dc \u05d4\u05e2\u05e8\u05d5\u05e5 \u05d4\u05d9\u05de\u05e0\u05d9.\u00a0\u05d4-Sidechains \u05d1\u05de\u05e6\u05d1 A&gt;AB \u05e2\u05d3\u05d9\u05d9\u05df \u05de\u05e7\u05d5\u05e9\u05e8\u05d5\u05ea \u05db\u05e4\u05d9 \u05e9\u05d4\u05df \u05d1\u05de\u05e6\u05d1 \u05d4\u05e1\u05d8\u05e8\u05d9\u05d0\u05d5.</span><br/><span style=\"font-size: 12pt;\">\u05d5\u05d1\u05de\u05e6\u05d1 A|B \u05d4-WA76-D2 \u05e4\u05d5\u05e2\u05dc \u05db\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8 \u05de\u05d5\u05e0\u05d5 \u05db\u05e4\u05d5\u05dc.<br/><br/></span></p>\n<p><span style=\"font-size: 12pt;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/qhYzTB7bWPg\" width=\"560\"></iframe></span></p>\n<p><span style=\"font-size: 12pt;\"><iframe frameborder=\"no\" height=\"166\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1962395207&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true\" width=\"100%\"></iframe></span></p>\n</div>",
+      "short_description": "\u05e7\u05d5\u05de\u05e4\u05e8\u05e1\u05d5\u05e8 \u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d5\u05de\u05ea\u05e7\u05d3\u05dd \u05d1\u05e2\u05dc \u05e9\u05e0\u05d9 \u05e2\u05e8\u05d5\u05e6\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Warm Audio",
+      "category": "UNCATEGORIZED",
+      "price": 5640.0,
+      "pricing": {
+        "regular_price": 5640.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16027396/large/60edfa463d9c46bd331d19f3b53f849f.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16027396/large/60edfa463d9c46bd331d19f3b53f849f.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/16027396/large/60edfa463d9c46bd331d19f3b53f849f.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16027396/large/60edfa463d9c46bd331d19f3b53f849f.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 76.0
+      },
+      "source_url": "https://www.halilit.com/items/7670561-warm-audio-wa76-d2-compressor",
+      "generated_at": "2026-01-30T02:36:19.220379",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 76.0
+      }
+    },
+    {
+      "id": "warm-audio_7665341",
+      "halilit_id": "7665341",
+      "name": "WA76-A",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 3502.0,
+      "pricing": {
+        "regular_price": 3502.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/7665341/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/7665341/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/7665341/5-year-nav.webp",
+          "/assets/images/warm-audio/7665341/73EQ.webp",
+          "/assets/images/warm-audio/7665341/76-overview-thumb.webp",
+          "/assets/images/warm-audio/7665341/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/7665341/76d-d2-thumbnail.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_Still1.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_Still2.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_Still4.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_Still5.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_Still7.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_angles.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_components.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_main.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_still2.webp",
+          "/assets/images/warm-audio/7665341/Gallery_WA76A_still3.webp",
+          "/assets/images/warm-audio/7665341/ProductCards_FindYourOutboard_76A.webp",
+          "/assets/images/warm-audio/7665341/ProductCards_FindYourOutboard_76A2.webp",
+          "/assets/images/warm-audio/7665341/Vibe-76BlueStripe.webp",
+          "/assets/images/warm-audio/7665341/Vibe_Mobile-76BlueStripe.webp",
+          "/assets/images/warm-audio/7665341/WA76-A2_Center.webp",
+          "/assets/images/warm-audio/7665341/WA76-A_Demo_Thumb-Web.webp",
+          "/assets/images/warm-audio/7665341/drumkit.webp",
+          "/assets/images/warm-audio/7665341/electricguitar.webp",
+          "/assets/images/warm-audio/7665341/eqp-product-card.webp",
+          "/assets/images/warm-audio/7665341/fluff-thumb.webp",
+          "/assets/images/warm-audio/7665341/headroom-thumb.webp",
+          "/assets/images/warm-audio/7665341/mixmaster.webp",
+          "/assets/images/warm-audio/7665341/namm.webp",
+          "/assets/images/warm-audio/7665341/nav-shadow.webp",
+          "/assets/images/warm-audio/7665341/retro64-thumb.webp",
+          "/assets/images/warm-audio/7665341/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/7665341/subnavtabshadow.webp",
+          "/assets/images/warm-audio/7665341/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/7665341/vocal.webp",
+          "/assets/images/warm-audio/7665341/wa76-intro-thumb.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/7665341/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7665341-warm-audio-wa76-a-compressor",
+      "generated_at": "2026-01-30T02:36:19.339758",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/7665341/Manual_WA76A-A2_Web.pdf",
+          "type": "pdf",
+          "label": "Manual Wa76A A2 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:36.310942"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_6889500",
+      "halilit_id": "6889500",
+      "name": "WA-19",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 913.0,
+      "pricing": {
+        "regular_price": 913.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/6889500/19_Black.webp",
+        "thumbnail": "/assets/images/warm-audio/6889500/19_Black.webp",
+        "gallery": [
+          "/assets/images/warm-audio/6889500/19_Black.webp",
+          "/assets/images/warm-audio/6889500/19_Nickel.webp",
+          "/assets/images/warm-audio/6889500/5-year-nav.webp",
+          "/assets/images/warm-audio/6889500/73EQ.webp",
+          "/assets/images/warm-audio/6889500/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/6889500/Bryce_Overview.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_angles.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_components-min.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_kit-min.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_main.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_still_4-min.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_still_5-min.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_still_6-min.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_still_6.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_still_7-min.webp",
+          "/assets/images/warm-audio/6889500/GALLERY_19_still_8-min.webp",
+          "/assets/images/warm-audio/6889500/Introduction.webp",
+          "/assets/images/warm-audio/6889500/Sean_Demo.webp",
+          "/assets/images/warm-audio/6889500/Vibe-19.webp",
+          "/assets/images/warm-audio/6889500/Vibe_Mobile-19.webp",
+          "/assets/images/warm-audio/6889500/acousticguitar.webp",
+          "/assets/images/warm-audio/6889500/drumkit.webp",
+          "/assets/images/warm-audio/6889500/drumoverhead.webp",
+          "/assets/images/warm-audio/6889500/eqp-product-card.webp",
+          "/assets/images/warm-audio/6889500/fluff-thumb.webp",
+          "/assets/images/warm-audio/6889500/headroom-thumb.webp",
+          "/assets/images/warm-audio/6889500/mt-10-featured.webp",
+          "/assets/images/warm-audio/6889500/namm.webp",
+          "/assets/images/warm-audio/6889500/nav-shadow.webp",
+          "/assets/images/warm-audio/6889500/retro64-thumb.webp",
+          "/assets/images/warm-audio/6889500/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/6889500/subnavtabshadow.webp",
+          "/assets/images/warm-audio/6889500/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/6889500/vocal.webp",
+          "/assets/images/warm-audio/6889500/wa-mpx-2mpx-card.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/6889500/19_Black.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/6889500-warm-audio-wa-19-dynamic-studio-microphone",
+      "generated_at": "2026-01-30T02:36:19.424776",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/6889500/WA19_WebManual-EU24.pdf",
+          "type": "pdf",
+          "label": "Wa19 Webmanual Eu24",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:37.738516"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_7205544",
+      "halilit_id": "7205544",
+      "name": "Warm Audio WA-DI-A Active Direct Box",
+      "brand": "Warm Audio",
+      "description": "<div class=\"desc\">\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 14pt;\"><strong>\u05e7\u05d5\u05e4\u05e1\u05ea DI \u05e9\u05dc\u05d0 \u05db\u05de\u05d5 \u05d4\u05d0\u05d7\u05e8\u05d5\u05ea \u05d1\u05e9\u05d5\u05e7!</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05d1\u05d9\u05df \u05d0\u05dd \u05d0\u05ea\u05dd \u05de\u05e0\u05d2\u05e0\u05d9\u05dd \u05d1\u05d2\u05d9\u05d8\u05e8\u05d4, \u05d1\u05e1, \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d0\u05d5 \u05db\u05dc\u05d9 \u05de\u05d9\u05ea\u05e8 \u05d0\u05d7\u05e8\u05d9\u05dd, \u05d0\u05ea\u05dd \u05ea\u05d6\u05d3\u05e7\u05e7\u05d5 \u05dc-DI \u05e9\u05dc\u05d0 \u05d9\u05d5\u05e8\u05d9\u05d3 \u05d0\u05ea \u05d0\u05d9\u05db\u05d5\u05ea \u05d4\u05e1\u05d0\u05d5\u05e0\u05d3 \u05e9\u05dc \u05d4\u05db\u05dc\u05d9 \u05e9\u05dc\u05db\u05dd, \u05db\u05de\u05d5 \u05d4-<strong>WA-DI-A</strong>, \u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI \u05d4\u05d0\u05e7\u05d8\u05d9\u05d1\u05d9\u05ea\u00a0\u05de\u05d1\u05d9\u05ea Warm Audio. \u05d1\u05e0\u05d5\u05d9\u05d4 \u05e2\u05dc \u05d1\u05e1\u05d9\u05e1 \u05d4\u05e0\u05d3\u05e1\u05ea \u05d4-CineMag <span class=\"caps\">USA</span> Transformer \u05d4\u05de\u05e4\u05d5\u05e8\u05e1\u05de\u05ea, \u05d5\u05e2\u05e9\u05d5\u05d9\u05d4 \u05de\u05e8\u05db\u05d9\u05d1\u05d9\u05dd \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05d4\u05d2\u05d1\u05d5\u05d4\u05d4 \u05d1\u05d9\u05d5\u05ea\u05e8 \u05d4\u05de\u05d5\u05d2\u05e0\u05d9\u05dd \u05d1\u05e9\u05dc\u05d3\u05ea \u05d0\u05dc\u05d5\u05de\u05d9\u05e0\u05d9\u05d5\u05dd \u05e7\u05e9\u05d9\u05d7\u05d4, \u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI \u05d4\u05d6\u05d5 \u05e0\u05d5\u05e2\u05d3\u05d4 \u05dc\u05d4\u05d9\u05d5\u05ea \u05e2\u05de\u05d9\u05d3\u05d4 \u05d1\u05e4\u05e0\u05d9 \u05e9\u05e0\u05d9\u05dd \u05e9\u05dc \u05e0\u05e1\u05d9\u05e2\u05d5\u05ea \u05d1\u05d3\u05e8\u05db\u05d9\u05dd \u05d5\u05e2\u05d1\u05d5\u05d3\u05d4 \u05d0\u05d9\u05e0\u05d8\u05e0\u05e1\u05d9\u05d1\u05d9\u05ea \u05d1\u05d0\u05d5\u05dc\u05e4\u05df.</span></p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05d1\u05e0\u05d5\u05d9\u05d4 \u05e2\u05dc \u05d1\u05e1\u05d9\u05e1 \u05d4-CineMag</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05db\u05dc \u05d4\u05d9\u05d1\u05d8 \u05e9\u05dc \u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI \u05d4\u05d6\u05d5 \u05de\u05ea\u05d5\u05db\u05e0\u05df \u05dc\u05e1\u05e4\u05e7 \u05e9\u05dc\u05de\u05d5\u05ea \u05e1\u05d0\u05d5\u05e0\u05d3 \u05de\u05e8\u05d1\u05d9\u05ea, \u05d4\u05d7\u05dc \u05de\u05e9\u05e0\u05d0\u05d9 \u05d4- custom-wound CineMag <span class=\"caps\">USA</span> \u05d5\u05e2\u05d3 \u05dc\u05db\u05e4\u05ea\u05d5\u05e8 \u05d5\u05d4\u05de\u05ea\u05d2\u05d9\u05dd \u05d4\u05e7\u05e9\u05d9\u05d7\u05d9\u05dd \u05d4\u05e2\u05e9\u05d5\u05d9\u05d9\u05dd \u05de\u05ea\u05db\u05ea. \u05ea\u05d5\u05db\u05dc\u05d5 \u05dc\u05e6\u05e4\u05d5\u05ea \u05dc\u05e1\u05d0\u05d5\u05e0\u05d3 \u05d7\u05dd \u05d5\u05e2\u05e9\u05d9\u05e8 \u05d2\u05dd \u05e2\u05dd \u05db\u05d1\u05dc\u05d9\u05dd \u05d0\u05e8\u05d5\u05db\u05d9\u05dd, \u05d5\u05de\u05d0\u05e8\u05d6 \u05d4\u05d0\u05dc\u05d5\u05de\u05d9\u05e0\u05d9\u05d5\u05dd \u05d4\u05e7\u05e9\u05d9\u05d7 \u05de\u05d1\u05d8\u05d9\u05d7 \u05ea\u05d5\u05d7\u05dc\u05ea \u05d7\u05d9\u05d9\u05dd \u05d0\u05e8\u05d5\u05db\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05e7\u05d5\u05e4\u05e1\u05d4. \u05d0\u05dd \u05d1\u05e8\u05e6\u05d5\u05e0\u05db\u05dd \u05dc\u05d4\u05de\u05d9\u05e8 \u05d0\u05d5\u05ea \u05de\u05e8\u05de\u05ea \u05db\u05dc\u05d9 \u05e0\u05d2\u05d9\u05e0\u05d4 \u05dc\u05e8\u05de\u05ea \u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df, \u05db\u05d0\u05e9\u05e8 \u05d0\u05d9\u05db\u05d5\u05ea \u05d4\u05e1\u05d0\u05d5\u05e0\u05d3 \u05d6\u05d4 \u05de\u05d4 \u05e9\u05e2\u05d5\u05de\u05d3 \u05d1\u05e8\u05d0\u05e9 \u05e1\u05d3\u05e8 \u05d4\u05e2\u05d3\u05d9\u05e4\u05d5\u05d9\u05d5\u05ea \u05e9\u05dc\u05db\u05dd, \u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI, \u05d4-<strong>WA-DI-A</strong> \u05d4\u05d9\u05d0 \u05d1\u05d7\u05d9\u05e8\u05d4 \u05de\u05e2\u05d5\u05dc\u05d4 \u05e2\u05d1\u05d5\u05e8 \u05d4\u05de\u05d8\u05dc\u05d4.</span></p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05d7\u05d5\u05d5\u05d9\u05d9\u05ea DI \u05d7\u05d3\u05d9\u05e9\u05d4</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05e7\u05d5\u05e4\u05e1\u05d0\u05ea \u05d4-<strong>WA-DI-A</strong> \u05de\u05e6\u05d9\u05e2\u05d4 \u05d0\u05ea \u05d4\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9\u05d5\u05ea \u05d4\u05e0\u05d3\u05d9\u05e8\u05d4 \u05e9\u05dc \u05d4\u05db\u05e4\u05ea\u05d5\u05e8 variable pad knob \u05d4\u05de\u05d5\u05d1\u05e0\u05d4 \u05d0\u05e9\u05e8 \u05de\u05e4\u05d7\u05d9\u05ea \u05d0\u05ea \u05d0\u05d5\u05ea \u05d4\u05d0\u05d9\u05e0\u05e4\u05d5\u05d8 \u05e9\u05dc\u05db\u05dd \u05db\u05dc \u05d4\u05d3\u05e8\u05da \u05de-3dB- \u05dc-30dB-, \u05de\u05d4 \u05e9\u05d1\u05e7\u05dc\u05d5\u05ea \u201c\u05d9\u05d0\u05dc\u05e3\u201d \u05db\u05dc \u05de\u05e7\u05d5\u05e8 \u05e9\u05dc \u05db\u05dc\u05d9 \u05e0\u05d2\u05d9\u05e0\u05d4. \u05d1\u05e0\u05d5\u05e1\u05e3 \u05d4\u05e7\u05d5\u05e4\u05e1\u05d4 \u05de\u05e6\u05d9\u05e2\u05d4 \u05e9\u05e7\u05e2 Thru-put \u05e9\u05de\u05e7\u05d5\u05e9\u05e8 \u05dc\u05e9\u05e7\u05e2 \u05d4\u05d0\u05d9\u05e0\u05e4\u05d5\u05d8. \u05d6\u05d4\u05d5 \u05e9\u05e7\u05e2 \u05e0\u05d5\u05d7 \u05d4\u05de\u05d0\u05e4\u05e9\u05e8 \u05dc\u05db\u05dd \u05dc\u05e9\u05dc\u05d5\u05d7 \u05d0\u05ea \u05d4\u05d0\u05d5\u05ea \u05e9\u05dc \u05d4\u05db\u05dc\u05d9 \u05e9\u05dc\u05db\u05dd \u05dc\u05de\u05e7\u05d5\u05dd \u05e9\u05e0\u05d9 \u05d1\u05e0\u05d5\u05e1\u05e3 \u05dc\u05de\u05d9\u05e7\u05e1\u05e8 \u05d0\u05d5 \u05dc\u05de\u05db\u05e9\u05d9\u05e8 \u05d4\u05d4\u05e7\u05dc\u05d8\u05d4.</span></p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05e9\u05d9\u05de\u05d5\u05e9\u05d9\u05dd \u05e9\u05d2\u05e8\u05ea\u05d9\u05d9\u05dd \u05e2\u05d1\u05d5\u05e8 \u05e7\u05d5\u05e4\u05e1\u05ea DI</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05d7\u05d9\u05d1\u05d5\u05e8 \u05db\u05dc\u05d9\u05dd \u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9\u05d9\u05dd \u05db\u05d2\u05d5\u05df \u05d2\u05d9\u05d8\u05e8\u05d4, \u05d1\u05e1, \u05de\u05e7\u05dc\u05d3\u05ea \u05d0\u05d5 \u05de\u05db\u05d5\u05e0\u05d5\u05ea \u05ea\u05d5\u05e4\u05d9\u05dd \u05d9\u05e9\u05d9\u05e8\u05d5\u05ea \u05dc\u05de\u05e2\u05e8\u05db\u05ea \u05d4\u05d2\u05d1\u05e8\u05d4 \u05d0\u05d5 \u05d4\u05e7\u05dc\u05d8\u05d4. \u05d1\u05de\u05d9\u05dc\u05d9\u05dd \u05e4\u05e9\u05d5\u05d8\u05d5\u05ea, \u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI \u05de\u05de\u05d9\u05e8\u05d4 \u05d0\u05ea \u05d0\u05d5\u05ea\u05d5\u05ea \u05d4\u05d9\u05e6\u05d9\u05d0\u05d4 \u05d4\u05d2\u05d1\u05d5\u05d4\u05d9\u05dd \u05d5\u05d4\u05dc\u05d0 \u05de\u05d0\u05d5\u05d6\u05e0\u05d9\u05dd \u05e9\u05dc \u05d4\u05db\u05dc\u05d9\u05dd \u05dc\u05d0\u05d5\u05ea\u05d5\u05ea \u05e4\u05dc\u05d8 \u05de\u05d0\u05d5\u05d6\u05e0\u05d9\u05dd \u05d1\u05e2\u05db\u05d1\u05d4 \u05e0\u05de\u05d5\u05db\u05d4. \u05e2\u05dc \u05d9\u05d3\u05d9 \u05db\u05da, \u05d4\u05d0\u05d5\u05ea\u05d5\u05ea \u05e9\u05dc \u05db\u05dc\u05d9 \u05d4\u05e0\u05d2\u05d9\u05e0\u05d4 \u05de\u05d5\u05de\u05e8\u05d9\u05dd \u05db\u05e2\u05ea \u05dc\u05e8\u05de\u05ea \u05d4\u05de\u05ea\u05d7 \u05d4\u05de\u05ea\u05d0\u05d9\u05de\u05d4 \u05dc-PA \u05d0\u05d5 \u05dc\u05de\u05e2\u05e8\u05db\u05ea \u05d4\u05d4\u05e7\u05dc\u05d8\u05d4 \u2013 \u05de\u05d4 \u05e9\u05de\u05e4\u05d7\u05d9\u05ea \u05de\u05d0\u05d5\u05d3 \u05d5/\u05d0\u05d5 \u05de\u05d1\u05d8\u05dc \u05d7\u05d9\u05d1\u05d5\u05e8\u05d9\u05dd \u05e9\u05e2\u05dc\u05d5\u05dc\u05d9\u05dd \u05dc\u05d2\u05e8\u05d5\u05dd \u05dc\u05e9\u05d9\u05e0\u05d5\u05d9\u05d9 \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d5\u05d3\u05d9\u05e1\u05d8\u05d5\u05e8\u05e9\u05df.</span></p>\n<h2 class=\"\" style=\"text-align: center;\"><span style=\"font-size: 12pt;\"><strong>\u05e4\u05e1\u05d9\u05d1\u05d9 \u05d0\u05d5 \u05d0\u05e7\u05d8\u05d9\u05d1\u05d9?</strong></span></h2>\n<p><span style=\"font-size: 12pt;\">\u05d4-<strong>WA-DI-A</strong> (\u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI \u05d4\u05d0\u05e7\u05d8\u05d9\u05d1\u05d9\u05ea) \u05d4\u05d9\u05d0 \u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d4\u05d8\u05d5\u05d1\u05d4 \u05d1\u05d9\u05d5\u05ea\u05e8 \u05e2\u05d1\u05d5\u05e8 \u05db\u05dc\u05d9\u05dd \u05e2\u05dd \u05e4\u05d9\u05e7\u05d0\u05e4\u05d9\u05dd \u05e4\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd, \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05db\u05dc\u05d9\u05dd \u05d0\u05e7\u05d5\u05e1\u05d8\u05d9\u05d9\u05dd. \u05d4-<strong>WA-DI-A</strong> \u05d9\u05db\u05d5\u05dc\u05d4 \u05dc\u05e4\u05e2\u05d5\u05dc \u05d2\u05dd \u05d1\u05de\u05e6\u05d1 \u201c\u05e4\u05d0\u05e1\u05d9\u05d1\u05d9\u201d \u05d1\u05de\u05d9\u05d3\u05ea \u05d4\u05e6\u05d5\u05e8\u05da. \u05d4-WA-DI-P (\u05e7\u05d5\u05e4\u05e1\u05ea \u05d4-DI \u05d4\u05e4\u05e1\u05d9\u05d1\u05d9\u05ea) \u05d4\u05d9\u05d0 \u05d4\u05d1\u05d7\u05d9\u05e8\u05d4 \u05d4\u05d8\u05d5\u05d1\u05d4 \u05d1\u05d9\u05d5\u05ea\u05e8 \u05dc\u05d0\u05d9\u05d6\u05d5\u05df \u05d4\u05d0\u05d5\u05ea \u05e9\u05dc \u05de\u05db\u05e9\u05d9\u05e8\u05d9\u05dd \u05e2\u05dd \u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9\u05e7\u05d4 \u05d0\u05e7\u05d8\u05d9\u05d1\u05d9\u05ea, \u05d0\u05da \u05e2\u05d3\u05d9\u05d9\u05df \u05de\u05ea\u05e4\u05e7\u05d3\u05ea \u05d8\u05d5\u05d1 \u05de\u05d0\u05d5\u05d3 \u05e2\u05dc \u05e4\u05d9\u05e7\u05d0\u05e4\u05d9\u05dd \u05e4\u05e1\u05d9\u05d1\u05d9\u05d9\u05dd \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d4\u05e4\u05e7\u05ea \u05d8\u05d5\u05d5\u05d7 \u05ea\u05d3\u05e8\u05d9\u05dd \u05d4\u05e2\u05d5\u05dc\u05d4 \u05e2\u05dc \u05d8\u05d5\u05d5\u05d7 \u05d4\u05ea\u05d3\u05e8\u05d9\u05dd \u05e9\u05dc \u05e8\u05d5\u05d1 \u05e7\u05d5\u05e4\u05e1\u05d0\u05d5\u05ea \u05d4-DI \u05d4\u05e4\u05e1\u05d9\u05d1\u05d9\u05d5\u05ea \u05d1\u05e9\u05d5\u05e7 \u05db\u05d9\u05d5\u05dd.</span></p>\n<p><span style=\"font-size: 12pt;\">\u00a0</span><span style=\"font-size: 12pt;\">\u00a0</span></p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/ZC8Mo8uQfGA\" width=\"560\"></iframe></p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/Vn9mgRol_FM\" width=\"560\"></iframe></p>\n</div>",
+      "short_description": "\u05e7\u05d5\u05e4\u05e1\u05ea Direct Box \u05d0\u05e7\u05d8\u05d9\u05d1\u05d9\u05ea \u05dc\u05d4\u05d2\u05d1\u05e8\u05ea \u05d0\u05d9\u05e8\u05d5\u05e2\u05d9\u05dd \u05d5\u05d4\u05e7\u05dc\u05d8\u05d5\u05ea \u05d0\u05d5\u05dc\u05e4\u05df \u05de\u05d1\u05d9\u05ea Warm Audio",
+      "category": "UNCATEGORIZED",
+      "price": 877.0,
+      "pricing": {
+        "regular_price": 877.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15025600/large/897841c4a337491e2a921fe1763a9a19.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15025600/large/897841c4a337491e2a921fe1763a9a19.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/15025600/large/897841c4a337491e2a921fe1763a9a19.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15025600/large/897841c4a337491e2a921fe1763a9a19.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 314.0
+      },
+      "source_url": "https://www.halilit.com/items/7205544-warm-audio-wa-di-a-active-direct-box",
+      "generated_at": "2026-01-30T02:36:19.512706",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 314.0
+      }
+    },
+    {
+      "id": "warm-audio_8341718",
+      "halilit_id": "8341718",
+      "name": "WA-87 R2",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 887.0,
+      "pricing": {
+        "regular_price": 887.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8341718/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/8341718/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8341718/5-year-nav.webp",
+          "/assets/images/warm-audio/8341718/67-87-8000_comp-chart.webp",
+          "/assets/images/warm-audio/8341718/73EQ.webp",
+          "/assets/images/warm-audio/8341718/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8341718/87R2T.webp",
+          "/assets/images/warm-audio/8341718/87R2_NICKEL_STILL_1.webp",
+          "/assets/images/warm-audio/8341718/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/8341718/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/8341718/87r2-video1.webp",
+          "/assets/images/warm-audio/8341718/87r2-video2.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_STILL_2.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_angles.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_main.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_still3.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_still4.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_still5.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_still6.webp",
+          "/assets/images/warm-audio/8341718/GALLERY_87R2_NICKEL_still7.webp",
+          "/assets/images/warm-audio/8341718/Vibe-87R2.webp",
+          "/assets/images/warm-audio/8341718/Vibe_Mobile-87R2.webp",
+          "/assets/images/warm-audio/8341718/WA-87R2T_Thumb.webp",
+          "/assets/images/warm-audio/8341718/acousticguitar.webp",
+          "/assets/images/warm-audio/8341718/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/8341718/electricguitar.webp",
+          "/assets/images/warm-audio/8341718/eqp-product-card.webp",
+          "/assets/images/warm-audio/8341718/fluff-thumb.webp",
+          "/assets/images/warm-audio/8341718/headroom-thumb.webp",
+          "/assets/images/warm-audio/8341718/namm.webp",
+          "/assets/images/warm-audio/8341718/nav-shadow.webp",
+          "/assets/images/warm-audio/8341718/retro64-thumb.webp",
+          "/assets/images/warm-audio/8341718/roommics.webp",
+          "/assets/images/warm-audio/8341718/sos-goty-2021-ft.webp",
+          "/assets/images/warm-audio/8341718/sos-goty-2022-ft.webp",
+          "/assets/images/warm-audio/8341718/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8341718/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8341718/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8341718/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8341718/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8341718-warm-audio-wa-87-jr-se-condenser-microphone",
+      "generated_at": "2026-01-30T02:36:19.609691",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8341718/Warm-Audio-WA-87r2-NKL-Manual-2020-web.pdf",
+          "type": "pdf",
+          "label": "Warm Audio Wa 87R2 Nkl Manual 2020 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:38.911170"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8072093",
+      "halilit_id": "8072093",
+      "name": "Fen-tone",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 3235.0,
+      "pricing": {
+        "regular_price": 3235.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8072093/10_GALLERY_Fen-tone_still.webp",
+        "thumbnail": "/assets/images/warm-audio/8072093/10_GALLERY_Fen-tone_still.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8072093/10_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8072093/1_GALLERY_Fen-tone_main.webp",
+          "/assets/images/warm-audio/8072093/3_GALLERY_Fen-tone_angles2.webp",
+          "/assets/images/warm-audio/8072093/4_GALLERY_Fen-tone_angles3.webp",
+          "/assets/images/warm-audio/8072093/5-year-nav.webp",
+          "/assets/images/warm-audio/8072093/5_GALLERY_Fen-tone_kit1.webp",
+          "/assets/images/warm-audio/8072093/6_GALLERY_Fen-tone_kit2.webp",
+          "/assets/images/warm-audio/8072093/73EQ.webp",
+          "/assets/images/warm-audio/8072093/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8072093/7_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8072093/8_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8072093/9_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8072093/Fen-tone-Thumb_Sean_Power2.webp",
+          "/assets/images/warm-audio/8072093/ProductCards_Fentone_Single_dropshadow.webp",
+          "/assets/images/warm-audio/8072093/ProductCards_Fentone_StereoPair_dropshadow.webp",
+          "/assets/images/warm-audio/8072093/ShockMount-SIngle.webp",
+          "/assets/images/warm-audio/8072093/Vibe-Fentone.webp",
+          "/assets/images/warm-audio/8072093/Vibe_Mobile-Fen.webp",
+          "/assets/images/warm-audio/8072093/acousticguitar.webp",
+          "/assets/images/warm-audio/8072093/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/8072093/drumoverhead.webp",
+          "/assets/images/warm-audio/8072093/eqp-product-card.webp",
+          "/assets/images/warm-audio/8072093/fen-tone-commercial-thumb.webp",
+          "/assets/images/warm-audio/8072093/fentone-overview-thumb.webp",
+          "/assets/images/warm-audio/8072093/fluff-thumb.webp",
+          "/assets/images/warm-audio/8072093/headroom-thumb.webp",
+          "/assets/images/warm-audio/8072093/horns.webp",
+          "/assets/images/warm-audio/8072093/lespaul.webp",
+          "/assets/images/warm-audio/8072093/namm.webp",
+          "/assets/images/warm-audio/8072093/nav-shadow.webp",
+          "/assets/images/warm-audio/8072093/retro64-thumb.webp",
+          "/assets/images/warm-audio/8072093/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8072093/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8072093/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8072093/wa-mpx-2mpx-card.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8072093/10_GALLERY_Fen-tone_still.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8072093-warm-audio-fen-tone-studio-ribbon-microphone",
+      "generated_at": "2026-01-30T02:36:19.693918",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8072093/WAFT_Single_UserManual_web.pdf",
+          "type": "pdf",
+          "label": "Waft Single Usermanual Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:41.468144"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8499889",
+      "halilit_id": "8499889",
+      "name": "Fen-tone",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 5658.0,
+      "pricing": {
+        "regular_price": 5658.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8499889/10_GALLERY_Fen-tone_still.webp",
+        "thumbnail": "/assets/images/warm-audio/8499889/10_GALLERY_Fen-tone_still.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8499889/10_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8499889/1_GALLERY_Fen-tone_main.webp",
+          "/assets/images/warm-audio/8499889/3_GALLERY_Fen-tone_angles2.webp",
+          "/assets/images/warm-audio/8499889/4_GALLERY_Fen-tone_angles3.webp",
+          "/assets/images/warm-audio/8499889/5-year-nav.webp",
+          "/assets/images/warm-audio/8499889/5_GALLERY_Fen-tone_kit1.webp",
+          "/assets/images/warm-audio/8499889/6_GALLERY_Fen-tone_kit2.webp",
+          "/assets/images/warm-audio/8499889/73EQ.webp",
+          "/assets/images/warm-audio/8499889/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8499889/7_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8499889/8_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8499889/9_GALLERY_Fen-tone_still.webp",
+          "/assets/images/warm-audio/8499889/Fen-tone-Thumb_Sean_Power2.webp",
+          "/assets/images/warm-audio/8499889/ProductCards_Fentone_Single_dropshadow.webp",
+          "/assets/images/warm-audio/8499889/ProductCards_Fentone_StereoPair_dropshadow.webp",
+          "/assets/images/warm-audio/8499889/ShockMount-SIngle.webp",
+          "/assets/images/warm-audio/8499889/Vibe-Fentone.webp",
+          "/assets/images/warm-audio/8499889/Vibe_Mobile-Fen.webp",
+          "/assets/images/warm-audio/8499889/acousticguitar.webp",
+          "/assets/images/warm-audio/8499889/drumoverhead.webp",
+          "/assets/images/warm-audio/8499889/eqp-product-card.webp",
+          "/assets/images/warm-audio/8499889/fen-tone-commercial-thumb.webp",
+          "/assets/images/warm-audio/8499889/fentone-overview-thumb.webp",
+          "/assets/images/warm-audio/8499889/fluff-thumb.webp",
+          "/assets/images/warm-audio/8499889/headroom-thumb.webp",
+          "/assets/images/warm-audio/8499889/horns.webp",
+          "/assets/images/warm-audio/8499889/lespaul.webp",
+          "/assets/images/warm-audio/8499889/namm.webp",
+          "/assets/images/warm-audio/8499889/nav-shadow.webp",
+          "/assets/images/warm-audio/8499889/retro64-thumb.webp",
+          "/assets/images/warm-audio/8499889/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8499889/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8499889/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8499889/wa-mpx-2mpx-card.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8499889/10_GALLERY_Fen-tone_still.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8499889-warm-audio-fen-tone-studio-ribbon-microphone-pair",
+      "generated_at": "2026-01-30T02:36:19.793996",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8499889/WAFT_Single_UserManual_web.pdf",
+          "type": "pdf",
+          "label": "Waft Single Usermanual Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:43.707062"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8341649",
+      "halilit_id": "8341649",
+      "name": "WA-87 R2",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 887.0,
+      "pricing": {
+        "regular_price": 887.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8341649/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/8341649/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8341649/5-year-nav.webp",
+          "/assets/images/warm-audio/8341649/67-87-8000_comp-chart.webp",
+          "/assets/images/warm-audio/8341649/73EQ.webp",
+          "/assets/images/warm-audio/8341649/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8341649/87R2T.webp",
+          "/assets/images/warm-audio/8341649/87R2_NICKEL_STILL_1.webp",
+          "/assets/images/warm-audio/8341649/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/8341649/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/8341649/87r2-video1.webp",
+          "/assets/images/warm-audio/8341649/87r2-video2.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_STILL_2.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_angles.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_main.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_still3.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_still4.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_still5.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_still6.webp",
+          "/assets/images/warm-audio/8341649/GALLERY_87R2_NICKEL_still7.webp",
+          "/assets/images/warm-audio/8341649/Vibe-87R2.webp",
+          "/assets/images/warm-audio/8341649/Vibe_Mobile-87R2.webp",
+          "/assets/images/warm-audio/8341649/WA-87R2T_Thumb.webp",
+          "/assets/images/warm-audio/8341649/acousticguitar.webp",
+          "/assets/images/warm-audio/8341649/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/8341649/electricguitar.webp",
+          "/assets/images/warm-audio/8341649/eqp-product-card.webp",
+          "/assets/images/warm-audio/8341649/fluff-thumb.webp",
+          "/assets/images/warm-audio/8341649/headroom-thumb.webp",
+          "/assets/images/warm-audio/8341649/namm.webp",
+          "/assets/images/warm-audio/8341649/nav-shadow.webp",
+          "/assets/images/warm-audio/8341649/retro64-thumb.webp",
+          "/assets/images/warm-audio/8341649/roommics.webp",
+          "/assets/images/warm-audio/8341649/sos-goty-2021-ft.webp",
+          "/assets/images/warm-audio/8341649/sos-goty-2022-ft.webp",
+          "/assets/images/warm-audio/8341649/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8341649/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8341649/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8341649/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8341649/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8341649-warm-audio-wa-87-jr-se-condenser-microphone",
+      "generated_at": "2026-01-30T02:36:19.945714",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8341649/Warm-Audio-WA-87r2-NKL-Manual-2020-web.pdf",
+          "type": "pdf",
+          "label": "Warm Audio Wa 87R2 Nkl Manual 2020 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:45.556624"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_6312276",
+      "halilit_id": "6312276",
+      "name": "WA-1B",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 5494.0,
+      "pricing": {
+        "regular_price": 5494.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/6312276/1B_KFCenter-min.webp",
+        "thumbnail": "/assets/images/warm-audio/6312276/1B_KFCenter-min.webp",
+        "gallery": [
+          "/assets/images/warm-audio/6312276/1B_KFCenter-min.webp",
+          "/assets/images/warm-audio/6312276/5-year-nav.webp",
+          "/assets/images/warm-audio/6312276/73EQ.webp",
+          "/assets/images/warm-audio/6312276/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/6312276/Demo.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL1-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL2-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL3-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL4-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL5-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL6-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_STILL7-min.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_angles.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_components.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_main.webp",
+          "/assets/images/warm-audio/6312276/Gallery_WA1B_still8.webp",
+          "/assets/images/warm-audio/6312276/Introduction.webp",
+          "/assets/images/warm-audio/6312276/Shootout.webp",
+          "/assets/images/warm-audio/6312276/Vibe-1B.webp",
+          "/assets/images/warm-audio/6312276/Vibe_Mobile-1B.webp",
+          "/assets/images/warm-audio/6312276/acousticguitar.webp",
+          "/assets/images/warm-audio/6312276/bassguitar.webp",
+          "/assets/images/warm-audio/6312276/eqp-product-card.webp",
+          "/assets/images/warm-audio/6312276/fluff-thumb.webp",
+          "/assets/images/warm-audio/6312276/headroom-thumb.webp",
+          "/assets/images/warm-audio/6312276/mixdown-goty-2023-ft.webp",
+          "/assets/images/warm-audio/6312276/namm.webp",
+          "/assets/images/warm-audio/6312276/nav-shadow.webp",
+          "/assets/images/warm-audio/6312276/rapvocal.webp",
+          "/assets/images/warm-audio/6312276/retro64-thumb.webp",
+          "/assets/images/warm-audio/6312276/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/6312276/subnavtabshadow.webp",
+          "/assets/images/warm-audio/6312276/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/6312276/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/6312276/1B_KFCenter-min.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/6312276-warm-audio-wa-1b-tube-optical-compressor",
+      "generated_at": "2026-01-30T02:36:20.058407",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/6312276/Manual_WA-1B_UpdateJune2025_Web.pdf",
+          "type": "pdf",
+          "label": "Manual Wa 1B Updatejune2025 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:49.170801"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8341617",
+      "halilit_id": "8341617",
+      "name": "WA-47F",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 887.0,
+      "pricing": {
+        "regular_price": 887.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8341617/47FamilyChart.webp",
+        "thumbnail": "/assets/images/warm-audio/8341617/47FamilyChart.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8341617/47FamilyChart.webp",
+          "/assets/images/warm-audio/8341617/47f-video-thumb-1.webp",
+          "/assets/images/warm-audio/8341617/47f-video-thumb-2.webp",
+          "/assets/images/warm-audio/8341617/47f-video-thumb-3.webp",
+          "/assets/images/warm-audio/8341617/5-year-nav.webp",
+          "/assets/images/warm-audio/8341617/73EQ.webp",
+          "/assets/images/warm-audio/8341617/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_angle.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_main.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still1-min.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still2-min.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still3-min.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still4-min.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still5-min.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still6.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still7.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still8.webp",
+          "/assets/images/warm-audio/8341617/GALLERY_47F_still9.webp",
+          "/assets/images/warm-audio/8341617/Vibe-47F.webp",
+          "/assets/images/warm-audio/8341617/Vibe_Mobile-47F.webp",
+          "/assets/images/warm-audio/8341617/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/8341617/drumkit.webp",
+          "/assets/images/warm-audio/8341617/electricguitar.webp",
+          "/assets/images/warm-audio/8341617/eqp-product-card.webp",
+          "/assets/images/warm-audio/8341617/fluff-thumb.webp",
+          "/assets/images/warm-audio/8341617/headroom-thumb.webp",
+          "/assets/images/warm-audio/8341617/horns.webp",
+          "/assets/images/warm-audio/8341617/namm.webp",
+          "/assets/images/warm-audio/8341617/nav-shadow.webp",
+          "/assets/images/warm-audio/8341617/retro64-thumb.webp",
+          "/assets/images/warm-audio/8341617/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8341617/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8341617/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8341617/tb12-product-card.webp",
+          "/assets/images/warm-audio/8341617/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8341617/47FamilyChart.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8341617-warm-audio-wa-47-jr-se-condenser-microphone",
+      "generated_at": "2026-01-30T02:36:20.200178",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8341617/WA-47F_Web_Manual.pdf",
+          "type": "pdf",
+          "label": "Wa 47F Web Manual",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:49.223533"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_6889362",
+      "halilit_id": "6889362",
+      "name": "WA-47F",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 4427.0,
+      "pricing": {
+        "regular_price": 4427.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/6889362/47FamilyChart.webp",
+        "thumbnail": "/assets/images/warm-audio/6889362/47FamilyChart.webp",
+        "gallery": [
+          "/assets/images/warm-audio/6889362/47FamilyChart.webp",
+          "/assets/images/warm-audio/6889362/47f-video-thumb-1.webp",
+          "/assets/images/warm-audio/6889362/47f-video-thumb-2.webp",
+          "/assets/images/warm-audio/6889362/47f-video-thumb-3.webp",
+          "/assets/images/warm-audio/6889362/5-year-nav.webp",
+          "/assets/images/warm-audio/6889362/73EQ.webp",
+          "/assets/images/warm-audio/6889362/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_angle.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_main.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still1-min.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still2-min.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still3-min.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still4-min.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still5-min.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still6.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still7.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still8.webp",
+          "/assets/images/warm-audio/6889362/GALLERY_47F_still9.webp",
+          "/assets/images/warm-audio/6889362/Vibe-47F.webp",
+          "/assets/images/warm-audio/6889362/Vibe_Mobile-47F.webp",
+          "/assets/images/warm-audio/6889362/drumkit.webp",
+          "/assets/images/warm-audio/6889362/electricguitar.webp",
+          "/assets/images/warm-audio/6889362/eqp-product-card.webp",
+          "/assets/images/warm-audio/6889362/fluff-thumb.webp",
+          "/assets/images/warm-audio/6889362/headroom-thumb.webp",
+          "/assets/images/warm-audio/6889362/horns.webp",
+          "/assets/images/warm-audio/6889362/namm.webp",
+          "/assets/images/warm-audio/6889362/nav-shadow.webp",
+          "/assets/images/warm-audio/6889362/retro64-thumb.webp",
+          "/assets/images/warm-audio/6889362/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/6889362/subnavtabshadow.webp",
+          "/assets/images/warm-audio/6889362/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/6889362/tb12-product-card.webp",
+          "/assets/images/warm-audio/6889362/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/6889362/47FamilyChart.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/6889362-warm-audio-wa-47-microphone",
+      "generated_at": "2026-01-30T02:36:20.282634",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/6889362/WA-47F_Web_Manual.pdf",
+          "type": "pdf",
+          "label": "Wa 47F Web Manual",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:51.255629"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8342093",
+      "halilit_id": "8342093",
+      "name": "WA-87 R2",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 1351.0,
+      "pricing": {
+        "regular_price": 1351.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8342093/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/8342093/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8342093/5-year-nav.webp",
+          "/assets/images/warm-audio/8342093/67-87-8000_comp-chart.webp",
+          "/assets/images/warm-audio/8342093/73EQ.webp",
+          "/assets/images/warm-audio/8342093/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8342093/87R2T.webp",
+          "/assets/images/warm-audio/8342093/87R2_NICKEL_STILL_1.webp",
+          "/assets/images/warm-audio/8342093/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/8342093/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/8342093/87r2-video1.webp",
+          "/assets/images/warm-audio/8342093/87r2-video2.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_STILL_2.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_angles.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_main.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_still3.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_still4.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_still5.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_still6.webp",
+          "/assets/images/warm-audio/8342093/GALLERY_87R2_NICKEL_still7.webp",
+          "/assets/images/warm-audio/8342093/Vibe-87R2.webp",
+          "/assets/images/warm-audio/8342093/Vibe_Mobile-87R2.webp",
+          "/assets/images/warm-audio/8342093/WA-87R2T_Thumb.webp",
+          "/assets/images/warm-audio/8342093/acousticguitar.webp",
+          "/assets/images/warm-audio/8342093/electricguitar.webp",
+          "/assets/images/warm-audio/8342093/eqp-product-card.webp",
+          "/assets/images/warm-audio/8342093/fluff-thumb.webp",
+          "/assets/images/warm-audio/8342093/headroom-thumb.webp",
+          "/assets/images/warm-audio/8342093/namm.webp",
+          "/assets/images/warm-audio/8342093/nav-shadow.webp",
+          "/assets/images/warm-audio/8342093/retro64-thumb.webp",
+          "/assets/images/warm-audio/8342093/roommics.webp",
+          "/assets/images/warm-audio/8342093/sos-goty-2021-ft.webp",
+          "/assets/images/warm-audio/8342093/sos-goty-2022-ft.webp",
+          "/assets/images/warm-audio/8342093/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8342093/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8342093/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8342093/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8342093/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8342093-warm-audio-wa-87-jr",
+      "generated_at": "2026-01-30T02:36:20.381954",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8342093/Warm-Audio-WA-87r2-NKL-Manual-2020-web.pdf",
+          "type": "pdf",
+          "label": "Warm Audio Wa 87R2 Nkl Manual 2020 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:53.741360"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_7671160",
+      "halilit_id": "7671160",
+      "name": "WA-C1 Chorus Vibrato",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Legendary chorus & vibrato circuit recreation with true-to-spec components.",
+      "category": "GUITAR_EFFECTS",
+      "price": 865.0,
+      "pricing": {
+        "regular_price": 865.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_main.webp",
+        "thumbnail": "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_main.webp",
+        "gallery": [
+          "/assets/images/warm-audio/7671160/5-year-nav.webp",
+          "/assets/images/warm-audio/7671160/73EQ.webp",
+          "/assets/images/warm-audio/7671160/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_angle1.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_angle2.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_main.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_still1.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_still2.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_still3.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_still4.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_still5.webp",
+          "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_still6.webp",
+          "/assets/images/warm-audio/7671160/IntroducingC1_VideoThumb.webp",
+          "/assets/images/warm-audio/7671160/Vibe-C1.webp",
+          "/assets/images/warm-audio/7671160/Vibe_Mobile-C1.webp",
+          "/assets/images/warm-audio/7671160/centavo-thumb.webp",
+          "/assets/images/warm-audio/7671160/eqp-product-card.webp",
+          "/assets/images/warm-audio/7671160/fluff-thumb.webp",
+          "/assets/images/warm-audio/7671160/headroom-thumb.webp",
+          "/assets/images/warm-audio/7671160/keyboard.webp",
+          "/assets/images/warm-audio/7671160/namm.webp",
+          "/assets/images/warm-audio/7671160/nav-shadow.webp",
+          "/assets/images/warm-audio/7671160/retro64-thumb.webp",
+          "/assets/images/warm-audio/7671160/rj-thumb.webp",
+          "/assets/images/warm-audio/7671160/semihollow.webp",
+          "/assets/images/warm-audio/7671160/shredder.webp",
+          "/assets/images/warm-audio/7671160/strat.webp",
+          "/assets/images/warm-audio/7671160/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/7671160/subnavtabshadow.webp",
+          "/assets/images/warm-audio/7671160/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/7671160/wa-c1-demo-thumb.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/7671160/Gallery_chorusvibrato_main.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7671160--warm-audio-wa-c1-vibrato-and-chorus-pedal",
+      "generated_at": "2026-01-30T02:36:20.501825",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/7671160/WA-C1_WebManual-EU24.pdf",
+          "type": "pdf",
+          "label": "Wa C1 Webmanual Eu24",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:56.130370"
+        }
+      ],
+      "sub_category": "Pedals",
+      "ui_context": {
+        "primary": "GUITAR_EFFECTS",
+        "sub": "Pedals"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_7670632",
+      "halilit_id": "7670632",
+      "name": "Pedal76",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "GUITAR_EFFECTS",
+      "price": 1228.0,
+      "pricing": {
+        "regular_price": 1228.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/7670632/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/7670632/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/7670632/5-year-nav.webp",
+          "/assets/images/warm-audio/7670632/73EQ.webp",
+          "/assets/images/warm-audio/7670632/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_angle1.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_angle2.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_main.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_still1.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_still2.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_still3.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_still4.webp",
+          "/assets/images/warm-audio/7670632/Gallery_pedal76_still5.webp",
+          "/assets/images/warm-audio/7670632/Introducing76_VideoThumb.webp",
+          "/assets/images/warm-audio/7670632/Vibe-Pedal76.webp",
+          "/assets/images/warm-audio/7670632/Vibe_Mobile-Pedal76.webp",
+          "/assets/images/warm-audio/7670632/bassguitar.webp",
+          "/assets/images/warm-audio/7670632/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/7670632/eqp-product-card.webp",
+          "/assets/images/warm-audio/7670632/fluff-thumb.webp",
+          "/assets/images/warm-audio/7670632/headroom-thumb.webp",
+          "/assets/images/warm-audio/7670632/lespaul.webp",
+          "/assets/images/warm-audio/7670632/namm.webp",
+          "/assets/images/warm-audio/7670632/nav-shadow.webp",
+          "/assets/images/warm-audio/7670632/pedal76-demo-thumb.webp",
+          "/assets/images/warm-audio/7670632/pedal76-overview-thumb.webp",
+          "/assets/images/warm-audio/7670632/retro64-thumb.webp",
+          "/assets/images/warm-audio/7670632/shredder.webp",
+          "/assets/images/warm-audio/7670632/strat.webp",
+          "/assets/images/warm-audio/7670632/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/7670632/subnavtabshadow.webp",
+          "/assets/images/warm-audio/7670632/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/7670632/warmdrive-thumb.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/7670632/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/7670632--warm-audio-pedal76-compressor-pedal",
+      "generated_at": "2026-01-30T02:36:20.581658",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/7670632/Pedal76_WebManual-EU24.pdf",
+          "type": "pdf",
+          "label": "Pedal76 Webmanual Eu24",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:57.738332"
+        }
+      ],
+      "sub_category": "Pedals",
+      "ui_context": {
+        "primary": "GUITAR_EFFECTS",
+        "sub": "Pedals"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8341848",
+      "halilit_id": "8341848",
+      "name": "WA-87 R2",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 1351.0,
+      "pricing": {
+        "regular_price": 1351.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8341848/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/8341848/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8341848/5-year-nav.webp",
+          "/assets/images/warm-audio/8341848/67-87-8000_comp-chart.webp",
+          "/assets/images/warm-audio/8341848/73EQ.webp",
+          "/assets/images/warm-audio/8341848/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8341848/87R2T.webp",
+          "/assets/images/warm-audio/8341848/87R2_NICKEL_STILL_1.webp",
+          "/assets/images/warm-audio/8341848/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/8341848/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/8341848/87r2-video1.webp",
+          "/assets/images/warm-audio/8341848/87r2-video2.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_STILL_2.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_angles.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_main.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_still3.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_still4.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_still5.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_still6.webp",
+          "/assets/images/warm-audio/8341848/GALLERY_87R2_NICKEL_still7.webp",
+          "/assets/images/warm-audio/8341848/Vibe-87R2.webp",
+          "/assets/images/warm-audio/8341848/Vibe_Mobile-87R2.webp",
+          "/assets/images/warm-audio/8341848/WA-87R2T_Thumb.webp",
+          "/assets/images/warm-audio/8341848/acousticguitar.webp",
+          "/assets/images/warm-audio/8341848/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/8341848/electricguitar.webp",
+          "/assets/images/warm-audio/8341848/eqp-product-card.webp",
+          "/assets/images/warm-audio/8341848/fluff-thumb.webp",
+          "/assets/images/warm-audio/8341848/headroom-thumb.webp",
+          "/assets/images/warm-audio/8341848/namm.webp",
+          "/assets/images/warm-audio/8341848/nav-shadow.webp",
+          "/assets/images/warm-audio/8341848/retro64-thumb.webp",
+          "/assets/images/warm-audio/8341848/roommics.webp",
+          "/assets/images/warm-audio/8341848/sos-goty-2021-ft.webp",
+          "/assets/images/warm-audio/8341848/sos-goty-2022-ft.webp",
+          "/assets/images/warm-audio/8341848/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8341848/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8341848/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8341848/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8341848/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8341848-warm-audio-wa-87-jr",
+      "generated_at": "2026-01-30T02:36:20.677334",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8341848/Warm-Audio-WA-87r2-NKL-Manual-2020-web.pdf",
+          "type": "pdf",
+          "label": "Warm Audio Wa 87R2 Nkl Manual 2020 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:36:59.231262"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_3988607",
+      "halilit_id": "3988607",
+      "name": "WA-87 R2",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 2862.0,
+      "pricing": {
+        "regular_price": 2862.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/3988607/5-year-nav.webp",
+        "thumbnail": "/assets/images/warm-audio/3988607/5-year-nav.webp",
+        "gallery": [
+          "/assets/images/warm-audio/3988607/5-year-nav.webp",
+          "/assets/images/warm-audio/3988607/67-87-8000_comp-chart.webp",
+          "/assets/images/warm-audio/3988607/73EQ.webp",
+          "/assets/images/warm-audio/3988607/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/3988607/87R2T.webp",
+          "/assets/images/warm-audio/3988607/87R2_NICKEL_STILL_1.webp",
+          "/assets/images/warm-audio/3988607/87r2-b-product-card.webp",
+          "/assets/images/warm-audio/3988607/87r2-n-product-card.webp",
+          "/assets/images/warm-audio/3988607/87r2-video1.webp",
+          "/assets/images/warm-audio/3988607/87r2-video2.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_STILL_2.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_angles.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_main.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_still3.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_still4.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_still5.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_still6.webp",
+          "/assets/images/warm-audio/3988607/GALLERY_87R2_NICKEL_still7.webp",
+          "/assets/images/warm-audio/3988607/Vibe-87R2.webp",
+          "/assets/images/warm-audio/3988607/Vibe_Mobile-87R2.webp",
+          "/assets/images/warm-audio/3988607/WA-87R2T_Thumb.webp",
+          "/assets/images/warm-audio/3988607/acousticguitar.webp",
+          "/assets/images/warm-audio/3988607/d6104191bc836af1ffe3399dab1eb58f.webp",
+          "/assets/images/warm-audio/3988607/electricguitar.webp",
+          "/assets/images/warm-audio/3988607/eqp-product-card.webp",
+          "/assets/images/warm-audio/3988607/fluff-thumb.webp",
+          "/assets/images/warm-audio/3988607/headroom-thumb.webp",
+          "/assets/images/warm-audio/3988607/namm.webp",
+          "/assets/images/warm-audio/3988607/nav-shadow.webp",
+          "/assets/images/warm-audio/3988607/retro64-thumb.webp",
+          "/assets/images/warm-audio/3988607/roommics.webp",
+          "/assets/images/warm-audio/3988607/sos-goty-2021-ft.webp",
+          "/assets/images/warm-audio/3988607/sos-goty-2022-ft.webp",
+          "/assets/images/warm-audio/3988607/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/3988607/subnavtabshadow.webp",
+          "/assets/images/warm-audio/3988607/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/3988607/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/3988607/5-year-nav.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/3988607-warm-audio-wa-87-r2-",
+      "generated_at": "2026-01-30T02:36:20.764620",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/3988607/Warm-Audio-WA-87r2-NKL-Manual-2020-web.pdf",
+          "type": "pdf",
+          "label": "Warm Audio Wa 87R2 Nkl Manual 2020 Web",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:37:01.090469"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_8336083",
+      "halilit_id": "8336083",
+      "name": "WA-47F",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 887.0,
+      "pricing": {
+        "regular_price": 887.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/8336083/47FamilyChart.webp",
+        "thumbnail": "/assets/images/warm-audio/8336083/47FamilyChart.webp",
+        "gallery": [
+          "/assets/images/warm-audio/8336083/47FamilyChart.webp",
+          "/assets/images/warm-audio/8336083/47f-video-thumb-1.webp",
+          "/assets/images/warm-audio/8336083/47f-video-thumb-2.webp",
+          "/assets/images/warm-audio/8336083/47f-video-thumb-3.webp",
+          "/assets/images/warm-audio/8336083/5-year-nav.webp",
+          "/assets/images/warm-audio/8336083/73EQ.webp",
+          "/assets/images/warm-audio/8336083/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_angle.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_main.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still1-min.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still2-min.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still3-min.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still4-min.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still5-min.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still6.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still7.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still8.webp",
+          "/assets/images/warm-audio/8336083/GALLERY_47F_still9.webp",
+          "/assets/images/warm-audio/8336083/Vibe-47F.webp",
+          "/assets/images/warm-audio/8336083/Vibe_Mobile-47F.webp",
+          "/assets/images/warm-audio/8336083/drumkit.webp",
+          "/assets/images/warm-audio/8336083/electricguitar.webp",
+          "/assets/images/warm-audio/8336083/eqp-product-card.webp",
+          "/assets/images/warm-audio/8336083/fluff-thumb.webp",
+          "/assets/images/warm-audio/8336083/headroom-thumb.webp",
+          "/assets/images/warm-audio/8336083/horns.webp",
+          "/assets/images/warm-audio/8336083/namm.webp",
+          "/assets/images/warm-audio/8336083/nav-shadow.webp",
+          "/assets/images/warm-audio/8336083/retro64-thumb.webp",
+          "/assets/images/warm-audio/8336083/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/8336083/subnavtabshadow.webp",
+          "/assets/images/warm-audio/8336083/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/8336083/tb12-product-card.webp",
+          "/assets/images/warm-audio/8336083/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/8336083/47FamilyChart.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/8336083-warm-audio-wa-47-jr-se-condenser-microphone",
+      "generated_at": "2026-01-30T02:36:20.859393",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/8336083/WA-47F_Web_Manual.pdf",
+          "type": "pdf",
+          "label": "Wa 47F Web Manual",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:37:02.316757"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    },
+    {
+      "id": "warm-audio_7204378",
+      "halilit_id": "7204378",
+      "name": "Warm Audio WA-MBA",
+      "brand": "Warm Audio",
+      "description": "<div class=\"desc\">\n<p><span style=\"font-size: 12pt;\">\u05d6\u05e8\u05d5\u05e2 \u05d4\u05d1\u05d5\u05dd \u05d4\u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05ea \u05d4\u05d7\u05d3\u05e9\u05d4, \u05d4-<strong>WA-<span class=\"caps\">MBA</span></strong> \u05de\u05d1\u05d9\u05ea Warm Audio \u05de\u05d5\u05e1\u05d9\u05e4\u05d4 \u05d0\u05ea \u05d4\u05d8\u05d0\u05e5\u2019 \u05d4\u05e1\u05d5\u05e4\u05d9 \u05dc\u05e1\u05d8-\u05d0\u05e4 \u05d4\u05e9\u05d9\u05d3\u05d5\u05e8 \u05d0\u05d5 \u05d4\u05e1\u05d8\u05e8\u05d9\u05de\u05d9\u05e0\u05d2 \u05e9\u05dc\u05db\u05dd, \u05d5\u05de\u05d0\u05e4\u05e9\u05e8\u05ea \u05dc\u05db\u05dd \u05dc\u05de\u05e7\u05dd \u05d0\u05ea \u05d4\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05d1\u05d3\u05d9\u05d5\u05e7 \u05dc\u05e4\u05d9 \u05d4\u05e6\u05e8\u05db\u05d9\u05dd \u05e9\u05dc\u05db\u05dd \u05e2\u05d1\u05d5\u05e8 \u05d0\u05d9\u05db\u05d5\u05ea \u05e1\u05d0\u05d5\u05e0\u05d3 \u05d0\u05d5\u05dc\u05d8\u05d9\u05de\u05d8\u05d9\u05d1\u05d9\u05ea. \u05e2\u05dd \u05de\u05e2\u05e8\u05db\u05ea \u05e0\u05d9\u05d4\u05d5\u05dc \u05db\u05d1\u05dc\u05d9\u05dd \u05e4\u05e0\u05d9\u05de\u05d9\u05ea \u05e0\u05e1\u05ea\u05e8\u05ea \u05d5\u05e6\u05d9\u05e8\u05d9\u05dd \u05e0\u05d5\u05d7\u05d9\u05dd \u05dc\u05d4\u05d6\u05d6\u05d4 \u05d5\u05e0\u05e2\u05d9\u05dc\u05d4, \u05de\u05e2\u05d5\u05dc\u05dd \u05dc\u05d0 \u05d4\u05d9\u05d4 \u05e7\u05dc \u05d9\u05d5\u05ea\u05e8 \u05d9\u05d5\u05ea\u05e8 \u05dc\u05d4\u05e9\u05d9\u05d2 \u05d0\u05ea \u05d4\u05de\u05e8\u05d0\u05d4 \u05d5\u05d4\u05d1\u05d9\u05e6\u05d5\u05e2\u05d9\u05dd \u05d4\u05de\u05e7\u05e6\u05d5\u05e2\u05d9\u05d9\u05dd \u05e9\u05ea\u05de\u05d9\u05d3 \u05d7\u05d9\u05e4\u05e9\u05ea\u05dd.</span></p>\n<p>\u00a0</p>\n<p style=\"text-align: right;\"><iframe allowfullscreen=\"allowfullscreen\" height=\"314\" src=\"//www.youtube.com/embed/nJwbZr4o1mo\" width=\"560\"></iframe></p>\n</div>",
+      "short_description": "\u05d6\u05e8\u05d5\u05e2 \u05d1\u05d5\u05dd \u05dc\u05de\u05d9\u05e7\u05e8\u05d5\u05e4\u05d5\u05df \u05dc\u05e9\u05d9\u05d3\u05d5\u05e8 \u05d5\u05e4\u05d5\u05d3\u05e7\u05d0\u05e1\u05d8, \u05d7\u05d6\u05e7\u05d4, \u05e2\u05de\u05d9\u05d3\u05d4 \u05d5\u05e0\u05d5\u05d7\u05d4 \u05dc\u05e9\u05d9\u05de\u05d5\u05e9 \u05e2\u05dd \u05de\u05d2\u05d5\u05d5\u05df \u05d0\u05e4\u05e9\u05e8\u05d5\u05d9\u05d5\u05ea \u05d4\u05d8\u05d9\u05d9\u05d4 \u05de\u05d1\u05d9\u05ea Warm Audio",
+      "category": "UNCATEGORIZED",
+      "price": 668.0,
+      "pricing": {
+        "regular_price": 668.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15021401/large/ca4fc099c4b510de41be6a4937a73340.jpg",
+        "thumbnail": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15021401/large/ca4fc099c4b510de41be6a4937a73340.jpg",
+        "gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/15021401/large/ca4fc099c4b510de41be6a4937a73340.jpg"
+        ]
+      },
+      "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15021401/large/ca4fc099c4b510de41be6a4937a73340.jpg",
+      "features": [],
+      "specs": {
+        "woofer_size_inch": 314.0
+      },
+      "source_url": "https://www.halilit.com/items/7204378-warm-audio-wa-mba-microphone-boom-arm",
+      "generated_at": "2026-01-30T02:36:20.978292",
+      "sub_category": "General",
+      "ui_context": {
+        "primary": "UNCATEGORIZED",
+        "sub": "General"
+      },
+      "quality_tier": "SILVER",
+      "verified": false,
+      "specs_preview": {
+        "woofer_size_inch": 314.0
+      }
+    },
+    {
+      "id": "warm-audio_3988942",
+      "halilit_id": "3988942",
+      "name": "WA-47F",
+      "brand": "Warm Audio",
+      "description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within reach for every musician.",
+      "short_description": "Warm Audio accurately recreates the classic recording gear that has delivered music's biggest hits. We believe that legendary sound should be within r...",
+      "category": "STUDIO_MONITORS",
+      "price": 1431.0,
+      "pricing": {
+        "regular_price": 1431.0,
+        "currency": "ILS",
+        "source": "halilit"
+      },
+      "status": "IN_STOCK",
+      "images": {
+        "main": "/assets/images/warm-audio/3988942/47FamilyChart.webp",
+        "thumbnail": "/assets/images/warm-audio/3988942/47FamilyChart.webp",
+        "gallery": [
+          "/assets/images/warm-audio/3988942/47FamilyChart.webp",
+          "/assets/images/warm-audio/3988942/47f-video-thumb-1.webp",
+          "/assets/images/warm-audio/3988942/47f-video-thumb-2.webp",
+          "/assets/images/warm-audio/3988942/47f-video-thumb-3.webp",
+          "/assets/images/warm-audio/3988942/5-year-nav.webp",
+          "/assets/images/warm-audio/3988942/73EQ.webp",
+          "/assets/images/warm-audio/3988942/76a-a2-thumbnail.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_angle.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_main.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still1-min.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still2-min.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still3-min.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still4-min.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still5-min.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still6.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still7.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still8.webp",
+          "/assets/images/warm-audio/3988942/GALLERY_47F_still9.webp",
+          "/assets/images/warm-audio/3988942/Vibe-47F.webp",
+          "/assets/images/warm-audio/3988942/Vibe_Mobile-47F.webp",
+          "/assets/images/warm-audio/3988942/drumkit.webp",
+          "/assets/images/warm-audio/3988942/electricguitar.webp",
+          "/assets/images/warm-audio/3988942/eqp-product-card.webp",
+          "/assets/images/warm-audio/3988942/fluff-thumb.webp",
+          "/assets/images/warm-audio/3988942/headroom-thumb.webp",
+          "/assets/images/warm-audio/3988942/horns.webp",
+          "/assets/images/warm-audio/3988942/namm.webp",
+          "/assets/images/warm-audio/3988942/nav-shadow.webp",
+          "/assets/images/warm-audio/3988942/retro64-thumb.webp",
+          "/assets/images/warm-audio/3988942/subnavtabshadow-short.webp",
+          "/assets/images/warm-audio/3988942/subnavtabshadow.webp",
+          "/assets/images/warm-audio/3988942/tab-shade-bottom.webp",
+          "/assets/images/warm-audio/3988942/tb12-product-card.webp",
+          "/assets/images/warm-audio/3988942/vocal.webp"
+        ]
+      },
+      "image_url": "/assets/images/warm-audio/3988942/47FamilyChart.webp",
+      "features": [],
+      "specs": [],
+      "source_url": "https://www.halilit.com/items/3988942-warm-audio-wa-47-jr-condenser-microphone",
+      "generated_at": "2026-01-30T02:36:21.076579",
+      "official_manuals": [
+        {
+          "url": "/assets/manuals/warm-audio/3988942/WA-47F_Web_Manual.pdf",
+          "type": "pdf",
+          "label": "Wa 47F Web Manual",
+          "source_domain": "brand_official",
+          "extracted_at": "2026-01-30T02:37:04.172411"
+        }
+      ],
+      "sub_category": "Nearfield",
+      "ui_context": {
+        "primary": "STUDIO_MONITORS",
+        "sub": "Nearfield"
+      },
+      "quality_tier": "GOLD",
+      "verified": true,
+      "specs_preview": []
+    }
+  ],
+  "processed_badge": {
+    "level": "DIAMOND",
+    "checks": {
+      "commercial_data": true,
+      "official_manual": true,
+      "taxonomy_aligned": true,
+      "context_layer": true,
+      "media_optimized": true
+    },
+    "signature": "refinery-v2-25"
+  },
+  "meta": {
+    "total_count": 25,
+    "refinery_version": "2.0",
+    "tiers": {
+      "DIAMOND": 0,
+      "GOLD": 21,
+      "SILVER": 4,
+      "BRONZE": 0
     }
   }
 }

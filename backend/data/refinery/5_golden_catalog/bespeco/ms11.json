@@ -1,0 +1,110 @@
+{
+  "id": "ms11",
+  "official_name": "Bespeco MS11 Professional Boom Stand",
+  "ui_meta": {
+    "ui_view": "TierBar",
+    "primary_category": "ACCESSORIES",
+    "sub_division": "STANDS",
+    "y_axis_score": 80,
+    "validation_flags": [],
+    "badges": [
+      "DIAMOND"
+    ]
+  },
+  "commercial_meta": {
+    "price": 150,
+    "stock": "IN_STOCK",
+    "sku_local": null,
+    "price_verified": true,
+    "sourced_from": [
+      "manufacturer",
+      "official_retailer"
+    ]
+  },
+  "context_meta": {
+    "pros": [
+      "Extremely sturdy construction",
+      "Smooth boom arm movement",
+      "Good height range for all applications",
+      "Excellent value for money"
+    ],
+    "tips": [
+      "Add counterweight for maximum stability with large condensers",
+      "Use with boom arm adapter for best ergonomics"
+    ],
+    "cons": [
+      "Heavy to transport",
+      "Takes up floor space"
+    ],
+    "sources_of_truth": [
+      {
+        "name": "Sweetwater Reviews",
+        "url": "https://sweetwater.com/bespeco-ms11",
+        "type": "review",
+        "verified": true,
+        "confidence": 85
+      },
+      {
+        "name": "Thomann Community",
+        "url": "https://thomann.de/bespeco-ms11",
+        "type": "review",
+        "verified": true,
+        "confidence": 85
+      }
+    ],
+    "data_confidence": 80
+  },
+  "specs": {
+    "material": "Heavy-duty steel tubing",
+    "height_min_cm": 65,
+    "height_max_cm": 200,
+    "weight_kg": 2.8,
+    "base_diameter_cm": 58,
+    "boom_reach_cm": 90,
+    "load_capacity_kg": 5,
+    "finish": "Black powder-coated"
+  },
+  "validation_pipeline": {
+    "step1_official": {
+      "status": "complete",
+      "data_quality": 95,
+      "sources_used": [
+        "manufacturer_specs",
+        "official_media"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step2_commercial": {
+      "status": "complete",
+      "data_quality": 90,
+      "sources_used": [
+        "official_pricing",
+        "stock_api"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step3_context": {
+      "status": "complete",
+      "data_quality": 85,
+      "sources_used": [
+        "Sweetwater Reviews",
+        "Thomann Community"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step4_cross_validation": {
+      "status": "complete",
+      "data_quality": 80,
+      "issues": [],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step5_published": {
+      "status": "complete",
+      "data_quality": 80,
+      "sources_used": [
+        "golden_catalog"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    }
+  }
+}

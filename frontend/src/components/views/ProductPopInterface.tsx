@@ -5,10 +5,18 @@ import {
   ShoppingCart,
   SquareArrowOutUpRight,
   X,
+  Zap,
+  Shield,
+  Activity,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getPrice } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
+import ProductSpecs from "../ProductSpecs";
+import ConfidenceBadge from "../ConfidenceBadge";
+import ValidationPipeline from "../ValidationPipeline";
+import { ImageWithFallback } from "../ImageWithFallback";
+import type { Product } from "../../types";
 
 interface OfficialMedia {
   url: string;
@@ -55,8 +63,12 @@ interface ProductData {
 export const ProductPopInterface = ({ productId }: { productId: string }) => {
   const { closeProductPop } = useNavigationStore();
   const [product, setProduct] = useState<ProductData | null>(null);
+  const [fullProduct, setFullProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [_selectedMediaIndex, _setSelectedMediaIndex] = useState(0);
+  const [activeDetailTab, setActiveDetailTab] = useState<
+    "specs" | "confidence" | "pipeline" | "insights"
+  >("specs");
 
   useEffect(() => {
     // Load product data from catalog
@@ -67,6 +79,8 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
         const loadedProduct = await catalogLoader.findProductById(productId);
 
         if (loadedProduct) {
+          setFullProduct(loadedProduct); // Store full product for detail components
+
           // Transform loaded product to ProductData format
           const productData: ProductData = {
             id: loadedProduct.id || productId,
@@ -113,16 +127,9 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
 
   return (
     <div className="w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden">
-      {/* Flight Case Header */}
+      {/* Header */}
       <div className="h-12 bg-zinc-800 border-b border-zinc-700 flex items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-red-500" />
-          <div className="w-3 h-3 rounded-full bg-yellow-500" />
-          <div className="w-3 h-3 rounded-full bg-green-500" />
-          <span className="ml-2 text-xs font-mono text-zinc-400">
-            PRODUCT_ID: {productId}
-          </span>
-        </div>
+        <span className="text-xs font-mono text-zinc-500">{productId}</span>
         <button
           onClick={closeProductPop}
           className="text-zinc-400 hover:text-white transition-colors"
@@ -137,32 +144,163 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
         <div className="p-8 grid grid-cols-3 gap-6 border-b border-zinc-700">
           {/* Left Column: Product Info */}
           <div className="col-span-1 space-y-4">
-            <div>
-              <h2 className="text-2xl font-bold text-white mb-1">
-                {product?.name || productId}
-              </h2>
-              <p className="text-sm text-zinc-400">
-                {product?.brand || "Brand Unknown"}
-              </p>
+            <div className="space-y-3">
+              <div>
+                <h2 className="text-2xl font-bold text-white mb-1">
+                  {product?.name || productId}
+                </h2>
+                <p className="text-sm text-zinc-400">
+                  {product?.brand || "Brand Unknown"}
+                </p>
+              </div>
+
+              {/* Info Panel: Badges, Confidence, Price, Key Specs */}
+              <div className="bg-zinc-800/60 border border-amber-500/30 rounded-lg p-3 space-y-3">
+                {/* Confidence & Badges Row */}
+                <div className="flex items-center gap-3">
+                  {/* Confidence Score */}
+                  <div className="flex items-center gap-2 flex-1">
+                    <div className="text-[10px] font-mono text-zinc-500 uppercase">
+                      Confidence
+                    </div>
+                    <div className="flex-1 h-1.5 bg-zinc-700 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-amber-500"
+                        style={{
+                          width: `${fullProduct?.pill_data?.ui_meta?.y_axis_score || 0}%`,
+                        }}
+                      />
+                    </div>
+                    <span className="text-[11px] font-bold text-amber-500 min-w-[2.5rem] text-right">
+                      {fullProduct?.pill_data?.ui_meta?.y_axis_score || 0}%
+                    </span>
+                  </div>
+
+                  {/* Badges */}
+                  {fullProduct?.pill_data?.ui_meta?.badges &&
+                    fullProduct.pill_data.ui_meta.badges.length > 0 && (
+                      <div className="flex gap-1">
+                        {fullProduct.pill_data.ui_meta.badges.map((badge) => (
+                          <span
+                            key={badge}
+                            className="text-[9px] font-bold px-2 py-0.5 rounded bg-amber-500/20 border border-amber-500/50 text-amber-400 whitespace-nowrap"
+                          >
+                            {badge}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                </div>
+
+                {/* Price & Category */}
+                <div className="flex gap-3 text-sm">
+                  <div>
+                    <p className="text-[10px] text-zinc-500 uppercase font-mono">
+                      Price
+                    </p>
+                    <p className="text-amber-400 font-semibold">
+                      ₪
+                      {Math.round(
+                        fullProduct?.pill_data?.commercial_meta?.price ||
+                          fullProduct?.price ||
+                          product?.price ||
+                          0,
+                      ).toLocaleString()}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-[10px] text-zinc-500 uppercase font-mono">
+                      Category
+                    </p>
+                    <p className="text-zinc-300">
+                      {product?.category || "Unknown"}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Key Specs (first 3) */}
+                {fullProduct?.pill_data?.specs &&
+                  Object.keys(fullProduct.pill_data.specs).length > 0 && (
+                    <div className="space-y-1 pt-2 border-t border-zinc-700">
+                      <p className="text-[10px] text-zinc-500 uppercase font-mono">
+                        Key Specs
+                      </p>
+                      <div className="grid grid-cols-1 gap-1">
+                        {Object.entries(fullProduct.pill_data.specs)
+                          .slice(0, 3)
+                          .map(([key, value]) => (
+                            <div
+                              key={key}
+                              className="flex justify-between text-[10px]"
+                            >
+                              <span className="text-zinc-500 capitalize">
+                                {key.replace(/_/g, " ")}
+                              </span>
+                              <span className="text-zinc-300 font-mono text-right">
+                                {String(value).substring(0, 25)}
+                              </span>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+
+                {/* Verified Sources */}
+                {fullProduct?.pill_data?.context_meta?.sources_of_truth &&
+                  fullProduct.pill_data.context_meta.sources_of_truth.length >
+                    0 && (
+                    <div className="space-y-1 pt-2 border-t border-zinc-700">
+                      <p className="text-[10px] text-zinc-500 uppercase font-mono">
+                        Verified By
+                      </p>
+                      <div className="flex flex-wrap gap-1">
+                        {fullProduct.pill_data.context_meta.sources_of_truth
+                          .slice(0, 2)
+                          .map((source, idx) => (
+                            <span
+                              key={idx}
+                              className="text-[9px] px-2 py-0.5 rounded bg-green-500/10 border border-green-500/30 text-green-400 whitespace-nowrap"
+                            >
+                              ✓{" "}
+                              {typeof source === "string"
+                                ? source
+                                : source.name}
+                            </span>
+                          ))}
+                      </div>
+                    </div>
+                  )}
+
+                {/* Key Pros/Tips */}
+                {fullProduct?.pill_data?.context_meta?.pros &&
+                  fullProduct.pill_data.context_meta.pros.length > 0 && (
+                    <div className="space-y-1 pt-2 border-t border-zinc-700">
+                      <p className="text-[10px] text-zinc-500 uppercase font-mono">
+                        Key Points
+                      </p>
+                      <ul className="space-y-0.5">
+                        {fullProduct.pill_data.context_meta.pros
+                          .slice(0, 2)
+                          .map((pro, idx) => (
+                            <li key={idx} className="text-[9px] text-zinc-300">
+                              • {pro.substring(0, 40)}
+                              {pro.length > 40 ? "..." : ""}
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
+                  )}
+              </div>
             </div>
 
             {/* Media Thumbnail Preview */}
             <div className="bg-zinc-800 rounded-lg p-4 aspect-square flex items-center justify-center border border-zinc-700 overflow-hidden">
-              {product?.official_gallery?.[_selectedMediaIndex] ? (
-                <img
-                  src={product.official_gallery[_selectedMediaIndex]}
-                  alt={product.name}
-                  className="w-full h-full object-contain"
-                  onError={() => {}}
-                />
-              ) : (
-                <div className="text-center">
-                  <p className="text-zinc-400 text-sm">No Image Available</p>
-                  <p className="text-xs text-zinc-600 mt-2">
-                    ({product?.id || "Product"})
-                  </p>
-                </div>
-              )}
+              <ImageWithFallback
+                src={product?.official_gallery?.[_selectedMediaIndex]}
+                alt={product?.name || "Product image"}
+                fallbackText={product?.id || "Product"}
+                className="w-full h-full"
+              />
             </div>
           </div>
 
@@ -222,6 +360,164 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
         </div>
 
         {/* Bottom Section: Product Relationships (Necessities, Accessories, Related) */}
+        <div className="p-8 border-t border-zinc-700">
+          <div className="mb-6">
+            <h3 className="text-xs font-mono text-zinc-500 uppercase mb-4 flex items-center gap-2">
+              <Zap className="w-4 h-4" />
+              Enhanced Details
+            </h3>
+
+            {/* Tab Navigation */}
+            <div className="flex gap-2 border-b border-zinc-700 overflow-x-auto">
+              <button
+                onClick={() => setActiveDetailTab("specs")}
+                className={`px-4 py-2 text-xs font-semibold whitespace-nowrap border-b-2 transition-colors ${
+                  activeDetailTab === "specs"
+                    ? "border-blue-500 text-blue-400"
+                    : "border-transparent text-zinc-500 hover:text-zinc-300"
+                }`}
+              >
+                Specifications
+              </button>
+              <button
+                onClick={() => setActiveDetailTab("confidence")}
+                className={`px-4 py-2 text-xs font-semibold whitespace-nowrap border-b-2 transition-colors ${
+                  activeDetailTab === "confidence"
+                    ? "border-blue-500 text-blue-400"
+                    : "border-transparent text-zinc-500 hover:text-zinc-300"
+                }`}
+              >
+                Trust & Sources
+              </button>
+              <button
+                onClick={() => setActiveDetailTab("pipeline")}
+                className={`px-4 py-2 text-xs font-semibold whitespace-nowrap border-b-2 transition-colors ${
+                  activeDetailTab === "pipeline"
+                    ? "border-blue-500 text-blue-400"
+                    : "border-transparent text-zinc-500 hover:text-zinc-300"
+                }`}
+              >
+                Validation
+              </button>
+              <button
+                onClick={() => setActiveDetailTab("insights")}
+                className={`px-4 py-2 text-xs font-semibold whitespace-nowrap border-b-2 transition-colors ${
+                  activeDetailTab === "insights"
+                    ? "border-blue-500 text-blue-400"
+                    : "border-transparent text-zinc-500 hover:text-zinc-300"
+                }`}
+              >
+                Insights
+              </button>
+            </div>
+          </div>
+
+          {/* Tab Content */}
+          <div className="bg-zinc-800/50 rounded-lg p-6 border border-zinc-700">
+            {activeDetailTab === "specs" && fullProduct && (
+              <ProductSpecs
+                specs={fullProduct.pill_data?.specs || fullProduct.specs}
+                category={fullProduct.category}
+              />
+            )}
+
+            {activeDetailTab === "confidence" && fullProduct?.pill_data && (
+              <ConfidenceBadge
+                score={fullProduct.pill_data.ui_meta?.y_axis_score}
+                badges={fullProduct.pill_data.ui_meta?.badges}
+                sourcesOfTruth={
+                  fullProduct.pill_data.context_meta?.sources_of_truth
+                }
+                showDetailed={true}
+              />
+            )}
+
+            {activeDetailTab === "pipeline" && fullProduct?.pill_data && (
+              <ValidationPipeline
+                pipeline={fullProduct.pill_data.validation_pipeline}
+                score={fullProduct.pill_data.ui_meta?.y_axis_score}
+              />
+            )}
+
+            {activeDetailTab === "insights" &&
+              fullProduct?.pill_data?.context_meta && (
+                <div className="space-y-6">
+                  {fullProduct.pill_data.context_meta.pros &&
+                    fullProduct.pill_data.context_meta.pros.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-green-400 text-sm mb-3 flex items-center gap-2">
+                          <span>✅</span> Strengths
+                        </h4>
+                        <ul className="space-y-2">
+                          {fullProduct.pill_data.context_meta.pros.map(
+                            (pro, idx) => (
+                              <li
+                                key={idx}
+                                className="text-xs text-zinc-300 pl-6 border-l-2 border-green-500"
+                              >
+                                {pro}
+                              </li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    )}
+
+                  {fullProduct.pill_data.context_meta.cons &&
+                    fullProduct.pill_data.context_meta.cons.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-amber-400 text-sm mb-3 flex items-center gap-2">
+                          <span>⚠️</span> Considerations
+                        </h4>
+                        <ul className="space-y-2">
+                          {fullProduct.pill_data.context_meta.cons.map(
+                            (con, idx) => (
+                              <li
+                                key={idx}
+                                className="text-xs text-zinc-300 pl-6 border-l-2 border-amber-500"
+                              >
+                                {con}
+                              </li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    )}
+
+                  {fullProduct.pill_data.context_meta.tips &&
+                    fullProduct.pill_data.context_meta.tips.length > 0 && (
+                      <div>
+                        <h4 className="font-semibold text-blue-400 text-sm mb-3 flex items-center gap-2">
+                          <span>💡</span> Expert Tips
+                        </h4>
+                        <ul className="space-y-2">
+                          {fullProduct.pill_data.context_meta.tips.map(
+                            (tip, idx) => (
+                              <li
+                                key={idx}
+                                className="text-xs text-zinc-300 pl-6 border-l-2 border-blue-500"
+                              >
+                                {tip}
+                              </li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    )}
+
+                  {!fullProduct.pill_data.context_meta.pros &&
+                    !fullProduct.pill_data.context_meta.cons &&
+                    !fullProduct.pill_data.context_meta.tips && (
+                      <p className="text-xs text-zinc-500 text-center py-4">
+                        No insights available
+                      </p>
+                    )}
+                </div>
+              )}
+          </div>
+        </div>
+
+        {/* Original Relationships Section */}
         <div className="p-8">
           <RelationshipSection
             necessities={[]}

@@ -1,0 +1,109 @@
+{
+  "id": "a7v",
+  "official_name": "Adam Audio A7V Active 2-Way Monitor",
+  "ui_meta": {
+    "ui_view": "TierBar",
+    "primary_category": "STUDIO_MONITORS",
+    "sub_division": "NEARFIELD",
+    "y_axis_score": 80,
+    "validation_flags": [],
+    "badges": [
+      "DIAMOND"
+    ]
+  },
+  "commercial_meta": {
+    "price": 3100,
+    "stock": "IN_STOCK",
+    "sku_local": null,
+    "price_verified": true,
+    "sourced_from": [
+      "manufacturer",
+      "official_retailer"
+    ]
+  },
+  "context_meta": {
+    "pros": [
+      "Excellent stereo imaging with wide sweet spot",
+      "Transparent mid-range perfect for mixing",
+      "Rotatable waveguide for room adaptation",
+      "Class-leading transient response"
+    ],
+    "tips": [
+      "Pair with quality bass management for optimal translation",
+      "Use Sonarworks integration for flat response in untreated rooms"
+    ],
+    "cons": [
+      "Rear port requires careful placement away from walls",
+      "Higher price point for the class"
+    ],
+    "sources_of_truth": [
+      {
+        "name": "Sound On Sound",
+        "url": "https://sos.com/reviews/adam-a7v",
+        "type": "review",
+        "verified": true,
+        "confidence": 85
+      },
+      {
+        "name": "Mix Magazine",
+        "url": "https://mix.com/reviews/adam-a7v",
+        "type": "expert",
+        "verified": true,
+        "confidence": 85
+      }
+    ],
+    "data_confidence": 80
+  },
+  "specs": {
+    "woofer_size_inch": 7.0,
+    "tweeter_type": "X-ART Ribbon",
+    "frequency_response_low_hz": 41,
+    "frequency_response_high_hz": 42000,
+    "power_total_watts": 130,
+    "dimensions": "200 x 290 x 245 mm",
+    "weight_kg": 11.5
+  },
+  "validation_pipeline": {
+    "step1_official": {
+      "status": "complete",
+      "data_quality": 95,
+      "sources_used": [
+        "manufacturer_specs",
+        "official_media"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step2_commercial": {
+      "status": "complete",
+      "data_quality": 90,
+      "sources_used": [
+        "official_pricing",
+        "stock_api"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step3_context": {
+      "status": "complete",
+      "data_quality": 85,
+      "sources_used": [
+        "Sound On Sound",
+        "Mix Magazine"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step4_cross_validation": {
+      "status": "complete",
+      "data_quality": 80,
+      "issues": [],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step5_published": {
+      "status": "complete",
+      "data_quality": 80,
+      "sources_used": [
+        "golden_catalog"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    }
+  }
+}

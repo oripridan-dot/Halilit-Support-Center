@@ -1,0 +1,117 @@
+{
+  "_comment": "This file defines the mapping rules from Raw Manufacturer Data -> App UI Structure.",
+  "frontend_taxonomy": {
+    "STUDIO_MONITORS": {
+      "sub_divisions": ["Nearfield", "Midfield", "Main", "Subwoofers"],
+      "ui_view": "Grid"
+    },
+    "AUDIO_INTERFACES": {
+      "sub_divisions": ["USB", "Thunderbolt", "Dante", "PCIe", "Firewire"],
+      "ui_view": "Table"
+    },
+    "MICROPHONES": {
+      "sub_divisions": ["Condenser", "Dynamic", "Ribbon", "USB"],
+      "ui_view": "Grid"
+    },
+    "GUITAR_EFFECTS": {
+      "sub_divisions": ["Pedals", "Multi-Effects"],
+      "ui_view": "Grid"
+    },
+    "HEADPHONES": {
+      "sub_divisions": ["Studio", "DJ", "Hi-Fi"],
+      "ui_view": "Grid"
+    },
+    "ACCESSORIES": {
+      "sub_divisions": ["Stands", "Cables", "Straps", "General"],
+      "ui_view": "Grid"
+    },
+    "CASES_BAGS": {
+      "sub_divisions": ["Cases", "Bags"],
+      "ui_view": "Grid"
+    }
+  },
+  "mappings": [
+    {
+      "priority": 100,
+      "contains_any": ["subwoofer", "sub-woofer", "lf extension"],
+      "result": { "primary": "STUDIO_MONITORS", "sub": "Subwoofers" }
+    },
+    {
+      "priority": 90,
+      "contains_any": ["nearfield", "near-field"],
+      "contains_context": ["monitor", "speaker"],
+      "result": { "primary": "STUDIO_MONITORS", "sub": "Nearfield" }
+    },
+    {
+      "priority": 90,
+      "contains_any": ["main monitor", "midfield"],
+      "result": { "primary": "STUDIO_MONITORS", "sub": "Main" }
+    },
+    {
+      "priority": 80,
+      "contains_any": ["audio interface", "recording interface"],
+      "contains_context": ["usb"],
+      "result": { "primary": "AUDIO_INTERFACES", "sub": "USB" }
+    },
+    {
+      "priority": 80,
+      "contains_any": ["audio interface"],
+      "contains_context": ["thunderbolt"],
+      "result": { "primary": "AUDIO_INTERFACES", "sub": "Thunderbolt" }
+    },
+    {
+      "priority": 50,
+      "contains_any": ["active monitor", "referenzmonitor", "studio monitor"],
+      "result": { "primary": "STUDIO_MONITORS", "sub": "Nearfield" }
+    },
+    {
+      "priority": 70,
+      "contains_any": [
+        "pedal",
+        "stompbox",
+        "effect",
+        "chorus",
+        "vibrato",
+        "overdrive",
+        "fuzz"
+      ],
+      "result": { "primary": "GUITAR_EFFECTS", "sub": "Pedals" }
+    },
+    {
+      "priority": 70,
+      "contains_any": ["bag", "case", "custodia", "cover", "gigbag"],
+      "result": { "primary": "CASES_BAGS", "sub": "Bags" }
+    },
+    {
+      "priority": 60,
+      "contains_any": [
+        "t series",
+        "a series",
+        "s series",
+        "ax series",
+        "active monitor"
+      ],
+      "result": { "primary": "STUDIO_MONITORS", "sub": "Nearfield" }
+    },
+    {
+      "priority": 70,
+      "contains_any": ["headphone", "cuffie"],
+      "result": { "primary": "HEADPHONES", "sub": "Studio" }
+    },
+    {
+      "priority": 60,
+      "contains_any": ["stand", "supporto", "treppiede"],
+      "result": { "primary": "ACCESSORIES", "sub": "Stands" }
+    },
+    {
+      "priority": 60,
+      "contains_any": ["cable", "cavo", "jack", "xlr"],
+      "result": { "primary": "ACCESSORIES", "sub": "Cables" }
+    },
+    {
+      "priority": 60,
+      "contains_any": ["strap", "tracolla", "cintura"],
+      "result": { "primary": "ACCESSORIES", "sub": "Straps" }
+    }
+  ]
+}

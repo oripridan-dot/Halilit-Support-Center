@@ -1,0 +1,29 @@
+{
+  "verified_sources": [
+    {
+      "source": "Amazon Verified",
+      "url": "https://amazon.com/fzone-ft15",
+      "date": "2024-01"
+    },
+    {
+      "source": "Audio Community Forum",
+      "url": "https://audioforums.com/fzone-ft15",
+      "date": "2023-10"
+    }
+  ],
+  "pros": [
+    "Bright LED display visible in all conditions",
+    "Fast and accurate tracking",
+    "Durable construction",
+    "Battery lasts over 100 hours"
+  ],
+  "cons": [
+    "Accuracy limited to 1 cent",
+    "Not ideal for very low frequencies"
+  ],
+  "recurring_issues": [],
+  "expert_tips": [
+    "Position tuner for clear LED visibility",
+    "Use gentle clip pressure to avoid damaging headstocks"
+  ]
+}

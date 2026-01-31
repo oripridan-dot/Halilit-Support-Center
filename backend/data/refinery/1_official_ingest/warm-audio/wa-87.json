@@ -1,0 +1,21 @@
+{
+  "manufacturer_sku": "WA-87r2",
+  "official_name": "Warm Audio WA-87 R2 Condenser Microphone",
+  "official_page": "https://warmaudio.com/wa-87",
+  "specs": {
+    "type": "Large-diaphragm Condenser",
+    "diaphragm_size_mm": 32,
+    "polar_pattern": "Cardioid / Omnidirectional / Figure-8 (switchable)",
+    "frequency_response_low_hz": 20,
+    "frequency_response_high_hz": 20000,
+    "sensitivity_db": 28,
+    "max_spl_db": 140,
+    "impedance_ohms": 200,
+    "weight_g": 435
+  },
+  "media_assets": {
+    "manual": "https://warmaudio.com/docs/wa-87-manual.pdf",
+    "image_front": "https://warmaudio.com/images/wa-87-front.jpg",
+    "polar_patterns": "https://warmaudio.com/images/wa-87-polar.pdf"
+  }
+}

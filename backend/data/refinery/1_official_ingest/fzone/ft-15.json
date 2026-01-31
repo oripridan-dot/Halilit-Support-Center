@@ -1,0 +1,20 @@
+{
+  "manufacturer_sku": "FT-15",
+  "official_name": "Fzone FT-15 Clip Tuner",
+  "official_page": "https://fzone.cn",
+  "specs": {
+    "type": "Chromatic clip tuner",
+    "frequency_range_hz": "30-4000",
+    "calibration_range_hz": "410-480",
+    "battery_type": "CR2032",
+    "battery_life_hours": 100,
+    "accuracy_cents": 1,
+    "display": "LED",
+    "weight_g": 30,
+    "rotation": "360 degree swivel"
+  },
+  "media_assets": {
+    "manual": "https://fzone.cn/docs/ft15-manual.pdf",
+    "image_front": "https://fzone.cn/images/ft-15.jpg"
+  }
+}

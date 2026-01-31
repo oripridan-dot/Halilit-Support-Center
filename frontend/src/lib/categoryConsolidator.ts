@@ -55,7 +55,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
     id: "drums-percussion",
     label: "Drums & Percussion",
     icon: "🥁",
-    color: "#ef4444", 
+    color: "#ef4444",
     description: "The Struck Universe",
     sortOrder: 2,
     spectrum: [
@@ -72,7 +72,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
     id: "keys-production",
     label: "Keys & Synths",
     icon: "🎹",
-    color: "#f59e0b", 
+    color: "#f59e0b",
     description: "The Synthesis Universe",
     sortOrder: 3,
     spectrum: [
@@ -88,7 +88,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
     id: "studio-recording",
     label: "Studio & Recording",
     icon: "🎙️",
-    color: "#10b981", 
+    color: "#10b981",
     description: "The Engineer's Universe",
     sortOrder: 4,
     spectrum: [
@@ -104,7 +104,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
     id: "live-dj",
     label: "Live Sound & DJ",
     icon: "🔊",
-    color: "#8b5cf6", 
+    color: "#8b5cf6",
     description: "The Stage Universe",
     sortOrder: 5,
     spectrum: [
@@ -233,7 +233,7 @@ export function consolidateCategory(
 }
 
 export function getGalaxyForSpectrum(spectrumId: string): ConsolidatedCategory | undefined {
-  return CONSOLIDATED_CATEGORIES.find(galaxy => 
+  return CONSOLIDATED_CATEGORIES.find(galaxy =>
     galaxy.spectrum.some(spec => spec.id === spectrumId)
   );
 }
@@ -244,9 +244,68 @@ export function getConsolidatedProductCategory(product: Product): {
   galaxyLabel: string;
   originalCategory: string;
 } {
+  // 1. Priority: Use refined UI Context from "Refinery" v5 (pill_data)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const pillData = (product as any).pill_data;
+  if (pillData?.ui_meta?.primary_category) {
+    // Map Backend Taxonomy Keys to Frontend Spectrum IDs
+    const TAXONOMY_BRIDGE: Record<string, string> = {
+      "STUDIO_MONITORS": "studio-monitors",
+      "AUDIO_INTERFACES": "audio-interfaces",
+      "MICROPHONES": "studio-microphones",
+      "CONDENSER": "studio-microphones",
+      "ACCESSORIES": "accessories-utility",
+      "STANDS": "stands",
+      "TUNING": "accessories-utility",
+      "UNCATEGORIZED": "accessories-utility"
+    };
+
+    const spectrumId = TAXONOMY_BRIDGE[pillData.ui_meta.primary_category] || "accessories-utility";
+    const galaxy = getGalaxyForSpectrum(spectrumId);
+
+    return {
+      spectrumId,
+      galaxyId: galaxy?.id || "accessories-utility",
+      galaxyLabel: galaxy?.label || "Accessories",
+      originalCategory: pillData.ui_meta.primary_category
+    };
+  }
+
+  // 2. Fallback: Use legacy UI Context
+  const uiContext = product.ui_context;
+  if (uiContext && uiContext.primary) {
+    // Map Backend Tax Keys to Frontend Spectrum IDs
+    // This is a "Bridge" map until the backend outputs Spectrum IDs directly
+    const TAXONOMY_BRIDGE: Record<string, string> = {
+      "STUDIO_MONITORS": "studio-monitors",
+      "AUDIO_INTERFACES": "audio-interfaces",
+      "MICROPHONES": "studio-microphones",
+      // Add default mappings for cases where refined data uses generic keys
+      "UNCATEGORIZED": "accessories-utility"
+    };
+    // If it has Sub-Division (e.g. "Subwoofer"), we might map specifically too
+    // For now, let's map the Primary Category to Spectrum ID
+
+    let spectrumId = TAXONOMY_BRIDGE[uiContext.primary] || "accessories-utility";
+
+    // Handle special sub-cases if needed (e.g. Subwoofers in backend might match PA vs Studio?)
+    // Actually, let's trust the backend primary for now.
+
+    const galaxy = getGalaxyForSpectrum(spectrumId);
+    const galaxyId = galaxy ? galaxy.id : "accessories-utility";
+    const galaxyLabel = galaxy ? galaxy.label : "General Utility";
+
+    return {
+      spectrumId,
+      galaxyId,
+      galaxyLabel,
+      originalCategory: product.category || "Refined",
+    };
+  }
+
   const originalCategory = product.category || "Uncategorized";
   const spectrumId = consolidateCategory("unknown", originalCategory);
-  
+
   // Find which Galaxy this spectrum belongs to
   const galaxy = getGalaxyForSpectrum(spectrumId);
   const galaxyId = galaxy ? galaxy.id : "accessories-utility";

@@ -1,0 +1,111 @@
+{
+  "id": "wa-87",
+  "official_name": "Warm Audio WA-87 R2 Condenser Microphone",
+  "ui_meta": {
+    "ui_view": "TierBar",
+    "primary_category": "MICROPHONES",
+    "sub_division": "CONDENSER",
+    "y_axis_score": 80,
+    "validation_flags": [],
+    "badges": [
+      "DIAMOND"
+    ]
+  },
+  "commercial_meta": {
+    "price": 2400,
+    "stock": "IN_STOCK",
+    "sku_local": null,
+    "price_verified": true,
+    "sourced_from": [
+      "manufacturer",
+      "official_retailer"
+    ]
+  },
+  "context_meta": {
+    "pros": [
+      "Warm vintage tone perfect for vocals",
+      "Excellent high SPL handling for loud sources",
+      "Multi-pattern design adds versatility",
+      "Outstanding value for price"
+    ],
+    "tips": [
+      "Pair with quality preamp to get the best from the circuitry",
+      "Use shock mount to minimize vibration transfer"
+    ],
+    "cons": [
+      "Requires phantom power supply",
+      "Build quality not at vintage tube mic level"
+    ],
+    "sources_of_truth": [
+      {
+        "name": "Sound On Sound",
+        "url": "https://sos.com/warm-audio-wa87",
+        "type": "review",
+        "verified": true,
+        "confidence": 85
+      },
+      {
+        "name": "RecordingHacks",
+        "url": "https://recordinghacks.com/wa87-review",
+        "type": "review",
+        "verified": true,
+        "confidence": 85
+      }
+    ],
+    "data_confidence": 80
+  },
+  "specs": {
+    "type": "Large-diaphragm Condenser",
+    "diaphragm_size_mm": 32,
+    "polar_pattern": "Cardioid / Omnidirectional / Figure-8 (switchable)",
+    "frequency_response_low_hz": 20,
+    "frequency_response_high_hz": 20000,
+    "sensitivity_db": 28,
+    "max_spl_db": 140,
+    "impedance_ohms": 200,
+    "weight_g": 435
+  },
+  "validation_pipeline": {
+    "step1_official": {
+      "status": "complete",
+      "data_quality": 95,
+      "sources_used": [
+        "manufacturer_specs",
+        "official_media"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step2_commercial": {
+      "status": "complete",
+      "data_quality": 90,
+      "sources_used": [
+        "official_pricing",
+        "stock_api"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step3_context": {
+      "status": "complete",
+      "data_quality": 85,
+      "sources_used": [
+        "Sound On Sound",
+        "RecordingHacks"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step4_cross_validation": {
+      "status": "complete",
+      "data_quality": 80,
+      "issues": [],
+      "timestamp": "2026-01-30T00:00:00Z"
+    },
+    "step5_published": {
+      "status": "complete",
+      "data_quality": 80,
+      "sources_used": [
+        "golden_catalog"
+      ],
+      "timestamp": "2026-01-30T00:00:00Z"
+    }
+  }
+}

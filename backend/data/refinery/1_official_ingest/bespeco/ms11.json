@@ -1,0 +1,19 @@
+{
+  "manufacturer_sku": "MS11",
+  "official_name": "Bespeco MS11 Professional Boom Stand",
+  "official_page": "https://bespeco.it/ms11",
+  "specs": {
+    "material": "Heavy-duty steel tubing",
+    "height_min_cm": 65,
+    "height_max_cm": 200,
+    "weight_kg": 2.8,
+    "base_diameter_cm": 58,
+    "boom_reach_cm": 90,
+    "load_capacity_kg": 5,
+    "finish": "Black powder-coated"
+  },
+  "media_assets": {
+    "manual": "https://bespeco.it/docs/ms11-manual.pdf",
+    "image_front": "https://bespeco.it/images/ms11.jpg"
+  }
+}

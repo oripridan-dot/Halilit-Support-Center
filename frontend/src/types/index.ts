@@ -76,12 +76,12 @@ export interface ProductRelationship {
   id: string;
   name: string;
   type:
-    | "accessory"
-    | "related"
-    | "alternative"
-    | "upgrade"
-    | "bundle"
-    | "necessity";
+  | "accessory"
+  | "related"
+  | "alternative"
+  | "upgrade"
+  | "bundle"
+  | "necessity";
   category?: string;
   relevance?: number;
   sku?: string;
@@ -120,6 +120,22 @@ export interface HalilitProductData {
   availability: string;
   match_quality: string;
   source: "PRIMARY" | "SECONDARY" | "HALILIT_ONLY";
+}
+
+
+export interface TrustedReview {
+  url: string;
+  source: string;
+  summary?: string;
+  [key: string]: any;
+}
+
+export interface RealWorldContext {
+  trusted_reviews: TrustedReview[];
+  pros: string[];
+  cons: string[];
+  recurring_issues: string[];
+  expert_tips: string[];
 }
 
 export interface Product {
@@ -190,6 +206,49 @@ export interface Product {
   official_gallery?: string[];
   official_specs?: Record<string, string | number | boolean>;
 
+  // Context Layer (Real World Data)
+  real_world_context?: RealWorldContext;
+
+  // Refinery Integration (v5.0 - The 3 Pillars)
+  pill_data?: {
+    id?: string;
+    official_name?: string;
+    ui_meta?: {
+      ui_view?: string;
+      primary_category?: string;
+      sub_division?: string;
+      y_axis_score?: number;
+      validation_flags?: string[];
+      badges?: string[];
+      confidence_score?: number;
+    };
+    commercial_meta?: {
+      price?: number;
+      stock?: string;
+      sku_local?: string;
+      price_verified?: boolean;
+      sourced_from?: string[];
+    };
+    context_meta?: {
+      pros?: string[];
+      cons?: string[];
+      tips?: string[];
+      sources_of_truth?: SourceOfTruth[];
+      data_confidence?: number;
+    };
+    specs?: Record<string, any>;
+    validation_pipeline?: {
+      step1_official?: ValidationStepInfo;
+      step2_commercial?: ValidationStepInfo;
+      step3_context?: ValidationStepInfo;
+      step4_cross_validation?: ValidationStepInfo;
+      step5_published?: ValidationStepInfo;
+    };
+  };
+
+  // Source tracking
+  sources_of_truth?: SourceOfTruth[];
+
   // Knowledge base and resources
   knowledgebase?: DocumentResource[];
   resources?: DocumentResource[];
@@ -219,6 +278,11 @@ export interface Product {
   _brandName?: string;
   brand_identity?: BrandIdentity;
   score?: number;
+  quality_tier?: "DIAMOND" | "GOLD" | "SILVER" | "BRONZE";
+  ui_context?: {
+    primary: string;
+    sub: string;
+  };
 }
 
 // ============================================================================
@@ -430,6 +494,24 @@ export interface FilterOptions {
   maxPrice?: number;
   availability?: string[];
   tags?: string[];
+}
+
+// Refinery Pipeline Types
+export interface SourceOfTruth {
+  name: string;
+  url?: string;
+  type: "manufacturer" | "review" | "expert" | "community" | "verified_retailer";
+  verified?: boolean;
+  confidence?: number;
+  extraction_date?: string;
+}
+
+export interface ValidationStepInfo {
+  status: "complete" | "partial" | "pending" | "failed";
+  timestamp?: string;
+  data_quality?: number; // 0-100
+  issues?: string[];
+  sources_used?: string[];
 }
 
 export type ValidateResult = {

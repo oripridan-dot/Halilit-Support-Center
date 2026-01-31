@@ -14,6 +14,7 @@ import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
 import { CategorySlot } from "./galaxy/CategorySlot";
 import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
 import { getContextBackground } from "../../lib/slotBackgrounds";
+import { useProductCounts } from "../../hooks/useProductCounts";
 
 // Icon mapping for sectors
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -48,6 +49,7 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
 
 export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
+  const { counts, loading } = useProductCounts();
 
   // Directly handle navigation to a subcategory
   const onSlotClick = (mainId: string, subId: string) => {
@@ -99,8 +101,6 @@ export const GalaxyDashboard = () => {
               {/* Subcategory Grid */}
               <div className="flex-1 p-3 grid grid-cols-4 gap-3 content-start overflow-hidden">
                 {sector.children.map((sub) => {
-                  const brand = extractBrandFromSpectrumId(sub.id);
-
                   return (
                     <CategorySlot
                       key={sub.id}
@@ -110,6 +110,7 @@ export const GalaxyDashboard = () => {
                       fallbackGradient={sub.fallbackGradient}
                       icon={sector.iconComponent}
                       mainColor={sector.color}
+                      count={loading ? undefined : counts[sub.id] || 0}
                       onClick={() => onSlotClick(sector.id, sub.id)}
                     />
                   );
