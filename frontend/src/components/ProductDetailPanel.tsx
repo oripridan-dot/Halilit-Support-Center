@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp, Info } from "lucide-react";
 import { Product } from "../types";
 import ProductSpecs from "./ProductSpecs";
-import ConfidenceBadge from "./ConfidenceBadge";
-import ValidationPipeline from "./ValidationPipeline";
 
 interface ProductDetailPanelProps {
   product: Product;
@@ -14,10 +12,9 @@ interface ProductDetailPanelProps {
  * ProductDetailPanel Component
  * Complete product information display with:
  * - Technical specifications
- * - Confidence badges and sources of truth
- * - Real-world validation process visualization
- * - Commercial details
- * - Expert tips and pros/cons
+ * - Pricing and availability
+ * - Real-world insights (pros/cons/tips)
+ * - Quality tier and scoring
  */
 export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
   product,
@@ -27,9 +24,7 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
     Record<string, boolean>
   >({
     specs: true,
-    confidence: true,
-    pipeline: true,
-    realworld: true,
+    insights: true,
   });
 
   const toggleSection = (section: string) => {
@@ -39,8 +34,8 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
     }));
   };
 
-  const pillData = product.pill_data;
-  if (!pillData) {
+  // Check if product has minimal required data
+  if (!product || !product.name) {
     return (
       <div className={`bg-slate-50 rounded-lg p-8 text-center ${className}`}>
         <Info className="w-8 h-8 text-slate-400 mx-auto mb-2" />
@@ -51,15 +46,17 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
     );
   }
 
-  const specs = pillData.specs || {};
-  const uiMeta = pillData.ui_meta || {};
-  const contextMeta = pillData.context_meta || {};
-  const commercialMeta = pillData.commercial_meta || {};
-  const pipeline = pillData.validation_pipeline || {};
+  const specs = product.specs || {};
+  const pros = product.pros || [];
+  const cons = product.cons || [];
+  const tips = product.expert_tips || [];
 
-  const confidenceScore = uiMeta.y_axis_score || 0;
-  const badges = uiMeta.badges || [];
-  const sourcesOfTruth = contextMeta.sources_of_truth || [];
+  const tierColors: Record<string, string> = {
+    diamond: "bg-blue-600",
+    gold: "bg-amber-600",
+    silver: "bg-slate-500",
+    bronze: "bg-orange-700",
+  };
 
   return (
     <div className={`space-y-6 ${className}`}>
@@ -69,16 +66,34 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
           {product.name}
         </h2>
         <p className="text-slate-600 mb-4">
-          {product.description || "Fully verified product"}
+          {product.description_full ||
+            product.description_short ||
+            "Product details"}
         </p>
+
+        {/* Quality Tier Badge */}
+        <div className="flex items-center gap-3 mb-4">
+          <span
+            className={`inline-block px-3 py-1 rounded-full text-xs font-semibold text-white ${
+              tierColors[product.tier || "bronze"] || "bg-slate-400"
+            }`}
+          >
+            {(product.tier || "unknown").toUpperCase()}
+          </span>
+          <span className="text-sm text-slate-600">
+            Quality Score: {product.tier_score || 0}/100
+          </span>
+        </div>
 
         {/* Quick Info */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
             <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold">
-              Brand
+              Brand ID
             </p>
-            <p className="text-sm font-bold text-slate-900">{product.brand}</p>
+            <p className="text-sm font-bold text-slate-900">
+              {product.brand_id || "N/A"}
+            </p>
           </div>
           <div>
             <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold">
@@ -88,50 +103,25 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
               {product.category}
             </p>
           </div>
-          {commercialMeta.price && (
+          {product.price && (
             <div>
               <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold">
                 Price
               </p>
               <p className="text-sm font-bold text-slate-900">
-                ₪{commercialMeta.price.toLocaleString()}
+                {product.currency} {product.price.toLocaleString()}
               </p>
             </div>
           )}
           <div>
             <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold">
-              SKU
+              Stock Status
             </p>
             <p className="text-sm font-mono text-slate-700">
-              {product.sku || "N/A"}
+              {product.stock_status || "unknown"}
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Confidence & Sources */}
-      <div className="bg-white rounded-lg border border-slate-200">
-        <button
-          onClick={() => toggleSection("confidence")}
-          className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors border-b border-slate-200"
-        >
-          <h3 className="font-semibold text-slate-900">Verification & Trust</h3>
-          {expandedSections.confidence ? (
-            <ChevronUp className="w-5 h-5 text-slate-600" />
-          ) : (
-            <ChevronDown className="w-5 h-5 text-slate-600" />
-          )}
-        </button>
-        {expandedSections.confidence && (
-          <div className="p-6">
-            <ConfidenceBadge
-              score={confidenceScore}
-              badges={badges}
-              sourcesOfTruth={sourcesOfTruth}
-              showDetailed={true}
-            />
-          </div>
-        )}
       </div>
 
       {/* Specifications */}
@@ -158,58 +148,34 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
         </div>
       )}
 
-      {/* Validation Pipeline */}
-      {Object.keys(pipeline).length > 0 && (
-        <div>
-          <button
-            onClick={() => toggleSection("pipeline")}
-            className="w-full text-left mb-2"
-          >
-            <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors">
-              <h3 className="font-semibold text-slate-900">
-                Validation Process
-              </h3>
-              {expandedSections.pipeline ? (
-                <ChevronUp className="w-5 h-5 text-slate-600" />
-              ) : (
-                <ChevronDown className="w-5 h-5 text-slate-600" />
-              )}
-            </div>
-          </button>
-          {expandedSections.pipeline && (
-            <ValidationPipeline pipeline={pipeline} score={confidenceScore} />
-          )}
-        </div>
-      )}
-
       {/* Real-World Insights */}
-      {(contextMeta.pros && contextMeta.pros.length > 0) ||
-      (contextMeta.cons && contextMeta.cons.length > 0) ||
-      (contextMeta.tips && contextMeta.tips.length > 0) ? (
+      {(pros && pros.length > 0) ||
+      (cons && cons.length > 0) ||
+      (tips && tips.length > 0) ? (
         <div className="bg-white rounded-lg border border-slate-200">
           <button
-            onClick={() => toggleSection("realworld")}
+            onClick={() => toggleSection("insights")}
             className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors border-b border-slate-200"
           >
             <h3 className="font-semibold text-slate-900">
               Real-World Insights
             </h3>
-            {expandedSections.realworld ? (
+            {expandedSections.insights ? (
               <ChevronUp className="w-5 h-5 text-slate-600" />
             ) : (
               <ChevronDown className="w-5 h-5 text-slate-600" />
             )}
           </button>
-          {expandedSections.realworld && (
+          {expandedSections.insights && (
             <div className="p-6 space-y-6">
               {/* Pros */}
-              {contextMeta.pros && contextMeta.pros.length > 0 && (
+              {pros && pros.length > 0 && (
                 <div>
                   <h4 className="font-semibold text-green-900 text-sm mb-3 flex items-center gap-2">
                     <span className="text-lg">✅</span> Strengths
                   </h4>
                   <ul className="space-y-2">
-                    {contextMeta.pros.map((pro, idx) => (
+                    {pros.map((pro, idx) => (
                       <li
                         key={idx}
                         className="text-sm text-slate-700 pl-6 border-l-2 border-green-300"
@@ -222,13 +188,13 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
               )}
 
               {/* Cons */}
-              {contextMeta.cons && contextMeta.cons.length > 0 && (
+              {cons && cons.length > 0 && (
                 <div>
                   <h4 className="font-semibold text-amber-900 text-sm mb-3 flex items-center gap-2">
                     <span className="text-lg">⚠️</span> Considerations
                   </h4>
                   <ul className="space-y-2">
-                    {contextMeta.cons.map((con, idx) => (
+                    {cons.map((con, idx) => (
                       <li
                         key={idx}
                         className="text-sm text-slate-700 pl-6 border-l-2 border-amber-300"
@@ -241,13 +207,13 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
               )}
 
               {/* Expert Tips */}
-              {contextMeta.tips && contextMeta.tips.length > 0 && (
+              {tips && tips.length > 0 && (
                 <div>
                   <h4 className="font-semibold text-blue-900 text-sm mb-3 flex items-center gap-2">
                     <span className="text-lg">💡</span> Expert Tips
                   </h4>
                   <ul className="space-y-2">
-                    {contextMeta.tips.map((tip, idx) => (
+                    {tips.map((tip, idx) => (
                       <li
                         key={idx}
                         className="text-sm text-slate-700 pl-6 border-l-2 border-blue-300"
@@ -266,11 +232,10 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
       {/* Footer */}
       <div className="bg-slate-50 rounded-lg p-4 border border-slate-200">
         <p className="text-xs text-slate-500 text-center">
-          This product data has been verified through our complete 5-step
-          refinery pipeline. Last verified:{" "}
-          {new Date(
-            pipeline.step5_published?.timestamp || Date.now(),
-          ).toLocaleDateString()}
+          Data synced at:{" "}
+          {product.synced_at
+            ? new Date(product.synced_at).toLocaleDateString()
+            : "N/A"}
         </p>
       </div>
     </div>

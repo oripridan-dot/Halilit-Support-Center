@@ -149,6 +149,31 @@ export const brandThemes: Record<string, BrandTheme> = {
     emissive: "#ea580c",
     intensity: 1.2,
   },
+  // New Additions
+  neumann: {
+    primary: "#1e293b", // Slate 800
+    secondary: "#cbd5e1",
+    emissive: "#94a3b8",
+    intensity: 1.0,
+  },
+  focal: {
+    primary: "#b91c1c", // Red 700
+    secondary: "#000000",
+    emissive: "#ef4444",
+    intensity: 1.4,
+  },
+  rode: {
+    primary: "#ca8a04", // Yellow 600 (Gold-ish)
+    secondary: "#000000",
+    emissive: "#eab308",
+    intensity: 1.3,
+  },
+  shure: {
+    primary: "#15803d", // Green 700
+    secondary: "#000000",
+    emissive: "#22c55e",
+    intensity: 1.2,
+  },
 
   // Live & PA
   mackie: {

@@ -334,7 +334,7 @@ class OptimizedProduct(BaseModel):
     color_primary: Optional[str] = None
 
     # Specs (flattened for UI)
-    specs: Dict[str, List[Dict[str, str]]] = Field(default_factory=dict)
+    specs: Dict[str, List[Dict[str, Any]]] = Field(default_factory=dict)
 
     # Context
     pros: List[str] = Field(default_factory=list)

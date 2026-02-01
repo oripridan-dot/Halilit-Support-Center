@@ -11,9 +11,7 @@ const GalaxyDashboard = lazy(() =>
   })),
 );
 const SpectrumModule = lazy(() =>
-  import("./components/views/SpectrumModule").then((m) => ({
-    default: m.SpectrumModule,
-  })),
+  import("./components/views/SpectrumModule"),
 );
 const ProductPopInterface = lazy(() =>
   import("./components/views/ProductPopInterface").then((m) => ({

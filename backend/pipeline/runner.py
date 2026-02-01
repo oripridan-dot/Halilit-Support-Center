@@ -334,8 +334,44 @@ class PipelineRunner:
             json.dump(index.model_dump(mode='json'),
                       f, indent=2, ensure_ascii=False)
 
+        # Generate search_index.json
+        self._generate_search_index(all_products, output_dir)
+
         logger.info(
             f"  → Deployed {len(brand_summaries)} brands, {total_products} products to {output_dir}")
+
+    def _generate_search_index(
+        self,
+        all_products: Dict[str, List[OptimizedProduct]],
+        output_dir: Path
+    ) -> None:
+        """Generate search_index.json for Web Worker search."""
+        search_items = []
+
+        for brand_id, products in all_products.items():
+            brand_name = brand_id.replace('-', ' ').title()
+
+            for product in products:
+                search_item = {
+                    "id": product.id,
+                    "label": product.name,
+                    "brand": brand_id,
+                    "brand_name": brand_name,
+                    "category": product.category,
+                    "subcategory": product.subcategories[0] if product.subcategories else product.category,
+                    "keywords": product.filter_tags or [],
+                    "description": product.description_short or product.description_full[:100],
+                    "image_url": product.image_thumbnail.get("url") if product.image_thumbnail else None,
+                }
+                search_items.append(search_item)
+
+        # Write search_index.json
+        search_index_file = output_dir / "search_index.json"
+        with open(search_index_file, 'w', encoding='utf-8') as f:
+            json.dump(search_items, f, indent=2, ensure_ascii=False)
+
+        logger.info(
+            f"  → Generated search index with {len(search_items)} items")
 
     def _generate_typescript_types(self) -> None:
         """Generate TypeScript types from Pydantic models."""

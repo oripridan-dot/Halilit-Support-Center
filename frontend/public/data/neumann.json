@@ -1,0 +1,1187 @@
+{
+  "brand": "neumann",
+  "brand_name": "Neumann",
+  "brand_color": null,
+  "logo_url": null,
+  "product_count": 15,
+  "products": [
+    {
+      "id": "neumann-vis",
+      "name": "VIS",
+      "slug": "/neumann/vis",
+      "brand_id": "neumann",
+      "category": "Neumann",
+      "subcategories": [],
+      "tier": "bronze",
+      "tier_score": 18,
+      "description_short": "VIS\n\nSpatial audio positioning controller application for Apple Vision Pro",
+      "description_full": "VIS\n\nSpatial audio positioning controller application for Apple Vision Pro",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "vis neumann vis\n\nspatial audio positioning controller application for apple vision pro neumann",
+      "filter_tags": [
+        "unknown",
+        "bronze",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/software/vis",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865641"
+    },
+    {
+      "id": "neumann-rime",
+      "name": "RIME",
+      "slug": "/neumann/rime",
+      "brand_id": "neumann",
+      "category": "Headphones",
+      "subcategories": [
+        "headphone",
+        "headphones"
+      ],
+      "tier": "silver",
+      "tier_score": 53,
+      "description_short": "RIME\n\nDAW plug-in for reference-quality immersive monitoring on Neumann headphones",
+      "description_full": "RIME\n\nDAW plug-in for reference-quality immersive monitoring on Neumann headphones",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://images3.cmp.optimizely.com/assets/NDH-20_Neumann-Headphone_M.png/Zz04ZThkZDYxNGU3YWIxMWYwOTllMjdhZWFhOWMzNzY0YQ==?width=730",
+        "alt": "NDH-20_Neumann-Headphone_M",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://images3.cmp.optimizely.com/assets/NDH-20_Neumann-Headphone_M.png/Zz04ZThkZDYxNGU3YWIxMWYwOTllMjdhZWFhOWMzNzY0YQ==?width=730",
+        "alt": "NDH-20_Neumann-Headphone_M",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/NDH-20-Black-Edition_Neumann-Headphone_M.png/Zz04ZDdmN2NhMGU3YWIxMWYwYWZkMWVhNTViNWQyZmI4Ng==?width=730",
+          "alt": "NDH-20-Black-Edition_Neumann-Headphone_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/NDH-30-WhiteFond_Neumann-Headphone_M.png/Zz05MDE1NzEwZWU3YWIxMWYwOGM4OTJhMzQxNzliYzkxZA==?width=730",
+          "alt": "NDH-30-WhiteFond_Neumann-Headphone_M",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {
+        "Specifications": [
+          {
+            "key": "MAC",
+            "value": "mac OS 10.15 and above, Intel and native Apple silicon CPU support"
+          },
+          {
+            "key": "PC",
+            "value": "Windows 10 and above"
+          },
+          {
+            "key": "Compatibility",
+            "value": "All major DAWs supported, such as Pro Tools, Pyramix, Logic, Reaper, Cubase, Nuendo"
+          },
+          {
+            "key": "PLUG-IN FORMATS",
+            "value": "VST3, AU, AAX"
+          }
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "rime headphones headphone headphones rime\n\ndaw plug-in for reference-quality immersive monitoring on neumann headphones neumann mac os 10.15 and above, intel and native apple silicon cpu support windows 10 and above all major daws supported, such as pro tools, pyramix, logic, reaper, cubase, nuendo vst3, au, aax",
+      "filter_tags": [
+        "unknown",
+        "silver",
+        "headphones",
+        "headphone",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": true,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/software/rime",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865763"
+    },
+    {
+      "id": "neumann-microphones",
+      "name": "MICROPHONES",
+      "slug": "/neumann/microphones",
+      "brand_id": "neumann",
+      "category": "Microphones",
+      "subcategories": [
+        "mic",
+        "microphone"
+      ],
+      "tier": "bronze",
+      "tier_score": 35,
+      "description_short": "Neumann Microphones for Recording ✓ Live Sound ✓ Broadcast ✓ Concert Hall ✓ Home Studio ✓ -...",
+      "description_full": "Neumann Microphones for Recording ✓ Live Sound ✓ Broadcast ✓ Concert Hall ✓ Home Studio ✓ - Highest Sound Quality since 1928",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "microphones microphones mic microphone neumann microphones for recording ✓ live sound ✓ broadcast ✓ concert hall ✓ home studio ✓ -... neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "mic",
+        "microphones",
+        "microphone",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/microphones",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865831"
+    },
+    {
+      "id": "neumann-studio",
+      "name": "STUDIO MONITOR",
+      "slug": "/neumann/studio-monitor",
+      "brand_id": "neumann",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "studio monitor"
+      ],
+      "tier": "bronze",
+      "tier_score": 35,
+      "description_short": "Neumann",
+      "description_full": "Neumann.Berlin offers a wide selection of studio monitors for your purposes. Recording studio ✓ editing suite ✓ broadcast ✓ living area ✓ computer workstation ✓",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "studio monitor studio monitors studio monitor neumann neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "studio monitors",
+        "studio monitor",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/monitors",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865871"
+    },
+    {
+      "id": "neumann-headphones",
+      "name": "HEADPHONES",
+      "slug": "/neumann/headphones",
+      "brand_id": "neumann",
+      "category": "Headphones",
+      "subcategories": [
+        "headphone",
+        "headphones"
+      ],
+      "tier": "bronze",
+      "tier_score": 35,
+      "description_short": "Precise sound with Neumann NDH 20 & NDH 30 headphones",
+      "description_full": "Precise sound with Neumann NDH 20 & NDH 30 headphones. Unrivalled audio quality meets professional design.",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "headphones headphones headphone headphones precise sound with neumann ndh 20 & ndh 30 headphones neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "headphones",
+        "headphone",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/headphones",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865906"
+    },
+    {
+      "id": "neumann-microphone",
+      "name": "MICROPHONE ACCESSORIES",
+      "slug": "/neumann/microphone-accessories",
+      "brand_id": "neumann",
+      "category": "Microphones",
+      "subcategories": [
+        "mic",
+        "microphone"
+      ],
+      "tier": "bronze",
+      "tier_score": 35,
+      "description_short": "Enhance your recording experience with the right accessories for Neumann microphones - in proven...",
+      "description_full": "Enhance your recording experience with the right accessories for Neumann microphones - in proven Neumann quality, of course.",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "microphone accessories microphones mic microphone enhance your recording experience with the right accessories for neumann microphones - in proven... neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "mic",
+        "microphones",
+        "microphone",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/microphone-accessories",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865943"
+    },
+    {
+      "id": "neumann-studio",
+      "name": "STUDIO MONITOR ACCESSORIES",
+      "slug": "/neumann/studio-monitor-accessories",
+      "brand_id": "neumann",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "studio monitor"
+      ],
+      "tier": "bronze",
+      "tier_score": 28,
+      "description_short": "The right accessories for Neumann studio monitors: calibration, stands and wall brackets",
+      "description_full": "The right accessories for Neumann studio monitors: calibration, stands and wall brackets.",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "studio monitor accessories studio monitors studio monitor the right accessories for neumann studio monitors: calibration, stands and wall brackets neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "studio monitors",
+        "studio monitor",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/monitor-accessories",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.865986"
+    },
+    {
+      "id": "neumann-headphones",
+      "name": "HEADPHONES ACCESSORIES",
+      "slug": "/neumann/headphones-accessories",
+      "brand_id": "neumann",
+      "category": "Headphones",
+      "subcategories": [
+        "headphone",
+        "headphones"
+      ],
+      "tier": "bronze",
+      "tier_score": 28,
+      "description_short": "Neumann Headphones Accessories for NDH 20 and NDH 30",
+      "description_full": "Neumann Headphones Accessories for NDH 20 and NDH 30 ",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "headphones accessories headphones headphone headphones neumann headphones accessories for ndh 20 and ndh 30 neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "headphones",
+        "headphone",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/headphone-accessories",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866040"
+    },
+    {
+      "id": "neumann-historical",
+      "name": "HISTORICAL",
+      "slug": "/neumann/historical",
+      "brand_id": "neumann",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "bronze",
+      "tier_score": 28,
+      "description_short": "Discover a piece of Neumann history with the historic Neumann products",
+      "description_full": "Discover a piece of Neumann history with the historic Neumann products.",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "historical other discover a piece of neumann history with the historic neumann products neumann",
+      "filter_tags": [
+        "unknown",
+        "bronze",
+        "neumann",
+        "other"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/historical",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866078"
+    },
+    {
+      "id": "neumann-product",
+      "name": "PRODUCT HISTORY",
+      "slug": "/neumann/product-history",
+      "brand_id": "neumann",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "silver",
+      "tier_score": 45,
+      "description_short": "PRODUCT HISTORY",
+      "description_full": "",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://images3.cmp.optimizely.com/assets/CMV-3_Neumann-Bottle_H.png/Zz02MGYyYzk3Y2U3YWExMWYwYjViMzc2OGVlOGU5N2FlYQ==?width=730",
+        "alt": "CMV-3_Neumann-Bottle_H",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://images3.cmp.optimizely.com/assets/CMV-3_Neumann-Bottle_H.png/Zz02MGYyYzk3Y2U3YWExMWYwYjViMzc2OGVlOGU5N2FlYQ==?width=730",
+        "alt": "CMV-3_Neumann-Bottle_H",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/MM-2_Neumann-Calibration-Microphone_H.png/Zz03YjQwNzY3YWU3YWIxMWYwODA0ZmJlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "MM-2_Neumann-Calibration-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images4.cmp.optimizely.com/assets/U-47_Neumann-Studio-Microphone_H.png/Zz1mY2U5Y2RlOGU3YWIxMWYwOTQ2OWNlM2Q3NWM0MGYwNw==?width=730",
+          "alt": "U-47_Neumann-Studio-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/M-49_Neumann-Studio-Microphone_H.png/Zz02MTEyMjFkNmU3YWIxMWYwYWE5OGVhNTViNWQyZmI4Ng==?width=730",
+          "alt": "M-49_Neumann-Studio-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images4.cmp.optimizely.com/assets/M-50_Neumann-Studio-Microphone_H.png/Zz02Mjk2MDNmNmU3YWIxMWYwOTQ2OWNlM2Q3NWM0MGYwNw==?width=730",
+          "alt": "M-50_Neumann-Studio-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KM-53_Neumann-Miniature-Condenser-Microphone_H.png/Zz1mOTdjZTZhMGU3YWExMWYwYmNlN2JlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "KM-53_Neumann-Miniature-Condenser-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KM-54_Neumann-Miniature-Condenser-Microphone_H.png/Zz1mOWMwMzc3MGU3YWExMWYwYjViMzc2OGVlOGU5N2FlYQ==?width=730",
+          "alt": "KM-54_Neumann-Miniature-Condenser-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/MM-3_Neumann-Calibration-Microphone_H.png/Zz03YWY4NDM1MGU3YWIxMWYwOTllMjdhZWFhOWMzNzY0YQ==?width=730",
+          "alt": "MM-3_Neumann-Calibration-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KM-56_Neumann-Miniature-Condenser-Microphone_H.png/Zz1mYTkzYjI4MGU3YWExMWYwOGI0MDc2OGVlOGU5N2FlYQ==?width=730",
+          "alt": "KM-56_Neumann-Miniature-Condenser-Microphone_H",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/product_detail_x2_desktop_SM-2_Neumann-Stereo-Microphone_H_Kopie_.png/Zz1jYTRlMjhiMGU3YWMxMWYwYmZiMmJlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "Neumann Stereo Microphone SM 2",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "product history other product history neumann",
+      "filter_tags": [
+        "unknown",
+        "neumann",
+        "silver",
+        "other"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/knowledge-base/history-products",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866126"
+    },
+    {
+      "id": "neumann-neumann-product-registration",
+      "name": "Product Registration",
+      "slug": "/neumann/product-registration",
+      "brand_id": "neumann",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "silver",
+      "tier_score": 45,
+      "description_short": "Product Registration",
+      "description_full": "",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://product-registration.neumann.com/images/layout/logo.png",
+        "alt": "Neumann Berlin Logo",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://product-registration.neumann.com/images/layout/logo.png",
+        "alt": "Neumann Berlin Logo",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://product-registration.neumann.com/images/layout/user.png",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://product-registration.neumann.com/images/layout/logo.png",
+          "alt": "Neumann Berlin Logo",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://product-registration.neumann.com/images/facebook-f-brands.svg",
+          "alt": "neumann-facebook",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://product-registration.neumann.com/images/youtube-brands.svg",
+          "alt": "neumann-youtube",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://product-registration.neumann.com/images/instagram-brands.svg",
+          "alt": "neumann-instagram",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "product registration other product registration neumann",
+      "filter_tags": [
+        "unknown",
+        "neumann",
+        "silver",
+        "other"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://product-registration.neumann.com/",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866240"
+    },
+    {
+      "id": "neumann-audio",
+      "name": "AUDIO INTERFACES",
+      "slug": "/neumann/audio-interfaces",
+      "brand_id": "neumann",
+      "category": "Audio Interfaces",
+      "subcategories": [
+        "audio interface"
+      ],
+      "tier": "bronze",
+      "tier_score": 28,
+      "description_short": "Discover the MT 48, Neumann's first audio interface",
+      "description_full": "Discover the MT 48, Neumann's first audio interface. Top-tier sound quality and superior tech.",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "audio interfaces audio interfaces audio interface discover the mt 48, neumann's first audio interface neumann",
+      "filter_tags": [
+        "bronze",
+        "unknown",
+        "audio interfaces",
+        "audio interface",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/audiointerfaces",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866281"
+    },
+    {
+      "id": "neumann-402",
+      "name": "V 402",
+      "slug": "/neumann/v-402",
+      "brand_id": "neumann",
+      "category": "Headphones",
+      "subcategories": [
+        "headphone"
+      ],
+      "tier": "gold",
+      "tier_score": 63,
+      "description_short": "V 402\n\nState-of-the-art microphone preamp with DI inputs and a high-class headphone amplifier",
+      "description_full": "V 402\n\nState-of-the-art microphone preamp with DI inputs and a high-class headphone amplifier",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://images3.cmp.optimizely.com/assets/MCM-KeyVisual-Neumann-Miniature-Clip-Mic-System_M.png/Zz1mODdiMzk5Y2U3YzcxMWYwOTg2Y2JlYjQzYzY2MTIyYQ==?width=730",
+        "alt": "Product image",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://images3.cmp.optimizely.com/assets/MCM-KeyVisual-Neumann-Miniature-Clip-Mic-System_M.png/Zz1mODdiMzk5Y2U3YzcxMWYwOTg2Y2JlYjQzYzY2MTIyYQ==?width=730",
+        "alt": "Product image",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KH-120-II-AES67-Left_Neumann-Studio-Monitor_M.png/Zz1mODM5MjQ4NmU3Y2IxMWYwYmZiMmJlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/product_detail_x1_desktop_AutomaticMonitorAlignmentMA1_730x730.png/Zz00YWFmMmU5OGRjMjAxMWYwYTBiMzRhNTkxYzY4NDNkNQ==?width=730",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KH-150-Left_Neumann-Studio-Monitor_M.png/Zz04NmU1MzdmYWU3YWExMWYwYWUzMDdhZWFhOWMzNzY0YQ==?width=730",
+          "alt": "KH-150-Left_Neumann-Studio-Monitor_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/NDH-30-WhiteFond_Neumann-Headphone_M.png/Zz05MDE1NzEwZWU3YWIxMWYwOGM4OTJhMzQxNzliYzkxZA==?width=730",
+          "alt": "NDH-30-WhiteFond_Neumann-Headphone_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/TLM-102-bk-with-EA4_Neumann-Studio-Microphone_M.png/Zz1kNjcxNmI4MGU3YWIxMWYwOWNlNjJhMzQxNzliYzkxZA==?width=730",
+          "alt": "TLM-102-bk-with-EA4_Neumann-Studio-Microphone_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KH-750-DSP-Left_Neumann-Studio-Subwoofer_M.png/Zz1hMjdkMjc4NGU3YWExMWYwYmZiMmJlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "KH-750-DSP-Left_Neumann-Studio-Subwoofer_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/U-87-Ai-Studio-Set_Neumann-Studio-Microphone_M.png/Zz0wMzM5NjNmY2U3YWMxMWYwYWE5OGVhNTViNWQyZmI4Ng==?width=730",
+          "alt": "U-87-Ai-Studio-Set_Neumann-Studio-Microphone_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/TLM-103-with-EA1_Neumann-Studio-Microphone_M.png/Zz1kZTJmOTBjY2U3YWIxMWYwOGNiZDJhMzQxNzliYzkxZA==?width=730",
+          "alt": "TLM-103-with-EA1_Neumann-Studio-Microphone_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/TLM-49-Set_Neumann-Studio-Microphone_M.png/Zz1lNjA0YmIyNGU3YWIxMWYwOTllMjdhZWFhOWMzNzY0YQ==?width=730",
+          "alt": "TLM-49-Set_Neumann-Studio-Microphone_M",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {
+        "Specifications": [
+          {
+            "key": "Frequency Range",
+            "value": "<10 Hz to >100 kHz (-3 dB@ 40 dB Gain)"
+          },
+          {
+            "key": "Mains Power Supply: Input Voltage; frequency",
+            "value": "100-120 V and 220-240 V; 50 Hz/60 Hz"
+          },
+          {
+            "key": "Power Consumption",
+            "value": "max. 25 W"
+          },
+          {
+            "key": "Microphone Inputs: Connector",
+            "value": "2 x XLR 3 F"
+          },
+          {
+            "key": "Microphone Inputs: Input Impedance",
+            "value": "approx. 3 kΩ"
+          },
+          {
+            "key": "Microphone Inputs: Minimum Gain",
+            "value": "+20 dB (PAD off)"
+          },
+          {
+            "key": "Microphone Inputs: Maximum Gain",
+            "value": "+60 dB (PAD off)"
+          },
+          {
+            "key": "Microphone Inputs: Attenuation PAD switchable",
+            "value": "off/-20 dB"
+          },
+          {
+            "key": "Microphone Inputs: Maximum Input Level (PAD off)",
+            "value": "+8 dBu"
+          },
+          {
+            "key": "Microphone Inputs: Maximum Input Level (PAD on)",
+            "value": "+28 dBu"
+          },
+          {
+            "key": "Microphone inputs: EIN @ 60 dB Gain / 50 Ohm¹⁾",
+            "value": "-129,4 dBu(A)"
+          },
+          {
+            "key": "Microphone inputs: EIN @ 40 dB Gain / 50 Ohm¹⁾",
+            "value": "-129,2 dBu(A)"
+          },
+          {
+            "key": "Microphone inputs: THD Mic In @ 1kHz /40 dB Gain / +12 dBu²⁾",
+            "value": "0,00018%"
+          },
+          {
+            "key": "Power Supply (P48, IEC 61938)",
+            "value": "48 V, max. ≥ 10 mA, switchable on/off"
+          },
+          {
+            "key": "Hi-Z Inputs: Active",
+            "value": "switchable on/off"
+          },
+          {
+            "key": "Hi-Z Inputs: Connector",
+            "value": "2 x Jack 6.3 mm (1/4”), mono, unbalanced (front)"
+          },
+          {
+            "key": "Hi-Z Inputs: Input Impedance",
+            "value": "3.3 MΩ"
+          },
+          {
+            "key": "Hi-Z Inputs: Maximum Input Level",
+            "value": "+21 dBu"
+          },
+          {
+            "key": "Hi-Z Inputs: Minimum Gain",
+            "value": "0 dB (PAD off)"
+          },
+          {
+            "key": "Hi-Z Inputs: Maximum Gain",
+            "value": "+40 dB (PAD off)"
+          },
+          {
+            "key": "Bargraphs per Channel",
+            "value": "-24 dBu to +24 dBu in 6 dB steps"
+          },
+          {
+            "key": "Bargraphs Peak Hold",
+            "value": "indication @ +24 dBu (hold time approx. 3 sec.)"
+          },
+          {
+            "key": "Headphone Output: Mono/Stereo",
+            "value": "switchable"
+          },
+          {
+            "key": "Headphone Output: Connector",
+            "value": "jack 6.3 mm (1/4”), stereo (front)"
+          },
+          {
+            "key": "Headphone Output: Volume Control",
+            "value": "for left & right channel + Master"
+          },
+          {
+            "key": "Headphone Output: Output Impedance",
+            "value": "approx. 2 Ω"
+          },
+          {
+            "key": "Headphone Output: Maximum Output Level",
+            "value": "+20 dBu into 150 Ω load impedance"
+          },
+          {
+            "key": "Outputs: Connector",
+            "value": "2 x XLR 3 M"
+          },
+          {
+            "key": "Outputs: Output Impedance",
+            "value": "approx. 200 Ω"
+          },
+          {
+            "key": "Outputs: Maximum Output Level",
+            "value": "+26 dBu into 1 kΩ load impedance"
+          },
+          {
+            "key": "High Pass Filter",
+            "value": "60 Hz, 12 dB/oct, switchable on /off"
+          },
+          {
+            "key": "Product Dimensions (height x width x depth)",
+            "value": "89mm x 483 mm x 242 mm"
+          },
+          {
+            "key": "Weight",
+            "value": "6.2 kg"
+          },
+          {
+            "key": "Operating Conditions",
+            "value": "0°C to +50°C; < 75% RH@ +40°C; non-condensing"
+          },
+          {
+            "key": "Transport/Storage Conditions",
+            "value": "-25°C to +70°C; < 95% RH; non-condensing"
+          },
+          {
+            "key": "Working Altitude",
+            "value": "< 2000 m"
+          },
+          {
+            "key": "Ground Lift",
+            "value": "switchable on/off"
+          }
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "v 402 headphones headphone v 402\n\nstate-of-the-art microphone preamp with di inputs and a high-class headphone amplifier neumann <10 hz to >100 khz (-3 db@ 40 db gain) 100-120 v and 220-240 v; 50 hz/60 hz max. 25 w 2 x xlr 3 f approx. 3 kω +20 db (pad off) +60 db (pad off) off/-20 db +8 dbu +28 dbu -129,4 dbu(a) -129,2 dbu(a) 0,00018% 48 v, max. ≥ 10 ma, switchable on/off switchable on/off 2 x jack 6.3 mm (1/4”), mono, unbalanced (front) 3.3 mω +21 dbu 0 db (pad off) +40 db (pad off) -24 dbu to +24 dbu in 6 db steps indication @ +24 dbu (hold time approx. 3 sec.) switchable jack 6.3 mm (1/4”), stereo (front) for left & right channel + master approx. 2 ω +20 dbu into 150 ω load impedance 2 x xlr 3 m approx. 200 ω +26 dbu into 1 kω load impedance 60 hz, 12 db/oct, switchable on /off 89mm x 483 mm x 242 mm 6.2 kg 0°c to +50°c; < 75% rh@ +40°c; non-condensing -25°c to +70°c; < 95% rh; non-condensing < 2000 m switchable on/off",
+      "filter_tags": [
+        "gold",
+        "unknown",
+        "headphones",
+        "headphone",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": true,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/historical/v-402",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866461"
+    },
+    {
+      "id": "neumann-neumann-mt-48-u-universal-power-supply",
+      "name": "MT 48 U (Universal Power Supply)",
+      "slug": "/neumann/mt-48-u-universal-power-supply",
+      "brand_id": "neumann",
+      "category": "Audio Interfaces",
+      "subcategories": [
+        "audio interface"
+      ],
+      "tier": "diamond",
+      "tier_score": 80,
+      "description_short": "MT 48 U (Universal Power Supply)\n\nPremium audio interface in Neumann quality with intuitive...",
+      "description_full": "MT 48 U (Universal Power Supply)\n\nPremium audio interface in Neumann quality with intuitive touchscreen control",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://images1.cmp.optimizely.com/assets/MT-48-PackagingOpen-WhiteFond_Neumann-Audio-Interface+_SR/Zz1jYjBmMjJhNGQwMmQxMWYwYTYxNjZhZDcwMDk5N2YxOA==?height=205",
+        "alt": "Product image",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://images1.cmp.optimizely.com/assets/MT-48-PackagingOpen-WhiteFond_Neumann-Audio-Interface+_SR/Zz1jYjBmMjJhNGQwMmQxMWYwYTYxNjZhZDcwMDk5N2YxOA==?height=205",
+        "alt": "Product image",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/MidiAdapterSet.tif/Zz1mYTYxYWIwOGU3YWMxMWYwYWUzMDdhZWFhOWMzNzY0YQ==?height=205",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images1.cmp.optimizely.com/assets/MT-48-PackagingOpen-WhiteFond_Neumann-Audio-Interface+_SR/Zz1jYjBmMjJhNGQwMmQxMWYwYTYxNjZhZDcwMDk5N2YxOA==?height=205",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/MidiAdapterSet.tif/Zz1mYTYxYWIwOGU3YWMxMWYwYWUzMDdhZWFhOWMzNzY0YQ==?height=205",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/MCM-KeyVisual-Neumann-Miniature-Clip-Mic-System_M.png/Zz1mODdiMzk5Y2U3YzcxMWYwOTg2Y2JlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KH-120-II-AES67-Left_Neumann-Studio-Monitor_M.png/Zz1mODM5MjQ4NmU3Y2IxMWYwYmZiMmJlYjQzYzY2MTIyYQ==?width=730",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/product_detail_x1_desktop_AutomaticMonitorAlignmentMA1_730x730.png/Zz00YWFmMmU5OGRjMjAxMWYwYTBiMzRhNTkxYzY4NDNkNQ==?width=730",
+          "alt": "Product image",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images3.cmp.optimizely.com/assets/KH-150-Left_Neumann-Studio-Monitor_M.png/Zz04NmU1MzdmYWU3YWExMWYwYWUzMDdhZWFhOWMzNzY0YQ==?width=730",
+          "alt": "KH-150-Left_Neumann-Studio-Monitor_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/NDH-30-WhiteFond_Neumann-Headphone_M.png/Zz05MDE1NzEwZWU3YWIxMWYwOGM4OTJhMzQxNzliYzkxZA==?width=730",
+          "alt": "NDH-30-WhiteFond_Neumann-Headphone_M",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://images2.cmp.optimizely.com/assets/TLM-102-bk-with-EA4_Neumann-Studio-Microphone_M.png/Zz1kNjcxNmI4MGU3YWIxMWYwOWNlNjJhMzQxNzliYzkxZA==?width=730",
+          "alt": "TLM-102-bk-with-EA4_Neumann-Studio-Microphone_M",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {
+        "Specifications": [
+          {
+            "key": "Dynamic Range",
+            "value": "122 dB-A (high) / 117 dB (low)"
+          },
+          {
+            "key": "Equivalent Input Noise (150 Ohm)",
+            "value": "-128 dBu-A"
+          },
+          {
+            "key": "Input Impedance",
+            "value": "2 MΩ (balanced)  / 1 MΩ (unbalanced)"
+          },
+          {
+            "key": "Gain Range",
+            "value": "0…+66 dB"
+          },
+          {
+            "key": "Pad",
+            "value": "12 dB/24 dB"
+          },
+          {
+            "key": "Max. Input Level",
+            "value": "+18 dBu"
+          },
+          {
+            "key": "THD + N Preamp + ADC @ 1 kHz, 0 dBFS",
+            "value": "< -112 dB (0.0003%)"
+          },
+          {
+            "key": "Sensitivity",
+            "value": "+18 dBu … -48 dBu"
+          },
+          {
+            "key": "Output Impedance",
+            "value": "0.035 Ω"
+          },
+          {
+            "key": "THD+N@ 1 kHz, 0 dBFS",
+            "value": "< -110 dB (0.0003%)"
+          },
+          {
+            "key": "Max. Output Level",
+            "value": "+16 dBu (high) /+8 dBu (low)"
+          },
+          {
+            "key": "AES67/Ravenna",
+            "value": "Standard RJ-45 Gigabit-Ethernet-Anschluss"
+          },
+          {
+            "key": "Expansion Connectivity",
+            "value": "\"ADAT/S/PDIF optical I/O, MIDI I/O via 1/4” jack,  (DIN5 adapter set available from Neumann: Cat. No.700261)\""
+          },
+          {
+            "key": "Computer Interface",
+            "value": "USB-C, 2.0 High Speed (480 MB/s) or higher"
+          },
+          {
+            "key": "Power Consumption",
+            "value": "<25 W"
+          },
+          {
+            "key": "Product Dimensions",
+            "value": "200 x 128 x 40mm"
+          }
+        ]
+      },
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "mt 48 u (universal power supply) audio interfaces audio interface mt 48 u (universal power supply)\n\npremium audio interface in neumann quality with intuitive... neumann 122 db-a (high) / 117 db (low) -128 dbu-a 2 mω (balanced)  / 1 mω (unbalanced) 0…+66 db 12 db/24 db +18 dbu < -112 db (0.0003%) +18 dbu … -48 dbu 0.035 ω < -110 db (0.0003%) +16 dbu (high) /+8 dbu (low) standard rj-45 gigabit-ethernet-anschluss \"adat/s/pdif optical i/o, midi i/o via 1/4” jack,  (din5 adapter set available from neumann: cat. no.700261)\" usb-c, 2.0 high speed (480 mb/s) or higher <25 w 200 x 128 x 40mm",
+      "filter_tags": [
+        "diamond",
+        "unknown",
+        "audio interfaces",
+        "audio interface",
+        "neumann"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": true,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": true
+      },
+      "source_url": "https://www.neumann.com/en-ie/products/audiointerfaces/mt-48",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866574"
+    },
+    {
+      "id": "neumann-product-related",
+      "name": "PRODUCT-RELATED PROTECTION OF OUR ENVIRONMENT",
+      "slug": "/neumann/product-related-protection-of-our-environment",
+      "brand_id": "neumann",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "bronze",
+      "tier_score": 20,
+      "description_short": "PRODUCT-RELATED PROTECTION OF OUR ENVIRONMENT",
+      "description_full": "",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "product-related protection of our environment other product-related protection of our environment neumann",
+      "filter_tags": [
+        "unknown",
+        "bronze",
+        "neumann",
+        "other"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.neumann.com/en-ie/legal/product-related-protection-of-our-environment",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T06:39:00.866631"
+    }
+  ],
+  "generated_at": "2026-02-01T06:46:43.291361"
+}

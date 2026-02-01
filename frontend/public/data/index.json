@@ -1,17 +1,53 @@
 {
-  "build_timestamp": "2026-01-31T12:00:00Z",
-  "version": "4.6.1",
-  "total_products": 3,
-  "total_verified": 3,
+  "version": "5.0.0",
+  "build_timestamp": "2026-02-01T06:46:43.314741",
+  "total_products": 98,
+  "total_verified": 39,
   "brands": [
     {
-      "id": "adam-audio",
-      "name": "Adam Audio",
-      "brand_color": "#000000",
-      "logo_url": "https://www.adam-audio.com/content/uploads/2016/09/logo.svg",
-      "product_count": 3,
-      "verified_count": 3,
-      "data_file": "adam-audio.json"
+      "id": "neumann",
+      "name": "Neumann",
+      "logo_url": null,
+      "brand_color": null,
+      "product_count": 15,
+      "verified_count": 2,
+      "data_file": "neumann.json"
+    },
+    {
+      "id": "focal",
+      "name": "Focal",
+      "logo_url": null,
+      "brand_color": null,
+      "product_count": 6,
+      "verified_count": 0,
+      "data_file": "focal.json"
+    },
+    {
+      "id": "rode",
+      "name": "Rode",
+      "logo_url": null,
+      "brand_color": null,
+      "product_count": 50,
+      "verified_count": 25,
+      "data_file": "rode.json"
+    },
+    {
+      "id": "shure",
+      "name": "Shure",
+      "logo_url": null,
+      "brand_color": null,
+      "product_count": 17,
+      "verified_count": 5,
+      "data_file": "shure.json"
+    },
+    {
+      "id": "universal-audio",
+      "name": "Universal Audio",
+      "logo_url": null,
+      "brand_color": null,
+      "product_count": 10,
+      "verified_count": 7,
+      "data_file": "universal-audio.json"
     }
   ]
 }

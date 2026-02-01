@@ -73,7 +73,7 @@ export const TierBar = ({
     // Initial Mapping
     const nodes = products.map((p) => {
       const price = getPriceValue(p);
-      const score = p.score || 50;
+      const score = p.tier_score || 50;
 
       // Outlier Detection
       const isOutlierLow = price < currentMin;
@@ -279,24 +279,16 @@ export const TierBar = ({
 
               {/* The Orb */}
               <div className="relative w-full h-full bg-zinc-900/90 backdrop-blur-md rounded-full border border-zinc-700 hover:border-amber-500 hover:scale-125 hover:shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all duration-200 overflow-hidden flex items-center justify-center p-1.5 z-20">
-                <img
-                  src={node.product.logo_url}
-                  alt={node.product.brand}
-                  className="w-full h-full object-contain opacity-80 group-hover/node:opacity-100 group-hover/node:invert"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none";
-                    // Simple text fallback
-                    const parent = e.currentTarget.parentElement;
-                    if (parent)
-                      parent.innerHTML = `<span class="text-[8px] font-bold text-zinc-500">${(node.product.brand ?? "").substring(0, 3)}</span>`;
-                  }}
-                />
+                <span className="text-[8px] font-bold text-zinc-500">
+                  {(node.product.brand_id ?? "").substring(0, 3).toUpperCase()}
+                </span>
               </div>
 
               {/* Price Tooltip (On Hover) */}
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover/node:opacity-100 transition-opacity whitespace-nowrap z-50 pointer-events-none">
                 <div className="bg-black text-amber-500 text-[10px] font-bold font-mono px-2 py-1 rounded border border-amber-500/50 shadow-xl">
-                  ₪{Math.round(node.price).toLocaleString()}
+                  {node.product.currency}{" "}
+                  {Math.round(node.price).toLocaleString()}
                 </div>
               </div>
             </motion.button>

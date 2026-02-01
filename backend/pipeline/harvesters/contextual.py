@@ -32,6 +32,17 @@ try:
 except ImportError:
     OPENAI_AVAILABLE = False
 
+try:
+    import google.genai as genai
+    GEMINI_AVAILABLE = True
+except ImportError:
+    # Try old package for backwards compatibility
+    try:
+        import google.generativeai as genai
+        GEMINI_AVAILABLE = True
+    except ImportError:
+        GEMINI_AVAILABLE = False
+
 from ..config import config
 from ..models import ContextualData, ReviewSource
 
@@ -68,17 +79,19 @@ class ContextualHarvester:
             'SERP_API_KEY') or config.SERP_API_KEY
         self.openai_api_key = os.environ.get(
             'OPENAI_API_KEY') or config.OPENAI_API_KEY
+        self.gemini_api_key = os.environ.get('GEMINI_API_KEY')
 
         # Check if real APIs are available
         self.search_enabled = bool(self.serp_api_key)
-        self.ai_enabled = OPENAI_AVAILABLE and bool(self.openai_api_key)
+        self.ai_enabled = (OPENAI_AVAILABLE and bool(self.openai_api_key)) or (
+            GEMINI_AVAILABLE and bool(self.gemini_api_key))
 
         if not self.search_enabled:
             logger.warning(
                 "⚠️ SERP_API_KEY not set - using mock search results")
         if not self.ai_enabled:
             logger.warning(
-                "⚠️ OPENAI_API_KEY not set - using mock AI synthesis")
+                "⚠️ OPENAI_API_KEY or GEMINI_API_KEY not set - using mock AI synthesis")
 
     async def harvest_product(
         self,
@@ -264,8 +277,84 @@ class ContextualHarvester:
         """Synthesize pros/cons/tips from search results using AI."""
 
         if self.ai_enabled:
-            return await self._synthesize_openai(sources, product_name)
-        else:
+            if self.gemini_api_key:
+                return await self._synthesize_gemini(sources, product_name)
+            elif self.openai_api_key:
+                return await self._synthesize_openai(sources, product_name)
+        return await self._synthesize_mock(sources, product_name)
+
+    async def _synthesize_gemini(
+        self,
+        sources: List[ReviewSource],
+        product_name: str
+    ) -> Dict[str, List[str]]:
+        """Real AI synthesis using Google Gemini."""
+        try:
+            # New google.genai API - configure with api_key parameter
+            client = genai.Client(api_key=self.gemini_api_key)
+
+            # Try latest models in order of preference
+            model_name = None
+            for name in ['gemini-2.0-flash', 'gemini-1.5-flash', 'gemini-pro']:
+                try:
+                    # Test if model is available
+                    model_name = name
+                    logger.debug(f"Attempting to use Gemini model: {name}")
+                    break
+                except Exception as e:
+                    logger.debug(f"Model {name} not available: {e}")
+                    continue
+
+            if not model_name:
+                raise Exception("No Gemini model available")
+
+            # Build context from snippets
+            context = "\n".join([
+                f"- {s.source_name}: {s.snippet}"
+                for s in sources if s.snippet
+            ])
+
+            prompt = f"""Analyze these review snippets for {product_name}:
+
+{context}
+
+Based on these sources, extract:
+1. PROS: 2-4 consensus strengths mentioned across reviews
+2. CONS: 2-4 consensus weaknesses or limitations  
+3. RECURRING_ISSUES: Any reliability/quality issues mentioned
+4. EXPERT_TIPS: Pro tips for getting the best results
+
+Respond ONLY with valid JSON (no markdown, no extra text):
+{{"pros": [...], "cons": [...], "recurring_issues": [...], "expert_tips": [...]}}"""
+
+            response = client.models.generate_content(
+                model=f"models/{model_name}",
+                contents=prompt,
+            )
+            # Handle different response formats
+            if hasattr(response, 'text') and response.text:
+                content = response.text
+            elif hasattr(response, 'content'):
+                content = response.content
+            elif isinstance(response, dict) and 'text' in response:
+                content = response['text']
+            else:
+                content = str(response)
+
+            # Try to extract JSON from response (might include markdown code blocks)
+            import re
+            json_match = re.search(
+                r'```json\s*(.*?)\s*```', content, re.DOTALL)
+            if json_match:
+                content = json_match.group(1)
+            elif content.startswith('```'):
+                content = re.sub(r'^```.*?\n', '', content)
+                content = re.sub(r'\n```$', '', content)
+
+            return json.loads(content.strip())
+
+        except Exception as e:
+            logger.error(f"Gemini synthesis error: {e}")
             return await self._synthesize_mock(sources, product_name)
 
     async def _synthesize_openai(

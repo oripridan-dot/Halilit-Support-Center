@@ -1,0 +1,113 @@
+{
+  "version": "5.0",
+  "last_updated": "2026-01-31",
+  "description": "Brand manifest for Halilit Support Center pipeline",
+  "brands": [
+    {
+      "id": "adam-audio",
+      "name": "ADAM Audio",
+      "logo_url": "https://www.adam-audio.com/assets/logo.svg",
+      "official_url": "https://www.adam-audio.com",
+      "official_products": [
+        "https://www.adam-audio.com/en/pro-monitors/t7v",
+        "https://www.adam-audio.com/en/pro-monitors/a7x",
+        "https://www.adam-audio.com/en/pro-monitors/a5x"
+      ],
+      "commercial_url": "https://halilit.com/?s=adam+audio",
+      "description": "Professional studio monitoring solutions for music production and audio engineering",
+      "category": "Studio Monitors",
+      "founded": 1999,
+      "country": "Germany",
+      "tags": ["studio", "monitors", "professional", "audio"]
+    },
+    {
+      "id": "neumann",
+      "name": "Neumann",
+      "logo_url": "https://www.neumann.com/shared/images/logo.svg",
+      "official_url": "https://www.neumann.com",
+      "official_products": [
+        "https://www.neumann.com/en-us/products/microphones/u87ai",
+        "https://www.neumann.com/en-us/products/microphones/tlm-49",
+        "https://www.neumann.com/en-us/products/microphones/km-9"
+      ],
+      "commercial_url": "https://halilit.com/?s=neumann",
+      "description": "Legendary microphones and monitoring solutions for broadcast, music, and live applications",
+      "category": "Microphones & Monitoring",
+      "founded": 1928,
+      "country": "Germany",
+      "tags": ["microphone", "broadcast", "legendary", "vocal"]
+    },
+    {
+      "id": "focal",
+      "name": "Focal",
+      "logo_url": "https://www.focal.com/logo.svg",
+      "official_url": "https://www.focal.com",
+      "official_products": [
+        "https://www.focal.com/en/studio-monitors/shape-65",
+        "https://www.focal.com/en/studio-monitors/solo6-be"
+      ],
+      "commercial_url": "https://halilit.com/?s=focal+monitors",
+      "description": "High-precision studio monitors with acoustic excellence for professional mixing",
+      "category": "Studio Monitors",
+      "founded": 1979,
+      "country": "France",
+      "tags": ["studio", "monitors", "acoustic", "beryllium"]
+    },
+    {
+      "id": "rode",
+      "name": "RODE",
+      "logo_url": "https://rode.com/images/logo.svg",
+      "official_url": "https://rode.com",
+      "official_products": [
+        "https://rode.com/en/microphones/large-diaphragm-condenser",
+        "https://rode.com/en/microphones/ntk"
+      ],
+      "commercial_url": "https://halilit.com/?s=rode+microphone",
+      "description": "Professional microphones and audio equipment for recording, podcasting, and broadcasting",
+      "category": "Microphones",
+      "founded": 1967,
+      "country": "Australia",
+      "tags": ["microphone", "recording", "podcast", "broadcast"]
+    },
+    {
+      "id": "shure",
+      "name": "Shure",
+      "logo_url": "https://shure.com/logo.svg",
+      "official_url": "https://shure.com",
+      "official_products": [
+        "https://shure.com/products/microphones/sm7b",
+        "https://shure.com/products/microphones/kSM9"
+      ],
+      "commercial_url": "https://halilit.com/?s=shure",
+      "description": "Industry-standard microphones and audio equipment for professional applications",
+      "category": "Microphones & Audio Equipment",
+      "founded": 1925,
+      "country": "USA",
+      "tags": ["microphone", "industry-standard", "professional", "live"]
+    },
+    {
+      "id": "universal-audio",
+      "name": "Universal Audio",
+      "logo_url": "https://www.uaudio.com/images/logo.svg",
+      "official_url": "https://www.uaudio.com",
+      "official_products": [
+        "https://www.uaudio.com/audio-interfaces/apollo-x8",
+        "https://www.uaudio.com/audio-interfaces/apollo-twin-mk2"
+      ],
+      "commercial_url": "https://halilit.com/?s=universal+audio",
+      "description": "Professional audio interfaces and DSP processing for world-class recording and mixing",
+      "category": "Audio Interfaces & Processing",
+      "founded": 1999,
+      "country": "USA",
+      "tags": ["audio-interface", "dsp", "processing", "professional"]
+    }
+  ],
+  "configuration": {
+    "harvest_official": true,
+    "harvest_commercial": true,
+    "harvest_contextual": true,
+    "concurrent_scrapes": 3,
+    "timeout_ms": 30000,
+    "retry_count": 3
+  }
+}

@@ -297,25 +297,20 @@ export function getConsolidatedProductCategory(product: Product): {
     };
   }
 
-  // 2. Fallback: Use legacy UI Context
-  const uiContext = product.ui_context;
-  if (uiContext && uiContext.primary) {
-    // Map Backend Tax Keys to Frontend Spectrum IDs
-    // This is a "Bridge" map until the backend outputs Spectrum IDs directly
-    const TAXONOMY_BRIDGE: Record<string, string> = {
-      "STUDIO_MONITORS": "studio-monitors",
-      "AUDIO_INTERFACES": "audio-interfaces",
-      "MICROPHONES": "studio-microphones",
-      // Add default mappings for cases where refined data uses generic keys
-      "UNCATEGORIZED": "accessories-utility"
+  // 2. Fallback: Use category field
+  if (product.category) {
+    // Map category names to Spectrum IDs
+    const CATEGORY_BRIDGE: Record<string, string> = {
+      "studio_monitors": "studio-monitors",
+      "audio_interfaces": "audio-interfaces",
+      "microphones": "studio-microphones",
+      "speakers": "speakers",
+      "headphones": "headphones",
+      "default": "accessories-utility"
     };
-    // If it has Sub-Division (e.g. "Subwoofer"), we might map specifically too
-    // For now, let's map the Primary Category to Spectrum ID
-
-    let spectrumId = TAXONOMY_BRIDGE[uiContext.primary] || "accessories-utility";
-
-    // Handle special sub-cases if needed (e.g. Subwoofers in backend might match PA vs Studio?)
-    // Actually, let's trust the backend primary for now.
+    
+    const categoryKey = (product.category || "default").toLowerCase().replace(/\s+/g, "_");
+    let spectrumId = CATEGORY_BRIDGE[categoryKey] || "accessories-utility";
 
     const galaxy = getGalaxyForSpectrum(spectrumId);
     const galaxyId = galaxy ? galaxy.id : "accessories-utility";

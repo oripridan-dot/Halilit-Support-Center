@@ -180,7 +180,7 @@ class OptimizeLayer:
     def _flatten_specs(
         self,
         specs: Dict[str, List[Any]]
-    ) -> Dict[str, List[Dict[str, str]]]:
+    ) -> Dict[str, List[Dict[str, Any]]]:
         """Flatten specs for frontend consumption."""
         result = {}
 
@@ -194,11 +194,17 @@ class OptimizeLayer:
                 else:
                     continue
 
-                result[category].append({
+                # Build spec entry, excluding None values
+                spec_entry: Dict[str, str] = {
                     "key": spec_dict.get('key', ''),
                     "value": spec_dict.get('value', ''),
-                    "unit": spec_dict.get('unit', ''),
-                })
+                }
+                # Only include unit if it's not None
+                unit = spec_dict.get('unit')
+                if unit is not None:
+                    spec_entry["unit"] = str(unit)
+
+                result[category].append(spec_entry)
 
         return result
 

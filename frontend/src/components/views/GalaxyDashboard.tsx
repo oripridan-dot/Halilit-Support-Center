@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   LayoutGrid,
   Guitar,
@@ -15,6 +15,7 @@ import { CategorySlot } from "./galaxy/CategorySlot";
 import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
 import { getContextBackground } from "../../lib/slotBackgrounds";
 import { useProductCounts } from "../../hooks/useProductCounts";
+import { useUnifiedTaxonomy } from "../../hooks/useUnifiedTaxonomy";
 
 // Icon mapping for sectors
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -51,6 +52,29 @@ export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
   const { counts, loading } = useProductCounts();
 
+  // ✅ Load unified taxonomy
+  const {
+    taxonomy,
+    loading: taxonomyLoading,
+    error: taxonomyError,
+  } = useUnifiedTaxonomy();
+
+  // Log taxonomy status for debugging
+  React.useEffect(() => {
+    if (taxonomyLoading) {
+      console.log("[GalaxyDashboard] Loading unified taxonomy...");
+    } else if (taxonomyError) {
+      console.warn("[GalaxyDashboard] Taxonomy error:", taxonomyError);
+    } else if (taxonomy) {
+      console.log("[GalaxyDashboard] ✅ Taxonomy loaded:", {
+        version: taxonomy.version,
+        categories: taxonomy.main_categories,
+        brands: taxonomy.total_brands,
+        products: taxonomy.total_products,
+      });
+    }
+  }, [taxonomy, taxonomyLoading, taxonomyError]);
+
   // Directly handle navigation to a subcategory
   const onSlotClick = (mainId: string, subId: string) => {
     goToSpectrum(mainId, subId, []);
@@ -67,6 +91,25 @@ export const GalaxyDashboard = () => {
           <h1 className="text-zinc-100 font-bold tracking-tight text-3xl">
             GALAXIES
           </h1>
+          {/* ✅ Taxonomy status indicator */}
+          {taxonomyLoading && (
+            <div className="ml-auto text-xs text-zinc-500 flex items-center gap-1">
+              <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
+              Loading taxonomy...
+            </div>
+          )}
+          {taxonomy && !taxonomyError && (
+            <div className="ml-auto text-xs text-green-500 flex items-center gap-1">
+              <div className="w-2 h-2 bg-green-500 rounded-full" />
+              Unified taxonomy active
+            </div>
+          )}
+          {taxonomyError && (
+            <div className="ml-auto text-xs text-red-500 flex items-center gap-1">
+              <div className="w-2 h-2 bg-red-500 rounded-full" />
+              Taxonomy unavailable
+            </div>
+          )}
         </div>
       </header>
 

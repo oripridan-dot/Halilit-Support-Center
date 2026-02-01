@@ -6,14 +6,17 @@
  * ✅ RUNTIME VALIDATED: All JSON parsed through Zod schemas
  * All types validated against actual roland.json data
  * 🔄 REAL-TIME: Auto-updates on data changes
+ * 📊 UNIFIED TAXONOMY: Integrates with TaxonomyService for categorization
  */
 
 import { normalizeProducts } from "./dataNormalizer";
+import { TaxonomyService } from "./taxonomyService";
 
 import type {
   BrandIdentity,
   ProductImagesType,
   Product as ProductType,
+  ImageAsset,
 } from "../types/index";
 import { SchemaValidator } from "./schemas";
 
@@ -77,10 +80,28 @@ export interface MasterIndex {
   brands: BrandIndexEntry[];
 }
 
+/**
+ * Lightweight product skeleton for initial rendering
+ * Contains only essential properties for quick display
+ */
+export interface ProductSkeleton extends Partial<Product> {
+  id?: string;
+  name?: string;
+  brand_id?: string;
+}
+
+/**
+ * Product with heavy details deferred for lazy loading
+ * "skeleton" indicates which fields are loaded
+ */
+export type LazyProduct = ProductSkeleton & Partial<Product>;
+
 class CatalogLoader {
   private index: MasterIndex | null = null;
   private brandCatalogs: Map<string, BrandCatalog> = new Map();
+  private lazyBrandCatalogs: Map<string, { products: LazyProduct[] }> = new Map();
   private allProducts: Product[] = [];
+  private allLazyProducts: LazyProduct[] = [];
   private loading: boolean = false;
   private changeCallbacks: Set<(type: "index" | "brand", id?: string) => void> =
     new Set();
@@ -97,6 +118,170 @@ class CatalogLoader {
   ): () => void {
     this.changeCallbacks.add(callback);
     return () => this.changeCallbacks.delete(callback);
+  }
+
+  /**
+   * Extract skeleton fields for lazy loading (lightweight, fast)
+   */
+  private extractSkeleton(product: Product): ProductSkeleton {
+    return {
+      id: product.id,
+      name: product.name,
+      brand_id: product.brand_id,
+      image_thumbnail: product.image_thumbnail,
+      category: product.category,
+      tier: product.tier,
+    };
+  }
+
+  /**
+   * Load all products as skeleton (lightweight, for immediate render)
+   * Defers loading full details until user interacts
+   */
+  async loadAllLazyProducts(): Promise<LazyProduct[]> {
+    if (this.allLazyProducts.length > 0) return this.allLazyProducts;
+    if (this.loading) {
+      // Wait for loading to complete
+      while (this.loading) await new Promise((r) => setTimeout(r, 100));
+      return this.allLazyProducts;
+    }
+
+    this.loading = true;
+    try {
+      const index = await this.loadIndex();
+
+      // Load all brands in parallel
+      const brandPromises = index.brands.map((b) =>
+        this.loadBrandLazy(b.id).catch(() => {
+          return null;
+        }),
+      );
+
+      const loadedCatalogs = (await Promise.all(brandPromises)).filter(
+        (cat): cat is { products: LazyProduct[] } => cat !== null,
+      );
+
+      // Flatten all lazy products with brand context
+      this.allLazyProducts = loadedCatalogs.flatMap((catalog) =>
+        catalog.products
+      );
+
+      return this.allLazyProducts;
+    } finally {
+      this.loading = false;
+    }
+  }
+
+  /**
+   * Load brand with skeleton products (lightweight, lazy loading)
+   * Full details are loaded on-demand when user views product details
+   */
+  async loadBrandLazy(brandId: string): Promise<{ products: LazyProduct[] } | null> {
+    // Check lazy cache first
+    const cachedLazy = this.lazyBrandCatalogs.get(brandId);
+    if (cachedLazy) {
+      return cachedLazy;
+    }
+
+    // Check full cache first to extract skeletons
+    const cached = this.brandCatalogs.get(brandId);
+    if (cached) {
+      const lazyResult = {
+        products: cached.products.map((p) => this.extractSkeleton(p)),
+      };
+      this.lazyBrandCatalogs.set(brandId, lazyResult);
+      return lazyResult;
+    }
+
+    try {
+      const index = await this.loadIndex();
+      const brandEntry = index.brands.find((b) => b.id === brandId);
+
+      if (!brandEntry) {
+        throw new Error(`Brand ${brandId} not found in index`);
+      }
+
+      const response = await fetch(
+        `/data/${brandEntry.data_file}?v=${Date.now()}`,
+      );
+      if (!response.ok) {
+        throw new Error(`Failed to load brand: ${brandId}`);
+      }
+
+      const rawData: unknown = await response.json();
+
+      // ✅ Validate with Zod
+      let data: BrandFile;
+      try {
+        const validated = SchemaValidator.validateBrandFile(rawData);
+        data = validated as unknown as BrandFile;
+      } catch (validationError) {
+        throw new Error(
+          `Invalid brand data structure for ${brandId}: ${(validationError as Error).message}`,
+        );
+      }
+
+      // Extract only skeletons for initial load
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
+      const productsArray = (data as any).products || [];
+
+      const skeletons = productsArray.map((p: Product) =>
+        this.extractSkeleton(p)
+      );
+
+      const lazyResult = { products: skeletons };
+      this.lazyBrandCatalogs.set(brandId, lazyResult);
+
+      // Also cache the full data for later access
+      // (so if someone calls loadBrand after loadBrandLazy, we have it)
+      this.brandCatalogs.set(brandId, {
+        brand_id: brandId,
+        brand_name: data.brand_identity?.name || brandEntry.name,
+        products: productsArray,
+      } as BrandCatalog);
+
+      return lazyResult;
+    } catch (error) {
+      console.error(`Failed to lazy-load brand ${brandId}:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Load full details for a specific product (on-demand)
+   * Used when user clicks on a product to view details
+   */
+  async loadProductDetails(
+    productId: string,
+    brandId?: string
+  ): Promise<Product | null> {
+    try {
+      const index = await this.loadIndex();
+
+      // If brand ID provided, load that brand first
+      if (brandId) {
+        const catalog = await this.loadBrand(brandId);
+        const product = catalog.products.find((p) => p.id === productId);
+        if (product) return product;
+      }
+
+      // Otherwise, search all brands
+      for (const brandEntry of index.brands) {
+        try {
+          const catalog = await this.loadBrand(brandEntry.id);
+          const product = catalog.products.find((p) => p.id === productId);
+          if (product) {
+            return product;
+          }
+        } catch {
+          // Continue searching other brands
+        }
+      }
+
+      return null;
+    } catch {
+      return null;
+    }
   }
 
   /**
@@ -174,27 +359,14 @@ class CatalogLoader {
    * Extract primary image URL from product, with fallback chain
    */
   private extractImageUrl(product: Product): string {
-    // Try image_url first
-    if (product.image_url && typeof product.image_url === "string") {
-      return product.image_url.trim();
+    // Try image_hero first
+    if (product.image_hero?.url) {
+      return product.image_hero.url;
     }
-
-    // Try images object/array
-    if (product.images) {
-      if (
-        typeof product.images === "object" &&
-        !Array.isArray(product.images)
-      ) {
-        const imagesObj = product.images as Record<string, string | string[]>;
-        return (imagesObj.main || imagesObj.thumbnail || "") as string;
-      }
-      if (Array.isArray(product.images) && product.images.length > 0) {
-        const first = product.images[0];
-        if (typeof first === "string") return first;
-        if (first && typeof first === "object" && "url" in first) {
-          return (first as { url: string }).url;
-        }
-      }
+    
+    // Try image_thumbnail as fallback
+    if (product.image_thumbnail?.url) {
+      return product.image_thumbnail.url;
     }
 
     // Last resort
@@ -278,103 +450,14 @@ class CatalogLoader {
       brand_identity: brandIdentity,
       // Normalize products to handle different data structures
       products: normalizeProducts(data.products).map((p: Product): Product => {
-        // NEW: Sandbox Mode - Warn on Low Quality but Allow
-        if (p.processed_badge?.level === "COAL") {
-          console.warn(`[Sandbox] Loading Low Quality Product: ${p.id}`);
+        // Warn on low tier products
+        if (p.tier === "bronze") {
+          console.warn(`[Sandbox] Loading Low Tier Product: ${p.id}`);
         }
 
-        // NEW: Preserve pill_data (the 3-Pillar Truth from Refinery)
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (p as any).pill_data = (p as any).pill_data || null;
-
-        // NEW: Map ui_meta categories to product fields (v4.6.1 + v5 Legacy Support)
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const uiMeta = (p as any).ui_meta || (p as any).pill_data?.ui_meta;
-
-        if (uiMeta) {
-          p.category = uiMeta.primary_category || p.category;
-          p.subcategory = uiMeta.sub_division || p.subcategory;
-          // Ensure ui_meta is set on the object if it came from pill_data
-          if (!(p as any).ui_meta) {
-            (p as any).ui_meta = uiMeta;
-          }
-        }
-
-        // Ensure brand is set
-        if (!p.brand) {
-          p.brand = brandIdentity.name || brandEntry.name || brandId;
-        }
-        // Ensure logo is set
-        if (!p.logo_url) {
-          p.logo_url =
-            brandIdentity.logo_url || brandEntry.logo_url || undefined;
-        }
-
-        // Generate specs_preview if missing (for Data Stream UI)
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-        if (!(p as any).specs_preview) {
-          let preview: { key: string; val: string }[] = [];
-
-          // Priority 1: Official Specs (Dict)
-          if (p.official_specs) {
-            preview = Object.entries(p.official_specs)
-              .slice(0, 4)
-              .map(([k, v]) => ({ key: k, val: String(v) }));
-          }
-          // Priority 2: Specifications (Array)
-          else if (p.specifications && Array.isArray(p.specifications)) {
-            preview = p.specifications.slice(0, 4).map((s) => ({
-              key: s.key,
-              val: String(s.value),
-            }));
-          }
-          // Priority 3: Legacy Specs (Dict)
-          else if (
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-            (p as any).specs &&
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-            typeof (p as any).specs === "object" &&
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-            !Array.isArray((p as any).specs)
-          ) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-            const specs = (p as any).specs;
-            preview = Object.entries(specs)
-              .slice(0, 4)
-              .map(([k, v]) => ({
-                key: k,
-                val: String(v),
-              }));
-          }
-
-          if (preview.length > 0) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-            (p as any).specs_preview = preview;
-          }
-        }
-
-        // Generate filters from subcategory (for 1176 Filter Engine)
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-        if (!(p as any).filters) {
-          const filters = new Set<string>();
-          if (p.subcategory && p.subcategory !== "Uncategorized") {
-            filters.add(p.subcategory);
-          }
-          if (p.category_hierarchy && Array.isArray(p.category_hierarchy)) {
-            p.category_hierarchy.forEach((c: string) => {
-              if (
-                c &&
-                c !== "Uncategorized" &&
-                c.toLowerCase() !== (p.main_category || "").toLowerCase()
-              ) {
-                filters.add(c);
-              }
-            });
-          }
-          if (filters.size > 0) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-            (p as any).filters = Array.from(filters);
-          }
+        // Ensure brand_id is set
+        if (!p.brand_id) {
+          p.brand_id = brandIdentity.id || brandId;
         }
 
         return p;
@@ -392,6 +475,7 @@ class CatalogLoader {
   /**
    * Load ALL brands referenced in the index
    * Returns flattened list of all products across all brands
+   * ✅ Integrates unified taxonomy for consistent categorization
    */
   async loadAllProducts(): Promise<Product[]> {
     if (this.allProducts.length > 0) return this.allProducts;
@@ -417,17 +501,31 @@ class CatalogLoader {
       );
 
       // Flatten all products with brand context
-      this.allProducts = loadedCatalogs.flatMap((catalog) =>
-        catalog.products.map((p) => ({
+      let products = loadedCatalogs.flatMap((catalog) =>
+        catalog.products.map((p): Product => ({
           ...p,
-          // Ensure brand is always populated (from JSON or catalog name)
-          brand: p.brand || catalog.brand_name,
-          _brandId: catalog.brand_id,
-          _brandName: catalog.brand_name,
-          brand_identity: catalog.brand_identity,
+          // Ensure brand_id is always populated
+          brand_id: p.brand_id || catalog.brand_id,
         })),
       );
 
+      // ✅ Apply unified taxonomy categorization to all products
+      try {
+        const taxonomy = TaxonomyService.getInstance();
+        await taxonomy.load();
+        products = taxonomy.categorizeProducts(products);
+        console.log(
+          `[CatalogLoader] ✅ Applied unified taxonomy to ${products.length} products`
+        );
+      } catch (taxError) {
+        console.warn(
+          "[CatalogLoader] ⚠️ Failed to apply taxonomy, continuing with existing categories:",
+          taxError
+        );
+        // Continue with uncategorized products if taxonomy fails
+      }
+
+      this.allProducts = products;
       return this.allProducts;
     } finally {
       this.loading = false;
@@ -513,7 +611,6 @@ class CatalogLoader {
           // Filter products that match the category
           const matchingProducts = catalog.products.filter((p) => {
             const productCategory = (
-              p.main_category ||
               p.category ||
               ""
             ).toLowerCase();

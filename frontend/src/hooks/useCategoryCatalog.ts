@@ -65,9 +65,9 @@ export const useCategoryCatalog = (
         const specDef = galaxyDef?.spectrum.find(s => s.id === spectrumId);
         if (specDef) {
           filterSet.add(specDef.label);
-          // Inject this label as a "filter" tag so SpectrumModule's 1176 engine can use it
-          if (!p.filters) p.filters = [];
-          if (!p.filters.includes(specDef.label)) p.filters.push(specDef.label);
+          // Inject this label as a "filter_tags" tag so SpectrumModule's 1176 engine can use it
+          if (!p.filter_tags) p.filter_tags = [];
+          if (!p.filter_tags.includes(specDef.label)) p.filter_tags.push(specDef.label);
         }
       });
 

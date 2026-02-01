@@ -1,56 +1,110 @@
 # Backend Pipeline v5.0
 
-Unified data processing pipeline for the Halilit Support Center.
+✅ **Production Ready** - Unified data processing pipeline for the Halilit Support Center.
 
-## Architecture
+## 📚 Documentation
+
+**Start with these guides** (in order):
+
+1. **`../PIPELINE_v5_SUMMARY.md`** - Quick overview & status
+2. **`../PIPELINE_PRODUCTION_GUIDE.md`** - Complete system guide
+3. **`../PIPELINE_CLI_REFERENCE.md`** - Command reference
+4. **`../REAL_DATA_INTEGRATION_GUIDE.md`** - Real data setup
+
+## 🏗️ Architecture
 
 ```
-3 Sources → 3 Layers → Frontend JSON
+3 SOURCES          3 LAYERS           FRONTEND OUTPUT
+┌──────────┐      ┌──────────┐      ┌─────────────────┐
+│ Official ├─────→│Normalize ├─────→│ Golden JSON     │
+│Commercial│      │Enrich    │      │TypeScript Types │
+│Contextual│      │Optimize  │      │Search Index     │
+└──────────┘      └──────────┘      └─────────────────┘
 ```
 
 ### Three Data Sources (Harvesters)
-- **Official**: Manufacturer data (specs, names, images, manuals)
-- **Commercial**: Halilit website (prices, SKUs, stock status)
-- **Contextual**: Expert reviews via web search + AI synthesis
+
+- **Official**: Manufacturer specs, images, descriptions
+- **Commercial**: Halilit prices, SKUs, stock status
+- **Contextual**: Expert reviews, pros/cons, tips (from web search + AI)
 
 ### Three Processing Layers
-1. **Normalize**: Merge & validate with Pydantic schemas
-2. **Enrich**: Taxonomy mapping, tier assignment (Diamond/Gold/Silver/Bronze)
+
+1. **Normalize**: Merge & validate data with Pydantic schemas
+2. **Enrich**: Taxonomy mapping, tier assignment (Bronze/Silver/Gold/Diamond)
 3. **Optimize**: UI-ready JSON with slugs, search text, render hints
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+cd /workspaces/Halilit-Support-Center
 
-# Run full pipeline
-python -m backend.pipeline run
+# Test with mock data (no API keys needed)
+PYTHONPATH=. python -m backend.pipeline run
 
-# Check status
-python -m backend.pipeline status
-
-# Generate TypeScript types
-python -m backend.pipeline types
+# Expected: ✅ Pipeline complete: 6 brands, 6 products
 ```
 
-## CLI Commands
+## 💻 CLI Commands
 
-| Command | Description |
-|---------|-------------|
-| `run` | Full pipeline (ingest → process → deploy) |
-| `ingest` | Run harvesters only |
-| `process` | Run layers only |
-| `deploy` | Deploy to frontend |
-| `types` | Generate TypeScript types |
-| `status` | Show pipeline status |
+```bash
+# Full pipeline
+PYTHONPATH=. python -m backend.pipeline run
 
-## Data Flow
+# Individual stages
+PYTHONPATH=. python -m backend.pipeline ingest    # Harvest only
+PYTHONPATH=. python -m backend.pipeline process   # Process only
+PYTHONPATH=. python -m backend.pipeline deploy    # Deploy only
+
+# Utilities
+PYTHONPATH=. python -m backend.pipeline status    # Check status
+PYTHONPATH=. python -m backend.pipeline validate  # Validate data
+PYTHONPATH=. python -m backend.pipeline types     # Generate types
+```
+
+See `../PIPELINE_CLI_REFERENCE.md` for full command reference.
+
+## 🔧 Configuration
+
+### Environment Variables (`.env`)
+
+```bash
+# Required for real data
+SERP_API_KEY=your_serpapi_key           # Web search
+OPENAI_API_KEY=your_openai_key          # AI synthesis
+
+# Optional settings
+SCRAPER_HEADLESS=true
+SCRAPER_TIMEOUT_MS=30000
+SCRAPER_RETRIES=3
+LOG_LEVEL=INFO
+```
+
+See `../.env.example` for all options.
+
+### Brands Configuration
+
+Edit `ingestion/manifest.json` to add or update brands:
+
+```json
+{
+  "brands": [
+    {
+      "id": "adam-audio",
+      "name": "ADAM Audio",
+      "official_url": "https://www.adam-audio.com",
+      "commercial_url": "https://halilit.com/?s=adam+audio"
+    }
+  ]
+}
+```
+
+## 📊 Data Flow
 
 ```
 backend/data/
 ├── 1_official/     # Raw manufacturer data
-├── 2_commercial/   # Raw commercial data  
+├── 2_commercial/   # Raw commercial data
 ├── 3_contextual/   # Raw contextual data
 ├── 4_validated/    # Normalized + enriched
 ├── 5_golden/       # Final optimized catalogs
