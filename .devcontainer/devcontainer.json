@@ -23,7 +23,7 @@
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "files.eol": "\n",
-        "typescript.tsserver.maxTsServerMemory": 3072,
+        "typescript.tsserver.maxTsServerMemory": 2048,
         "python.analysis.memory.keepLibraryAst": false,
         "python.analysis.memory.keepLibraryLocalVariables": false
       }
