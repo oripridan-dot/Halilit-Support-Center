@@ -1,7 +1,7 @@
-VERSION=5.1.0
-RELEASE_TAG=v5.1.0
+VERSION=5.2.0
+RELEASE_TAG=v5.2.0
 BUILD_DATE=2026-02-02
-BRANCH=v5.1-taxonomy
+BRANCH=main
 STATUS=adk-production-ready
 ARCHITECTURE=agent-development-kit
 AGENTS=trinity-swarm-active
