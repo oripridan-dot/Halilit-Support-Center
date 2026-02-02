@@ -7,7 +7,7 @@
     }
   },
   "containerEnv": {
-    "NODE_OPTIONS": "--max-old-space-size=4096"
+    "NODE_OPTIONS": "--max-old-space-size=2048"
   },
   "customizations": {
     "vscode": {
@@ -29,7 +29,8 @@
       }
     }
   },
-  "postCreateCommand": "bash -c 'cd frontend && npm install -g pnpm && pnpm install' &",
+  "postCreateCommand": "npm install -g pnpm",
+  "postStartCommand": "cd frontend && pnpm install",
   "forwardPorts": [5173],
   "portsAttributes": {
     "5173": {
