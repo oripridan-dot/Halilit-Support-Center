@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   Check,
   AlertCircle,
@@ -8,19 +8,33 @@ import {
   Flame,
   TrendingUp,
 } from "lucide-react";
+import { BaseComponentProps } from "../types/componentUtils";
 
-interface ConfidenceBadgeProps {
+interface BadgeConfig {
+  icon: React.ReactNode;
+  color: string;
+  label: string;
+  description: string;
+}
+
+interface ConfidenceBadgeProps extends BaseComponentProps {
   score?: number;
   badges?: string[];
   sourcesOfTruth?: Array<{ name: string; type: string; verified?: boolean }>;
-  className?: string;
   showDetailed?: boolean;
 }
 
 /**
  * ConfidenceBadge Component
+ *
  * Displays the trust/verification status with visual confidence indicators
  * and source attribution
+ *
+ * Features:
+ * - Confidence score visualization
+ * - Badge configuration mapping
+ * - Source attribution display
+ * - Detailed/compact view modes
  */
 export const ConfidenceBadge: React.FC<ConfidenceBadgeProps> = ({
   score = 0,
@@ -29,16 +43,9 @@ export const ConfidenceBadge: React.FC<ConfidenceBadgeProps> = ({
   className = "",
   showDetailed = false,
 }) => {
-  const getBadgeConfig = (badge: string) => {
-    const configs: Record<
-      string,
-      {
-        icon: React.ReactNode;
-        color: string;
-        label: string;
-        description: string;
-      }
-    > = {
+  // Memoize badge configuration
+  const badgeConfigs = useMemo<Record<string, BadgeConfig>>(
+    () => ({
       DIAMOND: {
         icon: <Flame className="w-4 h-4" />,
         color: "bg-blue-50 border-blue-200 text-blue-700",
@@ -69,21 +76,29 @@ export const ConfidenceBadge: React.FC<ConfidenceBadgeProps> = ({
         label: "Unverified",
         description: "Pending community validation",
       },
-    };
-    return configs[badge] || null;
+    }),
+    [],
+  );
+
+  const getBadgeConfig = (badge: string): BadgeConfig | null => {
+    return badgeConfigs[badge] || null;
   };
 
-  const getConfidenceColor = (score: number) => {
-    if (score >= 85) return "from-blue-600 to-blue-500";
-    if (score >= 70) return "from-green-600 to-emerald-500";
-    if (score >= 50) return "from-amber-600 to-yellow-500";
-    return "from-orange-600 to-red-500";
-  };
+  // Memoize color derivation from score
+  const getConfidenceColor = useMemo(
+    () => (scoreValue: number) => {
+      if (scoreValue >= 85) return "from-blue-600 to-blue-500";
+      if (scoreValue >= 70) return "from-green-600 to-emerald-500";
+      if (scoreValue >= 50) return "from-amber-600 to-yellow-500";
+      return "from-orange-600 to-red-500";
+    },
+    [],
+  );
 
-  const getConfidenceLabel = (score: number) => {
-    if (score >= 85) return "Excellent";
-    if (score >= 70) return "Good";
-    if (score >= 50) return "Fair";
+  const getConfidenceLabel = (scoreValue: number) => {
+    if (scoreValue >= 85) return "Excellent";
+    if (scoreValue >= 70) return "Good";
+    if (scoreValue >= 50) return "Fair";
     return "Limited";
   };
 

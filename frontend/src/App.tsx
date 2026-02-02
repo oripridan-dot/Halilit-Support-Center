@@ -2,7 +2,9 @@
 import { lazy, Suspense } from "react";
 import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
+import { DevAgentMonitor } from "./components/DevAgentMonitor";
 import { useNavigationStore } from "./store/navigationStore";
+import { useCopilotReadable, useCopilotAction } from "@copilotkit/react-core";
 
 // Lazy load heavy views for code-splitting
 const GalaxyDashboard = lazy(() =>
@@ -10,9 +12,13 @@ const GalaxyDashboard = lazy(() =>
     default: m.GalaxyDashboard,
   })),
 );
+
 const SpectrumModule = lazy(() =>
-  import("./components/views/SpectrumModule"),
+  import("./components/views/SpectrumModule").then((m) => ({
+    default: m.default,
+  })),
 );
+
 const ProductPopInterface = lazy(() =>
   import("./components/views/ProductPopInterface").then((m) => ({
     default: m.ProductPopInterface,
@@ -28,7 +34,37 @@ const LoadingPlaceholder = () => (
 
 function App() {
   // Extract strictly what we need
-  const { currentView, activeProductId } = useNavigationStore();
+  const { currentView, activeTribeId, activeProductId } = useNavigationStore();
+
+  // --- UI AGENT INTEGRATION ---
+  useCopilotReadable({
+    description: "The current state of the Halilit Support Center Dashboard",
+    value: {
+      currentView,
+      activeTribeId,
+      appVersion: "5.1",
+      status: "Online",
+    },
+  });
+
+  useCopilotAction({
+    name: "requestAudit",
+    description: "Request a full compliance audit for a specific brand",
+    parameters: [
+      {
+        name: "brand",
+        type: "string",
+        description: "The brand name to audit (e.g., 'Nord', 'Roland')",
+        required: true,
+      },
+    ],
+    handler: async ({ brand }) => {
+      // In a real app, this triggers the backend job
+      console.log(`[UI Agent] Requesting audit for ${brand}...`);
+      return `Audit requested for ${brand}. Check the logs.`;
+    },
+  });
+  // ---------------------------
 
   return (
     <GlobalErrorBoundary>
@@ -45,33 +81,30 @@ function App() {
 
         {/* Main Stage */}
         <main className="flex-1 relative overflow-hidden">
-          {/* Layer 1: Galaxy */}
-          {currentView === "GALAXY" && (
-            <div className="absolute inset-0 animate-fade-in">
-              <Suspense fallback={<LoadingPlaceholder />}>
+          {/* Conditional View Rendering Based on Navigation State */}
+          <Suspense fallback={<LoadingPlaceholder />}>
+            {currentView === "GALAXY" && (
+              <div className="absolute inset-0 animate-fade-in">
                 <GalaxyDashboard />
-              </Suspense>
-            </div>
-          )}
+              </div>
+            )}
 
-          {/* Layer 2: Spectrum */}
-          {currentView === "SPECTRUM" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
+            {currentView === "SPECTRUM" && (
+              <div className="absolute inset-0 animate-fade-in">
                 <SpectrumModule />
-              </Suspense>
-            </div>
-          )}
+              </div>
+            )}
 
-          {/* Layer 3: Product Pop (Overlay) */}
-          {currentView === "PRODUCT_POP" && activeProductId && (
-            <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
-              <Suspense fallback={<LoadingPlaceholder />}>
+            {currentView === "PRODUCT_POP" && activeProductId && (
+              <div className="absolute inset-0 animate-fade-in">
                 <ProductPopInterface productId={activeProductId} />
-              </Suspense>
-            </div>
-          )}
+              </div>
+            )}
+          </Suspense>
         </main>
+
+        {/* Development Agent Monitor - Only visible in dev mode */}
+        <DevAgentMonitor />
       </div>
     </GlobalErrorBoundary>
   );

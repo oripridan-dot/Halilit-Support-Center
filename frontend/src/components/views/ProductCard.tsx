@@ -2,72 +2,47 @@ import React, { memo } from "react";
 import type { OptimizedProduct } from "../../types";
 
 const ProductCardComponent = ({ product }: { product: OptimizedProduct }) => {
-  // Determine tier level for styling
-  const tier = product.tier || "bronze";
-  const tierLevel = tier.toUpperCase();
 
+  // Minimal Display: SKU & Price Emphasis
   return (
     <div
-      className={`card tier-${tier} p-4 border rounded-md mb-2 bg-zinc-900 border-zinc-800 relative`}
+      className={`card p-4 border rounded-md mb-2 bg-zinc-900 border-zinc-800 relative hover:border-zinc-600 transition-colors`}
     >
-      {/* Quality badge */}
-      {tier === "diamond" && (
-        <div className="badge-diamond inline-flex items-center gap-1 text-xs font-bold text-emerald-400 bg-emerald-950/30 px-2 py-0.5 rounded border border-emerald-500/50 mb-2">
-          💎 {tierLevel}
-        </div>
-      )}
-      {tier === "gold" && (
-        <div className="badge-gold inline-flex items-center gap-1 text-xs font-bold text-amber-400 bg-amber-950/30 px-2 py-0.5 rounded border border-amber-500/50 mb-2">
-          🏆 {tierLevel}
-        </div>
-      )}
-      {(tier === "silver" || tier === "bronze") && (
-        <div className="badge-lower inline-flex items-center gap-1 text-xs font-bold text-slate-400 bg-slate-950/30 px-2 py-0.5 rounded border border-slate-500/50 mb-2">
-          ⚠️ {tierLevel}
-        </div>
-      )}
-
       {/* HEADER: Product Name */}
-      <h3 className="text-lg font-bold text-white mb-2">
+      <h3 className="text-md font-bold text-white mb-2 leading-tight">
         {product.name || "Unknown Product"}
       </h3>
 
-      {/* Category and SKU */}
-      <div className="text-sm text-zinc-400 mb-2">
-        <p className="text-xs text-zinc-500">{product.category}</p>
+      {/* SKU & Category */}
+      <div className="flex justify-between items-start mb-2">
+         {product.sku && (
+            <span className="text-xs font-mono text-emerald-500/80 bg-emerald-950/20 px-1.5 py-0.5 rounded">
+              {product.sku}
+            </span>
+         )}
+         <span className="text-xs text-zinc-500 truncate max-w-[50%]">
+           {product.category}
+         </span>
       </div>
 
-      {/* Pros/Strengths */}
-      {product.pros && product.pros.length > 0 && (
-        <div className="text-sm text-zinc-400 mt-3 mb-2">
-          <p className="text-xs font-semibold text-emerald-500 mb-1">Pros:</p>
-          <ul className="space-y-1">
-            {product.pros.slice(0, 2).map((pro, idx) => (
-              <li key={idx} className="flex items-start gap-2 text-xs">
-                <span className="text-emerald-500 flex-shrink-0">✓</span>
-                <span>{pro}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {/* Price Emphasis */}
+      <div className="mt-3 pt-3 border-t border-zinc-800 flex justify-between items-end">
+        {product.price ? (
+          <div className="text-amber-400 font-mono font-bold text-lg">
+            {product.currency} {product.price.toLocaleString()}
+          </div>
+        ) : (
+           <div className="text-zinc-600 text-sm">Price N/A</div>
+        )}
+        
+        {/* Simple Stock Indicator */}
+        {product.in_stock ? (
+           <div className="w-2 h-2 rounded-full bg-emerald-500 mb-2" title="In Stock"/>
+        ) : (
+           <div className="w-2 h-2 rounded-full bg-red-500 mb-2" title="No Stock"/>
+        )}
+      </div>
 
-      {/* Price and Stock Status */}
-      {(product.price || product.stock_status) && (
-        <div className="text-xs text-zinc-500 mt-3 pt-3 border-t border-zinc-800">
-          {product.price && (
-            <p className="mb-1">
-              <span className="font-semibold">{product.currency}</span>{" "}
-              {product.price}
-            </p>
-          )}
-          {product.stock_status && (
-            <p>
-              Stock: <span className="capitalize">{product.stock_status}</span>
-            </p>
-          )}
-        </div>
-      )}
     </div>
   );
 };

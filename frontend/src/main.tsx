@@ -1,15 +1,33 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { CopilotKit } from "@copilotkit/react-core";
+import { CopilotSidebar } from "@copilotkit/react-ui";
+import "@copilotkit/react-ui/styles.css";
 import App from "./App.tsx";
 import "./index.css";
 
 const rootElement = document.getElementById("root");
 
+// Check if CopilotKit API key is available
+const copilotApiKey = import.meta.env.VITE_COPILOT_API_KEY;
+const useCopilot = !!copilotApiKey;
+
 if (rootElement) {
   try {
     createRoot(rootElement).render(
       <StrictMode>
-        <App />
+        {useCopilot ? (
+          <CopilotKit publicApiKey={copilotApiKey}>
+            <CopilotSidebar
+              instructions="You are the Halilit AI Agent Commander. You control the Trinity Swarm (CommercialScout, OfficialVerifier, ExternalValidator) to audit and enrich product catalogs. Ask me to run audits or check product data."
+              defaultOpen={false}
+            >
+              <App />
+            </CopilotSidebar>
+          </CopilotKit>
+        ) : (
+          <App />
+        )}
       </StrictMode>,
     );
   } catch (error) {

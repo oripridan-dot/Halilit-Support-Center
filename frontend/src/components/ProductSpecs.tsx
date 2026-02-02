@@ -1,72 +1,74 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Zap, Gauge, Box, Layers } from "lucide-react";
+import { BaseComponentProps } from "../types/componentUtils";
 
-interface ProductSpecsProps {
+interface ProductSpecsProps extends BaseComponentProps {
   specs?: Record<string, any> | Array<{ name: string; value: any }>;
   category?: string;
-  className?: string;
 }
 
 /**
  * ProductSpecs Component
+ *
  * Displays technical specifications in a clean, organized grid
  * with smart categorization and icon hints
+ *
+ * Features:
+ * - Automatic spec categorization (power, frequency, dimensions, etc.)
+ * - Icon hints for spec types
+ * - Responsive grid layout
+ * - Formatted value display
  */
 export const ProductSpecs: React.FC<ProductSpecsProps> = ({
   specs,
   category = "STUDIO_MONITORS",
   className = "",
 }) => {
-  if (
-    !specs ||
-    (Array.isArray(specs)
-      ? specs.length === 0
-      : Object.keys(specs).length === 0)
-  ) {
-    return (
-      <div className={`bg-slate-50 rounded-lg p-6 text-center ${className}`}>
-        <p className="text-slate-500 text-sm">No specifications available</p>
-      </div>
-    );
-  }
+  // Memoize category definitions
+  const categories = useMemo(
+    () => ({
+      power: ["power", "watts", "wattage", "power_total_watts"],
+      frequency: [
+        "frequency",
+        "hz",
+        "frequency_response_low_hz",
+        "frequency_response_high_hz",
+      ],
+      dimensions: [
+        "dimensions",
+        "size",
+        "height",
+        "width",
+        "depth",
+        "weight",
+        "kg",
+        "lb",
+      ],
+      materials: ["material", "finish", "color", "cabinet"],
+      drivers: ["woofer", "tweeter", "midrange", "driver", "diaphragm"],
+      other: [],
+    }),
+    [],
+  );
 
-  // Group specs by category hint
-  const categories = {
-    power: ["power", "watts", "wattage", "power_total_watts"],
-    frequency: [
-      "frequency",
-      "hz",
-      "frequency_response_low_hz",
-      "frequency_response_high_hz",
-    ],
-    dimensions: [
-      "dimensions",
-      "size",
-      "height",
-      "width",
-      "depth",
-      "weight",
-      "kg",
-      "lb",
-    ],
-    materials: ["material", "finish", "color", "cabinet"],
-    drivers: ["woofer", "tweeter", "midrange", "driver", "diaphragm"],
-    other: [],
-  };
+  // Get icon for spec key - memoized
+  const getIcon = useMemo(
+    () => (key: string) => {
+      const lower = key.toLowerCase();
+      if (categories.power.some((p) => lower.includes(p)))
+        return <Zap className="w-4 h-4" />;
+      if (categories.frequency.some((p) => lower.includes(p)))
+        return <Gauge className="w-4 h-4" />;
+      if (categories.dimensions.some((p) => lower.includes(p)))
+        return <Box className="w-4 h-4" />;
+      if (categories.drivers.some((p) => lower.includes(p)))
+        return <Layers className="w-4 h-4" />;
+      return null;
+    },
+    [categories],
+  );
 
-  const getIcon = (key: string) => {
-    const lower = key.toLowerCase();
-    if (categories.power.some((p) => lower.includes(p)))
-      return <Zap className="w-4 h-4" />;
-    if (categories.frequency.some((p) => lower.includes(p)))
-      return <Gauge className="w-4 h-4" />;
-    if (categories.dimensions.some((p) => lower.includes(p)))
-      return <Box className="w-4 h-4" />;
-    if (categories.drivers.some((p) => lower.includes(p)))
-      return <Layers className="w-4 h-4" />;
-    return null;
-  };
-
+  // Format value display - pure function
   const formatValue = (value: any): string => {
     if (typeof value === "boolean") return value ? "Yes" : "No";
     if (typeof value === "object") return JSON.stringify(value);
@@ -75,6 +77,7 @@ export const ProductSpecs: React.FC<ProductSpecsProps> = ({
     return String(value);
   };
 
+  // Format key display - pure function
   const formatKey = (key: string): string => {
     return key
       .replace(/_/g, " ")
@@ -85,9 +88,30 @@ export const ProductSpecs: React.FC<ProductSpecsProps> = ({
       .join(" ");
   };
 
-  const entries: [string, any][] = Array.isArray(specs)
-    ? specs.map((s): [string, any] => [s.name, s.value])
-    : Object.entries(specs || {});
+  // Memoize entries processing
+  const entries = useMemo<[string, any][]>(() => {
+    if (
+      !specs ||
+      (Array.isArray(specs)
+        ? specs.length === 0
+        : Object.keys(specs).length === 0)
+    ) {
+      return [];
+    }
+
+    return Array.isArray(specs)
+      ? specs.map((s): [string, any] => [s.name, s.value])
+      : Object.entries(specs || {});
+  }, [specs]);
+
+  // Handle empty state
+  if (entries.length === 0) {
+    return (
+      <div className={`bg-slate-50 rounded-lg p-6 text-center ${className}`}>
+        <p className="text-slate-500 text-sm">No specifications available</p>
+      </div>
+    );
+  }
 
   return (
     <div

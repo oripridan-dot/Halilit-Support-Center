@@ -1,52 +1,60 @@
 {
-  "version": "5.0.0",
-  "build_timestamp": "2026-02-01T06:46:43.314741",
-  "total_products": 98,
-  "total_verified": 39,
+  "version": "5.1.0",
+  "build_timestamp": "2026-02-02T20:47:00.967147",
+  "total_products": 668,
   "brands": [
     {
-      "id": "neumann",
-      "name": "Neumann",
-      "logo_url": null,
-      "brand_color": null,
-      "product_count": 15,
-      "verified_count": 2,
-      "data_file": "neumann.json"
+      "id": "drumdots",
+      "name": "Drumdots",
+      "product_count": 4,
+      "data_file": "drumdots.json"
     },
     {
       "id": "focal",
       "name": "Focal",
-      "logo_url": null,
-      "brand_color": null,
       "product_count": 6,
-      "verified_count": 0,
       "data_file": "focal.json"
+    },
+    {
+      "id": "moog",
+      "name": "Moog",
+      "product_count": 17,
+      "data_file": "moog.json"
+    },
+    {
+      "id": "neumann",
+      "name": "Neumann",
+      "product_count": 15,
+      "data_file": "neumann.json"
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "product_count": 37,
+      "data_file": "nord.json"
     },
     {
       "id": "rode",
       "name": "Rode",
-      "logo_url": null,
-      "brand_color": null,
       "product_count": 50,
-      "verified_count": 25,
       "data_file": "rode.json"
+    },
+    {
+      "id": "roland",
+      "name": "Roland",
+      "product_count": 513,
+      "data_file": "roland.json"
     },
     {
       "id": "shure",
       "name": "Shure",
-      "logo_url": null,
-      "brand_color": null,
       "product_count": 17,
-      "verified_count": 5,
       "data_file": "shure.json"
     },
     {
       "id": "universal-audio",
       "name": "Universal Audio",
-      "logo_url": null,
-      "brand_color": null,
-      "product_count": 10,
-      "verified_count": 7,
+      "product_count": 9,
       "data_file": "universal-audio.json"
     }
   ]

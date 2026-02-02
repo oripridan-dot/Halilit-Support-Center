@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { ChevronDown, ChevronUp, Info } from "lucide-react";
 import { Product } from "../types";
 import ProductSpecs from "./ProductSpecs";
+import { BaseComponentProps, EventHandler } from "../types/componentUtils";
 
-interface ProductDetailPanelProps {
+interface ProductDetailPanelProps extends BaseComponentProps {
   product: Product;
-  className?: string;
+  onClose?: EventHandler<void>;
+  onExpand?: EventHandler<string>;
 }
 
 /**
  * ProductDetailPanel Component
+ *
  * Complete product information display with:
  * - Technical specifications
  * - Pricing and availability
  * - Real-world insights (pros/cons/tips)
  * - Quality tier and scoring
+ * - Expandable sections with state management
  */
 export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
   product,
+  onClose,
+  onExpand,
   className = "",
 }) => {
   const [expandedSections, setExpandedSections] = useState<
@@ -27,12 +33,27 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
     insights: true,
   });
 
-  const toggleSection = (section: string) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [section]: !prev[section],
-    }));
-  };
+  const toggleSection = useCallback(
+    (section: string) => {
+      setExpandedSections((prev) => ({
+        ...prev,
+        [section]: !prev[section],
+      }));
+      onExpand?.(section);
+    },
+    [onExpand],
+  );
+
+  // Memoize tier colors mapping
+  const tierColors = useMemo<Record<string, string>>(
+    () => ({
+      diamond: "bg-blue-600",
+      gold: "bg-amber-600",
+      silver: "bg-slate-500",
+      bronze: "bg-orange-700",
+    }),
+    [],
+  );
 
   // Check if product has minimal required data
   if (!product || !product.name) {
@@ -42,6 +63,14 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
         <p className="text-slate-500 text-sm">
           Limited data available for this product
         </p>
+        {onClose && (
+          <button
+            onClick={() => onClose()}
+            className="mt-4 px-4 py-2 bg-slate-200 hover:bg-slate-300 rounded text-slate-700 text-sm font-medium"
+          >
+            Close
+          </button>
+        )}
       </div>
     );
   }
@@ -50,13 +79,6 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
   const pros = product.pros || [];
   const cons = product.cons || [];
   const tips = product.expert_tips || [];
-
-  const tierColors: Record<string, string> = {
-    diamond: "bg-blue-600",
-    gold: "bg-amber-600",
-    silver: "bg-slate-500",
-    bronze: "bg-orange-700",
-  };
 
   return (
     <div className={`space-y-6 ${className}`}>

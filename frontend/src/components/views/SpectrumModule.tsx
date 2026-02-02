@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useCallback } from "react";
 import {
   Activity,
   ArrowLeft,
@@ -39,6 +39,11 @@ const ProductDisplayStage = ({
 }) => {
   const { goToGalaxy } = useNavigationStore();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Memoized handler for image selection
+  const handleSelectImage = useCallback((img: string) => {
+    setSelectedImage(img);
+  }, []);
 
   // Reset selected image when product changes
   useEffect(() => {
@@ -136,8 +141,9 @@ const ProductDisplayStage = ({
             {allImages.map((img, idx) => (
               <button
                 key={idx}
-                onClick={() => setSelectedImage(img)}
+                onClick={() => handleSelectImage(img)}
                 className={`w-14 h-14 rounded-md border bg-black/50 p-1 flex-shrink-0 transition-all ${selectedImage === img ? "border-zinc-400 ring-1 ring-zinc-700" : "border-zinc-800 hover:border-zinc-600 opacity-60 hover:opacity-100"}`}
+                title="Select gallery image"
               >
                 <img
                   src={img}
@@ -564,8 +570,40 @@ const SpectrumModule: React.FC = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        console.log("[SpectrumModule] Starting data fetch...");
-        // Directly load the index and fetch all brand catalogs
+        console.log(`[SpectrumModule] Starting data fetch for tribe: ${activeTribeId}...`);
+        
+        // If we have an activeTribeId, try to load the category-specific data file first
+        if (activeTribeId) {
+          try {
+            const categoryResponse = await fetch(`/data/categories/${activeTribeId}.json`);
+            if (categoryResponse.ok) {
+              const categoryData = await categoryResponse.json();
+              console.log(`[SpectrumModule] Loaded ${categoryData.products?.length || 0} products from category file`);
+              
+              // Build minimal brand meta from category data
+              const meta: Record<string, { logo_url?: string | null; name: string }> = {};
+              const brandsSet = new Set<string>();
+              categoryData.products?.forEach((p: any) => {
+                if (p.brand && !brandsSet.has(p.brand)) {
+                  brandsSet.add(p.brand);
+                  meta[p.brand] = {
+                    name: p.brand,
+                    logo_url: p.logo_url || null,
+                  };
+                }
+              });
+              
+              setBrandMeta(meta);
+              setProducts(categoryData.products || []);
+              setLoading(false);
+              return;
+            }
+          } catch (categoryErr) {
+            console.warn(`[SpectrumModule] Failed to load category file, falling back to full catalog`, categoryErr);
+          }
+        }
+        
+        // Fallback: Load all products from brand catalogs
         const index = await catalogLoader.loadIndex();
 
         // Build brand metadata map
@@ -590,6 +628,7 @@ const SpectrumModule: React.FC = () => {
           }
         }
 
+        console.log(`[SpectrumModule] Loaded ${allBrandProducts.length} products total`);
         setProducts(allBrandProducts);
       } catch (error) {
         console.error("[SpectrumModule] Failed to load products:", error);
@@ -598,7 +637,7 @@ const SpectrumModule: React.FC = () => {
       }
     }
     fetchData();
-  }, []);
+  }, [activeTribeId]);
 
   // Helper to ensure every product has a visual price
   const getDisplayPrice = (p: Product) => {
@@ -608,7 +647,9 @@ const SpectrumModule: React.FC = () => {
     const score = p.tier_score || 50;
     // Add deterministic noise from ID
     const noise =
-      p.id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % 500;
+      (p.id || "0")
+        .split("")
+        .reduce((acc, char) => acc + char.charCodeAt(0), 0) % 500;
     return score * 50 + noise + 100;
   };
 

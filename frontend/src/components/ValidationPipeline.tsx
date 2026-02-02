@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   CheckCircle2,
   Circle,
@@ -10,6 +10,7 @@ import {
   CheckSquare,
   Package,
 } from "lucide-react";
+import { BaseComponentProps } from "../types/componentUtils";
 
 interface ValidationStep {
   status: "complete" | "partial" | "pending" | "failed";
@@ -19,64 +20,83 @@ interface ValidationStep {
   sources_used?: string[];
 }
 
-interface ValidationPipelineProps {
+interface ValidationPipelineProps extends BaseComponentProps {
   pipeline?: Record<string, ValidationStep>;
   score?: number;
-  className?: string;
+}
+
+interface StepDefinition {
+  key: string;
+  number: number;
+  title: string;
+  subtitle: string;
+  icon: React.ReactNode;
+  color: string;
 }
 
 /**
  * ValidationPipeline Component
- * Visualizes the 5-step refinery process that transforms raw data into verified products
- * Shows the journey from Official → Commercial → Context → Validation → Published
+ *
+ * Visualizes the 5-step refinery process:
+ * Official → Commercial → Context → Validation → Published
+ *
+ * Features:
+ * - Step status visualization
+ * - Trust score display
+ * - Data quality indicators
+ * - Source attribution
  */
 export const ValidationPipeline: React.FC<ValidationPipelineProps> = ({
   pipeline,
   score = 0,
   className = "",
 }) => {
-  const steps = [
-    {
-      key: "step1_official",
-      number: 1,
-      title: "Official Data",
-      subtitle: "Manufacturer specs & media",
-      icon: <Zap className="w-5 h-5" />,
-      color: "bg-blue-100 text-blue-700 border-blue-300",
-    },
-    {
-      key: "step2_commercial",
-      number: 2,
-      title: "Commercial",
-      subtitle: "Pricing & availability",
-      icon: <ShoppingCart className="w-5 h-5" />,
-      color: "bg-purple-100 text-purple-700 border-purple-300",
-    },
-    {
-      key: "step3_context",
-      number: 3,
-      title: "Context",
-      subtitle: "Real-world feedback",
-      icon: <Users className="w-5 h-5" />,
-      color: "bg-green-100 text-green-700 border-green-300",
-    },
-    {
-      key: "step4_cross_validation",
-      number: 4,
-      title: "Validation",
-      subtitle: "Cross-check & scoring",
-      icon: <CheckSquare className="w-5 h-5" />,
-      color: "bg-amber-100 text-amber-700 border-amber-300",
-    },
-    {
-      key: "step5_published",
-      number: 5,
-      title: "Published",
-      subtitle: "Ready for display",
-      icon: <Package className="w-5 h-5" />,
-      color: "bg-emerald-100 text-emerald-700 border-emerald-300",
-    },
-  ];
+  // Memoize step definitions
+  const steps = useMemo<StepDefinition[]>(
+    () => [
+      {
+        key: "step1_official",
+        number: 1,
+        title: "Official Data",
+        subtitle: "Manufacturer specs & media",
+        icon: <Zap className="w-5 h-5" />,
+        color: "bg-blue-100 text-blue-700 border-blue-300",
+      },
+      {
+        key: "step2_commercial",
+        number: 2,
+        title: "Commercial",
+        subtitle: "Pricing & availability",
+        icon: <ShoppingCart className="w-5 h-5" />,
+        color: "bg-purple-100 text-purple-700 border-purple-300",
+      },
+      {
+        key: "step3_context",
+        number: 3,
+        title: "Context",
+        subtitle: "Real-world feedback",
+        icon: <Users className="w-5 h-5" />,
+        color: "bg-green-100 text-green-700 border-green-300",
+      },
+      {
+        key: "step4_cross_validation",
+        number: 4,
+        title: "Validation",
+        subtitle: "Cross-check & scoring",
+        icon: <CheckSquare className="w-5 h-5" />,
+        color: "bg-amber-100 text-amber-700 border-amber-300",
+      },
+      {
+        key: "step5_published",
+        number: 5,
+        title: "Published",
+        subtitle: "Ready for display",
+        icon: <Package className="w-5 h-5" />,
+        color: "bg-emerald-100 text-emerald-700 border-emerald-300",
+      },
+    ],
+    [],
+  );
 
   const getStepStatus = (key: string) => {
     if (!pipeline) return "pending";
@@ -97,6 +117,7 @@ export const ValidationPipeline: React.FC<ValidationPipelineProps> = ({
     }
   };
 
+  // Handle empty state
   if (!pipeline || Object.keys(pipeline).length === 0) {
     return (
       <div className={`bg-slate-50 rounded-lg p-8 text-center ${className}`}>

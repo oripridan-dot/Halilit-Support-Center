@@ -1,22 +1,40 @@
 import { AlertCircle } from "lucide-react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import { BaseComponentProps } from "../types/componentUtils";
 
-interface ImageWithFallbackProps {
+interface ImageWithFallbackProps extends BaseComponentProps {
   src?: string;
   alt: string;
   fallbackText?: string;
-  className?: string;
 }
 
-export const ImageWithFallback = ({
+/**
+ * ImageWithFallback Component
+ *
+ * Renders an image with fallback state handling:
+ * - Loading state indicator
+ * - Error handling with fallback UI
+ * - Graceful degradation if src is missing
+ */
+export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   src,
   alt,
   fallbackText,
   className = "",
-}: ImageWithFallbackProps) => {
+}) => {
   const [hasError, setHasError] = useState(!src);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(!!src);
 
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+  }, []);
+
+  const handleError = useCallback(() => {
+    setHasError(true);
+    setIsLoading(false);
+  }, []);
+
+  // Fallback UI for error state
   if (hasError) {
     return (
       <div
@@ -39,20 +57,19 @@ export const ImageWithFallback = ({
     <div
       className={`relative overflow-hidden bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700 ${className}`}
     >
+      {/* Loading state overlay */}
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-zinc-800/50">
           <div className="animate-pulse text-xs text-zinc-400">Loading...</div>
         </div>
       )}
+      {/* Image */}
       <img
         src={src}
         alt={alt}
         className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity"
-        onLoad={() => setIsLoading(false)}
-        onError={() => {
-          setHasError(true);
-          setIsLoading(false);
-        }}
+        onLoad={handleLoad}
+        onError={handleError}
       />
     </div>
   );

@@ -1,202 +1,139 @@
-# Halilit Support Center
+# Halilit Support Center v5.1
 
-**Version 5.0** - Unified Data Pipeline Architecture
+**An AI-Powered Product Catalog System Built on Google's Agent Development Kit (ADK)**
 
-A modern product catalog and support center for professional audio equipment. Built with a "Static First" architecture where the backend generates optimized JSON files that the frontend consumes directly.
-
-## 🎯 Architecture Overview
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         3 DATA SOURCES                                   │
-├─────────────────────────────────────────────────────────────────────────┤
-│  OFFICIAL          │  COMMERCIAL         │  CONTEXTUAL                  │
-│  (Manufacturer)    │  (Halilit Prices)   │  (Expert Reviews)            │
-│  - Product specs   │  - SKU numbers      │  - Pros/Cons                 │
-│  - Names, images   │  - Prices (ILS/USD) │  - Expert tips               │
-│  - Manuals, docs   │  - Stock status     │  - Known issues              │
-└──────────┬─────────┴──────────┬──────────┴──────────┬────────────────────┘
-           │                    │                     │
-           └────────────────────┼─────────────────────┘
-                                ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      3 PROCESSING LAYERS                                 │
-├─────────────────────────────────────────────────────────────────────────┤
-│  LAYER 1: NORMALIZE    │  LAYER 2: ENRICH      │  LAYER 3: OPTIMIZE     │
-│  - Pydantic validation │  - Taxonomy mapping   │  - UI constraints      │
-│  - Schema enforcement  │  - Tier assignment    │  - Slug generation     │
-│  - Content hashing     │  - Image selection    │  - Search text         │
-└────────────────────────┴───────────────────────┴────────────────────────┘
-                                ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         OUTPUT: frontend/public/data/                    │
-│  index.json        - Brand catalog index                                │
-│  {brand}.json      - Per-brand product catalogs                         │
-└─────────────────────────────────────────────────────────────────────────┘
-                                ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                              FRONTEND                                    │
-│  React + Vite + TypeScript + Tailwind                                   │
-│  Loads static JSON → Galaxy Dashboard → Spectrum View → Product Modal   │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+🆕 **v5.1 Features**: Agent Learning & Memory, Auto-Context Logging, Preventive Validation
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Python 3.10+
-- Node.js 18+ / pnpm
-- (Optional) Playwright for web scraping: `pip install playwright && playwright install`
+- Python 3.11+, Node.js 18+
+- Google Gemini API Key
 
-### Installation
-
-```bash
-# Clone repository
-git clone https://github.com/oripridan-dot/Halilit-Support-Center.git
-cd Halilit-Support-Center
-
-# Backend setup
-cd backend
-pip install -r requirements.txt
-
-# Frontend setup
-cd ../frontend
-pnpm install
-```
-
-### Running the Pipeline
+### 30-Second Setup
 
 ```bash
-# Run complete pipeline (ingest → process → deploy)
-python -m backend.pipeline run
+# 1. Export data from backend → frontend
+python3 backend/export_to_frontend.py
 
-# Run specific stages
-python -m backend.pipeline ingest    # Only harvest data
-python -m backend.pipeline process   # Only process through layers
-python -m backend.pipeline deploy    # Only deploy to frontend
+# 2. Start backend
+PYTHONPATH=. python3 backend/server.py &
 
-# Check status
-python -m backend.pipeline status
-
-# Generate TypeScript types
-python -m backend.pipeline types
+# 3. Start frontend
+cd frontend && npm run dev
 ```
 
-### Running the Frontend
+Open http://localhost:5173 and explore 668 products from 9 brands!
+
+## 🤖 Trinity Swarm + DevAgent: 4 AI Agents with Learning
+
+1. **CommercialScout** 🧠 - Harvests product data + learns patterns
+2. **OfficialVerifier** 🧠 - Enriches with specs + learns enrichment strategies
+3. **ExternalValidator** 🧠 - Audits & scores (0-100) + learns audit criteria
+4. **DevAgent v3.0** ⭐ **CONTEXT-AWARE + LEARNING** - Complete development intelligence
+
+**DevAgent v3.0 Features**:
+
+- ✅ **v1.0**: Error analysis + AI fix suggestions
+- ✅ **v2.0**: Auto-validation + Auto-apply with backups
+- ✅ **v3.0**: Complete context management & proactive development
+- 🆕 **v3.1**: **Agent Learning & Memory System**
+  - **Functional Memory**: Every action recorded in `.agent_memory/`
+  - **AI-Powered Patterns**: Gemini analyzes learning records
+  - **Contextual Advice**: Agents query past learning before acting
+  - **Self-Improvement**: Agents identify and fix their weaknesses
+  - **Cross-Agent Learning**: All 4 agents learn and improve together
+
+**Storage**:
+
+- `.devagent/` - Development context (history, rules)
+- `.agent_memory/` - Learning records & patterns
+
+User commands agents via **CopilotKit sidebar** in real-time.  
+DevAgent monitors automatically + all agents learn from every action.
+
+## 🧠 Learning System
+
+### How Agents Learn
+
+1. **Action**: Agent performs task (analyze, fix, validate, etc.)
+2. **Record**: Input/output/success/confidence automatically logged
+3. **Pattern Analysis**: After 10+ actions, AI extracts patterns
+4. **Contextual Advice**: Before next action, agent queries memory
+5. **Improved Performance**: Success rates and confidence increase over time
+
+### Memory API Endpoints
 
 ```bash
-cd frontend
-pnpm dev    # Development server at http://localhost:5173
-pnpm build  # Production build
+GET /api/memory/stats/{agent_name}           # Learning statistics
+GET /api/memory/advice/{agent_name}?task=... # Get advice for task
+GET /api/memory/insights/{agent_name}        # View learned patterns
+GET /api/memory/improvements/{agent_name}    # Self-improvement suggestions
+GET /api/memory/all-agents                   # All agents summary
 ```
 
-## 📁 Project Structure
+See **[AGENT_LEARNING.md](AGENT_LEARNING.md)** for complete guide.
+
+## 📊 Data Flow
 
 ```
-├── backend/
-│   ├── pipeline/              # ⭐ MAIN PIPELINE (v5.0)
-│   │   ├── __main__.py       # CLI entry point
-│   │   ├── config.py         # Configuration
-│   │   ├── models.py         # Pydantic schemas
-│   │   ├── runner.py         # Pipeline orchestrator
-│   │   ├── typescript_generator.py
-│   │   ├── harvesters/       # Data ingestion
-│   │   │   ├── official.py   # Manufacturer data
-│   │   │   ├── commercial.py # Halilit prices
-│   │   │   └── contextual.py # Reviews (real web search + AI)
-│   │   └── layers/           # Processing layers
-│   │       ├── normalize.py  # Layer 1
-│   │       ├── enrich.py     # Layer 2
-│   │       └── optimize.py   # Layer 3
-│   ├── data/
-│   │   ├── 1_official/       # Raw official data
-│   │   ├── 2_commercial/     # Raw commercial data
-│   │   ├── 3_contextual/     # Raw contextual data
-│   │   ├── 4_validated/      # After layer processing
-│   │   ├── 5_golden/         # Production-ready catalogs
-│   │   └── reports/          # Pipeline reports
-│   ├── scripts/              # Utility scripts
-│   └── tests/                # Test suites
-│
-├── frontend/
-│   ├── public/data/          # Static JSON (pipeline output)
-│   ├── src/
-│   │   ├── components/       # React components
-│   │   ├── pages/            # Page views
-│   │   └── types/            # TypeScript types (auto-generated)
-│   └── package.json
-│
-└── docs/                     # Additional documentation
+Backend Golden Data (5_golden/)
+         ↓
+export_to_frontend.py (Transform)
+         ↓
+Frontend Public Data (public/data/)
+         ↓
+React UI (668 products ready!)
 ```
 
-## 🔧 Configuration
+**Run export anytime**: `python3 backend/export_to_frontend.py`
 
-### Environment Variables
+## ✅ System Status
 
-```bash
-# For real web search in Context Agent
-export SERP_API_KEY=your_serpapi_key
+- **Tests**: 31/31 passing ✓
+- **Agents**: All operational ✓
+- **Data Export**: 668 products ✓
+- **Code**: 100% synced (Backend + Frontend) ✓
+- **Documentation**: Complete ✓
 
-# For AI synthesis of reviews
-export OPENAI_API_KEY=your_openai_key
+## 📖 Documentation
 
-# Pipeline settings
-export PIPELINE_DEBUG=true
-export PIPELINE_SCRAPER_HEADLESS=false
-```
+### Core Documentation
 
-### Pipeline Configuration
+- **[README.md](README.md)** - This file (Quick start & overview)
+- **[ADK_ARCHITECTURE.md](ADK_ARCHITECTURE.md)** - System architecture deep dive
+- **[RELEASE_NOTES_v5.1.md](RELEASE_NOTES_v5.1.md)** ⭐ **NEW** - v5.1 release summary
 
-Edit `backend/pipeline/config.py` to customize paths, scraper settings, and tier thresholds.
+### DevAgent Documentation
+
+- **[DEVAGENT_V3_CONTEXT.md](DEVAGENT_V3_CONTEXT.md)** - Context management
+- **[DEVAGENT_V2.md](DEVAGENT_V2.md)** - Auto-validation & auto-apply
+- **[DEVAGENT_GUIDE.md](DEVAGENT_GUIDE.md)** - Complete guide
+- **[DEVAGENT_QUICKREF.md](DEVAGENT_QUICKREF.md)** - Quick reference
+- **[PREVENTION_GUIDE.md](PREVENTION_GUIDE.md)** - Prevention system
+
+### Learning System Documentation
+
+- **[AGENT_LEARNING.md](AGENT_LEARNING.md)** ⭐ **NEW** - Complete learning system guide (500+ lines)
+- **[AUTO_LOGGING_STATUS.md](AUTO_LOGGING_STATUS.md)** - Automatic logging details
+
+### System Status
+
+- **[SYSTEM_STATUS.md](SYSTEM_STATUS.md)** - Production readiness checklist
+- **[ADK_CLEANUP_REPORT.md](ADK_CLEANUP_REPORT.md)** - Cleanup details
+- **[backend/tests/test_adk_coverage.py](backend/tests/test_adk_coverage.py)** - 31 comprehensive tests
 
 ## 🧪 Testing
 
 ```bash
-# Run all tests
-python -m pytest backend/tests/ -v
-
-# Run specific test
-python -m pytest backend/tests/test_pipeline_e2e.py -v
-
-# Frontend tests
-cd frontend && pnpm test
+python -m pytest backend/tests/test_adk_coverage.py -v
 ```
 
-## 📊 Data Quality Tiers
+## 🛠️ Stack
 
-Products are automatically assigned quality tiers based on data completeness:
+**Backend**: Python + google.genai + FastAPI + Pydantic  
+**Frontend**: React 18 + CopilotKit + TypeScript + Vite  
+**Data**: 668 products across 9 brands
 
-| Tier       | Score | Requirements                             |
-| ---------- | ----- | ---------------------------------------- |
-| 💎 Diamond | 75+   | Complete data, verified, multiple images |
-| 🥇 Gold    | 60-74 | Good data, minor gaps                    |
-| 🥈 Silver  | 40-59 | Basic data, needs enrichment             |
-| 🥉 Bronze  | 0-39  | Minimal data                             |
-
-## 🔄 Data Flow
-
-1. **Ingest**: Harvesters collect data from 3 sources
-2. **Normalize**: Merge and validate against Pydantic schemas
-3. **Enrich**: Map taxonomy, assign tiers, select images
-4. **Optimize**: Generate slugs, search text, render hints
-5. **Deploy**: Write to `frontend/public/data/`
-6. **Types**: Auto-generate TypeScript types
-
-## 📖 Documentation
-
-- [Architecture Guide](ARCHITECTURE_v5.md)
-- [Getting Started](GETTING_STARTED_v5.md)
-- [Implementation Guide](IMPLEMENTATION_GUIDE_v5.md)
-- [Operations Manual](OPERATIONS.md)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Run tests before committing
-4. Submit a pull request
-
-## 📜 License
-
-MIT License - see LICENSE file for details.
+See [ADK_ARCHITECTURE.md](ADK_ARCHITECTURE.md) for full details.

@@ -1,28 +1,71 @@
 import { X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import ProductSpecs from "../ProductSpecs";
 import { ImageWithFallback } from "../ImageWithFallback";
+import { BaseComponentProps } from "../../types/componentUtils";
 import type { Product } from "../../types";
 
-export const ProductPopInterface = ({ productId }: { productId: string }) => {
+/**
+ * ProductPopInterface
+ *
+ * Displays complete product information in a modal-like interface
+ * with tabbed details (specs vs insights).
+ *
+ * Features:
+ * - Async product loading from catalog
+ * - Error states with graceful fallbacks
+ * - Tab switching with memoized callbacks
+ * - Image gallery with error handling
+ * - Responsive grid layout for product information
+ *
+ * @param {string} productId - The product ID to load and display
+ * @param {string} [className] - Optional CSS classes for styling
+ */
+interface ProductPopInterfaceProps extends BaseComponentProps {
+  productId: string;
+}
+
+const ProductPopInterfaceComponent = ({
+  productId,
+  className = "",
+}: ProductPopInterfaceProps) => {
   const { closeProductPop } = useNavigationStore();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [activeDetailTab, setActiveDetailTab] = useState<"specs" | "insights">(
     "specs",
   );
+
+  // Memoized tab handlers
+  const handleSpecsTab = useCallback(() => {
+    setActiveDetailTab("specs");
+  }, []);
+
+  const handleInsightsTab = useCallback(() => {
+    setActiveDetailTab("insights");
+  }, []);
+
+  const handleClose = useCallback(() => {
+    closeProductPop();
+  }, [closeProductPop]);
 
   useEffect(() => {
     // Load product data from catalog
     const loadProduct = async () => {
       try {
         setLoading(true);
+        setError(null);
         const { catalogLoader } = await import("../../lib/catalogLoader");
         const loadedProduct = await catalogLoader.findProductById(productId);
         setProduct(loadedProduct || null);
-      } catch {
+        if (!loadedProduct) {
+          setError("Product not found in catalog");
+        }
+      } catch (err) {
         setProduct(null);
+        setError(err instanceof Error ? err.message : "Failed to load product");
       } finally {
         setLoading(false);
       }
@@ -33,22 +76,41 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
 
   if (loading) {
     return (
-      <div className="w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden items-center justify-center">
-        <div className="text-zinc-400">Loading product details...</div>
+      <div
+        className={`w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden items-center justify-center ${className}`}
+      >
+        <div className="text-zinc-400 flex flex-col items-center gap-2">
+          <div className="w-8 h-8 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
+          Loading product details...
+        </div>
       </div>
     );
   }
 
-  if (!product) {
+  if (error || !product) {
     return (
-      <div className="w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden items-center justify-center">
-        <div className="text-zinc-400">Product not found</div>
+      <div
+        className={`w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden items-center justify-center ${className}`}
+      >
+        <div className="text-center space-y-2">
+          <div className="text-red-400 text-sm font-semibold">
+            {error || "Product not found"}
+          </div>
+          <button
+            onClick={handleClose}
+            className="text-xs text-zinc-400 hover:text-white transition-colors"
+          >
+            Close
+          </button>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden">
+    <div
+      className={`w-full max-w-4xl h-[80vh] bg-zinc-900 border border-zinc-700 rounded-xl relative shadow-2xl flex flex-col overflow-hidden ${className}`}
+    >
       {/* Header */}
       <div className="h-12 bg-zinc-800 border-b border-zinc-700 flex items-center justify-between px-4">
         <div className="flex items-center gap-4">
@@ -56,8 +118,9 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
           <span className="text-xs font-mono text-zinc-500">{product.id}</span>
         </div>
         <button
-          onClick={closeProductPop}
+          onClick={handleClose}
           className="text-zinc-400 hover:text-white transition-colors"
+          title="Close product details"
         >
           <X className="w-6 h-6" />
         </button>
@@ -82,6 +145,18 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
 
             {/* Key Info */}
             <div className="bg-zinc-800/60 rounded-lg p-4 space-y-3 border border-zinc-700">
+              {/* SKU DISPLAY */}
+              {product.sku && (
+                <div>
+                  <p className="text-xs text-zinc-500 uppercase font-mono mb-1">
+                    SKU
+                  </p>
+                  <p className="text-sm font-mono text-emerald-400 font-bold">
+                    {product.sku}
+                  </p>
+                </div>
+              )}
+
               <div>
                 <p className="text-xs text-zinc-500 uppercase font-mono mb-1">
                   Brand
@@ -194,22 +269,24 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
         <div className="border-t border-zinc-700 pt-6">
           <div className="flex gap-2 border-b border-zinc-700 mb-4 overflow-x-auto">
             <button
-              onClick={() => setActiveDetailTab("specs")}
+              onClick={handleSpecsTab}
               className={`px-4 py-2 text-xs font-semibold whitespace-nowrap border-b-2 transition-colors ${
                 activeDetailTab === "specs"
                   ? "border-blue-500 text-blue-400"
                   : "border-transparent text-zinc-500 hover:text-zinc-300"
               }`}
+              title="View specifications"
             >
               Specifications
             </button>
             <button
-              onClick={() => setActiveDetailTab("insights")}
+              onClick={handleInsightsTab}
               className={`px-4 py-2 text-xs font-semibold whitespace-nowrap border-b-2 transition-colors ${
                 activeDetailTab === "insights"
                   ? "border-blue-500 text-blue-400"
                   : "border-transparent text-zinc-500 hover:text-zinc-300"
               }`}
+              title="View insights and reviews"
             >
               Insights
             </button>
@@ -296,3 +373,5 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
     </div>
   );
 };
+
+export const ProductPopInterface = ProductPopInterfaceComponent;

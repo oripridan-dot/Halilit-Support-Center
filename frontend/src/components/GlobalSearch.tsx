@@ -1,35 +1,58 @@
 import { Search, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { useRealtimeSearch } from "../hooks/useRealtimeSearch";
 import { useNavigationStore } from "../store/navigationStore";
+import { BaseComponentProps, EventHandler } from "../types/componentUtils";
 
-export const GlobalSearch = () => {
+interface GlobalSearchProps extends BaseComponentProps {
+  onSelect?: EventHandler<string>;
+  maxResults?: number;
+}
+
+/**
+ * GlobalSearch Component
+ *
+ * Provides real-time product search functionality with:
+ * - Debounced search input
+ * - Dropdown results display
+ * - Click-outside detection for dropdown close
+ * - Accessible keyboard navigation
+ */
+export const GlobalSearch: React.FC<GlobalSearchProps> = ({
+  onSelect,
+  maxResults = 10,
+  className,
+}) => {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
-  const searchResult = useRealtimeSearch(query, { limit: 10 });
+  const searchResult = useRealtimeSearch(query, { limit: maxResults });
   const { data: results = [], loading, error } = searchResult;
   const { openProductPop } = useNavigationStore();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // Close on click outside
+  // Close dropdown on click outside
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    const handleClickOutside = (event: MouseEvent) => {
       if (
         wrapperRef.current &&
         !wrapperRef.current.contains(event.target as Node)
       ) {
         setIsOpen(false);
       }
-    }
+    };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelect = (productId: string) => {
-    openProductPop(productId);
-    setIsOpen(false);
-    setQuery("");
-  };
+  const handleSelect = useCallback(
+    (productId: string) => {
+      openProductPop(productId);
+      onSelect?.(productId);
+      setIsOpen(false);
+      setQuery("");
+    },
+    [openProductPop, onSelect],
+  );
 
   return (
     <div className="relative w-full max-w-md hidden md:block" ref={wrapperRef}>
@@ -63,17 +86,33 @@ export const GlobalSearch = () => {
         )}
       </div>
 
+      {/* Search Results Dropdown */}
       {isOpen && query.length > 1 && (
         <div className="absolute mt-1 w-full bg-zinc-900 border border-zinc-800 rounded-md shadow-xl z-50 overflow-hidden max-h-96 overflow-y-auto">
           {error ? (
+            // Error State
             <div className="p-4 text-center text-red-500 text-xs">
-              Search failed: {error.message}
+              <p>{error.message}</p>
+              <button
+                onClick={searchResult.retry}
+                className="mt-2 text-xs text-red-400 hover:text-red-300 underline"
+              >
+                Retry
+              </button>
+            </div>
+          ) : loading ? (
+            // Loading State
+            <div className="p-4 text-center text-zinc-500 text-xs">
+              <div className="inline-block h-3 w-3 animate-spin rounded-full border border-zinc-600 border-r-transparent" />
+              <p className="mt-2">Searching...</p>
             </div>
           ) : (results || []).length === 0 ? (
+            // Empty State
             <div className="p-4 text-center text-zinc-500 text-xs">
               No products found for "{query}"
             </div>
           ) : (
+            // Results List
             <div className="py-1">
               {(results || []).map((item) => (
                 <button

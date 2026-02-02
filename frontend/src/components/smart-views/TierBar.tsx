@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { RotateCcw, ZoomIn } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { getPriceValue } from "../../lib/priceFormatter";
 import type { Product } from "../../types";
 
@@ -171,6 +171,27 @@ export const TierBar = ({
   );
   const [hoveredProductId, setHoveredProductId] = useState<string | null>(null);
 
+  // Memoized event handlers
+  const handleNodeHoverEnter = useCallback(
+    (product: Product) => {
+      onHoverProduct(product);
+      setHoveredProductId(product.id ?? null);
+    },
+    [onHoverProduct],
+  );
+
+  const handleNodeHoverLeave = useCallback(() => {
+    onHoverProduct(null);
+    setHoveredProductId(null);
+  }, [onHoverProduct]);
+
+  const handleNodeClick = useCallback(
+    (productId: string) => {
+      onSelectProduct(productId);
+    },
+    [onSelectProduct],
+  );
+
   // Reset logic
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -264,15 +285,9 @@ export const TierBar = ({
               exit={{ opacity: 0, scale: 0 }}
               transition={{ type: "spring", stiffness: 200, damping: 25 }}
               className="absolute w-12 h-12 -ml-6 -mb-6 flex items-center justify-center pointer-events-auto group/node z-10"
-              onMouseEnter={() => {
-                onHoverProduct(node.product);
-                setHoveredProductId(node.id ?? null);
-              }}
-              onMouseLeave={() => {
-                onHoverProduct(null);
-                setHoveredProductId(null);
-              }}
-              onClick={() => onSelectProduct(node.id ?? "")}
+              onMouseEnter={() => handleNodeHoverEnter(node.product)}
+              onMouseLeave={handleNodeHoverLeave}
+              onClick={() => handleNodeClick(node.id ?? "")}
             >
               {/* Connection Line to Price Axis */}
               <div className="absolute top-1/2 left-1/2 w-px h-[500px] bg-gradient-to-b from-amber-500/20 to-transparent pointer-events-none opacity-0 group-hover/node:opacity-100 transition-opacity origin-top transform rotate-180" />
@@ -306,15 +321,9 @@ export const TierBar = ({
                 bottom: `${node.y * 100}%`,
               }}
               className="absolute w-6 h-6 -ml-3 -mb-3 flex items-center justify-center pointer-events-auto group/outlier z-5"
-              onMouseEnter={() => {
-                onHoverProduct(node.product);
-                setHoveredProductId(node.id ?? null);
-              }}
-              onMouseLeave={() => {
-                onHoverProduct(null);
-                setHoveredProductId(null);
-              }}
-              onClick={() => onSelectProduct(node.id ?? "")}
+              onMouseEnter={() => handleNodeHoverEnter(node.product)}
+              onMouseLeave={handleNodeHoverLeave}
+              onClick={() => handleNodeClick(node.id ?? "")}
             >
               <div className="w-2 h-2 rounded-full bg-zinc-600 group-hover/outlier:bg-amber-500 group-hover/outlier:scale-150 transition-all" />
             </motion.button>

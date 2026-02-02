@@ -20,24 +20,26 @@ export function getPrice(product: Product): string {
 /**
  * Format a price number for display
  */
-export function formatPrice(price: number | string, currency?: string): string {
+export function formatPrice(price: number | string, currency: string = "ILS", digits: number = 0): string {
   if (!price) return "TBD";
 
   const numPrice = typeof price === "string" ? parseFloat(price) : price;
 
   if (isNaN(numPrice)) return "TBD";
 
+  const opts = { minimumFractionDigits: digits, maximumFractionDigits: digits };
+
   // Format based on currency
   if (currency === "ILS" || currency === "₪") {
-    return `₪${numPrice.toLocaleString("he-IL")}`;
+    return `₪${numPrice.toLocaleString("he-IL", opts)}`;
   }
-  
+
   if (currency === "USD" || currency === "$") {
-    return `$${numPrice.toLocaleString("en-US")}`;
+    return `$${numPrice.toLocaleString("en-US", opts)}`;
   }
 
   // Default: shekel format
-  return `₪${numPrice.toLocaleString("he-IL")}`;
+  return `₪${numPrice.toLocaleString("he-IL", opts)}`;
 }
 
 /**
