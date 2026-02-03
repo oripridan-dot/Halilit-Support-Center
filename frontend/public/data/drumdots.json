@@ -2,234 +2,99 @@
   {
     "id": "drumdots-sku-005-im1820",
     "name": "Internal Drum Mic Mount W/XLR Connecting Cable",
-    "slug": "/drumdots/internal-drum-mic-mount-wxlr-connecting-cable",
-    "brand_id": "drumdots",
+    "description": "If multiple custom sizes are selected (multi-pack), separate sizes with commas.",
+    "brand": "Drumdots",
     "category": "Microphones",
-    "subcategories": [
-      "mic"
+    "subCategory": "mic",
+    "tier": "entry",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
+    },
+    "price": 0.0,
+    "stockStatus": "unknown",
+    "aiTags": [
+      "entry"
     ],
-    "tier": "bronze",
-    "tier_score": 38,
-    "description_short": "If multiple custom sizes are selected (multi-pack), separate sizes with commas",
-    "description_full": "If multiple custom sizes are selected (multi-pack), separate sizes with commas.",
-    "price": null,
-    "currency": "USD",
-    "stock_status": "unknown",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "color_primary": null,
     "specs": {
-      "Specifications": [
-        {
-          "key": "Drum Size",
-          "value": "Choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n15\"\n16\"\n18\"\n14\" Snare"
-        },
-        {
-          "key": "Drum MFG",
-          "value": "Choose an option\nPearl\nGretsch\nYamaha\nDW\nSonar\nTama\nLudwig\nPDP\nOther"
-        },
-        {
-          "key": "XLR Cable/Shell Mount",
-          "value": "Choose an option\n6ft XLR interlocking cable\nXLR shell mount"
-        }
-      ]
+      "Drum Size": "Choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n15\"\n16\"\n18\"\n14\" Snare",
+      "Drum MFG": "Choose an option\nPearl\nGretsch\nYamaha\nDW\nSonar\nTama\nLudwig\nPDP\nOther",
+      "XLR Cable/Shell Mount": "Choose an option\n6ft XLR interlocking cable\nXLR shell mount"
     },
-    "pros": [],
-    "cons": [],
-    "expert_tips": [],
-    "search_text": "internal drum mic mount w/xlr connecting cable microphones mic if multiple custom sizes are selected (multi-pack), separate sizes with commas drumdots choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n15\"\n16\"\n18\"\n14\" snare choose an option\npearl\ngretsch\nyamaha\ndw\nsonar\ntama\nludwig\npdp\nother choose an option\n6ft xlr interlocking cable\nxlr shell mount",
-    "filter_tags": [
-      "unknown",
-      "bronze",
-      "microphones",
-      "drumdots",
-      "mic"
-    ],
-    "render_hints": {
-      "has_hero_image": false,
-      "has_gallery": false,
-      "has_specs": true,
-      "has_price": false,
-      "has_reviews": false,
-      "has_tips": false,
-      "is_verified": false,
-      "show_badge": false
-    },
-    "source_url": "https://www.drummicmounts.com/product/internal-lug-bar-mount/",
-    "purchase_url": null,
-    "synced_at": "2026-02-01T21:10:43.986248"
+    "searchTokens": "internal drum mic mount w/xlr connecting cable drumdots microphones  "
   },
   {
     "id": "drumdots-sku-039-lbm22",
     "name": "Internal Kick Drum Mic Mount W/Interlocking Connecting Cable",
-    "slug": "/drumdots/internal-kick-drum-mic-mount-winterlocking-connecting-cable",
-    "brand_id": "drumdots",
+    "description": "Internal Kick Drum Mic Mount with R4 connecting cable 20\u2033 to 24\u2033",
+    "brand": "Drumdots",
     "category": "Microphones",
-    "subcategories": [
-      "mic"
+    "subCategory": "mic",
+    "tier": "entry",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
+    },
+    "price": 0.0,
+    "stockStatus": "unknown",
+    "aiTags": [
+      "entry"
     ],
-    "tier": "bronze",
-    "tier_score": 38,
-    "description_short": "Internal Kick Drum Mic Mount with R4 connecting cable 20″ to 24″",
-    "description_full": "Internal Kick Drum Mic Mount with R4 connecting cable 20″ to 24″",
-    "price": null,
-    "currency": "USD",
-    "stock_status": "unknown",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "color_primary": null,
     "specs": {
-      "Specifications": [
-        {
-          "key": "Drum Size",
-          "value": "Choose an option\n20\"\n22\"\n24\""
-        },
-        {
-          "key": "Drum MFG",
-          "value": "Choose an option\nPearl\nGretsch\nYamaha\nDW\nSonar\nTama\nLudwig\nPDP\nOther"
-        }
-      ]
+      "Drum Size": "Choose an option\n20\"\n22\"\n24\"",
+      "Drum MFG": "Choose an option\nPearl\nGretsch\nYamaha\nDW\nSonar\nTama\nLudwig\nPDP\nOther"
     },
-    "pros": [],
-    "cons": [],
-    "expert_tips": [],
-    "search_text": "internal kick drum mic mount w/interlocking connecting cable microphones mic internal kick drum mic mount with r4 connecting cable 20″ to 24″ drumdots choose an option\n20\"\n22\"\n24\" choose an option\npearl\ngretsch\nyamaha\ndw\nsonar\ntama\nludwig\npdp\nother",
-    "filter_tags": [
-      "unknown",
-      "bronze",
-      "microphones",
-      "drumdots",
-      "mic"
-    ],
-    "render_hints": {
-      "has_hero_image": false,
-      "has_gallery": false,
-      "has_specs": true,
-      "has_price": false,
-      "has_reviews": false,
-      "has_tips": false,
-      "is_verified": false,
-      "show_badge": false
-    },
-    "source_url": "https://www.drummicmounts.com/product/internal-kick-drum-mic-mount/",
-    "purchase_url": null,
-    "synced_at": "2026-02-01T21:10:43.986331"
+    "searchTokens": "internal kick drum mic mount w/interlocking connecting cable drumdots microphones  "
   },
   {
     "id": "drumdots-sku-090-0818",
     "name": "Internal Drum Triggers for Snares and Toms",
-    "slug": "/drumdots/internal-drum-triggers-for-snares-and-toms",
-    "brand_id": "drumdots",
+    "description": "Intern Drum Triggers",
+    "brand": "Drumdots",
     "category": "Other",
-    "subcategories": [],
-    "tier": "bronze",
-    "tier_score": 30,
-    "description_short": "Intern Drum Triggers",
-    "description_full": "Intern Drum Triggers",
-    "price": null,
-    "currency": "USD",
-    "stock_status": "unknown",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "color_primary": null,
-    "specs": {
-      "Specifications": [
-        {
-          "key": "Drum Size",
-          "value": "Choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n15\"\n16\"\n18'\n14\" Snare"
-        },
-        {
-          "key": "Drum MFG",
-          "value": "Choose an option\nPearl\nGretsch\nYamaha\nDW\nSonar\nTama\nLudwig\nPDP\nOther"
-        },
-        {
-          "key": "TRS Cable/Shell Mount",
-          "value": "Choose an option\n6ft TRS interlocking cable\nTRS shell mount"
-        }
-      ]
+    "subCategory": "General",
+    "tier": "entry",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "pros": [],
-    "cons": [],
-    "expert_tips": [],
-    "search_text": "internal drum triggers for snares and toms other intern drum triggers drumdots choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n15\"\n16\"\n18'\n14\" snare choose an option\npearl\ngretsch\nyamaha\ndw\nsonar\ntama\nludwig\npdp\nother choose an option\n6ft trs interlocking cable\ntrs shell mount",
-    "filter_tags": [
-      "unknown",
-      "other",
-      "bronze",
-      "drumdots"
+    "price": 0.0,
+    "stockStatus": "unknown",
+    "aiTags": [
+      "entry"
     ],
-    "render_hints": {
-      "has_hero_image": false,
-      "has_gallery": false,
-      "has_specs": true,
-      "has_price": false,
-      "has_reviews": false,
-      "has_tips": false,
-      "is_verified": false,
-      "show_badge": false
+    "specs": {
+      "Drum Size": "Choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n15\"\n16\"\n18'\n14\" Snare",
+      "Drum MFG": "Choose an option\nPearl\nGretsch\nYamaha\nDW\nSonar\nTama\nLudwig\nPDP\nOther",
+      "TRS Cable/Shell Mount": "Choose an option\n6ft TRS interlocking cable\nTRS shell mount"
     },
-    "source_url": "https://www.drummicmounts.com/product/internal-drum-triggers-for-snares-and-toms/",
-    "purchase_url": null,
-    "synced_at": "2026-02-01T21:10:43.986396"
+    "searchTokens": "internal drum triggers for snares and toms drumdots other  "
   },
   {
     "id": "drumdots-sku-001-rmm",
     "name": "Drum Rim Mic Mounts",
-    "slug": "/drumdots/drum-rim-mic-mounts",
-    "brand_id": "drumdots",
+    "description": "Drum Rim Mic Mounts for Snares and Toms 8\u2033 to 18\u2033. Can remain on drum as it fits in case or gig bag allowing easy setup, Adjustable and light weight. Custom Sizes Available",
+    "brand": "Drumdots",
     "category": "Microphones",
-    "subcategories": [
-      "mic"
+    "subCategory": "mic",
+    "tier": "entry",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
+    },
+    "price": 0.0,
+    "stockStatus": "unknown",
+    "aiTags": [
+      "entry"
     ],
-    "tier": "silver",
-    "tier_score": 45,
-    "description_short": "Drum Rim Mic Mounts for Snares and Toms 8″ to 18″",
-    "description_full": "Drum Rim Mic Mounts for Snares and Toms 8″ to 18″. Can remain on drum as it fits in case or gig bag allowing easy setup, Adjustable and light weight. Custom Sizes Available",
-    "price": null,
-    "currency": "USD",
-    "stock_status": "unknown",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "color_primary": null,
     "specs": {
-      "Specifications": [
-        {
-          "key": "Color",
-          "value": "Choose an option\nBlack\nSilver\nBlack/Blue\nBlack/Green\nBlack/Red"
-        },
-        {
-          "key": "Size",
-          "value": "Choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n14\" Snare\n16\"\n18\"\nCustom"
-        }
-      ]
+      "Color": "Choose an option\nBlack\nSilver\nBlack/Blue\nBlack/Green\nBlack/Red",
+      "Size": "Choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n14\" Snare\n16\"\n18\"\nCustom"
     },
-    "pros": [],
-    "cons": [],
-    "expert_tips": [],
-    "search_text": "drum rim mic mounts microphones mic drum rim mic mounts for snares and toms 8″ to 18″ drumdots choose an option\nblack\nsilver\nblack/blue\nblack/green\nblack/red choose an option\n8\"\n10\"\n12\"\n13\"\n14\"\n14\" snare\n16\"\n18\"\ncustom",
-    "filter_tags": [
-      "unknown",
-      "silver",
-      "microphones",
-      "drumdots",
-      "mic"
-    ],
-    "render_hints": {
-      "has_hero_image": false,
-      "has_gallery": false,
-      "has_specs": true,
-      "has_price": false,
-      "has_reviews": false,
-      "has_tips": false,
-      "is_verified": false,
-      "show_badge": false
-    },
-    "source_url": "https://www.drummicmounts.com/product/rim-mic-mount/",
-    "purchase_url": null,
-    "synced_at": "2026-02-01T21:10:43.986451"
+    "searchTokens": "drum rim mic mounts drumdots microphones  "
   }
 ]

@@ -7,9 +7,39 @@ and that the frontend can consume it.
 from backend.pipeline.data_refinery import DataRefinery
 import json
 import sys
+import os
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 # Add backend to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+sys.path.insert(0, os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
+
+def run_all_tests():
+    """Run all tests in this execution unit dynamically"""
+    print("\n" + "="*70)
+    print("🧪 GALAXY REFINERY TESTS")
+    print("="*70 + "\n")
+
+    # Get all functions starting with test_ in global scope
+    current_module = sys.modules[__name__]
+    tests = [
+        obj for name, obj in current_module.__dict__.items()
+        if name.startswith('test_') and callable(obj)
+    ]
+
+    passed = 0
+    for test in tests:
+        try:
+            test()
+            # print(f"✅ {test.__name__} passed") # Tests print their own success
+            passed += 1
+        except Exception as e:
+            print(f"❌ {test.__name__} failed: {e}")
+            pass  # Continue running other tests
+
+    print(f"\n📊 Result: {passed}/{len(tests)} passed")
+    return passed == len(tests)
 
 def test_refinery_initialization():
     """Test that refinery initializes properly."""

@@ -6,8 +6,13 @@ Tests all backend components: refinery, data processing, validation
 from backend.pipeline.data_refinery import DataRefinery
 import json
 import sys
+import os
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+# Add project root to sys.path
+sys.path.insert(0, os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
 
 class TestDataRefinery:
     """Unit tests for DataRefinery class"""
@@ -88,7 +93,11 @@ class TestDataRefinery:
             "description": "Classic analog synthesizer"
         }
 
-        tokens = refinery._generate_search_tokens(item, "Roland", "pro")
+        tokens = refinery._generate_search_tokens(
+            item, "Roland", ["warm", "vintage", "pro"])
+
+        # Debug print
+        print(f"Generated tokens: '{tokens}'")
 
         # Verify all key terms are present
         assert "juno-60" in tokens

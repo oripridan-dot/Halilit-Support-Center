@@ -9,6 +9,8 @@ Every skill must:
 """
 
 import logging
+from abc import ABC, abstractmethod
+from typing import Dict, Any, Tuple
 
 class BaseSkill(ABC):
     """

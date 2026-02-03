@@ -8,6 +8,9 @@ Capabilities:
 - Data completeness verification
 """
 
+from typing import Dict, Any, Tuple
+from .base_skill import BaseSkill
+
 class BrandMatcherSkill(BaseSkill):
     """
     Matches extracted brand names against official taxonomy.

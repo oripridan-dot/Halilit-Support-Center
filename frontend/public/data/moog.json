@@ -1,515 +1,359 @@
 [
   {
     "id": "8662023",
-    "sku": "29-MAVIS",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog Mavis",
-    "slug": "סינתיסייזר-moog-mavis",
-    "description_short": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
-    "description_full": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
-    "price": 1255.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
-      "alt": "סינתיסייזר Moog Mavis"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis",
+    "description": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "mid",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg"
+    "price": 1255.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "mid"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog mavis moog   "
   },
   {
     "id": "8670731",
-    "sku": "29-SUBHARMONICON",
-    "brand_id": "moog",
-    "name": "סינתיסייזר אנלוגי Moog Subharmonicon",
-    "slug": "סינתיסייזר-אנלוגי-moog-subharmonicon",
-    "description_short": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
-    "price": 2928.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
-      "alt": "סינתיסייזר אנלוגי Moog Subharmonicon"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg"
+    "price": 2928.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 4.0,
-      "count": 2
-    },
-    "contextual": {
-      "pros": [
-        "Excellent transient response and clarity",
-        "Wide sweet spot for mixing",
-        "Accurate low-end reproduction"
-      ],
-      "cons": [
-        "Rear bass port requires wall distance",
-        "Higher price point in category"
-      ],
-      "expert_tips": [
-        "Use room correction software for best results",
-        "Position at ear height on isolation pads"
-      ]
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog subharmonicon moog   "
   },
   {
     "id": "8670732",
-    "sku": "29-SPECTRAVOX",
-    "brand_id": "moog",
-    "name": "סינתיסייזר אנלוגי Moog Spectravox",
-    "slug": "סינתיסייזר-אנלוגי-moog-spectravox",
-    "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
-    "price": 2928.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
-      "alt": "סינתיסייזר אנלוגי Moog Spectravox"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg"
+    "price": 2928.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog spectravox moog   "
   },
   {
     "id": "8661547",
-    "sku": "29-MATRIARCH",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog Matriarch",
-    "slug": "סינתיסייזר-moog-matriarch",
-    "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
-    "price": 9203.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
-      "alt": "סינתיסייזר Moog Matriarch"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "flagship",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg"
+    "price": 9203.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "flagship"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog matriarch moog   "
   },
   {
     "id": "8637794",
-    "sku": "29-LABYRINTH",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog Labyrinth",
-    "slug": "סינתיסייזר-moog-labyrinth",
-    "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
-    "price": 2928.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
-      "alt": "סינתיסייזר Moog Labyrinth"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg"
+    "price": 2928.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog labyrinth moog   "
   },
   {
     "id": "8669288",
-    "sku": "29-MOTHER32",
-    "brand_id": "moog",
-    "name": "סינתיסייזר אנלוגי Moog Mother-32",
-    "slug": "סינתיסייזר-אנלוגי-moog-mother-32",
-    "description_short": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
-    "price": 2928.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
-      "alt": "סינתיסייזר אנלוגי Moog Mother-32"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg"
+    "price": 2928.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog mother-32 moog   "
   },
   {
     "id": "8663409",
-    "sku": "29-MINITAUR",
-    "brand_id": "moog",
-    "name": "סינתיסייזר בס Moog Minitaur",
-    "slug": "סינתיסייזר-בס-moog-minitaur",
-    "description_short": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
-    "description_full": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
-    "price": 2928.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
-      "alt": "סינתיסייזר בס Moog Minitaur"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg"
+    "price": 2928.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 moog minitaur moog   "
   },
   {
     "id": "8674471",
-    "sku": "29-SUBSEQUENT37",
-    "brand_id": "moog",
-    "name": "סינתיסייזר בס אנלוגי Moog Subsequent 37",
-    "slug": "סינתיסייזר-בס-אנלוגי-moog-subsequent-37",
-    "description_short": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
-    "description_full": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
-    "price": 8367.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
-      "alt": "סינתיסייזר בס אנלוגי Moog Subsequent 37"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "flagship",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg"
+    "price": 8367.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "flagship"
     ],
     "specs": {},
-    "reviews": {
-      "average": 4.0,
-      "count": 2
-    },
-    "contextual": {
-      "pros": [
-        "Excellent transient response and clarity",
-        "Wide sweet spot for mixing",
-        "Accurate low-end reproduction"
-      ],
-      "cons": [
-        "Rear bass port requires wall distance",
-        "Higher price point in category"
-      ],
-      "expert_tips": [
-        "Use room correction software for best results",
-        "Position at ear height on isolation pads"
-      ]
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog subsequent 37 moog   "
   },
   {
     "id": "8636862",
-    "sku": "29-GRANDMOTHER",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog Grandmother",
-    "slug": "סינתיסייזר-moog-grandmother",
-    "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
-    "price": 5020.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
-      "alt": "סינתיסייזר Moog Grandmother"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "flagship",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg"
+    "price": 5020.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "flagship"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog grandmother moog   "
   },
   {
     "id": "8669133",
-    "sku": "29-MINMOOGD0406",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog Minimoog Model D",
-    "slug": "סינתיסייזר-moog-minimoog-model-d",
-    "description_short": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
-    "price": 25100.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
-      "alt": "סינתיסייזר Moog Minimoog Model D"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "flagship",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg"
+    "price": 25100.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "flagship"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog minimoog model d moog   "
   },
   {
     "id": "8636373",
-    "sku": "29-DFAM",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog DFAM",
-    "slug": "סינתיסייזר-moog-dfam",
-    "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
-    "price": 2928.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
-      "alt": "סינתיסייזר Moog DFAM"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg"
+    "price": 2928.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog dfam moog   "
   },
   {
     "id": "8670434",
-    "sku": "29-MUSE",
-    "brand_id": "moog",
-    "name": "סינתיסייזר אנלוגי Moog Muse",
-    "slug": "סינתיסייזר-אנלוגי-moog-muse",
-    "description_short": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
-    "price": 14642.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
-      "alt": "סינתיסייזר אנלוגי Moog Muse"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "flagship",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg"
+    "price": 14642.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "flagship"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog muse moog   "
   },
   {
     "id": "8662251",
-    "sku": "29-MESSENGER",
-    "brand_id": "moog",
-    "name": "סינתיסייזר Moog Messenger",
-    "slug": "סינתיסייזר-moog-messenger",
-    "description_short": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
-    "description_full": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
-    "price": 3556.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
-      "alt": "סינתיסייזר Moog Messenger"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg"
+    "price": 3556.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog messenger moog   "
   },
   {
     "id": "8676603",
-    "sku": "29-THEREMINI",
-    "brand_id": "moog",
-    "name": "סינתיסייזר טרמין Moog Theremini",
-    "slug": "סינתיסייזר-טרמין-moog-theremini",
-    "description_short": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
-    "description_full": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
-    "price": 1882.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
-      "alt": "סינתיסייזר טרמין Moog Theremini"
+    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini",
+    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg"
+    "price": 1882.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df moog theremini moog   "
   },
   {
     "id": "8679188",
-    "sku": "29-DSR-CASE",
-    "brand_id": "moog",
-    "name": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case",
-    "slug": "כיסוי-לנשיאת-סינתיסייזר-moog-model-d-sr-series-case",
-    "description_short": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
-    "description_full": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
-    "price": 1673.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
-      "alt": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case"
+    "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case",
+    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "pro",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg"
+    "price": 1673.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "pro"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog model d sr series case moog   "
   },
   {
     "id": "8638605",
-    "sku": "29-2TIER-DCOVER",
-    "brand_id": "moog",
-    "name": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover",
-    "slug": "כיסוי-לסינתיסייזר-moog-2-tier-dust-cover",
-    "description_short": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
-    "description_full": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
-    "price": 209.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
-      "alt": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover"
+    "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover",
+    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "entry",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg"
+    "price": 209.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "entry"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog 2-tier dust cover moog   "
   },
   {
     "id": "8679326",
-    "sku": "29-MSSACCKIT",
-    "brand_id": "moog",
     "name": "Moog Sound Studio Accessory Kit",
-    "slug": "moog-sound-studio-accessory-kit",
-    "description_short": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
-    "description_full": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
-    "price": 962.0,
-    "currency": "ILS",
-    "in_stock": true,
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
-      "alt": "Moog Sound Studio Accessory Kit"
+    "description": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+    "brand": "Moog",
+    "category": "Uncategorized",
+    "subCategory": "General",
+    "tier": "mid",
+    "images": {
+      "main": "/assets/placeholders/no-image.png",
+      "thumbnail": "/assets/placeholders/no-image.png",
+      "gallery": []
     },
-    "image_gallery": [
-      "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg"
+    "price": 962.0,
+    "stockStatus": "in_stock",
+    "aiTags": [
+      "mid"
     ],
     "specs": {},
-    "reviews": {
-      "average": 3.5,
-      "count": 0
-    },
-    "contextual": {
-      "pros": [],
-      "cons": [],
-      "expert_tips": []
-    }
+    "searchTokens": "moog sound studio accessory kit moog   "
   }
 ]

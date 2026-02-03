@@ -8,6 +8,10 @@ Purpose: Enable all agents to learn from every action and improve over time
 import os
 import json
 from datetime import datetime
+from typing import Optional, List, Dict, Any
+from dotenv import load_dotenv
+from google import genai
+from pydantic import BaseModel, Field
 
 load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))

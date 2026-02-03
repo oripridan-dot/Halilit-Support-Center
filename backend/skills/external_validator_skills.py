@@ -8,6 +8,9 @@ Capabilities:
 - Audit report generation
 """
 
+from typing import Dict, Any, Tuple
+from .base_skill import BaseSkill
+
 class ComplianceAuditorSkill(BaseSkill):
     """
     Audits product data against strict compliance rules.

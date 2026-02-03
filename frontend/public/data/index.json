@@ -1,7 +1,7 @@
 {
-  "version": "5.1.0",
-  "build_timestamp": "2026-02-02T22:47:48.118463",
-  "total_products": 668,
+  "version": "5.2.0",
+  "build_timestamp": "2026-02-03T19:06:29Z",
+  "total_products": 647,
   "brands": [
     {
       "id": "drumdots",
@@ -10,22 +10,10 @@
       "data_file": "drumdots.json"
     },
     {
-      "id": "focal",
-      "name": "Focal",
-      "product_count": 6,
-      "data_file": "focal.json"
-    },
-    {
       "id": "moog",
       "name": "Moog",
       "product_count": 17,
       "data_file": "moog.json"
-    },
-    {
-      "id": "neumann",
-      "name": "Neumann",
-      "product_count": 15,
-      "data_file": "neumann.json"
     },
     {
       "id": "nord",
@@ -53,7 +41,7 @@
     },
     {
       "id": "universal-audio",
-      "name": "Universal Audio",
+      "name": "Universal-Audio",
       "product_count": 9,
       "data_file": "universal-audio.json"
     }

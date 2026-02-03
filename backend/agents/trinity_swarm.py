@@ -1,5 +1,10 @@
 import os
 import json
+from typing import List, Dict, Optional, Any
+from dotenv import load_dotenv
+from pydantic import BaseModel, Field
+import google.genai as genai
+from backend.agents.agent_memory import MemoryAwareMixin
 
 # --- CONFIGURATION ---
 # Load environment variables (API keys)

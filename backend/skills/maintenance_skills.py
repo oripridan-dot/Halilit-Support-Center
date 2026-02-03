@@ -9,6 +9,8 @@ Capabilities:
 
 import os
 import re
+from typing import Dict, Any, Tuple
+from .base_skill import BaseSkill
 
 class UnusedImportRemovalSkill(BaseSkill):
     """
@@ -68,13 +70,13 @@ class UnusedImportRemovalSkill(BaseSkill):
                         if re.search(rf'\b{imported_name}\b(?![\s]*(?:import|from))', rest_after) or \
                            re.search(rf'\b{imported_name}\b', '\n'.join(lines[:i])):
                             # If used before or after (but not in import statement)
-                             modified_lines.append(line)
+                            modified_lines.append(line)
                         else:
                             # It might be an "import as" or "from x import y"
                             # This is a basic heuristic skill
-                             modified_lines.append(line)
-                             # For safety in this skill implementation I'll stick to the proven logic from cleanup_codebase.py
-                             # which seemed to be: check rest of file.
+                            modified_lines.append(line)
+                            # For safety in this skill implementation I'll stick to the proven logic from cleanup_codebase.py
+                            # which seemed to be: check rest of file.
                     else:
                         modified_lines.append(line)
                 else:
@@ -117,7 +119,8 @@ class FileCleanupSkill(BaseSkill):
         - directory: str (optional, default root)
         - patterns: List[str] (optional)
         """
-        directory = context.get('directory', '/workspaces/Halilit-Support-Center')
+        directory = context.get(
+            'directory', '/workspaces/Halilit-Support-Center')
         patterns = context.get('patterns', [
             '**/*_BACKUP*',
             '**/*.bak',
@@ -136,7 +139,8 @@ class FileCleanupSkill(BaseSkill):
                             file_path.unlink()
                             removed_files.append(str(file_path))
                         except Exception as e:
-                            self.logger.warning(f"Failed to delete {file_path}: {e}")
+                            self.logger.warning(
+                                f"Failed to delete {file_path}: {e}")
 
             return True, {
                 'removed_count': len(removed_files),

@@ -9,6 +9,10 @@ import os
 import json
 import time
 from datetime import datetime
+from typing import Dict, Any, List, Optional
+from dotenv import load_dotenv
+from google import genai
+from pydantic import BaseModel, Field
 
 load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))

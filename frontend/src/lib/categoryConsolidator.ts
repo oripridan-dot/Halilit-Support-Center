@@ -178,25 +178,45 @@ const SPECTRUM_MAP: Record<string, string> = {
   "groovebox": "grooveboxes",
   "sampler": "grooveboxes",
 
-  // --- STUDIO ---
+  // --- STUDIO (from actual galaxy_db.json categories) ---
   "audio interface": "audio-interfaces",
+  "audio interfaces": "audio-interfaces",
   "studio monitor": "studio-monitors",
+  "studio monitors": "studio-monitors",
+  "speaker": "studio-monitors",
   "condenser microphone": "studio-microphones",
+  "condenser": "studio-microphones",
   "ribbon microphone": "studio-microphones",
+  "microphone": "studio-microphones",
+  "mic": "studio-microphones",
+  "dynamic mic": "studio-microphones",
   "daw": "software-plugins",
   "plugin": "software-plugins",
   "preamp": "outboard-gear",
   "compressor": "outboard-gear",
+  "subwoofer": "studio-monitors",
+  "sub": "studio-monitors",
 
   // --- LIVE ---
   "pa speaker": "pa-systems",
-  "subwoofer": "pa-systems",
   "live mixer": "live-mixers",
   "dj controller": "dj-equipment",
   "turntable": "dj-equipment",
   "wireless microphone": "live-mics",
   "moving head": "lighting",
   "par can": "lighting",
+
+  // --- ACCESSORIES (from actual galaxy_db.json) ---
+  "cable": "cables",
+  "cables": "cables",
+  "cables & connectors": "cables",
+  "jack": "cables",
+  "connector": "cables",
+  "boom arm": "studio-accessories",
+  "mount": "studio-accessories",
+  "headphones": "headphones",
+  "earphone": "headphones",
+  "accessories": "accessories-utility",
 };
 
 // =============================================================================
@@ -297,19 +317,35 @@ export function getConsolidatedProductCategory(product: Product): {
     };
   }
 
-  // 2. Fallback: Use category field
-  if (product.category) {
-    // Map category names to Spectrum IDs
+  // 2. Use category field - but check if it's "Uncategorized" first
+  const categoryKey = (product.category || "default").toLowerCase().trim();
+
+  // If category is explicitly set AND not "Uncategorized", use it
+  if (product.category && categoryKey !== "uncategorized") {
+    // Map category names to Spectrum IDs (matching galaxy_db.json categories)
     const CATEGORY_BRIDGE: Record<string, string> = {
+      // Studio categories
       "studio_monitors": "studio-monitors",
       "audio_interfaces": "audio-interfaces",
       "microphones": "studio-microphones",
-      "speakers": "speakers",
+      "audio interfaces": "audio-interfaces",
+      "studio monitors": "studio-monitors",
+      "speakers": "studio-monitors",
+      "subwoofers": "studio-monitors",
+      "cables & connectors": "cables",
+
+      // Live/consumer categories
       "headphones": "headphones",
-      "default": "accessories-utility"
+
+      // Accessories
+      "accessories": "accessories-utility",
+      "cables": "cables",
+
+      // Fallback
+      "default": "accessories-utility",
+      "other": "accessories-utility"
     };
 
-    const categoryKey = (product.category || "default").toLowerCase().replace(/\s+/g, "_");
     let spectrumId = CATEGORY_BRIDGE[categoryKey] || "accessories-utility";
 
     const galaxy = getGalaxyForSpectrum(spectrumId);
@@ -324,9 +360,9 @@ export function getConsolidatedProductCategory(product: Product): {
     };
   }
 
-  // 3. Fallback: Use brand-based categorization for uncategorized products
+  // 3. Brand-based categorization for uncategorized products
   // This distributes products from each brand to reasonable spectrum categories
-  const brandId = product.brand_id?.toLowerCase() || "unknown";
+  const brandId = product.brand_id?.toLowerCase() || product.brand?.toLowerCase() || "unknown";
   const BRAND_SPECTRUM_MAP: Record<string, string> = {
     // Roland: Drums, Keys, Synths (large catalog)
     "roland": "electronic-drums",

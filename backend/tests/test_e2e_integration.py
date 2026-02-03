@@ -5,8 +5,37 @@ Tests the complete flow: Raw Data → Refinery → Export → Frontend Consumpti
 
 import json
 import sys
+import os
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from backend.pipeline.data_refinery import DataRefinery
 
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+# Add project root to sys.path
+sys.path.insert(0, os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__)))))
+
+def run_all_e2e_tests():
+    """Run all e2e tests manually if pytest not available"""
+    print("\n" + "="*70)
+    print("🧪 RUNNING E2E INTEGRATION TESTS")
+    print("="*70 + "\n")
+
+    tester = TestE2EIntegration()
+
+    methods = [m for m in dir(tester) if m.startswith('test_')]
+    passed = 0
+
+    for method_name in methods:
+        method = getattr(tester, method_name)
+        try:
+            method()
+            print(f"✅ {method_name} passed")
+            passed += 1
+        except Exception as e:
+            print(f"❌ {method_name} failed: {e}")
+
+    print(f"\n📊 Result: {passed}/{len(methods)} passed")
+    return passed == len(methods)
 
 class TestE2EIntegration:
     """End-to-end integration tests"""
@@ -66,8 +95,10 @@ class TestE2EIntegration:
                 catalog = json.load(f)
 
             # Verify structure
-            assert catalog["stats"]["totalProducts"] == 3
-            assert catalog["stats"]["brandsCount"] == 3
+            assert catalog["stats"][
+                "totalProducts"] == 3, f"Total products mismatch: {catalog['stats']['totalProducts']}"
+            assert catalog["stats"][
+                "brandsCount"] == 3, f"Brands count mismatch: {catalog['stats']['brandsCount']}"
 
             # Verify products are normalized
             products = {p["id"]: p for p in catalog["products"]}

@@ -1,0 +1,867 @@
+{
+  "brand": "Universal-Audio",
+  "metadata": {
+    "source": "migration_v5.2",
+    "original_file": "universal-audio.json"
+  },
+  "products": [
+    {
+      "id": "universal-audio-610",
+      "name": "UA 610 Tube Preamp & EQ Collection",
+      "slug": "/universal-audio/ua-610-tube-preamp-eq-collection",
+      "brand_id": "universal-audio",
+      "category": "Audio Interfaces",
+      "subcategories": [
+        "preamp"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Timeless warmth and punch for your vocals and instruments",
+      "description_full": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic \u201cend-to-end\u201d emulation of two classics \u2014 the 610-A and 610-B \u2014 including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison\u2122 preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
+        "alt": "Spitfire Symphonic Brass",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
+        "alt": "Spitfire Symphonic Brass",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
+          "alt": "Manley Tube Preamp",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_woodwinds_gallery_1_f16aa1a8-c5b0-4738-9fad-e29cb6cbfa79.png?v=1742249055",
+          "alt": "Spitfire Symphonic Woodwinds",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+          "alt": "UAD Essentials Edition",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/century_tube_channel_strip_gallery_1.png?v=1742248567",
+          "alt": "Century Tube Channel Strip",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/analog_classics_pro_bundle_gallery_1_v2.png?v=1742233497",
+          "alt": "Analog Classics Pro Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_chamber_strings_gallery_1_a88222c8-137d-46d9-b2e7-4ba3870ca89f.png?v=1742249347",
+          "alt": "Spitfire Chamber Strings",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/la-6176_signature_channel_strip_gallery_1.png?v=1742248466",
+          "alt": "LA-6176 Signature Channel Strip",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_bundle_gallery_1.png?v=1742248538",
+          "alt": "LUNA Spitfire Bundle",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "ua 610 tube preamp & eq collection audio interfaces preamp timeless warmth and punch for your vocals and instruments universal audio",
+      "filter_tags": [
+        "unknown",
+        "audio interfaces",
+        "universal-audio",
+        "preamp",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/610-collection",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978019"
+    },
+    {
+      "id": "universal-audio-universal-audio-auto-tune-realtime-x",
+      "name": "Auto-Tune Realtime X",
+      "slug": "/universal-audio/auto-tune-realtime-x",
+      "brand_id": "universal-audio",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Get the iconic Auto-Tune\u00ae effect, perfected for Apollo interfaces",
+      "description_full": "Get the iconic Auto-Tune\u00ae effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto\u2011Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": "C-Suite C-Vox Noise & Ambience Reduction",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": "C-Suite C-Vox Noise & Ambience Reduction",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+          "alt": "UAD Complete 4",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
+          "alt": "Tube-Tech CL 1B MkII Compressor",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+          "alt": "Precision Maximizer",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
+          "alt": "AMS DMX Digital Delay & Pitch Shifter",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
+          "alt": "UAD Custom 10 Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
+          "alt": "Precision De-Esser",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+          "alt": "UAD Ultimate 14",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
+          "alt": "EMT 140 Classic Plate Reverberator",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "auto-tune realtime x other get the iconic auto-tune\u00ae effect, perfected for apollo interfaces universal audio",
+      "filter_tags": [
+        "universal-audio",
+        "other",
+        "unknown",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978095"
+    },
+    {
+      "id": "universal-audio-universal-audio-ocean-way-studios-deluxe",
+      "name": "Ocean Way Studios Deluxe",
+      "slug": "/universal-audio/ocean-way-studios-deluxe",
+      "brand_id": "universal-audio",
+      "category": "Microphones",
+      "subcategories": [
+        "mic"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Step inside the studio that made history, emulated in perfect end-to-end detail",
+      "description_full": "Step inside the studio that made history, emulated in perfect end-to-end detail.\nPlace your vocals, drums, guitars, and more inside Ocean Way Studios' legendary rooms\nBring your sources to life in Bill Putnam Sr.'s original reverb chambers\nTransform any track with Ocean Way's original hit-making re-mic setups\nShape your sound with the analog consoles and outboard gear heard on hundreds of iconic recordings\nPut yourself in the control rooms of a world class recording studio with enhanced retina graphics and user interface\nAlso includes original Ocean Way Studios plug-in for Apollo and UAD hardware",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/paradise_guitar_studio_gallery_1.png?v=1768333947",
+        "alt": "Paradise Guitar Studio",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/paradise_guitar_studio_gallery_1.png?v=1768333947",
+        "alt": "Paradise Guitar Studio",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_microphone_collection_gallery_2.png?v=1742249534",
+          "alt": "Ocean Way Microphone Collection",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/shadow_hills_mastering_compressor_class-A_gallery_1.png?v=1756919399",
+          "alt": "Shadow Hills Mastering Compressor Class A",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/studio_d_chorus_gallery_1.png?v=1742249235",
+          "alt": "Studio D Chorus",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/maag_eq4_ms_gallery_1.png?v=1756919362",
+          "alt": "Maag Audio EQ4 MS",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+          "alt": "UAD Ultimate 14",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/luna_pro_gallery_1.png?v=1761068886",
+          "alt": "LUNA Pro",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+          "alt": "UAD Essentials Edition",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spl_vitalizer_mk3t_gallery_1_v2.png?v=1763392654",
+          "alt": "SPL Vitalizer MK3-T",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "ocean way studios deluxe microphones mic step inside the studio that made history, emulated in perfect end-to-end detail universal audio",
+      "filter_tags": [
+        "unknown",
+        "universal-audio",
+        "microphones",
+        "mic",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/ocean-way-studios-deluxe",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978151"
+    },
+    {
+      "id": "universal-audio-universal-audio-paradise-guitar-studio",
+      "name": "Paradise Guitar Studio",
+      "slug": "/universal-audio/paradise-guitar-studio",
+      "brand_id": "universal-audio",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "speaker"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Turn your riffs into records",
+      "description_full": "Turn your riffs into records.\nGet an entire pro guitar recording chain in your DAW \u2014 complete with classic amps, cabs, mics, pedals, studio effects, and more\nExplore 11 hand-picked vintage and modified tube amps \u2014 a \u201cgolden unit\u201d collection of essential clean, crunch, and boutique tones\nCapture your perfect sound in minutes with curated speaker cabinets and expertly-placed studio mics\nShape your final tone with studio effects like 1176 compression, vintage tape echo, spring and plate reverbs, EQ, and more\nStay inspired with over 300 presets spanning rock, blues, indie, metal, funk, pop, and beyond",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
+        "alt": "Ocean Way Studios Deluxe",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
+        "alt": "Ocean Way Studios Deluxe",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+          "alt": "UAD Essentials Edition",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/luna_pro_gallery_1.png?v=1761068886",
+          "alt": "LUNA Pro",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
+          "alt": "Manley Tube Preamp",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+          "alt": "UAD Ultimate 14",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/studio_d_chorus_gallery_1.png?v=1742249235",
+          "alt": "Studio D Chorus",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_2_thumb_v2_e9604726-2345-408b-834d-53b4a4010e38.png?v=1747769025",
+          "alt": "UAD Custom 2 Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_pro_vocal_bundle_gallery_1.png?v=1748444512",
+          "alt": "UAD Pro Vocal Bundle",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "paradise guitar studio studio monitors speaker turn your riffs into records universal audio",
+      "filter_tags": [
+        "unknown",
+        "speaker",
+        "universal-audio",
+        "studio monitors",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/paradise-guitar-studio",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978200"
+    },
+    {
+      "id": "universal-audio-uad",
+      "name": "UAD Spark",
+      "slug": "/universal-audio/uad-spark",
+      "brand_id": "universal-audio",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "bronze",
+      "tier_score": 25,
+      "description_short": "The plug-ins and instruments in UAD Spark are all undoubtedly superb and if you don\u2019t already...",
+      "description_full": "The plug-ins and instruments in UAD Spark are all undoubtedly superb and if you don\u2019t already have these tools, this is a fantastic way to access and explore some exceptional analogue plug-ins and find out what all the fuss is about.",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": null,
+      "image_thumbnail": null,
+      "image_gallery": [],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "uad spark other the plug-ins and instruments in uad spark are all undoubtedly superb and if you don\u2019t already... universal audio",
+      "filter_tags": [
+        "universal-audio",
+        "other",
+        "unknown",
+        "bronze"
+      ],
+      "render_hints": {
+        "has_hero_image": false,
+        "has_gallery": false,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/uad-spark",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978242"
+    },
+    {
+      "id": "universal-audio-luna",
+      "name": "LUNA Pro",
+      "slug": "/universal-audio/luna-pro",
+      "brand_id": "universal-audio",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "silver",
+      "tier_score": 50,
+      "description_short": "Transform LUNA into an analog playground",
+      "description_full": "Transform LUNA into an analog playground.\nTurn LUNA into a fully-loaded studio with analog tape, summing, and console extensions\nTap into 29 UAD plug-ins and virtual instruments to take your mixes to the next level\nNew: Edit and tune vocals faster with ARA plug-ins like Melodyne and DynAssist\nNew: Integrate your analog gear using Hardware Inserts for streamlined mixing",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/neve_summing_gallery_1.png?v=1742502468",
+        "alt": "Neve Summing",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/neve_summing_gallery_1.png?v=1742502468",
+        "alt": "Neve Summing",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/api_summing_gallery_1.png?v=1742313699",
+          "alt": "API Summing",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
+          "alt": "Ocean Way Studios Deluxe",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+          "alt": "UAD Essentials Edition",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/paradise_guitar_studio_gallery_1.png?v=1768333947",
+          "alt": "Paradise Guitar Studio",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+          "alt": "UAD Complete 4",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+          "alt": "UAD Ultimate 14",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ampex_atr-102_mastering_tape_recorder_gallery_1_9d7ee9ff-76dc-433f-a341-1ee354d70e84.png?v=1742249387",
+          "alt": "Ampex ATR-102 Mastering Tape Recorder",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "luna pro other transform luna into an analog playground universal audio",
+      "filter_tags": [
+        "universal-audio",
+        "unknown",
+        "other",
+        "silver"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/luna-pro",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978283"
+    },
+    {
+      "id": "universal-audio-universal-audio-anthem-analog-synthesizer",
+      "name": "Anthem Analog Synthesizer",
+      "slug": "/universal-audio/anthem-analog-synthesizer",
+      "brand_id": "universal-audio",
+      "category": "Subwoofers",
+      "subcategories": [
+        "sub",
+        "bass"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Put the biggest, baddest analog sounds at your fingertips",
+      "description_full": "Put the biggest, baddest analog sounds at your fingertips.\nSculpt enormous bass and powerful leads that fill out your song with fat analog texture\nDial in the bold analog-modeled filter, from subtle warmth and saturation to all-out sonic destruction\nGet unapologetically lo-fi with vintage modulation effects, spring reverb, and dubby tape echo\nCreate evolving sequences with a step sequencer that adds polyrhythms, accents, and generative textures",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/electra_88_vintage_keyboard_studio_gallery_1.png?v=1742502469",
+        "alt": "Electra 88 Vintage Keyboard Studio",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/electra_88_vintage_keyboard_studio_gallery_1.png?v=1742502469",
+        "alt": "Electra 88 Vintage Keyboard Studio",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/opal_morphing_synthesizer_gallery_1.png?v=1742248619",
+          "alt": "Opal Morphing Synthesizer",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_woodrow_gallery_1.png?v=1742834740",
+          "alt": "UAD Woodrow '55 Instrument Amplifier",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+          "alt": "UAD Essentials Edition",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/a_ad_std-1_gallery_1.png?v=1742248691",
+          "alt": "A/DA STD-1 Stereo Tapped Delay",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/moog_minimoog_gallery_1.png?v=1742502468",
+          "alt": "Moog Minimoog",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/polyMAX_synth_gallery_1.png?v=1752591162",
+          "alt": "PolyMAX Synth",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/lexicon_224_digital_reverb_gallery_1.png?v=1742249116",
+          "alt": "Lexicon 224 Digital Reverb",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "anthem analog synthesizer subwoofers sub bass put the biggest, baddest analog sounds at your fingertips universal audio",
+      "filter_tags": [
+        "unknown",
+        "subwoofers",
+        "universal-audio",
+        "sub",
+        "bass",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/anthem-analog-synthesizer",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978332"
+    },
+    {
+      "id": "universal-audio-max",
+      "name": "PolyMAX Synth",
+      "slug": "/universal-audio/polymax-synth",
+      "brand_id": "universal-audio",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Retro sounds to shock your mind\u2011brain",
+      "description_full": "Retro sounds to shock your mind\u2011brain.\nGet rich, sit-in-the-mix analog sounds from an inspiring polyphonic wonder synth\nUse fat-sounding analog modeled oscillators and filters to demolish creative barriers\nAdd studio-quality UA effects like vintage spring reverb, tape delay, and modulation textures\nDive into lush poly synth sounds with album\u2011ready presets and simple, intuitive controls",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/brigade_chorus_pedal_gallery_1.png?v=1742502468",
+        "alt": "Brigade Chorus",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/brigade_chorus_pedal_gallery_1.png?v=1742502468",
+        "alt": "Brigade Chorus",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/opal_morphing_synthesizer_gallery_1.png?v=1742248619",
+          "alt": "Opal Morphing Synthesizer",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/la-6176_signature_channel_strip_gallery_1.png?v=1742248466",
+          "alt": "LA-6176 Signature Channel Strip",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+          "alt": "Precision Maximizer",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/galaxy_tape_echo_gallery_1.png?v=1742502469",
+          "alt": "Galaxy Tape Echo",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_classic_keys_synths_bundle_gallery_1.png?v=1748444537",
+          "alt": "UAD Classic Keys and Synths Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/helios_type_69_preamp___eq_gallery_1.png?v=1742502468",
+          "alt": "Helios Type 69 Preamp and EQ Collection",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_inflator_gallery_1_79e6a2bd-1515-4de8-b647-47d89fea7b4c.png?v=1742249529",
+          "alt": "Sonnox Oxford Inflator",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/teletronix_LA-3A_classic_audio_leveler_gallery_1.png?v=1742502468",
+          "alt": "Teletronix LA-3A Classic Audio Leveler",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "polymax synth other retro sounds to shock your mind\u2011brain universal audio",
+      "filter_tags": [
+        "universal-audio",
+        "other",
+        "unknown",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/polymax-synth",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978381"
+    },
+    {
+      "id": "universal-audio-universal-audio-ox-amp-top-box",
+      "name": "OX Amp Top Box",
+      "slug": "/universal-audio/ox-amp-top-box",
+      "brand_id": "universal-audio",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "speaker"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Get legendary studio tones from your tube amp \u2014 anywhere, at any volume",
+      "description_full": "Get legendary studio tones from your tube amp \u2014 anywhere, at any volume.\nPlay and record your tube amp in its tonal sweet spot \u2014 anywhere, at any volume, with full dynamics\nGet stunning mic and guitar cabinet combinations at the turn of a RIG knob \u2014 no miking required\nAudition, tweak, and save more than 100 jaw-dropping custom Rigs from compatible iPad, or Mac/Windows computers.\nGet authentic \u201cedge of destruction\u201d sounds, complete with UA Dynamic Room Modeling, speaker breakup, and cone cry",
+      "price": null,
+      "currency": "USD",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_dynamic_eq_gallery_1.png?v=1742248702",
+        "alt": "Sonnox Oxford Dynamic EQ",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_dynamic_eq_gallery_1.png?v=1742248702",
+        "alt": "Sonnox Oxford Dynamic EQ",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ampeg_svt-vr_bass_amplifier_gallery_1.png?v=1742248504",
+          "alt": "Ampeg SVT-VR Bass Amplifier",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/paradise_guitar_studio_gallery_1.png?v=1768333947",
+          "alt": "Paradise Guitar Studio",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_guitar_amp_bundle_mk2_gallery_1.png?v=1746728264",
+          "alt": "UAD Guitar Amp Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/distortion_essentials_bundle_gallery_1.png?v=1764003784",
+          "alt": "Distortion Essentials Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/marshall_legends_bundle_gallery_1.png?v=1742249317",
+          "alt": "Marshall Legends Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_inflator_gallery_1_79e6a2bd-1515-4de8-b647-47d89fea7b4c.png?v=1742249529",
+          "alt": "Sonnox Oxford Inflator",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_supr_esser_ds_gallery_1.png?v=1742248579",
+          "alt": "Sonnox Oxford SuprEsser DS",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tonelux_tilt_eq_gallery_1_ccc71ba6-93d1-41a9-9bab-8ad2b284c231.png?v=1742248590",
+          "alt": "Tonelux Tilt EQ",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "ox amp top box studio monitors speaker get legendary studio tones from your tube amp \u2014 anywhere, at any volume universal audio",
+      "filter_tags": [
+        "unknown",
+        "speaker",
+        "universal-audio",
+        "studio monitors",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/ox-amp-top-box",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978435"
+    }
+  ]
+}

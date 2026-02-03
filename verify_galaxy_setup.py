@@ -6,6 +6,7 @@ Checks that all components of the Galaxy Data Protocol are operational.
 
 import json
 import sys
+from pathlib import Path
 
 def check_backend_files():
     """Verify backend pipeline files exist."""

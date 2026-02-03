@@ -12,6 +12,7 @@ Capabilities:
 import os
 import re
 import json
+from typing import Dict, Any, Tuple, List
 from backend.skills.base_skill import BaseSkill
 
 class CodeAutoUpdateSkill(BaseSkill):

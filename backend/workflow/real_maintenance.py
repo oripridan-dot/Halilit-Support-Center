@@ -7,6 +7,7 @@ Not dummy workflows - this does real work.
 
 import os
 import re
+from typing import List, Dict, Any, Optional
 from backend.workflow.engine import WorkflowState
 
 class RealCodeCleanupWorkflow:

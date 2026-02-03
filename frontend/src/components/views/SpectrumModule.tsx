@@ -281,7 +281,9 @@ export const SpectrumModule = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
                       ID REF:{" "}
-                      {(hoveredProduct.id || "").split("_")[1] || hoveredProduct.id || "N/A"}
+                      {(hoveredProduct.id || "").split("_")[1] ||
+                        hoveredProduct.id ||
+                        "N/A"}
                     </span>
                   </div>
                   <h1 className="text-2xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
@@ -355,7 +357,9 @@ export const SpectrumModule = () => {
               <div className="w-full h-px bg-zinc-800" />
 
               <button
-                onClick={() => hoveredProduct.id && openProductPop(hoveredProduct.id)}
+                onClick={() =>
+                  hoveredProduct.id && openProductPop(hoveredProduct.id)
+                }
                 className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-4 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
               >
                 <Maximize2 className="w-4 h-4" />

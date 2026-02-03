@@ -1,210 +1,261 @@
-"""
-Data Refinery: Transforms raw product data into Galaxy Standard format.
-
-The strategy: "Refine, Validate, Enforce"
-1. Refine: Normalize brands, clean text, generate missing SEO tags.
-2. Validate: Fail the build if a product is missing critical fields.
-3. Enforce: Output a schema that matches the Frontend's TypeScript interfaces 1:1.
-"""
-
 import json
 import time
-import logging
+import glob
 import os
+import uuid
+from typing import List, Dict, Any
+import logging
 
 # Configure Logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("DataRefinery")
 
 class DataRefinery:
-    """Processes raw product data through refinement and validation gates."""
-
     def __init__(self):
-        self.products: List[Dict[str, Any]] = []
-        self.validation_errors: List[str] = []
-        self.validation_warnings: List[str] = []
+        self.products = []
+        self.validation_errors = []  # Critical errors that prevent ingestion
+        self.validation_warnings = []  # Soft warnings (e.g. zero price)
+        self.seen_ids = set()
+
+        # Brand normalization map
+        self.brand_map = {
+            "Nord Keyboards": "Nord",
+            "Moog Music": "Moog",
+            "Universal Audio": "Universal-Audio",
+            "Roland Inc.": "Roland",
+            "Yamaha Ltd.": "Yamaha",
+            "KORG Synths": "Korg",
+            "Korg Synths": "Korg",
+            "Native Instruments": "Native"
+        }
 
     def ingest_raw_data(self, raw_items: List[Dict]) -> int:
         """
         Takes raw dumps (from scrapers/agents) and attempts to refine them.
-
-        Args:
-            raw_items: List of raw product dictionaries
-
-        Returns:
-            Number of successfully refined items
+        Returns the number of successfully ingested items.
         """
-        logger.info(f"🔄 Refining {len(raw_items)} raw items...")
+        logger.info(f"Refining {len(raw_items)} raw items...")
+        count = 0
 
-        accepted_count = 0
-        for idx, item in enumerate(raw_items):
+        for item in raw_items:
             try:
                 refined = self._refine_item(item)
+
+                if not refined:
+                    logger.warning(
+                        f"Refinement returned None for item: {item.get('name', 'Unknown')}")
+                    continue
+
+                # Deduplication / ID Logic
+                original_id = refined['id']
+                dup_count = 1
+                while refined['id'] in self.seen_ids:
+                    refined['id'] = f"{original_id}-dup-{dup_count}"
+                    dup_count += 1
+
+                self.seen_ids.add(refined['id'])
+
                 if self._validate_item(refined):
                     self.products.append(refined)
-                    accepted_count += 1
+                    count += 1
                 else:
-                    logger.debug(
-                        f"Item #{idx} failed validation: {item.get('name', 'Unknown')}")
+                    reason = self.validation_errors[-1] if self.validation_errors else "Unknown"
+                    logger.warning(
+                        f"Validation failed for {refined['id']}: {reason}")
             except Exception as e:
                 logger.warning(
-                    f"Skipping item #{idx} ({item.get('name', 'Unknown')}): {e}")
+                    f"Skipping item {item.get('name', 'Unknown')}: {e}")
+        return count
 
-        logger.info(f"✅ Accepted {accepted_count}/{len(raw_items)} items")
-        return accepted_count
+    def _normalize_brand(self, brand_raw: Any) -> str:
+        """Standardizes brand names"""
+        if not brand_raw:
+            return ""
+        b = str(brand_raw).strip()
+        return self.brand_map.get(b, b.title())
 
-    def _refine_item(self, item: Dict) -> Dict[str, Any]:
-        """
-        TRANSFORMATION LAYER: Cleans and standardizes data.
-
-        Handles:
-        - Brand normalization (e.g., "Nord Keyboards" → "Nord")
-        - Tier calculation based on price
-        - Search token generation for frontend search
-        - Image URL fallbacks
-        """
-        # 1. Normalize Brand
-        brand_raw = item.get('brand', 'Generic').strip()
-        brand = self._normalize_brand(brand_raw)
-
-        # 2. Extract Price
-        price = self._parse_price(item.get('price', 0))
-
-        # 3. Calculate Tier (Logic rule: price-based)
-        tier = self._determine_tier(price)
-
-        # 4. Extract or Generate Images
-        main_image = item.get('image_url') or item.get(
-            'image') or "/assets/placeholders/no-image.png"
-        gallery = item.get('gallery', []) or [main_image]
-
-        # 5. Generate Search Tokens (For fast frontend search)
-        search_text = self._generate_search_tokens(item, brand, tier)
-
-        # 6. Extract Specs (with fallback)
-        specs = item.get('specs', {}) or item.get('specifications', {}) or {}
-        if isinstance(specs, str):
-            specs = {}  # Fallback if specs is malformed
-
-        # 7. Extract or generate AI tags
-        ai_tags = item.get('tags', []) or item.get('ai_tags', [])
-        if isinstance(ai_tags, str):
-            ai_tags = [ai_tags]
-        ai_tags = list(set(ai_tags + [tier]))  # Deduplicate
-
-        return {
-            "id": str(item.get('uuid') or item.get('id') or item.get('name', 'unknown')),
-            "name": item.get('name', 'Untitled Product').strip(),
-            "brand": brand,
-            "category": item.get('category', 'Uncategorized').strip(),
-            "subCategory": item.get('subCategory', 'General').strip(),
-            "tier": tier,
-            "images": {
-                "main": main_image,
-                "thumbnail": item.get('thumbnail_url') or main_image,
-                "gallery": gallery
-            },
-            "price": price,
-            "stockStatus": item.get('stock_status', 'in_stock'),
-            "aiTags": ai_tags,
-            "specs": specs,
-            "searchTokens": search_text,
-            "description": item.get('description', '').strip()
-        }
-
-    def _normalize_brand(self, brand: str) -> str:
-        """Normalize brand names (remove generic suffixes)."""
-        brand = brand.strip().title()
-        # Remove common suffixes
-        for suffix in [' Keyboards', ' Synths', ' Instruments', ' Inc.', ' Ltd.']:
-            if brand.endswith(suffix):
-                brand = brand[:-len(suffix)].strip()
-        return brand
-
-    def _parse_price(self, price_value: Any) -> float:
-        """Safely parse price from various formats."""
+    def _parse_price(self, price_raw: Any) -> float:
+        """Robust price parsing"""
         try:
-            if isinstance(price_value, str):
-                # Remove common currency symbols
-                cleaned = price_value.replace(
-                    '$', '').replace('€', '').replace('£', '')
-                return float(cleaned.split()[0])
-            return float(price_value)
-        except (ValueError, AttributeError, IndexError):
+            if isinstance(price_raw, (int, float)):
+                return float(price_raw)
+            if isinstance(price_raw, str):
+                cleaned = price_raw.strip().replace('$', '').replace(
+                    '€', '').replace('£', '').replace(',', '')
+                return float(cleaned) if cleaned else 0.0
+            return 0.0
+        except ValueError:
             return 0.0
 
     def _determine_tier(self, price: float) -> str:
-        """Determine product tier based on price."""
+        """Calculates tier from price"""
         if price < 500:
             return 'entry'
         elif price < 1500:
             return 'mid'
         elif price < 4000:
             return 'pro'
-        else:
-            return 'flagship'
+        return 'flagship'
 
-    def _generate_search_tokens(self, item: Dict, brand: str, tier: str) -> str:
-        """Generate a search string combining multiple fields."""
-        components = [
-            item.get('name', ''),
+    def _generate_search_tokens(self, item: Dict, brand: str, tags: List[str]) -> str:
+        """Creates searchable string"""
+        parts = [
+            str(item.get('name', '')),
             brand,
-            item.get('category', ''),
-            item.get('subCategory', ''),
-            tier,
-            ' '.join(item.get('tags', [])) if item.get('tags') else '',
-            item.get('description', '')[:100]  # First 100 chars of description
+            str(item.get('category', '')),
+            str(item.get('subCategory', '')),
+            " ".join(tags)
         ]
-        search_text = ' '.join(str(c) for c in components if c)
-        return search_text.lower()
+        return " ".join(parts).lower()
+
+    def _refine_item(self, item: Dict) -> Dict:
+        """
+        TRANSFORMATION LAYER: Cleans and standardizes data.
+        """
+        # Flatten 'commercial' wrapper if present (Roland/Generic scraping format)
+        commercial = item.get('commercial', {})
+        if commercial and isinstance(commercial, dict):
+            # Map commercial fields to top level if missing
+            if not item.get('name') and commercial.get('title'):
+                item['name'] = commercial.get('title')
+            if not item.get('price') and commercial.get('price_il'):
+                item['price'] = commercial.get('price_il')
+            if not item.get('brand') and commercial.get('brand'):
+                item['brand'] = commercial.get('brand')
+            if not item.get('image_url') and commercial.get('image_url'):
+                item['image_url'] = commercial.get('image_url')
+            if not item.get('stock_status'):
+                item['stock_status'] = 'in_stock' if commercial.get(
+                    'in_stock') else 'out_of_stock'
+
+        # Critical Filter: Drop garbage items
+        name = str(item.get('name', '')).strip()
+        if not name or name.lower() in ['untitled product', 'product', 'item a', 'item b', 'item c']:
+            return None
+            # Overlay commercial data onto item if not present
+            if 'name' not in item and 'title' in commercial:
+                item['name'] = commercial['title']
+            if 'price' not in item:
+                item['price'] = commercial.get('price_il', 0)
+            if 'image_url' not in item:
+                item['image_url'] = commercial.get('image_url')
+            if 'brand' not in item and 'brand' in commercial:
+                item['brand'] = commercial['brand']
+            if 'category' not in item and 'category' in commercial:
+                item['category'] = commercial.get('category')
+            if 'specs' not in item and 'specs' in commercial:
+                item['specs'] = commercial.get('specs', {})
+
+        # 1. Normalize Brand
+        brand = self._normalize_brand(item.get('brand'))
+
+        # 2. Calculate Tier
+        price = self._parse_price(item.get('price', 0))
+        tier = self._determine_tier(price)
+
+        # 3. Generate Search Tokens
+        tags_raw = item.get('tags', [])
+        tags_list = []
+        if isinstance(tags_raw, str):
+            tags_list = tags_raw.split(' ') if ' ' in tags_raw else [tags_raw]
+        elif isinstance(tags_raw, list):
+            tags_list = [str(t) for t in tags_raw]
+
+        search_text = self._generate_search_tokens(item, brand, tags_list)
+
+        # Normalize category/subcategory
+        # Try multiple field names for flexibility
+        category = item.get('category') or item.get('cat') or 'Uncategorized'
+
+        # For subcategory: try subCategory, subcategories (take first), or default to General
+        sub_category = item.get('subCategory')
+        if not sub_category:
+            subcats = item.get('subcategories')
+            if isinstance(subcats, list) and len(subcats) > 0:
+                sub_category = subcats[0]
+            else:
+                sub_category = 'General'
+
+        # FLATTEN SPECS LOGIC
+        raw_specs = item.get('specs', {})
+        final_specs = {}
+
+        if isinstance(raw_specs, dict):
+            # Check for "Specifications" list wrapper
+            if 'Specifications' in raw_specs and isinstance(raw_specs['Specifications'], list):
+                for s in raw_specs['Specifications']:
+                    k = s.get('key') or s.get('name')
+                    v = s.get('value')
+                    if k:
+                        final_specs[str(k)] = v
+            else:
+                # Assume strictly flat kv pairs or clean dictionary
+                final_specs = raw_specs
+        elif isinstance(raw_specs, list):
+            # Handle list of {key, value} objects
+            for s in raw_specs:
+                if isinstance(s, dict):
+                    k = s.get('key') or s.get('name')
+                    v = s.get('value')
+                    if k:
+                        final_specs[str(k)] = v
+
+        # Resolve description from multiple possible fields
+        description = item.get('description', '')
+        if not description:
+            description = item.get('description_full', '')
+        if not description:
+            description = item.get('description_short', '')
+
+        return {
+            "id": str(item.get('uuid') or item.get('id', f"generated-{uuid.uuid4()}")),
+            "name": item.get('name', 'Untitled Product').strip(),
+            "description": description,
+            "brand": brand,
+            "category": category,
+            "subCategory": sub_category,
+            "tier": tier,
+            "images": {
+                "main": item.get('image_url') or "/assets/placeholders/no-image.png",
+                "thumbnail": item.get('thumbnail_url') or item.get('image_url') or "/assets/placeholders/no-image.png",
+                "gallery": item.get('gallery', [])
+            },
+            "price": price,
+            "stockStatus": item.get('stock_status', 'in_stock'),
+            "aiTags": tags_list + [tier],  # Enrich tags
+            "specs": final_specs,
+            "searchTokens": search_text
+        }
 
     def _validate_item(self, item: Dict) -> bool:
         """
         QUALITY GATE: Rejects items that don't meet the standard.
-        Soft warnings for non-critical issues.
         """
         is_valid = True
-        item_ref = f"{item['id']} ({item['name']})"
 
-        # Critical: Name required
-        if not item['name'] or len(item['name'].strip()) < 2:
-            self.validation_errors.append(f"Missing/Invalid Name: {item_ref}")
+        if not item['name'] or len(str(item['name'])) < 2:
+            self.validation_errors.append(f"Missing/Short Name: {item['id']}")
             is_valid = False
 
-        # Critical: Brand required
-        if not item['brand'] or item['brand'] == 'Generic':
-            self.validation_errors.append(f"Missing Brand: {item_ref}")
+        if not item['brand']:
+            self.validation_errors.append(f"Missing Brand: {item['id']}")
             is_valid = False
 
-        # Soft warning: Zero price for in-stock items
         if item['price'] == 0 and item['stockStatus'] == 'in_stock':
-            self.validation_warnings.append(
-                f"Zero price (in-stock): {item_ref}")
-
-        # Soft warning: Missing main image
-        if '/placeholders/' in item['images']['main']:
-            self.validation_warnings.append(
-                f"Using placeholder image: {item_ref}")
+            # Soft warning
+            self.validation_warnings.append(f"Zero price: {item['name']}")
+            logger.warning(f"Zero price detected for {item['name']}")
 
         return is_valid
 
-    def export_golden_json(self, output_path: str) -> bool:
+    def export_golden_json(self, output_path: str):
         """
         Outputs the 'Super Solid' single source of truth.
-
-        Returns:
-            True if export successful, False otherwise
         """
         if not self.products:
-            logger.error("❌ No products to export! Refinery is empty.")
+            logger.warning("Attempted to export empty golden JSON. Aborting.")
             return False
-
-        # Prepare output directory
-        output_dir = Path(output_path).parent
-        output_dir.mkdir(parents=True, exist_ok=True)
 
         payload = {
             "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -217,99 +268,83 @@ class DataRefinery:
             "categories": self._extract_category_tree()
         }
 
-        try:
-            with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(payload, f, indent=2, ensure_ascii=False)
+        # Ensure directory exists
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-            file_size = os.path.getsize(output_path)
-            logger.info(
-                f"✅ SUCCESS: Exported {len(self.products)} products to {output_path} ({file_size} bytes)")
-            return True
-        except Exception as e:
-            logger.error(f"❌ Failed to export: {e}")
-            return False
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(payload, f, indent=2)
 
-    def _extract_category_tree(self) -> Dict[str, List[str]]:
-        """Extract unique category → subcategories mapping."""
+        logger.info(
+            f"✅ SUCCESS: Exported {len(self.products)} products to {output_path}")
+        return True
+
+    def _extract_category_tree(self):
         tree = {}
         for p in self.products:
-            category = p.get('category', 'Uncategorized')
-            subcategory = p.get('subCategory', 'General')
-
-            if category not in tree:
-                tree[category] = []
-            if subcategory not in tree[category]:
-                tree[category].append(subcategory)
-
+            if p['category'] not in tree:
+                tree[p['category']] = []
+            if p['subCategory'] not in tree[p['category']]:
+                tree[p['category']].append(p['subCategory'])
+        # Sort subcategories for consistency
+        for cat in tree:
+            tree[cat] = sorted(list(set(tree[cat])))
         return tree
-
-    def print_report(self):
-        """Print a human-readable report of the refinement process."""
-        logger.info("\n" + "="*60)
-        logger.info("📊 REFINERY REPORT")
-        logger.info("="*60)
-        logger.info(f"Products Accepted: {len(self.products)}")
-        logger.info(f"Validation Errors: {len(self.validation_errors)}")
-        logger.info(f"Validation Warnings: {len(self.validation_warnings)}")
-
-        if self.validation_errors:
-            logger.warning("\n⚠️  Validation Errors:")
-            for err in self.validation_errors[:5]:  # Show first 5
-                logger.warning(f"  - {err}")
-            if len(self.validation_errors) > 5:
-                logger.warning(
-                    f"  ... and {len(self.validation_errors) - 5} more")
-
-        if self.validation_warnings:
-            logger.info("\nℹ️  Validation Warnings:")
-            for warn in self.validation_warnings[:5]:  # Show first 5
-                logger.info(f"  - {warn}")
-            if len(self.validation_warnings) > 5:
-                logger.info(
-                    f"  ... and {len(self.validation_warnings) - 5} more")
-
-        logger.info(f"\n📁 Categories: {len(self._extract_category_tree())}")
-        logger.info(f"🏢 Brands: {len(set(p['brand'] for p in self.products))}")
-        logger.info("="*60 + "\n")
 
 # --- Usage Example ---
 if __name__ == "__main__":
-    """
-    Standalone execution: Load existing JSON dumps and refine them.
-    """
-    import sys
-
-    # Determine base path
-    script_dir = Path(__file__).parent.parent
-    data_dir = script_dir / "data" / "5_golden"
-    output_path = script_dir.parent / "frontend" / \
-        "public" / "data" / "galaxy_db.json"
-
-    # Initialize refinery
+    # In a real run, this would load from your database or multiple JSON dumps
     refinery = DataRefinery()
 
-    # Load all JSON files from data/5_golden/
-    if data_dir.exists():
-        json_files = list(data_dir.glob("*.json"))
-        logger.info(f"Found {len(json_files)} source files to process")
+    # Sources to check:
+    # 1. backend/data/brands/*/products.json (The NEW Single Source of Truth)
+    # 2. backend/data/5_golden/*.json (Legacy fallback)
 
-        for json_file in json_files:
+    base_dir = os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__)))  # backend/
+    workspace_root = os.path.dirname(base_dir)
+
+    sources = [
+        os.path.join(base_dir, 'data', 'brands', '*', 'products.json'),
+        os.path.join(base_dir, 'data', '5_golden', '*.json'),
+        os.path.join(workspace_root, 'frontend', 'public',
+                     'data', 'ingestion', '*.json')
+    ]
+
+    files_found = 0
+    for source_pattern in sources:
+        for file_path in glob.glob(source_pattern):
             try:
-                logger.info(f"Loading {json_file.name}...")
-                with open(json_file, 'r', encoding='utf-8') as f:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    logger.info(f"Ingesting {file_path}...")
                     raw_data = json.load(f)
 
-                # Handle both single object and list of objects
-                items = raw_data if isinstance(raw_data, list) else [raw_data]
-                refinery.ingest_raw_data(items)
+                    # Handle "Brand/Products" wrapper format
+                    items_to_process = []
+                    parent_brand = None
+                    if isinstance(raw_data, dict):
+                        parent_brand = raw_data.get(
+                            'brand_name') or raw_data.get('brand')
+                        if 'products' in raw_data and isinstance(raw_data['products'], list):
+                            items_to_process = raw_data['products']
+                        else:
+                            items_to_process = [raw_data]
+                    elif isinstance(raw_data, list):
+                        items_to_process = raw_data
+
+                    # Inject parent brand if missing in items
+                    if parent_brand:
+                        for item in items_to_process:
+                            if isinstance(item, dict) and not item.get('brand'):
+                                item['brand'] = parent_brand
+
+                    refinery.ingest_raw_data(items_to_process)
+                    files_found += 1
             except Exception as e:
-                logger.error(f"Failed to load {json_file.name}: {e}")
-    else:
-        logger.warning(f"Data directory not found: {data_dir}")
-        logger.info("Using empty dataset for testing...")
+                logger.error(f"Failed to ingest {file_path}: {e}")
 
-    # Export the golden JSON
-    refinery.print_report()
-    success = refinery.export_golden_json(str(output_path))
+    if files_found == 0:
+        logger.warning("No source files found. Checked: " + ", ".join(sources))
 
-    sys.exit(0 if success else 1)
+    output_path = os.path.join(
+        workspace_root, 'frontend', 'public', 'data', 'galaxy_db.json')
+    refinery.export_golden_json(output_path)

@@ -3,6 +3,10 @@ Automatic Context Logging System
 Wraps all DevAgent operations with automatic context tracking
 """
 
+from functools import wraps
+from typing import Callable, Any
+from backend.agents.context_manager import ContextManager
+
 # Global context manager instance
 _context_manager = None
 

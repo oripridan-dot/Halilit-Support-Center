@@ -14,6 +14,9 @@ This is the structural fix for the "DevAgent wipes frontend" disaster.
 """
 
 import logging
+from enum import Enum
+from typing import Dict, Any, List
+from backend.skills.frontend_builder import ReactComponentBuilder, TypeScriptModuleBuilder
 
 class WorkflowState(Enum):
     """Valid states in the feature build workflow."""

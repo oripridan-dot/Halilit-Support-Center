@@ -5,8 +5,11 @@ Runs all unit, integration, and e2e tests across the architecture
 """
 
 import sys
+import os
+from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+# Ensure the root of the workspace is in python path
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 def run_test_suite(suite_name, module_func):
     """Run a test suite and capture results"""
@@ -48,10 +51,30 @@ def main():
     # Import and run e2e tests
     print("📦 Loading E2E Integration Tests...")
     try:
-        test_suites.append(("E2E Integration Tests", run_all_e2e_tests))
-        print("✅ E2E tests loaded")
+        import backend.tests.test_e2e_integration as mod_e2e
+        if hasattr(mod_e2e, 'run_all_e2e_tests'):
+            test_suites.append(
+                ("E2E Integration Tests", mod_e2e.run_all_e2e_tests))
+            print("✅ E2E integration tests loaded")
+        else:
+            print(
+                f"❌ Failed to load e2e tests: Function 'run_all_e2e_tests' not found in module. Dir: {dir(mod_e2e)}")
     except Exception as e:
-        print(f"❌ Failed to load e2e tests: {e}")
+        print(f"❌ Failed to load e2e tests import error: {e}")
+
+    # Import and run data refinery tests
+    print("📦 Loading Data Refinery Tests...")
+    try:
+        import backend.tests.test_galaxy_refinery as mod_refinery
+        if hasattr(mod_refinery, 'run_all_tests'):
+            test_suites.append(
+                ("Data Refinery Tests", mod_refinery.run_all_tests))
+            print("✅ Data refinery tests loaded")
+        else:
+            print(
+                f"❌ Failed to load data refinery tests: Function 'run_all_tests' not found. Dir: {dir(mod_refinery)}")
+    except Exception as e:
+        print(f"❌ Failed to load data refinery tests import error: {e}")
 
     # Import and run galaxy refinery tests
     print("📦 Loading Data Refinery Tests...")

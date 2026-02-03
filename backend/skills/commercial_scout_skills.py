@@ -9,6 +9,8 @@ Capabilities:
 """
 
 import re
+from typing import Dict, Any, Tuple
+from .base_skill import BaseSkill
 
 class SourceHarvesterSkill(BaseSkill):
     """

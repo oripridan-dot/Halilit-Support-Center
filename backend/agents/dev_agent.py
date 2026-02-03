@@ -9,6 +9,12 @@ With AUTOMATIC context logging for everything
 import os
 import time
 import json
+from typing import Dict, Any, List, Optional
+from dotenv import load_dotenv
+from google import genai
+from pydantic import BaseModel, Field
+from backend.agents.auto_context import AutoContextMixin, auto_log_context
+from backend.agents.agent_memory import MemoryAwareMixin
 
 load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
