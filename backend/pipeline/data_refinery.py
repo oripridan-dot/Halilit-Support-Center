@@ -259,7 +259,7 @@ class DataRefinery:
 
         payload = {
             "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "version": "5.2.0",
+            "version": "5.2.3",
             "stats": {
                 "totalProducts": len(self.products),
                 "brandsCount": len(set(p['brand'] for p in self.products))
