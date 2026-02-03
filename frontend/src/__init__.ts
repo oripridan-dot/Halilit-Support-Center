@@ -1,7 +1,7 @@
 /**
  * Halilit Support Center v5.1 - Frontend
  * React 18 + Vite + TypeScript
- * 
+ *
  * Key Components:
  * - main.tsx: React entry point
  * - App.tsx: Root component with error boundary

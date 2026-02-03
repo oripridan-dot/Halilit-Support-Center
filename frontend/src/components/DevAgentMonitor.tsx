@@ -250,7 +250,7 @@ export function DevAgentMonitor() {
 🛡️ PREVENTION (NEW!):
   await DevAgent.validateBeforeSave(path, code) - Pre-save validation
   await DevAgent.validateSyntax(path, code)     - Syntax check only
-  
+
 💡 PROACTIVE:
   await DevAgent.scan()               - Scan codebase for issues
   DevAgent.improvements()             - View improvements

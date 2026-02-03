@@ -4,11 +4,9 @@ Test DevAgent Prevention Capabilities
 Demonstrates how DevAgent prevents syntax and type errors
 """
 
-from backend.agents.dev_agent import DevAgent
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 
 def test_prevention():
     """Test error prevention features"""
@@ -25,17 +23,17 @@ def test_prevention():
 export function DevAgentMonitor() {
   const [errors, setErrors] = useState([]);
   const [isDevelopment] = useState(() => import.meta.env.DEV);
-  
+
   // ❌ THIS IS WRONG - Return before hooks are done!
   if (!isDevelopment) {
     return null;
   }
-  
+
   // More hooks after conditional return
   const analyzeError = useCallback(async (error) => {
     // ...
   }, []);
-  
+
   return <div>Monitor</div>;
 }
 """
@@ -58,17 +56,17 @@ export function DevAgentMonitor() {
 export function DevAgentMonitor() {
   const [errors, setErrors] = useState([]);
   const [isDevelopment] = useState(() => import.meta.env.DEV);
-  
+
   // More hooks
   const analyzeError = useCallback(async (error) => {
     // ...
   }, []);
-  
+
   // ✅ Return AFTER all hooks
   if (!isDevelopment) {
     return null;
   }
-  
+
   return <div>Monitor</div>;
 }
 """
@@ -90,7 +88,7 @@ useEffect(() => {
   const subscription = observable.subscribe(value => {
     console.log(value);
   });
-  
+
   return () => subscription.unsubscribe();
 }, []);
 """
@@ -133,7 +131,6 @@ def my_function():
     print("   • Missing error boundaries")
     print("   • Type errors (when TypeScript is available)")
     print("\n🚀 Errors caught BEFORE they run = Faster development!\n")
-
 
 if __name__ == "__main__":
     test_prevention()

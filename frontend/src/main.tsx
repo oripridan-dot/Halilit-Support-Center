@@ -1,36 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { CopilotKit } from "@copilotkit/react-core";
-import { CopilotSidebar } from "@copilotkit/react-ui";
-import "@copilotkit/react-ui/styles.css";
 import App from "./App.tsx";
 import "./index.css";
 
 const rootElement = document.getElementById("root");
 
-// Check if CopilotKit API key is available
-const copilotApiKey = import.meta.env.VITE_COPILOT_API_KEY;
-const useCopilot = !!copilotApiKey;
-
 if (rootElement) {
   try {
     createRoot(rootElement).render(
       <StrictMode>
-        {useCopilot ? (
-          <CopilotKit publicApiKey={copilotApiKey}>
-            <CopilotSidebar
-              instructions="You are the Halilit AI Agent Commander. You control the Trinity Swarm (CommercialScout, OfficialVerifier, ExternalValidator) to audit and enrich product catalogs. Ask me to run audits or check product data."
-              defaultOpen={false}
-            >
-              <App />
-            </CopilotSidebar>
-          </CopilotKit>
-        ) : (
-          <App />
-        )}
-      </StrictMode>,
+        <App />
+      </StrictMode>
     );
   } catch (error) {
+    console.error("Failed to mount React application:", error);
     rootElement.innerHTML = `
       <div style="padding: 40px; font-family: system-ui; max-width: 600px; margin: 0 auto;">
         <h1 style="color: #ef4444;">Failed to Load Application</h1>
@@ -39,4 +22,6 @@ if (rootElement) {
       </div>
     `;
   }
+} else {
+  console.error("Root element #root not found");
 }

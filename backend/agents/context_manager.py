@@ -9,17 +9,11 @@ import os
 import json
 import time
 from datetime import datetime
-from typing import List, Dict, Any, Optional
-from pathlib import Path
-from pydantic import BaseModel, Field
-import google.genai as genai
-from dotenv import load_dotenv
 
 load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # --- DATA MODELS ---
-
 
 class ContextEntry(BaseModel):
     """Single context entry in development history"""
@@ -30,7 +24,6 @@ class ContextEntry(BaseModel):
     files_affected: List[str] = []
     tags: List[str] = []
     metadata: Dict[str, Any] = {}
-
 
 class DevelopmentContext(BaseModel):
     """Complete development context state"""
@@ -43,7 +36,6 @@ class DevelopmentContext(BaseModel):
     file_history: Dict[str, List[str]]  # file -> list of change ids
     consistency_rules: Dict[str, str]
 
-
 class ContextAnalysis(BaseModel):
     """Analysis of current development context"""
     consistency_score: int = Field(..., description="0-100")
@@ -51,7 +43,6 @@ class ContextAnalysis(BaseModel):
     inconsistencies: List[str]
     suggestions: List[str]
     related_context: List[str]
-
 
 class RefactoringPlan(BaseModel):
     """Automated refactoring plan"""
@@ -61,7 +52,6 @@ class RefactoringPlan(BaseModel):
     affected_files: List[str]
     suggested_changes: List[Dict[str, str]]
     reasoning: str
-
 
 # --- CONTEXT MANAGER ---
 
@@ -448,7 +438,6 @@ Recent Activity:
 """
         return summary
 
-
 # --- QUICK TEST ---
 
 def test_context_manager():
@@ -480,7 +469,6 @@ def test_context_manager():
     print(manager.get_context_summary())
 
     print("\n✅ Context Manager test complete!")
-
 
 if __name__ == "__main__":
     test_context_manager()

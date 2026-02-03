@@ -1,9 +1,9 @@
 /**
  * Halilit Support Center - Unified Types
- * 
+ *
  * This is the SINGLE source of truth for all TypeScript types.
  * Types are aligned with the backend pipeline output format.
- * 
+ *
  * Run `python -m backend.pipeline types` to regenerate generated.ts
  */
 

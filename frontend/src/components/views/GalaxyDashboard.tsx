@@ -1,163 +1,123 @@
-import React, { useEffect, useState } from "react";
-import { CategorySlot } from "./galaxy/CategorySlot";
+import React from "react";
+import {
+  LayoutGrid,
+  Guitar,
+  Music,
+  Piano,
+  Mic2,
+  Speaker,
+  Plug,
+  HelpCircle,
+} from "lucide-react";
 import { useNavigationStore } from "../../store/navigationStore";
-import { Guitar, Drum, Music, Mic, Volume2, Radio } from "lucide-react";
+import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
+import { CategorySlot } from "./galaxy/CategorySlot";
+import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
+import { getContextBackground } from "../../lib/slotBackgrounds";
+import { useProductCounts } from "../../hooks/useProductCounts";
 
-interface CategoryData {
-  id: string;
-  name: string;
-  subcategories?: string[];
-  product_count?: number;
-  icon?: React.ElementType;
-  color?: string;
-  image?: string;
-}
+// Icon mapping for sectors
+const ICON_MAP: Record<string, React.ElementType> = {
+  Guitar,
+  Music,
+  Piano,
+  Mic2,
+  Speaker,
+  Plug,
+  HelpCircle,
+};
 
-// Define the main 6 categories (Galaxies/Tribes)
-const MAIN_CATEGORIES: CategoryData[] = [
-  {
-    id: "guitars-bass",
-    name: "Guitars & Bass",
-    icon: Guitar,
-    color: "#e11d48",
-    image: "/assets/placeholders/guitars.jpg",
-  },
-  {
-    id: "drums-percussion",
-    name: "Drums & Percussion",
-    icon: Drum,
-    color: "#f59e0b",
-    image: "/assets/placeholders/drums.jpg",
-  },
-  {
-    id: "keys-production",
-    name: "Keys & Production",
-    icon: Music,
-    color: "#8b5cf6",
-    image: "/assets/placeholders/keys.jpg",
-  },
-  {
-    id: "studio-recording",
-    name: "Studio & Recording",
-    icon: Mic,
-    color: "#06b6d4",
-    image: "/assets/placeholders/studio.jpg",
-  },
-  {
-    id: "live-dj",
-    name: "Live & DJ",
-    icon: Radio,
-    color: "#10b981",
-    image: "/assets/placeholders/live.jpg",
-  },
-  {
-    id: "accessories",
-    name: "Accessories",
-    icon: Volume2,
-    color: "#6366f1",
-    image: "/assets/placeholders/accessories.jpg",
-  },
-];
+// --- ADAPTATION LAYER: Map Universal Categories to "Galaxy" shape ---
+const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
+  return {
+    id: cat.id,
+    name: cat.label,
+    icon: cat.iconName,
+    iconComponent: ICON_MAP[cat.iconName] || HelpCircle,
+    color: cat.color,
+    children: cat.spectrum.map((sub) => {
+      const bgConfig = getContextBackground(sub.id);
+      return {
+        id: sub.id,
+        name: sub.label,
+        image: bgConfig.imageUrl,
+        fallbackGradient: bgConfig.fallbackGradient,
+      };
+    }),
+  };
+});
 
-/**
- * GalaxyDashboard Component
- *
- * The main landing view showing 6 category sectors (Galaxies/Tribes).
- * Each sector contains subcategory slots that navigate to SpectrumModule.
- *
- * Layout: 2 rows × 3 columns grid
- */
-export const GalaxyDashboard: React.FC = () => {
+export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
-  const [categoryCounts, setCategoryCounts] = useState<Record<string, number>>(
-    {},
-  );
-  const [loading, setLoading] = useState(true);
+  const { counts, loading } = useProductCounts();
 
-  // Load category counts from index.json
-  useEffect(() => {
-    const loadCounts = async () => {
-      try {
-        const response = await fetch("/data/search_index.json");
-        if (!response.ok) throw new Error("Failed to load search index");
-
-        const products = await response.json();
-
-        // Count products by tribe_id/category
-        const counts: Record<string, number> = {};
-        products.forEach((product: any) => {
-          const tribeId = product.tribe_id || product.category;
-          if (tribeId) {
-            counts[tribeId] = (counts[tribeId] || 0) + 1;
-          }
-        });
-
-        setCategoryCounts(counts);
-      } catch (error) {
-        console.error("[GalaxyDashboard] Failed to load counts:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadCounts();
-  }, []);
-
-  const handleCategoryClick = (categoryId: string) => {
-    // For now, navigate to spectrum with the category as both tribe and subcategory
-    // This will be refined when we have actual subcategory data
-    console.log(`[GalaxyDashboard] Navigating to ${categoryId}`);
-    goToSpectrum(categoryId, categoryId, []);
+  // Directly handle navigation to a subcategory
+  const onSlotClick = (mainId: string, subId: string) => {
+    goToSpectrum(mainId, subId, []);
   };
 
-  if (loading) {
-    return (
-      <div className="h-full flex items-center justify-center bg-[#0a0a0a] text-zinc-500 font-mono">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zinc-600 mx-auto mb-4" />
-          <p>INITIALIZING GALAXY DASHBOARD...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="h-full w-full bg-[#0a0a0a] overflow-auto p-8">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-black tracking-tight text-white mb-2">
-          Product Galaxy
-        </h1>
-        <p className="text-sm text-zinc-500 font-mono">
-          Select a category to explore products
-        </p>
-      </div>
+    <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
+      {/* ------------------------------------------------------------------
+          HEADER: ULTRA COMPACT
+         ------------------------------------------------------------------ */}
+      <header className="h-14 flex items-center px-6 bg-gradient-to-b from-transparent to-black/20 z-10 border-b border-zinc-900/50 shrink-0">
+        <div className="flex items-center gap-3">
+          <LayoutGrid className="w-6 h-6 text-zinc-500" />
+          <h1 className="text-zinc-100 font-bold tracking-tight text-3xl">
+            GALAXIES
+          </h1>
+        </div>
+      </header>
 
-      {/* 2x3 Grid of Category Sectors */}
-      <div className="grid grid-cols-3 gap-6 max-w-7xl mx-auto">
-        {MAIN_CATEGORIES.map((category) => (
-          <CategorySlot
-            key={category.id}
-            id={category.id}
-            name={category.name}
-            image={category.image || "/assets/placeholders/no-img.png"}
-            fallbackGradient={`radial-gradient(circle at 50% 50%, ${category.color}40, transparent 70%)`}
-            icon={category.icon}
-            mainColor={category.color}
-            count={categoryCounts[category.id] || 0}
-            onClick={() => handleCategoryClick(category.id)}
-          />
-        ))}
-      </div>
+      {/* ------------------------------------------------------------------
+          MAIN CONTENT: 6 SECTOR CARDS GRID WITH SUBCATEGORIES
+         ------------------------------------------------------------------ */}
+      <div className="flex-1 p-6 min-h-0 w-full h-full text-[10px]">
+        {/* Force 2 rows, 3 columns, fitting height */}
+        <div className="grid grid-cols-3 grid-rows-2 gap-6 h-full w-full mx-auto">
+          {galaxy.map((sector) => (
+            <div
+              key={sector.id}
+              className="bg-[#0a0a0a] rounded-xl border border-zinc-800/60 overflow-hidden flex flex-col shadow-2xl min-h-0"
+            >
+              {/* Sector Header */}
+              <div className="px-4 py-3 border-b border-zinc-800/60 bg-[#0f0f0f] flex items-center gap-3 shrink-0 h-12">
+                <div
+                  className="w-6 h-6 rounded flex items-center justify-center text-xs font-bold shadow-lg shrink-0"
+                  style={{ backgroundColor: sector.color }}
+                >
+                  {/* Render Icon component */}
+                  {React.createElement(sector.iconComponent, {
+                    className: "w-4 h-4",
+                    color: "#fff",
+                  })}
+                </div>
+                <h2 className="font-bold uppercase tracking-tight text-zinc-100 text-sm truncate">
+                  {sector.name}
+                </h2>
+              </div>
 
-      {/* Stats Footer */}
-      <div className="mt-12 text-center text-xs text-zinc-600 font-mono">
-        <div className="flex items-center justify-center gap-8">
-          <span>TOTAL CATEGORIES: {MAIN_CATEGORIES.length}</span>
-          <span>
-            TOTAL PRODUCTS:{" "}
-            {Object.values(categoryCounts).reduce((a, b) => a + b, 0)}
-          </span>
+              {/* Subcategory Grid */}
+              <div className="flex-1 p-3 grid grid-cols-4 gap-3 content-start overflow-hidden">
+                {sector.children.map((sub) => {
+                  return (
+                    <CategorySlot
+                      key={sub.id}
+                      id={sub.id}
+                      name={sub.name}
+                      image={sub.image}
+                      fallbackGradient={sub.fallbackGradient}
+                      icon={sector.iconComponent}
+                      mainColor={sector.color}
+                      count={loading ? undefined : counts[sub.id] || 0}
+                      onClick={() => onSlotClick(sector.id, sub.id)}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

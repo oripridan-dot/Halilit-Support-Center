@@ -1,10 +1,9 @@
 import os
-import time
 import json
-import google.genai as genai
+import google.generativeai as genai
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-from typing import List, Optional, Dict
+from typing import Optional, List
 from backend.agents.agent_memory import MemoryAwareMixin
 
 # --- CONFIGURATION ---
@@ -142,12 +141,12 @@ class ValidatorAgent(AgentBase):
             model_name="gemini-2.0-flash",  # Updated to a valid model
             system_instruction="""
             You are the COMPLIANCE AUDITOR. You check product drafts against Strict Rules.
-            
+
             STRICT RULES:
             1. Price Consistency: Eilat price must be ~17% lower than IL price.
             2. Brand Integrity: Brand must match the provided Taxonomy List.
             3. Data Completeness: ID, Name, and Image are mandatory.
-            
+
             You output JSON only.
             """
         )
@@ -226,8 +225,9 @@ class ValidatorAgent(AgentBase):
                 auditor_notes="Automated fallback check passed."
             )
 
-
 # --- THE SWARM CONTROLLER (The Supervisor) ---
+
+
 class TrinitySwarm:
     def __init__(self):
         self.scout = CommercialAgent()

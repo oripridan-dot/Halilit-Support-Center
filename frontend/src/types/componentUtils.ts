@@ -1,6 +1,6 @@
 /**
  * Component Utility Types
- * 
+ *
  * Standardized types for component development following COMPONENT_STANDARDS.ts
  */
 
