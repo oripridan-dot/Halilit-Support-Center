@@ -1,177 +1,69 @@
-import React, { useMemo, useCallback } from "react";
+import React from "react";
+import { Product } from "../../types/galaxy";
 
-// Generate a consistent HSL color from a string
-const getBrandColor = (str: string) => {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash);
-  }
-  const h = Math.abs(hash) % 360;
-  return `hsl(${h}, 70%, 60%)`;
-};
+interface TimelineTrackProps {
+  brand: string;
+  products: Product[];
+  onHover: (product: Product | null) => void;
+  onClick: (product: Product) => void;
+}
 
-export const TimelineTrack = ({
+export const TimelineTrack: React.FC<TimelineTrackProps> = ({
   brand,
   products,
-  zoom,
   onHover,
-  activeId,
-  priceRange,
-  isPriceAxis = false,
-}: {
-  brand: string;
-  products: any[];
-  zoom: number;
-  onHover: (p: any) => void;
-  activeId?: string;
-  priceRange?: [number, number];
-  isPriceAxis?: boolean;
+  onClick,
 }) => {
-  const brandColor = useMemo(() => getBrandColor(brand), [brand]);
-
-  // Memoized hover handler
-  const handleProductHover = useCallback(
-    (product: any) => {
-      onHover(product);
-    },
-    [onHover],
-  );
-
-  // Calculate position and width based on price
-  const getPositionAndWidth = (product: any) => {
-    // Simple proportional width based on zoom
-    const baseWidth = 100 * zoom;
-    return { width: Math.max(baseWidth, 60) };
-  };
-
   return (
-    <div className="flex w-full bg-[#1a1a1a] border-b border-[#2a2a2a] h-32 group hover:bg-[#222] transition-colors relative">
-      {/* Ambient Brand Glow */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-5 transition-opacity duration-500"
-        style={{ backgroundColor: brandColor }}
-      />
-
-      {/* Track Header (Left Control Panel) */}
-      <div className="w-48 flex-shrink-0 bg-[#111] border-r border-[#2a2a2a] flex flex-col justify-center px-4 relative z-10 shadow-lg">
-        {/* Brand Accent Bar */}
-        <div
-          className="absolute left-0 top-0 bottom-0 w-1"
-          style={{ backgroundColor: brandColor }}
-        />
-
-        <h3 className="text-zinc-100 font-bold text-sm truncate" title={brand}>
+    <div className="px-6">
+      {/* Brand Label */}
+      <div className="mb-3">
+        <h3 className="text-lg font-bold text-slate-300 uppercase tracking-wider">
           {brand}
         </h3>
-        <p className="text-[10px] text-zinc-500 mt-0.5 font-mono">
-          {products.length} products
-        </p>
-
-        {/* Track Controls */}
-        <div className="flex gap-2 mt-2">
-          <div className="w-2 h-2 rounded-full bg-green-500/50" />
-          <div className="w-2 h-2 rounded-full bg-yellow-500/50" />
-          <div className="w-2 h-2 rounded-full bg-blue-500/50" />
-        </div>
+        <div className="h-px bg-gradient-to-r from-blue-500/50 to-transparent w-full mt-1" />
       </div>
 
-      {/* Track Content (Price Axis Timeline) */}
-      <div className="flex-1 overflow-x-auto overflow-y-hidden flex items-center p-1 bg-[#161616] relative custom-scrollbar">
-        {/* Grid Background */}
-        {isPriceAxis && priceRange && (
-          <div
-            className="absolute inset-0 pointer-events-none opacity-5 w-full h-full"
-            style={{
-              backgroundImage:
-                "linear-gradient(90deg, #555 1px, transparent 1px)",
-              backgroundSize: `${150 * zoom}px 100%`,
-            }}
-          ></div>
-        )}
+      {/* Horizontal Scroll Track */}
+      <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-slate-900 scrollbar-thumb-slate-700 hover:scrollbar-thumb-slate-600">
+        {products.map((product) => (
+          <button
+            key={product.uuid}
+            onMouseEnter={() => onHover(product)}
+            onMouseLeave={() => onHover(null)}
+            onClick={() => onClick(product)}
+            className="flex-shrink-0 w-40 h-40 bg-slate-800/50 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20 p-3 flex flex-col items-center justify-center group"
+          >
+            {/* Product Image */}
+            <div className="w-24 h-24 mb-2 flex items-center justify-center">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
 
-        {/* Clips Container - Flex layout for visible products */}
-        <div className="h-full inline-flex items-center gap-1 p-1 min-w-full">
-          {products.map((product, index) => {
-            const { width } = getPositionAndWidth(product);
-            const isActive = activeId === product.id;
-            // Create unique key combining brand, id, and index to avoid key warnings
-            const uniqueKey = `${brand}-${product.id}-${index}`;
+            {/* Product Name (Truncated) */}
+            <p className="text-xs text-slate-400 group-hover:text-white text-center line-clamp-2 font-medium">
+              {product.name}
+            </p>
 
-            return (
-              <div
-                key={uniqueKey}
-                style={{
-                  width: `${Math.max(width, 70)}px`,
-                  borderColor: isActive ? brandColor : "#333",
-                }}
-                className={`h-[80%] flex-shrink-0 relative rounded flex flex-col items-center justify-center overflow-hidden cursor-pointer transition-all duration-200 border
-                        ${
-                          isActive
-                            ? "ring-1 z-10 scale-y-110 shadow-2xl bg-[#2a2a2a]"
-                            : "bg-[#222] hover:border-zinc-500 hover:brightness-110 hover:z-5"
-                        }
-                    `}
-                onMouseEnter={() => handleProductHover(product)}
-                title={product.label || product.name}
-              >
-                {/* Active Glow */}
-                {isActive && (
-                  <div
-                    className="absolute inset-0 pointer-events-none opacity-20"
-                    style={{ backgroundColor: brandColor }}
-                  />
-                )}
-
-                {/* Thumbnail Image */}
-                {product.image_url ? (
-                  <img
-                    src={product.image_url}
-                    alt={product.label}
-                    className="h-[90%] w-[90%] object-contain opacity-85 hover:opacity-100 transition-opacity"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
-                ) : product.image_hero?.url ? (
-                  <img
-                    src={product.image_hero.url}
-                    alt={product.label}
-                    className="h-[90%] w-[90%] object-contain opacity-85 hover:opacity-100 transition-opacity"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
-                ) : (
-                  <div className="text-[7px] text-zinc-700 font-mono text-center p-1 break-words">
-                    NO IMG
-                  </div>
-                )}
-
-                {/* Clip Label Overlay */}
-                <div className="absolute bottom-0 inset-x-0 bg-black/80 backdrop-blur-sm p-0.5">
-                  <p className="text-[7px] text-zinc-200 truncate font-mono leading-tight">
-                    {product.label || product.name}
-                  </p>
-                  {product.price && (
-                    <p className="text-[6px] text-green-400 font-mono leading-tight">
-                      ${product.price.toFixed(0)}
-                    </p>
-                  )}
-                </div>
-
-                {/* Tier Badge */}
-                {product.tier === "diamond" && (
-                  <div className="absolute top-1 right-1 w-2 h-2 bg-cyan-400 rounded-full shadow-lg ring-1 ring-black border border-white/20" />
-                )}
-                {product.tier === "gold" && (
-                  <div className="absolute top-1 right-1 w-2 h-2 bg-amber-400 rounded-full shadow-lg ring-1 ring-black" />
-                )}
-              </div>
-            );
-          })}
-        </div>
+            {/* Tier Badge */}
+            <div
+              className={`mt-1 px-2 py-0.5 rounded text-[10px] font-bold uppercase ${
+                product.tier === "flagship"
+                  ? "bg-amber-600/20 text-amber-400 border border-amber-600/30"
+                  : product.tier === "pro"
+                    ? "bg-purple-600/20 text-purple-400 border border-purple-600/30"
+                    : product.tier === "mid"
+                      ? "bg-blue-600/20 text-blue-400 border border-blue-600/30"
+                      : "bg-green-600/20 text-green-400 border border-green-600/30"
+              }`}
+            >
+              {product.tier}
+            </div>
+          </button>
+        ))}
       </div>
     </div>
   );

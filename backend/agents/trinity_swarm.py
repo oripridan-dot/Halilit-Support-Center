@@ -1,10 +1,9 @@
 import os
-import time
 import json
-import google.genai as genai
+import google.generativeai as genai
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-from typing import List, Optional, Dict
+from typing import Optional, List
 from backend.agents.agent_memory import MemoryAwareMixin
 
 # --- CONFIGURATION ---
@@ -16,7 +15,6 @@ client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # --- DATA MODELS (The Language of the Swarm) ---
 
-
 class ProductDraft(BaseModel):
     id: str
     name: str
@@ -27,7 +25,6 @@ class ProductDraft(BaseModel):
     source_url: Optional[str] = None
     official_match: Optional[bool] = False
 
-
 class AuditReport(BaseModel):
     product_id: Optional[str] = None
     status: str = Field(..., description="'APPROVED' or 'REJECTED'")
@@ -36,7 +33,6 @@ class AuditReport(BaseModel):
     auditor_notes: str
 
 # --- THE AGENTS ---
-
 
 class AgentBase(MemoryAwareMixin):
     """Base agent with learning capabilities"""
@@ -93,7 +89,6 @@ class AgentBase(MemoryAwareMixin):
 # 1. COMMERCIAL SCOUT (The Hunter)
 # Uses the Harvester Tool we wrote earlier
 
-
 class CommercialAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -116,7 +111,6 @@ class CommercialAgent(AgentBase):
 
 # 2. OFFICIAL VERIFIER (The Enricher)
 
-
 class OfficialAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -134,7 +128,6 @@ class OfficialAgent(AgentBase):
 
 # 3. EXTERNAL VALIDATOR (The Auditor - "From Aside")
 
-
 class ValidatorAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -142,12 +135,12 @@ class ValidatorAgent(AgentBase):
             model_name="gemini-2.0-flash",  # Updated to a valid model
             system_instruction="""
             You are the COMPLIANCE AUDITOR. You check product drafts against Strict Rules.
-            
+
             STRICT RULES:
             1. Price Consistency: Eilat price must be ~17% lower than IL price.
             2. Brand Integrity: Brand must match the provided Taxonomy List.
             3. Data Completeness: ID, Name, and Image are mandatory.
-            
+
             You output JSON only.
             """
         )
@@ -226,7 +219,6 @@ class ValidatorAgent(AgentBase):
                 auditor_notes="Automated fallback check passed."
             )
 
-
 # --- THE SWARM CONTROLLER (The Supervisor) ---
 class TrinitySwarm:
     def __init__(self):
@@ -275,7 +267,6 @@ class TrinitySwarm:
             for v in report.violations:
                 print(f" - {v}")
             print(f"NOTES: {report.auditor_notes}")
-
 
 # --- RUNNER ---
 if __name__ == "__main__":

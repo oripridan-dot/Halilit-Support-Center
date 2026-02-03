@@ -8,14 +8,9 @@ Purpose: Enable all agents to learn from every action and improve over time
 import os
 import json
 from datetime import datetime
-from typing import Dict, List, Any, Optional
-from pydantic import BaseModel, Field
-import google.genai as genai
-from dotenv import load_dotenv
 
 load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
-
 
 class LearningRecord(BaseModel):
     """Single learning instance from an agent action"""
@@ -33,7 +28,6 @@ class LearningRecord(BaseModel):
     improvement_suggestions: List[str] = Field(default_factory=list)
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
-
 class AgentInsight(BaseModel):
     """Distilled insight from multiple learning records"""
     pattern: str
@@ -43,14 +37,12 @@ class AgentInsight(BaseModel):
     recommended_approach: str
     anti_patterns: List[str]
 
-
 class MemoryQuery(BaseModel):
     """Query to retrieve relevant past learning"""
     agent_name: str
     action_type: Optional[str] = None
     context: Optional[str] = None
     limit: int = 10
-
 
 class AgentMemory:
     """Functional memory system for agent learning and improvement"""
@@ -321,7 +313,6 @@ Provide specific, actionable advice in 2-3 sentences that:
             "recent_patterns": [i.pattern for i in insights][:3]
         }
 
-
 # Memory-aware mixin for agents
 class MemoryAwareMixin:
     """Mixin to add memory capabilities to any agent"""
@@ -368,7 +359,6 @@ class MemoryAwareMixin:
         """Get my learning statistics"""
         return self.memory.get_stats(self.agent_name)
 
-
 # Test function
 def test_agent_memory():
     """Test the memory system"""
@@ -408,7 +398,6 @@ def test_agent_memory():
     # Test stats
     stats = memory.get_stats("DevAgent")
     print(f"\n📊 Stats: {json.dumps(stats, indent=2)}")
-
 
 if __name__ == "__main__":
     test_agent_memory()

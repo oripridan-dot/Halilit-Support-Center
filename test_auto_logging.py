@@ -6,11 +6,9 @@ Verifies that ALL operations are automatically logged to context
 
 import time
 from backend.agents.context_manager import ContextManager
-from backend.agents.dev_agent import DevAgent, ErrorReport
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 
 def test_auto_logging():
     """Test that everything is automatically logged"""
@@ -94,7 +92,6 @@ def test_auto_logging():
     else:
         print("❌ FAILED: No automatic logging detected")
     print("="*70 + "\n")
-
 
 if __name__ == "__main__":
     test_auto_logging()

@@ -34,7 +34,7 @@ const ProductCardComponent = ({ product }: { product: OptimizedProduct }) => {
         ) : (
            <div className="text-zinc-600 text-sm">Price N/A</div>
         )}
-        
+
         {/* Simple Stock Indicator */}
         {product.in_stock ? (
            <div className="w-2 h-2 rounded-full bg-emerald-500 mb-2" title="In Stock"/>
