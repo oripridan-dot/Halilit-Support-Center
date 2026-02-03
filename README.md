@@ -1,8 +1,8 @@
-# Halilit Support Center v5.2.3
+# Halilit Support Center v5.2.4 - Google Conductor
 
-**An AI-Powered Product Catalog System Built on Google's Agent Development Kit (ADK)**
+**An AI-Powered Product Catalog System Built on Google's Agent Development Kit (ADK) with Conductor Orchestration**
 
-🆕 **v5.2.3 Features**: Full Maintenance Cycle, Data Pipeline Refinement, Category Taxonomy Fix, Code Consolidation, Production Ready
+🆕 **v5.2.4 Features**: Google Conductor Integration, Advanced Agent Orchestration, Workflow State Management, Enhanced Error Recovery, Production Ready
 
 ## 🚀 Quick Start
 

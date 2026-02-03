@@ -1,5 +1,5 @@
-VERSION=5.2.3
-RELEASE_TAG=v5.2.3
+VERSION=5.2.4
+RELEASE_TAG=v5.2.4-google-conductor
 BUILD_DATE=2026-02-02
 BRANCH=main
 STATUS=adk-production-ready

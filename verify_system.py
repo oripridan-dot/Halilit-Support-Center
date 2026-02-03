@@ -15,13 +15,14 @@ import json
 import re
 import sys
 
+
 class SystemVerifier:
     def __init__(self, root: str = '/workspaces/Halilit-Support-Center'):
         self.root = root
         self.errors = []
         self.warnings = []
         self.info = []
-        self.version = "5.2.3"
+        self.version = "5.2.4"
 
     def log_error(self, msg: str):
         """Log critical error"""
@@ -303,6 +304,7 @@ Info Messages:         {len(self.info)}
         print("="*80 + "\n")
 
         return results
+
 
 if __name__ == '__main__':
     verifier = SystemVerifier()

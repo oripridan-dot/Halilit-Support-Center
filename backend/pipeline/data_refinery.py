@@ -11,6 +11,7 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("DataRefinery")
 
+
 class DataRefinery:
     def __init__(self):
         self.products = []
@@ -259,7 +260,7 @@ class DataRefinery:
 
         payload = {
             "generatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "version": "5.2.3",
+            "version": "5.2.4",
             "stats": {
                 "totalProducts": len(self.products),
                 "brandsCount": len(set(p['brand'] for p in self.products))
@@ -289,6 +290,7 @@ class DataRefinery:
         for cat in tree:
             tree[cat] = sorted(list(set(tree[cat])))
         return tree
+
 
 # --- Usage Example ---
 if __name__ == "__main__":
