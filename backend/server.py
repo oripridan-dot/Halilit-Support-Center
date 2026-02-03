@@ -1,4 +1,8 @@
 import uvicorn
+from typing import List, Dict, Any
+from fastapi import FastAPI
+from pydantic import BaseModel
+from contextlib import redirect_stdout
 from backend.workflow.real_maintenance import (
     RealCodeCleanupWorkflow,
     RealCodeSyncWorkflow,
@@ -24,12 +28,15 @@ context_manager = ContextManager()
 agent_memory = AgentMemory()
 orchestrator = AgentMaintenanceOrchestrator()
 
+
 class ChatMessage(BaseModel):
     role: str
     content: str
 
+
 class ChatRequest(BaseModel):
     messages: List[ChatMessage]
+
 
 @app.post("/api/copilot/chat")
 async def chat_endpoint(request: ChatRequest):
@@ -81,11 +88,13 @@ async def chat_endpoint(request: ChatRequest):
 
     return {"detailedMessage": answer}
 
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
 # --- DEV AGENT ENDPOINTS ---
+
 
 @app.post("/api/dev/analyze-error")
 async def analyze_error(error: ErrorReport):
@@ -97,6 +106,7 @@ async def analyze_error(error: ErrorReport):
     fix = dev_agent.analyze_error(error)
     return fix.model_dump()
 
+
 @app.post("/api/dev/health-check")
 async def health_check(metrics: Dict[str, Any]):
     """
@@ -105,6 +115,7 @@ async def health_check(metrics: Dict[str, Any]):
     print(f"🏥 [DevAgent API] Health check requested")
     health = dev_agent.check_health(metrics)
     return health.model_dump()
+
 
 @app.post("/api/dev/suggest-improvements")
 async def suggest_improvements(data: Dict[str, str]):
@@ -116,6 +127,7 @@ async def suggest_improvements(data: Dict[str, str]):
     print(f"💡 [DevAgent API] Suggesting improvements for: {context}")
     suggestions = dev_agent.suggest_improvements(code, context)
     return suggestions
+
 
 @app.post("/api/dev/validate-fix")
 async def validate_fix(data: Dict[str, Any]):
@@ -134,6 +146,7 @@ async def validate_fix(data: Dict[str, Any]):
     validation = dev_agent.validate_fix(fix, error)
     return validation.model_dump()
 
+
 @app.post("/api/dev/auto-apply")
 async def auto_apply(data: Dict[str, Any]):
     """
@@ -151,6 +164,7 @@ async def auto_apply(data: Dict[str, Any]):
     result = dev_agent.auto_apply_fix(fix, file_path, dry_run)
     return result
 
+
 @app.post("/api/dev/scan-codebase")
 async def scan_codebase(data: Dict[str, str]):
     """
@@ -160,6 +174,7 @@ async def scan_codebase(data: Dict[str, str]):
     print(f"🔍 [DevAgent API] Scanning codebase: {directory}")
     result = dev_agent.scan_codebase(directory)
     return result
+
 
 @app.post("/api/dev/execute-improvement")
 async def execute_improvement(data: Dict[str, Any]):
@@ -173,6 +188,7 @@ async def execute_improvement(data: Dict[str, Any]):
     result = dev_agent.execute_improvement(suggestion, file_path)
     return result
 
+
 @app.post("/api/dev/validate-syntax")
 async def validate_syntax(data: Dict[str, Any]):
     """
@@ -185,6 +201,7 @@ async def validate_syntax(data: Dict[str, Any]):
     result = dev_agent.validate_syntax(file_path, code)
     return result.model_dump()
 
+
 @app.post("/api/dev/validate-types")
 async def validate_types(data: Dict[str, str]):
     """
@@ -195,6 +212,7 @@ async def validate_types(data: Dict[str, str]):
     print(f"🔍 [DevAgent API] Type checking: {file_path}")
     result = dev_agent.validate_types(file_path)
     return result.model_dump()
+
 
 @app.post("/api/dev/validate-before-save")
 async def validate_before_save(data: Dict[str, Any]):
@@ -210,11 +228,13 @@ async def validate_before_save(data: Dict[str, Any]):
 
 # --- CONTEXT MANAGER ENDPOINTS ---
 
+
 @app.get("/api/context/summary")
 async def get_context_summary():
     """Get development context summary"""
     summary = context_manager.get_context_summary()
     return {"summary": summary}
+
 
 @app.get("/api/context/history")
 async def get_context_history(limit: int = 20):
@@ -222,11 +242,13 @@ async def get_context_history(limit: int = 20):
     history = context_manager.get_recent_history(limit)
     return {"history": [h.model_dump() for h in history]}
 
+
 @app.post("/api/context/analyze")
 async def analyze_context():
     """Analyze development context for consistency"""
     analysis = context_manager.analyze_context()
     return analysis.model_dump()
+
 
 @app.post("/api/context/check-consistency")
 async def check_consistency(data: Dict[str, Any]):
@@ -237,6 +259,7 @@ async def check_consistency(data: Dict[str, Any]):
     result = context_manager.check_consistency(proposed_change, files)
     return result
 
+
 @app.post("/api/context/suggest-refactoring")
 async def suggest_refactoring(data: Dict[str, Any]):
     """Get refactoring suggestions based on context"""
@@ -244,6 +267,7 @@ async def suggest_refactoring(data: Dict[str, Any]):
 
     plans = context_manager.suggest_refactoring(file_path)
     return {"refactoring_plans": [p.model_dump() for p in plans]}
+
 
 @app.post("/api/context/log")
 async def log_context_entry(data: Dict[str, Any]):
@@ -262,11 +286,13 @@ async def log_context_entry(data: Dict[str, Any]):
 
 # --- AGENT MEMORY ENDPOINTS ---
 
+
 @app.get("/api/memory/stats/{agent_name}")
 async def get_agent_stats(agent_name: str):
     """Get learning statistics for an agent"""
     stats = agent_memory.get_stats(agent_name)
     return stats
+
 
 @app.get("/api/memory/advice/{agent_name}")
 async def get_agent_advice(agent_name: str, task: str = ""):
@@ -274,17 +300,20 @@ async def get_agent_advice(agent_name: str, task: str = ""):
     advice = agent_memory.get_contextual_advice(agent_name, task)
     return {"advice": advice}
 
+
 @app.get("/api/memory/insights/{agent_name}")
 async def get_agent_insights(agent_name: str):
     """Get learned patterns and insights"""
     insights = agent_memory.analyze_patterns(agent_name)
     return {"insights": [i.model_dump() for i in insights]}
 
+
 @app.get("/api/memory/improvements/{agent_name}")
 async def get_agent_improvements(agent_name: str):
     """Get suggested improvements for an agent"""
     improvements = agent_memory.suggest_improvements(agent_name)
     return {"improvements": improvements}
+
 
 @app.get("/api/memory/all-agents")
 async def get_all_agents_memory():
@@ -297,6 +326,7 @@ async def get_all_agents_memory():
     return summary
 
 # --- MAINTENANCE & ORCHESTRATION ENDPOINTS ---
+
 
 @app.post("/api/maintenance/health-check")
 async def run_health_check():
@@ -315,6 +345,7 @@ async def run_health_check():
         "empty_files": result.get("empty_files", 0),
         "details": result
     }
+
 
 @app.post("/api/maintenance/code-cleanup")
 async def run_code_cleanup():
@@ -335,6 +366,7 @@ async def run_code_cleanup():
         "details": result
     }
 
+
 @app.post("/api/maintenance/organize-code")
 async def run_code_organization():
     """
@@ -352,6 +384,7 @@ async def run_code_organization():
         "details": result
     }
 
+
 @app.post("/api/maintenance/sync-code")
 async def run_code_sync():
     """
@@ -368,6 +401,7 @@ async def run_code_sync():
         "sync_score": result.get("sync_score", 0),
         "details": result
     }
+
 
 @app.post("/api/maintenance/full-cycle")
 async def run_full_maintenance_cycle():
@@ -463,6 +497,7 @@ async def run_full_maintenance_cycle():
 
     return results
 
+
 @app.get("/api/maintenance/orchestrator-status")
 async def get_orchestrator_status():
     """
@@ -487,6 +522,7 @@ async def get_orchestrator_status():
             "ExternalValidator"
         ]
     }
+
 
 @app.post("/api/maintenance/report")
 async def generate_maintenance_report():

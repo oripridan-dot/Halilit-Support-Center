@@ -1,9 +1,9 @@
 import os
 import json
-import google.generativeai as genai
+import google.genai as genai
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 from backend.agents.agent_memory import MemoryAwareMixin
 
 # --- CONFIGURATION ---

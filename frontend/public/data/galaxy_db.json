@@ -1,0 +1,153 @@
+{
+  "generatedAt": "2026-02-03T08:41:42Z",
+  "version": "5.2.0",
+  "stats": {
+    "totalProducts": 6,
+    "brandsCount": 6
+  },
+  "products": [
+    {
+      "id": "unknown",
+      "name": "Untitled Product",
+      "brand": "Universal-Audio",
+      "category": "Uncategorized",
+      "subCategory": "General",
+      "tier": "entry",
+      "images": {
+        "main": "/assets/placeholders/no-image.png",
+        "thumbnail": "/assets/placeholders/no-image.png",
+        "gallery": [
+          "/assets/placeholders/no-image.png"
+        ]
+      },
+      "price": 0.0,
+      "stockStatus": "in_stock",
+      "aiTags": [
+        "entry"
+      ],
+      "specs": {},
+      "searchTokens": "universal-audio entry",
+      "description": ""
+    },
+    {
+      "id": "unknown",
+      "name": "Untitled Product",
+      "brand": "Neumann",
+      "category": "Uncategorized",
+      "subCategory": "General",
+      "tier": "entry",
+      "images": {
+        "main": "/assets/placeholders/no-image.png",
+        "thumbnail": "/assets/placeholders/no-image.png",
+        "gallery": [
+          "/assets/placeholders/no-image.png"
+        ]
+      },
+      "price": 0.0,
+      "stockStatus": "in_stock",
+      "aiTags": [
+        "entry"
+      ],
+      "specs": {},
+      "searchTokens": "neumann entry",
+      "description": ""
+    },
+    {
+      "id": "unknown",
+      "name": "Untitled Product",
+      "brand": "Drumdots",
+      "category": "Uncategorized",
+      "subCategory": "General",
+      "tier": "entry",
+      "images": {
+        "main": "/assets/placeholders/no-image.png",
+        "thumbnail": "/assets/placeholders/no-image.png",
+        "gallery": [
+          "/assets/placeholders/no-image.png"
+        ]
+      },
+      "price": 0.0,
+      "stockStatus": "in_stock",
+      "aiTags": [
+        "entry"
+      ],
+      "specs": {},
+      "searchTokens": "drumdots entry",
+      "description": ""
+    },
+    {
+      "id": "unknown",
+      "name": "Untitled Product",
+      "brand": "Rode",
+      "category": "Uncategorized",
+      "subCategory": "General",
+      "tier": "entry",
+      "images": {
+        "main": "/assets/placeholders/no-image.png",
+        "thumbnail": "/assets/placeholders/no-image.png",
+        "gallery": [
+          "/assets/placeholders/no-image.png"
+        ]
+      },
+      "price": 0.0,
+      "stockStatus": "in_stock",
+      "aiTags": [
+        "entry"
+      ],
+      "specs": {},
+      "searchTokens": "rode entry",
+      "description": ""
+    },
+    {
+      "id": "unknown",
+      "name": "Untitled Product",
+      "brand": "Shure",
+      "category": "Uncategorized",
+      "subCategory": "General",
+      "tier": "entry",
+      "images": {
+        "main": "/assets/placeholders/no-image.png",
+        "thumbnail": "/assets/placeholders/no-image.png",
+        "gallery": [
+          "/assets/placeholders/no-image.png"
+        ]
+      },
+      "price": 0.0,
+      "stockStatus": "in_stock",
+      "aiTags": [
+        "entry"
+      ],
+      "specs": {},
+      "searchTokens": "shure entry",
+      "description": ""
+    },
+    {
+      "id": "unknown",
+      "name": "Untitled Product",
+      "brand": "Focal",
+      "category": "Uncategorized",
+      "subCategory": "General",
+      "tier": "entry",
+      "images": {
+        "main": "/assets/placeholders/no-image.png",
+        "thumbnail": "/assets/placeholders/no-image.png",
+        "gallery": [
+          "/assets/placeholders/no-image.png"
+        ]
+      },
+      "price": 0.0,
+      "stockStatus": "in_stock",
+      "aiTags": [
+        "entry"
+      ],
+      "specs": {},
+      "searchTokens": "focal entry",
+      "description": ""
+    }
+  ],
+  "categories": {
+    "Uncategorized": [
+      "General"
+    ]
+  }
+}

@@ -15,7 +15,7 @@ This is the structural fix for the "DevAgent wipes frontend" disaster.
 
 import logging
 from enum import Enum
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, Optional, Tuple, List
 
 
 class WorkflowState(Enum):

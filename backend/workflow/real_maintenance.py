@@ -323,6 +323,7 @@ class RealHealthCheckWorkflow:
         issues = 0
 
         try:
+            import google.genai
         except ImportError:
             issues += 1
 

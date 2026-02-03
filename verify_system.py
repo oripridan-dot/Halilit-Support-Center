@@ -24,7 +24,7 @@ class SystemVerifier:
         self.errors = []
         self.warnings = []
         self.info = []
-        self.version = "5.2.1"
+        self.version = "5.2.2"
 
     def log_error(self, msg: str):
         """Log critical error"""
