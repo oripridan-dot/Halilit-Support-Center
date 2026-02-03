@@ -1,10 +1,5 @@
 import os
 import json
-import google.genai as genai
-from dotenv import load_dotenv
-from pydantic import BaseModel, Field
-from typing import Optional, List, Dict, Any
-from backend.agents.agent_memory import MemoryAwareMixin
 
 # --- CONFIGURATION ---
 # Load environment variables (API keys)
@@ -14,7 +9,6 @@ load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # --- DATA MODELS (The Language of the Swarm) ---
-
 
 class ProductDraft(BaseModel):
     id: str
@@ -26,7 +20,6 @@ class ProductDraft(BaseModel):
     source_url: Optional[str] = None
     official_match: Optional[bool] = False
 
-
 class AuditReport(BaseModel):
     product_id: Optional[str] = None
     status: str = Field(..., description="'APPROVED' or 'REJECTED'")
@@ -35,7 +28,6 @@ class AuditReport(BaseModel):
     auditor_notes: str
 
 # --- THE AGENTS ---
-
 
 class AgentBase(MemoryAwareMixin):
     """Base agent with learning capabilities"""
@@ -92,7 +84,6 @@ class AgentBase(MemoryAwareMixin):
 # 1. COMMERCIAL SCOUT (The Hunter)
 # Uses the Harvester Tool we wrote earlier
 
-
 class CommercialAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -115,7 +106,6 @@ class CommercialAgent(AgentBase):
 
 # 2. OFFICIAL VERIFIER (The Enricher)
 
-
 class OfficialAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -132,7 +122,6 @@ class OfficialAgent(AgentBase):
         }
 
 # 3. EXTERNAL VALIDATOR (The Auditor - "From Aside")
-
 
 class ValidatorAgent(AgentBase):
     def __init__(self):
@@ -227,12 +216,12 @@ class ValidatorAgent(AgentBase):
 
 # --- THE SWARM CONTROLLER (The Supervisor) ---
 
-
 class TrinitySwarm:
     def __init__(self):
         self.scout = CommercialAgent()
         self.verifier = OfficialAgent()
         self.auditor = ValidatorAgent()
+        self.processed_products = []  # Store processed products
 
         # Load Taxonomy for the Auditor
         # Adjust path to be relative to this script execution or absolute
@@ -261,6 +250,42 @@ class TrinitySwarm:
 
         self.handle_audit_outcome(enriched_data, audit_result)
 
+    def process_brand_with_results(self, brand_name: str):
+        """
+        Process a brand and return the results for UI consumption
+        Returns: { "brand": str, "products": [...], "audit_results": [...], "status": str }
+        """
+        print(f"\n🚀 STARTING TRINITY SWARM FOR: {brand_name}\n")
+
+        approved_products = []
+        audit_results = []
+
+        # Step 1: Scout
+        raw_data = self.scout.harvest(brand_name)
+
+        # Step 2: Verify & Enrich
+        enriched_data = self.verifier.enrich(raw_data)
+
+        # Step 3: EXTERNAL AUDIT (The "Aside" Review)
+        print(f"⚖️ [System] Submitting to External Validator...")
+        audit_result = self.auditor.audit(enriched_data, self.taxonomy)
+
+        audit_results.append(audit_result.model_dump())
+
+        if audit_result.status == "APPROVED":
+            approved_products.append(enriched_data)
+            print(f"✅ Product APPROVED: {enriched_data.get('name')}")
+        else:
+            print(f"🛑 Product REJECTED: {enriched_data.get('name')}")
+
+        return {
+            "brand": brand_name,
+            "products": approved_products,
+            "audit_results": audit_results,
+            "status": "COMPLETE",
+            "approved_count": len(approved_products)
+        }
+
     def handle_audit_outcome(self, data, report: AuditReport):
         print(f"\n📋 --- AUDIT REPORT FOR {data['name']} ---")
         print(f"STATUS: {report.status}")
@@ -275,7 +300,6 @@ class TrinitySwarm:
             for v in report.violations:
                 print(f" - {v}")
             print(f"NOTES: {report.auditor_notes}")
-
 
 # --- RUNNER ---
 if __name__ == "__main__":

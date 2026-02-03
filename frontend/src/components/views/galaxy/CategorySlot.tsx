@@ -28,8 +28,9 @@ export const CategorySlot = ({
   const hasData = count !== undefined && count > 0;
   // If count is undefined (loading), we treat it as clickable but maybe show spinner?
   // For now let's assume if undefined, we don't disable yet.
-
-  const isDisabled = count === 0;
+  // NOTE: Temporarily allow showing empty categories to visualize the UI
+  // const isDisabled = count === 0;
+  const isDisabled = false; // Allow clicking even with 0 count for now
 
   return (
     <motion.div

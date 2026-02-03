@@ -7,11 +7,9 @@ and that the frontend can consume it.
 from backend.pipeline.data_refinery import DataRefinery
 import json
 import sys
-from pathlib import Path
 
 # Add backend to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
 
 def test_refinery_initialization():
     """Test that refinery initializes properly."""
@@ -19,7 +17,6 @@ def test_refinery_initialization():
     assert refinery.products == []
     assert refinery.validation_errors == []
     print("✅ Refinery initialization test passed")
-
 
 def test_ingest_valid_data():
     """Test ingesting valid product data."""
@@ -44,7 +41,6 @@ def test_ingest_valid_data():
     assert refinery.products[0]['tier'] == 'pro'  # 2000 falls in pro tier
     print("✅ Valid data ingestion test passed")
 
-
 def test_validate_missing_brand():
     """Test that validation rejects items without brands."""
     refinery = DataRefinery()
@@ -62,7 +58,6 @@ def test_validate_missing_brand():
     assert count == 0  # Should be rejected
     assert len(refinery.validation_errors) > 0
     print("✅ Missing brand validation test passed")
-
 
 def test_validate_missing_name():
     """Test that validation rejects items without names."""
@@ -82,7 +77,6 @@ def test_validate_missing_name():
     assert len(refinery.validation_errors) > 0
     print("✅ Missing name validation test passed")
 
-
 def test_tier_calculation():
     """Test that tier is correctly calculated based on price."""
     refinery = DataRefinery()
@@ -101,7 +95,6 @@ def test_tier_calculation():
     assert refinery.products[2]['tier'] == 'pro'
     assert refinery.products[3]['tier'] == 'flagship'
     print("✅ Tier calculation test passed")
-
 
 def test_search_token_generation():
     """Test that search tokens are properly generated."""
@@ -126,7 +119,6 @@ def test_search_token_generation():
     assert "synthesizers" in product['searchTokens']
     assert "analog" in product['searchTokens']
     print("✅ Search token generation test passed")
-
 
 def test_export_golden_json(tmp_path):
     """Test that the refinery can export valid JSON."""
@@ -162,7 +154,6 @@ def test_export_golden_json(tmp_path):
     assert len(data['products']) == 1
     print("✅ Export golden JSON test passed")
 
-
 def test_category_tree_extraction():
     """Test that categories are properly extracted."""
     refinery = DataRefinery()
@@ -186,14 +177,11 @@ def test_category_tree_extraction():
     assert 'Machines' in tree['Drums']
     print("✅ Category tree extraction test passed")
 
-
 def run_all_tests():
     """Run all integration tests."""
     print("\n" + "="*60)
     print("🧪 GALAXY DATA PIPELINE INTEGRATION TESTS")
     print("="*60 + "\n")
-
-    from tempfile import TemporaryDirectory
 
     try:
         test_refinery_initialization()
@@ -215,7 +203,6 @@ def run_all_tests():
     except AssertionError as e:
         print(f"\n❌ TEST FAILED: {e}\n")
         return False
-
 
 if __name__ == "__main__":
     success = run_all_tests()

@@ -49,9 +49,17 @@ export const useCategoryCatalog = (
       // 2. Load all "Badged" Products from the 6 valid brands
       const allProducts = await catalogLoader.loadAllProducts();
 
+      console.log(`[useCategoryCatalog] Loaded ${allProducts.length} total products`);
+
+      if (allProducts.length === 0) {
+        console.warn('[useCategoryCatalog] WARNING: No products loaded at all!');
+      }
+
       // 3. Filter by Galaxy/Tribe
       // The 'category' param here corresponds to the 'Galaxy ID' (e.g. 'guitars-bass')
       const filteredProducts = allProducts.filter(p => productMatchesGalaxy(p, category));
+
+      console.log(`[useCategoryCatalog] Filtered to ${filteredProducts.length} products for galaxy: ${category}`);
 
       // 4. Generate Smart Filters based on actual content
       // Find the Galaxy Definition to get the Spectrum list (order matters)

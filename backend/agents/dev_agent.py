@@ -9,18 +9,11 @@ With AUTOMATIC context logging for everything
 import os
 import time
 import json
-from typing import Optional, List, Dict, Any
-from dotenv import load_dotenv
-import google.genai as genai
-from pydantic import BaseModel, Field
-from backend.agents.auto_context import auto_log_context, AutoContextMixin
-from backend.agents.agent_memory import MemoryAwareMixin
 
 load_dotenv()
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # --- DATA MODELS ---
-
 
 class ErrorReport(BaseModel):
     """Error detected in development"""
@@ -32,7 +25,6 @@ class ErrorReport(BaseModel):
     line_number: Optional[int] = None
     timestamp: str
     context: Optional[Dict[str, Any]] = None
-
 
 class FixSuggestion(BaseModel):
     """AI-generated fix for development error"""
@@ -46,7 +38,6 @@ class FixSuggestion(BaseModel):
     file_path: Optional[str] = None
     can_auto_apply: bool = False
 
-
 class ValidationResult(BaseModel):
     """Result of validating a fix"""
     success: bool
@@ -55,14 +46,12 @@ class ValidationResult(BaseModel):
     errors_found: List[str]
     confidence_after_test: int
 
-
 class HealthReport(BaseModel):
     """System health assessment"""
     status: str = Field(..., description="'healthy', 'warning', 'critical'")
     issues: List[str]
     suggestions: List[str]
     metrics: Dict[str, Any]
-
 
 class PreventionResult(BaseModel):
     """Result of preventive validation"""
@@ -74,7 +63,6 @@ class PreventionResult(BaseModel):
     validation_type: str  # syntax|type|lint|pattern
 
 # --- DEV AGENT ---
-
 
 class DevAgent(AutoContextMixin, MemoryAwareMixin):
     """Development monitoring agent - catches issues before they ship
@@ -777,7 +765,6 @@ Respond with JSON:
 
 # --- QUICK TEST ---
 
-
 def test_devagent():
     """Test the dev agent with a sample error"""
     agent = DevAgent()
@@ -814,7 +801,6 @@ def test_devagent():
     for tip in fix.prevention_tips:
         print(f"   • {tip}")
     print("="*60 + "\n")
-
 
 if __name__ == "__main__":
     test_devagent()

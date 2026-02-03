@@ -363,7 +363,7 @@ class CatalogLoader {
     if (product.image_hero?.url) {
       return product.image_hero.url;
     }
-    
+
     // Try image_thumbnail as fallback
     if (product.image_thumbnail?.url) {
       return product.image_thumbnail.url;
@@ -414,7 +414,7 @@ class CatalogLoader {
 
     // ✅ BADGE VERIFICATION: Log what we're getting
     // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-    const productsArray = (data as any).products || [];
+    const productsArray = ((data as any).products || data) as unknown[];
 
     if (productsArray.length === 0) {
       console.warn(`[CatalogLoader] ⚠️ WARNING: ${brandId} has no products in the data structure.`);

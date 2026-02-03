@@ -9,7 +9,6 @@ Full Codebase Cleanup & Consolidation
 
 import re
 
-
 class CodebaseCleanup:
     def __init__(self, root: str = '/workspaces/Halilit-Support-Center'):
         self.root = root
@@ -206,7 +205,6 @@ class CodebaseCleanup:
         print(f"Documentation consolidated: {docs_removed}")
         print("\nCodebase is now clean and consolidated!")
         print("="*70 + "\n")
-
 
 if __name__ == '__main__':
     cleanup = CodebaseCleanup()

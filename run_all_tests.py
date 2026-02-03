@@ -5,10 +5,8 @@ Runs all unit, integration, and e2e tests across the architecture
 """
 
 import sys
-from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
 
 def run_test_suite(suite_name, module_func):
     """Run a test suite and capture results"""
@@ -18,7 +16,6 @@ def run_test_suite(suite_name, module_func):
     except Exception as e:
         print(f"❌ {suite_name} failed with error: {e}")
         return False
-
 
 def main():
     """Run all test suites"""
@@ -51,7 +48,6 @@ def main():
     # Import and run e2e tests
     print("📦 Loading E2E Integration Tests...")
     try:
-        from backend.tests.test_e2e_integration import run_all_e2e_tests
         test_suites.append(("E2E Integration Tests", run_all_e2e_tests))
         print("✅ E2E tests loaded")
     except Exception as e:
@@ -60,7 +56,6 @@ def main():
     # Import and run galaxy refinery tests
     print("📦 Loading Data Refinery Tests...")
     try:
-        from backend.tests.test_galaxy_refinery import run_all_tests
         test_suites.append(("Data Refinery Tests", run_all_tests))
         print("✅ Data refinery tests loaded")
     except Exception as e:
@@ -140,7 +135,6 @@ def main():
             "║  ⚠️  SOME TESTS FAILED - PLEASE REVIEW ABOVE                             ║")
         print("╚" + "="*78 + "╝")
         return 1
-
 
 if __name__ == "__main__":
     sys.exit(main())

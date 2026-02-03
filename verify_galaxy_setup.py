@@ -6,8 +6,6 @@ Checks that all components of the Galaxy Data Protocol are operational.
 
 import json
 import sys
-from pathlib import Path
-
 
 def check_backend_files():
     """Verify backend pipeline files exist."""
@@ -32,7 +30,6 @@ def check_backend_files():
         all_exist = all_exist and exists
 
     return all_exist
-
 
 def check_frontend_files():
     """Verify frontend core files exist and are not empty."""
@@ -63,7 +60,6 @@ def check_frontend_files():
         all_exist = all_exist and exists
 
     return all_exist
-
 
 def check_data_files():
     """Verify data files exist and are valid JSON."""
@@ -109,7 +105,6 @@ def check_data_files():
         print(f"❌ Error reading file: {e}")
         return False
 
-
 def check_imports():
     """Verify that Python modules can be imported."""
     print("\n" + "="*60)
@@ -134,7 +129,6 @@ def check_imports():
     except Exception as e:
         print(f"❌ Error: {e}")
         return False
-
 
 def check_typescript_types():
     """Verify TypeScript type definitions are valid."""
@@ -165,7 +159,6 @@ def check_typescript_types():
         all_ok = all_ok and exists
 
     return all_ok
-
 
 def main():
     """Run all verification checks."""
@@ -214,7 +207,6 @@ def main():
         print("⚠️  SOME CHECKS FAILED - PLEASE FIX ABOVE ISSUES")
         print("="*60 + "\n")
         return 1
-
 
 if __name__ == "__main__":
     sys.exit(main())

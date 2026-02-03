@@ -12,9 +12,7 @@ Capabilities:
 import os
 import re
 import json
-from typing import Dict, Any, Tuple, List
 from backend.skills.base_skill import BaseSkill
-
 
 class CodeAutoUpdateSkill(BaseSkill):
     """
@@ -114,7 +112,6 @@ class CodeAutoUpdateSkill(BaseSkill):
         """Check if change might break functionality"""
         breaking_keywords = ['__init__', 'class', 'def ', 'return', 'import']
         return any(keyword in pattern for keyword in breaking_keywords)
-
 
 class CodeSyncSkill(BaseSkill):
     """
@@ -216,7 +213,6 @@ class CodeSyncSkill(BaseSkill):
         # Simple insertion at top for now
         return line + '\n' + content
 
-
 class CompatibilityCheckSkill(BaseSkill):
     """
     Checks code compatibility across the system.
@@ -305,7 +301,6 @@ class CompatibilityCheckSkill(BaseSkill):
             if import_name not in content.replace('import ' + import_name, ''):
                 unused.append(import_name)
         return unused[:3]  # Limit to 3 for brevity
-
 
 class CodeFormatterSkill(BaseSkill):
     """
@@ -411,7 +406,6 @@ class CodeFormatterSkill(BaseSkill):
 
         return '\n'.join(result)
 
-
 class ImportOrganizationSkill(BaseSkill):
     """
     Organizes and fixes imports across files.
@@ -511,7 +505,6 @@ class ImportOrganizationSkill(BaseSkill):
             self.logger.error(error_msg)
             return False, error_msg
 
-
 class CodeValidationSkill(BaseSkill):
     """
     Validates code quality and standards.
@@ -593,7 +586,6 @@ class CodeValidationSkill(BaseSkill):
             error_msg = f"Code validation failed: {str(e)}"
             self.logger.error(error_msg)
             return False, error_msg
-
 
 class DependencyResolutionSkill(BaseSkill):
     """

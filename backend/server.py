@@ -1,8 +1,4 @@
 import uvicorn
-from typing import List, Dict, Any
-from fastapi import FastAPI
-from pydantic import BaseModel
-from contextlib import redirect_stdout
 from backend.workflow.real_maintenance import (
     RealCodeCleanupWorkflow,
     RealCodeSyncWorkflow,
@@ -28,15 +24,12 @@ context_manager = ContextManager()
 agent_memory = AgentMemory()
 orchestrator = AgentMaintenanceOrchestrator()
 
-
 class ChatMessage(BaseModel):
     role: str
     content: str
 
-
 class ChatRequest(BaseModel):
     messages: List[ChatMessage]
-
 
 @app.post("/api/copilot/chat")
 async def chat_endpoint(request: ChatRequest):
@@ -88,13 +81,11 @@ async def chat_endpoint(request: ChatRequest):
 
     return {"detailedMessage": answer}
 
-
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
 # --- DEV AGENT ENDPOINTS ---
-
 
 @app.post("/api/dev/analyze-error")
 async def analyze_error(error: ErrorReport):
@@ -106,7 +97,6 @@ async def analyze_error(error: ErrorReport):
     fix = dev_agent.analyze_error(error)
     return fix.model_dump()
 
-
 @app.post("/api/dev/health-check")
 async def health_check(metrics: Dict[str, Any]):
     """
@@ -115,7 +105,6 @@ async def health_check(metrics: Dict[str, Any]):
     print(f"🏥 [DevAgent API] Health check requested")
     health = dev_agent.check_health(metrics)
     return health.model_dump()
-
 
 @app.post("/api/dev/suggest-improvements")
 async def suggest_improvements(data: Dict[str, str]):
@@ -127,7 +116,6 @@ async def suggest_improvements(data: Dict[str, str]):
     print(f"💡 [DevAgent API] Suggesting improvements for: {context}")
     suggestions = dev_agent.suggest_improvements(code, context)
     return suggestions
-
 
 @app.post("/api/dev/validate-fix")
 async def validate_fix(data: Dict[str, Any]):
@@ -146,7 +134,6 @@ async def validate_fix(data: Dict[str, Any]):
     validation = dev_agent.validate_fix(fix, error)
     return validation.model_dump()
 
-
 @app.post("/api/dev/auto-apply")
 async def auto_apply(data: Dict[str, Any]):
     """
@@ -164,7 +151,6 @@ async def auto_apply(data: Dict[str, Any]):
     result = dev_agent.auto_apply_fix(fix, file_path, dry_run)
     return result
 
-
 @app.post("/api/dev/scan-codebase")
 async def scan_codebase(data: Dict[str, str]):
     """
@@ -174,7 +160,6 @@ async def scan_codebase(data: Dict[str, str]):
     print(f"🔍 [DevAgent API] Scanning codebase: {directory}")
     result = dev_agent.scan_codebase(directory)
     return result
-
 
 @app.post("/api/dev/execute-improvement")
 async def execute_improvement(data: Dict[str, Any]):
@@ -188,7 +173,6 @@ async def execute_improvement(data: Dict[str, Any]):
     result = dev_agent.execute_improvement(suggestion, file_path)
     return result
 
-
 @app.post("/api/dev/validate-syntax")
 async def validate_syntax(data: Dict[str, Any]):
     """
@@ -201,7 +185,6 @@ async def validate_syntax(data: Dict[str, Any]):
     result = dev_agent.validate_syntax(file_path, code)
     return result.model_dump()
 
-
 @app.post("/api/dev/validate-types")
 async def validate_types(data: Dict[str, str]):
     """
@@ -212,7 +195,6 @@ async def validate_types(data: Dict[str, str]):
     print(f"🔍 [DevAgent API] Type checking: {file_path}")
     result = dev_agent.validate_types(file_path)
     return result.model_dump()
-
 
 @app.post("/api/dev/validate-before-save")
 async def validate_before_save(data: Dict[str, Any]):
@@ -228,13 +210,11 @@ async def validate_before_save(data: Dict[str, Any]):
 
 # --- CONTEXT MANAGER ENDPOINTS ---
 
-
 @app.get("/api/context/summary")
 async def get_context_summary():
     """Get development context summary"""
     summary = context_manager.get_context_summary()
     return {"summary": summary}
-
 
 @app.get("/api/context/history")
 async def get_context_history(limit: int = 20):
@@ -242,13 +222,11 @@ async def get_context_history(limit: int = 20):
     history = context_manager.get_recent_history(limit)
     return {"history": [h.model_dump() for h in history]}
 
-
 @app.post("/api/context/analyze")
 async def analyze_context():
     """Analyze development context for consistency"""
     analysis = context_manager.analyze_context()
     return analysis.model_dump()
-
 
 @app.post("/api/context/check-consistency")
 async def check_consistency(data: Dict[str, Any]):
@@ -259,7 +237,6 @@ async def check_consistency(data: Dict[str, Any]):
     result = context_manager.check_consistency(proposed_change, files)
     return result
 
-
 @app.post("/api/context/suggest-refactoring")
 async def suggest_refactoring(data: Dict[str, Any]):
     """Get refactoring suggestions based on context"""
@@ -267,7 +244,6 @@ async def suggest_refactoring(data: Dict[str, Any]):
 
     plans = context_manager.suggest_refactoring(file_path)
     return {"refactoring_plans": [p.model_dump() for p in plans]}
-
 
 @app.post("/api/context/log")
 async def log_context_entry(data: Dict[str, Any]):
@@ -286,13 +262,11 @@ async def log_context_entry(data: Dict[str, Any]):
 
 # --- AGENT MEMORY ENDPOINTS ---
 
-
 @app.get("/api/memory/stats/{agent_name}")
 async def get_agent_stats(agent_name: str):
     """Get learning statistics for an agent"""
     stats = agent_memory.get_stats(agent_name)
     return stats
-
 
 @app.get("/api/memory/advice/{agent_name}")
 async def get_agent_advice(agent_name: str, task: str = ""):
@@ -300,20 +274,17 @@ async def get_agent_advice(agent_name: str, task: str = ""):
     advice = agent_memory.get_contextual_advice(agent_name, task)
     return {"advice": advice}
 
-
 @app.get("/api/memory/insights/{agent_name}")
 async def get_agent_insights(agent_name: str):
     """Get learned patterns and insights"""
     insights = agent_memory.analyze_patterns(agent_name)
     return {"insights": [i.model_dump() for i in insights]}
 
-
 @app.get("/api/memory/improvements/{agent_name}")
 async def get_agent_improvements(agent_name: str):
     """Get suggested improvements for an agent"""
     improvements = agent_memory.suggest_improvements(agent_name)
     return {"improvements": improvements}
-
 
 @app.get("/api/memory/all-agents")
 async def get_all_agents_memory():
@@ -326,7 +297,6 @@ async def get_all_agents_memory():
     return summary
 
 # --- MAINTENANCE & ORCHESTRATION ENDPOINTS ---
-
 
 @app.post("/api/maintenance/health-check")
 async def run_health_check():
@@ -345,7 +315,6 @@ async def run_health_check():
         "empty_files": result.get("empty_files", 0),
         "details": result
     }
-
 
 @app.post("/api/maintenance/code-cleanup")
 async def run_code_cleanup():
@@ -366,7 +335,6 @@ async def run_code_cleanup():
         "details": result
     }
 
-
 @app.post("/api/maintenance/organize-code")
 async def run_code_organization():
     """
@@ -384,7 +352,6 @@ async def run_code_organization():
         "details": result
     }
 
-
 @app.post("/api/maintenance/sync-code")
 async def run_code_sync():
     """
@@ -401,7 +368,6 @@ async def run_code_sync():
         "sync_score": result.get("sync_score", 0),
         "details": result
     }
-
 
 @app.post("/api/maintenance/full-cycle")
 async def run_full_maintenance_cycle():
@@ -497,7 +463,6 @@ async def run_full_maintenance_cycle():
 
     return results
 
-
 @app.get("/api/maintenance/orchestrator-status")
 async def get_orchestrator_status():
     """
@@ -523,7 +488,6 @@ async def get_orchestrator_status():
         ]
     }
 
-
 @app.post("/api/maintenance/report")
 async def generate_maintenance_report():
     """
@@ -536,6 +500,188 @@ async def generate_maintenance_report():
         "status": "no_maintenance_history",
         "message": "No maintenance operations have been run yet"
     }
+
+# --- AGENT DATA ENDPOINTS (Close the Loop: Agent → UI) ---
+
+@app.post("/api/agent/process-brand")
+async def process_brand(data: Dict[str, str]):
+    """
+    Trigger the Trinity Swarm to process a brand
+    Returns: { "brand": str, "products": [...], "status": str }
+    """
+    brand_name = data.get("brand", "Nord")
+    print(f"🚀 [Agent API] Processing brand: {brand_name}")
+
+    # Run the swarm and collect all approved products
+    processed_data = swarm.process_brand_with_results(brand_name)
+
+    return processed_data
+
+@app.get("/api/agent/brands")
+async def get_brands():
+    """
+    Get all available brands from the Trinity Swarm taxonomy
+    Returns: { "brands": [...] }
+    """
+    return {
+        "brands": swarm.taxonomy,
+        "count": len(swarm.taxonomy)
+    }
+
+@app.get("/api/data/brands-with-products")
+async def get_brands_with_products():
+    """
+    Get all brands with their products sorted by price
+    Returns: { "brands": [{ "name": str, "products": [...] }] }
+
+    This endpoint serves the TierBar component with properly formatted brand/product data
+    """
+    import json
+
+    result = {
+        "brands": [],
+        "metadata": {
+            "totalBrands": 0,
+            "totalProducts": 0,
+            "generatedAt": None
+        }
+    }
+
+    # Try galaxy_db.json first (unified data source)
+    backend_dir = Path(__file__).parent
+    galaxy_db_path = backend_dir.parent / "frontend" / \
+        "public" / "data" / "galaxy_db.json"
+
+    if galaxy_db_path.exists():
+        try:
+            with open(galaxy_db_path, 'r') as f:
+                galaxy_data = json.load(f)
+
+            # Group products by brand
+            brands_map = {}
+            for product in galaxy_data.get("products", []):
+                brand_name = product.get("brand", "Unknown")
+
+                if brand_name not in brands_map:
+                    brands_map[brand_name] = []
+
+                # Transform to TierBar format
+                normalized = {
+                    "id": product.get("id", ""),
+                    "name": product.get("name", ""),
+                    "brand": brand_name,
+                    "price": float(product.get("price", 0)),
+                    "currency": "ILS",
+                    "image": product.get("images", {}).get("main", ""),
+                    "in_stock": product.get("stockStatus", "in_stock") == "in_stock",
+                    "sku": product.get("id", ""),
+                    "tier": product.get("tier", "entry"),
+                    "category": product.get("category", "Uncategorized")
+                }
+                brands_map[brand_name].append(normalized)
+
+            # Build result with sorted products
+            for brand_name, products in brands_map.items():
+                # Sort by price
+                products.sort(key=lambda x: x["price"])
+
+                result["brands"].append({
+                    "name": brand_name.upper(),
+                    "count": len(products),
+                    "products": products
+                })
+
+            # Sort brands alphabetically
+            result["brands"].sort(key=lambda x: x["name"])
+
+            result["metadata"]["totalBrands"] = len(brands_map)
+            result["metadata"]["totalProducts"] = len(
+                galaxy_data.get("products", []))
+            result["metadata"]["generatedAt"] = galaxy_data.get("generatedAt")
+
+            print(
+                f"✅ Loaded {result['metadata']['totalProducts']} products from {len(brands_map)} brands (galaxy_db.json)")
+            return result
+
+        except Exception as e:
+            print(f"⚠️ Error loading galaxy_db.json: {e}")
+            # Fall through to individual files
+
+    # Fallback: Load individual brand files
+    data_dir = backend_dir.parent / "frontend" / "public" / "data"
+
+    brand_files = [
+        "nord.json", "roland.json", "korg.json", "yamaha.json",
+        "moog.json", "neumann.json", "shure.json", "rode.json",
+        "focal.json", "drumdots.json", "universal-audio.json"
+    ]
+
+    total_products = 0
+    for brand_file in brand_files:
+        file_path = data_dir / brand_file
+
+        if file_path.exists():
+            try:
+                with open(file_path, 'r') as f:
+                    products = json.load(f)
+
+                # Normalize products to consistent schema
+                normalized_products = []
+                for p in products:
+                    # Handle both frontend format and backend 5_golden format
+                    if "commercial" in p:  # Backend format
+                        commercial = p.get("commercial", {})
+                        official = p.get("official", {})
+                        normalized = {
+                            "id": commercial.get("id", ""),
+                            "name": official.get("official_name", commercial.get("title", "")),
+                            "brand": commercial.get("brand", brand_file.replace(".json", "")),
+                            "price": float(commercial.get("price_il", 0)),
+                            "currency": "ILS",
+                            "image": official.get("image_url", commercial.get("image_url", "")),
+                            "in_stock": commercial.get("in_stock", False),
+                            "sku": commercial.get("sku", ""),
+                        }
+                    else:  # Frontend format
+                        image_url = ""
+                        if isinstance(p.get("image_hero"), dict):
+                            image_url = p.get("image_hero", {}).get("url", "")
+                        else:
+                            image_url = p.get("image_hero", "")
+
+                        normalized = {
+                            "id": p.get("id", ""),
+                            "name": p.get("name", ""),
+                            "brand": p.get("brand_id", brand_file.replace(".json", "")),
+                            "price": float(p.get("price", 0)),
+                            "currency": p.get("currency", "ILS"),
+                            "image": image_url,
+                            "in_stock": p.get("in_stock", False),
+                            "sku": p.get("sku", ""),
+                        }
+
+                    normalized_products.append(normalized)
+
+                # Sort by price
+                normalized_products.sort(key=lambda x: x["price"])
+
+                if normalized_products:
+                    result["brands"].append({
+                        "name": brand_file.replace(".json", "").upper(),
+                        "count": len(normalized_products),
+                        "products": normalized_products
+                    })
+                    total_products += len(normalized_products)
+
+                print(
+                    f"✅ Loaded {len(normalized_products)} products from {brand_file}")
+            except Exception as e:
+                print(f"❌ Error loading {brand_file}: {e}")
+
+    result["metadata"]["totalBrands"] = len(result["brands"])
+    result["metadata"]["totalProducts"] = total_products
+
+    return result
 
 if __name__ == "__main__":
     uvicorn.run("backend.server:app", host="0.0.0.0", port=8000, reload=True)

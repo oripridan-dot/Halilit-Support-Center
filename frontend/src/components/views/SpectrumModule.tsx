@@ -1,6 +1,8 @@
 import {
   Activity,
   ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
   Maximize2,
   ScanLine,
   Search,
@@ -12,7 +14,6 @@ import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
 import type { Product } from "../../types";
 import { useCategoryCatalog } from "../../hooks/useCategoryCatalog";
-import { TierBar } from "../smart-views/TierBar";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
 
@@ -22,9 +23,9 @@ const calculateRelevance = (p: Product): number => {
   let score = 50; // Base score
 
   // 1. Data Quality Bonuses
-  if (p.image || p.image_url) score += 20;
-  if (p.verified) score += 15;
-  if (p.pricing) score += 10;
+  if (p.image_hero || p.image_thumbnail) score += 20;
+  if (p.is_bestseller) score += 15;
+  if (p.price) score += 10;
 
   // 2. "Flagship" detection (Arbitrary heuristic for demo)
   // In a real app, this would come from analytics or sales data
@@ -32,13 +33,61 @@ const calculateRelevance = (p: Product): number => {
   if (price > 2000 && price < 15000) score += 10; // Sweet spot for pro gear
 
   // 3. Penalty for "Ghost" items
-  if (!p.image && !p.image_url) score -= 30;
+  if (!p.image_hero && !p.image_thumbnail) score -= 30;
 
   // 4. Deterministic "Random" spice based on ID (so it stays consistent)
   const idSpice =
-    p.id.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % 20;
+    (p.id || "").split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
+    20;
 
   return Math.min(100, Math.max(0, score + idSpice));
+};
+
+// --- BRAND LOGO HELPER ---
+const BrandLogo = ({
+  brand,
+  className = "h-8",
+}: {
+  brand: string;
+  className?: string;
+}) => {
+  const [error, setError] = useState(false);
+
+  // Normalize brand name for file path
+  // e.g., "Universal Audio" -> "universal-audio"
+  const brandSlug = brand.toLowerCase().replace(/\s+/g, "-");
+
+  // Try to load the logo
+  const logoPath = `/assets/logos/${brandSlug}_logo.png`;
+
+  if (error) {
+    return (
+      <span
+        className={`font-black italic uppercase text-lg text-transparent bg-clip-text bg-gradient-to-br from-zinc-500 to-zinc-800 ${className} flex items-center justify-center text-center`}
+      >
+        {brand}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={logoPath}
+      alt={brand}
+      className={`object-contain transition-all duration-500 grayscale hover:grayscale-0 ${className}`}
+      onError={(e) => {
+        const target = e.currentTarget as HTMLImageElement;
+        // Fallback chain: png -> jpg -> svg -> text
+        if (target.src.endsWith(".png")) {
+          target.src = target.src.replace(".png", ".jpg");
+        } else if (target.src.endsWith(".jpg")) {
+          target.src = target.src.replace(".jpg", ".svg");
+        } else {
+          setError(true);
+        }
+      }}
+    />
+  );
 };
 
 export const SpectrumModule = () => {
@@ -65,22 +114,73 @@ export const SpectrumModule = () => {
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null);
   const [imageLoadError, setImageLoadError] = useState(false);
+  const [scrollPositions, setScrollPositions] = useState<
+    Record<string, number>
+  >({});
 
   const handleHoverProduct = (product: Product | null) => {
     setHoveredProduct(product);
     setImageLoadError(false);
   };
 
+  const handleScroll = (trackId: string, direction: "left" | "right") => {
+    const trackElement = document.getElementById(`track-${trackId}`);
+    if (!trackElement) return;
+
+    const scrollAmount = 400;
+    const newPosition =
+      (scrollPositions[trackId] || 0) +
+      (direction === "right" ? scrollAmount : -scrollAmount);
+
+    trackElement.scrollTo({
+      left: newPosition,
+      behavior: "smooth",
+    });
+
+    setScrollPositions((prev) => ({
+      ...prev,
+      [trackId]: newPosition,
+    }));
+  };
+
   const filteredProducts = useMemo(() => {
     let base = rawProducts;
     if (activeFilter !== "ALL") {
       base = rawProducts.filter((p) =>
-        (p.tags || p.filters)?.includes(activeFilter),
+        (p.filter_tags || [])?.includes(activeFilter),
       );
     }
     // Sort primarily by Price (X-Axis), secondary by Score (Y-Axis)
     return base.sort((a, b) => getPriceValue(a) - getPriceValue(b));
   }, [rawProducts, activeFilter]);
+
+  // --- BRAND MATRIX ENGINE ---
+  const brandMatrix = useMemo(() => {
+    if (filteredProducts.length === 0)
+      return { brands: [], minPrice: 0, maxPrice: 0 };
+
+    // 1. Calculate Global Range
+    const prices = filteredProducts
+      .map((p) => getPriceValue(p))
+      .filter((p) => p > 0);
+    const minPrice = Math.min(...prices) || 0;
+    const maxPrice = Math.max(...prices) || 10000;
+
+    // 2. Group by Brand
+    const grouped: Record<string, Product[]> = {};
+    filteredProducts.forEach((p) => {
+      const brand = p.brand_id || "Other";
+      if (!grouped[brand]) grouped[brand] = [];
+      grouped[brand].push(p);
+    });
+
+    // 3. Sort Brands Alphabetically
+    const sortedBrands = Object.entries(grouped)
+      .sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([brand, products]) => ({ brand, products }));
+
+    return { brands: sortedBrands, minPrice, maxPrice };
+  }, [filteredProducts]);
 
   // Handle errors
   if (error) {
@@ -181,23 +281,24 @@ export const SpectrumModule = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
                       ID REF:{" "}
-                      {hoveredProduct.id.split("_")[1] || hoveredProduct.id}
+                      {(hoveredProduct.id || "").split("_")[1] || hoveredProduct.id || "N/A"}
                     </span>
                   </div>
                   <h1 className="text-2xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
                     {hoveredProduct.name}
                   </h1>
                   <div className="text-xs text-amber-500 font-bold uppercase tracking-widest">
-                    {hoveredProduct.brand}
+                    {hoveredProduct.brand_id || "Unknown Brand"}
                   </div>
                 </div>
               </div>
 
               {/* Description (New) */}
               <div className="text-xs text-zinc-400 font-sans leading-relaxed line-clamp-4 border-l-2 border-zinc-800 pl-3">
-                {hoveredProduct.short_description ||
+                {hoveredProduct.description_short ||
                   stripHtml(
-                    hoveredProduct.description || "No description available.",
+                    hoveredProduct.description_full ||
+                      "No description available.",
                   )}
               </div>
 
@@ -254,7 +355,7 @@ export const SpectrumModule = () => {
               <div className="w-full h-px bg-zinc-800" />
 
               <button
-                onClick={() => openProductPop(hoveredProduct.id)}
+                onClick={() => hoveredProduct.id && openProductPop(hoveredProduct.id)}
                 className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-4 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -265,20 +366,107 @@ export const SpectrumModule = () => {
         </Surface>
       </div>
 
-      {/* --- BOTTOM: TIER BAR ENGINE --- */}
-      <div className="flex-1 relative bg-gradient-to-b from-[#050505] to-[#0e0e10] p-0 flex flex-col justify-center overflow-hidden px-8">
+      {/* --- BOTTOM: BRAND SWIMLANES ENGINE --- */}
+      <div className="flex-1 relative bg-[#050505] overflow-hidden flex flex-col">
         {loading ? (
           <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono animate-pulse">
             <Sparkles className="w-4 h-4 mr-2 animate-spin" /> INITIALIZING
-            SPECTRUM...
+            MATRIX...
+          </div>
+        ) : filteredProducts.length === 0 ? (
+          <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono">
+            <div className="text-center">
+              <ScanLine className="w-8 h-8 mx-auto mb-4 opacity-50" />
+              <span>No products in this sector</span>
+            </div>
           </div>
         ) : (
-          <div className="w-full h-full relative z-10">
-            <TierBar
-              products={filteredProducts}
-              onHoverProduct={handleHoverProduct}
-              onSelectProduct={openProductPop}
-            />
+          <div className="w-full h-full flex flex-col">
+            {/* Header / Axis Labels (Logarithmic approx labels) */}
+            <div className="h-8 flex border-b border-zinc-800/50 bg-black/40 text-[9px] text-zinc-600 font-mono items-end pb-1 px-32 relative">
+              <span className="absolute left-32">LOW PRICE</span>
+              <div className="flex-1 flex justify-between px-10">
+                <span>Entry</span>
+                <span>Mid-Range</span>
+                <span>Premium</span>
+                <span>Elite</span>
+              </div>
+              <span className="absolute right-8">HIGH PRICE</span>
+            </div>
+
+            {/* Scrollable Matrix */}
+            <div className="flex-1 overflow-y-auto custom-scrollbar">
+              {brandMatrix.brands.map(({ brand, products }) => (
+                <div
+                  key={brand}
+                  className="flex h-20 border-b border-zinc-800/30 hover:bg-zinc-900/20 transition-colors group/row"
+                >
+                  {/* Brand Header */}
+                  <div className="w-32 flex-shrink-0 flex items-center justify-start pl-4 border-r border-zinc-800/30 bg-black/20">
+                    <BrandLogo
+                      brand={brand}
+                      className="max-h-8 max-w-[80px] opacity-50 group-hover/row:opacity-100 transition-opacity"
+                    />
+                  </div>
+
+                  {/* The Track */}
+                  <div className="flex-1 relative flex items-center px-4">
+                    {/* We use specific positioning logic: 
+                            Logarithmic scale to prevent overlap at low prices 
+                        */}
+                    {products.map((product) => {
+                      const price = getPriceValue(product);
+                      // Avoid DBZ
+                      const safePrice = price > 0 ? price : 1;
+                      const safeMin =
+                        brandMatrix.minPrice > 0 ? brandMatrix.minPrice : 1;
+                      const safeMax = brandMatrix.maxPrice;
+
+                      // Log scale calculation:
+                      // pos = (log(price) - log(min)) / (log(max) - log(min))
+                      let pct = 0; // Default (TBD prices go to left)
+                      if (price > 0 && safeMax > safeMin) {
+                        pct =
+                          (Math.log(safePrice) - Math.log(safeMin)) /
+                          (Math.log(safeMax) - Math.log(safeMin));
+                      }
+
+                      // Clamp
+                      pct = Math.max(0, Math.min(1, pct));
+
+                      return (
+                        <div
+                          key={product.id}
+                          className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
+                          style={{ left: `${pct * 90}%` }} // limit to 90% so last item doesn't overflow right
+                        >
+                          {/* The Dot / Thumbnail */}
+                          <div
+                            className="w-10 h-10 rounded shadow-lg border border-zinc-700 bg-zinc-900 cursor-pointer 
+                                    hover:scale-150 hover:border-blue-500 transition-all duration-200 overflow-hidden relative"
+                            onClick={() => openProductPop(product.id!)}
+                            // Hover Logic
+                            onMouseEnter={() => handleHoverProduct(product)}
+                            // onMouseLeave={() => handleHoverProduct(null)} // Stickiness feels better
+                          >
+                            {product.image_thumbnail ? (
+                              <img
+                                src={resolveProductImage(product)}
+                                className="w-full h-full object-cover"
+                              />
+                            ) : (
+                              <div className="w-full h-full bg-zinc-800 flex items-center justify-center text-[8px] text-zinc-500">
+                                IMG
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>

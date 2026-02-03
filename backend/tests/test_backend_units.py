@@ -6,11 +6,8 @@ Tests all backend components: refinery, data processing, validation
 from backend.pipeline.data_refinery import DataRefinery
 import json
 import sys
-from pathlib import Path
-from tempfile import TemporaryDirectory
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
 
 class TestDataRefinery:
     """Unit tests for DataRefinery class"""
@@ -329,7 +326,6 @@ class TestDataRefinery:
 
         print("✅ Duplicate handling tests passed")
 
-
 def run_all_backend_tests():
     """Run all backend unit tests"""
     print("\n" + "="*70)
@@ -376,7 +372,6 @@ def run_all_backend_tests():
     print("="*70 + "\n")
 
     return failed == 0
-
 
 if __name__ == "__main__":
     success = run_all_backend_tests()

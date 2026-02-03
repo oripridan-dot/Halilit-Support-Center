@@ -9,11 +9,9 @@ Each agent has its own workflow optimized for its role:
 
 import logging
 
-from backend.skills.commercial_scout_skills import (
     SourceHarvesterSkill, PriceExtractorSkill,
     DataQualityAssessorSkill, DuplicateDetectorSkill
 )
-from backend.skills.official_verifier_skills import (
     BrandMatcherSkill, ImageFetcherSkill,
     SpecificationEnricherSkill, DataCompletenessCheckerSkill
 )

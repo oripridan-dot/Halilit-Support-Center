@@ -6,5 +6,6 @@ Each skill implements BaseSkill and returns (success: bool, output: Any).
 """
 
 from .base_skill import BaseSkill
+from .maintenance_skills import FileCleanupSkill, WhitespaceFormattingSkill
 
-__all__ = ['BaseSkill']
+__all__ = ['BaseSkill', 'FileCleanupSkill', 'WhitespaceFormattingSkill']

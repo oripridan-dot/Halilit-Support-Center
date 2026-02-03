@@ -3,14 +3,10 @@ End-to-End Integration Tests - Galaxy Data Protocol
 Tests the complete flow: Raw Data → Refinery → Export → Frontend Consumption
 """
 
-from backend.pipeline.data_refinery import DataRefinery
 import json
 import sys
-from pathlib import Path
-from tempfile import TemporaryDirectory
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
 
 class TestE2EIntegration:
     """End-to-end integration tests"""
@@ -381,7 +377,6 @@ class TestE2EIntegration:
 
             print("✅ JSON export validity test passed")
 
-
 def run_all_e2e_tests():
     """Run all e2e integration tests"""
     print("\n" + "="*70)
@@ -424,7 +419,6 @@ def run_all_e2e_tests():
     print("="*70 + "\n")
 
     return failed == 0
-
 
 if __name__ == "__main__":
     success = run_all_e2e_tests()

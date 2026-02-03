@@ -308,7 +308,7 @@ export function getConsolidatedProductCategory(product: Product): {
       "headphones": "headphones",
       "default": "accessories-utility"
     };
-    
+
     const categoryKey = (product.category || "default").toLowerCase().replace(/\s+/g, "_");
     let spectrumId = CATEGORY_BRIDGE[categoryKey] || "accessories-utility";
 
@@ -324,19 +324,47 @@ export function getConsolidatedProductCategory(product: Product): {
     };
   }
 
-  const originalCategory = product.category || "Uncategorized";
-  const spectrumId = consolidateCategory("unknown", originalCategory);
+  // 3. Fallback: Use brand-based categorization for uncategorized products
+  // This distributes products from each brand to reasonable spectrum categories
+  const brandId = product.brand_id?.toLowerCase() || "unknown";
+  const BRAND_SPECTRUM_MAP: Record<string, string> = {
+    // Roland: Drums, Keys, Synths (large catalog)
+    "roland": "electronic-drums",
+    "boss": "guitar-pedals",
 
-  // Find which Galaxy this spectrum belongs to
-  const galaxy = getGalaxyForSpectrum(spectrumId);
-  const galaxyId = galaxy ? galaxy.id : "accessories-utility";
-  const galaxyLabel = galaxy ? galaxy.label : "General Utility";
+    // Moog: Synths
+    "moog": "synthesizers",
+
+    // Nord: Keys, Synths
+    "nord": "synthesizers",
+
+    // Shure: Microphones, Live
+    "shure": "live-mics",
+
+    // Rode: Microphones, Studio
+    "rode": "studio-microphones",
+
+    // Neumann: Studio Microphones
+    "neumann": "studio-microphones",
+
+    // Focal: Studio Monitors
+    "focal": "studio-monitors",
+
+    // Universal Audio: Audio Interfaces, Outboard
+    "universal-audio": "audio-interfaces",
+
+    // Drumdots: Drums
+    "drumdots": "acoustic-drums",
+  };
+
+  const brandSpectrumId = BRAND_SPECTRUM_MAP[brandId] || "accessories-utility";
+  const brandGalaxy = getGalaxyForSpectrum(brandSpectrumId);
 
   return {
-    spectrumId,
-    galaxyId,
-    galaxyLabel,
-    originalCategory,
+    spectrumId: brandSpectrumId,
+    galaxyId: brandGalaxy?.id || "accessories-utility",
+    galaxyLabel: brandGalaxy?.label || "Accessories",
+    originalCategory: brandId || "Uncategorized",
   };
 }
 

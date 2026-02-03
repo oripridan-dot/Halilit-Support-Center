@@ -9,7 +9,6 @@ import unittest
 import tempfile
 import os
 import json
-from backend.skills.devagent_skills import (
                                                                 CodeAutoUpdateSkill,
                                                                 CodeSyncSkill,
                                                                 CompatibilityCheckSkill,
@@ -18,7 +17,6 @@ from backend.skills.devagent_skills import (
                                                                 CodeValidationSkill,
                                                                 DependencyResolutionSkill
 )
-from backend.workflow.maintenance_workflows import (
                                                                 CodeCleanupWorkflow,
                                                                 CodeOrganizationWorkflow,
                                                                 CodeSyncWorkflow,

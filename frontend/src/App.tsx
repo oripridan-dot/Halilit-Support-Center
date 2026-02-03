@@ -20,6 +20,11 @@ const ProductPopInterface = lazy(() =>
     default: m.ProductPopInterface,
   })),
 );
+const TierBar = lazy(() =>
+  import("./components/views/TierBar").then((m) => ({
+    default: m.TierBar,
+  })),
+);
 
 // Loading placeholder
 const LoadingPlaceholder = () => (
@@ -65,7 +70,16 @@ function App() {
             </div>
           )}
 
-          {/* Layer 3: Product Pop (Overlay) */}
+          {/* Layer 3: Tier Bar (Products by Brand & Price) */}
+          {currentView === "TIER_BAR" && (
+            <div className="absolute inset-0 animate-fade-in">
+              <Suspense fallback={<LoadingPlaceholder />}>
+                <TierBar />
+              </Suspense>
+            </div>
+          )}
+
+          {/* Layer 4: Product Pop (Overlay) */}
           {currentView === "PRODUCT_POP" && activeProductId && (
             <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
               <Suspense fallback={<LoadingPlaceholder />}>

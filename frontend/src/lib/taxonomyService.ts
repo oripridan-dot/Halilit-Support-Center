@@ -17,6 +17,7 @@ export interface TaxonomyData {
     brand_category_mapping: Record<string, {
         brand_name: string;
         categories: string[];
+        primary_category?: string;
     }>;
     category_hierarchy: Record<string, string[]>;
     categorization_rules: {
@@ -100,7 +101,7 @@ export class TaxonomyService {
     ensureCategorized(product: Product): Product {
         // If taxonomy not loaded, return product with default categorization
         if (!this.taxonomy) {
-            if (!product.category) {
+            if (!product.category && !product.brand_id) {
                 return {
                     ...product,
                     category: 'Audio Equipment', // Fallback default
@@ -112,6 +113,17 @@ export class TaxonomyService {
         const category = this._getCategory(product);
 
         if (!category) {
+            // Try brand-based categorization
+            if (product.brand_id) {
+                const brandMapping = this.taxonomy.brand_category_mapping[product.brand_id.toLowerCase()];
+                if (brandMapping?.primary_category) {
+                    return {
+                        ...product,
+                        category: brandMapping.primary_category,
+                    };
+                }
+            }
+
             // Apply categorization rules
             const rules = this.taxonomy.categorization_rules;
 
@@ -120,12 +132,12 @@ export class TaxonomyService {
             // Try alias mapping
             if (!assignedCategory && product.category) {
                 assignedCategory =
-                    rules.category_aliases[product.category] || product.category;
+                    rules.category_aliases[product.category.toLowerCase()] || product.category;
             }
 
             // Use default if still uncategorized
             if (!assignedCategory) {
-                assignedCategory = rules.default_category;
+                assignedCategory = rules.default_category || 'Audio Equipment';
                 console.warn(
                     `[TaxonomyService] Product ${product.id} was uncategorized, assigned default: ${assignedCategory}`
                 );

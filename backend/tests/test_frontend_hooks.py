@@ -3,10 +3,6 @@ Frontend Hook Unit Tests - useGalaxyData
 Tests the React hook that consumes Galaxy data
 """
 
-import json
-from pathlib import Path
-
-
 class MockGalaxyData:
     """Mock Galaxy data for testing"""
 
@@ -175,7 +171,6 @@ class MockGalaxyData:
                 "Controllers": ["Pads"]
             }
         }
-
 
 class TestUseGalaxyDataLogic:
     """Unit tests for useGalaxyData hook logic (without React)"""
@@ -436,7 +431,6 @@ class TestUseGalaxyDataLogic:
 
         print("✅ Empty search results test passed")
 
-
 def run_all_hook_tests():
     """Run all frontend hook tests"""
     print("\n" + "="*70)
@@ -482,7 +476,6 @@ def run_all_hook_tests():
     print("="*70 + "\n")
 
     return failed == 0
-
 
 if __name__ == "__main__":
     import sys

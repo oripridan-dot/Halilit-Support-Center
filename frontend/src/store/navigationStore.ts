@@ -8,7 +8,7 @@
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_POP' | 'MODEL_SHOWCASE';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_POP' | 'MODEL_SHOWCASE' | 'TIER_BAR';
 
 /**
  * Core navigation state that determines what the user sees
@@ -33,6 +33,7 @@ export interface NavigationState {
   openProductPop: (productId: string) => void;
   closeProductPop: () => void;
   showModelShowcase: () => void;
+  showTierBar: () => void;
 
   // Utility actions
   updateFilters: (filters: string[]) => void;
@@ -120,6 +121,14 @@ export const useNavigationStore = create<NavigationState>((set) => ({
    */
   showModelShowcase: () => set({
     currentView: 'MODEL_SHOWCASE',
+    lastError: null,
+  }),
+
+  /**
+   * Show the Tier Bar (Products by Brand & Price)
+   */
+  showTierBar: () => set({
+    currentView: 'TIER_BAR',
     lastError: null,
   }),
 

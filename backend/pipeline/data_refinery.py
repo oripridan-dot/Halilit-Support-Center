@@ -11,8 +11,6 @@ import json
 import time
 import logging
 import os
-from typing import List, Dict, Any, Optional
-from pathlib import Path
 
 # Configure Logging
 logging.basicConfig(
@@ -20,7 +18,6 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger("DataRefinery")
-
 
 class DataRefinery:
     """Processes raw product data through refinement and validation gates."""
@@ -274,7 +271,6 @@ class DataRefinery:
         logger.info(f"\n📁 Categories: {len(self._extract_category_tree())}")
         logger.info(f"🏢 Brands: {len(set(p['brand'] for p in self.products))}")
         logger.info("="*60 + "\n")
-
 
 # --- Usage Example ---
 if __name__ == "__main__":

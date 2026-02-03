@@ -3,13 +3,8 @@ Automatic Context Logging System
 Wraps all DevAgent operations with automatic context tracking
 """
 
-from functools import wraps
-from typing import Callable, Optional
-from backend.agents.context_manager import ContextManager
-
 # Global context manager instance
 _context_manager = None
-
 
 def get_context_manager():
     """Get or create global context manager"""
@@ -17,7 +12,6 @@ def get_context_manager():
     if _context_manager is None:
         _context_manager = ContextManager()
     return _context_manager
-
 
 def auto_log_context(operation_type: str):
     """
@@ -119,7 +113,6 @@ def auto_log_context(operation_type: str):
 
         return wrapper
     return decorator
-
 
 class AutoContextMixin:
     """

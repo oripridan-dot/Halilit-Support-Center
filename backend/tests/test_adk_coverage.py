@@ -1,4 +1,3 @@
-from backend.agents.trinity_swarm import TrinitySwarm
 from fastapi import FastAPI, Request
 
 """
@@ -264,7 +263,6 @@ class TestServerIntegration:
                 @pytest.mark.asyncio
                 async def test_server_health_endpoint(self):
                                 """Test health endpoint exists"""
-                                from backend.server import app
                                 from fastapi.testclient import TestClient
 
                                 client = TestClient(app)

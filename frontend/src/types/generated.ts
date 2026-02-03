@@ -62,6 +62,17 @@ export interface OptimizedProduct {
   badges?: Record<string, string>[];
   features_html?: string;
   features?: string[];
+  // --- Manual Patches for UI Support ---
+  brand?: string;
+  pill_data?: any;
+  main_category?: string;
+  official_manuals?: any;
+  official_gallery?: any;
+  necessities?: any;
+  accessories?: any;
+  related?: any;
+  specifications?: any;
+  description?: string; // alias for description_full/short checks
 }
 
 export interface BrandSummary {

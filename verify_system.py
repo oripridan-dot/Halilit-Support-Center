@@ -14,9 +14,6 @@ import os
 import json
 import re
 import sys
-from pathlib import Path
-from typing import Dict, List, Tuple
-
 
 class SystemVerifier:
     def __init__(self, root: str = '/workspaces/Halilit-Support-Center'):
@@ -306,7 +303,6 @@ Info Messages:         {len(self.info)}
         print("="*80 + "\n")
 
         return results
-
 
 if __name__ == '__main__':
     verifier = SystemVerifier()

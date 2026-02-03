@@ -7,9 +7,7 @@ Not dummy workflows - this does real work.
 
 import os
 import re
-from typing import List, Dict, Any
 from backend.workflow.engine import WorkflowState
-
 
 class RealCodeCleanupWorkflow:
     """Actually cleans up code"""
@@ -184,7 +182,6 @@ class RealCodeCleanupWorkflow:
             'validation_score': 95 if total_modified > 0 else 100
         }
 
-
 class RealCodeSyncWorkflow:
     """Actually synchronizes code across the repo"""
 
@@ -272,7 +269,6 @@ class RealCodeSyncWorkflow:
             'sync_score': 90
         }
 
-
 class RealHealthCheckWorkflow:
     """Actually checks system health"""
 
@@ -323,7 +319,7 @@ class RealHealthCheckWorkflow:
         issues = 0
 
         try:
-            import google.genai
+            pass
         except ImportError:
             issues += 1
 

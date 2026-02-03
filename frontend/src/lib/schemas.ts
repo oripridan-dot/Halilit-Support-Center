@@ -146,13 +146,22 @@ export const BrandStatsSchema = z.object({
 });
 
 export const BrandFileSchema = z
-  .object({
-    brand_identity: BrandIdentitySchema.optional().nullable(),
-    brand_name: z.string().optional().nullable(), // Support legacy format
-    products: z.array(ProductSchema),
-    stats: BrandStatsSchema.optional(),
-  })
-  .passthrough(); // Allow extra fields like catalog_version, last_updated, etc.
+  .union([
+    // Format 1: Object with products array (new format)
+    z.object({
+      brand_identity: BrandIdentitySchema.optional().nullable(),
+      brand_name: z.string().optional().nullable(),
+      products: z.array(ProductSchema),
+      stats: BrandStatsSchema.optional(),
+    }).passthrough(),
+    // Format 2: Direct array of products (legacy format used in current data)
+    z.array(ProductSchema).transform(products => ({
+      products,
+      brand_identity: undefined,
+      brand_name: undefined,
+      stats: undefined,
+    })),
+  ]);
 
 // ============================================================================
 // INDEX/CATALOG SCHEMAS
@@ -170,7 +179,7 @@ export const BrandIndexEntrySchema = z
       .nullable(),
     logo_url: z.string().optional().nullable(), // Relaxed from .url()
     product_count: z.number().nonnegative(),
-    verified_count: z.number().nonnegative(),
+    verified_count: z.number().nonnegative().optional().default(0),
     data_file: z.string().min(1, "Data file path required"),
   })
   .passthrough(); // Allow other fields like 'last_updated' to pass through
@@ -180,7 +189,7 @@ export const MasterIndexSchema = z
     build_timestamp: z.string(), // Relaxed from .datetime() to accept variations
     version: z.string().min(1, "Version required"),
     total_products: z.number().nonnegative(),
-    total_verified: z.number().nonnegative(),
+    total_verified: z.number().nonnegative().optional().default(0),
     brands: z.array(BrandIndexEntrySchema),
   })
   .passthrough();

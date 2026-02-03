@@ -5,11 +5,8 @@ Direct maintenance execution - bypass server issues
 
 import os
 import sys
-import re
-from pathlib import Path
 
 sys.path.insert(0, '/workspaces/Halilit-Support-Center')
-
 
 class HealthCheck:
     def __init__(self, project_root: str = '/workspaces/Halilit-Support-Center'):
@@ -48,7 +45,6 @@ class HealthCheck:
             'health': 'HEALTHY' if not empty_files else 'DEGRADED',
             'empty_file_list': empty_files[:10]  # Show first 10
         }
-
 
 class CodeCleanup:
     def __init__(self, project_root: str = '/workspaces/Halilit-Support-Center'):
@@ -101,7 +97,6 @@ class CodeCleanup:
 
         return stats
 
-
 def main():
     print("\n" + "="*70)
     print("🧹 FULL MAINTENANCE CYCLE - DIRECT EXECUTION")
@@ -142,7 +137,6 @@ def main():
     print("\n✅ Maintenance cycle complete!")
     print("   Codebase is clean and consolidated.")
     print("="*70 + "\n")
-
 
 if __name__ == '__main__':
     main()

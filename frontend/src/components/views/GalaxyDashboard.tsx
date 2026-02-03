@@ -8,6 +8,7 @@ import {
   Speaker,
   Plug,
   HelpCircle,
+  Layers,
 } from "lucide-react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
@@ -48,7 +49,7 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
 });
 
 export const GalaxyDashboard = () => {
-  const { goToSpectrum } = useNavigationStore();
+  const { goToSpectrum, showTierBar } = useNavigationStore();
   const { counts, loading } = useProductCounts();
 
   // Directly handle navigation to a subcategory
@@ -59,15 +60,24 @@ export const GalaxyDashboard = () => {
   return (
     <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
       {/* ------------------------------------------------------------------
-          HEADER: ULTRA COMPACT
+          HEADER: ULTRA COMPACT WITH TIER BAR BUTTON
          ------------------------------------------------------------------ */}
-      <header className="h-14 flex items-center px-6 bg-gradient-to-b from-transparent to-black/20 z-10 border-b border-zinc-900/50 shrink-0">
+      <header className="h-14 flex items-center justify-between px-6 bg-gradient-to-b from-transparent to-black/20 z-10 border-b border-zinc-900/50 shrink-0">
         <div className="flex items-center gap-3">
           <LayoutGrid className="w-6 h-6 text-zinc-500" />
           <h1 className="text-zinc-100 font-bold tracking-tight text-3xl">
             GALAXIES
           </h1>
         </div>
+
+        {/* Tier Bar Button */}
+        <button
+          onClick={showTierBar}
+          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 hover:text-blue-300 border border-blue-500/30 hover:border-blue-500 transition-all duration-200"
+        >
+          <Layers className="w-4 h-4" />
+          <span className="text-sm font-semibold">Tier Bar</span>
+        </button>
       </header>
 
       {/* ------------------------------------------------------------------
