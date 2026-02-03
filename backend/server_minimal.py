@@ -4,6 +4,12 @@ Minimal FastAPI server for maintenance workflows
 Bypasses Trinity Swarm import issues
 """
 
+from backend.workflow.real_maintenance import (
+    RealCodeCleanupWorkflow,
+    RealCodeSyncWorkflow,
+    RealHealthCheckWorkflow
+)
+import sys
 import os
 import json
 import logging
@@ -34,27 +40,24 @@ app.add_middleware(
 # REAL MAINTENANCE WORKFLOWS (Direct import to avoid __init__.py)
 # ============================================================
 
-import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Import workflows directly without going through __init__.py
-from backend.workflow.real_maintenance import (
-    RealCodeCleanupWorkflow,
-    RealCodeSyncWorkflow,
-    RealHealthCheckWorkflow
-)
 
 # ============================================================
 # ENDPOINTS
 # ============================================================
 
+
 class HealthResponse(BaseModel):
     status: str
     message: str
 
+
 class WorkflowResponse(BaseModel):
     status: str
     result: dict
+
 
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
@@ -63,6 +66,7 @@ async def health_check():
         "status": "HEALTHY",
         "message": "Minimal server running - real maintenance workflows available"
     }
+
 
 @app.post("/api/maintenance/health-check", response_model=WorkflowResponse)
 async def run_health_check():
@@ -78,6 +82,7 @@ async def run_health_check():
         logger.error(f"Health check failed: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @app.post("/api/maintenance/code-cleanup", response_model=WorkflowResponse)
 async def run_code_cleanup():
     """Run code cleanup on Python files"""
@@ -92,6 +97,7 @@ async def run_code_cleanup():
         logger.error(f"Code cleanup failed: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @app.post("/api/maintenance/sync-code", response_model=WorkflowResponse)
 async def run_code_sync():
     """Synchronize exports and imports"""
@@ -105,6 +111,7 @@ async def run_code_sync():
     except Exception as e:
         logger.error(f"Code sync failed: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.post("/api/maintenance/full-cycle", response_model=WorkflowResponse)
 async def run_full_cycle():

@@ -10,6 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, '/workspaces/Halilit-Support-Center')
 
+
 class HealthCheck:
     def __init__(self, project_root: str = '/workspaces/Halilit-Support-Center'):
         self.project_root = project_root
@@ -20,7 +21,8 @@ class HealthCheck:
         total_files = 0
 
         extensions = ('.py', '.ts', '.tsx', '.js', '.jsx')
-        exclude_dirs = {'node_modules', '__pycache__', '.venv', 'dist', 'build', '.next'}
+        exclude_dirs = {'node_modules', '__pycache__',
+                        '.venv', 'dist', 'build', '.next'}
 
         for root, dirs, files in os.walk(self.project_root):
             # Remove excluded directories
@@ -34,7 +36,8 @@ class HealthCheck:
                     try:
                         size = os.path.getsize(file_path)
                         if size == 0:
-                            rel_path = os.path.relpath(file_path, self.project_root)
+                            rel_path = os.path.relpath(
+                                file_path, self.project_root)
                             empty_files.append(rel_path)
                     except Exception:
                         pass
@@ -45,6 +48,7 @@ class HealthCheck:
             'health': 'HEALTHY' if not empty_files else 'DEGRADED',
             'empty_file_list': empty_files[:10]  # Show first 10
         }
+
 
 class CodeCleanup:
     def __init__(self, project_root: str = '/workspaces/Halilit-Support-Center'):
@@ -97,6 +101,7 @@ class CodeCleanup:
 
         return stats
 
+
 def main():
     print("\n" + "="*70)
     print("🧹 FULL MAINTENANCE CYCLE - DIRECT EXECUTION")
@@ -107,7 +112,8 @@ def main():
     health = HealthCheck()
     initial_health = health.scan()
     print(f"  ✅ Scanned {initial_health['total_files']} files")
-    print(f"  📊 Status: {initial_health['health']} ({initial_health['empty_files']} empty files)")
+    print(
+        f"  📊 Status: {initial_health['health']} ({initial_health['empty_files']} empty files)")
 
     # Phase 2: Code cleanup
     print("\n[Phase 2/4] Code Cleanup...")
@@ -115,13 +121,15 @@ def main():
     cleanup_results = cleanup.cleanup_python_files()
     print(f"  ✅ Scanned {cleanup_results['files_scanned']} Python files")
     print(f"  ✅ Modified {cleanup_results['files_modified']} files")
-    print(f"  ✅ Fixed whitespace in {cleanup_results['whitespace_fixed']} files")
+    print(
+        f"  ✅ Fixed whitespace in {cleanup_results['whitespace_fixed']} files")
 
     # Phase 3: Final health check
     print("\n[Phase 3/4] Final Health Check...")
     final_health = health.scan()
     print(f"  ✅ Scanned {final_health['total_files']} files")
-    print(f"  📊 Status: {final_health['health']} ({final_health['empty_files']} empty files)")
+    print(
+        f"  📊 Status: {final_health['health']} ({final_health['empty_files']} empty files)")
 
     # Phase 4: Summary
     print("\n[Phase 4/4] Maintenance Complete!")
@@ -134,6 +142,7 @@ def main():
     print("\n✅ Maintenance cycle complete!")
     print("   Codebase is clean and consolidated.")
     print("="*70 + "\n")
+
 
 if __name__ == '__main__':
     main()
