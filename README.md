@@ -1,4 +1,4 @@
-# Halilit Support Center v5.2
+# Halilit Support Center v5.2.0
 
 **An AI-Powered Product Catalog System Built on Google's Agent Development Kit (ADK)**
 
