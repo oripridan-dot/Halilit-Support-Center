@@ -15,6 +15,7 @@ client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # --- DATA MODELS (The Language of the Swarm) ---
 
+
 class ProductDraft(BaseModel):
     id: str
     name: str
@@ -25,6 +26,7 @@ class ProductDraft(BaseModel):
     source_url: Optional[str] = None
     official_match: Optional[bool] = False
 
+
 class AuditReport(BaseModel):
     product_id: Optional[str] = None
     status: str = Field(..., description="'APPROVED' or 'REJECTED'")
@@ -33,6 +35,7 @@ class AuditReport(BaseModel):
     auditor_notes: str
 
 # --- THE AGENTS ---
+
 
 class AgentBase(MemoryAwareMixin):
     """Base agent with learning capabilities"""
@@ -89,6 +92,7 @@ class AgentBase(MemoryAwareMixin):
 # 1. COMMERCIAL SCOUT (The Hunter)
 # Uses the Harvester Tool we wrote earlier
 
+
 class CommercialAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -111,6 +115,7 @@ class CommercialAgent(AgentBase):
 
 # 2. OFFICIAL VERIFIER (The Enricher)
 
+
 class OfficialAgent(AgentBase):
     def __init__(self):
         super().__init__(
@@ -127,6 +132,7 @@ class OfficialAgent(AgentBase):
         }
 
 # 3. EXTERNAL VALIDATOR (The Auditor - "From Aside")
+
 
 class ValidatorAgent(AgentBase):
     def __init__(self):
@@ -220,6 +226,8 @@ class ValidatorAgent(AgentBase):
             )
 
 # --- THE SWARM CONTROLLER (The Supervisor) ---
+
+
 class TrinitySwarm:
     def __init__(self):
         self.scout = CommercialAgent()
@@ -267,6 +275,7 @@ class TrinitySwarm:
             for v in report.violations:
                 print(f" - {v}")
             print(f"NOTES: {report.auditor_notes}")
+
 
 # --- RUNNER ---
 if __name__ == "__main__":

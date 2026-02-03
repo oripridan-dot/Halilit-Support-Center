@@ -9,6 +9,7 @@ Full Codebase Cleanup & Consolidation
 
 import re
 
+
 class CodebaseCleanup:
     def __init__(self, root: str = '/workspaces/Halilit-Support-Center'):
         self.root = root
@@ -36,7 +37,8 @@ class CodebaseCleanup:
                 if file_path.is_file():
                     try:
                         file_path.unlink()
-                        print(f"  🗑️  Removed: {file_path.relative_to(self.root)}")
+                        print(
+                            f"  🗑️  Removed: {file_path.relative_to(self.root)}")
                         removed += 1
                     except Exception as e:
                         print(f"  ⚠️  Failed to remove {file_path}: {e}")
@@ -164,7 +166,8 @@ class CodebaseCleanup:
             if '__pycache__' in str(py_file):
                 continue
 
-            imports_removed = self.remove_unused_imports_from_file(str(py_file))
+            imports_removed = self.remove_unused_imports_from_file(
+                str(py_file))
             total_imports_removed += imports_removed
 
             if self.clean_whitespace(str(py_file)):
@@ -198,10 +201,12 @@ class CodebaseCleanup:
         print("="*70)
         print(f"Total clutter removed: {clutter_removed}")
         print(f"Imports cleaned: {total_imports_removed}")
-        print(f"Files whitespace fixed: {total_whitespace_fixed + total_ts_cleaned}")
+        print(
+            f"Files whitespace fixed: {total_whitespace_fixed + total_ts_cleaned}")
         print(f"Documentation consolidated: {docs_removed}")
         print("\nCodebase is now clean and consolidated!")
         print("="*70 + "\n")
+
 
 if __name__ == '__main__':
     cleanup = CodebaseCleanup()

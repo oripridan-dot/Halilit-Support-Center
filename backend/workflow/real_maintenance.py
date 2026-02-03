@@ -10,6 +10,7 @@ import re
 from typing import List, Dict, Any
 from backend.workflow.engine import WorkflowState
 
+
 class RealCodeCleanupWorkflow:
     """Actually cleans up code"""
 
@@ -183,6 +184,7 @@ class RealCodeCleanupWorkflow:
             'validation_score': 95 if total_modified > 0 else 100
         }
 
+
 class RealCodeSyncWorkflow:
     """Actually synchronizes code across the repo"""
 
@@ -269,6 +271,7 @@ class RealCodeSyncWorkflow:
             'imports_fixed': imports_synced,
             'sync_score': 90
         }
+
 
 class RealHealthCheckWorkflow:
     """Actually checks system health"""
