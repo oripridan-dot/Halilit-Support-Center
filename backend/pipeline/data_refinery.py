@@ -233,20 +233,28 @@ class DataRefinery:
         """
         QUALITY GATE: Rejects items that don't meet the standard.
         """
+        if not item:
+            self.validation_errors.append("Item is None or empty")
+            return False
+
         is_valid = True
 
-        if not item['name'] or len(str(item['name'])) < 2:
-            self.validation_errors.append(f"Missing/Short Name: {item['id']}")
+        if not item.get('name') or len(str(item.get('name', ''))) < 2:
+            self.validation_errors.append(
+                f"Missing/Short Name: {item.get('id', 'unknown')}")
             is_valid = False
 
-        if not item['brand']:
-            self.validation_errors.append(f"Missing Brand: {item['id']}")
+        if not item.get('brand'):
+            self.validation_errors.append(
+                f"Missing Brand: {item.get('id', 'unknown')}")
             is_valid = False
 
-        if item['price'] == 0 and item['stockStatus'] == 'in_stock':
+        if item.get('price', 0) == 0 and item.get('stockStatus') == 'in_stock':
             # Soft warning
-            self.validation_warnings.append(f"Zero price: {item['name']}")
-            logger.warning(f"Zero price detected for {item['name']}")
+            self.validation_warnings.append(
+                f"Zero price: {item.get('name', 'unknown')}")
+            logger.warning(
+                f"Zero price detected for {item.get('name', 'unknown')}")
 
         return is_valid
 

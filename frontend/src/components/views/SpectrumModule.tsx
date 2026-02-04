@@ -7,8 +7,13 @@ import {
   ScanLine,
   Search,
   Sparkles,
+  Star,
+  CheckCircle,
+  AlertCircle,
+  ExternalLink,
+  Package,
 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
@@ -87,6 +92,162 @@ const BrandLogo = ({
         }
       }}
     />
+  );
+};
+
+// --- DATA SOURCES BADGE ---
+const DataSourcesBadge = ({ sources = [] }: { sources?: string[] }) => {
+  const sourceMap: Record<
+    string,
+    { label: string; icon: string; color: string }
+  > = {
+    halilit_direct: {
+      label: "Halilit",
+      icon: "₪",
+      color: "from-blue-600 to-blue-400",
+    },
+    official_specs: {
+      label: "Official",
+      icon: "✓",
+      color: "from-emerald-600 to-emerald-400",
+    },
+    trusted_reviews: {
+      label: "Reviews",
+      icon: "★",
+      color: "from-amber-600 to-amber-400",
+    },
+  };
+
+  return (
+    <div className="flex gap-2 flex-wrap">
+      {sources.length > 0 ? (
+        sources.slice(0, 3).map((source, i) => {
+          const info = sourceMap[source] || {
+            label: source,
+            icon: "◆",
+            color: "from-zinc-600 to-zinc-400",
+          };
+          return (
+            <div
+              key={i}
+              className={`text-[9px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r ${info.color} text-white flex items-center gap-1`}
+              title={info.label}
+            >
+              <span>{info.icon}</span>
+              <span>{info.label}</span>
+            </div>
+          );
+        })
+      ) : (
+        <div className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-zinc-700 text-zinc-300">
+          No sources
+        </div>
+      )}
+    </div>
+  );
+};
+
+// --- ENRICHMENT INFO PANEL ---
+const EnrichmentPanel = ({
+  product,
+}: {
+  product: Product & {
+    official_specs?: any;
+    review_data?: any;
+    sources?: string[];
+  };
+}) => {
+  return (
+    <div className="space-y-3 text-[11px]">
+      {/* Official Specs Section */}
+      {product.official_specs && (
+        <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <CheckCircle className="w-3 h-3 text-emerald-500" />
+            <span className="font-bold text-emerald-400 uppercase tracking-widest">
+              Official Specs
+            </span>
+          </div>
+          <div className="space-y-1 text-zinc-300">
+            {product.official_specs.polyphony && (
+              <div>
+                <span className="text-emerald-600">◆</span> Polyphony:{" "}
+                {product.official_specs.polyphony}
+              </div>
+            )}
+            {product.official_specs.connectivity && (
+              <div>
+                <span className="text-emerald-600">◆</span> Inputs:{" "}
+                {product.official_specs.connectivity.join(", ")}
+              </div>
+            )}
+            {product.official_specs.power_supply && (
+              <div>
+                <span className="text-emerald-600">◆</span> Power:{" "}
+                {product.official_specs.power_supply}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Review Data Section */}
+      {product.review_data && product.review_data.aggregate_rating && (
+        <div className="border-l-2 border-amber-600/50 bg-amber-950/30 p-3 rounded-sm">
+          <div className="flex items-center gap-2 mb-2">
+            <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
+            <span className="font-bold text-amber-400 uppercase tracking-widest">
+              Trusted Reviews
+            </span>
+          </div>
+          <div className="space-y-2 text-zinc-300">
+            <div className="flex items-center gap-2">
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-2.5 h-2.5 ${
+                      i < Math.floor(product.review_data.aggregate_rating)
+                        ? "fill-amber-400 text-amber-400"
+                        : "text-zinc-700"
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="font-bold text-amber-400">
+                {product.review_data.aggregate_rating.toFixed(1)}
+              </span>
+              <span className="text-zinc-600">
+                ({product.review_data.total_reviews} reviews)
+              </span>
+            </div>
+            {product.review_data.pros_and_cons?.pros && (
+              <div>
+                <span className="text-amber-500 text-[10px] font-bold">
+                  Pros:
+                </span>
+                <div className="text-[10px] text-zinc-400">
+                  {product.review_data.pros_and_cons.pros
+                    .slice(0, 2)
+                    .join(" • ")}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Data Provenance */}
+      <div className="border-l-2 border-blue-600/50 bg-blue-950/30 p-3 rounded-sm">
+        <div className="flex items-center gap-2 mb-2">
+          <Package className="w-3 h-3 text-blue-500" />
+          <span className="font-bold text-blue-400 uppercase tracking-widest">
+            Data Sources
+          </span>
+        </div>
+        <DataSourcesBadge sources={product.sources || ["halilit_direct"]} />
+      </div>
+    </div>
   );
 };
 
@@ -273,9 +434,9 @@ export const SpectrumModule = () => {
           className="col-span-5 bg-zinc-950 flex flex-col p-6 relative overflow-hidden"
         >
           {hoveredProduct ? (
-            <div className="flex flex-col h-full gap-4">
+            <div className="flex flex-col h-full gap-4 overflow-y-auto custom-scrollbar">
               {/* Header */}
-              <div className="flex items-center justify-between border-b border-zinc-800 pb-2">
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-2 shrink-0">
                 <div className="flex flex-col overflow-hidden">
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -295,8 +456,8 @@ export const SpectrumModule = () => {
                 </div>
               </div>
 
-              {/* Description (New) */}
-              <div className="text-xs text-zinc-400 font-sans leading-relaxed line-clamp-4 border-l-2 border-zinc-800 pl-3">
+              {/* Description */}
+              <div className="text-xs text-zinc-400 font-sans leading-relaxed line-clamp-4 border-l-2 border-zinc-800 pl-3 shrink-0">
                 {hoveredProduct.description_short ||
                   stripHtml(
                     hoveredProduct.description_full ||
@@ -304,26 +465,32 @@ export const SpectrumModule = () => {
                   )}
               </div>
 
-              {/* Specs Grid */}
-              <div className="mt-auto grid grid-cols-2 gap-2 text-[10px] font-mono text-zinc-500">
-                {hoveredProduct.specs?.slice(0, 4).map((spec, i) => (
-                  <div
-                    key={i}
-                    className="flex flex-col bg-zinc-900/50 p-2 border border-zinc-800/50 rounded-sm"
-                  >
-                    <span className="text-amber-500/50 uppercase text-[9px] mb-1">
-                      {spec.name}
-                    </span>
-                    <span className="text-zinc-300 truncate">{spec.value}</span>
+              {/* Halilit Specs Grid */}
+              {hoveredProduct.specs && hoveredProduct.specs.length > 0 && (
+                <div>
+                  <div className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-2">
+                    Halilit Specs
                   </div>
-                ))}
-                {(!hoveredProduct.specs ||
-                  hoveredProduct.specs.length === 0) && (
-                  <div className="col-span-2 text-center text-zinc-700 italic py-2">
-                    Technical specifications unavailable
+                  <div className="grid grid-cols-2 gap-2 text-[10px] font-mono text-zinc-500">
+                    {hoveredProduct.specs.slice(0, 4).map((spec, i) => (
+                      <div
+                        key={i}
+                        className="flex flex-col bg-zinc-900/50 p-2 border border-zinc-800/50 rounded-sm"
+                      >
+                        <span className="text-amber-500/50 uppercase text-[9px] mb-1">
+                          {spec.name}
+                        </span>
+                        <span className="text-zinc-300 truncate">
+                          {spec.value}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                )}
-              </div>
+                </div>
+              )}
+
+              {/* Enrichment Data Section */}
+              <EnrichmentPanel product={hoveredProduct} />
             </div>
           ) : (
             <div className="h-full w-full flex items-center justify-center">
