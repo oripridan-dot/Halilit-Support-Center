@@ -1,7 +1,7 @@
-# Halilit Support Center v5.2.4 - ADK Backend
-# Agent Development Kit powered with Trinity Swarm and Google Conductor
-# Version: 5.2.4 (Production Ready)
-# Features: Trinity Swarm, DevAgent v3.1, Learning System, Google Conductor, Complete Maintenance, Full Sync
+# Halilit Support Center v5.4.0 - Spectrum Pipeline Backend
+# Google Conductor orchestration with Trinity Swarm and Spectrum Data Pipeline
+# Version: 5.4.0 (Production Ready)
+# Features: Trinity Swarm, Google Conductor, Spectrum Pipeline, Data Enrichment, Risk Validation, Cross-Validation Engine
 
 # Core Framework
 pydantic>=2.6.0

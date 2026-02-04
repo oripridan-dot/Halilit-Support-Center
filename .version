@@ -1,8 +1,8 @@
-VERSION=5.2.4
-RELEASE_TAG=v5.2.4-google-conductor
-BUILD_DATE=2026-02-02
+VERSION=5.4.0
+RELEASE_TAG=v5.4.0-spectrum
+BUILD_DATE=2026-02-04
 BRANCH=main
-STATUS=adk-production-ready
-ARCHITECTURE=agent-development-kit
-AGENTS=trinity-swarm-active
+STATUS=spectrum-production-ready
+ARCHITECTURE=google-conductor-orchestration
+AGENTS=trinity-swarm-spectrum-pipeline
 TEST_COVERAGE=31/31
