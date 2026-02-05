@@ -1,0 +1,14 @@
+{
+  "batch_id": "a4f3ed30",
+  "brand": "Moog",
+  "timestamp": "2026-02-05T14:49:18.052461",
+  "execution_time_seconds": 0.003694,
+  "total_processed": 17,
+  "approved_count": 17,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 58%)"
+  ],
+  "approved_products_count": 17,
+  "rejected_products_count": 0
+}

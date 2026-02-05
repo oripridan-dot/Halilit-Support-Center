@@ -1,7 +1,7 @@
 {
-  "version": "5.2.4",
-  "build_timestamp": "2026-02-03T19:06:29Z",
-  "total_products": 647,
+  "version": "5.2.0",
+  "build_timestamp": "2026-02-04T20:00:16Z",
+  "total_products": 648,
   "brands": [
     {
       "id": "drumdots",
@@ -38,6 +38,12 @@
       "name": "Shure",
       "product_count": 17,
       "data_file": "shure.json"
+    },
+    {
+      "id": "testbrand",
+      "name": "Testbrand",
+      "product_count": 1,
+      "data_file": "testbrand.json"
     },
     {
       "id": "universal-audio",

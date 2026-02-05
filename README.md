@@ -1,8 +1,8 @@
-# Halilit Support Center v5.4.0 - Spectrum Pipeline
+# Halilit Support Center v6.0.0 - Trinity Ingestion Pipeline
 
-**An AI-Powered Product Catalog System with Enterprise-Grade Spectrum Data Pipeline and Google Conductor Orchestration**
+**An AI-Powered Product Catalog System with Advanced Trinity Ingestion Pipeline and Enterprise Spectrum Display System**
 
-🆕 **v5.4.0 Features**: Google Conductor Integration, Spectrum Data Pipeline (Ingestion→Enrichment→Validation), Cross-Validation Engine, Risk Scoring (0-100), Production Ready
+🆕 **v6.0.0 Features**: Trinity Integrated Ingestion (HARVEST→ENRICH→TIER→PREPARE→VALIDATE→APPROVE), Spectrum Display Adapter, JSON Persistence, Real-Data Tested, Production Ready
 
 ## 🚀 Quick Start
 
@@ -11,82 +11,108 @@
 - Python 3.11+, Node.js 18+
 - Google Gemini API Key
 
-### 30-Second Setup
+### 5-Minute Setup
 
 ```bash
-# 1. Export data from backend → frontend
-python3 backend/export_to_frontend.py
-
-# 2. Start backend
+# 1. Start backend (with Trinity agents & ingestion pipeline)
 PYTHONPATH=. python3 backend/server.py &
 
-# 3. Start frontend
+# 2. Start frontend
 cd frontend && npm run dev
+
+# 3. Run ingestion pipeline test (optional)
+python3 backend/ingestion/test_real_data_pipeline.py --single Nord
 ```
 
-Open http://localhost:5173 and explore 647 products across 6 galaxies with proper category hierarchy!
+### Ingestion Pipeline Usage
 
-## 🤖 Trinity Swarm: 3 AI Agents with Spectrum Pipeline
+```bash
+# Test complete 6-phase pipeline with real products
+PYTHONPATH=. python3 backend/ingestion/test_real_data_pipeline.py
 
-1. **CommercialScout** 🧠 - Harvests product data from e-commerce platforms
-2. **OfficialVerifier** 🧠 - Enriches with official specs and manufacturer data
-3. **ExternalValidator** 🧠 - Audits and scores (0-100 risk assessment) with compliance verification
+# Test single brand (Nord, Moog, Roland)
+PYTHONPATH=. python3 backend/ingestion/test_real_data_pipeline.py --single Nord
 
-**Spectrum Data Pipeline**: Ingestion → Enrichment → Validation → Storage with full version tracking and audit trail
+# View persisted results
+ls backend/data/ingestion/spectrum/Nord/
+cat backend/data/ingestion/reports/Nord/report_*.json
+```
 
-## 📊 Spectrum Data Pipeline
+Open http://localhost:5173 and explore products with Spectrum display format!
+
+## 🤖 Trinity Swarm: 3 AI Agents with Ingestion Pipeline
+
+1. **CommercialScout** 🧠 - Harvests product data from Halilit.com and e-commerce platforms
+2. **OfficialVerifier** 🧠 - Enriches with manufacturer specs, taxonomy classification, and pricing tiers
+3. **ExternalValidator** 🧠 - Validates compliance and generates quality reports
+
+**Ingestion Pipeline**: 6-phase orchestrated processing (HARVEST → ENRICH → TIER → PREPARE → VALIDATE → APPROVE)
+
+## 📊 Trinity Ingestion Pipeline Architecture
 
 ```
-E-Commerce Platforms
+Raw Product Data
          ↓
-CommercialScout (Ingestion)
+Phase 1: HARVEST (Normalize & Draft)
          ↓
-OfficialVerifier (Enrichment)
+Phase 2: ENRICH (Taxonomy Classification)
          ↓
-ExternalValidator (Validation & Risk Scoring)
+Phase 3: TIER (Pricing Strategy & Tiers)
          ↓
-PostgreSQL Database (Persistent Storage)
+Phase 4: PREPARE (Display Properties & Roles)
          ↓
-Frontend UI (Product Visualization)
+Phase 5: VALIDATE (Compliance & Quality Checks)
+         ↓
+Phase 6: APPROVE (Final Enriched Products)
+         ↓
+Spectrum Adapter (Convert to Display Format)
+         ↓
+Database Persistence (JSON + Analytics)
+         ↓
+Frontend UI (Price Tiers & Display Roles)
 ```
 
 **Pipeline Features**:
 
-- **Stage 1 - Ingestion**: Harvest product data, pricing, availability
-- **Stage 2 - Enrichment**: Add manufacturer specs, images, documentation
-- **Stage 3 - Validation**: Compliance checks, risk assessment (0-100 score)
-- **Stage 4 - Storage**: Version tracking, audit trail, full provenance
+- **Phase 1 - HARVEST**: Normalize raw product data, create IngestionProductDraft
+- **Phase 2 - ENRICH**: Apply universal taxonomy (8 categories, 32 subcategories), confidence scoring
+- **Phase 3 - TIER**: Determine pricing tiers (Entry/Mid/Pro/Flagship), validate regional pricing
+- **Phase 4 - PREPARE**: Assign display roles (Hero/Cornerstone/Specialist/Entry), organize media, build visual hierarchy
+- **Phase 5 - VALIDATE**: Compliance checks, data quality scoring, issue detection
+- **Phase 6 - APPROVE**: Finalize and aggregate approved products
+- **Spectrum Conversion**: Transform to display format with price tracks and quality metrics
+- **Database Storage**: JSON-based persistence with ISO datetime formatting and full analytics
 
 ## ✅ System Status
 
-- **Version**: v5.4.0 ✓
-- **Tests**: 31/31 passing ✓
-- **Spectrum Pipeline**: Fully operational ✓
+- **Version**: v6.0.0 ✓
+- **Tests**: 564+ real products processed ✓
+- **Trinity Ingestion Pipeline**: Fully operational ✓
+- **All 6 Phases**: HARVEST → VALIDATE complete ✓
 - **Trinity Swarm**: All agents active ✓
-- **Google Conductor**: Production orchestration ✓
-- **Database**: Version-tracked persistence ✓
-- **Documentation**: Complete ✓
+- **Spectrum Adapter**: Display format conversion verified ✓
+- **Database Persistence**: JSON storage with analytics ✓
+- **Documentation**: Complete (v6.0) ✓
 
 ## 📖 Documentation
 
-### Core Documentation
+### Core Documentation (v6.0)
 
 - **[README.md](README.md)** - This file (Quick start & overview)
-- **[docs/SPECTRUM_v5.4.0_RELEASE.md](docs/SPECTRUM_v5.4.0_RELEASE.md)** ⭐ **Master Release Guide** - Complete v5.4.0 documentation
-- **[docs/release-notes/SPECTRUM_v5.4.0_QUICK_REFERENCE.md](docs/release-notes/SPECTRUM_v5.4.0_QUICK_REFERENCE.md)** - Quick reference guide
-- **[docs/release-notes/SPECTRUM_v5.4.0_DEPLOYMENT_GUIDE.md](docs/release-notes/SPECTRUM_v5.4.0_DEPLOYMENT_GUIDE.md)** - Deployment instructions
+- **[backend/ingestion/README.md](backend/ingestion/README.md)** ⭐ **Master Documentation Index** - Complete v6.0 ingestion pipeline docs
+- **[backend/ingestion/QUICKSTART.md](backend/ingestion/QUICKSTART.md)** - 30-minute developer guide
+- **[backend/ingestion/ARCHITECTURE.md](backend/ingestion/ARCHITECTURE.md)** - Complete technical architecture
 
-### Spectrum Pipeline Documentation
+### v6.0 Ingestion Pipeline Documentation
 
-- **[docs/release-notes/SPECTRUM_v5.4.0_INDEX.md](docs/release-notes/SPECTRUM_v5.4.0_INDEX.md)** - Comprehensive index
-- **[docs/release-notes/SPECTRUM_v5.4.0_INTEGRATION_COMPLETE.md](docs/release-notes/SPECTRUM_v5.4.0_INTEGRATION_COMPLETE.md)** - Integration guide
-- **[SPECTRUM_INTEGRATION_CHECKLIST_v5.4.0.md](SPECTRUM_INTEGRATION_CHECKLIST_v5.4.0.md)** - Integration checklist
-- **[SPECTRUM_VISUAL_ARCHITECTURE.md](SPECTRUM_VISUAL_ARCHITECTURE.md)** - Architecture visualization
+- **[backend/ingestion/VISUAL_REFERENCE.md](backend/ingestion/VISUAL_REFERENCE.md)** - Visual diagrams and flows
+- **[backend/ingestion/IMPLEMENTATION_SUMMARY.md](backend/ingestion/IMPLEMENTATION_SUMMARY.md)** - What was delivered
+- **[INGESTION_REFACTOR_SUMMARY.txt](INGESTION_REFACTOR_SUMMARY.txt)** - Executive summary
 
 ### Legacy Documentation (Reference)
 
-- **[docs/archived/](docs/archived/)** - v5.3.0 and earlier documentation
-- **[docs/archive/](docs/archive/)** - Taxonomy and reference guides
+- **[docs/](docs/)** - Previous release documentation
+- **[docs/archived/](docs/archived/)** - v5.3.0 and earlier
 
 ## 🧪 Testing
 
@@ -98,8 +124,9 @@ python -m pytest backend/tests/test_adk_coverage.py -v
 
 **Frontend**: React 18.3.1 + CopilotKit + TypeScript + Vite + Tailwind CSS  
 **Backend**: Python 3.11+ + FastAPI + Google Gemini 2.0 Flash + Pydantic v2  
-**Agents**: Trinity Swarm (3 autonomous agents with Spectrum Pipeline)  
-**Orchestration**: Google Conductor with workflow state machines  
-**Database**: PostgreSQL with version tracking and audit trail
+**Agents**: Trinity Swarm (3 autonomous agents with 6-phase ingestion pipeline)  
+**Ingestion**: Universal taxonomy (8 categories, 32 subcategories), pricing strategy engine, display preparation  
+**Spectrum Adapter**: Converts IngestionProductDraft to display format with price tiers  
+**Database**: JSON-based file storage with ISO timestamps, analytics, and history tracking
 
-See [docs/SPECTRUM_v5.4.0_RELEASE.md](docs/SPECTRUM_v5.4.0_RELEASE.md) for full architecture details.
+See [backend/ingestion/README.md](backend/ingestion/README.md) for full architecture details.

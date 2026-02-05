@@ -7,6 +7,9 @@ import {
   ArrowLeft,
 } from "lucide-react";
 import { useNavigationStore } from "../../store/navigationStore";
+import { catalogLoader } from "../../lib/catalogLoader";
+import { getPrice, getPriceValue } from "../../lib/priceFormatter";
+import type { Product as CatalogProduct } from "../../types";
 
 interface Product {
   id: string;
@@ -40,6 +43,7 @@ export const TierBar: React.FC<TierBarProps> = ({
   >({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { openProductPop } = useNavigationStore();
 
   useEffect(() => {
     fetchBrandsWithProducts();
@@ -48,11 +52,50 @@ export const TierBar: React.FC<TierBarProps> = ({
   const fetchBrandsWithProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/api/data/brands-with-products");
-      if (!response.ok) throw new Error("Failed to fetch data");
 
-      const data = await response.json();
-      setBrandTracks(data.brands || []);
+      // Load all products from catalog
+      const allProducts = await catalogLoader.loadAllProducts();
+
+      // Group by brand and sort by price
+      const brandMap = new Map<string, CatalogProduct[]>();
+
+      allProducts.forEach((product) => {
+        const brand = product.brand || "Unknown";
+        if (!brandMap.has(brand)) {
+          brandMap.set(brand, []);
+        }
+        brandMap.get(brand)!.push(product);
+      });
+
+      // Transform to BrandTrack format and sort products by price
+      const tracks: BrandTrack[] = Array.from(brandMap.entries())
+        .map(([brandName, products]) => {
+          const sorted = products.sort((a, b) => {
+            const priceA = getPriceValue(a);
+            const priceB = getPriceValue(b);
+            return priceA - priceB;
+          });
+
+          return {
+            name: brandName,
+            count: sorted.length,
+            products: sorted.map(
+              (p: any): Product => ({
+                id: p.id || "",
+                name: p.name || "Unnamed",
+                brand: p.brand || "Unknown",
+                price: getPriceValue(p),
+                currency: "ILS",
+                image: p.image_hero || p.image_thumbnail || "",
+                in_stock: p.in_stock !== false,
+                sku: String(p.sku || p.id || ""),
+              }),
+            ),
+          };
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      setBrandTracks(tracks);
       setError(null);
     } catch (err) {
       console.error("Error fetching brands:", err);
@@ -175,7 +218,10 @@ export const TierBar: React.FC<TierBarProps> = ({
                 {brand.products.map((product) => (
                   <div
                     key={product.id}
-                    onClick={() => onProductSelect?.(product)}
+                    onClick={() => {
+                      onProductSelect?.(product);
+                      openProductPop(product.id);
+                    }}
                     className="flex-shrink-0 w-48 bg-slate-900 rounded-lg overflow-hidden border border-slate-800 hover:border-blue-500 cursor-pointer transition group"
                   >
                     {/* Product Image */}

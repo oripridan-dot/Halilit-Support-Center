@@ -1,0 +1,15 @@
+{
+  "brand": "TestBrand",
+  "products": [
+    {
+      "id": "testbrand_testproduct",
+      "name": "TestProduct",
+      "brand": "TestBrand",
+      "price_il": 999.0,
+      "price_eilat": 0.0,
+      "image_url": null,
+      "source_url": null,
+      "official_match": false
+    }
+  ]
+}

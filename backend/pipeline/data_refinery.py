@@ -99,6 +99,166 @@ class DataRefinery:
             return 'pro'
         return 'flagship'
 
+    def _infer_category(self, name: str, description: str, specs: Dict) -> tuple:
+        """
+        Intelligently infers product category and subcategory from name, description, and specs.
+        Supports both English and Hebrew product names.
+        Returns (category, subcategory) tuple.
+        """
+        text = (name + " " + description).lower()
+        specs_text = " ".join([str(k) + " " + str(v)
+                              for k, v in specs.items()]).lower()
+        combined = text + " " + specs_text
+
+        # Category keywords - maps keywords to (category, subcategory)
+        # IMPORTANT: Order matters - check more specific terms first
+        # Include both English and Hebrew terms
+        category_map = [
+            # Keyboards & Synthesizers (English)
+            ('synthesizer', ('Keyboards & Synthesizers', 'Synthesizer')),
+            ('synth', ('Keyboards & Synthesizers', 'Synthesizer')),
+            ('nord grand', ('Keyboards & Synthesizers', 'Nord Keyboard')),
+            ('nord keyboard', ('Keyboards & Synthesizers', 'Nord Keyboard')),
+            ('nord', ('Keyboards & Synthesizers', 'Nord Synth')),
+            ('moog', ('Keyboards & Synthesizers', 'Moog Synth')),
+            ('elektron', ('Keyboards & Synthesizers', 'Groovebox')),
+            ('digital piano', ('Keyboards & Synthesizers', 'Digital Piano')),
+            ('electric piano', ('Keyboards & Synthesizers', 'Digital Piano')),
+            ('keyboard', ('Keyboards & Synthesizers', 'Digital Keyboard')),
+            ('piano', ('Keyboards & Synthesizers', 'Digital Piano')),
+            ('korg', ('Keyboards & Synthesizers', 'Digital Keyboard')),
+            ('yamaha', ('Keyboards & Synthesizers', 'Digital Keyboard')),
+
+            # Keyboards & Synthesizers (Hebrew)
+            ('סינתיסייזר', ('Keyboards & Synthesizers', 'Synthesizer')),  # Synthesizer
+            ('פסנתר', ('Keyboards & Synthesizers', 'Digital Piano')),  # Piano
+            ('אורגן', ('Keyboards & Synthesizers', 'Organ')),  # Organ
+
+            # Drums & Percussion (English)
+            ('drum trigger', ('Drums & Percussion', 'Drum Trigger')),
+            ('drum pad', ('Drums & Percussion', 'Drum Pad')),
+            ('drum kit', ('Drums & Percussion', 'Drum Kit')),
+            ('v-drum', ('Drums & Percussion', 'Electronic Drum')),
+            ('electronic drum', ('Drums & Percussion', 'Electronic Drum')),
+            ('drum', ('Drums & Percussion', 'Drum Kit')),
+            ('percussion', ('Drums & Percussion', 'Percussion')),
+            ('timpani', ('Drums & Percussion', 'Timpani')),
+            ('cymbals', ('Drums & Percussion', 'Cymbals')),
+            ('marimba', ('Drums & Percussion', 'Mallet Instruments')),
+
+            # Drums & Percussion (Hebrew)
+            ('תופים', ('Drums & Percussion', 'Drum Kit')),  # Drums
+            ('מצילה', ('Drums & Percussion', 'Cymbals')),  # Cymbal
+
+            # Audio Interfaces & Mixers
+            ('audio interface', ('Audio Interfaces & Mixers', 'Audio Interface')),
+            ('mixing console', ('Audio Interfaces & Mixers', 'Mixer')),
+            ('mixer', ('Audio Interfaces & Mixers', 'Mixer')),
+            ('preamp', ('Audio Interfaces & Mixers', 'Preamp')),
+            ('interface', ('Audio Interfaces & Mixers', 'Audio Interface')),
+
+            # Microphones & Recording (English)
+            ('condenser microphone', ('Microphones & Recording', 'Condenser Mic')),
+            ('dynamic microphone', ('Microphones & Recording', 'Dynamic Mic')),
+            ('ribbon microphone', ('Microphones & Recording', 'Ribbon Mic')),
+            ('vocal microphone', ('Microphones & Recording', 'Microphone')),
+            ('wireless microphone', ('Microphones & Recording', 'Wireless Mic')),
+            ('microphone', ('Microphones & Recording', 'Microphone')),
+            ('condenser', ('Microphones & Recording', 'Condenser Mic')),
+            ('dynamic mic', ('Microphones & Recording', 'Dynamic Mic')),
+            ('ribbon', ('Microphones & Recording', 'Ribbon Mic')),
+            ('mic', ('Microphones & Recording', 'Microphone')),
+            ('recording', ('Microphones & Recording', 'Recording Equipment')),
+
+            # Microphones & Recording (Hebrew)
+            ('מיקרופון', ('Microphones & Recording', 'Microphone')),  # Microphone
+
+            # Cables & Connectors
+            ('xlr cable', ('Cables & Connectors', 'Cable')),
+            ('1/4" cable', ('Cables & Connectors', 'Cable')),
+            ('balanced cable', ('Cables & Connectors', 'Cable')),
+            ('unbalanced cable', ('Cables & Connectors', 'Cable')),
+            ('rca cable', ('Cables & Connectors', 'Cable')),
+            ('usb cable', ('Cables & Connectors', 'Cable')),
+            ('ethernet cable', ('Cables & Connectors', 'Cable')),
+            ('hdmi cable', ('Cables & Connectors', 'Cable')),
+            ('cable', ('Cables & Connectors', 'Cable')),
+            ('connector', ('Cables & Connectors', 'Connector')),
+            ('jack', ('Cables & Connectors', 'Jack')),
+
+            # Cables & Connectors (Hebrew)
+            ('כבל', ('Cables & Connectors', 'Cable')),  # Cable
+
+            # Studio Monitors & Speakers
+            ('studio monitor', ('Studio Monitors & Speakers', 'Studio Monitor')),
+            ('nearfield monitor', ('Studio Monitors & Speakers', 'Nearfield Monitor')),
+            ('active speaker', ('Studio Monitors & Speakers', 'Powered Speaker')),
+            ('powered speaker', ('Studio Monitors & Speakers', 'Powered Speaker')),
+            ('speaker', ('Studio Monitors & Speakers', 'Speaker')),
+
+            # Headphones & Earphones (English)
+            ('wireless headphone', ('Headphones & Earphones', 'Wireless Headphones')),
+            ('in-ear monitor', ('Headphones & Earphones', 'In-Ear Monitor')),
+            ('headphone', ('Headphones & Earphones', 'Headphones')),
+            ('headset', ('Headphones & Earphones', 'Headphones')),
+            ('earphone', ('Headphones & Earphones', 'Earphones')),
+
+            # Headphones & Earphones (Hebrew)
+            ('אוזניות', ('Headphones & Earphones', 'Headphones')),  # Headphones
+
+            # Accessories & Mounting (English)
+            ('boom arm', ('Accessories & Mounting', 'Boom Arm')),
+            ('microphone stand', ('Accessories & Mounting', 'Mic Stand')),
+            ('mic stand', ('Accessories & Mounting', 'Mic Stand')),
+            ('shock mount', ('Accessories & Mounting', 'Shock Mount')),
+            ('pop filter', ('Accessories & Mounting', 'Pop Filter')),
+            ('cable management', ('Accessories & Mounting', 'Cable Management')),
+            ('carrying case', ('Accessories & Mounting', 'Case')),
+            ('protective case', ('Accessories & Mounting', 'Case')),
+            ('stand', ('Accessories & Mounting', 'Stand')),
+            ('mount', ('Accessories & Mounting', 'Mount')),
+            ('case', ('Accessories & Mounting', 'Case')),
+            ('cover', ('Accessories & Mounting', 'Cover')),
+
+            # Accessories & Mounting (Hebrew)
+            ('מעמד', ('Accessories & Mounting', 'Stand')),  # Stand
+
+            # Subwoofers & LFE
+            ('subwoofer', ('Subwoofers & LFE', 'Subwoofer')),
+            ('sub ', ('Subwoofers & LFE', 'Subwoofer')),
+            ('bass speaker', ('Subwoofers & LFE', 'Subwoofer')),
+
+            # Effects & Processing
+            ('reverb', ('Effects & Processing', 'Reverb')),
+            ('delay', ('Effects & Processing', 'Delay')),
+            ('compressor', ('Effects & Processing', 'Compressor')),
+            ('equalizer', ('Effects & Processing', 'Equalizer')),
+            ('distortion', ('Effects & Processing', 'Distortion')),
+            ('effect', ('Effects & Processing', 'Effects Processor')),
+
+            # Control Surfaces
+            ('daw controller', ('Control Surfaces', 'DAW Controller')),
+            ('midi controller', ('Control Surfaces', 'MIDI Controller')),
+            ('control surface', ('Control Surfaces', 'Control Surface')),
+            ('controller', ('Control Surfaces', 'MIDI Controller')),
+            ('midi', ('Control Surfaces', 'MIDI Controller')),
+        ]
+
+        # Find best match - prefer longer/more specific keywords
+        best_category = 'General Accessories'
+        best_subcategory = 'Miscellaneous'
+        best_score = 0
+
+        for keyword, (cat, subcat) in category_map:
+            if keyword in combined:
+                score = len(keyword)  # Longer matches are more specific
+                if score > best_score:
+                    best_score = score
+                    best_category = cat
+                    best_subcategory = subcat
+
+        return (best_category, best_subcategory)
+
     def _generate_search_tokens(self, item: Dict, brand: str, tags: List[str]) -> str:
         """Creates searchable string"""
         parts = [
@@ -166,17 +326,31 @@ class DataRefinery:
         search_text = self._generate_search_tokens(item, brand, tags_list)
 
         # Normalize category/subcategory
-        # Try multiple field names for flexibility
-        category = item.get('category') or item.get('cat') or 'Uncategorized'
-
-        # For subcategory: try subCategory, subcategories (take first), or default to General
+        # Try multiple field names for flexibility, but prefer intelligent inference
+        category = item.get('category') or item.get('cat')
         sub_category = item.get('subCategory')
+
+        # If category is missing or generic, use intelligent inference
+        if not category or category == 'Uncategorized' or category == 'General':
+            description = item.get('description', '') or item.get(
+                'description_full', '') or item.get('description_short', '')
+            raw_specs = item.get('specs', {})
+            specs_for_inference = raw_specs if isinstance(
+                raw_specs, dict) else {}
+
+            category, sub_category = self._infer_category(
+                item.get('name', ''),
+                description,
+                specs_for_inference
+            )
+
+        # For subcategory: use inferred one or fall back
         if not sub_category:
             subcats = item.get('subcategories')
             if isinstance(subcats, list) and len(subcats) > 0:
                 sub_category = subcats[0]
             else:
-                sub_category = 'General'
+                sub_category = 'Uncategorized'
 
         # FLATTEN SPECS LOGIC
         raw_specs = item.get('specs', {})

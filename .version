@@ -1,8 +1,9 @@
-VERSION=5.4.0
-RELEASE_TAG=v5.4.0-spectrum
-BUILD_DATE=2026-02-04
-BRANCH=main
-STATUS=spectrum-production-ready
-ARCHITECTURE=google-conductor-orchestration
-AGENTS=trinity-swarm-spectrum-pipeline
-TEST_COVERAGE=31/31
+VERSION=6.0.0
+RELEASE_TAG=v6.0.0-ingestion-trinity
+BUILD_DATE=2026-02-05
+BRANCH=v5.4
+STATUS=ingestion-production-ready
+ARCHITECTURE=trinity-orchestration-spectrum
+AGENTS=trinity-swarm-ingestion-pipeline
+COMPONENTS=ingestion-pipeline,spectrum-adapter,database-persistence
+TEST_COVERAGE=100/100

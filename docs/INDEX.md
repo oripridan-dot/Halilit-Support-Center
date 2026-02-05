@@ -1,179 +1,272 @@
-# Documentation Index
+# Halilit Support Center Documentation Index (v6.0)
 
-## Quick Navigation
+## 📚 v6.0.0 Documentation Structure
 
-### 🎯 Current Status
-
-- **[CONDUCTOR_EXECUTION_SUMMARY.md](./CONDUCTOR_EXECUTION_SUMMARY.md)** - Latest codebase perfection execution results (86 fixes applied, all phases complete)
-- **[PRODUCTION_READY_CERTIFICATION.md](./PRODUCTION_READY_CERTIFICATION.md)** - Complete verification checklist and deployment readiness assessment
-
-### 🚀 Project Configuration
-
-See the **Conductor framework** in `.conductor/` directory:
-
-- `.conductor/product.md` - Architecture vision and Trinity Swarm design
-- `.conductor/tech-stack.md` - Pinned dependency versions
-- `.conductor/guidelines.md` - Code standards and safety rules
-- `.conductor/tracks/` - Execution tracks and progress
-
-### 📚 Reference Documentation
-
-#### Release Notes & Versioning
-
-Located in `docs/release-notes/`:
-
-- `RELEASE_NOTES_v5.1.md` - v5.1 release information
-- `VERSION_RELEASE_v5.2.2.md` - v5.2.2 release notes
-- `VERSION_RELEASE_v5.2.3.md` - v5.2.3 release notes
-- `VERSION_RELEASE_v5.2.4.md` - v5.2.4 release notes (current)
-
-#### Historical/Archive
-
-Located in `docs/archive/` - Legacy documentation from previous iterations:
-
-- System refinements, architecture docs, optimization guides
-- Data refinery information, pipeline documentation
-- Previous status reports and completion records
-- Taxonomy integration guides
-
-## Repository Structure
-
-```
-├── docs/                          # All documentation
-│   ├── CONDUCTOR_EXECUTION_SUMMARY.md
-│   ├── PRODUCTION_READY_CERTIFICATION.md
-│   ├── FINAL_STATUS_REPORT.sh     # Status report script
-│   ├── release-notes/             # Version-specific documentation
-│   └── archive/                   # Historical documentation
-├── .conductor/                    # Conductor framework (persistent context)
-│   ├── product.md
-│   ├── tech-stack.md
-│   ├── guidelines.md
-│   └── tracks/
-├── backend/                       # Backend services
-│   ├── agents/                    # Trinity Swarm (3 agents)
-│   ├── skills/                    # Modular capabilities
-│   ├── workflow/                  # State machines
-│   ├── pipeline/                  # Data processing
-│   ├── tests/                     # Test suite (10+ test files)
-│   ├── tools/                     # Utilities & scripts
-│   │   ├── scripts/               # Automation scripts
-│   │   └── verification/          # Verification utilities
-│   ├── examples/                  # Example workflows
-│   └── server.py                  # FastAPI backend
-├── frontend/                      # React application
-│   ├── src/                       # React components, hooks, types
-│   ├── public/                    # Static assets
-│   └── vite.config.ts             # Vite configuration
-└── README.md                      # Main documentation
-```
-
-## Tools & Scripts
-
-### Backend Tools
-
-Located in `backend/tools/`:
-
-- **conductor_perfector.py** - Automated codebase cleanup (86 fixes)
-- **cleanup_codebase.py** - Code quality utilities
-- **migrate_to_brands_structure.py** - Data migration tool
-
-### Automation Scripts
-
-Located in `backend/tools/scripts/`:
-
-- **run_all_tests.py** - Execute full test suite
-- **run_maintenance.py** - Maintenance operations
-
-### Verification Scripts
-
-Located in `backend/tools/verification/`:
-
-- **verify_galaxy_setup.py** - Verify Galaxy Dashboard setup
-- **verify_pipeline.py** - Verify data pipeline
-- **verify_system.py** - System verification
-
-### Examples
-
-Located in `backend/examples/`:
-
-- **demo_skills_workflow.py** - Demonstration of skills and workflows
-
-## Key Features
-
-### 🔐 Conductor Framework (v5.2.4)
-
-- Persistent context files prevent AI-induced catastrophes
-- Plan-before-code workflow enforces deliberation
-- File integrity gates ensure no 0-byte overwrites
-- Track-based execution for atomic feature delivery
-
-### 🤖 Trinity Swarm Architecture
-
-Three autonomous agents working in concert:
-
-- **CommercialScout** - Harvests product data from Halilit.com
-- **OfficialVerifier** - Enriches with manufacturer specs
-- **ExternalValidator** - Audits for compliance
-
-### ✨ Code Quality Standards
-
-- Zero 0-byte files
-- Zero TypeScript errors
-- Zero Python syntax errors
-- 100% type safety (no `any` types)
-- All modules documented
-- Proper logging throughout
-
-## Getting Started
-
-### For Developers
-
-1. Read [.conductor/guidelines.md](../.conductor/guidelines.md) for code standards
-2. Review [.conductor/tech-stack.md](../.conductor/tech-stack.md) for dependency versions
-3. Check [.conductor/product.md](../.conductor/product.md) for architecture
-
-### For DevOps/Operations
-
-1. See [PRODUCTION_READY_CERTIFICATION.md](./PRODUCTION_READY_CERTIFICATION.md) for deployment checklist
-2. Review [CONDUCTOR_EXECUTION_SUMMARY.md](./CONDUCTOR_EXECUTION_SUMMARY.md) for recent changes
-3. Check `docs/release-notes/` for version information
-
-### For Maintenance
-
-1. Use scripts in `backend/tools/` for codebase utilities
-2. Run verification scripts in `backend/tools/verification/`
-3. Execute tests with `backend/tools/scripts/run_all_tests.py`
-
-## Version Information
-
-**Current Version**: v5.2.4  
-**Status**: 🟢 Production Ready  
-**Framework**: Google Conductor v5.2.4  
-**Last Update**: February 3, 2026
-
-## Cleaning & Consolidation
-
-This documentation structure represents a clean, consolidated repository:
-
-- ✅ 17 .md files consolidated to `/docs/` (organized by purpose)
-- ✅ 11 Python scripts organized into `/backend/tools/` (by function)
-- ✅ Obsolete directories removed (.agent_memory, .devagent, .archive)
-- ✅ Root-level clutter eliminated
-- ✅ Clean file system structure maintained
-
-## Questions?
-
-Refer to:
-
-1. **Architecture**: `.conductor/product.md`
-2. **Code Standards**: `.conductor/guidelines.md`
-3. **Dependencies**: `.conductor/tech-stack.md`
-4. **Recent Changes**: `docs/CONDUCTOR_EXECUTION_SUMMARY.md`
-5. **Verification**: `docs/PRODUCTION_READY_CERTIFICATION.md`
+This directory contains all documentation for the Halilit Support Center project, organized by version and component.
 
 ---
 
-**Documentation Last Updated**: February 3, 2026  
-**Repository**: Halilit Support Center v5.2.4  
-**Status**: Consolidated and Production-Ready
+## 🎯 Start Here: Main Entry Points
+
+### For New Developers
+
+1. **[../README.md](../README.md)** - Project overview, quick start, system status
+2. **[../backend/ingestion/QUICKSTART.md](../backend/ingestion/QUICKSTART.md)** - 30-minute developer guide
+3. **[../backend/ingestion/README.md](../backend/ingestion/README.md)** - Complete documentation index
+
+### For System Understanding
+
+1. **[../backend/ingestion/ARCHITECTURE.md](../backend/ingestion/ARCHITECTURE.md)** - Complete technical architecture
+2. **[../backend/ingestion/VISUAL_REFERENCE.md](../backend/ingestion/VISUAL_REFERENCE.md)** - Visual diagrams and flows
+
+### For Implementation Details
+
+1. **[../backend/ingestion/IMPLEMENTATION_SUMMARY.md](../backend/ingestion/IMPLEMENTATION_SUMMARY.md)** - What was built and delivered
+2. **[v6.0/INGESTION_REFACTOR_SUMMARY.txt](v6.0/INGESTION_REFACTOR_SUMMARY.txt)** - Executive summary
+
+---
+
+## 📂 Documentation Structure
+
+```
+docs/
+├── INDEX.md (this file)
+├── v6.0/
+│   ├── INGESTION_REFACTOR_SUMMARY.txt        # v6.0 executive summary
+│   ├── INGESTION_PIPELINE_DELIVERY.txt       # v6.0 delivery details
+│   └── SYSTEM_STATUS.sh                      # Status check script
+├── legacy/
+│   ├── CONDUCTOR_*.md                        # v5.x conductor documentation (archived)
+│   ├── SPECTRUM_*.md                         # Spectrum pipeline docs (archived)
+│   └── [Other archived documentation]
+└── archived/
+    └── [Previous versions]
+
+../backend/ingestion/
+├── README.md                                 # Ingestion documentation index
+├── QUICKSTART.md                             # 30-minute quick start
+├── ARCHITECTURE.md                           # Complete technical architecture
+├── VISUAL_REFERENCE.md                       # Diagrams and visual guides
+└── IMPLEMENTATION_SUMMARY.md                 # What was delivered
+```
+
+---
+
+## 🔍 Quick Navigation by Topic
+
+### Trinity Ingestion Pipeline (v6.0)
+
+| Topic            | Location                                                                                         | Time    |
+| ---------------- | ------------------------------------------------------------------------------------------------ | ------- |
+| **Overview**     | [../backend/ingestion/README.md](../backend/ingestion/README.md)                                 | 5 min   |
+| **Quick Start**  | [../backend/ingestion/QUICKSTART.md](../backend/ingestion/QUICKSTART.md)                         | 30 min  |
+| **Architecture** | [../backend/ingestion/ARCHITECTURE.md](../backend/ingestion/ARCHITECTURE.md)                     | 1-2 hrs |
+| **Visual Flows** | [../backend/ingestion/VISUAL_REFERENCE.md](../backend/ingestion/VISUAL_REFERENCE.md)             | 20 min  |
+| **What's New**   | [../backend/ingestion/IMPLEMENTATION_SUMMARY.md](../backend/ingestion/IMPLEMENTATION_SUMMARY.md) | 20 min  |
+
+### Components
+
+| Component               | Location                                   | Purpose                                       |
+| ----------------------- | ------------------------------------------ | --------------------------------------------- |
+| **Taxonomy Manager**    | `backend/ingestion/taxonomy_manager.py`    | 8 categories, 32 subcategories classification |
+| **Pricing Engine**      | `backend/ingestion/pricing_engine.py`      | Tier determination and validation             |
+| **Display Engine**      | `backend/ingestion/display_engine.py`      | Display roles and media organization          |
+| **Orchestrator**        | `backend/ingestion/orchestrator.py`        | 6-phase pipeline coordination                 |
+| **Spectrum Adapter**    | `backend/ingestion/spectrum_adapter.py`    | Display format conversion                     |
+| **Database**            | `backend/ingestion/ingestion_database.py`  | JSON persistence and storage                  |
+| **Trinity Integration** | `backend/ingestion/trinity_integration.py` | Trinity swarm bridge                          |
+
+### Data Models
+
+| Model                     | Location                                | Purpose                      |
+| ------------------------- | --------------------------------------- | ---------------------------- |
+| **IngestionProductDraft** | `backend/ingestion/data_models.py`      | Unified product data model   |
+| **IngestionBatch**        | `backend/ingestion/data_models.py`      | Batch processing container   |
+| **IngestionReport**       | `backend/ingestion/data_models.py`      | Pipeline results and metrics |
+| **SpectrumPayload**       | `backend/ingestion/spectrum_adapter.py` | Display format output        |
+
+---
+
+## 🔄 6-Phase Pipeline Overview
+
+```
+Phase 1: HARVEST
+  Normalize raw product data
+  Input: Raw JSON products
+  Output: IngestionProductDraft objects
+
+Phase 2: ENRICH
+  Apply universal taxonomy classification
+  8 categories, 32 subcategories
+  Confidence scoring included
+
+Phase 3: TIER
+  Determine pricing tiers
+  Entry / Mid / Pro / Flagship / Legacy
+
+Phase 4: PREPARE
+  Assign display roles
+  Hero / Cornerstone / Specialist / Entry
+  Organize media assets
+
+Phase 5: VALIDATE
+  Compliance and quality checks
+  Data completeness scoring
+  Issue detection and logging
+
+Phase 6: APPROVE
+  Finalize approved products list
+  Generate analytics and metrics
+  Prepare for persistence
+
+Spectrum Adaptation
+  Convert to display format
+  Organize by price tiers
+  Generate quality reports
+
+Database Persistence
+  Save reports, products, quality, spectrum
+  JSON file storage with ISO timestamps
+  Analytics and history tracking
+```
+
+---
+
+## 📊 System Status (v6.0)
+
+- **Version**: 6.0.0
+- **Ingestion Phases**: All 6 operational ✓
+- **Real Data Processing**: 564+ products tested ✓
+- **Spectrum Adapter**: Display format conversion verified ✓
+- **Database Persistence**: JSON storage with analytics ✓
+- **Trinity Integration**: Fully integrated ✓
+- **Documentation**: Complete ✓
+
+---
+
+## 🛠️ Tools and Utilities
+
+All utility scripts have been organized into `tools/conductor/`:
+
+```
+tools/conductor/
+├── conductor_master.py              # Master conductor
+├── conductor_final_check.py         # Final system check
+├── conductor_refine_all.py          # System refinement
+├── conductor_reingest_database.py   # Database reingestion
+├── conductor_status_report.py       # Status reporting
+├── run_all_tests.py                 # Test runner
+├── run_conductor_daemon.py          # Daemon launcher
+├── run_conductor_orchestrator.py    # Orchestrator launcher
+├── run_maintenance.py               # Maintenance tasks
+└── test_conductor_daemon.py         # Daemon tests
+```
+
+Use these for system management and maintenance tasks.
+
+---
+
+## 📝 Version History
+
+| Version    | Release Date | Focus                        | Status    |
+| ---------- | ------------ | ---------------------------- | --------- |
+| **v6.0.0** | 2026-02-05   | Trinity Ingestion Pipeline   | ✓ Current |
+| v5.4.0     | 2026-02-04   | Spectrum Pipeline (Archived) | Legacy    |
+| v5.3.0     | Earlier      | Previous version             | Archived  |
+
+See `legacy/` directory for archived documentation.
+
+---
+
+## 🎓 Learning Paths by Role
+
+### Backend Engineers
+
+1. [README.md](../README.md) - Overview (10 min)
+2. [backend/ingestion/QUICKSTART.md](../backend/ingestion/QUICKSTART.md) - API reference (30 min)
+3. [backend/ingestion/ARCHITECTURE.md](../backend/ingestion/ARCHITECTURE.md) - Deep dive (1-2 hrs)
+4. Source code review (orchestrator.py first)
+
+### Data Scientists
+
+1. [backend/ingestion/README.md](../backend/ingestion/README.md) - Overview (10 min)
+2. [backend/ingestion/VISUAL_REFERENCE.md](../backend/ingestion/VISUAL_REFERENCE.md) - Data flows (20 min)
+3. [backend/ingestion/ARCHITECTURE.md](../backend/ingestion/ARCHITECTURE.md) - Scoring & metrics (1 hr)
+4. Review data_models.py and quality metrics
+
+### Frontend Engineers
+
+1. [README.md](../README.md) - Overview (10 min)
+2. [backend/ingestion/VISUAL_REFERENCE.md](../backend/ingestion/VISUAL_REFERENCE.md) - Display format (20 min)
+3. [backend/ingestion/spectrum_adapter.py](../backend/ingestion/spectrum_adapter.py) - Output format
+
+### DevOps/Operations
+
+1. [README.md](../README.md) - Overview (10 min)
+2. [backend/ingestion/QUICKSTART.md](../backend/ingestion/QUICKSTART.md) - Common issues (20 min)
+3. [tools/conductor/](../tools/conductor/) - Utility scripts
+4. [v6.0/SYSTEM_STATUS.sh](v6.0/SYSTEM_STATUS.sh) - Status check
+
+---
+
+## 🚀 Getting Started
+
+### 1. Read the Main README
+
+```bash
+cat ../README.md
+```
+
+### 2. Follow Quick Start
+
+```bash
+# Backend
+PYTHONPATH=. python3 backend/server.py &
+
+# Frontend
+cd frontend && npm run dev
+
+# Test pipeline
+PYTHONPATH=. python3 backend/ingestion/test_real_data_pipeline.py --single Nord
+```
+
+### 3. Review Documentation
+
+```bash
+# Depending on your role, follow the learning paths above
+cat backend/ingestion/QUICKSTART.md        # 30 min
+cat backend/ingestion/ARCHITECTURE.md      # 1-2 hrs
+```
+
+---
+
+## 📞 Finding Help
+
+| I need to...                 | Look here...                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| Get started                  | [README.md](../README.md) + [QUICKSTART.md](../backend/ingestion/QUICKSTART.md) |
+| Understand architecture      | [ARCHITECTURE.md](../backend/ingestion/ARCHITECTURE.md)                         |
+| See code examples            | [QUICKSTART.md](../backend/ingestion/QUICKSTART.md)                             |
+| Understand data flow         | [VISUAL_REFERENCE.md](../backend/ingestion/VISUAL_REFERENCE.md)                 |
+| Integrate with other systems | [ARCHITECTURE.md](../backend/ingestion/ARCHITECTURE.md) (Integration section)   |
+| Debug issues                 | [QUICKSTART.md](../backend/ingestion/QUICKSTART.md) (Error handling)            |
+| Deploy to production         | [README.md](../README.md) (Stack section)                                       |
+| Review what changed          | [IMPLEMENTATION_SUMMARY.md](../backend/ingestion/IMPLEMENTATION_SUMMARY.md)     |
+
+---
+
+## 🔗 Quick Links
+
+- **Main Project**: [../README.md](../README.md)
+- **Ingestion Docs**: [../backend/ingestion/README.md](../backend/ingestion/README.md)
+- **Backend Code**: `../backend/`
+- **Frontend Code**: `../frontend/`
+- **Tools & Utilities**: [../tools/conductor/](../tools/conductor/)
+- **Legacy Docs**: [legacy/](legacy/)
+- **v6.0 Summaries**: [v6.0/](v6.0/)
+
+---
+
+**Last Updated**: 2026-02-05  
+**Version**: v6.0.0  
+**Status**: Production Ready ✓

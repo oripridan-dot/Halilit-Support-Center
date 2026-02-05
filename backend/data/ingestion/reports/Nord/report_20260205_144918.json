@@ -1,0 +1,14 @@
+{
+  "batch_id": "54ddaee2",
+  "brand": "Nord",
+  "timestamp": "2026-02-05T14:49:18.065094",
+  "execution_time_seconds": 0.007391,
+  "total_processed": 37,
+  "approved_count": 37,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 58%)"
+  ],
+  "approved_products_count": 37,
+  "rejected_products_count": 0
+}

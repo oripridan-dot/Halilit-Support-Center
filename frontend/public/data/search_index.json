@@ -1,5 +1,15 @@
 [
   {
+    "id": "testbrand_testproduct",
+    "name": "TestProduct",
+    "brand": "Testbrand",
+    "brand_id": "testbrand",
+    "price": 0.0,
+    "slug": "/testbrand/testproduct",
+    "image": "/assets/placeholders/no-image.png",
+    "in_stock": true
+  },
+  {
     "id": "7463688",
     "name": "\u05e1\u05d8 \u05ea\u05d5\u05e4\u05d9\u05dd \u05d0\u05dc\u05e7\u05d8\u05e8\u05d5\u05e0\u05d9\u05d9\u05dd Roland VAD716",
     "brand": "Roland",
