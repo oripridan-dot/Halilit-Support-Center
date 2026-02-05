@@ -1,5 +1,5 @@
-VERSION=6.0.0
-RELEASE_TAG=v6.0.0-ingestion-trinity
+VERSION=6.1.0
+RELEASE_TAG=v6.1.0-spectrum-enhancement
 BUILD_DATE=2026-02-05
 BRANCH=v5.4
 STATUS=ingestion-production-ready

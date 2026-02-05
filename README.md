@@ -1,6 +1,6 @@
-# Halilit Support Center v6.0.0 - Trinity Ingestion Pipeline
+# Halilit Support Center v6.1.0 - Spectrum Enhancement
 
-**An AI-Powered Product Catalog System with Trinity Ingestion Pipeline**
+**An AI-Powered Product Catalog System with Trinity Ingestion Pipeline & Enhanced Visualizer**
 
 ## 🚀 Quick Start
 

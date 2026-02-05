@@ -66,13 +66,13 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
               <div className="relative h-32 bg-slate-800 rounded overflow-hidden">
                 <ImageWithFallback
                   src={
-                    (typeof product.images?.main === 'string'
+                    (typeof product.images?.main === "string"
                       ? product.images.main
                       : product.images?.main?.url) ||
-                    (typeof product.image_hero === 'string'
+                    (typeof product.image_hero === "string"
                       ? product.image_hero
                       : product.image_hero?.url) ||
-                    (typeof product.image === 'string'
+                    (typeof product.image === "string"
                       ? product.image
                       : product.image?.url) ||
                     undefined
