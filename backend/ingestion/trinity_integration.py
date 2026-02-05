@@ -149,7 +149,9 @@ class TrinityIngestionBridge:
             # STEP 4: Generate display metrics
             logger.info(f"Step 4/5: Generating display metrics...")
             metrics = self.spectrum_adapter.generate_display_metrics(
-                spectrum_payload)
+                spectrum_payload)            # Inject pipeline metrics
+            metrics["approved_count"] = report.approved_count
+            metrics["rejected_count"] = report.rejected_count
             result["metrics"] = metrics
             logger.info(f"✅ Generated display metrics")
 

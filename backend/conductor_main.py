@@ -14,18 +14,18 @@ Usage:
     python3 backend/conductor_main.py catalog         - Show catalog statistics
 """
 
-from backend.ingestion_to_frontend import sync_brand_to_frontend, sync_all_brands
-from backend.ingestion.trinity_integration import get_trinity_ingestion_bridge
+from datetime import datetime
+from pathlib import Path
+import subprocess
+import json
+import argparse
 from backend.ingestion.orchestrator import IngestionOrchestrator
+from backend.ingestion.trinity_integration import get_trinity_ingestion_bridge
+from backend.ingestion_to_frontend import sync_brand_to_frontend, sync_all_brands
 import sys
 import os
-import argparse
-import json
-import subprocess
-from pathlib import Path
-from datetime import datetime
 
-# Add project root
+# Add project root to sys.path before importing backend modules
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
@@ -155,16 +155,20 @@ class ConductorCLI:
         if INGESTION_DIR.exists():
             for brand_dir in (INGESTION_DIR / "products").iterdir():
                 if brand_dir.is_dir():
-                    approved_file = brand_dir / "approved_products.json"
-                    if approved_file.exists():
+                    # Find the latest approved_*.json file
+                    approved_files = sorted(brand_dir.glob(
+                        "approved_*.json"), reverse=True)
+                    if approved_files:
                         try:
-                            with open(approved_file) as f:
+                            with open(approved_files[0]) as f:
                                 data = json.load(f)
                             products = data.get("products", data) if isinstance(
                                 data, dict) else data
                             brands[brand_dir.name] = len(products)
                         except:
                             brands[brand_dir.name] = 0
+                    else:
+                        brands[brand_dir.name] = 0
 
         print("\nBrands:")
         total_products = 0
