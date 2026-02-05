@@ -1,1095 +1,1552 @@
 [
   {
     "id": "rode-rode-wireless-micro",
+    "sku": null,
     "name": "Wireless Micro",
-    "description": "Wireless PRO\nThe Wireless PRO is the most powerful compact microphone system ever, featuring 32-bit float on-board recording, timecode, and many more professional features.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Wireless Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "wireless micro rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-wireless-go-gen-3",
+    "sku": null,
     "name": "Wireless GO (Gen 3)",
-    "description": "Charge Case+\nThe Charge Case+ for Wireless GO (Gen 3) is a convenient solution for securely storing, transporting and recharging your wireless system.",
     "brand": "Rode",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Wireless Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 850.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "wireless go (gen 3) rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-pro",
+    "sku": null,
     "name": "Wireless PRO",
-    "description": "Interview GO\nConvert your Wireless GO into a compact handheld microphone with the Interview GO! Perfect for reporting to-camera or interviewing in the field. Learn more here.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "wireless pro rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-wireless-micro-camera-kit",
+    "sku": null,
     "name": "Wireless Micro Camera Kit",
-    "description": "Wireless Micro\nThe R\u00d8DE Wireless Micro is a pocket-sized solution for capturing pristine audio with your smartphone \u2013 the perfect grab-and-go companion for mobile content creators.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Wireless Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "wireless micro camera kit rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-pro-dup-1",
+    "id": "rode-pro",
+    "sku": null,
     "name": "Interview PRO",
-    "description": "Wireless PRO\nThe Wireless PRO is the most powerful compact microphone system ever, featuring 32-bit float on-board recording, timecode, and many more professional features.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "interview pro rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-r-de-original-t-shirt",
-    "name": "R\u00d8DE Original T-Shirt",
-    "description": "R\u00d8DE Microphones",
+    "sku": null,
+    "name": "RØDE Original T-Shirt",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de original t-shirt rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-r-de-varsity-jacket",
-    "name": "R\u00d8DE Varsity Jacket",
-    "description": "R\u00d8DE Microphones",
+    "sku": null,
+    "name": "RØDE Varsity Jacket",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de varsity jacket rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-solo-podcast-kit",
+    "sku": null,
     "name": "Solo Podcast Kit",
-    "description": "The Solo Podcast Kit offers everything you need to capture incredible audio for your one-person podcast.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "solo podcast kit rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-dual-podcast-kit",
+    "sku": null,
     "name": "Dual Podcast Kit",
-    "description": "The Duo Podcast Kit offers everything you need to capture incredible audio for your two-person podcast.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "dual podcast kit rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-ultimate-podcast-kit",
+    "sku": null,
     "name": "Ultimate Podcast Kit",
-    "description": "The Ultimate Podcast Kit offers everything you need to capture incredible audio for your four-person podcast.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ultimate podcast kit rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-r-de-hub",
-    "name": "R\u00d8DE Hub",
-    "description": "The R\u00d8DE Hub is the ultimate high-performance USB hub, with six USB-C ports, high-speed data transfer and 60W pass-through charging.",
+    "sku": null,
+    "name": "RØDE Hub",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de hub rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-hdmi",
+    "sku": null,
     "name": "HDMI to USB-C Converter",
-    "description": "The HDMI to USB-C Converter is a compact 1080p60 capture card that connects your camera to your computer or any UVC-compatible device.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "hdmi to usb-c converter rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-xlr",
+    "sku": null,
     "name": "XLR Cable",
-    "description": "R\u00d8DECaster Pro II\nThe R\u00d8DECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
     "brand": "Rode",
-    "category": "Audio Interfaces",
-    "subCategory": "audio interface",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Cables & Connectors",
+    "subCategory": "Cable",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "xlr cable rode audio interfaces  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-hdmi-dup-1",
+    "id": "rode-hdmi",
+    "sku": null,
     "name": "HDMI Cable",
-    "description": "R\u00d8DECaster Video\nThe R\u00d8DECaster Video is a revolutionary all-in-one video and audio production console that provides intuitive control over every element of your content.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Cables & Connectors",
-    "subCategory": "cable",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "subCategory": "Cable",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "hdmi cable rode cables & connectors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nth-100",
+    "sku": null,
     "name": "NTH-100",
-    "description": "R\u00d8DECaster Pro II\nThe R\u00d8DECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
     "brand": "Rode",
-    "category": "Audio Interfaces",
-    "subCategory": "audio interface",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nth-100 rode audio interfaces  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nth-100m",
+    "sku": null,
     "name": "NTH-100M",
-    "description": "NTH-Mic\nThe R\u00d8DE NTH-Mic is a high-quality microphone for the R\u00d8DE NTH-100 headphones that transforms them into a professional headset.",
     "brand": "Rode",
-    "category": "Headphones",
-    "subCategory": "headphones",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nth-100m rode headphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-dec",
-    "name": "R\u00d8DECaster Video S",
-    "description": "The R\u00d8DECaster Video S is a streamlined all-in-one video and audio production console, delivering powerful and intuitive control over every element of content creation.",
+    "sku": null,
+    "name": "RØDECaster Video S",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {
-      "Video Sources": "6",
-      "HDMI Inputs": "4",
-      "UVC Inputs": "2",
-      "NDI Inputs": "4",
-      "Video Outputs": "2 \u00d7 HDMI, 1 \u00d7 UVC, 1 \u00d7 NDI",
-      "Recording": "PGM at 1080p60 and 6 x ISO at 1080p30",
-      "Streaming": "RTMP / RTMPS",
-      "Keying / DSK / Auto Switching": "Yes",
-      "Preview & Program Layers": "9",
-      "Custom Scenes": "7",
-      "Total Audio Channels": "9 x Stereo",
-      "Analogue Audio Inputs": "2 \u00d7 Combo Jacks",
-      "Analogue Audio Outputs": "2 \u00d7 Headphones, 2 \u00d7 Line Outputs",
-      "USB Audio Interfaces": "3",
-      "USB Audio Device Hosting": "2",
-      "Wireless Audio Receivers": "2",
-      "Ethernet / Wi-Fi / Bluetooth\u00ae": "Yes",
-      "Video Players": "2",
-      "Media Storage": "microSD Card",
-      "Remote Control (Ethernet / Wi-Fi / USB)": "Yes"
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
-    "searchTokens": "r\u00f8decaster video s rode other  "
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-dec-dup-1",
-    "name": "R\u00d8DECaster Video",
-    "description": "HDMI to USB-C Converter\nThe HDMI to USB-C Converter is a compact 1080p60 capture card that connects your camera to your computer or any UVC-compatible device.",
+    "id": "rode-dec",
+    "sku": null,
+    "name": "RØDECaster Video",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8decaster video rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-dec-dup-2",
-    "name": "R\u00d8DECaster Pro II",
-    "description": "R\u00d8DECaster Duo\nThe R\u00d8DECaster Duo is a compact and incredibly powerful all-in-one audio production solution for podcasters and content creators.",
+    "id": "rode-dec",
+    "sku": null,
+    "name": "RØDECaster Pro II",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {
-      "XLR/TRS Combo Inputs": "2",
-      "1/4-inch Headphone Outputs": "2",
-      "Physical Faders": "4",
-      "Virtual Faders": "3",
-      "SMART Pads": "6",
-      "USB Interfaces": "3",
-      "3.5mm TRRS Headset Input": "Yes",
-      "Series IV Wireless Receiver": "Yes",
-      "Quad-core Audio Engine": "Yes"
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
-    "searchTokens": "r\u00f8decaster pro ii rode other  "
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-dec-dup-3",
-    "name": "R\u00d8DECaster Duo",
-    "description": "The R\u00d8DECaster Duo is a compact and incredibly powerful all-in-one audio production solution for podcasters and content creators.",
+    "id": "rode-dec",
+    "sku": null,
+    "name": "RØDECaster Duo",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {
-      "XLR/TRS Combo Inputs": "2",
-      "1/4-inch Headphone Outputs": "2",
-      "Physical Faders": "4",
-      "Virtual Faders": "3",
-      "SMART Pads": "6",
-      "USB Interfaces": "3",
-      "3.5mm TRRS Headset Input": "Yes",
-      "Series IV Wireless Receiver": "Yes",
-      "Quad-core Audio Engine": "Yes"
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
-    "searchTokens": "r\u00f8decaster duo rode other  "
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-r-de-classic-beanie",
-    "name": "R\u00d8DE Classic Beanie",
-    "description": "R\u00d8DE Microphones",
+    "sku": null,
+    "name": "RØDE Classic Beanie",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de classic beanie rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-r-de-logo-cap",
-    "name": "R\u00d8DE Logo Cap",
-    "description": "R\u00d8DE Microphones",
+    "sku": null,
+    "name": "RØDE Logo Cap",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 850.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de logo cap rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nth-50",
+    "sku": null,
     "name": "NTH-50",
-    "description": "The NTH-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant chamber design that deliver exceptionally clear audio for professionals and content creators.",
     "brand": "Rode",
-    "category": "Headphones",
-    "subCategory": "headphones",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nth-50 rode headphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-street-interview-kit",
+    "sku": null,
     "name": "Street Interview Kit",
-    "description": "The Street Interview Kit is the perfect solution for capturing pristine wireless audio to your phone or camera while recording interviews on the go.",
     "brand": "Rode",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Wireless Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "street interview kit rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-dual-interview-kit",
+    "sku": null,
     "name": "Dual Interview Kit",
-    "description": "R\u00d8DE Microphones",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "dual interview kit rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-pro-interview-kit",
+    "sku": null,
     "name": "Pro Interview Kit",
-    "description": "The Pro Interview Kit is the ultimate solution for capturing pristine wireless audio for your interviews and other content.",
     "brand": "Rode",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Wireless Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "pro interview kit rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-ai-1",
+    "sku": null,
     "name": "AI-1",
-    "description": "VXLR Pro\nThe R\u00d8DE VXLR Pro is a female TRS mini-jack to male XLR adaptor that also features a transformer-balanced output. Learn more here.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Cables & Connectors",
-    "subCategory": "jack",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "subCategory": "Jack",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ai-1 rode cables & connectors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-ai-m",
+    "sku": null,
     "name": "AI-Micro",
-    "description": "Lavalier II\nThe Lavalier II is a high-quality lavalier microphone with a unique low-profile design that is ideal for the most demanding audio and video applications.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ai-micro rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nt1",
+    "sku": null,
     "name": "NT1 5th Generation",
-    "description": "SM6\nThe R\u00d8DE SM6 is a high-quality suspension shock mount designed for large diaphragm R\u00d8DE microphones and includes a removable pop shield and a telescopic arm.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Condenser Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nt1 5th generation rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-nt1-dup-1",
+    "id": "rode-nt1",
+    "sku": null,
     "name": "NT1 Signature Series",
-    "description": "XLR Cable\nThe XLR-3 and XLR-6 are premium XLR cables ideal for use with a wide range of audio equipment.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Cables & Connectors",
-    "subCategory": "cable",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "subCategory": "Cable",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nt1 signature series rode cables & connectors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-nt1-dup-2",
+    "id": "rode-nt1",
+    "sku": null,
     "name": "NT1 5th Generation",
-    "description": "SM6\nThe R\u00d8DE SM6 is a high-quality suspension shock mount designed for large diaphragm R\u00d8DE microphones and includes a removable pop shield and a telescopic arm.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Condenser Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nt1 5th generation rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nt2-a",
+    "sku": null,
     "name": "NT2-A",
-    "description": "NT1 Signature Series\nThe NT1 Signature Series is a workhorse studio condenser microphone with a warm, silky character, exceptionally low noise and high SPL handling.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "condenser",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Condenser Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nt2-a rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-psa1",
+    "sku": null,
     "name": "PSA1+",
-    "description": "PodMic\nThe R\u00d8DE PodMic is a broadcast-grade dynamic microphone optimised for gaming, streaming, podcasting and other voice-based applications. Find out more.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "dynamic mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Dynamic Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "psa1+ rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-ds2",
+    "sku": null,
     "name": "DS2",
-    "description": "PodMic USB\nThe PodMic USB is a broadcast-quality dynamic microphone that offers both XLR and USB connectivity for capturing professional sound with ease.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "dynamic mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Dynamic Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ds2 rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-tripod-2",
+    "sku": null,
     "name": "Tripod 2",
-    "description": "VideoMic NTG\nThe R\u00d8DE VideoMic NTG is a supremely versatile microphone with an unmatched feature set. Learn more.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "tripod 2 rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-boompole-pro",
+    "sku": null,
     "name": "Boompole Pro",
-    "description": "NTG3\nThe R\u00d8DE NTG3 offers exceptional audio capture for everything from voice-over work to location recording. It features RF-bias technology and a rich, warm tone. Learn more here.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "boompole pro rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-boompole",
+    "sku": null,
     "name": "Boompole",
-    "description": "NTG1\nThe R\u00d8DE NTG1 is a lightweight condenser shotgun microphone, designed for professional applications in film, video, television and broadcast. Learn more here.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "condenser",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "boompole rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-micro-boompole",
+    "sku": null,
     "name": "Micro Boompole",
-    "description": "Blimp\nThe R\u00d8DE Blimp is the ultimate windshield and shock mounting system for shotgun microphones. Learn more here.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "micro boompole rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-usb",
+    "sku": null,
     "name": "PodMic USB",
-    "description": "PSA1+\nThe PSA1+ is a premium professional studio boom arm. Offering completely silent operation, sleek looks and peerless stability, it is ideal for any type of content creator. Learn more here.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "podmic usb rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nt-usb",
+    "sku": null,
     "name": "NT-USB Mini",
-    "description": "PSA1+\nThe PSA1+ is a premium professional studio boom arm. Offering completely silent operation, sleek looks and peerless stability, it is ideal for any type of content creator. Learn more here.",
     "brand": "Rode",
-    "category": "Accessories",
-    "subCategory": "boom arm",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nt-usb mini rode accessories  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
-    "id": "rode-nt-usb-dup-1",
+    "id": "rode-nt-usb",
+    "sku": null,
     "name": "NT-USB+",
-    "description": "SC15\nThe R\u00d8DE SC15 is a Lightning Accessory Cable for connecting USB-C microphones such as the VideoMic NTG to iOS devices with a Lightning port.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nt-usb+ rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nth-m",
+    "sku": null,
     "name": "NTH-Mic",
-    "description": "NTH-100M\nThe R\u00d8DE NTH-100M combines the exceptional sonic performance of the award-winning NTH-100 headphones with a high-quality headset microphone.",
     "brand": "Rode",
-    "category": "Headphones",
-    "subCategory": "headphones",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3500.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nth-mic rode headphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-nth-cable",
+    "sku": null,
     "name": "NTH-CABLE",
-    "description": "NTH-100\nThe R\u00d8DE NTH-100 headphones are the perfect balance of exceptionally detailed audio, supreme comfort and cutting-edge style to inspire creativity.",
     "brand": "Rode",
-    "category": "Headphones",
-    "subCategory": "headphones",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nth-cable rode headphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-r-de-original-tote",
-    "name": "R\u00d8DE Original Tote",
-    "description": "R\u00d8DE Microphones",
+    "sku": null,
+    "name": "RØDE Original Tote",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de original tote rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-trip",
-    "name": "R\u00d8DE TRIP Book",
-    "description": "R\u00d8DE Microphones",
+    "sku": null,
+    "name": "RØDE TRIP Book",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "r\u00f8de trip book rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-streamer-x",
+    "sku": null,
     "name": "Streamer X",
-    "description": "R\u00d8DECaster Video\nThe R\u00d8DECaster Video is a revolutionary all-in-one video and audio production console that provides intuitive control over every element of your content.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {
-      "Input Format": "Compatible Capture Formats"
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
-    "searchTokens": "streamer x rode other  "
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-rode-signature-studio-kit",
+    "sku": null,
     "name": "Signature Studio Kit",
-    "description": "The Signature Studio Kit is the perfect solution for recording vocals and instruments with stunning clarity and rich detail.",
     "brand": "Rode",
+    "brand_id": "rode",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "signature studio kit rode other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-sm6",
+    "sku": null,
     "name": "SM6",
-    "description": "PSA1+\nThe PSA1+ is a premium professional studio boom arm. Offering completely silent operation, sleek looks and peerless stability, it is ideal for any type of content creator. Learn more here.",
     "brand": "Rode",
-    "category": "Accessories",
-    "subCategory": "boom arm",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "sm6 rode accessories  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-psm1",
+    "sku": null,
     "name": "PSM1",
-    "description": "PSA1+\nThe PSA1+ is a premium professional studio boom arm. Offering completely silent operation, sleek looks and peerless stability, it is ideal for any type of content creator. Learn more here.",
     "brand": "Rode",
-    "category": "Accessories",
-    "subCategory": "boom arm",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "psm1 rode accessories  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "rode-sm4-r",
+    "sku": null,
     "name": "SM4-R",
-    "description": "NT5\nThe NT5 is a premium small-diaphragm condenser microphone, ideal for recording everything from acoustic instruments to drums to live performances and dialogue on-location. Learn more here.",
     "brand": "Rode",
-    "category": "Microphones",
-    "subCategory": "condenser",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "rode",
+    "category": "Microphones & Recording",
+    "subCategory": "Condenser Mic",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "sm4-r rode microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   }
 ]

@@ -1,0 +1,807 @@
+{
+  "brand": "Moog",
+  "timestamp": "2026-02-05T20:44:36.178945",
+  "total_products": 17,
+  "tracks": {
+    "entry": {
+      "tier": "entry",
+      "tier_label": "Entry Level",
+      "price_range": [
+        0,
+        500
+      ],
+      "tier_level": 1,
+      "description": "",
+      "products": [
+        {
+          "halilit_id": "8638605",
+          "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 209.0,
+          "price_il": 209.0,
+          "price_eilat": 0.0,
+          "display_role": "entry",
+          "display_tier_level": 1,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179315"
+          }
+        }
+      ],
+      "product_count": 1
+    },
+    "mid": {
+      "tier": "mid",
+      "tier_label": "Mid-Range",
+      "price_range": [
+        500,
+        1500
+      ],
+      "tier_level": 2,
+      "description": "",
+      "products": [
+        {
+          "halilit_id": "8662023",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 1255.0,
+          "price_il": 1255.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 2,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179012"
+          }
+        },
+        {
+          "halilit_id": "8679326",
+          "name": "Moog Sound Studio Accessory Kit",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 962.0,
+          "price_il": 962.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 2,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179325"
+          }
+        }
+      ],
+      "product_count": 2
+    },
+    "pro": {
+      "tier": "pro",
+      "tier_label": "Professional",
+      "price_range": [
+        1500,
+        4000
+      ],
+      "tier_level": 3,
+      "description": "",
+      "products": [
+        {
+          "halilit_id": "8670731",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 2928.0,
+          "price_il": 2928.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179038"
+          }
+        },
+        {
+          "halilit_id": "8670732",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 2928.0,
+          "price_il": 2928.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179158"
+          }
+        },
+        {
+          "halilit_id": "8637794",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 2928.0,
+          "price_il": 2928.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179187"
+          }
+        },
+        {
+          "halilit_id": "8669288",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 2928.0,
+          "price_il": 2928.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179201"
+          }
+        },
+        {
+          "halilit_id": "8663409",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 2928.0,
+          "price_il": 2928.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179213"
+          }
+        },
+        {
+          "halilit_id": "8636373",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 2928.0,
+          "price_il": 2928.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179262"
+          }
+        },
+        {
+          "halilit_id": "8662251",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 3556.0,
+          "price_il": 3556.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179284"
+          }
+        },
+        {
+          "halilit_id": "8676603",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 1882.0,
+          "price_il": 1882.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179294"
+          }
+        },
+        {
+          "halilit_id": "8679188",
+          "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 1673.0,
+          "price_il": 1673.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 4,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179304"
+          }
+        }
+      ],
+      "product_count": 9
+    },
+    "flagship": {
+      "tier": "flagship",
+      "tier_label": "Flagship",
+      "price_range": [
+        4000,
+        100000
+      ],
+      "tier_level": 5,
+      "description": "",
+      "products": [
+        {
+          "halilit_id": "8661547",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 9203.0,
+          "price_il": 9203.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 5,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179173"
+          }
+        },
+        {
+          "halilit_id": "8674471",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 8367.0,
+          "price_il": 8367.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 5,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179224"
+          }
+        },
+        {
+          "halilit_id": "8636862",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 5020.0,
+          "price_il": 5020.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 5,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179236"
+          }
+        },
+        {
+          "halilit_id": "8669133",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 25100.0,
+          "price_il": 25100.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 5,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179251"
+          }
+        },
+        {
+          "halilit_id": "8670434",
+          "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse",
+          "brand": "Moog",
+          "category": "Keyboards & Synthesizers",
+          "subcategory": "Moog Synthesizer",
+          "price": 14642.0,
+          "price_il": 14642.0,
+          "price_eilat": 0.0,
+          "display_role": "specialist",
+          "display_tier_level": 5,
+          "hero_image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+          "media_assets": [
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 100
+            },
+            {
+              "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+              "type": "image",
+              "alt": null,
+              "priority": 50
+            }
+          ],
+          "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+          "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "#FF6B6B",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T20:44:36.179273"
+          }
+        }
+      ],
+      "product_count": 5
+    },
+    "legacy": {
+      "tier": "legacy",
+      "tier_label": "Legacy",
+      "price_range": [
+        0,
+        100000
+      ],
+      "tier_level": 0,
+      "description": "",
+      "products": [],
+      "product_count": 0
+    }
+  },
+  "metadata": {
+    "version": "v5.4",
+    "schema": "spectrum-ingestion-v1",
+    "created_at": "2026-02-05T20:44:36.178945"
+  }
+}

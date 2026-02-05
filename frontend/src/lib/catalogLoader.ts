@@ -509,21 +509,12 @@ class CatalogLoader {
         })),
       );
 
-      // ✅ Apply unified taxonomy categorization to all products
-      try {
-        const taxonomy = TaxonomyService.getInstance();
-        await taxonomy.load();
-        products = taxonomy.categorizeProducts(products);
-        console.log(
-          `[CatalogLoader] ✅ Applied unified taxonomy to ${products.length} products`
-        );
-      } catch (taxError) {
-        console.warn(
-          "[CatalogLoader] ⚠️ Failed to apply taxonomy, continuing with existing categories:",
-          taxError
-        );
-        // Continue with uncategorized products if taxonomy fails
-      }
+      // ✅ v6.0: Skip taxonomy file requirement - products use brand-based categorization
+      // This removes the gate that was preventing display when taxonomy.json was missing
+      // All categorization is now handled directly in getConsolidatedProductCategory
+      console.log(
+        `[CatalogLoader] ✅ Loaded ${products.length} products (taxonomy categorization simplified in v6.0)`
+      );
 
       this.allProducts = products;
       return this.allProducts;

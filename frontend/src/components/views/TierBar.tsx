@@ -79,18 +79,41 @@ export const TierBar: React.FC<TierBarProps> = ({
           return {
             name: brandName,
             count: sorted.length,
-            products: sorted.map(
-              (p: any): Product => ({
+            products: sorted.map((p: any): Product => {
+              // Robust Image Resolution Strategy (v6.0 Compatible)
+              let resolvedImage = "";
+
+              // 1. Try v6.0 Nested Object structure
+              if (
+                p.images &&
+                typeof p.images === "object" &&
+                !Array.isArray(p.images)
+              ) {
+                resolvedImage = p.images.main || p.images.thumbnail || "";
+              }
+
+              // 2. Try v5.0 Flat Properties
+              if (!resolvedImage) {
+                resolvedImage =
+                  p.image_hero || p.image_thumbnail || p.image_url || "";
+              }
+
+              // 3. Last Resort: Try direct 'image' property
+              if (!resolvedImage && p.image) {
+                resolvedImage = p.image;
+              }
+
+              return {
                 id: p.id || "",
                 name: p.name || "Unnamed",
                 brand: p.brand || "Unknown",
                 price: getPriceValue(p),
                 currency: "ILS",
-                image: p.image_hero || p.image_thumbnail || "",
+                image: resolvedImage,
                 in_stock: p.in_stock !== false,
                 sku: String(p.sku || p.id || ""),
-              }),
-            ),
+              };
+            }),
           };
         })
         .sort((a, b) => a.name.localeCompare(b.name));

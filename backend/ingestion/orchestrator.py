@@ -188,10 +188,12 @@ class IngestionOrchestrator:
 
     def _phase_harvest(self, raw_product: Dict[str, Any], brand: str) -> IngestionProductDraft:
         """
-        PHASE 1: HARVEST
+        PHASE 1: HARVEST (v6.0 STRICT)
 
         Normalize raw scraped data into IngestionProductDraft structure.
-        Extract primary fields: id, name, prices.
+        Enforces "The Golden List" rules:
+        - Halilit ID, Name, Price are IMMUTABLE here.
+        - Other fields are left empty for later agents.
         """
         # Generate or extract ID
         halilit_id = (
@@ -209,25 +211,80 @@ class IngestionOrchestrator:
             "Unknown Product"
         )
 
-        official_name = raw_product.get(
-            'official_name') or raw_product.get('manufacturer_name')
-        model_number = raw_product.get(
-            'model') or raw_product.get('model_number')
-        sku = raw_product.get('sku')
-
-        # Extract prices
+        # Extract prices (COMMERCIAL SOURCE OF TRUTH)
         price_il = float(raw_product.get('price_il')
                          or raw_product.get('price') or 0)
         price_eilat = float(raw_product.get('price_eilat') or 0)
 
-        # Create draft with minimal data
+        # Link
+        halilit_url = raw_product.get('source_url') or raw_product.get(
+            'url') or "https://halilit.com"
+
+        # Extract content (If present in source - treat as "Official" seed)
+        desc_short = raw_product.get('description_short')
+        desc_full = raw_product.get(
+            'description_full') or raw_product.get('description')
+
+        # Extract images (If present - treat as "Official" seed)
+        official_images = []
+        raw_hero = raw_product.get('image_hero')
+        if raw_hero:
+            url = raw_hero.get('url') if isinstance(
+                raw_hero, dict) else raw_hero
+            if url:
+                from backend.ingestion.data_models import MediaAsset  # Ensure import
+                official_images.append(MediaAsset(
+                    type="image",
+                    url=url,
+                    display_purpose="hero",
+                    source=DataSourceConfidence.OFFICIAL,  # Assume file data is verified
+                    priority=100
+                ))
+
+        # Parse gallery
+        raw_gallery = raw_product.get('image_gallery') or []
+        if isinstance(raw_gallery, list):
+            for img in raw_gallery:
+                url = img.get('url') if isinstance(img, dict) else img
+                if url:
+                    from backend.ingestion.data_models import MediaAsset
+                    official_images.append(MediaAsset(
+                        type="image",
+                        url=url,
+                        display_purpose="gallery",
+                        source=DataSourceConfidence.OFFICIAL,
+                        priority=50
+                    ))
+
+        # Extract official specs if present (from OfficialVerifier)
+        official_specs = raw_product.get('official_specs') or {}
+        if official_specs:
+            self.logger.info(
+                f"   📘 Found official specs for {product_name}: {list(official_specs.keys())}")
+        else:
+            # Debug why it is missing
+            if 'Moog' in brand and product_name.startswith('סינתיסייזר Moog Mavis'):
+                self.logger.warning(
+                    f"   ⚠️ MISSING official specs for {product_name}. Keys in raw: {list(raw_product.keys())}")
+
+        # Create draft with Strict Commercial Data + Seed Content
         draft = IngestionProductDraft(
+            # Commercial
             halilit_id=halilit_id,
             product_name=product_name,
-            official_name=official_name,
             brand=brand,
-            model_number=model_number,
-            sku=sku,
+            price_il=price_il,
+            price_eilat=price_eilat,
+            halilit_url=halilit_url,
+
+            # Content Seeding (Populate Official containers if data exists)
+            official_specs=official_specs,
+            official_description=desc_full,
+            description_long=desc_full,  # Legacy fallback
+            description_short=desc_short,
+            official_images=official_images,
+
+            # Legacy/Computed Containers (Initialized empty)
             taxonomy=TaxonomyMapping(
                 canonical_category="Other",
                 canonical_subcategory="Uncategorized",
@@ -236,33 +293,21 @@ class IngestionOrchestrator:
                 price_il=price_il,
                 price_eilat=price_eilat,
             ),
-            description_short=raw_product.get(
-                'description') or raw_product.get('description_short'),
-            description_long=raw_product.get('description_long'),
-            feature_list=raw_product.get('features') or [],
-            specifications=ProductSpecifications(
-                specs_dict=raw_product.get(
-                    'specs', raw_product.get('specifications', {})),
-                specs_source=DataSourceConfidence.COMMERCIAL,
-                specs_completeness=0.3,
-                specs_markdown=None,
-            ),
             display=DisplayProperties(),
-            primary_source=SourceProvenance(
-                source_name="halilit",
-                source_url=raw_product.get(
-                    'source_url') or "https://halilit.com",
-                confidence=DataSourceConfidence.COMMERCIAL,
-                extraction_method="web_scraper",
+            specifications=ProductSpecifications(
+                specs_dict={},
+                specs_source=DataSourceConfidence.COMMERCIAL
             ),
-            sources=[SourceProvenance(
-                source_name="halilit",
-                source_url=raw_product.get(
-                    'source_url') or "https://halilit.com",
+            # Source Tracking
+            primary_source=SourceProvenance(
+                source_name="Halilit",
+                source_url=halilit_url,
                 confidence=DataSourceConfidence.COMMERCIAL,
                 extraction_method="web_scraper",
-            )],
-            validation_status=IngestionStatus.HARVESTED,
+                extraction_notes=f"Scraped from {brand} catalog"
+            ),
+            status=IngestionStatus.HARVESTED,
+            pipeline_phase="harvest"
         )
 
         self.logger.debug(
@@ -313,6 +358,7 @@ class IngestionOrchestrator:
         draft.pricing.tier = tier
 
         # Compute Eilat discount
+        discount = 0.0
         if draft.pricing.price_il > 0:
             discount = ((draft.pricing.price_il - draft.pricing.price_eilat) /
                         draft.pricing.price_il * 100)
@@ -391,25 +437,28 @@ class IngestionOrchestrator:
         if not draft.product_name:
             errors.append("❌ Missing required field: product_name")
 
+        # Check brand
         if not draft.brand:
             errors.append("❌ Missing required field: brand")
 
-        # Check prices
-        if draft.pricing.price_il <= 0:
-            errors.append("❌ Invalid price_il (must be positive)")
+        # Check prices (Allow 0)
+        if draft.pricing.price_il < 0:
+            errors.append("❌ Invalid price_il (must be non-negative)")
+        elif draft.pricing.price_il == 0:
+            draft.validation_warnings.append("⚠ Price is 0 (TBD)")
 
-        # Check taxonomy validity
+        # Check taxonomy validity (warn but don't reject - user wants all products visible)
         if not self.taxonomy_manager.validate_category(
             draft.taxonomy.canonical_category,
             draft.taxonomy.canonical_subcategory,
         ):
-            errors.append(f"⚠ Invalid category: {draft.taxonomy.canonical_category} > "
-                          f"{draft.taxonomy.canonical_subcategory}")
+            draft.validation_warnings.append(f"⚠ Category may not be standard: {draft.taxonomy.canonical_category} > "
+                                             f"{draft.taxonomy.canonical_subcategory}")
 
-        # Check data completeness threshold (minimum 40%)
-        if draft.data_completeness < 0.4:
-            errors.append(f"⚠ Data completeness too low ({draft.data_completeness:.0%}) - "
-                          f"minimum 40% required")
+        # Check data completeness threshold (relaxed to 10% - v6.0 focus on display)
+        if draft.data_completeness < 0.1:
+            draft.validation_warnings.append(
+                f"⚠ Data completeness low ({draft.data_completeness:.0%})")
 
         # Check pricing consistency
         pricing_errors = validate_pricing_consistency(draft.pricing)

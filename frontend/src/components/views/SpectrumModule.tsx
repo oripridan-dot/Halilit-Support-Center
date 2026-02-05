@@ -12,6 +12,8 @@ import {
   AlertCircle,
   ExternalLink,
   Package,
+  Tag,
+  Zap,
 } from "lucide-react";
 import { useMemo, useState, useEffect } from "react";
 import { resolveProductImage } from "../../lib/imageResolver";
@@ -21,6 +23,7 @@ import type { Product } from "../../types";
 import { useCategoryCatalog } from "../../hooks/useCategoryCatalog";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
+import { getBrandTheme } from "../../styles/brandThemes";
 
 // --- RELEVANCE ENGINE ---
 // Calculates a 0-100 score for Y-Axis positioning
@@ -262,6 +265,18 @@ export const SpectrumModule = () => {
   const availableFilters = catalogResult.data?.availableFilters || [];
   const { loading, error } = catalogResult;
 
+  // DEBUG: Log data loading status
+  console.log("[SpectrumModule] activeTribeId:", activeTribeId);
+  console.log("[SpectrumModule] loading:", loading);
+  console.log("[SpectrumModule] error:", error);
+  console.log(
+    "[SpectrumModule] fetchedProducts count:",
+    fetchedProducts.length,
+  );
+  if (fetchedProducts.length > 0) {
+    console.log("[SpectrumModule] first product:", fetchedProducts[0]);
+  }
+
   const rawProducts = useMemo(() => {
     return fetchedProducts.map((p) => ({
       ...p,
@@ -461,6 +476,7 @@ export const SpectrumModule = () => {
                 {hoveredProduct.description_short ||
                   stripHtml(
                     hoveredProduct.description_full ||
+                      hoveredProduct.description || // v6.0 field
                       "No description available.",
                   )}
               </div>
@@ -504,30 +520,108 @@ export const SpectrumModule = () => {
           )}
         </Surface>
 
-        {/* RIGHT: ACTION & PRICE */}
+        {/* RIGHT: ACTION & DATA */}
         <Surface
           variant="screen"
           active={!!hoveredProduct}
-          className="col-span-3 bg-zinc-950 flex flex-col justify-center items-center p-6 relative"
+          className="col-span-3 bg-zinc-950 flex flex-col justify-between items-center p-6 relative overflow-y-auto custom-scrollbar"
         >
           {hoveredProduct ? (
-            <div className="animate-slide-up text-center w-full space-y-6">
-              <div>
-                <div className="text-4xl lg:text-5xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
+            <div className="w-full space-y-4 flex flex-col">
+              {/* Price Section */}
+              <div className="space-y-2">
+                <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
                   {getPrice(hoveredProduct)}
                 </div>
-                <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase mt-2">
+                <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
                   Price (VAT Included)
                 </div>
               </div>
 
-              <div className="w-full h-px bg-zinc-800" />
+              <div className="w-full h-px bg-zinc-800/50" />
 
+              {/* Category & Tier Info */}
+              <div className="space-y-2 text-xs">
+                <div className="flex items-start gap-2">
+                  <Tag className="w-3 h-3 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <div className="flex-1">
+                    <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-1">
+                      Category
+                    </div>
+                    <div className="text-zinc-200 font-semibold truncate">
+                      {hoveredProduct.category || "Other"}
+                    </div>
+                  </div>
+                </div>
+
+                {hoveredProduct.tier && (
+                  <div className="flex items-start gap-2">
+                    <Zap className="w-3 h-3 text-amber-400 mt-0.5 flex-shrink-0" />
+                    <div className="flex-1">
+                      <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-1">
+                        Tier
+                      </div>
+                      <div className="text-zinc-200 font-semibold capitalize">
+                        {hoveredProduct.tier}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {hoveredProduct.is_bestseller && (
+                  <div className="flex items-start gap-2">
+                    <Star className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />
+                    <div className="flex-1">
+                      <div className="text-zinc-500 uppercase text-[9px] tracking-widest">
+                        Bestseller
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <div className="w-full h-px bg-zinc-800/50" />
+
+              {/* Price Range Classification */}
+              <div className="space-y-2 text-xs">
+                <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-2">
+                  Price Range
+                </div>
+                <div className="w-full bg-zinc-900 rounded-sm border border-zinc-800 p-2 space-y-1">
+                  {(() => {
+                    const price = getPriceValue(hoveredProduct);
+                    const prices = filteredProducts
+                      .map((p) => getPriceValue(p))
+                      .filter((p) => p > 0)
+                      .sort((a, b) => a - b);
+
+                    return (
+                      <>
+                        <div className="flex items-center justify-between text-[9px]">
+                          <span className="text-zinc-500">
+                            Min: {getPrice({ price_il: prices[0] } as Product)}
+                          </span>
+                          <span className="text-zinc-500">
+                            Max:{" "}
+                            {getPrice({
+                              price_il: prices[prices.length - 1],
+                            } as Product)}
+                          </span>
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
+              </div>
+
+              <div className="flex-1" />
+
+              {/* CTA Button */}
               <button
                 onClick={() =>
                   hoveredProduct.id && openProductPop(hoveredProduct.id)
                 }
-                className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-4 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
+                className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-3 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
               >
                 <Maximize2 className="w-4 h-4" />
                 <span>Analyze</span>
@@ -567,76 +661,119 @@ export const SpectrumModule = () => {
 
             {/* Scrollable Matrix */}
             <div className="flex-1 overflow-y-auto custom-scrollbar">
-              {brandMatrix.brands.map(({ brand, products }) => (
-                <div
-                  key={brand}
-                  className="flex h-20 border-b border-zinc-800/30 hover:bg-zinc-900/20 transition-colors group/row"
-                >
-                  {/* Brand Header */}
-                  <div className="w-32 flex-shrink-0 flex items-center justify-start pl-4 border-r border-zinc-800/30 bg-black/20">
-                    <BrandLogo
-                      brand={brand}
-                      className="max-h-8 max-w-[80px] opacity-50 group-hover/row:opacity-100 transition-opacity"
-                    />
-                  </div>
+              {brandMatrix.brands.map(({ brand, products }) => {
+                const brandTheme = getBrandTheme(brand);
+                // Convert hex to RGB for opacity effects
+                const hexToRgb = (hex: string) => {
+                  const result =
+                    /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                  return result
+                    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+                    : "100, 100, 100";
+                };
+                const rgbColor = hexToRgb(brandTheme.primary);
 
-                  {/* The Track */}
-                  <div className="flex-1 relative flex items-center px-4">
-                    {/* We use specific positioning logic: 
+                return (
+                  <div
+                    key={brand}
+                    className="flex h-20 border-b transition-all duration-200 group/row hover:h-24 hover:shadow-lg"
+                    style={{
+                      borderColor: `rgba(${rgbColor}, 0.2)`,
+                      backgroundColor: `rgba(${rgbColor}, 0.04)`,
+                    }}
+                  >
+                    {/* Brand Header */}
+                    <div
+                      className="w-32 flex-shrink-0 flex items-center justify-start pl-4 border-r transition-all duration-200"
+                      style={{
+                        borderColor: `rgba(${rgbColor}, 0.3)`,
+                        backgroundColor: `rgba(${rgbColor}, 0.08)`,
+                      }}
+                    >
+                      <div className="flex flex-col gap-1 flex-1">
+                        <BrandLogo
+                          brand={brand}
+                          className="max-h-6 max-w-[70px] opacity-70 group-hover/row:opacity-100 transition-opacity"
+                        />
+                        <span
+                          className="text-[9px] font-bold uppercase tracking-widest"
+                          style={{ color: brandTheme.primary }}
+                        >
+                          {products.length}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* The Track */}
+                    <div className="flex-1 relative flex items-center px-4">
+                      {/* We use specific positioning logic: 
                             Logarithmic scale to prevent overlap at low prices 
                         */}
-                    {products.map((product) => {
-                      const price = getPriceValue(product);
-                      // Avoid DBZ
-                      const safePrice = price > 0 ? price : 1;
-                      const safeMin =
-                        brandMatrix.minPrice > 0 ? brandMatrix.minPrice : 1;
-                      const safeMax = brandMatrix.maxPrice;
+                      {products.map((product) => {
+                        const price = getPriceValue(product);
+                        // Avoid DBZ
+                        const safePrice = price > 0 ? price : 1;
+                        const safeMin =
+                          brandMatrix.minPrice > 0 ? brandMatrix.minPrice : 1;
+                        const safeMax = brandMatrix.maxPrice;
 
-                      // Log scale calculation:
-                      // pos = (log(price) - log(min)) / (log(max) - log(min))
-                      let pct = 0; // Default (TBD prices go to left)
-                      if (price > 0 && safeMax > safeMin) {
-                        pct =
-                          (Math.log(safePrice) - Math.log(safeMin)) /
-                          (Math.log(safeMax) - Math.log(safeMin));
-                      }
+                        // Log scale calculation:
+                        // pos = (log(price) - log(min)) / (log(max) - log(min))
+                        let pct = 0; // Default (TBD prices go to left)
+                        if (price > 0 && safeMax > safeMin) {
+                          pct =
+                            (Math.log(safePrice) - Math.log(safeMin)) /
+                            (Math.log(safeMax) - Math.log(safeMin));
+                        }
 
-                      // Clamp
-                      pct = Math.max(0, Math.min(1, pct));
+                        // Clamp
+                        pct = Math.max(0, Math.min(1, pct));
 
-                      return (
-                        <div
-                          key={product.id}
-                          className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
-                          style={{ left: `${pct * 90}%` }} // limit to 90% so last item doesn't overflow right
-                        >
-                          {/* The Dot / Thumbnail */}
+                        return (
                           <div
-                            className="w-10 h-10 rounded shadow-lg border border-zinc-700 bg-zinc-900 cursor-pointer 
-                                    hover:scale-150 hover:border-blue-500 transition-all duration-200 overflow-hidden relative"
-                            onClick={() => openProductPop(product.id!)}
-                            // Hover Logic
-                            onMouseEnter={() => handleHoverProduct(product)}
-                            // onMouseLeave={() => handleHoverProduct(null)} // Stickiness feels better
+                            key={product.id}
+                            className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
+                            style={{ left: `${pct * 90}%` }}
                           >
-                            {product.image_thumbnail ? (
-                              <img
-                                src={resolveProductImage(product)}
-                                className="w-full h-full object-cover"
+                            {/* The Dot / Thumbnail */}
+                            <div
+                              className="w-10 h-10 rounded shadow-lg bg-zinc-900 cursor-pointer 
+                                    hover:scale-150 transition-all duration-200 overflow-hidden relative"
+                              style={{
+                                borderWidth: "2px",
+                                borderColor: brandTheme.primary,
+                                boxShadow:
+                                  "0 0 0 1px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)",
+                              }}
+                              onClick={() => openProductPop(product.id!)}
+                              onMouseEnter={() => handleHoverProduct(product)}
+                            >
+                              {product.image_thumbnail ? (
+                                <img
+                                  src={resolveProductImage(product)}
+                                  className="w-full h-full object-cover"
+                                  alt={product.name}
+                                />
+                              ) : (
+                                <div className="w-full h-full bg-zinc-800 flex items-center justify-center text-[8px] text-zinc-500">
+                                  IMG
+                                </div>
+                              )}
+                              {/* Hover Glow */}
+                              <div
+                                className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-200"
+                                style={{
+                                  boxShadow: `0 0 12px ${brandTheme.primary}80, inset 0 0 8px ${brandTheme.primary}40`,
+                                }}
                               />
-                            ) : (
-                              <div className="w-full h-full bg-zinc-800 flex items-center justify-center text-[8px] text-zinc-500">
-                                IMG
-                              </div>
-                            )}
+                            </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}

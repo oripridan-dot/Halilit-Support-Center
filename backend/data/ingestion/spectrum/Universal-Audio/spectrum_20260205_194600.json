@@ -1,0 +1,98 @@
+{
+  "brand": "Universal-Audio",
+  "timestamp": "2026-02-05T19:46:00.185427",
+  "total_products": 1,
+  "tracks": {
+    "entry": {
+      "tier": "entry",
+      "tier_label": "Entry Level",
+      "price_range": [
+        0,
+        500
+      ],
+      "tier_level": 1,
+      "description": "",
+      "products": [],
+      "product_count": 0
+    },
+    "mid": {
+      "tier": "mid",
+      "tier_label": "Mid-Range",
+      "price_range": [
+        500,
+        1500
+      ],
+      "tier_level": 2,
+      "description": "",
+      "products": [],
+      "product_count": 0
+    },
+    "pro": {
+      "tier": "pro",
+      "tier_label": "Professional",
+      "price_range": [
+        1500,
+        4000
+      ],
+      "tier_level": 3,
+      "description": "",
+      "products": [],
+      "product_count": 0
+    },
+    "flagship": {
+      "tier": "flagship",
+      "tier_label": "Flagship",
+      "price_range": [
+        4000,
+        100000
+      ],
+      "tier_level": 5,
+      "description": "",
+      "products": [
+        {
+          "halilit_id": "123456",
+          "name": "Universal-Audio Grand Stage 88",
+          "brand": "Universal-Audio",
+          "category": "Other",
+          "subcategory": "Uncategorized",
+          "price_il": 18500.0,
+          "price_eilat": 15811.0,
+          "display_role": "specialist",
+          "display_tier_level": 5,
+          "hero_image_url": null,
+          "media_assets": [],
+          "description_short": null,
+          "description_long": null,
+          "official_specs": {},
+          "quality_score": 63.2,
+          "data_completeness": 63.2,
+          "color_hint": "bg-green-400",
+          "feature_list": [],
+          "validation_status": "APPROVED",
+          "data_provenance": {
+            "source": "ingestion_pipeline",
+            "timestamp": "2026-02-05T19:46:00.185457"
+          }
+        }
+      ],
+      "product_count": 1
+    },
+    "legacy": {
+      "tier": "legacy",
+      "tier_label": "Legacy",
+      "price_range": [
+        0,
+        100000
+      ],
+      "tier_level": 0,
+      "description": "",
+      "products": [],
+      "product_count": 0
+    }
+  },
+  "metadata": {
+    "version": "v5.4",
+    "schema": "spectrum-ingestion-v1",
+    "created_at": "2026-02-05T19:46:00.185427"
+  }
+}

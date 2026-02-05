@@ -92,7 +92,11 @@ export const ProductSchema = z
       ])
       .optional()
       .nullable(),
-    specifications: z.array(SpecificationSchema).optional().nullable(),
+    // Relaxed specifications to allow Dictionary-style specs from v6.0 backend
+    specifications: z.union([
+      z.array(SpecificationSchema),
+      z.record(z.any())
+    ]).optional().nullable(),
     manuals: z.array(ProductManualSchema).optional().nullable(),
     pricing: ProductPricingSchema.optional().nullable(),
     verified: z.boolean().default(true),

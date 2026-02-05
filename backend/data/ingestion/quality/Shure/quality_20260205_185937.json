@@ -1,0 +1,18 @@
+{
+  "brand": "Shure",
+  "timestamp": "20260205_185937",
+  "metrics": {
+    "brand": "Shure",
+    "generated_at": "2026-02-05T18:59:37.906428",
+    "total_products": 17,
+    "approved_products": 17,
+    "rejected_products": 0,
+    "overall_quality_score": 0.52,
+    "average_completeness": 0.52,
+    "critical_errors": [],
+    "warnings": [],
+    "recommendations": [
+      "Consider enriching data (avg completeness: 52%)"
+    ]
+  }
+}

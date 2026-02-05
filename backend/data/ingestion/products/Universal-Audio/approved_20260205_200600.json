@@ -1,0 +1,421 @@
+{
+  "brand": "Universal-Audio",
+  "timestamp": "20260205_200600",
+  "count": 9,
+  "products": [
+    {
+      "halilit_id": "universal-audio-610",
+      "product_name": "UA 610 Tube Preamp & EQ Collection",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Preamp",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 3000.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Timeless warmth and punch for your vocals and instruments",
+        "description_long": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic \u201cend-to-end\u201d emulation of two classics \u2014 the 610-A and 610-B \u2014 including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison\u2122 preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.378453",
+      "last_updated": "2026-02-05T20:06:00.378454"
+    },
+    {
+      "halilit_id": "universal-audio-universal-audio-auto-tune-realtime-x",
+      "product_name": "Auto-Tune Realtime X",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Audio Interface",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5800.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Get the iconic Auto-Tune\u00ae effect, perfected for Apollo interfaces",
+        "description_long": "Get the iconic Auto-Tune\u00ae effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto\u2011Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.378581",
+      "last_updated": "2026-02-05T20:06:00.378582"
+    },
+    {
+      "halilit_id": "universal-audio-universal-audio-ocean-way-studios-deluxe",
+      "product_name": "Ocean Way Studios Deluxe",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5800.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Step inside the studio that made history, emulated in perfect end-to-end detail",
+        "description_long": "Step inside the studio that made history, emulated in perfect end-to-end detail.\nPlace your vocals, drums, guitars, and more inside Ocean Way Studios' legendary rooms\nBring your sources to life in Bill Putnam Sr.'s original reverb chambers\nTransform any track with Ocean Way's original hit-making re-mic setups\nShape your sound with the analog consoles and outboard gear heard on hundreds of iconic recordings\nPut yourself in the control rooms of a world class recording studio with enhanced retina graphics and user interface\nAlso includes original Ocean Way Studios plug-in for Apollo and UAD hardware",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.378721",
+      "last_updated": "2026-02-05T20:06:00.378722"
+    },
+    {
+      "halilit_id": "universal-audio-universal-audio-paradise-guitar-studio",
+      "product_name": "Paradise Guitar Studio",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 3000.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Turn your riffs into records",
+        "description_long": "Turn your riffs into records.\nGet an entire pro guitar recording chain in your DAW \u2014 complete with classic amps, cabs, mics, pedals, studio effects, and more\nExplore 11 hand-picked vintage and modified tube amps \u2014 a \u201cgolden unit\u201d collection of essential clean, crunch, and boutique tones\nCapture your perfect sound in minutes with curated speaker cabinets and expertly-placed studio mics\nShape your final tone with studio effects like 1176 compression, vintage tape echo, spring and plate reverbs, EQ, and more\nStay inspired with over 300 presets spanning rock, blues, indie, metal, funk, pop, and beyond",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.378812",
+      "last_updated": "2026-02-05T20:06:00.378813"
+    },
+    {
+      "halilit_id": "universal-audio-uad",
+      "product_name": "UAD Spark",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2000.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "The plug-ins and instruments in UAD Spark are all undoubtedly superb and if you don\u2019t already...",
+        "description_long": "The plug-ins and instruments in UAD Spark are all undoubtedly superb and if you don\u2019t already have these tools, this is a fantastic way to access and explore some exceptional analogue plug-ins and find out what all the fuss is about.",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.378861",
+      "last_updated": "2026-02-05T20:06:00.378861"
+    },
+    {
+      "halilit_id": "universal-audio-luna",
+      "product_name": "LUNA Pro",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 4000.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Transform LUNA into an analog playground",
+        "description_long": "Transform LUNA into an analog playground.\nTurn LUNA into a fully-loaded studio with analog tape, summing, and console extensions\nTap into 29 UAD plug-ins and virtual instruments to take your mixes to the next level\nNew: Edit and tune vocals faster with ARA plug-ins like Melodyne and DynAssist\nNew: Integrate your analog gear using Hardware Inserts for streamlined mixing",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.378987",
+      "last_updated": "2026-02-05T20:06:00.378987"
+    },
+    {
+      "halilit_id": "universal-audio-universal-audio-anthem-analog-synthesizer",
+      "product_name": "Anthem Analog Synthesizer",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 3000.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Put the biggest, baddest analog sounds at your fingertips",
+        "description_long": "Put the biggest, baddest analog sounds at your fingertips.\nSculpt enormous bass and powerful leads that fill out your song with fat analog texture\nDial in the bold analog-modeled filter, from subtle warmth and saturation to all-out sonic destruction\nGet unapologetically lo-fi with vintage modulation effects, spring reverb, and dubby tape echo\nCreate evolving sequences with a step sequencer that adds polyrhythms, accents, and generative textures",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.379061",
+      "last_updated": "2026-02-05T20:06:00.379061"
+    },
+    {
+      "halilit_id": "universal-audio-max",
+      "product_name": "PolyMAX Synth",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5800.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Retro sounds to shock your mind\u2011brain",
+        "description_long": "Retro sounds to shock your mind\u2011brain.\nGet rich, sit-in-the-mix analog sounds from an inspiring polyphonic wonder synth\nUse fat-sounding analog modeled oscillators and filters to demolish creative barriers\nAdd studio-quality UA effects like vintage spring reverb, tape delay, and modulation textures\nDive into lush poly synth sounds with album\u2011ready presets and simple, intuitive controls",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.379140",
+      "last_updated": "2026-02-05T20:06:00.379140"
+    },
+    {
+      "halilit_id": "universal-audio-universal-audio-ox-amp-top-box",
+      "product_name": "OX Amp Top Box",
+      "official_name": null,
+      "brand": "Universal-Audio",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Amplifiers & Effects",
+        "canonical_subcategory": "Amplifier",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5800.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Get legendary studio tones from your tube amp \u2014 anywhere, at any volume",
+        "description_long": "Get legendary studio tones from your tube amp \u2014 anywhere, at any volume.\nPlay and record your tube amp in its tonal sweet spot \u2014 anywhere, at any volume, with full dynamics\nGet stunning mic and guitar cabinet combinations at the turn of a RIG knob \u2014 no miking required\nAudition, tweak, and save more than 100 jaw-dropping custom Rigs from compatible iPad, or Mac/Windows computers.\nGet authentic \u201cedge of destruction\u201d sounds, complete with UA Dynamic Room Modeling, speaker breakup, and cone cry",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:06:00.379220",
+      "last_updated": "2026-02-05T20:06:00.379220"
+    }
+  ]
+}

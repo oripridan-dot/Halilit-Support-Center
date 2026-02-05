@@ -264,52 +264,8 @@ class IngestionDatabase:
 
     def _product_to_dict(self, product: IngestionProductDraft) -> Dict[str, Any]:
         """Convert IngestionProductDraft to dictionary for JSON serialization"""
-        return {
-            "halilit_id": product.halilit_id,
-            "product_name": product.product_name,
-            "official_name": product.official_name,
-            "brand": product.brand,
-            "model_number": product.model_number,
-            "sku": product.sku,
-            "taxonomy": {
-                "canonical_category": product.taxonomy.canonical_category,
-                "canonical_subcategory": product.taxonomy.canonical_subcategory,
-                "keywords": product.taxonomy.keywords,
-            },
-            "pricing": {
-                "price_il": product.pricing.price_il,
-                "price_eilat": product.pricing.price_eilat,
-                "tier": product.pricing.tier if isinstance(product.pricing.tier, str) else (product.pricing.tier.value if product.pricing.tier else None),
-                "eilat_discount_percent": product.pricing.eilat_discount_percent,
-            },
-            "display": {
-                "display_role": product.display.display_role if isinstance(product.display.display_role, str) else (product.display.display_role.value if product.display.display_role else None),
-                "display_tier_level": product.display.display_tier_level,
-                "hero_image": product.display.hero_image,
-                "color_hint": product.display.color_hint,
-            },
-            "content": {
-                "description_short": product.description_short,
-                "description_long": product.description_long,
-                "feature_list": product.feature_list,
-            },
-            "specifications": {
-                "specs_dict": product.specifications.specs_dict,
-                "specs_completeness": product.specifications.specs_completeness,
-            },
-            "quality": {
-                "data_completeness": product.data_completeness,
-                "quality_score": product.quality_score,
-                "validation_status": product.validation_status if isinstance(product.validation_status, str) else (product.validation_status.value if product.validation_status else None),
-            },
-            "source": {
-                "primary_source": product.primary_source.source_name,
-                "sources": [s.source_name for s in product.sources],
-                "source_confidence": product.primary_source.confidence if isinstance(product.primary_source.confidence, str) else (product.primary_source.confidence.value if product.primary_source.confidence else None),
-            },
-            "created_at": product.created_at.isoformat() if hasattr(product.created_at, 'isoformat') else str(product.created_at),
-            "last_updated": product.last_updated.isoformat() if hasattr(product.last_updated, 'isoformat') else str(product.last_updated),
-        }
+        # "flexible" fix: Use Pydantic's built-in serialization to capture ALL fields (even extra ones)
+        return product.model_dump(mode='json')
 
     def export_analytics(self, brand: Optional[str] = None) -> Dict[str, Any]:
         """

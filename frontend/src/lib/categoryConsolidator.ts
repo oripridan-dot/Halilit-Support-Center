@@ -228,18 +228,40 @@ function getSpectrumId(rawCategoryString: string): string {
 
   const normalized = rawCategoryString.toLowerCase();
 
-  // Iterate through map
+  // PRIORITY 1: Check for compound categories from v6 backend (e.g. "Keyboards & Synthesizers")
+  const V6_CATEGORY_BRIDGE: Record<string, string> = {
+    "keyboards & synthesizers": "synthesizers",
+    "audio interfaces & mixers": "audio-interfaces",
+    "microphones & recording": "studio-microphones",
+    "amplifiers & effects": "guitar-amps",
+    "studio monitors & speakers": "studio-monitors",
+    "headphones & earphones": "headphones",
+    "drums & percussion": "acoustic-drums",
+  };
+
+  for (const [category, spectrum] of Object.entries(V6_CATEGORY_BRIDGE)) {
+    if (normalized.includes(category)) {
+      return spectrum;
+    }
+  }
+
+  // PRIORITY 2: Iterate through detailed spectrum map (keyword matching)
   for (const [keyword, spectrumId] of Object.entries(SPECTRUM_MAP)) {
     if (normalized.includes(keyword)) {
       return spectrumId;
     }
   }
 
-  // Fallbacks
+  // PRIORITY 3: Fallbacks
   if (normalized.includes("cable")) return "cables";
   if (normalized.includes("stand")) return "stands";
   if (normalized.includes("case") || normalized.includes("bag")) return "cases-bags";
   if (normalized.includes("power")) return "power-supplies";
+
+  // Log unmapped categories for debugging
+  if (typeof window !== 'undefined' && window.console) {
+    console.debug(`[categoryConsolidator] Unmapped category: "${rawCategoryString}"`);
+  }
 
   return "accessories-utility";
 }
@@ -264,144 +286,271 @@ export function getConsolidatedProductCategory(product: Product): {
   galaxyLabel: string;
   originalCategory: string;
 } {
-  // 0. Priority: v4.6.1 Standard (ui_meta directly on root)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  if ((product as any).ui_meta?.primary_category) {
-    const primary = (product as any).ui_meta.primary_category;
-    const TAXONOMY_BRIDGE: Record<string, string> = {
-      "STUDIO_MONITORS": "studio-monitors",
-      "AUDIO_INTERFACES": "audio-interfaces",
-      "MICROPHONES": "studio-microphones",
-      "CONDENSER": "studio-microphones",
-      "ACCESSORIES": "accessories-utility",
-      "STANDS": "stands",
-      "TUNING": "accessories-utility",
-      "UNCATEGORIZED": "accessories-utility"
-    };
+  // v6.0 VALIDATION HIERARCHY:
+  // 1. HALILIT DATA (ingestion pipeline) - Primary source of truth
+  // 2. BRAND WEBSITE VALIDATION - Cross-reference with brand official data
+  // 3. CONTEXTUAL DATA VALIDATION - Use product specs/features as last resort
 
-    const spectrumId = TAXONOMY_BRIDGE[primary] || "accessories-utility";
-    const galaxy = getGalaxyForSpectrum(spectrumId);
-
-    return {
-      spectrumId,
-      galaxyId: galaxy?.id || "accessories-utility",
-      galaxyLabel: galaxy?.label || "Accessories",
-      originalCategory: primary
-    };
+  // ========== TIER 1: HALILIT DATA VALIDATION ==========
+  // Check if product has explicit category from Halilit ingestion
+  if (product.category && product.category.toLowerCase() !== "none" && product.category.toLowerCase() !== "uncategorized") {
+    const halalitCategory = product.category.toLowerCase().trim();
+    const spectrum = mapCategoryToSpectrum(halalitCategory);
+    if (spectrum !== "accessories-utility") {
+      // Found valid Halilit category
+      const galaxy = getGalaxyForSpectrum(spectrum);
+      return {
+        spectrumId: spectrum,
+        galaxyId: galaxy?.id || spectrum,
+        galaxyLabel: galaxy?.label || product.category,
+        originalCategory: `halilit:${product.category}`,
+      };
+    }
   }
 
-  // 1. Priority: Use refined UI Context from "Refinery" v5 (pill_data)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const pillData = (product as any).pill_data;
-  if (pillData?.ui_meta?.primary_category) {
-    // Map Backend Taxonomy Keys to Frontend Spectrum IDs
-    const TAXONOMY_BRIDGE: Record<string, string> = {
-      "STUDIO_MONITORS": "studio-monitors",
-      "AUDIO_INTERFACES": "audio-interfaces",
-      "MICROPHONES": "studio-microphones",
-      "CONDENSER": "studio-microphones",
-      "ACCESSORIES": "accessories-utility",
-      "STANDS": "stands",
-      "TUNING": "accessories-utility",
-      "UNCATEGORIZED": "accessories-utility"
-    };
-
-    const spectrumId = TAXONOMY_BRIDGE[pillData.ui_meta.primary_category] || "accessories-utility";
-    const galaxy = getGalaxyForSpectrum(spectrumId);
-
-    return {
-      spectrumId,
-      galaxyId: galaxy?.id || "accessories-utility",
-      galaxyLabel: galaxy?.label || "Accessories",
-      originalCategory: pillData.ui_meta.primary_category
-    };
-  }
-
-  // 2. Use category field - but check if it's "Uncategorized" first
-  const categoryKey = (product.category || "default").toLowerCase().trim();
-
-  // If category is explicitly set AND not "Uncategorized", use it
-  if (product.category && categoryKey !== "uncategorized") {
-    // Map category names to Spectrum IDs (matching galaxy_db.json categories)
-    const CATEGORY_BRIDGE: Record<string, string> = {
-      // Studio categories
-      "studio_monitors": "studio-monitors",
-      "audio_interfaces": "audio-interfaces",
-      "microphones": "studio-microphones",
-      "audio interfaces": "audio-interfaces",
-      "studio monitors": "studio-monitors",
-      "speakers": "studio-monitors",
-      "subwoofers": "studio-monitors",
-      "cables & connectors": "cables",
-
-      // Live/consumer categories
-      "headphones": "headphones",
-
-      // Accessories
-      "accessories": "accessories-utility",
-      "cables": "cables",
-
-      // Fallback
-      "default": "accessories-utility",
-      "other": "accessories-utility"
-    };
-
-    let spectrumId = CATEGORY_BRIDGE[categoryKey] || "accessories-utility";
-
-    const galaxy = getGalaxyForSpectrum(spectrumId);
-    const galaxyId = galaxy ? galaxy.id : "accessories-utility";
-    const galaxyLabel = galaxy ? galaxy.label : "General Utility";
-
-    return {
-      spectrumId,
-      galaxyId,
-      galaxyLabel,
-      originalCategory: product.category || "Refined",
-    };
-  }
-
-  // 3. Brand-based categorization for uncategorized products
-  // This distributes products from each brand to reasonable spectrum categories
+  // ========== TIER 2: BRAND WEBSITE VALIDATION ==========
+  // Cross-validate using brand's known product categories and name patterns
   const brandId = product.brand_id?.toLowerCase() || product.brand?.toLowerCase() || "unknown";
+  const productName = (product.name || "").toLowerCase();
+
+  // Brand-specific product patterns from their official websites
+  const BRAND_WEBSITE_PATTERNS: Record<string, Array<{ pattern: RegExp; spectrum: string }>> = {
+    "roland": [
+      { pattern: /piano|keyboard|synth|arranger|workstation|sampler/i, spectrum: "synthesizers" },
+      { pattern: /drum|percussion|rhythm|groove|tr-|sp-/i, spectrum: "electronic-drums" },
+      { pattern: /amplifier|amp|pa|boss|effect|pedal/i, spectrum: "guitar-pedals" },
+      { pattern: /interface|audio|daw|recorder/i, spectrum: "audio-interfaces" },
+    ],
+    "nord": [
+      { pattern: /piano|keyboard|lead|bass|synth|stage|grand/i, spectrum: "synthesizers" },
+      { pattern: /drum|percussion|beat|groove/i, spectrum: "electronic-drums" },
+    ],
+    "moog": [
+      { pattern: /synthesizer|synth|keyboard|sequencer/i, spectrum: "synthesizers" },
+    ],
+    "rode": [
+      { pattern: /microphone|mic|condenser|shotgun|lavalier|wireless|lav/i, spectrum: "studio-microphones" },
+      { pattern: /interface|usb|audio/i, spectrum: "audio-interfaces" },
+      { pattern: /cable|connector|stand|windscreen|suspension/i, spectrum: "cables" },
+    ],
+    "shure": [
+      { pattern: /microphone|mic|condenser|dynamic|wireless|headset/i, spectrum: "live-mics" },
+      { pattern: /cable|stand|clip|adapter|connector/i, spectrum: "cables" },
+      { pattern: /monitor|speaker|system/i, spectrum: "studio-monitors" },
+    ],
+    "universal-audio": [
+      { pattern: /interface|audio|converter|preamp|uad/i, spectrum: "audio-interfaces" },
+      { pattern: /plugin|plugin|uad-/i, spectrum: "synthesizers" },
+      { pattern: /accelerator|card/i, spectrum: "audio-interfaces" },
+    ],
+    "drumdots": [
+      { pattern: /drum|cymbal|pad|percussion|kit/i, spectrum: "acoustic-drums" },
+    ],
+  };
+
+  // Try brand website pattern matching
+  const brandPatterns = BRAND_WEBSITE_PATTERNS[brandId];
+  if (brandPatterns && productName) {
+    for (const { pattern, spectrum } of brandPatterns) {
+      if (pattern.test(productName)) {
+        const galaxy = getGalaxyForSpectrum(spectrum);
+        return {
+          spectrumId: spectrum,
+          galaxyId: galaxy?.id || spectrum,
+          galaxyLabel: galaxy?.label || pattern.source,
+          originalCategory: `brand-website:${productName.substring(0, 20)}`,
+        };
+      }
+    }
+  }
+
+  // ========== TIER 3: CONTEXTUAL DATA VALIDATION ==========
+  // Use product specifications, descriptions, and name patterns to infer category
+
+  // 3a. Check product name for contextual clues
+  if (product.name) {
+    const name = product.name.toLowerCase();
+    const contextPatterns: Array<{ pattern: RegExp; spectrum: string }> = [
+      { pattern: /synthesizer|synth|keyboard|keys|workstation|sampler|arranger|rompler/i, spectrum: "synthesizers" },
+      { pattern: /drum machine|groove box|beat|drum pad|rhythm|percussion machine/i, spectrum: "electronic-drums" },
+      { pattern: /microphone|microphone|condenser mic|dynamic mic|shotgun|lavalier/i, spectrum: "studio-microphones" },
+      { pattern: /live mic|vocal mic|instrument mic|wireless microphone|headset mic/i, spectrum: "live-mics" },
+      { pattern: /audio interface|interface|converter|preamp/i, spectrum: "audio-interfaces" },
+      { pattern: /studio monitor|monitor speaker|nearfield|powered speaker/i, spectrum: "studio-monitors" },
+      { pattern: /cable|connector|stand|clip|adapter|windscreen|pop filter/i, spectrum: "cables" },
+      { pattern: /headphone|headphones|earphone|earbud/i, spectrum: "headphones" },
+      { pattern: /effect|pedal|distortion|reverb|delay|amp|amplifier/i, spectrum: "guitar-pedals" },
+    ];
+
+    for (const { pattern, spectrum } of contextPatterns) {
+      if (pattern.test(name)) {
+        const galaxy = getGalaxyForSpectrum(spectrum);
+        return {
+          spectrumId: spectrum,
+          galaxyId: galaxy?.id || spectrum,
+          galaxyLabel: galaxy?.label || "contextual-name",
+          originalCategory: `contextual:name`,
+        };
+      }
+    }
+  }
+
+  // 3b. Check specifications for contextual clues
+  if (product.specifications && typeof product.specifications === "object") {
+    const specsText = JSON.stringify(product.specifications).toLowerCase();
+
+    const specPatterns: Array<{ pattern: RegExp; spectrum: string }> = [
+      { pattern: /oscillator|filter|adsr|wavetable|arpeggiator|lfo/i, spectrum: "synthesizers" },
+      { pattern: /drum|pad|sample|sequencer|step|trigger/i, spectrum: "electronic-drums" },
+      { pattern: /condenser|diaphragm|frequency response|microphone|xlr/i, spectrum: "studio-microphones" },
+      { pattern: /impedance|sensitivity|output level|preamp|interface/i, spectrum: "audio-interfaces" },
+      { pattern: /monitor|speaker|wattage|frequency|near?field/i, spectrum: "studio-monitors" },
+      { pattern: /connector|connection|xlr|jack|plug|adapter/i, spectrum: "cables" },
+    ];
+
+    for (const { pattern, spectrum } of specPatterns) {
+      if (pattern.test(specsText)) {
+        const galaxy = getGalaxyForSpectrum(spectrum);
+        return {
+          spectrumId: spectrum,
+          galaxyId: galaxy?.id || spectrum,
+          galaxyLabel: galaxy?.label || "contextual-specs",
+          originalCategory: `contextual:specs`,
+        };
+      }
+    }
+  }
+
+  // 3c. Check description for contextual clues
+  if (product.description) {
+    const desc = product.description.toLowerCase();
+    const descPatterns: Array<{ pattern: RegExp; spectrum: string }> = [
+      { pattern: /synthesizer|synth|keyboard|electronic music production/i, spectrum: "synthesizers" },
+      { pattern: /drum|beat production|rhythm|groove creation/i, spectrum: "electronic-drums" },
+      { pattern: /recording studio|vocal recording|instrument recording|acoustic capture/i, spectrum: "studio-microphones" },
+      { pattern: /live performance|stage use|vocal reinforcement|concert/i, spectrum: "live-mics" },
+      { pattern: /audio recording|daw|digital audio|music production|studio use/i, spectrum: "audio-interfaces" },
+      { pattern: /studio monitoring|mix|master|accurate reference/i, spectrum: "studio-monitors" },
+    ];
+
+    for (const { pattern, spectrum } of descPatterns) {
+      if (pattern.test(desc)) {
+        const galaxy = getGalaxyForSpectrum(spectrum);
+        return {
+          spectrumId: spectrum,
+          galaxyId: galaxy?.id || spectrum,
+          galaxyLabel: galaxy?.label || "contextual-desc",
+          originalCategory: `contextual:description`,
+        };
+      }
+    }
+  }
+
+  // ========== FALLBACK: Brand-based default categorization ==========
+  // Last resort: assign based on known brand product focus
   const BRAND_SPECTRUM_MAP: Record<string, string> = {
-    // Roland: Drums, Keys, Synths (large catalog)
     "roland": "electronic-drums",
     "boss": "guitar-pedals",
-
-    // Moog: Synths
     "moog": "synthesizers",
-
-    // Nord: Keys, Synths
     "nord": "synthesizers",
-
-    // Shure: Microphones, Live
     "shure": "live-mics",
-
-    // Rode: Microphones, Studio
     "rode": "studio-microphones",
-
-    // Neumann: Studio Microphones
     "neumann": "studio-microphones",
-
-    // Focal: Studio Monitors
     "focal": "studio-monitors",
-
-    // Universal Audio: Audio Interfaces, Outboard
     "universal-audio": "audio-interfaces",
-
-    // Drumdots: Drums
     "drumdots": "acoustic-drums",
   };
 
-  const brandSpectrumId = BRAND_SPECTRUM_MAP[brandId] || "accessories-utility";
-  const brandGalaxy = getGalaxyForSpectrum(brandSpectrumId);
+  const spectrumId = BRAND_SPECTRUM_MAP[brandId] || "accessories-utility";
+  const galaxy = getGalaxyForSpectrum(spectrumId);
 
   return {
-    spectrumId: brandSpectrumId,
-    galaxyId: brandGalaxy?.id || "accessories-utility",
-    galaxyLabel: brandGalaxy?.label || "Accessories",
-    originalCategory: brandId || "Uncategorized",
+    spectrumId,
+    galaxyId: galaxy?.id || "accessories-utility",
+    galaxyLabel: galaxy?.label || "Accessories",
+    originalCategory: `brand-default:${brandId}`,
   };
+}
+
+/**
+ * Map a category name to spectrum ID
+ * Handles Halilit canonical categories as primary source
+ */
+function mapCategoryToSpectrum(category: string): string {
+  const categoryLower = category.toLowerCase().trim();
+
+  // HALILIT TIER 1: Map Halilit canonical categories to spectrum
+  const HALILIT_CATEGORY_MAP: Record<string, string> = {
+    // Keyboards & Synthesizers family
+    "keyboards & synthesizers": "synthesizers",
+    "keyboards synthesizers": "synthesizers",
+    "keyboard": "synthesizers",
+    "synthesizer": "synthesizers",
+
+    // Drums & Percussion family
+    "drums & percussion": "electronic-drums",
+    "drums percussion": "electronic-drums",
+    "electronic drums": "electronic-drums",
+    "acoustic drums": "acoustic-drums",
+    "drum machine": "electronic-drums",
+    "percussion": "electronic-drums",
+
+    // Microphones & Recording
+    "microphones & recording": "studio-microphones",
+    "microphones recording": "studio-microphones",
+    "microphone": "studio-microphones",
+    "microphones": "studio-microphones",
+
+    // Audio Interfaces & Mixers
+    "audio interfaces & mixers": "audio-interfaces",
+    "audio interfaces mixers": "audio-interfaces",
+    "audio interface": "audio-interfaces",
+    "interface": "audio-interfaces",
+
+    // Studio Monitors & Speakers
+    "studio monitors & speakers": "studio-monitors",
+    "studio monitors speakers": "studio-monitors",
+    "monitor": "studio-monitors",
+    "speaker": "studio-monitors",
+
+    // Amplifiers & Effects
+    "amplifiers & effects": "guitar-pedals",
+    "amplifiers effects": "guitar-pedals",
+    "amplifier": "guitar-pedals",
+    "effects": "guitar-pedals",
+
+    // Headphones & Earphones
+    "headphones & earphones": "headphones",
+    "headphones earphones": "headphones",
+    "headphones": "headphones",
+    "headphone": "headphones",
+    "earphones": "headphones",
+
+    // Cables & Connectors
+    "cables & connectors": "cables",
+    "cables connectors": "cables",
+    "cable": "cables",
+    "connector": "cables",
+
+    // Fallback
+    "other": "accessories-utility",
+    "default": "accessories-utility",
+    "uncategorized": "accessories-utility",
+  };
+
+  // Check for exact match first
+  if (HALILIT_CATEGORY_MAP[categoryLower]) {
+    return HALILIT_CATEGORY_MAP[categoryLower];
+  }
+
+  // Check for partial matches
+  for (const [pattern, spectrum] of Object.entries(HALILIT_CATEGORY_MAP)) {
+    if (categoryLower.includes(pattern) || pattern.includes(categoryLower)) {
+      return spectrum;
+    }
+  }
+
+  return "accessories-utility";
 }
 
 export function productMatchesGalaxy(

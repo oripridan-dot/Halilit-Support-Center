@@ -1,0 +1,14 @@
+{
+  "batch_id": "f50584d7",
+  "brand": "Shure",
+  "timestamp": "2026-02-05T17:14:23.886576",
+  "execution_time_seconds": 0.005119,
+  "total_processed": 17,
+  "approved_count": 17,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 52%)"
+  ],
+  "approved_products_count": 17,
+  "rejected_products_count": 0
+}

@@ -81,6 +81,7 @@ class SpecProduct:
             "brand": self.brand,
             "category": self.category,
             "subcategory": self.subcategory,
+            "price": self.price_il,  # Frontend expects "price"
             "price_il": self.price_il,
             "price_eilat": self.price_eilat,
             "display_role": self.display_role,
@@ -274,27 +275,77 @@ class SpectrumAdapter:
         return payload, quality
 
     def _convert_product(self, product: IngestionProductDraft) -> SpecProduct:
-        """Convert single IngestionProductDraft to SpecProduct"""
+        """
+        Convert single IngestionProductDraft to SpecProduct.
 
-        # Extract display properties
+        V6.0 STRICT DATA GATE IMPLEMENTATION:
+        Enforces "Iron Rules" of data separation:
+        1. COMMERCIAL (Halilit) -> Inventory, Price, SKU
+        2. OFFICIAL (Brand) -> Specs, Media, Description
+        """
+
+        # --- 1. COMMERCIAL DATA GATE (The Golden List) ---
+        # Critical inventory data MUST come from Halilit source fields,
+        # NOT from derived/enriched containers which might be mutable.
+        gate_id = product.halilit_id
+        gate_name = product.product_name
+        gate_brand = product.brand
+        gate_price_il = product.price_il
+        gate_price_eilat = product.price_eilat
+
+        # --- 2. OFFICIAL DATA GATE (The Knowledge) ---
+        # Content MUST prioritize Official Brand Data if available.
+
+        # Specs: Explicitly prefer official_specs over computed specifications
+        gate_specs = product.official_specs
+        if not gate_specs and product.specifications:
+            gate_specs = product.specifications.specs_dict
+        gate_specs = gate_specs or {}
+
+        # Description: Explicitly prefer official_description
+        gate_desc_long = product.official_description
+        if not gate_desc_long:
+            gate_desc_long = product.description_long
+
+        # Short description generation (Gate Logic)
+        gate_desc_short = product.description_short
+        if not gate_desc_short and gate_desc_long:
+            # Create snippet if missing
+            gate_desc_short = (
+                gate_desc_long[:147] + "...") if len(gate_desc_long) > 150 else gate_desc_long
+
+        # --- 3. DISPLAY LOGIC (The Presentation) ---
+        # Display properties are allowed to be computed/derived by DisplayEngine
         display_role = product.display.display_role
+
         # Handle both Enum and string values due to Pydantic use_enum_values config
         display_role_str = display_role if isinstance(display_role, str) else (
             display_role.value if display_role else "SPECIALIST")
         display_tier = product.display.display_tier_level or 3
 
-        # Extract hero image
+        # Extract hero image - prioritize Official Images if Display Engine failed
         hero_image = None
+
+        # Try Display Engine recommendation first
         if product.display.hero_image:
             hero_image = product.display.hero_image
+        # Fallback to Media Asset list
         elif product.display.media_assets and len(product.display.media_assets) > 0:
             hero_image = product.display.media_assets[0].url if hasattr(
                 product.display.media_assets[0], 'url') else None
 
+        # Last resort: Official Images direct access
+        if not hero_image and product.official_images:
+            hero_image = product.official_images[0].url
+
         # Build media assets
         media_assets = []
-        if product.display.media_assets:
-            for asset in product.display.media_assets:
+
+        # Merger: Prefer Display Engine assets (they are sorted), fallback to Official
+        source_assets = product.display.media_assets if product.display.media_assets else product.official_images
+
+        if source_assets:
+            for asset in source_assets:
                 if hasattr(asset, '__dict__'):
                     # Asset is a Pydantic model
                     media_assets.append(
@@ -319,22 +370,22 @@ class SpectrumAdapter:
         # Build feature list
         features = product.feature_list or []
 
-        # Create SpecProduct
+        # Create SpecProduct with Gated Data
         return SpecProduct(
-            halilit_id=product.halilit_id,
-            name=product.product_name,
-            brand=product.brand,
+            halilit_id=gate_id,
+            name=gate_name,
+            brand=gate_brand,
             category=product.taxonomy.canonical_category,
             subcategory=product.taxonomy.canonical_subcategory,
-            price_il=product.pricing.price_il,
-            price_eilat=product.pricing.price_eilat,
+            price_il=gate_price_il,
+            price_eilat=gate_price_eilat,
             display_role=display_role_str,
             display_tier_level=display_tier,
             hero_image_url=hero_image,
             media_assets=media_assets,
-            description_short=product.description_short,
-            description_long=product.description_long,
-            official_specs=product.specifications.specs_dict or {},
+            description_short=gate_desc_short,
+            description_long=gate_desc_long,
+            official_specs=gate_specs,
             quality_score=round(product.quality_score * 100, 1),
             data_completeness=round(
                 product.data_completeness * 100, 1),

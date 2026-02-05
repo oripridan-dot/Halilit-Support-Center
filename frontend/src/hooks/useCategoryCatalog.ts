@@ -36,6 +36,7 @@ export const useCategoryCatalog = (
     setError(null);
 
     if (!category) {
+      console.warn('[useCategoryCatalog] Category is null, clearing products');
       setProducts([]);
       setAvailableFilters([]);
       setLoading(false);
@@ -56,10 +57,22 @@ export const useCategoryCatalog = (
       }
 
       // 3. Filter by Galaxy/Tribe
-      // The 'category' param here corresponds to the 'Galaxy ID' (e.g. 'guitars-bass')
+      // The 'category' param here corresponds to the 'Galaxy ID' (e.g. 'guitars-bass', 'keys-production')
       const filteredProducts = allProducts.filter(p => productMatchesGalaxy(p, category));
 
+      console.log(`[useCategoryCatalog] Category: ${category}`);
       console.log(`[useCategoryCatalog] Filtered to ${filteredProducts.length} products for galaxy: ${category}`);
+
+      if (filteredProducts.length === 0) {
+        console.warn(`[useCategoryCatalog] WARNING: No products matched galaxy ${category}!`);
+        if (allProducts.length > 0) {
+          console.log('[useCategoryCatalog] Sample product for debugging:', {
+            name: allProducts[0].name,
+            brand_id: allProducts[0].brand_id,
+            category: allProducts[0].category,
+          });
+        }
+      }
 
       // 4. Generate Smart Filters based on actual content
       // Find the Galaxy Definition to get the Spectrum list (order matters)

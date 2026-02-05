@@ -1,359 +1,529 @@
 [
   {
     "id": "8662023",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis",
-    "description": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog Mavis",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1255.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog mavis moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8670731",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר אנלוגי Moog Subharmonicon",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2928.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog subharmonicon moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8670732",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר אנלוגי Moog Spectravox",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2928.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog spectravox moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8661547",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog Matriarch",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 9203.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog matriarch moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8637794",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog Labyrinth",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2928.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog labyrinth moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8669288",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר אנלוגי Moog Mother-32",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2928.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog mother-32 moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8663409",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר בס Moog Minitaur",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2928.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 moog minitaur moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8674471",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר בס אנלוגי Moog Subsequent 37",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 8367.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog subsequent 37 moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8636862",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog Grandmother",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 5020.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog grandmother moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8669133",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog Minimoog Model D",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 25100.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog minimoog model d moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8636373",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog DFAM",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2928.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog dfam moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8670434",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר אנלוגי Moog Muse",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 14642.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 moog muse moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8662251",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר Moog Messenger",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 3556.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog messenger moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8676603",
-    "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini",
-    "description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "סינתיסייזר טרמין Moog Theremini",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1882.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df moog theremini moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8679188",
-    "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case",
-    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1673.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog model d sr series case moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8638605",
-    "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover",
-    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+    "sku": null,
+    "name": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 209.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 moog 2-tier dust cover moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "8679326",
+    "sku": null,
     "name": "Moog Sound Studio Accessory Kit",
-    "description": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
     "brand": "Moog",
+    "brand_id": "moog",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Moog Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 962.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "moog sound studio accessory kit moog   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   }
 ]

@@ -1,191 +1,281 @@
 [
   {
     "id": "universal-audio-610",
+    "sku": null,
     "name": "UA 610 Tube Preamp & EQ Collection",
-    "description": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic \u201cend-to-end\u201d emulation of two classics \u2014 the 610-A and 610-B \u2014 including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison\u2122 preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
     "brand": "Universal-Audio",
-    "category": "Audio Interfaces",
-    "subCategory": "preamp",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Audio Interfaces & Mixers",
+    "subCategory": "Preamp",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ua 610 tube preamp & eq collection universal-audio audio interfaces  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-universal-audio-auto-tune-realtime-x",
+    "sku": null,
     "name": "Auto-Tune Realtime X",
-    "description": "Get the iconic Auto-Tune\u00ae effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto\u2011Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
     "brand": "Universal-Audio",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Audio Interfaces & Mixers",
+    "subCategory": "Audio Interface",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "auto-tune realtime x universal-audio other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-universal-audio-ocean-way-studios-deluxe",
+    "sku": null,
     "name": "Ocean Way Studios Deluxe",
-    "description": "Step inside the studio that made history, emulated in perfect end-to-end detail.\nPlace your vocals, drums, guitars, and more inside Ocean Way Studios' legendary rooms\nBring your sources to life in Bill Putnam Sr.'s original reverb chambers\nTransform any track with Ocean Way's original hit-making re-mic setups\nShape your sound with the analog consoles and outboard gear heard on hundreds of iconic recordings\nPut yourself in the control rooms of a world class recording studio with enhanced retina graphics and user interface\nAlso includes original Ocean Way Studios plug-in for Apollo and UAD hardware",
     "brand": "Universal-Audio",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ocean way studios deluxe universal-audio microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-universal-audio-paradise-guitar-studio",
+    "sku": null,
     "name": "Paradise Guitar Studio",
-    "description": "Turn your riffs into records.\nGet an entire pro guitar recording chain in your DAW \u2014 complete with classic amps, cabs, mics, pedals, studio effects, and more\nExplore 11 hand-picked vintage and modified tube amps \u2014 a \u201cgolden unit\u201d collection of essential clean, crunch, and boutique tones\nCapture your perfect sound in minutes with curated speaker cabinets and expertly-placed studio mics\nShape your final tone with studio effects like 1176 compression, vintage tape echo, spring and plate reverbs, EQ, and more\nStay inspired with over 300 presets spanning rock, blues, indie, metal, funk, pop, and beyond",
     "brand": "Universal-Audio",
-    "category": "Studio Monitors",
-    "subCategory": "speaker",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "paradise guitar studio universal-audio studio monitors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-uad",
+    "sku": null,
     "name": "UAD Spark",
-    "description": "The plug-ins and instruments in UAD Spark are all undoubtedly superb and if you don\u2019t already have these tools, this is a fantastic way to access and explore some exceptional analogue plug-ins and find out what all the fuss is about.",
     "brand": "Universal-Audio",
+    "brand_id": "universal-audio",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "uad spark universal-audio other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-luna",
+    "sku": null,
     "name": "LUNA Pro",
-    "description": "Transform LUNA into an analog playground.\nTurn LUNA into a fully-loaded studio with analog tape, summing, and console extensions\nTap into 29 UAD plug-ins and virtual instruments to take your mixes to the next level\nNew: Edit and tune vocals faster with ARA plug-ins like Melodyne and DynAssist\nNew: Integrate your analog gear using Hardware Inserts for streamlined mixing",
     "brand": "Universal-Audio",
+    "brand_id": "universal-audio",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "luna pro universal-audio other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-universal-audio-anthem-analog-synthesizer",
+    "sku": null,
     "name": "Anthem Analog Synthesizer",
-    "description": "Put the biggest, baddest analog sounds at your fingertips.\nSculpt enormous bass and powerful leads that fill out your song with fat analog texture\nDial in the bold analog-modeled filter, from subtle warmth and saturation to all-out sonic destruction\nGet unapologetically lo-fi with vintage modulation effects, spring reverb, and dubby tape echo\nCreate evolving sequences with a step sequencer that adds polyrhythms, accents, and generative textures",
     "brand": "Universal-Audio",
-    "category": "Subwoofers",
-    "subCategory": "sub",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "anthem analog synthesizer universal-audio subwoofers  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-max",
+    "sku": null,
     "name": "PolyMAX Synth",
-    "description": "Retro sounds to shock your mind\u2011brain.\nGet rich, sit-in-the-mix analog sounds from an inspiring polyphonic wonder synth\nUse fat-sounding analog modeled oscillators and filters to demolish creative barriers\nAdd studio-quality UA effects like vintage spring reverb, tape delay, and modulation textures\nDive into lush poly synth sounds with album\u2011ready presets and simple, intuitive controls",
     "brand": "Universal-Audio",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "polymax synth universal-audio other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "universal-audio-universal-audio-ox-amp-top-box",
+    "sku": null,
     "name": "OX Amp Top Box",
-    "description": "Get legendary studio tones from your tube amp \u2014 anywhere, at any volume.\nPlay and record your tube amp in its tonal sweet spot \u2014 anywhere, at any volume, with full dynamics\nGet stunning mic and guitar cabinet combinations at the turn of a RIG knob \u2014 no miking required\nAudition, tweak, and save more than 100 jaw-dropping custom Rigs from compatible iPad, or Mac/Windows computers.\nGet authentic \u201cedge of destruction\u201d sounds, complete with UA Dynamic Room Modeling, speaker breakup, and cone cry",
     "brand": "Universal-Audio",
-    "category": "Studio Monitors",
-    "subCategory": "speaker",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "universal-audio",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "ox amp top box universal-audio studio monitors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   }
 ]

@@ -1,0 +1,789 @@
+{
+  "brand": "Moog",
+  "timestamp": "20260205_203710",
+  "count": 17,
+  "products": [
+    {
+      "halilit_id": "8662023",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 1255.0,
+        "price_eilat": 0.0,
+        "tier": "mid",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 2,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.230944",
+      "last_updated": "2026-02-05T20:37:10.230945"
+    },
+    {
+      "halilit_id": "8670731",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231023",
+      "last_updated": "2026-02-05T20:37:10.231024"
+    },
+    {
+      "halilit_id": "8670732",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231086",
+      "last_updated": "2026-02-05T20:37:10.231087"
+    },
+    {
+      "halilit_id": "8661547",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 9203.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231154",
+      "last_updated": "2026-02-05T20:37:10.231154"
+    },
+    {
+      "halilit_id": "8637794",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231215",
+      "last_updated": "2026-02-05T20:37:10.231215"
+    },
+    {
+      "halilit_id": "8669288",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231274",
+      "last_updated": "2026-02-05T20:37:10.231274"
+    },
+    {
+      "halilit_id": "8663409",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231332",
+      "last_updated": "2026-02-05T20:37:10.231332"
+    },
+    {
+      "halilit_id": "8674471",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 8367.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231389",
+      "last_updated": "2026-02-05T20:37:10.231389"
+    },
+    {
+      "halilit_id": "8636862",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5020.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231441",
+      "last_updated": "2026-02-05T20:37:10.231441"
+    },
+    {
+      "halilit_id": "8669133",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 25100.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231493",
+      "last_updated": "2026-02-05T20:37:10.231494"
+    },
+    {
+      "halilit_id": "8636373",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231548",
+      "last_updated": "2026-02-05T20:37:10.231548"
+    },
+    {
+      "halilit_id": "8670434",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 14642.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231603",
+      "last_updated": "2026-02-05T20:37:10.231603"
+    },
+    {
+      "halilit_id": "8662251",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 3556.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231663",
+      "last_updated": "2026-02-05T20:37:10.231663"
+    },
+    {
+      "halilit_id": "8676603",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 1882.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231712",
+      "last_updated": "2026-02-05T20:37:10.231713"
+    },
+    {
+      "halilit_id": "8679188",
+      "product_name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 1673.0,
+        "price_eilat": 0.0,
+        "tier": "pro",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 4,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231768",
+      "last_updated": "2026-02-05T20:37:10.231768"
+    },
+    {
+      "halilit_id": "8638605",
+      "product_name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 209.0,
+        "price_eilat": 0.0,
+        "tier": "entry",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "entry",
+        "display_tier_level": 1,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231822",
+      "last_updated": "2026-02-05T20:37:10.231823"
+    },
+    {
+      "halilit_id": "8679326",
+      "product_name": "Moog Sound Studio Accessory Kit",
+      "official_name": null,
+      "brand": "Moog",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 962.0,
+        "price_eilat": 0.0,
+        "tier": "mid",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 2,
+        "hero_image": null,
+        "color_hint": "#FF6B6B"
+      },
+      "content": {
+        "description_short": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_long": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:10.231875",
+      "last_updated": "2026-02-05T20:37:10.231876"
+    }
+  ]
+}

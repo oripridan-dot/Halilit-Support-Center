@@ -1,779 +1,1149 @@
 [
   {
     "id": "7971375",
+    "sku": null,
     "name": "Nord Piano 6",
-    "description": "The latest generation of the Nord Piano series features a new panel design with LED faders, dual layers for Piano and Synth with independent effects and a premium Triple Sensor keybed. Combined with excellent portability and our world-class sounds, the Nord Piano 6 offers great flexibility for performance and sound creation.",
     "brand": "Nord",
-    "category": "Effects & Processing",
-    "subCategory": "Effects Processor",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 16200.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord piano 6 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "7966853",
+    "sku": null,
     "name": "Nord Piano 6",
-    "description": "The latest generation of the Nord Piano series features a new panel design with LED faders, dual layers for Piano and Synth with independent effects and a premium Triple Sensor keybed. Combined with excellent portability and our world-class sounds, the Nord Piano 6 offers great flexibility for performance and sound creation.",
     "brand": "Nord",
-    "category": "Effects & Processing",
-    "subCategory": "Effects Processor",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 15180.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord piano 6 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2363547",
+    "sku": null,
     "name": "Nord Drum 3P",
-    "description": "The super compact Nord Drum 3P combines stunning playability with unlimited sound design possibilities. New features include integrated multi-pad, Reverb and Delay effects, a simplified sound selection mode and new Sound Banks for quickly creating custom kits on the fly.",
     "brand": "Nord",
-    "category": "Effects & Processing",
-    "subCategory": "Reverb",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 3096.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "nord drum 3p nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "6388869",
+    "sku": null,
     "name": "Nord Grand Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05e2\u05dd \u05d2\u05dc\u05d2\u05dc\u05d9\u05dd \u05dc-Nord Grand \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Keyboard",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Digital Piano",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1968.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "nord grand soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "5819653",
+    "sku": null,
     "name": "Nord Stage 4",
-    "description": "The Nord Stage 4 features a new intuitive panel design, a premium triple sensor keybed, and complete effect sections for each layer. With significant upgrades to our award-winning technologies - the Stage 4 sets a new standard for live performance stage keyboards.",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
     "subCategory": "Digital Keyboard",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 18270.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord stage 4 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "5819657",
+    "sku": null,
     "name": "Nord Stage 4",
-    "description": "The Nord Stage 4 features a new intuitive panel design, a premium triple sensor keybed, and complete effect sections for each layer. With significant upgrades to our award-winning technologies - the Stage 4 sets a new standard for live performance stage keyboards.",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
     "subCategory": "Digital Keyboard",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 17333.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord stage 4 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "7481878",
+    "sku": null,
     "name": "Nord Grand 2",
-    "description": "The Nord Grand 2 features the latest generation premium Hammer Action keyboard from Kawai. Combining the responsive feel of an acoustic grand piano with our world renowned Sound Libraries and a tactile user interface, the sleek and elegant Nord Grand 2 offers a genuinely unique experience.",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Keyboard",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Digital Piano",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 18381.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord grand 2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2358960",
+    "sku": null,
     "name": "Nord Grand 2",
-    "description": "The Nord Grand 2 features the latest generation premium Hammer Action keyboard from Kawai. Combining the responsive feel of an acoustic grand piano with our world renowned Sound Libraries and a tactile user interface, the sleek and elegant Nord Grand 2 offers a genuinely unique experience.",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Keyboard",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Digital Piano",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 14334.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord grand 2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "5819637",
+    "sku": null,
     "name": "Nord Stage 4",
-    "description": "The Nord Stage 4 features a new intuitive panel design, a premium triple sensor keybed, and complete effect sections for each layer. With significant upgrades to our award-winning technologies - the Stage 4 sets a new standard for live performance stage keyboards.",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
     "subCategory": "Digital Keyboard",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 20143.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord stage 4 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2351753",
+    "sku": null,
     "name": "Nord Electro 6",
-    "description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
     "brand": "Nord",
-    "category": "Audio Interfaces & Mixers",
-    "subCategory": "Audio Interface",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 9383.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord electro 6 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2352572",
+    "sku": null,
     "name": "Nord Electro 6",
-    "description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
     "brand": "Nord",
-    "category": "Audio Interfaces & Mixers",
-    "subCategory": "Audio Interface",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 7975.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord electro 6 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2368021",
+    "sku": null,
     "name": "Nord Sustain Pedal",
-    "description": "\u05e4\u05d3\u05dc \u05e1\u05e1\u05d8\u05d9\u05d9\u05df \u05de\u05e7\u05e6\u05d5\u05e2\u05d9 \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Pedal",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 206.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nord sustain pedal nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "6163268",
+    "sku": null,
     "name": "Nord Triple Pedal 2",
-    "description": "\u05de\u05d4\u05d3\u05d5\u05e8\u05d4 \u05d7\u05d3\u05e9\u05d4 \u05dc\u05e4\u05d3\u05dc \u05e9\u05dc\u05d5\u05e9\u05ea \u05d4\u05d3\u05d5\u05d5\u05e9\u05d5\u05ea \u05e2\u05d1\u05d5\u05e8 \u05e4\u05e1\u05e0\u05ea\u05e8 \u05d4-Nord Stage 4/Grand 2 \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Digital Piano",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1499.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord triple pedal 2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "7269446",
+    "sku": null,
     "name": "Nord Wood Keyboard Stand V4",
-    "description": "\u05e1\u05d8\u05e0\u05d3 \u05d9\u05d5\u05e7\u05e8\u05ea\u05d9 \u05dc\u05de\u05e7\u05dc\u05d3\u05d5\u05ea 88 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05e1\u05d3\u05e8\u05ea Grand/Stage/Piano \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
     "subCategory": "Digital Keyboard",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 4271.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord wood keyboard stand v4 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "6163288",
+    "sku": null,
     "name": "Nord Single Pedal 2",
-    "description": "\u05de\u05d4\u05d3\u05d5\u05e8\u05d4 \u05d7\u05d3\u05e9\u05d4 \u05dc\u05e4\u05d3\u05dc \u05d3\u05d5\u05d5\u05e9\u05d4 \u05d1\u05d5\u05d3\u05d3\u05ea \u05e2\u05d1\u05d5\u05e8 \u05e4\u05e1\u05e0\u05ea\u05e8 \u05d4-Nord Stage 4/Grand 2 \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Digital Piano",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 562.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord single pedal 2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2975349",
+    "sku": null,
     "name": "Nord Wave 2",
-    "description": "The Nord Wave 2 is a powerful 4-part performance synthesizer combining Virtual Analog synthesis, Samples, FM and Wavetable with an intuitive layer-focused interface. With 48 voice polyphony, innovative performance features and hands-on controls, the Nord Wave 2 offers outstanding sonic possibilities with advanced layering and tweaking on the fly.",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
     "subCategory": "Synthesizer",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 9918.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord wave 2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2368164",
+    "sku": null,
     "name": "Nord Triple Pedal",
-    "description": "Sustain Pedal \u05e4\u05e1\u05e0\u05ea\u05e8\u05d9 \u05d1\u05e2\u05dc \u05e9\u05dc\u05d5\u05e9 \u05d3\u05d5\u05d5\u05e9\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Digital Piano",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Pedal",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 857.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord triple pedal nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2352562",
+    "sku": null,
     "name": "Nord Electro 6",
-    "description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
     "brand": "Nord",
-    "category": "Audio Interfaces & Mixers",
-    "subCategory": "Audio Interface",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 10321.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord electro 6 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2360321",
+    "sku": null,
     "name": "Nord Stage 3 HP76 Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05e2\u05dd \u05d2\u05dc\u05d2\u05dc\u05d9\u05dd \u05dc-Nord Stage 3 HP76 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Digital Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1452.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord stage 3 hp76 soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2360371",
+    "sku": null,
     "name": "Nord Electro HP Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc-Nord Electro HP \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea \u05de\u05d1\u05d9\u05eaNORD",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 843.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord electro hp soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "5069386",
+    "sku": null,
     "name": "Nord Piano 73 Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05e2\u05dd \u05d2\u05dc\u05d2\u05dc\u05d9\u05dd \u05dc-Nord Piano 73 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
     "subCategory": "Digital Piano",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1452.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord piano 73 soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "4130928",
+    "sku": null,
     "name": "Nord Wave 2 Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc-WAVE2/LEAD\u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 703.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord wave 2 soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2369909",
+    "sku": null,
     "name": "Nord Lead A1 Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc-Nord Lead A1 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 515.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord lead a1 soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2369951",
+    "sku": null,
     "name": "Nord Electro 61/Lead Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc-Nord Electro 61/Lead \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 609.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord electro 61/lead soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "6514099",
+    "sku": null,
     "name": "Nord Wood Music Stand",
-    "description": "\u05e1\u05d8\u05e0\u05d3 \u05ea\u05d5\u05d5\u05d9\u05dd \u05de\u05e2\u05e5 \u05dc\u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
-    "category": "Accessories & Mounting",
-    "subCategory": "Stand",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 656.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord wood music stand nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2369980",
+    "sku": null,
     "name": "Nord Electro/Stage 73 Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc-Nord Electro/Stage 73 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea \u05de\u05d1\u05d9\u05eaNORD",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 749.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord electro/stage 73 soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2348488",
+    "sku": null,
     "name": "Nord Lead A1",
-    "description": "The Nord Lead A1 is a 4-part multitimbral synth with a classic layout, extensive filter options and effects. With its powerful panel interface and pre-programmed modulation matrix, creating unique and exciting sounds is very inspirational and quick.",
     "brand": "Nord",
-    "category": "Audio Interfaces & Mixers",
-    "subCategory": "Audio Interface",
-    "tier": "flagship",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Synthesizer",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 6850.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "flagship"
-    ],
-    "specs": {},
-    "searchTokens": "nord lead a1 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2360544",
+    "sku": null,
     "name": "Nord Stage/Piano 88 Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05e2\u05dd \u05d2\u05dc\u05d2\u05dc\u05d9\u05dd \u05dc-Nord Stage/piano 88 \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Digital Piano",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Digital Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1452.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord stage/piano 88 soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2368757",
+    "sku": null,
     "name": "Nord Keyboard Stand EX",
-    "description": "\u05e1\u05d8\u05e0\u05d3 \u05d9\u05d9\u05e2\u05d5\u05d3\u05d9 \u05dc\u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Keyboard",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Digital Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 656.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord keyboard stand ex nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2368758",
+    "sku": null,
     "name": "Nord Music Stand V2",
-    "description": "\u05e1\u05d8\u05e0\u05d3 \u05ea\u05d5\u05d5\u05d9\u05dd \u05d9\u05d9\u05e2\u05d5\u05d3\u05d9 \u05dc\u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
-    "category": "Accessories & Mounting",
-    "subCategory": "Stand",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 281.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nord music stand v2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2370009",
+    "sku": null,
     "name": "Nord Drum 3P Soft Case",
-    "description": "\u05ea\u05d9\u05e7 \u05e0\u05e9\u05d9\u05d0\u05d4 \u05e8\u05da \u05dc-Nord Drum 3P \u05dc\u05d4\u05d2\u05e0\u05d4 \u05de\u05e7\u05e1\u05d9\u05de\u05dc\u05d9\u05ea",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Nord Synth",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 562.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord drum 3p soft case nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "2368786",
+    "sku": null,
     "name": "Nord Organ Stand",
-    "description": "\u05e1\u05d8\u05e0\u05d3 \u05d9\u05d9\u05e2\u05d5\u05d3\u05d9 \u05dc\u05d0\u05d5\u05e8\u05d2\u05e0\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
-    "category": "Accessories & Mounting",
-    "subCategory": "Stand",
-    "tier": "mid",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Keyboards & Synthesizers",
+    "subCategory": "Organ",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 1406.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "mid"
-    ],
-    "specs": {},
-    "searchTokens": "nord organ stand nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "4771619",
+    "sku": null,
     "name": "Nord Dust Cover HP",
-    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d0\u05d1\u05e7 \u05dc\u05e4\u05e1\u05e0\u05ea\u05e8/\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8NORDHP",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 232.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nord dust cover hp nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "4771454",
+    "sku": null,
     "name": "Nord Dust Cover 88",
-    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d0\u05d1\u05e7 \u05dc\u05e4\u05e1\u05e0\u05ea\u05e8/\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 88 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 282.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nord dust cover 88 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "3772353",
+    "sku": null,
     "name": "Nord Dust Cover 61",
-    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d0\u05d1\u05e7 \u05dc\u05e4\u05e1\u05e0\u05ea\u05e8/\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 61 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 222.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nord dust cover 61 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "3772643",
+    "sku": null,
     "name": "Nord Dust Cover 73",
-    "description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05d0\u05d1\u05e7 \u05dc\u05e4\u05e1\u05e0\u05ea\u05e8/\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 73 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Nord",
     "brand": "Nord",
+    "brand_id": "nord",
     "category": "Keyboards & Synthesizers",
-    "subCategory": "Synthesizer",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "subCategory": "Nord Keyboard",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 232.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "nord dust cover 73 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "3306649",
+    "sku": null,
     "name": "Nord Piano Monitors V2",
-    "description": "\u05de\u05d5\u05e0\u05d9\u05d8\u05d5\u05e8\u05d9\u05dd \u05de\u05d5\u05d2\u05d1\u05e8\u05d9\u05dd V2 \u05d9\u05e2\u05d5\u05d3\u05d9\u05d9\u05dd \u05dc\u05e4\u05e1\u05e0\u05ea\u05e8\u05d9 Nord",
     "brand": "Nord",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Digital Piano",
-    "tier": "pro",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
-    },
+    "brand_id": "nord",
+    "category": "Studio Monitors & Speakers",
+    "subCategory": "Studio Monitor",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
     "price": 2529.0,
-    "stockStatus": "in_stock",
-    "aiTags": [
-      "pro"
-    ],
-    "specs": {},
-    "searchTokens": "nord piano monitors v2 nord   "
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   }
 ]

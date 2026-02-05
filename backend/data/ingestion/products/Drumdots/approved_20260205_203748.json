@@ -1,0 +1,191 @@
+{
+  "brand": "Drumdots",
+  "timestamp": "20260205_203748",
+  "count": 4,
+  "products": [
+    {
+      "halilit_id": "drumdots-sku-005-im1820",
+      "product_name": "Internal Drum Mic Mount W/XLR Connecting Cable",
+      "official_name": null,
+      "brand": "Drumdots",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Cables & Connectors",
+        "canonical_subcategory": "Cable",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 4200.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "If multiple custom sizes are selected (multi-pack), separate sizes with commas",
+        "description_long": "If multiple custom sizes are selected (multi-pack), separate sizes with commas.",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:48.115016",
+      "last_updated": "2026-02-05T20:37:48.115017"
+    },
+    {
+      "halilit_id": "drumdots-sku-039-lbm22",
+      "product_name": "Internal Kick Drum Mic Mount W/Interlocking Connecting Cable",
+      "official_name": null,
+      "brand": "Drumdots",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Cables & Connectors",
+        "canonical_subcategory": "Cable",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 4620.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Internal Kick Drum Mic Mount with R4 connecting cable 20\u2033 to 24\u2033",
+        "description_long": "Internal Kick Drum Mic Mount with R4 connecting cable 20\u2033 to 24\u2033",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:48.115082",
+      "last_updated": "2026-02-05T20:37:48.115082"
+    },
+    {
+      "halilit_id": "drumdots-sku-090-0818",
+      "product_name": "Internal Drum Triggers for Snares and Toms",
+      "official_name": null,
+      "brand": "Drumdots",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Drums & Percussion",
+        "canonical_subcategory": "Drum Trigger",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5040.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Intern Drum Triggers",
+        "description_long": "Intern Drum Triggers",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:48.115113",
+      "last_updated": "2026-02-05T20:37:48.115114"
+    },
+    {
+      "halilit_id": "drumdots-sku-001-rmm",
+      "product_name": "Drum Rim Mic Mounts",
+      "official_name": null,
+      "brand": "Drumdots",
+      "model_number": null,
+      "sku": null,
+      "taxonomy": {
+        "canonical_category": "Microphones & Recording",
+        "canonical_subcategory": "Microphone",
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5460.0,
+        "price_eilat": 0.0,
+        "tier": "flagship",
+        "eilat_discount_percent": 100.0
+      },
+      "display": {
+        "display_role": "specialist",
+        "display_tier_level": 5,
+        "hero_image": null,
+        "color_hint": "bg-green-400"
+      },
+      "content": {
+        "description_short": "Drum Rim Mic Mounts for Snares and Toms 8\u2033 to 18\u2033",
+        "description_long": "Drum Rim Mic Mounts for Snares and Toms 8\u2033 to 18\u2033. Can remain on drum as it fits in case or gig bag allowing easy setup, Adjustable and light weight. Custom Sizes Available",
+        "feature_list": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_completeness": 0.5
+      },
+      "quality": {
+        "data_completeness": 0.6315789473684209,
+        "quality_score": 0.6315789473684209,
+        "validation_status": "approved"
+      },
+      "source": {
+        "primary_source": "Halilit",
+        "sources": [],
+        "source_confidence": "commercial"
+      },
+      "created_at": "2026-02-05T20:37:48.115138",
+      "last_updated": "2026-02-05T20:37:48.115138"
+    }
+  ]
+}

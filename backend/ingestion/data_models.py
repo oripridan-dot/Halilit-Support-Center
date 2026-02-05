@@ -139,54 +139,77 @@ class ProductSpecifications(BaseModel):
 
 class IngestionProductDraft(BaseModel):
     """
-    UNIFIED PRODUCT MODEL: Single source of truth for all ingestion data.
+    UNIFIED PRODUCT MODEL (v6.0 - Strict Separation): Single source of separation.
 
-    This is THE model that flows through the entire pipeline:
-    Harvest → Enrich (Taxonomy) → Tier (Pricing) → Prepare (Display) → Validate → Approve
+    This model enforces the "Iron Rules" of source-of-truth:
+    1. COMMERCIAL (Halilit) -> Inventory, Price, SKU (The Golden List)
+    2. OFFICIAL (Brand) -> Specs, Media, Description (The Knowledge)
+    3. CONTEXTUAL (Reviews) -> Ratings, Pros/Cons (The Insight)
     """
 
-    # IDENTITY & NAMING
-    halilit_id: str  # Primary unique identifier
-    product_name: str  # Display name
-    official_name: Optional[str] = None  # Manufacturer's official name
-    brand: str  # Normalized brand name
-    model_number: Optional[str] = None
+    # --- 1. COMMERCIAL DATA (The Golden List - Source: Halilit) ---
+    halilit_id: str = Field(..., description="Unique ID from Halilit (SKU)")
+    product_name: str = Field(..., description="Name as listed on Halilit")
+    brand: str = Field(..., description="Brand as listed on Halilit")
+    price_il: float = Field(..., description="Official IL Price from Halilit")
+    price_eilat: float = Field(...,
+                               description="Official Eilat Price from Halilit")
+    halilit_url: str = Field(..., description="Source URL on Halilit")
     sku: Optional[str] = None
+    model_number: Optional[str] = None
+    official_name: Optional[str] = None
 
-    # TAXONOMY & CLASSIFICATION
-    taxonomy: TaxonomyMapping  # Category system
+    # --- 2. OFFICIAL DATA (The Knowledge - Source: Brand Site) ---
+    official_specs: Dict[str, Any] = Field(
+        default_factory=dict, description="Tech specs from brand site")
+    official_description: Optional[str] = Field(
+        None, description="Marketing copy from brand site")
+    official_images: List[MediaAsset] = Field(
+        default_factory=list, description="High-res assets from brand")
+    official_url: Optional[str] = Field(
+        None, description="URL of the official product page")
 
-    # PRICING & VALUE
-    pricing: PricingData  # All pricing in one place
+    # --- 3. CONTEXTUAL DATA (The Insight - Source: Trusted Reviews) ---
+    reviews: List[Dict[str, Any]] = Field(
+        default_factory=list, description="Reviews from trusted sites")
+    review_synthesis: Optional[str] = Field(
+        None, description="AI summary of pros/cons")
+    average_rating: Optional[float] = Field(
+        None, description="Normalized 0-5 rating")
 
-    # DESCRIPTION & CONTENT
+    # --- PIPELINE METADATA ---
+    status: IngestionStatus = IngestionStatus.HARVESTED
+    pipeline_phase: str = "harvest"
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+    last_updated: datetime = Field(default_factory=datetime.utcnow)
+
+    # --- LEGACY / COMPUTED (Maintained for compatibility but derived) ---
+    # These containers capture the OUTPUT of the pipeline phases
+    taxonomy: Optional[TaxonomyMapping] = None
+    pricing: Optional[PricingData] = None
+    display: Optional[DisplayProperties] = None
+    specifications: Optional[ProductSpecifications] = None
+
+    # Description & Content (Derived/Legacy)
     description_short: Optional[str] = None
     description_long: Optional[str] = None
     feature_list: List[str] = []
 
-    # TECHNICAL SPECIFICATIONS
-    specifications: ProductSpecifications
+    # Source Tracking
+    sources: List[SourceProvenance] = []
+    primary_source: Optional[SourceProvenance] = None
 
-    # DISPLAY & PRESENTATION
-    display: DisplayProperties
-
-    # SOURCE & PROVENANCE
-    sources: List[SourceProvenance] = []  # Where this data came from
-    primary_source: SourceProvenance  # Which source is primary
-
-    # QUALITY & VALIDATION
-    data_completeness: float = 0.5  # 0-1, overall data quality
-    quality_score: float = 0.5  # 0-1, how complete and accurate
+    # Quality & Validation
+    data_completeness: float = 0.5
+    quality_score: float = 0.5
     validation_status: IngestionStatus = IngestionStatus.HARVESTED
     validation_errors: List[str] = []
     validation_warnings: List[str] = []
 
-    # METADATA
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    last_updated: datetime = Field(default_factory=datetime.utcnow)
-
     class Config:
+        arbitrary_types_allowed = True
         use_enum_values = True
+        extra = "allow"
 
 
 class IngestionBatch(BaseModel):

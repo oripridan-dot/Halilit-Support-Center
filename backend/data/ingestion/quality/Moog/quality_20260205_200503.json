@@ -1,0 +1,18 @@
+{
+  "brand": "Moog",
+  "timestamp": "20260205_200503",
+  "metrics": {
+    "brand": "Moog",
+    "generated_at": "2026-02-05T20:05:03.517947",
+    "total_products": 17,
+    "approved_products": 17,
+    "rejected_products": 0,
+    "overall_quality_score": 0.63,
+    "average_completeness": 0.63,
+    "critical_errors": [],
+    "warnings": [],
+    "recommendations": [
+      "\u2705 Pipeline running smoothly - no issues detected"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "version": "5.2.0",
-  "build_timestamp": "2026-02-04T20:00:16Z",
+  "build_timestamp": "2026-02-05T17:14:33.647874Z",
   "total_products": 648,
   "brands": [
     {
@@ -38,12 +38,6 @@
       "name": "Shure",
       "product_count": 17,
       "data_file": "shure.json"
-    },
-    {
-      "id": "testbrand",
-      "name": "Testbrand",
-      "product_count": 1,
-      "data_file": "testbrand.json"
     },
     {
       "id": "universal-audio",

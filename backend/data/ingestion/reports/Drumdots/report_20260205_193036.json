@@ -1,0 +1,14 @@
+{
+  "batch_id": "edec8859",
+  "brand": "Drumdots",
+  "timestamp": "2026-02-05T19:30:36.424825",
+  "execution_time_seconds": 0.000704,
+  "total_processed": 4,
+  "approved_count": 4,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 53%)"
+  ],
+  "approved_products_count": 4,
+  "rejected_products_count": 0
+}

@@ -1,0 +1,18 @@
+{
+  "brand": "Universal-Audio",
+  "timestamp": "20260205_165820",
+  "metrics": {
+    "brand": "Universal-Audio",
+    "generated_at": "2026-02-05T16:58:20.129110",
+    "total_products": 9,
+    "approved_products": 9,
+    "rejected_products": 0,
+    "overall_quality_score": 0.42,
+    "average_completeness": 0.42,
+    "critical_errors": [],
+    "warnings": [],
+    "recommendations": [
+      "Consider enriching data (avg completeness: 42%)"
+    ]
+  }
+}

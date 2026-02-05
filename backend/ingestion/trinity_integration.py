@@ -87,11 +87,28 @@ class TrinityIngestionBridge:
             # STEP 1: Trinity Swarm - Harvest raw data
             logger.info(f"Step 1/5: Trinity Swarm harvesting for {brand}...")
             raw_products = self._harvest_with_trinity(brand)
+
+            # STEP 1.5: Trinity Swarm - Enrich with Official Data
+            if raw_products:
+                logger.info(
+                    f"Step 1.5/5: Trinity Swarm enriching {len(raw_products)} products...")
+                enriched_raw = []
+                for p in raw_products:
+                    try:
+                        # OfficialVerifier enriches in-place or returns updated dict
+                        enriched = self.swarm.verifier.enrich(p)
+                        enriched_raw.append(enriched)
+                    except Exception as e:
+                        logger.warning(
+                            f"Failed to enrich {p.get('product_name', 'unknown')}: {e}")
+                        enriched_raw.append(p)
+                raw_products = enriched_raw
+
             result["trinity_harvest"] = {
                 "total_harvested": len(raw_products),
                 "products_sample": raw_products[:2] if raw_products else [],
             }
-            logger.info(f"✅ Harvested {len(raw_products)} raw products")
+            logger.info(f"✅ Harvested & Enriched {len(raw_products)} products")
 
             if not raw_products:
                 logger.warning(f"No products harvested for {brand}")
@@ -204,7 +221,12 @@ class TrinityIngestionBridge:
             with open(brand_file, "r") as f:
                 data = json.load(f)
 
-            products = data.get("products", [])
+            # Handle both list and dict formats
+            if isinstance(data, list):
+                products = data
+            else:
+                products = data.get("products", [])
+
             logger.info(f"Loaded {len(products)} products from {brand_file}")
             return products
 

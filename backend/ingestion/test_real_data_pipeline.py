@@ -69,7 +69,7 @@ def test_single_brand(brand: str, bridge) -> Dict[str, Any]:
     start_time = time.time()
 
     try:
-        result = bridge.process_brand_pipeline(brand)
+        result = bridge.process_brand_pipeline(brand, force_refresh=True)
         elapsed = time.time() - start_time
 
         # Print results

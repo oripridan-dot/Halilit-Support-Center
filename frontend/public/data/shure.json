@@ -1,359 +1,529 @@
 [
   {
     "id": "shure-shure-intellimix-bar-pro-kit",
-    "name": "IntelliMix\u2122 Bar Pro Kit",
-    "description": "Leg nauwkeurig audio en video vast in middelgrote tot grote samenwerkingsruimten met deze krachtige alles-in-\u00e9\u00e9n videoconferentiebar op basis van Android. Klaar voor de onderneming met auto-setup en eenvoudig global management, kunnen IT managers vergaderervaringen cre\u00ebren die gericht zijn op deelnemers met betrouwbare transcriptie voor verbeterde AI tools.",
+    "sku": null,
+    "name": "IntelliMix™ Bar Pro Kit",
     "brand": "Shure",
+    "brand_id": "shure",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "intellimix\u2122 bar pro kit shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-dca901",
+    "sku": null,
     "name": "DCA901",
-    "description": "De DCA901 opent nieuwe mogelijkheden voor het vastleggen van geluid in broadcast en mediaproducties. Deze compacte array microfoon voor digitale broadcast levert acht kanalen high-fidelity audio via \u00e9\u00e9n enkele netwerkkabel. De instelbare opneemzones isoleren de geluiden die belangrijk zijn en minimaliseren de omgevingsruis. Met ingebouwde DSP, minder kabels en een snellere installatie vervangt het omvangrijke analoge systemen, terwijl het tegelijkertijd immersief, verhaalgedreven geluid en moderne productieworkflows ondersteunt.",
     "brand": "Shure",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "dca901 shure microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-mv88",
+    "sku": null,
     "name": "MV88",
-    "description": "De MV88 is ontworpen voor creators die op zoek zijn naar de snelste en eenvoudigste audio-upgrade voor hun telefoon. Hij wordt rechtstreeks op je device aangesloten via de USB-C poort en is klaar om meteen op te nemen. Deze microfoon voor iPhone en Android levert geluid van professionele kwaliteit zonder gedoe en bevat Shure's befaamde Auto Level Mode, Real-time Denoiser en selecteerbare polar patterns om ervoor te zorgen dat je in elke situatie professioneel geluid vastlegt. Een microfoon die het allemaal doet - en het allemaal vastlegt.",
     "brand": "Shure",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2400.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "mv88 shure microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-shure-intellimix-room-kits",
-    "name": "IntelliMix\u2122 Room Kits",
-    "description": "Boost de samenwerking met eenvoudige en veilige Microsoft Teams Rooms vergaderkits. Met zero-touch provisioning kunt u moeiteloos audio- en video-ervaringen van hoge kwaliteit leveren in uw kleine, middelgrote en grote vergader- en samenwerkingsruimten, tot 10 x 5,5 m.  De componentgebaseerde systemen bieden alles wat je nodig hebt - automatisch.  Programmeren of aanpassen van audio- en video-instellingen is niet nodig.  Alle kits bevatten een krachtige Windows-gebaseerde Teams Rooms compute met eersteklas audiosignaalverwerking van Shure, een intu\u00eftief touch panel, een superieure alles-in-\u00e9\u00e9n plafondarraymicrofoon + luidspreker en intelligente video met hoge resolutie. ",
+    "sku": null,
+    "name": "IntelliMix™ Room Kits",
     "brand": "Shure",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3900.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "intellimix\u2122 room kits shure microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-microfoons",
+    "sku": null,
     "name": "MICROFOONS",
-    "description": "Experience legendary sound with Shure microphones, trusted by the industry for decades for performance, studio, content creation and more.",
     "brand": "Shure",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "microfoons shure microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-draadloze",
+    "sku": null,
     "name": "DRAADLOZE SYSTEMEN",
-    "description": "DRAADLOZE SYSTEMEN",
     "brand": "Shure",
+    "brand_id": "shure",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "draadloze systemen shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.5789473684210525,
+    "quality_score": 0.5789473684210525
   },
   {
     "id": "shure-earphones",
+    "sku": null,
     "name": "EARPHONES",
-    "description": "Experience Shure sound isolating earphones. Ideal for music, calls, workouts, daily use, professional monitoring, and musicians.",
     "brand": "Shure",
-    "category": "Headphones",
-    "subCategory": "earphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Headphones & Earphones",
+    "subCategory": "In-Ear Monitors",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "earphones shure headphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-headphones",
+    "sku": null,
     "name": "HEADPHONES",
-    "description": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
     "brand": "Shure",
-    "category": "Studio Monitors",
-    "subCategory": "studio monitor",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Studio Monitors & Speakers",
+    "subCategory": "Studio Monitor",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2400.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "headphones shure studio monitors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-in-ear",
+    "sku": null,
     "name": "IN-EAR MONITORING",
-    "description": "Explore Shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers.",
     "brand": "Shure",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Headphones & Earphones",
+    "subCategory": "In-Ear Monitors",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3900.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "in-ear monitoring shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-software",
+    "sku": null,
     "name": "SOFTWARE",
-    "description": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
     "brand": "Shure",
-    "category": "Other",
-    "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Studio Monitors & Speakers",
+    "subCategory": "Studio Monitor",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "software shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-dsp",
+    "sku": null,
     "name": "DSP, MIXERS & NETWORK INTERFACES",
-    "description": "Shure mixers and interfaces manage multi-microphone setups in boardrooms, conference spaces and more.",
     "brand": "Shure",
-    "category": "Microphones",
-    "subCategory": "microphone",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Microphones & Recording",
+    "subCategory": "Microphone",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "dsp, mixers & network interfaces shure microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-bundels",
+    "sku": null,
     "name": "BUNDELS",
-    "description": "Discover listening, performance and recording bundles for quick, reliable and easy audio solutions. ",
     "brand": "Shure",
+    "brand_id": "shure",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "bundels shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-luidsprekers",
+    "sku": null,
     "name": "LUIDSPREKERS",
-    "description": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
     "brand": "Shure",
-    "category": "Studio Monitors",
-    "subCategory": "speaker",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Studio Monitors & Speakers",
+    "subCategory": "Speaker",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3600.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "luidsprekers shure studio monitors  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-accessoires",
+    "sku": null,
     "name": "ACCESSOIRES",
-    "description": "Find Shure accessories and replacement parts. From storage and antenna management to connectivity and mounting, we have what you need.",
     "brand": "Shure",
-    "category": "Accessories",
-    "subCategory": "mount",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Other",
+    "subCategory": "Uncategorized",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3900.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "accessoires shure accessories  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-videoconferenties",
+    "sku": null,
     "name": "VIDEOCONFERENTIES",
-    "description": "VIDEOCONFERENTIES",
     "brand": "Shure",
+    "brand_id": "shure",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "videoconferenties shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.5789473684210525,
+    "quality_score": 0.5789473684210525
   },
   {
     "id": "shure-using",
+    "sku": null,
     "name": "USING WAVETOOL FOR SUPERIOR MIC MONITORING IN HIGH-STAKES PRODUCTIONS",
-    "description": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production\u2019s sound. Learn more.",
     "brand": "Shure",
-    "category": "Microphones",
-    "subCategory": "mic",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "brand_id": "shure",
+    "category": "Studio Monitors & Speakers",
+    "subCategory": "Studio Monitor",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "using wavetool for superior mic monitoring in high-stakes productions shure microphones  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
   },
   {
     "id": "shure-superior",
+    "sku": null,
     "name": "SUPERIOR PRODUCTS FOR EVERY NEED",
-    "description": "SUPERIOR PRODUCTS FOR EVERY NEED",
     "brand": "Shure",
+    "brand_id": "shure",
     "category": "Other",
     "subCategory": "Uncategorized",
-    "tier": "entry",
-    "images": {
-      "main": "/assets/placeholders/no-image.png",
-      "thumbnail": "/assets/placeholders/no-image.png",
-      "gallery": []
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
     },
-    "price": 0.0,
-    "stockStatus": "unknown",
-    "aiTags": [
-      "entry"
-    ],
-    "specs": {},
-    "searchTokens": "superior products for every need shure other  "
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.5789473684210525,
+    "quality_score": 0.5789473684210525
   }
 ]
