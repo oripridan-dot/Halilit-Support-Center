@@ -1,0 +1,281 @@
+[
+  {
+    "id": "5779664",
+    "sku": null,
+    "name": "Roland ST-A95",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 327.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3294979",
+    "sku": null,
+    "name": "Roland KSC-72BK",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 735.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3295009",
+    "sku": null,
+    "name": "Roland KSC-72WH",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 735.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3295025",
+    "sku": null,
+    "name": "Roland KSC-90",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 1207.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3295048",
+    "sku": null,
+    "name": "Roland KSC-90",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 1207.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3295062",
+    "sku": null,
+    "name": "Roland KSCFP10",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 526.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3294937",
+    "sku": null,
+    "name": "Roland KSC-70BK",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 568.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3294955",
+    "sku": null,
+    "name": "Roland KSC-70WH",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Keyboard Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 568.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "2113459",
+    "sku": null,
+    "name": "Roland ST-AX2 Keytar Stand",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Stands & Storage",
+    "subCategory": "Stand",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 309.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  }
+]

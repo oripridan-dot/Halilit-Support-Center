@@ -11,17 +11,15 @@
 export * from './generated';
 
 // Import for local use
-import type { OptimizedProduct, BrandCatalog, CatalogIndex, TierLevel, StockStatus } from './generated';
+import type { IngestionProductDraft, PricingTier, IngestionStatus } from './generated';
 
 // ============================================
 // TYPE ALIASES (for backward compatibility)
 // ============================================
 
-/** Product type - alias for OptimizedProduct */
-export type Product = OptimizedProduct;
-
-/** GoldenProduct - legacy alias */
-export type GoldenProduct = OptimizedProduct;
+/** Product type - alias for IngestionProductDraft */
+export type Product = IngestionProductDraft;
+export type OptimizedProduct = IngestionProductDraft; // Legacy support
 
 /** BrandIdentity - brand metadata */
 export interface BrandIdentity {
@@ -80,13 +78,7 @@ export interface ProductPricing {
 export type ViewType = 'TierBar' | 'Grid' | 'Table' | 'Galaxy';
 
 /** Product tier levels */
-export type Tier = TierLevel;
-
-// ============================================
-// CATALOG TYPES
-// ============================================
-
-export type { BrandCatalog, CatalogIndex };
+export type Tier = PricingTier;
 
 // ============================================
 // HELPER FUNCTIONS
@@ -96,32 +88,38 @@ export type { BrandCatalog, CatalogIndex };
  * Get product price formatted for display
  */
 export function formatPrice(product: Product): string {
-  if (!product.price) return 'Price on request';
-  const currency = product.currency || 'USD';
-  return new Intl.NumberFormat('en-US', {
+  // Adaptation for V6 model: price_il is standard
+  const price = product.pricing?.price_il || product.price_il;
+  if (!price) return 'Price on request';
+
+  const currency = product.pricing?.currency || 'ILS';
+  // Note: V6 model uses price_il (NIS) usually.
+
+  return new Intl.NumberFormat('en-IL', {
     style: 'currency',
-    currency
-  }).format(product.price);
+    currency: 'ILS'
+  }).format(price);
 }
 
 /**
  * Get product tier color
  */
-export function getTierColor(tier: TierLevel): string {
-  const colors: Record<TierLevel, string> = {
-    diamond: '#60A5FA',
-    gold: '#FBBF24',
-    silver: '#9CA3AF',
-    bronze: '#F59E0B'
+export function getTierColor(tier: PricingTier): string {
+  const colors: Record<string, string> = {
+    entry: '#F59E0B',   // Bronze
+    mid: '#9CA3AF',     // Silver
+    pro: '#FBBF24',     // Gold
+    flagship: '#60A5FA', // Diamond/Blue
+    legacy: '#4B5563'   // Grey
   };
-  return colors[tier] || colors.bronze;
+  return colors[tier] || colors.entry;
 }
 
 /**
  * Filter products by tier
  */
-export function filterByTier(products: Product[], tier: TierLevel): Product[] {
-  return products.filter(p => p.tier === tier);
+export function filterByTier(products: Product[], tier: PricingTier): Product[] {
+  return products.filter(p => (p.pricing?.tier || (p as any).tier) === tier);
 }
 
 /**
@@ -130,7 +128,7 @@ export function filterByTier(products: Product[], tier: TierLevel): Product[] {
 export function searchProducts(products: Product[], query: string): Product[] {
   const q = query.toLowerCase();
   return products.filter(p =>
-    p.search_text?.toLowerCase().includes(q) ||
-    p.name?.toLowerCase().includes(q)
+    p.product_name?.toLowerCase().includes(q) ||
+    p.brand?.toLowerCase().includes(q)
   );
 }

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "444313",
+    "sku": null,
+    "name": "Roland Cube 10GX",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 732.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "446389",
+    "sku": null,
+    "name": "מגבר לגיטרה חשמלית Roland CUBE Lite",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 743.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "444420",
+    "sku": null,
+    "name": "מגבר סטריאופוני נייד Roland CUBE Street EX",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2571.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "6407431",
+    "sku": null,
+    "name": "Roland RAC-JC120 Amp Cover",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 141.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "3294349",
+    "sku": null,
+    "name": "Roland Blues Cube Stage",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2627.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "444337",
+    "sku": null,
+    "name": "מגבר מנורות לגיטרה חשמלית Roland Blues Cube Artist",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 4444.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "447036",
+    "sku": null,
+    "name": "מגבר סטריאופוני נייד Roland Mobile Cube",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 1006.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "841257",
+    "sku": null,
+    "name": "Roland SYSTEM-500 572",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Effects Processor",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2191.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "513517",
+    "sku": null,
+    "name": "Roland DEMORA",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Effects Processor",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2027.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "universal-audio-universal-audio-ox-amp-top-box",
+    "sku": null,
+    "name": "OX Amp Top Box",
+    "brand": "Universal-Audio",
+    "brand_id": "universal-audio",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Amplifier",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "2368021",
+    "sku": null,
+    "name": "Nord Sustain Pedal",
+    "brand": "Nord",
+    "brand_id": "nord",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Pedal",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 206.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "2368164",
+    "sku": null,
+    "name": "Nord Triple Pedal",
+    "brand": "Nord",
+    "brand_id": "nord",
+    "category": "Amplifiers & Effects",
+    "subCategory": "Pedal",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 857.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  }
+]

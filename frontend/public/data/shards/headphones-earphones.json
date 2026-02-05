@@ -1,0 +1,312 @@
+[
+  {
+    "id": "446035",
+    "sku": null,
+    "name": "אוזניות Roland RH-A7",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 432.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "446032",
+    "sku": null,
+    "name": "אוזניות Roland RH-5",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 173.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "446028",
+    "sku": null,
+    "name": "אוזניות מוניטור Roland RH-200",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 448.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "entry",
+    "tier_level": 1,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "446031",
+    "sku": null,
+    "name": "אוזניות מוניטור Roland RH-300",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 812.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "446912",
+    "sku": null,
+    "name": "אוזניות מוניטור Roland RH-A30",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 812.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "mid",
+    "tier_level": 2,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "7756290",
+    "sku": null,
+    "name": "Roland VMH-S100 Headphones",
+    "brand": "Roland",
+    "brand_id": "roland",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 1750.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "rode-nth-50",
+    "sku": null,
+    "name": "NTH-50",
+    "brand": "Rode",
+    "brand_id": "rode",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "rode-nth-cable",
+    "sku": null,
+    "name": "NTH-CABLE",
+    "brand": "Rode",
+    "brand_id": "rode",
+    "category": "Headphones & Earphones",
+    "subCategory": "Headphones",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "shure-earphones",
+    "sku": null,
+    "name": "EARPHONES",
+    "brand": "Shure",
+    "brand_id": "shure",
+    "category": "Headphones & Earphones",
+    "subCategory": "In-Ear Monitors",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 2200.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "shure-in-ear",
+    "sku": null,
+    "name": "IN-EAR MONITORING",
+    "brand": "Shure",
+    "brand_id": "shure",
+    "category": "Headphones & Earphones",
+    "subCategory": "In-Ear Monitors",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3900.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  }
+]

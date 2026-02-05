@@ -1,0 +1,39 @@
+[
+  {
+    "halilit_id": "TEST_GOLD_001",
+    "product_name": "Moog Grandmother Dark Series",
+    "brand": "Moog",
+    "price_il": 5290.0,
+    "price_eilat": 4521.0,
+    "halilit_url": "https://halilit.com/products/moog-grandmother-dark-series",
+    "description_short": "Semi-modular analog synthesizer with spring reverb",
+    "official_specs": {
+      "polyphony": "Monophonic",
+      "keys": 32,
+      "type": "Analog"
+    },
+    "expected_outcomes": {
+      "tier": "pro",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Synthesizer"
+      }
+    }
+  },
+  {
+    "halilit_id": "TEST_GOLD_002",
+    "product_name": "Nord Piano 5 88",
+    "brand": "Nord",
+    "price_il": 13900.0,
+    "price_eilat": 11880.0,
+    "halilit_url": "https://halilit.com/products/nord-piano-5-88",
+    "description_short": "Premium 88-key stage piano with triple sensor layout",
+    "expected_outcomes": {
+      "tier": "flagship",
+      "taxonomy": {
+        "canonical_category": "Pianos",
+        "canonical_subcategory": "Stage Piano"
+      }
+    }
+  }
+]

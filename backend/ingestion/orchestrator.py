@@ -15,6 +15,7 @@ This is the conductor that orchestrates all the ingestion engines.
 
 import logging
 import uuid
+import asyncio
 from typing import Dict, List, Optional, Tuple, Any
 from datetime import datetime
 
@@ -27,8 +28,11 @@ from backend.ingestion.data_models import (
 from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.ingestion.pricing_engine import get_pricing_engine
 from backend.ingestion.display_engine import get_display_engine
+from backend.ingestion.guardrails import verify_critical_facts
 
 logger = logging.getLogger("IngestionOrchestrator")
+
+BATCH_SIZE = 20
 
 
 class IngestionOrchestrator:
@@ -49,131 +53,89 @@ class IngestionOrchestrator:
         self.pricing_engine = get_pricing_engine()
         self.display_engine = get_display_engine()
 
-    # ============================================================================
-    # MAIN ORCHESTRATION WORKFLOW
-    # ============================================================================
-
     def ingest_batch(
         self,
         brand: str,
         raw_products: List[Dict[str, Any]],
-        force_refresh: bool = False,
+        batch_id: str = None
     ) -> IngestionReport:
         """
-        Main entry point: Ingest a batch of raw products.
-
-        Orchestrates the complete 6-phase pipeline:
-        1. Harvest → 2. Enrich → 3. Tier → 4. Prepare → 5. Validate → 6. Approve
-
-        Args:
-            brand: Brand name
-            raw_products: List of raw product dicts from scraper
-            force_refresh: Skip cache if available
-
-        Returns:
-            IngestionReport with approved products
+        Run ingestion pipeline (Synchronous Wrapper).
+        Delegates to async implementation.
         """
-        batch_id = str(uuid.uuid4())[:8]
+        try:
+            loop = asyncio.get_running_loop()
+            if loop.is_running():
+                raise RuntimeError(
+                    "Async event loop detected. Use 'await ingest_batch_async(...)' instead.")
+        except RuntimeError:
+            pass  # No running loop, safe to use asyncio.run
+
+        return asyncio.run(self.ingest_batch_async(brand, raw_products, batch_id))
+
+    async def ingest_batch_async(
+        self,
+        brand: str,
+        raw_products: List[Dict[str, Any]],
+        batch_id: str = None
+    ) -> IngestionReport:
+        """
+        Run ingestion pipeline with Async concurrency & Batching.
+        """
         start_time = datetime.utcnow()
-
-        self.logger.info(f"🚀 Starting ingestion batch {batch_id} for {brand}")
-        self.logger.info(f"   Raw products: {len(raw_products)}")
-
-        # PHASE 1: HARVEST - Normalize raw data
-        drafted_products = []
-        for raw_product in raw_products:
-            try:
-                draft = self._phase_harvest(raw_product, brand)
-                drafted_products.append(draft)
-            except Exception as e:
-                self.logger.warning(
-                    f"   ❌ Failed to harvest {raw_product.get('name', 'unknown')}: {e}")
+        batch_id = batch_id or f"batch_{int(start_time.timestamp())}"
 
         self.logger.info(
-            f"   ✓ Phase 1 (HARVEST): {len(drafted_products)} products drafted")
+            f"🚀 Starting Ingestion Pipeline for {brand} (Batch: {batch_id})")
+        self.logger.info(f"   Input: {len(raw_products)} raw products")
 
-        # PHASE 2: ENRICH - Apply taxonomy
-        enriched_products = []
-        for draft in drafted_products:
-            try:
-                enriched = self._phase_enrich_taxonomy(draft)
-                enriched_products.append(enriched)
-            except Exception as e:
-                self.logger.warning(
-                    f"   ❌ Taxonomy enrichment failed for {draft.product_name}: {e}")
+        validated_products: List[IngestionProductDraft] = []
+        validation_failures: List[Tuple[Any, List[str]]] = []
 
-        self.logger.info(
-            f"   ✓ Phase 2 (ENRICH): {len(enriched_products)} products taxonomy-enriched")
+        # Process in chunks to manage memory
+        total_products = len(raw_products)
+        chunks = [raw_products[i:i + BATCH_SIZE]
+                  for i in range(0, total_products, BATCH_SIZE)]
 
-        # PHASE 3: TIER - Apply pricing strategy
-        tiered_products = []
-        for product in enriched_products:
-            try:
-                tiered = self._phase_tier_pricing(product)
-                tiered_products.append(tiered)
-            except Exception as e:
-                self.logger.warning(
-                    f"   ❌ Pricing tier failed for {product.product_name}: {e}")
+        for i, chunk in enumerate(chunks):
+            self.logger.info(
+                f"   Processing chunk {i+1}/{len(chunks)} ({len(chunk)} products)...")
 
-        self.logger.info(
-            f"   ✓ Phase 3 (TIER): {len(tiered_products)} products priced and tiered")
+            # Run pipeline for chunk concurrently
+            results = await asyncio.gather(*[
+                self._process_pipeline_for_product(p, brand) for p in chunk
+            ])
 
-        # PHASE 4: PREPARE - Prepare for display
-        prepared_products = []
-        for product in tiered_products:
-            try:
-                prepared = self._phase_prepare_display(product)
-                prepared_products.append(prepared)
-            except Exception as e:
-                self.logger.warning(
-                    f"   ❌ Display preparation failed for {product.product_name}: {e}")
-
-        self.logger.info(
-            f"   ✓ Phase 4 (PREPARE): {len(prepared_products)} products display-prepared")
-
-        # PHASE 5: VALIDATE - Check compliance
-        validated_products = []
-        validation_failures = []
-        for product in prepared_products:
-            try:
-                is_valid, errors = self._phase_validate(product)
-                product.validation_status = IngestionStatus.VALIDATED if is_valid else IngestionStatus.REJECTED
-                product.validation_errors = errors
-
-                if is_valid:
-                    validated_products.append(product)
+            # Aggregate results
+            for result, errors in results:
+                if result and not errors:
+                    validated_products.append(result)
                 else:
-                    validation_failures.append((product, errors))
-            except Exception as e:
-                self.logger.warning(
-                    f"   ❌ Validation failed for {product.product_name}: {e}")
-                validation_failures.append((product, [str(e)]))
+                    if result:
+                        validation_failures.append((result, errors))
+                    else:
+                        self.logger.warning(
+                            f"   ❌ Serious failure processing product: {errors}")
 
-        self.logger.info(f"   ✓ Phase 5 (VALIDATE): {len(validated_products)} products validated, "
-                         f"{len(validation_failures)} rejected")
-
-        # PHASE 6: APPROVE - Final approval
-        approved_products = []
-        for product in validated_products:
-            product.validation_status = IngestionStatus.APPROVED
-            approved_products.append(product)
+        # PHASE 6: APPROVE (Implicit in pipeline result)
+        approved_products = validated_products  # Already marked APPROVED in pipeline
 
         self.logger.info(
-            f"   ✓ Phase 6 (APPROVE): {len(approved_products)} products approved")
+            f"   ✓ Sync Pipeline Complete: {len(approved_products)} approved, {len(validation_failures)} rejected")
 
         # Generate report
         execution_time = (datetime.utcnow() - start_time).total_seconds()
         report = IngestionReport(
             batch_id=batch_id,
             brand=brand,
-            total_products_processed=len(raw_products),
+            total_products_processed=total_products,
             approved_count=len(approved_products),
             rejected_count=len(validation_failures),
             approved_products=approved_products,
             rejected_products=validation_failures,
             execution_time_seconds=execution_time,
             recommendations=self._generate_recommendations(
-                approved_products, validation_failures, len(raw_products)
+                approved_products, validation_failures, total_products
             ),
         )
 
@@ -181,6 +143,45 @@ class IngestionOrchestrator:
                          f"{report.approved_count} approved, {report.rejected_count} rejected")
 
         return report
+
+    async def _process_pipeline_for_product(self, raw_product: Dict[str, Any], brand: str) -> Tuple[Optional[IngestionProductDraft], List[str]]:
+        """
+        Run full 6-phase pipeline for a single product.
+        Returns (draft, errors). If success, errors is empty.
+        If draft is None, critical early failure.
+        """
+        draft = None
+        try:
+            # PHASE 1: HARVEST (Fast, CPU)
+            draft = self._phase_harvest(raw_product, brand)
+
+            # PHASE 2: ENRICH (Likely I/O or Heavy CPU)
+            draft = await asyncio.to_thread(self._phase_enrich_taxonomy, draft)
+
+            # PHASE 3: TIER
+            draft = await asyncio.to_thread(self._phase_tier_pricing, draft)
+
+            # PHASE 4: PREPARE
+            draft = await asyncio.to_thread(self._phase_prepare_display, draft)
+
+            # PHASE 5: VALIDATE
+            is_valid, errors = await asyncio.to_thread(self._phase_validate, draft)
+
+            if is_valid:
+                # PHASE 6: APPROVE
+                draft.validation_status = IngestionStatus.APPROVED
+                return draft, []
+            else:
+                draft.validation_status = IngestionStatus.REJECTED
+                return draft, errors
+
+        except Exception as e:
+            product_name = raw_product.get('name') or "Unknown"
+            if draft:
+                product_name = draft.product_name
+            self.logger.warning(
+                f"   ❌ Pipeline failed for {product_name}: {e}")
+            return draft, [str(e)]
 
     # ============================================================================
     # PHASE IMPLEMENTATIONS: The 6-Phase Pipeline
@@ -306,6 +307,7 @@ class IngestionOrchestrator:
                 extraction_method="web_scraper",
                 extraction_notes=f"Scraped from {brand} catalog"
             ),
+            raw_snapshot=raw_product,  # Capture raw data for verification
             status=IngestionStatus.HARVESTED,
             pipeline_phase="harvest"
         )
@@ -463,6 +465,11 @@ class IngestionOrchestrator:
         # Check pricing consistency
         pricing_errors = validate_pricing_consistency(draft.pricing)
         errors.extend(pricing_errors)
+
+        # Critical Fact Verification (Guardrails)
+        fact_errors = verify_critical_facts(draft)
+        if fact_errors:
+            errors.extend([f"❌ {err}" for err in fact_errors])
 
         # Determine if valid (only critical errors = not valid)
         is_valid = len([e for e in errors if e.startswith("❌")]) == 0

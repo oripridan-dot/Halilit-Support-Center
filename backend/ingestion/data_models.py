@@ -71,6 +71,15 @@ class SourceProvenance(BaseModel):
         use_enum_values = False
 
 
+class FieldLineage(BaseModel):
+    """Track provenance of specific data fields"""
+    field_name: str
+    source: str  # e.g., "trinity_agent_v2" or "regex_fallback"
+    confidence: float
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    previous_value: Any = None
+
+
 class TaxonomyMapping(BaseModel):
     """Product's position in taxonomy hierarchy"""
     canonical_category: str  # Universal: "Keyboards & Synthesizers"
@@ -198,6 +207,10 @@ class IngestionProductDraft(BaseModel):
     # Source Tracking
     sources: List[SourceProvenance] = []
     primary_source: Optional[SourceProvenance] = None
+    lineage: Dict[str, FieldLineage] = Field(
+        default_factory=dict, description="Per-field data lineage tracking")
+    raw_snapshot: Dict[str, Any] = Field(
+        default_factory=dict, description="Snapshot of raw input data for verification")
 
     # Quality & Validation
     data_completeness: float = 0.5

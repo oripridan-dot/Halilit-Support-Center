@@ -1,0 +1,64 @@
+[
+  {
+    "id": "universal-audio-610",
+    "sku": null,
+    "name": "UA 610 Tube Preamp & EQ Collection",
+    "brand": "Universal-Audio",
+    "brand_id": "universal-audio",
+    "category": "Audio Interfaces & Mixers",
+    "subCategory": "Preamp",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 3000.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "pro",
+    "tier_level": 4,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  },
+  {
+    "id": "universal-audio-universal-audio-auto-tune-realtime-x",
+    "sku": null,
+    "name": "Auto-Tune Realtime X",
+    "brand": "Universal-Audio",
+    "brand_id": "universal-audio",
+    "category": "Audio Interfaces & Mixers",
+    "subCategory": "Audio Interface",
+    "description": null,
+    "description_short": null,
+    "description_full": null,
+    "price": 5800.0,
+    "price_eilat": 0.0,
+    "currency": "ILS",
+    "tier": "flagship",
+    "tier_level": 5,
+    "images": {},
+    "specifications": {
+      "specs_dict": {},
+      "specs_source": "commercial",
+      "specs_completeness": 0.5,
+      "specs_markdown": null
+    },
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209
+  }
+]

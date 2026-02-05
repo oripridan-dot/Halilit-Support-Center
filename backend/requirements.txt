@@ -21,3 +21,6 @@ pytest-asyncio>=0.21.0
 
 # File Monitoring & Daemon Features
 watchdog>=4.0.0
+
+# Type Generation
+pydantic-to-typescript>=1.0.0
