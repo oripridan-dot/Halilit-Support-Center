@@ -1,7 +1,7 @@
-# Halilit Support Center v5.4.0 - Spectrum Pipeline Backend
-# Google Conductor orchestration with Trinity Swarm and Spectrum Data Pipeline
-# Version: 5.4.0 (Production Ready)
-# Features: Trinity Swarm, Google Conductor, Spectrum Pipeline, Data Enrichment, Risk Validation, Cross-Validation Engine
+# Halilit Support Center v6.1.0 - Spectrum Enhancement
+# Trinity Ingestion Pipeline & Enhanced Visualizer
+# Version: 6.1.0
+# Features: Trinity Swarm, Ingestion Pipeline, Spectrum Visualizer v6.1
 
 # Core Framework
 pydantic>=2.6.0

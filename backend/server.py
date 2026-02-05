@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Halilit Support Center v6.0 - FastAPI Server
+Halilit Support Center v6.1 - FastAPI Server
 
 Serves the frontend and provides data endpoints.
 Data pipeline is orchestrated separately via conductor.
