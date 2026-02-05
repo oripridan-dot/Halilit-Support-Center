@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
-import { useEffect, useState } from "react";
 import { ImageWithFallback } from "../ImageWithFallback";
 import { getPrice } from "../../lib/priceFormatter";
 import type { Product } from "../../types";
@@ -66,9 +66,18 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
               <div className="relative h-32 bg-slate-800 rounded overflow-hidden">
                 <ImageWithFallback
                   src={
-                    product.images?.main || product.image_hero || product.image
+                    (typeof product.images?.main === 'string'
+                      ? product.images.main
+                      : product.images?.main?.url) ||
+                    (typeof product.image_hero === 'string'
+                      ? product.image_hero
+                      : product.image_hero?.url) ||
+                    (typeof product.image === 'string'
+                      ? product.image
+                      : product.image?.url) ||
+                    undefined
                   }
-                  alt={product.name}
+                  alt={product.name || "Product"}
                   className="w-full h-full object-cover"
                 />
               </div>

@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useMemo } from "react";
 import { ChevronDown, ChevronUp, Info } from "lucide-react";
 import { Product } from "../types";
-import ProductSpecs from "./ProductSpecs";
 import { BaseComponentProps, EventHandler } from "../types/componentUtils";
 
 interface ProductDetailPanelProps extends BaseComponentProps {
@@ -165,7 +164,16 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
             </div>
           </button>
           {expandedSections.specs && (
-            <ProductSpecs specs={specs} category={product.category} />
+            <div className="p-4 bg-slate-50 border-t border-slate-200">
+               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {Object.entries(specs).map(([key, value]) => (
+                  <li key={key} className="text-sm">
+                    <span className="font-semibold text-slate-700 capitalize">{key.replace(/_/g, ' ')}:</span>{' '}
+                    <span className="text-slate-600">{String(value)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
         </div>
       )}

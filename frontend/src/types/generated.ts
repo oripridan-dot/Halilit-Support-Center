@@ -66,6 +66,8 @@ export interface OptimizedProduct {
   brand?: string;
   pill_data?: any;
   main_category?: string;
+  images?: any;
+  image?: any;
   official_manuals?: any;
   official_gallery?: any;
   necessities?: any;
