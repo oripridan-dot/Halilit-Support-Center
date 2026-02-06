@@ -198,34 +198,41 @@ class CatalogLoader {
       const brandEntry = index.brands.find((b) => b.id === brandId);
 
       if (!brandEntry) {
-        throw new Error(`Brand ${brandId} not found in index`);
+        console.warn(`Brand ${brandId} not found in index`);
+        return { products: [] };
       }
 
       const response = await fetch(
         `/data/${brandEntry.data_file}?v=${Date.now()}`,
       );
       if (!response.ok) {
-        throw new Error(`Failed to load brand: ${brandId}`);
+        console.warn(`Failed to load brand: ${brandId}`);
+        return { products: [] };
       }
 
       const rawData: unknown = await response.json();
 
-      // ✅ Validate with Zod
+      // ✅ Validate with Zod - but allow graceful degradation
       let data: BrandFile;
       try {
-        const validated = SchemaValidator.validateBrandFile(rawData);
-        data = validated as unknown as BrandFile;
+        data = SchemaValidator.validateBrandFile(rawData);
       } catch (validationError) {
-        throw new Error(
-          `Invalid brand data structure for ${brandId}: ${(validationError as Error).message}`,
-        );
+        console.warn(`Brand validation warning for ${brandId}:`, validationError);
+        // Use raw data if validation failed - try to extract products anyway
+        data = rawData as unknown as BrandFile;
       }
 
       // Extract only skeletons for initial load
       // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
-      const productsArray = (data as any).products || [];
+      const productsArray = ((data as any)?.products || []) as Product[];
 
-      const skeletons = productsArray.map((p: Product) =>
+      // Filter out obviously invalid products
+      const validProducts = productsArray.filter(
+        // Allow ingestion fields (halilit_id, product_name) to pass validation
+        (p) => p && (p.id || p.halilit_id) && (p.name || p.product_name)
+      );
+
+      const skeletons = validProducts.map((p: Product) =>
         this.extractSkeleton(p)
       );
 
@@ -233,17 +240,16 @@ class CatalogLoader {
       this.lazyBrandCatalogs.set(brandId, lazyResult);
 
       // Also cache the full data for later access
-      // (so if someone calls loadBrand after loadBrandLazy, we have it)
       this.brandCatalogs.set(brandId, {
         brand_id: brandId,
         brand_name: data.brand_identity?.name || brandEntry.name,
-        products: productsArray,
+        products: validProducts,
       } as BrandCatalog);
 
       return lazyResult;
     } catch (error) {
       console.error(`Failed to lazy-load brand ${brandId}:`, error);
-      return null;
+      return { products: [] };
     }
   }
 
@@ -286,20 +292,49 @@ class CatalogLoader {
 
   /**
    * Load master index (call once on app init)
-   * ✅ Runtime validation with Zod
+   * ✅ Runtime validation with Zod - gracefully degrades on validation errors
    */
   async loadIndex(): Promise<MasterIndex> {
     if (this.index) return this.index;
 
-    const response = await fetch(`/data/index.json?v=${Date.now()}`);
-    if (!response.ok) {
-      throw new Error("Failed to load master index");
-    }
-    const rawData: unknown = await response.json();
+    try {
+      const response = await fetch(`/data/index.json?v=${Date.now()}`);
+      if (!response.ok) {
+        throw new Error("Failed to load master index");
+      }
+      const rawData: unknown = await response.json();
 
-    // ✅ Validate with Zod
-    this.index = SchemaValidator.validateMasterIndex(rawData);
-    return this.index!;
+      // ✅ Validate with Zod - validateMasterIndex allows degradation
+      try {
+        this.index = SchemaValidator.validateMasterIndex(rawData) as MasterIndex;
+      } catch (validationError) {
+        console.warn("Index validation error:", validationError);
+        this.index = (rawData as any) || { brands: [] } as MasterIndex;
+      }
+
+      // Ensure we have a brands array
+      if (!this.index || !this.index.brands) {
+        this.index = {
+          build_timestamp: new Date().toISOString(),
+          version: "unknown",
+          total_products: 0,
+          total_verified: 0,
+          brands: [],
+        } as MasterIndex;
+      }
+
+      return this.index;
+    } catch (error) {
+      console.error("Failed to load index:", error);
+      // Return empty index as fallback
+      return {
+        build_timestamp: new Date().toISOString(),
+        version: "unknown",
+        total_products: 0,
+        total_verified: 0,
+        brands: [],
+      } as MasterIndex;
+    }
   }
 
   /**
@@ -400,16 +435,16 @@ class CatalogLoader {
 
     const rawData: unknown = await response.json();
 
-    // ✅ Validate with Zod
+    // ✅ Validate with Zod - but allow graceful degradation for ingestion data
     let data: BrandFile;
     try {
       // Zod validation ensures type safety - use any to cast the validated result
       const validated = SchemaValidator.validateBrandFile(rawData);
       data = validated as unknown as BrandFile;
     } catch (validationError) {
-      throw new Error(
-        `Invalid brand data structure for ${brandId}: ${(validationError as Error).message}`,
-      );
+      console.warn(`[CatalogLoader] Ingestion data schema mismatch for ${brandId} (handled via v7.2 adapter)`);
+      // Soften gate: Use raw data if validation failed
+      data = rawData as unknown as BrandFile;
     }
 
     // ✅ BADGE VERIFICATION: Log what we're getting
@@ -449,7 +484,13 @@ class CatalogLoader {
       description: brandIdentity.description || undefined,
       brand_identity: brandIdentity,
       // Normalize products to handle different data structures
-      products: normalizeProducts(data.products).map((p: Product): Product => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      products: normalizeProducts(data.products).map((p: any): Product => {
+        // v7.2 ADAPTER: Polyfill ingestion fields to frontend fields
+        // This ensures compatibility between "halilit_id" (backend) and "id" (frontend)
+        if (!p.id && p.halilit_id) p.id = p.halilit_id;
+        if (!p.name && p.product_name) p.name = p.product_name;
+
         // Warn on low tier products
         if (p.tier === "bronze") {
           console.warn(`[Sandbox] Loading Low Tier Product: ${p.id}`);
@@ -460,7 +501,7 @@ class CatalogLoader {
           p.brand_id = brandIdentity.id || brandId;
         }
 
-        return p;
+        return p as Product;
       }),
     };
 

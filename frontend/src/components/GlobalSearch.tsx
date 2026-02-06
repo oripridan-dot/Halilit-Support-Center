@@ -1,5 +1,5 @@
 import { Search, X } from "lucide-react";
-import { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useRealtimeSearch } from "../hooks/useRealtimeSearch";
 import { useNavigationStore } from "../store/navigationStore";
 import { BaseComponentProps, EventHandler } from "../types/componentUtils";
@@ -27,7 +27,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const searchResult = useRealtimeSearch(query, { limit: maxResults });
   const { data: results = [], loading, error } = searchResult;
-  const { openProductPop } = useNavigationStore();
+  const { openProductPage } = useNavigationStore();
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown on click outside
@@ -46,12 +46,12 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
 
   const handleSelect = useCallback(
     (productId: string) => {
-      openProductPop(productId);
+      openProductPage(productId);
       onSelect?.(productId);
       setIsOpen(false);
       setQuery("");
     },
-    [openProductPop, onSelect],
+    [openProductPage, onSelect],
   );
 
   return (

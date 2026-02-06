@@ -1,5 +1,15 @@
 // frontend/src/App.tsx
-import { lazy, Suspense } from "react";
+/**
+ * UNIFIED DATA PIPELINE v7.0
+ *
+ * Three screens that share the same data source:
+ * 1. GalaxyDashboard - Category browser
+ * 2. SpectrumModule - Product spectrum (TierBar is integrated)
+ * 3. ProductPage - Full product analysis
+ *
+ * All screens consume data from: catalogLoader (unified data source)
+ */
+import React, { lazy, Suspense } from "react";
 import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { useNavigationStore } from "./store/navigationStore";
@@ -15,14 +25,9 @@ const SpectrumModule = lazy(() =>
     default: m.SpectrumModule,
   })),
 );
-const ProductPopInterface = lazy(() =>
-  import("./components/views/ProductPopInterface").then((m) => ({
-    default: m.ProductPopInterface,
-  })),
-);
-const TierBar = lazy(() =>
-  import("./components/views/TierBar").then((m) => ({
-    default: m.TierBar,
+const ProductPage = lazy(() =>
+  import("./components/views/ProductPage").then((m) => ({
+    default: m.ProductPage,
   })),
 );
 
@@ -40,7 +45,7 @@ function App() {
   return (
     <GlobalErrorBoundary>
       <div className="flex h-screen w-screen flex-col bg-black text-white font-sans overflow-hidden">
-        {/* Global Header (Optional) */}
+        {/* Global Header */}
         <header className="h-12 bg-black border-b border-zinc-900 flex items-center justify-between px-6 z-50 relative">
           <span className="font-black italic text-lg tracking-tight shrink-0">
             Halilit<span className="text-zinc-600">SC</span>
@@ -52,7 +57,7 @@ function App() {
 
         {/* Main Stage */}
         <main className="flex-1 relative overflow-hidden">
-          {/* Layer 1: Galaxy */}
+          {/* Screen 1: Galaxy Dashboard */}
           {currentView === "GALAXY" && (
             <div className="absolute inset-0 animate-fade-in">
               <Suspense fallback={<LoadingPlaceholder />}>
@@ -61,7 +66,7 @@ function App() {
             </div>
           )}
 
-          {/* Layer 2: Spectrum */}
+          {/* Screen 2: Spectrum Module (includes TierBar/product spectrum) */}
           {currentView === "SPECTRUM" && (
             <div className="absolute inset-0 animate-slide-up">
               <Suspense fallback={<LoadingPlaceholder />}>
@@ -70,20 +75,11 @@ function App() {
             </div>
           )}
 
-          {/* Layer 3: Tier Bar (Products by Brand & Price) */}
-          {currentView === "TIER_BAR" && (
-            <div className="absolute inset-0 animate-fade-in">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <TierBar />
-              </Suspense>
-            </div>
-          )}
-
-          {/* Layer 4: Product Pop (Overlay) */}
-          {currentView === "PRODUCT_POP" && activeProductId && (
+          {/* Screen 3: Product Page (Full Analysis View) */}
+          {currentView === "PRODUCT_PAGE" && activeProductId && (
             <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
               <Suspense fallback={<LoadingPlaceholder />}>
-                <ProductPopInterface productId={activeProductId} />
+                <ProductPage productId={activeProductId} />
               </Suspense>
             </div>
           )}

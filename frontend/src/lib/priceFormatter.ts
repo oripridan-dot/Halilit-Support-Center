@@ -1,17 +1,28 @@
 /**
  * Price Formatter and Extractor
- * Aligned with OptimizedProduct type from pipeline
+ * Works with backend-normalized data (price field is now guaranteed to exist)
  */
 
 import type { Product } from "../types";
 
 /**
  * Get displayable price from product
+ * Now works with backend-normalized price field
  */
 export function getPrice(product: Product): string {
-  // Direct price field (from OptimizedProduct)
-  if (product.price && typeof product.price === "number") {
-    return formatPrice(product.price, product.currency);
+  // Top-level price field (from backend normalization)
+  if (product.price && typeof product.price === "number" && product.price > 0) {
+    return formatPrice(product.price, product.currency || "ILS");
+  }
+
+  // Fallback: price_il from ingestion format
+  if (product.price_il && typeof product.price_il === "number" && product.price_il > 0) {
+    return formatPrice(product.price_il, "ILS");
+  }
+
+  // Check pricing object
+  if (product.pricing?.regular_price && product.pricing.regular_price > 0) {
+    return formatPrice(product.pricing.regular_price, product.pricing.currency || "ILS");
   }
 
   return "TBD";
@@ -25,7 +36,7 @@ export function formatPrice(price: number | string, currency: string = "ILS", di
 
   const numPrice = typeof price === "string" ? parseFloat(price) : price;
 
-  if (isNaN(numPrice)) return "TBD";
+  if (isNaN(numPrice) || numPrice === 0) return "TBD";
 
   const opts = { minimumFractionDigits: digits, maximumFractionDigits: digits };
 
@@ -48,6 +59,12 @@ export function formatPrice(price: number | string, currency: string = "ILS", di
 export function getPriceValue(product: Product): number {
   if (product.price && typeof product.price === "number") {
     return product.price;
+  }
+  if (product.price_il && typeof product.price_il === "number") {
+    return product.price_il;
+  }
+  if (product.pricing?.regular_price) {
+    return product.pricing.regular_price;
   }
   return 0;
 }

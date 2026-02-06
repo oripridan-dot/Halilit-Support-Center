@@ -42,10 +42,9 @@ RAW DATA
    └─ Write to frontend/public/data/*.json
    ↓
 [FRONTEND DISPLAY]
-   ├─ GalaxyDashboard (6 product galaxies)
-   ├─ SpectrumModule (filtered by galaxy)
-   ├─ TierBar (sorted by price/brand)
-   └─ ProductPopInterface (detail card)
+   ├─ GalaxyDashboard (category browser)
+   ├─ SpectrumModule (product spectrum with brand swimlanes)
+   └─ ProductPage (full product analysis)
 ```
 
 ## 📦 Data Flow - v6.0 Only
@@ -111,10 +110,9 @@ frontend/
 ├── src/
 │   ├── components/
 │   │   ├── views/
-│   │   │   ├── GalaxyDashboard.tsx (Screen 1)
-│   │   │   ├── SpectrumModule.tsx  (Screen 2)
-│   │   │   ├── TierBar.tsx         (Screen 3)
-│   │   │   └── ProductPopInterface.tsx (detail)
+│   │   │   ├── GalaxyDashboard.tsx (Screen 1: Category browser)
+│   │   │   ├── SpectrumModule.tsx  (Screen 2: Product spectrum with swimlanes)
+│   │   │   └── ProductPage.tsx     (Screen 3: Full product analysis)
 │   │   └── ...
 │   ├── lib/
 │   │   ├── catalogLoader.ts

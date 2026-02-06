@@ -43,7 +43,7 @@ export const TierBar: React.FC<TierBarProps> = ({
   >({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { openProductPop } = useNavigationStore();
+  const { openProductPage } = useNavigationStore();
 
   useEffect(() => {
     fetchBrandsWithProducts();
@@ -243,7 +243,7 @@ export const TierBar: React.FC<TierBarProps> = ({
                     key={product.id}
                     onClick={() => {
                       onProductSelect?.(product);
-                      openProductPop(product.id);
+                      openProductPage(product.id);
                     }}
                     className="flex-shrink-0 w-48 bg-slate-900 rounded-lg overflow-hidden border border-slate-800 hover:border-blue-500 cursor-pointer transition group"
                   >

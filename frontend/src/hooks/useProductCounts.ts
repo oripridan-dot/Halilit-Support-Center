@@ -5,12 +5,14 @@ import { getConsolidatedProductCategory } from "../lib/categoryConsolidator";
 export function useProductCounts() {
     const [counts, setCounts] = useState<Record<string, number>>({});
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         let mounted = true;
 
         const calculateCounts = async () => {
             try {
+                setError(null);
                 // Ensure index is loaded
                 await catalogLoader.loadIndex();
 
@@ -33,6 +35,11 @@ export function useProductCounts() {
                 setCounts(newCounts);
             } catch (err) {
                 console.error("[useProductCounts] Error:", err);
+                if (mounted) {
+                    setError((err as Error).message || "Failed to load product counts");
+                    // Keep previous counts as fallback
+                    setCounts(prev => prev || {});
+                }
             } finally {
                 if (mounted) setLoading(false);
             }
@@ -45,5 +52,5 @@ export function useProductCounts() {
         };
     }, []);
 
-    return { counts, loading };
+    return { counts, loading, error };
 }

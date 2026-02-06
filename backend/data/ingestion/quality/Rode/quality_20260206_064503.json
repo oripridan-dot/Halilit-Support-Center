@@ -1,0 +1,18 @@
+{
+  "brand": "Rode",
+  "timestamp": "20260206_064503",
+  "metrics": {
+    "brand": "Rode",
+    "generated_at": "2026-02-06T06:45:03.465075",
+    "total_products": 50,
+    "approved_products": 50,
+    "rejected_products": 0,
+    "overall_quality_score": 0.74,
+    "average_completeness": 0.74,
+    "critical_errors": [],
+    "warnings": [],
+    "recommendations": [
+      "\u2705 Pipeline running smoothly - no issues detected"
+    ]
+  }
+}

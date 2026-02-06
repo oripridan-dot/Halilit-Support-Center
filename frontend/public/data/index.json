@@ -1,49 +1,71 @@
 {
   "version": "6.0.0",
-  "build_timestamp": "2026-02-05T23:02:20.746787Z",
+  "build_timestamp": "2026-02-06T11:50:36.421680",
   "total_products": 647,
+  "total_verified": 647,
   "brands": [
     {
       "id": "drumdots",
       "name": "Drumdots",
       "product_count": 4,
-      "data_file": "drumdots.json"
+      "verified_count": 4,
+      "primary_category": "Cables & Connectors",
+      "data_file": "drumdots.json",
+      "brand_color": "bg-green-400"
     },
     {
       "id": "moog",
       "name": "Moog",
       "product_count": 17,
-      "data_file": "moog.json"
+      "verified_count": 17,
+      "primary_category": "Keyboards & Synthesizers",
+      "data_file": "moog.json",
+      "brand_color": "#FF6B6B"
     },
     {
       "id": "nord",
       "name": "Nord",
       "product_count": 37,
-      "data_file": "nord.json"
+      "verified_count": 37,
+      "primary_category": "Keyboards & Synthesizers",
+      "data_file": "nord.json",
+      "brand_color": "#0084FF"
     },
     {
       "id": "rode",
       "name": "Rode",
       "product_count": 50,
-      "data_file": "rode.json"
+      "verified_count": 50,
+      "primary_category": "Microphones & Recording",
+      "data_file": "rode.json",
+      "brand_color": "bg-blue-400"
     },
     {
       "id": "roland",
       "name": "Roland",
       "product_count": 513,
-      "data_file": "roland.json"
+      "verified_count": 513,
+      "primary_category": "Drums & Percussion",
+      "data_file": "roland.json",
+      "brand_color": "#00A4EF"
     },
     {
       "id": "shure",
       "name": "Shure",
       "product_count": 17,
-      "data_file": "shure.json"
+      "verified_count": 17,
+      "primary_category": "Other",
+      "data_file": "shure.json",
+      "brand_color": "bg-blue-400"
     },
     {
       "id": "universal-audio",
       "name": "Universal-Audio",
       "product_count": 9,
-      "data_file": "universal-audio.json"
+      "verified_count": 9,
+      "primary_category": "Amplifiers & Effects",
+      "data_file": "universal-audio.json",
+      "brand_color": "bg-blue-400"
     }
   ]
 }

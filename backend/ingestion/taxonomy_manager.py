@@ -8,6 +8,9 @@ This is the single source of truth for "what categories exist and how to map to 
 """
 
 import logging
+import json
+import os
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
@@ -38,6 +41,11 @@ class TaxonomyManager:
     def __init__(self):
         self.logger = logger
 
+        # LEARNING: Load learned taxonomy mappings
+        self.learned_mappings_file = Path(
+            __file__).parent.parent / "data" / "learned_taxonomy.json"
+        self.learned_mappings = self._load_learned_mappings()
+
         # UNIVERSAL TAXONOMY: The single source of truth
         self.universal_taxonomy = self._build_universal_taxonomy()
 
@@ -46,6 +54,39 @@ class TaxonomyManager:
 
         # KEYWORD INDEX: Fast lookup from any keyword to categories
         self.keyword_index = self._build_keyword_index()
+
+    def _load_learned_mappings(self) -> Dict[str, str]:
+        """Load AI-learned mappings from disk"""
+        if not self.learned_mappings_file.exists():
+            return {}
+        try:
+            with open(self.learned_mappings_file, 'r') as f:
+                data = json.load(f)
+                return data.get("mappings", {})
+        except Exception as e:
+            self.logger.error(f"Failed to load learned mappings: {e}")
+            return {}
+
+    def learn_mapping(self, product_identifier: str, category: str, subcategory: str):
+        """
+        Teach the system a new mapping.
+        product_identifier can be a specific product name or a keyword.
+        """
+        mapping = f"{category} > {subcategory}"
+        self.learned_mappings[product_identifier.lower()] = mapping
+
+        try:
+            # Ensure directory exists
+            self.learned_mappings_file.parent.mkdir(
+                parents=True, exist_ok=True)
+
+            # Save to disk
+            with open(self.learned_mappings_file, 'w') as f:
+                json.dump({"mappings": self.learned_mappings}, f, indent=2)
+
+            self.logger.info(f"🧠 LEARNED: {product_identifier} → {mapping}")
+        except Exception as e:
+            self.logger.error(f"Failed to save learned mapping: {e}")
 
     # ============================================================================
     # TAXONOMY DEFINITION
@@ -467,14 +508,40 @@ class TaxonomyManager:
         """
         Classify a product into the universal taxonomy.
 
+        Uses 3-layer strategy:
+        1. Learned Mappings (AI/Manual overrides)
+        2. Brand Specific Rules (Longest pattern match wins)
+        3. Keyword Analysis (Name > Description)
+
         Returns: (category, subcategory, confidence_score)
         """
         if specifications is None:
             specifications = {}
 
+        # Step 0: CHECK LEARNED MAPPINGS (AI Overrides)
+        # Check against learned pattern matching (longest match wins)
+        if self.learned_mappings:
+            sorted_learned = sorted(
+                self.learned_mappings.items(), key=lambda x: len(x[0]), reverse=True)
+            for term, mapping in sorted_learned:
+                if term.lower() in product_name.lower():
+                    try:
+                        cat, subcat = mapping.split(" > ")
+                        self.logger.info(
+                            f"🧠 {product_name} → {cat} > {subcat} (learned mapping)")
+                        return cat, subcat, 0.99
+                    except ValueError:
+                        continue
+
         # Step 1: Try brand-specific mappings first (highest confidence)
         if brand in self.brand_taxonomy_mappings:
-            for brand_term, mapping in self.brand_taxonomy_mappings[brand].items():
+            # CRITICAL: Sort by length descending to catch specific terms before generic ones
+            # e.g. "Monitor for V-Drums" matches "Monitor" (if mapped) or specific V-Drums accessor rules
+            mappings = self.brand_taxonomy_mappings[brand]
+            sorted_mappings = sorted(
+                mappings.items(), key=lambda x: len(x[0]), reverse=True)
+
+            for brand_term, mapping in sorted_mappings:
                 if brand_term.lower() in product_name.lower():
                     cat, subcat = mapping.split(" > ")
                     self.logger.info(

@@ -1,16 +1,17 @@
 """
-UNIFIED INGESTION ORCHESTRATOR v6.0
+UNIFIED INGESTION ORCHESTRATOR v7.0 ⭐ CURRENT VERSION
 
 Master orchestrator for the complete scraping & ingestion pipeline:
 
-Phase 1: HARVEST - Scrape raw data
-Phase 2: ENRICH - Apply taxonomy classification
-Phase 3: TIER - Apply pricing strategy
-Phase 4: PREPARE - Prepare for display
-Phase 5: VALIDATE - Check compliance
-Phase 6: APPROVE - Final decision
+Phase 1: HARVEST - Scrape raw data (CommercialScout)
+Phase 2: ENRICH - Apply brand specifications (OfficialVerifier)
+Phase 3: VALIDATE - Check compliance (ExternalValidator)
+Phase 4: APPROVE - Final decision
 
-This is the conductor that orchestrates all the ingestion engines.
+Coordinated by Google Conductor for version v7.0+
+
+DO NOT USE: Legacy v6.0 methods. They are deprecated.
+USE INSTEAD: sync_brand_to_frontend for all data pipeline needs.
 """
 
 import logging
@@ -18,6 +19,9 @@ import uuid
 import asyncio
 from typing import Dict, List, Optional, Tuple, Any
 from datetime import datetime
+
+# ⭐ VERSION CONTROL
+from backend.VERSION_CONTROL import assert_version_supports, log_deprecation_warning
 
 from backend.ingestion.data_models import (
     IngestionProductDraft, SourceProvenance, TaxonomyMapping,
@@ -543,10 +547,20 @@ class IngestionOrchestrator:
         legacy_products: List[ProductDraft],
     ) -> IngestionReport:
         """
-        Ingest legacy ProductDraft format.
+        ❌ DEPRECATED - DO NOT USE (v5.x/v6.0 legacy method)
 
+        Ingest legacy ProductDraft format.
         Converts to new unified model and processes through pipeline.
+
+        REPLACEMENT: Use sync_brand_to_frontend() instead.
+        This method will be REMOVED in v8.0.
         """
+        log_deprecation_warning(
+            "ingest_legacy_products",
+            "sync_brand_to_frontend (in ingestion_to_frontend.py)"
+        )
+
+        # Still works for backward compatibility, but warn
         raw_products = []
         for legacy_product in legacy_products:
             raw_products.append({

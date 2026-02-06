@@ -256,7 +256,7 @@ const EnrichmentPanel = ({
 };
 
 export const SpectrumModule = () => {
-  const { activeTribeId, goToGalaxy, openProductPop } = useNavigationStore();
+  const { activeTribeId, goToGalaxy, openProductPage } = useNavigationStore();
 
   // --------------------------------------------------------------------------
   // 1. DATA INGESTION
@@ -620,7 +620,7 @@ export const SpectrumModule = () => {
               {/* CTA Button */}
               <button
                 onClick={() =>
-                  hoveredProduct.id && openProductPop(hoveredProduct.id)
+                  hoveredProduct.id && openProductPage(hoveredProduct.id)
                 }
                 className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-3 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
               >
@@ -746,7 +746,7 @@ export const SpectrumModule = () => {
                                 boxShadow:
                                   "0 0 0 1px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)",
                               }}
-                              onClick={() => openProductPop(product.id!)}
+                              onClick={() => openProductPage(product.id!)}
                               onMouseEnter={() => handleHoverProduct(product)}
                             >
                               {product.image_thumbnail ? (

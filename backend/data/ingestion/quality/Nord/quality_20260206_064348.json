@@ -1,0 +1,18 @@
+{
+  "brand": "Nord",
+  "timestamp": "20260206_064348",
+  "metrics": {
+    "brand": "Nord",
+    "generated_at": "2026-02-06T06:43:48.573601",
+    "total_products": 37,
+    "approved_products": 37,
+    "rejected_products": 0,
+    "overall_quality_score": 0.74,
+    "average_completeness": 0.74,
+    "critical_errors": [],
+    "warnings": [],
+    "recommendations": [
+      "\u2705 Pipeline running smoothly - no issues detected"
+    ]
+  }
+}

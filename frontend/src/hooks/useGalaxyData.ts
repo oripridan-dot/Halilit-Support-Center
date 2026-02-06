@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { GalaxyCatalog, GalaxyProduct } from "../types/galaxy-schema";
 
@@ -46,12 +47,31 @@ export const useGalaxyData = () => {
   });
 
   // Convert array to GalaxyCatalog format for backward compatibility
-  const catalog: GalaxyCatalog | null = Array.isArray(data)
-    ? {
-      products: data,
-      categories: extractCategories(data),
+  const catalog: GalaxyCatalog | null = useMemo(() => {
+    if (Array.isArray(data)) {
+      // Map raw ingestion data to GalaxyProduct schema
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const mappedProducts = data.map((p: any) => ({
+        ...p,
+        id: p.id || p.halilit_id || "unknown_id",
+        name: p.name || p.product_name || "Unknown Product",
+        // Ensure images object structure if missing
+        images: p.images || {
+          main: p.image_hero?.url || "",
+          thumbnail: p.image_thumbnail?.url || "",
+          gallery: []
+        }
+      }));
+      
+      return {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        products: mappedProducts as any[],
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        categories: extractCategories(data as any[]),
+      } as unknown as GalaxyCatalog;
     }
-    : null;
+    return data || null;
+  }, [data]);
 
   /**
    * Helper: Extract categories from products

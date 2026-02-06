@@ -32,60 +32,67 @@ export const useCategoryCatalog = (
     queryKey: ["category-catalog", category],
     queryFn: async () => {
       if (!category) {
-        throw new Error("Category is required");
+        return { products: [], availableFilters: [] };
       }
 
-      // 1. Ensure Index is loaded
-      await catalogLoader.loadIndex();
+      try {
+        // 1. Ensure Index is loaded
+        await catalogLoader.loadIndex();
 
-      // 2. Load all "Badged" Products from the 6 valid brands
-      const allProducts = await catalogLoader.loadAllProducts();
+        // 2. Load all "Badged" Products from the 6 valid brands
+        const allProducts = await catalogLoader.loadAllProducts();
 
-      console.log(`[useCategoryCatalog] Loaded ${allProducts.length} total products`);
+        console.log(`[useCategoryCatalog] Loaded ${allProducts.length} total products`);
 
-      if (allProducts.length === 0) {
-        console.warn('[useCategoryCatalog] WARNING: No products loaded at all!');
-      }
-
-      // 3. Filter by Galaxy/Tribe
-      const filteredProducts = allProducts.filter(p => productMatchesGalaxy(p, category));
-
-      console.log(`[useCategoryCatalog] Category: ${category}`);
-      console.log(`[useCategoryCatalog] Filtered to ${filteredProducts.length} products for galaxy: ${category}`);
-
-      if (filteredProducts.length === 0) {
-        console.warn(`[useCategoryCatalog] WARNING: No products matched galaxy ${category}!`);
-        if (allProducts.length > 0) {
-          console.log('[useCategoryCatalog] Sample product for debugging:', {
-            name: allProducts[0].name,
-            brand_id: allProducts[0].brand_id,
-            category: allProducts[0].category,
-          });
+        if (allProducts.length === 0) {
+          console.warn('[useCategoryCatalog] WARNING: No products loaded at all!');
+          return { products: [], availableFilters: [] };
         }
-      }
 
-      // 4. Generate Smart Filters based on actual content
-      const galaxyDef = CONSOLIDATED_CATEGORIES.find(g => g.id === category);
-      const filterSet = new Set<string>();
+        // 3. Filter by Galaxy/Tribe
+        const filteredProducts = allProducts.filter(p => productMatchesGalaxy(p, category));
 
-      filteredProducts.forEach(p => {
-        const { spectrumId } = getConsolidatedProductCategory(p);
-        const specDef = galaxyDef?.spectrum.find(s => s.id === spectrumId);
-        if (specDef) {
-          filterSet.add(specDef.label);
-          if (!p.filter_tags) p.filter_tags = [];
-          if (!p.filter_tags.includes(specDef.label)) p.filter_tags.push(specDef.label);
+        console.log(`[useCategoryCatalog] Category: ${category}`);
+        console.log(`[useCategoryCatalog] Filtered to ${filteredProducts.length} products for galaxy: ${category}`);
+
+        if (filteredProducts.length === 0) {
+          console.warn(`[useCategoryCatalog] WARNING: No products matched galaxy ${category}!`);
+          if (allProducts.length > 0) {
+            console.log('[useCategoryCatalog] Sample product for debugging:', {
+              name: allProducts[0].name,
+              brand_id: allProducts[0].brand_id,
+              category: allProducts[0].category,
+            });
+          }
         }
-      });
 
-      const sortedFilters = galaxyDef
-        ? galaxyDef.spectrum.map(s => s.label).filter(l => filterSet.has(l))
-        : Array.from(filterSet).sort();
+        // 4. Generate Smart Filters based on actual content
+        const galaxyDef = CONSOLIDATED_CATEGORIES.find(g => g.id === category);
+        const filterSet = new Set<string>();
 
-      return {
-        products: filteredProducts,
-        availableFilters: sortedFilters,
-      };
+        filteredProducts.forEach(p => {
+          const { spectrumId } = getConsolidatedProductCategory(p);
+          const specDef = galaxyDef?.spectrum.find(s => s.id === spectrumId);
+          if (specDef) {
+            filterSet.add(specDef.label);
+            if (!p.filter_tags) p.filter_tags = [];
+            if (!p.filter_tags.includes(specDef.label)) p.filter_tags.push(specDef.label);
+          }
+        });
+
+        const sortedFilters = galaxyDef
+          ? galaxyDef.spectrum.map(s => s.label).filter(l => filterSet.has(l))
+          : Array.from(filterSet).sort();
+
+        return {
+          products: filteredProducts,
+          availableFilters: sortedFilters,
+        };
+      } catch (err) {
+        console.error("[useCategoryCatalog] Error loading category:", err);
+        // Return empty but valid result instead of throwing
+        return { products: [], availableFilters: [] };
+      }
     },
     // Only fetch if category is provided
     enabled: !!category,

@@ -1,3 +1,16 @@
+"""
+TRINITY SWARM - v7.0 AUTONOMOUS AGENTS
+========================================
+
+Three-agent data processing pipeline:
+1. CommercialScout (harvest) - Extracts raw product data from Halilit
+2. OfficialVerifier (enrich) - Adds brand specifications & official data
+3. ExternalValidator (audit) - Final review & approval
+
+DO NOT use deprecated methods from v5.x or v6.0.
+Current version requires v7.0+.
+"""
+
 import os
 import json
 from typing import List, Dict, Optional, Any
@@ -6,9 +19,15 @@ from pydantic import BaseModel, Field
 import google.genai as genai
 from backend.agents.agent_memory import MemoryAwareMixin
 
+# ⭐ VERSION CONTROL
+from backend.VERSION_CONTROL import assert_version_supports, SYSTEM_VERSION, log_deprecation_warning
+
 # --- CONFIGURATION ---
 # Load environment variables (API keys)
 load_dotenv()
+
+# Verify system version compatibility
+assert_version_supports("Trinity Swarm", min_version="7.0")
 
 # Initialize the new Genai client
 try:

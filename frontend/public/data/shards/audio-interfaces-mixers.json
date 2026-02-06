@@ -1,11 +1,11 @@
 [
   {
-    "halilit_id": "universal-audio-610",
-    "product_name": "UA 610 Tube Preamp & EQ Collection",
-    "brand": "Universal-Audio",
-    "price_il": 3000.0,
-    "price_eilat": 2564.1,
-    "halilit_url": "https://www.uaudio.com/products/610-collection",
+    "halilit_id": "rode-xlr",
+    "product_name": "XLR Cable",
+    "brand": "Rode",
+    "price_il": 2000.0,
+    "price_eilat": 1709.4,
+    "halilit_url": "https://rode.com/en-nl/products/xlr-to-xlr",
     "sku": null,
     "model_number": null,
     "official_name": null,
@@ -14,88 +14,87 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic “end-to-end” emulation of two classics — the 610-A and 610-B — including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison™ preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+    "official_description": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
     "official_images": [
       {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_woodwinds_gallery_1_f16aa1a8-c5b0-4738-9fad-e29cb6cbfa79.png?v=1742249055",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/century_tube_channel_strip_gallery_1.png?v=1742248567",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/analog_classics_pro_bundle_gallery_1_v2.png?v=1742233497",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_chamber_strings_gallery_1_a88222c8-137d-46d9-b2e7-4ba3870ca89f.png?v=1742249347",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/la-6176_signature_channel_strip_gallery_1.png?v=1742248466",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
+        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+        "alt": null,
         "type": "image",
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_bundle_gallery_1.png?v=1742248538",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -104,129 +103,229 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.851396",
-    "last_updated": "2026-02-05T22:48:14.851397",
+    "created_at": "2026-02-06T06:45:16.823738",
+    "last_updated": "2026-02-06T06:45:16.823738",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
-      "canonical_subcategory": "Preamp",
+      "canonical_subcategory": "Audio Interface",
       "brand_taxonomy": null,
       "alt_categories": [],
       "keywords": []
     },
     "pricing": {
-      "price_il": 3000.0,
-      "price_eilat": 2564.1,
+      "price_il": 2000.0,
+      "price_eilat": 1709.4,
       "price_usd": null,
       "price_eur": null,
       "tier": "pro",
-      "eilat_discount_percent": 14.530000000000005,
-      "suggested_tier": "pro",
+      "eilat_discount_percent": 14.529999999999996,
+      "suggested_tier": "mid",
       "price_validity_marker": "current",
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "bg-blue-400",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
-    "description_short": "Timeless warmth and punch for your vocals and instruments",
-    "description_long": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic “end-to-end” emulation of two classics — the 610-A and 610-B — including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison™ preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+    "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
+    "description_long": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
-      "source_url": "https://www.uaudio.com/products/610-collection",
+      "source_url": "https://rode.com/en-nl/products/xlr-to-xlr",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.851366",
+      "timestamp": "2026-02-06T06:45:16.823731",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Universal-Audio catalog"
+      "extraction_notes": "Scraped from Rode catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "universal-audio-610",
-      "name": "UA 610 Tube Preamp & EQ Collection",
-      "slug": "/universal-audio/ua-610-tube-preamp-eq-collection",
-      "brand_id": "universal-audio",
+      "id": "rode-xlr",
+      "name": "XLR Cable",
+      "slug": "/rode/xlr-cable",
+      "brand_id": "rode",
       "category": "Audio Interfaces",
       "subcategories": [
-        "preamp"
+        "audio interface"
       ],
-      "tier": "gold",
-      "tier_score": 60,
-      "description_short": "Timeless warmth and punch for your vocals and instruments",
-      "description_full": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic “end-to-end” emulation of two classics — the 610-A and 610-B — including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison™ preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
-      "price": 3000,
+      "tier": "silver",
+      "tier_score": 50,
+      "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
+      "description_full": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
+      "price": 2000,
       "currency": "ILS",
       "stock_status": "unknown",
       "image_hero": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
-        "alt": "Spitfire Symphonic Brass",
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": "Wireless Micro",
         "width": null,
         "height": null
       },
       "image_thumbnail": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
-        "alt": "Spitfire Symphonic Brass",
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": "Wireless Micro",
         "width": null,
         "height": null
       },
       "image_gallery": [
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
-          "alt": "Manley Tube Preamp",
+          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": "Wireless GO (Gen 3)",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_woodwinds_gallery_1_f16aa1a8-c5b0-4738-9fad-e29cb6cbfa79.png?v=1742249055",
-          "alt": "Spitfire Symphonic Woodwinds",
+          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": "Wireless PRO",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-          "alt": "UAD Essentials Edition",
+          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+          "alt": "Wireless Micro Camera Kit",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/century_tube_channel_strip_gallery_1.png?v=1742248567",
-          "alt": "Century Tube Channel Strip",
+          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+          "alt": "Interview PRO",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/analog_classics_pro_bundle_gallery_1_v2.png?v=1742233497",
-          "alt": "Analog Classics Pro Bundle",
+          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+          "alt": "RØDE Original T-Shirt",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_chamber_strings_gallery_1_a88222c8-137d-46d9-b2e7-4ba3870ca89f.png?v=1742249347",
-          "alt": "Spitfire Chamber Strings",
+          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+          "alt": "RØDE Varsity Jacket",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/la-6176_signature_channel_strip_gallery_1.png?v=1742248466",
-          "alt": "LA-6176 Signature Channel Strip",
+          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+          "alt": "Solo Podcast Kit",
           "width": null,
           "height": null
         },
         {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_bundle_gallery_1.png?v=1742248538",
-          "alt": "LUNA Spitfire Bundle",
+          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+          "alt": "Dual Podcast Kit",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+          "alt": "Ultimate Podcast Kit",
           "width": null,
           "height": null
         }
@@ -236,13 +335,13 @@
       "pros": [],
       "cons": [],
       "expert_tips": [],
-      "search_text": "ua 610 tube preamp & eq collection audio interfaces preamp timeless warmth and punch for your vocals and instruments universal audio",
+      "search_text": "xlr cable audio interfaces audio interface rødecaster pro ii\nthe rødecaster pro ii is the ultimate audio production solution for streamers,... rode",
       "filter_tags": [
         "unknown",
+        "rode",
         "audio interfaces",
-        "universal-audio",
-        "preamp",
-        "gold"
+        "audio interface",
+        "silver"
       ],
       "render_hints": {
         "has_hero_image": true,
@@ -251,12 +350,12 @@
         "has_price": false,
         "has_reviews": false,
         "has_tips": false,
-        "is_verified": true,
+        "is_verified": false,
         "show_badge": false
       },
-      "source_url": "https://www.uaudio.com/products/610-collection",
+      "source_url": "https://rode.com/en-nl/products/xlr-to-xlr",
       "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.978019",
+      "synced_at": "2026-02-01T21:10:43.913842",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -278,7 +377,591 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2000.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png"
+  },
+  {
+    "halilit_id": "rode-nth-100",
+    "product_name": "NTH-100",
+    "brand": "Rode",
+    "price_il": 2000.0,
+    "price_eilat": 1709.4,
+    "halilit_url": "https://rode.com/en-nl/products/nth-100",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
+    "official_images": [
+      {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T06:45:16.823964",
+    "last_updated": "2026-02-06T06:45:16.823964",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2000.0,
+      "price_eilat": 1709.4,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529999999999996,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-blue-400",
+      "media_assets": [
+        {
+          "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
+    "description_long": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://rode.com/en-nl/products/nth-100",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T06:45:16.823958",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Rode catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "rode-nth-100",
+      "name": "NTH-100",
+      "slug": "/rode/nth-100",
+      "brand_id": "rode",
+      "category": "Audio Interfaces",
+      "subcategories": [
+        "audio interface"
+      ],
+      "tier": "silver",
+      "tier_score": 50,
+      "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
+      "description_full": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
+      "price": 2000,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": "Wireless Micro",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": "Wireless Micro",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": "Wireless GO (Gen 3)",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+          "alt": "Wireless PRO",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+          "alt": "Wireless Micro Camera Kit",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+          "alt": "Interview PRO",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+          "alt": "RØDE Original T-Shirt",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+          "alt": "RØDE Varsity Jacket",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+          "alt": "Solo Podcast Kit",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+          "alt": "Dual Podcast Kit",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+          "alt": "Ultimate Podcast Kit",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "nth-100 audio interfaces audio interface rødecaster pro ii\nthe rødecaster pro ii is the ultimate audio production solution for streamers,... rode",
+      "filter_tags": [
+        "unknown",
+        "rode",
+        "audio interfaces",
+        "audio interface",
+        "silver"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://rode.com/en-nl/products/nth-100",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.913937",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Category may not be standard: Other > Uncategorized"
+    ],
+    "price": 2000.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png"
   },
   {
     "halilit_id": "universal-audio-universal-audio-auto-tune-realtime-x",
@@ -298,85 +981,76 @@
     "official_description": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
     "official_images": [
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -385,8 +1059,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.852321",
-    "last_updated": "2026-02-05T22:48:14.852321",
+    "created_at": "2026-02-06T06:45:16.890270",
+    "last_updated": "2026-02-06T06:45:16.890270",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -408,18 +1082,104 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "bg-green-400",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces",
     "description_long": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
@@ -429,7 +1189,7 @@
       "source_name": "Halilit",
       "source_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.852296",
+      "timestamp": "2026-02-06T06:45:16.890260",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Universal-Audio catalog"
     },
@@ -556,6 +1316,1053 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 5800.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555"
+  },
+  {
+    "halilit_id": "42-ELECTRO6D73",
+    "product_name": "Nord Electro 6",
+    "brand": "Nord",
+    "price_il": 9383.0,
+    "price_eilat": 8019.66,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "official_images": [
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T06:45:16.928778",
+    "last_updated": "2026-02-06T06:45:16.928778",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 9383.0,
+      "price_eilat": 8019.66,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529894490035172,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#0084FF",
+      "media_assets": [
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
+    "description_long": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T06:45:16.928772",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Nord catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "2351753",
+      "sku": "42-ELECTRO6D73",
+      "brand_id": "nord",
+      "name": "Nord Electro 6",
+      "slug": "nord-electro-6",
+      "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
+      "description_full": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+      "price": 9383.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": "Nord Electro 6"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.5,
+        "count": 3
+      },
+      "contextual": {
+        "pros": [
+          "Exceptional build quality (Handmade in Sweden)",
+          "Industry-standard piano and organ engines",
+          "Intuitive 1-knob-per-function interface"
+        ],
+        "cons": [
+          "Premium price point compared to competitors",
+          "Limited split points on some models",
+          "Memory capacity fills up quickly with large samples"
+        ],
+        "expert_tips": [
+          "Download the Royal Grand 3D XL sample immediately",
+          "Use the Layer Scene feature (on Stage 4) for quick transitions"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [],
+    "price": 9383.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg"
+  },
+  {
+    "halilit_id": "42-ELECTRO6D61",
+    "product_name": "Nord Electro 6",
+    "brand": "Nord",
+    "price_il": 7975.0,
+    "price_eilat": 6816.24,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "official_images": [
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T06:45:16.929284",
+    "last_updated": "2026-02-06T06:45:16.929284",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 7975.0,
+      "price_eilat": 6816.24,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529905956112854,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#0084FF",
+      "media_assets": [
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
+    "description_long": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T06:45:16.929275",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Nord catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "2352572",
+      "sku": "42-ELECTRO6D61",
+      "brand_id": "nord",
+      "name": "Nord Electro 6",
+      "slug": "nord-electro-6",
+      "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
+      "description_full": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+      "price": 7975.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": "Nord Electro 6"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.5,
+        "count": 3
+      },
+      "contextual": {
+        "pros": [
+          "Exceptional build quality (Handmade in Sweden)",
+          "Industry-standard piano and organ engines",
+          "Intuitive 1-knob-per-function interface"
+        ],
+        "cons": [
+          "Premium price point compared to competitors",
+          "Limited split points on some models",
+          "Memory capacity fills up quickly with large samples"
+        ],
+        "expert_tips": [
+          "Download the Royal Grand 3D XL sample immediately",
+          "Use the Layer Scene feature (on Stage 4) for quick transitions"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [],
+    "price": 7975.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg"
+  },
+  {
+    "halilit_id": "42-ELECTRO6HP",
+    "product_name": "Nord Electro 6",
+    "brand": "Nord",
+    "price_il": 10321.0,
+    "price_eilat": 8821.37,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "official_images": [
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T06:45:16.930594",
+    "last_updated": "2026-02-06T06:45:16.930594",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 10321.0,
+      "price_eilat": 8821.37,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529890514485022,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#0084FF",
+      "media_assets": [
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
+    "description_long": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T06:45:16.930589",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Nord catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "2352562",
+      "sku": "42-ELECTRO6HP",
+      "brand_id": "nord",
+      "name": "Nord Electro 6",
+      "slug": "nord-electro-6",
+      "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
+      "description_full": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+      "price": 10321.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": "Nord Electro 6"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.5,
+        "count": 3
+      },
+      "contextual": {
+        "pros": [
+          "Exceptional build quality (Handmade in Sweden)",
+          "Industry-standard piano and organ engines",
+          "Intuitive 1-knob-per-function interface"
+        ],
+        "cons": [
+          "Premium price point compared to competitors",
+          "Limited split points on some models",
+          "Memory capacity fills up quickly with large samples"
+        ],
+        "expert_tips": [
+          "Download the Royal Grand 3D XL sample immediately",
+          "Use the Layer Scene feature (on Stage 4) for quick transitions"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [],
+    "price": 10321.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg"
   }
 ]

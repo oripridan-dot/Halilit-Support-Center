@@ -17,22 +17,20 @@
     "official_description": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -41,8 +39,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.828461",
-    "last_updated": "2026-02-05T22:48:14.828461",
+    "created_at": "2026-02-06T06:45:16.875251",
+    "last_updated": "2026-02-06T06:45:16.875252",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -64,18 +62,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
     "description_long": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
@@ -85,7 +113,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.828430",
+      "timestamp": "2026-02-06T06:45:16.875232",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -139,7 +167,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 1255.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg"
   },
   {
     "halilit_id": "29-SUBHARMONICON",
@@ -159,22 +224,20 @@
     "official_description": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -183,8 +246,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.829154",
-    "last_updated": "2026-02-05T22:48:14.829155",
+    "created_at": "2026-02-06T06:45:16.875722",
+    "last_updated": "2026-02-06T06:45:16.875723",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -206,18 +269,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
     "description_long": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
@@ -227,7 +320,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.829127",
+      "timestamp": "2026-02-06T06:45:16.875708",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -291,7 +384,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2928.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg"
   },
   {
     "halilit_id": "29-SPECTRAVOX",
@@ -311,22 +441,20 @@
     "official_description": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -335,8 +463,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.829314",
-    "last_updated": "2026-02-05T22:48:14.829315",
+    "created_at": "2026-02-06T06:45:16.875842",
+    "last_updated": "2026-02-06T06:45:16.875843",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -358,18 +486,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
     "description_long": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
@@ -379,7 +537,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.829305",
+      "timestamp": "2026-02-06T06:45:16.875835",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -433,7 +591,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2928.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg"
   },
   {
     "halilit_id": "29-MATRIARCH",
@@ -453,22 +648,20 @@
     "official_description": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -477,8 +670,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.829665",
-    "last_updated": "2026-02-05T22:48:14.829665",
+    "created_at": "2026-02-06T06:45:16.876282",
+    "last_updated": "2026-02-06T06:45:16.876282",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -500,18 +693,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
     "description_long": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
@@ -521,7 +744,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.829654",
+      "timestamp": "2026-02-06T06:45:16.876271",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -575,7 +798,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 9203.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg"
   },
   {
     "halilit_id": "29-LABYRINTH",
@@ -595,22 +855,20 @@
     "official_description": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -619,8 +877,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.830099",
-    "last_updated": "2026-02-05T22:48:14.830099",
+    "created_at": "2026-02-06T06:45:16.876383",
+    "last_updated": "2026-02-06T06:45:16.876383",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -642,18 +900,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
     "description_long": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
@@ -663,7 +951,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.830089",
+      "timestamp": "2026-02-06T06:45:16.876377",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -717,7 +1005,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2928.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg"
   },
   {
     "halilit_id": "29-MOTHER32",
@@ -737,22 +1062,20 @@
     "official_description": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -761,8 +1084,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.830215",
-    "last_updated": "2026-02-05T22:48:14.830215",
+    "created_at": "2026-02-06T06:45:16.876472",
+    "last_updated": "2026-02-06T06:45:16.876472",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -784,18 +1107,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
     "description_long": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
@@ -805,7 +1158,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.830208",
+      "timestamp": "2026-02-06T06:45:16.876466",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -859,7 +1212,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2928.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg"
   },
   {
     "halilit_id": "29-MINITAUR",
@@ -879,22 +1269,20 @@
     "official_description": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -903,8 +1291,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.830314",
-    "last_updated": "2026-02-05T22:48:14.830314",
+    "created_at": "2026-02-06T06:45:16.876940",
+    "last_updated": "2026-02-06T06:45:16.876940",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -926,18 +1314,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
     "description_long": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
@@ -947,7 +1365,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.830307",
+      "timestamp": "2026-02-06T06:45:16.876929",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1001,7 +1419,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2928.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg"
   },
   {
     "halilit_id": "29-SUBSEQUENT37",
@@ -1021,22 +1476,20 @@
     "official_description": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1045,8 +1498,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.830563",
-    "last_updated": "2026-02-05T22:48:14.830563",
+    "created_at": "2026-02-06T06:45:16.877175",
+    "last_updated": "2026-02-06T06:45:16.877175",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1068,18 +1521,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
     "description_long": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
@@ -1089,7 +1572,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.830554",
+      "timestamp": "2026-02-06T06:45:16.877167",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1153,7 +1636,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 8367.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg"
   },
   {
     "halilit_id": "29-GRANDMOTHER",
@@ -1173,22 +1693,20 @@
     "official_description": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1197,8 +1715,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.831171",
-    "last_updated": "2026-02-05T22:48:14.831171",
+    "created_at": "2026-02-06T06:45:16.877270",
+    "last_updated": "2026-02-06T06:45:16.877270",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1220,18 +1738,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
     "description_long": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
@@ -1241,7 +1789,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.831160",
+      "timestamp": "2026-02-06T06:45:16.877264",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1295,7 +1843,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 5020.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg"
   },
   {
     "halilit_id": "29-MINMOOGD0406",
@@ -1315,22 +1900,20 @@
     "official_description": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1339,8 +1922,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.831278",
-    "last_updated": "2026-02-05T22:48:14.831278",
+    "created_at": "2026-02-06T06:45:16.877359",
+    "last_updated": "2026-02-06T06:45:16.877360",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1362,18 +1945,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
     "description_long": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
@@ -1383,7 +1996,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.831270",
+      "timestamp": "2026-02-06T06:45:16.877354",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1437,7 +2050,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 25100.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg"
   },
   {
     "halilit_id": "29-DFAM",
@@ -1457,22 +2107,20 @@
     "official_description": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1481,8 +2129,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.831374",
-    "last_updated": "2026-02-05T22:48:14.831374",
+    "created_at": "2026-02-06T06:45:16.877894",
+    "last_updated": "2026-02-06T06:45:16.877894",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1504,18 +2152,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
     "description_long": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
@@ -1525,7 +2203,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.831368",
+      "timestamp": "2026-02-06T06:45:16.877885",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1579,7 +2257,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 2928.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg"
   },
   {
     "halilit_id": "29-MUSE",
@@ -1599,22 +2314,20 @@
     "official_description": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1623,8 +2336,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.831469",
-    "last_updated": "2026-02-05T22:48:14.831469",
+    "created_at": "2026-02-06T06:45:16.877997",
+    "last_updated": "2026-02-06T06:45:16.877997",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1646,18 +2359,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
     "description_long": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
@@ -1667,7 +2410,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.831462",
+      "timestamp": "2026-02-06T06:45:16.877991",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1721,7 +2464,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 14642.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg"
   },
   {
     "halilit_id": "29-MESSENGER",
@@ -1741,22 +2521,20 @@
     "official_description": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1765,8 +2543,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.831562",
-    "last_updated": "2026-02-05T22:48:14.831562",
+    "created_at": "2026-02-06T06:45:16.878112",
+    "last_updated": "2026-02-06T06:45:16.878112",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1788,18 +2566,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
     "description_long": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
@@ -1809,7 +2617,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.831555",
+      "timestamp": "2026-02-06T06:45:16.878106",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -1863,7 +2671,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 3556.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg"
   },
   {
     "halilit_id": "29-THEREMINI",
@@ -1883,22 +2728,20 @@
     "official_description": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1907,8 +2750,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.832238",
-    "last_updated": "2026-02-05T22:48:14.832238",
+    "created_at": "2026-02-06T06:45:16.878201",
+    "last_updated": "2026-02-06T06:45:16.878201",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -1930,18 +2773,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
     "description_long": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
@@ -1951,7 +2824,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.832227",
+      "timestamp": "2026-02-06T06:45:16.878195",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -2005,7 +2878,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 1882.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg"
   },
   {
     "halilit_id": "29-DSR-CASE",
@@ -2025,22 +2935,20 @@
     "official_description": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2049,8 +2957,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.832344",
-    "last_updated": "2026-02-05T22:48:14.832344",
+    "created_at": "2026-02-06T06:45:16.878289",
+    "last_updated": "2026-02-06T06:45:16.878289",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -2072,18 +2980,48 @@
     },
     "display": {
       "display_role": "cornerstone",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 5,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
     "description_long": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
@@ -2093,7 +3031,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.832337",
+      "timestamp": "2026-02-06T06:45:16.878283",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -2147,7 +3085,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 1673.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg"
   },
   {
     "halilit_id": "29-2TIER-DCOVER",
@@ -2167,22 +3142,20 @@
     "official_description": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2191,8 +3164,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.832440",
-    "last_updated": "2026-02-05T22:48:14.832440",
+    "created_at": "2026-02-06T06:45:16.878919",
+    "last_updated": "2026-02-06T06:45:16.878920",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -2214,18 +3187,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
     "description_long": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
@@ -2235,7 +3238,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.832433",
+      "timestamp": "2026-02-06T06:45:16.878911",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -2289,7 +3292,44 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 209.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg"
   },
   {
     "halilit_id": "29-MSSACCKIT",
@@ -2309,22 +3349,20 @@
     "official_description": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2333,8 +3371,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.832534",
-    "last_updated": "2026-02-05T22:48:14.832535",
+    "created_at": "2026-02-06T06:45:16.879031",
+    "last_updated": "2026-02-06T06:45:16.879031",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Moog Synthesizer",
@@ -2356,18 +3394,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#FF6B6B",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
     "description_long": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
@@ -2377,7 +3445,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.832528",
+      "timestamp": "2026-02-06T06:45:16.879009",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Moog catalog"
     },
@@ -2431,6 +3499,43 @@
     "quality_score": 0.7368421052631579,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": []
+    "validation_warnings": [],
+    "price": 962.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg"
   }
 ]

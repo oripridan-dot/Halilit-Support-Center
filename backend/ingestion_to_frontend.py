@@ -5,14 +5,18 @@ v6.0 Ingestion-to-Frontend Synchronizer
 Converts backend ingestion output to frontend-consumable JSON format.
 Called by conductor after ingestion pipeline completes.
 
+Uses DataNormalizer (orchestrated by Conductor) as the single source of truth
+for all data transformation and field mapping.
+
 Flow:
 1. Read approved products from backend/data/ingestion/products/{brand}/approved_*.json
-2. Extract product data into frontend format
+2. Normalize with DataNormalizer (guarantees proper price/image extraction)
 3. Write to frontend/public/data/{brand}.json
 4. Update index files
 """
 
 from backend.ingestion.data_models import IngestionProductDraft
+from backend.data_normalizer import DataNormalizer
 import os
 import sys
 import json
@@ -46,13 +50,14 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
     """
     Sync approved products from ingestion to frontend format.
 
-    Maps backend schema to IngestionProductDraft (the source of truth for frontend).
+    ⭐ ORCHESTRATED BY CONDUCTOR: Uses DataNormalizer as single source of truth
+    Guarantees proper extraction of prices, images, and official data
 
     Args:
         brand: Brand name (e.g., "Nord")
 
     Returns:
-        (Success boolean, List of frontend products)
+        (Success boolean, List of normalized frontend products)
     """
     try:
         brand_dir = INGESTION_DIR / "products" / brand
@@ -79,108 +84,29 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
         else:
             products = approved_data if isinstance(approved_data, list) else []
 
-        # Convert to FRONTEND SCHEMA (IngestionProductDraft)
-        frontend_products = []
-        for p in products:
-            # Extract main fields
-            halilit_id = p.get("halilit_id") or p.get("id")
-            product_name = p.get("product_name") or p.get(
-                "name", "Unknown Product")
-            brand_name = p.get("brand", "Generic")
+        logger.info(
+            f"  📦 Normalizing {len(products)} products with DataNormalizer...")
 
-            # Extract pricing data
-            pricing = p.get("pricing", {})
-            price_il = pricing.get("price_il") or p.get(
-                "price_il") or p.get("price", 0)
-            price_eilat = pricing.get("price_eilat") or p.get("price_eilat", 0)
+        # ⭐ USE CONDUCTOR-ORCHESTRATED DataNormalizer
+        # This ensures ALL products have properly extracted:
+        # - Prices (price_il, price, currency)
+        # - Images (image_hero, image_thumbnail, image_gallery, official_images)
+        # - Specs & descriptions
+        # - Taxonomy & categorization
+        frontend_products = DataNormalizer.normalize_batch(products, brand)
 
-            # Extract taxonomy
-            taxonomy = p.get("taxonomy", {})
+        # Validate normalized products
+        invalid_count = 0
+        for product in frontend_products:
+            is_valid, errors = DataNormalizer.validate_normalized(product)
+            if not is_valid:
+                invalid_count += 1
+                logger.warning(
+                    f"  ⚠️  Invalid product {product.get('halilit_id')}: {errors}")
 
-            # Extract display data
-            display = p.get("display", {})
-
-            # Properly map to IngestionProductDraft schema
-            fp = {
-                # ===== CORE COMMERCIAL DATA (Halilit) =====
-                "halilit_id": str(halilit_id) if halilit_id else "unknown",
-                "product_name": product_name,
-                "brand": brand_name,
-                "price_il": float(price_il) if price_il else 0,
-                "price_eilat": float(price_eilat) if price_eilat else 0,
-                "halilit_url": p.get("halilit_url", ""),
-
-                # ===== OPTIONAL IDS =====
-                "sku": p.get("sku") or p.get("model_number"),
-                "model_number": p.get("model_number"),
-                "official_name": p.get("official_name"),
-
-                # ===== OFFICIAL SPECS (Brand Source) =====
-                "official_specs": p.get("official_specs") or {},
-                "official_description": p.get("official_description"),
-                "official_images": p.get("official_images") or [],
-                "official_url": p.get("official_url"),
-
-                # ===== REVIEWS & RATINGS =====
-                "reviews": p.get("reviews") or [],
-                "review_synthesis": p.get("review_synthesis"),
-                "average_rating": p.get("average_rating"),
-
-                # ===== WORKFLOW STATUS =====
-                "status": p.get("status", "approved"),
-                "pipeline_phase": p.get("pipeline_phase"),
-                "created_at": p.get("created_at"),
-                "last_updated": p.get("last_updated"),
-
-                # ===== TAXONOMY MAPPING =====
-                "taxonomy": taxonomy or {},
-
-                # ===== PRICING DATA =====
-                "pricing": {
-                    "price_il": float(price_il) if price_il else 0,
-                    "price_eilat": float(price_eilat) if price_eilat else 0,
-                    "price_usd": pricing.get("price_usd"),
-                    "price_eur": pricing.get("price_eur"),
-                    "tier": pricing.get("tier", "entry"),
-                    "eilat_discount_percent": pricing.get("eilat_discount_percent", 0),
-                    "suggested_tier": pricing.get("suggested_tier"),
-                    "price_validity_marker": pricing.get("price_validity_marker"),
-                    "last_price_change": pricing.get("last_price_change"),
-                    "previous_price_il": pricing.get("previous_price_il"),
-                } or None,
-
-                # ===== DISPLAY PROPERTIES =====
-                "display": {
-                    "display_role": display.get("display_role", "entry"),
-                    "hero_image": display.get("hero_image"),
-                    "thumbnail_image": display.get("thumbnail_image"),
-                    "should_highlight": display.get("should_highlight", False),
-                    "display_tier_level": display.get("display_tier_level", 0),
-                    "color_hint": display.get("color_hint"),
-                    "media_assets": display.get("media_assets", []),
-                } or None,
-
-                # ===== SPECIFICATIONS =====
-                "specifications": p.get("specifications") or {},
-                "description_short": p.get("description_short"),
-                "description_long": p.get("description_long"),
-                "feature_list": p.get("feature_list") or [],
-
-                # ===== SOURCE TRACKING =====
-                "sources": p.get("sources") or [],
-                "primary_source": p.get("primary_source"),
-                "lineage": p.get("lineage"),
-                "raw_snapshot": p.get("raw_snapshot"),
-
-                # ===== QUALITY METRICS =====
-                "data_completeness": p.get("data_completeness", 0.5),
-                "quality_score": p.get("quality_score", 0.5),
-                "validation_status": p.get("validation_status", "approved"),
-                "validation_errors": p.get("validation_errors", []),
-                "validation_warnings": p.get("validation_warnings", []),
-            }
-
-            frontend_products.append(fp)
+        if invalid_count > 0:
+            logger.warning(
+                f"  ⚠️  {invalid_count}/{len(frontend_products)} products failed validation")
 
         # Write to frontend
         output_file = FRONTEND_DATA_DIR / f"{brand.lower()}.json"
@@ -190,7 +116,7 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
             json.dump(frontend_products, f, indent=2, ensure_ascii=False)
 
         logger.info(
-            f"  ✓ Synced {len(frontend_products)} products to {output_file.name}")
+            f"  ✅ Synced {len(frontend_products)} normalized products to {output_file.name}")
         return True, frontend_products
 
     except Exception as e:
@@ -266,8 +192,13 @@ def generate_index_metadata(all_products: List[Dict[str, Any]]):
     """
     Generate index.json with accurate brand metadata.
     CRITICAL: Prevents catalogLoader from discovering stale data.
+
+    Schema (from frontend/src/lib/schemas.ts):
+    - total_verified: Count of products with validation_status='APPROVED'
+    - verified_count: Per-brand count of verified products
+    - data_file: Path to brand's JSON file (e.g., "roland.json")
     """
-    logger.info("📇 Generating index.json metadata...")
+    logger.info("📇 Generating index.json metadata (Conductor-Synced)...")
 
     # Group products by brand
     brand_products = {}
@@ -277,8 +208,9 @@ def generate_index_metadata(all_products: List[Dict[str, Any]]):
             brand_products[brand] = []
         brand_products[brand].append(p)
 
-    # Build brand metadata
+    # Build brand metadata with Trinity Swarm verification
     brands = []
+    total_verified = 0
     brand_slugs = {
         "Drumdots": "drumdots",
         "Moog": "moog",
@@ -291,18 +223,31 @@ def generate_index_metadata(all_products: List[Dict[str, Any]]):
 
     for brand_name, products in brand_products.items():
         brand_slug = brand_slugs.get(brand_name, slugify(brand_name))
+        data_file = f"{brand_slug}.json"
+
+        # Count verified products (Trinity Swarm approved via Contextual validation)
+        verified_count = sum(
+            1 for p in products
+            if p.get("validation_status", "").lower() == "approved"
+        )
+        total_verified += verified_count
+
         brands.append({
             "id": brand_slug,
             "name": brand_name,
             "product_count": len(products),
-            "primary_category": products[0].get("taxonomy", {}).get("canonical_category", "Unknown") if products else "Unknown"
+            "verified_count": verified_count,
+            "primary_category": products[0].get("taxonomy", {}).get("canonical_category", "Unknown") if products else "Unknown",
+            "data_file": data_file,  # CRITICAL: Frontend uses this to load brand products
+            "brand_color": products[0].get("display", {}).get("color_hint", "#1e293b") if products else "#1e293b"
         })
 
-    # Create index structure
+    # Create index structure (matches MasterIndexSchema in frontend)
     index_data = {
         "version": "6.0.0",
         "build_timestamp": datetime.now().isoformat(),
         "total_products": len(all_products),
+        "total_verified": total_verified,  # From Trinity Swarm audits
         "brands": sorted(brands, key=lambda x: x["id"])
     }
 
@@ -311,7 +256,11 @@ def generate_index_metadata(all_products: List[Dict[str, Any]]):
         json.dump(index_data, f, indent=2, ensure_ascii=False)
 
     logger.info(
-        f"  ✓ Index generated: {len(brands)} brands, {len(all_products)} products -> index.json")
+        f"  ✓ Index generated: {len(brands)} brands, {len(all_products)} total, {total_verified} verified products")
+    logger.info(
+        f"  ✓ Data sources synced: Commercial (harvest) → Official (enrich) → Contextual (validate)")
+    logger.info(
+        f"  ✓ Index file: {index_file.name}")
 
 
 def sync_all_brands() -> Dict[str, bool]:

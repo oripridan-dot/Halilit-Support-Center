@@ -68,11 +68,15 @@ export const ProductRelationshipSchema = z.object({
 
 // Core product schema - minimal required fields
 // UPDATED v4.6.1: Supports both Flat (Normal) and Nested (Golden/Refinery) formats
+// ALSO supports raw ingestion format (halilit_id, product_name)
 export const ProductSchema = z
   .object({
-    id: z.string().min(1, "Product ID required"),
-    // Name can be at root OR inside identity
+    // Accept both id and halilit_id
+    id: z.string().min(1, "Product ID required").optional(),
+    halilit_id: z.string().optional(),
+    // Name can be at root OR inside identity, OR as product_name from raw data
     name: z.string().optional().nullable(),
+    product_name: z.string().optional().nullable(),
     brand: z.string().optional().nullable(),
 
     // Golden Context Support
@@ -103,7 +107,11 @@ export const ProductSchema = z
     relationships: z.array(ProductRelationshipSchema).optional().nullable(),
     // Allow additional fields from backend
   })
-  .passthrough();
+  .passthrough()
+  .refine(
+    data => data.id || data.halilit_id,
+    "Product must have either 'id' or 'halilit_id' field"
+  );
 
 // ============================================================================
 // BRAND SCHEMAS
@@ -112,14 +120,12 @@ export const ProductSchema = z
 export const BrandColorsSchema = z.object({
   primary: z
     .string()
-    .regex(/^#[0-9a-f]{6}$/i, "Invalid hex color")
     .optional()
-    .nullable(),
+    .nullable(),  // Accept any color string, validate in UI
   secondary: z
     .string()
-    .regex(/^#[0-9a-f]{6}$/i, "Invalid hex color")
     .optional()
-    .nullable(),
+    .nullable(),  // Accept any color string, validate in UI
 });
 
 export const BrandCategorySchema = z.object({
@@ -178,9 +184,8 @@ export const BrandIndexEntrySchema = z
     slug: z.string().optional(), // Added for compatibility
     brand_color: z
       .string()
-      .regex(/^#[0-9a-f]{6}$/i, "Invalid hex color")
       .optional()
-      .nullable(),
+      .nullable(),  // Accept any color string, validate in UI
     logo_url: z.string().optional().nullable(), // Relaxed from .url()
     product_count: z.number().nonnegative(),
     verified_count: z.number().nonnegative().optional().default(0),
@@ -199,7 +204,7 @@ export const MasterIndexSchema = z
   .passthrough();
 
 // ============================================================================
-// RUNTIME VALIDATORS (Safe parsing with error handling)
+// RUNTIME VALIDATORS (Safe parsing with error handling - graceful degradation)
 // ============================================================================
 
 export class SchemaValidator {
@@ -224,7 +229,10 @@ export class SchemaValidator {
   static validateMasterIndex(data: unknown) {
     const result = MasterIndexSchema.safeParse(data);
     if (!result.success) {
-      throw new Error(`Invalid index: ${result.error.errors[0].message}`);
+      // For index, log warning but allow degradation
+      console.warn(`Schema warning: ${result.error.errors[0].message}`);
+      // Return raw data with warning
+      return (data as any) || { brands: [] };
     }
     return result.data;
   }

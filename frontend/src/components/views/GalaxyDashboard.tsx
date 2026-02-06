@@ -8,7 +8,6 @@ import {
   Speaker,
   Plug,
   HelpCircle,
-  Layers,
 } from "lucide-react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
@@ -16,6 +15,8 @@ import { CategorySlot } from "./galaxy/CategorySlot";
 import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
 import { getContextBackground } from "../../lib/slotBackgrounds";
 import { useProductCounts } from "../../hooks/useProductCounts";
+import { useGalaxyData } from "../../hooks/useGalaxyData";
+import { getBrandsWithLogos } from "../../lib/brandLogoHelper";
 
 // Icon mapping for sectors
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -49,35 +50,41 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
 });
 
 export const GalaxyDashboard = () => {
-  const { goToSpectrum, showTierBar } = useNavigationStore();
+  const { goToSpectrum } = useNavigationStore();
   const { counts, loading } = useProductCounts();
+  const { catalog, loading: catalogLoading } = useGalaxyData();
 
   // Directly handle navigation to a subcategory
   const onSlotClick = (mainId: string, subId: string) => {
     goToSpectrum(mainId, subId, []);
   };
 
+  // Helper to get brands for a specific spectrum ID
+  const getBrandsForSpectrum = (spectrumId: string) => {
+    if (!catalog?.products) return [];
+    return getBrandsWithLogos(catalog.products, spectrumId, 4);
+  };
+
   return (
     <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
       {/* ------------------------------------------------------------------
-          HEADER: ULTRA COMPACT WITH TIER BAR BUTTON
+          HEADER: GALAXIES
          ------------------------------------------------------------------ */}
-      <header className="h-14 flex items-center justify-between px-6 bg-gradient-to-b from-transparent to-black/20 z-10 border-b border-zinc-900/50 shrink-0">
-        <div className="flex items-center gap-3">
-          <LayoutGrid className="w-6 h-6 text-zinc-500" />
-          <h1 className="text-zinc-100 font-bold tracking-tight text-3xl">
+      <header className="h-16 flex items-center justify-between px-8 bg-gradient-to-b from-[#0f0f0f] via-[#0a0a0a] to-black/50 z-10 border-b border-zinc-800/40 shrink-0 shadow-lg">
+        <div className="flex items-center gap-4">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-lg ring-1 ring-blue-400/30">
+            <LayoutGrid className="w-5 h-5 text-white" strokeWidth={2.5} />
+          </div>
+          <h1
+            className="text-zinc-50 font-bold tracking-[0.06em] text-3xl drop-shadow-lg"
+            style={{
+              textShadow:
+                "0 2px 8px rgba(0,0,0,0.6), 0 0 12px rgba(59, 130, 246, 0.2)",
+            }}
+          >
             GALAXIES
           </h1>
         </div>
-
-        {/* Tier Bar Button */}
-        <button
-          onClick={showTierBar}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 text-blue-400 hover:text-blue-300 border border-blue-500/30 hover:border-blue-500 transition-all duration-200"
-        >
-          <Layers className="w-4 h-4" />
-          <span className="text-sm font-semibold">Tier Bar</span>
-        </button>
       </header>
 
       {/* ------------------------------------------------------------------
@@ -91,11 +98,14 @@ export const GalaxyDashboard = () => {
               key={sector.id}
               className="bg-[#0a0a0a] rounded-xl border border-zinc-800/60 overflow-hidden flex flex-col shadow-2xl min-h-0"
             >
-              {/* Sector Header */}
-              <div className="px-4 py-3 border-b border-zinc-800/60 bg-[#0f0f0f] flex items-center gap-3 shrink-0 h-12">
+              {/* Sector Header - Enhanced styling */}
+              <div className="px-4 py-3 border-b border-zinc-700/40 bg-gradient-to-r from-[#0f0f0f] to-[#0a0a0a] flex items-center gap-3 shrink-0 h-12 shadow-lg">
                 <div
-                  className="w-6 h-6 rounded flex items-center justify-center text-xs font-bold shadow-lg shrink-0"
-                  style={{ backgroundColor: sector.color }}
+                  className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold shadow-lg shrink-0 ring-1 ring-white/10"
+                  style={{
+                    backgroundColor: sector.color,
+                    boxShadow: `0 0 12px ${sector.color}40`,
+                  }}
                 >
                   {/* Render Icon component */}
                   {React.createElement(sector.iconComponent, {
@@ -103,7 +113,12 @@ export const GalaxyDashboard = () => {
                     color: "#fff",
                   })}
                 </div>
-                <h2 className="font-bold uppercase tracking-tight text-zinc-100 text-sm truncate">
+                <h2
+                  className="font-bold uppercase tracking-[0.04em] text-zinc-50 text-sm truncate transition-all duration-300"
+                  style={{
+                    textShadow: `0 2px 4px rgba(0,0,0,0.5), 0 0 8px ${sector.color}30`,
+                  }}
+                >
                   {sector.name}
                 </h2>
               </div>
@@ -121,6 +136,7 @@ export const GalaxyDashboard = () => {
                       icon={sector.iconComponent}
                       mainColor={sector.color}
                       count={loading ? undefined : counts[sub.id] || 0}
+                      brands={getBrandsForSpectrum(sub.id)}
                       onClick={() => onSlotClick(sector.id, sub.id)}
                     />
                   );

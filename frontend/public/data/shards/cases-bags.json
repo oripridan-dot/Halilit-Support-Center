@@ -17,22 +17,20 @@
     "official_description": "תיק גב רב תכליתי לציוד מוזיקלי מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -41,8 +39,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.345672",
-    "last_updated": "2026-02-05T22:48:14.345673",
+    "created_at": "2026-02-06T06:45:16.463097",
+    "last_updated": "2026-02-06T06:45:16.463097",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -64,18 +62,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק גב רב תכליתי לציוד מוזיקלי מבית Roland",
     "description_long": "תיק גב רב תכליתי לציוד מוזיקלי מבית Roland",
@@ -85,7 +113,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.345653",
+      "timestamp": "2026-02-06T06:45:16.463082",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -141,7 +169,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 541.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9925959/original/ecc02dfbceb1790a9e8c6cb8f4a69282.jpg"
   },
   {
     "halilit_id": "87-CB404",
@@ -161,22 +226,20 @@
     "official_description": "תיק נשיאה ייעודי לסמפלר SP-404MK2 מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -185,8 +248,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.345929",
-    "last_updated": "2026-02-05T22:48:14.345929",
+    "created_at": "2026-02-06T06:45:16.463325",
+    "last_updated": "2026-02-06T06:45:16.463325",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -208,18 +271,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה ייעודי לסמפלר SP-404MK2 מבית Roland",
     "description_long": "תיק נשיאה ייעודי לסמפלר SP-404MK2 מבית Roland",
@@ -229,7 +322,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.345923",
+      "timestamp": "2026-02-06T06:45:16.463319",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -285,7 +378,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 347.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13211258/original/3b283e63ac82a4c7bc4b77d6354e0b13.jpg"
   },
   {
     "halilit_id": "87-CBB37",
@@ -305,22 +435,20 @@
     "official_description": "תיק נשיאה מרופד בצבע שחור ייעודי ל-GAIA2 ו-JUPITER-Xm מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -329,8 +457,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.416448",
-    "last_updated": "2026-02-05T22:48:14.416448",
+    "created_at": "2026-02-06T06:45:16.513701",
+    "last_updated": "2026-02-06T06:45:16.513701",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -352,18 +480,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה מרופד בצבע שחור ייעודי ל-GAIA2 ו-JUPITER-Xm מבית Roland",
     "description_long": "תיק נשיאה מרופד בצבע שחור ייעודי ל-GAIA2 ו-JUPITER-Xm מבית Roland",
@@ -373,7 +531,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.416442",
+      "timestamp": "2026-02-06T06:45:16.513685",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -429,7 +587,251 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 504.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13640776/original/a505b4f678dc58274bb3fc97389dfcd4.jpg"
+  },
+  {
+    "halilit_id": "87-CBGO61KP",
+    "product_name": "Roland CB-GO61KP Keyboard Bag",
+    "brand": "Roland",
+    "price_il": 372.0,
+    "price_eilat": 317.95,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "תיק נשיאה למקלדות GO-Piano/Keys-61 של Roland",
+    "official_images": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T06:45:16.514645",
+    "last_updated": "2026-02-06T06:45:16.514645",
+    "taxonomy": {
+      "canonical_category": "Cases & Bags",
+      "canonical_subcategory": "Case",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 372.0,
+      "price_eilat": 317.95,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 14.529569892473122,
+      "suggested_tier": "entry",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "#00A4EF",
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "תיק נשיאה למקלדות GO-Piano/Keys-61 של Roland",
+    "description_long": "תיק נשיאה למקלדות GO-Piano/Keys-61 של Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T06:45:16.514639",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "4640105",
+      "sku": "87-CBGO61KP",
+      "brand_id": "roland",
+      "name": "Roland CB-GO61KP Keyboard Bag",
+      "slug": "roland-cb-go61kp-keyboard-bag",
+      "description_short": "תיק נשיאה למקלדות GO-Piano/Keys-61 של Roland",
+      "description_full": "תיק נשיאה למקלדות GO-Piano/Keys-61 של Roland",
+      "price": 372.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": "Roland CB-GO61KP Keyboard Bag"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [],
+    "price": 372.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8805624/original/ca547c05dfa045fd9026a26b8e63e54e.jpg"
   },
   {
     "halilit_id": "87-CBB61",
@@ -449,22 +851,20 @@
     "official_description": "תיק נשיאה 61 קלידים מסדרת ה-Black של Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -473,8 +873,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.417761",
-    "last_updated": "2026-02-05T22:48:14.417762",
+    "created_at": "2026-02-06T06:45:16.515037",
+    "last_updated": "2026-02-06T06:45:16.515037",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -496,18 +896,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה 61 קלידים מסדרת ה-Black של Roland",
     "description_long": "תיק נשיאה 61 קלידים מסדרת ה-Black של Roland",
@@ -517,7 +947,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.417756",
+      "timestamp": "2026-02-06T06:45:16.515031",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -573,7 +1003,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 559.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3369421/original/5c4da55ee7131d54c38b25adf55cc305.jpg"
   },
   {
     "halilit_id": "87-CBB76",
@@ -593,22 +1060,20 @@
     "official_description": "תיק נשיאה 76 קלידים מסדרת ה-Black של Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -617,8 +1082,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.430807",
-    "last_updated": "2026-02-05T22:48:14.430807",
+    "created_at": "2026-02-06T06:45:16.526768",
+    "last_updated": "2026-02-06T06:45:16.526768",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -640,18 +1105,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה 76 קלידים מסדרת ה-Black של Roland",
     "description_long": "תיק נשיאה 76 קלידים מסדרת ה-Black של Roland",
@@ -661,7 +1156,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.430800",
+      "timestamp": "2026-02-06T06:45:16.526754",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -717,7 +1212,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 670.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346454/original/93a5d43ad74931d9afb6a7711dd4404c.jpg"
   },
   {
     "halilit_id": "87-CBB88V2",
@@ -737,22 +1269,20 @@
     "official_description": "תיק נשיאה רב תכליתי למקלדות 88 קלידים מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -761,8 +1291,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.431613",
-    "last_updated": "2026-02-05T22:48:14.431614",
+    "created_at": "2026-02-06T06:45:16.527577",
+    "last_updated": "2026-02-06T06:45:16.527577",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -784,18 +1314,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה רב תכליתי למקלדות 88 קלידים מבית Roland",
     "description_long": "תיק נשיאה רב תכליתי למקלדות 88 קלידים מבית Roland",
@@ -805,7 +1365,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.431608",
+      "timestamp": "2026-02-06T06:45:16.527570",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -861,7 +1421,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 732.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12940080/original/0bb1d3a95d413d9bd3db476edea1a7b4.jpg"
   },
   {
     "halilit_id": "87-CBB76S",
@@ -881,22 +1478,20 @@
     "official_description": "תיק נשיאה למקלדת דקה בעלת 76 קלידים מסדרת Black של Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -905,8 +1500,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.444983",
-    "last_updated": "2026-02-05T22:48:14.444983",
+    "created_at": "2026-02-06T06:45:16.543042",
+    "last_updated": "2026-02-06T06:45:16.543043",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -928,18 +1523,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה למקלדת דקה בעלת 76 קלידים מסדרת Black של Roland",
     "description_long": "תיק נשיאה למקלדת דקה בעלת 76 קלידים מסדרת Black של Roland",
@@ -949,7 +1574,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.444962",
+      "timestamp": "2026-02-06T06:45:16.543006",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1005,7 +1630,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 670.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13346738/original/4d1d4a4f69b03a7d1076ed10105934a4.jpg"
   },
   {
     "halilit_id": "87-CBJUXM",
@@ -1025,22 +1687,20 @@
     "official_description": "תיק נשיאה ייעודי לסינתיסייזרJUPITER-XM מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1049,8 +1709,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.493282",
-    "last_updated": "2026-02-05T22:48:14.493282",
+    "created_at": "2026-02-06T06:45:16.591391",
+    "last_updated": "2026-02-06T06:45:16.591391",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1072,18 +1732,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה ייעודי לסינתיסייזרJUPITER-XM מבית Roland",
     "description_long": "תיק נשיאה ייעודי לסינתיסייזרJUPITER-XM מבית Roland",
@@ -1093,7 +1783,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.493273",
+      "timestamp": "2026-02-06T06:45:16.591385",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1149,7 +1839,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 381.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8218281/original/0c3eb1f6dc62d1495348d2a40738cc2c.jpg"
   },
   {
     "halilit_id": "87-CBBAX",
@@ -1169,22 +1896,20 @@
     "official_description": "תיק נשיאה איכותי ומרופד בצבע שחור עם רצועות נשיאה על הגב למקלדת AX-Edge Keytar מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1193,8 +1918,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.493390",
-    "last_updated": "2026-02-05T22:48:14.493390",
+    "created_at": "2026-02-06T06:45:16.591484",
+    "last_updated": "2026-02-06T06:45:16.591484",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1216,18 +1941,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה איכותי ומרופד בצבע שחור עם רצועות נשיאה על הגב למקלדת AX-Edge Keytar מבית Roland",
     "description_long": "תיק נשיאה איכותי ומרופד בצבע שחור עם רצועות נשיאה על הגב למקלדת AX-Edge Keytar מבית Roland",
@@ -1237,7 +1992,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.493384",
+      "timestamp": "2026-02-06T06:45:16.591479",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1293,7 +2048,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 768.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5261058/original/b0f20e987415efc371ea6f09f4f4dd2e.jpg"
   },
   {
     "halilit_id": "87-CBMBC1",
@@ -1313,22 +2105,20 @@
     "official_description": "תיק נשיאה ל-Mobile Cube עם רצועה נוחה מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1337,8 +2127,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.500138",
-    "last_updated": "2026-02-05T22:48:14.500138",
+    "created_at": "2026-02-06T06:45:16.598861",
+    "last_updated": "2026-02-06T06:45:16.598861",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1360,18 +2150,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה ל-Mobile Cube עם רצועה נוחה מבית Roland",
     "description_long": "תיק נשיאה ל-Mobile Cube עם רצועה נוחה מבית Roland",
@@ -1381,7 +2201,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.500132",
+      "timestamp": "2026-02-06T06:45:16.598855",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1437,7 +2257,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 184.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/8607510/original/ba779273cd2d57ef26b2fcad65670fb8.jpg"
   },
   {
     "halilit_id": "87-CBCS2",
@@ -1457,22 +2314,20 @@
     "official_description": "תיק נשיאה ייעודי ל-CUBEStreet EX מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1481,8 +2336,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.507453",
-    "last_updated": "2026-02-05T22:48:14.507454",
+    "created_at": "2026-02-06T06:45:16.605229",
+    "last_updated": "2026-02-06T06:45:16.605229",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1504,18 +2359,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה ייעודי ל-CUBEStreet EX מבית Roland",
     "description_long": "תיק נשיאה ייעודי ל-CUBEStreet EX מבית Roland",
@@ -1525,7 +2410,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.507448",
+      "timestamp": "2026-02-06T06:45:16.605223",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1581,7 +2466,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 385.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557587/original/47c8fb0857efc1d71f0c1e1e8c70984e.jpg"
   },
   {
     "halilit_id": "87-CB76RL",
@@ -1601,22 +2523,20 @@
     "official_description": "תיק נשיאה איכותי למקלדות 76 קלידים מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1625,8 +2545,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.511589",
-    "last_updated": "2026-02-05T22:48:14.511589",
+    "created_at": "2026-02-06T06:45:16.606579",
+    "last_updated": "2026-02-06T06:45:16.606579",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1648,18 +2568,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה איכותי למקלדות 76 קלידים מבית Roland",
     "description_long": "תיק נשיאה איכותי למקלדות 76 קלידים מבית Roland",
@@ -1669,7 +2619,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.511580",
+      "timestamp": "2026-02-06T06:45:16.606574",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1725,7 +2675,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 438.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560567/original/aa0c495b6cdf7a7dcf5fc2c976c6d36b.jpg"
   },
   {
     "halilit_id": "87-CBBDJ202",
@@ -1745,22 +2732,20 @@
     "official_description": "תיק נשיאה איכותי ומרופד לקונטרולר DJ-202 מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1769,8 +2754,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.517199",
-    "last_updated": "2026-02-05T22:48:14.517199",
+    "created_at": "2026-02-06T06:45:16.611763",
+    "last_updated": "2026-02-06T06:45:16.611763",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1792,18 +2777,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה איכותי ומרופד לקונטרולר DJ-202 מבית Roland",
     "description_long": "תיק נשיאה איכותי ומרופד לקונטרולר DJ-202 מבית Roland",
@@ -1813,7 +2828,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.517191",
+      "timestamp": "2026-02-06T06:45:16.611755",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -1869,7 +2884,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 222.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952932/original/b83f11f8b890fc6cd6b6505c02c919f4.jpg"
   },
   {
     "halilit_id": "87-CBBHPD20",
@@ -1889,22 +2941,20 @@
     "official_description": "תיק נשיאה איכותי ומרופד למכונת תופיםHPD-20 מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -1913,8 +2963,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.520544",
-    "last_updated": "2026-02-05T22:48:14.520544",
+    "created_at": "2026-02-06T06:45:16.615415",
+    "last_updated": "2026-02-06T06:45:16.615416",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -1936,18 +2986,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה איכותי ומרופד למכונת תופיםHPD-20 מבית Roland",
     "description_long": "תיק נשיאה איכותי ומרופד למכונת תופיםHPD-20 מבית Roland",
@@ -1957,7 +3037,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.520534",
+      "timestamp": "2026-02-06T06:45:16.615407",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2013,7 +3093,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 359.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952956/original/de3901cd09a076c5903ce4221173e7da.jpg"
   },
   {
     "halilit_id": "87-CBBRB1",
@@ -2033,22 +3150,20 @@
     "official_description": "תיק נשיאה למודול יחיד מסדרת Roland Boutique",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2057,8 +3172,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.521375",
-    "last_updated": "2026-02-05T22:48:14.521376",
+    "created_at": "2026-02-06T06:45:16.615823",
+    "last_updated": "2026-02-06T06:45:16.615823",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2080,18 +3195,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה למודול יחיד מסדרת Roland Boutique",
     "description_long": "תיק נשיאה למודול יחיד מסדרת Roland Boutique",
@@ -2101,7 +3246,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.521367",
+      "timestamp": "2026-02-06T06:45:16.615815",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2157,7 +3302,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 127.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2951992/original/a3a1a867d86f220e7a34d761d8669a4e.jpg"
   },
   {
     "halilit_id": "87-CBBRB3",
@@ -2177,22 +3359,20 @@
     "official_description": "תיק נשיאה לשלושה מודולים ומקלדת מסדרת Roland Boutique",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2201,8 +3381,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.525841",
-    "last_updated": "2026-02-05T22:48:14.525841",
+    "created_at": "2026-02-06T06:45:16.620142",
+    "last_updated": "2026-02-06T06:45:16.620142",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2224,18 +3404,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה לשלושה מודולים ומקלדת מסדרת Roland Boutique",
     "description_long": "תיק נשיאה לשלושה מודולים ומקלדת מסדרת Roland Boutique",
@@ -2245,7 +3455,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.525834",
+      "timestamp": "2026-02-06T06:45:16.620137",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2301,7 +3511,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 304.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952019/original/142bdf17d79a8e0c1d2fc8e6685ac23c.jpg"
   },
   {
     "halilit_id": "87-CBHPD",
@@ -2321,22 +3568,20 @@
     "official_description": "תיק נשיאה איכותי ומרופד ל-HPD-20 ו-SPD-SX/SPD-SXPROמבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2345,8 +3590,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.547293",
-    "last_updated": "2026-02-05T22:48:14.547293",
+    "created_at": "2026-02-06T06:45:16.640806",
+    "last_updated": "2026-02-06T06:45:16.640806",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2368,18 +3613,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה איכותי ומרופד ל-HPD-20 ו-SPD-SX/SPD-SXPROמבית Roland",
     "description_long": "תיק נשיאה איכותי ומרופד ל-HPD-20 ו-SPD-SX/SPD-SXPROמבית Roland",
@@ -2389,7 +3664,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.547287",
+      "timestamp": "2026-02-06T06:45:16.640794",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2445,7 +3720,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 470.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12023329/original/1d2ad8530a525f0c4d8bea0537318fb9.jpg"
   },
   {
     "halilit_id": "87-CBBTRMIX",
@@ -2465,22 +3777,20 @@
     "official_description": "תיק נשיאה מרופד בצבע שחור ייעודי למכונות תופים TR-8S/TR-8 ול-Mix Preformer מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2489,8 +3799,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.548409",
-    "last_updated": "2026-02-05T22:48:14.548409",
+    "created_at": "2026-02-06T06:45:16.643389",
+    "last_updated": "2026-02-06T06:45:16.643389",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2512,18 +3822,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה מרופד בצבע שחור ייעודי למכונות תופים TR-8S/TR-8 ול-Mix Preformer מבית Roland",
     "description_long": "תיק נשיאה מרופד בצבע שחור ייעודי למכונות תופים TR-8S/TR-8 ול-Mix Preformer מבית Roland",
@@ -2533,7 +3873,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.548403",
+      "timestamp": "2026-02-06T06:45:16.643374",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2589,7 +3929,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 379.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/4465635/original/5a9d251987e6a8852ea33ccbfcd3541c.jpg"
   },
   {
     "halilit_id": "87-CBBOCT",
@@ -2609,22 +3986,20 @@
     "official_description": "תיק נשיאה מרופד בצבע שחור ייעודי למכונות תופים OctapadSPD-30 מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2633,8 +4008,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.558374",
-    "last_updated": "2026-02-05T22:48:14.558374",
+    "created_at": "2026-02-06T06:45:16.649510",
+    "last_updated": "2026-02-06T06:45:16.649510",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2656,18 +4031,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה מרופד בצבע שחור ייעודי למכונות תופים OctapadSPD-30 מבית Roland",
     "description_long": "תיק נשיאה מרופד בצבע שחור ייעודי למכונות תופים OctapadSPD-30 מבית Roland",
@@ -2677,7 +4082,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.558366",
+      "timestamp": "2026-02-06T06:45:16.649501",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2733,7 +4138,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 431.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2952751/original/9ba566138abe6a5d0c7058e008bd0701.jpg"
   },
   {
     "halilit_id": "87-CBB88S",
@@ -2753,22 +4195,20 @@
     "official_description": "תיק נשיאה איכותי במיוחד, עם ריפוד פנימי עבה למגוון מקלדות וסינתסייזרים 88 קלידים מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2777,8 +4217,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.565346",
-    "last_updated": "2026-02-05T22:48:14.565346",
+    "created_at": "2026-02-06T06:45:16.655430",
+    "last_updated": "2026-02-06T06:45:16.655430",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2800,18 +4240,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה איכותי במיוחד, עם ריפוד פנימי עבה למגוון מקלדות וסינתסייזרים 88 קלידים מבית Roland",
     "description_long": "תיק נשיאה איכותי במיוחד, עם ריפוד פנימי עבה למגוון מקלדות וסינתסייזרים 88 קלידים מבית Roland",
@@ -2821,7 +4291,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.565338",
+      "timestamp": "2026-02-06T06:45:16.655425",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -2877,7 +4347,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 1085.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17234945/original/e64194c2ec2a0bcd3db0102d15ef36ec.jpg"
   },
   {
     "halilit_id": "87-CBJDXI",
@@ -2897,22 +4404,20 @@
     "official_description": "תיק נשיאה ייעודי לסינטיסייזר JD-Xi מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -2921,8 +4426,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.566548",
-    "last_updated": "2026-02-05T22:48:14.566548",
+    "created_at": "2026-02-06T06:45:16.656612",
+    "last_updated": "2026-02-06T06:45:16.656612",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -2944,18 +4449,48 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה ייעודי לסינטיסייזר JD-Xi מבית Roland",
     "description_long": "תיק נשיאה ייעודי לסינטיסייזר JD-Xi מבית Roland",
@@ -2965,7 +4500,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.566540",
+      "timestamp": "2026-02-06T06:45:16.656607",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -3021,7 +4556,44 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 347.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/700343/original/5d5418806f9a810894d45d2ce9f8fbd2.jpg"
   },
   {
     "halilit_id": "87-CBTDP",
@@ -3041,22 +4613,20 @@
     "official_description": "תיק נשיאה ייחודי למערכת TD4KP מבית Roland",
     "official_images": [
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "hero",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 100
+        "priority": 100,
+        "source": "official"
       },
       {
-        "type": "image",
         "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+        "alt": null,
+        "type": "image",
         "display_purpose": "gallery",
-        "resolution": null,
-        "source": "official",
-        "alt_text": null,
-        "priority": 50
+        "priority": 50,
+        "source": "official"
       }
     ],
     "official_url": null,
@@ -3065,8 +4635,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-05T22:48:14.566735",
-    "last_updated": "2026-02-05T22:48:14.566735",
+    "created_at": "2026-02-06T06:45:16.656798",
+    "last_updated": "2026-02-06T06:45:16.656798",
     "taxonomy": {
       "canonical_category": "Cases & Bags",
       "canonical_subcategory": "Case",
@@ -3088,18 +4658,48 @@
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      "thumbnail_image": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
       "should_highlight": false,
       "display_tier_level": 2,
       "color_hint": "#00A4EF",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        }
+      ]
     },
     "specifications": {
-      "specs_dict": {},
-      "specs_source": "commercial",
-      "specs_completeness": 0.5,
-      "specs_markdown": null
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
     },
     "description_short": "תיק נשיאה ייחודי למערכת TD4KP מבית Roland",
     "description_long": "תיק נשיאה ייחודי למערכת TD4KP מבית Roland",
@@ -3109,7 +4709,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-05T22:48:14.566729",
+      "timestamp": "2026-02-06T06:45:16.656793",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
@@ -3165,6 +4765,43 @@
     "validation_errors": [],
     "validation_warnings": [
       "⚠ Category may not be standard: Cases & Bags > Case"
-    ]
+    ],
+    "price": 562.0,
+    "currency": "ILS",
+    "image_hero": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "hero",
+      "priority": 100,
+      "source": "official"
+    },
+    "image_thumbnail": {
+      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+      "alt": null,
+      "type": "image",
+      "display_purpose": "gallery",
+      "priority": 50,
+      "source": "official"
+    },
+    "image_gallery": [
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
+        "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      }
+    ],
+    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1453583/original/4c8226c9bae5ef86dd619d2e0b07a619.jpg"
   }
 ]

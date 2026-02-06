@@ -1,0 +1,2441 @@
+{
+  "brand": "Moog",
+  "timestamp": "20260206_064348",
+  "count": 17,
+  "products": [
+    {
+      "halilit_id": "29-MAVIS",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis",
+      "brand": "Moog",
+      "price_il": 1255.0,
+      "price_eilat": 1072.65,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.509949",
+      "last_updated": "2026-02-06T06:43:48.509950",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 1255.0,
+        "price_eilat": 1072.65,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "mid",
+        "eilat_discount_percent": 14.529880478087643,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 2,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.509930",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8662023",
+        "sku": "29-MAVIS",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-mavis",
+        "description_short": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e2\u05e8\u05db\u05d4 \u05dc\u05d1\u05e0\u05d9\u05d9\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05ea\u05e4\u05e2\u05d5\u05dc \u05e2\u05e6\u05de\u05d9 \u05d5\u05e2\u05dd Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 1255.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Mavis"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-SUBHARMONICON",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon",
+      "brand": "Moog",
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.510445",
+      "last_updated": "2026-02-06T06:43:48.510445",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 2502.56,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530054644808747,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.510431",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8670731",
+        "sku": "29-SUBHARMONICON",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9-moog-subharmonicon",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d5\u05d5\u05e8\u05e1\u05d8\u05d9\u05dc\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d5\u05d6 \u05e1\u05d0\u05d1\u05d4\u05e8\u05de\u05d5\u05e0\u05d9 \u05d5\u05e4\u05d5\u05dc\u05d9\u05e8\u05d9\u05ea\u05de\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 2928.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subharmonicon"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 4.0,
+          "count": 2
+        },
+        "contextual": {
+          "pros": [
+            "Excellent transient response and clarity",
+            "Wide sweet spot for mixing",
+            "Accurate low-end reproduction"
+          ],
+          "cons": [
+            "Rear bass port requires wall distance",
+            "Higher price point in category"
+          ],
+          "expert_tips": [
+            "Use room correction software for best results",
+            "Position at ear height on isolation pads"
+          ]
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-SPECTRAVOX",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox",
+      "brand": "Moog",
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.510563",
+      "last_updated": "2026-02-06T06:43:48.510563",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 2502.56,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530054644808747,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.510556",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8670732",
+        "sku": "29-SPECTRAVOX",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9-moog-spectravox",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05de\u05e6\u05d1 Vocoder \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 2928.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Spectravox"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MATRIARCH",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch",
+      "brand": "Moog",
+      "price_il": 9203.0,
+      "price_eilat": 7865.81,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.510990",
+      "last_updated": "2026-02-06T06:43:48.510990",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 9203.0,
+        "price_eilat": 7865.81,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.529935890470494,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.510979",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8661547",
+        "sku": "29-MATRIARCH",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-matriarch",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05de\u05d5\u05d1\u05e0\u05d4 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 9203.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Matriarch"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-LABYRINTH",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth",
+      "brand": "Moog",
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.511115",
+      "last_updated": "2026-02-06T06:43:48.511115",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 2502.56,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530054644808747,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.511108",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8637794",
+        "sku": "29-LABYRINTH",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-labyrinth",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e0\u05d2\u05d9\u05e0\u05d5\u05ea \u05d5\u05de\u05e7\u05e6\u05d1\u05d9\u05dd \u05de\u05e8\u05d4\u05d9\u05d1\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 2928.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Labyrinth"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MOTHER32",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32",
+      "brand": "Moog",
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.511208",
+      "last_updated": "2026-02-06T06:43:48.511209",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 2502.56,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530054644808747,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.511202",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8669288",
+        "sku": "29-MOTHER32",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9-moog-mother-32",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 2928.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Mother-32"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MINITAUR",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur",
+      "brand": "Moog",
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.511672",
+      "last_updated": "2026-02-06T06:43:48.511672",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 2502.56,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530054644808747,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.511661",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8663409",
+        "sku": "29-MINITAUR",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d1\u05e1-moog-minitaur",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e7\u05d5\u05e4\u05de\u05e7\u05d8\u05d9 \u05d5\u05d0\u05d9\u05db\u05d5\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 2928.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 Moog Minitaur"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-SUBSEQUENT37",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37",
+      "brand": "Moog",
+      "price_il": 8367.0,
+      "price_eilat": 7151.28,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.511893",
+      "last_updated": "2026-02-06T06:43:48.511893",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 8367.0,
+        "price_eilat": 7151.28,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.52993904625314,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.511885",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8674471",
+        "sku": "29-SUBSEQUENT37",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d1\u05e1-\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9-moog-subsequent-37",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05e8\u05e4\u05d5\u05e0\u05d9 \u05d1\u05e2\u05dc 2 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 8367.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d1\u05e1 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Subsequent 37"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 4.0,
+          "count": 2
+        },
+        "contextual": {
+          "pros": [
+            "Excellent transient response and clarity",
+            "Wide sweet spot for mixing",
+            "Accurate low-end reproduction"
+          ],
+          "cons": [
+            "Rear bass port requires wall distance",
+            "Higher price point in category"
+          ],
+          "expert_tips": [
+            "Use room correction software for best results",
+            "Position at ear height on isolation pads"
+          ]
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-GRANDMOTHER",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother",
+      "brand": "Moog",
+      "price_il": 5020.0,
+      "price_eilat": 4290.6,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.511988",
+      "last_updated": "2026-02-06T06:43:48.511988",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5020.0,
+        "price_eilat": 4290.6,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.529880478087643,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.511982",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8636862",
+        "sku": "29-GRANDMOTHER",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-grandmother",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05e2\u05dd \u05d0\u05e8\u05e4\u05d2\u2019\u05d9\u05d0\u05d8\u05d5\u05e8, \u05e1\u05d9\u05e7\u05d5\u05d5\u05e0\u05e1\u05e8 \u05d5\u05e8\u05d9\u05d1\u05e8\u05d1 \u05e7\u05e4\u05d9\u05e5 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 5020.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Grandmother"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MINMOOGD0406",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D",
+      "brand": "Moog",
+      "price_il": 25100.0,
+      "price_eilat": 21452.99,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.512096",
+      "last_updated": "2026-02-06T06:43:48.512096",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 25100.0,
+        "price_eilat": 21452.99,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.529920318725093,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.512090",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8669133",
+        "sku": "29-MINMOOGD0406",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-minimoog-model-d",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e0\u05d9\u05d9\u05d3 \u05d1\u05d0\u05d9\u05db\u05d5\u05ea \u05e7\u05e6\u05d4 \u05e2\u05dc\u05d9\u05d5\u05df \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 25100.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Minimoog Model D"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-DFAM",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM",
+      "brand": "Moog",
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.512635",
+      "last_updated": "2026-02-06T06:43:48.512636",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 2928.0,
+        "price_eilat": 2502.56,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530054644808747,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.512626",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8636373",
+        "sku": "29-DFAM",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-dfam",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05d7\u05e6\u05d9 \u05de\u05d5\u05d3\u05d5\u05dc\u05e8\u05d9 \u05dc\u05d9\u05e6\u05d9\u05e8\u05ea \u05de\u05e7\u05e6\u05d1\u05d9 \u05ea\u05d5\u05e4\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 2928.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog DFAM"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MUSE",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse",
+      "brand": "Moog",
+      "price_il": 14642.0,
+      "price_eilat": 12514.53,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.512735",
+      "last_updated": "2026-02-06T06:43:48.512735",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 14642.0,
+        "price_eilat": 12514.53,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.52991394618221,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.512728",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8670434",
+        "sku": "29-MUSE",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d0\u05e0\u05dc\u05d5\u05d2\u05d9-moog-muse",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05e4\u05d5\u05dc\u05d9\u05e4\u05d5\u05e0\u05d9 \u05e2\u05d5\u05e6\u05de\u05ea\u05d9 \u05d1\u05de\u05d9\u05d5\u05d7\u05d3 \u05e2\u05dd 8 \u05e7\u05d5\u05dc\u05d5\u05ea \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 14642.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Moog Muse"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MESSENGER",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger",
+      "brand": "Moog",
+      "price_il": 3556.0,
+      "price_eilat": 3039.32,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.512825",
+      "last_updated": "2026-02-06T06:43:48.512826",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 3556.0,
+        "price_eilat": 3039.32,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.529808773903257,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.512819",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8662251",
+        "sku": "29-MESSENGER",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-messenger",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 \u05de\u05d5\u05e0\u05d5\u05e4\u05d5\u05e0\u05d9 \u05e2\u05dd 32 \u05e7\u05dc\u05d9\u05d3\u05d9\u05dd \u05d7\u05e6\u05d9 \u05e9\u05e7\u05d5\u05dc\u05d9\u05dd \u05d1\u05d2\u05d5\u05d3\u05dc \u05de\u05dc\u05d0 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 3556.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog Messenger"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-THEREMINI",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini",
+      "brand": "Moog",
+      "price_il": 1882.0,
+      "price_eilat": 1608.55,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.512914",
+      "last_updated": "2026-02-06T06:43:48.512914",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 1882.0,
+        "price_eilat": 1608.55,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.529755579171097,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.512908",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8676603",
+        "sku": "29-THEREMINI",
+        "brand_id": "moog",
+        "name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini",
+        "slug": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-\u05d8\u05e8\u05de\u05d9\u05df-moog-theremini",
+        "description_short": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df \u05dc\u05e0\u05d2\u05d9\u05e0\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea, \u05dc\u05dc\u05d0 \u05e6\u05d5\u05e8\u05da \u05d1\u05de\u05d2\u05e2 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 1882.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+          "alt": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d8\u05e8\u05de\u05d9\u05df Moog Theremini"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-DSR-CASE",
+      "product_name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case",
+      "brand": "Moog",
+      "price_il": 1673.0,
+      "price_eilat": 1429.91,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.513003",
+      "last_updated": "2026-02-06T06:43:48.513003",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 1673.0,
+        "price_eilat": 1429.91,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.530185295875667,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "cornerstone",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.512996",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8679188",
+        "sku": "29-DSR-CASE",
+        "brand_id": "moog",
+        "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case",
+        "slug": "\u05db\u05d9\u05e1\u05d5\u05d9-\u05dc\u05e0\u05e9\u05d9\u05d0\u05ea-\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-model-d-sr-series-case",
+        "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 model D, \u05e2\u05de\u05d9\u05d3 \u05d1\u05de\u05d9\u05dd \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 1673.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+          "alt": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e0\u05e9\u05d9\u05d0\u05ea \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog model D SR series case"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-2TIER-DCOVER",
+      "product_name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover",
+      "brand": "Moog",
+      "price_il": 209.0,
+      "price_eilat": 178.63,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.513649",
+      "last_updated": "2026-02-06T06:43:48.513649",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 209.0,
+        "price_eilat": 178.63,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 14.531100478468902,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.513638",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8638605",
+        "sku": "29-2TIER-DCOVER",
+        "brand_id": "moog",
+        "name": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover",
+        "slug": "\u05db\u05d9\u05e1\u05d5\u05d9-\u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8-moog-2-tier-dust-cover",
+        "description_short": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05db\u05e4\u05d5\u05dc \u05e2\u05dc Eurorack \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 209.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+          "alt": "\u05db\u05d9\u05e1\u05d5\u05d9 \u05dc\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Moog 2-Tier Dust Cover"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    },
+    {
+      "halilit_id": "29-MSSACCKIT",
+      "product_name": "Moog Sound Studio Accessory Kit",
+      "brand": "Moog",
+      "price_il": 962.0,
+      "price_eilat": 822.22,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T06:43:48.513748",
+      "last_updated": "2026-02-06T06:43:48.513748",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Moog Synthesizer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 962.0,
+        "price_eilat": 822.22,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "mid",
+        "eilat_discount_percent": 14.530145530145527,
+        "suggested_tier": "mid",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 2,
+        "color_hint": "#FF6B6B",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+      "description_long": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T06:43:48.513741",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Moog catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "id": "8679326",
+        "sku": "29-MSSACCKIT",
+        "brand_id": "moog",
+        "name": "Moog Sound Studio Accessory Kit",
+        "slug": "moog-sound-studio-accessory-kit",
+        "description_short": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+        "description_full": "\u05e2\u05e8\u05db\u05ea \u05d0\u05d1\u05d9\u05d6\u05e8\u05d9\u05dd \u05de\u05d2\u05d5\u05d5\u05e0\u05ea \u05dc\u05e1\u05d8\u05d5\u05d3\u05d9\u05d5 \u05de\u05d1\u05d9\u05ea Moog",
+        "price": 962.0,
+        "currency": "ILS",
+        "in_stock": true,
+        "image_hero": {
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+          "alt": "Moog Sound Studio Accessory Kit"
+        },
+        "image_gallery": [
+          "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg"
+        ],
+        "specs": {},
+        "reviews": {
+          "average": 3.5,
+          "count": 0
+        },
+        "contextual": {
+          "pros": [],
+          "cons": [],
+          "expert_tips": []
+        },
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "type": "image",
+            "url": "https://brand.com/hero.jpg",
+            "display_purpose": "hero",
+            "source": "official"
+          }
+        ],
+        "official_url": "https://brand.com/products/stage-88",
+        "pipeline_phase": "enrich"
+      },
+      "data_completeness": 0.7368421052631579,
+      "quality_score": 0.7368421052631579,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": []
+    }
+  ]
+}

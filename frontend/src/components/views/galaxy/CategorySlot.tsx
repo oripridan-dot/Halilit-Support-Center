@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
+interface BrandLogo {
+  brand: string;
+  logoUrl: string;
+}
+
 interface CategorySlotProps {
   id: string;
   name: string;
@@ -9,6 +14,7 @@ interface CategorySlotProps {
   icon?: React.ElementType;
   mainColor?: string;
   count?: number; // Optional product count
+  brands?: BrandLogo[]; // Brand logos for this category
   onClick: () => void;
 }
 
@@ -20,6 +26,7 @@ export const CategorySlot = ({
   icon: Icon,
   mainColor = "#fff",
   count,
+  brands = [],
   onClick,
 }: CategorySlotProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -102,20 +109,64 @@ export const CategorySlot = ({
         />
       </div>
 
-      {/* Label Area - Integrated into the block */}
-      <div className="flex-1 bg-[#080808] flex items-center justify-center border-t border-white/5 shrink-0 px-2 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
-        <span
-          className="text-[10px] font-bold uppercase tracking-widest text-center line-clamp-1 transition-colors duration-300"
-          style={{
-            color: isHovered ? mainColor : "#52525b",
-            textShadow: isHovered ? `0 0 10px ${mainColor}66` : "none",
-          }}
-        >
-          {name}{" "}
+      {/* Label Area - Title + Brand Logos */}
+      <div className="flex-1 bg-gradient-to-t from-[#0a0a0a] to-[#101010] flex flex-col items-center justify-center border-t border-white/10 shrink-0 px-3 py-2 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.5)] gap-2">
+        {/* Title Section - With improved readability */}
+        <div className="flex flex-col items-center gap-1 w-full">
+          <span
+            className="text-[11px] font-bold uppercase tracking-[0.08em] text-center line-clamp-2 transition-all duration-300 leading-tight"
+            style={{
+              color: isHovered ? mainColor : "#e4e4e7",
+              textShadow: isHovered
+                ? `0 0 12px ${mainColor}80, 0 2px 4px rgba(0,0,0,0.8)`
+                : "0 1px 2px rgba(0,0,0,0.5)",
+              letterSpacing: isHovered ? "0.1em" : "0.08em",
+            }}
+          >
+            {name}
+          </span>
+
+          {/* Product Count Badge */}
           {count !== undefined && count > 0 && (
-            <span className="ml-1 opacity-50">({count})</span>
+            <span
+              className="text-[9px] font-semibold px-2 py-0.5 rounded-full transition-all duration-300"
+              style={{
+                backgroundColor: isHovered
+                  ? `${mainColor}20`
+                  : "rgba(255,255,255,0.05)",
+                color: isHovered ? mainColor : "#a1a1a1",
+                border: isHovered
+                  ? `1px solid ${mainColor}50`
+                  : "1px solid rgba(255,255,255,0.1)",
+              }}
+            >
+              {count} {count === 1 ? "item" : "items"}
+            </span>
           )}
-        </span>
+        </div>
+
+        {/* Brand Logos - Bottom panel */}
+        {brands && brands.length > 0 && (
+          <div className="w-full flex flex-wrap items-center justify-center gap-1.5 pt-1 border-t border-white/5">
+            {brands.slice(0, 4).map((brandLogo, idx) => (
+              <div
+                key={`${brandLogo.brand}-${idx}`}
+                className="flex-shrink-0 h-5 flex items-center justify-center bg-white/5 rounded px-1 py-0.5 hover:bg-white/10 transition-colors duration-200 group"
+                title={brandLogo.brand}
+              >
+                <img
+                  src={brandLogo.logoUrl}
+                  alt={brandLogo.brand}
+                  className="h-full object-contain max-w-[30px] opacity-70 group-hover:opacity-90 transition-opacity duration-200"
+                  onError={(e) => {
+                    // Hide broken images
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </motion.div>
   );

@@ -1,0 +1,95 @@
+{
+  "cors": {
+    "enabled": true,
+    "allowed_origins": [
+      "http://localhost:5173",
+      "http://localhost:3000"
+    ],
+    "allowed_methods": [
+      "GET",
+      "POST",
+      "PUT",
+      "DELETE",
+      "OPTIONS"
+    ],
+    "allowed_headers": [
+      "Content-Type",
+      "Authorization"
+    ],
+    "allow_credentials": true,
+    "max_age": 3600
+  },
+  "rate_limiting": {
+    "enabled": true,
+    "global_limit": 1000,
+    "global_window": 3600,
+    "per_ip_limit": 100,
+    "per_ip_window": 60,
+    "per_endpoint_limit": 50,
+    "per_endpoint_window": 60
+  },
+  "authentication": {
+    "enabled": true,
+    "jwt_secret": "change-me-in-production",
+    "jwt_algorithm": "HS256",
+    "jwt_expiry": 3600,
+    "require_auth": false,
+    "protected_endpoints": [
+      "/api/admin/*",
+      "/api/internal/*"
+    ]
+  },
+  "ddos_protection": {
+    "enabled": true,
+    "burst_threshold": 50,
+    "burst_window": 10,
+    "block_duration": 600,
+    "suspicious_threshold": 100,
+    "monitor_request_size": true,
+    "max_request_size": 10485760
+  },
+  "input_validation": {
+    "enabled": true,
+    "sanitize_inputs": true,
+    "max_string_length": 10000,
+    "max_array_length": 1000,
+    "block_sql_injection": true,
+    "block_xss": true
+  },
+  "security_headers": {
+    "enabled": true,
+    "headers": {
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "DENY",
+      "X-XSS-Protection": "1; mode=block",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Content-Security-Policy": "default-src 'self'",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    }
+  },
+  "logging": {
+    "enabled": true,
+    "log_requests": true,
+    "log_level": "INFO",
+    "log_file": "backend/logs/security.log",
+    "max_log_size": 10485760,
+    "backup_count": 5
+  },
+  "whitelist": {
+    "enabled": false,
+    "ips": [],
+    "enforce": false
+  },
+  "blacklist": {
+    "enabled": true,
+    "ips": [],
+    "patterns": []
+  },
+  "threat_detection": {
+    "enabled": true,
+    "monitor_failed_auth": true,
+    "max_failed_attempts": 5,
+    "lockout_duration": 900,
+    "monitor_unusual_patterns": true
+  }
+}

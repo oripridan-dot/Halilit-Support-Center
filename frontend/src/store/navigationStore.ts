@@ -1,14 +1,19 @@
 // frontend/src/store/navigationStore.ts
 /**
- * Navigation Store v4.1 - STANDARDIZED COMMUNICATION PROTOCOL
- * The Central State Machine for the 3-Step User Journey.
+ * Navigation Store v7.0 - UNIFIED DATA PIPELINE
+ * The Central State Machine for the 3-Screen User Journey.
+ * 
+ * Screens:
+ * 1. GALAXY - Category dashboard
+ * 2. SPECTRUM - Product spectrum by brand & price
+ * 3. PRODUCT_PAGE - Full product analysis (renamed from PRODUCT_POP)
  * 
  * Follows unified action patterns and error handling
  */
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_POP' | 'MODEL_SHOWCASE' | 'TIER_BAR';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'MODEL_SHOWCASE';
 
 /**
  * Core navigation state that determines what the user sees
@@ -30,10 +35,9 @@ export interface NavigationState {
   // Actions (Following standardized pattern)
   goToGalaxy: () => void;
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
-  openProductPop: (productId: string) => void;
-  closeProductPop: () => void;
+  openProductPage: (productId: string) => void;
+  closeProductPage: () => void;
   showModelShowcase: () => void;
-  showTierBar: () => void;
 
   // Utility actions
   updateFilters: (filters: string[]) => void;
@@ -70,7 +74,7 @@ export const useNavigationStore = create<NavigationState>((set) => ({
   }),
 
   /**
-   * Navigate to Spectrum (product workbench)
+   * Navigate to Spectrum (product workbench with TierBar)
    * @param tribeId - Main category ID
    * @param subcategoryId - Subcategory ID
    * @param filters - Active filter tags
@@ -91,26 +95,28 @@ export const useNavigationStore = create<NavigationState>((set) => ({
   },
 
   /**
-   * Open product detail modal
-   * @param productId - Product ID to display
+   * Open product analysis page
+   * Renamed from openProductPop to openProductPage
+   * @param productId - Product ID to analyze
    */
-  openProductPop: (productId: string) => {
+  openProductPage: (productId: string) => {
     if (!productId) {
-      console.warn('openProductPop: Invalid product ID');
+      console.warn('openProductPage: Invalid product ID');
       return;
     }
     set({
-      currentView: 'PRODUCT_POP',
+      currentView: 'PRODUCT_PAGE',
       activeProductId: productId,
       lastError: null,
     });
   },
 
   /**
-   * Close product detail modal
+   * Close product analysis page
    * Returns to Spectrum view while keeping state
+   * Renamed from closeProductPop to closeProductPage
    */
-  closeProductPop: () => set({
+  closeProductPage: () => set({
     currentView: 'SPECTRUM',
     activeProductId: null,
     lastError: null,
@@ -121,14 +127,6 @@ export const useNavigationStore = create<NavigationState>((set) => ({
    */
   showModelShowcase: () => set({
     currentView: 'MODEL_SHOWCASE',
-    lastError: null,
-  }),
-
-  /**
-   * Show the Tier Bar (Products by Brand & Price)
-   */
-  showTierBar: () => set({
-    currentView: 'TIER_BAR',
     lastError: null,
   }),
 

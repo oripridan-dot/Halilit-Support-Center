@@ -11,7 +11,7 @@ import type { Product } from "../../types";
  * Shows only: image, name, brand, price, description
  */
 export const ProductPopInterface = ({ productId }: { productId: string }) => {
-  const { closeProductPop } = useNavigationStore();
+  const { closeProductPage } = useNavigationStore();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -47,7 +47,7 @@ export const ProductPopInterface = ({ productId }: { productId: string }) => {
             Product Details
           </h3>
           <button
-            onClick={closeProductPop}
+            onClick={closeProductPage}
             className="p-1 text-zinc-400 hover:text-cyan-400 transition"
           >
             <X size={16} />
