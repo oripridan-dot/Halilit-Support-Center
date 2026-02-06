@@ -11,7 +11,7 @@ from typing import Optional
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="Halilit Support Center API", version="7.0")
+app = FastAPI(title="Halilit Support Center API", version="7.2")
 
 # Add CORS middleware for frontend development
 app.add_middleware(
@@ -59,7 +59,7 @@ async def health_check():
     """Health check endpoint for monitoring"""
     return {
         "status": "healthy",
-        "version": "7.0",
+        "version": "7.2",
         "service": "Halilit Support Center"
     }
 
@@ -108,27 +108,6 @@ async def get_catalog_products(limit: int = 100, offset: int = 0):
         "message": "Catalog data is loaded from frontend/public/data/"
     }
 
-# 1. Mount the frontend build directory
-# Ensure you run 'npm run build' in frontend/ first!
-if os.path.exists(FRONTEND_DIST):
-    app.mount(
-        "/assets", StaticFiles(directory=os.path.join(FRONTEND_DIST, "assets")), name="assets")
-
-    # Mount data if it exists
-    if os.path.exists(FRONTEND_PUBLIC_DATA):
-        app.mount("/data", StaticFiles(directory=FRONTEND_PUBLIC_DATA), name="data")
-
-    @app.get("/{catchall:path}")
-    async def serve_react_app(catchall: str):
-        # Return index.html for any path (SPA routing)
-        # Check if file exists in dist, otherwise serve index.html
-        file_path = os.path.join(FRONTEND_DIST, catchall)
-        if os.path.exists(file_path) and os.path.isfile(file_path):
-            return FileResponse(file_path)
-        return FileResponse(os.path.join(FRONTEND_DIST, "index.html"))
-else:
-    logger.warning(
-        f"WARNING: Frontend build not found at {FRONTEND_DIST}. Run 'npm run build' in frontend/ folder.")
 
 if __name__ == "__main__":
     import uvicorn
