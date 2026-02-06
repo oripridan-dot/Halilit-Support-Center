@@ -1,6 +1,6 @@
-VERSION=6.1.0
-RELEASE_TAG=v6.1.0-spectrum-enhancement
-BUILD_DATE=2026-02-05
+VERSION=6.1.1
+RELEASE_TAG=v6.1.1-patch
+BUILD_DATE=2026-02-06
 BRANCH=v5.4
 STATUS=ingestion-production-ready
 ARCHITECTURE=trinity-orchestration-spectrum

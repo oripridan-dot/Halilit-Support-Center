@@ -387,6 +387,6 @@ All requirements have been met:
 ---
 
 **Last Updated**: February 6, 2026
-**Version**: 6.1.0
+**Version**: 6.1.1
 **Build Status**: ✅ Successful
 **Deploy Status**: Ready ✅

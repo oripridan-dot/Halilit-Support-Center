@@ -1,4 +1,4 @@
-# Halilit Support Center v6.1.0 - Spectrum Enhancement
+# Halilit Support Center v6.1.1 - Spectrum Enhancement
 
 **An AI-Powered Product Catalog System with Trinity Ingestion Pipeline & Enhanced Visualizer**
 
