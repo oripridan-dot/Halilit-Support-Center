@@ -1,374 +1,1856 @@
 [
   {
-    "id": "444313",
-    "sku": null,
-    "name": "Roland Cube 10GX",
+    "halilit_id": "87-CUBE10GX",
+    "product_name": "Roland Cube 10GX",
     "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 732.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "mid",
-    "tier_level": 2,
-    "images": {},
+    "price_il": 732.0,
+    "price_eilat": 625.64,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "מגבר עם סאונדים מגוונים ולחזרות ואימון מבית Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557464/original/8d7f3ef4da8ace0fb2f8a61920561e16.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557464/original/8d7f3ef4da8ace0fb2f8a61920561e16.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.424581",
+    "last_updated": "2026-02-05T22:48:14.424581",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 732.0,
+      "price_eilat": 625.64,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "mid",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 2,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מגבר עם סאונדים מגוונים ולחזרות ואימון מבית Roland",
+    "description_long": "מגבר עם סאונדים מגוונים ולחזרות ואימון מבית Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.424576",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "444313",
+      "sku": "87-CUBE10GX",
+      "brand_id": "roland",
+      "name": "Roland Cube 10GX",
+      "slug": "roland-cube-10gx",
+      "description_short": "מגבר עם סאונדים מגוונים ולחזרות ואימון מבית Roland",
+      "description_full": "מגבר עם סאונדים מגוונים ולחזרות ואימון מבית Roland",
+      "price": 732.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557464/original/8d7f3ef4da8ace0fb2f8a61920561e16.jpg",
+        "alt": "Roland Cube 10GX"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/557464/original/8d7f3ef4da8ace0fb2f8a61920561e16.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-CUBELTBK",
+    "product_name": "מגבר לגיטרה חשמלית Roland CUBE Lite",
+    "brand": "Roland",
+    "price_il": 743.0,
+    "price_eilat": 635.04,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "446389",
-    "sku": null,
-    "name": "מגבר לגיטרה חשמלית Roland CUBE Lite",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 743.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "mid",
-    "tier_level": 2,
-    "images": {},
+    "official_description": "מיני מגבר לגיטרה חשמלית עם חיבור מובנה ל-iOS מבית Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560141/original/3e6ab2ba34cdf59dd38823d2069bf3f9.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560141/original/3e6ab2ba34cdf59dd38823d2069bf3f9.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.432133",
+    "last_updated": "2026-02-05T22:48:14.432133",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 743.0,
+      "price_eilat": 635.04,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 14.530282637954246,
+      "suggested_tier": "mid",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 2,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מיני מגבר לגיטרה חשמלית עם חיבור מובנה ל-iOS מבית Roland",
+    "description_long": "מיני מגבר לגיטרה חשמלית עם חיבור מובנה ל-iOS מבית Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.432121",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "446389",
+      "sku": "87-CUBELTBK",
+      "brand_id": "roland",
+      "name": "מגבר לגיטרה חשמלית Roland CUBE Lite",
+      "slug": "מגבר-לגיטרה-חשמלית-roland-cube-lite",
+      "description_short": "מיני מגבר לגיטרה חשמלית עם חיבור מובנה ל-iOS מבית Roland",
+      "description_full": "מיני מגבר לגיטרה חשמלית עם חיבור מובנה ל-iOS מבית Roland",
+      "price": 743.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560141/original/3e6ab2ba34cdf59dd38823d2069bf3f9.jpg",
+        "alt": "מגבר לגיטרה חשמלית Roland CUBE Lite"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/560141/original/3e6ab2ba34cdf59dd38823d2069bf3f9.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-CUBESTEX",
+    "product_name": "מגבר סטריאופוני נייד Roland CUBE Street EX",
+    "brand": "Roland",
+    "price_il": 2571.0,
+    "price_eilat": 2197.44,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "444420",
-    "sku": null,
-    "name": "מגבר סטריאופוני נייד Roland CUBE Street EX",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2571.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "מגבר סטריאופוני נייד וקומפקטי בעוצמה של 50 וואט, להופעות רחוב וחזרות מבית Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557588/original/7d2e8d63c25a4afaa32cc5e3e3257f1e.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557588/original/7d2e8d63c25a4afaa32cc5e3e3257f1e.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.454342",
+    "last_updated": "2026-02-05T22:48:14.454342",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2571.0,
+      "price_eilat": 2197.44,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529754959159858,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מגבר סטריאופוני נייד וקומפקטי בעוצמה של 50 וואט, להופעות רחוב וחזרות מבית Roland",
+    "description_long": "מגבר סטריאופוני נייד וקומפקטי בעוצמה של 50 וואט, להופעות רחוב וחזרות מבית Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.454331",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "444420",
+      "sku": "87-CUBESTEX",
+      "brand_id": "roland",
+      "name": "מגבר סטריאופוני נייד Roland CUBE Street EX",
+      "slug": "מגבר-סטריאופוני-נייד-roland-cube-street-ex",
+      "description_short": "מגבר סטריאופוני נייד וקומפקטי בעוצמה של 50 וואט, להופעות רחוב וחזרות מבית Roland",
+      "description_full": "מגבר סטריאופוני נייד וקומפקטי בעוצמה של 50 וואט, להופעות רחוב וחזרות מבית Roland",
+      "price": 2571.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/557588/original/7d2e8d63c25a4afaa32cc5e3e3257f1e.jpg",
+        "alt": "מגבר סטריאופוני נייד Roland CUBE Street EX"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/557588/original/7d2e8d63c25a4afaa32cc5e3e3257f1e.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-RACJC120",
+    "product_name": "Roland RAC-JC120 Amp Cover",
+    "brand": "Roland",
+    "price_il": 141.0,
+    "price_eilat": 120.51,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "6407431",
-    "sku": null,
-    "name": "Roland RAC-JC120 Amp Cover",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 141.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "entry",
-    "tier_level": 1,
-    "images": {},
+    "official_description": "כיסוי ייעודי למגבר JC-120 מבית Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13436532/original/3a3864452d33130d8f9f0d59f941c7ab.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13436532/original/3a3864452d33130d8f9f0d59f941c7ab.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.485437",
+    "last_updated": "2026-02-05T22:48:14.485438",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 141.0,
+      "price_eilat": 120.51,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 14.531914893617017,
+      "suggested_tier": "entry",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "כיסוי ייעודי למגבר JC-120 מבית Roland",
+    "description_long": "כיסוי ייעודי למגבר JC-120 מבית Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.485432",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "6407431",
+      "sku": "87-RACJC120",
+      "brand_id": "roland",
+      "name": "Roland RAC-JC120 Amp Cover",
+      "slug": "roland-rac-jc120-amp-cover",
+      "description_short": "כיסוי ייעודי למגבר JC-120 מבית Roland",
+      "description_full": "כיסוי ייעודי למגבר JC-120 מבית Roland",
+      "price": 141.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13436532/original/3a3864452d33130d8f9f0d59f941c7ab.jpg",
+        "alt": "Roland RAC-JC120 Amp Cover"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/13436532/original/3a3864452d33130d8f9f0d59f941c7ab.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-BCSTAGE",
+    "product_name": "Roland Blues Cube Stage",
+    "brand": "Roland",
+    "price_il": 2627.0,
+    "price_eilat": 2245.3,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "3294349",
-    "sku": null,
-    "name": "Roland Blues Cube Stage",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2627.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "מגבר גיטרה עם סאונד Tube Logic מעולה של Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5719705/original/0342a410477574b5b5a88d9c1d30986f.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5719705/original/0342a410477574b5b5a88d9c1d30986f.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.486617",
+    "last_updated": "2026-02-05T22:48:14.486617",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2627.0,
+      "price_eilat": 2245.3,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.52988199467072,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מגבר גיטרה עם סאונד Tube Logic מעולה של Roland",
+    "description_long": "מגבר גיטרה עם סאונד Tube Logic מעולה של Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.486612",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "3294349",
+      "sku": "87-BCSTAGE",
+      "brand_id": "roland",
+      "name": "Roland Blues Cube Stage",
+      "slug": "roland-blues-cube-stage",
+      "description_short": "מגבר גיטרה עם סאונד Tube Logic מעולה של Roland",
+      "description_full": "מגבר גיטרה עם סאונד Tube Logic מעולה של Roland",
+      "price": 2627.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5719705/original/0342a410477574b5b5a88d9c1d30986f.jpg",
+        "alt": "Roland Blues Cube Stage"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/5719705/original/0342a410477574b5b5a88d9c1d30986f.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.5,
+        "count": 3
+      },
+      "contextual": {
+        "pros": [
+          "Exceptional build quality (Handmade in Sweden)",
+          "Industry-standard piano and organ engines",
+          "Intuitive 1-knob-per-function interface"
+        ],
+        "cons": [
+          "Premium price point compared to competitors",
+          "Limited split points on some models",
+          "Memory capacity fills up quickly with large samples"
+        ],
+        "expert_tips": [
+          "Download the Royal Grand 3D XL sample immediately",
+          "Use the Layer Scene feature (on Stage 4) for quick transitions"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-BCARTIST",
+    "product_name": "מגבר מנורות לגיטרה חשמלית Roland Blues Cube Artist",
+    "brand": "Roland",
+    "price_il": 4444.0,
+    "price_eilat": 3798.29,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "444337",
-    "sku": null,
-    "name": "מגבר מנורות לגיטרה חשמלית Roland Blues Cube Artist",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 4444.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "official_description": "מגבר מנורות לגיטרה חשמלית עם סאונד אותנטי בצבע בלונד מבית Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/733088/original/78652590a9dbbc2171c661a5883a90c3.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/733088/original/78652590a9dbbc2171c661a5883a90c3.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.491953",
+    "last_updated": "2026-02-05T22:48:14.491953",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 4444.0,
+      "price_eilat": 3798.29,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.52992799279928,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מגבר מנורות לגיטרה חשמלית עם סאונד אותנטי בצבע בלונד מבית Roland",
+    "description_long": "מגבר מנורות לגיטרה חשמלית עם סאונד אותנטי בצבע בלונד מבית Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.491932",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "444337",
+      "sku": "87-BCARTIST",
+      "brand_id": "roland",
+      "name": "מגבר מנורות לגיטרה חשמלית Roland Blues Cube Artist",
+      "slug": "מגבר-מנורות-לגיטרה-חשמלית-roland-blues-cube-artist",
+      "description_short": "מגבר מנורות לגיטרה חשמלית עם סאונד אותנטי בצבע בלונד מבית Roland",
+      "description_full": "מגבר מנורות לגיטרה חשמלית עם סאונד אותנטי בצבע בלונד מבית Roland",
+      "price": 4444.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/733088/original/78652590a9dbbc2171c661a5883a90c3.jpg",
+        "alt": "מגבר מנורות לגיטרה חשמלית Roland Blues Cube Artist"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/733088/original/78652590a9dbbc2171c661a5883a90c3.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-MB-CUBE",
+    "product_name": "מגבר סטריאופוני נייד Roland Mobile Cube",
+    "brand": "Roland",
+    "price_il": 1006.0,
+    "price_eilat": 859.83,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "447036",
-    "sku": null,
-    "name": "מגבר סטריאופוני נייד Roland Mobile Cube",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 1006.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "mid",
-    "tier_level": 2,
-    "images": {},
+    "official_description": "מגבר נייד סטריאופוני מופעל בסוללות, לשימוש עם מגוון כלים, מבית Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560867/original/215ad1c0a23b158dda7bed78b4388a32.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560867/original/215ad1c0a23b158dda7bed78b4388a32.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.492968",
+    "last_updated": "2026-02-05T22:48:14.492969",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 1006.0,
+      "price_eilat": 859.83,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 14.529821073558644,
+      "suggested_tier": "mid",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 2,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מגבר נייד סטריאופוני מופעל בסוללות, לשימוש עם מגוון כלים, מבית Roland",
+    "description_long": "מגבר נייד סטריאופוני מופעל בסוללות, לשימוש עם מגוון כלים, מבית Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.492962",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "447036",
+      "sku": "87-MB-CUBE",
+      "brand_id": "roland",
+      "name": "מגבר סטריאופוני נייד Roland Mobile Cube",
+      "slug": "מגבר-סטריאופוני-נייד-roland-mobile-cube",
+      "description_short": "מגבר נייד סטריאופוני מופעל בסוללות, לשימוש עם מגוון כלים, מבית Roland",
+      "description_full": "מגבר נייד סטריאופוני מופעל בסוללות, לשימוש עם מגוון כלים, מבית Roland",
+      "price": 1006.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/560867/original/215ad1c0a23b158dda7bed78b4388a32.jpg",
+        "alt": "מגבר סטריאופוני נייד Roland Mobile Cube"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/560867/original/215ad1c0a23b158dda7bed78b4388a32.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-SYS572",
+    "product_name": "Roland SYSTEM-500 572",
+    "brand": "Roland",
+    "price_il": 2191.0,
+    "price_eilat": 1872.65,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "841257",
-    "sku": null,
-    "name": "Roland SYSTEM-500 572",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Effects Processor",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2191.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "מודול אנאלוגי Phase shifter + Delay +LFOמסדרת System 500 של Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1246728/original/5f9c7e652cb00a9bc28e007c6c897a6d.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1246728/original/5f9c7e652cb00a9bc28e007c6c897a6d.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.493585",
+    "last_updated": "2026-02-05T22:48:14.493585",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Effects Processor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2191.0,
+      "price_eilat": 1872.65,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529895025102688,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "מודול אנאלוגי Phase shifter + Delay +LFOמסדרת System 500 של Roland",
+    "description_long": "מודול אנאלוגי Phase shifter + Delay +LFOמסדרת System 500 של Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.493579",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "841257",
+      "sku": "87-SYS572",
+      "brand_id": "roland",
+      "name": "Roland SYSTEM-500 572",
+      "slug": "roland-system-500-572",
+      "description_short": "מודול אנאלוגי Phase shifter + Delay +LFOמסדרת System 500 של Roland",
+      "description_full": "מודול אנאלוגי Phase shifter + Delay +LFOמסדרת System 500 של Roland",
+      "price": 2191.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/1246728/original/5f9c7e652cb00a9bc28e007c6c897a6d.jpg",
+        "alt": "Roland SYSTEM-500 572"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/1246728/original/5f9c7e652cb00a9bc28e007c6c897a6d.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "87-DEMORA",
+    "product_name": "Roland DEMORA",
+    "brand": "Roland",
+    "price_il": 2027.0,
+    "price_eilat": 1732.48,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "513517",
-    "sku": null,
-    "name": "Roland DEMORA",
-    "brand": "Roland",
-    "brand_id": "roland",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Effects Processor",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2027.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "אפקט Delay מודולרי מסדרתAIRAשל Roland",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/665535/original/cc76add6e0a4209bf3e83e588ce8380c.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/665535/original/cc76add6e0a4209bf3e83e588ce8380c.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.499713",
+    "last_updated": "2026-02-05T22:48:14.499713",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Effects Processor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2027.0,
+      "price_eilat": 1732.48,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529847064627527,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#00A4EF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "אפקט Delay מודולרי מסדרתAIRAשל Roland",
+    "description_long": "אפקט Delay מודולרי מסדרתAIRAשל Roland",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.499706",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Roland catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "513517",
+      "sku": "87-DEMORA",
+      "brand_id": "roland",
+      "name": "Roland DEMORA",
+      "slug": "roland-demora",
+      "description_short": "אפקט Delay מודולרי מסדרתAIRAשל Roland",
+      "description_full": "אפקט Delay מודולרי מסדרתAIRAשל Roland",
+      "price": 2027.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/665535/original/cc76add6e0a4209bf3e83e588ce8380c.jpg",
+        "alt": "Roland DEMORA"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/665535/original/cc76add6e0a4209bf3e83e588ce8380c.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "universal-audio-universal-audio-ox-amp-top-box",
-    "sku": null,
-    "name": "OX Amp Top Box",
+    "halilit_id": "universal-audio-universal-audio-ox-amp-top-box",
+    "product_name": "OX Amp Top Box",
     "brand": "Universal-Audio",
-    "brand_id": "universal-audio",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Amplifier",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 5800.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 5800.0,
+    "price_eilat": 4957.26,
+    "halilit_url": "https://www.uaudio.com/products/ox-amp-top-box",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "Get legendary studio tones from your tube amp — anywhere, at any volume.\nPlay and record your tube amp in its tonal sweet spot — anywhere, at any volume, with full dynamics\nGet stunning mic and guitar cabinet combinations at the turn of a RIG knob — no miking required\nAudition, tweak, and save more than 100 jaw-dropping custom Rigs from compatible iPad, or Mac/Windows computers.\nGet authentic “edge of destruction” sounds, complete with UA Dynamic Room Modeling, speaker breakup, and cone cry",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_dynamic_eq_gallery_1.png?v=1742248702",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ampeg_svt-vr_bass_amplifier_gallery_1.png?v=1742248504",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/paradise_guitar_studio_gallery_1.png?v=1768333947",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_guitar_amp_bundle_mk2_gallery_1.png?v=1746728264",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/distortion_essentials_bundle_gallery_1.png?v=1764003784",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/marshall_legends_bundle_gallery_1.png?v=1742249317",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_inflator_gallery_1_79e6a2bd-1515-4de8-b647-47d89fea7b4c.png?v=1742249529",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_supr_esser_ds_gallery_1.png?v=1742248579",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tonelux_tilt_eq_gallery_1_ccc71ba6-93d1-41a9-9bab-8ad2b284c231.png?v=1742248590",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.855214",
+    "last_updated": "2026-02-05T22:48:14.855214",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Amplifier",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 5800.0,
+      "price_eilat": 4957.26,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529999999999996,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-green-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "Get legendary studio tones from your tube amp — anywhere, at any volume",
+    "description_long": "Get legendary studio tones from your tube amp — anywhere, at any volume.\nPlay and record your tube amp in its tonal sweet spot — anywhere, at any volume, with full dynamics\nGet stunning mic and guitar cabinet combinations at the turn of a RIG knob — no miking required\nAudition, tweak, and save more than 100 jaw-dropping custom Rigs from compatible iPad, or Mac/Windows computers.\nGet authentic “edge of destruction” sounds, complete with UA Dynamic Room Modeling, speaker breakup, and cone cry",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.uaudio.com/products/ox-amp-top-box",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.855199",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Universal-Audio catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "universal-audio-universal-audio-ox-amp-top-box",
+      "name": "OX Amp Top Box",
+      "slug": "/universal-audio/ox-amp-top-box",
+      "brand_id": "universal-audio",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "speaker"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Get legendary studio tones from your tube amp — anywhere, at any volume",
+      "description_full": "Get legendary studio tones from your tube amp — anywhere, at any volume.\nPlay and record your tube amp in its tonal sweet spot — anywhere, at any volume, with full dynamics\nGet stunning mic and guitar cabinet combinations at the turn of a RIG knob — no miking required\nAudition, tweak, and save more than 100 jaw-dropping custom Rigs from compatible iPad, or Mac/Windows computers.\nGet authentic “edge of destruction” sounds, complete with UA Dynamic Room Modeling, speaker breakup, and cone cry",
+      "price": 5800,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_dynamic_eq_gallery_1.png?v=1742248702",
+        "alt": "Sonnox Oxford Dynamic EQ",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_dynamic_eq_gallery_1.png?v=1742248702",
+        "alt": "Sonnox Oxford Dynamic EQ",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ampeg_svt-vr_bass_amplifier_gallery_1.png?v=1742248504",
+          "alt": "Ampeg SVT-VR Bass Amplifier",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/paradise_guitar_studio_gallery_1.png?v=1768333947",
+          "alt": "Paradise Guitar Studio",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_guitar_amp_bundle_mk2_gallery_1.png?v=1746728264",
+          "alt": "UAD Guitar Amp Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/distortion_essentials_bundle_gallery_1.png?v=1764003784",
+          "alt": "Distortion Essentials Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/marshall_legends_bundle_gallery_1.png?v=1742249317",
+          "alt": "Marshall Legends Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_inflator_gallery_1_79e6a2bd-1515-4de8-b647-47d89fea7b4c.png?v=1742249529",
+          "alt": "Sonnox Oxford Inflator",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/sonnox_oxford_supr_esser_ds_gallery_1.png?v=1742248579",
+          "alt": "Sonnox Oxford SuprEsser DS",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tonelux_tilt_eq_gallery_1_ccc71ba6-93d1-41a9-9bab-8ad2b284c231.png?v=1742248590",
+          "alt": "Tonelux Tilt EQ",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "ox amp top box studio monitors speaker get legendary studio tones from your tube amp — anywhere, at any volume universal audio",
+      "filter_tags": [
+        "unknown",
+        "speaker",
+        "universal-audio",
+        "studio monitors",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/ox-amp-top-box",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978435",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "2368021",
-    "sku": null,
-    "name": "Nord Sustain Pedal",
+    "halilit_id": "42-SUSTAINPEDAL",
+    "product_name": "Nord Sustain Pedal",
     "brand": "Nord",
-    "brand_id": "nord",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Pedal",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 206.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "entry",
-    "tier_level": 1,
-    "images": {},
+    "price_il": 206.0,
+    "price_eilat": 176.07,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "פדל ססטיין מקצועי בגודל מלא מבית Nord",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890378/original/54b9882035b27f2fe24d717229b409ab.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890378/original/54b9882035b27f2fe24d717229b409ab.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.941278",
+    "last_updated": "2026-02-05T22:48:14.941278",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Pedal",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 206.0,
+      "price_eilat": 176.07,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 14.529126213592235,
+      "suggested_tier": "entry",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "#0084FF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "פדל ססטיין מקצועי בגודל מלא מבית Nord",
+    "description_long": "פדל ססטיין מקצועי בגודל מלא מבית Nord",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.941267",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Nord catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "2368021",
+      "sku": "42-SUSTAINPEDAL",
+      "brand_id": "nord",
+      "name": "Nord Sustain Pedal",
+      "slug": "nord-sustain-pedal",
+      "description_short": "פדל ססטיין מקצועי בגודל מלא מבית Nord",
+      "description_full": "פדל ססטיין מקצועי בגודל מלא מבית Nord",
+      "price": 206.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890378/original/54b9882035b27f2fe24d717229b409ab.jpg",
+        "alt": "Nord Sustain Pedal"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890378/original/54b9882035b27f2fe24d717229b409ab.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "2368164",
-    "sku": null,
-    "name": "Nord Triple Pedal",
+    "halilit_id": "42-TRIPLEPEDAL",
+    "product_name": "Nord Triple Pedal",
     "brand": "Nord",
-    "brand_id": "nord",
-    "category": "Amplifiers & Effects",
-    "subCategory": "Pedal",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 857.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "mid",
-    "tier_level": 2,
-    "images": {},
+    "price_il": 857.0,
+    "price_eilat": 732.48,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "Sustain Pedal פסנתרי בעל שלוש דוושות מבית Nord",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890687/original/73b08bf455d59ad43247791be1ea2070.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890687/original/73b08bf455d59ad43247791be1ea2070.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.942938",
+    "last_updated": "2026-02-05T22:48:14.942938",
+    "taxonomy": {
+      "canonical_category": "Amplifiers & Effects",
+      "canonical_subcategory": "Pedal",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 857.0,
+      "price_eilat": 732.48,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 14.529754959159858,
+      "suggested_tier": "mid",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 2,
+      "color_hint": "#0084FF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "Sustain Pedal פסנתרי בעל שלוש דוושות מבית Nord",
+    "description_long": "Sustain Pedal פסנתרי בעל שלוש דוושות מבית Nord",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.942910",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Nord catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "2368164",
+      "sku": "42-TRIPLEPEDAL",
+      "brand_id": "nord",
+      "name": "Nord Triple Pedal",
+      "slug": "nord-triple-pedal",
+      "description_short": "Sustain Pedal פסנתרי בעל שלוש דוושות מבית Nord",
+      "description_full": "Sustain Pedal פסנתרי בעל שלוש דוושות מבית Nord",
+      "price": 857.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890687/original/73b08bf455d59ad43247791be1ea2070.jpg",
+        "alt": "Nord Triple Pedal"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3890687/original/73b08bf455d59ad43247791be1ea2070.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   }
 ]

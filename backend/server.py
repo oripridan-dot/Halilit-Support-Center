@@ -1,75 +1,37 @@
-#!/usr/bin/env python3
-"""
-Halilit Support Center v6.1 - FastAPI Server
-
-Serves the frontend and provides data endpoints.
-Data pipeline is orchestrated separately via conductor.
-
-Usage:
-    python3 backend/server.py
-"""
-
-import uvicorn
-import sys
-import os
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+import os
 
-# Add the project root to path
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+app = FastAPI()
 
-app = FastAPI(
-    title="Halilit Support Center v6.0",
-    description="AI-powered product catalog with Trinity Ingestion Pipeline",
-    version="6.0.0",
-)
+# Robust path handling
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FRONTEND_DIST = os.path.join(BASE_DIR, "../frontend/dist")
+FRONTEND_PUBLIC_DATA = os.path.join(BASE_DIR, "../frontend/public/data")
 
-# Enable CORS for all origins
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# 1. Mount the frontend build directory
+# Ensure you run 'npm run build' in frontend/ first!
+if os.path.exists(FRONTEND_DIST):
+    app.mount(
+        "/assets", StaticFiles(directory=os.path.join(FRONTEND_DIST, "assets")), name="assets")
 
+    # Mount data if it exists
+    if os.path.exists(FRONTEND_PUBLIC_DATA):
+        app.mount("/data", StaticFiles(directory=FRONTEND_PUBLIC_DATA), name="data")
 
-@app.get("/health")
-def health():
-    """Health check endpoint."""
-    return {
-        "status": "ok",
-        "version": "6.0.0",
-        "features": ["Trinity Ingestion", "Spectrum Catalog", "v6.0 Pipeline"]
-    }
-
-
-@app.get("/api/config")
-def get_config():
-    """Get application configuration."""
-    return {
-        "catalog": {
-            "brands": ["Roland", "Nord", "Moog", "Rode", "Shure", "Universal Audio", "Drumdots"],
-            "total_products": 648,
-            "galaxies": 6,
-            "last_sync": "2024-02-05T17:14:33"
-        }
-    }
-
-
-@app.get("/")
-def root():
-    """Root endpoint redirects to frontend."""
-    return {
-        "message": "Halilit Support Center v6.0",
-        "frontend": "http://localhost:5173",
-        "api_docs": "http://localhost:8000/docs"
-    }
-
+    @app.get("/{catchall:path}")
+    async def serve_react_app(catchall: str):
+        # Return index.html for any path (SPA routing)
+        # Check if file exists in dist, otherwise serve index.html
+        file_path = os.path.join(FRONTEND_DIST, catchall)
+        if os.path.exists(file_path) and os.path.isfile(file_path):
+            return FileResponse(file_path)
+        return FileResponse(os.path.join(FRONTEND_DIST, "index.html"))
+else:
+    print(
+        f"WARNING: Frontend build not found at {FRONTEND_DIST}. Run 'npm run build' in frontend/ folder.")
 
 if __name__ == "__main__":
-    print("🚀 Starting Halilit Support Center v6.0")
-    print("📖 API Docs:  http://localhost:8000/docs")
-    print("🎨 Frontend:  http://localhost:5173")
-    print("💾 Pipeline:  backend/ingestion/orchestrator.py")
+    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

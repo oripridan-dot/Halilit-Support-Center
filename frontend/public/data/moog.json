@@ -1,529 +1,2436 @@
 [
   {
-    "id": "8662023",
-    "sku": null,
-    "name": "סינתיסייזר Moog Mavis",
+    "halilit_id": "29-MAVIS",
+    "product_name": "סינתיסייזר Moog Mavis",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 1255.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "mid",
-    "tier_level": 2,
-    "images": {},
+    "price_il": 1255.0,
+    "price_eilat": 1072.65,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.828461",
+    "last_updated": "2026-02-05T22:48:14.828461",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 1255.0,
+      "price_eilat": 1072.65,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 14.529880478087643,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 2,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
+    "description_long": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.828430",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8662023",
+      "sku": "29-MAVIS",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog Mavis",
+      "slug": "סינתיסייזר-moog-mavis",
+      "description_short": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
+      "description_full": "ערכה לבניית סינתיסייזר אנלוגי מונופוני חצי מודולרי לתפעול עצמי ועם Eurorack מבית Moog",
+      "price": 1255.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg",
+        "alt": "סינתיסייזר Moog Mavis"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19273287/original/daf3da7eab30cacf326ff64fba11759f.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8670731",
-    "sku": null,
-    "name": "סינתיסייזר אנלוגי Moog Subharmonicon",
+    "halilit_id": "29-SUBHARMONICON",
+    "product_name": "סינתיסייזר אנלוגי Moog Subharmonicon",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2928.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2928.0,
+    "price_eilat": 2502.56,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.829154",
+    "last_updated": "2026-02-05T22:48:14.829155",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.829127",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8670731",
+      "sku": "29-SUBHARMONICON",
+      "brand_id": "moog",
+      "name": "סינתיסייזר אנלוגי Moog Subharmonicon",
+      "slug": "סינתיסייזר-אנלוגי-moog-subharmonicon",
+      "description_short": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי וורסטילי לסינתוז סאבהרמוני ופוליריתמי מבית Moog",
+      "price": 2928.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg",
+        "alt": "סינתיסייזר אנלוגי Moog Subharmonicon"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337672/original/cff28808d62cac25549ef93279378be8.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.0,
+        "count": 2
+      },
+      "contextual": {
+        "pros": [
+          "Excellent transient response and clarity",
+          "Wide sweet spot for mixing",
+          "Accurate low-end reproduction"
+        ],
+        "cons": [
+          "Rear bass port requires wall distance",
+          "Higher price point in category"
+        ],
+        "expert_tips": [
+          "Use room correction software for best results",
+          "Position at ear height on isolation pads"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8670732",
-    "sku": null,
-    "name": "סינתיסייזר אנלוגי Moog Spectravox",
+    "halilit_id": "29-SPECTRAVOX",
+    "product_name": "סינתיסייזר אנלוגי Moog Spectravox",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2928.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2928.0,
+    "price_eilat": 2502.56,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.829314",
+    "last_updated": "2026-02-05T22:48:14.829315",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.829305",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8670732",
+      "sku": "29-SPECTRAVOX",
+      "brand_id": "moog",
+      "name": "סינתיסייזר אנלוגי Moog Spectravox",
+      "slug": "סינתיסייזר-אנלוגי-moog-spectravox",
+      "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי חצי מודולרי עם מצב Vocoder אנלוגי מבית Moog",
+      "price": 2928.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg",
+        "alt": "סינתיסייזר אנלוגי Moog Spectravox"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19337668/original/cf33c0121c07091f433d802e3d0e29b2.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8661547",
-    "sku": null,
-    "name": "סינתיסייזר Moog Matriarch",
+    "halilit_id": "29-MATRIARCH",
+    "product_name": "סינתיסייזר Moog Matriarch",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 9203.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 9203.0,
+    "price_eilat": 7865.81,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.829665",
+    "last_updated": "2026-02-05T22:48:14.829665",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 9203.0,
+      "price_eilat": 7865.81,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529935890470494,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.829654",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8661547",
+      "sku": "29-MATRIARCH",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog Matriarch",
+      "slug": "סינתיסייזר-moog-matriarch",
+      "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי חצי מודולרי עם סיקוונסר מובנה מבית Moog",
+      "price": 9203.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg",
+        "alt": "סינתיסייזר Moog Matriarch"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19271275/original/0c90f5a70975bebd34d45fc6e2ddf3b0.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8637794",
-    "sku": null,
-    "name": "סינתיסייזר Moog Labyrinth",
+    "halilit_id": "29-LABYRINTH",
+    "product_name": "סינתיסייזר Moog Labyrinth",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2928.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2928.0,
+    "price_eilat": 2502.56,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.830099",
+    "last_updated": "2026-02-05T22:48:14.830099",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.830089",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8637794",
+      "sku": "29-LABYRINTH",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog Labyrinth",
+      "slug": "סינתיסייזר-moog-labyrinth",
+      "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מנגינות ומקצבים מרהיבים מבית Moog",
+      "price": 2928.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg",
+        "alt": "סינתיסייזר Moog Labyrinth"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19195434/original/0b086652282d98aa7b80f5435d5a592f.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8669288",
-    "sku": null,
-    "name": "סינתיסייזר אנלוגי Moog Mother-32",
+    "halilit_id": "29-MOTHER32",
+    "product_name": "סינתיסייזר אנלוגי Moog Mother-32",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2928.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2928.0,
+    "price_eilat": 2502.56,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.830215",
+    "last_updated": "2026-02-05T22:48:14.830215",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.830208",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8669288",
+      "sku": "29-MOTHER32",
+      "brand_id": "moog",
+      "name": "סינתיסייזר אנלוגי Moog Mother-32",
+      "slug": "סינתיסייזר-אנלוגי-moog-mother-32",
+      "description_short": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי חצי מודולרי באיכות קצה עליון מבית Moog",
+      "price": 2928.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg",
+        "alt": "סינתיסייזר אנלוגי Moog Mother-32"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320985/original/e71d746fd82594eeb221fd2af2df631e.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8663409",
-    "sku": null,
-    "name": "סינתיסייזר בס Moog Minitaur",
+    "halilit_id": "29-MINITAUR",
+    "product_name": "סינתיסייזר בס Moog Minitaur",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2928.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2928.0,
+    "price_eilat": 2502.56,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.830314",
+    "last_updated": "2026-02-05T22:48:14.830314",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
+    "description_long": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.830307",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8663409",
+      "sku": "29-MINITAUR",
+      "brand_id": "moog",
+      "name": "סינתיסייזר בס Moog Minitaur",
+      "slug": "סינתיסייזר-בס-moog-minitaur",
+      "description_short": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
+      "description_full": "סינתיסייזר בס אנלוגי קופמקטי ואיכותי במיוחד מבית Moog",
+      "price": 2928.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg",
+        "alt": "סינתיסייזר בס Moog Minitaur"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19280671/original/ba202d00490812d81584be70be2b7354.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8674471",
-    "sku": null,
-    "name": "סינתיסייזר בס אנלוגי Moog Subsequent 37",
+    "halilit_id": "29-SUBSEQUENT37",
+    "product_name": "סינתיסייזר בס אנלוגי Moog Subsequent 37",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 8367.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 8367.0,
+    "price_eilat": 7151.28,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.830563",
+    "last_updated": "2026-02-05T22:48:14.830563",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 8367.0,
+      "price_eilat": 7151.28,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.52993904625314,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
+    "description_long": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.830554",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8674471",
+      "sku": "29-SUBSEQUENT37",
+      "brand_id": "moog",
+      "name": "סינתיסייזר בס אנלוגי Moog Subsequent 37",
+      "slug": "סינתיסייזר-בס-אנלוגי-moog-subsequent-37",
+      "description_short": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
+      "description_full": "סינתיסייזר בס אנלוגי פרפוני בעל 2 קולות מבית Moog",
+      "price": 8367.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg",
+        "alt": "סינתיסייזר בס אנלוגי Moog Subsequent 37"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19409030/original/17e9972abdd50eddebdfc465f1c5aaf7.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.0,
+        "count": 2
+      },
+      "contextual": {
+        "pros": [
+          "Excellent transient response and clarity",
+          "Wide sweet spot for mixing",
+          "Accurate low-end reproduction"
+        ],
+        "cons": [
+          "Rear bass port requires wall distance",
+          "Higher price point in category"
+        ],
+        "expert_tips": [
+          "Use room correction software for best results",
+          "Position at ear height on isolation pads"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8636862",
-    "sku": null,
-    "name": "סינתיסייזר Moog Grandmother",
+    "halilit_id": "29-GRANDMOTHER",
+    "product_name": "סינתיסייזר Moog Grandmother",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 5020.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 5020.0,
+    "price_eilat": 4290.6,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.831171",
+    "last_updated": "2026-02-05T22:48:14.831171",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 5020.0,
+      "price_eilat": 4290.6,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529880478087643,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.831160",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8636862",
+      "sku": "29-GRANDMOTHER",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog Grandmother",
+      "slug": "סינתיסייזר-moog-grandmother",
+      "description_short": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי חצי מודולרי עם ארפג’יאטור, סיקוונסר וריברב קפיץ מבית Moog",
+      "price": 5020.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg",
+        "alt": "סינתיסייזר Moog Grandmother"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19192165/original/f230a87b178f7642236d306696e1fdcb.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8669133",
-    "sku": null,
-    "name": "סינתיסייזר Moog Minimoog Model D",
+    "halilit_id": "29-MINMOOGD0406",
+    "product_name": "סינתיסייזר Moog Minimoog Model D",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 25100.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 25100.0,
+    "price_eilat": 21452.99,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.831278",
+    "last_updated": "2026-02-05T22:48:14.831278",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 25100.0,
+      "price_eilat": 21452.99,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529920318725093,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.831270",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8669133",
+      "sku": "29-MINMOOGD0406",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog Minimoog Model D",
+      "slug": "סינתיסייזר-moog-minimoog-model-d",
+      "description_short": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי נייד באיכות קצה עליון מבית Moog",
+      "price": 25100.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg",
+        "alt": "סינתיסייזר Moog Minimoog Model D"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19320378/original/69e5b49fa817bfe63939155b03302e0d.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8636373",
-    "sku": null,
-    "name": "סינתיסייזר Moog DFAM",
+    "halilit_id": "29-DFAM",
+    "product_name": "סינתיסייזר Moog DFAM",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2928.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2928.0,
+    "price_eilat": 2502.56,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.831374",
+    "last_updated": "2026-02-05T22:48:14.831374",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2928.0,
+      "price_eilat": 2502.56,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530054644808747,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.831368",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8636373",
+      "sku": "29-DFAM",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog DFAM",
+      "slug": "סינתיסייזר-moog-dfam",
+      "description_short": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי חצי מודולרי ליצירת מקצבי תופים מבית Moog",
+      "price": 2928.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg",
+        "alt": "סינתיסייזר Moog DFAM"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19191902/original/2308b2cb778ae67d4deed4814f4e64e0.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8670434",
-    "sku": null,
-    "name": "סינתיסייזר אנלוגי Moog Muse",
+    "halilit_id": "29-MUSE",
+    "product_name": "סינתיסייזר אנלוגי Moog Muse",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 14642.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 14642.0,
+    "price_eilat": 12514.53,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.831469",
+    "last_updated": "2026-02-05T22:48:14.831469",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 14642.0,
+      "price_eilat": 12514.53,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.52991394618221,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.831462",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8670434",
+      "sku": "29-MUSE",
+      "brand_id": "moog",
+      "name": "סינתיסייזר אנלוגי Moog Muse",
+      "slug": "סינתיסייזר-אנלוגי-moog-muse",
+      "description_short": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי פוליפוני עוצמתי במיוחד עם 8 קולות מבית Moog",
+      "price": 14642.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg",
+        "alt": "סינתיסייזר אנלוגי Moog Muse"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19335408/original/99f2f67baee8ef29dd112ae185815e2b.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8662251",
-    "sku": null,
-    "name": "סינתיסייזר Moog Messenger",
+    "halilit_id": "29-MESSENGER",
+    "product_name": "סינתיסייזר Moog Messenger",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 3556.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 3556.0,
+    "price_eilat": 3039.32,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.831562",
+    "last_updated": "2026-02-05T22:48:14.831562",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 3556.0,
+      "price_eilat": 3039.32,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529808773903257,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
+    "description_long": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.831555",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8662251",
+      "sku": "29-MESSENGER",
+      "brand_id": "moog",
+      "name": "סינתיסייזר Moog Messenger",
+      "slug": "סינתיסייזר-moog-messenger",
+      "description_short": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
+      "description_full": "סינתיסייזר אנלוגי מונופוני עם 32 קלידים חצי שקולים בגודל מלא מבית Moog",
+      "price": 3556.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg",
+        "alt": "סינתיסייזר Moog Messenger"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19276875/original/6aadaaadbc0010bf2c2ef13ef365bb2a.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8676603",
-    "sku": null,
-    "name": "סינתיסייזר טרמין Moog Theremini",
+    "halilit_id": "29-THEREMINI",
+    "product_name": "סינתיסייזר טרמין Moog Theremini",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 1882.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 1882.0,
+    "price_eilat": 1608.55,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.832238",
+    "last_updated": "2026-02-05T22:48:14.832238",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 1882.0,
+      "price_eilat": 1608.55,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529755579171097,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
+    "description_long": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.832227",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8676603",
+      "sku": "29-THEREMINI",
+      "brand_id": "moog",
+      "name": "סינתיסייזר טרמין Moog Theremini",
+      "slug": "סינתיסייזר-טרמין-moog-theremini",
+      "description_short": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
+      "description_full": "סינתיסייזר טרמין לנגינה חופשית, ללא צורך במגע מבית Moog",
+      "price": 1882.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg",
+        "alt": "סינתיסייזר טרמין Moog Theremini"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19426789/original/19ed3d1aaf1f71c4db676591ff3007a1.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8679188",
-    "sku": null,
-    "name": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case",
+    "halilit_id": "29-DSR-CASE",
+    "product_name": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 1673.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 1673.0,
+    "price_eilat": 1429.91,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.832344",
+    "last_updated": "2026-02-05T22:48:14.832344",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 1673.0,
+      "price_eilat": 1429.91,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530185295875667,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
+    "description_long": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.832337",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8679188",
+      "sku": "29-DSR-CASE",
+      "brand_id": "moog",
+      "name": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case",
+      "slug": "כיסוי-לנשיאת-סינתיסייזר-moog-model-d-sr-series-case",
+      "description_short": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
+      "description_full": "כיסוי לנשיאת סינתיסייזר model D, עמיד במים מבית Moog",
+      "price": 1673.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg",
+        "alt": "כיסוי לנשיאת סינתיסייזר Moog model D SR series case"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435338/original/d7984f9b4303f8f0c2c9e0685f6f2c79.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8638605",
-    "sku": null,
-    "name": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover",
+    "halilit_id": "29-2TIER-DCOVER",
+    "product_name": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 209.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "entry",
-    "tier_level": 1,
-    "images": {},
+    "price_il": 209.0,
+    "price_eilat": 178.63,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.832440",
+    "last_updated": "2026-02-05T22:48:14.832440",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 209.0,
+      "price_eilat": 178.63,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 14.531100478468902,
+      "suggested_tier": "entry",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
+    "description_long": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.832433",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8638605",
+      "sku": "29-2TIER-DCOVER",
+      "brand_id": "moog",
+      "name": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover",
+      "slug": "כיסוי-לסינתיסייזר-moog-2-tier-dust-cover",
+      "description_short": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
+      "description_full": "כיסוי לסינתיסייזר כפול על Eurorack מבית Moog",
+      "price": 209.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg",
+        "alt": "כיסוי לסינתיסייזר Moog 2-Tier Dust Cover"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19198196/original/965738058a960f4f987ad4611d283fc1.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "8679326",
-    "sku": null,
-    "name": "Moog Sound Studio Accessory Kit",
+    "halilit_id": "29-MSSACCKIT",
+    "product_name": "Moog Sound Studio Accessory Kit",
     "brand": "Moog",
-    "brand_id": "moog",
-    "category": "Keyboards & Synthesizers",
-    "subCategory": "Moog Synthesizer",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 962.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "mid",
-    "tier_level": 2,
-    "images": {},
+    "price_il": 962.0,
+    "price_eilat": 822.22,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.832534",
+    "last_updated": "2026-02-05T22:48:14.832535",
+    "taxonomy": {
+      "canonical_category": "Keyboards & Synthesizers",
+      "canonical_subcategory": "Moog Synthesizer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 962.0,
+      "price_eilat": 822.22,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 14.530145530145527,
+      "suggested_tier": "mid",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 2,
+      "color_hint": "#FF6B6B",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
+    "description_long": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.832528",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Moog catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "8679326",
+      "sku": "29-MSSACCKIT",
+      "brand_id": "moog",
+      "name": "Moog Sound Studio Accessory Kit",
+      "slug": "moog-sound-studio-accessory-kit",
+      "description_short": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
+      "description_full": "ערכת אביזרים מגוונת לסטודיו מבית Moog",
+      "price": 962.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg",
+        "alt": "Moog Sound Studio Accessory Kit"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/19435717/original/57b6f7e6f2c5d872c20c45372aaac29b.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 3.5,
+        "count": 0
+      },
+      "contextual": {
+        "pros": [],
+        "cons": [],
+        "expert_tips": []
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   }
 ]

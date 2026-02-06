@@ -1,64 +1,561 @@
 [
   {
-    "id": "universal-audio-610",
-    "sku": null,
-    "name": "UA 610 Tube Preamp & EQ Collection",
+    "halilit_id": "universal-audio-610",
+    "product_name": "UA 610 Tube Preamp & EQ Collection",
     "brand": "Universal-Audio",
-    "brand_id": "universal-audio",
-    "category": "Audio Interfaces & Mixers",
-    "subCategory": "Preamp",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 3000.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 3000.0,
+    "price_eilat": 2564.1,
+    "halilit_url": "https://www.uaudio.com/products/610-collection",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic “end-to-end” emulation of two classics — the 610-A and 610-B — including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison™ preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_woodwinds_gallery_1_f16aa1a8-c5b0-4738-9fad-e29cb6cbfa79.png?v=1742249055",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/century_tube_channel_strip_gallery_1.png?v=1742248567",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/analog_classics_pro_bundle_gallery_1_v2.png?v=1742233497",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_chamber_strings_gallery_1_a88222c8-137d-46d9-b2e7-4ba3870ca89f.png?v=1742249347",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/la-6176_signature_channel_strip_gallery_1.png?v=1742248466",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_bundle_gallery_1.png?v=1742248538",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.851396",
+    "last_updated": "2026-02-05T22:48:14.851397",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Preamp",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 3000.0,
+      "price_eilat": 2564.1,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530000000000005,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-blue-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "Timeless warmth and punch for your vocals and instruments",
+    "description_long": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic “end-to-end” emulation of two classics — the 610-A and 610-B — including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison™ preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.uaudio.com/products/610-collection",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.851366",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Universal-Audio catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "universal-audio-610",
+      "name": "UA 610 Tube Preamp & EQ Collection",
+      "slug": "/universal-audio/ua-610-tube-preamp-eq-collection",
+      "brand_id": "universal-audio",
+      "category": "Audio Interfaces",
+      "subcategories": [
+        "preamp"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Timeless warmth and punch for your vocals and instruments",
+      "description_full": "Timeless warmth and punch for your vocals and instruments.\nProduce music in your DAW with the same channel strips that inspired generations\nAdd presence and warmth to vocal recordings so they stand out in your mix\nHear guitars, keyboards, and drums come alive with fat tube saturation\nMake any effect in your signal chain sound instantly more full and three-dimensional\nEnjoy our authentic “end-to-end” emulation of two classics — the 610-A and 610-B — including tube amplifiers, transformers, and EQ circuits\nUse the Apollo DSP version with Unison™ preamp technology to get the most authentic 610 sound and experience\nUse the UAD Native versions to get classic 610 tube warmth and character in your DAW, no Apollo required",
+      "price": 3000,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
+        "alt": "Spitfire Symphonic Brass",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_brass_gallery_1_525e4743-aa40-4be7-8b35-98d00ebfdaf7.png?v=1742249045",
+        "alt": "Spitfire Symphonic Brass",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
+          "alt": "Manley Tube Preamp",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_symphonic_woodwinds_gallery_1_f16aa1a8-c5b0-4738-9fad-e29cb6cbfa79.png?v=1742249055",
+          "alt": "Spitfire Symphonic Woodwinds",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
+          "alt": "UAD Essentials Edition",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/century_tube_channel_strip_gallery_1.png?v=1742248567",
+          "alt": "Century Tube Channel Strip",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/analog_classics_pro_bundle_gallery_1_v2.png?v=1742233497",
+          "alt": "Analog Classics Pro Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_chamber_strings_gallery_1_a88222c8-137d-46d9-b2e7-4ba3870ca89f.png?v=1742249347",
+          "alt": "Spitfire Chamber Strings",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/la-6176_signature_channel_strip_gallery_1.png?v=1742248466",
+          "alt": "LA-6176 Signature Channel Strip",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/spitfire_bundle_gallery_1.png?v=1742248538",
+          "alt": "LUNA Spitfire Bundle",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "ua 610 tube preamp & eq collection audio interfaces preamp timeless warmth and punch for your vocals and instruments universal audio",
+      "filter_tags": [
+        "unknown",
+        "audio interfaces",
+        "universal-audio",
+        "preamp",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/610-collection",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978019",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "universal-audio-universal-audio-auto-tune-realtime-x",
-    "sku": null,
-    "name": "Auto-Tune Realtime X",
+    "halilit_id": "universal-audio-universal-audio-auto-tune-realtime-x",
+    "product_name": "Auto-Tune Realtime X",
     "brand": "Universal-Audio",
-    "brand_id": "universal-audio",
-    "category": "Audio Interfaces & Mixers",
-    "subCategory": "Audio Interface",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 5800.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "flagship",
-    "tier_level": 5,
-    "images": {},
+    "price_il": 5800.0,
+    "price_eilat": 4957.26,
+    "halilit_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.852321",
+    "last_updated": "2026-02-05T22:48:14.852321",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 5800.0,
+      "price_eilat": 4957.26,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "flagship",
+      "eilat_discount_percent": 14.529999999999996,
+      "suggested_tier": "flagship",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "specialist",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-green-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces",
+    "description_long": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.852296",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Universal-Audio catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "universal-audio-universal-audio-auto-tune-realtime-x",
+      "name": "Auto-Tune Realtime X",
+      "slug": "/universal-audio/auto-tune-realtime-x",
+      "brand_id": "universal-audio",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces",
+      "description_full": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
+      "price": 5800,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": "C-Suite C-Vox Noise & Ambience Reduction",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
+        "alt": "C-Suite C-Vox Noise & Ambience Reduction",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
+          "alt": "UAD Complete 4",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
+          "alt": "Tube-Tech CL 1B MkII Compressor",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
+          "alt": "Precision Maximizer",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
+          "alt": "AMS DMX Digital Delay & Pitch Shifter",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
+          "alt": "UAD Custom 10 Bundle",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
+          "alt": "Precision De-Esser",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
+          "alt": "UAD Ultimate 14",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
+          "alt": "EMT 140 Classic Plate Reverberator",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "auto-tune realtime x other get the iconic auto-tune® effect, perfected for apollo interfaces universal audio",
+      "filter_tags": [
+        "universal-audio",
+        "other",
+        "unknown",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.978095",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   }
 ]

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Activity,
   ArrowLeft,
@@ -82,7 +83,7 @@ const BrandLogo = ({
     <img
       src={logoPath}
       alt={brand}
-      className={`object-contain transition-all duration-500 grayscale hover:grayscale-0 ${className}`}
+      className={`object-contain transition-all duration-500 ${className}`}
       onError={(e) => {
         const target = e.currentTarget as HTMLImageElement;
         // Fallback chain: png -> jpg -> svg -> text
@@ -684,16 +685,16 @@ export const SpectrumModule = () => {
                   >
                     {/* Brand Header */}
                     <div
-                      className="w-32 flex-shrink-0 flex items-center justify-start pl-4 border-r transition-all duration-200"
+                      className="w-32 flex-shrink-0 flex items-center justify-center pl-4 border-r transition-all duration-200"
                       style={{
                         borderColor: `rgba(${rgbColor}, 0.3)`,
                         backgroundColor: `rgba(${rgbColor}, 0.08)`,
                       }}
                     >
-                      <div className="flex flex-col gap-1 flex-1">
+                      <div className="flex flex-col gap-1 items-center justify-center flex-1">
                         <BrandLogo
                           brand={brand}
-                          className="max-h-6 max-w-[70px] opacity-70 group-hover/row:opacity-100 transition-opacity"
+                          className="max-h-12 max-w-[100px] w-auto h-auto transition-opacity"
                         />
                         <span
                           className="text-[9px] font-bold uppercase tracking-widest"

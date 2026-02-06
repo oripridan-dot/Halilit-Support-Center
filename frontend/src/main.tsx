@@ -1,7 +1,27 @@
+import React from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import App from "./App.tsx";
 import "./index.css";
+
+// Initialize React Query client with sensible defaults
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      // Stale-While-Revalidate: Cache is valid for 5 minutes
+      staleTime: 5 * 60 * 1000,
+      // Keep unused data in cache for 10 minutes
+      gcTime: 10 * 60 * 1000,
+      // Retry failed requests once
+      retry: 1,
+      // Refetch on window focus (e.g., user tabs back to app)
+      refetchOnWindowFocus: true,
+      // Refetch on network reconnection
+      refetchOnReconnect: true,
+    },
+  },
+});
 
 const rootElement = document.getElementById("root");
 
@@ -9,8 +29,10 @@ if (rootElement) {
   try {
     createRoot(rootElement).render(
       <StrictMode>
-        <App />
-      </StrictMode>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </StrictMode>,
     );
   } catch (error) {
     console.error("Failed to mount React application:", error);

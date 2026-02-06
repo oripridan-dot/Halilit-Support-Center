@@ -46,6 +46,8 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
     """
     Sync approved products from ingestion to frontend format.
 
+    Maps backend schema to IngestionProductDraft (the source of truth for frontend).
+
     Args:
         brand: Brand name (e.g., "Nord")
 
@@ -66,10 +68,10 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
             logger.warning(f"No approved products file for {brand}")
             return False, []
 
-        approved_dir = approved_files[0]  # Latest file
+        approved_file = approved_files[0]  # Latest file
 
         # Load approved products
-        with open(approved_dir) as f:
+        with open(approved_file) as f:
             approved_data = json.load(f)
 
         if isinstance(approved_data, dict) and "products" in approved_data:
@@ -77,45 +79,107 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
         else:
             products = approved_data if isinstance(approved_data, list) else []
 
-        # Convert to frontend format (simplified)
+        # Convert to FRONTEND SCHEMA (IngestionProductDraft)
         frontend_products = []
         for p in products:
-            # Extract nested data
+            # Extract main fields
+            halilit_id = p.get("halilit_id") or p.get("id")
+            product_name = p.get("product_name") or p.get(
+                "name", "Unknown Product")
+            brand_name = p.get("brand", "Generic")
+
+            # Extract pricing data
             pricing = p.get("pricing", {})
-            display = p.get("display", {})
-            content = p.get("content", {})
+            price_il = pricing.get("price_il") or p.get(
+                "price_il") or p.get("price", 0)
+            price_eilat = pricing.get("price_eilat") or p.get("price_eilat", 0)
+
+            # Extract taxonomy
             taxonomy = p.get("taxonomy", {})
 
-            # HALILIT TIER 1: Extract category from ingestion taxonomy (canonical_category)
-            halilit_category = taxonomy.get(
-                "canonical_category") if isinstance(taxonomy, dict) else None
-            halilit_subcategory = taxonomy.get(
-                "canonical_subcategory") if isinstance(taxonomy, dict) else None
+            # Extract display data
+            display = p.get("display", {})
 
+            # Properly map to IngestionProductDraft schema
             fp = {
-                "id": p.get("halilit_id") or p.get("id"),
+                # ===== CORE COMMERCIAL DATA (Halilit) =====
+                "halilit_id": str(halilit_id) if halilit_id else "unknown",
+                "product_name": product_name,
+                "brand": brand_name,
+                "price_il": float(price_il) if price_il else 0,
+                "price_eilat": float(price_eilat) if price_eilat else 0,
+                "halilit_url": p.get("halilit_url", ""),
+
+                # ===== OPTIONAL IDS =====
                 "sku": p.get("sku") or p.get("model_number"),
-                "name": p.get("product_name") or p.get("name"),
-                "brand": p.get("brand"),
-                "brand_id": p.get("brand", "unknown").lower(),
-                # HALILIT TIER 1: Use canonical category from ingestion as primary source of truth
-                "category": halilit_category,
-                "subCategory": halilit_subcategory,
-                "description": content.get("description_long") or content.get("description"),
-                "description_short": content.get("description_short"),
-                "description_full": content.get("description_long"),
-                "price": pricing.get("price_il"),
-                "price_eilat": pricing.get("price_eilat"),
-                "currency": p.get("currency", "ILS"),
-                "tier": pricing.get("tier"),
-                "tier_level": display.get("display_tier_level"),
-                "images": p.get("images") or {},
-                "specifications": p.get("specifications") or {},
-                # Pass official specs to frontend
+                "model_number": p.get("model_number"),
+                "official_name": p.get("official_name"),
+
+                # ===== OFFICIAL SPECS (Brand Source) =====
                 "official_specs": p.get("official_specs") or {},
-                "completeness": p.get("data_completeness"),
-                "quality_score": p.get("quality_score"),
+                "official_description": p.get("official_description"),
+                "official_images": p.get("official_images") or [],
+                "official_url": p.get("official_url"),
+
+                # ===== REVIEWS & RATINGS =====
+                "reviews": p.get("reviews") or [],
+                "review_synthesis": p.get("review_synthesis"),
+                "average_rating": p.get("average_rating"),
+
+                # ===== WORKFLOW STATUS =====
+                "status": p.get("status", "approved"),
+                "pipeline_phase": p.get("pipeline_phase"),
+                "created_at": p.get("created_at"),
+                "last_updated": p.get("last_updated"),
+
+                # ===== TAXONOMY MAPPING =====
+                "taxonomy": taxonomy or {},
+
+                # ===== PRICING DATA =====
+                "pricing": {
+                    "price_il": float(price_il) if price_il else 0,
+                    "price_eilat": float(price_eilat) if price_eilat else 0,
+                    "price_usd": pricing.get("price_usd"),
+                    "price_eur": pricing.get("price_eur"),
+                    "tier": pricing.get("tier", "entry"),
+                    "eilat_discount_percent": pricing.get("eilat_discount_percent", 0),
+                    "suggested_tier": pricing.get("suggested_tier"),
+                    "price_validity_marker": pricing.get("price_validity_marker"),
+                    "last_price_change": pricing.get("last_price_change"),
+                    "previous_price_il": pricing.get("previous_price_il"),
+                } or None,
+
+                # ===== DISPLAY PROPERTIES =====
+                "display": {
+                    "display_role": display.get("display_role", "entry"),
+                    "hero_image": display.get("hero_image"),
+                    "thumbnail_image": display.get("thumbnail_image"),
+                    "should_highlight": display.get("should_highlight", False),
+                    "display_tier_level": display.get("display_tier_level", 0),
+                    "color_hint": display.get("color_hint"),
+                    "media_assets": display.get("media_assets", []),
+                } or None,
+
+                # ===== SPECIFICATIONS =====
+                "specifications": p.get("specifications") or {},
+                "description_short": p.get("description_short"),
+                "description_long": p.get("description_long"),
+                "feature_list": p.get("feature_list") or [],
+
+                # ===== SOURCE TRACKING =====
+                "sources": p.get("sources") or [],
+                "primary_source": p.get("primary_source"),
+                "lineage": p.get("lineage"),
+                "raw_snapshot": p.get("raw_snapshot"),
+
+                # ===== QUALITY METRICS =====
+                "data_completeness": p.get("data_completeness", 0.5),
+                "quality_score": p.get("quality_score", 0.5),
+                "validation_status": p.get("validation_status", "approved"),
+                "validation_errors": p.get("validation_errors", []),
+                "validation_warnings": p.get("validation_warnings", []),
             }
+
             frontend_products.append(fp)
 
         # Write to frontend
@@ -125,11 +189,14 @@ def sync_brand_to_frontend(brand: str) -> tuple[bool, List[Dict[str, Any]]]:
         with open(output_file, 'w') as f:
             json.dump(frontend_products, f, indent=2, ensure_ascii=False)
 
-        logger.info(f"  ✓ Synced to {output_file.name}")
+        logger.info(
+            f"  ✓ Synced {len(frontend_products)} products to {output_file.name}")
         return True, frontend_products
 
     except Exception as e:
         logger.error(f"  ✗ Failed to sync {brand}: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         return False, []
 
 
@@ -143,15 +210,16 @@ def generate_smart_artifacts(all_products: List[Dict[str, Any]]):
     """
     logger.info("🧠 Generating Smart Artifacts (Search Index & Shards)...")
 
-    # 1. Search Index (Minified)
+    # 1. Search Index (Minified) - using correct field names
     search_index = []
     for p in all_products:
-        # Create minimal search object as per strategy
+        # Create minimal search object as per strategy (using correct IngestionProductDraft field names)
         search_item = {
-            "id": p.get("id"),
-            "t": p.get("name"),       # Title/Name
-            "s": p.get("category"),   # Section/Category
-            "b": p.get("brand")       # Brand (added for filter context)
+            "id": p.get("halilit_id"),           # Correct field name
+            "t": p.get("product_name"),          # Title/Name
+            # Section/Category
+            "s": p.get("taxonomy", {}).get("canonical_category") or "Uncategorized",
+            "b": p.get("brand")                  # Brand
         }
         search_index.append(search_item)
 
@@ -167,7 +235,9 @@ def generate_smart_artifacts(all_products: List[Dict[str, Any]]):
 
     shards = {}
     for p in all_products:
-        cat = p.get("category")
+        # Use taxonomy for category (frontend canonical source)
+        cat = p.get("taxonomy", {}).get("canonical_category") if isinstance(
+            p.get("taxonomy"), dict) else None
         if not cat:
             cat = "uncategorized"
 
@@ -184,11 +254,64 @@ def generate_smart_artifacts(all_products: List[Dict[str, Any]]):
 
     logger.info(f"  ✓ Generated {len(shards)} category shards")
 
-    # 3. Full Galaxy DB (Fallback)
+    # 3. Full Galaxy DB (Fallback) - contains full IngestionProductDraft schema
     galaxy_file = FRONTEND_DATA_DIR / "galaxy_db.json"
     with open(galaxy_file, 'w') as f:
         json.dump(all_products, f, indent=2, ensure_ascii=False)
-    logger.info(f"  ✓ Full DB Backup: {galaxy_file.name}")
+    logger.info(
+        f"  ✓ Full DB Backup: {galaxy_file.name} ({len(all_products)} items)")
+
+
+def generate_index_metadata(all_products: List[Dict[str, Any]]):
+    """
+    Generate index.json with accurate brand metadata.
+    CRITICAL: Prevents catalogLoader from discovering stale data.
+    """
+    logger.info("📇 Generating index.json metadata...")
+
+    # Group products by brand
+    brand_products = {}
+    for p in all_products:
+        brand = p.get("brand", "unknown")
+        if brand not in brand_products:
+            brand_products[brand] = []
+        brand_products[brand].append(p)
+
+    # Build brand metadata
+    brands = []
+    brand_slugs = {
+        "Drumdots": "drumdots",
+        "Moog": "moog",
+        "Nord": "nord",
+        "Rode": "rode",
+        "Roland": "roland",
+        "Shure": "shure",
+        "Universal Audio": "universal-audio"
+    }
+
+    for brand_name, products in brand_products.items():
+        brand_slug = brand_slugs.get(brand_name, slugify(brand_name))
+        brands.append({
+            "id": brand_slug,
+            "name": brand_name,
+            "product_count": len(products),
+            "primary_category": products[0].get("taxonomy", {}).get("canonical_category", "Unknown") if products else "Unknown"
+        })
+
+    # Create index structure
+    index_data = {
+        "version": "6.0.0",
+        "build_timestamp": datetime.now().isoformat(),
+        "total_products": len(all_products),
+        "brands": sorted(brands, key=lambda x: x["id"])
+    }
+
+    index_file = FRONTEND_DATA_DIR / "index.json"
+    with open(index_file, 'w') as f:
+        json.dump(index_data, f, indent=2, ensure_ascii=False)
+
+    logger.info(
+        f"  ✓ Index generated: {len(brands)} brands, {len(all_products)} products -> index.json")
 
 
 def sync_all_brands() -> Dict[str, bool]:
@@ -218,6 +341,7 @@ def sync_all_brands() -> Dict[str, bool]:
     # Generate Advanced Artifacts
     if all_products_collected:
         generate_smart_artifacts(all_products_collected)
+        generate_index_metadata(all_products_collected)
 
     # Generate Manifest Report
     generate_manifest_report(results)

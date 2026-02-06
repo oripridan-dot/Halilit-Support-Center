@@ -1,4 +1,5 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useQuery, useMutation } from '@tanstack/react-query';
+import { useCallback } from 'react';
 
 interface SpectrumDataOptions {
     include_enrichment?: boolean;
@@ -21,7 +22,7 @@ interface UseSpectrumDataReturn {
 }
 
 /**
- * Hook to fetch enhanced spectrum data from the backend
+ * Hook to fetch enhanced spectrum data from the backend - TanStack Query powered
  * 
  * Usage:
  * const { data, loading, error } = useSpectrumData('Nord', {
@@ -33,18 +34,12 @@ export const useSpectrumData = (
     brand: string,
     options: SpectrumDataOptions = {}
 ): UseSpectrumDataReturn => {
-    const [data, setData] = useState<SpectrumDataResult | null>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
-    const [retryCount, setRetryCount] = useState(0);
 
-    const fetchData = useCallback(async () => {
-        if (!brand) return;
+    const { data, isLoading, error, refetch } = useQuery({
+        queryKey: ['spectrum-data', brand, options.include_enrichment, options.force_refresh],
+        queryFn: async () => {
+            if (!brand) throw new Error('Brand is required');
 
-        setLoading(true);
-        setError(null);
-
-        try {
             const params = new URLSearchParams({
                 include_enrichment: String(options.include_enrichment ?? true),
                 force_refresh: String(options.force_refresh ?? false),
@@ -58,146 +53,108 @@ export const useSpectrumData = (
                 throw new Error(`Failed to fetch spectrum data: ${response.statusText}`);
             }
 
-            const result = await response.json();
-            setData(result);
-        } catch (err) {
-            setError(err instanceof Error ? err : new Error(String(err)));
-            console.error('Error fetching spectrum data:', err);
-        } finally {
-            setLoading(false);
-        }
-    }, [brand, options]);
-
-    useEffect(() => {
-        fetchData();
-    }, [brand, options.include_enrichment, options.force_refresh, fetchData]);
-
-    const retry = useCallback(() => {
-        setRetryCount(prev => prev + 1);
-        fetchData();
-    }, [fetchData]);
+            return response.json() as Promise<SpectrumDataResult>;
+        },
+        enabled: !!brand,
+        staleTime: 5 * 60 * 1000, // 5 minutes
+        gcTime: 10 * 60 * 1000,   // 10 minutes
+        refetchOnWindowFocus: true,
+        refetchOnReconnect: true,
+        retry: 1,
+    });
 
     return {
-        data,
-        loading,
-        error,
-        retry,
+        data: data || null,
+        loading: isLoading,
+        error: error instanceof Error ? error : null,
+        retry: () => refetch(),
     };
 };
 
 /**
- * Hook to fetch quality report for a brand
+ * Hook to fetch quality report for a brand - TanStack Query powered
  */
 export const useSpectrumQualityReport = (brand: string) => {
-    const [report, setReport] = useState<any>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
+    const { data: report, isLoading: loading, error } = useQuery({
+        queryKey: ['spectrum-quality-report', brand],
+        queryFn: async () => {
+            if (!brand) throw new Error('Brand is required');
 
-    useEffect(() => {
-        if (!brand) return;
+            const response = await fetch(`/api/spectrum/quality-report/${brand}`);
 
-        const fetchReport = async () => {
-            setLoading(true);
-            setError(null);
-
-            try {
-                const response = await fetch(`/api/spectrum/quality-report/${brand}`);
-
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch quality report: ${response.statusText}`);
-                }
-
-                const data = await response.json();
-                setReport(data);
-            } catch (err) {
-                setError(err instanceof Error ? err : new Error(String(err)));
-                console.error('Error fetching quality report:', err);
-            } finally {
-                setLoading(false);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch quality report: ${response.statusText}`);
             }
-        };
 
-        fetchReport();
-    }, [brand]);
+            return response.json();
+        },
+        enabled: !!brand,
+        staleTime: 10 * 60 * 1000, // 10 minutes
+        gcTime: 20 * 60 * 1000,    // 20 minutes
+        refetchOnWindowFocus: true,
+        refetchOnReconnect: true,
+        retry: 1,
+    });
 
-    return { report, loading, error };
+    return { report: report || null, loading, error: error instanceof Error ? error : null };
 };
 
 /**
- * Hook to fetch data sources information
+ * Hook to fetch data sources information - TanStack Query powered
  */
 export const useSpectrumDataSources = (brand: string) => {
-    const [sources, setSources] = useState<any>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
+    const { data: sources, isLoading: loading, error } = useQuery({
+        queryKey: ['spectrum-sources', brand],
+        queryFn: async () => {
+            if (!brand) throw new Error('Brand is required');
 
-    useEffect(() => {
-        if (!brand) return;
+            const response = await fetch(`/api/spectrum/sources/${brand}`);
 
-        const fetchSources = async () => {
-            setLoading(true);
-            setError(null);
-
-            try {
-                const response = await fetch(`/api/spectrum/sources/${brand}`);
-
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch data sources: ${response.statusText}`);
-                }
-
-                const data = await response.json();
-                setSources(data);
-            } catch (err) {
-                setError(err instanceof Error ? err : new Error(String(err)));
-                console.error('Error fetching data sources:', err);
-            } finally {
-                setLoading(false);
+            if (!response.ok) {
+                throw new Error(`Failed to fetch data sources: ${response.statusText}`);
             }
-        };
 
-        fetchSources();
-    }, [brand]);
+            return response.json();
+        },
+        enabled: !!brand,
+        staleTime: 10 * 60 * 1000, // 10 minutes
+        gcTime: 20 * 60 * 1000,    // 20 minutes
+        refetchOnWindowFocus: true,
+        refetchOnReconnect: true,
+        retry: 1,
+    });
 
-    return { sources, loading, error };
+    return { sources: sources || null, loading, error: error instanceof Error ? error : null };
 };
 
 /**
- * Hook to rebuild spectrum data for a brand
+ * Hook to rebuild spectrum data for a brand - useMutation for POST request
  */
 export const useSpectrumRebuild = () => {
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<Error | null>(null);
-    const [result, setResult] = useState<any>(null);
+    const { mutateAsync: rebuild, isPending: loading, error, data: result } = useMutation({
+        mutationFn: async (params: { brand: string; deepRefresh?: boolean }) => {
+            const response = await fetch(
+                `/api/spectrum/rebuild/${params.brand}?deep_refresh=${params.deepRefresh ?? false}`,
+                { method: 'POST' }
+            );
 
-    const rebuild = useCallback(
-        async (brand: string, deepRefresh: boolean = false) => {
-            setLoading(true);
-            setError(null);
-
-            try {
-                const response = await fetch(
-                    `/api/spectrum/rebuild/${brand}?deep_refresh=${deepRefresh}`,
-                    { method: 'POST' }
-                );
-
-                if (!response.ok) {
-                    throw new Error(`Failed to rebuild spectrum data: ${response.statusText}`);
-                }
-
-                const data = await response.json();
-                setResult(data);
-                return data;
-            } catch (err) {
-                const error = err instanceof Error ? err : new Error(String(err));
-                setError(error);
-                console.error('Error rebuilding spectrum data:', err);
-                throw error;
-            } finally {
-                setLoading(false);
+            if (!response.ok) {
+                throw new Error(`Failed to rebuild spectrum data: ${response.statusText}`);
             }
-        },
-        []
-    );
 
-    return { rebuild, loading, error, result };
+            return response.json();
+        },
+    });
+
+    return {
+        rebuild: useCallback(
+            async (brand: string, deepRefresh: boolean = false) => {
+                return rebuild({ brand, deepRefresh });
+            },
+            [rebuild]
+        ),
+        loading,
+        error: error instanceof Error ? error : null,
+        result: result || null,
+    };
 };

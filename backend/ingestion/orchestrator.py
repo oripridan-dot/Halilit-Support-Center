@@ -113,6 +113,8 @@ class IngestionOrchestrator:
                 else:
                     if result:
                         validation_failures.append((result, errors))
+                        self.logger.warning(
+                            f"   ⚠ REJECTED {result.product_name}: {errors}")
                     else:
                         self.logger.warning(
                             f"   ❌ Serious failure processing product: {errors}")
@@ -199,8 +201,8 @@ class IngestionOrchestrator:
         # Generate or extract ID
         halilit_id = (
             raw_product.get('halilit_id') or
-            raw_product.get('id') or
             raw_product.get('sku') or
+            raw_product.get('id') or
             f"{brand}_{uuid.uuid4().hex[:8]}"
         )
 
@@ -216,6 +218,10 @@ class IngestionOrchestrator:
         price_il = float(raw_product.get('price_il')
                          or raw_product.get('price') or 0)
         price_eilat = float(raw_product.get('price_eilat') or 0)
+
+        # Fallback for Eilat price if missing but IL price exists (Assume 17% VAT)
+        if price_il > 0 and price_eilat == 0:
+            price_eilat = round(price_il / 1.17, 2)
 
         # Link
         halilit_url = raw_product.get('source_url') or raw_product.get(

@@ -1,10 +1,15 @@
 /**
- * useBrandCatalog - Load and cache brand product catalog
- * Fetches pre-built JSON catalog for a specific brand
+ * useBrandCatalog - TanStack Query powered brand catalog hook
+ * 
+ * Features:
+ * - Automatic caching per brand
+ * - Deduplication of parallel requests
+ * - Automatic refetch on window focus
+ * - Automatic refetch on network reconnect
  * 
  * Follows STANDARDIZED COMMUNICATION PROTOCOL v1.0
  */
-import { useCallback, useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { catalogLoader, type BrandCatalog } from "../lib/catalogLoader";
 import { createAsyncResult, type AsyncResult } from "../lib/communicationProtocol";
 
@@ -17,60 +22,34 @@ import { createAsyncResult, type AsyncResult } from "../lib/communicationProtoco
  * const { data: catalog, loading, error, isReady } = useBrandCatalog(brandId)
  */
 export const useBrandCatalog = (brandId?: string): AsyncResult<BrandCatalog> => {
-  const [catalog, setCatalog] = useState<BrandCatalog | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
-
-  const loadCatalog = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    if (!brandId) {
-      setCatalog(null);
-      setLoading(false);
-      return;
-    }
-
-    try {
-      // SWR: 1. Try local storage immediately (Stale)
-      const storageKey = `brand_catalog_${brandId}`;
-      const cached = localStorage.getItem(storageKey);
-
-      if (cached) {
-        try {
-          const parsed = JSON.parse(cached) as BrandCatalog;
-          setCatalog(parsed);
-        } catch {
-          // Corrupted cache, will be replaced by fresh data
-        }
+  // Use TanStack Query for smart caching and refetching
+  const { data, isLoading, error, refetch } = useQuery({
+    // Unique key per brand
+    queryKey: ["brand-catalog", brandId],
+    // Fetch function
+    queryFn: async () => {
+      if (!brandId) {
+        throw new Error("Brand ID is required");
       }
+      return await catalogLoader.loadBrand(brandId);
+    },
+    // Only fetch if brandId is provided
+    enabled: !!brandId,
+    // Stale-While-Revalidate pattern
+    staleTime: 5 * 60 * 1000, // 5 minutes
+    gcTime: 10 * 60 * 1000, // 10 minutes
+    // Automatic refetch behavior
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+    retry: 1,
+  });
 
-      // SWR: 2. Fetch fresh data (Revalidate)
-      const data = await catalogLoader.loadBrand(brandId);
-      setCatalog(data);
-      setError(null);
-
-      // Persist fresh data
-      try {
-        localStorage.setItem(storageKey, JSON.stringify(data));
-      } catch {
-        // Storage full or disabled, continue without caching
-      }
-    } catch (err) {
-      const error = err instanceof Error ? err : new Error("Failed to load brand catalog");
-      setError(error);
-      // Keep cached data if available
-    } finally {
-      setLoading(false);
-    }
-  }, [brandId]);
-
-  // Initial load effect
-  useEffect(() => {
-    loadCatalog();
-  }, [brandId, loadCatalog]);
-
-  return createAsyncResult(catalog, loading, error, loadCatalog);
+  return createAsyncResult(
+    data || null,
+    isLoading,
+    error instanceof Error ? error : null,
+    refetch
+  );
 };
 
 export interface AllBrandCatalogsState {
@@ -86,43 +65,48 @@ export interface AllBrandCatalogsState {
  * if (isReady) { const catalog = data.catalogs.get('roland'); }
  */
 export const useAllBrandCatalogs = (): AsyncResult<AllBrandCatalogsState> => {
-  const [catalogs, setCatalogs] = useState<Map<string, BrandCatalog>>(
-    new Map(),
-  );
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
-
-  const loadAllCatalogs = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
+  // Use TanStack Query for all brand catalogs
+  const { data, isLoading, error, refetch } = useQuery({
+    queryKey: ["all-brand-catalogs"],
+    queryFn: async () => {
       const index = await catalogLoader.loadIndex();
       const brandMap = new Map<string, BrandCatalog>();
 
-      for (const brandEntry of index.brands) {
+      // Load catalogs in parallel using Promise.allSettled
+      const catalogPromises = index.brands.map(async (brandEntry) => {
         try {
           const catalog = await catalogLoader.loadBrand(brandEntry.id);
           if (catalog) {
-            brandMap.set(brandEntry.id, catalog);
+            return { id: brandEntry.id, catalog };
           }
         } catch (err) {
           // Log individual brand failures but continue
           console.warn(`Failed to load catalog for brand ${brandEntry.id}`, err);
         }
-      }
+        return null;
+      });
 
-      setCatalogs(brandMap);
-    } catch (err) {
-      const error = err instanceof Error ? err : new Error("Failed to load all catalogs");
-      setError(error);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+      const results = await Promise.allSettled(catalogPromises);
+      results.forEach((result) => {
+        if (result.status === "fulfilled" && result.value) {
+          brandMap.set(result.value.id, result.value.catalog);
+        }
+      });
 
-  useEffect(() => {
-    loadAllCatalogs();
-  }, [loadAllCatalogs]);
+      return { catalogs: brandMap };
+    },
+    // Longer cache time since it's all brands
+    staleTime: 10 * 60 * 1000, // 10 minutes
+    gcTime: 20 * 60 * 1000, // 20 minutes
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+    retry: 1,
+  });
 
-  return createAsyncResult({ catalogs }, loading, error, loadAllCatalogs);
+  return createAsyncResult(
+    data || { catalogs: new Map() },
+    isLoading,
+    error instanceof Error ? error : null,
+    refetch
+  );
 };

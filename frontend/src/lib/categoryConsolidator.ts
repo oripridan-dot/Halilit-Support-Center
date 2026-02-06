@@ -295,6 +295,22 @@ export function getConsolidatedProductCategory(product: Product): {
   // Check if product has explicit category from Halilit ingestion
   if (product.category && product.category.toLowerCase() !== "none" && product.category.toLowerCase() !== "uncategorized") {
     const halalitCategory = product.category.toLowerCase().trim();
+
+    // DIRECT GALAXY ID CHECK: If enriched data already has galaxy ID, use it directly
+    const isGalaxyId = CONSOLIDATED_CATEGORIES.some(g => g.id === halalitCategory);
+    if (isGalaxyId) {
+      const galaxy = CONSOLIDATED_CATEGORIES.find(g => g.id === halalitCategory);
+      // Use the first spectrum as default, or the spectrum field if available
+      const spectrumId = product.spectrum || (galaxy?.spectrum[0]?.id || "accessories-utility");
+      return {
+        spectrumId: spectrumId,
+        galaxyId: halalitCategory,
+        galaxyLabel: galaxy?.label || halalitCategory,
+        originalCategory: `halilit:${product.category}`,
+      };
+    }
+
+    // Otherwise try to map raw category to spectrum
     const spectrum = mapCategoryToSpectrum(halalitCategory);
     if (spectrum !== "accessories-utility") {
       // Found valid Halilit category

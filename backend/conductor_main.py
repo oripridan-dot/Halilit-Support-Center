@@ -19,14 +19,15 @@ from pathlib import Path
 import subprocess
 import json
 import argparse
-from backend.ingestion.orchestrator import IngestionOrchestrator
-from backend.ingestion.trinity_integration import get_trinity_ingestion_bridge
-from backend.ingestion_to_frontend import sync_brand_to_frontend, sync_all_brands
 import sys
 import os
 
 # Add project root to sys.path before importing backend modules
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from backend.ingestion.orchestrator import IngestionOrchestrator
+from backend.ingestion.trinity_integration import get_trinity_ingestion_bridge
+from backend.ingestion_to_frontend import sync_brand_to_frontend, sync_all_brands
 
 
 BRAND_DIR = Path(__file__).parent / "data" / "brands"

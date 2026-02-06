@@ -1,9 +1,9 @@
 /**
- * useCategoryCatalog - Load products and filters for a category
+ * useCategoryCatalog - TanStack Query powered category catalog hook
  * 
  * Follows STANDARDIZED COMMUNICATION PROTOCOL v1.0
  */
-import { useCallback, useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import type { Product } from "../types";
 import { createAsyncResult, type AsyncResult } from "../lib/communicationProtocol";
 import { catalogLoader } from "../lib/catalogLoader";
@@ -26,24 +26,15 @@ export interface CategoryCatalogState {
 export const useCategoryCatalog = (
   category: string | null,
 ): AsyncResult<CategoryCatalogState> => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [availableFilters, setAvailableFilters] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
+  // Use TanStack Query for smart data fetching
+  const { data, isLoading, error, refetch } = useQuery({
+    // Unique key per category
+    queryKey: ["category-catalog", category],
+    queryFn: async () => {
+      if (!category) {
+        throw new Error("Category is required");
+      }
 
-  const fetchCategory = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-
-    if (!category) {
-      console.warn('[useCategoryCatalog] Category is null, clearing products');
-      setProducts([]);
-      setAvailableFilters([]);
-      setLoading(false);
-      return;
-    }
-
-    try {
       // 1. Ensure Index is loaded
       await catalogLoader.loadIndex();
 
@@ -57,7 +48,6 @@ export const useCategoryCatalog = (
       }
 
       // 3. Filter by Galaxy/Tribe
-      // The 'category' param here corresponds to the 'Galaxy ID' (e.g. 'guitars-bass', 'keys-production')
       const filteredProducts = allProducts.filter(p => productMatchesGalaxy(p, category));
 
       console.log(`[useCategoryCatalog] Category: ${category}`);
@@ -75,53 +65,43 @@ export const useCategoryCatalog = (
       }
 
       // 4. Generate Smart Filters based on actual content
-      // Find the Galaxy Definition to get the Spectrum list (order matters)
       const galaxyDef = CONSOLIDATED_CATEGORIES.find(g => g.id === category);
-
       const filterSet = new Set<string>();
 
       filteredProducts.forEach(p => {
         const { spectrumId } = getConsolidatedProductCategory(p);
-        // Find the label for this spectrumId
         const specDef = galaxyDef?.spectrum.find(s => s.id === spectrumId);
         if (specDef) {
           filterSet.add(specDef.label);
-          // Inject this label as a "filter_tags" tag so SpectrumModule's 1176 engine can use it
           if (!p.filter_tags) p.filter_tags = [];
           if (!p.filter_tags.includes(specDef.label)) p.filter_tags.push(specDef.label);
         }
       });
 
-      // Sort filters based on Galaxy definition order
       const sortedFilters = galaxyDef
         ? galaxyDef.spectrum.map(s => s.label).filter(l => filterSet.has(l))
         : Array.from(filterSet).sort();
 
-      setProducts(filteredProducts);
-      setAvailableFilters(sortedFilters);
-      setError(null);
-    } catch (err) {
-      const error = err instanceof Error ? err : new Error("Unknown error loading category");
-      setError(error);
-      setProducts([]);
-      setAvailableFilters([]);
-    } finally {
-      setLoading(false);
-    }
-  }, [category]);
-
-  useEffect(() => {
-    fetchCategory();
-  }, [category, fetchCategory]);
+      return {
+        products: filteredProducts,
+        availableFilters: sortedFilters,
+      };
+    },
+    // Only fetch if category is provided
+    enabled: !!category,
+    // Cache for reasonable time since we're loading all products
+    staleTime: 5 * 60 * 1000, // 5 minutes
+    gcTime: 15 * 60 * 1000, // 15 minutes
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+    retry: 1,
+  });
 
   return createAsyncResult(
-    {
-      products,
-      availableFilters,
-    },
-    loading,
-    error,
-    fetchCategory,
+    data || { products: [], availableFilters: [] },
+    isLoading,
+    error instanceof Error ? error : null,
+    refetch,
   );
 };
 

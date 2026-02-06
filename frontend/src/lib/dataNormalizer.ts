@@ -66,26 +66,44 @@ interface RawProductInput {
 /**
  * Normalize a raw product from any brand to standard Product format
  * Handles differences in data structure across Roland, Boss, Nord, etc.
+ * 
+ * V6.0: Now supports IngestionProductDraft schema (halilit_id, product_name, etc.)
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function normalizeProduct(input: any): Product {
   const rawProduct = input as RawProductInput;
 
-  // v4.6.1 Golden Product Extraction
+  // v6.0: Handle IngestionProductDraft schema with fallback to legacy formats
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
   const identity = (input as any).identity || {};
 
   // Start with a copy of the raw product
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const product: any = {
-    id: rawProduct.id || "",
-    name: rawProduct.name || identity.name || "Unknown Product",
+    // Map from IngestionProductDraft fields (v6.0)
+    id: rawProduct.halilit_id || rawProduct.id || "",
+    name: rawProduct.product_name || rawProduct.name || identity.name || "Unknown Product",
     brand: rawProduct.brand || identity.brand || "",
+
+    // Category from taxonomy (v6.0 canonical source)
     category:
-      rawProduct.category || rawProduct.main_category || "uncategorized",
+      (typeof rawProduct.taxonomy === 'object' && rawProduct.taxonomy?.canonical_category) ||
+      rawProduct.category ||
+      rawProduct.main_category ||
+      "uncategorized",
     main_category:
-      rawProduct.main_category || rawProduct.category || "uncategorized",
-    description: rawProduct.description || rawProduct.commercial?.description || "",
+      (typeof rawProduct.taxonomy === 'object' && rawProduct.taxonomy?.canonical_category) ||
+      rawProduct.main_category ||
+      rawProduct.category ||
+      "uncategorized",
+
+    description:
+      rawProduct.description_long ||
+      rawProduct.description_short ||
+      rawProduct.description ||
+      rawProduct.official_description ||
+      rawProduct.commercial?.description ||
+      "",
 
     // v4.6.1 CRITICAL: Preserve Refinery Metadata
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -93,31 +111,33 @@ export function normalizeProduct(input: any): Product {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     processed_badge: rawProduct.processed_badge || null,
 
-    // Image URL: Try multiple locations
+    // Image URL: Try multiple locations (v6.0 supports official_images array)
     image_url:
+      (Array.isArray(rawProduct.official_images) && rawProduct.official_images[0]?.url) || // IngestionProductDraft
+      (typeof rawProduct.display === 'object' && rawProduct.display?.hero_image) ||
       rawProduct.image_url || // Roland format
       identity.images?.[0] || // Golden Identity format
-      rawProduct.image || // Alternative format
       rawProduct.image || // Alternative format
       rawProduct.media?.thumbnail || // Boss/Nord nested format
       rawProduct.media?.gallery?.[0] || // Gallery fallback
       "",
 
-    // Pricing: Try multiple locations
-
+    // Pricing: Extract from pricing object or fallback
     pricing: extractPrice(rawProduct),
 
     // Optional fields
     logo_url: rawProduct.logo_url,
-    url: rawProduct.url || rawProduct.commercial?.link,
-    sku: rawProduct.sku || rawProduct.halilit_id,
+    url: rawProduct.url || rawProduct.halilit_url || rawProduct.commercial?.link,
+    sku: rawProduct.sku || rawProduct.halilit_id || rawProduct.id,
     status: rawProduct.status || "IN_STOCK",
 
-    // Media/Gallery
-
+    // Media/Gallery - support official_images from IngestionProductDraft
     images: normalizeImages(rawProduct),
     official_gallery:
-      rawProduct.official_gallery || rawProduct.media?.gallery || [],
+      rawProduct.official_gallery ||
+      (Array.isArray(rawProduct.official_images) ? rawProduct.official_images.map((img: any) => img.url) : []) ||
+      rawProduct.media?.gallery ||
+      [],
 
     // Specs and details
     specs: normalizeSpecs(
@@ -125,7 +145,7 @@ export function normalizeProduct(input: any): Product {
       rawProduct.specs ||
       rawProduct.official_specs
     ),
-    features: rawProduct.features || [],
+    features: rawProduct.features || rawProduct.feature_list || [],
 
     // Documentation
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -143,6 +163,22 @@ export function normalizeProduct(input: any): Product {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     pill_data: rawProduct.pill_data || null,
 
+    // v6.0: Pass through IngestionProductDraft fields for advanced features
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    taxonomy: rawProduct.taxonomy || null,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    display: rawProduct.display || null,
+    official_specs: rawProduct.official_specs || null,
+    official_images: rawProduct.official_images || [],
+    official_url: rawProduct.official_url || null,
+    reviews: rawProduct.reviews || [],
+    review_synthesis: rawProduct.review_synthesis || null,
+    average_rating: rawProduct.average_rating || null,
+    data_completeness: rawProduct.data_completeness || 0,
+    quality_score: rawProduct.quality_score || 0,
+    description_long: rawProduct.description_long || "",
+    description_short: rawProduct.description_short || "",
+
     // Metadata
     verified: true,
   };
@@ -154,11 +190,17 @@ export function normalizeProduct(input: any): Product {
  * Extract price from various data structures
  */
 function extractPrice(product: RawProductInput): ProductPricing {
-  // Try direct pricing object first
+  // Try direct pricing object first (IngestionProductDraft format)
   if (product.pricing && typeof product.pricing === "object") {
-    // We assume the raw pricing object matches sufficiently or cast it
-    // Using unknown cast to break 'any' chain if needed, but here we just return it
     return product.pricing as ProductPricing;
+  }
+
+  // Try IngestionProductDraft price_il field directly
+  if (product.price_il !== undefined && product.price_il !== null) {
+    return {
+      regular_price: product.price_il,
+      currency: "ILS",
+    };
   }
 
   // Try nested commercial pricing
@@ -190,6 +232,18 @@ function extractPrice(product: RawProductInput): ProductPricing {
 function normalizeImages(product: RawProductInput): ProductImage[] {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-member-access
   const identityImages = (product as any).identity?.images;
+
+  // Try official_images first (IngestionProductDraft format)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const officialImages = (product as any).official_images as any[];
+  if (Array.isArray(officialImages) && officialImages.length > 0) {
+    return officialImages.map(img => ({
+      url: img.url || "",
+      type: img.display_purpose || "gallery",
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    })) as ProductImage[];
+  }
+
   const images = product.images || identityImages || [];
 
   // If empty, try to build from other sources

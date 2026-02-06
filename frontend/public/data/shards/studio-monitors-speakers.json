@@ -1,157 +1,1096 @@
 [
   {
-    "id": "shure-headphones",
-    "sku": null,
-    "name": "HEADPHONES",
+    "halilit_id": "shure-headphones",
+    "product_name": "HEADPHONES",
     "brand": "Shure",
-    "brand_id": "shure",
-    "category": "Studio Monitors & Speakers",
-    "subCategory": "Studio Monitor",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2400.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2400.0,
+    "price_eilat": 2051.28,
+    "halilit_url": "https://www.shure.com/nl-NL/producten/headphones",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4e626c0c3a34e538381c7c86363940b1.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/60f2412037a8d80079664ea0832690a1.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9846d721331f0d9f0d11c4b8c23d608e.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/55c25ed369f5b44b6408b5307dde76e1.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2a38ec073ebfe61a547132665261c3d6.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.896009",
+    "last_updated": "2026-02-05T22:48:14.896009",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2400.0,
+      "price_eilat": 2051.28,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529999999999992,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-blue-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use",
+    "description_long": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.shure.com/nl-NL/producten/headphones",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.895995",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Shure catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "shure-headphones",
+      "name": "HEADPHONES",
+      "slug": "/shure/headphones",
+      "brand_id": "shure",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "studio monitor"
+      ],
+      "tier": "silver",
+      "tier_score": 53,
+      "description_short": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use",
+      "description_full": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
+      "price": 2400.0,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
+        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/c",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
+        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/c",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/8",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4e626c0c3a34e538381c7c86363940b1.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/60f2412037a8d80079664ea0832690a1.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/6",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9846d721331f0d9f0d11c4b8c23d608e.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/55c25ed369f5b44b6408b5307dde76e1.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/5",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2a38ec073ebfe61a547132665261c3d6.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "headphones studio monitors studio monitor explore shure wireless and wired headphones for music, studio monitoring and mixing, and daily use shure",
+      "filter_tags": [
+        "shure",
+        "unknown",
+        "studio monitor",
+        "silver",
+        "studio monitors"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.shure.com/nl-NL/producten/headphones",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.952103",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "shure-software",
+    "product_name": "SOFTWARE",
+    "brand": "Shure",
+    "price_il": 2800.0,
+    "price_eilat": 2393.16,
+    "halilit_url": "https://www.shure.com/nl-NL/producten/software",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "shure-software",
-    "sku": null,
-    "name": "SOFTWARE",
-    "brand": "Shure",
-    "brand_id": "shure",
-    "category": "Studio Monitors & Speakers",
-    "subCategory": "Studio Monitor",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2800.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7281e2c8e734e2a3faf34b4c16049887.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/afa2abb155d17e78c1b6a0809999b5fb.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e49b04c999790112a45e8796aebc5f9b.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a5c4673c3ae7c6ee28ca0bc9e08d6a08.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/535cb8c1e26ef5bf0dd677cd19379b1e.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/04c3e4a86a1700a2b2a766a3b5f1fbf3.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.896595",
+    "last_updated": "2026-02-05T22:48:14.896596",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2800.0,
+      "price_eilat": 2393.16,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.530000000000005,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-blue-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum...",
+    "description_long": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.shure.com/nl-NL/producten/software",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.896584",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Shure catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "shure-software",
+      "name": "SOFTWARE",
+      "slug": "/shure/software",
+      "brand_id": "shure",
+      "category": "Other",
+      "subcategories": [],
+      "tier": "silver",
+      "tier_score": 50,
+      "description_short": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum...",
+      "description_full": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
+      "price": 2800.0,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
+        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/b",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
+        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/b",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7281e2c8e734e2a3faf34b4c16049887.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/afa2abb155d17e78c1b6a0809999b5fb.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/a",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e49b04c999790112a45e8796aebc5f9b.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a5c4673c3ae7c6ee28ca0bc9e08d6a08.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/535cb8c1e26ef5bf0dd677cd19379b1e.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/5",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/04c3e4a86a1700a2b2a766a3b5f1fbf3.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/0",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "software other enhance your audio with shure software solutions, including dsp, remote monitoring, rf spectrum... shure",
+      "filter_tags": [
+        "shure",
+        "unknown",
+        "other",
+        "silver"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.shure.com/nl-NL/producten/software",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.952187",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "shure-luidsprekers",
+    "product_name": "LUIDSPREKERS",
+    "brand": "Shure",
+    "price_il": 3600.0,
+    "price_eilat": 3076.92,
+    "halilit_url": "https://www.shure.com/nl-NL/producten/luidsprekers",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "shure-luidsprekers",
-    "sku": null,
-    "name": "LUIDSPREKERS",
-    "brand": "Shure",
-    "brand_id": "shure",
-    "category": "Studio Monitors & Speakers",
-    "subCategory": "Speaker",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 3600.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2c09ea2a8f99f25f3588ea5f011b468d.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdca0382c1c6b4eef5a6d17e6f013.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6314784ebecc026782c5f087a23.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb32e42e567bd46be265815b69f0d.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2a2667aaec9c51cdf78246e659b.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.897424",
+    "last_updated": "2026-02-05T22:48:14.897424",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 3600.0,
+      "price_eilat": 3076.92,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529999999999998,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-blue-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
+    "description_short": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing,...",
+    "description_long": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.shure.com/nl-NL/producten/luidsprekers",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.897413",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Shure catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "shure-luidsprekers",
+      "name": "LUIDSPREKERS",
+      "slug": "/shure/luidsprekers",
+      "brand_id": "shure",
+      "category": "Studio Monitors",
+      "subcategories": [
+        "speaker"
+      ],
+      "tier": "gold",
+      "tier_score": 60,
+      "description_short": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing,...",
+      "description_full": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
+      "price": 3600.0,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
+        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
+        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2c09ea2a8f99f25f3588ea5f011b468d.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdca0382c1c6b4eef5a6d17e6f013.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdc",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6314784ebecc026782c5f087a23.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb32e42e567bd46be265815b69f0d.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb3",
+          "width": null,
+          "height": null
+        },
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2a2667aaec9c51cdf78246e659b.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "luidsprekers studio monitors speaker experience high-quality audio with shure networked loudspeakers, ideal for av conferencing,... shure",
+      "filter_tags": [
+        "shure",
+        "unknown",
+        "speaker",
+        "studio monitors",
+        "gold"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": true,
+        "show_badge": false
+      },
+      "source_url": "https://www.shure.com/nl-NL/producten/luidsprekers",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.952334",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
+  },
+  {
+    "halilit_id": "shure-using",
+    "product_name": "USING WAVETOOL FOR SUPERIOR MIC MONITORING IN HIGH-STAKES PRODUCTIONS",
+    "brand": "Shure",
+    "price_il": 2000.0,
+    "price_eilat": 1709.4,
+    "halilit_url": "https://www.shure.com/nl-NL/insights/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
     "official_specs": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
-  },
-  {
-    "id": "shure-using",
-    "sku": null,
-    "name": "USING WAVETOOL FOR SUPERIOR MIC MONITORING IN HIGH-STAKES PRODUCTIONS",
-    "brand": "Shure",
-    "brand_id": "shure",
-    "category": "Studio Monitors & Speakers",
-    "subCategory": "Studio Monitor",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2000.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "official_description": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production’s sound. Learn more.",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.898426",
+    "last_updated": "2026-02-05T22:48:14.898426",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2000.0,
+      "price_eilat": 1709.4,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529999999999996,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "bg-blue-400",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater",
+    "description_long": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production’s sound. Learn more.",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://www.shure.com/nl-NL/insights/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.898412",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Shure catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "shure-using",
+      "name": "USING WAVETOOL FOR SUPERIOR MIC MONITORING IN HIGH-STAKES PRODUCTIONS",
+      "slug": "/shure/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
+      "brand_id": "shure",
+      "category": "Microphones",
+      "subcategories": [
+        "mic"
+      ],
+      "tier": "silver",
+      "tier_score": 50,
+      "description_short": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater",
+      "description_full": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production’s sound. Learn more.",
+      "price": 2000.0,
+      "currency": "ILS",
+      "stock_status": "unknown",
+      "image_hero": {
+        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
+        "alt": "A2 monitoring channels with WAVETOOL with iPad",
+        "width": null,
+        "height": null
+      },
+      "image_thumbnail": {
+        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
+        "alt": "A2 monitoring channels with WAVETOOL with iPad",
+        "width": null,
+        "height": null
+      },
+      "image_gallery": [
+        {
+          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
+          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f",
+          "width": null,
+          "height": null
+        }
+      ],
+      "color_primary": null,
+      "specs": {},
+      "pros": [],
+      "cons": [],
+      "expert_tips": [],
+      "search_text": "using wavetool for superior mic monitoring in high-stakes productions microphones mic explore wavetool, a game-changer in audio and mic monitoring for tv, broadcasting, and theater shure",
+      "filter_tags": [
+        "shure",
+        "unknown",
+        "silver",
+        "microphones",
+        "mic"
+      ],
+      "render_hints": {
+        "has_hero_image": true,
+        "has_gallery": true,
+        "has_specs": false,
+        "has_price": false,
+        "has_reviews": false,
+        "has_tips": false,
+        "is_verified": false,
+        "show_badge": false
+      },
+      "source_url": "https://www.shure.com/nl-NL/insights/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
+      "purchase_url": null,
+      "synced_at": "2026-02-01T21:10:43.952478",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   },
   {
-    "id": "3306649",
-    "sku": null,
-    "name": "Nord Piano Monitors V2",
+    "halilit_id": "42-PIANOMONITORV2",
+    "product_name": "Nord Piano Monitors V2",
     "brand": "Nord",
-    "brand_id": "nord",
-    "category": "Studio Monitors & Speakers",
-    "subCategory": "Studio Monitor",
-    "description": null,
-    "description_short": null,
-    "description_full": null,
-    "price": 2529.0,
-    "price_eilat": 0.0,
-    "currency": "ILS",
-    "tier": "pro",
-    "tier_level": 4,
-    "images": {},
+    "price_il": 2529.0,
+    "price_eilat": 2161.54,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
+    "official_images": [
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
+        "display_purpose": "hero",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 100
+      },
+      {
+        "type": "image",
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
+        "display_purpose": "gallery",
+        "resolution": null,
+        "source": "official",
+        "alt_text": null,
+        "priority": 50
+      }
+    ],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-05T22:48:14.955563",
+    "last_updated": "2026-02-05T22:48:14.955564",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 2529.0,
+      "price_eilat": 2161.54,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "pro",
+      "eilat_discount_percent": 14.529853697113484,
+      "suggested_tier": "pro",
+      "price_validity_marker": "current",
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "cornerstone",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 5,
+      "color_hint": "#0084FF",
+      "media_assets": []
+    },
     "specifications": {
       "specs_dict": {},
       "specs_source": "commercial",
       "specs_completeness": 0.5,
       "specs_markdown": null
     },
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+    "description_short": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
+    "description_long": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-05T22:48:14.955549",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Nord catalog"
     },
-    "completeness": 0.6315789473684209,
-    "quality_score": 0.6315789473684209
+    "lineage": {},
+    "raw_snapshot": {
+      "id": "3306649",
+      "sku": "42-PIANOMONITORV2",
+      "brand_id": "nord",
+      "name": "Nord Piano Monitors V2",
+      "slug": "nord-piano-monitors-v2",
+      "description_short": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
+      "description_full": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
+      "price": 2529.0,
+      "currency": "ILS",
+      "in_stock": true,
+      "image_hero": {
+        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
+        "alt": "Nord Piano Monitors V2"
+      },
+      "image_gallery": [
+        "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg"
+      ],
+      "specs": {},
+      "reviews": {
+        "average": 4.5,
+        "count": 3
+      },
+      "contextual": {
+        "pros": [
+          "Exceptional build quality (Handmade in Sweden)",
+          "Industry-standard piano and organ engines",
+          "Intuitive 1-knob-per-function interface"
+        ],
+        "cons": [
+          "Premium price point compared to competitors",
+          "Limited split points on some models",
+          "Memory capacity fills up quickly with large samples"
+        ],
+        "expert_tips": [
+          "Download the Royal Grand 3D XL sample immediately",
+          "Use the Layer Scene feature (on Stage 4) for quick transitions"
+        ]
+      },
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88",
+      "pipeline_phase": "enrich"
+    },
+    "data_completeness": 0.7368421052631579,
+    "quality_score": 0.7368421052631579,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": []
   }
 ]
