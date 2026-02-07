@@ -2,9 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Content Security Policy for Gemini AI compatibility -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      connect-src 'self' https://*.google.com https://*.googleapis.com https://*.gstatic.com https://*.googleusercontent.com;
+      img-src 'self' https://*.google.com https://*.gstatic.com https://*.googleusercontent.com https://*.ggpht.com data: blob;;
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.google.com https://*.gstatic.com;
+      style-src 'self' 'unsafe-inline' https://*.google.com https://*.gstatic.com;
+      font-src 'self' https://*.gstatic.com data:;
+      frame-src 'self' https://*.google.com;
+      media-src 'self' https://*.google.com https://*.googleapis.com https://*.gstatic.com https://*.googleusercontent.com blob;;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+    ">
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <title>Halilit Support Center</title>
   </head>
   <body>
     <div id="root"></div>
