@@ -25,7 +25,7 @@ from datetime import datetime
 from pathlib import Path
 import json
 
-from backend.agents.trinity_swarm import TrinitySwarm
+from backend.unified_agent_orchestrator_v73 import TrinitySwarm
 from backend.ingestion import (
     get_ingestion_orchestrator,
     get_spectrum_adapter,
@@ -103,6 +103,36 @@ class TrinityIngestionBridge:
                             f"Failed to enrich {p.get('product_name', 'unknown')}: {e}")
                         enriched_raw.append(p)
                 raw_products = enriched_raw
+
+            # STEP 1.8: Trinity Swarm - External Audit (Contextual Validation)
+            # Strictly enforces the "3 Trusted Sources" rule
+            if raw_products:
+                logger.info(
+                    f"Step 1.8/5: Trinity Swarm validating {len(raw_products)} products against trusted sources...")
+                audited_products = []
+                for p in raw_products:
+                    try:
+                        # Validate against 3 trusted sources (SoundOnSound, etc.)
+                        audit = self.swarm.auditor.validate_and_review(p)
+
+                        if audit.status == "APPROVED":
+                            # Attach audit metadata for the pipeline to see
+                            p['_audit_risk_score'] = audit.risk_score
+                            p['_audit_notes'] = audit.auditor_notes
+                            p['_audit_violations'] = audit.violations
+                            audited_products.append(p)
+                            logger.info(
+                                f"   ✓ Verified: {p.get('product_name')}")
+                        else:
+                            logger.warning(
+                                f"   🛑 REJECTED by ExternalValidator: {p.get('product_name')} (Risk: {audit.risk_score})")
+                    except Exception as e:
+                        logger.warning(
+                            f"   ⚠ Audit error for {p.get('product_name', 'Unknown')}: {e}. Skipping safely.")
+
+                logger.info(
+                    f"Auditor approved {len(audited_products)}/{len(raw_products)} items.")
+                raw_products = audited_products
 
             result["trinity_harvest"] = {
                 "total_harvested": len(raw_products),
@@ -182,17 +212,33 @@ class TrinityIngestionBridge:
             List of raw product dicts
         """
         try:
-            # In real implementation, this would use CommercialScout.harvest()
-            # For now, load from file if available
+            # OPTION 1: Try Real Harvesting via Trinity Swarm FIRST (for "Real Ingestion")
+            logger.info(
+                f"Loading from Trinity Swarm (Real/Live) for {brand}...")
+            raw_data = self.swarm.scout.harvest(brand)
+
+            # Handle both list (Real Scraping) and dict (Legacy Simulation) returns
+            if isinstance(raw_data, list) and len(raw_data) > 0:
+                logger.info(
+                    f"   ✓ Received {len(raw_data)} products from Swarm (Live)")
+                return raw_data
+            elif isinstance(raw_data, dict) and raw_data:
+                # If it returned a single dict, it might be the simulation fallback
+                # Check if it looks like a real scraped item or the hardcoded mock
+                if raw_data.get("halilit_id") == "123456":  # The mock ID
+                    logger.info(
+                        "   ⚠ Swarm returned Mock data. Checking file cache...")
+                else:
+                    return [raw_data]
+
+            # OPTION 2: Fallback to Local File Cache
             raw_products = self._load_brand_from_file(brand)
             if raw_products:
                 logger.info(
-                    f"✅ Loaded {len(raw_products)} products from file for {brand}")
+                    f"✅ Loaded {len(raw_products)} products from file for {brand} (Fallback)")
                 return raw_products
 
-            # Fallback to Trinity agent
-            logger.info(f"Loading from Trinity Swarm for {brand}...")
-            raw_data = self.swarm.scout.harvest(brand)
+            # OPTION 3: Return the Mock/Empty result from Swarm if file failed
             return [raw_data] if raw_data else []
 
         except Exception as e:

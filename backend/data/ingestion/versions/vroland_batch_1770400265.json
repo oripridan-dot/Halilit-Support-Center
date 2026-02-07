@@ -1,0 +1,16 @@
+{
+  "version_id": "roland_batch_1770400265",
+  "brand": "roland",
+  "batch_id": "batch_1770400265",
+  "timestamp": "2026-02-06T17:51:05.210286",
+  "approved_count": 25,
+  "rejected_count": 0,
+  "total_processed": 25,
+  "execution_time_seconds": 0.014944,
+  "data_completeness": 0.6315789473684211,
+  "quality_score": 0.6315789473684211,
+  "is_active": true,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ]
+}

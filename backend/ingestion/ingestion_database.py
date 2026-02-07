@@ -189,6 +189,36 @@ class IngestionDatabase:
             f"✅ Loaded {len(products)} {status} products from {latest_file}")
         return products
 
+    def get_all_approved_products(self) -> Dict[str, List[Dict[str, Any]]]:
+        """
+        Get all approved products from all brands.
+
+        Returns:
+            Dict of {brand: [approved_products]}
+        """
+        products_dir = self.base_path / "products"
+        if not products_dir.exists():
+            logger.warning("No products directory found")
+            return {}
+
+        all_products = {}
+
+        # Iterate through each brand directory
+        for brand_dir in products_dir.iterdir():
+            if not brand_dir.is_dir():
+                continue
+
+            brand_name = brand_dir.name
+            approved_products = self.load_latest_products(
+                brand_name, status="approved")
+
+            if approved_products:
+                all_products[brand_name] = approved_products
+
+        logger.info(
+            f"✅ Loaded approved products from {len(all_products)} brands")
+        return all_products
+
     def load_latest_report(self, brand: str) -> Optional[Dict[str, Any]]:
         """
         Load latest report for a brand

@@ -1,0 +1,16 @@
+{
+  "version_id": "asm_batch_1770400263",
+  "brand": "asm",
+  "batch_id": "batch_1770400263",
+  "timestamp": "2026-02-06T17:51:03.185510",
+  "approved_count": 16,
+  "rejected_count": 0,
+  "total_processed": 16,
+  "execution_time_seconds": 0.010672,
+  "data_completeness": 0.4210526315789471,
+  "quality_score": 0.4210526315789471,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

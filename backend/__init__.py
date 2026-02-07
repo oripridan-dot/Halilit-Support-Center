@@ -1,13 +1,25 @@
 """
-Halilit Support Center v5.2.4 - ADK Backend with Google Conductor
-==================================================================
+Halilit Support Center v7.3 - ADK Backend (Trinity Swarm + Consolidated)
+=========================================================================
 
-Lightweight module exports - actual imports handled by specific modules.
-Version: 5.2.4 (Production Ready - Conductor Integration)
-Features: Trinity Swarm, DevAgent v3.1, Learning System, Google Conductor, Complete Maintenance, Full Sync
+Lightweight module exports for the Halilit Support Center API.
+- Trinity Swarm: Three autonomous agents for data processing
+- Ingestion Pipeline: Data normalization and persistence
+- Skills & Workflow: Verified capabilities with state machines
+- Security: Multi-layer protection
+
+Version: 7.2 (Production-Ready)
 """
 
-__version__ = "5.2.4"
+import sys
+from pathlib import Path
+
+# Ensure parent directory is in path for imports
+_parent_dir = str(Path(__file__).parent.parent)
+if _parent_dir not in sys.path:
+    sys.path.insert(0, _parent_dir)
+
+__version__ = "7.2"
 __adk_enabled__ = True
 
 __all__ = [

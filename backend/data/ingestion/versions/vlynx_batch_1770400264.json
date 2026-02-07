@@ -1,0 +1,16 @@
+{
+  "version_id": "lynx_batch_1770400264",
+  "brand": "lynx",
+  "batch_id": "batch_1770400264",
+  "timestamp": "2026-02-06T17:51:04.269163",
+  "approved_count": 18,
+  "rejected_count": 0,
+  "total_processed": 18,
+  "execution_time_seconds": 0.008722,
+  "data_completeness": 0.4210526315789471,
+  "quality_score": 0.4210526315789471,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

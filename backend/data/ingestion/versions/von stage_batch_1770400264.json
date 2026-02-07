@@ -1,0 +1,16 @@
+{
+  "version_id": "on stage_batch_1770400264",
+  "brand": "on stage",
+  "batch_id": "batch_1770400264",
+  "timestamp": "2026-02-06T17:51:04.812690",
+  "approved_count": 24,
+  "rejected_count": 0,
+  "total_processed": 24,
+  "execution_time_seconds": 0.020234,
+  "data_completeness": 0.42105263157894707,
+  "quality_score": 0.42105263157894707,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

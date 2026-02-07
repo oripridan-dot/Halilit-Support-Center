@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770400264",
+  "brand": "guild",
+  "timestamp": "2026-02-06T17:51:04.033674",
+  "execution_time_seconds": 0.018577,
+  "total_processed": 25,
+  "approved_count": 25,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 25,
+  "rejected_products_count": 0
+}

@@ -1,0 +1,16 @@
+{
+  "version_id": "denon-dj_batch_1770455237",
+  "brand": "denon-dj",
+  "batch_id": "batch_1770455237",
+  "timestamp": "2026-02-07T09:07:17.211205",
+  "approved_count": 1,
+  "rejected_count": 0,
+  "total_processed": 1,
+  "execution_time_seconds": 0.001926,
+  "data_completeness": 0.6842105263157894,
+  "quality_score": 100.0,
+  "is_active": true,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ]
+}

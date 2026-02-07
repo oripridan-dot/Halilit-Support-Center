@@ -1,1874 +1,10 @@
 [
   {
-    "halilit_id": "universal-audio-universal-audio-paradise-guitar-studio",
-    "product_name": "Paradise Guitar Studio",
-    "brand": "Universal-Audio",
-    "price_il": 3000.0,
-    "price_eilat": 2564.1,
-    "halilit_url": "https://www.uaudio.com/products/paradise-guitar-studio",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Turn your riffs into records.\nGet an entire pro guitar recording chain in your DAW — complete with classic amps, cabs, mics, pedals, studio effects, and more\nExplore 11 hand-picked vintage and modified tube amps — a “golden unit” collection of essential clean, crunch, and boutique tones\nCapture your perfect sound in minutes with curated speaker cabinets and expertly-placed studio mics\nShape your final tone with studio effects like 1176 compression, vintage tape echo, spring and plate reverbs, EQ, and more\nStay inspired with over 300 presets spanning rock, blues, indie, metal, funk, pop, and beyond",
-    "official_images": [
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/luna_pro_gallery_1.png?v=1761068886",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/studio_d_chorus_gallery_1.png?v=1742249235",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_2_thumb_v2_e9604726-2345-408b-834d-53b4a4010e38.png?v=1747769025",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_pro_vocal_bundle_gallery_1.png?v=1748444512",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.890815",
-    "last_updated": "2026-02-06T06:45:16.890815",
-    "taxonomy": {
-      "canonical_category": "Studio Monitors & Speakers",
-      "canonical_subcategory": "Speaker",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 3000.0,
-      "price_eilat": 2564.1,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.530000000000005,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/luna_pro_gallery_1.png?v=1761068886",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/studio_d_chorus_gallery_1.png?v=1742249235",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_2_thumb_v2_e9604726-2345-408b-834d-53b4a4010e38.png?v=1747769025",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_pro_vocal_bundle_gallery_1.png?v=1748444512",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "Turn your riffs into records",
-    "description_long": "Turn your riffs into records.\nGet an entire pro guitar recording chain in your DAW — complete with classic amps, cabs, mics, pedals, studio effects, and more\nExplore 11 hand-picked vintage and modified tube amps — a “golden unit” collection of essential clean, crunch, and boutique tones\nCapture your perfect sound in minutes with curated speaker cabinets and expertly-placed studio mics\nShape your final tone with studio effects like 1176 compression, vintage tape echo, spring and plate reverbs, EQ, and more\nStay inspired with over 300 presets spanning rock, blues, indie, metal, funk, pop, and beyond",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://www.uaudio.com/products/paradise-guitar-studio",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.890806",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Universal-Audio catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "universal-audio-universal-audio-paradise-guitar-studio",
-      "name": "Paradise Guitar Studio",
-      "slug": "/universal-audio/paradise-guitar-studio",
-      "brand_id": "universal-audio",
-      "category": "Studio Monitors",
-      "subcategories": [
-        "speaker"
-      ],
-      "tier": "gold",
-      "tier_score": 60,
-      "description_short": "Turn your riffs into records",
-      "description_full": "Turn your riffs into records.\nGet an entire pro guitar recording chain in your DAW — complete with classic amps, cabs, mics, pedals, studio effects, and more\nExplore 11 hand-picked vintage and modified tube amps — a “golden unit” collection of essential clean, crunch, and boutique tones\nCapture your perfect sound in minutes with curated speaker cabinets and expertly-placed studio mics\nShape your final tone with studio effects like 1176 compression, vintage tape echo, spring and plate reverbs, EQ, and more\nStay inspired with over 300 presets spanning rock, blues, indie, metal, funk, pop, and beyond",
-      "price": 3000,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-        "alt": "Ocean Way Studios Deluxe",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-        "alt": "Ocean Way Studios Deluxe",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-          "alt": "UAD Essentials Edition",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/luna_pro_gallery_1.png?v=1761068886",
-          "alt": "LUNA Pro",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
-          "alt": "Manley Tube Preamp",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-          "alt": "UAD Ultimate 14",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/studio_d_chorus_gallery_1.png?v=1742249235",
-          "alt": "Studio D Chorus",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_2_thumb_v2_e9604726-2345-408b-834d-53b4a4010e38.png?v=1747769025",
-          "alt": "UAD Custom 2 Bundle",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_pro_vocal_bundle_gallery_1.png?v=1748444512",
-          "alt": "UAD Pro Vocal Bundle",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "paradise guitar studio studio monitors speaker turn your riffs into records universal audio",
-      "filter_tags": [
-        "unknown",
-        "speaker",
-        "universal-audio",
-        "studio monitors",
-        "gold"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": true,
-        "show_badge": false
-      },
-      "source_url": "https://www.uaudio.com/products/paradise-guitar-studio",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.978200",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Category may not be standard: Other > Uncategorized"
-    ],
-    "price": 3000.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_essentials_edition_gallery_1.png?v=1742248644",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/luna_pro_gallery_1.png?v=1761068886",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/manley_reference_microphone_preamplifier_gallery_1.png?v=1742248831",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/studio_d_chorus_gallery_1.png?v=1742249235",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_2_thumb_v2_e9604726-2345-408b-834d-53b4a4010e38.png?v=1747769025",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/UAD_pro_vocal_bundle_gallery_1.png?v=1748444512",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ocean_way_studios_deluxe_gallery_1.png?v=1761851746"
-  },
-  {
-    "halilit_id": "shure-headphones",
-    "product_name": "HEADPHONES",
-    "brand": "Shure",
-    "price_il": 2400.0,
-    "price_eilat": 2051.28,
-    "halilit_url": "https://www.shure.com/nl-NL/producten/headphones",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
-    "official_images": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4e626c0c3a34e538381c7c86363940b1.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/60f2412037a8d80079664ea0832690a1.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9846d721331f0d9f0d11c4b8c23d608e.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/55c25ed369f5b44b6408b5307dde76e1.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2a38ec073ebfe61a547132665261c3d6.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.909342",
-    "last_updated": "2026-02-06T06:45:16.909342",
-    "taxonomy": {
-      "canonical_category": "Studio Monitors & Speakers",
-      "canonical_subcategory": "Studio Monitor",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 2400.0,
-      "price_eilat": 2051.28,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999992,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4e626c0c3a34e538381c7c86363940b1.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/60f2412037a8d80079664ea0832690a1.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9846d721331f0d9f0d11c4b8c23d608e.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/55c25ed369f5b44b6408b5307dde76e1.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2a38ec073ebfe61a547132665261c3d6.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use",
-    "description_long": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://www.shure.com/nl-NL/producten/headphones",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.909336",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Shure catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "shure-headphones",
-      "name": "HEADPHONES",
-      "slug": "/shure/headphones",
-      "brand_id": "shure",
-      "category": "Studio Monitors",
-      "subcategories": [
-        "studio monitor"
-      ],
-      "tier": "silver",
-      "tier_score": 53,
-      "description_short": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use",
-      "description_full": "Explore Shure wireless and wired headphones for music, studio monitoring and mixing, and daily use.",
-      "price": 2400.0,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/c",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/c",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/8",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4e626c0c3a34e538381c7c86363940b1.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/60f2412037a8d80079664ea0832690a1.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/6",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9846d721331f0d9f0d11c4b8c23d608e.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/55c25ed369f5b44b6408b5307dde76e1.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/5",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2a38ec073ebfe61a547132665261c3d6.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "headphones studio monitors studio monitor explore shure wireless and wired headphones for music, studio monitoring and mixing, and daily use shure",
-      "filter_tags": [
-        "shure",
-        "unknown",
-        "studio monitor",
-        "silver",
-        "studio monitors"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://www.shure.com/nl-NL/producten/headphones",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.952103",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2400.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/ac7/0ac/2a-/original/868cc63ea8a2dba0a94c8e718fb5ee05.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/9d3/cc6/f4-/original/4e626c0c3a34e538381c7c86363940b1.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cca/17c/1d-/original/60f2412037a8d80079664ea0832690a1.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/42b/328/b3-/original/9846d721331f0d9f0d11c4b8c23d608e.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/d62/652/88-/original/55c25ed369f5b44b6408b5307dde76e1.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c99/ce7/93-/original/2a38ec073ebfe61a547132665261c3d6.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c25/16a/40-/original/ce632827adec4e1842caa762f10e643d.webp"
-  },
-  {
-    "halilit_id": "shure-software",
-    "product_name": "SOFTWARE",
-    "brand": "Shure",
-    "price_il": 2800.0,
-    "price_eilat": 2393.16,
-    "halilit_url": "https://www.shure.com/nl-NL/producten/software",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
-    "official_images": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7281e2c8e734e2a3faf34b4c16049887.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/afa2abb155d17e78c1b6a0809999b5fb.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e49b04c999790112a45e8796aebc5f9b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a5c4673c3ae7c6ee28ca0bc9e08d6a08.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/535cb8c1e26ef5bf0dd677cd19379b1e.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/04c3e4a86a1700a2b2a766a3b5f1fbf3.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.909539",
-    "last_updated": "2026-02-06T06:45:16.909540",
-    "taxonomy": {
-      "canonical_category": "Studio Monitors & Speakers",
-      "canonical_subcategory": "Studio Monitor",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 2800.0,
-      "price_eilat": 2393.16,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.530000000000005,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7281e2c8e734e2a3faf34b4c16049887.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/afa2abb155d17e78c1b6a0809999b5fb.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e49b04c999790112a45e8796aebc5f9b.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a5c4673c3ae7c6ee28ca0bc9e08d6a08.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/535cb8c1e26ef5bf0dd677cd19379b1e.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/04c3e4a86a1700a2b2a766a3b5f1fbf3.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum...",
-    "description_long": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://www.shure.com/nl-NL/producten/software",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.909534",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Shure catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "shure-software",
-      "name": "SOFTWARE",
-      "slug": "/shure/software",
-      "brand_id": "shure",
-      "category": "Other",
-      "subcategories": [],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum...",
-      "description_full": "Enhance your audio with Shure software solutions, including DSP, remote monitoring, RF spectrum management and more.",
-      "price": 2800.0,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/b",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/b",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7281e2c8e734e2a3faf34b4c16049887.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/afa2abb155d17e78c1b6a0809999b5fb.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/a",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e49b04c999790112a45e8796aebc5f9b.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a5c4673c3ae7c6ee28ca0bc9e08d6a08.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/535cb8c1e26ef5bf0dd677cd19379b1e.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/5",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/04c3e4a86a1700a2b2a766a3b5f1fbf3.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/0",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "software other enhance your audio with shure software solutions, including dsp, remote monitoring, rf spectrum... shure",
-      "filter_tags": [
-        "shure",
-        "unknown",
-        "other",
-        "silver"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://www.shure.com/nl-NL/producten/software",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.952187",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2800.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/dfa/af5/a7-/original/2e3e1e779c4dfba65a261b238e59015d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/a92/6c1/33-/original/7281e2c8e734e2a3faf34b4c16049887.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/61e/bbc/f8-/original/afa2abb155d17e78c1b6a0809999b5fb.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/e6b/f8e/43-/original/e49b04c999790112a45e8796aebc5f9b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/471/990/9d-/original/a5c4673c3ae7c6ee28ca0bc9e08d6a08.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/5e3/c48/74-/original/535cb8c1e26ef5bf0dd677cd19379b1e.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/783/223/75-/original/04c3e4a86a1700a2b2a766a3b5f1fbf3.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c5f/45a/0c-/original/bb36a7fd484657721f218d9502fe49ce.webp"
-  },
-  {
-    "halilit_id": "shure-luidsprekers",
-    "product_name": "LUIDSPREKERS",
-    "brand": "Shure",
-    "price_il": 3600.0,
-    "price_eilat": 3076.92,
-    "halilit_url": "https://www.shure.com/nl-NL/producten/luidsprekers",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
-    "official_images": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2c09ea2a8f99f25f3588ea5f011b468d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdca0382c1c6b4eef5a6d17e6f013.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6314784ebecc026782c5f087a23.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb32e42e567bd46be265815b69f0d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2a2667aaec9c51cdf78246e659b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.910395",
-    "last_updated": "2026-02-06T06:45:16.910395",
-    "taxonomy": {
-      "canonical_category": "Studio Monitors & Speakers",
-      "canonical_subcategory": "Speaker",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 3600.0,
-      "price_eilat": 3076.92,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999998,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2c09ea2a8f99f25f3588ea5f011b468d.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdca0382c1c6b4eef5a6d17e6f013.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6314784ebecc026782c5f087a23.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb32e42e567bd46be265815b69f0d.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2a2667aaec9c51cdf78246e659b.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing,...",
-    "description_long": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://www.shure.com/nl-NL/producten/luidsprekers",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.910388",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Shure catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "shure-luidsprekers",
-      "name": "LUIDSPREKERS",
-      "slug": "/shure/luidsprekers",
-      "brand_id": "shure",
-      "category": "Studio Monitors",
-      "subcategories": [
-        "speaker"
-      ],
-      "tier": "gold",
-      "tier_score": 60,
-      "description_short": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing,...",
-      "description_full": "Experience high-quality audio with Shure networked loudspeakers, ideal for AV conferencing, presentations, and diverse audio applications.",
-      "price": 3600.0,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2c09ea2a8f99f25f3588ea5f011b468d.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdca0382c1c6b4eef5a6d17e6f013.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdc",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6314784ebecc026782c5f087a23.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb32e42e567bd46be265815b69f0d.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb3",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2a2667aaec9c51cdf78246e659b.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "luidsprekers studio monitors speaker experience high-quality audio with shure networked loudspeakers, ideal for av conferencing,... shure",
-      "filter_tags": [
-        "shure",
-        "unknown",
-        "speaker",
-        "studio monitors",
-        "gold"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": true,
-        "show_badge": false
-      },
-      "source_url": "https://www.shure.com/nl-NL/producten/luidsprekers",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.952334",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 3600.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/ab3/85c/ee-/original/a01c1b9531eb8d6ed34805f5c5190c0a.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/c9e/b60/a7-/original/2c09ea2a8f99f25f3588ea5f011b468d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bb8/631/9a-/original/19fbdca0382c1c6b4eef5a6d17e6f013.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/148/3a8/67-/original/2619c6314784ebecc026782c5f087a23.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/703/1d8/4d-/original/82fdb32e42e567bd46be265815b69f0d.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d06/a56/3b-/original/d8ffb2a2667aaec9c51cdf78246e659b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/53c/0f8/41-/original/0e42ce43b0257f7208c201b245b3fc88.webp"
-  },
-  {
-    "halilit_id": "shure-using",
-    "product_name": "USING WAVETOOL FOR SUPERIOR MIC MONITORING IN HIGH-STAKES PRODUCTIONS",
-    "brand": "Shure",
-    "price_il": 2000.0,
-    "price_eilat": 1709.4,
-    "halilit_url": "https://www.shure.com/nl-NL/insights/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production’s sound. Learn more.",
-    "official_images": [
-      {
-        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.911218",
-    "last_updated": "2026-02-06T06:45:16.911218",
-    "taxonomy": {
-      "canonical_category": "Studio Monitors & Speakers",
-      "canonical_subcategory": "Studio Monitor",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 2000.0,
-      "price_eilat": 1709.4,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999996,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater",
-    "description_long": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production’s sound. Learn more.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://www.shure.com/nl-NL/insights/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.911208",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Shure catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "shure-using",
-      "name": "USING WAVETOOL FOR SUPERIOR MIC MONITORING IN HIGH-STAKES PRODUCTIONS",
-      "slug": "/shure/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
-      "brand_id": "shure",
-      "category": "Microphones",
-      "subcategories": [
-        "mic"
-      ],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater",
-      "description_full": "Explore WAVETOOL, a game-changer in audio and mic monitoring for TV, broadcasting, and theater. Revolutionize your production’s sound. Learn more.",
-      "price": 2000.0,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-        "alt": "A2 monitoring channels with WAVETOOL with iPad",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-        "alt": "A2 monitoring channels with WAVETOOL with iPad",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "using wavetool for superior mic monitoring in high-stakes productions microphones mic explore wavetool, a game-changer in audio and mic monitoring for tv, broadcasting, and theater shure",
-      "filter_tags": [
-        "shure",
-        "unknown",
-        "silver",
-        "microphones",
-        "mic"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://www.shure.com/nl-NL/insights/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.952478",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2000.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/b94/839/df-/original/f9db0769a47fcf960dca2edc8241781b.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://shure.widen.net/content/7hqu27uami/webp/using-wavetool-for-superior-mic-monitoring-in-high-stakes-productions_header.webp?position=c&color=ffffffff&quality=80&u=zenegx"
-  },
-  {
-    "halilit_id": "42-PIANOMONITORV2",
-    "product_name": "Nord Piano Monitors V2",
-    "brand": "Nord",
-    "price_il": 2529.0,
-    "price_eilat": 2161.54,
+    "halilit_id": "scraped-4371088336554685571",
+    "product_name": "On Stage SMS7500 Wood Studio Monitor Stands",
+    "brand": "On Stage",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
     "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
@@ -1878,33 +14,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.936163",
-    "last_updated": "2026-02-06T06:45:16.936163",
+    "created_at": "2026-02-06T14:03:15.975356",
+    "last_updated": "2026-02-06T14:03:15.975356",
     "taxonomy": {
       "canonical_category": "Studio Monitors & Speakers",
       "canonical_subcategory": "Studio Monitor",
@@ -1913,114 +32,53 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 2529.0,
-      "price_eilat": 2161.54,
+      "price_il": 0.0,
+      "price_eilat": 0.0,
       "price_usd": null,
       "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529853697113484,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "#0084FF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
-    "description_long": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.936157",
+      "timestamp": "2026-02-06T14:03:15.975336",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Nord catalog"
+      "extraction_notes": "Scraped from On Stage catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "3306649",
-      "sku": "42-PIANOMONITORV2",
-      "brand_id": "nord",
-      "name": "Nord Piano Monitors V2",
-      "slug": "nord-piano-monitors-v2",
-      "description_short": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
-      "description_full": "מוניטורים מוגברים V2 יעודיים לפסנתרי Nord",
-      "price": 2529.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": "Nord Piano Monitors V2"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 4.5,
-        "count": 3
-      },
-      "contextual": {
-        "pros": [
-          "Exceptional build quality (Handmade in Sweden)",
-          "Industry-standard piano and organ engines",
-          "Intuitive 1-knob-per-function interface"
-        ],
-        "cons": [
-          "Premium price point compared to competitors",
-          "Limited split points on some models",
-          "Memory capacity fills up quickly with large samples"
-        ],
-        "expert_tips": [
-          "Download the Royal Grand 3D XL sample immediately",
-          "Use the Layer Scene feature (on Stage 4) for quick transitions"
-        ]
-      },
+      "halilit_id": "scraped-4371088336554685571",
+      "product_name": "On Stage SMS7500 Wood Studio Monitor Stands",
+      "brand": "On Stage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6681634-on-stage-sms7500-wood-studio-monitor-stands\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -2035,50 +93,1230 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2529.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
     ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/5747648/original/80e22616a360ba33d805ef59ab7c4f5d.jpg"
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-4371088336554685571",
+    "product_name": "On Stage SMS7500 Wood Studio Monitor Stands",
+    "brand": "On Stage",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:15.976316",
+    "last_updated": "2026-02-06T14:03:15.976317",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:15.976300",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from On Stage catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-4371088336554685571",
+      "product_name": "On Stage SMS7500 Wood Studio Monitor Stands",
+      "brand": "On Stage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6682174-on-stage-sms7500-wood-studio-monitor-stands\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-6071262733360530177",
+    "product_name": "On Stage SS7761B All-Aluminum Speaker Stand",
+    "brand": "On Stage",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:15.984741",
+    "last_updated": "2026-02-06T14:03:15.984742",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:15.984724",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from On Stage catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-6071262733360530177",
+      "product_name": "On Stage SS7761B All-Aluminum Speaker Stand",
+      "brand": "On Stage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/723974-on-stage-ss7761b-all-aluminum-speaker-stand\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-6883127099362885927",
+    "product_name": "On Stage SSAS7000B Mini Adjustable Speaker Stand",
+    "brand": "On Stage",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:15.986062",
+    "last_updated": "2026-02-06T14:03:15.986062",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:15.986047",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from On Stage catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-6883127099362885927",
+      "product_name": "On Stage SSAS7000B Mini Adjustable Speaker Stand",
+      "brand": "On Stage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/1171476-on-stage-ssas7000b-mini-adjustable-speaker-stand\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--987960799161176472",
+    "product_name": "On Stage Power Crank-Up Speaker Stand",
+    "brand": "On Stage",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:15.997714",
+    "last_updated": "2026-02-06T14:03:15.997715",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:15.997698",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from On Stage catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--987960799161176472",
+      "product_name": "On Stage Power Crank-Up Speaker Stand",
+      "brand": "On Stage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/724000-on-stage-power-crank-up-speaker-stand\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--5397705381798368712",
+    "product_name": "Ultimate Support TS-99B Speaker Stand",
+    "brand": "Ultimate Support",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:20.416191",
+    "last_updated": "2026-02-06T14:04:20.416191",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:20.416177",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Ultimate Support catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--5397705381798368712",
+      "product_name": "Ultimate Support TS-99B Speaker Stand",
+      "brand": "Ultimate Support",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6688800-ultimate-support-ts-99b-speaker-stand\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--1843371750556415714",
+    "product_name": "Ultimate Support MS-80B Studio Monitor Stand",
+    "brand": "Ultimate Support",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:20.418131",
+    "last_updated": "2026-02-06T14:04:20.418131",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:20.418121",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Ultimate Support catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--1843371750556415714",
+      "product_name": "Ultimate Support MS-80B Studio Monitor Stand",
+      "brand": "Ultimate Support",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6691745-ultimate-support-ms-80b-studio-monitor-stand\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-1253583468284516972",
+    "product_name": "Xvive T9 In Ear Monitors",
+    "brand": "Xvive",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:35.952868",
+    "last_updated": "2026-02-06T14:04:35.952869",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Studio Monitor",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:35.952853",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Xvive catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-1253583468284516972",
+      "product_name": "Xvive T9 In Ear Monitors",
+      "brand": "Xvive",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/7820976-xvive-t9-in-ear-monitors\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--5351201647314269358",
+    "product_name": "Montarbo Nettuno 50 Top Active Loudspeaker",
+    "brand": "Montarbo",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:08.614595",
+    "last_updated": "2026-02-06T14:03:08.614595",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:08.614583",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Montarbo catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--5351201647314269358",
+      "product_name": "Montarbo Nettuno 50 Top Active Loudspeaker",
+      "brand": "Montarbo",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/7160956-montarbo-nettuno-50-top-active-loudspeaker\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--8709003550077644990",
+    "product_name": "תיק לרמקול \"Mackie Bag for Thump Speaker 10",
+    "brand": "Mackie",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:02:42.153007",
+    "last_updated": "2026-02-06T14:02:42.153007",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:02:42.152993",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Mackie catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--8709003550077644990",
+      "product_name": "תיק לרמקול \"Mackie Bag for Thump Speaker 10",
+      "brand": "Mackie",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/7766863--mackie-bag-for-thump-speaker-10\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-748744994445618389",
+    "product_name": "\"Mackie bag for Thrash212 Speaker 12",
+    "brand": "Mackie",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:02:42.154598",
+    "last_updated": "2026-02-06T14:02:42.154598",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:02:42.154582",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Mackie catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-748744994445618389",
+      "product_name": "\"Mackie bag for Thrash212 Speaker 12",
+      "brand": "Mackie",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/8252080--mackie-bag-for-thrash212-speaker-12\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--5852878081051005327",
+    "product_name": "\"Mackie bag for Thrash215 Speaker 15",
+    "brand": "Mackie",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:02:42.155128",
+    "last_updated": "2026-02-06T14:02:42.155128",
+    "taxonomy": {
+      "canonical_category": "Studio Monitors & Speakers",
+      "canonical_subcategory": "Speaker",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:02:42.155115",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Mackie catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--5852878081051005327",
+      "product_name": "\"Mackie bag for Thrash215 Speaker 15",
+      "brand": "Mackie",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/8252090--mackie-bag-for-thrash215-speaker-15\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   }
 ]

@@ -14,8 +14,7 @@ import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
 import { CategorySlot } from "./galaxy/CategorySlot";
 import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
 import { getContextBackground } from "../../lib/slotBackgrounds";
-import { useProductCounts } from "../../hooks/useProductCounts";
-import { useGalaxyData } from "../../hooks/useGalaxyData";
+import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import { getBrandsWithLogos } from "../../lib/brandLogoHelper";
 
 // Icon mapping for sectors
@@ -51,8 +50,7 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
 
 export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
-  const { counts, loading } = useProductCounts();
-  const { catalog, loading: catalogLoading } = useGalaxyData();
+  const { products, isLoading, totalProducts } = useConductorCatalog();
 
   // Directly handle navigation to a subcategory
   const onSlotClick = (mainId: string, subId: string) => {
@@ -61,8 +59,14 @@ export const GalaxyDashboard = () => {
 
   // Helper to get brands for a specific spectrum ID
   const getBrandsForSpectrum = (spectrumId: string) => {
-    if (!catalog?.products) return [];
-    return getBrandsWithLogos(catalog.products, spectrumId, 4);
+    return getBrandsWithLogos(products, spectrumId, 4);
+  };
+
+  // Count products per subcategory
+  const getCategoryCount = (categoryName: string): number => {
+    return products.filter(
+      (p) => p.taxonomy.canonical_category === categoryName,
+    ).length;
   };
 
   return (
@@ -135,7 +139,9 @@ export const GalaxyDashboard = () => {
                       fallbackGradient={sub.fallbackGradient}
                       icon={sector.iconComponent}
                       mainColor={sector.color}
-                      count={loading ? undefined : counts[sub.id] || 0}
+                      count={
+                        isLoading ? undefined : getCategoryCount(sector.name)
+                      }
                       brands={getBrandsForSpectrum(sub.id)}
                       onClick={() => onSlotClick(sector.id, sub.id)}
                     />

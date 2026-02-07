@@ -36,9 +36,9 @@ export interface ConsolidatedCategory {
 export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   {
     id: "guitars-bass",
-    label: "Guitars & Bass",
+    label: "Amplifiers & Effects",
     icon: "🎸",
-    color: "#3b82f6", // Galaxy Orange (Logic mapped to Blue here? User said Orange in JSON) - Keeping TS consistent with JSON is better but JSON said var(--galaxy-orange). I'll use hex for fallback or var if supported.
+    color: "#3b82f6",
     description: "The Plucked Universe",
     sortOrder: 1,
     spectrum: [
@@ -70,7 +70,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "keys-production",
-    label: "Keys & Synths",
+    label: "Keyboards & Synthesizers",
     icon: "🎹",
     color: "#f59e0b",
     description: "The Synthesis Universe",
@@ -86,7 +86,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "studio-recording",
-    label: "Studio & Recording",
+    label: "Audio Interfaces & Mixers",
     icon: "🎙️",
     color: "#10b981",
     description: "The Engineer's Universe",
@@ -102,7 +102,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "live-dj",
-    label: "Live Sound & DJ",
+    label: "Microphones & Recording",
     icon: "🔊",
     color: "#8b5cf6",
     description: "The Stage Universe",
@@ -118,7 +118,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "accessories-utility",
-    label: "General Utility",
+    label: "Studio Monitors & Speakers",
     icon: "🔌",
     color: "#64748b",
     description: "The Connection Universe",
@@ -576,4 +576,13 @@ export function productMatchesGalaxy(
   if (galaxyId === "all") return true;
   const { galaxyId: pGalaxyId } = getConsolidatedProductCategory(product);
   return pGalaxyId === galaxyId;
+}
+
+/**
+ * Map Galaxy/Tribe ID (e.g., "drums-percussion") to actual canonical_category label (e.g., "Drums & Percussion")
+ * This bridges the gap between UI IDs and database category names
+ */
+export function getCanonicalCategoryFromGalaxyId(galaxyId: string): string | null {
+  const category = CONSOLIDATED_CATEGORIES.find((cat) => cat.id === galaxyId);
+  return category ? category.label : null;
 }

@@ -1,518 +1,610 @@
 #!/usr/bin/env python3
 """
-Halilit Support Center v7.0 - Conductor CLI
-===========================================
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v7.3
 
-Central orchestrator for all system operations, data validation, and security.
+The Conductor CLI orchestrates all operations:
+- Data ingestion (Trinity Swarm)
+- Frontend synchronization
+- Quality validation
+- Development server management
 
 Usage:
-    INGESTION & BUILDING:
-    python3 backend/conductor_main.py ingest [brand]  - Run ingestion pipeline
-    python3 backend/conductor_main.py sync            - Sync ingestion → frontend
-    python3 backend/conductor_main.py build           - Build & sync everything
-    
-    DEVELOPMENT:
-    python3 backend/conductor_main.py server          - Start FastAPI server
-    python3 backend/conductor_main.py dev             - Start dev environment (server + frontend)
-    python3 backend/conductor_main.py test [brand]    - Test pipeline for brand
-    
-    VALIDATION:
-    python3 backend/conductor_main.py validate        - Validate entire data pipeline
-    python3 backend/conductor_main.py validate-sync   - Build + validate all 3 screens
-    python3 backend/conductor_main.py catalog         - Show catalog statistics
-    
-    SECURITY MANAGEMENT:
-    python3 backend/conductor_main.py shield          - Show security status
-    python3 backend/conductor_main.py shield-cors     - Manage CORS settings
-    python3 backend/conductor_main.py shield-limits   - Manage rate limits
-    python3 backend/conductor_main.py shield-ddos     - Manage DDoS protection
-    python3 backend/conductor_main.py shield-audit    - Audit security logs
+    python3 backend/conductor_main.py ingest [brand]    # Run ingestion pipeline
+    python3 backend/conductor_main.py test [brand]      # Test a brand
+    python3 backend/conductor_main.py sync              # Sync to frontend
+    python3 backend/conductor_main.py build             # Full build (ingest + sync)
+    python3 backend/conductor_main.py dev               # Start dev environment
+    python3 backend/conductor_main.py server            # Start API server
+    python3 backend/conductor_main.py catalog           # Show catalog statistics
 """
 
-from datetime import datetime
-from pathlib import Path
-import subprocess
-import json
-import argparse
+from backend.ingestion_versioning import get_version_manager, IngestionVersion
+from backend.ingestion.ingestion_database import get_ingestion_database
+from backend.ingestion.trinity_integration import TrinityIngestionBridge
+from backend.unified_data_service_v73 import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
+from backend.ingestion.orchestrator import IngestionOrchestrator
+from backend.unified_quality_gates_v73 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
 import sys
 import os
+import argparse
+import json
+import logging
+from pathlib import Path
+from typing import List, Dict, Any, Optional
+import subprocess
+from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 
-# Add project root to sys.path before importing backend modules
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Add project root to path
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 
-# ⭐ VERSION CONTROL (Prevent confusion & deprecation)
-from backend.VERSION_CONTROL import (
-    SYSTEM_VERSION, BRANCH_NAME, assert_version_supports,
-    check_component_responsibility, ComponentRegistry
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime)s] [%(name)s] %(levelname)s: %(message)s'
 )
-
-from backend.ingestion.orchestrator import IngestionOrchestrator
-from backend.ingestion.trinity_integration import get_trinity_ingestion_bridge
-from backend.ingestion_to_frontend import sync_brand_to_frontend, sync_all_brands
-from backend.data_pipeline_validator import DataPipelineValidator
-from backend.security_shield import SecurityShield
-
-
-BRAND_DIR = Path(__file__).parent / "data" / "brands"
-INGESTION_DIR = Path(__file__).parent / "data" / "ingestion"
-FRONTEND_DIR = Path(__file__).parent.parent / "frontend"
+logger = logging.getLogger("Conductor")
 
 
 class ConductorCLI:
-    """Central command interface for Halilit v7.0.
-    
-    Manages:
-      • Data ingestion & pipeline orchestration
-      • Data validation & quality assurance
-      • Security shields & defensive mechanisms
-      • Comprehensive logging & monitoring
-    """
+    """Central orchestrator for all Halilit pipelines."""
 
     def __init__(self):
         self.orchestrator = IngestionOrchestrator()
-        self.bridge = get_trinity_ingestion_bridge()
-        self.validator = DataPipelineValidator()
-        self.security_shield = SecurityShield()  # Security management
+        self.trinity_bridge = TrinityIngestionBridge()
+        self.database = get_ingestion_database()
+        self.version_manager = get_version_manager()
+        self.data_dir = Path("/workspaces/Halilit-Support-Center/backend/data")
+        self.frontend_dir = Path("/workspaces/Halilit-Support-Center/frontend")
 
-    def ingest(self, brand: str = None):
-        """Run ingestion pipeline for a brand or all brands."""
-        print("🚀 Starting v6.0 Ingestion Pipeline")
-        print("=" * 70)
+    def get_all_brands(self) -> List[str]:
+        """Get all available brands from public/data/."""
+        data_dir = self.frontend_dir / "public" / "data"
+        if not data_dir.exists():
+            return []
 
+        brands = []
+        for f in data_dir.glob("*.json"):
+            if f.name != "index.json":
+                brands.append(f.stem)
+        return sorted(brands)
+
+    def ingest_brand(self, brand: Optional[str]) -> bool:
+        """
+        Run ingestion pipeline for a brand.
+        If brand is None, ingest all brands.
+        """
         if brand:
             brands = [brand]
         else:
-            # Find all brands
-            brands = [d.name for d in BRAND_DIR.iterdir() if d.is_dir()]
+            logger.info(
+                "No brand specified, using Trinity to detect brands...")
+            brands = self._detect_brands_from_sources()
 
+        if not brands:
+            logger.warning("No brands to ingest")
+            return False
+
+        logger.info(
+            f"🎯 Starting ingestion for {len(brands)} brand(s): {', '.join(brands)}")
+
+        success_count = 0
         for b in brands:
-            print(f"\n📊 Processing: {b}")
-            result = self.bridge.process_brand_pipeline(b)
-            if result.get("success"):
-                metrics = result.get("metrics", {})
-                print(
-                    f"  ✓ {metrics.get('approved_count', 0)} products approved")
-            else:
-                errors = result.get("errors", [])
-                print(
-                    f"  ✗ Failed: {errors[0] if errors else 'Unknown error'}")
+            try:
+                logger.info(f"\n📦 Ingesting: {b}")
 
-        print("\n" + "=" * 70)
-        print("✅ Ingestion pipeline complete")
-
-    def sync(self):
-        """Sync ingestion output to frontend."""
-        print("🔄 Syncing ingestion → frontend")
-        print("=" * 70)
-        results = sync_all_brands()
-        success_count = sum(1 for v in results.values() if v)
-        print(f"\n✅ Synced {success_count}/{len(results)} brands")
-
-    def build(self):
-        """Full build: ingest + sync."""
-        print("🏗️  Building complete v6.0 catalog")
-        print("=" * 70)
-
-        self.ingest()
-        self.sync()
-
-        print("\n✅ Build complete!")
-
-    def server(self):
-        """Start the FastAPI server."""
-        print("🚀 Starting FastAPI server")
-        print("📖  http://localhost:8000/docs")
-        subprocess.run(
-            [sys.executable, "-m", "uvicorn", "backend.server:app",
-             "--host", "0.0.0.0", "--port", "8000"],
-            cwd=str(Path(__file__).parent.parent)
-        )
-
-    def dev(self):
-        """Start full development environment."""
-        print("⚡ Starting Halilit v6.0 Development Environment")
-        print("=" * 70)
-        print("🎨 Frontend: http://localhost:5173")
-        print("📖 Backend:  http://localhost:8000/docs")
-        print("")
-
-        # Start backend in background
-        backend_proc = subprocess.Popen(
-            [sys.executable, "backend/server.py"],
-            cwd=str(Path(__file__).parent.parent)
-        )
-
-        # Start frontend
-        print("Starting frontend...")
-        frontend_proc = subprocess.Popen(
-            ["npm", "run", "dev"],
-            cwd=str(FRONTEND_DIR)
-        )
-
-        try:
-            print("\n✅ Both servers running. Press Ctrl+C to stop.")
-            backend_proc.wait()
-            frontend_proc.wait()
-        except KeyboardInterrupt:
-            print("\n🛑 Stopping servers...")
-            backend_proc.terminate()
-            frontend_proc.terminate()
-
-    def test(self, brand: str = "Nord"):
-        """Test ingestion pipeline for a brand."""
-        print(f"🧪 Testing ingestion for: {brand}")
-        print("=" * 70)
-
-        result = self.bridge.process_brand_pipeline(brand)
-
-        if result.get("success"):
-            print(f"✅ Test passed!")
-            metrics = result.get("metrics", {})
-            print(f"  • Products: {metrics.get('total_count', 0)}")
-            print(f"  • Approved: {metrics.get('approved_count', 0)}")
-            quality = result.get("quality_report", {})
-            print(
-                f"  • Quality: {quality.get('overall_quality_score', 0):.1f}%")
-        else:
-            errors = result.get("errors", [])
-            print(f"✗ Test failed:")
-            print(f"  {errors[0] if errors else 'Unknown error'}")
-
-    def catalog(self):
-        """Show catalog statistics."""
-        print("📊 Catalog Statistics")
-        print("=" * 70)
-
-        # Count files
-        brands = {}
-        if INGESTION_DIR.exists():
-            for brand_dir in (INGESTION_DIR / "products").iterdir():
-                if brand_dir.is_dir():
-                    # Find the latest approved_*.json file
-                    approved_files = sorted(brand_dir.glob(
-                        "approved_*.json"), reverse=True)
-                    if approved_files:
-                        try:
-                            with open(approved_files[0]) as f:
-                                data = json.load(f)
-                            products = data.get("products", data) if isinstance(
-                                data, dict) else data
-                            brands[brand_dir.name] = len(products)
-                        except:
-                            brands[brand_dir.name] = 0
-                    else:
-                        brands[brand_dir.name] = 0
-
-        print("\nBrands:")
-        total_products = 0
-        for brand, count in sorted(brands.items()):
-            print(f"  • {brand.title()}: {count} products")
-            total_products += count
-
-        print(
-            f"\n📈 Total: {total_products} products across {len(brands)} brands")
-        print(f"🌌 Galaxies: 6 (Guitars, Drums, Keys, Studio, DJ, Utility)")
-
-    def validate(self):
-        """Validate entire data pipeline for consistency and alignment."""
-        print("\n🔍 VALIDATING DATA PIPELINE (All 3 Screens)")
-        print("=" * 70)
-        
-        results = self.validator.validate_all()
-        self.validator.print_report(results)
-        
-        return results
-    
-    def validate_sync(self):
-        """Build complete pipeline and validate all 3 screens work together."""
-        print("\n🚀 BUILD + VALIDATE COMPLETE PIPELINE")
-        print("=" * 70)
-        
-        print("\n1️⃣  Building catalog...")
-        self.build()
-        
-        print("\n2️⃣  Validating pipeline...")
-        validation_results = self.validate()
-        
-        print("\n3️⃣  Running integration test...")
-        self._test_screen_integration()
-        
-        return validation_results
-    
-    def _test_screen_integration(self):
-        """Test that all 3 screens can load data correctly"""
-        print("\n🧪 Testing Screen Integration")
-        print("-" * 70)
-        
-        try:
-            # Check that backend has prepared data for frontend
-            brands_dir = Path(__file__).parent / "data" / "brands"
-            
-            if not brands_dir.exists():
-                print("⚠️  Brands directory not found")
-                return
-            
-            # Check each brand has products
-            brands_processed = 0
-            total_products = 0
-            
-            for brand_dir in sorted(brands_dir.glob("*")):
-                if not brand_dir.is_dir():
+                # Load raw data from appropriate source
+                raw_products = self._load_brand_source_data(b)
+                if not raw_products:
+                    logger.warning(f"⚠️  No data found for {b}")
                     continue
-                
-                products_file = brand_dir / "products.json"
-                if products_file.exists():
+
+                # Run ingestion pipeline
+                report = self.orchestrator.ingest_batch(b, raw_products)
+
+                if report.approved_count > 0:
+                    logger.info(
+                        f"✅ {b}: {report.approved_count} products approved")
+
+                    # Save ingestion results to database
                     try:
-                        with open(products_file) as f:
-                            data = json.load(f)
-                            products = data.get("products", [])
-                            brands_processed += 1
-                            total_products += len(products)
-                            print(f"✓ {brand_dir.name:20s} → {len(products):4d} products ready")
+                        self.database.save_products(
+                            b,
+                            report.approved_products,
+                            [p for p, _ in report.rejected_products] if report.rejected_products else [
+                            ]
+                        )
+                        self.database.save_report(report)
+                        logger.info(f"   💾 Saved to database")
                     except Exception as e:
-                        print(f"⚠️  Error reading {brand_dir.name}/products.json: {e}")
-            
-            print(f"\n✅ Backend has prepared {total_products} products across {brands_processed} brands")
-            print("✅ All 3 screens can access data from the unified ingestion pipeline:")
-            print("   → GalaxyDashboard:  catalogLoader.loadAllProducts() filtered by category")
-            print("   → SpectrumModule:   catalogLoader.loadAllProducts() grouped by brand")
-            print("   → ProductPage:      catalogLoader.findProductById() for enriched details")
-            print("\n✅ ALL SCREENS INTEGRATION PASSED")
-            
-        except Exception as e:
-            print(f"\n❌ INTEGRATION TEST FAILED: {e}")
-    
-    def shield(self):
-        """Show comprehensive security status and configuration."""
-        print("\n🛡️  SECURITY SHIELD STATUS (v7.0)")
-        print("=" * 70)
-        
-        status = self.security_shield.get_security_status()
-        
-        print("\n✅ CORS Management:")
-        cors_config = status["cors"]
-        print(f"   Status: {'ENABLED' if cors_config['enabled'] else 'DISABLED'}")
-        print(f"   Allowed Origins: {', '.join(cors_config['allowed_origins'])}")
-        
-        print("\n✅ Rate Limiting:")
-        ratelimit = status["rate_limiting"]
-        print(f"   Status: {'ENABLED' if ratelimit['enabled'] else 'DISABLED'}")
-        print(f"   Active Tracking IPs: {ratelimit['stats']['tracked_ips']}")
-        
-        print("\n✅ DDoS Protection:")
-        ddos = status["ddos_protection"]
-        print(f"   Status: {'ENABLED' if ddos['enabled'] else 'DISABLED'}")
-        print(f"   Blocked IPs: {ddos['status']['currently_blocked']}")
-        print(f"   Suspicious IPs: {ddos['status']['suspicious_ips']}")
-        
-        print("\n✅ Input Validation:")
-        print(f"   Status: {'ENABLED' if status['input_validation']['enabled'] else 'DISABLED'}")
-        print(f"   • SQL Injection Detection: ACTIVE")
-        print(f"   • XSS Detection: ACTIVE")
-        print(f"   • Size Limits: ENFORCED")
-        
-        print("\n✅ Security Logging:")
-        print(f"   Status: {'ENABLED' if status['logging']['enabled'] else 'DISABLED'}")
-        print(f"   Log File: backend/logs/security.log")
-        
-        print("\n💡 Configuration:")
-        print("   To manage security settings, use:")
-        print("   • shield-cors    - CORS whitelist/blacklist")
-        print("   • shield-limits  - Rate limiting configuration")
-        print("   • shield-ddos    - DDoS protection settings")
-        print("   • shield-audit   - Review security logs")
-    
-    def shield_cors(self, action: str = "list", origin: str = None):
-        """Manage CORS settings."""
-        print("\n🔐 CORS Configuration Manager")
-        print("=" * 70)
-        
-        if action == "list":
-            origins = self.security_shield.config.get("cors.allowed_origins", [])
-            print("\nAllowed Origins:")
-            for i, o in enumerate(origins, 1):
-                print(f"  {i}. {o}")
-        
-        elif action == "add" and origin:
-            self.security_shield.cors.add_origin(origin)
-            print(f"✅ Added allowed origin: {origin}")
-        
-        elif action == "remove" and origin:
-            self.security_shield.cors.remove_origin(origin)
-            print(f"✅ Removed allowed origin: {origin}")
-        
-        else:
-            print("Usage:")
-            print("  shield-cors list                           - List allowed origins")
-            print("  shield-cors add <origin>                   - Add new origin")
-            print("  shield-cors remove <origin>                - Remove origin")
-    
-    def shield_limits(self, limit_type: str = "show"):
-        """Manage rate limiting configuration."""
-        print("\n⚡ Rate Limiting Configuration")
-        print("=" * 70)
-        
-        limits = self.security_shield.config.get("rate_limiting", {})
-        
-        print(f"\nGlobal Limits:")
-        print(f"  • Requests: {limits.get('global_limit', 1000)}{limits.get('global_window', 3600)}s")
-        
-        print(f"\nPer-IP Limits:")
-        print(f"  • Requests: {limits.get('per_ip_limit', 100)} per {limits.get('per_ip_window', 60)}s")
-        
-        print(f"\nPer-Endpoint Limits:")
-        print(f"  • Requests: {limits.get('per_endpoint_limit', 50)} per {limits.get('per_endpoint_window', 60)}s")
-        
-        print("\n💡 To modify limits, edit: backend/security_config.json")
-        print("   Then restart the server for changes to take effect.")
-    
-    def shield_ddos(self):
-        """Show DDoS protection status."""
-        print("\n🚨 DDoS Protection Status")
-        print("=" * 70)
-        
-        ddos_config = self.security_shield.config.get("ddos_protection", {})
-        ddos_status = self.security_shield.ddos_protection.get_status()
-        
-        print(f"\nBurst Detection:")
-        print(f"  • Threshold: {ddos_config.get('burst_threshold', 50)} requests per {ddos_config.get('burst_window', 10)}s")
-        print(f"  • Current blocked IPs: {ddos_status['currently_blocked']}")
-        
-        print(f"\nSuspicious Activity:")
-        print(f"  • Suspicious IPs: {ddos_status['suspicious_ips']}")
-        print(f"  • Currently tracked: {ddos_status['active_tracking']} IPs")
-        
-        print(f"\nRequest Size Protection:")
-        max_size = ddos_config.get('max_request_size', 10485760)
-        print(f"  • Max request size: {max_size / 1024 / 1024:.1f} MB")
-        
-        if len(self.security_shield.ddos_protection.blocked_ips) > 0:
-            print(f"\n⚠️  Currently Blocked IPs:")
-            for ip, timestamp in list(self.security_shield.ddos_protection.blocked_ips.items())[:10]:
-                print(f"  • {ip} (blocked at {datetime.fromtimestamp(timestamp)})")
-    
-    def shield_audit(self):
-        """Show security audit log."""
-        print("\n📋 Security Audit Log")
-        print("=" * 70)
-        
-        log_file = self.security_shield.config.get("logging.log_file", "backend/logs/security.log")
-        log_path = Path(__file__).parent / log_file
-        
-        if not log_path.exists():
-            print(f"No log file yet: {log_file}")
-            return
-        
+                        logger.warning(
+                            f"   ⚠️  Failed to save to database: {e}")
+
+                    # Track version for versioning system
+                    try:
+                        avg_completeness = (
+                            sum(p.data_completeness for p in report.approved_products)
+                            / len(report.approved_products)
+                            if report.approved_products else 0.0
+                        )
+                        avg_quality = (
+                            sum(p.quality_score for p in report.approved_products)
+                            / len(report.approved_products)
+                            if report.approved_products else 0.0
+                        )
+
+                        version = IngestionVersion(
+                            brand=b,
+                            batch_id=report.batch_id,
+                            approved_count=report.approved_count,
+                            rejected_count=report.rejected_count,
+                            total_processed=report.total_products_processed,
+                            execution_time_seconds=report.execution_time_seconds,
+                            data_completeness=avg_completeness,
+                            quality_score=avg_quality,
+                            recommendations=report.recommendations,
+                        )
+                        self.version_manager.save_version(version)
+                        logger.info(
+                            f"   📌 Version tracked: {version.version_id}")
+                    except Exception as e:
+                        logger.warning(f"   ⚠️  Failed to track version: {e}")
+
+                    success_count += 1
+                else:
+                    logger.warning(
+                        f"⚠️  {b}: 0 products approved ({report.rejected_count} rejected)")
+
+            except Exception as e:
+                logger.error(f"❌ Failed to ingest {b}: {e}")
+
+        logger.info(
+            f"\n✅ Ingestion complete: {success_count}/{len(brands)} brands")
+        return success_count > 0
+
+    def test_brand(self, brand: str) -> bool:
+        """Test ingestion for a single brand without writing to frontend."""
+        logger.info(f"🧪 Testing brand: {brand}")
+
         try:
-            with open(log_path) as f:
-                lines = f.readlines()
-            
-            # Show last 50 entries
-            print(f"\nRecent entries (last 50):")
-            for line in lines[-50:]:
-                print(f"  {line.strip()}")
-            
-            print(f"\n📊 Total log entries: {len(lines)}")
-            print(f"Log file: {log_path}")
+            raw_products = self._load_brand_source_data(brand)
+            if not raw_products:
+                logger.error(f"No data found for {brand}")
+                return False
+
+            report = self.orchestrator.ingest_batch(brand, raw_products)
+
+            logger.info(f"\n📊 Test Results:")
+            logger.info(f"  Status: Completed")
+            logger.info(
+                f"  Products: {report.approved_count}/{len(raw_products)}")
+            logger.info(f"  Approved: {report.approved_count}")
+            logger.info(f"  Rejected: {report.rejected_count}")
+
+            if report.recommendations:
+                logger.info("\n💡 Recommendations:")
+                for rec in report.recommendations[:5]:
+                    logger.info(f"    - {rec}")
+
+            return report.approved_count > 0
+
         except Exception as e:
-            print(f"Error reading log file: {e}")
+            logger.error(f"Test failed: {e}")
+            return False
 
+    def sync_to_frontend(self, brand: Optional[str]) -> bool:
+        """Sync ingested data to frontend."""
+        if brand:
+            brands = [brand]
+        else:
+            brands = self.get_all_brands()
 
+        logger.info(f"🔄 Syncing {len(brands)} brand(s) to frontend...")
+
+        success_count = 0
+        engine = get_ingest_to_frontend_engine()
+        for b in brands:
+            try:
+                success, products = engine.sync_brand_to_frontend(b)
+                if success:
+                    logger.info(f"✅ {b}: {len(products)} products synced")
+                    success_count += 1
+                else:
+                    logger.warning(f"⚠️  {b}: Sync failed")
+            except Exception as e:
+                logger.error(f"❌ Sync failed for {b}: {e}")
+
+        logger.info(f"✅ Sync complete: {success_count}/{len(brands)} brands")
+        return success_count > 0
+
+    def full_build(self, brand: Optional[str]) -> bool:
+        """Run full build: ingest + sync."""
+        logger.info("🏗️  FULL BUILD: ingest + sync")
+        logger.info("=" * 60)
+
+        # Phase 1: Ingest
+        ingest_success = self.ingest_brand(brand)
+        if not ingest_success:
+            logger.error("❌ Ingestion failed")
+            return False
+
+        # Phase 2: Sync
+        logger.info("\n" + "=" * 60)
+        sync_success = self.sync_to_frontend(brand)
+
+        logger.info("=" * 60)
+        if sync_success:
+            logger.info("✅ Build complete!")
+        else:
+            logger.warning("⚠️  Build partially complete (some syncs failed)")
+
+        return True
+
+    def show_catalog(self) -> bool:
+        """Display catalog statistics."""
+        brands = self.get_all_brands()
+        logger.info(f"\n📊 CATALOG STATISTICS")
+        logger.info("=" * 60)
+        logger.info(f"Total Brands: {len(brands)}")
+
+    def show_agent_learning(self) -> bool:
+        """Display agent learning progress and health."""
+        logger.info(f"\n🧠 AGENT LEARNING & HEALTH REPORT")
+        logger.info("=" * 60)
+
+        health = feedback_engine.get_pipeline_health_report()
+
+        logger.info(f"Timestamp: {health['timestamp']}")
+        logger.info(f"Pipeline Accuracy: {health['pipeline_accuracy']}%")
+        logger.info(f"Total Decisions: {health['total_decisions']}")
+        logger.info(f"Total Feedback: {health['total_feedback_received']}")
+
+        logger.info("\n📈 AGENT SUMMARIES:")
+        for agent_name, summary in health['agents'].items():
+            logger.info(f"\n  {agent_name}:")
+            logger.info(f"    ✅ Decisions: {summary['total_decisions']}")
+            logger.info(f"    📊 Accuracy: {summary['accuracy']}%")
+            logger.info(f"    ✓ Approved: {summary['approved']}")
+            logger.info(f"    ✗ Rejected: {summary['rejected']}")
+            logger.info(f"    ⏳ Pending: {summary['pending_review']}")
+            logger.info(f"    🎯 Confidence: {summary['confidence_score']}%")
+
+            if summary['improvement_areas']:
+                logger.info(f"    ⚠️  Improvement Areas:")
+                for area in summary['improvement_areas']:
+                    logger.info(f"       - {area}")
+
+        if health['bottlenecks']:
+            logger.info("\n⚠️  BOTTLENECKS:")
+            for bottleneck in health['bottlenecks']:
+                logger.info(f"  - {bottleneck}")
+
+        if health['recommendations']:
+            logger.info("\n💡 RECOMMENDATIONS:")
+            for rec in health['recommendations'][:10]:
+                logger.info(f"  - {rec}")
+
+        return True
+
+    def show_audit_trail(self, limit: int = 50) -> bool:
+        """Display recent audit events."""
+        logger.info(f"\n🔍 AUDIT TRAIL (Last {limit} events)")
+        logger.info("=" * 60)
+
+        trail = audit_logger.get_audit_trail(limit=limit)
+
+        for event in trail:
+            level_emoji = {
+                "info": "ℹ️ ",
+                "warning": "⚠️ ",
+                "error": "❌",
+                "critical": "🚨",
+                "security": "🔒",
+            }.get(event['level'], "•")
+
+            logger.info(
+                f"{level_emoji} [{event['category']}] {event['action']} "
+                f"({event['status']}) - {event['execution_time_ms']:.2f}ms"
+            )
+            if event['agent']:
+                logger.info(f"   Agent: {event['agent']}")
+
+        return True
+
+    def show_security_audit(self) -> bool:
+        """Display security audit summary."""
+        logger.info(f"\n🔒 SECURITY AUDIT REPORT")
+        logger.info("=" * 60)
+
+        audit = audit_logger.get_security_audit()
+
+        logger.info(f"Timestamp: {audit['timestamp']}")
+        logger.info(f"Total Security Events: {audit['total_security_events']}")
+        logger.info(f"🚨 Critical: {audit['critical_events']}")
+        logger.info(f"🔴 High Severity: {audit['high_severity_events']}")
+
+        if audit['recent_events']:
+            logger.info("\n📋 Recent Security Events:")
+            for event in audit['recent_events'][:10]:
+                logger.info(
+                    f"  - [{event['category']}] {event['action']} ({event['status']})")
+
+        return True
+
+    def show_performance_metrics(self) -> bool:
+        """Display agent performance metrics."""
+        logger.info(f"\n⚡ PERFORMANCE METRICS")
+        logger.info("=" * 60)
+
+        perf = audit_logger.get_performance_report()
+
+        logger.info(f"Report Time: {perf['timestamp']}")
+
+        for agent_name, metrics in perf['by_agent'].items():
+            logger.info(f"\n  {agent_name}:")
+            logger.info(f"    Total Actions: {metrics['total_actions']}")
+            logger.info(f"    ✓ Successful: {metrics['successful']}")
+            logger.info(f"    ✗ Failed: {metrics['failed']}")
+            logger.info(f"    Success Rate: {metrics['success_rate']}%")
+            logger.info(
+                f"    Avg Execution: {metrics['avg_execution_time_ms']:.2f}ms")
+            logger.info(
+                f"    Total Execution: {metrics['total_execution_time_ms']:.2f}ms")
+
+        return True
+
+        total_products = 0
+        for b in brands:
+            data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
+            if data_file.exists():
+                try:
+                    with open(data_file) as f:
+                        data = json.load(f)
+                        # Data can be either a list or dict
+                        if isinstance(data, list):
+                            count = len(data)
+                        elif isinstance(data, dict):
+                            count = len(data.get("products", []))
+                        else:
+                            count = 0
+                        total_products += count
+                        logger.info(f"  • {b}: {count} products")
+                except Exception as e:
+                    logger.warning(f"  • {b}: Error reading ({e})")
+
+        logger.info(f"\nTotal Products: {total_products}")
+        logger.info("=" * 60)
+        return True
+
+    def start_dev_server(self) -> bool:
+        """Start dev environment (backend + frontend)."""
+        logger.info("🚀 Starting development environment...")
+        logger.info("=" * 60)
+
+        # Start backend server in subprocess
+        def run_backend():
+            logger.info("▶️  Starting FastAPI backend...")
+            subprocess.run([
+                sys.executable,
+                str(PROJECT_ROOT / "backend" / "server.py")
+            ])
+
+        def run_frontend():
+            logger.info("▶️  Starting Vite frontend...")
+            subprocess.run(
+                ["npm", "run", "dev"],
+                cwd=str(self.frontend_dir)
+            )
+
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            executor.submit(run_backend)
+            executor.submit(run_frontend)
+            logger.info("\n✅ Dev environment running on http://localhost:5173")
+            logger.info("Backend API: http://localhost:8000")
+
+            # Keep running
+            try:
+                while True:
+                    pass
+            except KeyboardInterrupt:
+                logger.info("\n⭐ Shutting down...")
+
+    def start_api_server(self) -> bool:
+        """Start API server only."""
+        logger.info("🚀 Starting API server...")
+        subprocess.run([
+            sys.executable,
+            str(PROJECT_ROOT / "backend" / "server.py")
+        ])
+        return True
+
+    def _load_brand_source_data(self, brand: str) -> List[Dict[str, Any]]:
+        """Load raw product data for a brand."""
+        # Try exact match first
+        data_file = self.frontend_dir / "public" / "data" / f"{brand}.json"
+        if data_file.exists():
+            try:
+                with open(data_file) as f:
+                    data = json.load(f)
+                    # Data can be either a list (processed) or dict with "products" key
+                    if isinstance(data, list):
+                        return data
+                    elif isinstance(data, dict):
+                        return data.get("products", [])
+            except Exception as e:
+                logger.warning(f"Failed to load {data_file}: {e}")
+
+        # Try lowercase match
+        data_file = self.frontend_dir / "public" / \
+            "data" / f"{brand.lower()}.json"
+        if data_file.exists():
+            try:
+                with open(data_file) as f:
+                    data = json.load(f)
+                    if isinstance(data, list):
+                        return data
+                    elif isinstance(data, dict):
+                        return data.get("products", [])
+            except Exception as e:
+                logger.warning(f"Failed to load {data_file}: {e}")
+
+        # Fallback to backend data
+        ingestion_file = self.data_dir / "ingestion" / "products" / brand / "raw_*.json"
+        try:
+            import glob
+            files = glob.glob(str(ingestion_file))
+            if files:
+                with open(files[0]) as f:
+                    data = json.load(f)
+                    if isinstance(data, list):
+                        return data
+                    elif isinstance(data, dict):
+                        return data.get("products", [])
+        except Exception as e:
+            logger.warning(f"Failed to load ingestion data: {e}")
+
+        return []
+
+    def _detect_brands_from_sources(self) -> List[str]:
+        """
+        Auto-detect available brands ONLY from Halilit's golden list.
+        Golden list is the ONLY source of truth: /frontend/public/data/*.json
+        """
+        brands = set()
+
+        # From frontend/public/data/ - use exact filenames (GOLDEN LIST ONLY)
+        data_dir = self.frontend_dir / "public" / "data"
+        if data_dir.exists():
+            # Metadata files to exclude
+            metadata = {"index.json", "search_index.json",
+                        "search_index_min.json"}
+
+            for f in data_dir.glob("*.json"):
+                if f.name not in metadata:
+                    brands.add(f.stem)
+                    logger.debug(f"   📋 Golden list brand: {f.stem}")
+
+        logger.info(
+            f"🔒 Locked to {len(brands)} golden list brands (source: /frontend/public/data/)")
+        return sorted(list(brands))
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Halilit Support Center v7.0 - Conductor CLI",
+        description="Conductor CLI - Halilit Support Center v7.3",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog=__doc__
+        epilog="""
+Examples:
+  # Ingest all brands
+  %(prog)s ingest
+  
+  # Ingest specific brand
+  %(prog)s ingest "Adam Audio"
+  
+  # Full build (ingest + sync)
+  %(prog)s build
+  
+  # Start dev environment
+  %(prog)s dev
+  
+  # Show statistics
+  %(prog)s catalog
+        """
     )
 
     subparsers = parser.add_subparsers(dest="command", help="Command to run")
 
-    # Ingest command
+    # ingest command
     ingest_parser = subparsers.add_parser(
         "ingest", help="Run ingestion pipeline")
     ingest_parser.add_argument(
-        "brand", nargs="?", help="Brand to ingest (optional)")
+        "brand", nargs="?", help="Brand name (optional, ingest all if not specified)")
 
-    # Sync command
-    subparsers.add_parser("sync", help="Sync ingestion → frontend")
-
-    # Build command
-    subparsers.add_parser("build", help="Full build: ingest + sync")
-
-    # Server command
-    subparsers.add_parser("server", help="Start FastAPI server")
-
-    # Dev command
-    subparsers.add_parser("dev", help="Start dev environment")
-
-    # Test command
+    # test command
     test_parser = subparsers.add_parser("test", help="Test ingestion")
-    test_parser.add_argument(
-        "brand", nargs="?", default="Nord", help="Brand to test")
+    test_parser.add_argument("brand", help="Brand name")
 
-    # Catalog command
-    subparsers.add_parser("catalog", help="Show catalog statistics")
-    
-    # Validate command
-    subparsers.add_parser("validate", help="Validate entire data pipeline")
-    
-    # Validate + Sync command
-    subparsers.add_parser("validate-sync", help="Build + validate complete pipeline")
-    
-    # Security Shield Commands
-    subparsers.add_parser("shield", help="Show security status and configuration")
-    
-    shield_cors_parser = subparsers.add_parser("shield-cors", help="Manage CORS settings")
-    shield_cors_parser.add_argument("action", nargs="?", default="list", 
-                                    choices=["list", "add", "remove"],
-                                    help="CORS action")
-    shield_cors_parser.add_argument("origin", nargs="?", help="Origin URL (for add/remove)")
-    
-    subparsers.add_parser("shield-limits", help="Show rate limiting configuration")
-    
-    subparsers.add_parser("shield-ddos", help="Show DDoS protection status")
-    
-    subparsers.add_parser("shield-audit", help="Show security audit log")
+    # sync command
+    sync_parser = subparsers.add_parser("sync", help="Sync to frontend")
+    sync_parser.add_argument(
+        "brand", nargs="?", help="Brand name (optional, sync all if not specified)")
+
+    # build command
+    build_parser = subparsers.add_parser(
+        "build", help="Full build (ingest + sync)")
+    build_parser.add_argument(
+        "brand", nargs="?", help="Brand name (optional, build all if not specified)")
+
+    # dev command
+    dev_parser = subparsers.add_parser("dev", help="Start dev environment")
+
+    # server command
+    server_parser = subparsers.add_parser("server", help="Start API server")
+
+    # catalog command
+    catalog_parser = subparsers.add_parser(
+        "catalog", help="Show catalog statistics")
+
+    # learning command
+    learning_parser = subparsers.add_parser(
+        "learning", help="Show agent learning progress")
+
+    # audit command
+    audit_parser = subparsers.add_parser(
+        "audit", help="Show audit trail")
+    audit_parser.add_argument(
+        "--limit", type=int, default=50, help="Number of events to show")
+
+    # security command
+    security_parser = subparsers.add_parser(
+        "security", help="Show security audit report")
+
+    # performance command
+    performance_parser = subparsers.add_parser(
+        "performance", help="Show performance metrics")
 
     args = parser.parse_args()
 
     if not args.command:
         parser.print_help()
-        sys.exit(1)
+        return 0
 
     conductor = ConductorCLI()
 
-    if args.command == "ingest":
-        conductor.ingest(args.brand)
-    elif args.command == "sync":
-        conductor.sync()
-    elif args.command == "build":
-        conductor.build()
-    elif args.command == "server":
-        conductor.server()
-    elif args.command == "dev":
-        conductor.dev()
-    elif args.command == "test":
-        conductor.test(args.brand)
-    elif args.command == "catalog":
-        conductor.catalog()
-    elif args.command == "validate":
-        conductor.validate()
-    elif args.command == "validate-sync":
-        conductor.validate_sync()
-    elif args.command == "shield":
-        conductor.shield()
-    elif args.command == "shield-cors":
-        conductor.shield_cors(args.action, getattr(args, 'origin', None))
-    elif args.command == "shield-limits":
-        conductor.shield_limits()
-    elif args.command == "shield-ddos":
-        conductor.shield_ddos()
-    elif args.command == "shield-audit":
-        conductor.shield_audit()
+    try:
+        if args.command == "ingest":
+            success = conductor.ingest_brand(args.brand)
+        elif args.command == "test":
+            success = conductor.test_brand(args.brand)
+        elif args.command == "sync":
+            success = conductor.sync_to_frontend(args.brand)
+        elif args.command == "build":
+            success = conductor.full_build(args.brand)
+        elif args.command == "dev":
+            success = conductor.start_dev_server()
+        elif args.command == "server":
+            success = conductor.start_api_server()
+        elif args.command == "catalog":
+            success = conductor.show_catalog()
+        elif args.command == "learning":
+            success = conductor.show_agent_learning()
+        elif args.command == "audit":
+            success = conductor.show_audit_trail(limit=args.limit)
+        elif args.command == "security":
+            success = conductor.show_security_audit()
+        elif args.command == "performance":
+            success = conductor.show_performance_metrics()
+        else:
+            logger.error(f"Unknown command: {args.command}")
+            return 1
+
+        return 0 if success else 1
+
+    except Exception as e:
+        logger.error(f"Fatal error: {e}", exc_info=True)
+        return 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

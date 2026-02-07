@@ -1,0 +1,16 @@
+{
+  "version_id": "presonus_batch_1770400264",
+  "brand": "presonus",
+  "batch_id": "batch_1770400264",
+  "timestamp": "2026-02-06T17:51:04.959026",
+  "approved_count": 23,
+  "rejected_count": 0,
+  "total_processed": 23,
+  "execution_time_seconds": 0.015341,
+  "data_completeness": 0.42105263157894707,
+  "quality_score": 0.42105263157894707,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

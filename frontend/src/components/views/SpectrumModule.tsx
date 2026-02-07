@@ -21,7 +21,11 @@ import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
 import type { Product } from "../../types";
-import { useCategoryCatalog } from "../../hooks/useCategoryCatalog";
+import {
+  useConductorCatalog,
+  useConductorProductsByCategory,
+} from "../../hooks/useConductorCatalog";
+import { getCanonicalCategoryFromGalaxyId } from "../../lib/categoryConsolidator";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
 import { getBrandTheme } from "../../styles/brandThemes";
@@ -50,6 +54,19 @@ const calculateRelevance = (p: Product): number => {
     20;
 
   return Math.min(100, Math.max(0, score + idSpice));
+};
+
+// --- HEALTH CHECK ENGINE ---
+const isProductHealthy = (p: Product): boolean => {
+  // 1. Critical: Must have a name
+  if (!p.product_name || p.product_name.trim().length === 0) return false;
+
+  // 2. Critical: Must have a valid price
+  // (We use getPriceValue which handles multiple fields. If 0, it's effectively TBD or invalid)
+  const price = getPriceValue(p);
+  if (price <= 0) return false;
+
+  return true;
 };
 
 // --- BRAND LOGO HELPER ---
@@ -259,16 +276,49 @@ export const SpectrumModule = () => {
   const { activeTribeId, goToGalaxy, openProductPage } = useNavigationStore();
 
   // --------------------------------------------------------------------------
-  // 1. DATA INGESTION
+  // 1. DATA INGESTION - Using Conductor Verified Data
   // --------------------------------------------------------------------------
-  const catalogResult = useCategoryCatalog(activeTribeId);
-  const fetchedProducts = catalogResult.data?.products || [];
-  const availableFilters = catalogResult.data?.availableFilters || [];
-  const { loading, error } = catalogResult;
+  // Get all products from Conductor catalog
+  const {
+    products: allProducts,
+    isLoading,
+    error,
+    categories,
+  } = useConductorCatalog();
+
+  // Filter by category (activeTribeId maps to canonical_category)
+  const fetchedProducts = useMemo(() => {
+    if (!activeTribeId) return allProducts;
+
+    // Map the galaxy ID (e.g., "drums-percussion") to the actual category name (e.g., "Drums & Percussion")
+    const canonicalCategory = getCanonicalCategoryFromGalaxyId(activeTribeId);
+
+    if (!canonicalCategory) {
+      console.warn(
+        "[SpectrumModule] No canonical category found for tribeId:",
+        activeTribeId,
+      );
+      return [];
+    }
+
+    return allProducts.filter(
+      (p) => p.taxonomy.canonical_category === canonicalCategory,
+    );
+  }, [allProducts, activeTribeId]);
+
+  const availableFilters = useMemo(() => {
+    // Extract unique display roles, pricing tiers, etc. from fetched products
+    const filters = new Set<string>();
+    fetchedProducts.forEach((p) => {
+      filters.add(p.display.display_role || "All");
+      filters.add(p.pricing.tier || "All");
+    });
+    return Array.from(filters);
+  }, [fetchedProducts]);
 
   // DEBUG: Log data loading status
   console.log("[SpectrumModule] activeTribeId:", activeTribeId);
-  console.log("[SpectrumModule] loading:", loading);
+  console.log("[SpectrumModule] isLoading:", isLoading);
   console.log("[SpectrumModule] error:", error);
   console.log(
     "[SpectrumModule] fetchedProducts count:",
@@ -279,11 +329,36 @@ export const SpectrumModule = () => {
   }
 
   const rawProducts = useMemo(() => {
-    return fetchedProducts.map((p) => ({
-      ...p,
-      score: calculateRelevance(p),
-    }));
+    // Convert Conductor products to Product type with relevance scoring
+    return fetchedProducts.map(
+      (p: any) =>
+        ({
+          ...p,
+          id: p.id,
+          product_name: p.product_name,
+          brand: p.brand,
+          price: p.pricing.price_il,
+          image_hero: p.display.hero_image,
+          image_thumbnail: p.display.thumbnail_image,
+          is_bestseller: p.display.should_highlight,
+          score: calculateRelevance(p as any),
+        }) as Product,
+    );
   }, [fetchedProducts]);
+
+  // --- HEALTH SEGREGATION LAYER ---
+  const { cleanProducts, flaggedCount } = useMemo(() => {
+    const valid = rawProducts.filter(isProductHealthy);
+    const broken = rawProducts.length - valid.length;
+
+    if (broken > 0) {
+      console.warn(
+        `[HealthGuard] Flagged ${broken} products as broken/incomplete.`,
+      );
+    }
+
+    return { cleanProducts: valid, flaggedCount: broken };
+  }, [rawProducts]);
 
   // --------------------------------------------------------------------------
   // 2. THE 1176 ENGINE (Filtering)
@@ -321,15 +396,15 @@ export const SpectrumModule = () => {
   };
 
   const filteredProducts = useMemo(() => {
-    let base = rawProducts;
+    let base = cleanProducts;
     if (activeFilter !== "ALL") {
-      base = rawProducts.filter((p) =>
+      base = cleanProducts.filter((p) =>
         (p.filter_tags || [])?.includes(activeFilter),
       );
     }
     // Sort primarily by Price (X-Axis), secondary by Score (Y-Axis)
     return base.sort((a, b) => getPriceValue(a) - getPriceValue(b));
-  }, [rawProducts, activeFilter]);
+  }, [cleanProducts, activeFilter]);
 
   // --- BRAND MATRIX ENGINE ---
   const brandMatrix = useMemo(() => {
@@ -364,9 +439,9 @@ export const SpectrumModule = () => {
     return (
       <div className="flex h-full w-full items-center justify-center flex-col gap-4 bg-red-950/20 border border-red-900 rounded-lg">
         <div className="text-red-400 font-bold">Failed to load catalog</div>
-        <div className="text-sm text-red-300">{error.message}</div>
+        <div className="text-sm text-red-300">{error}</div>
         <button
-          onClick={() => catalogResult.retry()}
+          onClick={() => window.location.reload()}
           className="px-4 py-2 bg-red-900 hover:bg-red-800 text-red-100 rounded text-xs"
         >
           Retry
@@ -404,6 +479,15 @@ export const SpectrumModule = () => {
               {filteredProducts.length} units
             </span>
           </div>
+          {flaggedCount > 0 && (
+            <div
+              className="hidden md:flex items-center gap-2 text-xs font-mono text-amber-500/80 border border-amber-900/30 rounded-full px-3 py-1 bg-amber-950/20"
+              title="Items hidden due to missing price or name"
+            >
+              <AlertCircle className="w-3 h-3" />
+              <span>{flaggedCount} issues resolved</span>
+            </div>
+          )}
         </div>
       </Surface>
 
@@ -634,7 +718,7 @@ export const SpectrumModule = () => {
 
       {/* --- BOTTOM: BRAND SWIMLANES ENGINE --- */}
       <div className="flex-1 relative bg-[#050505] overflow-hidden flex flex-col">
-        {loading ? (
+        {isLoading ? (
           <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono animate-pulse">
             <Sparkles className="w-4 h-4 mr-2 animate-spin" /> INITIALIZING
             MATRIX...

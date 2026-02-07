@@ -1,12 +1,12 @@
 {
   "name": "halilit-support-center-root",
-  "version": "1.0.0",
+  "version": "7.3.0",
   "scripts": {
     "install:all": "pip install -r backend/requirements.txt && cd frontend && pnpm install",
     "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
-    "dev:backend": "python backend/conductor_main.py server",
+    "dev:backend": "PYTHONPATH=/workspaces/Halilit-Support-Center python -m uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000",
     "dev:frontend": "cd frontend && pnpm dev",
-    "codegen": "cd backend && python scripts/generate_ts_types.py"
+    "prod": "PYTHONPATH=/workspaces/Halilit-Support-Center python -m uvicorn backend.server:app --host 0.0.0.0 --port 8000"
   },
   "devDependencies": {
     "concurrently": "^8.0.0"

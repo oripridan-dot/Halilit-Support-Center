@@ -1,0 +1,16 @@
+{
+  "version_id": "eden_batch_1770400263",
+  "brand": "eden",
+  "batch_id": "batch_1770400263",
+  "timestamp": "2026-02-06T17:51:03.591712",
+  "approved_count": 7,
+  "rejected_count": 0,
+  "total_processed": 7,
+  "execution_time_seconds": 0.007782,
+  "data_completeness": 0.4210526315789473,
+  "quality_score": 0.4210526315789473,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

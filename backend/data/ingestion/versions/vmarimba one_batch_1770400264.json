@@ -1,0 +1,16 @@
+{
+  "version_id": "marimba one_batch_1770400264",
+  "brand": "marimba one",
+  "batch_id": "batch_1770400264",
+  "timestamp": "2026-02-06T17:51:04.429067",
+  "approved_count": 5,
+  "rejected_count": 0,
+  "total_processed": 5,
+  "execution_time_seconds": 0.004122,
+  "data_completeness": 0.42105263157894723,
+  "quality_score": 0.42105263157894723,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

@@ -1,10 +1,10 @@
 [
   {
-    "halilit_id": "87-RHA7BK",
+    "halilit_id": "scraped-6615786252398579337",
     "product_name": "אוזניות Roland RH-A7",
     "brand": "Roland",
     "price_il": 432.0,
-    "price_eilat": 369.23,
+    "price_eilat": 367.2,
     "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
@@ -14,33 +14,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "אוזניות איכותיות רב תכליתיות מבית Roland",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.451266",
-    "last_updated": "2026-02-06T06:45:16.451266",
+    "created_at": "2026-02-06T14:19:48.625404",
+    "last_updated": "2026-02-06T14:19:48.625405",
     "taxonomy": {
       "canonical_category": "Headphones & Earphones",
       "canonical_subcategory": "Headphones",
@@ -50,11 +33,11 @@
     },
     "pricing": {
       "price_il": 432.0,
-      "price_eilat": 369.23,
+      "price_eilat": 367.2,
       "price_usd": null,
       "price_eur": null,
       "tier": "entry",
-      "eilat_discount_percent": 14.530092592592588,
+      "eilat_discount_percent": 15.000000000000002,
       "suggested_tier": "entry",
       "price_validity_marker": "current",
       "last_price_change": null,
@@ -62,92 +45,41 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "#00A4EF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "אוזניות איכותיות רב תכליתיות מבית Roland",
-    "description_long": "אוזניות איכותיות רב תכליתיות מבית Roland",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.451259",
+      "timestamp": "2026-02-06T14:19:48.625388",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Roland catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "446035",
-      "sku": "87-RHA7BK",
-      "brand_id": "roland",
-      "name": "אוזניות Roland RH-A7",
-      "slug": "אוזניות-roland-rh-a7",
-      "description_short": "אוזניות איכותיות רב תכליתיות מבית Roland",
-      "description_full": "אוזניות איכותיות רב תכליתיות מבית Roland",
-      "price": 432.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": "אוזניות Roland RH-A7"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 4.0,
-        "count": 2
-      },
-      "contextual": {
-        "pros": [
-          "Well-reviewed אוזניות Roland RH-A7"
-        ],
-        "cons": [],
-        "expert_tips": []
-      },
+      "halilit_id": "scraped-6615786252398579337",
+      "product_name": "אוזניות Roland RH-A7",
+      "brand": "Roland",
+      "price_il": 432.0,
+      "price_eilat": 367.2,
+      "halilit_url": "https://www.halilit.com  /items/446035-roland-rh-a7-open-air-headphones\n",
+      "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -162,58 +94,26 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [],
     "price": 432.0,
     "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/9601446/original/465746d615e7f0825b6214f7a57a7eee.jpg"
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   },
   {
-    "halilit_id": "87-RH5",
-    "product_name": "אוזניות Roland RH-5",
-    "brand": "Roland",
-    "price_il": 173.0,
-    "price_eilat": 147.86,
+    "halilit_id": "scraped-5054423111991463705",
+    "product_name": "Xvive U4 In-Ear Monitor Wireless System",
+    "brand": "Xvive",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
     "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
@@ -223,2080 +123,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "אוזניות מוניטור איכותיות לכלי נגינה והאזנה למוסיקה מבית Roland",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.508263",
-    "last_updated": "2026-02-06T06:45:16.508263",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 173.0,
-      "price_eilat": 147.86,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 14.531791907514444,
-      "suggested_tier": "entry",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "#00A4EF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "אוזניות מוניטור איכותיות לכלי נגינה והאזנה למוסיקה מבית Roland",
-    "description_long": "אוזניות מוניטור איכותיות לכלי נגינה והאזנה למוסיקה מבית Roland",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.508252",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Roland catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "446032",
-      "sku": "87-RH5",
-      "brand_id": "roland",
-      "name": "אוזניות Roland RH-5",
-      "slug": "אוזניות-roland-rh-5",
-      "description_short": "אוזניות מוניטור איכותיות לכלי נגינה והאזנה למוסיקה מבית Roland",
-      "description_full": "אוזניות מוניטור איכותיות לכלי נגינה והאזנה למוסיקה מבית Roland",
-      "price": 173.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": "אוזניות Roland RH-5"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 3.5,
-        "count": 0
-      },
-      "contextual": {
-        "pros": [],
-        "cons": [],
-        "expert_tips": []
-      },
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 173.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559774/original/48327ea2de23eb9c911244cce20ec857.jpg"
-  },
-  {
-    "halilit_id": "87-RH200",
-    "product_name": "אוזניות מוניטור Roland RH-200",
-    "brand": "Roland",
-    "price_il": 448.0,
-    "price_eilat": 382.91,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "אוזניות מוניטור מקצועיות לאולפן מבית Roland",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.547761",
-    "last_updated": "2026-02-06T06:45:16.547761",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 448.0,
-      "price_eilat": 382.91,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 14.52901785714285,
-      "suggested_tier": "entry",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "#00A4EF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "אוזניות מוניטור מקצועיות לאולפן מבית Roland",
-    "description_long": "אוזניות מוניטור מקצועיות לאולפן מבית Roland",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.547748",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Roland catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "446028",
-      "sku": "87-RH200",
-      "brand_id": "roland",
-      "name": "אוזניות מוניטור Roland RH-200",
-      "slug": "אוזניות-מוניטור-roland-rh-200",
-      "description_short": "אוזניות מוניטור מקצועיות לאולפן מבית Roland",
-      "description_full": "אוזניות מוניטור מקצועיות לאולפן מבית Roland",
-      "price": 448.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": "אוזניות מוניטור Roland RH-200"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 3.5,
-        "count": 0
-      },
-      "contextual": {
-        "pros": [],
-        "cons": [],
-        "expert_tips": []
-      },
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 448.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/589861/original/fe1707fd1cf11d77225453eaf4612941.jpg"
-  },
-  {
-    "halilit_id": "87-RH300",
-    "product_name": "אוזניות מוניטור Roland RH-300",
-    "brand": "Roland",
-    "price_il": 812.0,
-    "price_eilat": 694.02,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "אוזניות מוניטור אולפניות מקצועיות ואיכותיות במיוחד מבית Roland",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.562345",
-    "last_updated": "2026-02-06T06:45:16.562346",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 812.0,
-      "price_eilat": 694.02,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "mid",
-      "eilat_discount_percent": 14.529556650246308,
-      "suggested_tier": "mid",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "specialist",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 2,
-      "color_hint": "#00A4EF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "אוזניות מוניטור אולפניות מקצועיות ואיכותיות במיוחד מבית Roland",
-    "description_long": "אוזניות מוניטור אולפניות מקצועיות ואיכותיות במיוחד מבית Roland",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.562339",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Roland catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "446031",
-      "sku": "87-RH300",
-      "brand_id": "roland",
-      "name": "אוזניות מוניטור Roland RH-300",
-      "slug": "אוזניות-מוניטור-roland-rh-300",
-      "description_short": "אוזניות מוניטור אולפניות מקצועיות ואיכותיות במיוחד מבית Roland",
-      "description_full": "אוזניות מוניטור אולפניות מקצועיות ואיכותיות במיוחד מבית Roland",
-      "price": 812.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": "אוזניות מוניטור Roland RH-300"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 3.5,
-        "count": 0
-      },
-      "contextual": {
-        "pros": [],
-        "cons": [],
-        "expert_tips": []
-      },
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 812.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/559772/original/e76d7797c107c02cd723312f70a1d510.jpg"
-  },
-  {
-    "halilit_id": "87-RHA30",
-    "product_name": "אוזניות מוניטור Roland RH-A30",
-    "brand": "Roland",
-    "price_il": 812.0,
-    "price_eilat": 694.02,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "אוזניות מוניטור מקצועיות למוזיקאים מבית Roland",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.569928",
-    "last_updated": "2026-02-06T06:45:16.569929",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 812.0,
-      "price_eilat": 694.02,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "mid",
-      "eilat_discount_percent": 14.529556650246308,
-      "suggested_tier": "mid",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "specialist",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 2,
-      "color_hint": "#00A4EF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "אוזניות מוניטור מקצועיות למוזיקאים מבית Roland",
-    "description_long": "אוזניות מוניטור מקצועיות למוזיקאים מבית Roland",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.569919",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Roland catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "446912",
-      "sku": "87-RHA30",
-      "brand_id": "roland",
-      "name": "אוזניות מוניטור Roland RH-A30",
-      "slug": "אוזניות-מוניטור-roland-rh-a30",
-      "description_short": "אוזניות מוניטור מקצועיות למוזיקאים מבית Roland",
-      "description_full": "אוזניות מוניטור מקצועיות למוזיקאים מבית Roland",
-      "price": 812.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": "אוזניות מוניטור Roland RH-A30"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 3.5,
-        "count": 0
-      },
-      "contextual": {
-        "pros": [],
-        "cons": [],
-        "expert_tips": []
-      },
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 812.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/2152865/original/977a14a97e06ebc49fd7cc8d3278d09b.jpg"
-  },
-  {
-    "halilit_id": "87-VMHS100",
-    "product_name": "Roland VMH-S100 Headphones",
-    "brand": "Roland",
-    "price_il": 1750.0,
-    "price_eilat": 1495.73,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "אוזניות אולפן סגורות להלחנה, הקלטה ומיקס 30 Ohm מבית Roland",
-    "official_images": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.605132",
-    "last_updated": "2026-02-06T06:45:16.605132",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 1750.0,
-      "price_eilat": 1495.73,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529714285714284,
-      "suggested_tier": "mid",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "#00A4EF",
-      "media_assets": [
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "אוזניות אולפן סגורות להלחנה, הקלטה ומיקס 30 Ohm מבית Roland",
-    "description_long": "אוזניות אולפן סגורות להלחנה, הקלטה ומיקס 30 Ohm מבית Roland",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.605124",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Roland catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "7756290",
-      "sku": "87-VMHS100",
-      "brand_id": "roland",
-      "name": "Roland VMH-S100 Headphones",
-      "slug": "roland-vmh-s100-headphones",
-      "description_short": "אוזניות אולפן סגורות להלחנה, הקלטה ומיקס 30 Ohm מבית Roland",
-      "description_full": "אוזניות אולפן סגורות להלחנה, הקלטה ומיקס 30 Ohm מבית Roland",
-      "price": 1750.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": "Roland VMH-S100 Headphones"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 3.5,
-        "count": 1
-      },
-      "contextual": {
-        "pros": [],
-        "cons": [],
-        "expert_tips": []
-      },
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 1750.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/16201950/original/d01a20a81a04b52e9373eb50ae33de0d.jpg"
-  },
-  {
-    "halilit_id": "rode-nth-50",
-    "product_name": "NTH-50",
-    "brand": "Rode",
-    "price_il": 2000.0,
-    "price_eilat": 1709.4,
-    "halilit_url": "https://rode.com/en-nl/products/nth-50",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "The NTH-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant chamber design that deliver exceptionally clear audio for professionals and content creators.",
-    "official_images": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.829168",
-    "last_updated": "2026-02-06T06:45:16.829169",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 2000.0,
-      "price_eilat": 1709.4,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999996,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "The NTH-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant...",
-    "description_long": "The NTH-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant chamber design that deliver exceptionally clear audio for professionals and content creators.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://rode.com/en-nl/products/nth-50",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.829162",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Rode catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "rode-nth-50",
-      "name": "NTH-50",
-      "slug": "/rode/nth-50",
-      "brand_id": "rode",
-      "category": "Headphones",
-      "subcategories": [
-        "headphones",
-        "headphone"
-      ],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "The NTH-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant...",
-      "description_full": "The NTH-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant chamber design that deliver exceptionally clear audio for professionals and content creators.",
-      "price": 2000,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless GO (Gen 3)",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": "Wireless Micro Camera Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": "Interview PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Original T-Shirt",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Varsity Jacket",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": "Solo Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": "Dual Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": "Ultimate Podcast Kit",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "nth-50 headphones headphones headphone the nth-50 professional on-ear headphones feature custom-built dynamic drivers and a resonant... rode",
-      "filter_tags": [
-        "unknown",
-        "rode",
-        "headphone",
-        "silver",
-        "headphones"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://rode.com/en-nl/products/nth-50",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.914464",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2000.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png"
-  },
-  {
-    "halilit_id": "rode-nth-cable",
-    "product_name": "NTH-CABLE",
-    "brand": "Rode",
-    "price_il": 2000.0,
-    "price_eilat": 1709.4,
-    "halilit_url": "https://rode.com/en-nl/products/nth-cable",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "NTH-100\nThe RØDE NTH-100 headphones are the perfect balance of exceptionally detailed audio, supreme comfort and cutting-edge style to inspire creativity.",
-    "official_images": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.836216",
-    "last_updated": "2026-02-06T06:45:16.836217",
-    "taxonomy": {
-      "canonical_category": "Headphones & Earphones",
-      "canonical_subcategory": "Headphones",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 2000.0,
-      "price_eilat": 1709.4,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999996,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "NTH-100\nThe RØDE NTH-100 headphones are the perfect balance of exceptionally detailed audio,...",
-    "description_long": "NTH-100\nThe RØDE NTH-100 headphones are the perfect balance of exceptionally detailed audio, supreme comfort and cutting-edge style to inspire creativity.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://rode.com/en-nl/products/nth-cable",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.836210",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Rode catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "rode-nth-cable",
-      "name": "NTH-CABLE",
-      "slug": "/rode/nth-cable",
-      "brand_id": "rode",
-      "category": "Headphones",
-      "subcategories": [
-        "headphones",
-        "headphone"
-      ],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "NTH-100\nThe RØDE NTH-100 headphones are the perfect balance of exceptionally detailed audio,...",
-      "description_full": "NTH-100\nThe RØDE NTH-100 headphones are the perfect balance of exceptionally detailed audio, supreme comfort and cutting-edge style to inspire creativity.",
-      "price": 2000,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless GO (Gen 3)",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": "Wireless Micro Camera Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": "Interview PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Original T-Shirt",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Varsity Jacket",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": "Solo Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": "Dual Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": "Ultimate Podcast Kit",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "nth-cable headphones headphones headphone nth-100\nthe røde nth-100 headphones are the perfect balance of exceptionally detailed audio,... rode",
-      "filter_tags": [
-        "unknown",
-        "rode",
-        "headphone",
-        "silver",
-        "headphones"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://rode.com/en-nl/products/nth-cable",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.915503",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2000.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png"
-  },
-  {
-    "halilit_id": "shure-earphones",
-    "product_name": "EARPHONES",
-    "brand": "Shure",
-    "price_il": 2200.0,
-    "price_eilat": 1880.34,
-    "halilit_url": "https://www.shure.com/nl-NL/producten/earphones",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Experience Shure sound isolating earphones. Ideal for music, calls, workouts, daily use, professional monitoring, and musicians.",
-    "official_images": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c143931965fca580649d32061240d553.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/8ca/58a/23-/original/629c617d84cfecd6a702a622145863cf.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bc4/d76/ee-/original/7b97831f8f26a63b8164cf8fe84fd4e9.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/e0c/342/41-/original/3a593144af51cba8849c6433047a3da8.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d3b/fd5/6a-/original/323f0829ad4dbd28d29ee3237966bf00.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/447/21e/a1-/original/b767a5e765ff25bf32cd1a659e8e8035.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/cbe/930/52-/original/4ef0e0eb8fee8817141c0f5c8ddf43e8.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.909227",
-    "last_updated": "2026-02-06T06:45:16.909227",
+    "created_at": "2026-02-06T14:04:35.954288",
+    "last_updated": "2026-02-06T14:04:35.954289",
     "taxonomy": {
       "canonical_category": "Headphones & Earphones",
       "canonical_subcategory": "In-Ear Monitors",
@@ -2305,221 +141,53 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 2200.0,
-      "price_eilat": 1880.34,
+      "price_il": 0.0,
+      "price_eilat": 0.0,
       "price_usd": null,
       "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.530000000000005,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c143931965fca580649d32061240d553.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c143931965fca580649d32061240d553.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/8ca/58a/23-/original/629c617d84cfecd6a702a622145863cf.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bc4/d76/ee-/original/7b97831f8f26a63b8164cf8fe84fd4e9.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/e0c/342/41-/original/3a593144af51cba8849c6433047a3da8.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d3b/fd5/6a-/original/323f0829ad4dbd28d29ee3237966bf00.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/447/21e/a1-/original/b767a5e765ff25bf32cd1a659e8e8035.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/cbe/930/52-/original/4ef0e0eb8fee8817141c0f5c8ddf43e8.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "Experience Shure sound isolating earphones",
-    "description_long": "Experience Shure sound isolating earphones. Ideal for music, calls, workouts, daily use, professional monitoring, and musicians.",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
-      "source_url": "https://www.shure.com/nl-NL/producten/earphones",
+      "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.909218",
+      "timestamp": "2026-02-06T14:04:35.954272",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Shure catalog"
+      "extraction_notes": "Scraped from Xvive catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "shure-earphones",
-      "name": "EARPHONES",
-      "slug": "/shure/earphones",
-      "brand_id": "shure",
-      "category": "Headphones",
-      "subcategories": [
-        "earphone"
-      ],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "Experience Shure sound isolating earphones",
-      "description_full": "Experience Shure sound isolating earphones. Ideal for music, calls, workouts, daily use, professional monitoring, and musicians.",
-      "price": 2200.0,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e039",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e039",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c143931965fca580649d32061240d553.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/8ca/58a/23-/original/629c617d84cfecd6a702a622145863cf.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/8ca/58a/23-/original/6",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bc4/d76/ee-/original/7b97831f8f26a63b8164cf8fe84fd4e9.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/bc4/d76/ee-/original/7b9783",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/e0c/342/41-/original/3a593144af51cba8849c6433047a3da8.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/e0c/342/41-/original/3a5931",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d3b/fd5/6a-/original/323f0829ad4dbd28d29ee3237966bf00.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/d3b/fd5/6a-/original/323f08",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/447/21e/a1-/original/b767a5e765ff25bf32cd1a659e8e8035.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/447/21e/a1-/original/b767a5",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_images/files/cbe/930/52-/original/4ef0e0eb8fee8817141c0f5c8ddf43e8.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_images/files/cbe/930/52-/original/4ef0e0",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "earphones headphones earphone experience shure sound isolating earphones shure",
-      "filter_tags": [
-        "shure",
-        "unknown",
-        "earphone",
-        "silver",
-        "headphones"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://www.shure.com/nl-NL/producten/earphones",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.952060",
+      "halilit_id": "scraped-5054423111991463705",
+      "product_name": "Xvive U4 In-Ear Monitor Wireless System",
+      "brand": "Xvive",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/5622287-xvive-u4-in-ear-monitor-wireless-system\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -2534,107 +202,29 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2200.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c143931965fca580649d32061240d553.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/003/e53/e4-/original/c143931965fca580649d32061240d553.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/8ca/58a/23-/original/629c617d84cfecd6a702a622145863cf.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/bc4/d76/ee-/original/7b97831f8f26a63b8164cf8fe84fd4e9.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/e0c/342/41-/original/3a593144af51cba8849c6433047a3da8.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/d3b/fd5/6a-/original/323f0829ad4dbd28d29ee3237966bf00.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/447/21e/a1-/original/b767a5e765ff25bf32cd1a659e8e8035.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_images/files/cbe/930/52-/original/4ef0e0eb8fee8817141c0f5c8ddf43e8.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
     ],
-    "image_url": "https://products.shureweb.eu/shure_product_db/product_images/files/377/0ee/1b-/original/71e03903030d4a92f1846ce447f618c4.webp"
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   },
   {
-    "halilit_id": "shure-in-ear",
-    "product_name": "IN-EAR MONITORING",
-    "brand": "Shure",
-    "price_il": 3900.0,
-    "price_eilat": 3333.33,
-    "halilit_url": "https://www.shure.com/nl-NL/producten/in-ear-monitoring",
+    "halilit_id": "scraped-7479067702459714345",
+    "product_name": "Xvive U4R In-Ear Monitor Wireless Receiver",
+    "brand": "Xvive",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
     "official_name": null,
@@ -2643,41 +233,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "Explore Shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers.",
-    "official_images": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/177f909cda27714d4dfcdafb0aa7a594.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/202/f2b/96-/original/b4045f467c32422e540fc8112fe52821.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.909436",
-    "last_updated": "2026-02-06T06:45:16.909436",
+    "created_at": "2026-02-06T14:04:35.960066",
+    "last_updated": "2026-02-06T14:04:35.960067",
     "taxonomy": {
       "canonical_category": "Headphones & Earphones",
       "canonical_subcategory": "In-Ear Monitors",
@@ -2686,148 +251,53 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 3900.0,
-      "price_eilat": 3333.33,
+      "price_il": 0.0,
+      "price_eilat": 0.0,
       "price_usd": null,
       "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.530000000000001,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/177f909cda27714d4dfcdafb0aa7a594.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/177f909cda27714d4dfcdafb0aa7a594.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/202/f2b/96-/original/b4045f467c32422e540fc8112fe52821.webp",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "Explore Shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers",
-    "description_long": "Explore Shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers.",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
-      "source_url": "https://www.shure.com/nl-NL/producten/in-ear-monitoring",
+      "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.909430",
+      "timestamp": "2026-02-06T14:04:35.960057",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Shure catalog"
+      "extraction_notes": "Scraped from Xvive catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "shure-in-ear",
-      "name": "IN-EAR MONITORING",
-      "slug": "/shure/in-ear-monitoring",
-      "brand_id": "shure",
-      "category": "Other",
-      "subcategories": [],
-      "tier": "gold",
-      "tier_score": 60,
-      "description_short": "Explore Shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers",
-      "description_full": "Explore Shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers.",
-      "price": 3900.0,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/5",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-        "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/5",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/177f909cda27714d4dfcdafb0aa7a594.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/1",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/202/f2b/96-/original/b4045f467c32422e540fc8112fe52821.webp",
-          "alt": "Image https://products.shureweb.eu/shure_product_db/product_main_images/files/202/f2b/96-/original/b",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "in-ear monitoring other explore shure in-ear monitoring systems, perfect for musicians, performers, and live sound engineers shure",
-      "filter_tags": [
-        "shure",
-        "other",
-        "unknown",
-        "gold"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": true,
-        "show_badge": false
-      },
-      "source_url": "https://www.shure.com/nl-NL/producten/in-ear-monitoring",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.952147",
+      "halilit_id": "scraped-7479067702459714345",
+      "product_name": "Xvive U4R In-Ear Monitor Wireless Receiver",
+      "brand": "Xvive",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/7821942-xvive-u4r-in-ear-monitor-wireless-receiver\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -2842,58 +312,20 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [],
-    "price": 3900.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/177f909cda27714d4dfcdafb0aa7a594.webp",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/cae/4b8/ec-/original/177f909cda27714d4dfcdafb0aa7a594.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/202/f2b/96-/original/b4045f467c32422e540fc8112fe52821.webp",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
     ],
-    "image_url": "https://products.shureweb.eu/shure_product_db/product_main_images/files/6e9/30d/f0-/original/58f26cf2252caf940d6b96cbff5fde60.webp"
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   }
 ]

@@ -1,0 +1,16 @@
+{
+  "version_id": "gibson_batch_1770400263",
+  "brand": "gibson",
+  "batch_id": "batch_1770400263",
+  "timestamp": "2026-02-06T17:51:04.002682",
+  "approved_count": 3,
+  "rejected_count": 0,
+  "total_processed": 3,
+  "execution_time_seconds": 0.002599,
+  "data_completeness": 0.4210526315789473,
+  "quality_score": 0.4210526315789473,
+  "is_active": true,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ]
+}

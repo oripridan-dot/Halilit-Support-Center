@@ -1,11 +1,11 @@
 [
   {
-    "halilit_id": "rode-xlr",
-    "product_name": "XLR Cable",
-    "brand": "Rode",
-    "price_il": 2000.0,
-    "price_eilat": 1709.4,
-    "halilit_url": "https://rode.com/en-nl/products/xlr-to-xlr",
+    "halilit_id": "scraped-1475598141640909717",
+    "product_name": "PreSonus Quantum HD 2 USB-C Audio Interface",
+    "brand": "Presonus",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
     "official_name": null,
@@ -14,97 +14,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
-    "official_images": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.823738",
-    "last_updated": "2026-02-06T06:45:16.823738",
+    "created_at": "2026-02-06T14:03:30.808341",
+    "last_updated": "2026-02-06T14:03:30.808342",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -113,1188 +32,1814 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 2000.0,
-      "price_eilat": 1709.4,
+      "price_il": 0.0,
+      "price_eilat": 0.0,
       "price_usd": null,
       "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999996,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:30.808331",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Presonus catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-1475598141640909717",
+      "product_name": "PreSonus Quantum HD 2 USB-C Audio Interface",
+      "brand": "Presonus",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/7099544-presonus-quantum-hd-2-usb-c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-7894946182855016107",
+    "product_name": "PreSonus Quantum ES 2 USB-C Audio Interface",
+    "brand": "Presonus",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:30.808876",
+    "last_updated": "2026-02-06T14:03:30.808876",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:30.808863",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Presonus catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-7894946182855016107",
+      "product_name": "PreSonus Quantum ES 2 USB-C Audio Interface",
+      "brand": "Presonus",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6864555-presonus-quantum-es-2-usb-c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-8714477295089570884",
+    "product_name": "PreSonus Studio 24C Audio Interface",
+    "brand": "Presonus",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:30.810226",
+    "last_updated": "2026-02-06T14:03:30.810226",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:30.810213",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Presonus catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-8714477295089570884",
+      "product_name": "PreSonus Studio 24C Audio Interface",
+      "brand": "Presonus",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/2326296-presonus-studio-24c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--3342609476249164278",
+    "product_name": "PreSonus Quantum HD 8 USB-C Audio Interface",
+    "brand": "Presonus",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:30.810821",
+    "last_updated": "2026-02-06T14:03:30.810822",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:30.810808",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Presonus catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--3342609476249164278",
+      "product_name": "PreSonus Quantum HD 8 USB-C Audio Interface",
+      "brand": "Presonus",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6864925-presonus-quantum-hd-8-usb-c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--6481193868747430143",
+    "product_name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+    "brand": "Presonus",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:30.811596",
+    "last_updated": "2026-02-06T14:03:30.811597",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:30.811579",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Presonus catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--6481193868747430143",
+      "product_name": "PreSonus Quantum ES 4 USB-C Audio Interface",
+      "brand": "Presonus",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6864687-presonus-quantum-es-4-usb-c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--5420340727238483871",
+    "product_name": "PreSonus Studio 26C USB Audio Interface",
+    "brand": "Presonus",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:30.819203",
+    "last_updated": "2026-02-06T14:03:30.819204",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:30.819190",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Presonus catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--5420340727238483871",
+      "product_name": "PreSonus Studio 26C USB Audio Interface",
+      "brand": "Presonus",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/2326876-presonus-studio-26c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-5375155090680844883",
+    "product_name": "סינתיסייזר Oberheim OB-6 Desktop",
+    "brand": "Oberheim",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:14.191062",
+    "last_updated": "2026-02-06T14:03:14.191062",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Mixer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:14.191050",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Oberheim catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-5375155090680844883",
+      "product_name": "סינתיסייזר Oberheim OB-6 Desktop",
+      "brand": "Oberheim",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-837143750221588188",
+    "product_name": "סינתיסייזר Oberheim OB-X8 Desktop",
+    "brand": "Oberheim",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:03:14.191796",
+    "last_updated": "2026-02-06T14:03:14.191797",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Mixer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:03:14.191784",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Oberheim catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-837143750221588188",
+      "product_name": "סינתיסייזר Oberheim OB-X8 Desktop",
+      "brand": "Oberheim",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6365130-oberheim-ob-x8-desktop\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-6492917057949400830",
+    "product_name": "Magma Multi-Format Case Player/Mixer-Set BB",
+    "brand": "Magma",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:02:51.511222",
+    "last_updated": "2026-02-06T14:02:51.511222",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Mixer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:02:51.511203",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Magma catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-6492917057949400830",
+      "product_name": "Magma Multi-Format Case Player/Mixer-Set BB",
+      "brand": "Magma",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/7536907-magma-multi-format-case-player-mixer-set-bb\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-533389215236255512",
+    "product_name": "Magma CTRL Case CDJ/Mixer II",
+    "brand": "Magma",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:02:51.513191",
+    "last_updated": "2026-02-06T14:02:51.513191",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Mixer",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:02:51.513179",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Magma catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-533389215236255512",
+      "product_name": "Magma CTRL Case CDJ/Mixer II",
+      "brand": "Magma",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/4741388-magma-ctrl-case-cdj-mixer-ii\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-634131018282658653",
+    "product_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio",
+    "brand": "Fender",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T13:57:00.013847",
+    "last_updated": "2026-02-06T13:57:00.013847",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T13:57:00.013811",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Fender catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-634131018282658653",
+      "product_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio",
+      "brand": "Fender",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/8776065-fender-quantum-hd-2-usb-c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-2089963705499567986",
+    "product_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio",
+    "brand": "Fender",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T13:57:00.015075",
+    "last_updated": "2026-02-06T13:57:00.015075",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T13:57:00.015062",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Fender catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-2089963705499567986",
+      "product_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio",
+      "brand": "Fender",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/8776132-fender-quantum-hd-8-usb-c-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-1358539785473765725",
+    "product_name": "Xotic BB PREAMP V1.5",
+    "brand": "Xotic",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:34.477486",
+    "last_updated": "2026-02-06T14:04:34.477487",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Preamp",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:34.477475",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Xotic catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-1358539785473765725",
+      "product_name": "Xotic BB PREAMP V1.5",
+      "brand": "Xotic",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/4812617-xotic-bb-preamp-v1-5\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--6742827031589420240",
+    "product_name": "Universal Audio Volt 1 USB Audio Interface",
+    "brand": "Universal Audio",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:21.416733",
+    "last_updated": "2026-02-06T14:04:21.416734",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:21.416714",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Universal Audio catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--6742827031589420240",
+      "product_name": "Universal Audio Volt 1 USB Audio Interface",
+      "brand": "Universal Audio",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/4186883-universal-audio-volt-1-usb-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-8360942210692238360",
+    "product_name": "Universal Audio Volt 276 USB Audio Interface",
+    "brand": "Universal Audio",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:21.418883",
+    "last_updated": "2026-02-06T14:04:21.418884",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:21.418869",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Universal Audio catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-8360942210692238360",
+      "product_name": "Universal Audio Volt 276 USB Audio Interface",
+      "brand": "Universal Audio",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/4186634-universal-audio-volt-276-usb-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--753520876720104463",
+    "product_name": "Universal Audio Volt 2 USB Audio Interface",
+    "brand": "Universal Audio",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:21.419500",
+    "last_updated": "2026-02-06T14:04:21.419500",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:21.419488",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Universal Audio catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--753520876720104463",
+      "product_name": "Universal Audio Volt 2 USB Audio Interface",
+      "brand": "Universal Audio",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/4186896-universal-audio-volt-2-usb-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-1652050942965688700",
+    "product_name": "Universal Audio Volt 1 USB Audio Interface",
+    "brand": "Universal-Audio",
+    "price_il": 603.0,
+    "price_eilat": 512.55,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:19:49.503550",
+    "last_updated": "2026-02-06T14:19:49.503551",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 603.0,
+      "price_eilat": 512.55,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "mid",
+      "eilat_discount_percent": 15.000000000000007,
       "suggested_tier": "mid",
       "price_validity_marker": "current",
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
-    "description_long": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://rode.com/en-nl/products/xlr-to-xlr",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.823731",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Rode catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "rode-xlr",
-      "name": "XLR Cable",
-      "slug": "/rode/xlr-cable",
-      "brand_id": "rode",
-      "category": "Audio Interfaces",
-      "subcategories": [
-        "audio interface"
-      ],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
-      "description_full": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
-      "price": 2000,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless GO (Gen 3)",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": "Wireless Micro Camera Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": "Interview PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Original T-Shirt",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Varsity Jacket",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": "Solo Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": "Dual Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": "Ultimate Podcast Kit",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "xlr cable audio interfaces audio interface rødecaster pro ii\nthe rødecaster pro ii is the ultimate audio production solution for streamers,... rode",
-      "filter_tags": [
-        "unknown",
-        "rode",
-        "audio interfaces",
-        "audio interface",
-        "silver"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://rode.com/en-nl/products/xlr-to-xlr",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.913842",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [],
-    "price": 2000.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png"
-  },
-  {
-    "halilit_id": "rode-nth-100",
-    "product_name": "NTH-100",
-    "brand": "Rode",
-    "price_il": 2000.0,
-    "price_eilat": 1709.4,
-    "halilit_url": "https://rode.com/en-nl/products/nth-100",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
-    "official_images": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.823964",
-    "last_updated": "2026-02-06T06:45:16.823964",
-    "taxonomy": {
-      "canonical_category": "Audio Interfaces & Mixers",
-      "canonical_subcategory": "Audio Interface",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 2000.0,
-      "price_eilat": 1709.4,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "pro",
-      "eilat_discount_percent": 14.529999999999996,
-      "suggested_tier": "pro",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "cornerstone",
-      "hero_image": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "bg-blue-400",
-      "media_assets": [
-        {
-          "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
-    "description_long": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://rode.com/en-nl/products/nth-100",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.823958",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Rode catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "id": "rode-nth-100",
-      "name": "NTH-100",
-      "slug": "/rode/nth-100",
-      "brand_id": "rode",
-      "category": "Audio Interfaces",
-      "subcategories": [
-        "audio interface"
-      ],
-      "tier": "silver",
-      "tier_score": 50,
-      "description_short": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers,...",
-      "description_full": "RØDECaster Pro II\nThe RØDECaster Pro II is the ultimate audio production solution for streamers, podcasters, musicians and content creators. Learn more about the world's most powerful audio interface and digital mixer here.",
-      "price": 2000,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": "Wireless Micro",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless GO (Gen 3)",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-          "alt": "Wireless PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-          "alt": "Wireless Micro Camera Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-          "alt": "Interview PRO",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Original T-Shirt",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-          "alt": "RØDE Varsity Jacket",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-          "alt": "Solo Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-          "alt": "Dual Podcast Kit",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-          "alt": "Ultimate Podcast Kit",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "nth-100 audio interfaces audio interface rødecaster pro ii\nthe rødecaster pro ii is the ultimate audio production solution for streamers,... rode",
-      "filter_tags": [
-        "unknown",
-        "rode",
-        "audio interfaces",
-        "audio interface",
-        "silver"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": false,
-        "show_badge": false
-      },
-      "source_url": "https://rode.com/en-nl/products/nth-100",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.913937",
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": "The ultimate stage piano for professionals.",
-      "official_images": [
-        {
-          "type": "image",
-          "url": "https://brand.com/hero.jpg",
-          "display_purpose": "hero",
-          "source": "official"
-        }
-      ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
-    },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Category may not be standard: Other > Uncategorized"
-    ],
-    "price": 2000.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1485/rode-wireless-go-gen-III-black-front-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1267/rode-wireless-pro-hero-three-quarter-4000x4000-rgb-1080x1080-7280b4f.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/3011/rode-wireless-micro-camera-kit-3Q-left-4096x4096-rgb-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1266/rode-interview-pro-front-5464x8192-rgb-1080x1080-e96ac54.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2210/rode-merch-male-rode-tee-logo-black-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/2230/rode-merch-varsity-jacket-m-01-1080x1080-cd32e26.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1415/KITSOLO-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1416/KITDUAL-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://edge.rode.com//images/products/1417/KITULT-1080x1080-f521e30.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://edge.rode.com//images/products/1465/HS4C2-WIRELESS_MICRO-3Q-USB-1080x1080-6710c74.png"
-  },
-  {
-    "halilit_id": "universal-audio-universal-audio-auto-tune-realtime-x",
-    "product_name": "Auto-Tune Realtime X",
-    "brand": "Universal-Audio",
-    "price_il": 5800.0,
-    "price_eilat": 4957.26,
-    "halilit_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
-    "official_images": [
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.890270",
-    "last_updated": "2026-02-06T06:45:16.890270",
-    "taxonomy": {
-      "canonical_category": "Audio Interfaces & Mixers",
-      "canonical_subcategory": "Audio Interface",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 5800.0,
-      "price_eilat": 4957.26,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "flagship",
-      "eilat_discount_percent": 14.529999999999996,
-      "suggested_tier": "flagship",
-      "price_validity_marker": "current",
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
       "display_role": "specialist",
-      "hero_image": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
+      "display_tier_level": 2,
       "color_hint": "bg-green-400",
-      "media_assets": [
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces",
-    "description_long": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
-      "source_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
+      "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.890260",
+      "timestamp": "2026-02-06T14:19:49.503529",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from Universal-Audio catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "universal-audio-universal-audio-auto-tune-realtime-x",
-      "name": "Auto-Tune Realtime X",
-      "slug": "/universal-audio/auto-tune-realtime-x",
-      "brand_id": "universal-audio",
-      "category": "Other",
-      "subcategories": [],
-      "tier": "gold",
-      "tier_score": 60,
-      "description_short": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces",
-      "description_full": "Get the iconic Auto-Tune® effect, perfected for Apollo interfaces.\nApply Auto-Tune pitch-correction to a performance in realtime when tracking with Apollo interfaces\nCorrect vocals and other solo instruments transparently during mixdown\nCreate the iconic Auto-Tune vocal effect essential to modern pop, hip-hop, and electronic music\nUse Classic Mode to get the gritty, glitchy \"Auto‑Tune 5\" sound made famous by Future, Bon Iver, and more\nFine-tune using Auto-Tune X's powerful Humanize, Vibrato, and Flex-Tune functions\nControl target pitches or other Auto-Tune parameters in realtime using MIDI input",
-      "price": 5800,
-      "currency": "ILS",
-      "stock_status": "unknown",
-      "image_hero": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-        "alt": "C-Suite C-Vox Noise & Ambience Reduction",
-        "width": null,
-        "height": null
-      },
-      "image_thumbnail": {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-        "alt": "C-Suite C-Vox Noise & Ambience Reduction",
-        "width": null,
-        "height": null
-      },
-      "image_gallery": [
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
-          "alt": "UAD Complete 4",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
-          "alt": "Tube-Tech CL 1B MkII Compressor",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
-          "alt": "Precision Maximizer",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
-          "alt": "AMS DMX Digital Delay & Pitch Shifter",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
-          "alt": "UAD Custom 10 Bundle",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
-          "alt": "Precision De-Esser",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-          "alt": "UAD Ultimate 14",
-          "width": null,
-          "height": null
-        },
-        {
-          "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
-          "alt": "EMT 140 Classic Plate Reverberator",
-          "width": null,
-          "height": null
-        }
-      ],
-      "color_primary": null,
-      "specs": {},
-      "pros": [],
-      "cons": [],
-      "expert_tips": [],
-      "search_text": "auto-tune realtime x other get the iconic auto-tune® effect, perfected for apollo interfaces universal audio",
-      "filter_tags": [
-        "universal-audio",
-        "other",
-        "unknown",
-        "gold"
-      ],
-      "render_hints": {
-        "has_hero_image": true,
-        "has_gallery": true,
-        "has_specs": false,
-        "has_price": false,
-        "has_reviews": false,
-        "has_tips": false,
-        "is_verified": true,
-        "show_badge": false
-      },
-      "source_url": "https://www.uaudio.com/products/auto-tune-realtime-x",
-      "purchase_url": null,
-      "synced_at": "2026-02-01T21:10:43.978095",
+      "halilit_id": "scraped-1652050942965688700",
+      "product_name": "Universal Audio Volt 1 USB Audio Interface",
+      "brand": "Universal-Audio",
+      "price_il": 603.0,
+      "price_eilat": 512.55,
+      "halilit_url": "https://www.halilit.com  /items/4186883-universal-audio-volt-1-usb-audio-interface\n",
+      "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7684267/original/9dee0bce2139389d7e01809afe8e573a.jpg",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -1309,114 +1854,26 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [],
-    "price": 5800.0,
+    "price": 603.0,
     "currency": "ILS",
-    "image_hero": {
-      "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_complete_4_gallery_1.png?v=1762189686",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/tube-tech-cl-1b-mkii_gallery.png?v=1742248749",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_maximizer_gallery_1.png?v=1742249190",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/ams_dmx_15-80_s_stereo_digital_delay_and_pitch_shifter_gallery_1.png?v=1742502469",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/custom_10_thumb_v2_33f9c432-dd5f-4d93-a287-93f3cfa1fe9d.png?v=1744815255",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/precision_de-esser_gallery_1.png?v=1742249517",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/uad_ultimate_14_gallery_1.png?v=1762189673",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/emt_140_classic_plate_reverberator_gallery_1.png?v=1742249161",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "//cdn.shopify.com/s/files/1/0558/1724/0665/files/c-vox_noise_reduction_gallery_1.png?v=1742249555"
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   },
   {
-    "halilit_id": "42-ELECTRO6D73",
-    "product_name": "Nord Electro 6",
-    "brand": "Nord",
-    "price_il": 9383.0,
-    "price_eilat": 8019.66,
+    "halilit_id": "scraped-97974413910427637",
+    "product_name": "Universal Audio Volt 276 USB Audio Interface",
+    "brand": "Universal-Audio",
+    "price_il": 1211.0,
+    "price_eilat": 1029.35,
     "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
@@ -1426,65 +1883,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
-    "official_images": [
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.928778",
-    "last_updated": "2026-02-06T06:45:16.928778",
+    "created_at": "2026-02-06T14:19:49.505951",
+    "last_updated": "2026-02-06T14:19:49.505951",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -1493,150 +1901,54 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 9383.0,
-      "price_eilat": 8019.66,
+      "price_il": 1211.0,
+      "price_eilat": 1029.35,
       "price_usd": null,
       "price_eur": null,
-      "tier": "flagship",
-      "eilat_discount_percent": 14.529894490035172,
-      "suggested_tier": "flagship",
+      "tier": "mid",
+      "eilat_discount_percent": 15.000000000000007,
+      "suggested_tier": "mid",
       "price_validity_marker": "current",
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "#0084FF",
-      "media_assets": [
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "display_tier_level": 2,
+      "color_hint": "bg-green-400",
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
-    "description_long": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.928772",
+      "timestamp": "2026-02-06T14:19:49.505938",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Nord catalog"
+      "extraction_notes": "Scraped from Universal-Audio catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "2351753",
-      "sku": "42-ELECTRO6D73",
-      "brand_id": "nord",
-      "name": "Nord Electro 6",
-      "slug": "nord-electro-6",
-      "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
-      "description_full": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
-      "price": 9383.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": "Nord Electro 6"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 4.5,
-        "count": 3
-      },
-      "contextual": {
-        "pros": [
-          "Exceptional build quality (Handmade in Sweden)",
-          "Industry-standard piano and organ engines",
-          "Intuitive 1-knob-per-function interface"
-        ],
-        "cons": [
-          "Premium price point compared to competitors",
-          "Limited split points on some models",
-          "Memory capacity fills up quickly with large samples"
-        ],
-        "expert_tips": [
-          "Download the Royal Grand 3D XL sample immediately",
-          "Use the Layer Scene feature (on Stage 4) for quick transitions"
-        ]
-      },
+      "halilit_id": "scraped-97974413910427637",
+      "product_name": "Universal Audio Volt 276 USB Audio Interface",
+      "brand": "Universal-Audio",
+      "price_il": 1211.0,
+      "price_eilat": 1029.35,
+      "halilit_url": "https://www.halilit.com  /items/4186634-universal-audio-volt-276-usb-audio-interface\n",
+      "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7683882/original/bccda6e667f7841e433069515a12446e.jpg",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -1651,90 +1963,26 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [],
-    "price": 9383.0,
+    "price": 1211.0,
     "currency": "ILS",
-    "image_hero": {
-      "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3855325/original/d08d5bba09efc35b54f3a221961edef1.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg"
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   },
   {
-    "halilit_id": "42-ELECTRO6D61",
-    "product_name": "Nord Electro 6",
-    "brand": "Nord",
-    "price_il": 7975.0,
-    "price_eilat": 6816.24,
+    "halilit_id": "scraped-5543447529620637891",
+    "product_name": "Universal Audio Volt 2 USB Audio Interface",
+    "brand": "Universal-Audio",
+    "price_il": 806.0,
+    "price_eilat": 685.1,
     "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
@@ -1744,65 +1992,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
-    "official_images": [
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.929284",
-    "last_updated": "2026-02-06T06:45:16.929284",
+    "created_at": "2026-02-06T14:19:49.506553",
+    "last_updated": "2026-02-06T14:19:49.506554",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -1811,150 +2010,54 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 7975.0,
-      "price_eilat": 6816.24,
+      "price_il": 806.0,
+      "price_eilat": 685.1,
       "price_usd": null,
       "price_eur": null,
-      "tier": "flagship",
-      "eilat_discount_percent": 14.529905956112854,
-      "suggested_tier": "flagship",
+      "tier": "mid",
+      "eilat_discount_percent": 14.999999999999996,
+      "suggested_tier": "mid",
       "price_validity_marker": "current",
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
       "display_role": "specialist",
-      "hero_image": {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "#0084FF",
-      "media_assets": [
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "display_tier_level": 2,
+      "color_hint": "bg-green-400",
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
-    "description_long": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.929275",
+      "timestamp": "2026-02-06T14:19:49.506540",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Nord catalog"
+      "extraction_notes": "Scraped from Universal-Audio catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "2352572",
-      "sku": "42-ELECTRO6D61",
-      "brand_id": "nord",
-      "name": "Nord Electro 6",
-      "slug": "nord-electro-6",
-      "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
-      "description_full": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
-      "price": 7975.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": "Nord Electro 6"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 4.5,
-        "count": 3
-      },
-      "contextual": {
-        "pros": [
-          "Exceptional build quality (Handmade in Sweden)",
-          "Industry-standard piano and organ engines",
-          "Intuitive 1-knob-per-function interface"
-        ],
-        "cons": [
-          "Premium price point compared to competitors",
-          "Limited split points on some models",
-          "Memory capacity fills up quickly with large samples"
-        ],
-        "expert_tips": [
-          "Download the Royal Grand 3D XL sample immediately",
-          "Use the Layer Scene feature (on Stage 4) for quick transitions"
-        ]
-      },
+      "halilit_id": "scraped-5543447529620637891",
+      "product_name": "Universal Audio Volt 2 USB Audio Interface",
+      "brand": "Universal-Audio",
+      "price_il": 806.0,
+      "price_eilat": 685.1,
+      "halilit_url": "https://www.halilit.com  /items/4186896-universal-audio-volt-2-usb-audio-interface\n",
+      "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/7684279/original/f6a76ff9c5f1f509a2aa880710273bed.jpg",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -1969,90 +2072,26 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.6315789473684209,
+    "quality_score": 0.6315789473684209,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [],
-    "price": 7975.0,
+    "price": 806.0,
     "currency": "ILS",
-    "image_hero": {
-      "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857556/original/e1f0599c855ccc4831e9f27c9831a343.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
-    "image_url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg"
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   },
   {
-    "halilit_id": "42-ELECTRO6HP",
-    "product_name": "Nord Electro 6",
-    "brand": "Nord",
-    "price_il": 10321.0,
-    "price_eilat": 8821.37,
+    "halilit_id": "scraped-9143294932921646340",
+    "product_name": "Lynx Mesa Thunderbolt 3 Audio Interface",
+    "brand": "Lynx",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
     "halilit_url": "https://halilit.com",
     "sku": null,
     "model_number": null,
@@ -2062,65 +2101,16 @@
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "official_description": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
-    "official_images": [
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
-    ],
+    "official_description": null,
+    "official_images": [],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T06:45:16.930594",
-    "last_updated": "2026-02-06T06:45:16.930594",
+    "created_at": "2026-02-06T14:02:38.778810",
+    "last_updated": "2026-02-06T14:02:38.778810",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -2129,150 +2119,53 @@
       "keywords": []
     },
     "pricing": {
-      "price_il": 10321.0,
-      "price_eilat": 8821.37,
+      "price_il": 0.0,
+      "price_eilat": 0.0,
       "price_usd": null,
       "price_eur": null,
-      "tier": "flagship",
-      "eilat_discount_percent": 14.529890514485022,
-      "suggested_tier": "flagship",
-      "price_validity_marker": "current",
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
       "last_price_change": null,
       "previous_price_il": null
     },
     "display": {
-      "display_role": "specialist",
-      "hero_image": {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      "thumbnail_image": {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
       "should_highlight": false,
-      "display_tier_level": 5,
-      "color_hint": "#0084FF",
-      "media_assets": [
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        }
-      ]
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
     },
     "specifications": {
       "keys": 88,
       "action": "Hammer Action",
       "polyphony": 128
     },
-    "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
-    "description_long": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
+    "description_short": "",
+    "description_long": "",
     "feature_list": [],
     "sources": [],
     "primary_source": {
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T06:45:16.930589",
+      "timestamp": "2026-02-06T14:02:38.778789",
       "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from Nord catalog"
+      "extraction_notes": "Scraped from Lynx catalog"
     },
     "lineage": {},
     "raw_snapshot": {
-      "id": "2352562",
-      "sku": "42-ELECTRO6HP",
-      "brand_id": "nord",
-      "name": "Nord Electro 6",
-      "slug": "nord-electro-6",
-      "description_short": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 i...",
-      "description_full": "The Nord Electro 6 combines our award-winning emulations of vintage electro mechanical and acoustic instruments in an ultra-portable package. With 3 independent sound sections, a new streamlined user interface and the addition of Seamless Transitions, we're proud to present the most powerful and flexible Electro ever - a refined modern classic.",
-      "price": 10321.0,
-      "currency": "ILS",
-      "in_stock": true,
-      "image_hero": {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": "Nord Electro 6"
-      },
-      "image_gallery": [
-        "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg"
-      ],
-      "specs": {},
-      "reviews": {
-        "average": 4.5,
-        "count": 3
-      },
-      "contextual": {
-        "pros": [
-          "Exceptional build quality (Handmade in Sweden)",
-          "Industry-standard piano and organ engines",
-          "Intuitive 1-knob-per-function interface"
-        ],
-        "cons": [
-          "Premium price point compared to competitors",
-          "Limited split points on some models",
-          "Memory capacity fills up quickly with large samples"
-        ],
-        "expert_tips": [
-          "Download the Royal Grand 3D XL sample immediately",
-          "Use the Layer Scene feature (on Stage 4) for quick transitions"
-        ]
-      },
+      "halilit_id": "scraped-9143294932921646340",
+      "product_name": "Lynx Mesa Thunderbolt 3 Audio Interface",
+      "brand": "Lynx",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/8115046-lynx-mesa-thunderbolt-3-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
       "official_specs": {
         "keys": 88,
         "action": "Hammer Action",
@@ -2287,82 +2180,350 @@
           "source": "official"
         }
       ],
-      "official_url": "https://brand.com/products/stage-88",
-      "pipeline_phase": "enrich"
+      "official_url": "https://brand.com/products/stage-88"
     },
-    "data_completeness": 0.7368421052631579,
-    "quality_score": 0.7368421052631579,
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [],
-    "price": 10321.0,
-    "currency": "ILS",
-    "image_hero": {
-      "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "hero",
-      "priority": 100,
-      "source": "official"
-    },
-    "image_thumbnail": {
-      "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
-      "alt": null,
-      "type": "image",
-      "display_purpose": "gallery",
-      "priority": 50,
-      "source": "official"
-    },
-    "image_gallery": [
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
-        "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/3857512/original/4eb96f08fedb42eb22a00a515ee98700.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/ZtDd1xil/NE6D-73-Front-Angled.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/dQCDJWnm/NE6D-73-Back.png",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Nord_Electro6D_73_Large_60.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/Electro6_img2.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      }
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
     ],
-    "image_url": "https://assets.nordkeyboards.com/nord-assets-prod/media/original_images/NE6_list_img_JnjKPac.jpg"
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped-6206233408788463257",
+    "product_name": "Steinberg IXO12 USB Audio Interface",
+    "brand": "Steinberg",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:07.808927",
+    "last_updated": "2026-02-06T14:04:07.808927",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:07.808906",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Steinberg catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped-6206233408788463257",
+      "product_name": "Steinberg IXO12 USB Audio Interface",
+      "brand": "Steinberg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6605471-steinberg-ixo12-usb-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--1228832981092647591",
+    "product_name": "Steinberg IXO22 USB Audio Interface",
+    "brand": "Steinberg",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:07.809495",
+    "last_updated": "2026-02-06T14:04:07.809496",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:07.809473",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Steinberg catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--1228832981092647591",
+      "product_name": "Steinberg IXO22 USB Audio Interface",
+      "brand": "Steinberg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6606350-steinberg-ixo22-usb-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
+  },
+  {
+    "halilit_id": "scraped--1228832981092647591",
+    "product_name": "Steinberg IXO22 USB Audio Interface",
+    "brand": "Steinberg",
+    "price_il": 0.0,
+    "price_eilat": 0.0,
+    "halilit_url": "https://halilit.com",
+    "sku": null,
+    "model_number": null,
+    "official_name": null,
+    "official_specs": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "official_description": null,
+    "official_images": [],
+    "official_url": null,
+    "reviews": [],
+    "review_synthesis": null,
+    "average_rating": null,
+    "status": "harvested",
+    "pipeline_phase": "harvest",
+    "created_at": "2026-02-06T14:04:07.810044",
+    "last_updated": "2026-02-06T14:04:07.810045",
+    "taxonomy": {
+      "canonical_category": "Audio Interfaces & Mixers",
+      "canonical_subcategory": "Audio Interface",
+      "brand_taxonomy": null,
+      "alt_categories": [],
+      "keywords": []
+    },
+    "pricing": {
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "price_usd": null,
+      "price_eur": null,
+      "tier": "entry",
+      "eilat_discount_percent": 0,
+      "suggested_tier": null,
+      "price_validity_marker": null,
+      "last_price_change": null,
+      "previous_price_il": null
+    },
+    "display": {
+      "display_role": "entry",
+      "hero_image": null,
+      "thumbnail_image": null,
+      "should_highlight": false,
+      "display_tier_level": 1,
+      "color_hint": "bg-gray-300",
+      "media_assets": []
+    },
+    "specifications": {
+      "keys": 88,
+      "action": "Hammer Action",
+      "polyphony": 128
+    },
+    "description_short": "",
+    "description_long": "",
+    "feature_list": [],
+    "sources": [],
+    "primary_source": {
+      "source_name": "Halilit",
+      "source_url": "https://halilit.com",
+      "confidence": "commercial",
+      "timestamp": "2026-02-06T14:04:07.810033",
+      "extraction_method": "web_scraper",
+      "extraction_notes": "Scraped from Steinberg catalog"
+    },
+    "lineage": {},
+    "raw_snapshot": {
+      "halilit_id": "scraped--1228832981092647591",
+      "product_name": "Steinberg IXO22 USB Audio Interface",
+      "brand": "Steinberg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://www.halilit.com  /items/6606402-steinberg-ixo22-usb-audio-interface\n",
+      "pipeline_phase": "enrich",
+      "status": "harvested",
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "source": "official"
+        }
+      ],
+      "official_url": "https://brand.com/products/stage-88"
+    },
+    "data_completeness": 0.4210526315789473,
+    "quality_score": 0.4210526315789473,
+    "validation_status": "approved",
+    "validation_errors": [],
+    "validation_warnings": [
+      "⚠ Price is 0 (TBD)"
+    ],
+    "price": 0.0,
+    "currency": "ILS",
+    "image_hero": null,
+    "image_thumbnail": null,
+    "image_gallery": [],
+    "image_url": ""
   }
 ]

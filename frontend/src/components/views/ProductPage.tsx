@@ -73,6 +73,56 @@ export const ProductPage = ({ productId }: { productId: string }) => {
     );
   }
 
+  // --- HEALTH CHECK ---
+  // Ensure we don't display broken products with missing core data
+  const hasName =
+    product.product_name && product.product_name.trim().length > 0;
+  const hasPrice = getPrice(product) !== "TBD" && getPrice(product) !== "0"; // getPrice handles formatting
+
+  if (!hasName || !hasPrice) {
+    return (
+      <div className="w-full h-full flex items-center justify-center bg-slate-950 rounded-lg p-6 font-mono">
+        <div className="text-center max-w-md border border-amber-900/50 bg-amber-950/20 p-8 rounded-xl">
+          <div className="text-amber-500 mb-4 flex justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="48"
+              height="48"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <p className="text-amber-400/90 font-bold mb-2">
+            PRODUCT DATA INCOMPLETE
+          </p>
+          <p className="text-zinc-500 text-sm mb-6">
+            This item is currently flagged for maintenance. Core data
+            (Price/Name) is missing or being updated.
+          </p>
+          <div className="flex gap-2 justify-center">
+            <button
+              onClick={closeProductPage}
+              className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded text-xs transition"
+            >
+              Close View
+            </button>
+          </div>
+          <div className="mt-8 pt-4 border-t border-white/5 text-[10px] text-zinc-700 font-mono">
+            ID: {product.halilit_id || product.id}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Extract images
   const images = Array.isArray(product?.images)
     ? product.images

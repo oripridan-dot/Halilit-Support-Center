@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770400263",
+  "brand": "fzone",
+  "timestamp": "2026-02-06T17:51:03.939204",
+  "execution_time_seconds": 0.01477,
+  "total_processed": 25,
+  "approved_count": 25,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 25,
+  "rejected_products_count": 0
+}

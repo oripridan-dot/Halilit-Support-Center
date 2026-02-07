@@ -1,0 +1,1807 @@
+{
+  "brand": "ampeg",
+  "timestamp": "20260206_175103",
+  "count": 5,
+  "products": [
+    {
+      "halilit_id": "scraped-5808767204837725065",
+      "product_name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+      "brand": "ampeg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T17:51:03.068922",
+      "last_updated": "2026-02-06T17:51:03.068923",
+      "taxonomy": {
+        "canonical_category": "Amplifiers & Effects",
+        "canonical_subcategory": "Amplifier",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T17:51:03.068902",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from ampeg catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-5808767204837725065",
+        "product_name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+        "brand": "ampeg",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:26:35.068703",
+        "last_updated": "2026-02-06T17:26:35.068703",
+        "taxonomy": {
+          "canonical_category": "Amplifiers & Effects",
+          "canonical_subcategory": "Amplifier",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:26:35.068690",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from ampeg catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped-5808767204837725065",
+          "product_name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+          "brand": "ampeg",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:12.064351",
+          "last_updated": "2026-02-06T17:26:12.064351",
+          "taxonomy": {
+            "canonical_category": "Amplifiers & Effects",
+            "canonical_subcategory": "Amplifier",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:12.064337",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from ampeg catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped-5808767204837725065",
+            "product_name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+            "brand": "Ampeg",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:12.155411",
+            "last_updated": "2026-02-06T14:01:12.155412",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:12.155388",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Ampeg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-5808767204837725065",
+              "product_name": "\u05e4\u05d3\u05dc \u05e4\u05e8\u05d0\u05de\u05e4 \u05dc\u05d1\u05e1 Ampeg Classic",
+              "brand": "Ampeg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1439842-ampeg-classic-analog-bass-preamp-pedal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 0.4210526315789473,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Price is 0 (TBD)"
+      ]
+    },
+    {
+      "halilit_id": "scraped--5132201012176965452",
+      "product_name": "Ampeg Scrambler Bass Overdrive",
+      "brand": "ampeg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T17:51:03.069414",
+      "last_updated": "2026-02-06T17:51:03.069415",
+      "taxonomy": {
+        "canonical_category": "Amplifiers & Effects",
+        "canonical_subcategory": "Amplifier",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T17:51:03.069397",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from ampeg catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped--5132201012176965452",
+        "product_name": "Ampeg Scrambler Bass Overdrive",
+        "brand": "ampeg",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:26:35.069061",
+        "last_updated": "2026-02-06T17:26:35.069061",
+        "taxonomy": {
+          "canonical_category": "Amplifiers & Effects",
+          "canonical_subcategory": "Amplifier",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:26:35.069051",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from ampeg catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped--5132201012176965452",
+          "product_name": "Ampeg Scrambler Bass Overdrive",
+          "brand": "ampeg",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:12.064754",
+          "last_updated": "2026-02-06T17:26:12.064754",
+          "taxonomy": {
+            "canonical_category": "Amplifiers & Effects",
+            "canonical_subcategory": "Amplifier",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:12.064742",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from ampeg catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped--5132201012176965452",
+            "product_name": "Ampeg Scrambler Bass Overdrive",
+            "brand": "Ampeg",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:12.156699",
+            "last_updated": "2026-02-06T14:01:12.156700",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:12.156683",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Ampeg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--5132201012176965452",
+              "product_name": "Ampeg Scrambler Bass Overdrive",
+              "brand": "Ampeg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1390181-ampeg-scrambler-bass-overdrive\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 0.4210526315789473,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Price is 0 (TBD)"
+      ]
+    },
+    {
+      "halilit_id": "scraped-7979978248812897723",
+      "product_name": "Ampeg Liquifier Analog Chorus",
+      "brand": "ampeg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T17:51:03.069590",
+      "last_updated": "2026-02-06T17:51:03.069590",
+      "taxonomy": {
+        "canonical_category": "Amplifiers & Effects",
+        "canonical_subcategory": "Amplifier",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T17:51:03.069578",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from ampeg catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-7979978248812897723",
+        "product_name": "Ampeg Liquifier Analog Chorus",
+        "brand": "ampeg",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:26:35.069161",
+        "last_updated": "2026-02-06T17:26:35.069161",
+        "taxonomy": {
+          "canonical_category": "Amplifiers & Effects",
+          "canonical_subcategory": "Amplifier",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:26:35.069155",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from ampeg catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped-7979978248812897723",
+          "product_name": "Ampeg Liquifier Analog Chorus",
+          "brand": "ampeg",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:12.064860",
+          "last_updated": "2026-02-06T17:26:12.064860",
+          "taxonomy": {
+            "canonical_category": "Amplifiers & Effects",
+            "canonical_subcategory": "Amplifier",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:12.064853",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from ampeg catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped-7979978248812897723",
+            "product_name": "Ampeg Liquifier Analog Chorus",
+            "brand": "Ampeg",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:12.156853",
+            "last_updated": "2026-02-06T14:01:12.156854",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:12.156827",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Ampeg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7979978248812897723",
+              "product_name": "Ampeg Liquifier Analog Chorus",
+              "brand": "Ampeg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3909033-ampeg-liquifier-analog-chorus\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 0.4210526315789473,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Price is 0 (TBD)"
+      ]
+    },
+    {
+      "halilit_id": "scraped-7774859089508859005",
+      "product_name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+      "brand": "ampeg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T17:51:03.070215",
+      "last_updated": "2026-02-06T17:51:03.070215",
+      "taxonomy": {
+        "canonical_category": "Amplifiers & Effects",
+        "canonical_subcategory": "Amplifier",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T17:51:03.070198",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from ampeg catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-7774859089508859005",
+        "product_name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+        "brand": "ampeg",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:26:35.069550",
+        "last_updated": "2026-02-06T17:26:35.069550",
+        "taxonomy": {
+          "canonical_category": "Amplifiers & Effects",
+          "canonical_subcategory": "Amplifier",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:26:35.069541",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from ampeg catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped-7774859089508859005",
+          "product_name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+          "brand": "ampeg",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:12.065254",
+          "last_updated": "2026-02-06T17:26:12.065254",
+          "taxonomy": {
+            "canonical_category": "Amplifiers & Effects",
+            "canonical_subcategory": "Amplifier",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:12.065243",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from ampeg catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped-7774859089508859005",
+            "product_name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+            "brand": "Ampeg",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:12.157366",
+            "last_updated": "2026-02-06T14:01:12.157366",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:12.157353",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Ampeg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7774859089508859005",
+              "product_name": "\u05de\u05d2\u05d1\u05e8 \u05e8\u05d0\u05e9 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg SVT-VR",
+              "brand": "Ampeg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6484227-ampeg-classic-svt-vr-bass-amplifier\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 0.4210526315789473,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Price is 0 (TBD)"
+      ]
+    },
+    {
+      "halilit_id": "scraped-273270126354081970",
+      "product_name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+      "brand": "ampeg",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-06T17:51:03.070367",
+      "last_updated": "2026-02-06T17:51:03.070367",
+      "taxonomy": {
+        "canonical_category": "Amplifiers & Effects",
+        "canonical_subcategory": "Amplifier",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-06T17:51:03.070356",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from ampeg catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-273270126354081970",
+        "product_name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+        "brand": "ampeg",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:26:35.069640",
+        "last_updated": "2026-02-06T17:26:35.069640",
+        "taxonomy": {
+          "canonical_category": "Amplifiers & Effects",
+          "canonical_subcategory": "Amplifier",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:26:35.069634",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from ampeg catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped-273270126354081970",
+          "product_name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+          "brand": "ampeg",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:12.065350",
+          "last_updated": "2026-02-06T17:26:12.065350",
+          "taxonomy": {
+            "canonical_category": "Amplifiers & Effects",
+            "canonical_subcategory": "Amplifier",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:12.065343",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from ampeg catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped-273270126354081970",
+            "product_name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+            "brand": "Ampeg",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:12.157492",
+            "last_updated": "2026-02-06T14:01:12.157492",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:12.157482",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Ampeg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-273270126354081970",
+              "product_name": "\u05e7\u05d1\u05d9\u05e0\u05d4 \u05dc\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d1\u05e1 Ampeg PF-210HE Portaflex",
+              "brand": "Ampeg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446821-ampeg-pf-210he-portaflex\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 0.4210526315789473,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Price is 0 (TBD)"
+      ]
+    }
+  ]
+}

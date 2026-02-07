@@ -1,9 +1,9 @@
-VERSION=6.1.1
-RELEASE_TAG=v6.1.1-patch
-BUILD_DATE=2026-02-06
-BRANCH=v5.4
-STATUS=ingestion-production-ready
+VERSION=7.2
+RELEASE_TAG=v7.2-production
+BUILD_DATE=2026-02-07
+BRANCH=v7.2
+STATUS=production-ready
 ARCHITECTURE=trinity-orchestration-spectrum
 AGENTS=trinity-swarm-ingestion-pipeline
-COMPONENTS=ingestion-pipeline,spectrum-adapter,database-persistence
-TEST_COVERAGE=100/100
+COMPONENTS=skills-framework,copilot-integration,auto-sync,ingestion-pipeline
+TEST_COVERAGE=18/18

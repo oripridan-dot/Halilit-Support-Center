@@ -1,0 +1,16 @@
+{
+  "version_id": "oscar schmidt acoustic guitars_batch_1770447806",
+  "brand": "oscar schmidt acoustic guitars",
+  "batch_id": "batch_1770447806",
+  "timestamp": "2026-02-07T07:03:26.559001",
+  "approved_count": 1,
+  "rejected_count": 0,
+  "total_processed": 1,
+  "execution_time_seconds": 0.006332,
+  "data_completeness": 0.6315789473684209,
+  "quality_score": 100.0,
+  "is_active": true,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ]
+}
