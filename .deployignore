@@ -1,0 +1,38 @@
+# Production deployment ignore (what we DON'T ship)
+
+# Dev dependencies
+node_modules/
+.venv/
+__pycache__/
+
+# Dev tooling
+.vscode/
+.idea/
+*.log
+tests/
+playwright.config.ts
+vite.config.ts  # We'll use production vite config
+
+# Large unneeded assets
+frontend/assets/manuals/
+frontend/assets/media/
+frontend/assets/bg/
+
+# Lock files (use package.json)
+pnpm-lock.yaml
+yarn.lock
+
+# Build temp
+dist-ssr/
+.turbo/
+.next/
+
+# Docs & config
+README.md
+ARCHITECTURE*.md
+CODEBASE_AUDIT.md
+*.md
+
+# Git
+.git
+.gitignore

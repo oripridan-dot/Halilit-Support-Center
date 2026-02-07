@@ -29,39 +29,7 @@
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
-        "priority": 80,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 80,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
         "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
         "source": "official"
       },
       {
@@ -79,8 +47,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-07T09:07:17.384199",
-    "last_updated": "2026-02-07T09:07:17.384199",
+    "created_at": "2026-02-07T07:58:29.451478",
+    "last_updated": "2026-02-07T07:58:29.451479",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Digital Piano",
@@ -115,7 +83,7 @@
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
-        "priority": 80,
+        "priority": 100,
         "source": "official"
       },
       "should_highlight": false,
@@ -135,39 +103,7 @@
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
-          "priority": 80,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 80,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
           "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
           "source": "official"
         },
         {
@@ -193,7 +129,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-07T09:07:17.384172",
+      "timestamp": "2026-02-07T07:58:29.451466",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from foxgear guitar effects and pedals catalog"
     },
@@ -217,26 +153,10 @@
       "official_images": [
         {
           "url": "https://brand.com/hero.jpg",
-          "alt": null,
+          "alt": "Product image",
           "type": "image",
           "display_purpose": "hero",
-          "priority": 80,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
+          "priority": 0,
           "source": "official"
         }
       ],
@@ -246,8 +166,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-07T07:58:29.451478",
-      "last_updated": "2026-02-07T07:58:29.451479",
+      "created_at": "2026-02-07T07:03:25.315908",
+      "last_updated": "2026-02-07T07:03:25.315909",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Digital Piano",
@@ -271,18 +191,18 @@
         "display_role": "specialist",
         "hero_image": {
           "url": "https://brand.com/hero.jpg",
-          "alt": null,
+          "alt": "Product image",
           "type": "image",
           "display_purpose": "hero",
-          "priority": 80,
+          "priority": 0,
           "source": "official"
         },
         "thumbnail_image": {
           "url": "https://brand.com/hero.jpg",
-          "alt": null,
+          "alt": "Product image",
           "type": "image",
           "display_purpose": "hero",
-          "priority": 100,
+          "priority": 0,
           "source": "official"
         },
         "should_highlight": false,
@@ -291,26 +211,10 @@
         "media_assets": [
           {
             "url": "https://brand.com/hero.jpg",
-            "alt": null,
+            "alt": "Product image",
             "type": "image",
             "display_purpose": "hero",
-            "priority": 80,
-            "source": "official"
-          },
-          {
-            "url": "https://brand.com/hero.jpg",
-            "alt": null,
-            "type": "image",
-            "display_purpose": "hero",
-            "priority": 100,
-            "source": "official"
-          },
-          {
-            "url": "https://brand.com/hero.jpg",
-            "alt": null,
-            "type": "image",
-            "display_purpose": "gallery",
-            "priority": 50,
+            "priority": 0,
             "source": "official"
           }
         ]
@@ -328,7 +232,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-07T07:58:29.451466",
+        "timestamp": "2026-02-07T07:03:25.315881",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from foxgear guitar effects and pedals catalog"
       },
@@ -348,28 +252,19 @@
           "action": "Hammer Action",
           "polyphony": 128
         },
-        "official_description": "The ultimate stage piano for professionals.",
-        "official_images": [
-          {
-            "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
-            "type": "image",
-            "display_purpose": "hero",
-            "priority": 0,
-            "source": "official"
-          }
-        ],
+        "official_description": null,
+        "official_images": [],
         "official_url": null,
         "reviews": [],
         "review_synthesis": null,
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-07T07:03:25.315908",
-        "last_updated": "2026-02-07T07:03:25.315909",
+        "created_at": "2026-02-06T17:51:03.883335",
+        "last_updated": "2026-02-06T17:51:03.883335",
         "taxonomy": {
-          "canonical_category": "Keyboards & Synthesizers",
-          "canonical_subcategory": "Digital Piano",
+          "canonical_category": "Amplifiers & Effects",
+          "canonical_subcategory": "Pedal",
           "brand_taxonomy": null,
           "alt_categories": [],
           "keywords": []
@@ -388,50 +283,27 @@
         },
         "display": {
           "display_role": "specialist",
-          "hero_image": {
-            "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
-            "type": "image",
-            "display_purpose": "hero",
-            "priority": 0,
-            "source": "official"
-          },
-          "thumbnail_image": {
-            "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
-            "type": "image",
-            "display_purpose": "hero",
-            "priority": 0,
-            "source": "official"
-          },
+          "hero_image": null,
+          "thumbnail_image": null,
           "should_highlight": false,
           "display_tier_level": 5,
           "color_hint": "bg-green-400",
-          "media_assets": [
-            {
-              "url": "https://brand.com/hero.jpg",
-              "alt": "Product image",
-              "type": "image",
-              "display_purpose": "hero",
-              "priority": 0,
-              "source": "official"
-            }
-          ]
+          "media_assets": []
         },
         "specifications": {
           "keys": 88,
           "action": "Hammer Action",
           "polyphony": 128
         },
-        "description_short": "The ultimate stage piano for professionals.",
-        "description_long": "The ultimate stage piano for professionals.",
+        "description_short": "",
+        "description_long": "",
         "feature_list": [],
         "sources": [],
         "primary_source": {
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-07T07:03:25.315881",
+          "timestamp": "2026-02-06T17:51:03.883317",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from foxgear guitar effects and pedals catalog"
         },
@@ -459,8 +331,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:51:03.883335",
-          "last_updated": "2026-02-06T17:51:03.883335",
+          "created_at": "2026-02-06T17:26:35.482999",
+          "last_updated": "2026-02-06T17:26:35.483000",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Pedal",
@@ -502,7 +374,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:51:03.883317",
+            "timestamp": "2026-02-06T17:26:35.482987",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from foxgear guitar effects and pedals catalog"
           },
@@ -530,8 +402,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T17:26:35.482999",
-            "last_updated": "2026-02-06T17:26:35.483000",
+            "created_at": "2026-02-06T17:26:12.376280",
+            "last_updated": "2026-02-06T17:26:12.376280",
             "taxonomy": {
               "canonical_category": "Amplifiers & Effects",
               "canonical_subcategory": "Pedal",
@@ -573,7 +445,7 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T17:26:35.482987",
+              "timestamp": "2026-02-06T17:26:12.376265",
               "extraction_method": "web_scraper",
               "extraction_notes": "Scraped from foxgear guitar effects and pedals catalog"
             },
@@ -581,7 +453,7 @@
             "raw_snapshot": {
               "halilit_id": "123456",
               "product_name": "Foxgear Guitar Effects And Pedals Grand Stage 88",
-              "brand": "foxgear guitar effects and pedals",
+              "brand": "Foxgear Guitar Effects And Pedals",
               "price_il": 18500.0,
               "price_eilat": 15811.0,
               "halilit_url": "https://halilit.com",
@@ -601,8 +473,8 @@
               "average_rating": null,
               "status": "harvested",
               "pipeline_phase": "harvest",
-              "created_at": "2026-02-06T17:26:12.376280",
-              "last_updated": "2026-02-06T17:26:12.376280",
+              "created_at": "2026-02-06T14:02:01.624337",
+              "last_updated": "2026-02-06T14:02:01.624337",
               "taxonomy": {
                 "canonical_category": "Amplifiers & Effects",
                 "canonical_subcategory": "Pedal",
@@ -644,9 +516,9 @@
                 "source_name": "Halilit",
                 "source_url": "https://halilit.com",
                 "confidence": "commercial",
-                "timestamp": "2026-02-06T17:26:12.376265",
+                "timestamp": "2026-02-06T14:02:01.624313",
                 "extraction_method": "web_scraper",
-                "extraction_notes": "Scraped from foxgear guitar effects and pedals catalog"
+                "extraction_notes": "Scraped from Foxgear Guitar Effects And Pedals catalog"
               },
               "lineage": {},
               "raw_snapshot": {
@@ -655,107 +527,24 @@
                 "brand": "Foxgear Guitar Effects And Pedals",
                 "price_il": 18500.0,
                 "price_eilat": 15811.0,
-                "halilit_url": "https://halilit.com",
-                "sku": null,
-                "model_number": null,
-                "official_name": null,
+                "halilit_url": "https://halilit.com/brands/Foxgear Guitar Effects And Pedals/stage-88",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
                 "official_specs": {
                   "keys": 88,
                   "action": "Hammer Action",
                   "polyphony": 128
                 },
-                "official_description": null,
-                "official_images": [],
-                "official_url": null,
-                "reviews": [],
-                "review_synthesis": null,
-                "average_rating": null,
-                "status": "harvested",
-                "pipeline_phase": "harvest",
-                "created_at": "2026-02-06T14:02:01.624337",
-                "last_updated": "2026-02-06T14:02:01.624337",
-                "taxonomy": {
-                  "canonical_category": "Amplifiers & Effects",
-                  "canonical_subcategory": "Pedal",
-                  "brand_taxonomy": null,
-                  "alt_categories": [],
-                  "keywords": []
-                },
-                "pricing": {
-                  "price_il": 18500.0,
-                  "price_eilat": 15811.0,
-                  "price_usd": null,
-                  "price_eur": null,
-                  "tier": "flagship",
-                  "eilat_discount_percent": 14.535135135135135,
-                  "suggested_tier": "flagship",
-                  "price_validity_marker": "current",
-                  "last_price_change": null,
-                  "previous_price_il": null
-                },
-                "display": {
-                  "display_role": "specialist",
-                  "hero_image": null,
-                  "thumbnail_image": null,
-                  "should_highlight": false,
-                  "display_tier_level": 5,
-                  "color_hint": "bg-green-400",
-                  "media_assets": []
-                },
-                "specifications": {
-                  "keys": 88,
-                  "action": "Hammer Action",
-                  "polyphony": 128
-                },
-                "description_short": "",
-                "description_long": "",
-                "feature_list": [],
-                "sources": [],
-                "primary_source": {
-                  "source_name": "Halilit",
-                  "source_url": "https://halilit.com",
-                  "confidence": "commercial",
-                  "timestamp": "2026-02-06T14:02:01.624313",
-                  "extraction_method": "web_scraper",
-                  "extraction_notes": "Scraped from Foxgear Guitar Effects And Pedals catalog"
-                },
-                "lineage": {},
-                "raw_snapshot": {
-                  "halilit_id": "123456",
-                  "product_name": "Foxgear Guitar Effects And Pedals Grand Stage 88",
-                  "brand": "Foxgear Guitar Effects And Pedals",
-                  "price_il": 18500.0,
-                  "price_eilat": 15811.0,
-                  "halilit_url": "https://halilit.com/brands/Foxgear Guitar Effects And Pedals/stage-88",
-                  "pipeline_phase": "enrich",
-                  "status": "harvested",
-                  "official_specs": {
-                    "keys": 88,
-                    "action": "Hammer Action",
-                    "polyphony": 128
-                  },
-                  "official_description": "The ultimate stage piano for professionals.",
-                  "official_images": [
-                    {
-                      "type": "image",
-                      "url": "https://brand.com/hero.jpg",
-                      "display_purpose": "hero",
-                      "source": "official"
-                    }
-                  ],
-                  "official_url": "https://brand.com/products/stage-88"
-                },
-                "data_completeness": 0.6315789473684209,
-                "quality_score": 0.6315789473684209,
-                "validation_status": "approved",
-                "validation_errors": [],
-                "validation_warnings": [],
-                "price": 18500.0,
-                "currency": "ILS",
-                "image_hero": null,
-                "image_thumbnail": null,
-                "image_gallery": [],
-                "image_url": ""
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
               },
               "data_completeness": 0.6315789473684209,
               "quality_score": 0.6315789473684209,
@@ -794,41 +583,18 @@
           "image_url": ""
         },
         "data_completeness": 0.6315789473684209,
-        "quality_score": 100.0,
+        "quality_score": 0.6315789473684209,
         "validation_status": "approved",
         "validation_errors": [],
         "validation_warnings": [],
         "price": 18500.0,
         "currency": "ILS",
-        "image_hero": {
-          "url": "https://brand.com/hero.jpg",
-          "alt": "Product image",
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 0,
-          "source": "official"
-        },
-        "image_thumbnail": {
-          "url": "https://brand.com/hero.jpg",
-          "alt": "Product image",
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 0,
-          "source": "official"
-        },
-        "image_gallery": [
-          {
-            "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
-            "type": "image",
-            "display_purpose": "hero",
-            "priority": 0,
-            "source": "official"
-          }
-        ],
-        "image_url": "https://brand.com/hero.jpg"
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
       },
-      "data_completeness": 0.6842105263157894,
+      "data_completeness": 0.6315789473684209,
       "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
@@ -837,43 +603,27 @@
       "currency": "ILS",
       "image_hero": {
         "url": "https://brand.com/hero.jpg",
-        "alt": null,
+        "alt": "Product image",
         "type": "image",
         "display_purpose": "hero",
-        "priority": 80,
+        "priority": 0,
         "source": "official"
       },
       "image_thumbnail": {
         "url": "https://brand.com/hero.jpg",
-        "alt": null,
+        "alt": "Product image",
         "type": "image",
         "display_purpose": "hero",
-        "priority": 100,
+        "priority": 0,
         "source": "official"
       },
       "image_gallery": [
         {
           "url": "https://brand.com/hero.jpg",
-          "alt": null,
+          "alt": "Product image",
           "type": "image",
           "display_purpose": "hero",
-          "priority": 80,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 100,
-          "source": "official"
-        },
-        {
-          "url": "https://brand.com/hero.jpg",
-          "alt": null,
-          "type": "image",
-          "display_purpose": "gallery",
-          "priority": 50,
+          "priority": 0,
           "source": "official"
         }
       ],
@@ -899,7 +649,7 @@
       "alt": null,
       "type": "image",
       "display_purpose": "hero",
-      "priority": 80,
+      "priority": 100,
       "source": "official"
     },
     "image_gallery": [
@@ -916,39 +666,7 @@
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
-        "priority": 80,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 80,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "hero",
         "priority": 100,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
-        "source": "official"
-      },
-      {
-        "url": "https://brand.com/hero.jpg",
-        "alt": null,
-        "type": "image",
-        "display_purpose": "gallery",
-        "priority": 50,
         "source": "official"
       },
       {

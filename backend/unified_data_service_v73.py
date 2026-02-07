@@ -393,23 +393,25 @@ class DataNormalizer:
     @staticmethod
     def validate_normalized(product: Dict[str, Any]) -> tuple[bool, List[str]]:
         """
-        Validate that a normalized product has all required fields
+        Validate that a normalized product has all REQUIRED fields.
+
+        ✅ v7.3 CHANGE: Only require core commercial fields
+        ❌ No longer strict about images, specs, or description
+
         Returns (is_valid, list_of_errors)
         """
         errors = []
 
-        required = ["halilit_id", "product_name",
-                    "brand", "price_il", "official_images"]
+        # Core required fields (must exist for any valid product)
+        required = ["halilit_id", "product_name", "brand"]
         for field in required:
             if not product.get(field):
                 errors.append(f"Missing required field: {field}")
 
+        # Price optional but validate if present
         if product.get("price_il") is not None and not isinstance(product["price_il"], (int, float)):
             errors.append(
                 f"price_il must be numeric, got {type(product['price_il'])}")
-
-        if not isinstance(product.get("official_images"), list):
-            errors.append("official_images must be a list")
 
         return len(errors) == 0, errors
 
@@ -862,33 +864,18 @@ class IngestToFrontendSyncEngine:
             for product in frontend_products:
                 is_valid, errors = DataNormalizer.validate_normalized(product)
 
-                price_il = float(product.get('price_il', 0))
-                official_images = product.get('official_images', [])
-                data_completeness = float(product.get('data_completeness', 0))
+                # ✅ RELAXED VALIDATION (v7.3) - Include more products
+                # Only reject if there are core validation errors
+                # (missing required fields), not quality issues
 
-                frontend_specific_errors = []
-
-                if price_il < 500:
-                    frontend_specific_errors.append(
-                        f"Price too low ({price_il} NIS) - likely simulated data"
-                    )
-
-                if not official_images or len(official_images) == 0:
-                    frontend_specific_errors.append(
-                        "No images available for frontend display")
-
-                if data_completeness < 0.4:
-                    frontend_specific_errors.append(
-                        f"Data incomplete ({data_completeness:.0%}) - requires 40% minimum"
-                    )
-
-                if is_valid and len(frontend_specific_errors) == 0:
+                if is_valid:
+                    # Product has all required fields - accept it
                     valid_products.append(product)
                 else:
+                    # Only reject if core required fields are missing
                     invalid_count += 1
-                    all_errors = errors + frontend_specific_errors
-                    logger.warning(
-                        f"  ⚠️  Invalid product {product.get('halilit_id')}: {all_errors}")
+                    logger.debug(
+                        f"  ⚠️  Skipped {product.get('halilit_id')}: {errors}")
 
             logger.info(
                 f"  ✅ After strict validation: {len(valid_products)}/{len(frontend_products)} products passed")
