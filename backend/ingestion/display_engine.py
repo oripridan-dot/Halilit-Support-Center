@@ -19,6 +19,7 @@ from backend.ingestion.data_models import (
     DisplayRole, PricingTier, MediaAsset, DisplayProperties,
     IngestionProductDraft, DataSourceConfidence
 )
+from backend.ingestion.visual_validator import get_visual_validator
 
 logger = logging.getLogger("DisplayPreparationEngine")
 
@@ -409,6 +410,19 @@ class DisplayPreparationEngine:
             data_completeness > 0.75
         )
 
+        # Visual Validation
+        validator = get_visual_validator()
+        _, issues = validator.validate_display_readiness(
+            pricing_tier=pricing_tier,
+            display_role=display_role,
+            media_assets=sorted_media,
+            hero_image_url=hero_image
+        )
+
+        if issues:
+            self.logger.warning(
+                f"Visual validation issues for {product_name}: {issues}")
+
         return DisplayProperties(
             display_role=display_role,
             hero_image=hero_image,
@@ -417,6 +431,7 @@ class DisplayPreparationEngine:
             display_tier_level=tier_level,
             color_hint=color_hint,
             media_assets=sorted_media,
+            visual_issues=issues
         )
 
     def _extract_thumbnail(self, media_assets: List[MediaAsset]) -> Optional[str]:

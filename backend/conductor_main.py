@@ -23,6 +23,7 @@ from backend.ingestion.ingestion_database import get_ingestion_database
 from backend.ingestion.trinity_integration import TrinityIngestionBridge
 from backend.unified_data_service_v73 import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
 from backend.ingestion.orchestrator import IngestionOrchestrator
+from backend.unified_agent_orchestrator_v73 import CommercialAgent
 from backend.unified_quality_gates_v73 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
 import sys
 import os
@@ -463,6 +464,24 @@ class ConductorCLI:
                         return data.get("products", [])
         except Exception as e:
             logger.warning(f"Failed to load ingestion data: {e}")
+
+        # Last resort: Fresh Scrape via CommercialScout
+        logger.info(
+            f"   🔎 No local data found for {brand}. Launching CommercialScout...")
+        try:
+            scout = CommercialAgent()
+            raw_data = scout.harvest(brand)
+            logger.info(
+                f"   ✓ Scout harvested {len(raw_data) if raw_data else 0} items.")
+
+            # Normalize to list
+            if isinstance(raw_data, dict):
+                return [raw_data]
+            elif isinstance(raw_data, list):
+                return raw_data
+
+        except Exception as e:
+            logger.error(f"   ❌ Scout failed: {e}")
 
         return []
 

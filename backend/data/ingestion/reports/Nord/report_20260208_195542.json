@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770580542",
+  "brand": "Nord",
+  "timestamp": "2026-02-08T19:55:42.535766",
+  "execution_time_seconds": 0.071869,
+  "total_processed": 24,
+  "approved_count": 24,
+  "rejected_count": 0,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ],
+  "approved_products_count": 24,
+  "rejected_products_count": 0
+}

@@ -1,0 +1,2651 @@
+{
+  "brand": "Sequential",
+  "timestamp": "20260208_201913",
+  "count": 23,
+  "products": [
+    {
+      "halilit_id": "scraped-2738367341179863796",
+      "product_name": "\u05de\u05d5\u05d3\u05d5\u05dc \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05e9\u05d5\u05dc\u05d7\u05e0\u05d9 Oberheim TEO-5",
+      "brand": "Sequential",
+      "price_il": 5818.0,
+      "price_eilat": 4945.3,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19135524/original/8a76a08fdfd7f4919862de1daca81518.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.364801",
+      "last_updated": "2026-02-08T20:19:13.364801",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5818.0,
+        "price_eilat": 4945.3,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.999999999999996,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.364778",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-2738367341179863796",
+        "product_name": "\u05de\u05d5\u05d3\u05d5\u05dc \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05e9\u05d5\u05dc\u05d7\u05e0\u05d9 Oberheim TEO-5",
+        "brand": "Sequential",
+        "price_il": 5818.0,
+        "price_eilat": 4945.3,
+        "halilit_url": "https://www.halilit.com  /items/8623225-oberheim-teo-5-desktop-poly-synth-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19135524/original/8a76a08fdfd7f4919862de1daca81518.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19135524/original/8a76a08fdfd7f4919862de1daca81518.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-1291812067408608907",
+      "product_name": "\u05de\u05d5\u05d3\u05d5\u05dc \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05e9\u05d5\u05dc\u05d7\u05e0\u05d9 Sequential Take 5",
+      "brand": "Sequential",
+      "price_il": 5818.0,
+      "price_eilat": 4945.3,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19129838/original/6407589366e75f80161c843e84f0b54a.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.365288",
+      "last_updated": "2026-02-08T20:19:13.365289",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 5818.0,
+        "price_eilat": 4945.3,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.999999999999996,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.365267",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-1291812067408608907",
+        "product_name": "\u05de\u05d5\u05d3\u05d5\u05dc \u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05e9\u05d5\u05dc\u05d7\u05e0\u05d9 Sequential Take 5",
+        "brand": "Sequential",
+        "price_il": 5818.0,
+        "price_eilat": 4945.3,
+        "halilit_url": "https://www.halilit.com  /items/8621783-sequential-take-5-desktop-compact-poly-synth-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19129838/original/6407589366e75f80161c843e84f0b54a.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19129838/original/6407589366e75f80161c843e84f0b54a.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-7312520357773199234",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-5",
+      "brand": "Sequential",
+      "price_il": 17231.0,
+      "price_eilat": 14646.35,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190600/original/bd0702045336b46ce8d4f9434a07830b.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.365930",
+      "last_updated": "2026-02-08T20:19:13.365930",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 17231.0,
+        "price_eilat": 14646.35,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 14.999999999999996,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.365919",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-7312520357773199234",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-5",
+        "brand": "Sequential",
+        "price_il": 17231.0,
+        "price_eilat": 14646.35,
+        "halilit_url": "https://www.halilit.com  /items/6305024-sequential-prophet-5-legendary-5-voice-analog-poly-synth\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190600/original/bd0702045336b46ce8d4f9434a07830b.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190600/original/bd0702045336b46ce8d4f9434a07830b.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-4500253835663417309",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Take 5",
+      "brand": "Sequential",
+      "price_il": 7177.0,
+      "price_eilat": 6100.45,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188102/original/73e1e1a405fea7815b560ee984e89e6d.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.366259",
+      "last_updated": "2026-02-08T20:19:13.366259",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 7177.0,
+        "price_eilat": 6100.45,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000002,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.366249",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-4500253835663417309",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Take 5",
+        "brand": "Sequential",
+        "price_il": 7177.0,
+        "price_eilat": 6100.45,
+        "halilit_url": "https://www.halilit.com  /items/6304060-sequential-take-5-compact-poly-synth\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188102/original/73e1e1a405fea7815b560ee984e89e6d.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188102/original/73e1e1a405fea7815b560ee984e89e6d.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-3039151976019101442",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Sequential Fourm",
+      "brand": "Sequential",
+      "price_il": 3924.0,
+      "price_eilat": 3335.4,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19013237/original/374c1b902d2e9672f404fa12df016fba.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.366547",
+      "last_updated": "2026-02-08T20:19:13.366547",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 3924.0,
+        "price_eilat": 3335.4,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "pro",
+        "eilat_discount_percent": 14.999999999999996,
+        "suggested_tier": "pro",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 4,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.PRO",
+          "Insufficient images for PricingTier.PRO tier. Found 0, required 2"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.366537",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-3039151976019101442",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 \u05d0\u05e0\u05dc\u05d5\u05d2\u05d9 Sequential Fourm",
+        "brand": "Sequential",
+        "price_il": 3924.0,
+        "price_eilat": 3335.4,
+        "halilit_url": "https://www.halilit.com  /items/8602430-sequential-fourm-4-voice-analog-poly-synth\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19013237/original/374c1b902d2e9672f404fa12df016fba.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/19013237/original/374c1b902d2e9672f404fa12df016fba.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-1153928378420930767",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Keyboard",
+      "brand": "Sequential",
+      "price_il": 16752.0,
+      "price_eilat": 14239.199999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942729/original/eabc50e117972416ec9b41fa149da738.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.366623",
+      "last_updated": "2026-02-08T20:19:13.366623",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Digital Keyboard",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000007,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.366615",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-1153928378420930767",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Keyboard",
+        "brand": "Sequential",
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "halilit_url": "https://www.halilit.com  /items/6364998-oberheim-ob-6-6-voice-polyphonic-analog-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942729/original/eabc50e117972416ec9b41fa149da738.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942729/original/eabc50e117972416ec9b41fa149da738.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-7742963282330323534",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-10 Special Edition",
+      "brand": "Sequential",
+      "price_il": 29585.0,
+      "price_eilat": 25147.25,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17216933/original/87df161a1ea5bb1f7d7aeaf8f6d081d4.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.366986",
+      "last_updated": "2026-02-08T20:19:13.366986",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 29585.0,
+        "price_eilat": 25147.25,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.0,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.366977",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-7742963282330323534",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-10 Special Edition",
+        "brand": "Sequential",
+        "price_il": 29585.0,
+        "price_eilat": 25147.25,
+        "halilit_url": "https://www.halilit.com  /items/8233546-sequential-prophet-10-special-edition\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17216933/original/87df161a1ea5bb1f7d7aeaf8f6d081d4.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/17216933/original/87df161a1ea5bb1f7d7aeaf8f6d081d4.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-6363965296357895702",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+      "brand": "Sequential",
+      "price_il": 11487.0,
+      "price_eilat": 9763.949999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942730/original/90eaa458e2a7e39eb57eb9df03d35657.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.367646",
+      "last_updated": "2026-02-08T20:19:13.367646",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 11487.0,
+        "price_eilat": 9763.949999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.00000000000001,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.367635",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-6363965296357895702",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Oberheim OB-6 Desktop",
+        "brand": "Sequential",
+        "price_il": 11487.0,
+        "price_eilat": 9763.949999999999,
+        "halilit_url": "https://www.halilit.com  /items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942730/original/90eaa458e2a7e39eb57eb9df03d35657.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942730/original/90eaa458e2a7e39eb57eb9df03d35657.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-7420097320291706680",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-6 Desktop",
+      "brand": "Sequential",
+      "price_il": 11007.0,
+      "price_eilat": 9355.949999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325993/original/bb571518b45e3ea20b6379f05f52ae2a.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.367732",
+      "last_updated": "2026-02-08T20:19:13.367733",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 11007.0,
+        "price_eilat": 9355.949999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.00000000000001,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.367727",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-7420097320291706680",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-6 Desktop",
+        "brand": "Sequential",
+        "price_il": 11007.0,
+        "price_eilat": 9355.949999999999,
+        "halilit_url": "https://www.halilit.com  /items/6349147-sequential-prophet-6-desktop-\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325993/original/bb571518b45e3ea20b6379f05f52ae2a.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325993/original/bb571518b45e3ea20b6379f05f52ae2a.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-4035433233107853858",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Trigon-6",
+      "brand": "Sequential",
+      "price_il": 16752.0,
+      "price_eilat": 14239.199999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13181255/original/5396e95e1169f20a50d31a4b96b06ed2.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.367874",
+      "last_updated": "2026-02-08T20:19:13.367874",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000007,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.367868",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-4035433233107853858",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Trigon-6",
+        "brand": "Sequential",
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "halilit_url": "https://www.halilit.com  /items/6301037-sequential-trigon-6-polyphonic-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13181255/original/5396e95e1169f20a50d31a4b96b06ed2.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13181255/original/5396e95e1169f20a50d31a4b96b06ed2.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-8353297637586382559",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 Desktop 16-Voice",
+      "brand": "Sequential",
+      "price_il": 9571.0,
+      "price_eilat": 8135.349999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13226576/original/b1d0226f33e31ce8d41f0a6d5f778127.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.367933",
+      "last_updated": "2026-02-08T20:19:13.367934",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 9571.0,
+        "price_eilat": 8135.349999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000005,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.367928",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-8353297637586382559",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 Desktop 16-Voice",
+        "brand": "Sequential",
+        "price_il": 9571.0,
+        "price_eilat": 8135.349999999999,
+        "halilit_url": "https://www.halilit.com  /items/6320751-sequential-prophet-rev2-desktop-16-voice-polyphonic-analog-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13226576/original/b1d0226f33e31ce8d41f0a6d5f778127.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13226576/original/b1d0226f33e31ce8d41f0a6d5f778127.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-3292671631409311720",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-10 Desktop Module",
+      "brand": "Sequential",
+      "price_il": 16273.0,
+      "price_eilat": 13832.05,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323758/original/05746f2baa705d48c9ab5758b9cb374d.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.367984",
+      "last_updated": "2026-02-08T20:19:13.367985",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 16273.0,
+        "price_eilat": 13832.05,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000005,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.367979",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-3292671631409311720",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-10 Desktop Module",
+        "brand": "Sequential",
+        "price_il": 16273.0,
+        "price_eilat": 13832.05,
+        "halilit_url": "https://www.halilit.com  /items/6348410-sequential-prophet-10-desktop-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323758/original/05746f2baa705d48c9ab5758b9cb374d.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323758/original/05746f2baa705d48c9ab5758b9cb374d.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-1171117319002861562",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-10",
+      "brand": "Sequential",
+      "price_il": 21061.0,
+      "price_eilat": 17901.85,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190318/original/fa6c58e64f67566ba8583e3dd4436856.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368036",
+      "last_updated": "2026-02-08T20:19:13.368036",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 21061.0,
+        "price_eilat": 17901.85,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000007,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368031",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-1171117319002861562",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-10",
+        "brand": "Sequential",
+        "price_il": 21061.0,
+        "price_eilat": 17901.85,
+        "halilit_url": "https://www.halilit.com  /items/6304892-sequential-prophet-10-\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190318/original/fa6c58e64f67566ba8583e3dd4436856.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190318/original/fa6c58e64f67566ba8583e3dd4436856.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-3699073244929407054",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Pro 3",
+      "brand": "Sequential",
+      "price_il": 9571.0,
+      "price_eilat": 8135.349999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190118/original/399eb4ef82df3878288ee45e15dd5372.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368091",
+      "last_updated": "2026-02-08T20:19:13.368091",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 9571.0,
+        "price_eilat": 8135.349999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000005,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368085",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-3699073244929407054",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Pro 3",
+        "brand": "Sequential",
+        "price_il": 9571.0,
+        "price_eilat": 8135.349999999999,
+        "halilit_url": "https://www.halilit.com  /items/6304393-sequential-pro-3\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190118/original/399eb4ef82df3878288ee45e15dd5372.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13190118/original/399eb4ef82df3878288ee45e15dd5372.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-3898610023643537673",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 16-Voice Keyboard",
+      "brand": "Sequential",
+      "price_il": 12444.0,
+      "price_eilat": 10577.4,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225788/original/6f0fbd321baba76ee4e7577fc5c259a7.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368172",
+      "last_updated": "2026-02-08T20:19:13.368172",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Digital Keyboard",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 12444.0,
+        "price_eilat": 10577.4,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000002,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368163",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-3898610023643537673",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 16-Voice Keyboard",
+        "brand": "Sequential",
+        "price_il": 12444.0,
+        "price_eilat": 10577.4,
+        "halilit_url": "https://www.halilit.com  /items/6320521-sequential-prophet-rev2-16-voice-polyphonic-analog-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225788/original/6f0fbd321baba76ee4e7577fc5c259a7.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225788/original/6f0fbd321baba76ee4e7577fc5c259a7.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-6365465490359363729",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 Desktop 8-Voice",
+      "brand": "Sequential",
+      "price_il": 8374.0,
+      "price_eilat": 7117.9,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13227041/original/09ce84bcf2beef7113015f923d64a771.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368272",
+      "last_updated": "2026-02-08T20:19:13.368272",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 8374.0,
+        "price_eilat": 7117.9,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000005,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368265",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-6365465490359363729",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 Desktop 8-Voice",
+        "brand": "Sequential",
+        "price_il": 8374.0,
+        "price_eilat": 7117.9,
+        "halilit_url": "https://www.halilit.com  /items/6321052-sequential-prophet-rev2-desktop-8-voice-polyphonic-analog-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13227041/original/09ce84bcf2beef7113015f923d64a771.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13227041/original/09ce84bcf2beef7113015f923d64a771.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-2979513553094704599",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-6",
+      "brand": "Sequential",
+      "price_il": 16752.0,
+      "price_eilat": 14239.199999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325485/original/f84c482bcc3a6dd2eb942bf85bab612a.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368329",
+      "last_updated": "2026-02-08T20:19:13.368329",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000007,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368324",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-2979513553094704599",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-6",
+        "brand": "Sequential",
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "halilit_url": "https://www.halilit.com  /items/6348963-sequential-prophet-6-\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325485/original/f84c482bcc3a6dd2eb942bf85bab612a.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13325485/original/f84c482bcc3a6dd2eb942bf85bab612a.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-306247330306474198",
+      "product_name": "\u05e1\u05d9\u05e0\u05d8\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential OB-6 Keyboard",
+      "brand": "Sequential",
+      "price_il": 16752.0,
+      "price_eilat": 14239.199999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942726/original/565c8fac0c9ec5df825dfb8f389165f0.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368386",
+      "last_updated": "2026-02-08T20:19:13.368386",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Digital Keyboard",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000007,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368377",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-306247330306474198",
+        "product_name": "\u05e1\u05d9\u05e0\u05d8\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential OB-6 Keyboard",
+        "brand": "Sequential",
+        "price_il": 16752.0,
+        "price_eilat": 14239.199999999999,
+        "halilit_url": "https://www.halilit.com  /items/6350511-sequential-ob-6-6-voice-polyphonic-analog-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942726/original/565c8fac0c9ec5df825dfb8f389165f0.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942726/original/565c8fac0c9ec5df825dfb8f389165f0.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-4610180646919771591",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Pro 3 SE",
+      "brand": "Sequential",
+      "price_il": 10528.0,
+      "price_eilat": 8948.8,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188324/original/83b4b12ea08c5ea007855cdeca9227be.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368445",
+      "last_updated": "2026-02-08T20:19:13.368445",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 10528.0,
+        "price_eilat": 8948.8,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000007,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368439",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-4610180646919771591",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Pro 3 SE",
+        "brand": "Sequential",
+        "price_il": 10528.0,
+        "price_eilat": 8948.8,
+        "halilit_url": "https://www.halilit.com  /items/6304203-sequential-pro-3-se\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188324/original/83b4b12ea08c5ea007855cdeca9227be.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13188324/original/83b4b12ea08c5ea007855cdeca9227be.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-8133859069330825997",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 8-Voice Keyboard",
+      "brand": "Sequential",
+      "price_il": 9571.0,
+      "price_eilat": 8135.349999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225905/original/65220d7642e3ae66668b090855580156.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.368538",
+      "last_updated": "2026-02-08T20:19:13.368539",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Digital Keyboard",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 9571.0,
+        "price_eilat": 8135.349999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.000000000000005,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.368533",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-8133859069330825997",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet Rev2 8-Voice Keyboard",
+        "brand": "Sequential",
+        "price_il": 9571.0,
+        "price_eilat": 8135.349999999999,
+        "halilit_url": "https://www.halilit.com  /items/6320598-sequential-prophet-rev2-8-voice-polyphonic-analog-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225905/original/65220d7642e3ae66668b090855580156.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13225905/original/65220d7642e3ae66668b090855580156.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-6068020278016049423",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-5 Desktop Module",
+      "brand": "Sequential",
+      "price_il": 9955.0,
+      "price_eilat": 8461.75,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942724/original/76ede51b83858c76de060a1fc1a5cd72.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.400224",
+      "last_updated": "2026-02-08T20:19:13.400225",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 9955.0,
+        "price_eilat": 8461.75,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.0,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.400206",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-6068020278016049423",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Prophet-5 Desktop Module",
+        "brand": "Sequential",
+        "price_il": 9955.0,
+        "price_eilat": 8461.75,
+        "halilit_url": "https://www.halilit.com  /items/6349287-sequential-prophet-5-desktop-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942724/original/76ede51b83858c76de060a1fc1a5cd72.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942724/original/76ede51b83858c76de060a1fc1a5cd72.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-3182294509217139986",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential OB-6 Desktop",
+      "brand": "Sequential",
+      "price_il": 11487.0,
+      "price_eilat": 9763.949999999999,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942727/original/dc98799f9545e66156b566e084885fef.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.400339",
+      "last_updated": "2026-02-08T20:19:13.400339",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 11487.0,
+        "price_eilat": 9763.949999999999,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.00000000000001,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.400328",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-3182294509217139986",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential OB-6 Desktop",
+        "brand": "Sequential",
+        "price_il": 11487.0,
+        "price_eilat": 9763.949999999999,
+        "halilit_url": "https://www.halilit.com  /items/6350584-sequential-ob-6-desktop-6-voice-polyphonic-analog-synthesizer\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942727/original/dc98799f9545e66156b566e084885fef.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15942727/original/dc98799f9545e66156b566e084885fef.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped-5151073254373898065",
+      "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Trigon-6 Desktop Module",
+      "brand": "Sequential",
+      "price_il": 11965.0,
+      "price_eilat": 10170.25,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "keys": 88,
+        "action": "Hammer Action",
+        "polyphony": 128
+      },
+      "official_description": "The ultimate stage piano for professionals.",
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323993/original/a7e6a3ab7e5b86d6d2f4a37162ec8fa4.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "commercial",
+          "alt_text": null,
+          "priority": 80
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T20:19:13.400424",
+      "last_updated": "2026-02-08T20:19:13.400424",
+      "taxonomy": {
+        "canonical_category": "Audio Interfaces & Mixers",
+        "canonical_subcategory": "Mixer",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 11965.0,
+        "price_eilat": 10170.25,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "flagship",
+        "eilat_discount_percent": 15.0,
+        "suggested_tier": "flagship",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 5,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Missing hero image for high-value tier: PricingTier.FLAGSHIP",
+          "Insufficient images for PricingTier.FLAGSHIP tier. Found 0, required 3"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": null,
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T20:19:13.400414",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from Sequential catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-5151073254373898065",
+        "product_name": "\u05e1\u05d9\u05e0\u05ea\u05d9\u05e1\u05d9\u05d9\u05d6\u05e8 Sequential Trigon-6 Desktop Module",
+        "brand": "Sequential",
+        "price_il": 11965.0,
+        "price_eilat": 10170.25,
+        "halilit_url": "https://www.halilit.com  /items/6348512-sequential-trigon-6-desktop-module\n",
+        "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323993/original/a7e6a3ab7e5b86d6d2f4a37162ec8fa4.jpg",
+        "official_images": [
+          {
+            "url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/13323993/original/a7e6a3ab7e5b86d6d2f4a37162ec8fa4.jpg",
+            "type": "image",
+            "display_purpose": "hero",
+            "source": "commercial"
+          }
+        ],
+        "pipeline_phase": "harvest",
+        "status": "harvested"
+      },
+      "data_completeness": 0.6315789473684209,
+      "quality_score": 100.0,
+      "validation_status": "approved",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    }
+  ]
+}

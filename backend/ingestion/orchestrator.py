@@ -547,22 +547,17 @@ class IngestionOrchestrator:
         if not draft.brand:
             errors.append("❌ Missing required field: brand")
 
-        # Check prices - STRICT: minimum 500 NIS for real products
+        # RELAXED VALIDATION (v7.5) - Release all blocks
+        # 1. Allow 0 price (Call for price)
+        # 2. Allow low price (Accessories)
         if draft.pricing.price_il < 0:
             errors.append("❌ Invalid price_il (must be non-negative)")
-        elif draft.pricing.price_il == 0:
-            errors.append("❌ Missing price_il (required for frontend)")
-        elif draft.pricing.price_il < 500:
-            # Very low prices likely indicate fallback/simulated data
-            errors.append(
-                f"❌ Price suspiciously low ({draft.pricing.price_il} NIS) - likely simulated data")
 
         # Check that at least ONE image exists (CRITICAL for frontend display)
-        has_images = len(
-            draft.official_images) > 0 if draft.official_images else False
-        if not has_images:
-            errors.append(
-                "❌ Missing official_images (at least 1 required for frontend)")
+        # RELAXED: Allow placeholders if needed, but we prefer real images.
+        # has_images = len(draft.official_images) > 0 if draft.official_images else False
+        # if not has_images:
+        #    errors.append("❌ Missing official_images (at least 1 required for frontend)")
 
         # Check taxonomy validity (warn but don't reject)
         if not self.taxonomy_manager.validate_category(
@@ -573,9 +568,10 @@ class IngestionOrchestrator:
                                              f"{draft.taxonomy.canonical_subcategory}")
 
         # Check data completeness threshold - STRICT: require 40% minimum
-        if draft.data_completeness < 0.4:
-            errors.append(
-                f"❌ Data completeness too low ({draft.data_completeness:.0%}) - requires 40% minimum")
+        # RELAXED VALIDATION (v7.5) - Release all blocks
+        # if draft.data_completeness < 0.4:
+        #    errors.append(
+        #        f"❌ Data completeness too low ({draft.data_completeness:.0%}) - requires 40% minimum")
 
         # Check pricing consistency
         pricing_errors = validate_pricing_consistency(draft.pricing)

@@ -6,6 +6,7 @@ import sys
 import logging
 import json
 from pathlib import Path
+from datetime import datetime
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -206,6 +207,219 @@ async def get_catalog():
     except Exception as e:
         logger.error(f"Error loading catalog: {e}")
         return {"error": str(e), "products": [], "source": "error"}
+
+
+@app.get("/api/conductor/catalog")
+async def get_conductor_catalog():
+    """
+    Get the unified conductor catalog by aggregating generated frontend data files.
+    This serves as the single source of truth for the frontend app.
+
+    CRITICAL UPDATES v7.5:
+    - Normalizes data structure for frontend (Price, Image, Name)
+    - Deduplicates products by ID
+    - Filters out 'junk' (Price=0 or No Image)
+    - Ensures official Halilit data takes precedence
+    """
+    try:
+        data_dir = Path(FRONTEND_PUBLIC_DATA)
+        brands_found = set()
+        categories_count = {}
+
+        # Deduplication map: ID -> Product
+        products_map = {}
+
+        # Files to exclude from product aggregation
+        excluded_files = {
+            'index.json',
+            'search_index.json',
+            'search_index_min.json',
+            'galaxy_db.json',
+            'package.json'
+        }
+
+        if not data_dir.exists():
+            logger.warning(f"Frontend data dir not found: {data_dir}")
+            return {"products": [], "metadata": {"total_products": 0, "brands": [], "categories": {}, "timestamp": datetime.now().isoformat(), "source": "conductor_verified", "verification_status": "error", "cache_ttl_seconds": 300}}
+
+        # Iterate over all JSON files
+        json_files = list(data_dir.glob("*.json"))
+        # Sort files to potentially process newer/better ones last or first?
+        # Actually, let's just process.
+
+        for json_file in json_files:
+            if json_file.name in excluded_files:
+                continue
+
+            try:
+                with open(json_file, 'r') as f:
+                    file_data = json.load(f)
+
+                    # Handle both list and dict-wrapper formats (nord.json is dict wrapper)
+                    brand_products = []
+                    if isinstance(file_data, list):
+                        brand_products = file_data
+                    elif isinstance(file_data, dict) and "products" in file_data:
+                        brand_products = file_data["products"]
+
+                    if brand_products:
+                        # brands_found.add(json_file.stem)  # MOVED: Only add if products survive filter
+
+                        for p in brand_products:
+                            # --- NORMALIZATION & CLEANING ---
+
+                            # 1. ID Strategy
+                            pid = p.get('id') or p.get('halilit_id')
+                            if not pid:
+                                continue  # Skip invalid ID
+
+                            # 2. Name Strategy
+                            name = p.get('name') or p.get('product_name') or p.get(
+                                'official_name') or "Unknown Product"
+
+                            # 3. Category Strategy
+                            category = p.get('category')
+                            if not category:
+                                category = p.get('taxonomy', {}).get(
+                                    'canonical_category', 'Other')
+                            if category == 'Uncategorized':
+                                category = 'Other'
+
+                            # 4. Price Strategy
+                            # Check root price first, then pricing object, then price_il specific
+                            price = p.get('price')
+                            if not price or price == 0:
+                                price = p.get('price_il', 0)
+                            if not price or price == 0:
+                                price = p.get('pricing', {}).get('price_il', 0)
+
+                            # QUALITY GATE 1: Price must be > 0
+                            if float(price) <= 0:
+                                continue
+
+                            # 5. Image Strategy
+                            image_url = p.get('image_url') or ""
+                            if not image_url:
+                                # Try official images (best quality)
+                                official_images = p.get('official_images', [])
+                                if official_images and isinstance(official_images, list):
+                                    # Prefer hero
+                                    for img in official_images:
+                                        if img.get('display_purpose') == 'hero':
+                                            image_url = img.get('url')
+                                            break
+                                    # Fallback to first
+                                    if not image_url and len(official_images) > 0:
+                                        image_url = official_images[0].get(
+                                            'url')
+
+                            if not image_url:
+                                # Try display object
+                                disp_hero = p.get(
+                                    'display', {}).get('hero_image')
+                                if disp_hero:
+                                    if isinstance(disp_hero, dict):
+                                        image_url = disp_hero.get('url')
+                                    elif isinstance(disp_hero, str):
+                                        image_url = disp_hero
+
+                            if not image_url:
+                                # Try primary source (Halilit scraper fallback)
+                                p_source = p.get('primary_source', {})
+                                if isinstance(p_source, dict):
+                                    image_url = p_source.get(
+                                        'image', "")  # rare but possible
+
+                            # QUALITY GATE 2: Must have an image
+                            # (We can relax this if strictly needed, but user asked for "only junk data")
+                            if not image_url:
+                                continue
+
+                            # --- CONSTRUCT FINAL OBJECT ---
+                            # Deduce sources if missing
+                            sources = p.get('sources', [])
+                            if not sources:
+                                sources.append('halilit_direct')
+                                if p.get('official_specs') or p.get('official_description'):
+                                    sources.append('official_specs')
+                                if p.get('reviews') or p.get('average_rating'):
+                                    sources.append('trusted_reviews')
+
+                            normalized_product = {
+                                "id": pid,
+                                "halilit_id": pid,
+                                "name": name,
+                                "product_name": name,
+                                "brand": p.get('brand', json_file.stem),
+                                "category": category,
+                                "price": float(price),
+                                "currency": "ILS",
+                                "image_url": image_url,
+                                "description": p.get('description_short') or p.get('official_description') or "",
+                                "taxonomy": p.get('taxonomy', {"canonical_category": category}),
+                                "display": {
+                                    "hero_image": {"url": image_url},
+                                    "color_hint": p.get('display', {}).get('color_hint', 'bg-slate-800'),
+                                    "display_role": p.get('display', {}).get('display_role', 'entry'),
+                                    "should_highlight": p.get('display', {}).get('should_highlight', False)
+                                },
+                                # --- ENRICHMENT FIELDS (The "Three Pillars") ---
+                                "sources": sources,
+                                "official_specs": p.get('official_specs', {}),
+                                "review_data": {
+                                    "aggregate_rating": p.get('average_rating') or p.get('review_data', {}).get('aggregate_rating', 0),
+                                    "total_reviews": len(p.get('reviews', [])) or p.get('review_data', {}).get('total_reviews', 0),
+                                    "pros_and_cons": p.get('pros_and_cons') or p.get('review_data', {}).get('pros_and_cons', {})
+                                },
+                                "pricing": {
+                                    "price_il": float(price),
+                                    # Simple heuristic
+                                    "tier": "pro" if float(price) > 2000 else "entry"
+                                }
+                            }
+
+                            # Deduplicate: Overwrite with newest/best?
+                            # For now simply overwrite (last one wins)
+                            products_map[pid] = normalized_product
+                            # Mark brand as having valid products
+                            brands_found.add(json_file.stem)
+
+            except Exception as e:
+                logger.error(f"Error loading {json_file.name}: {e}")
+
+        # Final List
+        all_products = list(products_map.values())
+
+        # Re-calc categories from final list
+        categories_count = {}
+        for p in all_products:
+            c = p.get('category', 'Other')
+            categories_count[c] = categories_count.get(c, 0) + 1
+
+        logger.info(
+            f"✅ Served Clean Catalog: {len(all_products)} verified products from {len(brands_found)} brands")
+
+        catalog = {
+            'products': all_products,
+            'metadata': {
+                'total_products': len(all_products),
+                'brands': sorted(list(brands_found)),
+                'categories': categories_count,
+                'timestamp': datetime.now().isoformat(),
+                'source': 'conductor_verified_clean',
+                'verification_status': 'complete',
+                'cache_ttl_seconds': 300
+            }
+        }
+
+        return catalog
+
+    except Exception as e:
+        logger.error(f"Failed to generate conductor catalog: {e}")
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Failed to generate catalog", "details": str(e)}
+        )
 
 
 @app.get("/api/brands/{brand}")
@@ -414,32 +628,28 @@ async def clear_execution_history():
 # These are the PRIMARY endpoints for frontend data loading
 # All data is Conductor-verified and taxonomy-compliant
 
-@app.get("/api/conductor/catalog")
-async def get_conductor_catalog():
-    """
-    Get unified, Conductor-verified product catalog.
-
-    This is the single source of truth for product data consumed by the frontend.
-    All products have been processed through the 6-phase Conductor pipeline.
-
-    Returns aggregated data from all brands with consistent taxonomy.
-    """
-    try:
-        service = get_conductor_data_service()
-        catalog = service.get_unified_catalog()
-        logger.info(
-            f"✅ Served unified catalog with {catalog['metadata']['total_products']} products")
-        return catalog
-    except Exception as e:
-        logger.error(f"❌ Failed to get catalog: {e}")
-        return {
-            "error": str(e),
-            "products": [],
-            "metadata": {
-                "source": "error",
-                "verification_status": "failed"
-            }
-        }
+# @app.get("/api/conductor/catalog")
+# async def get_conductor_catalog_unified():
+#     """
+#     Get unified, Conductor-verified product catalog.
+#     (DISABLED: Using direct file aggregation method defined earlier in this file)
+#     """
+#     try:
+#         service = get_conductor_data_service()
+#         catalog = service.get_unified_catalog()
+#         logger.info(
+#             f"✅ Served unified catalog with {catalog['metadata']['total_products']} products")
+#         return catalog
+#     except Exception as e:
+#         logger.error(f"❌ Failed to get catalog: {e}")
+#         return {
+#             "error": str(e),
+#             "products": [],
+#             "metadata": {
+#                 "source": "error",
+#                 "verification_status": "failed"
+#             }
+#         }
 
 
 @app.get("/api/conductor/taxonomy")

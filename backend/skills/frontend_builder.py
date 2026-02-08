@@ -16,6 +16,7 @@ import re
 from typing import Dict, Any, Tuple
 from .base_skill import BaseSkill
 
+
 class ReactComponentBuilder(BaseSkill):
     """
     Builds and validates React components with strict safety checks.
@@ -34,6 +35,11 @@ class ReactComponentBuilder(BaseSkill):
     }
 
     MIN_FILE_SIZE = 100  # Realistic minimum for a component (bytes)
+
+    VISUAL_THEME_PATTERNS = [
+        (r'slate-900', 'Galaxy Background (slate-900)'),
+        (r'blue-500', 'Galaxy Accent (blue-500)')
+    ]
 
     def execute(self, context: Dict[str, Any]) -> Tuple[bool, Any]:
         """
@@ -84,6 +90,14 @@ class ReactComponentBuilder(BaseSkill):
                 if not validation_result[0]:
                     return False, f"Pre-write validation failed: {validation_result[1]}"
 
+                # VISUAL VALIDATION (Strict Policy)
+                # Only check if it looks like a UI component (has JSX/return)
+                if 'return (' in code_content or 'return <' in code_content:
+                    valid_visuals, visual_msg = self._validate_visual_standards(
+                        code_content)
+                    if not valid_visuals:
+                        return False, f"Visual Validation Failed: {visual_msg}"
+
             # WRITE the file
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(code_content)
@@ -123,6 +137,21 @@ class ReactComponentBuilder(BaseSkill):
         except Exception as e:
             self.log_execution(False, "ReactComponentBuilder", str(e))
             return False, f"Exception during build: {str(e)}"
+
+    def _validate_visual_standards(self, code_content: str) -> Tuple[bool, str]:
+        """
+        Validates that the component adheres to the Galaxy Theme visual standards.
+        Required: slate-900 (Background), blue-500 (Details)
+        """
+        missing = []
+        for pattern, name in self.VISUAL_THEME_PATTERNS:
+            if not re.search(pattern, code_content):
+                missing.append(name)
+
+        if missing:
+            return False, f"Missing strict visual compliance: {', '.join(missing)}. Please use 'slate-900' for backgrounds and 'blue-500' for accents."
+
+        return True, "Visual verification passed"
 
     def _validate_content(self, code_content: str) -> Tuple[bool, str]:
         """
@@ -178,6 +207,7 @@ class ReactComponentBuilder(BaseSkill):
 
         except Exception as e:
             return False, f"File read verification failed: {str(e)}"
+
 
 class TypeScriptModuleBuilder(BaseSkill):
     """

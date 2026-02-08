@@ -133,6 +133,7 @@ class DisplayProperties(BaseModel):
     display_tier_level: int = 3  # 1-5, higher = more prominent tier
     color_hint: Optional[str] = None  # Suggested brand color
     media_assets: List[MediaAsset] = []
+    visual_issues: List[str] = []  # Issues found by VisualValidator
 
     class Config:
         use_enum_values = True
@@ -218,6 +219,12 @@ class IngestionProductDraft(BaseModel):
     validation_status: IngestionStatus = IngestionStatus.HARVESTED
     validation_errors: List[str] = []
     validation_warnings: List[str] = []
+
+    # Visual Matching (New)
+    visual_match_confidence: float = Field(
+        0.0, description="Confidence that commercial and official images match")
+    visual_match_reasoning: Optional[str] = None
+    visual_match_status: str = "pending"  # pending, matched, mismatch, skipped
 
     class Config:
         arbitrary_types_allowed = True
