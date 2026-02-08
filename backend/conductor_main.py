@@ -25,6 +25,7 @@ from backend.unified_data_service_v73 import IngestToFrontendSyncEngine, get_ing
 from backend.ingestion.orchestrator import IngestionOrchestrator
 from backend.unified_agent_orchestrator_v73 import CommercialAgent
 from backend.unified_quality_gates_v73 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
+from backend.ingestion.visual_validator import visual_validator
 import sys
 import os
 import argparse
@@ -100,6 +101,27 @@ class ConductorCLI:
                 if not raw_products:
                     logger.warning(f"⚠️  No data found for {b}")
                     continue
+
+                # --- VISUAL VALIDATION PRE-FLIGHT ---
+                # v7.3: Check if candidates exist and validate them
+                validated_products = []
+                for p in raw_products:
+                    if 'candidates' in p and isinstance(p['candidates'], list) and p['candidates']:
+                        logger.info(f"🔎 Running Visual Validator for {p.get('product_name')}")
+                        match = process_candidates(p, p['candidates'])
+                        if match:
+                            p['verified_match'] = match
+                            validated_products.append(p)
+                        else:
+                            # Keep product but mark as unverified? Or skip?
+                            # For safety, we keep it but log warning
+                            logger.warning(f"   No visual match confirmed for {p.get('product_name')}")
+                            validated_products.append(p)
+                    else:
+                        validated_products.append(p)
+                
+                raw_products = validated_products
+                # ------------------------------------
 
                 # Run ingestion pipeline
                 report = self.orchestrator.ingest_batch(b, raw_products)
@@ -507,6 +529,52 @@ class ConductorCLI:
         logger.info(
             f"🔒 Locked to {len(brands)} golden list brands (source: /frontend/public/data/)")
         return sorted(list(brands))
+
+
+def process_candidates(halilit_product: Dict[str, Any], thomann_candidates: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """
+    Filters a list of potential matches using AI Visual Verification.
+    """
+    best_match = None
+    highest_confidence = 0.0
+
+    print(
+        f"🔍 Validating {len(thomann_candidates)} candidates for: {halilit_product.get('name', 'Unknown')}")
+
+    for candidate in thomann_candidates:
+        # 1. Commercial Pre-Check (Fast Fail)
+        # If price difference is > 300% or < 10%, it's likely wrong (e.g. cable vs mixer)
+        # (Optional logic to save API tokens)
+
+        # 2. AI Visual Check
+        verification = visual_validator.verify_match(
+            reference={
+                "name": halilit_product.get('name'),
+                "brand": halilit_product.get('brand'),
+                "image_url": halilit_product.get('image_url'),
+                "description": halilit_product.get('description')
+            },
+            candidate={
+                "name": candidate.get('name'),
+                "image_url": candidate.get('image_url'),
+                "price": candidate.get('price')
+            }
+        )
+
+        if verification.is_match:
+            print(
+                f"   ✅ MATCH FOUND: {candidate.get('name')} ({verification.confidence*100:.1f}%)")
+            print(f"      Reason: {verification.reason}")
+
+            if verification.confidence > highest_confidence:
+                highest_confidence = verification.confidence
+                best_match = candidate
+                best_match['ai_verification'] = verification.dict()
+        else:
+            print(
+                f"   ❌ REJECTED: {candidate.get('name', 'Unknown')} - {verification.reason}")
+
+    return best_match
 
 
 def main():
