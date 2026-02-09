@@ -30,7 +30,7 @@ from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.ingestion.pricing_engine import get_pricing_engine
 from backend.ingestion.display_engine import get_display_engine
 from backend.ingestion.guardrails import verify_critical_facts
-from backend.unified_agent_orchestrator_v75 import CommercialAgent, OfficialAgent, ContextualAgent
+from backend.unified_agent_orchestrator_v76 import CommercialAgent, OfficialAgent, ContextualAgent
 
 logger = logging.getLogger("IngestionOrchestrator")
 

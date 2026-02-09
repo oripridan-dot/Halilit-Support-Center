@@ -43,7 +43,7 @@ const LoadingPlaceholder = () => (
 function App() {
   // Extract strictly what we need
   const { currentView, activeProductId } = useNavigationStore();
-  
+
   // Initialize Learning Stream listener
   useLearningStream();
 
@@ -92,7 +92,7 @@ function App() {
             </div>
           )}
         </main>
-        
+
         {/* Real-time Learning Feed Overlay */}
         <LearningFeed />
       </div>

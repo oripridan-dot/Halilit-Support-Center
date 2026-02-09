@@ -11,6 +11,7 @@ logger = logging.getLogger("LearningStream")
 router = APIRouter()
 ls = LearningSystem()
 
+
 @router.get("/api/stream/learning")
 async def stream_learning_updates(request: Request):
     """
@@ -18,11 +19,11 @@ async def stream_learning_updates(request: Request):
     as they are discovered during bulk processing.
     """
     logger.info("🆕 Client connected to learning stream")
-    
+
     async def event_generator():
         # Track the last insight we sent to avoid duplicates
         last_seen_id = None
-        
+
         while True:
             # Check if client disconnected
             if await request.is_disconnected():
@@ -35,12 +36,14 @@ async def stream_learning_updates(request: Request):
 
                 if latest_insight:
                     # Use a unique identifier for the insight if available, else construct a simple hash/id
-                    insight_id = latest_insight.get('pattern_id') or latest_insight.get('insight')
-                    
+                    insight_id = latest_insight.get(
+                        'pattern_id') or latest_insight.get('insight')
+
                     if insight_id != last_seen_id:
                         last_seen_id = insight_id
-                        
-                        logger.info(f"📡 Pushing insight: {latest_insight.get('brand')} - {latest_insight.get('insight')[:30]}...")
+
+                        logger.info(
+                            f"📡 Pushing insight: {latest_insight.get('brand')} - {latest_insight.get('insight')[:30]}...")
 
                         # 2. Format the payload for the Zustand store
                         yield {
@@ -50,12 +53,13 @@ async def stream_learning_updates(request: Request):
                                 "brand": latest_insight.get('brand'),
                                 "insight": latest_insight.get('insight'),
                                 "timestamp": latest_insight.get('created_at'),
-                                "productId": latest_insight.get('pattern_id') # Using pattern_id as key
+                                # Using pattern_id as key
+                                "productId": latest_insight.get('pattern_id')
                             })
                         }
             except Exception as e:
                 logger.error(f"Error in stream generator: {e}")
-                
+
             # Wait briefly before polling again to save CPU
             await asyncio.sleep(1)
 

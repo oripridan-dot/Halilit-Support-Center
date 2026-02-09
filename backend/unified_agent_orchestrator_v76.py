@@ -33,10 +33,8 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import google.genai as genai
 from google.genai import types
-from backend.unified_quality_gates_v75 import MemoryAwareMixin
-from backend.ingestion.visual_comparator import get_visual_comparator_engine
-from backend.ingestion.data_models import IngestionProductDraft
-from backend.unified_learning_system_v76 import LearningPatternRepository, LearningPattern
+from backend.unified_quality_gates_v76 import MemoryAwareMixin
+from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -76,6 +74,27 @@ class AgentImprovement:
     applied_at: str
 
 
+# --- MODULE 4.1: CROSS-CUTTING LOGIC ---
+
+def inject_learning_insights(system_prompt: str, insights: List[str]) -> str:
+    """
+    Retrieves stored conflict resolutions and patterns for a specific brand
+    and injects them into the agent's system prompt.
+    """
+    if not insights:
+        return system_prompt
+
+    # Format the insights into a "Cautionary" block
+    knowledge_block = "\n### INSTITUTIONAL KNOWLEDGE & BRAND ANOMALIES (From Learning System):\n"
+    for idx, insight in enumerate(insights, 1):
+        knowledge_block += f"{idx}. {insight}\n"
+
+    # Prepend to the original prompt so it's top-of-mind for the LLM
+    updated_prompt = f"{knowledge_block}\n{system_prompt}"
+
+    return updated_prompt
+
+
 # --- MODULE 4: BASE CLASSES ---
 
 class AgentBase(MemoryAwareMixin):
@@ -91,18 +110,21 @@ class AgentBase(MemoryAwareMixin):
 
         print(f"🧠 [{self.name}] Initialized with learning capabilities")
 
-    def think(self, prompt: str):
+    def think(self, prompt: str, dynamic_system_instruction: Optional[str] = None):
         """Generate content using Gemini with learning integration."""
         print(f"🤖 [{self.name}] Thinking...")
         if not self.client:
             return "Simulation: Client not initialized."
+
+        # Use dynamic instruction if provided, else fall back to static
+        active_instruction = dynamic_system_instruction if dynamic_system_instruction else self.system_instruction
 
         try:
             response = self.client.models.generate_content(
                 model=self.model_name,
                 contents=prompt,
                 config={
-                    "system_instruction": self.system_instruction} if self.system_instruction else {}
+                    "system_instruction": active_instruction} if active_instruction else {}
             )
             text = response.text if hasattr(
                 response, 'text') else str(response)
@@ -401,7 +423,7 @@ class OfficialAgent(AgentBase):
             """
         )
 
-    def enrich(self, draft: Dict) -> Dict:
+    def enrich(self, draft: Dict, context_insights: List[str] = None) -> Dict:
         """
         Takes a Commercial Draft and injects Official Knowledge.
 
@@ -420,6 +442,15 @@ class OfficialAgent(AgentBase):
         product_name = draft.get('product_name', 'Unknown')
         print(
             f"🤖 [{self.name}] 📘 Injecting Official Documentation for {product_name}...")
+
+        # --- DYNAMIC LEARNING INJECTION ---
+        # If we have insights, update the system prompt for this execution
+        active_system_prompt = self.system_instruction
+        if context_insights:
+            print(
+                f"      🎓 Injecting {len(context_insights)} learned insights into OfficialVerifier...")
+            active_system_prompt = inject_learning_insights(
+                self.system_instruction, context_insights)
 
         # Preserve immutable fields (Commercial Truth)
         preserved_halilit_id = draft.get('halilit_id')
@@ -470,8 +501,9 @@ class OfficialAgent(AgentBase):
             Do not include markdown blocks. Just the raw JSON.
             """
 
-            # Call the LLM
-            response_text = self.think(prompt)
+            # Call the LLM (passing the dynamic system prompt)
+            response_text = self.think(
+                prompt, dynamic_system_instruction=active_system_prompt)
 
             # Clean response (remove markdown if present)
             cleaned_text = response_text.replace(
@@ -642,6 +674,9 @@ class ContextualAgent(AgentBase):
 
         # --- VISUAL VERIFICATION (New v7.5) ---
         try:
+            from backend.ingestion.data_models import IngestionProductDraft
+            from backend.ingestion.visual_comparator import get_visual_comparator_engine
+
             # Convert dict to Pydantic model for tools that expect it (handling permissive fields)
             # We filter only known fields to avoid errors if draft has extra keys
             valid_keys = IngestionProductDraft.model_fields.keys()
@@ -749,7 +784,7 @@ class AgentImprovementEngine:
         }
 
         # Get feedback summary
-        from backend.unified_quality_gates_v75 import feedback_engine
+        from backend.unified_quality_gates_v76 import feedback_engine
         health = feedback_engine.get_pipeline_health_report()
 
         # CommercialScout improvements
@@ -922,6 +957,7 @@ class TrinitySwarm:
         self.processed_products = []
         self.learning_repo = LearningPatternRepository()
         # Initialize Visual Comparator with global client
+        from backend.ingestion.visual_comparator import get_visual_comparator_engine
         self.visual_comparator = get_visual_comparator_engine(client)
 
         # Load Taxonomy (Mock for now)
@@ -945,7 +981,7 @@ class TrinitySwarm:
 
         self.handle_audit_outcome(enriched_data, audit_result)
 
-    def _resolve_conflict(self, product_name: str, claims: Dict, visual_evidence: str, discrepancy: str, image_url: str) -> Dict[str, Any]:
+    def resolve_conflict(self, product_name: str, claims: Dict, visual_evidence: str, discrepancy: str, image_url: str) -> Dict[str, Any]:
         """
         Arbitrates between Official Text and Visual Evidence using Gemini.
         Returns the resolved data updates and a learning pattern if applicable.
@@ -1065,7 +1101,12 @@ class TrinitySwarm:
 
                 # Step 2: Verify & Enrich (Official - Knowledge)
                 # Ingests ALL official docs/media for this specific map item
-                enriched_data = self.verifier.enrich(raw_data)
+                # Retrieve learned insights for this brand
+                brand_insights = self.learning_repo.get_brand_insights(
+                    brand_name)
+
+                enriched_data = self.verifier.enrich(
+                    raw_data, context_insights=brand_insights)
 
                 if not isinstance(enriched_data, dict):
                     raise ValueError(
@@ -1073,7 +1114,8 @@ class TrinitySwarm:
 
                 # --- 🔍 CONFLICT DETECTION (Visual vs Official) ---
                 try:
-                    img_url = enriched_data.get('image_url') or raw_data.get('image_url')
+                    img_url = enriched_data.get(
+                        'image_url') or raw_data.get('image_url')
                     if img_url:
                         # Extract claims to verify
                         claims_to_check = {
@@ -1081,34 +1123,39 @@ class TrinitySwarm:
                             "category": enriched_data.get('category', 'Unknown'),
                             "official_description": enriched_data.get('description', '')[:200]
                         }
-                        
+
                         # Validate
-                        is_consistent, visual_evidence, discrepancy, conf = self.visual_comparator.validate_single_image_claims(img_url, claims_to_check)
-                        
+                        is_consistent, visual_evidence, discrepancy, conf = self.visual_comparator.validate_single_image_claims(
+                            img_url, claims_to_check)
+
                         if not is_consistent and conf > 0.8:
                             # ⚔️ MAJOR CONFLICT - Invoke Arbitrator
-                            resolution = self._resolve_conflict(
+                            resolution = self.resolve_conflict(
                                 enriched_data.get('product_name'),
                                 claims_to_check,
                                 visual_evidence,
                                 discrepancy,
                                 img_url
                             )
-                            
+
                             if resolution.get("winner") == "Visual":
                                 # Apply corrections
-                                updates = resolution.get("corrected_claims", {})
+                                updates = resolution.get(
+                                    "corrected_claims", {})
                                 enriched_data.update(updates)
-                                print(f"      🎨 Visual Winner! Updated: {updates}")
-                            
+                                print(
+                                    f"      🎨 Visual Winner! Updated: {updates}")
+
                             # SAVE LEARNING PATTERN
                             if resolution.get("learning_insight"):
                                 pattern = LearningPattern(
                                     pattern_id=f"pat_{int(datetime.now().timestamp())}",
                                     brand=brand_name,
-                                    category=enriched_data.get('category', 'General'),
+                                    category=enriched_data.get(
+                                        'category', 'General'),
                                     insight=resolution.get("learning_insight"),
-                                    confidence=resolution.get("confidence", 0.9),
+                                    confidence=resolution.get(
+                                        "confidence", 0.9),
                                     created_at=datetime.now().isoformat(),
                                     source="VisualValidator_Arbitration"
                                 )

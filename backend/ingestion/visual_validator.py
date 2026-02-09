@@ -33,15 +33,34 @@ class VisualValidator:
         }
 
     def _download_image(self, url: str) -> Optional[Image.Image]:
-        """Downloads image into memory."""
+        """Downloads image into memory, or loads from local disk."""
         if not url:
             return None
         try:
+            # Handle local file paths
+            if not url.startswith('http'):
+                # Try to resolve relative to workspace if it starts with /
+                if url.startswith('/assets/'):
+                    # HACK: Hardcoded path mapping for this environment
+                    local_path = f"/workspaces/Halilit-Support-Center/frontend/public{url}"
+                    self.logger.info(f"Trying local path: {local_path}")
+                    if os.path.exists(local_path):
+                        return Image.open(local_path)
+                    else:
+                        self.logger.warning(f"File NOT found at: {local_path}")
+
+                # Try absolute path
+                if os.path.exists(url):
+                    return Image.open(url)
+
+                self.logger.warning(f"Local file not found: {url}")
+                return None
+
             response = requests.get(url, headers=self.headers, timeout=10)
             if response.status_code == 200:
                 return Image.open(BytesIO(response.content))
         except Exception as e:
-            self.logger.warning(f"Image download failed {url}: {e}")
+            self.logger.warning(f"Image download failed for {url}: {e}")
         return None
 
     def verify_match(self, reference: Dict, candidate: Dict) -> VerificationResult:

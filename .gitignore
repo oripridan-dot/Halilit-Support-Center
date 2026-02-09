@@ -71,3 +71,7 @@ backend/data/ingestion/products/
 backend/data/ingestion/reports/
 backend/logs/
 frontend/public/data/galaxy_db.json
+
+# === LARGE DATA FILES ===
+frontend/public/data/shards/*.json
+frontend/public/data/search_index_min.json

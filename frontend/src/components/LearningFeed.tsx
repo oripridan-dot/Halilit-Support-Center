@@ -1,6 +1,6 @@
 // frontend/src/components/LearningFeed.tsx
-import React from 'react';
-import { useProductStore } from '../store/productStore';
+import React from "react";
+import { useProductStore } from "../store/productStore";
 
 export const LearningFeed = () => {
   const insights = useProductStore((state) => state.learningInsights);
@@ -18,13 +18,17 @@ export const LearningFeed = () => {
       </h3>
       <div className="space-y-3 max-h-60 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-blue-500/20 scrollbar-track-transparent">
         {insights.map((item, i) => (
-          <div key={i} className="text-xs group animate-in fade-in slide-in-from-right-8 duration-500" style={{ animationDelay: `${i * 100}ms` }}>
+          <div
+            key={i}
+            className="text-xs group animate-in fade-in slide-in-from-right-8 duration-500"
+            style={{ animationDelay: `${i * 100}ms` }}
+          >
             <div className="flex justify-between items-start mb-1 text-xs text-zinc-600 font-mono">
-                <span>{item.timestamp}</span>
-                <span className="text-blue-400/80">{item.brand}</span>
+              <span>{item.timestamp}</span>
+              <span className="text-blue-400/80">{item.brand}</span>
             </div>
             <p className="text-zinc-300 italic border-l-2 border-blue-500/30 pl-2 leading-relaxed">
-                "{item.insight}"
+              "{item.insight}"
             </p>
           </div>
         ))}

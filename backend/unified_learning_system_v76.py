@@ -7,8 +7,8 @@ Consolidates four learning modules:
 - learning_endpoints.py: FastAPI routes for exposing learning metrics
 - enhanced_training.py: Training orchestration with run_enhanced_training
 
-This unified system enables the three agents (CommercialScout, OfficialVerifier, 
-ExternalValidator) to learn from their actions and continuously improve toward the 
+This unified system enables the three agents (CommercialScout, OfficialVerifier,
+ExternalValidator) to learn from their actions and continuously improve toward the
 PerfectionMap.
 
 Architecture:
@@ -41,14 +41,15 @@ from backend.agents.perfection_map import (
     create_improvement_plan,
     DimensionScorecard,
 )
-from backend.unified_agent_orchestrator_v75 import (
+from backend.unified_agent_orchestrator_v76 import (
     TrinitySwarm,
     CommercialAgent,
     OfficialAgent,
     ContextualAgent,
     AuditReport,
 )
-from backend.unified_quality_gates_v75 import feedback_engine, FeedbackType, audit_logger, AuditLevel, AuditCategory
+from backend.unified_quality_gates_v76 import feedback_engine, FeedbackType, audit_logger, AuditLevel, AuditCategory
+from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 
 # ============================================================================
 # LOGGING & CONFIGURATION
@@ -117,100 +118,28 @@ class QualityAuditRecord:
         return json.dumps(asdict(self), default=str)
 
 
-@dataclass
-class LearningPattern:
-    """
-    Represents a specific learned insight about a brand or category.
-    Used to inject knowledge into future agent runs.
-    """
-    pattern_id: str
-    brand: str
-    category: str
-    insight: str  # e.g., "Brand X often uses accessory photos for main listings"
-    confidence: float
-    created_at: str
-    # visual_validator, manual_review, etc.
-    source: str = "conflict_resolution"
-
-# ============================================================================
-# LEARNING REPOSITORY
-# ============================================================================
-
-
-class LearningPatternRepository:
-    """
-    Manages the persistence and retrieval of learned patterns.
-    Acts as the 'Long Term Memory' for agent strategy.
-    """
-
-    def __init__(self, memory_dir: str = ".agent_memory"):
-        self.memory_dir = Path(memory_dir)
-        self.patterns_file = self.memory_dir / "learning_patterns.json"
-        self._ensure_storage()
-
-    def _ensure_storage(self):
-        self.memory_dir.mkdir(parents=True, exist_ok=True)
-        if not self.patterns_file.exists():
-            with open(self.patterns_file, "w") as f:
-                json.dump([], f)
-
-    def save_pattern(self, pattern: LearningPattern):
-        patterns = self._load_patterns()
-        # Check for duplicates based on insight text and brand
-        if any(p['insight'] == pattern.insight and p['brand'] == pattern.brand for p in patterns):
-            return  # Skip duplicate
-
-        patterns.append(asdict(pattern))
-        with open(self.patterns_file, "w") as f:
-            json.dump(patterns, f, indent=2)
-        logger.info(
-            f"🧠 Learned new pattern for {pattern.brand}: {pattern.insight}")
-
-    def get_brand_insights(self, brand: str) -> List[str]:
-        """Retrieve all insights valid for a specific brand."""
-        patterns = self._load_patterns()
-        # Filter for this brand or 'ALL'
-        return [p['insight'] for p in patterns if p['brand'].lower() == brand.lower() or p['brand'] == "ALL"]
-
-    def get_most_recent_insight(self) -> Optional[Dict]:
-        """Retrieve the single most recent insight added to the system."""
-        patterns = self._load_patterns()
-        if not patterns:
-            return None
-        # Assuming patterns are appended, last is newest. 
-        # Or sort by created_at if structure allows.
-        return patterns[-1]
-
-    def _load_patterns(self) -> List[dict]:
-        try:
-            with open(self.patterns_file, "r") as f:
-                return json.load(f)
-        except (json.JSONDecodeError, FileNotFoundError):
-            return []
-
-
-
 class LearningSystem:
     def __init__(self):
         self.repo = LearningPatternRepository()
 
     def get_brand_insights(self, brand: str):
         return self.repo.get_brand_insights(brand)
-    
+
     def get_most_recent_insight(self):
         return self.repo.get_most_recent_insight()
-    
+
     def save_insight(self, brand, insight, product_id, category='General'):
         # Wrapper for simple usage
-         self.repo.save_pattern(LearningPattern(
+        self.repo.save_pattern(LearningPattern(
             pattern_id=f"auto_{int(datetime.now().timestamp())}",
             brand=brand,
             category=category,
             insight=insight,
             confidence=0.95,
             created_at=datetime.now().isoformat(),
-            source="Manual_Override_or_Bulk"
-         ))
+            source="LearningSystem_Wrapper"
+        ))
+
 
 @dataclass
 class LearningMetric:

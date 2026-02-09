@@ -23,6 +23,7 @@ FILES_TO_INCLUDE = [
 
 OUTPUT_FILE = "GEMINI_REVIEW_BUNDLE.md"
 
+
 def generate_tree(startpath):
     tree_str = "## Project Structure\n\n```text\n"
     for root, dirs, files in os.walk(startpath):
@@ -33,16 +34,19 @@ def generate_tree(startpath):
         tree_str += '{}{}/\n'.format(indent, os.path.basename(root))
         subindent = ' ' * 4 * (level + 1)
         for f in files:
-            if f.endswith(".json"): continue # Skip json data files
+            if f.endswith(".json"):
+                continue  # Skip json data files
             tree_str += '{}{}\n'.format(subindent, f)
     tree_str += "```\n\n"
     return tree_str
 
+
 def create_bundle():
     with open(OUTPUT_FILE, "w", encoding="utf-8") as outfile:
-        outfile.write("# Halilit Support Center - Code Review Bundle (v7.6)\n\n")
+        outfile.write(
+            "# Halilit Support Center - Code Review Bundle (v7.6)\n\n")
         outfile.write("Generated for Gemini 3 Pro Code Review.\n\n")
-        
+
         # 1. Add File Tree (Simplified)
         # outfile.write(generate_tree(".")) # Can be too large, let's skip strict tree and just list included files
         outfile.write("## Included Files\n\n")
@@ -55,8 +59,9 @@ def create_bundle():
             if os.path.exists(filepath):
                 outfile.write(f"## File: {filepath}\n\n")
                 ext = filepath.split('.')[-1]
-                lang = "python" if ext == "py" else "typescript" if ext in ["ts", "tsx"] else "markdown"
-                
+                lang = "python" if ext == "py" else "typescript" if ext in [
+                    "ts", "tsx"] else "markdown"
+
                 outfile.write(f"```{lang}\n")
                 try:
                     with open(filepath, "r", encoding="utf-8") as infile:
@@ -68,6 +73,7 @@ def create_bundle():
                 outfile.write(f"## File: {filepath} (NOT FOUND)\n\n")
 
     print(f"Bundle created at {OUTPUT_FILE}")
+
 
 if __name__ == "__main__":
     create_bundle()

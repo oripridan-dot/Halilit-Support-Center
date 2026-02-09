@@ -134,6 +134,14 @@ app.add_middleware(
 
 app.include_router(streams_router, tags=["Real-time Streams"])
 
+# CopilotKit Integration
+try:
+    from backend.api.copilot_router import router as copilot_router
+    app.include_router(copilot_router, prefix="/api", tags=["CopilotKit"])
+    logger.info("✅ CopilotKit endpoint registered at /api/copilot/chat")
+except Exception as e:
+    logger.warning(f"⚠️ Failed to register CopilotKit: {e}")
+
 # Include learning endpoints
 try:
     from backend.unified_learning_system_v75 import router as learning_router

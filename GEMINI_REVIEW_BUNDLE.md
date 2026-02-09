@@ -79,7 +79,6 @@ npm run dev
 | Document                                           | Purpose                                                  |
 | -------------------------------------------------- | -------------------------------------------------------- |
 | **[ARCHITECTURE.md](ARCHITECTURE.md)**             | **Technical architecture**, API reference, system design |
-| **[archive/v7.3_reports/](archive/v7.3_reports/)** | Historical status reports                                |
 
 ---
 
@@ -1515,6 +1514,14 @@ app.add_middleware(
 )
 
 app.include_router(streams_router, tags=["Real-time Streams"])
+
+# CopilotKit Integration
+try:
+    from backend.api.copilot_router import router as copilot_router
+    app.include_router(copilot_router, prefix="/api", tags=["CopilotKit"])
+    logger.info("✅ CopilotKit endpoint registered at /api/copilot/chat")
+except Exception as e:
+    logger.warning(f"⚠️ Failed to register CopilotKit: {e}")
 
 # Include learning endpoints
 try:
@@ -3410,10 +3417,8 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import google.genai as genai
 from google.genai import types
-from backend.unified_quality_gates_v75 import MemoryAwareMixin
-from backend.ingestion.visual_comparator import get_visual_comparator_engine
-from backend.ingestion.data_models import IngestionProductDraft
-from backend.unified_learning_system_v76 import LearningPatternRepository, LearningPattern
+from backend.unified_quality_gates_v76 import MemoryAwareMixin
+from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -4053,6 +4058,9 @@ class ContextualAgent(AgentBase):
 
         # --- VISUAL VERIFICATION (New v7.5) ---
         try:
+            from backend.ingestion.data_models import IngestionProductDraft
+            from backend.ingestion.visual_comparator import get_visual_comparator_engine
+
             # Convert dict to Pydantic model for tools that expect it (handling permissive fields)
             # We filter only known fields to avoid errors if draft has extra keys
             valid_keys = IngestionProductDraft.model_fields.keys()
@@ -4160,7 +4168,7 @@ class AgentImprovementEngine:
         }
 
         # Get feedback summary
-        from backend.unified_quality_gates_v75 import feedback_engine
+        from backend.unified_quality_gates_v76 import feedback_engine
         health = feedback_engine.get_pipeline_health_report()
 
         # CommercialScout improvements
@@ -4333,6 +4341,7 @@ class TrinitySwarm:
         self.processed_products = []
         self.learning_repo = LearningPatternRepository()
         # Initialize Visual Comparator with global client
+        from backend.ingestion.visual_comparator import get_visual_comparator_engine
         self.visual_comparator = get_visual_comparator_engine(client)
 
         # Load Taxonomy (Mock for now)
@@ -6346,8 +6355,8 @@ Consolidates four learning modules:
 - learning_endpoints.py: FastAPI routes for exposing learning metrics
 - enhanced_training.py: Training orchestration with run_enhanced_training
 
-This unified system enables the three agents (CommercialScout, OfficialVerifier, 
-ExternalValidator) to learn from their actions and continuously improve toward the 
+This unified system enables the three agents (CommercialScout, OfficialVerifier,
+ExternalValidator) to learn from their actions and continuously improve toward the
 PerfectionMap.
 
 Architecture:
@@ -6380,14 +6389,15 @@ from backend.agents.perfection_map import (
     create_improvement_plan,
     DimensionScorecard,
 )
-from backend.unified_agent_orchestrator_v75 import (
+from backend.unified_agent_orchestrator_v76 import (
     TrinitySwarm,
     CommercialAgent,
     OfficialAgent,
     ContextualAgent,
     AuditReport,
 )
-from backend.unified_quality_gates_v75 import feedback_engine, FeedbackType, audit_logger, AuditLevel, AuditCategory
+from backend.unified_quality_gates_v76 import feedback_engine, FeedbackType, audit_logger, AuditLevel, AuditCategory
+from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 
 # ============================================================================
 # LOGGING & CONFIGURATION
@@ -6456,100 +6466,28 @@ class QualityAuditRecord:
         return json.dumps(asdict(self), default=str)
 
 
-@dataclass
-class LearningPattern:
-    """
-    Represents a specific learned insight about a brand or category.
-    Used to inject knowledge into future agent runs.
-    """
-    pattern_id: str
-    brand: str
-    category: str
-    insight: str  # e.g., "Brand X often uses accessory photos for main listings"
-    confidence: float
-    created_at: str
-    # visual_validator, manual_review, etc.
-    source: str = "conflict_resolution"
-
-# ============================================================================
-# LEARNING REPOSITORY
-# ============================================================================
-
-
-class LearningPatternRepository:
-    """
-    Manages the persistence and retrieval of learned patterns.
-    Acts as the 'Long Term Memory' for agent strategy.
-    """
-
-    def __init__(self, memory_dir: str = ".agent_memory"):
-        self.memory_dir = Path(memory_dir)
-        self.patterns_file = self.memory_dir / "learning_patterns.json"
-        self._ensure_storage()
-
-    def _ensure_storage(self):
-        self.memory_dir.mkdir(parents=True, exist_ok=True)
-        if not self.patterns_file.exists():
-            with open(self.patterns_file, "w") as f:
-                json.dump([], f)
-
-    def save_pattern(self, pattern: LearningPattern):
-        patterns = self._load_patterns()
-        # Check for duplicates based on insight text and brand
-        if any(p['insight'] == pattern.insight and p['brand'] == pattern.brand for p in patterns):
-            return  # Skip duplicate
-
-        patterns.append(asdict(pattern))
-        with open(self.patterns_file, "w") as f:
-            json.dump(patterns, f, indent=2)
-        logger.info(
-            f"🧠 Learned new pattern for {pattern.brand}: {pattern.insight}")
-
-    def get_brand_insights(self, brand: str) -> List[str]:
-        """Retrieve all insights valid for a specific brand."""
-        patterns = self._load_patterns()
-        # Filter for this brand or 'ALL'
-        return [p['insight'] for p in patterns if p['brand'].lower() == brand.lower() or p['brand'] == "ALL"]
-
-    def get_most_recent_insight(self) -> Optional[Dict]:
-        """Retrieve the single most recent insight added to the system."""
-        patterns = self._load_patterns()
-        if not patterns:
-            return None
-        # Assuming patterns are appended, last is newest. 
-        # Or sort by created_at if structure allows.
-        return patterns[-1]
-
-    def _load_patterns(self) -> List[dict]:
-        try:
-            with open(self.patterns_file, "r") as f:
-                return json.load(f)
-        except (json.JSONDecodeError, FileNotFoundError):
-            return []
-
-
-
 class LearningSystem:
     def __init__(self):
         self.repo = LearningPatternRepository()
 
     def get_brand_insights(self, brand: str):
         return self.repo.get_brand_insights(brand)
-    
+
     def get_most_recent_insight(self):
         return self.repo.get_most_recent_insight()
-    
+
     def save_insight(self, brand, insight, product_id, category='General'):
         # Wrapper for simple usage
-         self.repo.save_pattern(LearningPattern(
+        self.repo.save_pattern(LearningPattern(
             pattern_id=f"auto_{int(datetime.now().timestamp())}",
             brand=brand,
             category=category,
             insight=insight,
             confidence=0.95,
             created_at=datetime.now().isoformat(),
-            source="Manual_Override_or_Bulk"
-         ))
+            source="LearningSystem_Wrapper"
+        ))
+
 
 @dataclass
 class LearningMetric:
@@ -7869,7 +7807,7 @@ from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.ingestion.pricing_engine import get_pricing_engine
 from backend.ingestion.display_engine import get_display_engine
 from backend.ingestion.guardrails import verify_critical_facts
-from backend.unified_agent_orchestrator_v75 import CommercialAgent, OfficialAgent, ContextualAgent
+from backend.unified_agent_orchestrator_v76 import CommercialAgent, OfficialAgent, ContextualAgent
 
 logger = logging.getLogger("IngestionOrchestrator")
 
@@ -8572,15 +8510,34 @@ class VisualValidator:
         }
 
     def _download_image(self, url: str) -> Optional[Image.Image]:
-        """Downloads image into memory."""
+        """Downloads image into memory, or loads from local disk."""
         if not url:
             return None
         try:
+            # Handle local file paths
+            if not url.startswith('http'):
+                # Try to resolve relative to workspace if it starts with /
+                if url.startswith('/assets/'):
+                    # HACK: Hardcoded path mapping for this environment
+                    local_path = f"/workspaces/Halilit-Support-Center/frontend/public{url}"
+                    self.logger.info(f"Trying local path: {local_path}")
+                    if os.path.exists(local_path):
+                        return Image.open(local_path)
+                    else:
+                        self.logger.warning(f"File NOT found at: {local_path}")
+
+                # Try absolute path
+                if os.path.exists(url):
+                    return Image.open(url)
+
+                self.logger.warning(f"Local file not found: {url}")
+                return None
+
             response = requests.get(url, headers=self.headers, timeout=10)
             if response.status_code == 200:
                 return Image.open(BytesIO(response.content))
         except Exception as e:
-            self.logger.warning(f"Image download failed {url}: {e}")
+            self.logger.warning(f"Image download failed for {url}: {e}")
         return None
 
     def verify_match(self, reference: Dict, candidate: Dict) -> VerificationResult:
@@ -9886,7 +9843,7 @@ const LoadingPlaceholder = () => (
 function App() {
   // Extract strictly what we need
   const { currentView, activeProductId } = useNavigationStore();
-  
+
   // Initialize Learning Stream listener
   useLearningStream();
 
@@ -9935,7 +9892,7 @@ function App() {
             </div>
           )}
         </main>
-        
+
         {/* Real-time Learning Feed Overlay */}
         <LearningFeed />
       </div>

@@ -52,7 +52,6 @@ npm run dev
 | Document                                           | Purpose                                                  |
 | -------------------------------------------------- | -------------------------------------------------------- |
 | **[ARCHITECTURE.md](ARCHITECTURE.md)**             | **Technical architecture**, API reference, system design |
-| **[archive/v7.3_reports/](archive/v7.3_reports/)** | Historical status reports                                |
 
 ---
 
