@@ -359,7 +359,8 @@ class IngestionOrchestrator:
                 extraction_method="web_scraper",
                 extraction_notes=f"Scraped from {brand} catalog"
             ),
-            raw_snapshot=raw_product,  # Capture raw data for verification
+            # Flatten raw_snapshot to prevent recursive nesting (Matryoshka effect)
+            raw_snapshot=raw_product.get('raw_snapshot') if isinstance(raw_product.get('raw_snapshot'), dict) else raw_product,
             status=IngestionStatus.HARVESTED,
             pipeline_phase="harvest"
         )

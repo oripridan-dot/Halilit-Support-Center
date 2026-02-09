@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.302183",
-    "last_updated": "2026-02-08T23:27:46.302184",
+    "created_at": "2026-02-09T00:49:16.675906",
+    "last_updated": "2026-02-09T00:49:16.675907",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.302154",
+      "timestamp": "2026-02-09T00:49:16.675884",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Sideman"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.090276",
-      "last_updated": "2026-02-06T17:51:05.090277",
+      "created_at": "2026-02-08T23:27:46.302183",
+      "last_updated": "2026-02-08T23:27:46.302184",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Sideman"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.090246",
+        "timestamp": "2026-02-08T23:27:46.302154",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.121098",
-        "last_updated": "2026-02-06T17:26:37.121098",
+        "created_at": "2026-02-06T17:51:05.090276",
+        "last_updated": "2026-02-06T17:51:05.090277",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.121076",
+          "timestamp": "2026-02-06T17:51:05.090246",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.750315",
-          "last_updated": "2026-02-06T17:26:13.750316",
+          "created_at": "2026-02-06T17:26:37.121098",
+          "last_updated": "2026-02-06T17:26:37.121098",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.750303",
+            "timestamp": "2026-02-06T17:26:37.121076",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2679409614239990480",
             "product_name": "Rhythm Tech Sideman",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.656058",
-            "last_updated": "2026-02-06T14:03:45.656059",
+            "created_at": "2026-02-06T17:26:13.750315",
+            "last_updated": "2026-02-06T17:26:13.750316",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.656034",
+              "timestamp": "2026-02-06T17:26:13.750303",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,110 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4339990-rhythm-tech-sideman\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.656058",
+              "last_updated": "2026-02-06T14:03:45.656059",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.656034",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2679409614239990480",
+                "product_name": "Rhythm Tech Sideman",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4339990-rhythm-tech-sideman\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -423,11 +507,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -473,8 +556,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.303240",
-    "last_updated": "2026-02-08T23:27:46.303240",
+    "created_at": "2026-02-09T00:49:16.676678",
+    "last_updated": "2026-02-09T00:49:16.676678",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -515,7 +598,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.303219",
+      "timestamp": "2026-02-09T00:49:16.676660",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -531,9 +614,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech CABASA"
       },
       "official_description": null,
       "official_images": [],
@@ -543,8 +625,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.090914",
-      "last_updated": "2026-02-06T17:51:05.090915",
+      "created_at": "2026-02-08T23:27:46.303240",
+      "last_updated": "2026-02-08T23:27:46.303240",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -574,9 +656,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech CABASA"
       },
       "description_short": "",
       "description_long": "",
@@ -586,7 +667,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.090895",
+        "timestamp": "2026-02-08T23:27:46.303219",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -614,8 +695,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.122948",
-        "last_updated": "2026-02-06T17:26:37.122948",
+        "created_at": "2026-02-06T17:51:05.090914",
+        "last_updated": "2026-02-06T17:51:05.090915",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -657,7 +738,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.122928",
+          "timestamp": "2026-02-06T17:51:05.090895",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -685,8 +766,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.750692",
-          "last_updated": "2026-02-06T17:26:13.750693",
+          "created_at": "2026-02-06T17:26:37.122948",
+          "last_updated": "2026-02-06T17:26:37.122948",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -728,7 +809,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.750681",
+            "timestamp": "2026-02-06T17:26:37.122928",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -736,7 +817,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--5263185511805688182",
             "product_name": "Rhythm Tech CABASA",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -756,8 +837,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.656669",
-            "last_updated": "2026-02-06T14:03:45.656669",
+            "created_at": "2026-02-06T17:26:13.750692",
+            "last_updated": "2026-02-06T17:26:13.750693",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -799,9 +880,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.656654",
+              "timestamp": "2026-02-06T17:26:13.750681",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -810,24 +891,110 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4340021-rhythm-tech-cabasa\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.656669",
+              "last_updated": "2026-02-06T14:03:45.656669",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.656654",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--5263185511805688182",
+                "product_name": "Rhythm Tech CABASA",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4340021-rhythm-tech-cabasa\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -875,11 +1042,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -925,8 +1091,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.303423",
-    "last_updated": "2026-02-08T23:27:46.303424",
+    "created_at": "2026-02-09T00:49:16.676824",
+    "last_updated": "2026-02-09T00:49:16.676825",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -967,7 +1133,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.303411",
+      "timestamp": "2026-02-09T00:49:16.676814",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -983,9 +1149,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech BAR CHIMES (DOUBLE ROW)"
       },
       "official_description": null,
       "official_images": [],
@@ -995,8 +1160,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.091074",
-      "last_updated": "2026-02-06T17:51:05.091074",
+      "created_at": "2026-02-08T23:27:46.303423",
+      "last_updated": "2026-02-08T23:27:46.303424",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1026,9 +1191,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech BAR CHIMES (DOUBLE ROW)"
       },
       "description_short": "",
       "description_long": "",
@@ -1038,7 +1202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.091062",
+        "timestamp": "2026-02-08T23:27:46.303411",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -1066,8 +1230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.123119",
-        "last_updated": "2026-02-06T17:26:37.123120",
+        "created_at": "2026-02-06T17:51:05.091074",
+        "last_updated": "2026-02-06T17:51:05.091074",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1109,7 +1273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.123106",
+          "timestamp": "2026-02-06T17:51:05.091062",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -1137,8 +1301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.750802",
-          "last_updated": "2026-02-06T17:26:13.750802",
+          "created_at": "2026-02-06T17:26:37.123119",
+          "last_updated": "2026-02-06T17:26:37.123120",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1180,7 +1344,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.750795",
+            "timestamp": "2026-02-06T17:26:37.123106",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -1188,7 +1352,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2114457775648093150",
             "product_name": "Rhythm Tech BAR CHIMES (DOUBLE ROW)",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1208,8 +1372,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.656800",
-            "last_updated": "2026-02-06T14:03:45.656800",
+            "created_at": "2026-02-06T17:26:13.750802",
+            "last_updated": "2026-02-06T17:26:13.750802",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1251,9 +1415,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.656788",
+              "timestamp": "2026-02-06T17:26:13.750795",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1262,24 +1426,110 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4340008-rhythm-tech-bar-chimes-double-row-\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.656800",
+              "last_updated": "2026-02-06T14:03:45.656800",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.656788",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2114457775648093150",
+                "product_name": "Rhythm Tech BAR CHIMES (DOUBLE ROW)",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4340008-rhythm-tech-bar-chimes-double-row-\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1327,11 +1577,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1377,8 +1626,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.304624",
-    "last_updated": "2026-02-08T23:27:46.304625",
+    "created_at": "2026-02-09T00:49:16.677594",
+    "last_updated": "2026-02-09T00:49:16.677595",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Drum Trigger",
@@ -1419,7 +1668,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.304608",
+      "timestamp": "2026-02-09T00:49:16.677580",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -1435,9 +1684,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech TRIGGER TRIANGLE"
       },
       "official_description": null,
       "official_images": [],
@@ -1447,8 +1695,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.091984",
-      "last_updated": "2026-02-06T17:51:05.091984",
+      "created_at": "2026-02-08T23:27:46.304624",
+      "last_updated": "2026-02-08T23:27:46.304625",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Drum Trigger",
@@ -1478,9 +1726,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech TRIGGER TRIANGLE"
       },
       "description_short": "",
       "description_long": "",
@@ -1490,7 +1737,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.091969",
+        "timestamp": "2026-02-08T23:27:46.304608",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -1518,8 +1765,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.123679",
-        "last_updated": "2026-02-06T17:26:37.123679",
+        "created_at": "2026-02-06T17:51:05.091984",
+        "last_updated": "2026-02-06T17:51:05.091984",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Drum Trigger",
@@ -1561,7 +1808,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.123664",
+          "timestamp": "2026-02-06T17:51:05.091969",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -1589,8 +1836,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.751181",
-          "last_updated": "2026-02-06T17:26:13.751181",
+          "created_at": "2026-02-06T17:26:37.123679",
+          "last_updated": "2026-02-06T17:26:37.123679",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Drum Trigger",
@@ -1632,7 +1879,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.751172",
+            "timestamp": "2026-02-06T17:26:37.123664",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -1640,7 +1887,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-6942407595691775745",
             "product_name": "Rhythm Tech TRIGGER TRIANGLE",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1660,8 +1907,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.657301",
-            "last_updated": "2026-02-06T14:03:45.657301",
+            "created_at": "2026-02-06T17:26:13.751181",
+            "last_updated": "2026-02-06T17:26:13.751181",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Drum Trigger",
@@ -1703,9 +1950,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.657283",
+              "timestamp": "2026-02-06T17:26:13.751172",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1714,24 +1961,109 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4339922-rhythm-tech-trigger-triangle\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.657301",
+              "last_updated": "2026-02-06T14:03:45.657301",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Drum Trigger",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.657283",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-6942407595691775745",
+                "product_name": "Rhythm Tech TRIGGER TRIANGLE",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4339922-rhythm-tech-trigger-triangle\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1776,12 +2108,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1823,8 +2153,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.304770",
-    "last_updated": "2026-02-08T23:27:46.304770",
+    "created_at": "2026-02-09T00:49:16.678251",
+    "last_updated": "2026-02-09T00:49:16.678251",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1865,7 +2195,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.304759",
+      "timestamp": "2026-02-09T00:49:16.678238",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -1881,9 +2211,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Stick Jingler with Nickel Jingles"
       },
       "official_description": null,
       "official_images": [],
@@ -1893,8 +2222,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.092124",
-      "last_updated": "2026-02-06T17:51:05.092124",
+      "created_at": "2026-02-08T23:27:46.304770",
+      "last_updated": "2026-02-08T23:27:46.304770",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1924,9 +2253,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Stick Jingler with Nickel Jingles"
       },
       "description_short": "",
       "description_long": "",
@@ -1936,7 +2264,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.092112",
+        "timestamp": "2026-02-08T23:27:46.304759",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -1964,8 +2292,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.123919",
-        "last_updated": "2026-02-06T17:26:37.123919",
+        "created_at": "2026-02-06T17:51:05.092124",
+        "last_updated": "2026-02-06T17:51:05.092124",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2007,7 +2335,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.123906",
+          "timestamp": "2026-02-06T17:51:05.092112",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -2035,8 +2363,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.751273",
-          "last_updated": "2026-02-06T17:26:13.751274",
+          "created_at": "2026-02-06T17:26:37.123919",
+          "last_updated": "2026-02-06T17:26:37.123919",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2078,7 +2406,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.751267",
+            "timestamp": "2026-02-06T17:26:37.123906",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -2086,7 +2414,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--4492275843365466447",
             "product_name": "Rhythm Tech Stick Jingler with Nickel Jingles",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2106,8 +2434,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.657426",
-            "last_updated": "2026-02-06T14:03:45.657426",
+            "created_at": "2026-02-06T17:26:13.751273",
+            "last_updated": "2026-02-06T17:26:13.751274",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2149,9 +2477,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.657410",
+              "timestamp": "2026-02-06T17:26:13.751267",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2160,24 +2488,110 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4339833-rhythm-tech-stick-jingler-with-nickel-jingles\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.657426",
+              "last_updated": "2026-02-06T14:03:45.657426",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.657410",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--4492275843365466447",
+                "product_name": "Rhythm Tech Stick Jingler with Nickel Jingles",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4339833-rhythm-tech-stick-jingler-with-nickel-jingles\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2225,11 +2639,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2275,8 +2688,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.304905",
-    "last_updated": "2026-02-08T23:27:46.304906",
+    "created_at": "2026-02-09T00:49:16.678667",
+    "last_updated": "2026-02-09T00:49:16.678667",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2317,7 +2730,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.304895",
+      "timestamp": "2026-02-09T00:49:16.678654",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -2333,9 +2746,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Hat Trick G2 Single Brass Jingles"
       },
       "official_description": null,
       "official_images": [],
@@ -2345,8 +2757,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.092237",
-      "last_updated": "2026-02-06T17:51:05.092238",
+      "created_at": "2026-02-08T23:27:46.304905",
+      "last_updated": "2026-02-08T23:27:46.304906",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2376,9 +2788,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Hat Trick G2 Single Brass Jingles"
       },
       "description_short": "",
       "description_long": "",
@@ -2388,7 +2799,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.092221",
+        "timestamp": "2026-02-08T23:27:46.304895",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -2416,8 +2827,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.124263",
-        "last_updated": "2026-02-06T17:26:37.124264",
+        "created_at": "2026-02-06T17:51:05.092237",
+        "last_updated": "2026-02-06T17:51:05.092238",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2459,7 +2870,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.124249",
+          "timestamp": "2026-02-06T17:51:05.092221",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -2487,8 +2898,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.751354",
-          "last_updated": "2026-02-06T17:26:13.751355",
+          "created_at": "2026-02-06T17:26:37.124263",
+          "last_updated": "2026-02-06T17:26:37.124264",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2530,7 +2941,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.751349",
+            "timestamp": "2026-02-06T17:26:37.124249",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -2538,7 +2949,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-6249191645327998117",
             "product_name": "Rhythm Tech Hat Trick G2 Single Brass Jingles",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2558,8 +2969,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.657528",
-            "last_updated": "2026-02-06T14:03:45.657528",
+            "created_at": "2026-02-06T17:26:13.751354",
+            "last_updated": "2026-02-06T17:26:13.751355",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2601,9 +3012,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.657518",
+              "timestamp": "2026-02-06T17:26:13.751349",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2612,24 +3023,110 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4339868-rhythm-tech-hat-trick-g2-single-brass-jingles\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.657528",
+              "last_updated": "2026-02-06T14:03:45.657528",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.657518",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-6249191645327998117",
+                "product_name": "Rhythm Tech Hat Trick G2 Single Brass Jingles",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4339868-rhythm-tech-hat-trick-g2-single-brass-jingles\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2677,11 +3174,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2727,8 +3223,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.306130",
-    "last_updated": "2026-02-08T23:27:46.306130",
+    "created_at": "2026-02-09T00:49:16.679084",
+    "last_updated": "2026-02-09T00:49:16.679085",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2769,7 +3265,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.306114",
+      "timestamp": "2026-02-09T00:49:16.679073",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -2785,9 +3281,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Hat Trick G2 Double Row Brass Jingles"
       },
       "official_description": null,
       "official_images": [],
@@ -2797,8 +3292,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.092923",
-      "last_updated": "2026-02-06T17:51:05.092923",
+      "created_at": "2026-02-08T23:27:46.306130",
+      "last_updated": "2026-02-08T23:27:46.306130",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2828,9 +3323,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech Hat Trick G2 Double Row Brass Jingles"
       },
       "description_short": "",
       "description_long": "",
@@ -2840,7 +3334,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.092909",
+        "timestamp": "2026-02-08T23:27:46.306114",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -2868,8 +3362,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.124658",
-        "last_updated": "2026-02-06T17:26:37.124658",
+        "created_at": "2026-02-06T17:51:05.092923",
+        "last_updated": "2026-02-06T17:51:05.092923",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2911,7 +3405,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.124647",
+          "timestamp": "2026-02-06T17:51:05.092909",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -2939,8 +3433,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.751818",
-          "last_updated": "2026-02-06T17:26:13.751818",
+          "created_at": "2026-02-06T17:26:37.124658",
+          "last_updated": "2026-02-06T17:26:37.124658",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2982,7 +3476,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.751806",
+            "timestamp": "2026-02-06T17:26:37.124647",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -2990,7 +3484,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--7504099859635259220",
             "product_name": "Rhythm Tech Hat Trick G2 Double Row Brass Jingles",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3010,8 +3504,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.658054",
-            "last_updated": "2026-02-06T14:03:45.658054",
+            "created_at": "2026-02-06T17:26:13.751818",
+            "last_updated": "2026-02-06T17:26:13.751818",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3053,9 +3547,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.658041",
+              "timestamp": "2026-02-06T17:26:13.751806",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3064,24 +3558,110 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4339883-rhythm-tech-hat-trick-g2-double-row-brass-jingles\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.658054",
+              "last_updated": "2026-02-06T14:03:45.658054",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.658041",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--7504099859635259220",
+                "product_name": "Rhythm Tech Hat Trick G2 Double Row Brass Jingles",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4339883-rhythm-tech-hat-trick-g2-double-row-brass-jingles\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3129,11 +3709,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3179,8 +3758,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:46.306557",
-    "last_updated": "2026-02-08T23:27:46.306557",
+    "created_at": "2026-02-09T00:49:16.679727",
+    "last_updated": "2026-02-09T00:49:16.679727",
     "taxonomy": {
       "canonical_category": "Microphones & Recording",
       "canonical_subcategory": "Ribbon Mic",
@@ -3221,7 +3800,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:46.306535",
+      "timestamp": "2026-02-09T00:49:16.679713",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from rhythm tech catalog"
     },
@@ -3237,9 +3816,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech 11\" Ribbon Crasher"
       },
       "official_description": null,
       "official_images": [],
@@ -3249,8 +3827,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.093148",
-      "last_updated": "2026-02-06T17:51:05.093149",
+      "created_at": "2026-02-08T23:27:46.306557",
+      "last_updated": "2026-02-08T23:27:46.306557",
       "taxonomy": {
         "canonical_category": "Microphones & Recording",
         "canonical_subcategory": "Ribbon Mic",
@@ -3280,9 +3858,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Rhythm Tech 11\" Ribbon Crasher"
       },
       "description_short": "",
       "description_long": "",
@@ -3292,7 +3869,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.093136",
+        "timestamp": "2026-02-08T23:27:46.306535",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from rhythm tech catalog"
       },
@@ -3320,8 +3897,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.124942",
-        "last_updated": "2026-02-06T17:26:37.124942",
+        "created_at": "2026-02-06T17:51:05.093148",
+        "last_updated": "2026-02-06T17:51:05.093149",
         "taxonomy": {
           "canonical_category": "Microphones & Recording",
           "canonical_subcategory": "Ribbon Mic",
@@ -3363,7 +3940,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.124932",
+          "timestamp": "2026-02-06T17:51:05.093136",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from rhythm tech catalog"
         },
@@ -3391,8 +3968,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.751918",
-          "last_updated": "2026-02-06T17:26:13.751919",
+          "created_at": "2026-02-06T17:26:37.124942",
+          "last_updated": "2026-02-06T17:26:37.124942",
           "taxonomy": {
             "canonical_category": "Microphones & Recording",
             "canonical_subcategory": "Ribbon Mic",
@@ -3434,7 +4011,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.751912",
+            "timestamp": "2026-02-06T17:26:37.124932",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from rhythm tech catalog"
           },
@@ -3442,7 +4019,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-9181392731573637486",
             "product_name": "Rhythm Tech 11\" Ribbon Crasher",
-            "brand": "Rhythm Tech",
+            "brand": "rhythm tech",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3462,8 +4039,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:45.658459",
-            "last_updated": "2026-02-06T14:03:45.658459",
+            "created_at": "2026-02-06T17:26:13.751918",
+            "last_updated": "2026-02-06T17:26:13.751919",
             "taxonomy": {
               "canonical_category": "Microphones & Recording",
               "canonical_subcategory": "Ribbon Mic",
@@ -3505,9 +4082,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:45.658345",
+              "timestamp": "2026-02-06T17:26:13.751912",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Rhythm Tech catalog"
+              "extraction_notes": "Scraped from rhythm tech catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3516,24 +4093,109 @@
               "brand": "Rhythm Tech",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4339935-rhythm-tech-11-ribbon-crasher\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:45.658459",
+              "last_updated": "2026-02-06T14:03:45.658459",
+              "taxonomy": {
+                "canonical_category": "Microphones & Recording",
+                "canonical_subcategory": "Ribbon Mic",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:45.658345",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Rhythm Tech catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-9181392731573637486",
+                "product_name": "Rhythm Tech 11\" Ribbon Crasher",
+                "brand": "Rhythm Tech",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4339935-rhythm-tech-11-ribbon-crasher\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3578,12 +4240,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,

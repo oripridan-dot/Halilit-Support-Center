@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:26:30.893478",
-    "last_updated": "2026-02-08T23:26:30.893478",
+    "created_at": "2026-02-09T00:48:02.258166",
+    "last_updated": "2026-02-09T00:48:02.258167",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:26:30.893459",
+      "timestamp": "2026-02-09T00:48:02.258128",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from marimba one catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One Izzy Frame"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.419441",
-      "last_updated": "2026-02-06T17:51:04.419441",
+      "created_at": "2026-02-08T23:26:30.893478",
+      "last_updated": "2026-02-08T23:26:30.893478",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One Izzy Frame"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.419403",
+        "timestamp": "2026-02-08T23:26:30.893459",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from marimba one catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.874099",
-        "last_updated": "2026-02-06T17:26:36.874099",
+        "created_at": "2026-02-06T17:51:04.419441",
+        "last_updated": "2026-02-06T17:51:04.419441",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.874081",
+          "timestamp": "2026-02-06T17:51:04.419403",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from marimba one catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.504460",
-          "last_updated": "2026-02-06T17:26:13.504460",
+          "created_at": "2026-02-06T17:26:36.874099",
+          "last_updated": "2026-02-06T17:26:36.874099",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.504448",
+            "timestamp": "2026-02-06T17:26:36.874081",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from marimba one catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-8915105191583427362",
             "product_name": "Marimba One Izzy Frame",
-            "brand": "Marimba One",
+            "brand": "marimba one",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:53.161204",
-            "last_updated": "2026-02-06T14:02:53.161205",
+            "created_at": "2026-02-06T17:26:13.504460",
+            "last_updated": "2026-02-06T17:26:13.504460",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Percussion",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:53.161184",
+              "timestamp": "2026-02-06T17:26:13.504448",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Marimba One catalog"
+              "extraction_notes": "Scraped from marimba one catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,109 @@
               "brand": "Marimba One",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1287593-marimba-one-izzy-frame\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:53.161204",
+              "last_updated": "2026-02-06T14:02:53.161205",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Percussion",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:53.161184",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Marimba One catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-8915105191583427362",
+                "product_name": "Marimba One Izzy Frame",
+                "brand": "Marimba One",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1287593-marimba-one-izzy-frame\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -420,12 +503,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -467,8 +548,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:26:30.894207",
-    "last_updated": "2026-02-08T23:26:30.894207",
+    "created_at": "2026-02-09T00:48:02.259001",
+    "last_updated": "2026-02-09T00:48:02.259002",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -509,7 +590,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:26:30.894192",
+      "timestamp": "2026-02-09T00:48:02.258978",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from marimba one catalog"
     },
@@ -525,9 +606,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One 3100 Frame"
       },
       "official_description": null,
       "official_images": [],
@@ -537,8 +617,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.419935",
-      "last_updated": "2026-02-06T17:51:04.419936",
+      "created_at": "2026-02-08T23:26:30.894207",
+      "last_updated": "2026-02-08T23:26:30.894207",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -568,9 +648,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One 3100 Frame"
       },
       "description_short": "",
       "description_long": "",
@@ -580,7 +659,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.419910",
+        "timestamp": "2026-02-08T23:26:30.894192",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from marimba one catalog"
       },
@@ -608,8 +687,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.874519",
-        "last_updated": "2026-02-06T17:26:36.874519",
+        "created_at": "2026-02-06T17:51:04.419935",
+        "last_updated": "2026-02-06T17:51:04.419936",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -651,7 +730,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.874507",
+          "timestamp": "2026-02-06T17:51:04.419910",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from marimba one catalog"
         },
@@ -679,8 +758,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.504835",
-          "last_updated": "2026-02-06T17:26:13.504835",
+          "created_at": "2026-02-06T17:26:36.874519",
+          "last_updated": "2026-02-06T17:26:36.874519",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -722,7 +801,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.504823",
+            "timestamp": "2026-02-06T17:26:36.874507",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from marimba one catalog"
           },
@@ -730,7 +809,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--6394530348075395789",
             "product_name": "Marimba One 3100 Frame",
-            "brand": "Marimba One",
+            "brand": "marimba one",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -750,8 +829,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:53.161666",
-            "last_updated": "2026-02-06T14:02:53.161666",
+            "created_at": "2026-02-06T17:26:13.504835",
+            "last_updated": "2026-02-06T17:26:13.504835",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Percussion",
@@ -793,9 +872,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:53.161652",
+              "timestamp": "2026-02-06T17:26:13.504823",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Marimba One catalog"
+              "extraction_notes": "Scraped from marimba one catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -804,24 +883,109 @@
               "brand": "Marimba One",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1287857-marimba-one-3100-frame\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:53.161666",
+              "last_updated": "2026-02-06T14:02:53.161666",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Percussion",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:53.161652",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Marimba One catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--6394530348075395789",
+                "product_name": "Marimba One 3100 Frame",
+                "brand": "Marimba One",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1287857-marimba-one-3100-frame\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -866,12 +1030,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -913,8 +1075,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:26:30.894349",
-    "last_updated": "2026-02-08T23:26:30.894349",
+    "created_at": "2026-02-09T00:48:02.259167",
+    "last_updated": "2026-02-09T00:48:02.259168",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -955,7 +1117,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:26:30.894336",
+      "timestamp": "2026-02-09T00:48:02.259155",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from marimba one catalog"
     },
@@ -971,9 +1133,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One One Vibe Silver no motor"
       },
       "official_description": null,
       "official_images": [],
@@ -983,8 +1144,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.420102",
-      "last_updated": "2026-02-06T17:51:04.420102",
+      "created_at": "2026-02-08T23:26:30.894349",
+      "last_updated": "2026-02-08T23:26:30.894349",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1014,9 +1175,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One One Vibe Silver no motor"
       },
       "description_short": "",
       "description_long": "",
@@ -1026,7 +1186,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.420089",
+        "timestamp": "2026-02-08T23:26:30.894336",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from marimba one catalog"
       },
@@ -1054,8 +1214,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.874632",
-        "last_updated": "2026-02-06T17:26:36.874632",
+        "created_at": "2026-02-06T17:51:04.420102",
+        "last_updated": "2026-02-06T17:51:04.420102",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1097,7 +1257,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.874625",
+          "timestamp": "2026-02-06T17:51:04.420089",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from marimba one catalog"
         },
@@ -1125,8 +1285,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.504946",
-          "last_updated": "2026-02-06T17:26:13.504946",
+          "created_at": "2026-02-06T17:26:36.874632",
+          "last_updated": "2026-02-06T17:26:36.874632",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1168,7 +1328,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.504939",
+            "timestamp": "2026-02-06T17:26:36.874625",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from marimba one catalog"
           },
@@ -1176,7 +1336,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--7761819895636590058",
             "product_name": "Marimba One One Vibe Silver no motor",
-            "brand": "Marimba One",
+            "brand": "marimba one",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1196,8 +1356,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:53.162083",
-            "last_updated": "2026-02-06T14:02:53.162083",
+            "created_at": "2026-02-06T17:26:13.504946",
+            "last_updated": "2026-02-06T17:26:13.504946",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Percussion",
@@ -1239,9 +1399,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:53.162070",
+              "timestamp": "2026-02-06T17:26:13.504939",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Marimba One catalog"
+              "extraction_notes": "Scraped from marimba one catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1250,24 +1410,109 @@
               "brand": "Marimba One",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1036154-marimba-one-one-vibe-silver-no-motor\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:53.162083",
+              "last_updated": "2026-02-06T14:02:53.162083",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Percussion",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:53.162070",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Marimba One catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--7761819895636590058",
+                "product_name": "Marimba One One Vibe Silver no motor",
+                "brand": "Marimba One",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1036154-marimba-one-one-vibe-silver-no-motor\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1312,12 +1557,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1359,8 +1602,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:26:30.895237",
-    "last_updated": "2026-02-08T23:26:30.895238",
+    "created_at": "2026-02-09T00:48:02.260162",
+    "last_updated": "2026-02-09T00:48:02.260162",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -1401,7 +1644,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:26:30.895220",
+      "timestamp": "2026-02-09T00:48:02.260132",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from marimba one catalog"
     },
@@ -1417,9 +1660,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One One Vibe Gold no motor"
       },
       "official_description": null,
       "official_images": [],
@@ -1429,8 +1671,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.420644",
-      "last_updated": "2026-02-06T17:51:04.420645",
+      "created_at": "2026-02-08T23:26:30.895237",
+      "last_updated": "2026-02-08T23:26:30.895238",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1460,9 +1702,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One One Vibe Gold no motor"
       },
       "description_short": "",
       "description_long": "",
@@ -1472,7 +1713,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.420630",
+        "timestamp": "2026-02-08T23:26:30.895220",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from marimba one catalog"
       },
@@ -1500,8 +1741,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.875013",
-        "last_updated": "2026-02-06T17:26:36.875013",
+        "created_at": "2026-02-06T17:51:04.420644",
+        "last_updated": "2026-02-06T17:51:04.420645",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1543,7 +1784,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.875003",
+          "timestamp": "2026-02-06T17:51:04.420630",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from marimba one catalog"
         },
@@ -1571,8 +1812,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.505329",
-          "last_updated": "2026-02-06T17:26:13.505329",
+          "created_at": "2026-02-06T17:26:36.875013",
+          "last_updated": "2026-02-06T17:26:36.875013",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1614,7 +1855,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.505320",
+            "timestamp": "2026-02-06T17:26:36.875003",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from marimba one catalog"
           },
@@ -1622,7 +1863,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--5237272674347595487",
             "product_name": "Marimba One One Vibe Gold no motor",
-            "brand": "Marimba One",
+            "brand": "marimba one",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1642,8 +1883,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:53.162198",
-            "last_updated": "2026-02-06T14:02:53.162199",
+            "created_at": "2026-02-06T17:26:13.505329",
+            "last_updated": "2026-02-06T17:26:13.505329",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Percussion",
@@ -1685,9 +1926,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:53.162189",
+              "timestamp": "2026-02-06T17:26:13.505320",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Marimba One catalog"
+              "extraction_notes": "Scraped from marimba one catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1696,24 +1937,109 @@
               "brand": "Marimba One",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1036176-marimba-one-one-vibe-gold-no-motor\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:53.162198",
+              "last_updated": "2026-02-06T14:02:53.162199",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Percussion",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:53.162189",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Marimba One catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--5237272674347595487",
+                "product_name": "Marimba One One Vibe Gold no motor",
+                "brand": "Marimba One",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1036176-marimba-one-one-vibe-gold-no-motor\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1758,12 +2084,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1805,8 +2129,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:26:30.895365",
-    "last_updated": "2026-02-08T23:26:30.895365",
+    "created_at": "2026-02-09T00:48:02.260302",
+    "last_updated": "2026-02-09T00:48:02.260303",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -1847,7 +2171,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:26:30.895355",
+      "timestamp": "2026-02-09T00:48:02.260292",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from marimba one catalog"
     },
@@ -1863,9 +2187,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One One Vibe Silver with motor"
       },
       "official_description": null,
       "official_images": [],
@@ -1875,8 +2198,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.420817",
-      "last_updated": "2026-02-06T17:51:04.420817",
+      "created_at": "2026-02-08T23:26:30.895365",
+      "last_updated": "2026-02-08T23:26:30.895365",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1906,9 +2229,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Marimba One One Vibe Silver with motor"
       },
       "description_short": "",
       "description_long": "",
@@ -1918,7 +2240,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.420804",
+        "timestamp": "2026-02-08T23:26:30.895355",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from marimba one catalog"
       },
@@ -1946,8 +2268,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.875104",
-        "last_updated": "2026-02-06T17:26:36.875104",
+        "created_at": "2026-02-06T17:51:04.420817",
+        "last_updated": "2026-02-06T17:51:04.420817",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1989,7 +2311,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.875097",
+          "timestamp": "2026-02-06T17:51:04.420804",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from marimba one catalog"
         },
@@ -2017,8 +2339,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.505434",
-          "last_updated": "2026-02-06T17:26:13.505434",
+          "created_at": "2026-02-06T17:26:36.875104",
+          "last_updated": "2026-02-06T17:26:36.875104",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -2060,7 +2382,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.505413",
+            "timestamp": "2026-02-06T17:26:36.875097",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from marimba one catalog"
           },
@@ -2068,7 +2390,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--8129870461104533501",
             "product_name": "Marimba One One Vibe Silver with motor",
-            "brand": "Marimba One",
+            "brand": "marimba one",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2088,8 +2410,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:53.162300",
-            "last_updated": "2026-02-06T14:02:53.162300",
+            "created_at": "2026-02-06T17:26:13.505434",
+            "last_updated": "2026-02-06T17:26:13.505434",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Percussion",
@@ -2131,9 +2453,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:53.162290",
+              "timestamp": "2026-02-06T17:26:13.505413",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Marimba One catalog"
+              "extraction_notes": "Scraped from marimba one catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2142,24 +2464,109 @@
               "brand": "Marimba One",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1036186-marimba-one-one-vibe-silver-with-motor\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:53.162300",
+              "last_updated": "2026-02-06T14:02:53.162300",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Percussion",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:53.162290",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Marimba One catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--8129870461104533501",
+                "product_name": "Marimba One One Vibe Silver with motor",
+                "brand": "Marimba One",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1036186-marimba-one-one-vibe-silver-with-motor\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2204,12 +2611,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,

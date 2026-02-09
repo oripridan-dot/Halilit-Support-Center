@@ -70,3 +70,4 @@ backend/data/reports/
 backend/data/ingestion/products/
 backend/data/ingestion/reports/
 backend/logs/
+frontend/public/data/galaxy_db.json

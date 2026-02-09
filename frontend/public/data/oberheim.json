@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:06.232029",
-    "last_updated": "2026-02-08T23:27:06.232030",
+    "created_at": "2026-02-09T00:48:35.365623",
+    "last_updated": "2026-02-09T00:48:35.365624",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Synthesizer",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:06.232000",
+      "timestamp": "2026-02-09T00:48:35.365598",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from oberheim catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim TEO-5 Synthesizer"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.725222",
-      "last_updated": "2026-02-06T17:51:04.725222",
+      "created_at": "2026-02-08T23:27:06.232029",
+      "last_updated": "2026-02-08T23:27:06.232030",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Synthesizer",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim TEO-5 Synthesizer"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.725203",
+        "timestamp": "2026-02-08T23:27:06.232000",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from oberheim catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.990995",
-        "last_updated": "2026-02-06T17:26:36.990995",
+        "created_at": "2026-02-06T17:51:04.725222",
+        "last_updated": "2026-02-06T17:51:04.725222",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Synthesizer",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.990982",
+          "timestamp": "2026-02-06T17:51:04.725203",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from oberheim catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.603849",
-          "last_updated": "2026-02-06T17:26:13.603850",
+          "created_at": "2026-02-06T17:26:36.990995",
+          "last_updated": "2026-02-06T17:26:36.990995",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Synthesizer",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.603838",
+            "timestamp": "2026-02-06T17:26:36.990982",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from oberheim catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-5550551013719934361",
             "product_name": "סינתיסייזר Oberheim TEO-5 Synthesizer",
-            "brand": "Oberheim",
+            "brand": "oberheim",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:14.189941",
-            "last_updated": "2026-02-06T14:03:14.189941",
+            "created_at": "2026-02-06T17:26:13.603849",
+            "last_updated": "2026-02-06T17:26:13.603850",
             "taxonomy": {
               "canonical_category": "Keyboards & Synthesizers",
               "canonical_subcategory": "Synthesizer",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:14.189921",
+              "timestamp": "2026-02-06T17:26:13.603838",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Oberheim catalog"
+              "extraction_notes": "Scraped from oberheim catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,109 @@
               "brand": "Oberheim",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7579741-oberheim-teo-5-synthesizer\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:14.189941",
+              "last_updated": "2026-02-06T14:03:14.189941",
+              "taxonomy": {
+                "canonical_category": "Keyboards & Synthesizers",
+                "canonical_subcategory": "Synthesizer",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:14.189921",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Oberheim catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-5550551013719934361",
+                "product_name": "סינתיסייזר Oberheim TEO-5 Synthesizer",
+                "brand": "Oberheim",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7579741-oberheim-teo-5-synthesizer\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -420,12 +503,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -467,8 +548,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:06.232956",
-    "last_updated": "2026-02-08T23:27:06.232956",
+    "created_at": "2026-02-09T00:48:35.366571",
+    "last_updated": "2026-02-09T00:48:35.366571",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -509,7 +590,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:06.232937",
+      "timestamp": "2026-02-09T00:48:35.366548",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from oberheim catalog"
     },
@@ -525,9 +606,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מודול סינתיסייזר שולחני Oberheim TEO-5"
       },
       "official_description": null,
       "official_images": [],
@@ -537,8 +617,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.725718",
-      "last_updated": "2026-02-06T17:51:04.725718",
+      "created_at": "2026-02-08T23:27:06.232956",
+      "last_updated": "2026-02-08T23:27:06.232956",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -568,9 +648,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מודול סינתיסייזר שולחני Oberheim TEO-5"
       },
       "description_short": "",
       "description_long": "",
@@ -580,7 +659,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.725701",
+        "timestamp": "2026-02-08T23:27:06.232937",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from oberheim catalog"
       },
@@ -608,8 +687,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.991372",
-        "last_updated": "2026-02-06T17:26:36.991373",
+        "created_at": "2026-02-06T17:51:04.725718",
+        "last_updated": "2026-02-06T17:51:04.725718",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -651,7 +730,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.991362",
+          "timestamp": "2026-02-06T17:51:04.725701",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from oberheim catalog"
         },
@@ -679,8 +758,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.604241",
-          "last_updated": "2026-02-06T17:26:13.604241",
+          "created_at": "2026-02-06T17:26:36.991372",
+          "last_updated": "2026-02-06T17:26:36.991373",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -722,7 +801,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.604229",
+            "timestamp": "2026-02-06T17:26:36.991362",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from oberheim catalog"
           },
@@ -730,7 +809,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--4941835082101424061",
             "product_name": "מודול סינתיסייזר שולחני Oberheim TEO-5",
-            "brand": "Oberheim",
+            "brand": "oberheim",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -750,8 +829,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:14.190512",
-            "last_updated": "2026-02-06T14:03:14.190512",
+            "created_at": "2026-02-06T17:26:13.604241",
+            "last_updated": "2026-02-06T17:26:13.604241",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -793,9 +872,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:14.190487",
+              "timestamp": "2026-02-06T17:26:13.604229",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Oberheim catalog"
+              "extraction_notes": "Scraped from oberheim catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -804,24 +883,110 @@
               "brand": "Oberheim",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/8623225-oberheim-teo-5-desktop-poly-synth-module\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:14.190512",
+              "last_updated": "2026-02-06T14:03:14.190512",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:14.190487",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Oberheim catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--4941835082101424061",
+                "product_name": "מודול סינתיסייזר שולחני Oberheim TEO-5",
+                "brand": "Oberheim",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/8623225-oberheim-teo-5-desktop-poly-synth-module\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -869,11 +1034,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -919,8 +1083,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:06.233128",
-    "last_updated": "2026-02-08T23:27:06.233128",
+    "created_at": "2026-02-09T00:48:35.366727",
+    "last_updated": "2026-02-09T00:48:35.366728",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Digital Keyboard",
@@ -961,7 +1125,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:06.233117",
+      "timestamp": "2026-02-09T00:48:35.366712",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from oberheim catalog"
     },
@@ -977,9 +1141,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-6 Keyboard"
       },
       "official_description": null,
       "official_images": [],
@@ -989,8 +1152,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.725853",
-      "last_updated": "2026-02-06T17:51:04.725853",
+      "created_at": "2026-02-08T23:27:06.233128",
+      "last_updated": "2026-02-08T23:27:06.233128",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Digital Keyboard",
@@ -1020,9 +1183,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-6 Keyboard"
       },
       "description_short": "",
       "description_long": "",
@@ -1032,7 +1194,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.725842",
+        "timestamp": "2026-02-08T23:27:06.233117",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from oberheim catalog"
       },
@@ -1060,8 +1222,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.991496",
-        "last_updated": "2026-02-06T17:26:36.991496",
+        "created_at": "2026-02-06T17:51:04.725853",
+        "last_updated": "2026-02-06T17:51:04.725853",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Digital Keyboard",
@@ -1103,7 +1265,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.991489",
+          "timestamp": "2026-02-06T17:51:04.725842",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from oberheim catalog"
         },
@@ -1131,8 +1293,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.604345",
-          "last_updated": "2026-02-06T17:26:13.604345",
+          "created_at": "2026-02-06T17:26:36.991496",
+          "last_updated": "2026-02-06T17:26:36.991496",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Digital Keyboard",
@@ -1174,7 +1336,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.604338",
+            "timestamp": "2026-02-06T17:26:36.991489",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from oberheim catalog"
           },
@@ -1182,7 +1344,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-4830076824106989558",
             "product_name": "סינתיסייזר Oberheim OB-6 Keyboard",
-            "brand": "Oberheim",
+            "brand": "oberheim",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1202,8 +1364,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:14.190935",
-            "last_updated": "2026-02-06T14:03:14.190936",
+            "created_at": "2026-02-06T17:26:13.604345",
+            "last_updated": "2026-02-06T17:26:13.604345",
             "taxonomy": {
               "canonical_category": "Keyboards & Synthesizers",
               "canonical_subcategory": "Digital Keyboard",
@@ -1245,9 +1407,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:14.190920",
+              "timestamp": "2026-02-06T17:26:13.604338",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Oberheim catalog"
+              "extraction_notes": "Scraped from oberheim catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1256,24 +1418,109 @@
               "brand": "Oberheim",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/6364998-oberheim-ob-6-6-voice-polyphonic-analog-synthesizer\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:14.190935",
+              "last_updated": "2026-02-06T14:03:14.190936",
+              "taxonomy": {
+                "canonical_category": "Keyboards & Synthesizers",
+                "canonical_subcategory": "Digital Keyboard",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:14.190920",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Oberheim catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-4830076824106989558",
+                "product_name": "סינתיסייזר Oberheim OB-6 Keyboard",
+                "brand": "Oberheim",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/6364998-oberheim-ob-6-6-voice-polyphonic-analog-synthesizer\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1318,12 +1565,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1365,8 +1610,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:06.233982",
-    "last_updated": "2026-02-08T23:27:06.233982",
+    "created_at": "2026-02-09T00:48:35.367640",
+    "last_updated": "2026-02-09T00:48:35.367640",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Mixer",
@@ -1407,7 +1652,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:06.233967",
+      "timestamp": "2026-02-09T00:48:35.367626",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from oberheim catalog"
     },
@@ -1423,9 +1668,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-6 Desktop"
       },
       "official_description": null,
       "official_images": [],
@@ -1435,8 +1679,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.726320",
-      "last_updated": "2026-02-06T17:51:04.726320",
+      "created_at": "2026-02-08T23:27:06.233982",
+      "last_updated": "2026-02-08T23:27:06.233982",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Mixer",
@@ -1466,9 +1710,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-6 Desktop"
       },
       "description_short": "",
       "description_long": "",
@@ -1478,7 +1721,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.726305",
+        "timestamp": "2026-02-08T23:27:06.233967",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from oberheim catalog"
       },
@@ -1506,8 +1749,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.991893",
-        "last_updated": "2026-02-06T17:26:36.991894",
+        "created_at": "2026-02-06T17:51:04.726320",
+        "last_updated": "2026-02-06T17:51:04.726320",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Mixer",
@@ -1549,7 +1792,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.991885",
+          "timestamp": "2026-02-06T17:51:04.726305",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from oberheim catalog"
         },
@@ -1577,8 +1820,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.604763",
-          "last_updated": "2026-02-06T17:26:13.604763",
+          "created_at": "2026-02-06T17:26:36.991893",
+          "last_updated": "2026-02-06T17:26:36.991894",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Mixer",
@@ -1620,7 +1863,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.604754",
+            "timestamp": "2026-02-06T17:26:36.991885",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from oberheim catalog"
           },
@@ -1628,7 +1871,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-5375155090680844883",
             "product_name": "סינתיסייזר Oberheim OB-6 Desktop",
-            "brand": "Oberheim",
+            "brand": "oberheim",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1648,8 +1891,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:14.191062",
-            "last_updated": "2026-02-06T14:03:14.191062",
+            "created_at": "2026-02-06T17:26:13.604763",
+            "last_updated": "2026-02-06T17:26:13.604763",
             "taxonomy": {
               "canonical_category": "Audio Interfaces & Mixers",
               "canonical_subcategory": "Mixer",
@@ -1691,9 +1934,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:14.191050",
+              "timestamp": "2026-02-06T17:26:13.604754",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Oberheim catalog"
+              "extraction_notes": "Scraped from oberheim catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1702,24 +1945,109 @@
               "brand": "Oberheim",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:14.191062",
+              "last_updated": "2026-02-06T14:03:14.191062",
+              "taxonomy": {
+                "canonical_category": "Audio Interfaces & Mixers",
+                "canonical_subcategory": "Mixer",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:14.191050",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Oberheim catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-5375155090680844883",
+                "product_name": "סינתיסייזר Oberheim OB-6 Desktop",
+                "brand": "Oberheim",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/6365009-oberheim-ob-6-desktop-6-voice-polyphonic-analog-synthesizer\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1764,12 +2092,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1811,8 +2137,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:06.234993",
-    "last_updated": "2026-02-08T23:27:06.234994",
+    "created_at": "2026-02-09T00:48:35.367914",
+    "last_updated": "2026-02-09T00:48:35.367914",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Digital Keyboard",
@@ -1853,7 +2179,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:06.234959",
+      "timestamp": "2026-02-09T00:48:35.367904",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from oberheim catalog"
     },
@@ -1869,9 +2195,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-X8 Keyboard"
       },
       "official_description": null,
       "official_images": [],
@@ -1881,8 +2206,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.726447",
-      "last_updated": "2026-02-06T17:51:04.726447",
+      "created_at": "2026-02-08T23:27:06.234993",
+      "last_updated": "2026-02-08T23:27:06.234994",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Digital Keyboard",
@@ -1912,9 +2237,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-X8 Keyboard"
       },
       "description_short": "",
       "description_long": "",
@@ -1924,7 +2248,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.726436",
+        "timestamp": "2026-02-08T23:27:06.234959",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from oberheim catalog"
       },
@@ -1952,8 +2276,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.991983",
-        "last_updated": "2026-02-06T17:26:36.991983",
+        "created_at": "2026-02-06T17:51:04.726447",
+        "last_updated": "2026-02-06T17:51:04.726447",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Digital Keyboard",
@@ -1995,7 +2319,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.991977",
+          "timestamp": "2026-02-06T17:51:04.726436",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from oberheim catalog"
         },
@@ -2023,8 +2347,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.604856",
-          "last_updated": "2026-02-06T17:26:13.604856",
+          "created_at": "2026-02-06T17:26:36.991983",
+          "last_updated": "2026-02-06T17:26:36.991983",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Digital Keyboard",
@@ -2066,7 +2390,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.604850",
+            "timestamp": "2026-02-06T17:26:36.991977",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from oberheim catalog"
           },
@@ -2074,7 +2398,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-3925296635844102897",
             "product_name": "סינתיסייזר Oberheim OB-X8 Keyboard",
-            "brand": "Oberheim",
+            "brand": "oberheim",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2094,8 +2418,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:14.191160",
-            "last_updated": "2026-02-06T14:03:14.191161",
+            "created_at": "2026-02-06T17:26:13.604856",
+            "last_updated": "2026-02-06T17:26:13.604856",
             "taxonomy": {
               "canonical_category": "Keyboards & Synthesizers",
               "canonical_subcategory": "Digital Keyboard",
@@ -2137,9 +2461,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:14.191150",
+              "timestamp": "2026-02-06T17:26:13.604850",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Oberheim catalog"
+              "extraction_notes": "Scraped from oberheim catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2148,24 +2472,109 @@
               "brand": "Oberheim",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/6365110-oberheim-ob-x8-keyboard\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:14.191160",
+              "last_updated": "2026-02-06T14:03:14.191161",
+              "taxonomy": {
+                "canonical_category": "Keyboards & Synthesizers",
+                "canonical_subcategory": "Digital Keyboard",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:14.191150",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Oberheim catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-3925296635844102897",
+                "product_name": "סינתיסייזר Oberheim OB-X8 Keyboard",
+                "brand": "Oberheim",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/6365110-oberheim-ob-x8-keyboard\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2210,12 +2619,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -2257,8 +2664,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:27:06.235917",
-    "last_updated": "2026-02-08T23:27:06.235917",
+    "created_at": "2026-02-09T00:48:35.368330",
+    "last_updated": "2026-02-09T00:48:35.368330",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Mixer",
@@ -2299,7 +2706,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:27:06.235901",
+      "timestamp": "2026-02-09T00:48:35.368317",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from oberheim catalog"
     },
@@ -2315,9 +2722,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-X8 Desktop"
       },
       "official_description": null,
       "official_images": [],
@@ -2327,8 +2733,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:04.726735",
-      "last_updated": "2026-02-06T17:51:04.726735",
+      "created_at": "2026-02-08T23:27:06.235917",
+      "last_updated": "2026-02-08T23:27:06.235917",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Mixer",
@@ -2358,9 +2764,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סינתיסייזר Oberheim OB-X8 Desktop"
       },
       "description_short": "",
       "description_long": "",
@@ -2370,7 +2775,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:04.726719",
+        "timestamp": "2026-02-08T23:27:06.235901",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from oberheim catalog"
       },
@@ -2398,8 +2803,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:36.992061",
-        "last_updated": "2026-02-06T17:26:36.992061",
+        "created_at": "2026-02-06T17:51:04.726735",
+        "last_updated": "2026-02-06T17:51:04.726735",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Mixer",
@@ -2441,7 +2846,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:36.992056",
+          "timestamp": "2026-02-06T17:51:04.726719",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from oberheim catalog"
         },
@@ -2469,8 +2874,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:13.604937",
-          "last_updated": "2026-02-06T17:26:13.604937",
+          "created_at": "2026-02-06T17:26:36.992061",
+          "last_updated": "2026-02-06T17:26:36.992061",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Mixer",
@@ -2512,7 +2917,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:13.604931",
+            "timestamp": "2026-02-06T17:26:36.992056",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from oberheim catalog"
           },
@@ -2520,7 +2925,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-837143750221588188",
             "product_name": "סינתיסייזר Oberheim OB-X8 Desktop",
-            "brand": "Oberheim",
+            "brand": "oberheim",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2540,8 +2945,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:03:14.191796",
-            "last_updated": "2026-02-06T14:03:14.191797",
+            "created_at": "2026-02-06T17:26:13.604937",
+            "last_updated": "2026-02-06T17:26:13.604937",
             "taxonomy": {
               "canonical_category": "Audio Interfaces & Mixers",
               "canonical_subcategory": "Mixer",
@@ -2583,9 +2988,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:03:14.191784",
+              "timestamp": "2026-02-06T17:26:13.604931",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Oberheim catalog"
+              "extraction_notes": "Scraped from oberheim catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2594,24 +2999,109 @@
               "brand": "Oberheim",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/6365130-oberheim-ob-x8-desktop\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:14.191796",
+              "last_updated": "2026-02-06T14:03:14.191797",
+              "taxonomy": {
+                "canonical_category": "Audio Interfaces & Mixers",
+                "canonical_subcategory": "Mixer",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:14.191784",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Oberheim catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-837143750221588188",
+                "product_name": "סינתיסייזר Oberheim OB-X8 Desktop",
+                "brand": "Oberheim",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/6365130-oberheim-ob-x8-desktop\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2656,12 +3146,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,

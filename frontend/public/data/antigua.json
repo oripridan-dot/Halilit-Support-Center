@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.145039",
-    "last_updated": "2026-02-08T23:23:47.145039",
+    "created_at": "2026-02-09T00:45:23.077818",
+    "last_updated": "2026-02-09T00:45:23.077819",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.145019",
+      "timestamp": "2026-02-09T00:45:23.077795",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua AS-1203LQ Alto Saxophone"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.124798",
-      "last_updated": "2026-02-06T17:51:03.124798",
+      "created_at": "2026-02-08T23:23:47.145039",
+      "last_updated": "2026-02-08T23:23:47.145039",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua AS-1203LQ Alto Saxophone"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.124776",
+        "timestamp": "2026-02-08T23:23:47.145019",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.090043",
-        "last_updated": "2026-02-06T17:26:35.090044",
+        "created_at": "2026-02-06T17:51:03.124798",
+        "last_updated": "2026-02-06T17:51:03.124798",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.090032",
+          "timestamp": "2026-02-06T17:51:03.124776",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.081942",
-          "last_updated": "2026-02-06T17:26:12.081943",
+          "created_at": "2026-02-06T17:26:35.090043",
+          "last_updated": "2026-02-06T17:26:35.090044",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.081931",
+            "timestamp": "2026-02-06T17:26:35.090032",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-1598462738122583039",
             "product_name": "Antigua AS-1203LQ Alto Saxophone",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.335389",
-            "last_updated": "2026-02-06T14:01:18.335389",
+            "created_at": "2026-02-06T17:26:12.081942",
+            "last_updated": "2026-02-06T17:26:12.081943",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.335367",
+              "timestamp": "2026-02-06T17:26:12.081931",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/446754-antigua-as-1203lq-alto-saxophone\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.335389",
+              "last_updated": "2026-02-06T14:01:18.335389",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.335367",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-1598462738122583039",
+                "product_name": "Antigua AS-1203LQ Alto Saxophone",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/446754-antigua-as-1203lq-alto-saxophone\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -423,11 +507,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -473,8 +556,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.145846",
-    "last_updated": "2026-02-08T23:23:47.145847",
+    "created_at": "2026-02-09T00:45:23.078619",
+    "last_updated": "2026-02-09T00:45:23.078619",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -515,7 +598,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.145831",
+      "timestamp": "2026-02-09T00:45:23.078595",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -531,9 +614,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TR1501LQ Trumpet"
       },
       "official_description": null,
       "official_images": [],
@@ -543,8 +625,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.125240",
-      "last_updated": "2026-02-06T17:51:03.125241",
+      "created_at": "2026-02-08T23:23:47.145846",
+      "last_updated": "2026-02-08T23:23:47.145847",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -574,9 +656,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TR1501LQ Trumpet"
       },
       "description_short": "",
       "description_long": "",
@@ -586,7 +667,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.125222",
+        "timestamp": "2026-02-08T23:23:47.145831",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -614,8 +695,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.090394",
-        "last_updated": "2026-02-06T17:26:35.090395",
+        "created_at": "2026-02-06T17:51:03.125240",
+        "last_updated": "2026-02-06T17:51:03.125241",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -657,7 +738,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.090384",
+          "timestamp": "2026-02-06T17:51:03.125222",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -685,8 +766,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.082284",
-          "last_updated": "2026-02-06T17:26:12.082284",
+          "created_at": "2026-02-06T17:26:35.090394",
+          "last_updated": "2026-02-06T17:26:35.090395",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -728,7 +809,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.082274",
+            "timestamp": "2026-02-06T17:26:35.090384",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -736,7 +817,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-3828091055006185910",
             "product_name": "Antigua TR1501LQ Trumpet",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -756,8 +837,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.335904",
-            "last_updated": "2026-02-06T14:01:18.335904",
+            "created_at": "2026-02-06T17:26:12.082284",
+            "last_updated": "2026-02-06T17:26:12.082284",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -799,9 +880,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.335876",
+              "timestamp": "2026-02-06T17:26:12.082274",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -810,24 +891,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/446773-antigua-tr1501lq-trumpet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.335904",
+              "last_updated": "2026-02-06T14:01:18.335904",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.335876",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-3828091055006185910",
+                "product_name": "Antigua TR1501LQ Trumpet",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/446773-antigua-tr1501lq-trumpet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -875,11 +1042,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -925,8 +1091,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.145987",
-    "last_updated": "2026-02-08T23:23:47.145987",
+    "created_at": "2026-02-09T00:45:23.078761",
+    "last_updated": "2026-02-09T00:45:23.078762",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -967,7 +1133,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.145971",
+      "timestamp": "2026-02-09T00:45:23.078750",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -983,9 +1149,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TR2561LQ Trumpet"
       },
       "official_description": null,
       "official_images": [],
@@ -995,8 +1160,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.125370",
-      "last_updated": "2026-02-06T17:51:03.125370",
+      "created_at": "2026-02-08T23:23:47.145987",
+      "last_updated": "2026-02-08T23:23:47.145987",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1026,9 +1191,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TR2561LQ Trumpet"
       },
       "description_short": "",
       "description_long": "",
@@ -1038,7 +1202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.125359",
+        "timestamp": "2026-02-08T23:23:47.145971",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -1066,8 +1230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.090534",
-        "last_updated": "2026-02-06T17:26:35.090534",
+        "created_at": "2026-02-06T17:51:03.125370",
+        "last_updated": "2026-02-06T17:51:03.125370",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1109,7 +1273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.090523",
+          "timestamp": "2026-02-06T17:51:03.125359",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -1137,8 +1301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.082386",
-          "last_updated": "2026-02-06T17:26:12.082386",
+          "created_at": "2026-02-06T17:26:35.090534",
+          "last_updated": "2026-02-06T17:26:35.090534",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1180,7 +1344,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.082380",
+            "timestamp": "2026-02-06T17:26:35.090523",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -1188,7 +1352,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-7833764192435106000",
             "product_name": "Antigua TR2561LQ Trumpet",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1208,8 +1372,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.336249",
-            "last_updated": "2026-02-06T14:01:18.336249",
+            "created_at": "2026-02-06T17:26:12.082386",
+            "last_updated": "2026-02-06T17:26:12.082386",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1251,9 +1415,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.336234",
+              "timestamp": "2026-02-06T17:26:12.082380",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1262,24 +1426,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3055872-antigua-tr2561lq-trumpet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.336249",
+              "last_updated": "2026-02-06T14:01:18.336249",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.336234",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-7833764192435106000",
+                "product_name": "Antigua TR2561LQ Trumpet",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3055872-antigua-tr2561lq-trumpet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1327,11 +1577,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1377,8 +1626,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.146757",
-    "last_updated": "2026-02-08T23:23:47.146757",
+    "created_at": "2026-02-09T00:45:23.079662",
+    "last_updated": "2026-02-09T00:45:23.079662",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1419,7 +1668,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.146747",
+      "timestamp": "2026-02-09T00:45:23.079650",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -1435,9 +1684,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua Vosi WFL2210 Side Flute"
       },
       "official_description": null,
       "official_images": [],
@@ -1447,8 +1695,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.125837",
-      "last_updated": "2026-02-06T17:51:03.125837",
+      "created_at": "2026-02-08T23:23:47.146757",
+      "last_updated": "2026-02-08T23:23:47.146757",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1478,9 +1726,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua Vosi WFL2210 Side Flute"
       },
       "description_short": "",
       "description_long": "",
@@ -1490,7 +1737,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.125822",
+        "timestamp": "2026-02-08T23:23:47.146747",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -1518,8 +1765,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.090913",
-        "last_updated": "2026-02-06T17:26:35.090913",
+        "created_at": "2026-02-06T17:51:03.125837",
+        "last_updated": "2026-02-06T17:51:03.125837",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1561,7 +1808,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.090903",
+          "timestamp": "2026-02-06T17:51:03.125822",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -1589,8 +1836,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.082789",
-          "last_updated": "2026-02-06T17:26:12.082789",
+          "created_at": "2026-02-06T17:26:35.090913",
+          "last_updated": "2026-02-06T17:26:35.090913",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1632,7 +1879,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.082780",
+            "timestamp": "2026-02-06T17:26:35.090903",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -1640,7 +1887,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-5282782680941114185",
             "product_name": "Antigua Vosi WFL2210 Side Flute",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1660,8 +1907,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.336372",
-            "last_updated": "2026-02-06T14:01:18.336372",
+            "created_at": "2026-02-06T17:26:12.082789",
+            "last_updated": "2026-02-06T17:26:12.082789",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1703,9 +1950,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.336361",
+              "timestamp": "2026-02-06T17:26:12.082780",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1714,24 +1961,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/2512130-antigua-vosi-wfl2210-side-flute-\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.336372",
+              "last_updated": "2026-02-06T14:01:18.336372",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.336361",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-5282782680941114185",
+                "product_name": "Antigua Vosi WFL2210 Side Flute",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/2512130-antigua-vosi-wfl2210-side-flute-\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1779,11 +2112,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1829,8 +2161,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.146891",
-    "last_updated": "2026-02-08T23:23:47.146891",
+    "created_at": "2026-02-09T00:45:23.080164",
+    "last_updated": "2026-02-09T00:45:23.080164",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1871,7 +2203,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.146880",
+      "timestamp": "2026-02-09T00:45:23.080127",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -1887,9 +2219,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua X/P TS1203LQ Bb Tenor Saxophone"
       },
       "official_description": null,
       "official_images": [],
@@ -1899,8 +2230,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.126040",
-      "last_updated": "2026-02-06T17:51:03.126040",
+      "created_at": "2026-02-08T23:23:47.146891",
+      "last_updated": "2026-02-08T23:23:47.146891",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1930,9 +2261,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua X/P TS1203LQ Bb Tenor Saxophone"
       },
       "description_short": "",
       "description_long": "",
@@ -1942,7 +2272,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.126031",
+        "timestamp": "2026-02-08T23:23:47.146880",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -1970,8 +2300,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.091001",
-        "last_updated": "2026-02-06T17:26:35.091001",
+        "created_at": "2026-02-06T17:51:03.126040",
+        "last_updated": "2026-02-06T17:51:03.126040",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2013,7 +2343,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.090996",
+          "timestamp": "2026-02-06T17:51:03.126031",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -2041,8 +2371,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.082998",
-          "last_updated": "2026-02-06T17:26:12.082999",
+          "created_at": "2026-02-06T17:26:35.091001",
+          "last_updated": "2026-02-06T17:26:35.091001",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2084,7 +2414,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.082990",
+            "timestamp": "2026-02-06T17:26:35.090996",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -2092,7 +2422,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--1403714344780903280",
             "product_name": "Antigua X/P TS1203LQ Bb Tenor Saxophone",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2112,8 +2442,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.336785",
-            "last_updated": "2026-02-06T14:01:18.336785",
+            "created_at": "2026-02-06T17:26:12.082998",
+            "last_updated": "2026-02-06T17:26:12.082999",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2155,9 +2485,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.336771",
+              "timestamp": "2026-02-06T17:26:12.082990",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2166,24 +2496,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/446753-antigua-x-p-ts1203lq-bb-tenor-saxophone\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.336785",
+              "last_updated": "2026-02-06T14:01:18.336785",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.336771",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--1403714344780903280",
+                "product_name": "Antigua X/P TS1203LQ Bb Tenor Saxophone",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/446753-antigua-x-p-ts1203lq-bb-tenor-saxophone\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2231,11 +2647,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2281,8 +2696,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.147632",
-    "last_updated": "2026-02-08T23:23:47.147633",
+    "created_at": "2026-02-09T00:45:23.080683",
+    "last_updated": "2026-02-09T00:45:23.080684",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2323,7 +2738,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.147614",
+      "timestamp": "2026-02-09T00:45:23.080668",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -2339,9 +2754,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סקספון טנור Antigua TS-2150LQ"
       },
       "official_description": null,
       "official_images": [],
@@ -2351,8 +2765,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.126159",
-      "last_updated": "2026-02-06T17:51:03.126159",
+      "created_at": "2026-02-08T23:23:47.147632",
+      "last_updated": "2026-02-08T23:23:47.147633",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2382,9 +2796,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סקספון טנור Antigua TS-2150LQ"
       },
       "description_short": "",
       "description_long": "",
@@ -2394,7 +2807,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.126149",
+        "timestamp": "2026-02-08T23:23:47.147614",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -2422,8 +2835,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.091081",
-        "last_updated": "2026-02-06T17:26:35.091081",
+        "created_at": "2026-02-06T17:51:03.126159",
+        "last_updated": "2026-02-06T17:51:03.126159",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2465,7 +2878,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.091075",
+          "timestamp": "2026-02-06T17:51:03.126149",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -2493,8 +2906,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.083088",
-          "last_updated": "2026-02-06T17:26:12.083088",
+          "created_at": "2026-02-06T17:26:35.091081",
+          "last_updated": "2026-02-06T17:26:35.091081",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2536,7 +2949,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.083082",
+            "timestamp": "2026-02-06T17:26:35.091075",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -2544,7 +2957,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-7962434428412847160",
             "product_name": "סקספון טנור Antigua TS-2150LQ",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2564,8 +2977,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.336929",
-            "last_updated": "2026-02-06T14:01:18.336929",
+            "created_at": "2026-02-06T17:26:12.083088",
+            "last_updated": "2026-02-06T17:26:12.083088",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2607,9 +3020,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.336918",
+              "timestamp": "2026-02-06T17:26:12.083082",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2618,24 +3031,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3055220-antigua-ts2150lq-tenor-saxophone\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.336929",
+              "last_updated": "2026-02-06T14:01:18.336929",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.336918",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-7962434428412847160",
+                "product_name": "סקספון טנור Antigua TS-2150LQ",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3055220-antigua-ts2150lq-tenor-saxophone\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2683,11 +3182,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2733,8 +3231,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.148098",
-    "last_updated": "2026-02-08T23:23:47.148098",
+    "created_at": "2026-02-09T00:45:23.081844",
+    "last_updated": "2026-02-09T00:45:23.081844",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2775,7 +3273,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.148081",
+      "timestamp": "2026-02-09T00:45:23.081828",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -2791,9 +3289,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua CL1211A XP Clarinet"
       },
       "official_description": null,
       "official_images": [],
@@ -2803,8 +3300,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.126761",
-      "last_updated": "2026-02-06T17:51:03.126761",
+      "created_at": "2026-02-08T23:23:47.148098",
+      "last_updated": "2026-02-08T23:23:47.148098",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2834,9 +3331,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua CL1211A XP Clarinet"
       },
       "description_short": "",
       "description_long": "",
@@ -2846,7 +3342,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.126747",
+        "timestamp": "2026-02-08T23:23:47.148081",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -2874,8 +3370,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.091546",
-        "last_updated": "2026-02-06T17:26:35.091546",
+        "created_at": "2026-02-06T17:51:03.126761",
+        "last_updated": "2026-02-06T17:51:03.126761",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2917,7 +3413,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.091537",
+          "timestamp": "2026-02-06T17:51:03.126747",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -2945,8 +3441,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.083571",
-          "last_updated": "2026-02-06T17:26:12.083571",
+          "created_at": "2026-02-06T17:26:35.091546",
+          "last_updated": "2026-02-06T17:26:35.091546",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2988,7 +3484,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.083562",
+            "timestamp": "2026-02-06T17:26:35.091537",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -2996,7 +3492,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--4686328643893578010",
             "product_name": "Antigua CL1211A XP Clarinet",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3016,8 +3512,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.337045",
-            "last_updated": "2026-02-06T14:01:18.337046",
+            "created_at": "2026-02-06T17:26:12.083571",
+            "last_updated": "2026-02-06T17:26:12.083571",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3059,9 +3555,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.337035",
+              "timestamp": "2026-02-06T17:26:12.083562",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3070,24 +3566,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/458375-antigua-cl1211a-xp-clarinet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.337045",
+              "last_updated": "2026-02-06T14:01:18.337046",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.337035",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--4686328643893578010",
+                "product_name": "Antigua CL1211A XP Clarinet",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/458375-antigua-cl1211a-xp-clarinet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3135,11 +3717,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3185,8 +3766,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.148593",
-    "last_updated": "2026-02-08T23:23:47.148593",
+    "created_at": "2026-02-09T00:45:23.082014",
+    "last_updated": "2026-02-09T00:45:23.082014",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3227,7 +3808,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.148581",
+      "timestamp": "2026-02-09T00:45:23.082002",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -3243,9 +3824,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua Vosi CL2220 Clarinet"
       },
       "official_description": null,
       "official_images": [],
@@ -3255,8 +3835,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.126917",
-      "last_updated": "2026-02-06T17:51:03.126918",
+      "created_at": "2026-02-08T23:23:47.148593",
+      "last_updated": "2026-02-08T23:23:47.148593",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3286,9 +3866,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua Vosi CL2220 Clarinet"
       },
       "description_short": "",
       "description_long": "",
@@ -3298,7 +3877,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.126905",
+        "timestamp": "2026-02-08T23:23:47.148581",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -3326,8 +3905,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.091635",
-        "last_updated": "2026-02-06T17:26:35.091635",
+        "created_at": "2026-02-06T17:51:03.126917",
+        "last_updated": "2026-02-06T17:51:03.126918",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3369,7 +3948,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.091630",
+          "timestamp": "2026-02-06T17:51:03.126905",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -3397,8 +3976,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.083662",
-          "last_updated": "2026-02-06T17:26:12.083662",
+          "created_at": "2026-02-06T17:26:35.091635",
+          "last_updated": "2026-02-06T17:26:35.091635",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3440,7 +4019,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.083656",
+            "timestamp": "2026-02-06T17:26:35.091630",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -3448,7 +4027,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-6303912761307330265",
             "product_name": "Antigua Vosi CL2220 Clarinet",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3468,8 +4047,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.337143",
-            "last_updated": "2026-02-06T14:01:18.337143",
+            "created_at": "2026-02-06T17:26:12.083662",
+            "last_updated": "2026-02-06T17:26:12.083662",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3511,9 +4090,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.337134",
+              "timestamp": "2026-02-06T17:26:12.083656",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3522,24 +4101,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/458376-antigua-vosi-cl2220-clarinet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.337143",
+              "last_updated": "2026-02-06T14:01:18.337143",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.337134",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-6303912761307330265",
+                "product_name": "Antigua Vosi CL2220 Clarinet",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/458376-antigua-vosi-cl2220-clarinet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3587,11 +4252,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3637,8 +4301,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.149630",
-    "last_updated": "2026-02-08T23:23:47.149630",
+    "created_at": "2026-02-09T00:45:23.082174",
+    "last_updated": "2026-02-09T00:45:23.082174",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3679,7 +4343,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.149614",
+      "timestamp": "2026-02-09T00:45:23.082163",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -3695,9 +4359,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua SS6200 Vintage Gold"
       },
       "official_description": null,
       "official_images": [],
@@ -3707,8 +4370,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.127062",
-      "last_updated": "2026-02-06T17:51:03.127062",
+      "created_at": "2026-02-08T23:23:47.149630",
+      "last_updated": "2026-02-08T23:23:47.149630",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3738,9 +4401,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua SS6200 Vintage Gold"
       },
       "description_short": "",
       "description_long": "",
@@ -3750,7 +4412,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.127050",
+        "timestamp": "2026-02-08T23:23:47.149614",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -3778,8 +4440,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.091716",
-        "last_updated": "2026-02-06T17:26:35.091716",
+        "created_at": "2026-02-06T17:51:03.127062",
+        "last_updated": "2026-02-06T17:51:03.127062",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3821,7 +4483,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.091710",
+          "timestamp": "2026-02-06T17:51:03.127050",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -3849,8 +4511,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.083744",
-          "last_updated": "2026-02-06T17:26:12.083744",
+          "created_at": "2026-02-06T17:26:35.091716",
+          "last_updated": "2026-02-06T17:26:35.091716",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3892,7 +4554,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.083739",
+            "timestamp": "2026-02-06T17:26:35.091710",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -3900,7 +4562,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2963202046101106839",
             "product_name": "Antigua SS6200 Vintage Gold",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3920,8 +4582,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.337748",
-            "last_updated": "2026-02-06T14:01:18.337749",
+            "created_at": "2026-02-06T17:26:12.083744",
+            "last_updated": "2026-02-06T17:26:12.083744",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3963,9 +4625,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.337731",
+              "timestamp": "2026-02-06T17:26:12.083739",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3974,24 +4636,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1425299-antigua-ss6200-vintage-gold-soprano-saxophone\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.337748",
+              "last_updated": "2026-02-06T14:01:18.337749",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.337731",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2963202046101106839",
+                "product_name": "Antigua SS6200 Vintage Gold",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1425299-antigua-ss6200-vintage-gold-soprano-saxophone\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4039,11 +4787,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4089,8 +4836,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.149959",
-    "last_updated": "2026-02-08T23:23:47.149959",
+    "created_at": "2026-02-09T00:45:23.082316",
+    "last_updated": "2026-02-09T00:45:23.082317",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4131,7 +4878,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.149944",
+      "timestamp": "2026-02-09T00:45:23.082307",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -4147,9 +4894,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua AS4240LQSH Alto Saxophone"
       },
       "official_description": null,
       "official_images": [],
@@ -4159,8 +4905,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.127187",
-      "last_updated": "2026-02-06T17:51:03.127187",
+      "created_at": "2026-02-08T23:23:47.149959",
+      "last_updated": "2026-02-08T23:23:47.149959",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4190,9 +4936,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua AS4240LQSH Alto Saxophone"
       },
       "description_short": "",
       "description_long": "",
@@ -4202,7 +4947,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.127176",
+        "timestamp": "2026-02-08T23:23:47.149944",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -4230,8 +4975,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.091794",
-        "last_updated": "2026-02-06T17:26:35.091794",
+        "created_at": "2026-02-06T17:51:03.127187",
+        "last_updated": "2026-02-06T17:51:03.127187",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4273,7 +5018,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.091788",
+          "timestamp": "2026-02-06T17:51:03.127176",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -4301,8 +5046,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.083825",
-          "last_updated": "2026-02-06T17:26:12.083825",
+          "created_at": "2026-02-06T17:26:35.091794",
+          "last_updated": "2026-02-06T17:26:35.091794",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4344,7 +5089,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.083819",
+            "timestamp": "2026-02-06T17:26:35.091788",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -4352,7 +5097,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-7801781486762037799",
             "product_name": "Antigua AS4240LQSH Alto Saxophone",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -4372,8 +5117,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.338807",
-            "last_updated": "2026-02-06T14:01:18.338807",
+            "created_at": "2026-02-06T17:26:12.083825",
+            "last_updated": "2026-02-06T17:26:12.083825",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -4415,9 +5160,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.338786",
+              "timestamp": "2026-02-06T17:26:12.083819",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -4426,24 +5171,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3124116-antigua-as4240lqsh-alto-saxophone\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.338807",
+              "last_updated": "2026-02-06T14:01:18.338807",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.338786",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-7801781486762037799",
+                "product_name": "Antigua AS4240LQSH Alto Saxophone",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3124116-antigua-as4240lqsh-alto-saxophone\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4491,11 +5322,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4541,8 +5371,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.150664",
-    "last_updated": "2026-02-08T23:23:47.150664",
+    "created_at": "2026-02-09T00:45:23.083785",
+    "last_updated": "2026-02-09T00:45:23.083786",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4583,7 +5413,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.150649",
+      "timestamp": "2026-02-09T00:45:23.083764",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -4599,9 +5429,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua AS6200 Vintage Gold"
       },
       "official_description": null,
       "official_images": [],
@@ -4611,8 +5440,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.127905",
-      "last_updated": "2026-02-06T17:51:03.127906",
+      "created_at": "2026-02-08T23:23:47.150664",
+      "last_updated": "2026-02-08T23:23:47.150664",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4642,9 +5471,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua AS6200 Vintage Gold"
       },
       "description_short": "",
       "description_long": "",
@@ -4654,7 +5482,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.127889",
+        "timestamp": "2026-02-08T23:23:47.150649",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -4682,8 +5510,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.092389",
-        "last_updated": "2026-02-06T17:26:35.092390",
+        "created_at": "2026-02-06T17:51:03.127905",
+        "last_updated": "2026-02-06T17:51:03.127906",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4725,7 +5553,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.092379",
+          "timestamp": "2026-02-06T17:51:03.127889",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -4753,8 +5581,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.084341",
-          "last_updated": "2026-02-06T17:26:12.084341",
+          "created_at": "2026-02-06T17:26:35.092389",
+          "last_updated": "2026-02-06T17:26:35.092390",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4796,7 +5624,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.084331",
+            "timestamp": "2026-02-06T17:26:35.092379",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -4804,7 +5632,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-4516782231882512871",
             "product_name": "Antigua AS6200 Vintage Gold",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -4824,8 +5652,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.339111",
-            "last_updated": "2026-02-06T14:01:18.339112",
+            "created_at": "2026-02-06T17:26:12.084341",
+            "last_updated": "2026-02-06T17:26:12.084341",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -4867,9 +5695,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.339093",
+              "timestamp": "2026-02-06T17:26:12.084331",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -4878,24 +5706,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1424535-antigua-as6200-vintage-gold\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.339111",
+              "last_updated": "2026-02-06T14:01:18.339112",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.339093",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-4516782231882512871",
+                "product_name": "Antigua AS6200 Vintage Gold",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1424535-antigua-as6200-vintage-gold\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4943,11 +5857,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4993,8 +5906,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.151653",
-    "last_updated": "2026-02-08T23:23:47.151653",
+    "created_at": "2026-02-09T00:45:23.084188",
+    "last_updated": "2026-02-09T00:45:23.084188",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5035,7 +5948,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.151639",
+      "timestamp": "2026-02-09T00:45:23.084175",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -5051,9 +5964,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TB1203LQ Trombone"
       },
       "official_description": null,
       "official_images": [],
@@ -5063,8 +5975,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.128038",
-      "last_updated": "2026-02-06T17:51:03.128038",
+      "created_at": "2026-02-08T23:23:47.151653",
+      "last_updated": "2026-02-08T23:23:47.151653",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5094,9 +6006,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TB1203LQ Trombone"
       },
       "description_short": "",
       "description_long": "",
@@ -5106,7 +6017,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.128027",
+        "timestamp": "2026-02-08T23:23:47.151639",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -5134,8 +6045,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.092502",
-        "last_updated": "2026-02-06T17:26:35.092503",
+        "created_at": "2026-02-06T17:51:03.128038",
+        "last_updated": "2026-02-06T17:51:03.128038",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5177,7 +6088,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.092495",
+          "timestamp": "2026-02-06T17:51:03.128027",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -5205,8 +6116,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.084451",
-          "last_updated": "2026-02-06T17:26:12.084452",
+          "created_at": "2026-02-06T17:26:35.092502",
+          "last_updated": "2026-02-06T17:26:35.092503",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5248,7 +6159,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.084445",
+            "timestamp": "2026-02-06T17:26:35.092495",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -5256,7 +6167,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2400501797559438549",
             "product_name": "Antigua TB1203LQ Trombone",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -5276,8 +6187,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.339254",
-            "last_updated": "2026-02-06T14:01:18.339254",
+            "created_at": "2026-02-06T17:26:12.084451",
+            "last_updated": "2026-02-06T17:26:12.084452",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -5319,9 +6230,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.339242",
+              "timestamp": "2026-02-06T17:26:12.084445",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -5330,24 +6241,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/447900-antigua-tb1203lq-trombone-\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.339254",
+              "last_updated": "2026-02-06T14:01:18.339254",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.339242",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2400501797559438549",
+                "product_name": "Antigua TB1203LQ Trombone",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/447900-antigua-tb1203lq-trombone-\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -5395,11 +6392,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -5445,8 +6441,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.151814",
-    "last_updated": "2026-02-08T23:23:47.151814",
+    "created_at": "2026-02-09T00:45:23.085346",
+    "last_updated": "2026-02-09T00:45:23.085346",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5487,7 +6483,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.151803",
+      "timestamp": "2026-02-09T00:45:23.085330",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -5503,9 +6499,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua EP1120LQ Baritone"
       },
       "official_description": null,
       "official_images": [],
@@ -5515,8 +6510,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.128160",
-      "last_updated": "2026-02-06T17:51:03.128161",
+      "created_at": "2026-02-08T23:23:47.151814",
+      "last_updated": "2026-02-08T23:23:47.151814",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5546,9 +6541,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua EP1120LQ Baritone"
       },
       "description_short": "",
       "description_long": "",
@@ -5558,7 +6552,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.128149",
+        "timestamp": "2026-02-08T23:23:47.151803",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -5586,8 +6580,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.092588",
-        "last_updated": "2026-02-06T17:26:35.092588",
+        "created_at": "2026-02-06T17:51:03.128160",
+        "last_updated": "2026-02-06T17:51:03.128161",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5629,7 +6623,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.092581",
+          "timestamp": "2026-02-06T17:51:03.128149",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -5657,8 +6651,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.084539",
-          "last_updated": "2026-02-06T17:26:12.084539",
+          "created_at": "2026-02-06T17:26:35.092588",
+          "last_updated": "2026-02-06T17:26:35.092588",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5700,7 +6694,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.084533",
+            "timestamp": "2026-02-06T17:26:35.092581",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -5708,7 +6702,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2397571428842916333",
             "product_name": "Antigua EP1120LQ Baritone",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -5728,8 +6722,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.339550",
-            "last_updated": "2026-02-06T14:01:18.339551",
+            "created_at": "2026-02-06T17:26:12.084539",
+            "last_updated": "2026-02-06T17:26:12.084539",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -5771,9 +6765,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.339535",
+              "timestamp": "2026-02-06T17:26:12.084533",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -5782,24 +6776,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/447902-antigua-ep1120lq-baritone\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.339550",
+              "last_updated": "2026-02-06T14:01:18.339551",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.339535",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2397571428842916333",
+                "product_name": "Antigua EP1120LQ Baritone",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/447902-antigua-ep1120lq-baritone\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -5847,463 +6927,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
-        "⚠ Category may not be standard: Other > Uncategorized"
-      ],
-      "price": 0.0,
-      "currency": "ILS",
-      "image_hero": null,
-      "image_thumbnail": null,
-      "image_gallery": [],
-      "image_url": ""
-    },
-    "data_completeness": 0.4210526315789473,
-    "quality_score": 100.0,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Category may not be standard: Other > Uncategorized"
-    ],
-    "price": 0.0,
-    "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
-  },
-  {
-    "halilit_id": "scraped--1510183857483547789",
-    "product_name": "Antigua BB1120LQ Tube",
-    "brand": "antigua",
-    "price_il": 0.0,
-    "price_eilat": 0.0,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "note": "Standardized via Halilit Commercial Source",
-      "extracted_name": "Antigua BB1120LQ Tube"
-    },
-    "official_description": null,
-    "official_images": [],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.151948",
-    "last_updated": "2026-02-08T23:23:47.151948",
-    "taxonomy": {
-      "canonical_category": "Other",
-      "canonical_subcategory": "Uncategorized",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 0,
-      "suggested_tier": null,
-      "price_validity_marker": null,
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "bg-gray-300",
-      "media_assets": []
-    },
-    "specifications": {
-      "note": "Standardized via Halilit Commercial Source",
-      "extracted_name": "Antigua BB1120LQ Tube"
-    },
-    "description_short": "",
-    "description_long": "",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.151938",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from antigua catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "halilit_id": "scraped--1510183857483547789",
-      "product_name": "Antigua BB1120LQ Tube",
-      "brand": "antigua",
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "halilit_url": "https://halilit.com",
-      "sku": null,
-      "model_number": null,
-      "official_name": null,
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": null,
-      "official_images": [],
-      "official_url": null,
-      "reviews": [],
-      "review_synthesis": null,
-      "average_rating": null,
-      "status": "harvested",
-      "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.128299",
-      "last_updated": "2026-02-06T17:51:03.128299",
-      "taxonomy": {
-        "canonical_category": "Other",
-        "canonical_subcategory": "Uncategorized",
-        "brand_taxonomy": null,
-        "alt_categories": [],
-        "keywords": []
-      },
-      "pricing": {
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "price_usd": null,
-        "price_eur": null,
-        "tier": "entry",
-        "eilat_discount_percent": 0,
-        "suggested_tier": null,
-        "price_validity_marker": null,
-        "last_price_change": null,
-        "previous_price_il": null
-      },
-      "display": {
-        "display_role": "entry",
-        "hero_image": null,
-        "thumbnail_image": null,
-        "should_highlight": false,
-        "display_tier_level": 1,
-        "color_hint": "bg-gray-300",
-        "media_assets": []
-      },
-      "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "description_short": "",
-      "description_long": "",
-      "feature_list": [],
-      "sources": [],
-      "primary_source": {
-        "source_name": "Halilit",
-        "source_url": "https://halilit.com",
-        "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.128288",
-        "extraction_method": "web_scraper",
-        "extraction_notes": "Scraped from antigua catalog"
-      },
-      "lineage": {},
-      "raw_snapshot": {
-        "halilit_id": "scraped--1510183857483547789",
-        "product_name": "Antigua BB1120LQ Tube",
-        "brand": "antigua",
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "halilit_url": "https://halilit.com",
-        "sku": null,
-        "model_number": null,
-        "official_name": null,
-        "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "official_description": null,
-        "official_images": [],
-        "official_url": null,
-        "reviews": [],
-        "review_synthesis": null,
-        "average_rating": null,
-        "status": "harvested",
-        "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.092668",
-        "last_updated": "2026-02-06T17:26:35.092669",
-        "taxonomy": {
-          "canonical_category": "Other",
-          "canonical_subcategory": "Uncategorized",
-          "brand_taxonomy": null,
-          "alt_categories": [],
-          "keywords": []
-        },
-        "pricing": {
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "price_usd": null,
-          "price_eur": null,
-          "tier": "entry",
-          "eilat_discount_percent": 0,
-          "suggested_tier": null,
-          "price_validity_marker": null,
-          "last_price_change": null,
-          "previous_price_il": null
-        },
-        "display": {
-          "display_role": "entry",
-          "hero_image": null,
-          "thumbnail_image": null,
-          "should_highlight": false,
-          "display_tier_level": 1,
-          "color_hint": "bg-gray-300",
-          "media_assets": []
-        },
-        "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "description_short": "",
-        "description_long": "",
-        "feature_list": [],
-        "sources": [],
-        "primary_source": {
-          "source_name": "Halilit",
-          "source_url": "https://halilit.com",
-          "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.092663",
-          "extraction_method": "web_scraper",
-          "extraction_notes": "Scraped from antigua catalog"
-        },
-        "lineage": {},
-        "raw_snapshot": {
-          "halilit_id": "scraped--1510183857483547789",
-          "product_name": "Antigua BB1120LQ Tube",
-          "brand": "antigua",
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "halilit_url": "https://halilit.com",
-          "sku": null,
-          "model_number": null,
-          "official_name": null,
-          "official_specs": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "official_description": null,
-          "official_images": [],
-          "official_url": null,
-          "reviews": [],
-          "review_synthesis": null,
-          "average_rating": null,
-          "status": "harvested",
-          "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.084622",
-          "last_updated": "2026-02-06T17:26:12.084623",
-          "taxonomy": {
-            "canonical_category": "Other",
-            "canonical_subcategory": "Uncategorized",
-            "brand_taxonomy": null,
-            "alt_categories": [],
-            "keywords": []
-          },
-          "pricing": {
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "price_usd": null,
-            "price_eur": null,
-            "tier": "entry",
-            "eilat_discount_percent": 0,
-            "suggested_tier": null,
-            "price_validity_marker": null,
-            "last_price_change": null,
-            "previous_price_il": null
-          },
-          "display": {
-            "display_role": "entry",
-            "hero_image": null,
-            "thumbnail_image": null,
-            "should_highlight": false,
-            "display_tier_level": 1,
-            "color_hint": "bg-gray-300",
-            "media_assets": []
-          },
-          "specifications": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "description_short": "",
-          "description_long": "",
-          "feature_list": [],
-          "sources": [],
-          "primary_source": {
-            "source_name": "Halilit",
-            "source_url": "https://halilit.com",
-            "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.084616",
-            "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from antigua catalog"
-          },
-          "lineage": {},
-          "raw_snapshot": {
-            "halilit_id": "scraped--1510183857483547789",
-            "product_name": "Antigua BB1120LQ Tube",
-            "brand": "Antigua",
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "halilit_url": "https://halilit.com",
-            "sku": null,
-            "model_number": null,
-            "official_name": null,
-            "official_specs": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "official_description": null,
-            "official_images": [],
-            "official_url": null,
-            "reviews": [],
-            "review_synthesis": null,
-            "average_rating": null,
-            "status": "harvested",
-            "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.340357",
-            "last_updated": "2026-02-06T14:01:18.340358",
-            "taxonomy": {
-              "canonical_category": "Other",
-              "canonical_subcategory": "Uncategorized",
-              "brand_taxonomy": null,
-              "alt_categories": [],
-              "keywords": []
-            },
-            "pricing": {
-              "price_il": 0.0,
-              "price_eilat": 0.0,
-              "price_usd": null,
-              "price_eur": null,
-              "tier": "entry",
-              "eilat_discount_percent": 0,
-              "suggested_tier": null,
-              "price_validity_marker": null,
-              "last_price_change": null,
-              "previous_price_il": null
-            },
-            "display": {
-              "display_role": "entry",
-              "hero_image": null,
-              "thumbnail_image": null,
-              "should_highlight": false,
-              "display_tier_level": 1,
-              "color_hint": "bg-gray-300",
-              "media_assets": []
-            },
-            "specifications": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "description_short": "",
-            "description_long": "",
-            "feature_list": [],
-            "sources": [],
-            "primary_source": {
-              "source_name": "Halilit",
-              "source_url": "https://halilit.com",
-              "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.340342",
-              "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
-            },
-            "lineage": {},
-            "raw_snapshot": {
-              "halilit_id": "scraped--1510183857483547789",
-              "product_name": "Antigua BB1120LQ Tube",
-              "brand": "Antigua",
-              "price_il": 0.0,
-              "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/447903-antigua-bb1120lq-tube\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
-              "official_specs": {
-                "keys": 88,
-                "action": "Hammer Action",
-                "polyphony": 128
-              },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
-              ],
-              "official_url": "https://brand.com/products/stage-88"
-            },
-            "data_completeness": 0.4210526315789473,
-            "quality_score": 0.4210526315789473,
-            "validation_status": "approved",
-            "validation_errors": [],
-            "validation_warnings": [
-              "⚠ Price is 0 (TBD)",
-              "⚠ Category may not be standard: Other > Uncategorized"
-            ],
-            "price": 0.0,
-            "currency": "ILS",
-            "image_hero": null,
-            "image_thumbnail": null,
-            "image_gallery": [],
-            "image_url": ""
-          },
-          "data_completeness": 0.4210526315789473,
-          "quality_score": 0.4210526315789473,
-          "validation_status": "approved",
-          "validation_errors": [],
-          "validation_warnings": [
-            "⚠ Price is 0 (TBD)",
-            "⚠ Category may not be standard: Other > Uncategorized"
-          ],
-          "price": 0.0,
-          "currency": "ILS",
-          "image_hero": null,
-          "image_thumbnail": null,
-          "image_gallery": [],
-          "image_url": ""
-        },
-        "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
-        "validation_status": "approved",
-        "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)",
-          "⚠ Category may not be standard: Other > Uncategorized"
-        ],
-        "price": 0.0,
-        "currency": "ILS",
-        "image_hero": null,
-        "image_thumbnail": null,
-        "image_gallery": [],
-        "image_url": ""
-      },
-      "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
-      "validation_status": "approved",
-      "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -6349,8 +6976,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.152084",
-    "last_updated": "2026-02-08T23:23:47.152085",
+    "created_at": "2026-02-09T00:45:23.085976",
+    "last_updated": "2026-02-09T00:45:23.085977",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -6391,7 +7018,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.152074",
+      "timestamp": "2026-02-09T00:45:23.085961",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -6407,9 +7034,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua ST-30B Neckstrap"
       },
       "official_description": null,
       "official_images": [],
@@ -6419,8 +7045,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.128438",
-      "last_updated": "2026-02-06T17:51:03.128438",
+      "created_at": "2026-02-08T23:23:47.152084",
+      "last_updated": "2026-02-08T23:23:47.152085",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -6450,9 +7076,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua ST-30B Neckstrap"
       },
       "description_short": "",
       "description_long": "",
@@ -6462,7 +7087,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.128412",
+        "timestamp": "2026-02-08T23:23:47.152074",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -6490,8 +7115,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.092749",
-        "last_updated": "2026-02-06T17:26:35.092749",
+        "created_at": "2026-02-06T17:51:03.128438",
+        "last_updated": "2026-02-06T17:51:03.128438",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6533,7 +7158,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.092743",
+          "timestamp": "2026-02-06T17:51:03.128412",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -6561,8 +7186,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.084703",
-          "last_updated": "2026-02-06T17:26:12.084703",
+          "created_at": "2026-02-06T17:26:35.092749",
+          "last_updated": "2026-02-06T17:26:35.092749",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -6604,7 +7229,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.084698",
+            "timestamp": "2026-02-06T17:26:35.092743",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -6612,7 +7237,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-5697968644347892646",
             "product_name": "Antigua ST-30B Neckstrap",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -6632,8 +7257,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.340643",
-            "last_updated": "2026-02-06T14:01:18.340644",
+            "created_at": "2026-02-06T17:26:12.084703",
+            "last_updated": "2026-02-06T17:26:12.084703",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -6675,9 +7300,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.340630",
+              "timestamp": "2026-02-06T17:26:12.084698",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -6686,24 +7311,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3240406-antigua-winds-st-30b-neckstrap\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.340643",
+              "last_updated": "2026-02-06T14:01:18.340644",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.340630",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-5697968644347892646",
+                "product_name": "Antigua ST-30B Neckstrap",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3240406-antigua-winds-st-30b-neckstrap\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -6751,11 +7462,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -6801,8 +7511,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.152233",
-    "last_updated": "2026-02-08T23:23:47.152233",
+    "created_at": "2026-02-09T00:45:23.086942",
+    "last_updated": "2026-02-09T00:45:23.086943",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -6843,7 +7553,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.152221",
+      "timestamp": "2026-02-09T00:45:23.086926",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -6859,9 +7569,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua CL3233 Clarinet"
       },
       "official_description": null,
       "official_images": [],
@@ -6871,8 +7580,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.129279",
-      "last_updated": "2026-02-06T17:51:03.129279",
+      "created_at": "2026-02-08T23:23:47.152233",
+      "last_updated": "2026-02-08T23:23:47.152233",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -6902,9 +7611,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua CL3233 Clarinet"
       },
       "description_short": "",
       "description_long": "",
@@ -6914,7 +7622,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.129264",
+        "timestamp": "2026-02-08T23:23:47.152221",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -6942,8 +7650,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.093336",
-        "last_updated": "2026-02-06T17:26:35.093336",
+        "created_at": "2026-02-06T17:51:03.129279",
+        "last_updated": "2026-02-06T17:51:03.129279",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6985,7 +7693,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.093326",
+          "timestamp": "2026-02-06T17:51:03.129264",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -7013,8 +7721,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.085365",
-          "last_updated": "2026-02-06T17:26:12.085366",
+          "created_at": "2026-02-06T17:26:35.093336",
+          "last_updated": "2026-02-06T17:26:35.093336",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -7056,7 +7764,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.085356",
+            "timestamp": "2026-02-06T17:26:35.093326",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -7064,7 +7772,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2898697017083831500",
             "product_name": "Antigua CL3233 Clarinet",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -7084,8 +7792,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.341045",
-            "last_updated": "2026-02-06T14:01:18.341046",
+            "created_at": "2026-02-06T17:26:12.085365",
+            "last_updated": "2026-02-06T17:26:12.085366",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -7127,9 +7835,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.341030",
+              "timestamp": "2026-02-06T17:26:12.085356",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -7138,24 +7846,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1425375-antigua-cl3233-clarinet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.341045",
+              "last_updated": "2026-02-06T14:01:18.341046",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.341030",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2898697017083831500",
+                "product_name": "Antigua CL3233 Clarinet",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1425375-antigua-cl3233-clarinet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -7203,11 +7997,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -7253,8 +8046,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.153588",
-    "last_updated": "2026-02-08T23:23:47.153588",
+    "created_at": "2026-02-09T00:45:23.087341",
+    "last_updated": "2026-02-09T00:45:23.087342",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -7295,7 +8088,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.153579",
+      "timestamp": "2026-02-09T00:45:23.087326",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -7311,9 +8104,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TS6200 Vintage Gold"
       },
       "official_description": null,
       "official_images": [],
@@ -7323,8 +8115,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.129405",
-      "last_updated": "2026-02-06T17:51:03.129406",
+      "created_at": "2026-02-08T23:23:47.153588",
+      "last_updated": "2026-02-08T23:23:47.153588",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -7354,9 +8146,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua TS6200 Vintage Gold"
       },
       "description_short": "",
       "description_long": "",
@@ -7366,7 +8157,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.129395",
+        "timestamp": "2026-02-08T23:23:47.153579",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -7394,8 +8185,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.093443",
-        "last_updated": "2026-02-06T17:26:35.093444",
+        "created_at": "2026-02-06T17:51:03.129405",
+        "last_updated": "2026-02-06T17:51:03.129406",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -7437,7 +8228,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.093433",
+          "timestamp": "2026-02-06T17:51:03.129395",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -7465,8 +8256,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.085475",
-          "last_updated": "2026-02-06T17:26:12.085475",
+          "created_at": "2026-02-06T17:26:35.093443",
+          "last_updated": "2026-02-06T17:26:35.093444",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -7508,7 +8299,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.085469",
+            "timestamp": "2026-02-06T17:26:35.093433",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -7516,7 +8307,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--5450082943925485008",
             "product_name": "Antigua TS6200 Vintage Gold",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -7536,8 +8327,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.341359",
-            "last_updated": "2026-02-06T14:01:18.341359",
+            "created_at": "2026-02-06T17:26:12.085475",
+            "last_updated": "2026-02-06T17:26:12.085475",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -7579,9 +8370,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.341344",
+              "timestamp": "2026-02-06T17:26:12.085469",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -7590,24 +8381,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1424622-antigua-ts6200-vintage-gold\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.341359",
+              "last_updated": "2026-02-06T14:01:18.341359",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.341344",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--5450082943925485008",
+                "product_name": "Antigua TS6200 Vintage Gold",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1424622-antigua-ts6200-vintage-gold\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -7655,11 +8532,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -7705,8 +8581,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:23:47.154605",
-    "last_updated": "2026-02-08T23:23:47.154606",
+    "created_at": "2026-02-09T00:45:23.088364",
+    "last_updated": "2026-02-09T00:45:23.088364",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -7747,7 +8623,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:23:47.154590",
+      "timestamp": "2026-02-09T00:45:23.088353",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from antigua catalog"
     },
@@ -7763,9 +8639,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua FL1210 Side Flute"
       },
       "official_description": null,
       "official_images": [],
@@ -7775,8 +8650,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.129561",
-      "last_updated": "2026-02-06T17:51:03.129561",
+      "created_at": "2026-02-08T23:23:47.154605",
+      "last_updated": "2026-02-08T23:23:47.154606",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -7806,9 +8681,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Antigua FL1210 Side Flute"
       },
       "description_short": "",
       "description_long": "",
@@ -7818,7 +8692,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.129550",
+        "timestamp": "2026-02-08T23:23:47.154590",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from antigua catalog"
       },
@@ -7846,8 +8720,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.093529",
-        "last_updated": "2026-02-06T17:26:35.093529",
+        "created_at": "2026-02-06T17:51:03.129561",
+        "last_updated": "2026-02-06T17:51:03.129561",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -7889,7 +8763,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.093523",
+          "timestamp": "2026-02-06T17:51:03.129550",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from antigua catalog"
         },
@@ -7917,8 +8791,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.085562",
-          "last_updated": "2026-02-06T17:26:12.085562",
+          "created_at": "2026-02-06T17:26:35.093529",
+          "last_updated": "2026-02-06T17:26:35.093529",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -7960,7 +8834,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.085556",
+            "timestamp": "2026-02-06T17:26:35.093523",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from antigua catalog"
           },
@@ -7968,7 +8842,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--4483922738026908084",
             "product_name": "Antigua FL1210 Side Flute",
-            "brand": "Antigua",
+            "brand": "antigua",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -7988,8 +8862,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:18.341798",
-            "last_updated": "2026-02-06T14:01:18.341798",
+            "created_at": "2026-02-06T17:26:12.085562",
+            "last_updated": "2026-02-06T17:26:12.085562",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -8031,9 +8905,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:18.341783",
+              "timestamp": "2026-02-06T17:26:12.085556",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Antigua catalog"
+              "extraction_notes": "Scraped from antigua catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -8042,24 +8916,110 @@
               "brand": "Antigua",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/446967-antigua-fl1210-side-flute\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:18.341798",
+              "last_updated": "2026-02-06T14:01:18.341798",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:18.341783",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Antigua catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--4483922738026908084",
+                "product_name": "Antigua FL1210 Side Flute",
+                "brand": "Antigua",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/446967-antigua-fl1210-side-flute\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -8107,11 +9067,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,

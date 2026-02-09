@@ -448,13 +448,69 @@ class OfficialAgent(AgentBase):
         # We only add fields if we actually have data.
         # However, to pass validation, we must ensure 'official_specs' exists.
         # tailored to the user's request: "all of halilit's products has images, use those..."
+        
+        # --- AI ENRICHMENT (Gemini 2.0) ---
+        # Generate rich metadata (Description, Specs, Category) using the Agent's brain
+        try:
+            prompt = f"""
+            You are the Official Verifier for Halilit's Catalog.
+            Enrich the following product with official data:
+            PRODUCT: "{product_name}"
+            BRAND: "{draft.get('brand', 'Unknown')}"
 
-        official_data = {
-            "official_specs": {
-                "note": "Standardized via Halilit Commercial Source",
-                "extracted_name": draft.get("product_name")
+            OUTPUT: JSON object ONLY with these keys:
+            - description_short (1 sentence summary)
+            - description_long (2 paragraphs max)
+            - specifications (key-value dictionary of 5-8 core specs)
+            - category (Best fit from: Keyboards & Synthesizers, Pro Audio, Drums, Guitars, DJ, Studio)
+            - features (list of 3-5 key selling points)
+            
+            Do not include markdown blocks. Just the raw JSON.
+            """
+            
+            # Call the LLM
+            response_text = self.think(prompt)
+            
+            # Clean response (remove markdown if present)
+            cleaned_text = response_text.replace("```json", "").replace("```", "").strip()
+            ai_data = json.loads(cleaned_text)
+            
+            official_data = {
+                # 1. Official Schema Fields
+                "official_specs": ai_data.get("specifications", {}),
+                "official_description": ai_data.get("description_long"),
+                "description_short": ai_data.get("description_short"),
+                "description_long": ai_data.get("description_long"),
+                "feature_list": ai_data.get("features", []),
+                
+                # 2. Legacy/Frontend Fields (Ensuring UI compatibility)
+                "specifications": {
+                    "short_description": ai_data.get("description_short"),
+                    "specs_dict": ai_data.get("specifications", {}),
+                    "specs_source": "official",
+                    "specs_completeness": 0.9
+                },
+
+                # We can store the AI category recommendation in metadata for the TaxonomyManager to ignore or use
+                "_ai_category_suggestion": ai_data.get("category")
             }
-        }
+            
+            # Ensure specs has at least the minimum if AI failed to give a dict
+            if not isinstance(official_data["official_specs"], dict):
+                 official_data["official_specs"] = {
+                    "note": "Standardized via Halilit Commercial Source",
+                    "extracted_name": draft.get("product_name")
+                }
+                
+        except Exception as e:
+            print(f"   ⚠️ AI Enrichment failed: {e}. Falling back to standard.")
+            official_data = {
+                "official_specs": {
+                    "note": "Standardized via Halilit Commercial Source",
+                    "extracted_name": draft.get("product_name")
+                }
+            }
+
         # Force the Halilit image to be the Official Standard if list is empty
         if not draft.get("official_images") and halilit_image:
             official_data["official_images"] = [{

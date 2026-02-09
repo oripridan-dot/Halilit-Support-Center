@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.101675",
-    "last_updated": "2026-02-08T23:25:25.101676",
+    "created_at": "2026-02-09T00:47:03.464880",
+    "last_updated": "2026-02-09T00:47:03.464880",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.101646",
+      "timestamp": "2026-02-09T00:47:03.464857",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "תיק לגיטרה אקוסטית Fzone FGB-121"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.924752",
-      "last_updated": "2026-02-06T17:51:03.924752",
+      "created_at": "2026-02-08T23:25:25.101675",
+      "last_updated": "2026-02-08T23:25:25.101676",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "תיק לגיטרה אקוסטית Fzone FGB-121"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.924731",
+        "timestamp": "2026-02-08T23:25:25.101646",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.503449",
-        "last_updated": "2026-02-06T17:26:35.503449",
+        "created_at": "2026-02-06T17:51:03.924752",
+        "last_updated": "2026-02-06T17:51:03.924752",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.503437",
+          "timestamp": "2026-02-06T17:51:03.924731",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.395016",
-          "last_updated": "2026-02-06T17:26:12.395017",
+          "created_at": "2026-02-06T17:26:35.503449",
+          "last_updated": "2026-02-06T17:26:35.503449",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.395004",
+            "timestamp": "2026-02-06T17:26:35.503437",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--6281205553205906133",
             "product_name": "תיק לגיטרה אקוסטית Fzone FGB-121",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.491050",
-            "last_updated": "2026-02-06T14:02:07.491050",
+            "created_at": "2026-02-06T17:26:12.395016",
+            "last_updated": "2026-02-06T17:26:12.395017",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.491028",
+              "timestamp": "2026-02-06T17:26:12.395004",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7811653-fzone-fgb-121-acoustic-guitar-bag\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.491050",
+              "last_updated": "2026-02-06T14:02:07.491050",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.491028",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--6281205553205906133",
+                "product_name": "תיק לגיטרה אקוסטית Fzone FGB-121",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7811653-fzone-fgb-121-acoustic-guitar-bag\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -423,11 +507,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -473,8 +556,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.104332",
-    "last_updated": "2026-02-08T23:25:25.104333",
+    "created_at": "2026-02-09T00:47:03.465739",
+    "last_updated": "2026-02-09T00:47:03.465739",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -515,7 +598,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.104309",
+      "timestamp": "2026-02-09T00:47:03.465714",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -531,9 +614,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "רצועה לגיטרה Fzone S-32 D'Addario"
       },
       "official_description": null,
       "official_images": [],
@@ -543,8 +625,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.925227",
-      "last_updated": "2026-02-06T17:51:03.925227",
+      "created_at": "2026-02-08T23:25:25.104332",
+      "last_updated": "2026-02-08T23:25:25.104333",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -574,9 +656,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "רצועה לגיטרה Fzone S-32 D'Addario"
       },
       "description_short": "",
       "description_long": "",
@@ -586,7 +667,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.925207",
+        "timestamp": "2026-02-08T23:25:25.104309",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -614,8 +695,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.503814",
-        "last_updated": "2026-02-06T17:26:35.503815",
+        "created_at": "2026-02-06T17:51:03.925227",
+        "last_updated": "2026-02-06T17:51:03.925227",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -657,7 +738,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.503804",
+          "timestamp": "2026-02-06T17:51:03.925207",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -685,8 +766,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.395500",
-          "last_updated": "2026-02-06T17:26:12.395500",
+          "created_at": "2026-02-06T17:26:35.503814",
+          "last_updated": "2026-02-06T17:26:35.503815",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -728,7 +809,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.395488",
+            "timestamp": "2026-02-06T17:26:35.503804",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -736,7 +817,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-9012168924550448878",
             "product_name": "רצועה לגיטרה Fzone S-32 D'Addario",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -756,8 +837,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.491603",
-            "last_updated": "2026-02-06T14:02:07.491603",
+            "created_at": "2026-02-06T17:26:12.395500",
+            "last_updated": "2026-02-06T17:26:12.395500",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -799,9 +880,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.491580",
+              "timestamp": "2026-02-06T17:26:12.395488",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -810,24 +891,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7820431--fzone-s-32-neoprene-guitar-strap-\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.491603",
+              "last_updated": "2026-02-06T14:02:07.491603",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.491580",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-9012168924550448878",
+                "product_name": "רצועה לגיטרה Fzone S-32 D'Addario",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7820431--fzone-s-32-neoprene-guitar-strap-\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -875,463 +1042,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
-        "⚠ Category may not be standard: Other > Uncategorized"
-      ],
-      "price": 0.0,
-      "currency": "ILS",
-      "image_hero": null,
-      "image_thumbnail": null,
-      "image_gallery": [],
-      "image_url": ""
-    },
-    "data_completeness": 0.4210526315789473,
-    "quality_score": 100.0,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Category may not be standard: Other > Uncategorized"
-    ],
-    "price": 0.0,
-    "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
-  },
-  {
-    "halilit_id": "scraped-7245353893007897605",
-    "product_name": "פאנטם Fzone STD8I11N Red",
-    "brand": "fzone",
-    "price_il": 0.0,
-    "price_eilat": 0.0,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "note": "Standardized via Halilit Commercial Source",
-      "extracted_name": "פאנטם Fzone STD8I11N Red"
-    },
-    "official_description": null,
-    "official_images": [],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.116491",
-    "last_updated": "2026-02-08T23:25:25.116491",
-    "taxonomy": {
-      "canonical_category": "Other",
-      "canonical_subcategory": "Uncategorized",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 0,
-      "suggested_tier": null,
-      "price_validity_marker": null,
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "bg-gray-300",
-      "media_assets": []
-    },
-    "specifications": {
-      "note": "Standardized via Halilit Commercial Source",
-      "extracted_name": "פאנטם Fzone STD8I11N Red"
-    },
-    "description_short": "",
-    "description_long": "",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.116477",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from fzone catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "halilit_id": "scraped-7245353893007897605",
-      "product_name": "פאנטם Fzone STD8I11N Red",
-      "brand": "fzone",
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "halilit_url": "https://halilit.com",
-      "sku": null,
-      "model_number": null,
-      "official_name": null,
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": null,
-      "official_images": [],
-      "official_url": null,
-      "reviews": [],
-      "review_synthesis": null,
-      "average_rating": null,
-      "status": "harvested",
-      "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.927105",
-      "last_updated": "2026-02-06T17:51:03.927105",
-      "taxonomy": {
-        "canonical_category": "Other",
-        "canonical_subcategory": "Uncategorized",
-        "brand_taxonomy": null,
-        "alt_categories": [],
-        "keywords": []
-      },
-      "pricing": {
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "price_usd": null,
-        "price_eur": null,
-        "tier": "entry",
-        "eilat_discount_percent": 0,
-        "suggested_tier": null,
-        "price_validity_marker": null,
-        "last_price_change": null,
-        "previous_price_il": null
-      },
-      "display": {
-        "display_role": "entry",
-        "hero_image": null,
-        "thumbnail_image": null,
-        "should_highlight": false,
-        "display_tier_level": 1,
-        "color_hint": "bg-gray-300",
-        "media_assets": []
-      },
-      "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "description_short": "",
-      "description_long": "",
-      "feature_list": [],
-      "sources": [],
-      "primary_source": {
-        "source_name": "Halilit",
-        "source_url": "https://halilit.com",
-        "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.927093",
-        "extraction_method": "web_scraper",
-        "extraction_notes": "Scraped from fzone catalog"
-      },
-      "lineage": {},
-      "raw_snapshot": {
-        "halilit_id": "scraped-7245353893007897605",
-        "product_name": "פאנטם Fzone STD8I11N Red",
-        "brand": "fzone",
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "halilit_url": "https://halilit.com",
-        "sku": null,
-        "model_number": null,
-        "official_name": null,
-        "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "official_description": null,
-        "official_images": [],
-        "official_url": null,
-        "reviews": [],
-        "review_synthesis": null,
-        "average_rating": null,
-        "status": "harvested",
-        "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.505983",
-        "last_updated": "2026-02-06T17:26:35.505983",
-        "taxonomy": {
-          "canonical_category": "Other",
-          "canonical_subcategory": "Uncategorized",
-          "brand_taxonomy": null,
-          "alt_categories": [],
-          "keywords": []
-        },
-        "pricing": {
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "price_usd": null,
-          "price_eur": null,
-          "tier": "entry",
-          "eilat_discount_percent": 0,
-          "suggested_tier": null,
-          "price_validity_marker": null,
-          "last_price_change": null,
-          "previous_price_il": null
-        },
-        "display": {
-          "display_role": "entry",
-          "hero_image": null,
-          "thumbnail_image": null,
-          "should_highlight": false,
-          "display_tier_level": 1,
-          "color_hint": "bg-gray-300",
-          "media_assets": []
-        },
-        "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "description_short": "",
-        "description_long": "",
-        "feature_list": [],
-        "sources": [],
-        "primary_source": {
-          "source_name": "Halilit",
-          "source_url": "https://halilit.com",
-          "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.505973",
-          "extraction_method": "web_scraper",
-          "extraction_notes": "Scraped from fzone catalog"
-        },
-        "lineage": {},
-        "raw_snapshot": {
-          "halilit_id": "scraped-7245353893007897605",
-          "product_name": "פאנטם Fzone STD8I11N Red",
-          "brand": "fzone",
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "halilit_url": "https://halilit.com",
-          "sku": null,
-          "model_number": null,
-          "official_name": null,
-          "official_specs": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "official_description": null,
-          "official_images": [],
-          "official_url": null,
-          "reviews": [],
-          "review_synthesis": null,
-          "average_rating": null,
-          "status": "harvested",
-          "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.396855",
-          "last_updated": "2026-02-06T17:26:12.396855",
-          "taxonomy": {
-            "canonical_category": "Other",
-            "canonical_subcategory": "Uncategorized",
-            "brand_taxonomy": null,
-            "alt_categories": [],
-            "keywords": []
-          },
-          "pricing": {
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "price_usd": null,
-            "price_eur": null,
-            "tier": "entry",
-            "eilat_discount_percent": 0,
-            "suggested_tier": null,
-            "price_validity_marker": null,
-            "last_price_change": null,
-            "previous_price_il": null
-          },
-          "display": {
-            "display_role": "entry",
-            "hero_image": null,
-            "thumbnail_image": null,
-            "should_highlight": false,
-            "display_tier_level": 1,
-            "color_hint": "bg-gray-300",
-            "media_assets": []
-          },
-          "specifications": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "description_short": "",
-          "description_long": "",
-          "feature_list": [],
-          "sources": [],
-          "primary_source": {
-            "source_name": "Halilit",
-            "source_url": "https://halilit.com",
-            "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.396849",
-            "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from fzone catalog"
-          },
-          "lineage": {},
-          "raw_snapshot": {
-            "halilit_id": "scraped-7245353893007897605",
-            "product_name": "פאנטם Fzone STD8I11N Red",
-            "brand": "Fzone",
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "halilit_url": "https://halilit.com",
-            "sku": null,
-            "model_number": null,
-            "official_name": null,
-            "official_specs": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "official_description": null,
-            "official_images": [],
-            "official_url": null,
-            "reviews": [],
-            "review_synthesis": null,
-            "average_rating": null,
-            "status": "harvested",
-            "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.493278",
-            "last_updated": "2026-02-06T14:02:07.493279",
-            "taxonomy": {
-              "canonical_category": "Other",
-              "canonical_subcategory": "Uncategorized",
-              "brand_taxonomy": null,
-              "alt_categories": [],
-              "keywords": []
-            },
-            "pricing": {
-              "price_il": 0.0,
-              "price_eilat": 0.0,
-              "price_usd": null,
-              "price_eur": null,
-              "tier": "entry",
-              "eilat_discount_percent": 0,
-              "suggested_tier": null,
-              "price_validity_marker": null,
-              "last_price_change": null,
-              "previous_price_il": null
-            },
-            "display": {
-              "display_role": "entry",
-              "hero_image": null,
-              "thumbnail_image": null,
-              "should_highlight": false,
-              "display_tier_level": 1,
-              "color_hint": "bg-gray-300",
-              "media_assets": []
-            },
-            "specifications": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "description_short": "",
-            "description_long": "",
-            "feature_list": [],
-            "sources": [],
-            "primary_source": {
-              "source_name": "Halilit",
-              "source_url": "https://halilit.com",
-              "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.493268",
-              "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
-            },
-            "lineage": {},
-            "raw_snapshot": {
-              "halilit_id": "scraped-7245353893007897605",
-              "product_name": "פאנטם Fzone STD8I11N Red",
-              "brand": "Fzone",
-              "price_il": 0.0,
-              "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7820954-fzone-std8i11n-red-steel-tongue-drum\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
-              "official_specs": {
-                "keys": 88,
-                "action": "Hammer Action",
-                "polyphony": 128
-              },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
-              ],
-              "official_url": "https://brand.com/products/stage-88"
-            },
-            "data_completeness": 0.4210526315789473,
-            "quality_score": 0.4210526315789473,
-            "validation_status": "approved",
-            "validation_errors": [],
-            "validation_warnings": [
-              "⚠ Price is 0 (TBD)",
-              "⚠ Category may not be standard: Other > Uncategorized"
-            ],
-            "price": 0.0,
-            "currency": "ILS",
-            "image_hero": null,
-            "image_thumbnail": null,
-            "image_gallery": [],
-            "image_url": ""
-          },
-          "data_completeness": 0.4210526315789473,
-          "quality_score": 0.4210526315789473,
-          "validation_status": "approved",
-          "validation_errors": [],
-          "validation_warnings": [
-            "⚠ Price is 0 (TBD)",
-            "⚠ Category may not be standard: Other > Uncategorized"
-          ],
-          "price": 0.0,
-          "currency": "ILS",
-          "image_hero": null,
-          "image_thumbnail": null,
-          "image_gallery": [],
-          "image_url": ""
-        },
-        "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
-        "validation_status": "approved",
-        "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)",
-          "⚠ Category may not be standard: Other > Uncategorized"
-        ],
-        "price": 0.0,
-        "currency": "ILS",
-        "image_hero": null,
-        "image_thumbnail": null,
-        "image_gallery": [],
-        "image_url": ""
-      },
-      "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
-      "validation_status": "approved",
-      "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1377,8 +1091,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.124750",
-    "last_updated": "2026-02-08T23:25:25.124750",
+    "created_at": "2026-02-09T00:47:03.466706",
+    "last_updated": "2026-02-09T00:47:03.466706",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1419,7 +1133,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.124736",
+      "timestamp": "2026-02-09T00:47:03.466692",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -1435,9 +1149,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "תיק לגיטרה חשמלית Fzone FGB-125"
       },
       "official_description": null,
       "official_images": [],
@@ -1447,8 +1160,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.928956",
-      "last_updated": "2026-02-06T17:51:03.928956",
+      "created_at": "2026-02-08T23:25:25.124750",
+      "last_updated": "2026-02-08T23:25:25.124750",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1478,9 +1191,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "תיק לגיטרה חשמלית Fzone FGB-125"
       },
       "description_short": "",
       "description_long": "",
@@ -1490,7 +1202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.928945",
+        "timestamp": "2026-02-08T23:25:25.124736",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -1518,8 +1230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.507128",
-        "last_updated": "2026-02-06T17:26:35.507128",
+        "created_at": "2026-02-06T17:51:03.928956",
+        "last_updated": "2026-02-06T17:51:03.928956",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1561,7 +1273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.507121",
+          "timestamp": "2026-02-06T17:51:03.928945",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -1589,8 +1301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.397809",
-          "last_updated": "2026-02-06T17:26:12.397809",
+          "created_at": "2026-02-06T17:26:35.507128",
+          "last_updated": "2026-02-06T17:26:35.507128",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1632,7 +1344,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.397803",
+            "timestamp": "2026-02-06T17:26:35.507121",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -1640,7 +1352,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2261902092064837454",
             "product_name": "תיק לגיטרה חשמלית Fzone FGB-125",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1660,8 +1372,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.495126",
-            "last_updated": "2026-02-06T14:02:07.495127",
+            "created_at": "2026-02-06T17:26:12.397809",
+            "last_updated": "2026-02-06T17:26:12.397809",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1703,9 +1415,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.495113",
+              "timestamp": "2026-02-06T17:26:12.397803",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1714,24 +1426,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7819909-fzone-fgb-125-electric-guitar-gig-bag\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.495126",
+              "last_updated": "2026-02-06T14:02:07.495127",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.495113",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2261902092064837454",
+                "product_name": "תיק לגיטרה חשמלית Fzone FGB-125",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7819909-fzone-fgb-125-electric-guitar-gig-bag\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1779,11 +1577,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1829,8 +1626,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.127772",
-    "last_updated": "2026-02-08T23:25:25.127772",
+    "created_at": "2026-02-09T00:47:03.466831",
+    "last_updated": "2026-02-09T00:47:03.466831",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1871,7 +1668,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.127758",
+      "timestamp": "2026-02-09T00:47:03.466821",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -1887,9 +1684,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "תיק ליוקללה Fzone CUB-3"
       },
       "official_description": null,
       "official_images": [],
@@ -1899,8 +1695,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.929077",
-      "last_updated": "2026-02-06T17:51:03.929077",
+      "created_at": "2026-02-08T23:25:25.127772",
+      "last_updated": "2026-02-08T23:25:25.127772",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1930,9 +1726,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "תיק ליוקללה Fzone CUB-3"
       },
       "description_short": "",
       "description_long": "",
@@ -1942,7 +1737,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.929066",
+        "timestamp": "2026-02-08T23:25:25.127758",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -1970,8 +1765,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.507212",
-        "last_updated": "2026-02-06T17:26:35.507212",
+        "created_at": "2026-02-06T17:51:03.929077",
+        "last_updated": "2026-02-06T17:51:03.929077",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2013,7 +1808,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.507206",
+          "timestamp": "2026-02-06T17:51:03.929066",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -2041,8 +1836,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.397890",
-          "last_updated": "2026-02-06T17:26:12.397890",
+          "created_at": "2026-02-06T17:26:35.507212",
+          "last_updated": "2026-02-06T17:26:35.507212",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2084,7 +1879,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.397884",
+            "timestamp": "2026-02-06T17:26:35.507206",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -2092,7 +1887,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2016265234940827099",
             "product_name": "תיק ליוקללה Fzone CUB-3",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2112,8 +1907,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.495430",
-            "last_updated": "2026-02-06T14:02:07.495430",
+            "created_at": "2026-02-06T17:26:12.397890",
+            "last_updated": "2026-02-06T17:26:12.397890",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2155,9 +1950,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.495415",
+              "timestamp": "2026-02-06T17:26:12.397884",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2166,24 +1961,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7813255-fzone-cub-3-ukulele-gig-bag\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.495430",
+              "last_updated": "2026-02-06T14:02:07.495430",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.495415",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2016265234940827099",
+                "product_name": "תיק ליוקללה Fzone CUB-3",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7813255-fzone-cub-3-ukulele-gig-bag\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2231,11 +2112,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2281,8 +2161,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.130051",
-    "last_updated": "2026-02-08T23:25:25.130052",
+    "created_at": "2026-02-09T00:47:03.466946",
+    "last_updated": "2026-02-09T00:47:03.466946",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2323,7 +2203,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.129560",
+      "timestamp": "2026-02-09T00:47:03.466937",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -2339,9 +2219,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZONE FM-310"
       },
       "official_description": null,
       "official_images": [],
@@ -2351,8 +2230,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.929304",
-      "last_updated": "2026-02-06T17:51:03.929305",
+      "created_at": "2026-02-08T23:25:25.130051",
+      "last_updated": "2026-02-08T23:25:25.130052",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2382,9 +2261,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZONE FM-310"
       },
       "description_short": "",
       "description_long": "",
@@ -2394,7 +2272,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.929294",
+        "timestamp": "2026-02-08T23:25:25.129560",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -2422,8 +2300,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.507783",
-        "last_updated": "2026-02-06T17:26:35.507784",
+        "created_at": "2026-02-06T17:51:03.929304",
+        "last_updated": "2026-02-06T17:51:03.929305",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2465,7 +2343,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.507770",
+          "timestamp": "2026-02-06T17:51:03.929294",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -2493,8 +2371,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.398629",
-          "last_updated": "2026-02-06T17:26:12.398629",
+          "created_at": "2026-02-06T17:26:35.507783",
+          "last_updated": "2026-02-06T17:26:35.507784",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2536,7 +2414,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.398622",
+            "timestamp": "2026-02-06T17:26:35.507770",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -2544,7 +2422,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--5453012804711092880",
             "product_name": "FZONE FM-310",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2564,8 +2442,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.495961",
-            "last_updated": "2026-02-06T14:02:07.495962",
+            "created_at": "2026-02-06T17:26:12.398629",
+            "last_updated": "2026-02-06T17:26:12.398629",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2607,9 +2485,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.495948",
+              "timestamp": "2026-02-06T17:26:12.398622",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2618,24 +2496,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4202993-fzone-fm-310\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.495961",
+              "last_updated": "2026-02-06T14:02:07.495962",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.495948",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--5453012804711092880",
+                "product_name": "FZONE FM-310",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4202993-fzone-fm-310\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2683,11 +2647,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2733,8 +2696,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.132097",
-    "last_updated": "2026-02-08T23:25:25.132097",
+    "created_at": "2026-02-09T00:47:03.468072",
+    "last_updated": "2026-02-09T00:47:03.468072",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2775,7 +2738,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.132080",
+      "timestamp": "2026-02-09T00:47:03.468051",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -2791,9 +2754,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZONE S2"
       },
       "official_description": null,
       "official_images": [],
@@ -2803,8 +2765,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.930310",
-      "last_updated": "2026-02-06T17:51:03.930310",
+      "created_at": "2026-02-08T23:25:25.132097",
+      "last_updated": "2026-02-08T23:25:25.132097",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2834,9 +2796,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZONE S2"
       },
       "description_short": "",
       "description_long": "",
@@ -2846,7 +2807,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.930297",
+        "timestamp": "2026-02-08T23:25:25.132080",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -2874,8 +2835,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.507910",
-        "last_updated": "2026-02-06T17:26:35.507910",
+        "created_at": "2026-02-06T17:51:03.930310",
+        "last_updated": "2026-02-06T17:51:03.930310",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2917,7 +2878,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.507903",
+          "timestamp": "2026-02-06T17:51:03.930297",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -2945,8 +2906,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.398714",
-          "last_updated": "2026-02-06T17:26:12.398714",
+          "created_at": "2026-02-06T17:26:35.507910",
+          "last_updated": "2026-02-06T17:26:35.507910",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2988,7 +2949,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.398708",
+            "timestamp": "2026-02-06T17:26:35.507903",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -2996,7 +2957,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-1254264569490719503",
             "product_name": "FZONE S2",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3016,8 +2977,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.496252",
-            "last_updated": "2026-02-06T14:02:07.496252",
+            "created_at": "2026-02-06T17:26:12.398714",
+            "last_updated": "2026-02-06T17:26:12.398714",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3059,9 +3020,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.496238",
+              "timestamp": "2026-02-06T17:26:12.398708",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3070,24 +3031,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4202828-fzone-s-2\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.496252",
+              "last_updated": "2026-02-06T14:02:07.496252",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.496238",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-1254264569490719503",
+                "product_name": "FZONE S2",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4202828-fzone-s-2\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3135,11 +3182,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3185,8 +3231,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.132478",
-    "last_updated": "2026-02-08T23:25:25.132478",
+    "created_at": "2026-02-09T00:47:03.468475",
+    "last_updated": "2026-02-09T00:47:03.468475",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3227,7 +3273,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.132460",
+      "timestamp": "2026-02-09T00:47:03.468460",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -3243,9 +3289,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZone FZP-C351 Pick"
       },
       "official_description": null,
       "official_images": [],
@@ -3255,8 +3300,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.930607",
-      "last_updated": "2026-02-06T17:51:03.930607",
+      "created_at": "2026-02-08T23:25:25.132478",
+      "last_updated": "2026-02-08T23:25:25.132478",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3286,9 +3331,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZone FZP-C351 Pick"
       },
       "description_short": "",
       "description_long": "",
@@ -3298,7 +3342,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.930593",
+        "timestamp": "2026-02-08T23:25:25.132460",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -3326,8 +3370,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.508000",
-        "last_updated": "2026-02-06T17:26:35.508000",
+        "created_at": "2026-02-06T17:51:03.930607",
+        "last_updated": "2026-02-06T17:51:03.930607",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3369,7 +3413,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.507994",
+          "timestamp": "2026-02-06T17:51:03.930593",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -3397,8 +3441,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.398796",
-          "last_updated": "2026-02-06T17:26:12.398796",
+          "created_at": "2026-02-06T17:26:35.508000",
+          "last_updated": "2026-02-06T17:26:35.508000",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3440,7 +3484,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.398790",
+            "timestamp": "2026-02-06T17:26:35.507994",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -3448,7 +3492,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--397232695474732592",
             "product_name": "FZone FZP-C351 Pick",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3468,8 +3512,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.496613",
-            "last_updated": "2026-02-06T14:02:07.496613",
+            "created_at": "2026-02-06T17:26:12.398796",
+            "last_updated": "2026-02-06T17:26:12.398796",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3511,9 +3555,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.496524",
+              "timestamp": "2026-02-06T17:26:12.398790",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3522,24 +3566,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7811671-fzone-fzp-c351-pick\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.496613",
+              "last_updated": "2026-02-06T14:02:07.496613",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.496524",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--397232695474732592",
+                "product_name": "FZone FZP-C351 Pick",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7811671-fzone-fzp-c351-pick\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3587,11 +3717,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3637,8 +3766,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:25.134949",
-    "last_updated": "2026-02-08T23:25:25.134949",
+    "created_at": "2026-02-09T00:47:03.469670",
+    "last_updated": "2026-02-09T00:47:03.469671",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3679,7 +3808,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:25.134932",
+      "timestamp": "2026-02-09T00:47:03.469655",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -3695,9 +3824,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "יוקללה קונצרט מוגברת FZONE FZU-30EQ"
       },
       "official_description": null,
       "official_images": [],
@@ -3707,8 +3835,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.931011",
-      "last_updated": "2026-02-06T17:51:03.931011",
+      "created_at": "2026-02-08T23:25:25.134949",
+      "last_updated": "2026-02-08T23:25:25.134949",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3738,9 +3866,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "יוקללה קונצרט מוגברת FZONE FZU-30EQ"
       },
       "description_short": "",
       "description_long": "",
@@ -3750,7 +3877,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.930999",
+        "timestamp": "2026-02-08T23:25:25.134932",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -3778,8 +3905,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.508085",
-        "last_updated": "2026-02-06T17:26:35.508085",
+        "created_at": "2026-02-06T17:51:03.931011",
+        "last_updated": "2026-02-06T17:51:03.931011",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3821,7 +3948,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.508079",
+          "timestamp": "2026-02-06T17:51:03.930999",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -3849,8 +3976,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.398875",
-          "last_updated": "2026-02-06T17:26:12.398876",
+          "created_at": "2026-02-06T17:26:35.508085",
+          "last_updated": "2026-02-06T17:26:35.508085",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3892,7 +4019,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.398870",
+            "timestamp": "2026-02-06T17:26:35.508079",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -3900,7 +4027,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--7980404735928243497",
             "product_name": "יוקללה קונצרט מוגברת FZONE FZU-30EQ",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3920,8 +4047,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.497020",
-            "last_updated": "2026-02-06T14:02:07.497020",
+            "created_at": "2026-02-06T17:26:12.398875",
+            "last_updated": "2026-02-06T17:26:12.398876",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3963,9 +4090,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.497005",
+              "timestamp": "2026-02-06T17:26:12.398870",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3974,24 +4101,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4242534-fzone-fzu-30eq\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.497020",
+              "last_updated": "2026-02-06T14:02:07.497020",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.497005",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--7980404735928243497",
+                "product_name": "יוקללה קונצרט מוגברת FZONE FZU-30EQ",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4242534-fzone-fzu-30eq\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4039,11 +4252,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4089,8 +4301,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:30.101009",
-    "last_updated": "2026-02-08T23:25:30.101009",
+    "created_at": "2026-02-09T00:47:03.469833",
+    "last_updated": "2026-02-09T00:47:03.469833",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4131,7 +4343,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:30.100985",
+      "timestamp": "2026-02-09T00:47:03.469821",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -4147,9 +4359,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZone FZP-N351 Pick"
       },
       "official_description": null,
       "official_images": [],
@@ -4159,8 +4370,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.936259",
-      "last_updated": "2026-02-06T17:51:03.936260",
+      "created_at": "2026-02-08T23:25:30.101009",
+      "last_updated": "2026-02-08T23:25:30.101009",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4190,9 +4401,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZone FZP-N351 Pick"
       },
       "description_short": "",
       "description_long": "",
@@ -4202,7 +4412,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.936243",
+        "timestamp": "2026-02-08T23:25:30.100985",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -4230,8 +4440,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.511895",
-        "last_updated": "2026-02-06T17:26:35.511895",
+        "created_at": "2026-02-06T17:51:03.936259",
+        "last_updated": "2026-02-06T17:51:03.936260",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4273,7 +4483,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.511883",
+          "timestamp": "2026-02-06T17:51:03.936243",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -4301,8 +4511,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.402491",
-          "last_updated": "2026-02-06T17:26:12.402492",
+          "created_at": "2026-02-06T17:26:35.511895",
+          "last_updated": "2026-02-06T17:26:35.511895",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4344,7 +4554,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.402480",
+            "timestamp": "2026-02-06T17:26:35.511883",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -4352,7 +4562,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--19862047277335037",
             "product_name": "FZone FZP-N351 Pick",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -4372,8 +4582,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.501919",
-            "last_updated": "2026-02-06T14:02:07.501920",
+            "created_at": "2026-02-06T17:26:12.402491",
+            "last_updated": "2026-02-06T17:26:12.402492",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -4415,9 +4625,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.501901",
+              "timestamp": "2026-02-06T17:26:12.402480",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -4426,24 +4636,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7922800-fzone-fzp-n351-pick\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.501919",
+              "last_updated": "2026-02-06T14:02:07.501920",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.501901",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--19862047277335037",
+                "product_name": "FZone FZP-N351 Pick",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7922800-fzone-fzp-n351-pick\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4491,11 +4787,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4541,8 +4836,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:30.101214",
-    "last_updated": "2026-02-08T23:25:30.101215",
+    "created_at": "2026-02-09T00:47:03.471594",
+    "last_updated": "2026-02-09T00:47:03.471594",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4583,7 +4878,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:30.101201",
+      "timestamp": "2026-02-09T00:47:03.471578",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -4599,9 +4894,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "טיונר לגיטרה Fzone MN-5"
       },
       "official_description": null,
       "official_images": [],
@@ -4611,8 +4905,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.936447",
-      "last_updated": "2026-02-06T17:51:03.936448",
+      "created_at": "2026-02-08T23:25:30.101214",
+      "last_updated": "2026-02-08T23:25:30.101215",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4642,9 +4936,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "טיונר לגיטרה Fzone MN-5"
       },
       "description_short": "",
       "description_long": "",
@@ -4654,7 +4947,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.936434",
+        "timestamp": "2026-02-08T23:25:30.101201",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -4682,8 +4975,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.512005",
-        "last_updated": "2026-02-06T17:26:35.512005",
+        "created_at": "2026-02-06T17:51:03.936447",
+        "last_updated": "2026-02-06T17:51:03.936448",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4725,7 +5018,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.511998",
+          "timestamp": "2026-02-06T17:51:03.936434",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -4753,8 +5046,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.402593",
-          "last_updated": "2026-02-06T17:26:12.402593",
+          "created_at": "2026-02-06T17:26:35.512005",
+          "last_updated": "2026-02-06T17:26:35.512005",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4796,7 +5089,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.402586",
+            "timestamp": "2026-02-06T17:26:35.511998",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -4804,7 +5097,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-311022523472956471",
             "product_name": "טיונר לגיטרה Fzone MN-5",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -4824,8 +5117,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.502175",
-            "last_updated": "2026-02-06T14:02:07.502175",
+            "created_at": "2026-02-06T17:26:12.402593",
+            "last_updated": "2026-02-06T17:26:12.402593",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -4867,9 +5160,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.502164",
+              "timestamp": "2026-02-06T17:26:12.402586",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -4878,24 +5171,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7922804-fzone-mn-5-mini-tuner\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.502175",
+              "last_updated": "2026-02-06T14:02:07.502175",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.502164",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-311022523472956471",
+                "product_name": "טיונר לגיטרה Fzone MN-5",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7922804-fzone-mn-5-mini-tuner\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4943,11 +5322,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4993,8 +5371,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:30.101343",
-    "last_updated": "2026-02-08T23:25:30.101343",
+    "created_at": "2026-02-09T00:47:03.471734",
+    "last_updated": "2026-02-09T00:47:03.471735",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5035,7 +5413,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:30.101332",
+      "timestamp": "2026-02-09T00:47:03.471723",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -5051,9 +5429,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "טיונר לגיטרה Fzone MN-6"
       },
       "official_description": null,
       "official_images": [],
@@ -5063,8 +5440,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.936774",
-      "last_updated": "2026-02-06T17:51:03.936774",
+      "created_at": "2026-02-08T23:25:30.101343",
+      "last_updated": "2026-02-08T23:25:30.101343",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5094,9 +5471,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "טיונר לגיטרה Fzone MN-6"
       },
       "description_short": "",
       "description_long": "",
@@ -5106,7 +5482,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.936764",
+        "timestamp": "2026-02-08T23:25:30.101332",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -5134,8 +5510,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.512094",
-        "last_updated": "2026-02-06T17:26:35.512094",
+        "created_at": "2026-02-06T17:51:03.936774",
+        "last_updated": "2026-02-06T17:51:03.936774",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5177,7 +5553,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.512088",
+          "timestamp": "2026-02-06T17:51:03.936764",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -5205,8 +5581,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.402679",
-          "last_updated": "2026-02-06T17:26:12.402679",
+          "created_at": "2026-02-06T17:26:35.512094",
+          "last_updated": "2026-02-06T17:26:35.512094",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5248,7 +5624,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.402673",
+            "timestamp": "2026-02-06T17:26:35.512088",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -5256,7 +5632,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--3349123919795589595",
             "product_name": "טיונר לגיטרה Fzone MN-6",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -5276,8 +5652,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.502489",
-            "last_updated": "2026-02-06T14:02:07.502489",
+            "created_at": "2026-02-06T17:26:12.402679",
+            "last_updated": "2026-02-06T17:26:12.402679",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -5319,9 +5695,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.502467",
+              "timestamp": "2026-02-06T17:26:12.402673",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -5330,24 +5706,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7922826-fzone-mn-6-mini-tuner\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.502489",
+              "last_updated": "2026-02-06T14:02:07.502489",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.502467",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--3349123919795589595",
+                "product_name": "טיונר לגיטרה Fzone MN-6",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7922826-fzone-mn-6-mini-tuner\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -5395,11 +5857,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -5445,8 +5906,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:30.101476",
-    "last_updated": "2026-02-08T23:25:30.101476",
+    "created_at": "2026-02-09T00:47:03.471857",
+    "last_updated": "2026-02-09T00:47:03.471857",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5487,7 +5948,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:30.101454",
+      "timestamp": "2026-02-09T00:47:03.471847",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -5503,9 +5964,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZONE S3"
       },
       "official_description": null,
       "official_images": [],
@@ -5515,8 +5975,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.937156",
-      "last_updated": "2026-02-06T17:51:03.937156",
+      "created_at": "2026-02-08T23:25:30.101476",
+      "last_updated": "2026-02-08T23:25:30.101476",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5546,9 +6006,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "FZONE S3"
       },
       "description_short": "",
       "description_long": "",
@@ -5558,7 +6017,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.937141",
+        "timestamp": "2026-02-08T23:25:30.101454",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -5586,8 +6045,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.512179",
-        "last_updated": "2026-02-06T17:26:35.512179",
+        "created_at": "2026-02-06T17:51:03.937156",
+        "last_updated": "2026-02-06T17:51:03.937156",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5629,7 +6088,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.512172",
+          "timestamp": "2026-02-06T17:51:03.937141",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -5657,8 +6116,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.402763",
-          "last_updated": "2026-02-06T17:26:12.402763",
+          "created_at": "2026-02-06T17:26:35.512179",
+          "last_updated": "2026-02-06T17:26:35.512179",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5700,7 +6159,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.402757",
+            "timestamp": "2026-02-06T17:26:35.512172",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -5708,7 +6167,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2729718787992554233",
             "product_name": "FZONE S3",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -5728,8 +6187,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.502761",
-            "last_updated": "2026-02-06T14:02:07.502761",
+            "created_at": "2026-02-06T17:26:12.402763",
+            "last_updated": "2026-02-06T17:26:12.402763",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -5771,9 +6230,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.502745",
+              "timestamp": "2026-02-06T17:26:12.402757",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -5782,24 +6241,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3233932-fzone-s-3\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.502761",
+              "last_updated": "2026-02-06T14:02:07.502761",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.502745",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2729718787992554233",
+                "product_name": "FZONE S3",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3233932-fzone-s-3\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -5847,11 +6392,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -5897,8 +6441,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:30.101591",
-    "last_updated": "2026-02-08T23:25:30.101592",
+    "created_at": "2026-02-09T00:47:03.471975",
+    "last_updated": "2026-02-09T00:47:03.471975",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5939,7 +6483,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:30.101581",
+      "timestamp": "2026-02-09T00:47:03.471965",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fzone catalog"
     },
@@ -5955,9 +6499,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "כיסוי גומי לפתח התהודה Fzone SC-100"
       },
       "official_description": null,
       "official_images": [],
@@ -5967,8 +6510,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.937317",
-      "last_updated": "2026-02-06T17:51:03.937318",
+      "created_at": "2026-02-08T23:25:30.101591",
+      "last_updated": "2026-02-08T23:25:30.101592",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5998,9 +6541,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "כיסוי גומי לפתח התהודה Fzone SC-100"
       },
       "description_short": "",
       "description_long": "",
@@ -6010,7 +6552,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.937305",
+        "timestamp": "2026-02-08T23:25:30.101581",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fzone catalog"
       },
@@ -6038,8 +6580,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.512261",
-        "last_updated": "2026-02-06T17:26:35.512261",
+        "created_at": "2026-02-06T17:51:03.937317",
+        "last_updated": "2026-02-06T17:51:03.937318",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6081,7 +6623,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.512255",
+          "timestamp": "2026-02-06T17:51:03.937305",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fzone catalog"
         },
@@ -6109,8 +6651,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.402845",
-          "last_updated": "2026-02-06T17:26:12.402845",
+          "created_at": "2026-02-06T17:26:35.512261",
+          "last_updated": "2026-02-06T17:26:35.512261",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -6152,7 +6694,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.402839",
+            "timestamp": "2026-02-06T17:26:35.512255",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fzone catalog"
           },
@@ -6160,7 +6702,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-7433185448092270668",
             "product_name": "כיסוי גומי לפתח התהודה Fzone SC-100",
-            "brand": "Fzone",
+            "brand": "fzone",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -6180,8 +6722,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:02:07.502914",
-            "last_updated": "2026-02-06T14:02:07.502914",
+            "created_at": "2026-02-06T17:26:12.402845",
+            "last_updated": "2026-02-06T17:26:12.402845",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -6223,9 +6765,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:02:07.502902",
+              "timestamp": "2026-02-06T17:26:12.402839",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fzone catalog"
+              "extraction_notes": "Scraped from fzone catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -6234,24 +6776,110 @@
               "brand": "Fzone",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7811726-fzone-sc-100\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:02:07.502914",
+              "last_updated": "2026-02-06T14:02:07.502914",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:02:07.502902",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Fzone catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-7433185448092270668",
+                "product_name": "כיסוי גומי לפתח התהודה Fzone SC-100",
+                "brand": "Fzone",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7811726-fzone-sc-100\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -6299,11 +6927,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,

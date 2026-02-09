@@ -44,7 +44,71 @@
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
         "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
         "source": "official"
       },
       {
@@ -78,8 +142,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:33.129200",
-    "last_updated": "2026-02-08T23:24:33.129201",
+    "created_at": "2026-02-09T00:46:02.796787",
+    "last_updated": "2026-02-09T00:46:02.796788",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -150,7 +214,71 @@
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
           "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
           "source": "official"
         },
         {
@@ -191,7 +319,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:33.129176",
+      "timestamp": "2026-02-09T00:46:02.796756",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from clavia catalog"
     },
@@ -207,17 +335,32 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Clavia Grand Stage 88"
       },
-      "official_description": "The ultimate stage piano for professionals.",
+      "official_description": null,
       "official_images": [
         {
           "url": "https://brand.com/hero.jpg",
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
           "priority": 80,
           "source": "official"
         },
@@ -236,6 +379,22 @@
           "display_purpose": "gallery",
           "priority": 50,
           "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
         }
       ],
       "official_url": null,
@@ -244,11 +403,11 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-07T07:58:29.400066",
-      "last_updated": "2026-02-07T07:58:29.400067",
+      "created_at": "2026-02-08T23:24:33.129200",
+      "last_updated": "2026-02-08T23:24:33.129201",
       "taxonomy": {
-        "canonical_category": "Keyboards & Synthesizers",
-        "canonical_subcategory": "Digital Piano",
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
         "brand_taxonomy": null,
         "alt_categories": [],
         "keywords": []
@@ -280,13 +439,105 @@
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
-          "priority": 100,
+          "priority": 80,
           "source": "official"
         },
         "should_highlight": false,
         "display_tier_level": 5,
         "color_hint": "bg-green-400",
         "media_assets": [
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 100,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          }
+        ]
+      },
+      "specifications": {
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Clavia Grand Stage 88"
+      },
+      "description_short": "The ultimate stage piano for professionals.",
+      "description_long": "",
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T23:24:33.129176",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from clavia catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "123456",
+        "product_name": "Clavia Grand Stage 88",
+        "brand": "clavia",
+        "price_il": 18500.0,
+        "price_eilat": 15811.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
           {
             "url": "https://brand.com/hero.jpg",
             "alt": null,
@@ -311,51 +562,6 @@
             "priority": 50,
             "source": "official"
           }
-        ]
-      },
-      "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "description_short": "The ultimate stage piano for professionals.",
-      "description_long": "The ultimate stage piano for professionals.",
-      "feature_list": [],
-      "sources": [],
-      "primary_source": {
-        "source_name": "Halilit",
-        "source_url": "https://halilit.com",
-        "confidence": "commercial",
-        "timestamp": "2026-02-07T07:58:29.400055",
-        "extraction_method": "web_scraper",
-        "extraction_notes": "Scraped from clavia catalog"
-      },
-      "lineage": {},
-      "raw_snapshot": {
-        "halilit_id": "123456",
-        "product_name": "Clavia Grand Stage 88",
-        "brand": "clavia",
-        "price_il": 18500.0,
-        "price_eilat": 15811.0,
-        "halilit_url": "https://halilit.com",
-        "sku": null,
-        "model_number": null,
-        "official_name": null,
-        "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "official_description": "The ultimate stage piano for professionals.",
-        "official_images": [
-          {
-            "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
-            "type": "image",
-            "display_purpose": "hero",
-            "priority": 0,
-            "source": "official"
-          }
         ],
         "official_url": null,
         "reviews": [],
@@ -363,8 +569,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-07T07:03:24.870821",
-        "last_updated": "2026-02-07T07:03:24.870822",
+        "created_at": "2026-02-07T07:58:29.400066",
+        "last_updated": "2026-02-07T07:58:29.400067",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Digital Piano",
@@ -388,18 +594,18 @@
           "display_role": "specialist",
           "hero_image": {
             "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
+            "alt": null,
             "type": "image",
             "display_purpose": "hero",
-            "priority": 0,
+            "priority": 80,
             "source": "official"
           },
           "thumbnail_image": {
             "url": "https://brand.com/hero.jpg",
-            "alt": "Product image",
+            "alt": null,
             "type": "image",
             "display_purpose": "hero",
-            "priority": 0,
+            "priority": 100,
             "source": "official"
           },
           "should_highlight": false,
@@ -408,10 +614,26 @@
           "media_assets": [
             {
               "url": "https://brand.com/hero.jpg",
-              "alt": "Product image",
+              "alt": null,
               "type": "image",
               "display_purpose": "hero",
-              "priority": 0,
+              "priority": 80,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 100,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 50,
               "source": "official"
             }
           ]
@@ -429,7 +651,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-07T07:03:24.870791",
+          "timestamp": "2026-02-07T07:58:29.400055",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from clavia catalog"
         },
@@ -449,19 +671,28 @@
             "action": "Hammer Action",
             "polyphony": 128
           },
-          "official_description": null,
-          "official_images": [],
+          "official_description": "The ultimate stage piano for professionals.",
+          "official_images": [
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": "Product image",
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 0,
+              "source": "official"
+            }
+          ],
           "official_url": null,
           "reviews": [],
           "review_synthesis": null,
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:51:03.456906",
-          "last_updated": "2026-02-06T17:51:03.456906",
+          "created_at": "2026-02-07T07:03:24.870821",
+          "last_updated": "2026-02-07T07:03:24.870822",
           "taxonomy": {
-            "canonical_category": "Other",
-            "canonical_subcategory": "Uncategorized",
+            "canonical_category": "Keyboards & Synthesizers",
+            "canonical_subcategory": "Digital Piano",
             "brand_taxonomy": null,
             "alt_categories": [],
             "keywords": []
@@ -480,27 +711,50 @@
           },
           "display": {
             "display_role": "specialist",
-            "hero_image": null,
-            "thumbnail_image": null,
+            "hero_image": {
+              "url": "https://brand.com/hero.jpg",
+              "alt": "Product image",
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 0,
+              "source": "official"
+            },
+            "thumbnail_image": {
+              "url": "https://brand.com/hero.jpg",
+              "alt": "Product image",
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 0,
+              "source": "official"
+            },
             "should_highlight": false,
             "display_tier_level": 5,
             "color_hint": "bg-green-400",
-            "media_assets": []
+            "media_assets": [
+              {
+                "url": "https://brand.com/hero.jpg",
+                "alt": "Product image",
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 0,
+                "source": "official"
+              }
+            ]
           },
           "specifications": {
             "keys": 88,
             "action": "Hammer Action",
             "polyphony": 128
           },
-          "description_short": "",
-          "description_long": "",
+          "description_short": "The ultimate stage piano for professionals.",
+          "description_long": "The ultimate stage piano for professionals.",
           "feature_list": [],
           "sources": [],
           "primary_source": {
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:51:03.456885",
+            "timestamp": "2026-02-07T07:03:24.870791",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from clavia catalog"
           },
@@ -528,8 +782,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T17:26:35.242829",
-            "last_updated": "2026-02-06T17:26:35.242830",
+            "created_at": "2026-02-06T17:51:03.456906",
+            "last_updated": "2026-02-06T17:51:03.456906",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -571,7 +825,7 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T17:26:35.242813",
+              "timestamp": "2026-02-06T17:51:03.456885",
               "extraction_method": "web_scraper",
               "extraction_notes": "Scraped from clavia catalog"
             },
@@ -599,8 +853,8 @@
               "average_rating": null,
               "status": "harvested",
               "pipeline_phase": "harvest",
-              "created_at": "2026-02-06T17:26:12.231016",
-              "last_updated": "2026-02-06T17:26:12.231017",
+              "created_at": "2026-02-06T17:26:35.242829",
+              "last_updated": "2026-02-06T17:26:35.242830",
               "taxonomy": {
                 "canonical_category": "Other",
                 "canonical_subcategory": "Uncategorized",
@@ -642,7 +896,7 @@
                 "source_name": "Halilit",
                 "source_url": "https://halilit.com",
                 "confidence": "commercial",
-                "timestamp": "2026-02-06T17:26:12.231004",
+                "timestamp": "2026-02-06T17:26:35.242813",
                 "extraction_method": "web_scraper",
                 "extraction_notes": "Scraped from clavia catalog"
               },
@@ -650,7 +904,7 @@
               "raw_snapshot": {
                 "halilit_id": "123456",
                 "product_name": "Clavia Grand Stage 88",
-                "brand": "Clavia",
+                "brand": "clavia",
                 "price_il": 18500.0,
                 "price_eilat": 15811.0,
                 "halilit_url": "https://halilit.com",
@@ -670,8 +924,8 @@
                 "average_rating": null,
                 "status": "harvested",
                 "pipeline_phase": "harvest",
-                "created_at": "2026-02-06T13:56:46.419595",
-                "last_updated": "2026-02-06T13:56:46.419595",
+                "created_at": "2026-02-06T17:26:12.231016",
+                "last_updated": "2026-02-06T17:26:12.231017",
                 "taxonomy": {
                   "canonical_category": "Other",
                   "canonical_subcategory": "Uncategorized",
@@ -713,9 +967,9 @@
                   "source_name": "Halilit",
                   "source_url": "https://halilit.com",
                   "confidence": "commercial",
-                  "timestamp": "2026-02-06T13:56:46.419573",
+                  "timestamp": "2026-02-06T17:26:12.231004",
                   "extraction_method": "web_scraper",
-                  "extraction_notes": "Scraped from Clavia catalog"
+                  "extraction_notes": "Scraped from clavia catalog"
                 },
                 "lineage": {},
                 "raw_snapshot": {
@@ -724,24 +978,109 @@
                   "brand": "Clavia",
                   "price_il": 18500.0,
                   "price_eilat": 15811.0,
-                  "halilit_url": "https://halilit.com/brands/Clavia/stage-88",
-                  "pipeline_phase": "enrich",
-                  "status": "harvested",
+                  "halilit_url": "https://halilit.com",
+                  "sku": null,
+                  "model_number": null,
+                  "official_name": null,
                   "official_specs": {
                     "keys": 88,
                     "action": "Hammer Action",
                     "polyphony": 128
                   },
-                  "official_description": "The ultimate stage piano for professionals.",
-                  "official_images": [
-                    {
-                      "type": "image",
-                      "url": "https://brand.com/hero.jpg",
-                      "display_purpose": "hero",
-                      "source": "official"
-                    }
+                  "official_description": null,
+                  "official_images": [],
+                  "official_url": null,
+                  "reviews": [],
+                  "review_synthesis": null,
+                  "average_rating": null,
+                  "status": "harvested",
+                  "pipeline_phase": "harvest",
+                  "created_at": "2026-02-06T13:56:46.419595",
+                  "last_updated": "2026-02-06T13:56:46.419595",
+                  "taxonomy": {
+                    "canonical_category": "Other",
+                    "canonical_subcategory": "Uncategorized",
+                    "brand_taxonomy": null,
+                    "alt_categories": [],
+                    "keywords": []
+                  },
+                  "pricing": {
+                    "price_il": 18500.0,
+                    "price_eilat": 15811.0,
+                    "price_usd": null,
+                    "price_eur": null,
+                    "tier": "flagship",
+                    "eilat_discount_percent": 14.535135135135135,
+                    "suggested_tier": "flagship",
+                    "price_validity_marker": "current",
+                    "last_price_change": null,
+                    "previous_price_il": null
+                  },
+                  "display": {
+                    "display_role": "specialist",
+                    "hero_image": null,
+                    "thumbnail_image": null,
+                    "should_highlight": false,
+                    "display_tier_level": 5,
+                    "color_hint": "bg-green-400",
+                    "media_assets": []
+                  },
+                  "specifications": {
+                    "keys": 88,
+                    "action": "Hammer Action",
+                    "polyphony": 128
+                  },
+                  "description_short": "",
+                  "description_long": "",
+                  "feature_list": [],
+                  "sources": [],
+                  "primary_source": {
+                    "source_name": "Halilit",
+                    "source_url": "https://halilit.com",
+                    "confidence": "commercial",
+                    "timestamp": "2026-02-06T13:56:46.419573",
+                    "extraction_method": "web_scraper",
+                    "extraction_notes": "Scraped from Clavia catalog"
+                  },
+                  "lineage": {},
+                  "raw_snapshot": {
+                    "halilit_id": "123456",
+                    "product_name": "Clavia Grand Stage 88",
+                    "brand": "Clavia",
+                    "price_il": 18500.0,
+                    "price_eilat": 15811.0,
+                    "halilit_url": "https://halilit.com/brands/Clavia/stage-88",
+                    "pipeline_phase": "enrich",
+                    "status": "harvested",
+                    "official_specs": {
+                      "keys": 88,
+                      "action": "Hammer Action",
+                      "polyphony": 128
+                    },
+                    "official_description": "The ultimate stage piano for professionals.",
+                    "official_images": [
+                      {
+                        "type": "image",
+                        "url": "https://brand.com/hero.jpg",
+                        "display_purpose": "hero",
+                        "source": "official"
+                      }
+                    ],
+                    "official_url": "https://brand.com/products/stage-88"
+                  },
+                  "data_completeness": 0.6315789473684209,
+                  "quality_score": 0.6315789473684209,
+                  "validation_status": "approved",
+                  "validation_errors": [],
+                  "validation_warnings": [
+                    "⚠ Category may not be standard: Other > Uncategorized"
                   ],
-                  "official_url": "https://brand.com/products/stage-88"
+                  "price": 18500.0,
+                  "currency": "ILS",
+                  "image_hero": null,
+                  "image_thumbnail": null,
+                  "image_gallery": [],
+                  "image_url": ""
                 },
                 "data_completeness": 0.6315789473684209,
                 "quality_score": 0.6315789473684209,
@@ -786,7 +1125,7 @@
             "image_url": ""
           },
           "data_completeness": 0.6315789473684209,
-          "quality_score": 0.6315789473684209,
+          "quality_score": 100.0,
           "validation_status": "approved",
           "validation_errors": [],
           "validation_warnings": [
@@ -794,43 +1133,80 @@
           ],
           "price": 18500.0,
           "currency": "ILS",
-          "image_hero": null,
-          "image_thumbnail": null,
-          "image_gallery": [],
-          "image_url": ""
-        },
-        "data_completeness": 0.6315789473684209,
-        "quality_score": 100.0,
-        "validation_status": "approved",
-        "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Category may not be standard: Other > Uncategorized"
-        ],
-        "price": 18500.0,
-        "currency": "ILS",
-        "image_hero": {
-          "url": "https://brand.com/hero.jpg",
-          "alt": "Product image",
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 0,
-          "source": "official"
-        },
-        "image_thumbnail": {
-          "url": "https://brand.com/hero.jpg",
-          "alt": "Product image",
-          "type": "image",
-          "display_purpose": "hero",
-          "priority": 0,
-          "source": "official"
-        },
-        "image_gallery": [
-          {
+          "image_hero": {
             "url": "https://brand.com/hero.jpg",
             "alt": "Product image",
             "type": "image",
             "display_purpose": "hero",
             "priority": 0,
+            "source": "official"
+          },
+          "image_thumbnail": {
+            "url": "https://brand.com/hero.jpg",
+            "alt": "Product image",
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 0,
+            "source": "official"
+          },
+          "image_gallery": [
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": "Product image",
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 0,
+              "source": "official"
+            }
+          ],
+          "image_url": "https://brand.com/hero.jpg"
+        },
+        "data_completeness": 0.6842105263157894,
+        "quality_score": 100.0,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [],
+        "price": 18500.0,
+        "currency": "ILS",
+        "image_hero": {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        "image_thumbnail": {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 100,
+          "source": "official"
+        },
+        "image_gallery": [
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 100,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
             "source": "official"
           }
         ],
@@ -856,7 +1232,7 @@
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
-        "priority": 100,
+        "priority": 80,
         "source": "official"
       },
       "image_gallery": [
@@ -873,7 +1249,39 @@
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 80,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
           "priority": 100,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
+          "source": "official"
+        },
+        {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "gallery",
+          "priority": 50,
           "source": "official"
         },
         {
@@ -940,7 +1348,71 @@
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 80,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "hero",
         "priority": 100,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
+        "source": "official"
+      },
+      {
+        "url": "https://brand.com/hero.jpg",
+        "alt": null,
+        "type": "image",
+        "display_purpose": "gallery",
+        "priority": 50,
         "source": "official"
       },
       {

@@ -26,6 +26,7 @@ from backend.ingestion.orchestrator import IngestionOrchestrator
 from backend.unified_agent_orchestrator_v73 import CommercialAgent
 from backend.unified_quality_gates_v73 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
 from backend.ingestion.visual_validator import visual_validator
+from backend.ingestion.match_learning import MatchLearningSystem
 import sys
 import os
 import argparse
@@ -59,6 +60,23 @@ class ConductorCLI:
         self.version_manager = get_version_manager()
         self.data_dir = Path("/workspaces/Halilit-Support-Center/backend/data")
         self.frontend_dir = Path("/workspaces/Halilit-Support-Center/frontend")
+        self.config_dir = Path("/workspaces/Halilit-Support-Center/backend/config")
+        
+        # Initialize Learning System
+        self.match_learner = MatchLearningSystem(self.data_dir)
+        
+        # Load Brand Tiers
+        self.brand_tiers = self._load_tiers()
+
+    def _load_tiers(self) -> Dict[str, List[str]]:
+        try:
+            tier_file = self.config_dir / "brand_tiers.json"
+            if tier_file.exists():
+                with open(tier_file) as f:
+                    return json.load(f)
+        except Exception as e:
+            logger.warning(f"Failed to load brand tiers: {e}")
+        return {}
 
     def get_all_brands(self) -> List[str]:
         """Get all available brands from public/data/."""
@@ -72,17 +90,25 @@ class ConductorCLI:
                 brands.append(f.stem)
         return sorted(brands)
 
-    def ingest_brand(self, brand: Optional[str]) -> bool:
+    def ingest_brand(self, brand: Optional[str], tier: Optional[str] = None, force: bool = False) -> bool:
         """
         Run ingestion pipeline for a brand.
-        If brand is None, ingest all brands.
+        If brand is None, ingest all brands (filtered by tier if provided).
         """
         if brand:
             brands = [brand]
         else:
-            logger.info(
-                "No brand specified, using Trinity to detect brands...")
-            brands = self._detect_brands_from_sources()
+            if tier:
+                tier_key = f"tier_{tier}"
+                brands = self.brand_tiers.get(tier_key, [])
+                logger.info(f"🎯 Ingesting Tier {tier}: {len(brands)} brands")
+                if not brands:
+                   logger.warning(f"No brands found for Tier {tier}")
+                   return False
+            else:
+                logger.info(
+                    "No brand specified, using Trinity to detect brands...")
+                brands = self._detect_brands_from_sources()
 
         if not brands:
             logger.warning("No brands to ingest")
@@ -97,7 +123,7 @@ class ConductorCLI:
                 logger.info(f"\n📦 Ingesting: {b}")
 
                 # Load raw data from appropriate source
-                raw_products = self._load_brand_source_data(b)
+                raw_products = self._load_brand_source_data(b, force=force)
                 if not raw_products:
                     logger.warning(f"⚠️  No data found for {b}")
                     continue
@@ -109,7 +135,7 @@ class ConductorCLI:
                     if 'candidates' in p and isinstance(p['candidates'], list) and p['candidates']:
                         logger.info(
                             f"🔎 Running Visual Validator for {p.get('product_name')}")
-                        match = process_candidates(p, p['candidates'])
+                        match = process_candidates(p, p['candidates'], self.match_learner)
                         if match:
                             p['verified_match'] = match
                             validated_products.append(p)
@@ -241,15 +267,53 @@ class ConductorCLI:
                 logger.error(f"❌ Sync failed for {b}: {e}")
 
         logger.info(f"✅ Sync complete: {success_count}/{len(brands)} brands")
+
+        # Rebuild global artifacts (Search Index, Shards)
+        if success_count > 0:
+            self._rebuild_global_artifacts(engine)
+
         return success_count > 0
 
-    def full_build(self, brand: Optional[str]) -> bool:
+    def _rebuild_global_artifacts(self, engine: Any) -> bool:
+        """Rebuild global frontend artifacts (Search Index, Categories)."""
+        logger.info("\n🌍 Rebuilding Global Artifacts (Index & Shards)...")
+        try:
+            # 1. Load ALL valid frontend data
+            all_products = []
+            frontend_brands = self.get_all_brands()
+            
+            for b in frontend_brands:
+                data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
+                if data_file.exists():
+                     try:
+                        with open(data_file) as f:
+                            data = json.load(f)
+                            if isinstance(data, list):
+                                all_products.extend(data)
+                     except Exception as e:
+                         logger.warning(f"Skipping {b} in artifacts build: {e}")
+
+            # 2. Generate artifacts
+            if all_products:
+                engine.generate_smart_artifacts(all_products)
+                logger.info(f"✅ Global build complete ({len(all_products)} products indexed)")
+                return True
+            else:
+                logger.warning("⚠️  No products found for global build")
+                return False
+
+        except Exception as e:
+            logger.error(f"❌ Global build failed: {e}")
+            return False
+
+
+    def full_build(self, brand: Optional[str] = None, tier: Optional[int] = None, force: bool = False) -> bool:
         """Run full build: ingest + sync."""
         logger.info("🏗️  FULL BUILD: ingest + sync")
         logger.info("=" * 60)
 
         # Phase 1: Ingest
-        ingest_success = self.ingest_brand(brand)
+        ingest_success = self.ingest_brand(brand, tier=tier, force=force)
         if not ingest_success:
             logger.error("❌ Ingestion failed")
             return False
@@ -444,55 +508,60 @@ class ConductorCLI:
         ])
         return True
 
-    def _load_brand_source_data(self, brand: str) -> List[Dict[str, Any]]:
+    def _load_brand_source_data(self, brand: str, force: bool = False) -> List[Dict[str, Any]]:
         """Load raw product data for a brand."""
-        # Try exact match first
-        data_file = self.frontend_dir / "public" / "data" / f"{brand}.json"
-        if data_file.exists():
-            try:
-                with open(data_file) as f:
-                    data = json.load(f)
-                    # Data can be either a list (processed) or dict with "products" key
-                    if isinstance(data, list):
-                        return data
-                    elif isinstance(data, dict):
-                        return data.get("products", [])
-            except Exception as e:
-                logger.warning(f"Failed to load {data_file}: {e}")
+        if not force:
+            # Try exact match first
+            data_file = self.frontend_dir / "public" / "data" / f"{brand}.json"
+            if data_file.exists():
+                try:
+                    with open(data_file) as f:
+                        data = json.load(f)
+                        # Data can be either a list (processed) or dict with "products" key
+                        if isinstance(data, list):
+                            return data
+                        elif isinstance(data, dict):
+                            return data.get("products", [])
+                except Exception as e:
+                    logger.warning(f"Failed to load {data_file}: {e}")
 
-        # Try lowercase match
-        data_file = self.frontend_dir / "public" / \
-            "data" / f"{brand.lower()}.json"
-        if data_file.exists():
-            try:
-                with open(data_file) as f:
-                    data = json.load(f)
-                    if isinstance(data, list):
-                        return data
-                    elif isinstance(data, dict):
-                        return data.get("products", [])
-            except Exception as e:
-                logger.warning(f"Failed to load {data_file}: {e}")
+            # Try lowercase match
+            data_file = self.frontend_dir / "public" / \
+                "data" / f"{brand.lower()}.json"
+            if data_file.exists():
+                try:
+                    with open(data_file) as f:
+                        data = json.load(f)
+                        if isinstance(data, list):
+                            return data
+                        elif isinstance(data, dict):
+                            return data.get("products", [])
+                except Exception as e:
+                    logger.warning(f"Failed to load {data_file}: {e}")
 
-        # Fallback to backend data
-        ingestion_file = self.data_dir / "ingestion" / "products" / brand / "raw_*.json"
-        try:
-            import glob
-            files = glob.glob(str(ingestion_file))
-            if files:
-                with open(files[0]) as f:
-                    data = json.load(f)
-                    if isinstance(data, list):
-                        return data
-                    elif isinstance(data, dict):
-                        return data.get("products", [])
-        except Exception as e:
-            logger.warning(f"Failed to load ingestion data: {e}")
+            # Fallback to backend data
+            ingestion_file = self.data_dir / "ingestion" / "products" / brand / "raw_*.json"
+            try:
+                import glob
+                files = glob.glob(str(ingestion_file))
+                if files:
+                    with open(files[0]) as f:
+                        data = json.load(f)
+                        if isinstance(data, list):
+                            return data
+                        elif isinstance(data, dict):
+                            return data.get("products", [])
+            except Exception as e:
+                logger.warning(f"Failed to load ingestion data: {e}")
 
         # Last resort: Fresh Scrape via CommercialScout
-        logger.info(
-            f"   🔎 No local data found for {brand}. Launching CommercialScout...")
+        if force:
+             logger.info(f"   ⚡ FORCE ENABLED: Skipping local files. Launching CommercialScout for {brand}...")
+        else:
+            logger.info(
+                f"   🔎 No local data found for {brand}. Launching CommercialScout...")
         try:
+            # Use CommercialAgent (Scout) directly - already imported from unified_agent_orchestrator
             scout = CommercialAgent()
             raw_data = scout.harvest(brand)
             logger.info(
@@ -505,8 +574,8 @@ class ConductorCLI:
                 return raw_data
 
         except Exception as e:
-            logger.error(f"   ❌ Scout failed: {e}")
-
+             logger.error(f"   ❌ Scout failed: {e}")
+             
         return []
 
     def _detect_brands_from_sources(self) -> List[str]:
@@ -533,10 +602,25 @@ class ConductorCLI:
         return sorted(list(brands))
 
 
-def process_candidates(halilit_product: Dict[str, Any], thomann_candidates: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+def process_candidates(
+    halilit_product: Dict[str, Any], 
+    thomann_candidates: List[Dict[str, Any]],
+    match_learner: Optional[MatchLearningSystem] = None
+) -> Optional[Dict[str, Any]]:
     """
     Filters a list of potential matches using AI Visual Verification.
+    Uses MatchLearningSystem to skip expensive AI checks if match is already known.
     """
+    
+    # 0. Check cache first
+    # Use name as ID primarily as it's the stable identifier in this pipeline iteration
+    product_id = halilit_product.get('name') or halilit_product.get('id')
+    if match_learner and product_id:
+        cached = match_learner.get_match(str(product_id))
+        if cached:
+            print(f"      🧠 Using LEARNED MATCH for {halilit_product.get('name')} (Conf: {cached.get('confidence', 0)*100:.1f}%)")
+            return cached.get('candidate')
+
     best_match = None
     highest_confidence = 0.0
 
@@ -576,6 +660,14 @@ def process_candidates(halilit_product: Dict[str, Any], thomann_candidates: List
             print(
                 f"   ❌ REJECTED: {candidate.get('name', 'Unknown')} - {verification.reason}")
 
+    # Register the best successful match
+    if best_match and match_learner and product_id:
+        match_learner.register_match(
+            str(product_id), 
+            best_match, 
+            highest_confidence
+        )
+
     return best_match
 
 
@@ -609,6 +701,10 @@ Examples:
         "ingest", help="Run ingestion pipeline")
     ingest_parser.add_argument(
         "brand", nargs="?", help="Brand name (optional, ingest all if not specified)")
+    ingest_parser.add_argument(
+        "--tier", type=int, choices=[1, 2, 3], help="Ingest only brands in specific tier")
+    ingest_parser.add_argument(
+        "--force", action="store_true", help="Force fresh scrape (ignore local data)")
 
     # test command
     test_parser = subparsers.add_parser("test", help="Test ingestion")
@@ -624,6 +720,10 @@ Examples:
         "build", help="Full build (ingest + sync)")
     build_parser.add_argument(
         "brand", nargs="?", help="Brand name (optional, build all if not specified)")
+    build_parser.add_argument(
+        "--tier", type=int, choices=[1, 2, 3], help="Build only brands in specific tier")
+    build_parser.add_argument(
+        "--force", action="store_true", help="Force fresh scrape (ignore local data)")
 
     # dev command
     dev_parser = subparsers.add_parser("dev", help="Start dev environment")
@@ -663,13 +763,15 @@ Examples:
 
     try:
         if args.command == "ingest":
-            success = conductor.ingest_brand(args.brand)
+            success = conductor.ingest_brand(
+                args.brand, tier=args.tier, force=args.force)
         elif args.command == "test":
             success = conductor.test_brand(args.brand)
         elif args.command == "sync":
             success = conductor.sync_to_frontend(args.brand)
         elif args.command == "build":
-            success = conductor.full_build(args.brand)
+            success = conductor.full_build(
+                args.brand, tier=args.tier, force=args.force)
         elif args.command == "dev":
             success = conductor.start_dev_server()
         elif args.command == "server":

@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:14.657869",
-    "last_updated": "2026-02-08T23:25:14.657869",
+    "created_at": "2026-02-09T00:59:04.676207",
+    "last_updated": "2026-02-09T00:59:04.676208",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:14.657851",
+      "timestamp": "2026-02-09T00:59:04.676183",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fender catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.863666",
-      "last_updated": "2026-02-06T17:51:03.863667",
+      "created_at": "2026-02-09T00:46:48.960015",
+      "last_updated": "2026-02-09T00:46:48.960016",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Audio Interface",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.863638",
+        "timestamp": "2026-02-09T00:46:48.959987",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fender catalog"
       },
@@ -150,9 +148,8 @@
         "model_number": null,
         "official_name": null,
         "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
+          "note": "Standardized via Halilit Commercial Source",
+          "extracted_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio"
         },
         "official_description": null,
         "official_images": [],
@@ -162,8 +159,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.464064",
-        "last_updated": "2026-02-06T17:26:35.464064",
+        "created_at": "2026-02-08T23:25:14.657869",
+        "last_updated": "2026-02-08T23:25:14.657869",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Audio Interface",
@@ -193,9 +190,8 @@
           "media_assets": []
         },
         "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
+          "note": "Standardized via Halilit Commercial Source",
+          "extracted_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio"
         },
         "description_short": "",
         "description_long": "",
@@ -205,7 +201,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.464040",
+          "timestamp": "2026-02-08T23:25:14.657851",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fender catalog"
         },
@@ -233,8 +229,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.365237",
-          "last_updated": "2026-02-06T17:26:12.365237",
+          "created_at": "2026-02-06T17:51:03.863666",
+          "last_updated": "2026-02-06T17:51:03.863667",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Audio Interface",
@@ -276,7 +272,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.365225",
+            "timestamp": "2026-02-06T17:51:03.863638",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fender catalog"
           },
@@ -284,7 +280,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-634131018282658653",
             "product_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio",
-            "brand": "Fender",
+            "brand": "fender",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +300,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T13:57:00.013847",
-            "last_updated": "2026-02-06T13:57:00.013847",
+            "created_at": "2026-02-06T17:26:35.464064",
+            "last_updated": "2026-02-06T17:26:35.464064",
             "taxonomy": {
               "canonical_category": "Audio Interfaces & Mixers",
               "canonical_subcategory": "Audio Interface",
@@ -347,35 +343,205 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T13:57:00.013811",
+              "timestamp": "2026-02-06T17:26:35.464040",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fender catalog"
+              "extraction_notes": "Scraped from fender catalog"
             },
             "lineage": {},
             "raw_snapshot": {
               "halilit_id": "scraped-634131018282658653",
               "product_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio",
-              "brand": "Fender",
+              "brand": "fender",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/8776065-fender-quantum-hd-2-usb-c-audio-interface\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T17:26:12.365237",
+              "last_updated": "2026-02-06T17:26:12.365237",
+              "taxonomy": {
+                "canonical_category": "Audio Interfaces & Mixers",
+                "canonical_subcategory": "Audio Interface",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T17:26:12.365225",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from fender catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-634131018282658653",
+                "product_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio",
+                "brand": "Fender",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://halilit.com",
+                "sku": null,
+                "model_number": null,
+                "official_name": null,
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": null,
+                "official_images": [],
+                "official_url": null,
+                "reviews": [],
+                "review_synthesis": null,
+                "average_rating": null,
+                "status": "harvested",
+                "pipeline_phase": "harvest",
+                "created_at": "2026-02-06T13:57:00.013847",
+                "last_updated": "2026-02-06T13:57:00.013847",
+                "taxonomy": {
+                  "canonical_category": "Audio Interfaces & Mixers",
+                  "canonical_subcategory": "Audio Interface",
+                  "brand_taxonomy": null,
+                  "alt_categories": [],
+                  "keywords": []
+                },
+                "pricing": {
+                  "price_il": 0.0,
+                  "price_eilat": 0.0,
+                  "price_usd": null,
+                  "price_eur": null,
+                  "tier": "entry",
+                  "eilat_discount_percent": 0,
+                  "suggested_tier": null,
+                  "price_validity_marker": null,
+                  "last_price_change": null,
+                  "previous_price_il": null
+                },
+                "display": {
+                  "display_role": "entry",
+                  "hero_image": null,
+                  "thumbnail_image": null,
+                  "should_highlight": false,
+                  "display_tier_level": 1,
+                  "color_hint": "bg-gray-300",
+                  "media_assets": []
+                },
+                "specifications": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "description_short": "",
+                "description_long": "",
+                "feature_list": [],
+                "sources": [],
+                "primary_source": {
+                  "source_name": "Halilit",
+                  "source_url": "https://halilit.com",
+                  "confidence": "commercial",
+                  "timestamp": "2026-02-06T13:57:00.013811",
+                  "extraction_method": "web_scraper",
+                  "extraction_notes": "Scraped from Fender catalog"
+                },
+                "lineage": {},
+                "raw_snapshot": {
+                  "halilit_id": "scraped-634131018282658653",
+                  "product_name": "Fender Quantum HD 2 USB-C Audio Interface Fender Studio",
+                  "brand": "Fender",
+                  "price_il": 0.0,
+                  "price_eilat": 0.0,
+                  "halilit_url": "https://www.halilit.com  /items/8776065-fender-quantum-hd-2-usb-c-audio-interface\n",
+                  "pipeline_phase": "enrich",
+                  "status": "harvested",
+                  "official_specs": {
+                    "keys": 88,
+                    "action": "Hammer Action",
+                    "polyphony": 128
+                  },
+                  "official_description": "The ultimate stage piano for professionals.",
+                  "official_images": [
+                    {
+                      "type": "image",
+                      "url": "https://brand.com/hero.jpg",
+                      "display_purpose": "hero",
+                      "source": "official"
+                    }
+                  ],
+                  "official_url": "https://brand.com/products/stage-88"
+                },
+                "data_completeness": 0.4210526315789473,
+                "quality_score": 0.4210526315789473,
+                "validation_status": "approved",
+                "validation_errors": [],
+                "validation_warnings": [
+                  "⚠ Price is 0 (TBD)"
+                ],
+                "price": 0.0,
+                "currency": "ILS",
+                "image_hero": null,
+                "image_thumbnail": null,
+                "image_gallery": [],
+                "image_url": ""
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -406,12 +572,10 @@
           "image_url": ""
         },
         "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
+        "quality_score": 100.0,
         "validation_status": "approved",
         "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)"
-        ],
+        "validation_warnings": [],
         "price": 0.0,
         "currency": "ILS",
         "image_hero": null,
@@ -420,12 +584,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -438,458 +600,6 @@
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [],
-    "price": 0.0,
-    "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
-  },
-  {
-    "halilit_id": "scraped--4224716834315432274",
-    "product_name": "Fender Quantum Complete Bundle Fender Studio",
-    "brand": "fender",
-    "price_il": 0.0,
-    "price_eilat": 0.0,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "note": "Standardized via Halilit Commercial Source",
-      "extracted_name": "Fender Quantum Complete Bundle Fender Studio"
-    },
-    "official_description": null,
-    "official_images": [],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:14.658746",
-    "last_updated": "2026-02-08T23:25:14.658746",
-    "taxonomy": {
-      "canonical_category": "Other",
-      "canonical_subcategory": "Uncategorized",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 0,
-      "suggested_tier": null,
-      "price_validity_marker": null,
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "bg-gray-300",
-      "media_assets": []
-    },
-    "specifications": {
-      "note": "Standardized via Halilit Commercial Source",
-      "extracted_name": "Fender Quantum Complete Bundle Fender Studio"
-    },
-    "description_short": "",
-    "description_long": "",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:14.658731",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from fender catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "halilit_id": "scraped--4224716834315432274",
-      "product_name": "Fender Quantum Complete Bundle Fender Studio",
-      "brand": "fender",
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "halilit_url": "https://halilit.com",
-      "sku": null,
-      "model_number": null,
-      "official_name": null,
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": null,
-      "official_images": [],
-      "official_url": null,
-      "reviews": [],
-      "review_synthesis": null,
-      "average_rating": null,
-      "status": "harvested",
-      "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.864160",
-      "last_updated": "2026-02-06T17:51:03.864161",
-      "taxonomy": {
-        "canonical_category": "Other",
-        "canonical_subcategory": "Uncategorized",
-        "brand_taxonomy": null,
-        "alt_categories": [],
-        "keywords": []
-      },
-      "pricing": {
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "price_usd": null,
-        "price_eur": null,
-        "tier": "entry",
-        "eilat_discount_percent": 0,
-        "suggested_tier": null,
-        "price_validity_marker": null,
-        "last_price_change": null,
-        "previous_price_il": null
-      },
-      "display": {
-        "display_role": "entry",
-        "hero_image": null,
-        "thumbnail_image": null,
-        "should_highlight": false,
-        "display_tier_level": 1,
-        "color_hint": "bg-gray-300",
-        "media_assets": []
-      },
-      "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "description_short": "",
-      "description_long": "",
-      "feature_list": [],
-      "sources": [],
-      "primary_source": {
-        "source_name": "Halilit",
-        "source_url": "https://halilit.com",
-        "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.864142",
-        "extraction_method": "web_scraper",
-        "extraction_notes": "Scraped from fender catalog"
-      },
-      "lineage": {},
-      "raw_snapshot": {
-        "halilit_id": "scraped--4224716834315432274",
-        "product_name": "Fender Quantum Complete Bundle Fender Studio",
-        "brand": "fender",
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "halilit_url": "https://halilit.com",
-        "sku": null,
-        "model_number": null,
-        "official_name": null,
-        "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "official_description": null,
-        "official_images": [],
-        "official_url": null,
-        "reviews": [],
-        "review_synthesis": null,
-        "average_rating": null,
-        "status": "harvested",
-        "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.465340",
-        "last_updated": "2026-02-06T17:26:35.465341",
-        "taxonomy": {
-          "canonical_category": "Other",
-          "canonical_subcategory": "Uncategorized",
-          "brand_taxonomy": null,
-          "alt_categories": [],
-          "keywords": []
-        },
-        "pricing": {
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "price_usd": null,
-          "price_eur": null,
-          "tier": "entry",
-          "eilat_discount_percent": 0,
-          "suggested_tier": null,
-          "price_validity_marker": null,
-          "last_price_change": null,
-          "previous_price_il": null
-        },
-        "display": {
-          "display_role": "entry",
-          "hero_image": null,
-          "thumbnail_image": null,
-          "should_highlight": false,
-          "display_tier_level": 1,
-          "color_hint": "bg-gray-300",
-          "media_assets": []
-        },
-        "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "description_short": "",
-        "description_long": "",
-        "feature_list": [],
-        "sources": [],
-        "primary_source": {
-          "source_name": "Halilit",
-          "source_url": "https://halilit.com",
-          "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.465320",
-          "extraction_method": "web_scraper",
-          "extraction_notes": "Scraped from fender catalog"
-        },
-        "lineage": {},
-        "raw_snapshot": {
-          "halilit_id": "scraped--4224716834315432274",
-          "product_name": "Fender Quantum Complete Bundle Fender Studio",
-          "brand": "fender",
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "halilit_url": "https://halilit.com",
-          "sku": null,
-          "model_number": null,
-          "official_name": null,
-          "official_specs": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "official_description": null,
-          "official_images": [],
-          "official_url": null,
-          "reviews": [],
-          "review_synthesis": null,
-          "average_rating": null,
-          "status": "harvested",
-          "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.365626",
-          "last_updated": "2026-02-06T17:26:12.365627",
-          "taxonomy": {
-            "canonical_category": "Other",
-            "canonical_subcategory": "Uncategorized",
-            "brand_taxonomy": null,
-            "alt_categories": [],
-            "keywords": []
-          },
-          "pricing": {
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "price_usd": null,
-            "price_eur": null,
-            "tier": "entry",
-            "eilat_discount_percent": 0,
-            "suggested_tier": null,
-            "price_validity_marker": null,
-            "last_price_change": null,
-            "previous_price_il": null
-          },
-          "display": {
-            "display_role": "entry",
-            "hero_image": null,
-            "thumbnail_image": null,
-            "should_highlight": false,
-            "display_tier_level": 1,
-            "color_hint": "bg-gray-300",
-            "media_assets": []
-          },
-          "specifications": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "description_short": "",
-          "description_long": "",
-          "feature_list": [],
-          "sources": [],
-          "primary_source": {
-            "source_name": "Halilit",
-            "source_url": "https://halilit.com",
-            "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.365614",
-            "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from fender catalog"
-          },
-          "lineage": {},
-          "raw_snapshot": {
-            "halilit_id": "scraped--4224716834315432274",
-            "product_name": "Fender Quantum Complete Bundle Fender Studio",
-            "brand": "Fender",
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "halilit_url": "https://halilit.com",
-            "sku": null,
-            "model_number": null,
-            "official_name": null,
-            "official_specs": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "official_description": null,
-            "official_images": [],
-            "official_url": null,
-            "reviews": [],
-            "review_synthesis": null,
-            "average_rating": null,
-            "status": "harvested",
-            "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T13:57:00.014450",
-            "last_updated": "2026-02-06T13:57:00.014450",
-            "taxonomy": {
-              "canonical_category": "Other",
-              "canonical_subcategory": "Uncategorized",
-              "brand_taxonomy": null,
-              "alt_categories": [],
-              "keywords": []
-            },
-            "pricing": {
-              "price_il": 0.0,
-              "price_eilat": 0.0,
-              "price_usd": null,
-              "price_eur": null,
-              "tier": "entry",
-              "eilat_discount_percent": 0,
-              "suggested_tier": null,
-              "price_validity_marker": null,
-              "last_price_change": null,
-              "previous_price_il": null
-            },
-            "display": {
-              "display_role": "entry",
-              "hero_image": null,
-              "thumbnail_image": null,
-              "should_highlight": false,
-              "display_tier_level": 1,
-              "color_hint": "bg-gray-300",
-              "media_assets": []
-            },
-            "specifications": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "description_short": "",
-            "description_long": "",
-            "feature_list": [],
-            "sources": [],
-            "primary_source": {
-              "source_name": "Halilit",
-              "source_url": "https://halilit.com",
-              "confidence": "commercial",
-              "timestamp": "2026-02-06T13:57:00.014430",
-              "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fender catalog"
-            },
-            "lineage": {},
-            "raw_snapshot": {
-              "halilit_id": "scraped--4224716834315432274",
-              "product_name": "Fender Quantum Complete Bundle Fender Studio",
-              "brand": "Fender",
-              "price_il": 0.0,
-              "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/8779524-fender-quantum-complete-bundle\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
-              "official_specs": {
-                "keys": 88,
-                "action": "Hammer Action",
-                "polyphony": 128
-              },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
-              ],
-              "official_url": "https://brand.com/products/stage-88"
-            },
-            "data_completeness": 0.4210526315789473,
-            "quality_score": 0.4210526315789473,
-            "validation_status": "approved",
-            "validation_errors": [],
-            "validation_warnings": [
-              "⚠ Price is 0 (TBD)",
-              "⚠ Category may not be standard: Other > Uncategorized"
-            ],
-            "price": 0.0,
-            "currency": "ILS",
-            "image_hero": null,
-            "image_thumbnail": null,
-            "image_gallery": [],
-            "image_url": ""
-          },
-          "data_completeness": 0.4210526315789473,
-          "quality_score": 0.4210526315789473,
-          "validation_status": "approved",
-          "validation_errors": [],
-          "validation_warnings": [
-            "⚠ Price is 0 (TBD)",
-            "⚠ Category may not be standard: Other > Uncategorized"
-          ],
-          "price": 0.0,
-          "currency": "ILS",
-          "image_hero": null,
-          "image_thumbnail": null,
-          "image_gallery": [],
-          "image_url": ""
-        },
-        "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
-        "validation_status": "approved",
-        "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)",
-          "⚠ Category may not be standard: Other > Uncategorized"
-        ],
-        "price": 0.0,
-        "currency": "ILS",
-        "image_hero": null,
-        "image_thumbnail": null,
-        "image_gallery": [],
-        "image_url": ""
-      },
-      "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
-      "validation_status": "approved",
-      "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
-        "⚠ Category may not be standard: Other > Uncategorized"
-      ],
-      "price": 0.0,
-      "currency": "ILS",
-      "image_hero": null,
-      "image_thumbnail": null,
-      "image_gallery": [],
-      "image_url": ""
-    },
-    "data_completeness": 0.4210526315789473,
-    "quality_score": 100.0,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Category may not be standard: Other > Uncategorized"
-    ],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -919,8 +629,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:14.659797",
-    "last_updated": "2026-02-08T23:25:14.659797",
+    "created_at": "2026-02-09T00:59:04.676978",
+    "last_updated": "2026-02-09T00:59:04.676978",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -961,7 +671,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:14.659784",
+      "timestamp": "2026-02-09T00:59:04.676963",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fender catalog"
     },
@@ -977,9 +687,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio"
       },
       "official_description": null,
       "official_images": [],
@@ -989,8 +698,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.864896",
-      "last_updated": "2026-02-06T17:51:03.864897",
+      "created_at": "2026-02-09T00:46:48.961029",
+      "last_updated": "2026-02-09T00:46:48.961029",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Audio Interface",
@@ -1020,9 +729,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio"
       },
       "description_short": "",
       "description_long": "",
@@ -1032,7 +740,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.864881",
+        "timestamp": "2026-02-09T00:46:48.961018",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fender catalog"
       },
@@ -1048,9 +756,8 @@
         "model_number": null,
         "official_name": null,
         "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
+          "note": "Standardized via Halilit Commercial Source",
+          "extracted_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio"
         },
         "official_description": null,
         "official_images": [],
@@ -1060,8 +767,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.466945",
-        "last_updated": "2026-02-06T17:26:35.466945",
+        "created_at": "2026-02-08T23:25:14.659797",
+        "last_updated": "2026-02-08T23:25:14.659797",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Audio Interface",
@@ -1091,9 +798,8 @@
           "media_assets": []
         },
         "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
+          "note": "Standardized via Halilit Commercial Source",
+          "extracted_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio"
         },
         "description_short": "",
         "description_long": "",
@@ -1103,7 +809,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.466929",
+          "timestamp": "2026-02-08T23:25:14.659784",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fender catalog"
         },
@@ -1131,8 +837,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.366106",
-          "last_updated": "2026-02-06T17:26:12.366106",
+          "created_at": "2026-02-06T17:51:03.864896",
+          "last_updated": "2026-02-06T17:51:03.864897",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Audio Interface",
@@ -1174,7 +880,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.366097",
+            "timestamp": "2026-02-06T17:51:03.864881",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fender catalog"
           },
@@ -1182,7 +888,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2089963705499567986",
             "product_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio",
-            "brand": "Fender",
+            "brand": "fender",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1202,8 +908,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T13:57:00.015075",
-            "last_updated": "2026-02-06T13:57:00.015075",
+            "created_at": "2026-02-06T17:26:35.466945",
+            "last_updated": "2026-02-06T17:26:35.466945",
             "taxonomy": {
               "canonical_category": "Audio Interfaces & Mixers",
               "canonical_subcategory": "Audio Interface",
@@ -1245,35 +951,205 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T13:57:00.015062",
+              "timestamp": "2026-02-06T17:26:35.466929",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fender catalog"
+              "extraction_notes": "Scraped from fender catalog"
             },
             "lineage": {},
             "raw_snapshot": {
               "halilit_id": "scraped-2089963705499567986",
               "product_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio",
-              "brand": "Fender",
+              "brand": "fender",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/8776132-fender-quantum-hd-8-usb-c-audio-interface\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T17:26:12.366106",
+              "last_updated": "2026-02-06T17:26:12.366106",
+              "taxonomy": {
+                "canonical_category": "Audio Interfaces & Mixers",
+                "canonical_subcategory": "Audio Interface",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T17:26:12.366097",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from fender catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2089963705499567986",
+                "product_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio",
+                "brand": "Fender",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://halilit.com",
+                "sku": null,
+                "model_number": null,
+                "official_name": null,
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": null,
+                "official_images": [],
+                "official_url": null,
+                "reviews": [],
+                "review_synthesis": null,
+                "average_rating": null,
+                "status": "harvested",
+                "pipeline_phase": "harvest",
+                "created_at": "2026-02-06T13:57:00.015075",
+                "last_updated": "2026-02-06T13:57:00.015075",
+                "taxonomy": {
+                  "canonical_category": "Audio Interfaces & Mixers",
+                  "canonical_subcategory": "Audio Interface",
+                  "brand_taxonomy": null,
+                  "alt_categories": [],
+                  "keywords": []
+                },
+                "pricing": {
+                  "price_il": 0.0,
+                  "price_eilat": 0.0,
+                  "price_usd": null,
+                  "price_eur": null,
+                  "tier": "entry",
+                  "eilat_discount_percent": 0,
+                  "suggested_tier": null,
+                  "price_validity_marker": null,
+                  "last_price_change": null,
+                  "previous_price_il": null
+                },
+                "display": {
+                  "display_role": "entry",
+                  "hero_image": null,
+                  "thumbnail_image": null,
+                  "should_highlight": false,
+                  "display_tier_level": 1,
+                  "color_hint": "bg-gray-300",
+                  "media_assets": []
+                },
+                "specifications": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "description_short": "",
+                "description_long": "",
+                "feature_list": [],
+                "sources": [],
+                "primary_source": {
+                  "source_name": "Halilit",
+                  "source_url": "https://halilit.com",
+                  "confidence": "commercial",
+                  "timestamp": "2026-02-06T13:57:00.015062",
+                  "extraction_method": "web_scraper",
+                  "extraction_notes": "Scraped from Fender catalog"
+                },
+                "lineage": {},
+                "raw_snapshot": {
+                  "halilit_id": "scraped-2089963705499567986",
+                  "product_name": "Fender Quantum HD 8 USB-C Audio Interface Fender Studio",
+                  "brand": "Fender",
+                  "price_il": 0.0,
+                  "price_eilat": 0.0,
+                  "halilit_url": "https://www.halilit.com  /items/8776132-fender-quantum-hd-8-usb-c-audio-interface\n",
+                  "pipeline_phase": "enrich",
+                  "status": "harvested",
+                  "official_specs": {
+                    "keys": 88,
+                    "action": "Hammer Action",
+                    "polyphony": 128
+                  },
+                  "official_description": "The ultimate stage piano for professionals.",
+                  "official_images": [
+                    {
+                      "type": "image",
+                      "url": "https://brand.com/hero.jpg",
+                      "display_purpose": "hero",
+                      "source": "official"
+                    }
+                  ],
+                  "official_url": "https://brand.com/products/stage-88"
+                },
+                "data_completeness": 0.4210526315789473,
+                "quality_score": 0.4210526315789473,
+                "validation_status": "approved",
+                "validation_errors": [],
+                "validation_warnings": [
+                  "⚠ Price is 0 (TBD)"
+                ],
+                "price": 0.0,
+                "currency": "ILS",
+                "image_hero": null,
+                "image_thumbnail": null,
+                "image_gallery": [],
+                "image_url": ""
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1304,12 +1180,10 @@
           "image_url": ""
         },
         "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
+        "quality_score": 100.0,
         "validation_status": "approved",
         "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)"
-        ],
+        "validation_warnings": [],
         "price": 0.0,
         "currency": "ILS",
         "image_hero": null,
@@ -1318,12 +1192,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1365,8 +1237,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:25:14.659925",
-    "last_updated": "2026-02-08T23:25:14.659926",
+    "created_at": "2026-02-09T00:59:04.677125",
+    "last_updated": "2026-02-09T00:59:04.677126",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1407,7 +1279,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:25:14.659914",
+      "timestamp": "2026-02-09T00:59:04.677115",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from fender catalog"
     },
@@ -1423,9 +1295,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Fender Quantum Creator Bundle Fender Studio"
       },
       "official_description": null,
       "official_images": [],
@@ -1435,8 +1306,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.865061",
-      "last_updated": "2026-02-06T17:51:03.865062",
+      "created_at": "2026-02-09T00:46:48.961967",
+      "last_updated": "2026-02-09T00:46:48.961968",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1466,9 +1337,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Fender Quantum Creator Bundle Fender Studio"
       },
       "description_short": "",
       "description_long": "",
@@ -1478,7 +1348,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.865048",
+        "timestamp": "2026-02-09T00:46:48.961952",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from fender catalog"
       },
@@ -1494,9 +1364,8 @@
         "model_number": null,
         "official_name": null,
         "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
+          "note": "Standardized via Halilit Commercial Source",
+          "extracted_name": "Fender Quantum Creator Bundle Fender Studio"
         },
         "official_description": null,
         "official_images": [],
@@ -1506,8 +1375,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.467497",
-        "last_updated": "2026-02-06T17:26:35.467498",
+        "created_at": "2026-02-08T23:25:14.659925",
+        "last_updated": "2026-02-08T23:25:14.659926",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1537,9 +1406,8 @@
           "media_assets": []
         },
         "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
+          "note": "Standardized via Halilit Commercial Source",
+          "extracted_name": "Fender Quantum Creator Bundle Fender Studio"
         },
         "description_short": "",
         "description_long": "",
@@ -1549,7 +1417,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.467482",
+          "timestamp": "2026-02-08T23:25:14.659914",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from fender catalog"
         },
@@ -1577,8 +1445,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.366324",
-          "last_updated": "2026-02-06T17:26:12.366324",
+          "created_at": "2026-02-06T17:51:03.865061",
+          "last_updated": "2026-02-06T17:51:03.865062",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1620,7 +1488,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.366315",
+            "timestamp": "2026-02-06T17:51:03.865048",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from fender catalog"
           },
@@ -1628,7 +1496,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2723904643293998095",
             "product_name": "Fender Quantum Creator Bundle Fender Studio",
-            "brand": "Fender",
+            "brand": "fender",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1648,8 +1516,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T13:57:00.015192",
-            "last_updated": "2026-02-06T13:57:00.015193",
+            "created_at": "2026-02-06T17:26:35.467497",
+            "last_updated": "2026-02-06T17:26:35.467498",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1691,35 +1559,207 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T13:57:00.015181",
+              "timestamp": "2026-02-06T17:26:35.467482",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Fender catalog"
+              "extraction_notes": "Scraped from fender catalog"
             },
             "lineage": {},
             "raw_snapshot": {
               "halilit_id": "scraped-2723904643293998095",
               "product_name": "Fender Quantum Creator Bundle Fender Studio",
-              "brand": "Fender",
+              "brand": "fender",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/8776168-fender-quantum-creator-bundle\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T17:26:12.366324",
+              "last_updated": "2026-02-06T17:26:12.366324",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T17:26:12.366315",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from fender catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2723904643293998095",
+                "product_name": "Fender Quantum Creator Bundle Fender Studio",
+                "brand": "Fender",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://halilit.com",
+                "sku": null,
+                "model_number": null,
+                "official_name": null,
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": null,
+                "official_images": [],
+                "official_url": null,
+                "reviews": [],
+                "review_synthesis": null,
+                "average_rating": null,
+                "status": "harvested",
+                "pipeline_phase": "harvest",
+                "created_at": "2026-02-06T13:57:00.015192",
+                "last_updated": "2026-02-06T13:57:00.015193",
+                "taxonomy": {
+                  "canonical_category": "Other",
+                  "canonical_subcategory": "Uncategorized",
+                  "brand_taxonomy": null,
+                  "alt_categories": [],
+                  "keywords": []
+                },
+                "pricing": {
+                  "price_il": 0.0,
+                  "price_eilat": 0.0,
+                  "price_usd": null,
+                  "price_eur": null,
+                  "tier": "entry",
+                  "eilat_discount_percent": 0,
+                  "suggested_tier": null,
+                  "price_validity_marker": null,
+                  "last_price_change": null,
+                  "previous_price_il": null
+                },
+                "display": {
+                  "display_role": "entry",
+                  "hero_image": null,
+                  "thumbnail_image": null,
+                  "should_highlight": false,
+                  "display_tier_level": 1,
+                  "color_hint": "bg-gray-300",
+                  "media_assets": []
+                },
+                "specifications": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "description_short": "",
+                "description_long": "",
+                "feature_list": [],
+                "sources": [],
+                "primary_source": {
+                  "source_name": "Halilit",
+                  "source_url": "https://halilit.com",
+                  "confidence": "commercial",
+                  "timestamp": "2026-02-06T13:57:00.015181",
+                  "extraction_method": "web_scraper",
+                  "extraction_notes": "Scraped from Fender catalog"
+                },
+                "lineage": {},
+                "raw_snapshot": {
+                  "halilit_id": "scraped-2723904643293998095",
+                  "product_name": "Fender Quantum Creator Bundle Fender Studio",
+                  "brand": "Fender",
+                  "price_il": 0.0,
+                  "price_eilat": 0.0,
+                  "halilit_url": "https://www.halilit.com  /items/8776168-fender-quantum-creator-bundle\n",
+                  "pipeline_phase": "enrich",
+                  "status": "harvested",
+                  "official_specs": {
+                    "keys": 88,
+                    "action": "Hammer Action",
+                    "polyphony": 128
+                  },
+                  "official_description": "The ultimate stage piano for professionals.",
+                  "official_images": [
+                    {
+                      "type": "image",
+                      "url": "https://brand.com/hero.jpg",
+                      "display_purpose": "hero",
+                      "source": "official"
+                    }
+                  ],
+                  "official_url": "https://brand.com/products/stage-88"
+                },
+                "data_completeness": 0.4210526315789473,
+                "quality_score": 0.4210526315789473,
+                "validation_status": "approved",
+                "validation_errors": [],
+                "validation_warnings": [
+                  "⚠ Price is 0 (TBD)",
+                  "⚠ Category may not be standard: Other > Uncategorized"
+                ],
+                "price": 0.0,
+                "currency": "ILS",
+                "image_hero": null,
+                "image_thumbnail": null,
+                "image_gallery": [],
+                "image_url": ""
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1752,11 +1792,10 @@
           "image_url": ""
         },
         "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
+        "quality_score": 100.0,
         "validation_status": "approved",
         "validation_errors": [],
         "validation_warnings": [
-          "⚠ Price is 0 (TBD)",
           "⚠ Category may not be standard: Other > Uncategorized"
         ],
         "price": 0.0,
@@ -1767,11 +1806,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,

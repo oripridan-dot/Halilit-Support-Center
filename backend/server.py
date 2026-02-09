@@ -1,6 +1,7 @@
 from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
 from backend.auto_sync_engine import get_auto_sync_engine
 from backend.unified_data_service_v73 import get_conductor_data_service
+from backend.ingestion_to_frontend import get_frontend_data
 import os
 import sys
 import logging
@@ -175,6 +176,11 @@ async def get_versions():
             "total_products": 0,
             "active_versions": {}
         }
+
+
+@app.get("/api/galaxy-view")
+async def galaxy_view():
+    return get_frontend_data()
 
 
 @app.get("/api/catalog")

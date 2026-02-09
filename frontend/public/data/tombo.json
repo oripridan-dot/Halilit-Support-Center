@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:28:34.646739",
-    "last_updated": "2026-02-08T23:28:34.646740",
+    "created_at": "2026-02-09T00:50:01.888415",
+    "last_updated": "2026-02-09T00:50:01.888416",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:28:34.646717",
+      "timestamp": "2026-02-09T00:50:01.888385",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from tombo catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo Ultimo 1810 B"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.395235",
-      "last_updated": "2026-02-06T17:51:05.395235",
+      "created_at": "2026-02-08T23:28:34.646739",
+      "last_updated": "2026-02-08T23:28:34.646740",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo Ultimo 1810 B"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.395212",
+        "timestamp": "2026-02-08T23:28:34.646717",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from tombo catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.398824",
-        "last_updated": "2026-02-06T17:26:37.398825",
+        "created_at": "2026-02-06T17:51:05.395235",
+        "last_updated": "2026-02-06T17:51:05.395235",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.398813",
+          "timestamp": "2026-02-06T17:51:05.395212",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from tombo catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:14.042864",
-          "last_updated": "2026-02-06T17:26:14.042865",
+          "created_at": "2026-02-06T17:26:37.398824",
+          "last_updated": "2026-02-06T17:26:37.398825",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:14.042848",
+            "timestamp": "2026-02-06T17:26:37.398813",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from tombo catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--7357074815872518975",
             "product_name": "Tombo Ultimo 1810 B",
-            "brand": "Tombo",
+            "brand": "tombo",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:04:13.601675",
-            "last_updated": "2026-02-06T14:04:13.601676",
+            "created_at": "2026-02-06T17:26:14.042864",
+            "last_updated": "2026-02-06T17:26:14.042865",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:04:13.601656",
+              "timestamp": "2026-02-06T17:26:14.042848",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Tombo catalog"
+              "extraction_notes": "Scraped from tombo catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,110 @@
               "brand": "Tombo",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/5665175-tombo-ultimo-1810-b-harmonica\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:13.601675",
+              "last_updated": "2026-02-06T14:04:13.601676",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:13.601656",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Tombo catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--7357074815872518975",
+                "product_name": "Tombo Ultimo 1810 B",
+                "brand": "Tombo",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/5665175-tombo-ultimo-1810-b-harmonica\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -423,11 +507,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -473,8 +556,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:28:34.647471",
-    "last_updated": "2026-02-08T23:28:34.647472",
+    "created_at": "2026-02-09T00:50:01.889471",
+    "last_updated": "2026-02-09T00:50:01.889472",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -515,7 +598,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:28:34.647456",
+      "timestamp": "2026-02-09T00:50:01.889454",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from tombo catalog"
     },
@@ -531,9 +614,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo 1204KN Baby Harmonica Gold"
       },
       "official_description": null,
       "official_images": [],
@@ -543,8 +625,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.396184",
-      "last_updated": "2026-02-06T17:51:05.396185",
+      "created_at": "2026-02-08T23:28:34.647471",
+      "last_updated": "2026-02-08T23:28:34.647472",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -574,9 +656,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo 1204KN Baby Harmonica Gold"
       },
       "description_short": "",
       "description_long": "",
@@ -586,7 +667,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.396165",
+        "timestamp": "2026-02-08T23:28:34.647456",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from tombo catalog"
       },
@@ -614,8 +695,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.399171",
-        "last_updated": "2026-02-06T17:26:37.399172",
+        "created_at": "2026-02-06T17:51:05.396184",
+        "last_updated": "2026-02-06T17:51:05.396185",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -657,7 +738,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.399161",
+          "timestamp": "2026-02-06T17:51:05.396165",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from tombo catalog"
         },
@@ -685,8 +766,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:14.043291",
-          "last_updated": "2026-02-06T17:26:14.043291",
+          "created_at": "2026-02-06T17:26:37.399171",
+          "last_updated": "2026-02-06T17:26:37.399172",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -728,7 +809,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:14.043276",
+            "timestamp": "2026-02-06T17:26:37.399161",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from tombo catalog"
           },
@@ -736,7 +817,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2913749023017357214",
             "product_name": "Tombo 1204KN Baby Harmonica Gold",
-            "brand": "Tombo",
+            "brand": "tombo",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -756,8 +837,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:04:13.602209",
-            "last_updated": "2026-02-06T14:04:13.602210",
+            "created_at": "2026-02-06T17:26:14.043291",
+            "last_updated": "2026-02-06T17:26:14.043291",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -799,9 +880,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:04:13.602192",
+              "timestamp": "2026-02-06T17:26:14.043276",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Tombo catalog"
+              "extraction_notes": "Scraped from tombo catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -810,24 +891,110 @@
               "brand": "Tombo",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4944852-tombo-1204kn-baby-harmonica-gold\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:13.602209",
+              "last_updated": "2026-02-06T14:04:13.602210",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:13.602192",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Tombo catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2913749023017357214",
+                "product_name": "Tombo 1204KN Baby Harmonica Gold",
+                "brand": "Tombo",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4944852-tombo-1204kn-baby-harmonica-gold\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -875,11 +1042,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -925,8 +1091,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:28:34.647641",
-    "last_updated": "2026-02-08T23:28:34.647641",
+    "created_at": "2026-02-09T00:50:01.889622",
+    "last_updated": "2026-02-09T00:50:01.889623",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -967,7 +1133,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:28:34.647629",
+      "timestamp": "2026-02-09T00:50:01.889607",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from tombo catalog"
     },
@@ -983,9 +1149,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo MU-01 Short Cross Slide Chromatic 2248"
       },
       "official_description": null,
       "official_images": [],
@@ -995,8 +1160,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.396343",
-      "last_updated": "2026-02-06T17:51:05.396343",
+      "created_at": "2026-02-08T23:28:34.647641",
+      "last_updated": "2026-02-08T23:28:34.647641",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1026,9 +1191,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo MU-01 Short Cross Slide Chromatic 2248"
       },
       "description_short": "",
       "description_long": "",
@@ -1038,7 +1202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.396331",
+        "timestamp": "2026-02-08T23:28:34.647629",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from tombo catalog"
       },
@@ -1066,8 +1230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.399272",
-        "last_updated": "2026-02-06T17:26:37.399272",
+        "created_at": "2026-02-06T17:51:05.396343",
+        "last_updated": "2026-02-06T17:51:05.396343",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1109,7 +1273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.399265",
+          "timestamp": "2026-02-06T17:51:05.396331",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from tombo catalog"
         },
@@ -1137,8 +1301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:14.043451",
-          "last_updated": "2026-02-06T17:26:14.043451",
+          "created_at": "2026-02-06T17:26:37.399272",
+          "last_updated": "2026-02-06T17:26:37.399272",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1180,7 +1344,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:14.043439",
+            "timestamp": "2026-02-06T17:26:37.399265",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from tombo catalog"
           },
@@ -1188,7 +1352,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2874218445819806754",
             "product_name": "Tombo MU-01 Short Cross Slide Chromatic 2248",
-            "brand": "Tombo",
+            "brand": "tombo",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1208,8 +1372,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:04:13.602683",
-            "last_updated": "2026-02-06T14:04:13.602683",
+            "created_at": "2026-02-06T17:26:14.043451",
+            "last_updated": "2026-02-06T17:26:14.043451",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1251,9 +1415,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:04:13.602669",
+              "timestamp": "2026-02-06T17:26:14.043439",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Tombo catalog"
+              "extraction_notes": "Scraped from tombo catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1262,24 +1426,110 @@
               "brand": "Tombo",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4944795-tombo-mu-01-short-cross-slide-chromatic-2248\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:13.602683",
+              "last_updated": "2026-02-06T14:04:13.602683",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:13.602669",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Tombo catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2874218445819806754",
+                "product_name": "Tombo MU-01 Short Cross Slide Chromatic 2248",
+                "brand": "Tombo",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4944795-tombo-mu-01-short-cross-slide-chromatic-2248\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1327,11 +1577,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1377,8 +1626,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:28:34.648780",
-    "last_updated": "2026-02-08T23:28:34.648781",
+    "created_at": "2026-02-09T00:50:01.890505",
+    "last_updated": "2026-02-09T00:50:01.890505",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1419,7 +1668,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:28:34.648766",
+      "timestamp": "2026-02-09T00:50:01.890483",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from tombo catalog"
     },
@@ -1435,9 +1684,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo MU-01 Short Cross Slide Chromatic 2248"
       },
       "official_description": null,
       "official_images": [],
@@ -1447,8 +1695,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.397060",
-      "last_updated": "2026-02-06T17:51:05.397061",
+      "created_at": "2026-02-08T23:28:34.648780",
+      "last_updated": "2026-02-08T23:28:34.648781",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1478,9 +1726,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo MU-01 Short Cross Slide Chromatic 2248"
       },
       "description_short": "",
       "description_long": "",
@@ -1490,7 +1737,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.397045",
+        "timestamp": "2026-02-08T23:28:34.648766",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from tombo catalog"
       },
@@ -1518,8 +1765,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.399669",
-        "last_updated": "2026-02-06T17:26:37.399669",
+        "created_at": "2026-02-06T17:51:05.397060",
+        "last_updated": "2026-02-06T17:51:05.397061",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1561,7 +1808,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.399659",
+          "timestamp": "2026-02-06T17:51:05.397045",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from tombo catalog"
         },
@@ -1589,8 +1836,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:14.043950",
-          "last_updated": "2026-02-06T17:26:14.043951",
+          "created_at": "2026-02-06T17:26:37.399669",
+          "last_updated": "2026-02-06T17:26:37.399669",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1632,7 +1879,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:14.043937",
+            "timestamp": "2026-02-06T17:26:37.399659",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from tombo catalog"
           },
@@ -1640,7 +1887,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2874218445819806754",
             "product_name": "Tombo MU-01 Short Cross Slide Chromatic 2248",
-            "brand": "Tombo",
+            "brand": "tombo",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1660,8 +1907,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:04:13.602805",
-            "last_updated": "2026-02-06T14:04:13.602805",
+            "created_at": "2026-02-06T17:26:14.043950",
+            "last_updated": "2026-02-06T17:26:14.043951",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1703,9 +1950,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:04:13.602795",
+              "timestamp": "2026-02-06T17:26:14.043937",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Tombo catalog"
+              "extraction_notes": "Scraped from tombo catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1714,24 +1961,110 @@
               "brand": "Tombo",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/4944817-tombo-mu-01-short-cross-slide-chromatic-2248\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:13.602805",
+              "last_updated": "2026-02-06T14:04:13.602805",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:13.602795",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Tombo catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2874218445819806754",
+                "product_name": "Tombo MU-01 Short Cross Slide Chromatic 2248",
+                "brand": "Tombo",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/4944817-tombo-mu-01-short-cross-slide-chromatic-2248\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1779,11 +2112,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1829,8 +2161,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:28:34.648994",
-    "last_updated": "2026-02-08T23:28:34.648994",
+    "created_at": "2026-02-09T00:50:01.890647",
+    "last_updated": "2026-02-09T00:50:01.890647",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1871,7 +2203,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:28:34.648982",
+      "timestamp": "2026-02-09T00:50:01.890628",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from tombo catalog"
     },
@@ -1887,9 +2219,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo Baby Harmonica 1204N"
       },
       "official_description": null,
       "official_images": [],
@@ -1899,8 +2230,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.397586",
-      "last_updated": "2026-02-06T17:51:05.397587",
+      "created_at": "2026-02-08T23:28:34.648994",
+      "last_updated": "2026-02-08T23:28:34.648994",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1930,9 +2261,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Tombo Baby Harmonica 1204N"
       },
       "description_short": "",
       "description_long": "",
@@ -1942,7 +2272,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.397571",
+        "timestamp": "2026-02-08T23:28:34.648982",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from tombo catalog"
       },
@@ -1970,8 +2300,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.399763",
-        "last_updated": "2026-02-06T17:26:37.399763",
+        "created_at": "2026-02-06T17:51:05.397586",
+        "last_updated": "2026-02-06T17:51:05.397587",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2013,7 +2343,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.399756",
+          "timestamp": "2026-02-06T17:51:05.397571",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from tombo catalog"
         },
@@ -2041,8 +2371,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:14.044190",
-          "last_updated": "2026-02-06T17:26:14.044191",
+          "created_at": "2026-02-06T17:26:37.399763",
+          "last_updated": "2026-02-06T17:26:37.399763",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2084,7 +2414,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:14.044178",
+            "timestamp": "2026-02-06T17:26:37.399756",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from tombo catalog"
           },
@@ -2092,7 +2422,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-3695761784613374430",
             "product_name": "Tombo Baby Harmonica 1204N",
-            "brand": "Tombo",
+            "brand": "tombo",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2112,8 +2442,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:04:13.602937",
-            "last_updated": "2026-02-06T14:04:13.602937",
+            "created_at": "2026-02-06T17:26:14.044190",
+            "last_updated": "2026-02-06T17:26:14.044191",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2155,9 +2485,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:04:13.602928",
+              "timestamp": "2026-02-06T17:26:14.044178",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Tombo catalog"
+              "extraction_notes": "Scraped from tombo catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2166,24 +2496,110 @@
               "brand": "Tombo",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/844993-tombo-baby-harmonica-1204n-\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:13.602937",
+              "last_updated": "2026-02-06T14:04:13.602937",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:13.602928",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Tombo catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-3695761784613374430",
+                "product_name": "Tombo Baby Harmonica 1204N",
+                "brand": "Tombo",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/844993-tombo-baby-harmonica-1204n-\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2231,11 +2647,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2281,8 +2696,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:28:34.649898",
-    "last_updated": "2026-02-08T23:28:34.649899",
+    "created_at": "2026-02-09T00:50:01.890759",
+    "last_updated": "2026-02-09T00:50:01.890760",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2323,7 +2738,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:28:34.649884",
+      "timestamp": "2026-02-09T00:50:01.890749",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from tombo catalog"
     },
@@ -2339,9 +2754,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Lee Oskar LOHP Harmonica Case Tombo"
       },
       "official_description": null,
       "official_images": [],
@@ -2351,8 +2765,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:05.397826",
-      "last_updated": "2026-02-06T17:51:05.397826",
+      "created_at": "2026-02-08T23:28:34.649898",
+      "last_updated": "2026-02-08T23:28:34.649899",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2382,9 +2796,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Lee Oskar LOHP Harmonica Case Tombo"
       },
       "description_short": "",
       "description_long": "",
@@ -2394,7 +2807,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:05.397813",
+        "timestamp": "2026-02-08T23:28:34.649884",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from tombo catalog"
       },
@@ -2422,8 +2835,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:37.399844",
-        "last_updated": "2026-02-06T17:26:37.399844",
+        "created_at": "2026-02-06T17:51:05.397826",
+        "last_updated": "2026-02-06T17:51:05.397826",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2465,7 +2878,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:37.399838",
+          "timestamp": "2026-02-06T17:51:05.397813",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from tombo catalog"
         },
@@ -2493,8 +2906,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:14.044397",
-          "last_updated": "2026-02-06T17:26:14.044398",
+          "created_at": "2026-02-06T17:26:37.399844",
+          "last_updated": "2026-02-06T17:26:37.399844",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2536,7 +2949,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:14.044386",
+            "timestamp": "2026-02-06T17:26:37.399838",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from tombo catalog"
           },
@@ -2544,7 +2957,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-5960545706964961006",
             "product_name": "Lee Oskar LOHP Harmonica Case Tombo",
-            "brand": "Tombo",
+            "brand": "tombo",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2564,8 +2977,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:04:13.603427",
-            "last_updated": "2026-02-06T14:04:13.603427",
+            "created_at": "2026-02-06T17:26:14.044397",
+            "last_updated": "2026-02-06T17:26:14.044398",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2607,9 +3020,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:04:13.603416",
+              "timestamp": "2026-02-06T17:26:14.044386",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Tombo catalog"
+              "extraction_notes": "Scraped from tombo catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2618,24 +3031,110 @@
               "brand": "Tombo",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1338085-lee-oskar-lohp-harmonica-case\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:13.603427",
+              "last_updated": "2026-02-06T14:04:13.603427",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:13.603416",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Tombo catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-5960545706964961006",
+                "product_name": "Lee Oskar LOHP Harmonica Case Tombo",
+                "brand": "Tombo",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1338085-lee-oskar-lohp-harmonica-case\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2683,11 +3182,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,

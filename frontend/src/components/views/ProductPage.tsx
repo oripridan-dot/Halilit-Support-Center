@@ -289,28 +289,28 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           {/* Column 3: Specifications & Details */}
           <div className="space-y-6">
             {/* Description */}
-            {product?.specifications?.short_description && (
+            {(product?.description_short || product?.official_description || product?.specifications?.short_description) && (
               <div className="bg-slate-900 rounded p-4 border border-slate-800">
                 <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                   Overview
                 </h2>
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  {product.specifications.short_description}
+                  {product.description_short || product.official_description || product.specifications?.short_description}
                 </p>
               </div>
             )}
 
             {/* Features */}
-            {product?.specifications?.features &&
-              product.specifications.features.length > 0 && (
+            {(product?.feature_list || product?.specifications?.features) &&
+              (product.feature_list || product.specifications?.features || []).length > 0 && (
                 <div className="bg-slate-900 rounded p-4 border border-slate-800">
                   <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                     Features
                   </h2>
                   <ul className="space-y-1 text-sm text-zinc-300">
-                    {product.specifications.features
+                    {(product.feature_list || product.specifications?.features || [])
                       .slice(0, 5)
-                      .map((feature, idx) => (
+                      .map((feature: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-2">
                           <span className="text-blue-400 font-bold mt-0.5">
                             ▸
@@ -323,22 +323,24 @@ export const ProductPage = ({ productId }: { productId: string }) => {
               )}
 
             {/* Specs */}
-            {product?.specifications?.specs &&
-              Object.keys(product.specifications.specs).length > 0 && (
+            {product?.specifications &&
+              (Object.keys(product.specifications).length > 0) && (
                 <div className="bg-slate-900 rounded p-4 border border-slate-800">
                   <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                     Specifications
                   </h2>
                   <div className="space-y-2 text-sm">
-                    {Object.entries(product.specifications.specs)
-                      .slice(0, 5)
+                    {/* Handle both unified (direct dict) and legacy (nested .specs) structures */}
+                    {Object.entries(product.specifications?.specs || product.specifications)
+                      .filter(([key]) => key !== 'specs' && key !== 'features' && key !== 'short_description' && key !== 'long_description')
+                      .slice(0, 8)
                       .map(([key, value]) => (
                         <div key={key} className="flex justify-between">
                           <span className="text-zinc-500 capitalize">
                             {key}:
                           </span>
-                          <span className="text-white font-medium">
-                            {String(value)}
+                          <span className="text-white font-medium text-right ml-4">
+                            {typeof value === 'object' ? JSON.stringify(value) : String(value)}
                           </span>
                         </div>
                       ))}
@@ -349,13 +351,13 @@ export const ProductPage = ({ productId }: { productId: string }) => {
         </div>
 
         {/* Full Specifications Section (if there are more) */}
-        {product?.specifications?.long_description && (
+        {(product?.description_long || product?.specifications?.long_description) && (
           <div className="bg-slate-900 rounded p-6 border border-slate-800 mt-6">
             <h2 className="text-lg font-bold text-white mb-4">
               Full Description
             </h2>
             <p className="text-sm text-zinc-300 leading-relaxed whitespace-pre-wrap">
-              {product.specifications.long_description}
+              {product.description_long || product.specifications?.long_description}
             </p>
           </div>
         )}

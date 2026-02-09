@@ -1,122 +1,35 @@
-import { useMemo } from "react";
-import { useQuery } from "@tanstack/react-query";
-import { GalaxyCatalog, GalaxyProduct } from "../types/galaxy-schema";
+import { useState, useEffect } from 'react';
+import { GalaxyCategory } from '../types/galaxy';
 
-/**
- * useGalaxyData - TanStack Query powered data hook
- * 
- * Features:
- * - Automatic caching (5 minute stale time)
- * - Stale-While-Revalidate pattern (serves cache while checking for updates)
- * - Automatic refetch on window focus
- * - Automatic refetch on network reconnect
- * - Deduplication of parallel requests
- * 
- * Benefits:
- * - "Wrong data" issues solved by smart caching
- * - No race conditions between requests
- * - Performance perception improved (instant on cached)
- * - No manual loading/error state management
- */
 export const useGalaxyData = () => {
-  // Fetch function that loads the single source of truth
-  const fetchGalaxyData = async (): Promise<GalaxyCatalog> => {
-    const response = await fetch("/data/galaxy_db.json");
-    if (!response.ok) {
-      throw new Error(`Failed to load Galaxy DB: ${response.statusText}`);
-    }
-    const data = await response.json();
-    console.log(`✅ Loaded ${Array.isArray(data) ? data.length : 0} products from Galaxy DB`);
-    return data;
-  };
+    const [data, setData] = useState<GalaxyCategory[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-  // Use TanStack Query for smart data fetching
-  const { data, isLoading, error, isStale, refetch } = useQuery({
-    queryKey: ["galaxy-catalog"],
-    queryFn: fetchGalaxyData,
-    // Stale-While-Revalidate: Keep data valid for 5 minutes
-    staleTime: 5 * 60 * 1000,
-    // Keep unused data in cache for 10 minutes
-    gcTime: 10 * 60 * 1000,
-    // Retry failed requests once
-    retry: 1,
-    // Refetch on window focus (user tabs back)
-    refetchOnWindowFocus: true,
-    // Refetch on network reconnect
-    refetchOnReconnect: true,
-  });
+    const fetchData = async () => {
+        try {
+            setLoading(true);
+            // Ensure this endpoint matches your server.py
+            const response = await fetch('http://localhost:8000/api/galaxy-view');
 
-  // Convert array to GalaxyCatalog format for backward compatibility
-  const catalog: GalaxyCatalog | null = useMemo(() => {
-    if (Array.isArray(data)) {
-      // Map raw ingestion data to GalaxyProduct schema
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const mappedProducts = data.map((p: any) => ({
-        ...p,
-        id: p.id || p.halilit_id || "unknown_id",
-        name: p.name || p.product_name || "Unknown Product",
-        // Ensure images object structure if missing
-        images: p.images || {
-          main: p.image_hero?.url || "",
-          thumbnail: p.image_thumbnail?.url || "",
-          gallery: []
+            if (!response.ok) {
+                throw new Error('Failed to fetch galaxy data');
+            }
+
+            const jsonData = await response.json();
+            setData(jsonData);
+            setError(null);
+        } catch (err) {
+            console.error("Galaxy Fetch Error:", err);
+            setError(err instanceof Error ? err.message : 'Unknown error');
+        } finally {
+            setLoading(false);
         }
-      }));
-      
-      return {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        products: mappedProducts as any[],
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        categories: extractCategories(data as any[]),
-      } as unknown as GalaxyCatalog;
-    }
-    return data || null;
-  }, [data]);
+    };
 
-  /**
-   * Helper: Extract categories from products
-   */
-  function extractCategories(products: GalaxyProduct[]) {
-    const cats: Record<string, number> = {};
-    products.forEach(p => {
-      const cat = (p.taxonomy?.canonical_category as string) || "Uncategorized";
-      cats[cat] = (cats[cat] || 0) + 1;
-    });
-    return cats;
-  }
+    useEffect(() => {
+        fetchData();
+    }, []);
 
-  /**
-   * Helper: Semantic search
-   */
-  const search = (query: string): GalaxyProduct[] => {
-    if (!catalog) return [];
-    const lowerQ = query.toLowerCase();
-    return catalog.products.filter(p => {
-      const searchableText = [
-        p.product_name?.toLowerCase() ?? "",
-        p.brand?.toLowerCase() ?? "",
-        p.taxonomy?.canonical_category?.toLowerCase() ?? "",
-        p.taxonomy?.keywords?.join(" ").toLowerCase() ?? "",
-      ].join(" ");
-      return searchableText.includes(lowerQ);
-    });
-  };
-
-  /**
-   * Manually trigger a refetch if needed
-   */
-  const refreshData = async () => {
-    await refetch();
-  };
-
-  return {
-    catalog,
-    products: catalog?.products || [],
-    categories: catalog?.categories || {},
-    loading: isLoading,
-    error: error ? (error as Error).message : null,
-    isStale,
-    search,
-    refresh: refreshData,
-  };
+    return { data, loading, error, refetch: fetchData };
 };

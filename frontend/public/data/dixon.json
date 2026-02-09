@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.200725",
-    "last_updated": "2026-02-08T23:24:35.200726",
+    "created_at": "2026-02-09T00:46:04.722307",
+    "last_updated": "2026-02-09T00:46:04.722308",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.200702",
+      "timestamp": "2026-02-09T00:46:04.722286",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Zebra Wood/Red Silkwood 14\" Snare"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.483247",
-      "last_updated": "2026-02-06T17:51:03.483248",
+      "created_at": "2026-02-08T23:24:35.200725",
+      "last_updated": "2026-02-08T23:24:35.200726",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Zebra Wood/Red Silkwood 14\" Snare"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.483226",
+        "timestamp": "2026-02-08T23:24:35.200702",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.253544",
-        "last_updated": "2026-02-06T17:26:35.253544",
+        "created_at": "2026-02-06T17:51:03.483247",
+        "last_updated": "2026-02-06T17:51:03.483248",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.253527",
+          "timestamp": "2026-02-06T17:51:03.483226",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.238269",
-          "last_updated": "2026-02-06T17:26:12.238270",
+          "created_at": "2026-02-06T17:26:35.253544",
+          "last_updated": "2026-02-06T17:26:35.253544",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.238257",
+            "timestamp": "2026-02-06T17:26:35.253527",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-763865797879062860",
             "product_name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.791020",
-            "last_updated": "2026-02-06T14:01:40.791021",
+            "created_at": "2026-02-06T17:26:12.238269",
+            "last_updated": "2026-02-06T17:26:12.238270",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.791000",
+              "timestamp": "2026-02-06T17:26:12.238257",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3960840-dixon-zebra-wood-red-silkwood-14-snare\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.791020",
+              "last_updated": "2026-02-06T14:01:40.791021",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.791000",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-763865797879062860",
+                "product_name": "Dixon Zebra Wood/Red Silkwood 14\" Snare",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3960840-dixon-zebra-wood-red-silkwood-14-snare\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -423,11 +507,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -473,8 +556,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.201518",
-    "last_updated": "2026-02-08T23:24:35.201519",
+    "created_at": "2026-02-09T00:46:04.723089",
+    "last_updated": "2026-02-09T00:46:04.723090",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -515,7 +598,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.201501",
+      "timestamp": "2026-02-09T00:46:04.723068",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -531,9 +614,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Australian Rose Gum 14\" Snare"
       },
       "official_description": null,
       "official_images": [],
@@ -543,8 +625,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.489963",
-      "last_updated": "2026-02-06T17:51:03.489963",
+      "created_at": "2026-02-08T23:24:35.201518",
+      "last_updated": "2026-02-08T23:24:35.201519",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -574,9 +656,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Australian Rose Gum 14\" Snare"
       },
       "description_short": "",
       "description_long": "",
@@ -586,7 +667,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.489942",
+        "timestamp": "2026-02-08T23:24:35.201501",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -614,8 +695,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.253968",
-        "last_updated": "2026-02-06T17:26:35.253968",
+        "created_at": "2026-02-06T17:51:03.489963",
+        "last_updated": "2026-02-06T17:51:03.489963",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -657,7 +738,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.253952",
+          "timestamp": "2026-02-06T17:51:03.489942",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -685,8 +766,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.238656",
-          "last_updated": "2026-02-06T17:26:12.238656",
+          "created_at": "2026-02-06T17:26:35.253968",
+          "last_updated": "2026-02-06T17:26:35.253968",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -728,7 +809,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.238646",
+            "timestamp": "2026-02-06T17:26:35.253952",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -736,7 +817,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-8557367897059324057",
             "product_name": "Dixon Australian Rose Gum 14\" Snare",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -756,8 +837,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.791503",
-            "last_updated": "2026-02-06T14:01:40.791504",
+            "created_at": "2026-02-06T17:26:12.238656",
+            "last_updated": "2026-02-06T17:26:12.238656",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -799,9 +880,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.791486",
+              "timestamp": "2026-02-06T17:26:12.238646",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -810,24 +891,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/3960896-dixon-australian-rose-gum-14-snare\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.791503",
+              "last_updated": "2026-02-06T14:01:40.791504",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.791486",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-8557367897059324057",
+                "product_name": "Dixon Australian Rose Gum 14\" Snare",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/3960896-dixon-australian-rose-gum-14-snare\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -875,11 +1042,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -925,8 +1091,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.201678",
-    "last_updated": "2026-02-08T23:24:35.201678",
+    "created_at": "2026-02-09T00:46:04.723261",
+    "last_updated": "2026-02-09T00:46:04.723261",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Drum Pad",
@@ -967,7 +1133,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.201666",
+      "timestamp": "2026-02-09T00:46:04.723241",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -983,9 +1149,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Practice 6\" Pad"
       },
       "official_description": null,
       "official_images": [],
@@ -995,8 +1160,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.490133",
-      "last_updated": "2026-02-06T17:51:03.490133",
+      "created_at": "2026-02-08T23:24:35.201678",
+      "last_updated": "2026-02-08T23:24:35.201678",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Drum Pad",
@@ -1026,9 +1191,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Practice 6\" Pad"
       },
       "description_short": "",
       "description_long": "",
@@ -1038,7 +1202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.490121",
+        "timestamp": "2026-02-08T23:24:35.201666",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -1066,8 +1230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.254369",
-        "last_updated": "2026-02-06T17:26:35.254370",
+        "created_at": "2026-02-06T17:51:03.490133",
+        "last_updated": "2026-02-06T17:51:03.490133",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Drum Pad",
@@ -1109,7 +1273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.254354",
+          "timestamp": "2026-02-06T17:51:03.490121",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -1137,8 +1301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.238868",
-          "last_updated": "2026-02-06T17:26:12.238869",
+          "created_at": "2026-02-06T17:26:35.254369",
+          "last_updated": "2026-02-06T17:26:35.254370",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Drum Pad",
@@ -1180,7 +1344,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.238860",
+            "timestamp": "2026-02-06T17:26:35.254354",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -1188,7 +1352,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--4518997532779445533",
             "product_name": "Dixon Practice 6\" Pad",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1208,8 +1372,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.791857",
-            "last_updated": "2026-02-06T14:01:40.791857",
+            "created_at": "2026-02-06T17:26:12.238868",
+            "last_updated": "2026-02-06T17:26:12.238869",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Drum Pad",
@@ -1251,9 +1415,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.791830",
+              "timestamp": "2026-02-06T17:26:12.238860",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1262,24 +1426,109 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/7617651-dixon-practice-8-pad\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.791857",
+              "last_updated": "2026-02-06T14:01:40.791857",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Drum Pad",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.791830",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--4518997532779445533",
+                "product_name": "Dixon Practice 6\" Pad",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7617651-dixon-practice-8-pad\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1324,12 +1573,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1371,8 +1618,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.203364",
-    "last_updated": "2026-02-08T23:24:35.203365",
+    "created_at": "2026-02-09T00:46:04.724119",
+    "last_updated": "2026-02-09T00:46:04.724119",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -1413,7 +1660,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.203349",
+      "timestamp": "2026-02-09T00:46:04.724106",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -1429,9 +1676,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PA-HCM-SP Hoop Cymbal Mount"
       },
       "official_description": null,
       "official_images": [],
@@ -1441,8 +1687,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.491886",
-      "last_updated": "2026-02-06T17:51:03.491887",
+      "created_at": "2026-02-08T23:24:35.203364",
+      "last_updated": "2026-02-08T23:24:35.203365",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1472,9 +1718,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PA-HCM-SP Hoop Cymbal Mount"
       },
       "description_short": "",
       "description_long": "",
@@ -1484,7 +1729,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.491874",
+        "timestamp": "2026-02-08T23:24:35.203349",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -1512,8 +1757,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.254972",
-        "last_updated": "2026-02-06T17:26:35.254972",
+        "created_at": "2026-02-06T17:51:03.491886",
+        "last_updated": "2026-02-06T17:51:03.491887",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1555,7 +1800,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.254958",
+          "timestamp": "2026-02-06T17:51:03.491874",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -1583,8 +1828,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.239361",
-          "last_updated": "2026-02-06T17:26:12.239361",
+          "created_at": "2026-02-06T17:26:35.254972",
+          "last_updated": "2026-02-06T17:26:35.254972",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1626,7 +1871,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.239354",
+            "timestamp": "2026-02-06T17:26:35.254958",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -1634,7 +1879,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--5867964084960126545",
             "product_name": "Dixon PA-HCM-SP Hoop Cymbal Mount",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1654,8 +1899,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.792454",
-            "last_updated": "2026-02-06T14:01:40.792454",
+            "created_at": "2026-02-06T17:26:12.239361",
+            "last_updated": "2026-02-06T17:26:12.239361",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Percussion",
@@ -1697,9 +1942,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.792441",
+              "timestamp": "2026-02-06T17:26:12.239354",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1708,24 +1953,109 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/448348-dixon-pa-hcm-sp-cymbal-mount\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.792454",
+              "last_updated": "2026-02-06T14:01:40.792454",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Percussion",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.792441",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--5867964084960126545",
+                "product_name": "Dixon PA-HCM-SP Hoop Cymbal Mount",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/448348-dixon-pa-hcm-sp-cymbal-mount\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1770,12 +2100,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -1817,8 +2145,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.203531",
-    "last_updated": "2026-02-08T23:24:35.203532",
+    "created_at": "2026-02-09T00:46:04.724885",
+    "last_updated": "2026-02-09T00:46:04.724885",
     "taxonomy": {
       "canonical_category": "Microphones & Recording",
       "canonical_subcategory": "Microphone",
@@ -1859,7 +2187,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.203519",
+      "timestamp": "2026-02-09T00:46:04.724872",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -1875,9 +2203,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PA-HMM-SP Microphone Clamp"
       },
       "official_description": null,
       "official_images": [],
@@ -1887,8 +2214,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.492016",
-      "last_updated": "2026-02-06T17:51:03.492016",
+      "created_at": "2026-02-08T23:24:35.203531",
+      "last_updated": "2026-02-08T23:24:35.203532",
       "taxonomy": {
         "canonical_category": "Microphones & Recording",
         "canonical_subcategory": "Microphone",
@@ -1918,9 +2245,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PA-HMM-SP Microphone Clamp"
       },
       "description_short": "",
       "description_long": "",
@@ -1930,7 +2256,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.492006",
+        "timestamp": "2026-02-08T23:24:35.203519",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -1958,8 +2284,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.255255",
-        "last_updated": "2026-02-06T17:26:35.255256",
+        "created_at": "2026-02-06T17:51:03.492016",
+        "last_updated": "2026-02-06T17:51:03.492016",
         "taxonomy": {
           "canonical_category": "Microphones & Recording",
           "canonical_subcategory": "Microphone",
@@ -2001,7 +2327,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.255243",
+          "timestamp": "2026-02-06T17:51:03.492006",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -2029,8 +2355,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.239458",
-          "last_updated": "2026-02-06T17:26:12.239458",
+          "created_at": "2026-02-06T17:26:35.255255",
+          "last_updated": "2026-02-06T17:26:35.255256",
           "taxonomy": {
             "canonical_category": "Microphones & Recording",
             "canonical_subcategory": "Microphone",
@@ -2072,7 +2398,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.239451",
+            "timestamp": "2026-02-06T17:26:35.255243",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -2080,7 +2406,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--806019739826241353",
             "product_name": "Dixon PA-HMM-SP Microphone Clamp",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2100,8 +2426,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.792569",
-            "last_updated": "2026-02-06T14:01:40.792569",
+            "created_at": "2026-02-06T17:26:12.239458",
+            "last_updated": "2026-02-06T17:26:12.239458",
             "taxonomy": {
               "canonical_category": "Microphones & Recording",
               "canonical_subcategory": "Microphone",
@@ -2143,9 +2469,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.792558",
+              "timestamp": "2026-02-06T17:26:12.239451",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2154,24 +2480,109 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/448350-dixon-pa-hmm-sp-microphone-clamp\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.792569",
+              "last_updated": "2026-02-06T14:01:40.792569",
+              "taxonomy": {
+                "canonical_category": "Microphones & Recording",
+                "canonical_subcategory": "Microphone",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.792558",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--806019739826241353",
+                "product_name": "Dixon PA-HMM-SP Microphone Clamp",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/448350-dixon-pa-hmm-sp-microphone-clamp\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2216,12 +2627,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -2263,8 +2672,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.203691",
-    "last_updated": "2026-02-08T23:24:35.203693",
+    "created_at": "2026-02-09T00:46:04.725028",
+    "last_updated": "2026-02-09T00:46:04.725029",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Drum Pad",
@@ -2305,7 +2714,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.203672",
+      "timestamp": "2026-02-09T00:46:04.725018",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -2321,9 +2730,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Practice 4\" Pad"
       },
       "official_description": null,
       "official_images": [],
@@ -2333,8 +2741,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.492744",
-      "last_updated": "2026-02-06T17:51:03.492745",
+      "created_at": "2026-02-08T23:24:35.203691",
+      "last_updated": "2026-02-08T23:24:35.203693",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Drum Pad",
@@ -2364,9 +2772,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Practice 4\" Pad"
       },
       "description_short": "",
       "description_long": "",
@@ -2376,7 +2783,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.492728",
+        "timestamp": "2026-02-08T23:24:35.203672",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -2404,8 +2811,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.255389",
-        "last_updated": "2026-02-06T17:26:35.255389",
+        "created_at": "2026-02-06T17:51:03.492744",
+        "last_updated": "2026-02-06T17:51:03.492745",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Drum Pad",
@@ -2447,7 +2854,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.255379",
+          "timestamp": "2026-02-06T17:51:03.492728",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -2475,8 +2882,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.239902",
-          "last_updated": "2026-02-06T17:26:12.239903",
+          "created_at": "2026-02-06T17:26:35.255389",
+          "last_updated": "2026-02-06T17:26:35.255389",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Drum Pad",
@@ -2518,7 +2925,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.239894",
+            "timestamp": "2026-02-06T17:26:35.255379",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -2526,7 +2933,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--93803409114806287",
             "product_name": "Dixon Practice 4\" Pad",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2546,8 +2953,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.792667",
-            "last_updated": "2026-02-06T14:01:40.792667",
+            "created_at": "2026-02-06T17:26:12.239902",
+            "last_updated": "2026-02-06T17:26:12.239903",
             "taxonomy": {
               "canonical_category": "Drums & Percussion",
               "canonical_subcategory": "Drum Pad",
@@ -2589,9 +2996,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.792658",
+              "timestamp": "2026-02-06T17:26:12.239894",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2600,24 +3007,109 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/446137-dixon-practice-4-pad\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.792667",
+              "last_updated": "2026-02-06T14:01:40.792667",
+              "taxonomy": {
+                "canonical_category": "Drums & Percussion",
+                "canonical_subcategory": "Drum Pad",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.792658",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--93803409114806287",
+                "product_name": "Dixon Practice 4\" Pad",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/446137-dixon-practice-4-pad\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2662,12 +3154,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
+      "validation_warnings": [],
       "price": 0.0,
       "currency": "ILS",
       "image_hero": null,
@@ -2709,8 +3199,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.205310",
-    "last_updated": "2026-02-08T23:24:35.205311",
+    "created_at": "2026-02-09T00:46:04.725160",
+    "last_updated": "2026-02-09T00:46:04.725161",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2751,7 +3241,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.205295",
+      "timestamp": "2026-02-09T00:46:04.725139",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -2767,9 +3257,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PRWBDS Rock Block Set"
       },
       "official_description": null,
       "official_images": [],
@@ -2779,8 +3268,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.493010",
-      "last_updated": "2026-02-06T17:51:03.493010",
+      "created_at": "2026-02-08T23:24:35.205310",
+      "last_updated": "2026-02-08T23:24:35.205311",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2810,9 +3299,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PRWBDS Rock Block Set"
       },
       "description_short": "",
       "description_long": "",
@@ -2822,7 +3310,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.492996",
+        "timestamp": "2026-02-08T23:24:35.205295",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -2850,8 +3338,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.255915",
-        "last_updated": "2026-02-06T17:26:35.255915",
+        "created_at": "2026-02-06T17:51:03.493010",
+        "last_updated": "2026-02-06T17:51:03.493010",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2893,7 +3381,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.255900",
+          "timestamp": "2026-02-06T17:51:03.492996",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -2921,8 +3409,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.239994",
-          "last_updated": "2026-02-06T17:26:12.239994",
+          "created_at": "2026-02-06T17:26:35.255915",
+          "last_updated": "2026-02-06T17:26:35.255915",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2964,7 +3452,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.239988",
+            "timestamp": "2026-02-06T17:26:35.255900",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -2972,7 +3460,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2061050919876285061",
             "product_name": "Dixon PRWBDS Rock Block Set",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2992,8 +3480,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.792764",
-            "last_updated": "2026-02-06T14:01:40.792765",
+            "created_at": "2026-02-06T17:26:12.239994",
+            "last_updated": "2026-02-06T17:26:12.239994",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3035,9 +3523,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.792755",
+              "timestamp": "2026-02-06T17:26:12.239988",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3046,24 +3534,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/448360-dixon-prwbds-rock-block-set\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.792764",
+              "last_updated": "2026-02-06T14:01:40.792765",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.792755",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2061050919876285061",
+                "product_name": "Dixon PRWBDS Rock Block Set",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/448360-dixon-prwbds-rock-block-set\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3111,11 +3685,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3161,8 +3734,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.205541",
-    "last_updated": "2026-02-08T23:24:35.205541",
+    "created_at": "2026-02-09T00:46:04.725993",
+    "last_updated": "2026-02-09T00:46:04.725993",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3203,7 +3776,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.205527",
+      "timestamp": "2026-02-09T00:46:04.725979",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -3219,9 +3792,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Tambourine 16 Jingle"
       },
       "official_description": null,
       "official_images": [],
@@ -3231,8 +3803,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.493167",
-      "last_updated": "2026-02-06T17:51:03.493167",
+      "created_at": "2026-02-08T23:24:35.205541",
+      "last_updated": "2026-02-08T23:24:35.205541",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3262,9 +3834,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon Tambourine 16 Jingle"
       },
       "description_short": "",
       "description_long": "",
@@ -3274,7 +3845,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.493155",
+        "timestamp": "2026-02-08T23:24:35.205527",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -3302,8 +3873,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.256050",
-        "last_updated": "2026-02-06T17:26:35.256050",
+        "created_at": "2026-02-06T17:51:03.493167",
+        "last_updated": "2026-02-06T17:51:03.493167",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3345,7 +3916,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.256039",
+          "timestamp": "2026-02-06T17:51:03.493155",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -3373,8 +3944,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.240076",
-          "last_updated": "2026-02-06T17:26:12.240076",
+          "created_at": "2026-02-06T17:26:35.256050",
+          "last_updated": "2026-02-06T17:26:35.256050",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3416,7 +3987,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.240070",
+            "timestamp": "2026-02-06T17:26:35.256039",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -3424,7 +3995,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--8825082841874248840",
             "product_name": "Dixon Tambourine 16 Jingle",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3444,8 +4015,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.793517",
-            "last_updated": "2026-02-06T14:01:40.793518",
+            "created_at": "2026-02-06T17:26:12.240076",
+            "last_updated": "2026-02-06T17:26:12.240076",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3487,9 +4058,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.793505",
+              "timestamp": "2026-02-06T17:26:12.240070",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3498,24 +4069,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/460375-dixon-tambourine-16-jingle\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.793517",
+              "last_updated": "2026-02-06T14:01:40.793518",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.793505",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--8825082841874248840",
+                "product_name": "Dixon Tambourine 16 Jingle",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/460375-dixon-tambourine-16-jingle\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3563,11 +4220,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -3613,8 +4269,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.205778",
-    "last_updated": "2026-02-08T23:24:35.205779",
+    "created_at": "2026-02-09T00:46:04.726181",
+    "last_updated": "2026-02-09T00:46:04.726181",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3655,7 +4311,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.205764",
+      "timestamp": "2026-02-09T00:46:04.726168",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -3671,9 +4327,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PSG9000 Bongo Stand"
       },
       "official_description": null,
       "official_images": [],
@@ -3683,8 +4338,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.493299",
-      "last_updated": "2026-02-06T17:51:03.493299",
+      "created_at": "2026-02-08T23:24:35.205778",
+      "last_updated": "2026-02-08T23:24:35.205779",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3714,9 +4369,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Dixon PSG9000 Bongo Stand"
       },
       "description_short": "",
       "description_long": "",
@@ -3726,7 +4380,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.493289",
+        "timestamp": "2026-02-08T23:24:35.205764",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -3754,8 +4408,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.256177",
-        "last_updated": "2026-02-06T17:26:35.256177",
+        "created_at": "2026-02-06T17:51:03.493299",
+        "last_updated": "2026-02-06T17:51:03.493299",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3797,7 +4451,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.256166",
+          "timestamp": "2026-02-06T17:51:03.493289",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -3825,8 +4479,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.240157",
-          "last_updated": "2026-02-06T17:26:12.240158",
+          "created_at": "2026-02-06T17:26:35.256177",
+          "last_updated": "2026-02-06T17:26:35.256177",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3868,7 +4522,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.240152",
+            "timestamp": "2026-02-06T17:26:35.256166",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -3876,7 +4530,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--7054172917362368205",
             "product_name": "Dixon PSG9000 Bongo Stand",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3896,8 +4550,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.793637",
-            "last_updated": "2026-02-06T14:01:40.793637",
+            "created_at": "2026-02-06T17:26:12.240157",
+            "last_updated": "2026-02-06T17:26:12.240158",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3939,9 +4593,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.793625",
+              "timestamp": "2026-02-06T17:26:12.240152",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3950,24 +4604,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/448346-dixon-psg9000-bongo-stand-\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.793637",
+              "last_updated": "2026-02-06T14:01:40.793637",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.793625",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--7054172917362368205",
+                "product_name": "Dixon PSG9000 Bongo Stand",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/448346-dixon-psg9000-bongo-stand-\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4015,11 +4755,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4065,8 +4804,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.205992",
-    "last_updated": "2026-02-08T23:24:35.205993",
+    "created_at": "2026-02-09T00:46:04.728240",
+    "last_updated": "2026-02-09T00:46:04.728240",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4107,7 +4846,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.205980",
+      "timestamp": "2026-02-09T00:46:04.728217",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -4123,9 +4862,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סט תופים Dixon Artisan"
       },
       "official_description": null,
       "official_images": [],
@@ -4135,8 +4873,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.494263",
-      "last_updated": "2026-02-06T17:51:03.494264",
+      "created_at": "2026-02-08T23:24:35.205992",
+      "last_updated": "2026-02-08T23:24:35.205993",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4166,9 +4904,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סט תופים Dixon Artisan"
       },
       "description_short": "",
       "description_long": "",
@@ -4178,7 +4915,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.494247",
+        "timestamp": "2026-02-08T23:24:35.205980",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -4206,8 +4943,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.256437",
-        "last_updated": "2026-02-06T17:26:35.256438",
+        "created_at": "2026-02-06T17:51:03.494263",
+        "last_updated": "2026-02-06T17:51:03.494264",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4249,7 +4986,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.256408",
+          "timestamp": "2026-02-06T17:51:03.494247",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -4277,8 +5014,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.240681",
-          "last_updated": "2026-02-06T17:26:12.240681",
+          "created_at": "2026-02-06T17:26:35.256437",
+          "last_updated": "2026-02-06T17:26:35.256438",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4320,7 +5057,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.240671",
+            "timestamp": "2026-02-06T17:26:35.256408",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -4328,7 +5065,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-1999075770320917603",
             "product_name": "סט תופים Dixon Artisan",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -4348,8 +5085,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.793818",
-            "last_updated": "2026-02-06T14:01:40.793818",
+            "created_at": "2026-02-06T17:26:12.240681",
+            "last_updated": "2026-02-06T17:26:12.240681",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -4391,9 +5128,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.793807",
+              "timestamp": "2026-02-06T17:26:12.240671",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -4402,24 +5139,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1112708-dixon-artisan-drum-set\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.793818",
+              "last_updated": "2026-02-06T14:01:40.793818",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.793807",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-1999075770320917603",
+                "product_name": "סט תופים Dixon Artisan",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1112708-dixon-artisan-drum-set\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4467,11 +5290,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4517,8 +5339,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.206207",
-    "last_updated": "2026-02-08T23:24:35.206208",
+    "created_at": "2026-02-09T00:46:04.728763",
+    "last_updated": "2026-02-09T00:46:04.728764",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4559,7 +5381,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.206195",
+      "timestamp": "2026-02-09T00:46:04.728750",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -4575,9 +5397,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סט תופים Dixon Fuse"
       },
       "official_description": null,
       "official_images": [],
@@ -4587,8 +5408,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.494544",
-      "last_updated": "2026-02-06T17:51:03.494544",
+      "created_at": "2026-02-08T23:24:35.206207",
+      "last_updated": "2026-02-08T23:24:35.206208",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4618,9 +5439,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סט תופים Dixon Fuse"
       },
       "description_short": "",
       "description_long": "",
@@ -4630,7 +5450,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.494528",
+        "timestamp": "2026-02-08T23:24:35.206195",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -4658,8 +5478,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.257179",
-        "last_updated": "2026-02-06T17:26:35.257180",
+        "created_at": "2026-02-06T17:51:03.494544",
+        "last_updated": "2026-02-06T17:51:03.494544",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4701,7 +5521,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.257164",
+          "timestamp": "2026-02-06T17:51:03.494528",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -4729,8 +5549,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.240770",
-          "last_updated": "2026-02-06T17:26:12.240770",
+          "created_at": "2026-02-06T17:26:35.257179",
+          "last_updated": "2026-02-06T17:26:35.257180",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4772,7 +5592,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.240764",
+            "timestamp": "2026-02-06T17:26:35.257164",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -4780,7 +5600,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--5617036877088906654",
             "product_name": "סט תופים Dixon Fuse",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -4800,8 +5620,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.793960",
-            "last_updated": "2026-02-06T14:01:40.793960",
+            "created_at": "2026-02-06T17:26:12.240770",
+            "last_updated": "2026-02-06T17:26:12.240770",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -4843,9 +5663,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.793950",
+              "timestamp": "2026-02-06T17:26:12.240764",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -4854,24 +5674,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1112717-dixon-fuse-drum-set\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.793960",
+              "last_updated": "2026-02-06T14:01:40.793960",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.793950",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--5617036877088906654",
+                "product_name": "סט תופים Dixon Fuse",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1112717-dixon-fuse-drum-set\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -4919,11 +5825,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -4969,8 +5874,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:35.207566",
-    "last_updated": "2026-02-08T23:24:35.207567",
+    "created_at": "2026-02-09T00:46:04.729291",
+    "last_updated": "2026-02-09T00:46:04.729292",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5011,7 +5916,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:35.207315",
+      "timestamp": "2026-02-09T00:46:04.729276",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from dixon catalog"
     },
@@ -5027,9 +5932,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סט תופים Dixon Spark"
       },
       "official_description": null,
       "official_images": [],
@@ -5039,8 +5943,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.494935",
-      "last_updated": "2026-02-06T17:51:03.494936",
+      "created_at": "2026-02-08T23:24:35.207566",
+      "last_updated": "2026-02-08T23:24:35.207567",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5070,9 +5974,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "סט תופים Dixon Spark"
       },
       "description_short": "",
       "description_long": "",
@@ -5082,7 +5985,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.494920",
+        "timestamp": "2026-02-08T23:24:35.207315",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from dixon catalog"
       },
@@ -5110,8 +6013,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.257442",
-        "last_updated": "2026-02-06T17:26:35.257442",
+        "created_at": "2026-02-06T17:51:03.494935",
+        "last_updated": "2026-02-06T17:51:03.494936",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5153,7 +6056,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.257414",
+          "timestamp": "2026-02-06T17:51:03.494920",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from dixon catalog"
         },
@@ -5181,8 +6084,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.240852",
-          "last_updated": "2026-02-06T17:26:12.240852",
+          "created_at": "2026-02-06T17:26:35.257442",
+          "last_updated": "2026-02-06T17:26:35.257442",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5224,7 +6127,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.240846",
+            "timestamp": "2026-02-06T17:26:35.257414",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from dixon catalog"
           },
@@ -5232,7 +6135,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-8773151650097768375",
             "product_name": "סט תופים Dixon Spark",
-            "brand": "Dixon",
+            "brand": "dixon",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -5252,8 +6155,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:40.794060",
-            "last_updated": "2026-02-06T14:01:40.794060",
+            "created_at": "2026-02-06T17:26:12.240852",
+            "last_updated": "2026-02-06T17:26:12.240852",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -5295,9 +6198,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:40.794050",
+              "timestamp": "2026-02-06T17:26:12.240846",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Dixon catalog"
+              "extraction_notes": "Scraped from dixon catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -5306,24 +6209,110 @@
               "brand": "Dixon",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1112736-dixon-spark-drum-set\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:40.794060",
+              "last_updated": "2026-02-06T14:01:40.794060",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:40.794050",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Dixon catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-8773151650097768375",
+                "product_name": "סט תופים Dixon Spark",
+                "brand": "Dixon",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1112736-dixon-spark-drum-set\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -5371,11 +6360,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,

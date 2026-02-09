@@ -117,53 +117,24 @@ const BrandLogo = ({
 };
 
 // --- DATA SOURCES BADGE ---
-const DataSourcesBadge = ({ sources = [] }: { sources?: string[] }) => {
-  const sourceMap: Record<
-    string,
-    { label: string; icon: string; color: string }
-  > = {
-    halilit_direct: {
-      label: "Halilit",
-      icon: "₪",
-      color: "from-blue-600 to-blue-400",
-    },
-    official_specs: {
-      label: "Official",
-      icon: "✓",
-      color: "from-emerald-600 to-emerald-400",
-    },
-    trusted_reviews: {
-      label: "Reviews",
-      icon: "★",
-      color: "from-amber-600 to-amber-400",
-    },
-  };
-
+const DataSourcesBadge = ({ sources = [], brand }: { sources?: string[]; brand: string }) => {
   return (
-    <div className="flex gap-2 flex-wrap">
-      {sources.length > 0 ? (
-        sources.slice(0, 3).map((source, i) => {
-          const info = sourceMap[source] || {
-            label: source,
-            icon: "◆",
-            color: "from-zinc-600 to-zinc-400",
-          };
-          return (
-            <div
-              key={i}
-              className={`text-[9px] font-bold px-2 py-0.5 rounded-full bg-gradient-to-r ${info.color} text-white flex items-center gap-1`}
-              title={info.label}
-            >
-              <span>{info.icon}</span>
-              <span>{info.label}</span>
-            </div>
-          );
-        })
-      ) : (
-        <div className="text-[9px] font-bold px-2 py-0.5 rounded-full bg-zinc-700 text-zinc-300">
-          No sources
+    <div className="flex gap-4 items-center mt-1">
+      {/* Halilit Source (Use pseudo-logo since no image file exists) */}
+      <div className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity" title="Commercial Source: Halilit.com">
+        <div className="h-8 w-8 bg-blue-600 rounded-md flex items-center justify-center shadow-lg shadow-blue-900/20 text-white font-black italic text-[10px] tracking-tighter">
+          ZL
         </div>
-      )}
+        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Halilit</span>
+      </div>
+
+      <div className="h-6 w-px bg-zinc-800" />
+
+      {/* Official Source (Brand Logo) */}
+      <div className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity" title={`Official Source: ${brand} Website`}>
+        <BrandLogo brand={brand} className="h-8 w-auto max-w-[60px]" />
+        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Official</span>
+      </div>
     </div>
   );
 };
@@ -179,9 +150,9 @@ const EnrichmentPanel = ({
   };
 }) => {
   return (
-    <div className="space-y-3 text-[11px]">
+    <div className="space-y-4 text-[11px]">
       {/* Official Specs Section */}
-      {product.official_specs && (
+      {product.official_specs && Object.keys(product.official_specs).length > 0 && (
         <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
           <div className="flex items-center gap-2 mb-2">
             <CheckCircle className="w-3 h-3 text-emerald-500" />
@@ -190,24 +161,16 @@ const EnrichmentPanel = ({
             </span>
           </div>
           <div className="space-y-1 text-zinc-300">
-            {product.official_specs.polyphony && (
-              <div>
-                <span className="text-emerald-600">◆</span> Polyphony:{" "}
-                {product.official_specs.polyphony}
+            {Object.entries(product.official_specs)
+              .filter(([key]) => key !== 'note' && key !== 'extracted_name') // Filter out metadata
+              .slice(0, 5) // Limit just in case
+              .map(([key, value]) => (
+              <div key={key} className="flex gap-1 break-words">
+                <span className="text-emerald-600 mt-0.5">◆</span> 
+                <span className="text-emerald-500/80 capitalize">{key.replace(/_/g, ' ')}:</span>
+                <span className="text-zinc-200">{String(value)}</span>
               </div>
-            )}
-            {product.official_specs.connectivity && (
-              <div>
-                <span className="text-emerald-600">◆</span> Inputs:{" "}
-                {product.official_specs.connectivity.join(", ")}
-              </div>
-            )}
-            {product.official_specs.power_supply && (
-              <div>
-                <span className="text-emerald-600">◆</span> Power:{" "}
-                {product.official_specs.power_supply}
-              </div>
-            )}
+            ))}
           </div>
         </div>
       )}
@@ -266,11 +229,15 @@ const EnrichmentPanel = ({
             Data Sources
           </span>
         </div>
-        <DataSourcesBadge sources={product.sources || ["halilit_direct"]} />
+        <DataSourcesBadge 
+          sources={product.sources || ["halilit_direct"]} 
+          brand={product.brand || "Unknown"}
+        />
       </div>
     </div>
   );
 };
+
 
 export const SpectrumModule = () => {
   const { activeTribeId, goToGalaxy, openProductPage } = useNavigationStore();
@@ -665,40 +632,6 @@ export const SpectrumModule = () => {
                     </div>
                   </div>
                 )}
-              </div>
-
-              <div className="w-full h-px bg-zinc-800/50" />
-
-              {/* Price Range Classification */}
-              <div className="space-y-2 text-xs">
-                <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-2">
-                  Price Range
-                </div>
-                <div className="w-full bg-zinc-900 rounded-sm border border-zinc-800 p-2 space-y-1">
-                  {(() => {
-                    const price = getPriceValue(hoveredProduct);
-                    const prices = filteredProducts
-                      .map((p) => getPriceValue(p))
-                      .filter((p) => p > 0)
-                      .sort((a, b) => a - b);
-
-                    return (
-                      <>
-                        <div className="flex items-center justify-between text-[9px]">
-                          <span className="text-zinc-500">
-                            Min: {getPrice({ price_il: prices[0] } as Product)}
-                          </span>
-                          <span className="text-zinc-500">
-                            Max:{" "}
-                            {getPrice({
-                              price_il: prices[prices.length - 1],
-                            } as Product)}
-                          </span>
-                        </div>
-                      </>
-                    );
-                  })()}
-                </div>
               </div>
 
               <div className="flex-1" />

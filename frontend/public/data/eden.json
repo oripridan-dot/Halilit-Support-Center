@@ -21,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.140450",
-    "last_updated": "2026-02-08T23:24:47.140450",
+    "created_at": "2026-02-09T00:46:20.603466",
+    "last_updated": "2026-02-09T00:46:20.603467",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -63,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.140432",
+      "timestamp": "2026-02-09T00:46:20.603430",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -79,9 +79,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN110-4"
       },
       "official_description": null,
       "official_images": [],
@@ -91,8 +90,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.575751",
-      "last_updated": "2026-02-06T17:51:03.575751",
+      "created_at": "2026-02-08T23:24:47.140450",
+      "last_updated": "2026-02-08T23:24:47.140450",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -122,9 +121,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN110-4"
       },
       "description_short": "",
       "description_long": "",
@@ -134,7 +132,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.575734",
+        "timestamp": "2026-02-08T23:24:47.140432",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -162,8 +160,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.322923",
-        "last_updated": "2026-02-06T17:26:35.322924",
+        "created_at": "2026-02-06T17:51:03.575751",
+        "last_updated": "2026-02-06T17:51:03.575751",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -205,7 +203,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.322903",
+          "timestamp": "2026-02-06T17:51:03.575734",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -233,8 +231,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.274237",
-          "last_updated": "2026-02-06T17:26:12.274238",
+          "created_at": "2026-02-06T17:26:35.322923",
+          "last_updated": "2026-02-06T17:26:35.322924",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -276,7 +274,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.274226",
+            "timestamp": "2026-02-06T17:26:35.322903",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -284,7 +282,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--683384927899550534",
             "product_name": "מגבר לגיטרה בס Eden Terra Nova TN110-4",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -304,8 +302,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.470404",
-            "last_updated": "2026-02-06T14:01:47.470404",
+            "created_at": "2026-02-06T17:26:12.274237",
+            "last_updated": "2026-02-06T17:26:12.274238",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -347,9 +345,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.470377",
+              "timestamp": "2026-02-06T17:26:12.274226",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -358,24 +356,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/2664292-eden-tn110-4-electric-bass-guitar-amplifier-cabinet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.470404",
+              "last_updated": "2026-02-06T14:01:47.470404",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.470377",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--683384927899550534",
+                "product_name": "מגבר לגיטרה בס Eden Terra Nova TN110-4",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/2664292-eden-tn110-4-electric-bass-guitar-amplifier-cabinet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -423,11 +507,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -473,8 +556,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.141559",
-    "last_updated": "2026-02-08T23:24:47.141560",
+    "created_at": "2026-02-09T00:46:20.614443",
+    "last_updated": "2026-02-09T00:46:20.614444",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -515,7 +598,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.141542",
+      "timestamp": "2026-02-09T00:46:20.614410",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -531,9 +614,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN110-8"
       },
       "official_description": null,
       "official_images": [],
@@ -543,8 +625,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.576182",
-      "last_updated": "2026-02-06T17:51:03.576182",
+      "created_at": "2026-02-08T23:24:47.141559",
+      "last_updated": "2026-02-08T23:24:47.141560",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -574,9 +656,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN110-8"
       },
       "description_short": "",
       "description_long": "",
@@ -586,7 +667,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.576163",
+        "timestamp": "2026-02-08T23:24:47.141542",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -614,8 +695,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.323399",
-        "last_updated": "2026-02-06T17:26:35.323399",
+        "created_at": "2026-02-06T17:51:03.576182",
+        "last_updated": "2026-02-06T17:51:03.576182",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -657,7 +738,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.323381",
+          "timestamp": "2026-02-06T17:51:03.576163",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -685,8 +766,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.274617",
-          "last_updated": "2026-02-06T17:26:12.274618",
+          "created_at": "2026-02-06T17:26:35.323399",
+          "last_updated": "2026-02-06T17:26:35.323399",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -728,7 +809,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.274607",
+            "timestamp": "2026-02-06T17:26:35.323381",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -736,7 +817,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-6812477676781563798",
             "product_name": "מגבר לגיטרה בס Eden Terra Nova TN110-8",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -756,8 +837,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.470901",
-            "last_updated": "2026-02-06T14:01:47.470902",
+            "created_at": "2026-02-06T17:26:12.274617",
+            "last_updated": "2026-02-06T17:26:12.274618",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -799,9 +880,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.470880",
+              "timestamp": "2026-02-06T17:26:12.274607",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -810,24 +891,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/2664579-eden-tn110-8-electric-bass-guitar-amplifier-cabinet\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.470901",
+              "last_updated": "2026-02-06T14:01:47.470902",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.470880",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-6812477676781563798",
+                "product_name": "מגבר לגיטרה בס Eden Terra Nova TN110-8",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/2664579-eden-tn110-8-electric-bass-guitar-amplifier-cabinet\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -875,11 +1042,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -925,8 +1091,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.141900",
-    "last_updated": "2026-02-08T23:24:47.141900",
+    "created_at": "2026-02-09T00:46:20.614668",
+    "last_updated": "2026-02-09T00:46:20.614668",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -967,7 +1133,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.141888",
+      "timestamp": "2026-02-09T00:46:20.614652",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -983,9 +1149,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN2251"
       },
       "official_description": null,
       "official_images": [],
@@ -995,8 +1160,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.576310",
-      "last_updated": "2026-02-06T17:51:03.576310",
+      "created_at": "2026-02-08T23:24:47.141900",
+      "last_updated": "2026-02-08T23:24:47.141900",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1026,9 +1191,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN2251"
       },
       "description_short": "",
       "description_long": "",
@@ -1038,7 +1202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.576300",
+        "timestamp": "2026-02-08T23:24:47.141888",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -1066,8 +1230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.323880",
-        "last_updated": "2026-02-06T17:26:35.323881",
+        "created_at": "2026-02-06T17:51:03.576310",
+        "last_updated": "2026-02-06T17:51:03.576310",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1109,7 +1273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.323864",
+          "timestamp": "2026-02-06T17:51:03.576300",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -1137,8 +1301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.274725",
-          "last_updated": "2026-02-06T17:26:12.274725",
+          "created_at": "2026-02-06T17:26:35.323880",
+          "last_updated": "2026-02-06T17:26:35.323881",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1180,7 +1344,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.274718",
+            "timestamp": "2026-02-06T17:26:35.323864",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -1188,7 +1352,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped-2323489958483179129",
             "product_name": "מגבר לגיטרה בס Eden Terra Nova TN2251",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1208,8 +1372,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.471027",
-            "last_updated": "2026-02-06T14:01:47.471027",
+            "created_at": "2026-02-06T17:26:12.274725",
+            "last_updated": "2026-02-06T17:26:12.274725",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1251,9 +1415,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.471016",
+              "timestamp": "2026-02-06T17:26:12.274718",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1262,24 +1426,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1441050-eden-terra-nova-tn2251\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.471027",
+              "last_updated": "2026-02-06T14:01:47.471027",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.471016",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-2323489958483179129",
+                "product_name": "מגבר לגיטרה בס Eden Terra Nova TN2251",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1441050-eden-terra-nova-tn2251\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1327,11 +1577,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1377,8 +1626,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.142975",
-    "last_updated": "2026-02-08T23:24:47.142975",
+    "created_at": "2026-02-09T00:46:20.619479",
+    "last_updated": "2026-02-09T00:46:20.619479",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1419,7 +1668,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.142961",
+      "timestamp": "2026-02-09T00:46:20.619458",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -1435,9 +1684,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN2252"
       },
       "official_description": null,
       "official_images": [],
@@ -1447,8 +1695,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.576987",
-      "last_updated": "2026-02-06T17:51:03.576987",
+      "created_at": "2026-02-08T23:24:47.142975",
+      "last_updated": "2026-02-08T23:24:47.142975",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1478,9 +1726,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר לגיטרה בס Eden Terra Nova TN2252"
       },
       "description_short": "",
       "description_long": "",
@@ -1490,7 +1737,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.576969",
+        "timestamp": "2026-02-08T23:24:47.142961",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -1518,8 +1765,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.324133",
-        "last_updated": "2026-02-06T17:26:35.324133",
+        "created_at": "2026-02-06T17:51:03.576987",
+        "last_updated": "2026-02-06T17:51:03.576987",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1561,7 +1808,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.324119",
+          "timestamp": "2026-02-06T17:51:03.576969",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -1589,8 +1836,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.275117",
-          "last_updated": "2026-02-06T17:26:12.275118",
+          "created_at": "2026-02-06T17:26:35.324133",
+          "last_updated": "2026-02-06T17:26:35.324133",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1632,7 +1879,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.275109",
+            "timestamp": "2026-02-06T17:26:35.324119",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -1640,7 +1887,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--744011399210684531",
             "product_name": "מגבר לגיטרה בס Eden Terra Nova TN2252",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -1660,8 +1907,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.471528",
-            "last_updated": "2026-02-06T14:01:47.471528",
+            "created_at": "2026-02-06T17:26:12.275117",
+            "last_updated": "2026-02-06T17:26:12.275118",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -1703,9 +1950,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.471512",
+              "timestamp": "2026-02-06T17:26:12.275109",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -1714,24 +1961,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1441085-eden-terra-nova-tn2252\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.471528",
+              "last_updated": "2026-02-06T14:01:47.471528",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.471512",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--744011399210684531",
+                "product_name": "מגבר לגיטרה בס Eden Terra Nova TN2252",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1441085-eden-terra-nova-tn2252\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -1779,11 +2112,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -1829,8 +2161,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.143311",
-    "last_updated": "2026-02-08T23:24:47.143312",
+    "created_at": "2026-02-09T00:46:20.620187",
+    "last_updated": "2026-02-09T00:46:20.620187",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1871,7 +2203,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.143299",
+      "timestamp": "2026-02-09T00:46:20.620169",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -1887,9 +2219,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר ראש לגיטרה בס Eden Terra Nova TN226"
       },
       "official_description": null,
       "official_images": [],
@@ -1899,8 +2230,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.577152",
-      "last_updated": "2026-02-06T17:51:03.577152",
+      "created_at": "2026-02-08T23:24:47.143311",
+      "last_updated": "2026-02-08T23:24:47.143312",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1930,9 +2261,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר ראש לגיטרה בס Eden Terra Nova TN226"
       },
       "description_short": "",
       "description_long": "",
@@ -1942,7 +2272,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.577141",
+        "timestamp": "2026-02-08T23:24:47.143299",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -1970,8 +2300,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.324647",
-        "last_updated": "2026-02-06T17:26:35.324647",
+        "created_at": "2026-02-06T17:51:03.577152",
+        "last_updated": "2026-02-06T17:51:03.577152",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2013,7 +2343,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.324631",
+          "timestamp": "2026-02-06T17:51:03.577141",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -2041,8 +2371,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.275209",
-          "last_updated": "2026-02-06T17:26:12.275209",
+          "created_at": "2026-02-06T17:26:35.324647",
+          "last_updated": "2026-02-06T17:26:35.324647",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2084,7 +2414,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.275203",
+            "timestamp": "2026-02-06T17:26:35.324631",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -2092,7 +2422,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2794004016249846419",
             "product_name": "מגבר ראש לגיטרה בס Eden Terra Nova TN226",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2112,8 +2442,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.471663",
-            "last_updated": "2026-02-06T14:01:47.471663",
+            "created_at": "2026-02-06T17:26:12.275209",
+            "last_updated": "2026-02-06T17:26:12.275209",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2155,9 +2485,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.471652",
+              "timestamp": "2026-02-06T17:26:12.275203",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2166,24 +2496,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/1441101-eden-terra-nova-tn226-bass-amp-head\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.471663",
+              "last_updated": "2026-02-06T14:01:47.471663",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.471652",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2794004016249846419",
+                "product_name": "מגבר ראש לגיטרה בס Eden Terra Nova TN226",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1441101-eden-terra-nova-tn226-bass-amp-head\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2231,11 +2647,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2281,8 +2696,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.143686",
-    "last_updated": "2026-02-08T23:24:47.143687",
+    "created_at": "2026-02-09T00:46:20.620382",
+    "last_updated": "2026-02-09T00:46:20.620383",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2323,7 +2738,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.143673",
+      "timestamp": "2026-02-09T00:46:20.620369",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -2339,9 +2754,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר ראש לגיטרה בס Eden WTX-264"
       },
       "official_description": null,
       "official_images": [],
@@ -2351,8 +2765,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.577272",
-      "last_updated": "2026-02-06T17:51:03.577273",
+      "created_at": "2026-02-08T23:24:47.143686",
+      "last_updated": "2026-02-08T23:24:47.143687",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2382,9 +2796,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "מגבר ראש לגיטרה בס Eden WTX-264"
       },
       "description_short": "",
       "description_long": "",
@@ -2394,7 +2807,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.577262",
+        "timestamp": "2026-02-08T23:24:47.143673",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -2422,8 +2835,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.324941",
-        "last_updated": "2026-02-06T17:26:35.324941",
+        "created_at": "2026-02-06T17:51:03.577272",
+        "last_updated": "2026-02-06T17:51:03.577273",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2465,7 +2878,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.324926",
+          "timestamp": "2026-02-06T17:51:03.577262",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -2493,8 +2906,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.275291",
-          "last_updated": "2026-02-06T17:26:12.275291",
+          "created_at": "2026-02-06T17:26:35.324941",
+          "last_updated": "2026-02-06T17:26:35.324941",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2536,7 +2949,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.275286",
+            "timestamp": "2026-02-06T17:26:35.324926",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -2544,7 +2957,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--7508646536253542879",
             "product_name": "מגבר ראש לגיטרה בס Eden WTX-264",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -2564,8 +2977,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.471768",
-            "last_updated": "2026-02-06T14:01:47.471768",
+            "created_at": "2026-02-06T17:26:12.275291",
+            "last_updated": "2026-02-06T17:26:12.275291",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -2607,9 +3020,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.471759",
+              "timestamp": "2026-02-06T17:26:12.275286",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -2618,24 +3031,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/446484-eden-wtx-264\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.471768",
+              "last_updated": "2026-02-06T14:01:47.471768",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.471759",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--7508646536253542879",
+                "product_name": "מגבר ראש לגיטרה בס Eden WTX-264",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/446484-eden-wtx-264\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -2683,11 +3182,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,
@@ -2733,8 +3231,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-08T23:24:47.144656",
-    "last_updated": "2026-02-08T23:24:47.144656",
+    "created_at": "2026-02-09T00:46:20.623847",
+    "last_updated": "2026-02-09T00:46:20.623848",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2775,7 +3273,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-08T23:24:47.144642",
+      "timestamp": "2026-02-09T00:46:20.623831",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eden catalog"
     },
@@ -2791,9 +3289,8 @@
       "model_number": null,
       "official_name": null,
       "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Eden I90 Chorus"
       },
       "official_description": null,
       "official_images": [],
@@ -2803,8 +3300,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:51:03.578870",
-      "last_updated": "2026-02-06T17:51:03.578870",
+      "created_at": "2026-02-08T23:24:47.144656",
+      "last_updated": "2026-02-08T23:24:47.144656",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2834,9 +3331,8 @@
         "media_assets": []
       },
       "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Eden I90 Chorus"
       },
       "description_short": "",
       "description_long": "",
@@ -2846,7 +3342,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:51:03.578854",
+        "timestamp": "2026-02-08T23:24:47.144642",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eden catalog"
       },
@@ -2874,8 +3370,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:35.325381",
-        "last_updated": "2026-02-06T17:26:35.325382",
+        "created_at": "2026-02-06T17:51:03.578870",
+        "last_updated": "2026-02-06T17:51:03.578870",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2917,7 +3413,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:35.325367",
+          "timestamp": "2026-02-06T17:51:03.578854",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eden catalog"
         },
@@ -2945,8 +3441,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T17:26:12.275776",
-          "last_updated": "2026-02-06T17:26:12.275776",
+          "created_at": "2026-02-06T17:26:35.325381",
+          "last_updated": "2026-02-06T17:26:35.325382",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2988,7 +3484,7 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T17:26:12.275767",
+            "timestamp": "2026-02-06T17:26:35.325367",
             "extraction_method": "web_scraper",
             "extraction_notes": "Scraped from eden catalog"
           },
@@ -2996,7 +3492,7 @@
           "raw_snapshot": {
             "halilit_id": "scraped--2564031212354728360",
             "product_name": "Eden I90 Chorus",
-            "brand": "Eden",
+            "brand": "eden",
             "price_il": 0.0,
             "price_eilat": 0.0,
             "halilit_url": "https://halilit.com",
@@ -3016,8 +3512,8 @@
             "average_rating": null,
             "status": "harvested",
             "pipeline_phase": "harvest",
-            "created_at": "2026-02-06T14:01:47.472303",
-            "last_updated": "2026-02-06T14:01:47.472303",
+            "created_at": "2026-02-06T17:26:12.275776",
+            "last_updated": "2026-02-06T17:26:12.275776",
             "taxonomy": {
               "canonical_category": "Other",
               "canonical_subcategory": "Uncategorized",
@@ -3059,9 +3555,9 @@
               "source_name": "Halilit",
               "source_url": "https://halilit.com",
               "confidence": "commercial",
-              "timestamp": "2026-02-06T14:01:47.472292",
+              "timestamp": "2026-02-06T17:26:12.275767",
               "extraction_method": "web_scraper",
-              "extraction_notes": "Scraped from Eden catalog"
+              "extraction_notes": "Scraped from eden catalog"
             },
             "lineage": {},
             "raw_snapshot": {
@@ -3070,24 +3566,110 @@
               "brand": "Eden",
               "price_il": 0.0,
               "price_eilat": 0.0,
-              "halilit_url": "https://www.halilit.com  /items/444697-eden-i90-chorus\n",
-              "pipeline_phase": "enrich",
-              "status": "harvested",
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
               "official_specs": {
                 "keys": 88,
                 "action": "Hammer Action",
                 "polyphony": 128
               },
-              "official_description": "The ultimate stage piano for professionals.",
-              "official_images": [
-                {
-                  "type": "image",
-                  "url": "https://brand.com/hero.jpg",
-                  "display_purpose": "hero",
-                  "source": "official"
-                }
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:01:47.472303",
+              "last_updated": "2026-02-06T14:01:47.472303",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:01:47.472292",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Eden catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--2564031212354728360",
+                "product_name": "Eden I90 Chorus",
+                "brand": "Eden",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/444697-eden-i90-chorus\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "⚠ Price is 0 (TBD)",
+                "⚠ Category may not be standard: Other > Uncategorized"
               ],
-              "official_url": "https://brand.com/products/stage-88"
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
             },
             "data_completeness": 0.4210526315789473,
             "quality_score": 0.4210526315789473,
@@ -3135,11 +3717,10 @@
         "image_url": ""
       },
       "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
+      "quality_score": 100.0,
       "validation_status": "approved",
       "validation_errors": [],
       "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
         "⚠ Category may not be standard: Other > Uncategorized"
       ],
       "price": 0.0,

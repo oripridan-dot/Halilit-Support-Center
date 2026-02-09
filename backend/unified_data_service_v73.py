@@ -439,6 +439,14 @@ class ConductorDataService:
         self._catalog_cache = None
         self._cache_timestamp = None
 
+    def get_all_products(self) -> List[Dict[str, Any]]:
+        """
+        Get flat list of all products.
+        Wrapper for get_unified_catalog()['products'].
+        """
+        catalog = self.get_unified_catalog()
+        return catalog.get('products', [])
+
     def get_unified_catalog(self) -> Dict[str, Any]:
         """
         Get all Conductor-verified products aggregated from all brands.
@@ -1038,3 +1046,7 @@ def get_conductor_data_service() -> ConductorDataService:
 def get_ingest_to_frontend_engine() -> IngestToFrontendSyncEngine:
     """Get IngestToFrontendSyncEngine (stateless utility class)."""
     return IngestToFrontendSyncEngine()
+
+
+# Compatibility for external modules
+unified_data_service = get_conductor_data_service()
