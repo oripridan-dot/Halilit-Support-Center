@@ -3406,9 +3406,11 @@ import logging
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import google.genai as genai
+from google.genai import types
 from backend.unified_quality_gates_v75 import MemoryAwareMixin
 from backend.ingestion.visual_comparator import get_visual_comparator_engine
 from backend.ingestion.data_models import IngestionProductDraft
+from backend.unified_learning_system_v76 import LearningPatternRepository, LearningPattern
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -4292,6 +4294,9 @@ class TrinitySwarm:
         self.verifier = OfficialAgent()
         self.auditor = ContextualAgent()
         self.processed_products = []
+        self.learning_repo = LearningPatternRepository()
+        # Initialize Visual Comparator with global client
+        self.visual_comparator = get_visual_comparator_engine(client)
 
         # Load Taxonomy (Mock for now)
         self.taxonomy = ["Nord", "Roland", "Yamaha", "Korg"]
@@ -4313,6 +4318,53 @@ class TrinitySwarm:
         audit_result = self.auditor.validate_and_review(enriched_data)
 
         self.handle_audit_outcome(enriched_data, audit_result)
+
+    def _resolve_conflict(self, product_name: str, claims: Dict, visual_evidence: str, discrepancy: str, image_url: str) -> Dict[str, Any]:
+        """
+        Arbitrates between Official Text and Visual Evidence using Gemini.
+        Returns the resolved data updates and a learning pattern if applicable.
+        """
+        print(f"   ⚔️ CONFLICT DETECTED for {product_name}!")
+        print(f"      Text claims: {claims}")
+        print(f"      Visual sees: {visual_evidence}")
+
+        prompt = f"""
+        CONFLICT DETECTED in Product Data Pipeline for '{product_name}'.
+        
+        SOURCE A (Official Text): {json.dumps(claims)}
+        SOURCE B (Visual Evidence): {visual_evidence}
+        DISCREPANCY: {discrepancy}
+        IMAGE URL: {image_url}
+
+        You are the SUPREME ARBITRATOR. 
+        Your job is to decide the TRUTH and generate a LEARNING PATTERN to prevent this specific type of error in the future.
+
+        RULES:
+        1. Visual Evidence > 90% Confidence usually trumps generic text.
+        2. Official Manufacturer Spec usually trumps vague photos.
+        3. If the photo looks like an accessory (bag, cable) but the text says "Piano", the Text is likely right about the PRODUCT, but the Photo is WRONG (or vice versa).
+
+        OUTPUT JSON ONLY:
+        {{
+            "resolution": "Description of the truth",
+            "winner": "Visual" or "Text",
+            "corrected_claims": {{}}, 
+            "learning_insight": "A concise rule to apply to this brand in the future",
+            "confidence": 0.9
+        }}
+        """
+
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json")
+            )
+            return json.loads(response.text)
+        except Exception as e:
+            logger.error(f"Arbitration failed: {e}")
+            return {"winner": "Text", "corrected_claims": {}}
 
     def process_brand_with_results(self, brand_name: str):
         """
@@ -4392,6 +4444,52 @@ class TrinitySwarm:
                 if not isinstance(enriched_data, dict):
                     raise ValueError(
                         f"Enrichment returned non-dict for product {idx}")
+
+                # --- 🔍 CONFLICT DETECTION (Visual vs Official) ---
+                try:
+                    img_url = enriched_data.get('image_url') or raw_data.get('image_url')
+                    if img_url:
+                        # Extract claims to verify
+                        claims_to_check = {
+                            "product_name": enriched_data.get('product_name'),
+                            "category": enriched_data.get('category', 'Unknown'),
+                            "official_description": enriched_data.get('description', '')[:200]
+                        }
+                        
+                        # Validate
+                        is_consistent, visual_evidence, discrepancy, conf = self.visual_comparator.validate_single_image_claims(img_url, claims_to_check)
+                        
+                        if not is_consistent and conf > 0.8:
+                            # ⚔️ MAJOR CONFLICT - Invoke Arbitrator
+                            resolution = self._resolve_conflict(
+                                enriched_data.get('product_name'),
+                                claims_to_check,
+                                visual_evidence,
+                                discrepancy,
+                                img_url
+                            )
+                            
+                            if resolution.get("winner") == "Visual":
+                                # Apply corrections
+                                updates = resolution.get("corrected_claims", {})
+                                enriched_data.update(updates)
+                                print(f"      🎨 Visual Winner! Updated: {updates}")
+                            
+                            # SAVE LEARNING PATTERN
+                            if resolution.get("learning_insight"):
+                                pattern = LearningPattern(
+                                    pattern_id=f"pat_{int(datetime.now().timestamp())}",
+                                    brand=brand_name,
+                                    category=enriched_data.get('category', 'General'),
+                                    insight=resolution.get("learning_insight"),
+                                    confidence=resolution.get("confidence", 0.9),
+                                    created_at=datetime.now().isoformat(),
+                                    source="VisualValidator_Arbitration"
+                                )
+                                self.learning_repo.save_pattern(pattern)
+                except Exception as ve:
+                    print(f"   ⚠️ Visual validation skipped: {ve}")
+                # --------------------------------------------------
 
                 # Step 3: EXTERNAL AUDIT (Contextual - Insight)
                 # Validates against 3 sources
@@ -6308,6 +6406,69 @@ class QualityAuditRecord:
     def to_json(self) -> str:
         """Serialize to JSON for storage"""
         return json.dumps(asdict(self), default=str)
+
+
+@dataclass
+class LearningPattern:
+    """
+    Represents a specific learned insight about a brand or category.
+    Used to inject knowledge into future agent runs.
+    """
+    pattern_id: str
+    brand: str
+    category: str
+    insight: str  # e.g., "Brand X often uses accessory photos for main listings"
+    confidence: float
+    created_at: str
+    # visual_validator, manual_review, etc.
+    source: str = "conflict_resolution"
+
+# ============================================================================
+# LEARNING REPOSITORY
+# ============================================================================
+
+
+class LearningPatternRepository:
+    """
+    Manages the persistence and retrieval of learned patterns.
+    Acts as the 'Long Term Memory' for agent strategy.
+    """
+
+    def __init__(self, memory_dir: str = ".agent_memory"):
+        self.memory_dir = Path(memory_dir)
+        self.patterns_file = self.memory_dir / "learning_patterns.json"
+        self._ensure_storage()
+
+    def _ensure_storage(self):
+        self.memory_dir.mkdir(parents=True, exist_ok=True)
+        if not self.patterns_file.exists():
+            with open(self.patterns_file, "w") as f:
+                json.dump([], f)
+
+    def save_pattern(self, pattern: LearningPattern):
+        patterns = self._load_patterns()
+        # Check for duplicates based on insight text and brand
+        if any(p['insight'] == pattern.insight and p['brand'] == pattern.brand for p in patterns):
+            return  # Skip duplicate
+
+        patterns.append(asdict(pattern))
+        with open(self.patterns_file, "w") as f:
+            json.dump(patterns, f, indent=2)
+        logger.info(
+            f"🧠 Learned new pattern for {pattern.brand}: {pattern.insight}")
+
+    def get_brand_insights(self, brand: str) -> List[str]:
+        """Retrieve all insights valid for a specific brand."""
+        patterns = self._load_patterns()
+        # Filter for this brand or 'ALL'
+        return [p['insight'] for p in patterns if p['brand'].lower() == brand.lower() or p['brand'] == "ALL"]
+
+    def _load_patterns(self) -> List[dict]:
+        try:
+            with open(self.patterns_file, "r") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, FileNotFoundError):
+            return []
 
 
 @dataclass

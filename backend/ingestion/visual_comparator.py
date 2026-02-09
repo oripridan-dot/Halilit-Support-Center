@@ -78,6 +78,61 @@ class VisualComparator:
             logger.error(f"Gemini Vision error: {e}")
             return 0.0, f"Vision model error: {str(e)}", "error"
 
+    def validate_single_image_claims(self, image_url: str, claims: Dict[str, str]) -> Tuple[bool, str, str, float]:
+        """
+        Validates if a single image supports the text claims provided.
+        Returns: (is_consistent, evidence, discrepancy_details, confidence)
+        """
+        if not self.client or not image_url:
+            return True, "Skipped", "No client or image", 0.0
+
+        try:
+            img_data = self._download_image(image_url)
+            if not img_data:
+                return True, "Skipped", "Image download failed", 0.0
+
+            prompt = f"""
+            You are an expert Visual Validator.
+            Look at this product image and verify if it matches the following specific CLAIMS.
+            
+            CLAIMS:
+            {claims}
+            
+            TASK:
+            For each claim (e.g., Color=Black, Type=Drums), check if the image contradicts it.
+            
+            RESPONSE FORMAT (JSON ONLY):
+            {{
+                "is_consistent": boolean, 
+                "confidence": float (0-1),
+                "visual_evidence": "What you see explicitly in the image",
+                "discrepancy": "Description of conflict if any, else 'None'"
+            }}
+            """
+
+            response = self.client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=[
+                    types.Part.from_bytes(
+                        data=img_data, mime_type="image/jpeg"),
+                    prompt
+                ],
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json")
+            )
+
+            import json
+            res = json.loads(response.text)
+            return (
+                res.get("is_consistent", True),
+                res.get("visual_evidence", ""),
+                res.get("discrepancy", ""),
+                res.get("confidence", 0.0)
+            )
+        except Exception as e:
+            logger.error(f"Single image validation failed: {e}")
+            return True, "Error", str(e), 0.0
+
     def _download_image(self, url: str) -> Optional[bytes]:
         """Downloads image bytes from URL"""
         try:
