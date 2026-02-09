@@ -1,6 +1,6 @@
 // frontend/src/store/navigationStore.ts
 /**
- * Navigation Store v7.0 - UNIFIED DATA PIPELINE
+ * Navigation Store v8.0 - UNIFIED DATA PIPELINE
  * The Central State Machine for the 3-Screen User Journey.
  * 
  * Screens:

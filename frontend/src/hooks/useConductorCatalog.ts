@@ -1,5 +1,5 @@
 /**
- * useConductorCatalog v7.3
+ * useConductorCatalog v8.0
  *
  * PRIMARY HOOK for all frontend data loading.
  *

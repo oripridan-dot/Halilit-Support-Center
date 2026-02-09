@@ -435,6 +435,30 @@ export const useProductStore = create<ProductStoreState>()(
             {
                 name: 'product-store',
                 version: 1,
+                storage: {
+                    getItem: (name) => {
+                        const str = localStorage.getItem(name);
+                        if (!str) return null;
+                        const parsed = JSON.parse(str);
+                        // Restore Map from plain object
+                        if (parsed?.state?.activeBatches && !(parsed.state.activeBatches instanceof Map)) {
+                            parsed.state.activeBatches = new Map(Object.entries(parsed.state.activeBatches));
+                        }
+                        return parsed;
+                    },
+                    setItem: (name, value) => {
+                        // Serialize Map to plain object
+                        const toStore = { ...value };
+                        if (toStore.state?.activeBatches instanceof Map) {
+                            toStore.state = {
+                                ...toStore.state,
+                                activeBatches: Object.fromEntries(toStore.state.activeBatches),
+                            };
+                        }
+                        localStorage.setItem(name, JSON.stringify(toStore));
+                    },
+                    removeItem: (name) => localStorage.removeItem(name),
+                },
             }
         )
     )

@@ -14,7 +14,7 @@ Task Workflow:
 import logging
 from celery import shared_task, Task
 from celery.exceptions import SoftTimeLimitExceeded
-from celery_config import celery_app
+from backend.celery_config import celery_app
 from typing import Dict, List, Optional, Any
 import traceback
 from datetime import datetime
@@ -272,7 +272,7 @@ def validate_product(self, product: Dict[str, Any], risk_threshold: int = 50) ->
         # Initialize and run validation agent
         agent = ContextualAgent()
 
-        audit_report = agent.audit(product)
+        audit_report = agent.validate_and_review(product)
 
         risk_score = getattr(audit_report, 'risk_score', 0)
         passed = risk_score <= risk_threshold

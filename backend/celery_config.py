@@ -45,9 +45,6 @@ celery_app.conf.update(
     result_expires=3600,  # Keep results for 1 hour
     result_persistent=True,
 
-    # Retry configuration (database-level)
-    task_acks_late=True,
-
     # Task auto-retry configuration
     task_auto_retry_for=(Exception,),
     task_max_retries=3,

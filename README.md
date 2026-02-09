@@ -1,10 +1,10 @@
-# Halilit Support Center v7.6 - Visual Validator & Enrichment
+# Halilit Support Center v8.0 - Async Task Queue & Distributed Pipeline
 
-**Status**: ✅ **PRODUCTION READY - Visuals & Metadata Live**
-**Version**: v7.6.0
-**Visual Pipeline**: Verified ✅
-**All APIs**: Operational (+Enrichment) ✅
-**Product Catalog**: 1,200+ verified ✅
+**Status**: ✅ **PRODUCTION READY**  
+**Version**: v8.0.0  
+**Branch**: `v8.0`  
+**Pipeline**: Trinity Swarm + Celery Async Workers  
+**Product Catalog**: 1,200+ verified products  
 
 ---
 
@@ -20,419 +20,189 @@ An **AI-powered product intelligence platform** that automatically:
 
 Uses **Google Gemini 2.0-flash** agents working in unison to ensure data accuracy.
 
+### What's New in v8.0
+
+- **Async Task Queue**: Celery + Redis distributed pipeline replaces synchronous agent execution
+- **Parallel Workers**: Multiple Celery workers process products concurrently (15x+ throughput)
+- **Docker Infrastructure**: Full `docker-compose.yml` with Redis, PostgreSQL, Flower monitoring
+- **Stress Testing**: Comprehensive test harness for baseline comparisons
+- **SSE Streaming**: Real-time Server-Sent Events for pipeline progress
+
 ---
 
-## 🎯 One-Minute Setup
+## One-Minute Setup
 
 ```bash
-# Prerequisites: Python 3.11+, Node.js 18+, API Key
+# Prerequisites: Python 3.11+, Node.js 18+, GOOGLE_API_KEY
 
 # 1. Install backend
 cd /workspaces/Halilit-Support-Center
-python3 -m venv backend/.venv
-source backend/.venv/bin/activate
 pip install -r backend/requirements.txt
 
 # 2. Install frontend
-cd frontend && npm install
+cd frontend && pnpm install
 
 # 3. Start backend (Terminal 1)
+cd /workspaces/Halilit-Support-Center
 PYTHONPATH=. python3 backend/server.py
 
 # 4. Start frontend (Terminal 2)
-npm run dev
+cd frontend && pnpm dev
 
-# → Open http://localhost:5178 (or 5173 if available)
+# Open http://localhost:5173
 ```
 
----
-
-## 📚 Complete Documentation
-
-| Document                                           | Purpose                                                  |
-| -------------------------------------------------- | -------------------------------------------------------- |
-| **[ARCHITECTURE.md](ARCHITECTURE.md)**             | **Technical architecture**, API reference, system design |
-
----
-
-## 🏗️ System Architecture
-
-### Three-Layer Design
-
-```
-┌─────────────────────────────────┐
-│ FRONTEND (React 18)             │
-│ - GalaxyDashboard              │
-│ - Zustand Product Store        │
-│ - Real-time Sync Display       │
-└────────────┬────────────────────┘
-             │ (SSE + REST)
-┌────────────▼────────────────────┐
-│ FASTAPI BACKEND (13 endpoints)  │
-│ - Skills Execution (7 endpoints)│
-│ - Auto-Sync (6+ endpoints)      │
-└────────────┬────────────────────┘
-             │
-┌────────────▼────────────────────┐
-│ SKILL EXECUTOR & SYNC ENGINE    │
-│ - 6 Modular Skills              │
-│ - Real-time SSE Streaming       │
-└────────────┬────────────────────┘
-             │
-┌────────────▼────────────────────┐
-│ TRINITY SWARM (3 Agents)        │
-│ - CommercialScout               │
-│ - OfficialVerifier              │
-│ - ExternalValidator             │
-└─────────────────────────────────┘
-```
-
----
-
-## 🧠 The Trinity Swarm
-
-Three specialized AI agents work together:
-
-### 1. **CommercialScout** (Harvest)
-
-- Extracts product inventory from Halilit.com
-- Ensures single source of truth (only what's sold by Halilit)
-- Outputs: Product name, ID, price
-
-### 2. **OfficialVerifier** (Enrich)
-
-- Classifies products into taxonomy
-- Adds manufacturer specifications
-- Adds official images and descriptions
-- Ensures all official data is accurate
-
-### 3. **ExternalValidator** (Validate)
-
-- Audits data for compliance
-- Gathers contextual insights from 3+ sources
-- Provides risk scoring (0-100 scale)
-- Ensures product meets all quality standards
-
-All agents have **learning capabilities** - they improve over time!
-
----
-
-## 📊 By The Numbers
-
-| Metric                  | Value     | Status                      |
-| ----------------------- | --------- | --------------------------- |
-| **Phases Complete**     | 6/6       | ✅ 100%                     |
-| **Tests Passing**       | 18/18     | ✅ 100%                     |
-| **Code Quality**        | Type-safe | ✅ TypeScript + Pydantic v2 |
-| **Performance**         | 0.602s    | ✅ 69% faster than target   |
-| **API Endpoints**       | 13 live   | ✅ All operational          |
-| **Frontend Components** | 8 new     | ✅ Fully integrated         |
-| **Production Ready**    | YES       | ✅ Ready to deploy          |
-
----
-
-## 🎮 Using the System
-
-### Run the Full Pipeline
-
-```python
-# Frontend: Use SkillsFrameworkDashboard
-# - Enter product URL
-# - Watch 6-phase pipeline in real-time
-# - Get approved/rejected result
-# - Auto-syncs to product store
-```
-
-### Batch Process Products
+### Docker (for async workers)
 
 ```bash
-# Via API
-curl -X POST http://localhost:8000/api/copilot/batch-ingest \
-  -H "Content-Type: application/json" \
-  -d '{
-    "products": [
-      {"url": "...", "brand": "Nord"},
-      {"url": "...", "brand": "Roland"}
-    ]
-  }'
-```
-
-### Monitor Real-Time Sync
-
-```typescript
-// Frontend Hook
-const { syncProduct, getSyncHistory } = useSyncUpdates();
-
-// Start a sync
-await syncProduct(product, brand);
-
-// Check history
-const history = await getSyncHistory(50);
+docker-compose up -d redis postgres
+# Start Celery workers
+celery -A backend.tasks worker --loglevel=info --concurrency=4
+# Monitor with Flower
+celery -A backend.tasks flower --port=5555
 ```
 
 ---
 
-## 🧪 Running Tests
+## Documentation
+
+| Document | Purpose |
+|---|---|
+| **[ARCHITECTURE.md](ARCHITECTURE.md)** | Technical architecture, API reference, system design |
+| **[backend/ingestion/README.md](backend/ingestion/README.md)** | Ingestion pipeline details |
+
+---
+
+## System Architecture
+
+```
+┌────────────────────────────────────────┐
+│ FRONTEND (React 18 + CopilotKit)       │
+│ - GalaxyDashboard (category browser)   │
+│ - SpectrumModule (product spectrum)    │
+│ - ProductPage (full analysis)          │
+│ - Zustand Store + React Query          │
+└──────────────┬─────────────────────────┘
+               │ SSE + REST
+┌──────────────▼─────────────────────────┐
+│ FASTAPI BACKEND (server.py)            │
+│ - Conductor endpoints (/api/conductor) │
+│ - Skills endpoints (/api/copilot)      │
+│ - Sync endpoints (/api/copilot/sync)   │
+│ - Task queue endpoints (/api/tasks)    │
+└──────────────┬─────────────────────────┘
+               │
+┌──────────────▼─────────────────────────┐
+│ ASYNC TASK QUEUE (v8.0)                │
+│ - Celery + Redis broker                │
+│ - Distributed worker pool              │
+│ - Task monitoring (Flower)             │
+└──────────────┬─────────────────────────┘
+               │
+┌──────────────▼─────────────────────────┐
+│ TRINITY SWARM (3 Gemini Agents)        │
+│ - CommercialScout (harvest)            │
+│ - OfficialVerifier (enrich + images)   │
+│ - ExternalValidator (audit + score)    │
+│ + Learning System + Quality Gates      │
+└────────────────────────────────────────┘
+```
+
+---
+
+## The Trinity Swarm
+
+Three specialized Gemini 2.0-flash agents:
+
+| Agent | Role | Output |
+|---|---|---|
+| **CommercialScout** | Harvests product data from Halilit.com | ProductDraft with price |
+| **OfficialVerifier** | Enriches with specs, images, taxonomy | EnrichedProduct with images |
+| **ExternalValidator** | Audits compliance, risk scoring 0-100 | AuditReport with risk score |
+
+All agents have **learning capabilities** — they improve over time via feedback loops.
+
+---
+
+## Project Structure
+
+```
+backend/
+├── server.py                      # FastAPI main server
+├── conductor_main.py              # CLI interface
+├── celery_config.py               # Celery task queue (v8.0)
+├── tasks.py                       # Distributed task definitions (v8.0)
+├── auto_sync_engine.py            # Real-time SSE sync
+├── unified_agent_orchestrator_v76.py  # Trinity Swarm orchestration
+├── unified_data_service_v76.py        # Data pipeline & normalization
+├── unified_quality_gates_v76.py       # Quality gates & audit
+├── unified_learning_system_v76.py     # Agent learning system
+├── agents/                        # Multi-cycle runner, perfection map
+├── api/                           # Routers (copilot, tasks, streams, ws)
+├── ingestion/                     # 6-phase pipeline modules
+├── skills/                        # Modular skill framework
+├── scripts/                       # Utilities & stress tests
+├── tests/                         # Test suites
+└── config/                        # Brand tiers, DB schema
+
+frontend/
+├── src/
+│   ├── App.tsx                    # Three-screen router
+│   ├── components/views/          # Galaxy, Spectrum, ProductPage
+│   ├── hooks/                     # React Query hooks
+│   ├── lib/                       # Utilities
+│   ├── store/                     # Zustand state
+│   └── types/                     # TypeScript definitions
+└── public/data/                   # Static product data (100+ brands)
+
+docker-compose.yml                 # Redis + PostgreSQL + Workers
+Dockerfile                         # Worker container image
+```
+
+---
+
+## API Reference
+
+### Conductor Endpoints
+
+| Method | Path | Description |
+|---|---|---|
+| GET | `/api/conductor/catalog` | All verified products |
+| GET | `/api/conductor/taxonomy` | Category & brand schema |
+| POST | `/api/conductor/filter` | Filtered product query |
+| GET | `/api/conductor/categories` | Category summary |
+| GET | `/api/conductor/refresh` | Force cache refresh |
+
+### Skills & Pipeline Endpoints
+
+| Method | Path | Description |
+|---|---|---|
+| GET | `/api/copilot/skills` | List available skills |
+| POST | `/api/copilot/execute-skill` | Execute single skill |
+| POST | `/api/copilot/pipeline` | Run full pipeline |
+| POST | `/api/copilot/batch-ingest` | Batch processing |
+
+### Task Queue Endpoints (v8.0)
+
+| Method | Path | Description |
+|---|---|---|
+| POST | `/api/tasks/submit` | Submit async task |
+| GET | `/api/tasks/{id}/status` | Task status |
+| GET | `/api/tasks/queue/stats` | Queue statistics |
+
+---
+
+## Running Tests
 
 ```bash
-# Phase 1C: Skills Framework (4 tests)
-python3 backend/tests/test_phase_1c_skills.py
+PYTHONPATH=. python3 -m pytest backend/tests/ -v
 
-# Phase 1D: CopilotKit Integration (6 tests)
-python3 backend/tests/test_phase_1d_copilot.py
-
-# Phase 1E: Auto-Sync Pipeline (6 tests)
-python3 backend/tests/test_phase_1e_sync.py
-
-# Phase 1F: End-to-End Integration (6 tests)
-python3 backend/tests/test_phase_1f_e2e.py
-```
-
-**Result:** 18/18 tests passing (100%)
-
----
-
-## 📁 Project Structure
-
-```
-Halilit-Support-Center/
-├── backend/
-│   ├── server.py                 # FastAPI main server
-│   ├── copilot_skill_executor.py # Phase 1D: Skills bridge
-│   ├── auto_sync_engine.py       # Phase 1E: Frontend sync
-│   ├── skills/                   # 6 modular skills
-│   ├── agents/                   # Trinity swarm (3 agents)
-│   ├── ingestion/                # 6-phase pipeline
-│   └── tests/                    # 18 comprehensive tests
-├── frontend/
-│   ├── src/
-│   │   ├── App.tsx
-│   │   ├── store/productStore.ts # Phase 1F: Data management
-│   │   ├── hooks/                # useCopilotSkills, useSyncUpdates
-│   │   ├── components/           # UI components
-│   │   └── types/                # TypeScript types
-│   └── package.json
-├── DEPLOYMENT.md       # Installation & running guide
-├── CODEBASE_STRUCTURE.md        # Code organization reference
-├── PATH_1_FINAL_COMPLETION.md   # Completion status
-└── README.md (you are here)
+# Stress test (requires Redis)
+PYTHONPATH=. python3 backend/scripts/phase8b_stress_test.py
 ```
 
 ---
 
-## 🔑 Key Features
-
-### ✅ Phase 1A: Foundation
-
-- Fixed critical taxonomy validation bug
-- Enabled proper product approvals
-
-### ✅ Phase 1B: AI Agents
-
-- Integrated 3 Gemini agents
-- Enabled learning capabilities
-- Full orchestration working
-
-### ✅ Phase 1C: Skills Framework
-
-- 6 modular, reusable skills
-- Safety verification gates
-- 100% test coverage
-
-### ✅ Phase 1D: Real-Time API
-
-- 7 production endpoints
-- SSE streaming to frontend
-- Pipeline visualization
-
-### ✅ Phase 1E: Auto-Sync
-
-- Real-time product synchronization
-- Batch operations with progress
-- 7-event sync lifecycle
-- Zustand store integration
-
-### ✅ Phase 1F: Production Validation
-
-- End-to-end integration tests
-- Performance benchmarking
-- Error scenario validation
-- Concurrent operation support
-
----
-
-## 📈 Performance Metrics
-
-### Single Product Processing
-
-```
-├── HARVEST     0.030s
-├── ENRICH      0.050s
-├── TIER        0.020s
-├── PREPARE     0.025s
-├── VALIDATE    0.040s
-├── APPROVE     0.010s
-├── SYNC        0.401s
-└── TOTAL       0.602s (target: 2.5s) ✅
-```
-
-### Batch Processing (3 products)
-
-- Sequential: 3.01 seconds
-- Concurrent: 0.20 seconds
-- **Speedup: 15x** ✅
-
----
-
-## 🚀 Deployment
-
-See [DEPLOYMENT.md](DEPLOYMENT.md) for complete deployment guide.
-
-### Quick Checklist
-
-- [ ] All 18 tests passing
-- [ ] Environment variables configured
-- [ ] Backend running on port 8000
-- [ ] Frontend running on port 5173
-- [ ] API endpoints responding
-
-```bash
-# Build production frontend
-cd frontend && npm run build
-# Output: frontend/dist/
-
-# Run production backend
-gunicorn -w 4 -k uvicorn.workers.UvicornWorker \
-  --bind 0.0.0.0:8000 backend.server:app
-```
-
----
-
-## 🐛 Troubleshooting
-
-### Backend Won't Start
-
-```bash
-# Clear cache and restart
-rm -rf backend/__pycache__
-source backend/.venv/bin/activate
-python3 backend/server.py
-```
-
-### Tests Failing
-
-```bash
-# Check environment
-source backend/.venv/bin/activate
-export PYTHONPATH=/workspaces/Halilit-Support-Center
-
-# Run with verbose output
-python3 -u backend/tests/test_phase_1f_e2e.py
-```
-
-### Frontend Not Syncing
-
-1. Check backend is running: `curl http://localhost:8000/api/copilot/skills`
-2. Check network console for SSE errors
-3. Verify CORS in `server.py` (should be wide open for dev)
-
----
-
-## 📖 API Reference
-
-### Skills Endpoints (Phase 1D)
-
-```
-GET  /api/copilot/skills                    # List available skills
-POST /api/copilot/execute-skill            # Execute single skill
-POST /api/copilot/pipeline                 # Run full 6-phase pipeline
-POST /api/copilot/batch-ingest             # Process multiple products
-GET  /api/copilot/status                   # Pipeline status & capabilities
-GET  /api/copilot/history                  # Execution history
-DELETE /api/copilot/history                # Clear history
-```
-
-### Sync Endpoints (Phase 1E)
-
-```
-POST /api/copilot/sync                     # Sync single product
-POST /api/copilot/sync-batch               # Sync batch of products
-GET  /api/copilot/sync/history             # Sync operation history
-GET  /api/copilot/sync/batch-status/{id}   # Batch progress
-POST /api/copilot/sync/toggle              # Enable/disable sync
-```
-
----
-
-## 🛠️ Development
-
-### Adding a New Skill
-
-1. Create file: `backend/skills/my_skill.py`
-2. Inherit from `BaseSkill`
-3. Implement `execute()` method
-4. Register in `SkillRegistry`
-5. Add test to `test_phase_1c_skills.py`
-6. Add frontend hook in `hooks/useMySkill.ts`
-
-### Adding a New Endpoint
-
-1. Add route in `server.py`
-2. Import types from `generated.ts`
-3. Create hook in `hooks/`
-4. Use in component
-5. Add test
-
----
-
-## 📋 Checklist for Production
-
-- [ ] All 18 tests passing (`4 + 6 + 6 + 6 = 18`)
-- [ ] No Python warnings in logs
-- [ ] Frontend builds without errors (`npm run build`)
-- [ ] All 13 API endpoints responding
-- [ ] Database backups created
-- [ ] Monitoring/alerting configured
-- [ ] Error logging configured
-- [ ] Rate limiting configured (if needed)
-
----
-
-## 📞 Support
-
-For issues or questions:
-
-1. Check [DEPLOYMENT.md](DEPLOYMENT.md) for installation issues
-2. Check [CODEBASE_STRUCTURE.md](CODEBASE_STRUCTURE.md) for code organization
-3. Run relevant test suite to identify problem
-4. Check logs in `backend/logs/`
-
----
-
-## 📄 License
-
-Part of Halilit Support Center v7.3  
-Production System - All Rights Reserved
-
----
-
-## 👥 Team
-
-**Path 1 Completion:** February 7, 2026
-
-| Phase | Component              | Status      |
-| ----- | ---------------------- | ----------- |
-| 1A    | Bug Fix                | ✅ Complete |
-| 1B    | Trinity Agents         | ✅ Complete |
-| 1C    | Skills Framework       | ✅ Complete |
-| 1D    | CopilotKit Integration | ✅ Complete |
-| 1E    | Auto-Sync Pipeline     | ✅ Complete |
-| 1F    | Production Testing     | ✅ Complete |
-
----
-
-**Halilit Support Center v7.3**  
-**Production Ready - Fully Tested - Enterprise Grade**
-
-Last Updated: 2026-02-07  
-Status: ✅ PRODUCTION READY (Version: v7.3 | Branch: main)
+**Halilit Support Center v8.0**  
+**Async Pipeline — Distributed Workers — Production Ready**  
+Last Updated: February 9, 2026

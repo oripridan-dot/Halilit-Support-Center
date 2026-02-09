@@ -1,5 +1,5 @@
 """
-DISPLAY PREPARATION ENGINE v6.0
+DISPLAY PREPARATION ENGINE v8.0
 
 Prepares products for display by:
 - Determining display role (hero, cornerstone, specialist, entry)

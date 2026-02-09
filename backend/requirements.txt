@@ -8,6 +8,7 @@ lxml>=4.9.0
 requests>=2.31.0
 pandas>=2.0.0
 colorlog>=6.7.0
+sse-starlette>=1.6.0
 
 # Phase 8.0: Async Task Queue Infrastructure
 celery[redis]==5.3.0

@@ -121,7 +121,7 @@ def get_ingestion_products_for_golden_brands():
     return result
 
 
-app = FastAPI(title="Halilit Support Center API", version="7.3")
+app = FastAPI(title="Halilit Support Center API", version="8.0")
 
 # Add CORS middleware for frontend development
 app.add_middleware(
@@ -144,11 +144,27 @@ except Exception as e:
 
 # Include learning endpoints
 try:
-    from backend.unified_learning_system_v75 import router as learning_router
+    from backend.unified_learning_system_v76 import router as learning_router
     app.include_router(learning_router)
     logger.info("✅ Learning endpoints registered")
 except Exception as e:
     logger.warning(f"⚠️ Failed to load learning endpoints: {e}")
+
+# v8.0 Async Task Queue API
+try:
+    from backend.api.task_router import router as task_router
+    app.include_router(task_router, tags=["Task Queue"])
+    logger.info("✅ Task queue endpoints registered at /api/v8/tasks")
+except Exception as e:
+    logger.warning(f"⚠️ Failed to register task router: {e}")
+
+# WebSocket real-time task updates
+try:
+    from backend.api.websocket_manager import create_websocket_route
+    create_websocket_route(app)
+    logger.info("✅ WebSocket endpoint registered at /ws/tasks/{{task_id}}")
+except Exception as e:
+    logger.warning(f"⚠️ Failed to register WebSocket: {e}")
 
 # Robust path handling
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -167,7 +183,7 @@ async def health_check():
     """Health check endpoint for monitoring"""
     return {
         "status": "healthy",
-        "version": "7.3",
+        "version": "8.0",
         "service": "Halilit Support Center"
     }
 
@@ -232,7 +248,7 @@ async def get_conductor_catalog():
     Get the unified conductor catalog by aggregating generated frontend data files.
     This serves as the single source of truth for the frontend app.
 
-    CRITICAL UPDATES v7.6:
+    CRITICAL UPDATES v8.0:
     - Normalizes data structure for frontend (Price, Image, Name)
     - Deduplicates products by ID
     - Filters out 'junk' (Price=0 or No Image)
@@ -534,147 +550,16 @@ async def search_products(q: str = ""):
         return {"error": str(e), "results": [], "source": "error"}
 
 
-# ========== COPILOTKIT INTEGRATION ENDPOINTS ==========
-
-# Initialize the CopilotKit executor (singleton)
-_executor = None
-
-
-def get_executor():
-    """Get or create the CopilotKit skill executor."""
-    global _executor
-    if _executor is None:
-        from backend.copilot_skill_executor import CopilotSkillExecutor
-        _executor = CopilotSkillExecutor()
-    return _executor
+# ========== COPILOTKIT SKILL ENDPOINTS ==========
+# NOTE: CopilotKit skill executor endpoints have been removed in v8.0.
+# Skill execution is now handled via the Celery task queue (see tasks.py)
+# and the CopilotKit chat router (see api/copilot_router.py).
+# The v8.0 task API is served by api/task_router.py.
 
 
-@app.get("/api/copilot/skills")
-async def list_available_skills():
-    """Get list of available skills for CopilotKit agent."""
-    executor = get_executor()
-    return {
-        "skills": executor.get_available_skills(),
-        "total_skills": len(executor.get_available_skills()),
-        "status": "ready"
-    }
-
-
-@app.post("/api/copilot/execute-skill")
-async def execute_single_skill(request: dict):
-    """Execute a single skill via CopilotKit."""
-    executor = get_executor()
-
-    skill_name = request.get('skill')
-    context = request.get('context', {})
-
-    if not skill_name:
-        return {"error": "skill parameter required"}
-
-    result = await executor.execute_skill(skill_name, context)
-    return result
-
-
-@app.post("/api/copilot/pipeline")
-async def execute_pipeline(request: dict):
-    """
-    Execute a product through the full 6-phase pipeline.
-    Returns SSE stream of progress updates.
-    """
-    from fastapi.responses import StreamingResponse
-
-    executor = get_executor()
-
-    raw_product = request.get('raw_product')
-    brand = request.get('brand')
-
-    if not raw_product or not brand:
-        return {"error": "raw_product and brand required"}
-
-    async def event_stream():
-        """Stream progress events as SSE."""
-        async for event in executor.execute_full_pipeline(raw_product, brand):
-            # Format as SSE
-            yield f"data: {json.dumps(event)}\n\n"
-
-    return StreamingResponse(event_stream(), media_type="text/event-stream")
-
-
-@app.post("/api/copilot/batch-ingest")
-async def batch_ingest_products(request: dict):
-    """
-    Ingest multiple products with progress streaming.
-    Returns SSE stream of progress updates.
-    """
-    from fastapi.responses import StreamingResponse
-
-    executor = get_executor()
-
-    products = request.get('products', [])
-    brand = request.get('brand')
-
-    if not products or not brand:
-        return {"error": "products list and brand required"}
-
-    async def event_stream():
-        """Stream batch progress events as SSE."""
-        async for event in executor.stream_ingestion_progress(products, brand):
-            yield f"data: {json.dumps(event)}\n\n"
-
-    return StreamingResponse(event_stream(), media_type="text/event-stream")
-
-
-@app.get("/api/copilot/status")
-async def copilot_status():
-    """Get CopilotKit pipeline status and capabilities."""
-    executor = get_executor()
-    return executor.get_pipeline_status()
-
-
-@app.get("/api/copilot/history")
-async def execution_history(limit: int = 50):
-    """Get recent execution history."""
-    executor = get_executor()
-    return {
-        "history": executor.get_execution_history(limit),
-        "total_executions": len(executor.execution_history)
-    }
-
-
-@app.delete("/api/copilot/history")
-async def clear_execution_history():
-    """Clear execution history."""
-    executor = get_executor()
-    executor.clear_history()
-    return {"status": "cleared"}
-
-
-# ========== CONDUCTOR UNIFIED DATA ENDPOINTS v7.6 ==========
+# ========== CONDUCTOR UNIFIED DATA ENDPOINTS v8.0 ==========
 # These are the PRIMARY endpoints for frontend data loading
 # All data is Conductor-verified and taxonomy-compliant
-
-# @app.get("/api/conductor/catalog")
-# async def get_conductor_catalog_unified():
-#     """
-#     Get unified, Conductor-verified product catalog.
-#     (DISABLED: Using direct file aggregation method defined earlier in this file)
-#     """
-#     try:
-#         service = get_conductor_data_service()
-#         catalog = service.get_unified_catalog()
-#         logger.info(
-#             f"✅ Served unified catalog with {catalog['metadata']['total_products']} products")
-#         return catalog
-#     except Exception as e:
-#         logger.error(f"❌ Failed to get catalog: {e}")
-#         return {
-#             "error": str(e),
-#             "products": [],
-#             "metadata": {
-#                 "source": "error",
-#                 "verification_status": "failed"
-#             }
-#         }
 
 
 @app.get("/api/conductor/taxonomy")

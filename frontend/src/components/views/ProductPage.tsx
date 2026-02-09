@@ -6,7 +6,7 @@ import { getPrice } from "../../lib/priceFormatter";
 import type { Product } from "../../types";
 
 /**
- * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v7.0
+ * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v8.0
  *
  * Complete product analysis and inspection page.
  * Displays all available product information:

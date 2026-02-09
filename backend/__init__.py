@@ -1,14 +1,15 @@
 """
-Halilit Support Center v7.6 - ADK Backend (Trinity Swarm + Consolidated)
-=========================================================================
+Halilit Support Center v8.0 - ADK Backend (Trinity Swarm + Async Task Queue)
+=============================================================================
 
 Lightweight module exports for the Halilit Support Center API.
 - Trinity Swarm: Three autonomous agents for data processing
+- Async Task Queue: Celery + Redis distributed pipeline
 - Ingestion Pipeline: Data normalization and persistence
 - Skills & Workflow: Verified capabilities with state machines
 - Security: Multi-layer protection
 
-Version: 7.6.0 (Production-Ready)
+Version: 8.0.0 (Production-Ready)
 """
 
 import sys
@@ -19,7 +20,7 @@ _parent_dir = str(Path(__file__).parent.parent)
 if _parent_dir not in sys.path:
     sys.path.insert(0, _parent_dir)
 
-__version__ = "7.2"
+__version__ = "8.0"
 __adk_enabled__ = True
 
 __all__ = [

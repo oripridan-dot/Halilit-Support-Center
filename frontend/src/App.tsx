@@ -1,6 +1,6 @@
 // frontend/src/App.tsx
 /**
- * UNIFIED DATA PIPELINE v7.0
+ * UNIFIED DATA PIPELINE v8.0
  *
  * Three screens that share the same data source:
  * 1. GalaxyDashboard - Category browser
@@ -92,9 +92,6 @@ function App() {
             </div>
           )}
         </main>
-
-        {/* Real-time Learning Feed Overlay */}
-        <LearningFeed />
       </div>
     </GlobalErrorBoundary>
   );
