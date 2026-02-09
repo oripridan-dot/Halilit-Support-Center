@@ -516,7 +516,7 @@ class LearningOptimizerEngine:
     def __init__(self):
         self.logs_dir = Path("/workspaces/Halilit-Support-Center/backend/logs")
         self.learning_dir = self.logs_dir / "learning_cycles"
-        self.learning_dir.mkdir(exist_ok=True)
+        self.learning_dir.mkdir(parents=True, exist_ok=True)
 
         self.agent_names = ["CommercialScout",
                             "OfficialVerifier", "ExternalValidator"]
@@ -962,7 +962,7 @@ def run_enhanced_training(num_cycles: int = 5, log_file: Optional[Path] = None) 
     if log_file is None:
         log_file = Path(
             "/workspaces/Halilit-Support-Center/backend/logs/enhanced_training.log")
-    log_file.parent.mkdir(exist_ok=True)
+    log_file.parent.mkdir(parents=True, exist_ok=True)
 
     from backend.unified_agent_orchestrator_v73 import AgentImprovementEngine
 

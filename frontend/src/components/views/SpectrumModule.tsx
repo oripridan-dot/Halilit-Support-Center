@@ -551,7 +551,9 @@ export const SpectrumModule = () => {
                     {hoveredProduct.name}
                   </h1>
                   <div className="text-xs text-amber-500 font-bold uppercase tracking-widest">
-                    {hoveredProduct.brand || hoveredProduct.brand_id || "Unknown Brand"}
+                    {hoveredProduct.brand ||
+                      hoveredProduct.brand_id ||
+                      "Unknown Brand"}
                   </div>
                 </div>
               </div>

@@ -65,3 +65,8 @@ backend/data/4_validated/
 backend/data/5_golden/
 backend/data/reports/
 .env
+
+# === GENERATED INGESTION DATA ===
+backend/data/ingestion/products/
+backend/data/ingestion/reports/
+backend/logs/
