@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593012",
+  "brand": "akai",
+  "timestamp": "2026-02-08T23:23:35.773009",
+  "execution_time_seconds": 3.545101,
+  "total_processed": 24,
+  "approved_count": 24,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 24,
+  "rejected_products_count": 0
+}

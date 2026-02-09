@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770591481",
+  "brand": "headliner la equipment stands",
+  "timestamp": "2026-02-08T22:58:01.529004",
+  "execution_time_seconds": 0.019956,
+  "total_processed": 1,
+  "approved_count": 1,
+  "rejected_count": 0,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ],
+  "approved_products_count": 1,
+  "rejected_products_count": 0
+}

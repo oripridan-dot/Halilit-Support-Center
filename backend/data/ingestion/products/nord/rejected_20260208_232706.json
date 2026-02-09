@@ -1,0 +1,1190 @@
+{
+  "brand": "nord",
+  "timestamp": "20260208_232706",
+  "count": 1,
+  "products": [
+    {
+      "halilit_id": "scraped-3779295386979704285",
+      "product_name": "Nord Single Pedal 2",
+      "brand": "nord",
+      "price_il": 562.0,
+      "price_eilat": 477.7,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "Nord Single Pedal 2"
+      },
+      "official_description": null,
+      "official_images": [
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 80
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "hero",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 100
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        },
+        {
+          "type": "image",
+          "url": "https://brand.com/hero.jpg",
+          "display_purpose": "gallery",
+          "resolution": null,
+          "source": "official",
+          "alt_text": null,
+          "priority": 50
+        }
+      ],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T23:27:02.621664",
+      "last_updated": "2026-02-08T23:27:02.621665",
+      "taxonomy": {
+        "canonical_category": "Keyboards & Synthesizers",
+        "canonical_subcategory": "Digital Piano",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 562.0,
+        "price_eilat": 477.7,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "mid",
+        "eilat_discount_percent": 15.000000000000002,
+        "suggested_tier": "mid",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "specialist",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 2,
+        "color_hint": "bg-green-400",
+        "media_assets": [],
+        "visual_issues": [
+          "Insufficient images for PricingTier.MID tier. Found 0, required 1"
+        ]
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "The ultimate stage piano for professionals.",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T23:27:02.621651",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from nord catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped-3779295386979704285",
+        "product_name": "Nord Single Pedal 2",
+        "brand": "nord",
+        "price_il": 562.0,
+        "price_eilat": 477.7,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": "The ultimate stage piano for professionals.",
+        "official_images": [
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 100,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          }
+        ],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-07T09:07:17.932347",
+        "last_updated": "2026-02-07T09:07:17.932347",
+        "taxonomy": {
+          "canonical_category": "Keyboards & Synthesizers",
+          "canonical_subcategory": "Digital Piano",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 562.0,
+          "price_eilat": 477.7,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "mid",
+          "eilat_discount_percent": 15.000000000000002,
+          "suggested_tier": "mid",
+          "price_validity_marker": "current",
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "specialist",
+          "hero_image": {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          "thumbnail_image": {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          "should_highlight": false,
+          "display_tier_level": 2,
+          "color_hint": "bg-green-400",
+          "media_assets": [
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 80,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 80,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 80,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 100,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 50,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 50,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 50,
+              "source": "official"
+            }
+          ]
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "The ultimate stage piano for professionals.",
+        "description_long": "The ultimate stage piano for professionals.",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-07T09:07:17.932325",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from nord catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped-3779295386979704285",
+          "product_name": "Nord Single Pedal 2",
+          "brand": "nord",
+          "price_il": 562.0,
+          "price_eilat": 477.7,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": "The ultimate stage piano for professionals.",
+          "official_images": [
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 80,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 100,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 50,
+              "source": "official"
+            }
+          ],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-07T07:58:29.579691",
+          "last_updated": "2026-02-07T07:58:29.579692",
+          "taxonomy": {
+            "canonical_category": "Keyboards & Synthesizers",
+            "canonical_subcategory": "Digital Piano",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 562.0,
+            "price_eilat": 477.7,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "mid",
+            "eilat_discount_percent": 15.000000000000002,
+            "suggested_tier": "mid",
+            "price_validity_marker": "current",
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "specialist",
+            "hero_image": {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 80,
+              "source": "official"
+            },
+            "thumbnail_image": {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 100,
+              "source": "official"
+            },
+            "should_highlight": false,
+            "display_tier_level": 2,
+            "color_hint": "bg-green-400",
+            "media_assets": [
+              {
+                "url": "https://brand.com/hero.jpg",
+                "alt": null,
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 80,
+                "source": "official"
+              },
+              {
+                "url": "https://brand.com/hero.jpg",
+                "alt": null,
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 100,
+                "source": "official"
+              },
+              {
+                "url": "https://brand.com/hero.jpg",
+                "alt": null,
+                "type": "image",
+                "display_purpose": "gallery",
+                "priority": 50,
+                "source": "official"
+              }
+            ]
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "The ultimate stage piano for professionals.",
+          "description_long": "The ultimate stage piano for professionals.",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-07T07:58:29.579686",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from nord catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped-3779295386979704285",
+            "product_name": "Nord Single Pedal 2",
+            "brand": "nord",
+            "price_il": 562.0,
+            "price_eilat": 477.7,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": "The ultimate stage piano for professionals.",
+            "official_images": [
+              {
+                "url": "https://brand.com/hero.jpg",
+                "alt": "Product image",
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 0,
+                "source": "official"
+              }
+            ],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-07T07:03:26.331902",
+            "last_updated": "2026-02-07T07:03:26.331903",
+            "taxonomy": {
+              "canonical_category": "Keyboards & Synthesizers",
+              "canonical_subcategory": "Digital Piano",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 562.0,
+              "price_eilat": 477.7,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "mid",
+              "eilat_discount_percent": 15.000000000000002,
+              "suggested_tier": "mid",
+              "price_validity_marker": "current",
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "specialist",
+              "hero_image": {
+                "url": "https://brand.com/hero.jpg",
+                "alt": "Product image",
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 0,
+                "source": "official"
+              },
+              "thumbnail_image": {
+                "url": "https://brand.com/hero.jpg",
+                "alt": "Product image",
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 0,
+                "source": "official"
+              },
+              "should_highlight": false,
+              "display_tier_level": 2,
+              "color_hint": "bg-green-400",
+              "media_assets": [
+                {
+                  "url": "https://brand.com/hero.jpg",
+                  "alt": "Product image",
+                  "type": "image",
+                  "display_purpose": "hero",
+                  "priority": 0,
+                  "source": "official"
+                }
+              ]
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "The ultimate stage piano for professionals.",
+            "description_long": "The ultimate stage piano for professionals.",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-07T07:03:26.331888",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from nord catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-3779295386979704285",
+              "product_name": "Nord Single Pedal 2",
+              "brand": "nord",
+              "price_il": 562.0,
+              "price_eilat": 477.7,
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T17:51:04.692721",
+              "last_updated": "2026-02-06T17:51:04.692722",
+              "taxonomy": {
+                "canonical_category": "Amplifiers & Effects",
+                "canonical_subcategory": "Pedal",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 562.0,
+                "price_eilat": 477.7,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "mid",
+                "eilat_discount_percent": 15.000000000000002,
+                "suggested_tier": "mid",
+                "price_validity_marker": "current",
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "specialist",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 2,
+                "color_hint": "bg-green-400",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T17:51:04.692708",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from nord catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped-3779295386979704285",
+                "product_name": "Nord Single Pedal 2",
+                "brand": "nord",
+                "price_il": 562.0,
+                "price_eilat": 477.7,
+                "halilit_url": "https://halilit.com",
+                "sku": null,
+                "model_number": null,
+                "official_name": null,
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": null,
+                "official_images": [],
+                "official_url": null,
+                "reviews": [],
+                "review_synthesis": null,
+                "average_rating": null,
+                "status": "harvested",
+                "pipeline_phase": "harvest",
+                "created_at": "2026-02-06T17:26:36.973150",
+                "last_updated": "2026-02-06T17:26:36.973151",
+                "taxonomy": {
+                  "canonical_category": "Amplifiers & Effects",
+                  "canonical_subcategory": "Pedal",
+                  "brand_taxonomy": null,
+                  "alt_categories": [],
+                  "keywords": []
+                },
+                "pricing": {
+                  "price_il": 562.0,
+                  "price_eilat": 477.7,
+                  "price_usd": null,
+                  "price_eur": null,
+                  "tier": "mid",
+                  "eilat_discount_percent": 15.000000000000002,
+                  "suggested_tier": "mid",
+                  "price_validity_marker": "current",
+                  "last_price_change": null,
+                  "previous_price_il": null
+                },
+                "display": {
+                  "display_role": "specialist",
+                  "hero_image": null,
+                  "thumbnail_image": null,
+                  "should_highlight": false,
+                  "display_tier_level": 2,
+                  "color_hint": "bg-green-400",
+                  "media_assets": []
+                },
+                "specifications": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "description_short": "",
+                "description_long": "",
+                "feature_list": [],
+                "sources": [],
+                "primary_source": {
+                  "source_name": "Halilit",
+                  "source_url": "https://halilit.com",
+                  "confidence": "commercial",
+                  "timestamp": "2026-02-06T17:26:36.973145",
+                  "extraction_method": "web_scraper",
+                  "extraction_notes": "Scraped from nord catalog"
+                },
+                "lineage": {},
+                "raw_snapshot": {
+                  "halilit_id": "scraped-3779295386979704285",
+                  "product_name": "Nord Single Pedal 2",
+                  "brand": "nord",
+                  "price_il": 562.0,
+                  "price_eilat": 477.7,
+                  "halilit_url": "https://halilit.com",
+                  "sku": null,
+                  "model_number": null,
+                  "official_name": null,
+                  "official_specs": {
+                    "keys": 88,
+                    "action": "Hammer Action",
+                    "polyphony": 128
+                  },
+                  "official_description": null,
+                  "official_images": [],
+                  "official_url": null,
+                  "reviews": [],
+                  "review_synthesis": null,
+                  "average_rating": null,
+                  "status": "harvested",
+                  "pipeline_phase": "harvest",
+                  "created_at": "2026-02-06T17:26:13.589068",
+                  "last_updated": "2026-02-06T17:26:13.589068",
+                  "taxonomy": {
+                    "canonical_category": "Amplifiers & Effects",
+                    "canonical_subcategory": "Pedal",
+                    "brand_taxonomy": null,
+                    "alt_categories": [],
+                    "keywords": []
+                  },
+                  "pricing": {
+                    "price_il": 562.0,
+                    "price_eilat": 477.7,
+                    "price_usd": null,
+                    "price_eur": null,
+                    "tier": "mid",
+                    "eilat_discount_percent": 15.000000000000002,
+                    "suggested_tier": "mid",
+                    "price_validity_marker": "current",
+                    "last_price_change": null,
+                    "previous_price_il": null
+                  },
+                  "display": {
+                    "display_role": "specialist",
+                    "hero_image": null,
+                    "thumbnail_image": null,
+                    "should_highlight": false,
+                    "display_tier_level": 2,
+                    "color_hint": "bg-green-400",
+                    "media_assets": []
+                  },
+                  "specifications": {
+                    "keys": 88,
+                    "action": "Hammer Action",
+                    "polyphony": 128
+                  },
+                  "description_short": "",
+                  "description_long": "",
+                  "feature_list": [],
+                  "sources": [],
+                  "primary_source": {
+                    "source_name": "Halilit",
+                    "source_url": "https://halilit.com",
+                    "confidence": "commercial",
+                    "timestamp": "2026-02-06T17:26:13.589062",
+                    "extraction_method": "web_scraper",
+                    "extraction_notes": "Scraped from nord catalog"
+                  },
+                  "lineage": {},
+                  "raw_snapshot": {
+                    "halilit_id": "scraped-3779295386979704285",
+                    "product_name": "Nord Single Pedal 2",
+                    "brand": "Nord",
+                    "price_il": 562.0,
+                    "price_eilat": 477.7,
+                    "halilit_url": "https://halilit.com",
+                    "sku": null,
+                    "model_number": null,
+                    "official_name": null,
+                    "official_specs": {
+                      "keys": 88,
+                      "action": "Hammer Action",
+                      "polyphony": 128
+                    },
+                    "official_description": null,
+                    "official_images": [],
+                    "official_url": null,
+                    "reviews": [],
+                    "review_synthesis": null,
+                    "average_rating": null,
+                    "status": "harvested",
+                    "pipeline_phase": "harvest",
+                    "created_at": "2026-02-06T14:19:50.052715",
+                    "last_updated": "2026-02-06T14:19:50.052715",
+                    "taxonomy": {
+                      "canonical_category": "Amplifiers & Effects",
+                      "canonical_subcategory": "Pedal",
+                      "brand_taxonomy": null,
+                      "alt_categories": [],
+                      "keywords": []
+                    },
+                    "pricing": {
+                      "price_il": 562.0,
+                      "price_eilat": 477.7,
+                      "price_usd": null,
+                      "price_eur": null,
+                      "tier": "mid",
+                      "eilat_discount_percent": 15.000000000000002,
+                      "suggested_tier": "mid",
+                      "price_validity_marker": "current",
+                      "last_price_change": null,
+                      "previous_price_il": null
+                    },
+                    "display": {
+                      "display_role": "specialist",
+                      "hero_image": null,
+                      "thumbnail_image": null,
+                      "should_highlight": false,
+                      "display_tier_level": 2,
+                      "color_hint": "#0084FF",
+                      "media_assets": []
+                    },
+                    "specifications": {
+                      "keys": 88,
+                      "action": "Hammer Action",
+                      "polyphony": 128
+                    },
+                    "description_short": "",
+                    "description_long": "",
+                    "feature_list": [],
+                    "sources": [],
+                    "primary_source": {
+                      "source_name": "Halilit",
+                      "source_url": "https://halilit.com",
+                      "confidence": "commercial",
+                      "timestamp": "2026-02-06T14:19:50.052699",
+                      "extraction_method": "web_scraper",
+                      "extraction_notes": "Scraped from Nord catalog"
+                    },
+                    "lineage": {},
+                    "raw_snapshot": {
+                      "halilit_id": "scraped-3779295386979704285",
+                      "product_name": "Nord Single Pedal 2",
+                      "brand": "Nord",
+                      "price_il": 562.0,
+                      "price_eilat": 477.7,
+                      "halilit_url": "https://www.halilit.com  /items/6163288-nord-single-pedal-2\n",
+                      "commercial_image": "https://d3m9l0v76dty0.cloudfront.net/system/photos/12904837/original/f27156a4ed722866cdca322f6214419f.jpg",
+                      "pipeline_phase": "enrich",
+                      "status": "harvested",
+                      "official_specs": {
+                        "keys": 88,
+                        "action": "Hammer Action",
+                        "polyphony": 128
+                      },
+                      "official_description": "The ultimate stage piano for professionals.",
+                      "official_images": [
+                        {
+                          "type": "image",
+                          "url": "https://brand.com/hero.jpg",
+                          "display_purpose": "hero",
+                          "source": "official"
+                        }
+                      ],
+                      "official_url": "https://brand.com/products/stage-88"
+                    },
+                    "data_completeness": 0.6315789473684209,
+                    "quality_score": 0.6315789473684209,
+                    "validation_status": "approved",
+                    "validation_errors": [],
+                    "validation_warnings": [],
+                    "price": 562.0,
+                    "currency": "ILS",
+                    "image_hero": null,
+                    "image_thumbnail": null,
+                    "image_gallery": [],
+                    "image_url": ""
+                  },
+                  "data_completeness": 0.6315789473684209,
+                  "quality_score": 0.6315789473684209,
+                  "validation_status": "approved",
+                  "validation_errors": [],
+                  "validation_warnings": [],
+                  "price": 562.0,
+                  "currency": "ILS",
+                  "image_hero": null,
+                  "image_thumbnail": null,
+                  "image_gallery": [],
+                  "image_url": ""
+                },
+                "data_completeness": 0.6315789473684209,
+                "quality_score": 0.6315789473684209,
+                "validation_status": "approved",
+                "validation_errors": [],
+                "validation_warnings": [],
+                "price": 562.0,
+                "currency": "ILS",
+                "image_hero": null,
+                "image_thumbnail": null,
+                "image_gallery": [],
+                "image_url": ""
+              },
+              "data_completeness": 0.6315789473684209,
+              "quality_score": 0.6315789473684209,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [],
+              "price": 562.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
+            },
+            "data_completeness": 0.6315789473684209,
+            "quality_score": 100.0,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [],
+            "price": 562.0,
+            "currency": "ILS",
+            "image_hero": {
+              "url": "https://brand.com/hero.jpg",
+              "alt": "Product image",
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 0,
+              "source": "official"
+            },
+            "image_thumbnail": {
+              "url": "https://brand.com/hero.jpg",
+              "alt": "Product image",
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 0,
+              "source": "official"
+            },
+            "image_gallery": [
+              {
+                "url": "https://brand.com/hero.jpg",
+                "alt": "Product image",
+                "type": "image",
+                "display_purpose": "hero",
+                "priority": 0,
+                "source": "official"
+              }
+            ],
+            "image_url": "https://brand.com/hero.jpg"
+          },
+          "data_completeness": 0.6842105263157894,
+          "quality_score": 100.0,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [],
+          "price": 562.0,
+          "currency": "ILS",
+          "image_hero": {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          "image_thumbnail": {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 100,
+            "source": "official"
+          },
+          "image_gallery": [
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 80,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "hero",
+              "priority": 100,
+              "source": "official"
+            },
+            {
+              "url": "https://brand.com/hero.jpg",
+              "alt": null,
+              "type": "image",
+              "display_purpose": "gallery",
+              "priority": 50,
+              "source": "official"
+            }
+          ],
+          "image_url": "https://brand.com/hero.jpg"
+        },
+        "data_completeness": 0.6842105263157894,
+        "quality_score": 100.0,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [],
+        "price": 562.0,
+        "currency": "ILS",
+        "image_hero": {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        "image_thumbnail": {
+          "url": "https://brand.com/hero.jpg",
+          "alt": null,
+          "type": "image",
+          "display_purpose": "hero",
+          "priority": 80,
+          "source": "official"
+        },
+        "image_gallery": [
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 80,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "hero",
+            "priority": 100,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          },
+          {
+            "url": "https://brand.com/hero.jpg",
+            "alt": null,
+            "type": "image",
+            "display_purpose": "gallery",
+            "priority": 50,
+            "source": "official"
+          }
+        ],
+        "image_url": "https://brand.com/hero.jpg"
+      },
+      "data_completeness": 0.6842105263157894,
+      "quality_score": 80.0,
+      "validation_status": "rejected",
+      "validation_errors": [],
+      "validation_warnings": [],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    }
+  ]
+}

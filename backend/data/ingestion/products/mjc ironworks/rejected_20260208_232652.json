@@ -1,0 +1,459 @@
+{
+  "brand": "mjc ironworks",
+  "timestamp": "20260208_232652",
+  "count": 1,
+  "products": [
+    {
+      "halilit_id": "scraped--9121869886018686676",
+      "product_name": "MJC Ironworks XL Acoustic Guitar",
+      "brand": "mjc ironworks",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "MJC Ironworks XL Acoustic Guitar"
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T23:26:49.970617",
+      "last_updated": "2026-02-08T23:26:49.970618",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": [],
+        "visual_issues": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T23:26:49.970606",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from mjc ironworks catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped--9121869886018686676",
+        "product_name": "MJC Ironworks XL Acoustic Guitar",
+        "brand": "mjc ironworks",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:51:04.526568",
+        "last_updated": "2026-02-06T17:51:04.526569",
+        "taxonomy": {
+          "canonical_category": "Other",
+          "canonical_subcategory": "Uncategorized",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:51:04.526555",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from mjc ironworks catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped--9121869886018686676",
+          "product_name": "MJC Ironworks XL Acoustic Guitar",
+          "brand": "mjc ironworks",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:36.926574",
+          "last_updated": "2026-02-06T17:26:36.926574",
+          "taxonomy": {
+            "canonical_category": "Other",
+            "canonical_subcategory": "Uncategorized",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:36.926567",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from mjc ironworks catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped--9121869886018686676",
+            "product_name": "MJC Ironworks XL Acoustic Guitar",
+            "brand": "mjc ironworks",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T17:26:13.549283",
+            "last_updated": "2026-02-06T17:26:13.549283",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T17:26:13.549276",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from mjc ironworks catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--9121869886018686676",
+              "product_name": "MJC Ironworks XL Acoustic Guitar",
+              "brand": "Mjc Ironworks",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:03:06.790260",
+              "last_updated": "2026-02-06T14:03:06.790261",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:03:06.790245",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Mjc Ironworks catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--9121869886018686676",
+                "product_name": "MJC Ironworks XL Acoustic Guitar",
+                "brand": "Mjc Ironworks",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/1732404-mjc-ironwork-xl-acoustic-guitar-strings\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "\u26a0 Price is 0 (TBD)",
+                "\u26a0 Category may not be standard: Other > Uncategorized"
+              ],
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)",
+              "\u26a0 Category may not be standard: Other > Uncategorized"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)",
+            "\u26a0 Category may not be standard: Other > Uncategorized"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)",
+          "\u26a0 Category may not be standard: Other > Uncategorized"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 80.0,
+      "validation_status": "rejected",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    }
+  ]
+}

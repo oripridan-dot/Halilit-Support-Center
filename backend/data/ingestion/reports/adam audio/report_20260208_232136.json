@@ -1,0 +1,15 @@
+{
+  "batch_id": "batch_1770592892",
+  "brand": "adam audio",
+  "timestamp": "2026-02-08T23:21:36.483179",
+  "execution_time_seconds": 3.894583,
+  "total_processed": 24,
+  "approved_count": 23,
+  "rejected_count": 1,
+  "recommendations": [
+    "Most common issue (1 products): \u274c Agent: Product not recognized by Knowledge Base",
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 23,
+  "rejected_products_count": 1
+}

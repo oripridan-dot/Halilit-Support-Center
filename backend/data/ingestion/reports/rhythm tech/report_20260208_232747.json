@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593266",
+  "brand": "rhythm tech",
+  "timestamp": "2026-02-08T23:27:47.702461",
+  "execution_time_seconds": 1.400818,
+  "total_processed": 8,
+  "approved_count": 8,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 8,
+  "rejected_products_count": 0
+}

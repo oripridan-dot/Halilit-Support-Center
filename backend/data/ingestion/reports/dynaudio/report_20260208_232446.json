@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593081",
+  "brand": "dynaudio",
+  "timestamp": "2026-02-08T23:24:46.477583",
+  "execution_time_seconds": 4.759681,
+  "total_processed": 22,
+  "approved_count": 22,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 22,
+  "rejected_products_count": 0
+}

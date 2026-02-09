@@ -542,7 +542,7 @@ export const SpectrumModule = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
                       ID REF:{" "}
-                      {(hoveredProduct.id || "").split("_")[1] ||
+                      {(hoveredProduct.id || "").split("-")[1] ||
                         hoveredProduct.id ||
                         "N/A"}
                     </span>
@@ -551,7 +551,7 @@ export const SpectrumModule = () => {
                     {hoveredProduct.name}
                   </h1>
                   <div className="text-xs text-amber-500 font-bold uppercase tracking-widest">
-                    {hoveredProduct.brand_id || "Unknown Brand"}
+                    {hoveredProduct.brand || hoveredProduct.brand_id || "Unknown Brand"}
                   </div>
                 </div>
               </div>

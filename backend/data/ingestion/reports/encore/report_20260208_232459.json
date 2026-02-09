@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593091",
+  "brand": "encore",
+  "timestamp": "2026-02-08T23:24:58.973290",
+  "execution_time_seconds": 7.588715,
+  "total_processed": 24,
+  "approved_count": 24,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 24,
+  "rejected_products_count": 0
+}

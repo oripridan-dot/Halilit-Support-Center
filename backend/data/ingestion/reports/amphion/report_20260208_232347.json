@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593022",
+  "brand": "amphion",
+  "timestamp": "2026-02-08T23:23:47.129282",
+  "execution_time_seconds": 4.930656,
+  "total_processed": 15,
+  "approved_count": 15,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 15,
+  "rejected_products_count": 0
+}

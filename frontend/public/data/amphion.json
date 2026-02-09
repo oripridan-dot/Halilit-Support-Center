@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני אקטיבי Amphion One25A"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.097205",
-    "last_updated": "2026-02-06T17:51:03.097206",
+    "created_at": "2026-02-08T23:23:42.198947",
+    "last_updated": "2026-02-08T23:23:42.198947",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני אקטיבי Amphion One25A"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.097178",
+      "timestamp": "2026-02-08T23:23:42.198924",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.075465",
-      "last_updated": "2026-02-06T17:26:35.075466",
+      "created_at": "2026-02-06T17:51:03.097205",
+      "last_updated": "2026-02-06T17:51:03.097206",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.075449",
+        "timestamp": "2026-02-06T17:51:03.097178",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.070318",
-        "last_updated": "2026-02-06T17:26:12.070319",
+        "created_at": "2026-02-06T17:26:35.075465",
+        "last_updated": "2026-02-06T17:26:35.075466",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.070305",
+          "timestamp": "2026-02-06T17:26:35.075449",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8952001671500649355",
           "product_name": "מוניטור אולפני אקטיבי Amphion One25A",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.172868",
-          "last_updated": "2026-02-06T14:01:14.172869",
+          "created_at": "2026-02-06T17:26:12.070318",
+          "last_updated": "2026-02-06T17:26:12.070319",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.172823",
+            "timestamp": "2026-02-06T17:26:12.070305",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/6966280-amphion-one25a-3-way-studio-monitor\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.172868",
+            "last_updated": "2026-02-06T14:01:14.172869",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.172823",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8952001671500649355",
+              "product_name": "מוניטור אולפני אקטיבי Amphion One25A",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6966280-amphion-one25a-3-way-studio-monitor\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -351,12 +434,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -375,9 +456,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp400.12"
     },
     "official_description": null,
     "official_images": [],
@@ -387,8 +467,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.098020",
-    "last_updated": "2026-02-06T17:51:03.098020",
+    "created_at": "2026-02-08T23:23:42.199694",
+    "last_updated": "2026-02-08T23:23:42.199695",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -418,9 +498,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp400.12"
     },
     "description_short": "",
     "description_long": "",
@@ -430,7 +509,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.097999",
+      "timestamp": "2026-02-08T23:23:42.199671",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -458,8 +537,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.075827",
-      "last_updated": "2026-02-06T17:26:35.075828",
+      "created_at": "2026-02-06T17:51:03.098020",
+      "last_updated": "2026-02-06T17:51:03.098020",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -501,7 +580,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.075817",
+        "timestamp": "2026-02-06T17:51:03.097999",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -529,8 +608,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.070698",
-        "last_updated": "2026-02-06T17:26:12.070699",
+        "created_at": "2026-02-06T17:26:35.075827",
+        "last_updated": "2026-02-06T17:26:35.075828",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -572,7 +651,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.070688",
+          "timestamp": "2026-02-06T17:26:35.075817",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -580,7 +659,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7426448033377013172",
           "product_name": "Amphion Amp400.12",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -600,8 +679,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.173369",
-          "last_updated": "2026-02-06T14:01:14.173369",
+          "created_at": "2026-02-06T17:26:12.070698",
+          "last_updated": "2026-02-06T17:26:12.070699",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -643,9 +722,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.173343",
+            "timestamp": "2026-02-06T17:26:12.070688",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -654,24 +733,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/6894165-amphion-amp400-12-multi-channel-power-amplifier\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.173369",
+            "last_updated": "2026-02-06T14:01:14.173369",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.173343",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7426448033377013172",
+              "product_name": "Amphion Amp400.12",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6894165-amphion-amp400-12-multi-channel-power-amplifier\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -716,12 +880,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -740,9 +902,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One18X"
     },
     "official_description": null,
     "official_images": [],
@@ -752,8 +913,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.098203",
-    "last_updated": "2026-02-06T17:51:03.098203",
+    "created_at": "2026-02-08T23:23:42.199839",
+    "last_updated": "2026-02-08T23:23:42.199840",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -783,9 +944,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One18X"
     },
     "description_short": "",
     "description_long": "",
@@ -795,7 +955,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.098188",
+      "timestamp": "2026-02-08T23:23:42.199829",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -823,8 +983,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.075929",
-      "last_updated": "2026-02-06T17:26:35.075929",
+      "created_at": "2026-02-06T17:51:03.098203",
+      "last_updated": "2026-02-06T17:51:03.098203",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -866,7 +1026,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.075922",
+        "timestamp": "2026-02-06T17:51:03.098188",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -894,8 +1054,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.070805",
-        "last_updated": "2026-02-06T17:26:12.070806",
+        "created_at": "2026-02-06T17:26:35.075929",
+        "last_updated": "2026-02-06T17:26:35.075929",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -937,7 +1097,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.070798",
+          "timestamp": "2026-02-06T17:26:35.075922",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -945,7 +1105,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--2064005879133160829",
           "product_name": "מוניטור פאסיבי Amphion One18X",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -965,8 +1125,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.173785",
-          "last_updated": "2026-02-06T14:01:14.173785",
+          "created_at": "2026-02-06T17:26:12.070805",
+          "last_updated": "2026-02-06T17:26:12.070806",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -1008,9 +1168,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.173771",
+            "timestamp": "2026-02-06T17:26:12.070798",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1019,24 +1179,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8377417-amphion-one18x\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.173785",
+            "last_updated": "2026-02-06T14:01:14.173785",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.173771",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--2064005879133160829",
+              "product_name": "מוניטור פאסיבי Amphion One18X",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8377417-amphion-one18x\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1081,12 +1326,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1105,9 +1348,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One12"
     },
     "official_description": null,
     "official_images": [],
@@ -1117,8 +1359,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.099535",
-    "last_updated": "2026-02-06T17:51:03.099536",
+    "created_at": "2026-02-08T23:23:42.200817",
+    "last_updated": "2026-02-08T23:23:42.200818",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -1148,9 +1390,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One12"
     },
     "description_short": "",
     "description_long": "",
@@ -1160,7 +1401,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.099518",
+      "timestamp": "2026-02-08T23:23:42.200806",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -1188,8 +1429,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.076312",
-      "last_updated": "2026-02-06T17:26:35.076313",
+      "created_at": "2026-02-06T17:51:03.099535",
+      "last_updated": "2026-02-06T17:51:03.099536",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -1231,7 +1472,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.076303",
+        "timestamp": "2026-02-06T17:51:03.099518",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -1259,8 +1500,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.071192",
-        "last_updated": "2026-02-06T17:26:12.071192",
+        "created_at": "2026-02-06T17:26:35.076312",
+        "last_updated": "2026-02-06T17:26:35.076313",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -1302,7 +1543,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.071183",
+          "timestamp": "2026-02-06T17:26:35.076303",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -1310,7 +1551,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1848653576401503200",
           "product_name": "מוניטור פאסיבי Amphion One12",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1330,8 +1571,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.173930",
-          "last_updated": "2026-02-06T14:01:14.173931",
+          "created_at": "2026-02-06T17:26:12.071192",
+          "last_updated": "2026-02-06T17:26:12.071192",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -1373,9 +1614,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.173919",
+            "timestamp": "2026-02-06T17:26:12.071183",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1384,24 +1625,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2123111-amphion-one12\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.173930",
+            "last_updated": "2026-02-06T14:01:14.173931",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.173919",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1848653576401503200",
+              "product_name": "מוניטור פאסיבי Amphion One12",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2123111-amphion-one12\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1446,12 +1772,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1470,9 +1794,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion Two18X"
     },
     "official_description": null,
     "official_images": [],
@@ -1482,8 +1805,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.100001",
-    "last_updated": "2026-02-06T17:51:03.100001",
+    "created_at": "2026-02-08T23:23:42.201672",
+    "last_updated": "2026-02-08T23:23:42.201672",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -1513,9 +1836,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion Two18X"
     },
     "description_short": "",
     "description_long": "",
@@ -1525,7 +1847,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.099982",
+      "timestamp": "2026-02-08T23:23:42.201656",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -1553,8 +1875,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.076402",
-      "last_updated": "2026-02-06T17:26:35.076402",
+      "created_at": "2026-02-06T17:51:03.100001",
+      "last_updated": "2026-02-06T17:51:03.100001",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -1596,7 +1918,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.076396",
+        "timestamp": "2026-02-06T17:51:03.099982",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -1624,8 +1946,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.071284",
-        "last_updated": "2026-02-06T17:26:12.071284",
+        "created_at": "2026-02-06T17:26:35.076402",
+        "last_updated": "2026-02-06T17:26:35.076402",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -1667,7 +1989,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.071278",
+          "timestamp": "2026-02-06T17:26:35.076396",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -1675,7 +1997,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--2382875773275200111",
           "product_name": "מוניטור פאסיבי Amphion Two18X",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1695,8 +2017,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.174437",
-          "last_updated": "2026-02-06T14:01:14.174438",
+          "created_at": "2026-02-06T17:26:12.071284",
+          "last_updated": "2026-02-06T17:26:12.071284",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -1738,9 +2060,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.174419",
+            "timestamp": "2026-02-06T17:26:12.071278",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1749,24 +2071,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8378366-amphion-two18x\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.174437",
+            "last_updated": "2026-02-06T14:01:14.174438",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.174419",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--2382875773275200111",
+              "product_name": "מוניטור פאסיבי Amphion Two18X",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8378366-amphion-two18x\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1811,12 +2218,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1835,9 +2240,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp700"
     },
     "official_description": null,
     "official_images": [],
@@ -1847,8 +2251,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.100342",
-    "last_updated": "2026-02-06T17:51:03.100343",
+    "created_at": "2026-02-08T23:23:42.201968",
+    "last_updated": "2026-02-08T23:23:42.201968",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -1878,9 +2282,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp700"
     },
     "description_short": "",
     "description_long": "",
@@ -1890,7 +2293,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.100329",
+      "timestamp": "2026-02-08T23:23:42.201954",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -1918,8 +2321,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.076504",
-      "last_updated": "2026-02-06T17:26:35.076504",
+      "created_at": "2026-02-06T17:51:03.100342",
+      "last_updated": "2026-02-06T17:51:03.100343",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -1961,7 +2364,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.076498",
+        "timestamp": "2026-02-06T17:51:03.100329",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -1989,8 +2392,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.071368",
-        "last_updated": "2026-02-06T17:26:12.071368",
+        "created_at": "2026-02-06T17:26:35.076504",
+        "last_updated": "2026-02-06T17:26:35.076504",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -2032,7 +2435,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.071363",
+          "timestamp": "2026-02-06T17:26:35.076498",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -2040,7 +2443,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7648844341925592750",
           "product_name": "Amphion Amp700",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2060,8 +2463,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.174572",
-          "last_updated": "2026-02-06T14:01:14.174573",
+          "created_at": "2026-02-06T17:26:12.071368",
+          "last_updated": "2026-02-06T17:26:12.071368",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -2103,9 +2506,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.174561",
+            "timestamp": "2026-02-06T17:26:12.071363",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2114,24 +2517,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5115518-amphion-amp700\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.174572",
+            "last_updated": "2026-02-06T14:01:14.174573",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.174561",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7648844341925592750",
+              "product_name": "Amphion Amp700",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5115518-amphion-amp700\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2176,12 +2664,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2200,9 +2686,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp100 Mono"
     },
     "official_description": null,
     "official_images": [],
@@ -2212,8 +2697,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.100639",
-    "last_updated": "2026-02-06T17:51:03.100639",
+    "created_at": "2026-02-08T23:23:42.202651",
+    "last_updated": "2026-02-08T23:23:42.202652",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -2243,9 +2728,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp100 Mono"
     },
     "description_short": "",
     "description_long": "",
@@ -2255,7 +2739,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.100624",
+      "timestamp": "2026-02-08T23:23:42.202635",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -2283,8 +2767,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.077069",
-      "last_updated": "2026-02-06T17:26:35.077069",
+      "created_at": "2026-02-06T17:51:03.100639",
+      "last_updated": "2026-02-06T17:51:03.100639",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -2326,7 +2810,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.077059",
+        "timestamp": "2026-02-06T17:51:03.100624",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -2354,8 +2838,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.071888",
-        "last_updated": "2026-02-06T17:26:12.071888",
+        "created_at": "2026-02-06T17:26:35.077069",
+        "last_updated": "2026-02-06T17:26:35.077069",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -2397,7 +2881,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.071878",
+          "timestamp": "2026-02-06T17:26:35.077059",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -2405,7 +2889,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6650911522371389374",
           "product_name": "Amphion Amp100 Mono",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2425,8 +2909,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.174692",
-          "last_updated": "2026-02-06T14:01:14.174693",
+          "created_at": "2026-02-06T17:26:12.071888",
+          "last_updated": "2026-02-06T17:26:12.071888",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -2468,9 +2952,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.174672",
+            "timestamp": "2026-02-06T17:26:12.071878",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2479,24 +2963,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2124973-amphion-amp100-mono-\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.174692",
+            "last_updated": "2026-02-06T14:01:14.174693",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.174672",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6650911522371389374",
+              "product_name": "Amphion Amp100 Mono",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2124973-amphion-amp100-mono-\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2541,12 +3110,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2565,9 +3132,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One18"
     },
     "official_description": null,
     "official_images": [],
@@ -2577,8 +3143,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.101377",
-    "last_updated": "2026-02-06T17:51:03.101377",
+    "created_at": "2026-02-08T23:23:42.202862",
+    "last_updated": "2026-02-08T23:23:42.202862",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -2608,9 +3174,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One18"
     },
     "description_short": "",
     "description_long": "",
@@ -2620,7 +3185,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.101362",
+      "timestamp": "2026-02-08T23:23:42.202848",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -2648,8 +3213,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.077160",
-      "last_updated": "2026-02-06T17:26:35.077161",
+      "created_at": "2026-02-06T17:51:03.101377",
+      "last_updated": "2026-02-06T17:51:03.101377",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -2691,7 +3256,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.077154",
+        "timestamp": "2026-02-06T17:51:03.101362",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -2719,8 +3284,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.071990",
-        "last_updated": "2026-02-06T17:26:12.071990",
+        "created_at": "2026-02-06T17:26:35.077160",
+        "last_updated": "2026-02-06T17:26:35.077161",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -2762,7 +3327,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.071984",
+          "timestamp": "2026-02-06T17:26:35.077154",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -2770,7 +3335,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4327447639550168521",
           "product_name": "מוניטור פאסיבי Amphion One18",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2790,8 +3355,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.174788",
-          "last_updated": "2026-02-06T14:01:14.174789",
+          "created_at": "2026-02-06T17:26:12.071990",
+          "last_updated": "2026-02-06T17:26:12.071990",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -2833,9 +3398,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.174778",
+            "timestamp": "2026-02-06T17:26:12.071984",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2844,24 +3409,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2124169-amphion-one18\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.174788",
+            "last_updated": "2026-02-06T14:01:14.174789",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.174778",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4327447639550168521",
+              "product_name": "מוניטור פאסיבי Amphion One18",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2124169-amphion-one18\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2906,12 +3556,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2930,9 +3578,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion Two18"
     },
     "official_description": null,
     "official_images": [],
@@ -2942,8 +3589,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.101819",
-    "last_updated": "2026-02-06T17:51:03.101820",
+    "created_at": "2026-02-08T23:23:42.204450",
+    "last_updated": "2026-02-08T23:23:42.204451",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -2973,9 +3620,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion Two18"
     },
     "description_short": "",
     "description_long": "",
@@ -2985,7 +3631,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.101804",
+      "timestamp": "2026-02-08T23:23:42.204436",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -3013,8 +3659,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.077242",
-      "last_updated": "2026-02-06T17:26:35.077242",
+      "created_at": "2026-02-06T17:51:03.101819",
+      "last_updated": "2026-02-06T17:51:03.101820",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -3056,7 +3702,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.077236",
+        "timestamp": "2026-02-06T17:51:03.101804",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -3084,8 +3730,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.072076",
-        "last_updated": "2026-02-06T17:26:12.072076",
+        "created_at": "2026-02-06T17:26:35.077242",
+        "last_updated": "2026-02-06T17:26:35.077242",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -3127,7 +3773,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.072070",
+          "timestamp": "2026-02-06T17:26:35.077236",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -3135,7 +3781,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7656640800580679367",
           "product_name": "מוניטור פאסיבי Amphion Two18",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3155,8 +3801,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.175533",
-          "last_updated": "2026-02-06T14:01:14.175533",
+          "created_at": "2026-02-06T17:26:12.072076",
+          "last_updated": "2026-02-06T17:26:12.072076",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -3198,9 +3844,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.175511",
+            "timestamp": "2026-02-06T17:26:12.072070",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3209,24 +3855,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2125126-amphion-two18\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.175533",
+            "last_updated": "2026-02-06T14:01:14.175533",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.175511",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7656640800580679367",
+              "product_name": "מוניטור פאסיבי Amphion Two18",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2125126-amphion-two18\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3271,12 +4002,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -3295,9 +4024,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One15"
     },
     "official_description": null,
     "official_images": [],
@@ -3307,8 +4035,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.102262",
-    "last_updated": "2026-02-06T17:51:03.102262",
+    "created_at": "2026-02-08T23:23:42.205231",
+    "last_updated": "2026-02-08T23:23:42.205231",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -3338,9 +4066,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion One15"
     },
     "description_short": "",
     "description_long": "",
@@ -3350,7 +4077,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.102247",
+      "timestamp": "2026-02-08T23:23:42.205216",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -3378,8 +4105,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.077320",
-      "last_updated": "2026-02-06T17:26:35.077321",
+      "created_at": "2026-02-06T17:51:03.102262",
+      "last_updated": "2026-02-06T17:51:03.102262",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -3421,7 +4148,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.077315",
+        "timestamp": "2026-02-06T17:51:03.102247",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -3449,8 +4176,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.072157",
-        "last_updated": "2026-02-06T17:26:12.072157",
+        "created_at": "2026-02-06T17:26:35.077320",
+        "last_updated": "2026-02-06T17:26:35.077321",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -3492,7 +4219,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.072152",
+          "timestamp": "2026-02-06T17:26:35.077315",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -3500,7 +4227,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1946839748384756952",
           "product_name": "מוניטור פאסיבי Amphion One15",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3520,8 +4247,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.175664",
-          "last_updated": "2026-02-06T14:01:14.175664",
+          "created_at": "2026-02-06T17:26:12.072157",
+          "last_updated": "2026-02-06T17:26:12.072157",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -3563,9 +4290,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.175648",
+            "timestamp": "2026-02-06T17:26:12.072152",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3574,24 +4301,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2123766-amphion-one15\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.175664",
+            "last_updated": "2026-02-06T14:01:14.175664",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.175648",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1946839748384756952",
+              "product_name": "מוניטור פאסיבי Amphion One15",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2123766-amphion-one15\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3636,12 +4448,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -3660,9 +4470,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion Two15"
     },
     "official_description": null,
     "official_images": [],
@@ -3672,8 +4481,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.102592",
-    "last_updated": "2026-02-06T17:51:03.102593",
+    "created_at": "2026-02-08T23:23:42.206151",
+    "last_updated": "2026-02-08T23:23:42.206152",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -3703,9 +4512,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור פאסיבי Amphion Two15"
     },
     "description_short": "",
     "description_long": "",
@@ -3715,7 +4523,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.102579",
+      "timestamp": "2026-02-08T23:23:42.206119",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -3743,8 +4551,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.077909",
-      "last_updated": "2026-02-06T17:26:35.077910",
+      "created_at": "2026-02-06T17:51:03.102592",
+      "last_updated": "2026-02-06T17:51:03.102593",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -3786,7 +4594,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.077900",
+        "timestamp": "2026-02-06T17:51:03.102579",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -3814,8 +4622,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.072709",
-        "last_updated": "2026-02-06T17:26:12.072709",
+        "created_at": "2026-02-06T17:26:35.077909",
+        "last_updated": "2026-02-06T17:26:35.077910",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -3857,7 +4665,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.072699",
+          "timestamp": "2026-02-06T17:26:35.077900",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -3865,7 +4673,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8915515031592032402",
           "product_name": "מוניטור פאסיבי Amphion Two15",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3885,8 +4693,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.175757",
-          "last_updated": "2026-02-06T14:01:14.175757",
+          "created_at": "2026-02-06T17:26:12.072709",
+          "last_updated": "2026-02-06T17:26:12.072709",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -3928,9 +4736,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.175747",
+            "timestamp": "2026-02-06T17:26:12.072699",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3939,24 +4747,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2125050-amphion-two15\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.175757",
+            "last_updated": "2026-02-06T14:01:14.175757",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.175747",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8915515031592032402",
+              "product_name": "מוניטור פאסיבי Amphion Two15",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2125050-amphion-two15\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4001,12 +4894,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4025,9 +4916,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp500"
     },
     "official_description": null,
     "official_images": [],
@@ -4037,8 +4927,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.102735",
-    "last_updated": "2026-02-06T17:51:03.102735",
+    "created_at": "2026-02-08T23:23:42.206869",
+    "last_updated": "2026-02-08T23:23:42.206869",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -4068,9 +4958,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp500"
     },
     "description_short": "",
     "description_long": "",
@@ -4080,7 +4969,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.102723",
+      "timestamp": "2026-02-08T23:23:42.206837",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -4108,8 +4997,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.078001",
-      "last_updated": "2026-02-06T17:26:35.078001",
+      "created_at": "2026-02-06T17:51:03.102735",
+      "last_updated": "2026-02-06T17:51:03.102735",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -4151,7 +5040,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.077995",
+        "timestamp": "2026-02-06T17:51:03.102723",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -4179,8 +5068,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.072880",
-        "last_updated": "2026-02-06T17:26:12.072880",
+        "created_at": "2026-02-06T17:26:35.078001",
+        "last_updated": "2026-02-06T17:26:35.078001",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -4222,7 +5111,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.072872",
+          "timestamp": "2026-02-06T17:26:35.077995",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -4230,7 +5119,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6835799508207656267",
           "product_name": "Amphion Amp500",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4250,8 +5139,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.175884",
-          "last_updated": "2026-02-06T14:01:14.175885",
+          "created_at": "2026-02-06T17:26:12.072880",
+          "last_updated": "2026-02-06T17:26:12.072880",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -4293,9 +5182,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.175874",
+            "timestamp": "2026-02-06T17:26:12.072872",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4304,24 +5193,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2124853-amphion-amp500\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.175884",
+            "last_updated": "2026-02-06T14:01:14.175885",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.175874",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6835799508207656267",
+              "product_name": "Amphion Amp500",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2124853-amphion-amp500\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4366,12 +5340,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4390,9 +5362,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp400.8"
     },
     "official_description": null,
     "official_images": [],
@@ -4402,8 +5373,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.102863",
-    "last_updated": "2026-02-06T17:51:03.102863",
+    "created_at": "2026-02-08T23:23:42.207156",
+    "last_updated": "2026-02-08T23:23:42.207157",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -4433,9 +5404,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion Amp400.8"
     },
     "description_short": "",
     "description_long": "",
@@ -4445,7 +5415,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.102853",
+      "timestamp": "2026-02-08T23:23:42.207131",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -4473,8 +5443,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.078082",
-      "last_updated": "2026-02-06T17:26:35.078083",
+      "created_at": "2026-02-06T17:51:03.102863",
+      "last_updated": "2026-02-06T17:51:03.102863",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -4516,7 +5486,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.078076",
+        "timestamp": "2026-02-06T17:51:03.102853",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -4544,8 +5514,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.072968",
-        "last_updated": "2026-02-06T17:26:12.072968",
+        "created_at": "2026-02-06T17:26:35.078082",
+        "last_updated": "2026-02-06T17:26:35.078083",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -4587,7 +5557,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.072962",
+          "timestamp": "2026-02-06T17:26:35.078076",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -4595,7 +5565,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7757135684221385077",
           "product_name": "Amphion Amp400.8",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4615,8 +5585,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.176017",
-          "last_updated": "2026-02-06T14:01:14.176017",
+          "created_at": "2026-02-06T17:26:12.072968",
+          "last_updated": "2026-02-06T17:26:12.072968",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -4658,9 +5628,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.176007",
+            "timestamp": "2026-02-06T17:26:12.072962",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4669,24 +5639,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5115687-amphion-amp400-8\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.176017",
+            "last_updated": "2026-02-06T14:01:14.176017",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.176007",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7757135684221385077",
+              "product_name": "Amphion Amp400.8",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5115687-amphion-amp400-8\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4731,12 +5786,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4755,9 +5808,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion BaseTwo25 System"
     },
     "official_description": null,
     "official_images": [],
@@ -4767,8 +5819,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.104019",
-    "last_updated": "2026-02-06T17:51:03.104020",
+    "created_at": "2026-02-08T23:23:42.207424",
+    "last_updated": "2026-02-08T23:23:42.207425",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -4798,9 +5850,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion BaseTwo25 System"
     },
     "description_short": "",
     "description_long": "",
@@ -4810,7 +5861,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.104003",
+      "timestamp": "2026-02-08T23:23:42.207411",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -4838,8 +5889,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.078162",
-      "last_updated": "2026-02-06T17:26:35.078163",
+      "created_at": "2026-02-06T17:51:03.104019",
+      "last_updated": "2026-02-06T17:51:03.104020",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -4881,7 +5932,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.078157",
+        "timestamp": "2026-02-06T17:51:03.104003",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -4909,8 +5960,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.073053",
-        "last_updated": "2026-02-06T17:26:12.073054",
+        "created_at": "2026-02-06T17:26:35.078162",
+        "last_updated": "2026-02-06T17:26:35.078163",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -4952,7 +6003,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.073047",
+          "timestamp": "2026-02-06T17:26:35.078157",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -4960,7 +6011,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4557029916519838340",
           "product_name": "Amphion BaseTwo25 System",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4980,8 +6031,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.177016",
-          "last_updated": "2026-02-06T14:01:14.177017",
+          "created_at": "2026-02-06T17:26:12.073053",
+          "last_updated": "2026-02-06T17:26:12.073054",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -5023,9 +6074,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.177000",
+            "timestamp": "2026-02-06T17:26:12.073047",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5034,24 +6085,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5115577-amphion-basetwo25-system\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.177016",
+            "last_updated": "2026-02-06T14:01:14.177017",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.177000",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4557029916519838340",
+              "product_name": "Amphion BaseTwo25 System",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5115577-amphion-basetwo25-system\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5096,12 +6232,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -5120,9 +6254,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion FlexBase25"
     },
     "official_description": null,
     "official_images": [],
@@ -5132,8 +6265,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.104174",
-    "last_updated": "2026-02-06T17:51:03.104175",
+    "created_at": "2026-02-08T23:23:42.209963",
+    "last_updated": "2026-02-08T23:23:42.209963",
     "taxonomy": {
       "canonical_category": "Amplifiers & Effects",
       "canonical_subcategory": "Amplifier",
@@ -5163,9 +6296,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Amphion FlexBase25"
     },
     "description_short": "",
     "description_long": "",
@@ -5175,7 +6307,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.104163",
+      "timestamp": "2026-02-08T23:23:42.209948",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from amphion catalog"
     },
@@ -5203,8 +6335,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.078242",
-      "last_updated": "2026-02-06T17:26:35.078242",
+      "created_at": "2026-02-06T17:51:03.104174",
+      "last_updated": "2026-02-06T17:51:03.104175",
       "taxonomy": {
         "canonical_category": "Amplifiers & Effects",
         "canonical_subcategory": "Amplifier",
@@ -5246,7 +6378,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.078236",
+        "timestamp": "2026-02-06T17:51:03.104163",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from amphion catalog"
       },
@@ -5274,8 +6406,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.073136",
-        "last_updated": "2026-02-06T17:26:12.073137",
+        "created_at": "2026-02-06T17:26:35.078242",
+        "last_updated": "2026-02-06T17:26:35.078242",
         "taxonomy": {
           "canonical_category": "Amplifiers & Effects",
           "canonical_subcategory": "Amplifier",
@@ -5317,7 +6449,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.073131",
+          "timestamp": "2026-02-06T17:26:35.078236",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from amphion catalog"
         },
@@ -5325,7 +6457,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7878422421441133678",
           "product_name": "Amphion FlexBase25",
-          "brand": "Amphion",
+          "brand": "amphion",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5345,8 +6477,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:14.177158",
-          "last_updated": "2026-02-06T14:01:14.177158",
+          "created_at": "2026-02-06T17:26:12.073136",
+          "last_updated": "2026-02-06T17:26:12.073137",
           "taxonomy": {
             "canonical_category": "Amplifiers & Effects",
             "canonical_subcategory": "Amplifier",
@@ -5388,9 +6520,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:14.177147",
+            "timestamp": "2026-02-06T17:26:12.073131",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Amphion catalog"
+            "extraction_notes": "Scraped from amphion catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5399,24 +6531,109 @@
             "brand": "Amphion",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5115632-amphion-flexbase25\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:14.177158",
+            "last_updated": "2026-02-06T14:01:14.177158",
+            "taxonomy": {
+              "canonical_category": "Amplifiers & Effects",
+              "canonical_subcategory": "Amplifier",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:14.177147",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Amphion catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7878422421441133678",
+              "product_name": "Amphion FlexBase25",
+              "brand": "Amphion",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5115632-amphion-flexbase25\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5461,12 +6678,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,

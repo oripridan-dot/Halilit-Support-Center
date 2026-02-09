@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593185",
+  "brand": "magma",
+  "timestamp": "2026-02-08T23:26:30.869014",
+  "execution_time_seconds": 5.402674,
+  "total_processed": 25,
+  "approved_count": 25,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 25,
+  "rejected_products_count": 0
+}

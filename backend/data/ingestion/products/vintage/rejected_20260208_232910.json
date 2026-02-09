@@ -1,0 +1,911 @@
+{
+  "brand": "vintage",
+  "timestamp": "20260208_232910",
+  "count": 2,
+  "products": [
+    {
+      "halilit_id": "scraped--3626243176222400455",
+      "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+      "brand": "vintage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo"
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T23:29:00.147760",
+      "last_updated": "2026-02-08T23:29:00.147760",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": [],
+        "visual_issues": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T23:29:00.147745",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from vintage catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped--3626243176222400455",
+        "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+        "brand": "vintage",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:51:05.762290",
+        "last_updated": "2026-02-06T17:51:05.762290",
+        "taxonomy": {
+          "canonical_category": "Other",
+          "canonical_subcategory": "Uncategorized",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:51:05.762275",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from vintage catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped--3626243176222400455",
+          "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+          "brand": "vintage",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:37.516921",
+          "last_updated": "2026-02-06T17:26:37.516921",
+          "taxonomy": {
+            "canonical_category": "Other",
+            "canonical_subcategory": "Uncategorized",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:37.516911",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from vintage catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped--3626243176222400455",
+            "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+            "brand": "vintage",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T17:26:14.140016",
+            "last_updated": "2026-02-06T17:26:14.140017",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T17:26:14.140008",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from vintage catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--3626243176222400455",
+              "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+              "brand": "Vintage",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:27.697013",
+              "last_updated": "2026-02-06T14:04:27.697013",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:27.696991",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Vintage catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--3626243176222400455",
+                "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+                "brand": "Vintage",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7131159-vintage-revo-colt-hs-duo-electric-guitar\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "\u26a0 Price is 0 (TBD)",
+                "\u26a0 Category may not be standard: Other > Uncategorized"
+              ],
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)",
+              "\u26a0 Category may not be standard: Other > Uncategorized"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)",
+            "\u26a0 Category may not be standard: Other > Uncategorized"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)",
+          "\u26a0 Category may not be standard: Other > Uncategorized"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 80.0,
+      "validation_status": "rejected",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    },
+    {
+      "halilit_id": "scraped--3626243176222400455",
+      "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+      "brand": "vintage",
+      "price_il": 0.0,
+      "price_eilat": 0.0,
+      "halilit_url": "https://halilit.com",
+      "sku": null,
+      "model_number": null,
+      "official_name": null,
+      "official_specs": {
+        "note": "Standardized via Halilit Commercial Source",
+        "extracted_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo"
+      },
+      "official_description": null,
+      "official_images": [],
+      "official_url": null,
+      "reviews": [],
+      "review_synthesis": null,
+      "average_rating": null,
+      "status": "harvested",
+      "pipeline_phase": "harvest",
+      "created_at": "2026-02-08T23:29:00.152061",
+      "last_updated": "2026-02-08T23:29:00.152061",
+      "taxonomy": {
+        "canonical_category": "Other",
+        "canonical_subcategory": "Uncategorized",
+        "brand_taxonomy": null,
+        "alt_categories": [],
+        "keywords": []
+      },
+      "pricing": {
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "price_usd": null,
+        "price_eur": null,
+        "tier": "entry",
+        "eilat_discount_percent": 0.0,
+        "suggested_tier": "entry",
+        "price_validity_marker": "current",
+        "last_price_change": null,
+        "previous_price_il": null
+      },
+      "display": {
+        "display_role": "entry",
+        "hero_image": null,
+        "thumbnail_image": null,
+        "should_highlight": false,
+        "display_tier_level": 1,
+        "color_hint": "bg-gray-300",
+        "media_assets": [],
+        "visual_issues": []
+      },
+      "specifications": {
+        "specs_dict": {},
+        "specs_source": "commercial",
+        "specs_completeness": 0.5,
+        "specs_markdown": null
+      },
+      "description_short": "",
+      "description_long": null,
+      "feature_list": [],
+      "sources": [],
+      "primary_source": {
+        "source_name": "Halilit",
+        "source_url": "https://halilit.com",
+        "confidence": "commercial",
+        "timestamp": "2026-02-08T23:29:00.152051",
+        "extraction_method": "web_scraper",
+        "extraction_notes": "Scraped from vintage catalog"
+      },
+      "lineage": {},
+      "raw_snapshot": {
+        "halilit_id": "scraped--3626243176222400455",
+        "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+        "brand": "vintage",
+        "price_il": 0.0,
+        "price_eilat": 0.0,
+        "halilit_url": "https://halilit.com",
+        "sku": null,
+        "model_number": null,
+        "official_name": null,
+        "official_specs": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "official_description": null,
+        "official_images": [],
+        "official_url": null,
+        "reviews": [],
+        "review_synthesis": null,
+        "average_rating": null,
+        "status": "harvested",
+        "pipeline_phase": "harvest",
+        "created_at": "2026-02-06T17:51:05.764082",
+        "last_updated": "2026-02-06T17:51:05.764082",
+        "taxonomy": {
+          "canonical_category": "Other",
+          "canonical_subcategory": "Uncategorized",
+          "brand_taxonomy": null,
+          "alt_categories": [],
+          "keywords": []
+        },
+        "pricing": {
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "price_usd": null,
+          "price_eur": null,
+          "tier": "entry",
+          "eilat_discount_percent": 0,
+          "suggested_tier": null,
+          "price_validity_marker": null,
+          "last_price_change": null,
+          "previous_price_il": null
+        },
+        "display": {
+          "display_role": "entry",
+          "hero_image": null,
+          "thumbnail_image": null,
+          "should_highlight": false,
+          "display_tier_level": 1,
+          "color_hint": "bg-gray-300",
+          "media_assets": []
+        },
+        "specifications": {
+          "keys": 88,
+          "action": "Hammer Action",
+          "polyphony": 128
+        },
+        "description_short": "",
+        "description_long": "",
+        "feature_list": [],
+        "sources": [],
+        "primary_source": {
+          "source_name": "Halilit",
+          "source_url": "https://halilit.com",
+          "confidence": "commercial",
+          "timestamp": "2026-02-06T17:51:05.764070",
+          "extraction_method": "web_scraper",
+          "extraction_notes": "Scraped from vintage catalog"
+        },
+        "lineage": {},
+        "raw_snapshot": {
+          "halilit_id": "scraped--3626243176222400455",
+          "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+          "brand": "vintage",
+          "price_il": 0.0,
+          "price_eilat": 0.0,
+          "halilit_url": "https://halilit.com",
+          "sku": null,
+          "model_number": null,
+          "official_name": null,
+          "official_specs": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "official_description": null,
+          "official_images": [],
+          "official_url": null,
+          "reviews": [],
+          "review_synthesis": null,
+          "average_rating": null,
+          "status": "harvested",
+          "pipeline_phase": "harvest",
+          "created_at": "2026-02-06T17:26:37.518177",
+          "last_updated": "2026-02-06T17:26:37.518177",
+          "taxonomy": {
+            "canonical_category": "Other",
+            "canonical_subcategory": "Uncategorized",
+            "brand_taxonomy": null,
+            "alt_categories": [],
+            "keywords": []
+          },
+          "pricing": {
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "price_usd": null,
+            "price_eur": null,
+            "tier": "entry",
+            "eilat_discount_percent": 0,
+            "suggested_tier": null,
+            "price_validity_marker": null,
+            "last_price_change": null,
+            "previous_price_il": null
+          },
+          "display": {
+            "display_role": "entry",
+            "hero_image": null,
+            "thumbnail_image": null,
+            "should_highlight": false,
+            "display_tier_level": 1,
+            "color_hint": "bg-gray-300",
+            "media_assets": []
+          },
+          "specifications": {
+            "keys": 88,
+            "action": "Hammer Action",
+            "polyphony": 128
+          },
+          "description_short": "",
+          "description_long": "",
+          "feature_list": [],
+          "sources": [],
+          "primary_source": {
+            "source_name": "Halilit",
+            "source_url": "https://halilit.com",
+            "confidence": "commercial",
+            "timestamp": "2026-02-06T17:26:37.518171",
+            "extraction_method": "web_scraper",
+            "extraction_notes": "Scraped from vintage catalog"
+          },
+          "lineage": {},
+          "raw_snapshot": {
+            "halilit_id": "scraped--3626243176222400455",
+            "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+            "brand": "vintage",
+            "price_il": 0.0,
+            "price_eilat": 0.0,
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
+            "official_specs": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T17:26:14.141372",
+            "last_updated": "2026-02-06T17:26:14.141372",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T17:26:14.141367",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from vintage catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--3626243176222400455",
+              "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+              "brand": "Vintage",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://halilit.com",
+              "sku": null,
+              "model_number": null,
+              "official_name": null,
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": null,
+              "official_images": [],
+              "official_url": null,
+              "reviews": [],
+              "review_synthesis": null,
+              "average_rating": null,
+              "status": "harvested",
+              "pipeline_phase": "harvest",
+              "created_at": "2026-02-06T14:04:27.699142",
+              "last_updated": "2026-02-06T14:04:27.699142",
+              "taxonomy": {
+                "canonical_category": "Other",
+                "canonical_subcategory": "Uncategorized",
+                "brand_taxonomy": null,
+                "alt_categories": [],
+                "keywords": []
+              },
+              "pricing": {
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "price_usd": null,
+                "price_eur": null,
+                "tier": "entry",
+                "eilat_discount_percent": 0,
+                "suggested_tier": null,
+                "price_validity_marker": null,
+                "last_price_change": null,
+                "previous_price_il": null
+              },
+              "display": {
+                "display_role": "entry",
+                "hero_image": null,
+                "thumbnail_image": null,
+                "should_highlight": false,
+                "display_tier_level": 1,
+                "color_hint": "bg-gray-300",
+                "media_assets": []
+              },
+              "specifications": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "description_short": "",
+              "description_long": "",
+              "feature_list": [],
+              "sources": [],
+              "primary_source": {
+                "source_name": "Halilit",
+                "source_url": "https://halilit.com",
+                "confidence": "commercial",
+                "timestamp": "2026-02-06T14:04:27.699128",
+                "extraction_method": "web_scraper",
+                "extraction_notes": "Scraped from Vintage catalog"
+              },
+              "lineage": {},
+              "raw_snapshot": {
+                "halilit_id": "scraped--3626243176222400455",
+                "product_name": "\u05d2\u05d9\u05d8\u05e8\u05d4 \u05d7\u05e9\u05de\u05dc\u05d9\u05ea Vintage REVO 'Colt' HS Duo",
+                "brand": "Vintage",
+                "price_il": 0.0,
+                "price_eilat": 0.0,
+                "halilit_url": "https://www.halilit.com  /items/7128352-vintage-revo-colt-hs-duo-electric-guitar\n",
+                "pipeline_phase": "enrich",
+                "status": "harvested",
+                "official_specs": {
+                  "keys": 88,
+                  "action": "Hammer Action",
+                  "polyphony": 128
+                },
+                "official_description": "The ultimate stage piano for professionals.",
+                "official_images": [
+                  {
+                    "type": "image",
+                    "url": "https://brand.com/hero.jpg",
+                    "display_purpose": "hero",
+                    "source": "official"
+                  }
+                ],
+                "official_url": "https://brand.com/products/stage-88"
+              },
+              "data_completeness": 0.4210526315789473,
+              "quality_score": 0.4210526315789473,
+              "validation_status": "approved",
+              "validation_errors": [],
+              "validation_warnings": [
+                "\u26a0 Price is 0 (TBD)",
+                "\u26a0 Category may not be standard: Other > Uncategorized"
+              ],
+              "price": 0.0,
+              "currency": "ILS",
+              "image_hero": null,
+              "image_thumbnail": null,
+              "image_gallery": [],
+              "image_url": ""
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "\u26a0 Price is 0 (TBD)",
+              "\u26a0 Category may not be standard: Other > Uncategorized"
+            ],
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
+          },
+          "data_completeness": 0.4210526315789473,
+          "quality_score": 0.4210526315789473,
+          "validation_status": "approved",
+          "validation_errors": [],
+          "validation_warnings": [
+            "\u26a0 Price is 0 (TBD)",
+            "\u26a0 Category may not be standard: Other > Uncategorized"
+          ],
+          "price": 0.0,
+          "currency": "ILS",
+          "image_hero": null,
+          "image_thumbnail": null,
+          "image_gallery": [],
+          "image_url": ""
+        },
+        "data_completeness": 0.4210526315789473,
+        "quality_score": 0.4210526315789473,
+        "validation_status": "approved",
+        "validation_errors": [],
+        "validation_warnings": [
+          "\u26a0 Price is 0 (TBD)",
+          "\u26a0 Category may not be standard: Other > Uncategorized"
+        ],
+        "price": 0.0,
+        "currency": "ILS",
+        "image_hero": null,
+        "image_thumbnail": null,
+        "image_gallery": [],
+        "image_url": ""
+      },
+      "data_completeness": 0.4210526315789473,
+      "quality_score": 80.0,
+      "validation_status": "rejected",
+      "validation_errors": [],
+      "validation_warnings": [
+        "\u26a0 Category may not be standard: Other > Uncategorized"
+      ],
+      "visual_match_confidence": 0.0,
+      "visual_match_reasoning": null,
+      "visual_match_status": "pending"
+    }
+  ]
+}

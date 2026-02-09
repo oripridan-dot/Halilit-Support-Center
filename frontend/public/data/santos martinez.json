@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית  Santos Martinez Preludio"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.217927",
-    "last_updated": "2026-02-06T17:51:05.217927",
+    "created_at": "2026-02-08T23:28:00.387613",
+    "last_updated": "2026-02-08T23:28:00.387614",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית  Santos Martinez Preludio"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.217900",
+      "timestamp": "2026-02-08T23:28:00.387592",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.185795",
-      "last_updated": "2026-02-06T17:26:37.185795",
+      "created_at": "2026-02-06T17:51:05.217927",
+      "last_updated": "2026-02-06T17:51:05.217927",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.185779",
+        "timestamp": "2026-02-06T17:51:05.217900",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.806281",
-        "last_updated": "2026-02-06T17:26:13.806281",
+        "created_at": "2026-02-06T17:26:37.185795",
+        "last_updated": "2026-02-06T17:26:37.185795",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.806268",
+          "timestamp": "2026-02-06T17:26:37.185779",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-3110356916043937390",
           "product_name": "גיטרה קלאסית  Santos Martinez Preludio",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.631873",
-          "last_updated": "2026-02-06T14:03:51.631874",
+          "created_at": "2026-02-06T17:26:13.806281",
+          "last_updated": "2026-02-06T17:26:13.806281",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.631829",
+            "timestamp": "2026-02-06T17:26:13.806268",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846432-santos-martinez-preludio-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.631873",
+            "last_updated": "2026-02-06T14:03:51.631874",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.631829",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-3110356916043937390",
+              "product_name": "גיטרה קלאסית  Santos Martinez Preludio",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846432-santos-martinez-preludio-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -354,11 +438,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -379,9 +462,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Principante 3/4"
     },
     "official_description": null,
     "official_images": [],
@@ -391,8 +473,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.218644",
-    "last_updated": "2026-02-06T17:51:05.218644",
+    "created_at": "2026-02-08T23:28:00.388716",
+    "last_updated": "2026-02-08T23:28:00.388717",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -422,9 +504,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Principante 3/4"
     },
     "description_short": "",
     "description_long": "",
@@ -434,7 +515,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.218624",
+      "timestamp": "2026-02-08T23:28:00.388697",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -462,8 +543,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.186203",
-      "last_updated": "2026-02-06T17:26:37.186204",
+      "created_at": "2026-02-06T17:51:05.218644",
+      "last_updated": "2026-02-06T17:51:05.218644",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -505,7 +586,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.186191",
+        "timestamp": "2026-02-06T17:51:05.218624",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -533,8 +614,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.806681",
-        "last_updated": "2026-02-06T17:26:13.806682",
+        "created_at": "2026-02-06T17:26:37.186203",
+        "last_updated": "2026-02-06T17:26:37.186204",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -576,7 +657,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.806670",
+          "timestamp": "2026-02-06T17:26:37.186191",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -584,7 +665,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7166967754852158215",
           "product_name": "גיטרה קלאסית Santos Martinez Principante 3/4",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -604,8 +685,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.632445",
-          "last_updated": "2026-02-06T14:03:51.632445",
+          "created_at": "2026-02-06T17:26:13.806681",
+          "last_updated": "2026-02-06T17:26:13.806682",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -647,9 +728,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.632426",
+            "timestamp": "2026-02-06T17:26:13.806670",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -658,24 +739,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846184-santos-martinez-principante-3-4-size-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.632445",
+            "last_updated": "2026-02-06T14:03:51.632445",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.632426",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7166967754852158215",
+              "product_name": "גיטרה קלאסית Santos Martinez Principante 3/4",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846184-santos-martinez-principante-3-4-size-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -723,11 +890,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -748,9 +914,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית חצי נפח Santos Martinez Principante 1/2"
     },
     "official_description": null,
     "official_images": [],
@@ -760,8 +925,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.218993",
-    "last_updated": "2026-02-06T17:51:05.218994",
+    "created_at": "2026-02-08T23:28:00.388882",
+    "last_updated": "2026-02-08T23:28:00.388882",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -791,9 +956,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית חצי נפח Santos Martinez Principante 1/2"
     },
     "description_short": "",
     "description_long": "",
@@ -803,7 +967,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.218974",
+      "timestamp": "2026-02-08T23:28:00.388871",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -831,8 +995,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.186309",
-      "last_updated": "2026-02-06T17:26:37.186309",
+      "created_at": "2026-02-06T17:51:05.218993",
+      "last_updated": "2026-02-06T17:51:05.218994",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -874,7 +1038,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.186302",
+        "timestamp": "2026-02-06T17:51:05.218974",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -902,8 +1066,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.806788",
-        "last_updated": "2026-02-06T17:26:13.806788",
+        "created_at": "2026-02-06T17:26:37.186309",
+        "last_updated": "2026-02-06T17:26:37.186309",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -945,7 +1109,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.806781",
+          "timestamp": "2026-02-06T17:26:37.186302",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -953,7 +1117,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4415036348466164969",
           "product_name": "גיטרה קלאסית חצי נפח Santos Martinez Principante 1/2",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -973,8 +1137,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.632623",
-          "last_updated": "2026-02-06T14:03:51.632623",
+          "created_at": "2026-02-06T17:26:13.806788",
+          "last_updated": "2026-02-06T17:26:13.806788",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1016,9 +1180,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.632609",
+            "timestamp": "2026-02-06T17:26:13.806781",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1027,24 +1191,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846006-santos-martinez-principante-1-2-size\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.632623",
+            "last_updated": "2026-02-06T14:03:51.632623",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.632609",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4415036348466164969",
+              "product_name": "גיטרה קלאסית חצי נפח Santos Martinez Principante 1/2",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846006-santos-martinez-principante-1-2-size\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1092,11 +1342,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1117,9 +1366,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Estudio"
     },
     "official_description": null,
     "official_images": [],
@@ -1129,8 +1377,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.219641",
-    "last_updated": "2026-02-06T17:51:05.219642",
+    "created_at": "2026-02-08T23:28:00.389874",
+    "last_updated": "2026-02-08T23:28:00.389875",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1160,9 +1408,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Estudio"
     },
     "description_short": "",
     "description_long": "",
@@ -1172,7 +1419,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.219623",
+      "timestamp": "2026-02-08T23:28:00.389860",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -1200,8 +1447,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.186743",
-      "last_updated": "2026-02-06T17:26:37.186744",
+      "created_at": "2026-02-06T17:51:05.219641",
+      "last_updated": "2026-02-06T17:51:05.219642",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1243,7 +1490,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.186734",
+        "timestamp": "2026-02-06T17:51:05.219623",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -1271,8 +1518,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.807203",
-        "last_updated": "2026-02-06T17:26:13.807203",
+        "created_at": "2026-02-06T17:26:37.186743",
+        "last_updated": "2026-02-06T17:26:37.186744",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1314,7 +1561,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.807192",
+          "timestamp": "2026-02-06T17:26:37.186734",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -1322,7 +1569,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-8770215609812198415",
           "product_name": "גיטרה קלאסית Santos Martinez Estudio",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1342,8 +1589,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.633241",
-          "last_updated": "2026-02-06T14:03:51.633241",
+          "created_at": "2026-02-06T17:26:13.807203",
+          "last_updated": "2026-02-06T17:26:13.807203",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1385,9 +1632,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.633220",
+            "timestamp": "2026-02-06T17:26:13.807192",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1396,24 +1643,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846057-santos-martinez-estudio-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.633241",
+            "last_updated": "2026-02-06T14:03:51.633241",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.633220",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-8770215609812198415",
+              "product_name": "גיטרה קלאסית Santos Martinez Estudio",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846057-santos-martinez-estudio-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1461,11 +1794,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1486,9 +1818,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Estuduiante"
     },
     "official_description": null,
     "official_images": [],
@@ -1498,8 +1829,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.219851",
-    "last_updated": "2026-02-06T17:51:05.219852",
+    "created_at": "2026-02-08T23:28:00.390031",
+    "last_updated": "2026-02-08T23:28:00.390031",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1529,9 +1860,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Estuduiante"
     },
     "description_short": "",
     "description_long": "",
@@ -1541,7 +1871,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.219836",
+      "timestamp": "2026-02-08T23:28:00.390021",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -1569,8 +1899,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.186835",
-      "last_updated": "2026-02-06T17:26:37.186836",
+      "created_at": "2026-02-06T17:51:05.219851",
+      "last_updated": "2026-02-06T17:51:05.219852",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1612,7 +1942,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.186829",
+        "timestamp": "2026-02-06T17:51:05.219836",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -1640,8 +1970,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.807297",
-        "last_updated": "2026-02-06T17:26:13.807297",
+        "created_at": "2026-02-06T17:26:37.186835",
+        "last_updated": "2026-02-06T17:26:37.186836",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1683,7 +2013,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.807290",
+          "timestamp": "2026-02-06T17:26:37.186829",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -1691,7 +2021,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--4164040168024150352",
           "product_name": "גיטרה קלאסית Santos Martinez Estuduiante",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1711,8 +2041,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.633449",
-          "last_updated": "2026-02-06T14:03:51.633449",
+          "created_at": "2026-02-06T17:26:13.807297",
+          "last_updated": "2026-02-06T17:26:13.807297",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1754,9 +2084,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.633440",
+            "timestamp": "2026-02-06T17:26:13.807290",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1765,24 +2095,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846308-santos-martinez-estuduiante-classical-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.633449",
+            "last_updated": "2026-02-06T14:03:51.633449",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.633440",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--4164040168024150352",
+              "product_name": "גיטרה קלאסית Santos Martinez Estuduiante",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846308-santos-martinez-estuduiante-classical-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1830,11 +2246,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1855,9 +2270,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Santos Martinez Estudio Cutaway"
     },
     "official_description": null,
     "official_images": [],
@@ -1867,8 +2281,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.220081",
-    "last_updated": "2026-02-06T17:51:05.220081",
+    "created_at": "2026-02-08T23:28:00.390182",
+    "last_updated": "2026-02-08T23:28:00.390183",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1898,9 +2312,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Santos Martinez Estudio Cutaway"
     },
     "description_short": "",
     "description_long": "",
@@ -1910,7 +2323,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.220064",
+      "timestamp": "2026-02-08T23:28:00.390172",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -1938,8 +2351,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.186916",
-      "last_updated": "2026-02-06T17:26:37.186916",
+      "created_at": "2026-02-06T17:51:05.220081",
+      "last_updated": "2026-02-06T17:51:05.220081",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1981,7 +2394,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.186911",
+        "timestamp": "2026-02-06T17:51:05.220064",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -2009,8 +2422,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.807379",
-        "last_updated": "2026-02-06T17:26:13.807379",
+        "created_at": "2026-02-06T17:26:37.186916",
+        "last_updated": "2026-02-06T17:26:37.186916",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2052,7 +2465,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.807373",
+          "timestamp": "2026-02-06T17:26:37.186911",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -2060,7 +2473,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--5692237688461577710",
           "product_name": "גיטרה קלאסית מוגברת Santos Martinez Estudio Cutaway",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2080,8 +2493,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.633696",
-          "last_updated": "2026-02-06T14:03:51.633696",
+          "created_at": "2026-02-06T17:26:13.807379",
+          "last_updated": "2026-02-06T17:26:13.807379",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2123,9 +2536,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.633682",
+            "timestamp": "2026-02-06T17:26:13.807373",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2134,24 +2547,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846077-santos-martinez-estudio-cutaway\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.633696",
+            "last_updated": "2026-02-06T14:03:51.633696",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.633682",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--5692237688461577710",
+              "product_name": "גיטרה קלאסית מוגברת Santos Martinez Estudio Cutaway",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846077-santos-martinez-estudio-cutaway\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2199,11 +2698,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2224,9 +2722,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Santos Martinez Preludio Cutaway"
     },
     "official_description": null,
     "official_images": [],
@@ -2236,8 +2733,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.220838",
-    "last_updated": "2026-02-06T17:51:05.220838",
+    "created_at": "2026-02-08T23:28:00.391941",
+    "last_updated": "2026-02-08T23:28:00.391941",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2267,9 +2764,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Santos Martinez Preludio Cutaway"
     },
     "description_short": "",
     "description_long": "",
@@ -2279,7 +2775,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.220823",
+      "timestamp": "2026-02-08T23:28:00.391926",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -2307,8 +2803,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.187527",
-      "last_updated": "2026-02-06T17:26:37.187528",
+      "created_at": "2026-02-06T17:51:05.220838",
+      "last_updated": "2026-02-06T17:51:05.220838",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2350,7 +2846,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.187516",
+        "timestamp": "2026-02-06T17:51:05.220823",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -2378,8 +2874,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.807875",
-        "last_updated": "2026-02-06T17:26:13.807875",
+        "created_at": "2026-02-06T17:26:37.187527",
+        "last_updated": "2026-02-06T17:26:37.187528",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2421,7 +2917,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.807866",
+          "timestamp": "2026-02-06T17:26:37.187516",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -2429,7 +2925,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--4119273021771634282",
           "product_name": "גיטרה קלאסית מוגברת Santos Martinez Preludio Cutaway",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2449,8 +2945,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.634084",
-          "last_updated": "2026-02-06T14:03:51.634085",
+          "created_at": "2026-02-06T17:26:13.807875",
+          "last_updated": "2026-02-06T17:26:13.807875",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2492,9 +2988,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.634070",
+            "timestamp": "2026-02-06T17:26:13.807866",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2503,24 +2999,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846345-santos-martinez-preludio-cutaway-electro-classic-guitar-\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.634084",
+            "last_updated": "2026-02-06T14:03:51.634085",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.634070",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--4119273021771634282",
+              "product_name": "גיטרה קלאסית מוגברת Santos Martinez Preludio Cutaway",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846345-santos-martinez-preludio-cutaway-electro-classic-guitar-\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2568,11 +3150,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2593,9 +3174,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Santos Martinez Allegro Cutaway"
     },
     "official_description": null,
     "official_images": [],
@@ -2605,8 +3185,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.220970",
-    "last_updated": "2026-02-06T17:51:05.220970",
+    "created_at": "2026-02-08T23:28:00.392289",
+    "last_updated": "2026-02-08T23:28:00.392290",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2636,9 +3216,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Santos Martinez Allegro Cutaway"
     },
     "description_short": "",
     "description_long": "",
@@ -2648,7 +3227,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.220960",
+      "timestamp": "2026-02-08T23:28:00.392275",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -2676,8 +3255,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.187634",
-      "last_updated": "2026-02-06T17:26:37.187634",
+      "created_at": "2026-02-06T17:51:05.220970",
+      "last_updated": "2026-02-06T17:51:05.220970",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2719,7 +3298,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.187627",
+        "timestamp": "2026-02-06T17:51:05.220960",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -2747,8 +3326,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.807965",
-        "last_updated": "2026-02-06T17:26:13.807965",
+        "created_at": "2026-02-06T17:26:37.187634",
+        "last_updated": "2026-02-06T17:26:37.187634",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2790,7 +3369,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.807959",
+          "timestamp": "2026-02-06T17:26:37.187627",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -2798,7 +3377,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-932108788003628757",
           "product_name": "גיטרה קלאסית מוגברת Santos Martinez Allegro Cutaway",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2818,8 +3397,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.634332",
-          "last_updated": "2026-02-06T14:03:51.634333",
+          "created_at": "2026-02-06T17:26:13.807965",
+          "last_updated": "2026-02-06T17:26:13.807965",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2861,9 +3440,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.634322",
+            "timestamp": "2026-02-06T17:26:13.807959",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2872,24 +3451,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3846494-santos-martinez-allegro-cutaway-electro-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.634332",
+            "last_updated": "2026-02-06T14:03:51.634333",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.634322",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-932108788003628757",
+              "product_name": "גיטרה קלאסית מוגברת Santos Martinez Allegro Cutaway",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3846494-santos-martinez-allegro-cutaway-electro-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2937,11 +3602,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2962,9 +3626,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Principante 4/4 Size"
     },
     "official_description": null,
     "official_images": [],
@@ -2974,8 +3637,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.221084",
-    "last_updated": "2026-02-06T17:51:05.221084",
+    "created_at": "2026-02-08T23:28:00.392654",
+    "last_updated": "2026-02-08T23:28:00.392654",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3005,9 +3668,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Santos Martinez Principante 4/4 Size"
     },
     "description_short": "",
     "description_long": "",
@@ -3017,7 +3679,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.221074",
+      "timestamp": "2026-02-08T23:28:00.392639",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from santos martinez catalog"
     },
@@ -3045,8 +3707,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.187721",
-      "last_updated": "2026-02-06T17:26:37.187721",
+      "created_at": "2026-02-06T17:51:05.221084",
+      "last_updated": "2026-02-06T17:51:05.221084",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3088,7 +3750,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.187715",
+        "timestamp": "2026-02-06T17:51:05.221074",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from santos martinez catalog"
       },
@@ -3116,8 +3778,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:13.808141",
-        "last_updated": "2026-02-06T17:26:13.808141",
+        "created_at": "2026-02-06T17:26:37.187721",
+        "last_updated": "2026-02-06T17:26:37.187721",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3159,7 +3821,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:13.808134",
+          "timestamp": "2026-02-06T17:26:37.187715",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from santos martinez catalog"
         },
@@ -3167,7 +3829,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6425914241240829382",
           "product_name": "גיטרה קלאסית Santos Martinez Principante 4/4 Size",
-          "brand": "Santos Martinez",
+          "brand": "santos martinez",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3187,8 +3849,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:03:51.634871",
-          "last_updated": "2026-02-06T14:03:51.634871",
+          "created_at": "2026-02-06T17:26:13.808141",
+          "last_updated": "2026-02-06T17:26:13.808141",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3230,9 +3892,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:03:51.634859",
+            "timestamp": "2026-02-06T17:26:13.808134",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Santos Martinez catalog"
+            "extraction_notes": "Scraped from santos martinez catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3241,24 +3903,110 @@
             "brand": "Santos Martinez",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3847365-santos-martinez-principante-4-4-size-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:03:51.634871",
+            "last_updated": "2026-02-06T14:03:51.634871",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:03:51.634859",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Santos Martinez catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6425914241240829382",
+              "product_name": "גיטרה קלאסית Santos Martinez Principante 4/4 Size",
+              "brand": "Santos Martinez",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3847365-santos-martinez-principante-4-4-size-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3306,11 +4054,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,

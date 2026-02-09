@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593108",
+  "brand": "eve audio",
+  "timestamp": "2026-02-08T23:25:11.206376",
+  "execution_time_seconds": 2.724623,
+  "total_processed": 18,
+  "approved_count": 18,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 18,
+  "rejected_products_count": 0
+}

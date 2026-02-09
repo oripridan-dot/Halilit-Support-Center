@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg IXO12 USB Audio Interface"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.354815",
-    "last_updated": "2026-02-06T17:51:05.354816",
+    "created_at": "2026-02-08T23:28:29.157788",
+    "last_updated": "2026-02-08T23:28:29.157789",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg IXO12 USB Audio Interface"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.354794",
+      "timestamp": "2026-02-08T23:28:29.157760",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.381971",
-      "last_updated": "2026-02-06T17:26:37.381972",
+      "created_at": "2026-02-06T17:51:05.354815",
+      "last_updated": "2026-02-06T17:51:05.354816",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Audio Interface",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.381959",
+        "timestamp": "2026-02-06T17:51:05.354794",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.026451",
-        "last_updated": "2026-02-06T17:26:14.026452",
+        "created_at": "2026-02-06T17:26:37.381971",
+        "last_updated": "2026-02-06T17:26:37.381972",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Audio Interface",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.026439",
+          "timestamp": "2026-02-06T17:26:37.381959",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-6206233408788463257",
           "product_name": "Steinberg IXO12 USB Audio Interface",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.808927",
-          "last_updated": "2026-02-06T14:04:07.808927",
+          "created_at": "2026-02-06T17:26:14.026451",
+          "last_updated": "2026-02-06T17:26:14.026452",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Audio Interface",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.808906",
+            "timestamp": "2026-02-06T17:26:14.026439",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,109 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/6605471-steinberg-ixo12-usb-audio-interface\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.808927",
+            "last_updated": "2026-02-06T14:04:07.808927",
+            "taxonomy": {
+              "canonical_category": "Audio Interfaces & Mixers",
+              "canonical_subcategory": "Audio Interface",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.808906",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-6206233408788463257",
+              "product_name": "Steinberg IXO12 USB Audio Interface",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6605471-steinberg-ixo12-usb-audio-interface\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -351,12 +434,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -375,9 +456,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg IXO22 USB Audio Interface"
     },
     "official_description": null,
     "official_images": [],
@@ -387,8 +467,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.355320",
-    "last_updated": "2026-02-06T17:51:05.355321",
+    "created_at": "2026-02-08T23:28:29.159508",
+    "last_updated": "2026-02-08T23:28:29.159509",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -418,9 +498,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg IXO22 USB Audio Interface"
     },
     "description_short": "",
     "description_long": "",
@@ -430,7 +509,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.355300",
+      "timestamp": "2026-02-08T23:28:29.159488",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -458,8 +537,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.382440",
-      "last_updated": "2026-02-06T17:26:37.382441",
+      "created_at": "2026-02-06T17:51:05.355320",
+      "last_updated": "2026-02-06T17:51:05.355321",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Audio Interface",
@@ -501,7 +580,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.382413",
+        "timestamp": "2026-02-06T17:51:05.355300",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -529,8 +608,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.026828",
-        "last_updated": "2026-02-06T17:26:14.026829",
+        "created_at": "2026-02-06T17:26:37.382440",
+        "last_updated": "2026-02-06T17:26:37.382441",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Audio Interface",
@@ -572,7 +651,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.026818",
+          "timestamp": "2026-02-06T17:26:37.382413",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -580,7 +659,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1228832981092647591",
           "product_name": "Steinberg IXO22 USB Audio Interface",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -600,8 +679,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.809495",
-          "last_updated": "2026-02-06T14:04:07.809496",
+          "created_at": "2026-02-06T17:26:14.026828",
+          "last_updated": "2026-02-06T17:26:14.026829",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Audio Interface",
@@ -643,9 +722,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.809473",
+            "timestamp": "2026-02-06T17:26:14.026818",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -654,24 +733,109 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/6606350-steinberg-ixo22-usb-audio-interface\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.809495",
+            "last_updated": "2026-02-06T14:04:07.809496",
+            "taxonomy": {
+              "canonical_category": "Audio Interfaces & Mixers",
+              "canonical_subcategory": "Audio Interface",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.809473",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1228832981092647591",
+              "product_name": "Steinberg IXO22 USB Audio Interface",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6606350-steinberg-ixo22-usb-audio-interface\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -716,12 +880,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -740,9 +902,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Pro 15"
     },
     "official_description": null,
     "official_images": [],
@@ -752,8 +913,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.355483",
-    "last_updated": "2026-02-06T17:51:05.355484",
+    "created_at": "2026-02-08T23:28:29.160630",
+    "last_updated": "2026-02-08T23:28:29.160630",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -783,9 +944,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Pro 15"
     },
     "description_short": "",
     "description_long": "",
@@ -795,7 +955,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.355470",
+      "timestamp": "2026-02-08T23:28:29.160613",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -823,8 +983,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.382552",
-      "last_updated": "2026-02-06T17:26:37.382552",
+      "created_at": "2026-02-06T17:51:05.355483",
+      "last_updated": "2026-02-06T17:51:05.355484",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -866,7 +1026,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.382545",
+        "timestamp": "2026-02-06T17:51:05.355470",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -894,8 +1054,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.026933",
-        "last_updated": "2026-02-06T17:26:14.026933",
+        "created_at": "2026-02-06T17:26:37.382552",
+        "last_updated": "2026-02-06T17:26:37.382552",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -937,7 +1097,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.026926",
+          "timestamp": "2026-02-06T17:26:37.382545",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -945,7 +1105,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-2999025915456245880",
           "product_name": "Steinberg Cubase Pro 15",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -965,8 +1125,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.809921",
-          "last_updated": "2026-02-06T14:04:07.809921",
+          "created_at": "2026-02-06T17:26:14.026933",
+          "last_updated": "2026-02-06T17:26:14.026933",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1008,9 +1168,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.809905",
+            "timestamp": "2026-02-06T17:26:14.026926",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1019,24 +1179,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8582159-steinberg-cubase-pro-15\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.809921",
+            "last_updated": "2026-02-06T14:04:07.809921",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.809905",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-2999025915456245880",
+              "product_name": "Steinberg Cubase Pro 15",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8582159-steinberg-cubase-pro-15\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1084,11 +1330,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1109,9 +1354,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg IXO22 USB Audio Interface"
     },
     "official_description": null,
     "official_images": [],
@@ -1121,8 +1365,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.355961",
-    "last_updated": "2026-02-06T17:51:05.355962",
+    "created_at": "2026-02-08T23:28:29.161247",
+    "last_updated": "2026-02-08T23:28:29.161247",
     "taxonomy": {
       "canonical_category": "Audio Interfaces & Mixers",
       "canonical_subcategory": "Audio Interface",
@@ -1152,9 +1396,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg IXO22 USB Audio Interface"
     },
     "description_short": "",
     "description_long": "",
@@ -1164,7 +1407,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.355945",
+      "timestamp": "2026-02-08T23:28:29.161231",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -1192,8 +1435,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.382936",
-      "last_updated": "2026-02-06T17:26:37.382937",
+      "created_at": "2026-02-06T17:51:05.355961",
+      "last_updated": "2026-02-06T17:51:05.355962",
       "taxonomy": {
         "canonical_category": "Audio Interfaces & Mixers",
         "canonical_subcategory": "Audio Interface",
@@ -1235,7 +1478,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.382927",
+        "timestamp": "2026-02-06T17:51:05.355945",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -1263,8 +1506,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.027310",
-        "last_updated": "2026-02-06T17:26:14.027310",
+        "created_at": "2026-02-06T17:26:37.382936",
+        "last_updated": "2026-02-06T17:26:37.382937",
         "taxonomy": {
           "canonical_category": "Audio Interfaces & Mixers",
           "canonical_subcategory": "Audio Interface",
@@ -1306,7 +1549,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.027301",
+          "timestamp": "2026-02-06T17:26:37.382927",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -1314,7 +1557,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1228832981092647591",
           "product_name": "Steinberg IXO22 USB Audio Interface",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1334,8 +1577,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.810044",
-          "last_updated": "2026-02-06T14:04:07.810045",
+          "created_at": "2026-02-06T17:26:14.027310",
+          "last_updated": "2026-02-06T17:26:14.027310",
           "taxonomy": {
             "canonical_category": "Audio Interfaces & Mixers",
             "canonical_subcategory": "Audio Interface",
@@ -1377,9 +1620,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.810033",
+            "timestamp": "2026-02-06T17:26:14.027301",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1388,24 +1631,109 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/6606402-steinberg-ixo22-usb-audio-interface\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.810044",
+            "last_updated": "2026-02-06T14:04:07.810045",
+            "taxonomy": {
+              "canonical_category": "Audio Interfaces & Mixers",
+              "canonical_subcategory": "Audio Interface",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.810033",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1228832981092647591",
+              "product_name": "Steinberg IXO22 USB Audio Interface",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6606402-steinberg-ixo22-usb-audio-interface\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1450,12 +1778,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1474,9 +1800,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Artist 15"
     },
     "official_description": null,
     "official_images": [],
@@ -1486,8 +1811,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.356080",
-    "last_updated": "2026-02-06T17:51:05.356080",
+    "created_at": "2026-02-08T23:28:29.161565",
+    "last_updated": "2026-02-08T23:28:29.161566",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1517,9 +1842,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Artist 15"
     },
     "description_short": "",
     "description_long": "",
@@ -1529,7 +1853,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.356070",
+      "timestamp": "2026-02-08T23:28:29.161553",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -1557,8 +1881,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.383028",
-      "last_updated": "2026-02-06T17:26:37.383029",
+      "created_at": "2026-02-06T17:51:05.356080",
+      "last_updated": "2026-02-06T17:51:05.356080",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1600,7 +1924,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.383022",
+        "timestamp": "2026-02-06T17:51:05.356070",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -1628,8 +1952,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.027402",
-        "last_updated": "2026-02-06T17:26:14.027402",
+        "created_at": "2026-02-06T17:26:37.383028",
+        "last_updated": "2026-02-06T17:26:37.383029",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1671,7 +1995,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.027396",
+          "timestamp": "2026-02-06T17:26:37.383022",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -1679,7 +2003,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8813067896807851449",
           "product_name": "Steinberg Cubase Artist 15",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1699,8 +2023,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.810145",
-          "last_updated": "2026-02-06T14:04:07.810145",
+          "created_at": "2026-02-06T17:26:14.027402",
+          "last_updated": "2026-02-06T17:26:14.027402",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1742,9 +2066,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.810136",
+            "timestamp": "2026-02-06T17:26:14.027396",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1753,24 +2077,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8582810-steinberg-cubase-artist-15\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.810145",
+            "last_updated": "2026-02-06T14:04:07.810145",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.810136",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8813067896807851449",
+              "product_name": "Steinberg Cubase Artist 15",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8582810-steinberg-cubase-artist-15\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1818,11 +2228,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1843,9 +2252,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Elements 15"
     },
     "official_description": null,
     "official_images": [],
@@ -1855,8 +2263,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.356192",
-    "last_updated": "2026-02-06T17:51:05.356193",
+    "created_at": "2026-02-08T23:28:29.162850",
+    "last_updated": "2026-02-08T23:28:29.162850",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1886,9 +2294,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Elements 15"
     },
     "description_short": "",
     "description_long": "",
@@ -1898,7 +2305,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.356182",
+      "timestamp": "2026-02-08T23:28:29.162833",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -1926,8 +2333,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.383110",
-      "last_updated": "2026-02-06T17:26:37.383110",
+      "created_at": "2026-02-06T17:51:05.356192",
+      "last_updated": "2026-02-06T17:51:05.356193",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1969,7 +2376,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.383104",
+        "timestamp": "2026-02-06T17:51:05.356182",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -1997,8 +2404,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.027599",
-        "last_updated": "2026-02-06T17:26:14.027599",
+        "created_at": "2026-02-06T17:26:37.383110",
+        "last_updated": "2026-02-06T17:26:37.383110",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2040,7 +2447,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.027592",
+          "timestamp": "2026-02-06T17:26:37.383104",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -2048,7 +2455,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4255010056592683712",
           "product_name": "Steinberg Cubase Elements 15",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2068,8 +2475,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.810721",
-          "last_updated": "2026-02-06T14:04:07.810721",
+          "created_at": "2026-02-06T17:26:14.027599",
+          "last_updated": "2026-02-06T17:26:14.027599",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2111,9 +2518,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.810709",
+            "timestamp": "2026-02-06T17:26:14.027592",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2122,24 +2529,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8582859-steinberg-cubase-elements-15-\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.810721",
+            "last_updated": "2026-02-06T14:04:07.810721",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.810709",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4255010056592683712",
+              "product_name": "Steinberg Cubase Elements 15",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8582859-steinberg-cubase-elements-15-\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2187,11 +2680,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2212,9 +2704,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Pro 15 - בהנחה אקדמית"
     },
     "official_description": null,
     "official_images": [],
@@ -2224,8 +2715,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.356845",
-    "last_updated": "2026-02-06T17:51:05.356845",
+    "created_at": "2026-02-08T23:28:29.164528",
+    "last_updated": "2026-02-08T23:28:29.164528",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2255,9 +2746,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Pro 15 - בהנחה אקדמית"
     },
     "description_short": "",
     "description_long": "",
@@ -2267,7 +2757,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.356831",
+      "timestamp": "2026-02-08T23:28:29.164512",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -2295,8 +2785,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.383578",
-      "last_updated": "2026-02-06T17:26:37.383578",
+      "created_at": "2026-02-06T17:51:05.356845",
+      "last_updated": "2026-02-06T17:51:05.356845",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2338,7 +2828,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.383569",
+        "timestamp": "2026-02-06T17:51:05.356831",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -2366,8 +2856,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.028055",
-        "last_updated": "2026-02-06T17:26:14.028056",
+        "created_at": "2026-02-06T17:26:37.383578",
+        "last_updated": "2026-02-06T17:26:37.383578",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2409,7 +2899,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.028047",
+          "timestamp": "2026-02-06T17:26:37.383569",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -2417,7 +2907,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-1517449916245512471",
           "product_name": "Steinberg Cubase Pro 15 - בהנחה אקדמית",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2437,8 +2927,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.810854",
-          "last_updated": "2026-02-06T14:04:07.810854",
+          "created_at": "2026-02-06T17:26:14.028055",
+          "last_updated": "2026-02-06T17:26:14.028056",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2480,9 +2970,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.810843",
+            "timestamp": "2026-02-06T17:26:14.028047",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2491,24 +2981,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8582875-steinberg-cubase-pro-15-education-version\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.810854",
+            "last_updated": "2026-02-06T14:04:07.810854",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.810843",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-1517449916245512471",
+              "product_name": "Steinberg Cubase Pro 15 - בהנחה אקדמית",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8582875-steinberg-cubase-pro-15-education-version\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2556,11 +3132,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2581,9 +3156,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Artist 15 - בהנחה אקדמית"
     },
     "official_description": null,
     "official_images": [],
@@ -2593,8 +3167,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.356960",
-    "last_updated": "2026-02-06T17:51:05.356960",
+    "created_at": "2026-02-08T23:28:29.165552",
+    "last_updated": "2026-02-08T23:28:29.165552",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2624,9 +3198,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Artist 15 - בהנחה אקדמית"
     },
     "description_short": "",
     "description_long": "",
@@ -2636,7 +3209,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.356950",
+      "timestamp": "2026-02-08T23:28:29.165463",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -2664,8 +3237,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.383669",
-      "last_updated": "2026-02-06T17:26:37.383669",
+      "created_at": "2026-02-06T17:51:05.356960",
+      "last_updated": "2026-02-06T17:51:05.356960",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2707,7 +3280,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.383663",
+        "timestamp": "2026-02-06T17:51:05.356950",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -2735,8 +3308,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.028155",
-        "last_updated": "2026-02-06T17:26:14.028155",
+        "created_at": "2026-02-06T17:26:37.383669",
+        "last_updated": "2026-02-06T17:26:37.383669",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2778,7 +3351,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.028149",
+          "timestamp": "2026-02-06T17:26:37.383663",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -2786,7 +3359,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-5815538754119563626",
           "product_name": "Steinberg Cubase Artist 15 - בהנחה אקדמית",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2806,8 +3379,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.810963",
-          "last_updated": "2026-02-06T14:04:07.810963",
+          "created_at": "2026-02-06T17:26:14.028155",
+          "last_updated": "2026-02-06T17:26:14.028155",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2849,9 +3422,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.810954",
+            "timestamp": "2026-02-06T17:26:14.028149",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2860,24 +3433,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8582883-steinberg-cubase-artist-15-education-version\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.810963",
+            "last_updated": "2026-02-06T14:04:07.810963",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.810954",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-5815538754119563626",
+              "product_name": "Steinberg Cubase Artist 15 - בהנחה אקדמית",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8582883-steinberg-cubase-artist-15-education-version\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2925,11 +3584,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2950,9 +3608,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Elements 15 - בהנחה אקדמית"
     },
     "official_description": null,
     "official_images": [],
@@ -2962,8 +3619,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.357071",
-    "last_updated": "2026-02-06T17:51:05.357071",
+    "created_at": "2026-02-08T23:28:29.168824",
+    "last_updated": "2026-02-08T23:28:29.168825",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2993,9 +3650,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg Cubase Elements 15 - בהנחה אקדמית"
     },
     "description_short": "",
     "description_long": "",
@@ -3005,7 +3661,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.357061",
+      "timestamp": "2026-02-08T23:28:29.168810",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -3033,8 +3689,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.383751",
-      "last_updated": "2026-02-06T17:26:37.383751",
+      "created_at": "2026-02-06T17:51:05.357071",
+      "last_updated": "2026-02-06T17:51:05.357071",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3076,7 +3732,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.383746",
+        "timestamp": "2026-02-06T17:51:05.357061",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -3104,8 +3760,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.028240",
-        "last_updated": "2026-02-06T17:26:14.028240",
+        "created_at": "2026-02-06T17:26:37.383751",
+        "last_updated": "2026-02-06T17:26:37.383751",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3147,7 +3803,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.028234",
+          "timestamp": "2026-02-06T17:26:37.383746",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -3155,7 +3811,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7271820082809595979",
           "product_name": "Steinberg Cubase Elements 15 - בהנחה אקדמית",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3175,8 +3831,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.811181",
-          "last_updated": "2026-02-06T14:04:07.811181",
+          "created_at": "2026-02-06T17:26:14.028240",
+          "last_updated": "2026-02-06T17:26:14.028240",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3218,9 +3874,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.811168",
+            "timestamp": "2026-02-06T17:26:14.028234",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3229,24 +3885,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8582884-steinberg-cubase-elements-15-education-version\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.811181",
+            "last_updated": "2026-02-06T14:04:07.811181",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.811168",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7271820082809595979",
+              "product_name": "Steinberg Cubase Elements 15 - בהנחה אקדמית",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8582884-steinberg-cubase-elements-15-education-version\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3294,11 +4036,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3319,9 +4060,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR242"
     },
     "official_description": null,
     "official_images": [],
@@ -3331,8 +4071,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.357182",
-    "last_updated": "2026-02-06T17:51:05.357182",
+    "created_at": "2026-02-08T23:28:29.169495",
+    "last_updated": "2026-02-08T23:28:29.169496",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3362,9 +4102,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR242"
     },
     "description_short": "",
     "description_long": "",
@@ -3374,7 +4113,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.357172",
+      "timestamp": "2026-02-08T23:28:29.169480",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -3402,8 +4141,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.383830",
-      "last_updated": "2026-02-06T17:26:37.383830",
+      "created_at": "2026-02-06T17:51:05.357182",
+      "last_updated": "2026-02-06T17:51:05.357182",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3445,7 +4184,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.383825",
+        "timestamp": "2026-02-06T17:51:05.357172",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -3473,8 +4212,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.028323",
-        "last_updated": "2026-02-06T17:26:14.028323",
+        "created_at": "2026-02-06T17:26:37.383830",
+        "last_updated": "2026-02-06T17:26:37.383830",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3516,7 +4255,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.028317",
+          "timestamp": "2026-02-06T17:26:37.383825",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -3524,7 +4263,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4058773633072899925",
           "product_name": "Steinberg UR242",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3544,8 +4283,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.811800",
-          "last_updated": "2026-02-06T14:04:07.811801",
+          "created_at": "2026-02-06T17:26:14.028323",
+          "last_updated": "2026-02-06T17:26:14.028323",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3587,9 +4326,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.811786",
+            "timestamp": "2026-02-06T17:26:14.028317",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3598,24 +4337,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/502311-steinberg-ur242\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.811800",
+            "last_updated": "2026-02-06T14:04:07.811801",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.811786",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4058773633072899925",
+              "product_name": "Steinberg UR242",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/502311-steinberg-ur242\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3663,11 +4488,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3688,9 +4512,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg  WaveLab Pro"
     },
     "official_description": null,
     "official_images": [],
@@ -3700,8 +4523,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.358199",
-    "last_updated": "2026-02-06T17:51:05.358199",
+    "created_at": "2026-02-08T23:28:29.169734",
+    "last_updated": "2026-02-08T23:28:29.169734",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3731,9 +4554,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg  WaveLab Pro"
     },
     "description_short": "",
     "description_long": "",
@@ -3743,7 +4565,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.358182",
+      "timestamp": "2026-02-08T23:28:29.169721",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -3771,8 +4593,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.384372",
-      "last_updated": "2026-02-06T17:26:37.384372",
+      "created_at": "2026-02-06T17:51:05.358199",
+      "last_updated": "2026-02-06T17:51:05.358199",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3814,7 +4636,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.384364",
+        "timestamp": "2026-02-06T17:51:05.358182",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -3842,8 +4664,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.028875",
-        "last_updated": "2026-02-06T17:26:14.028875",
+        "created_at": "2026-02-06T17:26:37.384372",
+        "last_updated": "2026-02-06T17:26:37.384372",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3885,7 +4707,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.028864",
+          "timestamp": "2026-02-06T17:26:37.384364",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -3893,7 +4715,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--3621849138665345368",
           "product_name": "Steinberg  WaveLab Pro",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3913,8 +4735,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.812163",
-          "last_updated": "2026-02-06T14:04:07.812163",
+          "created_at": "2026-02-06T17:26:14.028875",
+          "last_updated": "2026-02-06T17:26:14.028875",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3956,9 +4778,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.812140",
+            "timestamp": "2026-02-06T17:26:14.028864",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3967,24 +4789,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/4296520-steinberg-wavelab-pro-mastering-suite\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.812163",
+            "last_updated": "2026-02-06T14:04:07.812163",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.812140",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--3621849138665345368",
+              "product_name": "Steinberg  WaveLab Pro",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/4296520-steinberg-wavelab-pro-mastering-suite\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4032,11 +4940,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4057,9 +4964,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR-44"
     },
     "official_description": null,
     "official_images": [],
@@ -4069,8 +4975,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.358351",
-    "last_updated": "2026-02-06T17:51:05.358351",
+    "created_at": "2026-02-08T23:28:29.169884",
+    "last_updated": "2026-02-08T23:28:29.169885",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4100,9 +5006,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR-44"
     },
     "description_short": "",
     "description_long": "",
@@ -4112,7 +5017,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.358339",
+      "timestamp": "2026-02-08T23:28:29.169873",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -4140,8 +5045,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.384477",
-      "last_updated": "2026-02-06T17:26:37.384477",
+      "created_at": "2026-02-06T17:51:05.358351",
+      "last_updated": "2026-02-06T17:51:05.358351",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4183,7 +5088,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.384471",
+        "timestamp": "2026-02-06T17:51:05.358339",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -4211,8 +5116,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.028970",
-        "last_updated": "2026-02-06T17:26:14.028970",
+        "created_at": "2026-02-06T17:26:37.384477",
+        "last_updated": "2026-02-06T17:26:37.384477",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4254,7 +5159,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.028964",
+          "timestamp": "2026-02-06T17:26:37.384471",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -4262,7 +5167,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7298400923780100050",
           "product_name": "Steinberg UR-44",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4282,8 +5187,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.812417",
-          "last_updated": "2026-02-06T14:04:07.812417",
+          "created_at": "2026-02-06T17:26:14.028970",
+          "last_updated": "2026-02-06T17:26:14.028970",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4325,9 +5230,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.812404",
+            "timestamp": "2026-02-06T17:26:14.028964",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4336,24 +5241,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/444459-steinberg-ur-44\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.812417",
+            "last_updated": "2026-02-06T14:04:07.812417",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.812404",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7298400923780100050",
+              "product_name": "Steinberg UR-44",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/444459-steinberg-ur-44\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4401,11 +5392,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4426,9 +5416,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg The Guitar Recording Kit"
     },
     "official_description": null,
     "official_images": [],
@@ -4438,8 +5427,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.358500",
-    "last_updated": "2026-02-06T17:51:05.358500",
+    "created_at": "2026-02-08T23:28:29.170042",
+    "last_updated": "2026-02-08T23:28:29.170042",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4469,9 +5458,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg The Guitar Recording Kit"
     },
     "description_short": "",
     "description_long": "",
@@ -4481,7 +5469,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.358489",
+      "timestamp": "2026-02-08T23:28:29.170031",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -4509,8 +5497,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.384634",
-      "last_updated": "2026-02-06T17:26:37.384634",
+      "created_at": "2026-02-06T17:51:05.358500",
+      "last_updated": "2026-02-06T17:51:05.358500",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4552,7 +5540,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.384628",
+        "timestamp": "2026-02-06T17:51:05.358489",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -4580,8 +5568,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.029054",
-        "last_updated": "2026-02-06T17:26:14.029054",
+        "created_at": "2026-02-06T17:26:37.384634",
+        "last_updated": "2026-02-06T17:26:37.384634",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4623,7 +5611,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.029048",
+          "timestamp": "2026-02-06T17:26:37.384628",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -4631,7 +5619,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6438763871076602895",
           "product_name": "Steinberg The Guitar Recording Kit",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4651,8 +5639,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.812677",
-          "last_updated": "2026-02-06T14:04:07.812678",
+          "created_at": "2026-02-06T17:26:14.029054",
+          "last_updated": "2026-02-06T17:26:14.029054",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4694,9 +5682,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.812668",
+            "timestamp": "2026-02-06T17:26:14.029048",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4705,24 +5693,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3318059-steinberg-the-guitar-recording-kit\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.812677",
+            "last_updated": "2026-02-06T14:04:07.812678",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.812668",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6438763871076602895",
+              "product_name": "Steinberg The Guitar Recording Kit",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3318059-steinberg-the-guitar-recording-kit\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4770,380 +5844,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
-      "⚠ Category may not be standard: Other > Uncategorized"
-    ],
-    "price": 0.0,
-    "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
-  },
-  {
-    "halilit_id": "scraped-2287153709392807617",
-    "product_name": "STEINBERG | ZERO DOWN TIME פתרון מיידי למפתח רישיון תקול",
-    "brand": "steinberg",
-    "price_il": 0.0,
-    "price_eilat": 0.0,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": null,
-    "official_images": [],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.358628",
-    "last_updated": "2026-02-06T17:51:05.358628",
-    "taxonomy": {
-      "canonical_category": "Other",
-      "canonical_subcategory": "Uncategorized",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 0,
-      "suggested_tier": null,
-      "price_validity_marker": null,
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "bg-gray-300",
-      "media_assets": []
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "",
-    "description_long": "",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.358617",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from steinberg catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "halilit_id": "scraped-2287153709392807617",
-      "product_name": "STEINBERG | ZERO DOWN TIME פתרון מיידי למפתח רישיון תקול",
-      "brand": "steinberg",
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "halilit_url": "https://halilit.com",
-      "sku": null,
-      "model_number": null,
-      "official_name": null,
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": null,
-      "official_images": [],
-      "official_url": null,
-      "reviews": [],
-      "review_synthesis": null,
-      "average_rating": null,
-      "status": "harvested",
-      "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.384718",
-      "last_updated": "2026-02-06T17:26:37.384718",
-      "taxonomy": {
-        "canonical_category": "Other",
-        "canonical_subcategory": "Uncategorized",
-        "brand_taxonomy": null,
-        "alt_categories": [],
-        "keywords": []
-      },
-      "pricing": {
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "price_usd": null,
-        "price_eur": null,
-        "tier": "entry",
-        "eilat_discount_percent": 0,
-        "suggested_tier": null,
-        "price_validity_marker": null,
-        "last_price_change": null,
-        "previous_price_il": null
-      },
-      "display": {
-        "display_role": "entry",
-        "hero_image": null,
-        "thumbnail_image": null,
-        "should_highlight": false,
-        "display_tier_level": 1,
-        "color_hint": "bg-gray-300",
-        "media_assets": []
-      },
-      "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "description_short": "",
-      "description_long": "",
-      "feature_list": [],
-      "sources": [],
-      "primary_source": {
-        "source_name": "Halilit",
-        "source_url": "https://halilit.com",
-        "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.384712",
-        "extraction_method": "web_scraper",
-        "extraction_notes": "Scraped from steinberg catalog"
-      },
-      "lineage": {},
-      "raw_snapshot": {
-        "halilit_id": "scraped-2287153709392807617",
-        "product_name": "STEINBERG | ZERO DOWN TIME פתרון מיידי למפתח רישיון תקול",
-        "brand": "steinberg",
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "halilit_url": "https://halilit.com",
-        "sku": null,
-        "model_number": null,
-        "official_name": null,
-        "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "official_description": null,
-        "official_images": [],
-        "official_url": null,
-        "reviews": [],
-        "review_synthesis": null,
-        "average_rating": null,
-        "status": "harvested",
-        "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.029137",
-        "last_updated": "2026-02-06T17:26:14.029137",
-        "taxonomy": {
-          "canonical_category": "Other",
-          "canonical_subcategory": "Uncategorized",
-          "brand_taxonomy": null,
-          "alt_categories": [],
-          "keywords": []
-        },
-        "pricing": {
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "price_usd": null,
-          "price_eur": null,
-          "tier": "entry",
-          "eilat_discount_percent": 0,
-          "suggested_tier": null,
-          "price_validity_marker": null,
-          "last_price_change": null,
-          "previous_price_il": null
-        },
-        "display": {
-          "display_role": "entry",
-          "hero_image": null,
-          "thumbnail_image": null,
-          "should_highlight": false,
-          "display_tier_level": 1,
-          "color_hint": "bg-gray-300",
-          "media_assets": []
-        },
-        "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "description_short": "",
-        "description_long": "",
-        "feature_list": [],
-        "sources": [],
-        "primary_source": {
-          "source_name": "Halilit",
-          "source_url": "https://halilit.com",
-          "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.029131",
-          "extraction_method": "web_scraper",
-          "extraction_notes": "Scraped from steinberg catalog"
-        },
-        "lineage": {},
-        "raw_snapshot": {
-          "halilit_id": "scraped-2287153709392807617",
-          "product_name": "STEINBERG | ZERO DOWN TIME פתרון מיידי למפתח רישיון תקול",
-          "brand": "Steinberg",
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "halilit_url": "https://halilit.com",
-          "sku": null,
-          "model_number": null,
-          "official_name": null,
-          "official_specs": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "official_description": null,
-          "official_images": [],
-          "official_url": null,
-          "reviews": [],
-          "review_synthesis": null,
-          "average_rating": null,
-          "status": "harvested",
-          "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.812956",
-          "last_updated": "2026-02-06T14:04:07.812957",
-          "taxonomy": {
-            "canonical_category": "Other",
-            "canonical_subcategory": "Uncategorized",
-            "brand_taxonomy": null,
-            "alt_categories": [],
-            "keywords": []
-          },
-          "pricing": {
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "price_usd": null,
-            "price_eur": null,
-            "tier": "entry",
-            "eilat_discount_percent": 0,
-            "suggested_tier": null,
-            "price_validity_marker": null,
-            "last_price_change": null,
-            "previous_price_il": null
-          },
-          "display": {
-            "display_role": "entry",
-            "hero_image": null,
-            "thumbnail_image": null,
-            "should_highlight": false,
-            "display_tier_level": 1,
-            "color_hint": "bg-gray-300",
-            "media_assets": []
-          },
-          "specifications": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "description_short": "",
-          "description_long": "",
-          "feature_list": [],
-          "sources": [],
-          "primary_source": {
-            "source_name": "Halilit",
-            "source_url": "https://halilit.com",
-            "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.812942",
-            "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
-          },
-          "lineage": {},
-          "raw_snapshot": {
-            "halilit_id": "scraped-2287153709392807617",
-            "product_name": "STEINBERG | ZERO DOWN TIME פתרון מיידי למפתח רישיון תקול",
-            "brand": "Steinberg",
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/622002-steinberg-zdt\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
-            "official_specs": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
-            ],
-            "official_url": "https://brand.com/products/stage-88"
-          },
-          "data_completeness": 0.4210526315789473,
-          "quality_score": 0.4210526315789473,
-          "validation_status": "approved",
-          "validation_errors": [],
-          "validation_warnings": [
-            "⚠ Price is 0 (TBD)",
-            "⚠ Category may not be standard: Other > Uncategorized"
-          ],
-          "price": 0.0,
-          "currency": "ILS",
-          "image_hero": null,
-          "image_thumbnail": null,
-          "image_gallery": [],
-          "image_url": ""
-        },
-        "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
-        "validation_status": "approved",
-        "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)",
-          "⚠ Category may not be standard: Other > Uncategorized"
-        ],
-        "price": 0.0,
-        "currency": "ILS",
-        "image_hero": null,
-        "image_thumbnail": null,
-        "image_gallery": [],
-        "image_url": ""
-      },
-      "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
-      "validation_status": "approved",
-      "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)",
-        "⚠ Category may not be standard: Other > Uncategorized"
-      ],
-      "price": 0.0,
-      "currency": "ILS",
-      "image_hero": null,
-      "image_thumbnail": null,
-      "image_gallery": [],
-      "image_url": ""
-    },
-    "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5164,9 +5868,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR-RT4"
     },
     "official_description": null,
     "official_images": [],
@@ -5176,8 +5879,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.358750",
-    "last_updated": "2026-02-06T17:51:05.358751",
+    "created_at": "2026-02-08T23:28:29.172276",
+    "last_updated": "2026-02-08T23:28:29.172276",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5207,9 +5910,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR-RT4"
     },
     "description_short": "",
     "description_long": "",
@@ -5219,7 +5921,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.358740",
+      "timestamp": "2026-02-08T23:28:29.172260",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -5247,8 +5949,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.384797",
-      "last_updated": "2026-02-06T17:26:37.384797",
+      "created_at": "2026-02-06T17:51:05.358750",
+      "last_updated": "2026-02-06T17:51:05.358751",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5290,7 +5992,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.384792",
+        "timestamp": "2026-02-06T17:51:05.358740",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -5318,8 +6020,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.029219",
-        "last_updated": "2026-02-06T17:26:14.029219",
+        "created_at": "2026-02-06T17:26:37.384797",
+        "last_updated": "2026-02-06T17:26:37.384797",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5361,7 +6063,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.029214",
+          "timestamp": "2026-02-06T17:26:37.384792",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -5369,7 +6071,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-2397529530557319703",
           "product_name": "Steinberg UR-RT4",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5389,8 +6091,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.813106",
-          "last_updated": "2026-02-06T14:04:07.813107",
+          "created_at": "2026-02-06T17:26:14.029219",
+          "last_updated": "2026-02-06T17:26:14.029219",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5432,9 +6134,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.813095",
+            "timestamp": "2026-02-06T17:26:14.029214",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5443,24 +6145,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/1943731-steinberg-ur-rt4-audio-interface\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.813106",
+            "last_updated": "2026-02-06T14:04:07.813107",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.813095",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-2397529530557319703",
+              "product_name": "Steinberg UR-RT4",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1943731-steinberg-ur-rt4-audio-interface\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5508,11 +6296,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5533,9 +6320,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR-RT2"
     },
     "official_description": null,
     "official_images": [],
@@ -5545,8 +6331,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.359551",
-    "last_updated": "2026-02-06T17:51:05.359551",
+    "created_at": "2026-02-08T23:28:29.172590",
+    "last_updated": "2026-02-08T23:28:29.172591",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5576,9 +6362,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Steinberg UR-RT2"
     },
     "description_short": "",
     "description_long": "",
@@ -5588,7 +6373,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.359534",
+      "timestamp": "2026-02-08T23:28:29.172576",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from steinberg catalog"
     },
@@ -5616,8 +6401,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.385394",
-      "last_updated": "2026-02-06T17:26:37.385394",
+      "created_at": "2026-02-06T17:51:05.359551",
+      "last_updated": "2026-02-06T17:51:05.359551",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5659,7 +6444,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.385385",
+        "timestamp": "2026-02-06T17:51:05.359534",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from steinberg catalog"
       },
@@ -5687,8 +6472,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.029540",
-        "last_updated": "2026-02-06T17:26:14.029540",
+        "created_at": "2026-02-06T17:26:37.385394",
+        "last_updated": "2026-02-06T17:26:37.385394",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5730,7 +6515,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.029532",
+          "timestamp": "2026-02-06T17:26:37.385385",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from steinberg catalog"
         },
@@ -5738,7 +6523,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-1149206869274268147",
           "product_name": "Steinberg UR-RT2",
-          "brand": "Steinberg",
+          "brand": "steinberg",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5758,8 +6543,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:07.813605",
-          "last_updated": "2026-02-06T14:04:07.813605",
+          "created_at": "2026-02-06T17:26:14.029540",
+          "last_updated": "2026-02-06T17:26:14.029540",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5801,9 +6586,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:07.813595",
+            "timestamp": "2026-02-06T17:26:14.029532",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Steinberg catalog"
+            "extraction_notes": "Scraped from steinberg catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5812,24 +6597,110 @@
             "brand": "Steinberg",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/1833439-steinberg-ur-rt2-audio-interface\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:07.813605",
+            "last_updated": "2026-02-06T14:04:07.813605",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:07.813595",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Steinberg catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-1149206869274268147",
+              "product_name": "Steinberg UR-RT2",
+              "brand": "Steinberg",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1833439-steinberg-ur-rt2-audio-interface\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5877,11 +6748,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,

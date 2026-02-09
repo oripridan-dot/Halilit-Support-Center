@@ -36,6 +36,7 @@ class IngestionVersion:
 
     brand: str
     version_id: str                    # e.g., "20260207-001"
+    batch_id: str = ""                 # Unique batch run identifier
     created_at: datetime = field(
         default_factory=lambda: datetime.now(timezone.utc))
     phase: IngestionPhase = field(default=IngestionPhase.HARVESTED)

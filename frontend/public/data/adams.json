@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Timpani Mallets soft"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.905315",
-    "last_updated": "2026-02-06T17:51:02.905315",
+    "created_at": "2026-02-08T23:23:28.500430",
+    "last_updated": "2026-02-08T23:23:28.500430",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Timpani Mallets soft"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.905295",
+      "timestamp": "2026-02-08T23:23:28.500399",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.997309",
-      "last_updated": "2026-02-06T17:26:34.997309",
+      "created_at": "2026-02-06T17:51:02.905315",
+      "last_updated": "2026-02-06T17:51:02.905315",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.997297",
+        "timestamp": "2026-02-06T17:51:02.905295",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.990993",
-        "last_updated": "2026-02-06T17:26:11.990994",
+        "created_at": "2026-02-06T17:26:34.997309",
+        "last_updated": "2026-02-06T17:26:34.997309",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.990981",
+          "timestamp": "2026-02-06T17:26:34.997297",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--28850975946820835",
           "product_name": "Adams Timpani Mallets soft",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.224492",
-          "last_updated": "2026-02-06T14:01:06.224492",
+          "created_at": "2026-02-06T17:26:11.990993",
+          "last_updated": "2026-02-06T17:26:11.990994",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.224467",
+            "timestamp": "2026-02-06T17:26:11.990981",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531201-adams-timpani-mallets-soft\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.224492",
+            "last_updated": "2026-02-06T14:01:06.224492",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.224467",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--28850975946820835",
+              "product_name": "Adams Timpani Mallets soft",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531201-adams-timpani-mallets-soft\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -351,12 +434,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -375,9 +456,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Timpani Mallets Hard"
     },
     "official_description": null,
     "official_images": [],
@@ -387,8 +467,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.906119",
-    "last_updated": "2026-02-06T17:51:02.906119",
+    "created_at": "2026-02-08T23:23:28.501224",
+    "last_updated": "2026-02-08T23:23:28.501224",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -418,9 +498,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Timpani Mallets Hard"
     },
     "description_short": "",
     "description_long": "",
@@ -430,7 +509,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.906102",
+      "timestamp": "2026-02-08T23:23:28.501209",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -458,8 +537,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.997684",
-      "last_updated": "2026-02-06T17:26:34.997684",
+      "created_at": "2026-02-06T17:51:02.906119",
+      "last_updated": "2026-02-06T17:51:02.906119",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -501,7 +580,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.997673",
+        "timestamp": "2026-02-06T17:51:02.906102",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -529,8 +608,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.991345",
-        "last_updated": "2026-02-06T17:26:11.991346",
+        "created_at": "2026-02-06T17:26:34.997684",
+        "last_updated": "2026-02-06T17:26:34.997684",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -572,7 +651,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.991335",
+          "timestamp": "2026-02-06T17:26:34.997673",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -580,7 +659,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8313982005050654614",
           "product_name": "Adams Timpani Mallets Hard",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -600,8 +679,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.225011",
-          "last_updated": "2026-02-06T14:01:06.225011",
+          "created_at": "2026-02-06T17:26:11.991345",
+          "last_updated": "2026-02-06T17:26:11.991346",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -643,9 +722,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.224994",
+            "timestamp": "2026-02-06T17:26:11.991335",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -654,24 +733,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531187-adams-timpani-mallets-hard\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.225011",
+            "last_updated": "2026-02-06T14:01:06.225011",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.224994",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8313982005050654614",
+              "product_name": "Adams Timpani Mallets Hard",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531187-adams-timpani-mallets-hard\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -716,12 +880,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -740,9 +902,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Timpani Mallets Medium"
     },
     "official_description": null,
     "official_images": [],
@@ -752,8 +913,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.906469",
-    "last_updated": "2026-02-06T17:51:02.906469",
+    "created_at": "2026-02-08T23:23:28.501827",
+    "last_updated": "2026-02-08T23:23:28.501827",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -783,9 +944,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Timpani Mallets Medium"
     },
     "description_short": "",
     "description_long": "",
@@ -795,7 +955,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.906453",
+      "timestamp": "2026-02-08T23:23:28.501816",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -823,8 +983,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.997788",
-      "last_updated": "2026-02-06T17:26:34.997788",
+      "created_at": "2026-02-06T17:51:02.906469",
+      "last_updated": "2026-02-06T17:51:02.906469",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -866,7 +1026,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.997781",
+        "timestamp": "2026-02-06T17:51:02.906453",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -894,8 +1054,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.991462",
-        "last_updated": "2026-02-06T17:26:11.991463",
+        "created_at": "2026-02-06T17:26:34.997788",
+        "last_updated": "2026-02-06T17:26:34.997788",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -937,7 +1097,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.991455",
+          "timestamp": "2026-02-06T17:26:34.997781",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -945,7 +1105,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7822580712534009610",
           "product_name": "Adams Timpani Mallets Medium",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -965,8 +1125,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.225134",
-          "last_updated": "2026-02-06T14:01:06.225134",
+          "created_at": "2026-02-06T17:26:11.991462",
+          "last_updated": "2026-02-06T17:26:11.991463",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1008,9 +1168,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.225123",
+            "timestamp": "2026-02-06T17:26:11.991455",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1019,24 +1179,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531191-adams-timpani-mallets-medium\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.225134",
+            "last_updated": "2026-02-06T14:01:06.225134",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.225123",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7822580712534009610",
+              "product_name": "Adams Timpani Mallets Medium",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531191-adams-timpani-mallets-medium\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1081,12 +1326,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1105,9 +1348,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Solist Marimba"
     },
     "official_description": null,
     "official_images": [],
@@ -1117,8 +1359,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.906992",
-    "last_updated": "2026-02-06T17:51:02.906993",
+    "created_at": "2026-02-08T23:23:28.501974",
+    "last_updated": "2026-02-08T23:23:28.501974",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -1148,9 +1390,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Solist Marimba"
     },
     "description_short": "",
     "description_long": "",
@@ -1160,7 +1401,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.906977",
+      "timestamp": "2026-02-08T23:23:28.501961",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -1188,8 +1429,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.998168",
-      "last_updated": "2026-02-06T17:26:34.998168",
+      "created_at": "2026-02-06T17:51:02.906992",
+      "last_updated": "2026-02-06T17:51:02.906993",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1231,7 +1472,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.998158",
+        "timestamp": "2026-02-06T17:51:02.906977",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -1259,8 +1500,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.991846",
-        "last_updated": "2026-02-06T17:26:11.991847",
+        "created_at": "2026-02-06T17:26:34.998168",
+        "last_updated": "2026-02-06T17:26:34.998168",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1302,7 +1543,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.991837",
+          "timestamp": "2026-02-06T17:26:34.998158",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -1310,7 +1551,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-6171224165054931734",
           "product_name": "Adams Solist Marimba",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1330,8 +1571,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.225595",
-          "last_updated": "2026-02-06T14:01:06.225595",
+          "created_at": "2026-02-06T17:26:11.991846",
+          "last_updated": "2026-02-06T17:26:11.991847",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1373,9 +1614,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.225585",
+            "timestamp": "2026-02-06T17:26:11.991837",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1384,24 +1625,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446475-adams-solist-marimba\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.225595",
+            "last_updated": "2026-02-06T14:01:06.225595",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.225585",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-6171224165054931734",
+              "product_name": "Adams Solist Marimba",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446475-adams-solist-marimba\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1446,12 +1772,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1470,9 +1794,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams טימפני מסדרת הפילהרמונים"
     },
     "official_description": null,
     "official_images": [],
@@ -1482,8 +1805,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.907294",
-    "last_updated": "2026-02-06T17:51:02.907294",
+    "created_at": "2026-02-08T23:23:28.502971",
+    "last_updated": "2026-02-08T23:23:28.502971",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1513,9 +1836,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams טימפני מסדרת הפילהרמונים"
     },
     "description_short": "",
     "description_long": "",
@@ -1525,7 +1847,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.907277",
+      "timestamp": "2026-02-08T23:23:28.502961",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -1553,8 +1875,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.998262",
-      "last_updated": "2026-02-06T17:26:34.998262",
+      "created_at": "2026-02-06T17:51:02.907294",
+      "last_updated": "2026-02-06T17:51:02.907294",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1596,7 +1918,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.998255",
+        "timestamp": "2026-02-06T17:51:02.907277",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -1624,8 +1946,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.992044",
-        "last_updated": "2026-02-06T17:26:11.992044",
+        "created_at": "2026-02-06T17:26:34.998262",
+        "last_updated": "2026-02-06T17:26:34.998262",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1667,7 +1989,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.992036",
+          "timestamp": "2026-02-06T17:26:34.998255",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -1675,7 +1997,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-2171662938617037597",
           "product_name": "Adams טימפני מסדרת הפילהרמונים",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1695,8 +2017,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.225710",
-          "last_updated": "2026-02-06T14:01:06.225711",
+          "created_at": "2026-02-06T17:26:11.992044",
+          "last_updated": "2026-02-06T17:26:11.992044",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1738,9 +2060,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.225699",
+            "timestamp": "2026-02-06T17:26:11.992036",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1749,24 +2071,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447603-Adams-%D7%98%D7%99%D7%9E%D7%A4%D7%A0%D7%99-%D7%9E%D7%A1%D7%93%D7%A8%D7%AA-%D7%94%D7%A4%D7%99%D7%9C%D7%94%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.225710",
+            "last_updated": "2026-02-06T14:01:06.225711",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.225699",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-2171662938617037597",
+              "product_name": "Adams טימפני מסדרת הפילהרמונים",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447603-Adams-%D7%98%D7%99%D7%9E%D7%A4%D7%A0%D7%99-%D7%9E%D7%A1%D7%93%D7%A8%D7%AA-%D7%94%D7%A4%D7%99%D7%9C%D7%94%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1814,11 +2222,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1839,9 +2246,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "טימפני מסדרת הפרופשיונל Adams"
     },
     "official_description": null,
     "official_images": [],
@@ -1851,8 +2257,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.907450",
-    "last_updated": "2026-02-06T17:51:02.907450",
+    "created_at": "2026-02-08T23:23:28.503311",
+    "last_updated": "2026-02-08T23:23:28.503311",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1882,9 +2288,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "טימפני מסדרת הפרופשיונל Adams"
     },
     "description_short": "",
     "description_long": "",
@@ -1894,7 +2299,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.907438",
+      "timestamp": "2026-02-08T23:23:28.503301",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -1922,8 +2327,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.998343",
-      "last_updated": "2026-02-06T17:26:34.998343",
+      "created_at": "2026-02-06T17:51:02.907450",
+      "last_updated": "2026-02-06T17:51:02.907450",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1965,7 +2370,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.998337",
+        "timestamp": "2026-02-06T17:51:02.907438",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -1993,8 +2398,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.992129",
-        "last_updated": "2026-02-06T17:26:11.992129",
+        "created_at": "2026-02-06T17:26:34.998343",
+        "last_updated": "2026-02-06T17:26:34.998343",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2036,7 +2441,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.992123",
+          "timestamp": "2026-02-06T17:26:34.998337",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -2044,7 +2449,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-1226988798135655639",
           "product_name": "טימפני מסדרת הפרופשיונל Adams",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2064,8 +2469,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.225810",
-          "last_updated": "2026-02-06T14:01:06.225811",
+          "created_at": "2026-02-06T17:26:11.992129",
+          "last_updated": "2026-02-06T17:26:11.992129",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2107,9 +2512,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.225799",
+            "timestamp": "2026-02-06T17:26:11.992123",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2118,24 +2523,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447604-%D7%98%D7%99%D7%9E%D7%A4%D7%A0%D7%99-%D7%9E%D7%A1%D7%93%D7%A8%D7%AA-%D7%94%D7%A4%D7%A8%D7%95%D7%A4%D7%A9%D7%99%D7%95%D7%A0%D7%9C-Adams\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.225810",
+            "last_updated": "2026-02-06T14:01:06.225811",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.225799",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-1226988798135655639",
+              "product_name": "טימפני מסדרת הפרופשיונל Adams",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447604-%D7%98%D7%99%D7%9E%D7%A4%D7%A0%D7%99-%D7%9E%D7%A1%D7%93%D7%A8%D7%AA-%D7%94%D7%A4%D7%A8%D7%95%D7%A4%D7%A9%D7%99%D7%95%D7%A0%D7%9C-Adams\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2183,11 +2674,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2208,9 +2698,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Symphonic Timpani"
     },
     "official_description": null,
     "official_images": [],
@@ -2220,8 +2709,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.908161",
-    "last_updated": "2026-02-06T17:51:02.908161",
+    "created_at": "2026-02-08T23:23:28.503692",
+    "last_updated": "2026-02-08T23:23:28.503693",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -2251,9 +2740,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Symphonic Timpani"
     },
     "description_short": "",
     "description_long": "",
@@ -2263,7 +2751,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.908146",
+      "timestamp": "2026-02-08T23:23:28.503682",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -2291,8 +2779,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.998806",
-      "last_updated": "2026-02-06T17:26:34.998806",
+      "created_at": "2026-02-06T17:51:02.908161",
+      "last_updated": "2026-02-06T17:51:02.908161",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -2334,7 +2822,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.998797",
+        "timestamp": "2026-02-06T17:51:02.908146",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -2362,8 +2850,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.992602",
-        "last_updated": "2026-02-06T17:26:11.992603",
+        "created_at": "2026-02-06T17:26:34.998806",
+        "last_updated": "2026-02-06T17:26:34.998806",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -2405,7 +2893,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.992593",
+          "timestamp": "2026-02-06T17:26:34.998797",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -2413,7 +2901,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1694643480042686381",
           "product_name": "Adams Symphonic Timpani",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2433,8 +2921,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.226410",
-          "last_updated": "2026-02-06T14:01:06.226410",
+          "created_at": "2026-02-06T17:26:11.992602",
+          "last_updated": "2026-02-06T17:26:11.992603",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -2476,9 +2964,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.226394",
+            "timestamp": "2026-02-06T17:26:11.992593",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2487,24 +2975,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447606-adams-symphonic-timpani-\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.226410",
+            "last_updated": "2026-02-06T14:01:06.226410",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.226394",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1694643480042686381",
+              "product_name": "Adams Symphonic Timpani",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447606-adams-symphonic-timpani-\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2549,12 +3122,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2573,9 +3144,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Baroque Timpani"
     },
     "official_description": null,
     "official_images": [],
@@ -2585,8 +3155,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.908295",
-    "last_updated": "2026-02-06T17:51:02.908295",
+    "created_at": "2026-02-08T23:23:28.504169",
+    "last_updated": "2026-02-08T23:23:28.504171",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -2616,9 +3186,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Baroque Timpani"
     },
     "description_short": "",
     "description_long": "",
@@ -2628,7 +3197,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.908284",
+      "timestamp": "2026-02-08T23:23:28.504136",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -2656,8 +3225,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.998893",
-      "last_updated": "2026-02-06T17:26:34.998893",
+      "created_at": "2026-02-06T17:51:02.908295",
+      "last_updated": "2026-02-06T17:51:02.908295",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -2699,7 +3268,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.998887",
+        "timestamp": "2026-02-06T17:51:02.908284",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -2727,8 +3296,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.992692",
-        "last_updated": "2026-02-06T17:26:11.992692",
+        "created_at": "2026-02-06T17:26:34.998893",
+        "last_updated": "2026-02-06T17:26:34.998893",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -2770,7 +3339,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.992686",
+          "timestamp": "2026-02-06T17:26:34.998887",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -2778,7 +3347,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7487445652352633082",
           "product_name": "Adams Baroque Timpani",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2798,8 +3367,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.226530",
-          "last_updated": "2026-02-06T14:01:06.226530",
+          "created_at": "2026-02-06T17:26:11.992692",
+          "last_updated": "2026-02-06T17:26:11.992692",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -2841,9 +3410,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.226519",
+            "timestamp": "2026-02-06T17:26:11.992686",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2852,24 +3421,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447608-baroque-timpani-adams\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.226530",
+            "last_updated": "2026-02-06T14:01:06.226530",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.226519",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7487445652352633082",
+              "product_name": "Adams Baroque Timpani",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447608-baroque-timpani-adams\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2914,12 +3568,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2938,9 +3590,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Solist Xylophones"
     },
     "official_description": null,
     "official_images": [],
@@ -2950,8 +3601,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.908412",
-    "last_updated": "2026-02-06T17:51:02.908412",
+    "created_at": "2026-02-08T23:23:28.505085",
+    "last_updated": "2026-02-08T23:23:28.505085",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2981,9 +3632,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Solist Xylophones"
     },
     "description_short": "",
     "description_long": "",
@@ -2993,7 +3643,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.908402",
+      "timestamp": "2026-02-08T23:23:28.505070",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -3021,8 +3671,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.998973",
-      "last_updated": "2026-02-06T17:26:34.998973",
+      "created_at": "2026-02-06T17:51:02.908412",
+      "last_updated": "2026-02-06T17:51:02.908412",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3064,7 +3714,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.998968",
+        "timestamp": "2026-02-06T17:51:02.908402",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -3092,8 +3742,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.992772",
-        "last_updated": "2026-02-06T17:26:11.992772",
+        "created_at": "2026-02-06T17:26:34.998973",
+        "last_updated": "2026-02-06T17:26:34.998973",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3135,7 +3785,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.992767",
+          "timestamp": "2026-02-06T17:26:34.998968",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -3143,7 +3793,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7378534018524320944",
           "product_name": "Adams Solist Xylophones",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3163,8 +3813,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.226638",
-          "last_updated": "2026-02-06T14:01:06.226639",
+          "created_at": "2026-02-06T17:26:11.992772",
+          "last_updated": "2026-02-06T17:26:11.992772",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3206,9 +3856,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.226628",
+            "timestamp": "2026-02-06T17:26:11.992767",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3217,24 +3867,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447609-adams-solist-xylophones\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.226638",
+            "last_updated": "2026-02-06T14:01:06.226639",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.226628",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7378534018524320944",
+              "product_name": "Adams Solist Xylophones",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447609-adams-solist-xylophones\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3282,11 +4018,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3307,9 +4042,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Solist Vibraphone"
     },
     "official_description": null,
     "official_images": [],
@@ -3319,8 +4053,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.908875",
-    "last_updated": "2026-02-06T17:51:02.908875",
+    "created_at": "2026-02-08T23:23:28.505407",
+    "last_updated": "2026-02-08T23:23:28.505407",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3350,9 +4084,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Solist Vibraphone"
     },
     "description_short": "",
     "description_long": "",
@@ -3362,7 +4095,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.908860",
+      "timestamp": "2026-02-08T23:23:28.505394",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -3390,8 +4123,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.999050",
-      "last_updated": "2026-02-06T17:26:34.999050",
+      "created_at": "2026-02-06T17:51:02.908875",
+      "last_updated": "2026-02-06T17:51:02.908875",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3433,7 +4166,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.999044",
+        "timestamp": "2026-02-06T17:51:02.908860",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -3461,8 +4194,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.992852",
-        "last_updated": "2026-02-06T17:26:11.992852",
+        "created_at": "2026-02-06T17:26:34.999050",
+        "last_updated": "2026-02-06T17:26:34.999050",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3504,7 +4237,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.992847",
+          "timestamp": "2026-02-06T17:26:34.999044",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -3512,7 +4245,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--5661186832258828339",
           "product_name": "Adams Solist Vibraphone",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3532,8 +4265,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.226739",
-          "last_updated": "2026-02-06T14:01:06.226739",
+          "created_at": "2026-02-06T17:26:11.992852",
+          "last_updated": "2026-02-06T17:26:11.992852",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3575,9 +4308,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.226729",
+            "timestamp": "2026-02-06T17:26:11.992847",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3586,24 +4319,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447610-adams-solist-vibraphone\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.226739",
+            "last_updated": "2026-02-06T14:01:06.226739",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.226729",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--5661186832258828339",
+              "product_name": "Adams Solist Vibraphone",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447610-adams-solist-vibraphone\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3651,11 +4470,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3676,9 +4494,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Revolution Timpani"
     },
     "official_description": null,
     "official_images": [],
@@ -3688,8 +4505,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.909597",
-    "last_updated": "2026-02-06T17:51:02.909597",
+    "created_at": "2026-02-08T23:23:28.505565",
+    "last_updated": "2026-02-08T23:23:28.505565",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -3719,9 +4536,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Revolution Timpani"
     },
     "description_short": "",
     "description_long": "",
@@ -3731,7 +4547,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.909583",
+      "timestamp": "2026-02-08T23:23:28.505553",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -3759,8 +4575,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.999676",
-      "last_updated": "2026-02-06T17:26:34.999676",
+      "created_at": "2026-02-06T17:51:02.909597",
+      "last_updated": "2026-02-06T17:51:02.909597",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -3802,7 +4618,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.999667",
+        "timestamp": "2026-02-06T17:51:02.909583",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -3830,8 +4646,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.993356",
-        "last_updated": "2026-02-06T17:26:11.993357",
+        "created_at": "2026-02-06T17:26:34.999676",
+        "last_updated": "2026-02-06T17:26:34.999676",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -3873,7 +4689,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.993348",
+          "timestamp": "2026-02-06T17:26:34.999667",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -3881,7 +4697,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-5646967494065368389",
           "product_name": "Adams Revolution Timpani",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3901,8 +4717,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.227408",
-          "last_updated": "2026-02-06T14:01:06.227408",
+          "created_at": "2026-02-06T17:26:11.993356",
+          "last_updated": "2026-02-06T17:26:11.993357",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -3944,9 +4760,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.227394",
+            "timestamp": "2026-02-06T17:26:11.993348",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3955,24 +4771,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531123-adams-revolution-timpani\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.227408",
+            "last_updated": "2026-02-06T14:01:06.227408",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.227394",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-5646967494065368389",
+              "product_name": "Adams Revolution Timpani",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531123-adams-revolution-timpani\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4017,12 +4918,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4041,9 +4940,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Universal Timpani"
     },
     "official_description": null,
     "official_images": [],
@@ -4053,8 +4951,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.909738",
-    "last_updated": "2026-02-06T17:51:02.909738",
+    "created_at": "2026-02-08T23:23:28.505695",
+    "last_updated": "2026-02-08T23:23:28.505696",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -4084,9 +4982,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Universal Timpani"
     },
     "description_short": "",
     "description_long": "",
@@ -4096,7 +4993,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.909727",
+      "timestamp": "2026-02-08T23:23:28.505687",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -4124,8 +5021,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.999767",
-      "last_updated": "2026-02-06T17:26:34.999767",
+      "created_at": "2026-02-06T17:51:02.909738",
+      "last_updated": "2026-02-06T17:51:02.909738",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -4167,7 +5064,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.999761",
+        "timestamp": "2026-02-06T17:51:02.909727",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -4195,8 +5092,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.993463",
-        "last_updated": "2026-02-06T17:26:11.993463",
+        "created_at": "2026-02-06T17:26:34.999767",
+        "last_updated": "2026-02-06T17:26:34.999767",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -4238,7 +5135,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.993457",
+          "timestamp": "2026-02-06T17:26:34.999761",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -4246,7 +5143,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-6385204514684867968",
           "product_name": "Adams Universal Timpani",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4266,8 +5163,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.227728",
-          "last_updated": "2026-02-06T14:01:06.227728",
+          "created_at": "2026-02-06T17:26:11.993463",
+          "last_updated": "2026-02-06T17:26:11.993463",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -4309,9 +5206,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.227716",
+            "timestamp": "2026-02-06T17:26:11.993457",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4320,24 +5217,109 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531128-adams-universal-timpani\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.227728",
+            "last_updated": "2026-02-06T14:01:06.227728",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.227716",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-6385204514684867968",
+              "product_name": "Adams Universal Timpani",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531128-adams-universal-timpani\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4382,12 +5364,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4406,9 +5386,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Academy"
     },
     "official_description": null,
     "official_images": [],
@@ -4418,8 +5397,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.909866",
-    "last_updated": "2026-02-06T17:51:02.909867",
+    "created_at": "2026-02-08T23:23:28.506193",
+    "last_updated": "2026-02-08T23:23:28.506193",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4449,9 +5428,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Academy"
     },
     "description_short": "",
     "description_long": "",
@@ -4461,7 +5439,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.909856",
+      "timestamp": "2026-02-08T23:23:28.506184",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -4489,8 +5467,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.999847",
-      "last_updated": "2026-02-06T17:26:34.999847",
+      "created_at": "2026-02-06T17:51:02.909866",
+      "last_updated": "2026-02-06T17:51:02.909867",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4532,7 +5510,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.999842",
+        "timestamp": "2026-02-06T17:51:02.909856",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -4560,8 +5538,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.993547",
-        "last_updated": "2026-02-06T17:26:11.993547",
+        "created_at": "2026-02-06T17:26:34.999847",
+        "last_updated": "2026-02-06T17:26:34.999847",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4603,7 +5581,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.993542",
+          "timestamp": "2026-02-06T17:26:34.999842",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -4611,7 +5589,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-9105801552204993815",
           "product_name": "Adams Xylophone Academy",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4631,8 +5609,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.228006",
-          "last_updated": "2026-02-06T14:01:06.228006",
+          "created_at": "2026-02-06T17:26:11.993547",
+          "last_updated": "2026-02-06T17:26:11.993547",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4674,9 +5652,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.227993",
+            "timestamp": "2026-02-06T17:26:11.993542",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4685,24 +5663,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531157-adams-xylophone-academy\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.228006",
+            "last_updated": "2026-02-06T14:01:06.228006",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.227993",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-9105801552204993815",
+              "product_name": "Adams Xylophone Academy",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531157-adams-xylophone-academy\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4750,11 +5814,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4775,9 +5838,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Mallets Soft"
     },
     "official_description": null,
     "official_images": [],
@@ -4787,8 +5849,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.909987",
-    "last_updated": "2026-02-06T17:51:02.909988",
+    "created_at": "2026-02-08T23:23:28.507622",
+    "last_updated": "2026-02-08T23:23:28.507623",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4818,9 +5880,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Mallets Soft"
     },
     "description_short": "",
     "description_long": "",
@@ -4830,7 +5891,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.909977",
+      "timestamp": "2026-02-08T23:23:28.507608",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -4858,8 +5919,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:34.999930",
-      "last_updated": "2026-02-06T17:26:34.999930",
+      "created_at": "2026-02-06T17:51:02.909987",
+      "last_updated": "2026-02-06T17:51:02.909988",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4901,7 +5962,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:34.999924",
+        "timestamp": "2026-02-06T17:51:02.909977",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -4929,8 +5990,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.993629",
-        "last_updated": "2026-02-06T17:26:11.993629",
+        "created_at": "2026-02-06T17:26:34.999930",
+        "last_updated": "2026-02-06T17:26:34.999930",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4972,7 +6033,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.993623",
+          "timestamp": "2026-02-06T17:26:34.999924",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -4980,7 +6041,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-8473344802879209974",
           "product_name": "Adams Xylophone Mallets Soft",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5000,8 +6061,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.228142",
-          "last_updated": "2026-02-06T14:01:06.228142",
+          "created_at": "2026-02-06T17:26:11.993629",
+          "last_updated": "2026-02-06T17:26:11.993629",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5043,9 +6104,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.228131",
+            "timestamp": "2026-02-06T17:26:11.993623",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5054,24 +6115,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531178-adams-xylophone-mallets-soft\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.228142",
+            "last_updated": "2026-02-06T14:01:06.228142",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.228131",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-8473344802879209974",
+              "product_name": "Adams Xylophone Mallets Soft",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531178-adams-xylophone-mallets-soft\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5119,11 +6266,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5144,9 +6290,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Mallets Medium"
     },
     "official_description": null,
     "official_images": [],
@@ -5156,8 +6301,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.910774",
-    "last_updated": "2026-02-06T17:51:02.910774",
+    "created_at": "2026-02-08T23:23:28.508160",
+    "last_updated": "2026-02-08T23:23:28.508160",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5187,9 +6332,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Mallets Medium"
     },
     "description_short": "",
     "description_long": "",
@@ -5199,7 +6343,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.910759",
+      "timestamp": "2026-02-08T23:23:28.508131",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -5227,8 +6371,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.000010",
-      "last_updated": "2026-02-06T17:26:35.000010",
+      "created_at": "2026-02-06T17:51:02.910774",
+      "last_updated": "2026-02-06T17:51:02.910774",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5270,7 +6414,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.000005",
+        "timestamp": "2026-02-06T17:51:02.910759",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -5298,8 +6442,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.993708",
-        "last_updated": "2026-02-06T17:26:11.993708",
+        "created_at": "2026-02-06T17:26:35.000010",
+        "last_updated": "2026-02-06T17:26:35.000010",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5341,7 +6485,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.993702",
+          "timestamp": "2026-02-06T17:26:35.000005",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -5349,7 +6493,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-1519518502760700823",
           "product_name": "Adams Xylophone Mallets Medium",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5369,8 +6513,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.228257",
-          "last_updated": "2026-02-06T14:01:06.228257",
+          "created_at": "2026-02-06T17:26:11.993708",
+          "last_updated": "2026-02-06T17:26:11.993708",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5412,9 +6556,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.228248",
+            "timestamp": "2026-02-06T17:26:11.993702",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5423,24 +6567,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531182-adams-xylophone-mallets-medium\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.228257",
+            "last_updated": "2026-02-06T14:01:06.228257",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.228248",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-1519518502760700823",
+              "product_name": "Adams Xylophone Mallets Medium",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531182-adams-xylophone-mallets-medium\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5488,11 +6718,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5513,9 +6742,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Mallets Hard"
     },
     "official_description": null,
     "official_images": [],
@@ -5525,8 +6753,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.910932",
-    "last_updated": "2026-02-06T17:51:02.910932",
+    "created_at": "2026-02-08T23:23:28.508339",
+    "last_updated": "2026-02-08T23:23:28.508339",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5556,9 +6784,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Xylophone Mallets Hard"
     },
     "description_short": "",
     "description_long": "",
@@ -5568,7 +6795,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.910919",
+      "timestamp": "2026-02-08T23:23:28.508326",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -5596,8 +6823,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.000626",
-      "last_updated": "2026-02-06T17:26:35.000627",
+      "created_at": "2026-02-06T17:51:02.910932",
+      "last_updated": "2026-02-06T17:51:02.910932",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5639,7 +6866,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.000618",
+        "timestamp": "2026-02-06T17:51:02.910919",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -5667,8 +6894,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.994380",
-        "last_updated": "2026-02-06T17:26:11.994380",
+        "created_at": "2026-02-06T17:26:35.000626",
+        "last_updated": "2026-02-06T17:26:35.000627",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5710,7 +6937,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.994370",
+          "timestamp": "2026-02-06T17:26:35.000618",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -5718,7 +6945,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--5425263798076555522",
           "product_name": "Adams Xylophone Mallets Hard",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5738,8 +6965,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.228743",
-          "last_updated": "2026-02-06T14:01:06.228744",
+          "created_at": "2026-02-06T17:26:11.994380",
+          "last_updated": "2026-02-06T17:26:11.994380",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5781,9 +7008,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.228727",
+            "timestamp": "2026-02-06T17:26:11.994370",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5792,24 +7019,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/531184-adams-xylophone-mallets-hard\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.228743",
+            "last_updated": "2026-02-06T14:01:06.228744",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.228727",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--5425263798076555522",
+              "product_name": "Adams Xylophone Mallets Hard",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/531184-adams-xylophone-mallets-hard\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5857,11 +7170,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5882,9 +7194,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Concert 32\" Bass Drum"
     },
     "official_description": null,
     "official_images": [],
@@ -5894,8 +7205,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.911080",
-    "last_updated": "2026-02-06T17:51:02.911081",
+    "created_at": "2026-02-08T23:23:28.508482",
+    "last_updated": "2026-02-08T23:23:28.508483",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5925,9 +7236,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Concert 32\" Bass Drum"
     },
     "description_short": "",
     "description_long": "",
@@ -5937,7 +7247,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.911068",
+      "timestamp": "2026-02-08T23:23:28.508472",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -5965,8 +7275,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.000720",
-      "last_updated": "2026-02-06T17:26:35.000721",
+      "created_at": "2026-02-06T17:51:02.911080",
+      "last_updated": "2026-02-06T17:51:02.911081",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -6008,7 +7318,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.000714",
+        "timestamp": "2026-02-06T17:51:02.911068",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -6036,8 +7346,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.994489",
-        "last_updated": "2026-02-06T17:26:11.994489",
+        "created_at": "2026-02-06T17:26:35.000720",
+        "last_updated": "2026-02-06T17:26:35.000721",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6079,7 +7389,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.994483",
+          "timestamp": "2026-02-06T17:26:35.000714",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -6087,7 +7397,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-423864422997682086",
           "product_name": "Adams Concert 32\" Bass Drum",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -6107,8 +7417,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.229528",
-          "last_updated": "2026-02-06T14:01:06.229529",
+          "created_at": "2026-02-06T17:26:11.994489",
+          "last_updated": "2026-02-06T17:26:11.994489",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -6150,9 +7460,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.229508",
+            "timestamp": "2026-02-06T17:26:11.994483",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -6161,24 +7471,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447600-adams-concert-32-bass-drum-\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.229528",
+            "last_updated": "2026-02-06T14:01:06.229529",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.229508",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-423864422997682086",
+              "product_name": "Adams Concert 32\" Bass Drum",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447600-adams-concert-32-bass-drum-\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -6226,11 +7622,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -6251,9 +7646,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Concert 40\" Bass Drum"
     },
     "official_description": null,
     "official_images": [],
@@ -6263,8 +7657,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:02.911441",
-    "last_updated": "2026-02-06T17:51:02.911442",
+    "created_at": "2026-02-08T23:23:28.508631",
+    "last_updated": "2026-02-08T23:23:28.508632",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -6294,9 +7688,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Adams Concert 40\" Bass Drum"
     },
     "description_short": "",
     "description_long": "",
@@ -6306,7 +7699,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:02.911416",
+      "timestamp": "2026-02-08T23:23:28.508621",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from adams catalog"
     },
@@ -6334,8 +7727,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.000801",
-      "last_updated": "2026-02-06T17:26:35.000801",
+      "created_at": "2026-02-06T17:51:02.911441",
+      "last_updated": "2026-02-06T17:51:02.911442",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -6377,7 +7770,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.000795",
+        "timestamp": "2026-02-06T17:51:02.911416",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from adams catalog"
       },
@@ -6405,8 +7798,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:11.994571",
-        "last_updated": "2026-02-06T17:26:11.994571",
+        "created_at": "2026-02-06T17:26:35.000801",
+        "last_updated": "2026-02-06T17:26:35.000801",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6448,7 +7841,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:11.994566",
+          "timestamp": "2026-02-06T17:26:35.000795",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from adams catalog"
         },
@@ -6456,7 +7849,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6318498501354932258",
           "product_name": "Adams Concert 40\" Bass Drum",
-          "brand": "Adams",
+          "brand": "adams",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -6476,8 +7869,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:06.229863",
-          "last_updated": "2026-02-06T14:01:06.229864",
+          "created_at": "2026-02-06T17:26:11.994571",
+          "last_updated": "2026-02-06T17:26:11.994571",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -6519,9 +7912,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:06.229848",
+            "timestamp": "2026-02-06T17:26:11.994566",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Adams catalog"
+            "extraction_notes": "Scraped from adams catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -6530,24 +7923,110 @@
             "brand": "Adams",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/447601-adams-concert-40-bass-drum\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:06.229863",
+            "last_updated": "2026-02-06T14:01:06.229864",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:06.229848",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Adams catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6318498501354932258",
+              "product_name": "Adams Concert 40\" Bass Drum",
+              "brand": "Adams",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/447601-adams-concert-40-bass-drum\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -6595,11 +8074,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,

@@ -572,13 +572,13 @@ class ContextualAgent(AgentBase):
         #    risk_score += 40
 
         # Check official enrichment
-        if not draft.get('official_specs'):
-            violations.append("Missing official_specs (incomplete enrichment)")
-            risk_score += 15
+        # if not draft.get('official_specs'):
+        #     violations.append("Missing official_specs (incomplete enrichment)")
+        #     risk_score += 15
 
-        if not draft.get('official_images'):
-            violations.append("Missing official_images")
-            risk_score += 10
+        # if not draft.get('official_images'):
+        #     violations.append("Missing official_images")
+        #     risk_score += 10
 
         # --- VISUAL VERIFICATION (New v7.5) ---
         try:

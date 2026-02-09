@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Keyboard"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.156993",
-    "last_updated": "2026-02-06T17:51:03.156994",
+    "created_at": "2026-02-08T23:23:59.446793",
+    "last_updated": "2026-02-08T23:23:59.446793",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Digital Keyboard",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Keyboard"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.156976",
+      "timestamp": "2026-02-08T23:23:59.446764",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.111264",
-      "last_updated": "2026-02-06T17:26:35.111264",
+      "created_at": "2026-02-06T17:51:03.156993",
+      "last_updated": "2026-02-06T17:51:03.156994",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Digital Keyboard",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.111252",
+        "timestamp": "2026-02-06T17:51:03.156976",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.100130",
-        "last_updated": "2026-02-06T17:26:12.100130",
+        "created_at": "2026-02-06T17:26:35.111264",
+        "last_updated": "2026-02-06T17:26:35.111264",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Digital Keyboard",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.100118",
+          "timestamp": "2026-02-06T17:26:35.111252",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-3771349243082042688",
           "product_name": "סינתיסייזר ASM Hydrasynth Keyboard",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.346662",
-          "last_updated": "2026-02-06T14:01:21.346663",
+          "created_at": "2026-02-06T17:26:12.100130",
+          "last_updated": "2026-02-06T17:26:12.100130",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Digital Keyboard",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.346632",
+            "timestamp": "2026-02-06T17:26:12.100118",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,109 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3712385-asm-hydrasynth-keyboard\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.346662",
+            "last_updated": "2026-02-06T14:01:21.346663",
+            "taxonomy": {
+              "canonical_category": "Keyboards & Synthesizers",
+              "canonical_subcategory": "Digital Keyboard",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.346632",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-3771349243082042688",
+              "product_name": "סינתיסייזר ASM Hydrasynth Keyboard",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3712385-asm-hydrasynth-keyboard\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -351,12 +434,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -375,9 +456,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית מוגברת Jasmine JO-37CE"
     },
     "official_description": null,
     "official_images": [],
@@ -387,8 +467,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.157443",
-    "last_updated": "2026-02-06T17:51:03.157443",
+    "created_at": "2026-02-08T23:23:59.447748",
+    "last_updated": "2026-02-08T23:23:59.447748",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -418,9 +498,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית מוגברת Jasmine JO-37CE"
     },
     "description_short": "",
     "description_long": "",
@@ -430,7 +509,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.157412",
+      "timestamp": "2026-02-08T23:23:59.447731",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -458,8 +537,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.111639",
-      "last_updated": "2026-02-06T17:26:35.111640",
+      "created_at": "2026-02-06T17:51:03.157443",
+      "last_updated": "2026-02-06T17:51:03.157443",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -501,7 +580,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.111628",
+        "timestamp": "2026-02-06T17:51:03.157412",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -529,8 +608,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.100517",
-        "last_updated": "2026-02-06T17:26:12.100517",
+        "created_at": "2026-02-06T17:26:35.111639",
+        "last_updated": "2026-02-06T17:26:35.111640",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -572,7 +651,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.100506",
+          "timestamp": "2026-02-06T17:26:35.111628",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -580,7 +659,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-6622338910609600096",
           "product_name": "גיטרה אקוסטית מוגברת Jasmine JO-37CE",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -600,8 +679,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.347290",
-          "last_updated": "2026-02-06T14:01:21.347291",
+          "created_at": "2026-02-06T17:26:12.100517",
+          "last_updated": "2026-02-06T17:26:12.100517",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -643,9 +722,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.347268",
+            "timestamp": "2026-02-06T17:26:12.100506",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -654,24 +733,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5180698-jasmine-jo-37ce\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.347290",
+            "last_updated": "2026-02-06T14:01:21.347291",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.347268",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-6622338910609600096",
+              "product_name": "גיטרה אקוסטית מוגברת Jasmine JO-37CE",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5180698-jasmine-jo-37ce\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -719,11 +884,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -744,9 +908,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Jasmine JC-25CE"
     },
     "official_description": null,
     "official_images": [],
@@ -756,8 +919,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.157587",
-    "last_updated": "2026-02-06T17:51:03.157587",
+    "created_at": "2026-02-08T23:23:59.448509",
+    "last_updated": "2026-02-08T23:23:59.448509",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -787,9 +950,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Jasmine JC-25CE"
     },
     "description_short": "",
     "description_long": "",
@@ -799,7 +961,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.157574",
+      "timestamp": "2026-02-08T23:23:59.448494",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -827,8 +989,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.111744",
-      "last_updated": "2026-02-06T17:26:35.111744",
+      "created_at": "2026-02-06T17:51:03.157587",
+      "last_updated": "2026-02-06T17:51:03.157587",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -870,7 +1032,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.111737",
+        "timestamp": "2026-02-06T17:51:03.157574",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -898,8 +1060,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.100626",
-        "last_updated": "2026-02-06T17:26:12.100626",
+        "created_at": "2026-02-06T17:26:35.111744",
+        "last_updated": "2026-02-06T17:26:35.111744",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -941,7 +1103,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.100619",
+          "timestamp": "2026-02-06T17:26:35.111737",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -949,7 +1111,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--4468729670271943354",
           "product_name": "גיטרה קלאסית מוגברת Jasmine JC-25CE",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -969,8 +1131,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.347731",
-          "last_updated": "2026-02-06T14:01:21.347732",
+          "created_at": "2026-02-06T17:26:12.100626",
+          "last_updated": "2026-02-06T17:26:12.100626",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1012,9 +1174,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.347716",
+            "timestamp": "2026-02-06T17:26:12.100619",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1023,24 +1185,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5179689-jasmine-jc-25-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.347731",
+            "last_updated": "2026-02-06T14:01:21.347732",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.347716",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--4468729670271943354",
+              "product_name": "גיטרה קלאסית מוגברת Jasmine JC-25CE",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5179689-jasmine-jc-25-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1088,11 +1336,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1113,9 +1360,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית 3/4 Jasmine JC-23"
     },
     "official_description": null,
     "official_images": [],
@@ -1125,8 +1371,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.158084",
-    "last_updated": "2026-02-06T17:51:03.158084",
+    "created_at": "2026-02-08T23:23:59.448660",
+    "last_updated": "2026-02-08T23:23:59.448660",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1156,9 +1402,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית 3/4 Jasmine JC-23"
     },
     "description_short": "",
     "description_long": "",
@@ -1168,7 +1413,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.158069",
+      "timestamp": "2026-02-08T23:23:59.448639",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -1196,8 +1441,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.112143",
-      "last_updated": "2026-02-06T17:26:35.112143",
+      "created_at": "2026-02-06T17:51:03.158084",
+      "last_updated": "2026-02-06T17:51:03.158084",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1239,7 +1484,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.112132",
+        "timestamp": "2026-02-06T17:51:03.158069",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -1267,8 +1512,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.101007",
-        "last_updated": "2026-02-06T17:26:12.101007",
+        "created_at": "2026-02-06T17:26:35.112143",
+        "last_updated": "2026-02-06T17:26:35.112143",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1310,7 +1555,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.100998",
+          "timestamp": "2026-02-06T17:26:35.112132",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -1318,7 +1563,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8631602526145237613",
           "product_name": "גיטרה קלאסית 3/4 Jasmine JC-23",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1338,8 +1583,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.348004",
-          "last_updated": "2026-02-06T14:01:21.348005",
+          "created_at": "2026-02-06T17:26:12.101007",
+          "last_updated": "2026-02-06T17:26:12.101007",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1381,9 +1626,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.347990",
+            "timestamp": "2026-02-06T17:26:12.100998",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1392,24 +1637,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5170762-jasmine-jc-23-classical-3-4-size\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.348004",
+            "last_updated": "2026-02-06T14:01:21.348005",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.347990",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8631602526145237613",
+              "product_name": "גיטרה קלאסית 3/4 Jasmine JC-23",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5170762-jasmine-jc-23-classical-3-4-size\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1457,11 +1788,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1482,9 +1812,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית Jasmine S34C"
     },
     "official_description": null,
     "official_images": [],
@@ -1494,8 +1823,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.158318",
-    "last_updated": "2026-02-06T17:51:03.158318",
+    "created_at": "2026-02-08T23:23:59.450360",
+    "last_updated": "2026-02-08T23:23:59.450360",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1525,9 +1854,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית Jasmine S34C"
     },
     "description_short": "",
     "description_long": "",
@@ -1537,7 +1865,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.158305",
+      "timestamp": "2026-02-08T23:23:59.450344",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -1565,8 +1893,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.112237",
-      "last_updated": "2026-02-06T17:26:35.112237",
+      "created_at": "2026-02-06T17:51:03.158318",
+      "last_updated": "2026-02-06T17:51:03.158318",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1608,7 +1936,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.112230",
+        "timestamp": "2026-02-06T17:51:03.158305",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -1636,8 +1964,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.101208",
-        "last_updated": "2026-02-06T17:26:12.101208",
+        "created_at": "2026-02-06T17:26:35.112237",
+        "last_updated": "2026-02-06T17:26:35.112237",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1679,7 +2007,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.101201",
+          "timestamp": "2026-02-06T17:26:35.112230",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -1687,7 +2015,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4450214255278159669",
           "product_name": "גיטרה אקוסטית Jasmine S34C",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1707,8 +2035,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.348378",
-          "last_updated": "2026-02-06T14:01:21.348379",
+          "created_at": "2026-02-06T17:26:12.101208",
+          "last_updated": "2026-02-06T17:26:12.101208",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1750,9 +2078,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.348364",
+            "timestamp": "2026-02-06T17:26:12.101201",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1761,24 +2089,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5177733-jasmine-s-34c-acoustic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.348378",
+            "last_updated": "2026-02-06T14:01:21.348379",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.348364",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4450214255278159669",
+              "product_name": "גיטרה אקוסטית Jasmine S34C",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5177733-jasmine-s-34c-acoustic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1826,11 +2240,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1851,9 +2264,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית Jasmine JO-36"
     },
     "official_description": null,
     "official_images": [],
@@ -1863,8 +2275,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.158481",
-    "last_updated": "2026-02-06T17:51:03.158481",
+    "created_at": "2026-02-08T23:23:59.450687",
+    "last_updated": "2026-02-08T23:23:59.450687",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1894,9 +2306,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית Jasmine JO-36"
     },
     "description_short": "",
     "description_long": "",
@@ -1906,7 +2317,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.158469",
+      "timestamp": "2026-02-08T23:23:59.450677",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -1934,8 +2345,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.112317",
-      "last_updated": "2026-02-06T17:26:35.112317",
+      "created_at": "2026-02-06T17:51:03.158481",
+      "last_updated": "2026-02-06T17:51:03.158481",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1977,7 +2388,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.112312",
+        "timestamp": "2026-02-06T17:51:03.158469",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -2005,8 +2416,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.101293",
-        "last_updated": "2026-02-06T17:26:12.101293",
+        "created_at": "2026-02-06T17:26:35.112317",
+        "last_updated": "2026-02-06T17:26:35.112317",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2048,7 +2459,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.101287",
+          "timestamp": "2026-02-06T17:26:35.112312",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -2056,7 +2467,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--920972172987075080",
           "product_name": "גיטרה אקוסטית Jasmine JO-36",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2076,8 +2487,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.348599",
-          "last_updated": "2026-02-06T14:01:21.348600",
+          "created_at": "2026-02-06T17:26:12.101293",
+          "last_updated": "2026-02-06T17:26:12.101293",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2119,9 +2530,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.348586",
+            "timestamp": "2026-02-06T17:26:12.101287",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2130,24 +2541,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5179280-jasmine-jo-36-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.348599",
+            "last_updated": "2026-02-06T14:01:21.348600",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.348586",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--920972172987075080",
+              "product_name": "גיטרה אקוסטית Jasmine JO-36",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5179280-jasmine-jo-36-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2195,11 +2692,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2220,9 +2716,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Jasmine JC-27"
     },
     "official_description": null,
     "official_images": [],
@@ -2232,8 +2727,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.159148",
-    "last_updated": "2026-02-06T17:51:03.159149",
+    "created_at": "2026-02-08T23:23:59.451152",
+    "last_updated": "2026-02-08T23:23:59.451153",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2263,9 +2758,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית Jasmine JC-27"
     },
     "description_short": "",
     "description_long": "",
@@ -2275,7 +2769,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.159134",
+      "timestamp": "2026-02-08T23:23:59.451126",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -2303,8 +2797,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.112816",
-      "last_updated": "2026-02-06T17:26:35.112816",
+      "created_at": "2026-02-06T17:51:03.159148",
+      "last_updated": "2026-02-06T17:51:03.159149",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2346,7 +2840,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.112807",
+        "timestamp": "2026-02-06T17:51:03.159134",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -2374,8 +2868,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.101775",
-        "last_updated": "2026-02-06T17:26:12.101775",
+        "created_at": "2026-02-06T17:26:35.112816",
+        "last_updated": "2026-02-06T17:26:35.112816",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2417,7 +2911,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.101766",
+          "timestamp": "2026-02-06T17:26:35.112807",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -2425,7 +2919,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6504756492146043390",
           "product_name": "גיטרה קלאסית Jasmine JC-27",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2445,8 +2939,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.348820",
-          "last_updated": "2026-02-06T14:01:21.348820",
+          "created_at": "2026-02-06T17:26:12.101775",
+          "last_updated": "2026-02-06T17:26:12.101775",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2488,9 +2982,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.348806",
+            "timestamp": "2026-02-06T17:26:12.101766",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2499,24 +2993,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5180832-jasmine-jc-27-classic-guitar\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.348820",
+            "last_updated": "2026-02-06T14:01:21.348820",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.348806",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6504756492146043390",
+              "product_name": "גיטרה קלאסית Jasmine JC-27",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5180832-jasmine-jc-27-classic-guitar\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2564,11 +3144,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2589,9 +3168,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Desktop"
     },
     "official_description": null,
     "official_images": [],
@@ -2601,8 +3179,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.159277",
-    "last_updated": "2026-02-06T17:51:03.159278",
+    "created_at": "2026-02-08T23:23:59.451655",
+    "last_updated": "2026-02-08T23:23:59.451655",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Synthesizer",
@@ -2632,9 +3210,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Desktop"
     },
     "description_short": "",
     "description_long": "",
@@ -2644,7 +3221,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.159268",
+      "timestamp": "2026-02-08T23:23:59.451641",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -2672,8 +3249,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.112904",
-      "last_updated": "2026-02-06T17:26:35.112904",
+      "created_at": "2026-02-06T17:51:03.159277",
+      "last_updated": "2026-02-06T17:51:03.159278",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Synthesizer",
@@ -2715,7 +3292,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.112898",
+        "timestamp": "2026-02-06T17:51:03.159268",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -2743,8 +3320,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.101863",
-        "last_updated": "2026-02-06T17:26:12.101863",
+        "created_at": "2026-02-06T17:26:35.112904",
+        "last_updated": "2026-02-06T17:26:35.112904",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Synthesizer",
@@ -2786,7 +3363,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.101858",
+          "timestamp": "2026-02-06T17:26:35.112898",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -2794,7 +3371,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--979402755720783689",
           "product_name": "סינתיסייזר ASM Hydrasynth Desktop",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2814,8 +3391,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.349348",
-          "last_updated": "2026-02-06T14:01:21.349348",
+          "created_at": "2026-02-06T17:26:12.101863",
+          "last_updated": "2026-02-06T17:26:12.101863",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Synthesizer",
@@ -2857,9 +3434,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.349334",
+            "timestamp": "2026-02-06T17:26:12.101858",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2868,24 +3445,109 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/3725985-asm-hydrasynth-desktop-synthesizer\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.349348",
+            "last_updated": "2026-02-06T14:01:21.349348",
+            "taxonomy": {
+              "canonical_category": "Keyboards & Synthesizers",
+              "canonical_subcategory": "Synthesizer",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.349334",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--979402755720783689",
+              "product_name": "סינתיסייזר ASM Hydrasynth Desktop",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/3725985-asm-hydrasynth-desktop-synthesizer\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2930,12 +3592,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2954,9 +3614,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית Jasmine S35"
     },
     "official_description": null,
     "official_images": [],
@@ -2966,8 +3625,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.159393",
-    "last_updated": "2026-02-06T17:51:03.159394",
+    "created_at": "2026-02-08T23:23:59.452119",
+    "last_updated": "2026-02-08T23:23:59.452119",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2997,9 +3656,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית Jasmine S35"
     },
     "description_short": "",
     "description_long": "",
@@ -3009,7 +3667,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.159384",
+      "timestamp": "2026-02-08T23:23:59.452097",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -3037,8 +3695,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.112982",
-      "last_updated": "2026-02-06T17:26:35.112982",
+      "created_at": "2026-02-06T17:51:03.159393",
+      "last_updated": "2026-02-06T17:51:03.159394",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3080,7 +3738,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.112977",
+        "timestamp": "2026-02-06T17:51:03.159384",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -3108,8 +3766,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.101942",
-        "last_updated": "2026-02-06T17:26:12.101943",
+        "created_at": "2026-02-06T17:26:35.112982",
+        "last_updated": "2026-02-06T17:26:35.112982",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3151,7 +3809,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.101937",
+          "timestamp": "2026-02-06T17:26:35.112977",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -3159,7 +3817,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--3552580024559756970",
           "product_name": "גיטרה אקוסטית Jasmine S35",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3179,8 +3837,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.349566",
-          "last_updated": "2026-02-06T14:01:21.349566",
+          "created_at": "2026-02-06T17:26:12.101942",
+          "last_updated": "2026-02-06T17:26:12.101943",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3222,9 +3880,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.349551",
+            "timestamp": "2026-02-06T17:26:12.101937",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3233,24 +3891,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5177520-jasmine-s35\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.349566",
+            "last_updated": "2026-02-06T14:01:21.349566",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.349551",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--3552580024559756970",
+              "product_name": "גיטרה אקוסטית Jasmine S35",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5177520-jasmine-s35\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3298,11 +4042,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3323,9 +4066,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית מוגברת Jasmine JD-37CE"
     },
     "official_description": null,
     "official_images": [],
@@ -3335,8 +4077,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.159532",
-    "last_updated": "2026-02-06T17:51:03.159532",
+    "created_at": "2026-02-08T23:23:59.452864",
+    "last_updated": "2026-02-08T23:23:59.452864",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3366,9 +4108,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית מוגברת Jasmine JD-37CE"
     },
     "description_short": "",
     "description_long": "",
@@ -3378,7 +4119,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.159521",
+      "timestamp": "2026-02-08T23:23:59.452849",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -3406,8 +4147,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.113061",
-      "last_updated": "2026-02-06T17:26:35.113061",
+      "created_at": "2026-02-06T17:51:03.159532",
+      "last_updated": "2026-02-06T17:51:03.159532",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3449,7 +4190,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.113055",
+        "timestamp": "2026-02-06T17:51:03.159521",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -3477,8 +4218,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.102020",
-        "last_updated": "2026-02-06T17:26:12.102020",
+        "created_at": "2026-02-06T17:26:35.113061",
+        "last_updated": "2026-02-06T17:26:35.113061",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3520,7 +4261,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.102015",
+          "timestamp": "2026-02-06T17:26:35.113055",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -3528,7 +4269,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8688194268521623746",
           "product_name": "גיטרה אקוסטית מוגברת Jasmine JD-37CE",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3548,8 +4289,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.349812",
-          "last_updated": "2026-02-06T14:01:21.349812",
+          "created_at": "2026-02-06T17:26:12.102020",
+          "last_updated": "2026-02-06T17:26:12.102020",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3591,9 +4332,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.349798",
+            "timestamp": "2026-02-06T17:26:12.102015",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3602,24 +4343,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5180859-jasmin-jd-37ce\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.349812",
+            "last_updated": "2026-02-06T14:01:21.349812",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.349798",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8688194268521623746",
+              "product_name": "גיטרה אקוסטית מוגברת Jasmine JD-37CE",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5180859-jasmin-jd-37ce\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3667,11 +4494,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3692,9 +4518,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Explorer"
     },
     "official_description": null,
     "official_images": [],
@@ -3704,8 +4529,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.160350",
-    "last_updated": "2026-02-06T17:51:03.160351",
+    "created_at": "2026-02-08T23:23:59.453211",
+    "last_updated": "2026-02-08T23:23:59.453212",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Synthesizer",
@@ -3735,9 +4560,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Explorer"
     },
     "description_short": "",
     "description_long": "",
@@ -3747,7 +4571,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.160335",
+      "timestamp": "2026-02-08T23:23:59.453196",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -3775,8 +4599,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.113783",
-      "last_updated": "2026-02-06T17:26:35.113783",
+      "created_at": "2026-02-06T17:51:03.160350",
+      "last_updated": "2026-02-06T17:51:03.160351",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Synthesizer",
@@ -3818,7 +4642,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.113773",
+        "timestamp": "2026-02-06T17:51:03.160335",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -3846,8 +4670,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.102578",
-        "last_updated": "2026-02-06T17:26:12.102578",
+        "created_at": "2026-02-06T17:26:35.113783",
+        "last_updated": "2026-02-06T17:26:35.113783",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Synthesizer",
@@ -3889,7 +4713,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.102568",
+          "timestamp": "2026-02-06T17:26:35.113773",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -3897,7 +4721,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4667449402239173108",
           "product_name": "סינתיסייזר ASM Hydrasynth Explorer",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3917,8 +4741,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.350291",
-          "last_updated": "2026-02-06T14:01:21.350292",
+          "created_at": "2026-02-06T17:26:12.102578",
+          "last_updated": "2026-02-06T17:26:12.102578",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Synthesizer",
@@ -3960,9 +4784,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.350276",
+            "timestamp": "2026-02-06T17:26:12.102568",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3971,24 +4795,109 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5663419-asm-hydrasynth-explorer-synthesizer\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.350291",
+            "last_updated": "2026-02-06T14:01:21.350292",
+            "taxonomy": {
+              "canonical_category": "Keyboards & Synthesizers",
+              "canonical_subcategory": "Synthesizer",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.350276",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4667449402239173108",
+              "product_name": "סינתיסייזר ASM Hydrasynth Explorer",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5663419-asm-hydrasynth-explorer-synthesizer\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4033,12 +4942,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4057,9 +4964,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית מוגברת Jasmine JO-36CE"
     },
     "official_description": null,
     "official_images": [],
@@ -4069,8 +4975,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.160512",
-    "last_updated": "2026-02-06T17:51:03.160512",
+    "created_at": "2026-02-08T23:23:59.453685",
+    "last_updated": "2026-02-08T23:23:59.453685",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4100,9 +5006,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה אקוסטית מוגברת Jasmine JO-36CE"
     },
     "description_short": "",
     "description_long": "",
@@ -4112,7 +5017,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.160500",
+      "timestamp": "2026-02-08T23:23:59.453672",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -4140,8 +5045,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.113879",
-      "last_updated": "2026-02-06T17:26:35.113879",
+      "created_at": "2026-02-06T17:51:03.160512",
+      "last_updated": "2026-02-06T17:51:03.160512",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4183,7 +5088,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.113872",
+        "timestamp": "2026-02-06T17:51:03.160500",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -4211,8 +5116,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.102670",
-        "last_updated": "2026-02-06T17:26:12.102670",
+        "created_at": "2026-02-06T17:26:35.113879",
+        "last_updated": "2026-02-06T17:26:35.113879",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4254,7 +5159,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.102664",
+          "timestamp": "2026-02-06T17:26:35.113872",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -4262,7 +5167,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-2055100588014321652",
           "product_name": "גיטרה אקוסטית מוגברת Jasmine JO-36CE",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4282,8 +5187,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.350693",
-          "last_updated": "2026-02-06T14:01:21.350693",
+          "created_at": "2026-02-06T17:26:12.102670",
+          "last_updated": "2026-02-06T17:26:12.102670",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4325,9 +5230,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.350675",
+            "timestamp": "2026-02-06T17:26:12.102664",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4336,24 +5241,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5180876-jasmin-jo-36ce\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.350693",
+            "last_updated": "2026-02-06T14:01:21.350693",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.350675",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-2055100588014321652",
+              "product_name": "גיטרה אקוסטית מוגברת Jasmine JO-36CE",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5180876-jasmin-jo-36ce\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4401,11 +5392,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4426,9 +5416,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Deluxe"
     },
     "official_description": null,
     "official_images": [],
@@ -4438,8 +5427,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.160659",
-    "last_updated": "2026-02-06T17:51:03.160659",
+    "created_at": "2026-02-08T23:23:59.453845",
+    "last_updated": "2026-02-08T23:23:59.453845",
     "taxonomy": {
       "canonical_category": "Keyboards & Synthesizers",
       "canonical_subcategory": "Synthesizer",
@@ -4469,9 +5458,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "סינתיסייזר ASM Hydrasynth Deluxe"
     },
     "description_short": "",
     "description_long": "",
@@ -4481,7 +5469,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.160647",
+      "timestamp": "2026-02-08T23:23:59.453834",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -4509,8 +5497,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.113961",
-      "last_updated": "2026-02-06T17:26:35.113961",
+      "created_at": "2026-02-06T17:51:03.160659",
+      "last_updated": "2026-02-06T17:51:03.160659",
       "taxonomy": {
         "canonical_category": "Keyboards & Synthesizers",
         "canonical_subcategory": "Synthesizer",
@@ -4552,7 +5540,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.113955",
+        "timestamp": "2026-02-06T17:51:03.160647",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -4580,8 +5568,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.102751",
-        "last_updated": "2026-02-06T17:26:12.102751",
+        "created_at": "2026-02-06T17:26:35.113961",
+        "last_updated": "2026-02-06T17:26:35.113961",
         "taxonomy": {
           "canonical_category": "Keyboards & Synthesizers",
           "canonical_subcategory": "Synthesizer",
@@ -4623,7 +5611,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.102745",
+          "timestamp": "2026-02-06T17:26:35.113955",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -4631,7 +5619,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7273096517336697623",
           "product_name": "סינתיסייזר ASM Hydrasynth Deluxe",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4651,8 +5639,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.350989",
-          "last_updated": "2026-02-06T14:01:21.350989",
+          "created_at": "2026-02-06T17:26:12.102751",
+          "last_updated": "2026-02-06T17:26:12.102751",
           "taxonomy": {
             "canonical_category": "Keyboards & Synthesizers",
             "canonical_subcategory": "Synthesizer",
@@ -4694,9 +5682,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.350973",
+            "timestamp": "2026-02-06T17:26:12.102745",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4705,24 +5693,109 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5664734-asm-hydrasynth-deluxe-synthesizer\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.350989",
+            "last_updated": "2026-02-06T14:01:21.350989",
+            "taxonomy": {
+              "canonical_category": "Keyboards & Synthesizers",
+              "canonical_subcategory": "Synthesizer",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.350973",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7273096517336697623",
+              "product_name": "סינתיסייזר ASM Hydrasynth Deluxe",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5664734-asm-hydrasynth-deluxe-synthesizer\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4767,12 +5840,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -4791,9 +5862,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Jasmine JC-27CE"
     },
     "official_description": null,
     "official_images": [],
@@ -4803,8 +5873,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.160800",
-    "last_updated": "2026-02-06T17:51:03.160800",
+    "created_at": "2026-02-08T23:23:59.455225",
+    "last_updated": "2026-02-08T23:23:59.455225",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4834,9 +5904,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "גיטרה קלאסית מוגברת Jasmine JC-27CE"
     },
     "description_short": "",
     "description_long": "",
@@ -4846,7 +5915,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.160788",
+      "timestamp": "2026-02-08T23:23:59.455211",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -4874,8 +5943,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.114040",
-      "last_updated": "2026-02-06T17:26:35.114040",
+      "created_at": "2026-02-06T17:51:03.160800",
+      "last_updated": "2026-02-06T17:51:03.160800",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4917,7 +5986,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.114034",
+        "timestamp": "2026-02-06T17:51:03.160788",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -4945,8 +6014,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.102828",
-        "last_updated": "2026-02-06T17:26:12.102828",
+        "created_at": "2026-02-06T17:26:35.114040",
+        "last_updated": "2026-02-06T17:26:35.114040",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4988,7 +6057,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.102823",
+          "timestamp": "2026-02-06T17:26:35.114034",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -4996,7 +6065,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-2279855559184956081",
           "product_name": "גיטרה קלאסית מוגברת Jasmine JC-27CE",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5016,8 +6085,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.351469",
-          "last_updated": "2026-02-06T14:01:21.351470",
+          "created_at": "2026-02-06T17:26:12.102828",
+          "last_updated": "2026-02-06T17:26:12.102828",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5059,9 +6128,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.351454",
+            "timestamp": "2026-02-06T17:26:12.102823",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5070,24 +6139,110 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5180761-jasmin-jc-27ce\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.351469",
+            "last_updated": "2026-02-06T14:01:21.351470",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.351454",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-2279855559184956081",
+              "product_name": "גיטרה קלאסית מוגברת Jasmine JC-27CE",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5180761-jasmin-jc-27ce\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5135,11 +6290,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5160,9 +6314,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "On Stage ASMS4730 Microphone Isolation Shield"
     },
     "official_description": null,
     "official_images": [],
@@ -5172,8 +6325,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.161058",
-    "last_updated": "2026-02-06T17:51:03.161059",
+    "created_at": "2026-02-08T23:23:59.455609",
+    "last_updated": "2026-02-08T23:23:59.455609",
     "taxonomy": {
       "canonical_category": "Microphones & Recording",
       "canonical_subcategory": "Microphone",
@@ -5203,9 +6356,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "On Stage ASMS4730 Microphone Isolation Shield"
     },
     "description_short": "",
     "description_long": "",
@@ -5215,7 +6367,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.161049",
+      "timestamp": "2026-02-08T23:23:59.455594",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -5243,8 +6395,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.114118",
-      "last_updated": "2026-02-06T17:26:35.114118",
+      "created_at": "2026-02-06T17:51:03.161058",
+      "last_updated": "2026-02-06T17:51:03.161059",
       "taxonomy": {
         "canonical_category": "Microphones & Recording",
         "canonical_subcategory": "Microphone",
@@ -5286,7 +6438,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.114112",
+        "timestamp": "2026-02-06T17:51:03.161049",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -5314,8 +6466,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.102906",
-        "last_updated": "2026-02-06T17:26:12.102906",
+        "created_at": "2026-02-06T17:26:35.114118",
+        "last_updated": "2026-02-06T17:26:35.114118",
         "taxonomy": {
           "canonical_category": "Microphones & Recording",
           "canonical_subcategory": "Microphone",
@@ -5357,7 +6509,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.102900",
+          "timestamp": "2026-02-06T17:26:35.114112",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -5365,7 +6517,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--44515643046060161",
           "product_name": "On Stage ASMS4730 Microphone Isolation Shield",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5385,8 +6537,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.351719",
-          "last_updated": "2026-02-06T14:01:21.351719",
+          "created_at": "2026-02-06T17:26:12.102906",
+          "last_updated": "2026-02-06T17:26:12.102906",
           "taxonomy": {
             "canonical_category": "Microphones & Recording",
             "canonical_subcategory": "Microphone",
@@ -5428,9 +6580,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.351706",
+            "timestamp": "2026-02-06T17:26:12.102900",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5439,24 +6591,109 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/1170975-on-stage-asms4730-microphone-isolation-shield\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.351719",
+            "last_updated": "2026-02-06T14:01:21.351719",
+            "taxonomy": {
+              "canonical_category": "Microphones & Recording",
+              "canonical_subcategory": "Microphone",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.351706",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--44515643046060161",
+              "product_name": "On Stage ASMS4730 Microphone Isolation Shield",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1170975-on-stage-asms4730-microphone-isolation-shield\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5501,12 +6738,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -5525,9 +6760,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "On Stage ASMS3000 Microphone Isolation Shield"
     },
     "official_description": null,
     "official_images": [],
@@ -5537,8 +6771,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.161841",
-    "last_updated": "2026-02-06T17:51:03.161842",
+    "created_at": "2026-02-08T23:23:59.455784",
+    "last_updated": "2026-02-08T23:23:59.455784",
     "taxonomy": {
       "canonical_category": "Microphones & Recording",
       "canonical_subcategory": "Microphone",
@@ -5568,9 +6802,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "On Stage ASMS3000 Microphone Isolation Shield"
     },
     "description_short": "",
     "description_long": "",
@@ -5580,7 +6813,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.161828",
+      "timestamp": "2026-02-08T23:23:59.455772",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from asm catalog"
     },
@@ -5608,8 +6841,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.114528",
-      "last_updated": "2026-02-06T17:26:35.114529",
+      "created_at": "2026-02-06T17:51:03.161841",
+      "last_updated": "2026-02-06T17:51:03.161842",
       "taxonomy": {
         "canonical_category": "Microphones & Recording",
         "canonical_subcategory": "Microphone",
@@ -5651,7 +6884,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.114520",
+        "timestamp": "2026-02-06T17:51:03.161828",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from asm catalog"
       },
@@ -5679,8 +6912,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.103632",
-        "last_updated": "2026-02-06T17:26:12.103633",
+        "created_at": "2026-02-06T17:26:35.114528",
+        "last_updated": "2026-02-06T17:26:35.114529",
         "taxonomy": {
           "canonical_category": "Microphones & Recording",
           "canonical_subcategory": "Microphone",
@@ -5722,7 +6955,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.103624",
+          "timestamp": "2026-02-06T17:26:35.114520",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from asm catalog"
         },
@@ -5730,7 +6963,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7381418583045721435",
           "product_name": "On Stage ASMS3000 Microphone Isolation Shield",
-          "brand": "Asm",
+          "brand": "asm",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5750,8 +6983,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:21.351950",
-          "last_updated": "2026-02-06T14:01:21.351951",
+          "created_at": "2026-02-06T17:26:12.103632",
+          "last_updated": "2026-02-06T17:26:12.103633",
           "taxonomy": {
             "canonical_category": "Microphones & Recording",
             "canonical_subcategory": "Microphone",
@@ -5793,9 +7026,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:21.351937",
+            "timestamp": "2026-02-06T17:26:12.103624",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Asm catalog"
+            "extraction_notes": "Scraped from asm catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5804,24 +7037,109 @@
             "brand": "Asm",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/8058006-on-stage-asms3000-microphone-isolation-shield\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:21.351950",
+            "last_updated": "2026-02-06T14:01:21.351951",
+            "taxonomy": {
+              "canonical_category": "Microphones & Recording",
+              "canonical_subcategory": "Microphone",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:21.351937",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Asm catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7381418583045721435",
+              "product_name": "On Stage ASMS3000 Microphone Isolation Shield",
+              "brand": "Asm",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/8058006-on-stage-asms3000-microphone-isolation-shield\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5866,12 +7184,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,

@@ -313,6 +313,10 @@ async def get_conductor_catalog():
                                         image_url = official_images[0].get(
                                             'url')
 
+                            # Filter out placeholder images
+                            if image_url and ("brand.com" in image_url or "placeholder" in image_url):
+                                image_url = ""
+
                             if not image_url:
                                 # Try display object
                                 disp_hero = p.get(
@@ -329,6 +333,10 @@ async def get_conductor_catalog():
                                 if isinstance(p_source, dict):
                                     image_url = p_source.get(
                                         'image', "")  # rare but possible
+
+                            # Filter out placeholder images (Final Check)
+                            if image_url and ("brand.com" in image_url or "placeholder" in image_url):
+                                image_url = ""
 
                             # QUALITY GATE 2: Must have an image
                             # (We can relax this if strictly needed, but user asked for "only junk data")

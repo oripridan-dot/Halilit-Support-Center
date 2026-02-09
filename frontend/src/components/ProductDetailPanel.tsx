@@ -110,10 +110,10 @@ export const ProductDetailPanel: React.FC<ProductDetailPanelProps> = ({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div>
             <p className="text-xs text-slate-600 uppercase tracking-wider font-semibold">
-              Brand ID
+              Brand
             </p>
             <p className="text-sm font-bold text-slate-900">
-              {product.brand_id || "N/A"}
+              {product.brand || product.brand_id || "N/A"}
             </p>
           </div>
           <div>

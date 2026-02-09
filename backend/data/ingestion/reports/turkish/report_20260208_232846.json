@@ -1,0 +1,15 @@
+{
+  "batch_id": "batch_1770593321",
+  "brand": "turkish",
+  "timestamp": "2026-02-08T23:28:46.691880",
+  "execution_time_seconds": 5.584932,
+  "total_processed": 10,
+  "approved_count": 9,
+  "rejected_count": 1,
+  "recommendations": [
+    "Most common issue (1 products): \u274c Agent: Product not recognized by Knowledge Base",
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 9,
+  "rejected_products_count": 1
+}

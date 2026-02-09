@@ -1,0 +1,15 @@
+{
+  "batch_id": "batch_1770593209",
+  "brand": "mjc ironworks",
+  "timestamp": "2026-02-08T23:26:52.497923",
+  "execution_time_seconds": 2.528432,
+  "total_processed": 5,
+  "approved_count": 4,
+  "rejected_count": 1,
+  "recommendations": [
+    "Most common issue (1 products): \u274c Agent: Product not recognized by Knowledge Base",
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 4,
+  "rejected_products_count": 1
+}

@@ -21,9 +21,19 @@ export function resolveProductImage(
     return generatePlaceholderImage("Unknown");
   }
 
-  // 1. Try hero image
+  // 1. Try hero image (new structure: display.hero_image.url OR top-level image_url)
+  if (product.image_url && isValidImageUrl(product.image_url)) {
+    return product.image_url;
+  }
+
+  // Legacy structure support
   if (product.image_hero?.url && isValidImageUrl(product.image_hero.url)) {
     return product.image_hero.url;
+  }
+
+  // Try display object structure
+  if (product.display?.hero_image?.url && isValidImageUrl(product.display.hero_image.url)) {
+    return product.display.hero_image.url;
   }
 
   // 2. Try thumbnail image

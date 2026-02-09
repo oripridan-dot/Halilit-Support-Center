@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593314",
+  "brand": "tombo",
+  "timestamp": "2026-02-08T23:28:37.381904",
+  "execution_time_seconds": 2.735468,
+  "total_processed": 6,
+  "approved_count": 6,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 6,
+  "rejected_products_count": 0
+}

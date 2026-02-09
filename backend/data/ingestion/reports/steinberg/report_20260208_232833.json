@@ -1,0 +1,15 @@
+{
+  "batch_id": "batch_1770593309",
+  "brand": "steinberg",
+  "timestamp": "2026-02-08T23:28:33.958403",
+  "execution_time_seconds": 4.801297,
+  "total_processed": 16,
+  "approved_count": 15,
+  "rejected_count": 1,
+  "recommendations": [
+    "Most common issue (1 products): \u274c Agent: Product not recognized by Knowledge Base",
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 15,
+  "rejected_products_count": 1
+}

@@ -1,0 +1,16 @@
+{
+  "batch_id": "batch_1770593114",
+  "brand": "fender",
+  "timestamp": "2026-02-08T23:25:18.627496",
+  "execution_time_seconds": 3.969886,
+  "total_processed": 8,
+  "approved_count": 4,
+  "rejected_count": 4,
+  "recommendations": [
+    "\u26a0 Low approval rate (50%) - review data quality",
+    "Most common issue (4 products): \u274c Agent: Product not recognized by Knowledge Base",
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 4,
+  "rejected_products_count": 4
+}

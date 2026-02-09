@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770591112",
+  "brand": "krk systems",
+  "timestamp": "2026-02-08T22:51:52.586278",
+  "execution_time_seconds": 0.027337,
+  "total_processed": 1,
+  "approved_count": 1,
+  "rejected_count": 0,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ],
+  "approved_products_count": 1,
+  "rejected_products_count": 0
+}

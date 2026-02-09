@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593317",
+  "brand": "topp pro",
+  "timestamp": "2026-02-08T23:28:41.090006",
+  "execution_time_seconds": 3.698961,
+  "total_processed": 17,
+  "approved_count": 17,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 17,
+  "rejected_products_count": 0
+}

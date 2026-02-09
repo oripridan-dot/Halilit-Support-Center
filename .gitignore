@@ -64,3 +64,4 @@ backend/data/3_contextual/
 backend/data/4_validated/
 backend/data/5_golden/
 backend/data/reports/
+.env

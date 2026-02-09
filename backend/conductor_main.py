@@ -107,7 +107,8 @@ class ConductorCLI:
                 validated_products = []
                 for p in raw_products:
                     if 'candidates' in p and isinstance(p['candidates'], list) and p['candidates']:
-                        logger.info(f"🔎 Running Visual Validator for {p.get('product_name')}")
+                        logger.info(
+                            f"🔎 Running Visual Validator for {p.get('product_name')}")
                         match = process_candidates(p, p['candidates'])
                         if match:
                             p['verified_match'] = match
@@ -115,11 +116,12 @@ class ConductorCLI:
                         else:
                             # Keep product but mark as unverified? Or skip?
                             # For safety, we keep it but log warning
-                            logger.warning(f"   No visual match confirmed for {p.get('product_name')}")
+                            logger.warning(
+                                f"   No visual match confirmed for {p.get('product_name')}")
                             validated_products.append(p)
                     else:
                         validated_products.append(p)
-                
+
                 raw_products = validated_products
                 # ------------------------------------
 

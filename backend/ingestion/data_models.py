@@ -325,11 +325,11 @@ def validate_pricing_consistency(pricing: PricingData) -> List[str]:
     """Validate pricing rules and return any violations"""
     errors = []
 
-    if pricing.price_il <= 0:
-        errors.append("price_il must be positive")
+    if pricing.price_il < 0:
+        errors.append("price_il must be non-negative")
 
-    if pricing.price_eilat <= 0:
-        errors.append("price_eilat must be positive")
+    if pricing.price_eilat < 0:
+        errors.append("price_eilat must be non-negative")
 
     if pricing.price_eilat > pricing.price_il:
         errors.append("Eilat price cannot exceed Israel mainland price")

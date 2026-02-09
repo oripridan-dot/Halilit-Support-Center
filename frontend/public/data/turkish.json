@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Vintage Soul Crash 18\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.457330",
-    "last_updated": "2026-02-06T17:51:05.457331",
+    "created_at": "2026-02-08T23:28:41.107310",
+    "last_updated": "2026-02-08T23:28:41.107311",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Vintage Soul Crash 18\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.457301",
+      "timestamp": "2026-02-08T23:28:41.107291",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.421021",
-      "last_updated": "2026-02-06T17:26:37.421021",
+      "created_at": "2026-02-06T17:51:05.457330",
+      "last_updated": "2026-02-06T17:51:05.457331",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.421008",
+        "timestamp": "2026-02-06T17:51:05.457301",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.071295",
-        "last_updated": "2026-02-06T17:26:14.071295",
+        "created_at": "2026-02-06T17:26:37.421021",
+        "last_updated": "2026-02-06T17:26:37.421021",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.071282",
+          "timestamp": "2026-02-06T17:26:37.421008",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1692144263068065206",
           "product_name": "Turkish Vintage Soul Crash 18\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.404012",
-          "last_updated": "2026-02-06T14:04:16.404013",
+          "created_at": "2026-02-06T17:26:14.071295",
+          "last_updated": "2026-02-06T17:26:14.071295",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.403984",
+            "timestamp": "2026-02-06T17:26:14.071282",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/4602637-turkish-vintage-soul-crash-18-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.404012",
+            "last_updated": "2026-02-06T14:04:16.404013",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.403984",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1692144263068065206",
+              "product_name": "Turkish Vintage Soul Crash 18\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/4602637-turkish-vintage-soul-crash-18-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -351,12 +434,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -375,9 +456,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Vintage Soul Crash 16\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -387,8 +467,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.462553",
-    "last_updated": "2026-02-06T17:51:05.462554",
+    "created_at": "2026-02-08T23:28:41.108032",
+    "last_updated": "2026-02-08T23:28:41.108033",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -418,9 +498,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Vintage Soul Crash 16\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -430,7 +509,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.462528",
+      "timestamp": "2026-02-08T23:28:41.108015",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -458,8 +537,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.421391",
-      "last_updated": "2026-02-06T17:26:37.421391",
+      "created_at": "2026-02-06T17:51:05.462553",
+      "last_updated": "2026-02-06T17:51:05.462554",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -501,7 +580,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.421380",
+        "timestamp": "2026-02-06T17:51:05.462528",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -529,8 +608,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.071682",
-        "last_updated": "2026-02-06T17:26:14.071682",
+        "created_at": "2026-02-06T17:26:37.421391",
+        "last_updated": "2026-02-06T17:26:37.421391",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -572,7 +651,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.071672",
+          "timestamp": "2026-02-06T17:26:37.421380",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -580,7 +659,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-8661502592358200582",
           "product_name": "Turkish Vintage Soul Crash 16\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -600,8 +679,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.404533",
-          "last_updated": "2026-02-06T14:04:16.404533",
+          "created_at": "2026-02-06T17:26:14.071682",
+          "last_updated": "2026-02-06T17:26:14.071682",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -643,9 +722,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.404515",
+            "timestamp": "2026-02-06T17:26:14.071672",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -654,24 +733,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/4602647-turkish-vintage-soul-crash-16-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.404533",
+            "last_updated": "2026-02-06T14:04:16.404533",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.404515",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-8661502592358200582",
+              "product_name": "Turkish Vintage Soul Crash 16\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/4602647-turkish-vintage-soul-crash-16-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -716,12 +880,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -740,9 +902,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Ride Apex 20\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -752,8 +913,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.462730",
-    "last_updated": "2026-02-06T17:51:05.462730",
+    "created_at": "2026-02-08T23:28:41.108199",
+    "last_updated": "2026-02-08T23:28:41.108199",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -783,9 +944,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Ride Apex 20\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -795,7 +955,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.462716",
+      "timestamp": "2026-02-08T23:28:41.108186",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -823,8 +983,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.421511",
-      "last_updated": "2026-02-06T17:26:37.421511",
+      "created_at": "2026-02-06T17:51:05.462730",
+      "last_updated": "2026-02-06T17:51:05.462730",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -866,7 +1026,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.421504",
+        "timestamp": "2026-02-06T17:51:05.462716",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -894,8 +1054,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.071785",
-        "last_updated": "2026-02-06T17:26:14.071785",
+        "created_at": "2026-02-06T17:26:37.421511",
+        "last_updated": "2026-02-06T17:26:37.421511",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -937,7 +1097,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.071778",
+          "timestamp": "2026-02-06T17:26:37.421504",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -945,7 +1105,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-2611924822184583142",
           "product_name": "Turkish Ride Apex 20\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -965,8 +1125,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.404666",
-          "last_updated": "2026-02-06T14:04:16.404666",
+          "created_at": "2026-02-06T17:26:14.071785",
+          "last_updated": "2026-02-06T17:26:14.071785",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1008,9 +1168,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.404653",
+            "timestamp": "2026-02-06T17:26:14.071778",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1019,24 +1179,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/4573267-turkish-ride-apex-20-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.404666",
+            "last_updated": "2026-02-06T14:04:16.404666",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.404653",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-2611924822184583142",
+              "product_name": "Turkish Ride Apex 20\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/4573267-turkish-ride-apex-20-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1081,12 +1326,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1105,9 +1348,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish John Blackwell 21\" Ride Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -1117,8 +1359,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.466627",
-    "last_updated": "2026-02-06T17:51:05.466628",
+    "created_at": "2026-02-08T23:28:41.108965",
+    "last_updated": "2026-02-08T23:28:41.108965",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -1148,9 +1390,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish John Blackwell 21\" Ride Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -1160,7 +1401,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.466608",
+      "timestamp": "2026-02-08T23:28:41.108944",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -1188,8 +1429,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.421891",
-      "last_updated": "2026-02-06T17:26:37.421891",
+      "created_at": "2026-02-06T17:51:05.466627",
+      "last_updated": "2026-02-06T17:51:05.466628",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1231,7 +1472,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.421882",
+        "timestamp": "2026-02-06T17:51:05.466608",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -1259,8 +1500,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.072171",
-        "last_updated": "2026-02-06T17:26:14.072171",
+        "created_at": "2026-02-06T17:26:37.421891",
+        "last_updated": "2026-02-06T17:26:37.421891",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1302,7 +1543,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.072161",
+          "timestamp": "2026-02-06T17:26:37.421882",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -1310,7 +1551,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--2416995855976131083",
           "product_name": "Turkish John Blackwell 21\" Ride Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1330,8 +1571,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.405287",
-          "last_updated": "2026-02-06T14:04:16.405288",
+          "created_at": "2026-02-06T17:26:14.072171",
+          "last_updated": "2026-02-06T17:26:14.072171",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1373,9 +1614,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.405271",
+            "timestamp": "2026-02-06T17:26:14.072161",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1384,24 +1625,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/2870356-turkish-john-blackwell-21-ride-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.405287",
+            "last_updated": "2026-02-06T14:04:16.405288",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.405271",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--2416995855976131083",
+              "product_name": "Turkish John Blackwell 21\" Ride Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/2870356-turkish-john-blackwell-21-ride-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1446,12 +1772,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -1470,9 +1794,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Fusion Crash Ride 18\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -1482,8 +1805,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.466780",
-    "last_updated": "2026-02-06T17:51:05.466781",
+    "created_at": "2026-02-08T23:28:41.109586",
+    "last_updated": "2026-02-08T23:28:41.109586",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -1513,9 +1836,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Fusion Crash Ride 18\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -1525,7 +1847,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.466769",
+      "timestamp": "2026-02-08T23:28:41.109574",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -1553,8 +1875,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.421982",
-      "last_updated": "2026-02-06T17:26:37.421982",
+      "created_at": "2026-02-06T17:51:05.466780",
+      "last_updated": "2026-02-06T17:51:05.466781",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -1596,7 +1918,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.421976",
+        "timestamp": "2026-02-06T17:51:05.466769",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -1624,8 +1946,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.072267",
-        "last_updated": "2026-02-06T17:26:14.072268",
+        "created_at": "2026-02-06T17:26:37.421982",
+        "last_updated": "2026-02-06T17:26:37.421982",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -1667,7 +1989,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.072261",
+          "timestamp": "2026-02-06T17:26:37.421976",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -1675,7 +1997,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4231283252280361783",
           "product_name": "Turkish Fusion Crash Ride 18\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1695,8 +2017,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.405524",
-          "last_updated": "2026-02-06T14:04:16.405524",
+          "created_at": "2026-02-06T17:26:14.072267",
+          "last_updated": "2026-02-06T17:26:14.072268",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -1738,9 +2060,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.405509",
+            "timestamp": "2026-02-06T17:26:14.072261",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1749,24 +2071,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/827989-turkish-fusion-crash-ride-18-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.405524",
+            "last_updated": "2026-02-06T14:04:16.405524",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.405509",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4231283252280361783",
+              "product_name": "Turkish Fusion Crash Ride 18\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/827989-turkish-fusion-crash-ride-18-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1811,377 +2218,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
-    "price": 0.0,
-    "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
-  },
-  {
-    "halilit_id": "scraped-3223975140060749811",
-    "product_name": "Turkish Euphonic Ride 20\" Cymbal",
-    "brand": "turkish",
-    "price_il": 0.0,
-    "price_eilat": 0.0,
-    "halilit_url": "https://halilit.com",
-    "sku": null,
-    "model_number": null,
-    "official_name": null,
-    "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "official_description": null,
-    "official_images": [],
-    "official_url": null,
-    "reviews": [],
-    "review_synthesis": null,
-    "average_rating": null,
-    "status": "harvested",
-    "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.466901",
-    "last_updated": "2026-02-06T17:51:05.466902",
-    "taxonomy": {
-      "canonical_category": "Drums & Percussion",
-      "canonical_subcategory": "Percussion",
-      "brand_taxonomy": null,
-      "alt_categories": [],
-      "keywords": []
-    },
-    "pricing": {
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "price_usd": null,
-      "price_eur": null,
-      "tier": "entry",
-      "eilat_discount_percent": 0,
-      "suggested_tier": null,
-      "price_validity_marker": null,
-      "last_price_change": null,
-      "previous_price_il": null
-    },
-    "display": {
-      "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
-      "should_highlight": false,
-      "display_tier_level": 1,
-      "color_hint": "bg-gray-300",
-      "media_assets": []
-    },
-    "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
-    },
-    "description_short": "",
-    "description_long": "",
-    "feature_list": [],
-    "sources": [],
-    "primary_source": {
-      "source_name": "Halilit",
-      "source_url": "https://halilit.com",
-      "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.466891",
-      "extraction_method": "web_scraper",
-      "extraction_notes": "Scraped from turkish catalog"
-    },
-    "lineage": {},
-    "raw_snapshot": {
-      "halilit_id": "scraped-3223975140060749811",
-      "product_name": "Turkish Euphonic Ride 20\" Cymbal",
-      "brand": "turkish",
-      "price_il": 0.0,
-      "price_eilat": 0.0,
-      "halilit_url": "https://halilit.com",
-      "sku": null,
-      "model_number": null,
-      "official_name": null,
-      "official_specs": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "official_description": null,
-      "official_images": [],
-      "official_url": null,
-      "reviews": [],
-      "review_synthesis": null,
-      "average_rating": null,
-      "status": "harvested",
-      "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.422161",
-      "last_updated": "2026-02-06T17:26:37.422161",
-      "taxonomy": {
-        "canonical_category": "Drums & Percussion",
-        "canonical_subcategory": "Percussion",
-        "brand_taxonomy": null,
-        "alt_categories": [],
-        "keywords": []
-      },
-      "pricing": {
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "price_usd": null,
-        "price_eur": null,
-        "tier": "entry",
-        "eilat_discount_percent": 0,
-        "suggested_tier": null,
-        "price_validity_marker": null,
-        "last_price_change": null,
-        "previous_price_il": null
-      },
-      "display": {
-        "display_role": "entry",
-        "hero_image": null,
-        "thumbnail_image": null,
-        "should_highlight": false,
-        "display_tier_level": 1,
-        "color_hint": "bg-gray-300",
-        "media_assets": []
-      },
-      "specifications": {
-        "keys": 88,
-        "action": "Hammer Action",
-        "polyphony": 128
-      },
-      "description_short": "",
-      "description_long": "",
-      "feature_list": [],
-      "sources": [],
-      "primary_source": {
-        "source_name": "Halilit",
-        "source_url": "https://halilit.com",
-        "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.422154",
-        "extraction_method": "web_scraper",
-        "extraction_notes": "Scraped from turkish catalog"
-      },
-      "lineage": {},
-      "raw_snapshot": {
-        "halilit_id": "scraped-3223975140060749811",
-        "product_name": "Turkish Euphonic Ride 20\" Cymbal",
-        "brand": "turkish",
-        "price_il": 0.0,
-        "price_eilat": 0.0,
-        "halilit_url": "https://halilit.com",
-        "sku": null,
-        "model_number": null,
-        "official_name": null,
-        "official_specs": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "official_description": null,
-        "official_images": [],
-        "official_url": null,
-        "reviews": [],
-        "review_synthesis": null,
-        "average_rating": null,
-        "status": "harvested",
-        "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.072351",
-        "last_updated": "2026-02-06T17:26:14.072352",
-        "taxonomy": {
-          "canonical_category": "Drums & Percussion",
-          "canonical_subcategory": "Percussion",
-          "brand_taxonomy": null,
-          "alt_categories": [],
-          "keywords": []
-        },
-        "pricing": {
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "price_usd": null,
-          "price_eur": null,
-          "tier": "entry",
-          "eilat_discount_percent": 0,
-          "suggested_tier": null,
-          "price_validity_marker": null,
-          "last_price_change": null,
-          "previous_price_il": null
-        },
-        "display": {
-          "display_role": "entry",
-          "hero_image": null,
-          "thumbnail_image": null,
-          "should_highlight": false,
-          "display_tier_level": 1,
-          "color_hint": "bg-gray-300",
-          "media_assets": []
-        },
-        "specifications": {
-          "keys": 88,
-          "action": "Hammer Action",
-          "polyphony": 128
-        },
-        "description_short": "",
-        "description_long": "",
-        "feature_list": [],
-        "sources": [],
-        "primary_source": {
-          "source_name": "Halilit",
-          "source_url": "https://halilit.com",
-          "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.072346",
-          "extraction_method": "web_scraper",
-          "extraction_notes": "Scraped from turkish catalog"
-        },
-        "lineage": {},
-        "raw_snapshot": {
-          "halilit_id": "scraped-3223975140060749811",
-          "product_name": "Turkish Euphonic Ride 20\" Cymbal",
-          "brand": "Turkish",
-          "price_il": 0.0,
-          "price_eilat": 0.0,
-          "halilit_url": "https://halilit.com",
-          "sku": null,
-          "model_number": null,
-          "official_name": null,
-          "official_specs": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "official_description": null,
-          "official_images": [],
-          "official_url": null,
-          "reviews": [],
-          "review_synthesis": null,
-          "average_rating": null,
-          "status": "harvested",
-          "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.406006",
-          "last_updated": "2026-02-06T14:04:16.406006",
-          "taxonomy": {
-            "canonical_category": "Drums & Percussion",
-            "canonical_subcategory": "Percussion",
-            "brand_taxonomy": null,
-            "alt_categories": [],
-            "keywords": []
-          },
-          "pricing": {
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "price_usd": null,
-            "price_eur": null,
-            "tier": "entry",
-            "eilat_discount_percent": 0,
-            "suggested_tier": null,
-            "price_validity_marker": null,
-            "last_price_change": null,
-            "previous_price_il": null
-          },
-          "display": {
-            "display_role": "entry",
-            "hero_image": null,
-            "thumbnail_image": null,
-            "should_highlight": false,
-            "display_tier_level": 1,
-            "color_hint": "bg-gray-300",
-            "media_assets": []
-          },
-          "specifications": {
-            "keys": 88,
-            "action": "Hammer Action",
-            "polyphony": 128
-          },
-          "description_short": "",
-          "description_long": "",
-          "feature_list": [],
-          "sources": [],
-          "primary_source": {
-            "source_name": "Halilit",
-            "source_url": "https://halilit.com",
-            "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.405990",
-            "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
-          },
-          "lineage": {},
-          "raw_snapshot": {
-            "halilit_id": "scraped-3223975140060749811",
-            "product_name": "Turkish Euphonic Ride 20\" Cymbal",
-            "brand": "Turkish",
-            "price_il": 0.0,
-            "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/4573531-turkish-euphonic-ride-20-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
-            "official_specs": {
-              "keys": 88,
-              "action": "Hammer Action",
-              "polyphony": 128
-            },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
-            ],
-            "official_url": "https://brand.com/products/stage-88"
-          },
-          "data_completeness": 0.4210526315789473,
-          "quality_score": 0.4210526315789473,
-          "validation_status": "approved",
-          "validation_errors": [],
-          "validation_warnings": [
-            "⚠ Price is 0 (TBD)"
-          ],
-          "price": 0.0,
-          "currency": "ILS",
-          "image_hero": null,
-          "image_thumbnail": null,
-          "image_gallery": [],
-          "image_url": ""
-        },
-        "data_completeness": 0.4210526315789473,
-        "quality_score": 0.4210526315789473,
-        "validation_status": "approved",
-        "validation_errors": [],
-        "validation_warnings": [
-          "⚠ Price is 0 (TBD)"
-        ],
-        "price": 0.0,
-        "currency": "ILS",
-        "image_hero": null,
-        "image_thumbnail": null,
-        "image_gallery": [],
-        "image_url": ""
-      },
-      "data_completeness": 0.4210526315789473,
-      "quality_score": 0.4210526315789473,
-      "validation_status": "approved",
-      "validation_errors": [],
-      "validation_warnings": [
-        "⚠ Price is 0 (TBD)"
-      ],
-      "price": 0.0,
-      "currency": "ILS",
-      "image_hero": null,
-      "image_thumbnail": null,
-      "image_gallery": [],
-      "image_url": ""
-    },
-    "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
-    "validation_status": "approved",
-    "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2200,9 +2240,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Euphonic Ride 22\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -2212,8 +2251,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.470507",
-    "last_updated": "2026-02-06T17:51:05.470508",
+    "created_at": "2026-02-08T23:28:41.110266",
+    "last_updated": "2026-02-08T23:28:41.110266",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -2243,9 +2282,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Euphonic Ride 22\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -2255,7 +2293,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.470488",
+      "timestamp": "2026-02-08T23:28:41.110253",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -2283,8 +2321,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.422641",
-      "last_updated": "2026-02-06T17:26:37.422641",
+      "created_at": "2026-02-06T17:51:05.470507",
+      "last_updated": "2026-02-06T17:51:05.470508",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -2326,7 +2364,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.422631",
+        "timestamp": "2026-02-06T17:51:05.470488",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -2354,8 +2392,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.072825",
-        "last_updated": "2026-02-06T17:26:14.072826",
+        "created_at": "2026-02-06T17:26:37.422641",
+        "last_updated": "2026-02-06T17:26:37.422641",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -2397,7 +2435,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.072816",
+          "timestamp": "2026-02-06T17:26:37.422631",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -2405,7 +2443,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--8126723874840487455",
           "product_name": "Turkish Euphonic Ride 22\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2425,8 +2463,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.406685",
-          "last_updated": "2026-02-06T14:04:16.406685",
+          "created_at": "2026-02-06T17:26:14.072825",
+          "last_updated": "2026-02-06T17:26:14.072826",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -2468,9 +2506,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.406656",
+            "timestamp": "2026-02-06T17:26:14.072816",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2479,24 +2517,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/4573541-turkish-euphonic-ride-22-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.406685",
+            "last_updated": "2026-02-06T14:04:16.406685",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.406656",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--8126723874840487455",
+              "product_name": "Turkish Euphonic Ride 22\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/4573541-turkish-euphonic-ride-22-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2541,12 +2664,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2565,9 +2686,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Dark Hammer Ride 20\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -2577,8 +2697,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.471452",
-    "last_updated": "2026-02-06T17:51:05.471452",
+    "created_at": "2026-02-08T23:28:41.110423",
+    "last_updated": "2026-02-08T23:28:41.110423",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -2608,9 +2728,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Dark Hammer Ride 20\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -2620,7 +2739,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.471436",
+      "timestamp": "2026-02-08T23:28:41.110412",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -2648,8 +2767,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.422730",
-      "last_updated": "2026-02-06T17:26:37.422730",
+      "created_at": "2026-02-06T17:51:05.471452",
+      "last_updated": "2026-02-06T17:51:05.471452",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -2691,7 +2810,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.422724",
+        "timestamp": "2026-02-06T17:51:05.471436",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -2719,8 +2838,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.073047",
-        "last_updated": "2026-02-06T17:26:14.073047",
+        "created_at": "2026-02-06T17:26:37.422730",
+        "last_updated": "2026-02-06T17:26:37.422730",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -2762,7 +2881,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.073039",
+          "timestamp": "2026-02-06T17:26:37.422724",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -2770,7 +2889,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7114706970690409048",
           "product_name": "Turkish Dark Hammer Ride 20\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2790,8 +2909,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.406998",
-          "last_updated": "2026-02-06T14:04:16.406998",
+          "created_at": "2026-02-06T17:26:14.073047",
+          "last_updated": "2026-02-06T17:26:14.073047",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -2833,9 +2952,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.406983",
+            "timestamp": "2026-02-06T17:26:14.073039",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2844,24 +2963,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/827806-turkish-dark-hammer-ride-20-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.406998",
+            "last_updated": "2026-02-06T14:04:16.406998",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.406983",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7114706970690409048",
+              "product_name": "Turkish Dark Hammer Ride 20\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/827806-turkish-dark-hammer-ride-20-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2906,12 +3110,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,
@@ -2930,9 +3132,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Dark Hammer 18\" Crash"
     },
     "official_description": null,
     "official_images": [],
@@ -2942,8 +3143,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.474602",
-    "last_updated": "2026-02-06T17:51:05.474602",
+    "created_at": "2026-02-08T23:28:41.111629",
+    "last_updated": "2026-02-08T23:28:41.111630",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2973,9 +3174,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Dark Hammer 18\" Crash"
     },
     "description_short": "",
     "description_long": "",
@@ -2985,7 +3185,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.474585",
+      "timestamp": "2026-02-08T23:28:41.111616",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -3013,8 +3213,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.422810",
-      "last_updated": "2026-02-06T17:26:37.422810",
+      "created_at": "2026-02-06T17:51:05.474602",
+      "last_updated": "2026-02-06T17:51:05.474602",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3056,7 +3256,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.422804",
+        "timestamp": "2026-02-06T17:51:05.474585",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -3084,8 +3284,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.073142",
-        "last_updated": "2026-02-06T17:26:14.073142",
+        "created_at": "2026-02-06T17:26:37.422810",
+        "last_updated": "2026-02-06T17:26:37.422810",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3127,7 +3327,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.073136",
+          "timestamp": "2026-02-06T17:26:37.422804",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -3135,7 +3335,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-5862279823004339045",
           "product_name": "Turkish Dark Hammer 18\" Crash",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3155,8 +3355,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.407256",
-          "last_updated": "2026-02-06T14:04:16.407257",
+          "created_at": "2026-02-06T17:26:14.073142",
+          "last_updated": "2026-02-06T17:26:14.073142",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3198,9 +3398,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.407244",
+            "timestamp": "2026-02-06T17:26:14.073136",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3209,24 +3409,110 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/827835-turkish-dark-hammer-18-crash\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.407256",
+            "last_updated": "2026-02-06T14:04:16.407257",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.407244",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-5862279823004339045",
+              "product_name": "Turkish Dark Hammer 18\" Crash",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/827835-turkish-dark-hammer-18-crash\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3274,11 +3560,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3299,9 +3584,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Euphonic Crash 18\" Cymbal"
     },
     "official_description": null,
     "official_images": [],
@@ -3311,8 +3595,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:05.474741",
-    "last_updated": "2026-02-06T17:51:05.474741",
+    "created_at": "2026-02-08T23:28:41.112169",
+    "last_updated": "2026-02-08T23:28:41.112170",
     "taxonomy": {
       "canonical_category": "Drums & Percussion",
       "canonical_subcategory": "Percussion",
@@ -3342,9 +3626,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "Turkish Euphonic Crash 18\" Cymbal"
     },
     "description_short": "",
     "description_long": "",
@@ -3354,7 +3637,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:05.474730",
+      "timestamp": "2026-02-08T23:28:41.112138",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from turkish catalog"
     },
@@ -3382,8 +3665,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:37.422888",
-      "last_updated": "2026-02-06T17:26:37.422889",
+      "created_at": "2026-02-06T17:51:05.474741",
+      "last_updated": "2026-02-06T17:51:05.474741",
       "taxonomy": {
         "canonical_category": "Drums & Percussion",
         "canonical_subcategory": "Percussion",
@@ -3425,7 +3708,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:37.422883",
+        "timestamp": "2026-02-06T17:51:05.474730",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from turkish catalog"
       },
@@ -3453,8 +3736,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:14.073224",
-        "last_updated": "2026-02-06T17:26:14.073224",
+        "created_at": "2026-02-06T17:26:37.422888",
+        "last_updated": "2026-02-06T17:26:37.422889",
         "taxonomy": {
           "canonical_category": "Drums & Percussion",
           "canonical_subcategory": "Percussion",
@@ -3496,7 +3779,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:14.073219",
+          "timestamp": "2026-02-06T17:26:37.422883",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from turkish catalog"
         },
@@ -3504,7 +3787,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--707712816092726956",
           "product_name": "Turkish Euphonic Crash 18\" Cymbal",
-          "brand": "Turkish",
+          "brand": "turkish",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3524,8 +3807,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:04:16.407725",
-          "last_updated": "2026-02-06T14:04:16.407725",
+          "created_at": "2026-02-06T17:26:14.073224",
+          "last_updated": "2026-02-06T17:26:14.073224",
           "taxonomy": {
             "canonical_category": "Drums & Percussion",
             "canonical_subcategory": "Percussion",
@@ -3567,9 +3850,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:04:16.407709",
+            "timestamp": "2026-02-06T17:26:14.073219",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Turkish catalog"
+            "extraction_notes": "Scraped from turkish catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3578,24 +3861,109 @@
             "brand": "Turkish",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/827853-turkish-euphonic-crash-18-cymbal\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:04:16.407725",
+            "last_updated": "2026-02-06T14:04:16.407725",
+            "taxonomy": {
+              "canonical_category": "Drums & Percussion",
+              "canonical_subcategory": "Percussion",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:04:16.407709",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Turkish catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--707712816092726956",
+              "product_name": "Turkish Euphonic Crash 18\" Cymbal",
+              "brand": "Turkish",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/827853-turkish-euphonic-crash-18-cymbal\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3640,12 +4008,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
-    "validation_warnings": [
-      "⚠ Price is 0 (TBD)"
-    ],
+    "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
     "image_hero": null,

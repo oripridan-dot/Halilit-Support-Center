@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593280",
+  "brand": "santos martinez",
+  "timestamp": "2026-02-08T23:28:04.923303",
+  "execution_time_seconds": 4.535988,
+  "total_processed": 9,
+  "approved_count": 9,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 9,
+  "rejected_products_count": 0
+}

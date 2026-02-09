@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593255",
+  "brand": "rcf",
+  "timestamp": "2026-02-08T23:27:41.955026",
+  "execution_time_seconds": 6.878756,
+  "total_processed": 25,
+  "approved_count": 25,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 25,
+  "rejected_products_count": 0
+}

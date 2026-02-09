@@ -10,9 +10,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC207"
     },
     "official_description": null,
     "official_images": [],
@@ -22,8 +21,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.805242",
-    "last_updated": "2026-02-06T17:51:03.805242",
+    "created_at": "2026-02-08T23:25:08.482081",
+    "last_updated": "2026-02-08T23:25:08.482081",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -53,9 +52,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC207"
     },
     "description_short": "",
     "description_long": "",
@@ -65,7 +63,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.805213",
+      "timestamp": "2026-02-08T23:25:08.482061",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -93,8 +91,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.405610",
-      "last_updated": "2026-02-06T17:26:35.405611",
+      "created_at": "2026-02-06T17:51:03.805242",
+      "last_updated": "2026-02-06T17:51:03.805242",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -136,7 +134,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.405586",
+        "timestamp": "2026-02-06T17:51:03.805213",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -164,8 +162,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.337509",
-        "last_updated": "2026-02-06T17:26:12.337509",
+        "created_at": "2026-02-06T17:26:35.405610",
+        "last_updated": "2026-02-06T17:26:35.405611",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -207,7 +205,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.337491",
+          "timestamp": "2026-02-06T17:26:35.405586",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -215,7 +213,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-318753300757464845",
           "product_name": "מוניטור אולפני EVE Audio SC207",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -235,8 +233,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.144933",
-          "last_updated": "2026-02-06T14:01:56.144934",
+          "created_at": "2026-02-06T17:26:12.337509",
+          "last_updated": "2026-02-06T17:26:12.337509",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -278,9 +276,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.144911",
+            "timestamp": "2026-02-06T17:26:12.337491",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -289,24 +287,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7541248-eve-audio-sc207-black-edition\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.144933",
+            "last_updated": "2026-02-06T14:01:56.144934",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.144911",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-318753300757464845",
+              "product_name": "מוניטור אולפני EVE Audio SC207",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7541248-eve-audio-sc207-black-edition\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -354,11 +438,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -379,9 +462,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 28"
     },
     "official_description": null,
     "official_images": [],
@@ -391,8 +473,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.805841",
-    "last_updated": "2026-02-06T17:51:03.805842",
+    "created_at": "2026-02-08T23:25:08.483264",
+    "last_updated": "2026-02-08T23:25:08.483264",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -422,9 +504,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 28"
     },
     "description_short": "",
     "description_long": "",
@@ -434,7 +515,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.805820",
+      "timestamp": "2026-02-08T23:25:08.483247",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -462,8 +543,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.406153",
-      "last_updated": "2026-02-06T17:26:35.406153",
+      "created_at": "2026-02-06T17:51:03.805841",
+      "last_updated": "2026-02-06T17:51:03.805842",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -505,7 +586,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.406133",
+        "timestamp": "2026-02-06T17:51:03.805820",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -533,8 +614,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.338011",
-        "last_updated": "2026-02-06T17:26:12.338012",
+        "created_at": "2026-02-06T17:26:35.406153",
+        "last_updated": "2026-02-06T17:26:35.406153",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -576,7 +657,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.337995",
+          "timestamp": "2026-02-06T17:26:35.406133",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -584,7 +665,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--7946926760624146629",
           "product_name": "מוניטור אולפני EVE Audio EXO 28",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -604,8 +685,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.145438",
-          "last_updated": "2026-02-06T14:01:56.145439",
+          "created_at": "2026-02-06T17:26:12.338011",
+          "last_updated": "2026-02-06T17:26:12.338012",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -647,9 +728,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.145420",
+            "timestamp": "2026-02-06T17:26:12.337995",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -658,24 +739,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7972358-eve-audio-exo-28\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.145438",
+            "last_updated": "2026-02-06T14:01:56.145439",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.145420",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--7946926760624146629",
+              "product_name": "מוניטור אולפני EVE Audio EXO 28",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7972358-eve-audio-exo-28\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -723,11 +890,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -748,9 +914,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC205"
     },
     "official_description": null,
     "official_images": [],
@@ -760,8 +925,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.806263",
-    "last_updated": "2026-02-06T17:51:03.806263",
+    "created_at": "2026-02-08T23:25:08.483435",
+    "last_updated": "2026-02-08T23:25:08.483436",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -791,9 +956,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC205"
     },
     "description_short": "",
     "description_long": "",
@@ -803,7 +967,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.806246",
+      "timestamp": "2026-02-08T23:25:08.483423",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -831,8 +995,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.406607",
-      "last_updated": "2026-02-06T17:26:35.406607",
+      "created_at": "2026-02-06T17:51:03.806263",
+      "last_updated": "2026-02-06T17:51:03.806263",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -874,7 +1038,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.406593",
+        "timestamp": "2026-02-06T17:51:03.806246",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -902,8 +1066,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.338528",
-        "last_updated": "2026-02-06T17:26:12.338529",
+        "created_at": "2026-02-06T17:26:35.406607",
+        "last_updated": "2026-02-06T17:26:35.406607",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -945,7 +1109,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.338514",
+          "timestamp": "2026-02-06T17:26:35.406593",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -953,7 +1117,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7119646040919698843",
           "product_name": "מוניטור אולפני EVE Audio SC205",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -973,8 +1137,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.145799",
-          "last_updated": "2026-02-06T14:01:56.145799",
+          "created_at": "2026-02-06T17:26:12.338528",
+          "last_updated": "2026-02-06T17:26:12.338529",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1016,9 +1180,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.145786",
+            "timestamp": "2026-02-06T17:26:12.338514",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1027,24 +1191,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7541317-eve-audio-sc205-black-edition\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.145799",
+            "last_updated": "2026-02-06T14:01:56.145799",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.145786",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7119646040919698843",
+              "product_name": "מוניטור אולפני EVE Audio SC205",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7541317-eve-audio-sc205-black-edition\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1092,11 +1342,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1117,9 +1366,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC4070"
     },
     "official_description": null,
     "official_images": [],
@@ -1129,8 +1377,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.806404",
-    "last_updated": "2026-02-06T17:51:03.806405",
+    "created_at": "2026-02-08T23:25:08.484285",
+    "last_updated": "2026-02-08T23:25:08.484286",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1160,9 +1408,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC4070"
     },
     "description_short": "",
     "description_long": "",
@@ -1172,7 +1419,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.806393",
+      "timestamp": "2026-02-08T23:25:08.484272",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -1200,8 +1447,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.406852",
-      "last_updated": "2026-02-06T17:26:35.406852",
+      "created_at": "2026-02-06T17:51:03.806404",
+      "last_updated": "2026-02-06T17:51:03.806405",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1243,7 +1490,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.406839",
+        "timestamp": "2026-02-06T17:51:03.806393",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -1271,8 +1518,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.338786",
-        "last_updated": "2026-02-06T17:26:12.338786",
+        "created_at": "2026-02-06T17:26:35.406852",
+        "last_updated": "2026-02-06T17:26:35.406852",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1314,7 +1561,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.338772",
+          "timestamp": "2026-02-06T17:26:35.406839",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -1322,7 +1569,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--998516530613900698",
           "product_name": "מוניטור אולפני EVE Audio SC4070",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1342,8 +1589,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.145940",
-          "last_updated": "2026-02-06T14:01:56.145940",
+          "created_at": "2026-02-06T17:26:12.338786",
+          "last_updated": "2026-02-06T17:26:12.338786",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1385,9 +1632,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.145928",
+            "timestamp": "2026-02-06T17:26:12.338772",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1396,24 +1643,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/6884680-eve-audio-sc4070-active-studio-monitor\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.145940",
+            "last_updated": "2026-02-06T14:01:56.145940",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.145928",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--998516530613900698",
+              "product_name": "מוניטור אולפני EVE Audio SC4070",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/6884680-eve-audio-sc4070-active-studio-monitor\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1461,11 +1794,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1486,9 +1818,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 25"
     },
     "official_description": null,
     "official_images": [],
@@ -1498,8 +1829,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.807048",
-    "last_updated": "2026-02-06T17:51:03.807049",
+    "created_at": "2026-02-08T23:25:08.485009",
+    "last_updated": "2026-02-08T23:25:08.485009",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1529,9 +1860,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 25"
     },
     "description_short": "",
     "description_long": "",
@@ -1541,7 +1871,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.807033",
+      "timestamp": "2026-02-08T23:25:08.484994",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -1569,8 +1899,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.407150",
-      "last_updated": "2026-02-06T17:26:35.407150",
+      "created_at": "2026-02-06T17:51:03.807048",
+      "last_updated": "2026-02-06T17:51:03.807049",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1612,7 +1942,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.407137",
+        "timestamp": "2026-02-06T17:51:03.807033",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -1640,8 +1970,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.339181",
-        "last_updated": "2026-02-06T17:26:12.339182",
+        "created_at": "2026-02-06T17:26:35.407150",
+        "last_updated": "2026-02-06T17:26:35.407150",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -1683,7 +2013,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.339166",
+          "timestamp": "2026-02-06T17:26:35.407137",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -1691,7 +2021,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6069962455713989892",
           "product_name": "מוניטור אולפני EVE Audio EXO 25",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -1711,8 +2041,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.146493",
-          "last_updated": "2026-02-06T14:01:56.146493",
+          "created_at": "2026-02-06T17:26:12.339181",
+          "last_updated": "2026-02-06T17:26:12.339182",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -1754,9 +2084,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.146478",
+            "timestamp": "2026-02-06T17:26:12.339166",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -1765,24 +2095,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7971181-eve-audio-exo-25\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.146493",
+            "last_updated": "2026-02-06T14:01:56.146493",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.146478",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6069962455713989892",
+              "product_name": "מוניטור אולפני EVE Audio EXO 25",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7971181-eve-audio-exo-25\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -1830,11 +2246,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -1855,9 +2270,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC205"
     },
     "official_description": null,
     "official_images": [],
@@ -1867,8 +2281,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.807205",
-    "last_updated": "2026-02-06T17:51:03.807205",
+    "created_at": "2026-02-08T23:25:08.485339",
+    "last_updated": "2026-02-08T23:25:08.485339",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -1898,9 +2312,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC205"
     },
     "description_short": "",
     "description_long": "",
@@ -1910,7 +2323,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.807193",
+      "timestamp": "2026-02-08T23:25:08.485325",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -1938,8 +2351,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.407395",
-      "last_updated": "2026-02-06T17:26:35.407396",
+      "created_at": "2026-02-06T17:51:03.807205",
+      "last_updated": "2026-02-06T17:51:03.807205",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -1981,7 +2394,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.407381",
+        "timestamp": "2026-02-06T17:51:03.807193",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -2009,8 +2422,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.339766",
-        "last_updated": "2026-02-06T17:26:12.339767",
+        "created_at": "2026-02-06T17:26:35.407395",
+        "last_updated": "2026-02-06T17:26:35.407396",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2052,7 +2465,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.339752",
+          "timestamp": "2026-02-06T17:26:35.407381",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -2060,7 +2473,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7119646040919698843",
           "product_name": "מוניטור אולפני EVE Audio SC205",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2080,8 +2493,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.146612",
-          "last_updated": "2026-02-06T14:01:56.146612",
+          "created_at": "2026-02-06T17:26:12.339766",
+          "last_updated": "2026-02-06T17:26:12.339767",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2123,9 +2536,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.146602",
+            "timestamp": "2026-02-06T17:26:12.339752",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2134,24 +2547,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446338-eve-audio-sc205\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.146612",
+            "last_updated": "2026-02-06T14:01:56.146612",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.146602",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7119646040919698843",
+              "product_name": "מוניטור אולפני EVE Audio SC205",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446338-eve-audio-sc205\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2199,11 +2698,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2224,9 +2722,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 27"
     },
     "official_description": null,
     "official_images": [],
@@ -2236,8 +2733,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.807337",
-    "last_updated": "2026-02-06T17:51:03.807337",
+    "created_at": "2026-02-08T23:25:08.485981",
+    "last_updated": "2026-02-08T23:25:08.485982",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2267,9 +2764,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 27"
     },
     "description_short": "",
     "description_long": "",
@@ -2279,7 +2775,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.807326",
+      "timestamp": "2026-02-08T23:25:08.485968",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -2307,8 +2803,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.408005",
-      "last_updated": "2026-02-06T17:26:35.408005",
+      "created_at": "2026-02-06T17:51:03.807337",
+      "last_updated": "2026-02-06T17:51:03.807337",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2350,7 +2846,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.407989",
+        "timestamp": "2026-02-06T17:51:03.807326",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -2378,8 +2874,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.340062",
-        "last_updated": "2026-02-06T17:26:12.340062",
+        "created_at": "2026-02-06T17:26:35.408005",
+        "last_updated": "2026-02-06T17:26:35.408005",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2421,7 +2917,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.340048",
+          "timestamp": "2026-02-06T17:26:35.407989",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -2429,7 +2925,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-713603345406120748",
           "product_name": "מוניטור אולפני EVE Audio EXO 27",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2449,8 +2945,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.146712",
-          "last_updated": "2026-02-06T14:01:56.146713",
+          "created_at": "2026-02-06T17:26:12.340062",
+          "last_updated": "2026-02-06T17:26:12.340062",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2492,9 +2988,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.146704",
+            "timestamp": "2026-02-06T17:26:12.340048",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2503,24 +2999,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7971211-eve-audio-exo-27\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.146712",
+            "last_updated": "2026-02-06T14:01:56.146713",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.146704",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-713603345406120748",
+              "product_name": "מוניטור אולפני EVE Audio EXO 27",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7971211-eve-audio-exo-27\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2568,11 +3150,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2593,9 +3174,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 24"
     },
     "official_description": null,
     "official_images": [],
@@ -2605,8 +3185,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.807470",
-    "last_updated": "2026-02-06T17:51:03.807470",
+    "created_at": "2026-02-08T23:25:08.486308",
+    "last_updated": "2026-02-08T23:25:08.486308",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -2636,9 +3216,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio EXO 24"
     },
     "description_short": "",
     "description_long": "",
@@ -2648,7 +3227,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.807459",
+      "timestamp": "2026-02-08T23:25:08.486298",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -2676,8 +3255,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.408263",
-      "last_updated": "2026-02-06T17:26:35.408264",
+      "created_at": "2026-02-06T17:51:03.807470",
+      "last_updated": "2026-02-06T17:51:03.807470",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -2719,7 +3298,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.408250",
+        "timestamp": "2026-02-06T17:51:03.807459",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -2747,8 +3326,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.340458",
-        "last_updated": "2026-02-06T17:26:12.340458",
+        "created_at": "2026-02-06T17:26:35.408263",
+        "last_updated": "2026-02-06T17:26:35.408264",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -2790,7 +3369,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.340444",
+          "timestamp": "2026-02-06T17:26:35.408250",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -2798,7 +3377,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--95846701092064207",
           "product_name": "מוניטור אולפני EVE Audio EXO 24",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -2818,8 +3397,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.146812",
-          "last_updated": "2026-02-06T14:01:56.146812",
+          "created_at": "2026-02-06T17:26:12.340458",
+          "last_updated": "2026-02-06T17:26:12.340458",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -2861,9 +3440,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.146803",
+            "timestamp": "2026-02-06T17:26:12.340444",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -2872,24 +3451,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7971037-eve-audio-exo-24\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.146812",
+            "last_updated": "2026-02-06T14:01:56.146812",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.146803",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--95846701092064207",
+              "product_name": "מוניטור אולפני EVE Audio EXO 24",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7971037-eve-audio-exo-24\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -2937,11 +3602,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -2962,9 +3626,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC307"
     },
     "official_description": null,
     "official_images": [],
@@ -2974,8 +3637,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.808158",
-    "last_updated": "2026-02-06T17:51:03.808159",
+    "created_at": "2026-02-08T23:25:08.487351",
+    "last_updated": "2026-02-08T23:25:08.487352",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3005,9 +3668,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC307"
     },
     "description_short": "",
     "description_long": "",
@@ -3017,7 +3679,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.808144",
+      "timestamp": "2026-02-08T23:25:08.487337",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -3045,8 +3707,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.408696",
-      "last_updated": "2026-02-06T17:26:35.408696",
+      "created_at": "2026-02-06T17:51:03.808158",
+      "last_updated": "2026-02-06T17:51:03.808159",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3088,7 +3750,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.408682",
+        "timestamp": "2026-02-06T17:51:03.808144",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -3116,8 +3778,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.340705",
-        "last_updated": "2026-02-06T17:26:12.340705",
+        "created_at": "2026-02-06T17:26:35.408696",
+        "last_updated": "2026-02-06T17:26:35.408696",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3159,7 +3821,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.340692",
+          "timestamp": "2026-02-06T17:26:35.408682",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -3167,7 +3829,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7544755878353710734",
           "product_name": "מוניטור אולפני EVE Audio SC307",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3187,8 +3849,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.147451",
-          "last_updated": "2026-02-06T14:01:56.147451",
+          "created_at": "2026-02-06T17:26:12.340705",
+          "last_updated": "2026-02-06T17:26:12.340705",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3230,9 +3892,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.147435",
+            "timestamp": "2026-02-06T17:26:12.340692",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3241,24 +3903,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446333-eve-audio-sc307\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.147451",
+            "last_updated": "2026-02-06T14:01:56.147451",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.147435",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7544755878353710734",
+              "product_name": "מוניטור אולפני EVE Audio SC307",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446333-eve-audio-sc307\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3306,11 +4054,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3331,9 +4078,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC2070"
     },
     "official_description": null,
     "official_images": [],
@@ -3343,8 +4089,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.808297",
-    "last_updated": "2026-02-06T17:51:03.808298",
+    "created_at": "2026-02-08T23:25:08.487528",
+    "last_updated": "2026-02-08T23:25:08.487529",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3374,9 +4120,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC2070"
     },
     "description_short": "",
     "description_long": "",
@@ -3386,7 +4131,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.808286",
+      "timestamp": "2026-02-08T23:25:08.487515",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -3414,8 +4159,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.408968",
-      "last_updated": "2026-02-06T17:26:35.408968",
+      "created_at": "2026-02-06T17:51:03.808297",
+      "last_updated": "2026-02-06T17:51:03.808298",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3457,7 +4202,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.408954",
+        "timestamp": "2026-02-06T17:51:03.808286",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -3485,8 +4230,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.340940",
-        "last_updated": "2026-02-06T17:26:12.340941",
+        "created_at": "2026-02-06T17:26:35.408968",
+        "last_updated": "2026-02-06T17:26:35.408968",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3528,7 +4273,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.340928",
+          "timestamp": "2026-02-06T17:26:35.408954",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -3536,7 +4281,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-6942151985721718884",
           "product_name": "מוניטור אולפני EVE Audio SC2070",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3556,8 +4301,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.147576",
-          "last_updated": "2026-02-06T14:01:56.147576",
+          "created_at": "2026-02-06T17:26:12.340940",
+          "last_updated": "2026-02-06T17:26:12.340941",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3599,9 +4344,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.147566",
+            "timestamp": "2026-02-06T17:26:12.340928",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3610,24 +4355,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/5570980-eve-audio-sc2070\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.147576",
+            "last_updated": "2026-02-06T14:01:56.147576",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.147566",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-6942151985721718884",
+              "product_name": "מוניטור אולפני EVE Audio SC2070",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/5570980-eve-audio-sc2070\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -3675,11 +4506,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -3700,9 +4530,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "זוג מוניטורים EVE Audio SC203"
     },
     "official_description": null,
     "official_images": [],
@@ -3712,8 +4541,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.808416",
-    "last_updated": "2026-02-06T17:51:03.808417",
+    "created_at": "2026-02-08T23:25:08.487988",
+    "last_updated": "2026-02-08T23:25:08.487989",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -3743,9 +4572,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "זוג מוניטורים EVE Audio SC203"
     },
     "description_short": "",
     "description_long": "",
@@ -3755,7 +4583,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.808407",
+      "timestamp": "2026-02-08T23:25:08.487963",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -3783,8 +4611,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.409325",
-      "last_updated": "2026-02-06T17:26:35.409326",
+      "created_at": "2026-02-06T17:51:03.808416",
+      "last_updated": "2026-02-06T17:51:03.808417",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -3826,7 +4654,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.409311",
+        "timestamp": "2026-02-06T17:51:03.808407",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -3854,8 +4682,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.341308",
-        "last_updated": "2026-02-06T17:26:12.341309",
+        "created_at": "2026-02-06T17:26:35.409325",
+        "last_updated": "2026-02-06T17:26:35.409326",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -3897,7 +4725,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.341295",
+          "timestamp": "2026-02-06T17:26:35.409311",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -3905,7 +4733,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--3402984347621736582",
           "product_name": "זוג מוניטורים EVE Audio SC203",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -3925,8 +4753,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.147683",
-          "last_updated": "2026-02-06T14:01:56.147683",
+          "created_at": "2026-02-06T17:26:12.341308",
+          "last_updated": "2026-02-06T17:26:12.341309",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -3968,9 +4796,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.147673",
+            "timestamp": "2026-02-06T17:26:12.341295",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -3979,24 +4807,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/511514-eve-audio-sc203\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.147683",
+            "last_updated": "2026-02-06T14:01:56.147683",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.147673",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--3402984347621736582",
+              "product_name": "זוג מוניטורים EVE Audio SC203",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/511514-eve-audio-sc203\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4044,11 +4958,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4069,9 +4982,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC208"
     },
     "official_description": null,
     "official_images": [],
@@ -4081,8 +4993,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.808551",
-    "last_updated": "2026-02-06T17:51:03.808552",
+    "created_at": "2026-02-08T23:25:08.488986",
+    "last_updated": "2026-02-08T23:25:08.488987",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4112,9 +5024,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC208"
     },
     "description_short": "",
     "description_long": "",
@@ -4124,7 +5035,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.808541",
+      "timestamp": "2026-02-08T23:25:08.488973",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -4152,8 +5063,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.409660",
-      "last_updated": "2026-02-06T17:26:35.409660",
+      "created_at": "2026-02-06T17:51:03.808551",
+      "last_updated": "2026-02-06T17:51:03.808552",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4195,7 +5106,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.409645",
+        "timestamp": "2026-02-06T17:51:03.808541",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -4223,8 +5134,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.341632",
-        "last_updated": "2026-02-06T17:26:12.341632",
+        "created_at": "2026-02-06T17:26:35.409660",
+        "last_updated": "2026-02-06T17:26:35.409660",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4266,7 +5177,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.341618",
+          "timestamp": "2026-02-06T17:26:35.409645",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -4274,7 +5185,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-1587406004667104438",
           "product_name": "מוניטור אולפני EVE Audio SC208",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4294,8 +5205,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.147784",
-          "last_updated": "2026-02-06T14:01:56.147784",
+          "created_at": "2026-02-06T17:26:12.341632",
+          "last_updated": "2026-02-06T17:26:12.341632",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4337,9 +5248,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.147774",
+            "timestamp": "2026-02-06T17:26:12.341618",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4348,24 +5259,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446335-eve-audio-sc208\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.147784",
+            "last_updated": "2026-02-06T14:01:56.147784",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.147774",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-1587406004667104438",
+              "product_name": "מוניטור אולפני EVE Audio SC208",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446335-eve-audio-sc208\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4413,11 +5410,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4438,9 +5434,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC207"
     },
     "official_description": null,
     "official_images": [],
@@ -4450,8 +5445,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.808669",
-    "last_updated": "2026-02-06T17:51:03.808669",
+    "created_at": "2026-02-08T23:25:08.489135",
+    "last_updated": "2026-02-08T23:25:08.489135",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4481,9 +5476,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC207"
     },
     "description_short": "",
     "description_long": "",
@@ -4493,7 +5487,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.808659",
+      "timestamp": "2026-02-08T23:25:08.489126",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -4521,8 +5515,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.410010",
-      "last_updated": "2026-02-06T17:26:35.410011",
+      "created_at": "2026-02-06T17:51:03.808669",
+      "last_updated": "2026-02-06T17:51:03.808669",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4564,7 +5558,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.409997",
+        "timestamp": "2026-02-06T17:51:03.808659",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -4592,8 +5586,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.342006",
-        "last_updated": "2026-02-06T17:26:12.342006",
+        "created_at": "2026-02-06T17:26:35.410010",
+        "last_updated": "2026-02-06T17:26:35.410011",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -4635,7 +5629,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.341992",
+          "timestamp": "2026-02-06T17:26:35.409997",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -4643,7 +5637,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-318753300757464845",
           "product_name": "מוניטור אולפני EVE Audio SC207",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -4663,8 +5657,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.147906",
-          "last_updated": "2026-02-06T14:01:56.147907",
+          "created_at": "2026-02-06T17:26:12.342006",
+          "last_updated": "2026-02-06T17:26:12.342006",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -4706,9 +5700,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.147896",
+            "timestamp": "2026-02-06T17:26:12.341992",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -4717,24 +5711,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446336-eve-audio-sc207\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.147906",
+            "last_updated": "2026-02-06T14:01:56.147907",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.147896",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-318753300757464845",
+              "product_name": "מוניטור אולפני EVE Audio SC207",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446336-eve-audio-sc207\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -4782,11 +5862,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -4807,9 +5886,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC204"
     },
     "official_description": null,
     "official_images": [],
@@ -4819,8 +5897,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.809498",
-    "last_updated": "2026-02-06T17:51:03.809498",
+    "created_at": "2026-02-08T23:25:08.489303",
+    "last_updated": "2026-02-08T23:25:08.489304",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -4850,9 +5928,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC204"
     },
     "description_short": "",
     "description_long": "",
@@ -4862,7 +5939,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.809484",
+      "timestamp": "2026-02-08T23:25:08.489292",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -4890,8 +5967,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.410250",
-      "last_updated": "2026-02-06T17:26:35.410251",
+      "created_at": "2026-02-06T17:51:03.809498",
+      "last_updated": "2026-02-06T17:51:03.809498",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -4933,7 +6010,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.410237",
+        "timestamp": "2026-02-06T17:51:03.809484",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -4961,8 +6038,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.342252",
-        "last_updated": "2026-02-06T17:26:12.342252",
+        "created_at": "2026-02-06T17:26:35.410250",
+        "last_updated": "2026-02-06T17:26:35.410251",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5004,7 +6081,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.342238",
+          "timestamp": "2026-02-06T17:26:35.410237",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -5012,7 +6089,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--1353896732773860824",
           "product_name": "מוניטור אולפני EVE Audio SC204",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5032,8 +6109,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.148547",
-          "last_updated": "2026-02-06T14:01:56.148547",
+          "created_at": "2026-02-06T17:26:12.342252",
+          "last_updated": "2026-02-06T17:26:12.342252",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5075,9 +6152,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.148529",
+            "timestamp": "2026-02-06T17:26:12.342238",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5086,24 +6163,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446339-eve-audio-sc204\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.148547",
+            "last_updated": "2026-02-06T14:01:56.148547",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.148529",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--1353896732773860824",
+              "product_name": "מוניטור אולפני EVE Audio SC204",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446339-eve-audio-sc204\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5151,11 +6314,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5176,9 +6338,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC305"
     },
     "official_description": null,
     "official_images": [],
@@ -5188,8 +6349,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.809754",
-    "last_updated": "2026-02-06T17:51:03.809754",
+    "created_at": "2026-02-08T23:25:08.490638",
+    "last_updated": "2026-02-08T23:25:08.490639",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5219,9 +6380,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC305"
     },
     "description_short": "",
     "description_long": "",
@@ -5231,7 +6391,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.809738",
+      "timestamp": "2026-02-08T23:25:08.490623",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -5259,8 +6419,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.410673",
-      "last_updated": "2026-02-06T17:26:35.410674",
+      "created_at": "2026-02-06T17:51:03.809754",
+      "last_updated": "2026-02-06T17:51:03.809754",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5302,7 +6462,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.410659",
+        "timestamp": "2026-02-06T17:51:03.809738",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -5330,8 +6490,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.342625",
-        "last_updated": "2026-02-06T17:26:12.342626",
+        "created_at": "2026-02-06T17:26:35.410673",
+        "last_updated": "2026-02-06T17:26:35.410674",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5373,7 +6533,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.342612",
+          "timestamp": "2026-02-06T17:26:35.410659",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -5381,7 +6541,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--6729737298011541000",
           "product_name": "מוניטור אולפני EVE Audio SC305",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5401,8 +6561,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.148984",
-          "last_updated": "2026-02-06T14:01:56.148985",
+          "created_at": "2026-02-06T17:26:12.342625",
+          "last_updated": "2026-02-06T17:26:12.342626",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5444,9 +6604,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.148970",
+            "timestamp": "2026-02-06T17:26:12.342612",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5455,24 +6615,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/446334-eve-audio-sc305\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.148984",
+            "last_updated": "2026-02-06T14:01:56.148985",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.148970",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--6729737298011541000",
+              "product_name": "מוניטור אולפני EVE Audio SC305",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/446334-eve-audio-sc305\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5520,11 +6766,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5545,9 +6790,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC407"
     },
     "official_description": null,
     "official_images": [],
@@ -5557,8 +6801,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.810048",
-    "last_updated": "2026-02-06T17:51:03.810048",
+    "created_at": "2026-02-08T23:25:08.491292",
+    "last_updated": "2026-02-08T23:25:08.491292",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5588,9 +6832,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC407"
     },
     "description_short": "",
     "description_long": "",
@@ -5600,7 +6843,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.810017",
+      "timestamp": "2026-02-08T23:25:08.491278",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -5628,8 +6871,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.410826",
-      "last_updated": "2026-02-06T17:26:35.410826",
+      "created_at": "2026-02-06T17:51:03.810048",
+      "last_updated": "2026-02-06T17:51:03.810048",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -5671,7 +6914,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.410814",
+        "timestamp": "2026-02-06T17:51:03.810017",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -5699,8 +6942,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.342871",
-        "last_updated": "2026-02-06T17:26:12.342872",
+        "created_at": "2026-02-06T17:26:35.410826",
+        "last_updated": "2026-02-06T17:26:35.410826",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -5742,7 +6985,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.342859",
+          "timestamp": "2026-02-06T17:26:35.410814",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -5750,7 +6993,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-7299018489107280425",
           "product_name": "מוניטור אולפני EVE Audio SC407",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -5770,8 +7013,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.149144",
-          "last_updated": "2026-02-06T14:01:56.149144",
+          "created_at": "2026-02-06T17:26:12.342871",
+          "last_updated": "2026-02-06T17:26:12.342872",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -5813,9 +7056,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.149132",
+            "timestamp": "2026-02-06T17:26:12.342859",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -5824,24 +7067,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/1270314-eve-audio-sc407-monitor\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.149144",
+            "last_updated": "2026-02-06T14:01:56.149144",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.149132",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-7299018489107280425",
+              "product_name": "מוניטור אולפני EVE Audio SC407",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1270314-eve-audio-sc407-monitor\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -5889,11 +7218,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -5914,9 +7242,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC408"
     },
     "official_description": null,
     "official_images": [],
@@ -5926,8 +7253,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.810519",
-    "last_updated": "2026-02-06T17:51:03.810519",
+    "created_at": "2026-02-08T23:25:08.491461",
+    "last_updated": "2026-02-08T23:25:08.491461",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -5957,9 +7284,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני EVE Audio SC408"
     },
     "description_short": "",
     "description_long": "",
@@ -5969,7 +7295,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.810504",
+      "timestamp": "2026-02-08T23:25:08.491450",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -5997,8 +7323,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.410956",
-      "last_updated": "2026-02-06T17:26:35.410957",
+      "created_at": "2026-02-06T17:51:03.810519",
+      "last_updated": "2026-02-06T17:51:03.810519",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -6040,7 +7366,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.410947",
+        "timestamp": "2026-02-06T17:51:03.810504",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -6068,8 +7394,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.343223",
-        "last_updated": "2026-02-06T17:26:12.343224",
+        "created_at": "2026-02-06T17:26:35.410956",
+        "last_updated": "2026-02-06T17:26:35.410957",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6111,7 +7437,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.343209",
+          "timestamp": "2026-02-06T17:26:35.410947",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -6119,7 +7445,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped--9079215900162699945",
           "product_name": "מוניטור אולפני EVE Audio SC408",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -6139,8 +7465,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.149544",
-          "last_updated": "2026-02-06T14:01:56.149544",
+          "created_at": "2026-02-06T17:26:12.343223",
+          "last_updated": "2026-02-06T17:26:12.343224",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -6182,9 +7508,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.149533",
+            "timestamp": "2026-02-06T17:26:12.343209",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -6193,24 +7519,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/1396566-eve-audio-sc408-monitor\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.149544",
+            "last_updated": "2026-02-06T14:01:56.149544",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.149533",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped--9079215900162699945",
+              "product_name": "מוניטור אולפני EVE Audio SC408",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/1396566-eve-audio-sc408-monitor\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -6258,11 +7670,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,
@@ -6283,9 +7694,8 @@
     "model_number": null,
     "official_name": null,
     "official_specs": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני צד שמאל EVE Audio SC3070"
     },
     "official_description": null,
     "official_images": [],
@@ -6295,8 +7705,8 @@
     "average_rating": null,
     "status": "harvested",
     "pipeline_phase": "harvest",
-    "created_at": "2026-02-06T17:51:03.810949",
-    "last_updated": "2026-02-06T17:51:03.810950",
+    "created_at": "2026-02-08T23:25:08.491595",
+    "last_updated": "2026-02-08T23:25:08.491595",
     "taxonomy": {
       "canonical_category": "Other",
       "canonical_subcategory": "Uncategorized",
@@ -6326,9 +7736,8 @@
       "media_assets": []
     },
     "specifications": {
-      "keys": 88,
-      "action": "Hammer Action",
-      "polyphony": 128
+      "note": "Standardized via Halilit Commercial Source",
+      "extracted_name": "מוניטור אולפני צד שמאל EVE Audio SC3070"
     },
     "description_short": "",
     "description_long": "",
@@ -6338,7 +7747,7 @@
       "source_name": "Halilit",
       "source_url": "https://halilit.com",
       "confidence": "commercial",
-      "timestamp": "2026-02-06T17:51:03.810934",
+      "timestamp": "2026-02-08T23:25:08.491586",
       "extraction_method": "web_scraper",
       "extraction_notes": "Scraped from eve audio catalog"
     },
@@ -6366,8 +7775,8 @@
       "average_rating": null,
       "status": "harvested",
       "pipeline_phase": "harvest",
-      "created_at": "2026-02-06T17:26:35.411080",
-      "last_updated": "2026-02-06T17:26:35.411080",
+      "created_at": "2026-02-06T17:51:03.810949",
+      "last_updated": "2026-02-06T17:51:03.810950",
       "taxonomy": {
         "canonical_category": "Other",
         "canonical_subcategory": "Uncategorized",
@@ -6409,7 +7818,7 @@
         "source_name": "Halilit",
         "source_url": "https://halilit.com",
         "confidence": "commercial",
-        "timestamp": "2026-02-06T17:26:35.411069",
+        "timestamp": "2026-02-06T17:51:03.810934",
         "extraction_method": "web_scraper",
         "extraction_notes": "Scraped from eve audio catalog"
       },
@@ -6437,8 +7846,8 @@
         "average_rating": null,
         "status": "harvested",
         "pipeline_phase": "harvest",
-        "created_at": "2026-02-06T17:26:12.343650",
-        "last_updated": "2026-02-06T17:26:12.343650",
+        "created_at": "2026-02-06T17:26:35.411080",
+        "last_updated": "2026-02-06T17:26:35.411080",
         "taxonomy": {
           "canonical_category": "Other",
           "canonical_subcategory": "Uncategorized",
@@ -6480,7 +7889,7 @@
           "source_name": "Halilit",
           "source_url": "https://halilit.com",
           "confidence": "commercial",
-          "timestamp": "2026-02-06T17:26:12.343636",
+          "timestamp": "2026-02-06T17:26:35.411069",
           "extraction_method": "web_scraper",
           "extraction_notes": "Scraped from eve audio catalog"
         },
@@ -6488,7 +7897,7 @@
         "raw_snapshot": {
           "halilit_id": "scraped-4184567028779862030",
           "product_name": "מוניטור אולפני צד שמאל EVE Audio SC3070",
-          "brand": "Eve Audio",
+          "brand": "eve audio",
           "price_il": 0.0,
           "price_eilat": 0.0,
           "halilit_url": "https://halilit.com",
@@ -6508,8 +7917,8 @@
           "average_rating": null,
           "status": "harvested",
           "pipeline_phase": "harvest",
-          "created_at": "2026-02-06T14:01:56.149807",
-          "last_updated": "2026-02-06T14:01:56.149807",
+          "created_at": "2026-02-06T17:26:12.343650",
+          "last_updated": "2026-02-06T17:26:12.343650",
           "taxonomy": {
             "canonical_category": "Other",
             "canonical_subcategory": "Uncategorized",
@@ -6551,9 +7960,9 @@
             "source_name": "Halilit",
             "source_url": "https://halilit.com",
             "confidence": "commercial",
-            "timestamp": "2026-02-06T14:01:56.149793",
+            "timestamp": "2026-02-06T17:26:12.343636",
             "extraction_method": "web_scraper",
-            "extraction_notes": "Scraped from Eve Audio catalog"
+            "extraction_notes": "Scraped from eve audio catalog"
           },
           "lineage": {},
           "raw_snapshot": {
@@ -6562,24 +7971,110 @@
             "brand": "Eve Audio",
             "price_il": 0.0,
             "price_eilat": 0.0,
-            "halilit_url": "https://www.halilit.com  /items/7995849-eve-audio-sc3070-studio-monitor\n",
-            "pipeline_phase": "enrich",
-            "status": "harvested",
+            "halilit_url": "https://halilit.com",
+            "sku": null,
+            "model_number": null,
+            "official_name": null,
             "official_specs": {
               "keys": 88,
               "action": "Hammer Action",
               "polyphony": 128
             },
-            "official_description": "The ultimate stage piano for professionals.",
-            "official_images": [
-              {
-                "type": "image",
-                "url": "https://brand.com/hero.jpg",
-                "display_purpose": "hero",
-                "source": "official"
-              }
+            "official_description": null,
+            "official_images": [],
+            "official_url": null,
+            "reviews": [],
+            "review_synthesis": null,
+            "average_rating": null,
+            "status": "harvested",
+            "pipeline_phase": "harvest",
+            "created_at": "2026-02-06T14:01:56.149807",
+            "last_updated": "2026-02-06T14:01:56.149807",
+            "taxonomy": {
+              "canonical_category": "Other",
+              "canonical_subcategory": "Uncategorized",
+              "brand_taxonomy": null,
+              "alt_categories": [],
+              "keywords": []
+            },
+            "pricing": {
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "price_usd": null,
+              "price_eur": null,
+              "tier": "entry",
+              "eilat_discount_percent": 0,
+              "suggested_tier": null,
+              "price_validity_marker": null,
+              "last_price_change": null,
+              "previous_price_il": null
+            },
+            "display": {
+              "display_role": "entry",
+              "hero_image": null,
+              "thumbnail_image": null,
+              "should_highlight": false,
+              "display_tier_level": 1,
+              "color_hint": "bg-gray-300",
+              "media_assets": []
+            },
+            "specifications": {
+              "keys": 88,
+              "action": "Hammer Action",
+              "polyphony": 128
+            },
+            "description_short": "",
+            "description_long": "",
+            "feature_list": [],
+            "sources": [],
+            "primary_source": {
+              "source_name": "Halilit",
+              "source_url": "https://halilit.com",
+              "confidence": "commercial",
+              "timestamp": "2026-02-06T14:01:56.149793",
+              "extraction_method": "web_scraper",
+              "extraction_notes": "Scraped from Eve Audio catalog"
+            },
+            "lineage": {},
+            "raw_snapshot": {
+              "halilit_id": "scraped-4184567028779862030",
+              "product_name": "מוניטור אולפני צד שמאל EVE Audio SC3070",
+              "brand": "Eve Audio",
+              "price_il": 0.0,
+              "price_eilat": 0.0,
+              "halilit_url": "https://www.halilit.com  /items/7995849-eve-audio-sc3070-studio-monitor\n",
+              "pipeline_phase": "enrich",
+              "status": "harvested",
+              "official_specs": {
+                "keys": 88,
+                "action": "Hammer Action",
+                "polyphony": 128
+              },
+              "official_description": "The ultimate stage piano for professionals.",
+              "official_images": [
+                {
+                  "type": "image",
+                  "url": "https://brand.com/hero.jpg",
+                  "display_purpose": "hero",
+                  "source": "official"
+                }
+              ],
+              "official_url": "https://brand.com/products/stage-88"
+            },
+            "data_completeness": 0.4210526315789473,
+            "quality_score": 0.4210526315789473,
+            "validation_status": "approved",
+            "validation_errors": [],
+            "validation_warnings": [
+              "⚠ Price is 0 (TBD)",
+              "⚠ Category may not be standard: Other > Uncategorized"
             ],
-            "official_url": "https://brand.com/products/stage-88"
+            "price": 0.0,
+            "currency": "ILS",
+            "image_hero": null,
+            "image_thumbnail": null,
+            "image_gallery": [],
+            "image_url": ""
           },
           "data_completeness": 0.4210526315789473,
           "quality_score": 0.4210526315789473,
@@ -6627,11 +8122,10 @@
       "image_url": ""
     },
     "data_completeness": 0.4210526315789473,
-    "quality_score": 0.4210526315789473,
+    "quality_score": 100.0,
     "validation_status": "approved",
     "validation_errors": [],
     "validation_warnings": [
-      "⚠ Price is 0 (TBD)",
       "⚠ Category may not be standard: Other > Uncategorized"
     ],
     "price": 0.0,

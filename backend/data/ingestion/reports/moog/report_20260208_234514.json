@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770594311",
+  "brand": "moog",
+  "timestamp": "2026-02-08T23:45:14.492459",
+  "execution_time_seconds": 3.134071,
+  "total_processed": 13,
+  "approved_count": 13,
+  "rejected_count": 0,
+  "recommendations": [
+    "\u2705 Pipeline running smoothly - no issues detected"
+  ],
+  "approved_products_count": 13,
+  "rejected_products_count": 0
+}

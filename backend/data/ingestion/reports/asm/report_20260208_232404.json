@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_1770593039",
+  "brand": "asm",
+  "timestamp": "2026-02-08T23:24:04.007696",
+  "execution_time_seconds": 4.561669,
+  "total_processed": 16,
+  "approved_count": 16,
+  "rejected_count": 0,
+  "recommendations": [
+    "Consider enriching data (avg completeness: 42%)"
+  ],
+  "approved_products_count": 16,
+  "rejected_products_count": 0
+}
