@@ -17,7 +17,9 @@ import logging
 import os
 import re
 import hashlib
-from datetime import datetime
+import time
+import threading
+from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Any, Callable, Tuple
 from dataclasses import dataclass, asdict
 from enum import Enum
@@ -25,6 +27,7 @@ from functools import wraps
 from dotenv import load_dotenv
 from google import genai
 from pydantic import BaseModel, Field
+from collections import deque
 
 load_dotenv()
 
@@ -35,6 +38,302 @@ try:
     genai_client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 except Exception:
     genai_client = None
+
+# ============================================================================
+# SECTION 0.5: RATE LIMITING & SOURCE TRACEABILITY (NEW v7.6)
+# ============================================================================
+
+@dataclass
+class SourceReference:
+    """Tracks the source of a verification or data enrichment"""
+    source_type: str  # "url", "api", "manufacturer_data", "internal_db"
+    source_url: Optional[str] = None  # URL if applicable
+    source_snippet: Optional[str] = None  # Relevant text/data snippet (max 500 chars)
+    extraction_method: str = "scrape"  # How the data was extracted
+    timestamp: str = ""  # When it was extracted
+    confidence: float = 1.0  # 0.0-1.0, confidence in this source
+    
+    def __post_init__(self):
+        if not self.timestamp:
+            self.timestamp = datetime.now().isoformat()
+        if self.source_snippet and len(self.source_snippet) > 500:
+            self.source_snippet = self.source_snippet[:497] + "..."
+
+
+@dataclass
+class VerificationTrace:
+    """Complete traceability for a verification decision"""
+    verification_id: str
+    product_id: str
+    verified_field: str  # E.g., "official_price", "manufacturer_name"
+    verified_value: Any
+    sources: List[SourceReference] = None
+    verification_timestamp: str = ""
+    auditor_agent: str = ""
+    is_approved: bool = False
+    confidence_score: float = 0.0
+    
+    def __post_init__(self):
+        if self.sources is None:
+            self.sources = []
+        if not self.verification_timestamp:
+            self.verification_timestamp = datetime.now().isoformat()
+    
+    def add_source(self, source: SourceReference) -> None:
+        """Register a source for this verification"""
+        self.sources.append(source)
+    
+    def source_summary(self) -> Dict[str, Any]:
+        """Summary of all sources used in this verification"""
+        return {
+            "total_sources": len(self.sources),
+            "primary_source": self.sources[0].source_type if self.sources else None,
+            "sources": [
+                {
+                    "type": s.source_type,
+                    "url": s.source_url,
+                    "confidence": s.confidence,
+                    "timestamp": s.timestamp
+                }
+                for s in self.sources
+            ]
+        }
+
+
+class RateLimiter:
+    """
+    Production-grade rate limiter for Gemini API calls.
+    
+    Implements:
+    - Token bucket algorithm for request rate limiting
+    - Exponential backoff on API errors
+    - Per-agent request tracking
+    - Quota monitoring
+    
+    Usage:
+        limiter = RateLimiter(max_requests_per_minute=60)
+        limiter.wait_if_needed('CommercialScout')
+        # Make API call
+        limiter.record_success('CommercialScout')
+        # OR on failure:
+        limiter.record_failure('CommercialScout', error_code=429)
+    """
+    
+    def __init__(self, max_requests_per_minute: int = 60, 
+                 max_requests_per_day: int = 10000):
+        """
+        Initialize rate limiter.
+        
+        Args:
+            max_requests_per_minute: RPM quota (Gemini 2.0 Flash default)
+            max_requests_per_day: Daily quota
+        """
+        self.max_rpm = max_requests_per_minute
+        self.max_daily = max_requests_per_day
+        self.request_times = deque()  # Track all requests
+        self.agent_backoff = {}  # Per-agent backoff timers
+        self.agent_request_count = {}  # Per-agent request count
+        self.last_reset_time = datetime.now()
+        self.lock = threading.Lock()
+        
+        logger.info(f"🚦 RateLimiter initialized: {max_requests_per_minute} RPM, "
+                   f"{max_requests_per_day} daily")
+    
+    def wait_if_needed(self, agent_name: str) -> float:
+        """
+        Check if we need to wait before making a request.
+        Returns the wait time in seconds (0 if no wait needed).
+        
+        Implements exponential backoff on consecutive failures.
+        """
+        with self.lock:
+            # Check agent-specific backoff
+            if agent_name in self.agent_backoff:
+                backoff_until = self.agent_backoff[agent_name]
+                wait_time = (backoff_until - datetime.now()).total_seconds()
+                if wait_time > 0:
+                    logger.warning(f"⏱️  [{agent_name}] Backoff active. "
+                                 f"Waiting {wait_time:.1f}s")
+                    return wait_time
+                else:
+                    # Backoff expired, remove it
+                    del self.agent_backoff[agent_name]
+            
+            # Check global rate limit (token bucket)
+            now = datetime.now()
+            minute_ago = now - timedelta(minutes=1)
+            
+            # Remove requests older than 1 minute
+            while self.request_times and self.request_times[0] < minute_ago:
+                self.request_times.popleft()
+            
+            # If we're at the limit, calculate wait time
+            if len(self.request_times) >= self.max_rpm:
+                oldest_request = self.request_times[0]
+                reset_time = oldest_request + timedelta(minutes=1)
+                wait_seconds = (reset_time - now).total_seconds()
+                
+                logger.info(f"🚦 Rate limit reached ({self.max_rpm} RPM). "
+                          f"Waiting {wait_seconds:.1f}s")
+                return wait_seconds
+            
+            return 0.0
+    
+    def record_request(self, agent_name: str) -> None:
+        """Record that a request was made"""
+        with self.lock:
+            self.request_times.append(datetime.now())
+            self.agent_request_count[agent_name] = \
+                self.agent_request_count.get(agent_name, 0) + 1
+    
+    def record_success(self, agent_name: str) -> None:
+        """Record successful API call. Resets backoff timer."""
+        with self.lock:
+            # Clear backoff on success
+            if agent_name in self.agent_backoff:
+                del self.agent_backoff[agent_name]
+                logger.info(f"✅ [{agent_name}] Backoff cleared (success)")
+    
+    def record_failure(self, agent_name: str, error_code: Optional[int] = None,
+                      retry_after: Optional[float] = None) -> None:
+        """
+        Record API failure and apply exponential backoff.
+        
+        Args:
+            agent_name: Which agent failed
+            error_code: HTTP error code (429 = rate limit, 503 = service unavailable)
+            retry_after: Server-suggested retry delay (seconds)
+        """
+        with self.lock:
+            # Get current backoff level
+            current_backoff = self.agent_backoff.get(agent_name)
+            
+            if current_backoff:
+                # Already backing off, increase delay
+                backoff_seconds = min(300, (current_backoff - datetime.now()).total_seconds() * 2)
+            else:
+                # First failure
+                if error_code == 429:
+                    # Rate limit hit - use server's retry_after or default to 60s
+                    backoff_seconds = retry_after or 60.0
+                elif error_code == 503:
+                    # Service unavailable - exponential backoff
+                    backoff_seconds = retry_after or 30.0
+                else:
+                    # Generic error - short backoff
+                    backoff_seconds = 5.0
+            
+            # Cap backoff at 5 minutes
+            backoff_seconds = min(300, backoff_seconds)
+            backoff_until = datetime.now() + timedelta(seconds=backoff_seconds)
+            self.agent_backoff[agent_name] = backoff_until
+            
+            logger.warning(f"⚠️  [{agent_name}] API failure (code {error_code}). "
+                         f"Backoff: {backoff_seconds:.1f}s")
+    
+    def get_status(self) -> Dict[str, Any]:
+        """Get current limiter status"""
+        with self.lock:
+            now = datetime.now()
+            minute_ago = now - timedelta(minutes=1)
+            requests_in_window = len([t for t in self.request_times if t > minute_ago])
+            
+            return {
+                "current_rpm": requests_in_window,
+                "max_rpm": self.max_rpm,
+                "capacity_remaining": max(0, self.max_rpm - requests_in_window),
+                "agents_with_backoff": list(self.agent_backoff.keys()),
+                "agent_request_counts": dict(self.agent_request_count),
+                "timestamp": now.isoformat()
+            }
+
+
+class SourceTracedVerification:
+    """
+    Enhanced verification that tracks sources for all data points.
+    
+    Replaces basic verification with auditable, traceable verification.
+    """
+    
+    def __init__(self, log_dir: str = "/workspaces/Halilit-Support-Center/backend/logs/verification"):
+        self.log_dir = log_dir
+        self.traces: Dict[str, VerificationTrace] = {}
+        os.makedirs(log_dir, exist_ok=True)
+        self.traces_file = os.path.join(log_dir, "verification_traces.jsonl")
+    
+    def verify_with_source(self, product_id: str, field: str, value: Any,
+                          source: SourceReference, agent_name: str = "",
+                          confidence: float = 1.0) -> VerificationTrace:
+        """
+        Record a verification with full source traceability.
+        
+        Args:
+            product_id: Which product is being verified
+            field: Which field (e.g., "official_price")
+            value: The verified value
+            source: SourceReference with URL, snippet, etc.
+            agent_name: Which agent performed verification
+            confidence: 0.0-1.0 confidence in this verification
+            
+        Returns:
+            VerificationTrace with full audit trail
+        """
+        trace_id = f"trace_{product_id}_{field}_{datetime.now().isoformat()}"
+        
+        trace = VerificationTrace(
+            verification_id=trace_id,
+            product_id=product_id,
+            verified_field=field,
+            verified_value=value,
+            auditor_agent=agent_name,
+            confidence_score=confidence,
+            is_approved=True  # Default to approved
+        )
+        
+        trace.add_source(source)
+        self.traces[trace_id] = trace
+        self._save_trace(trace)
+        
+        logger.info(f"📋 Verification traced: {product_id}.{field} "
+                   f"from {source.source_type}")
+        
+        return trace
+    
+    def add_verification_source(self, trace_id: str, source: SourceReference) -> None:
+        """Add an additional source to an existing verification"""
+        if trace_id in self.traces:
+            self.traces[trace_id].add_source(source)
+            self._save_trace(self.traces[trace_id])
+            logger.info(f"📋 Added source to {trace_id}: {source.source_type}")
+    
+    def get_verification_audit(self, product_id: str) -> Dict[str, Any]:
+        """Get complete audit trail for a product's verifications"""
+        product_traces = [t for t in self.traces.values() 
+                         if t.product_id == product_id]
+        
+        return {
+            "product_id": product_id,
+            "total_verifications": len(product_traces),
+            "verified_fields": [t.verified_field for t in product_traces],
+            "verifications": [
+                {
+                    "field": t.verified_field,
+                    "value": str(t.verified_value)[:100],
+                    "confidence": t.confidence_score,
+                    "auditor": t.auditor_agent,
+                    "sources": t.source_summary()
+                }
+                for t in product_traces
+            ],
+            "audit_timestamp": datetime.now().isoformat()
+        }
+    
+    def _save_trace(self, trace: VerificationTrace) -> None:
+        """Persist verification trace to disk"""
+        trace_dict = asdict(trace)
+        trace_dict['sources'] = [asdict(s) for s in trace.sources]
+        with open(self.traces_file, 'a') as f:
+            f.write(json.dumps(trace_dict, default=str) + '\n')
 
 # ============================================================================
 # SECTION 1: ENUMS & DATA MODELS
@@ -1674,6 +1973,98 @@ class MemoryAwareMixin:
 # Initialize global instances for easy access
 audit_logger = AuditLogger()
 feedback_engine = FeedbackEngine()
+rate_limiter = RateLimiter(max_requests_per_minute=60, max_requests_per_day=10000)
+source_verification = SourceTracedVerification()
+
+
+# ============================================================================
+# SECTION 7: ENHANCED API CALL WRAPPER (NEW v7.6)
+# ============================================================================
+
+def call_gemini_with_rate_limit(agent_name: str, prompt: str, 
+                               model: str = "gemini-2.0-flash",
+                               system_instruction: Optional[str] = None) -> Tuple[str, bool]:
+    """
+    Make a Gemini API call with automatic rate limiting and backoff.
+    
+    Args:
+        agent_name: Name of calling agent (for rate limit tracking)
+        prompt: The prompt to send
+        model: Model to use
+        system_instruction: Optional system instruction
+        
+    Returns:
+        (response_text, success: bool)
+        
+    Example:
+        response, success = call_gemini_with_rate_limit(
+            'CommercialScout',
+            'Find all Roland products on Halilit.com',
+            system_instruction='You are a product harvester...'
+        )
+        if success:
+            print(response)
+        else:
+            logger.error(f"API call failed: {response}")
+    """
+    if not genai_client:
+        return "Error: Genai client not initialized", False
+    
+    # Check rate limit and wait if needed
+    wait_time = rate_limiter.wait_if_needed(agent_name)
+    if wait_time > 0:
+        logger.info(f"⏱️  Waiting {wait_time:.1f}s due to rate limit...")
+        time.sleep(wait_time)
+    
+    try:
+        # Make API call
+        rate_limiter.record_request(agent_name)
+        
+        response = genai_client.models.generate_content(
+            model=model,
+            contents=prompt,
+            config={"system_instruction": system_instruction} if system_instruction else {}
+        )
+        
+        response_text = response.text if hasattr(response, 'text') else str(response)
+        
+        # Record success
+        rate_limiter.record_success(agent_name)
+        audit_logger.log_event(
+            category=AuditCategory.AGENT_ACTION,
+            level=AuditLevel.INFO,
+            action=f"API call succeeded: {agent_name}",
+            agent_name=agent_name,
+            output_data={"response_length": len(response_text)}
+        )
+        
+        return response_text, True
+        
+    except Exception as e:
+        error_code = None
+        error_msg = str(e)
+        
+        # Extract HTTP error code if available
+        if "429" in error_msg:
+            error_code = 429
+        elif "503" in error_msg:
+            error_code = 503
+        elif "QuotaExceededError" in error_msg:
+            error_code = 429
+        
+        # Record failure with backoff
+        rate_limiter.record_failure(agent_name, error_code=error_code)
+        
+        audit_logger.log_event(
+            category=AuditCategory.ERROR_RECOVERY,
+            level=AuditLevel.ERROR,
+            action=f"API call failed: {agent_name}",
+            agent_name=agent_name,
+            error_message=error_msg,
+            status="failure"
+        )
+        
+        return f"API Error: {error_msg}", False
 
 
 # ============================================================================
@@ -1715,3 +2106,63 @@ def test_agent_memory():
 
 if __name__ == "__main__":
     test_agent_memory()
+    
+    # Test Rate Limiter
+    print("\n" + "="*60)
+    print("TESTING RATE LIMITER")
+    print("="*60)
+    
+    limiter = RateLimiter(max_requests_per_minute=5)
+    
+    # Simulate 6 rapid requests (5th should trigger rate limit)
+    for i in range(6):
+        wait = limiter.wait_if_needed("TestAgent")
+        if wait > 0:
+            print(f"Request {i+1}: Rate limited! Wait {wait:.2f}s")
+        else:
+            print(f"Request {i+1}: OK")
+        limiter.record_request("TestAgent")
+    
+    print(f"\n📊 Limiter status: {json.dumps(limiter.get_status(), indent=2)}")
+    
+    # Test Source Traceability
+    print("\n" + "="*60)
+    print("TESTING SOURCE TRACEABILITY")
+    print("="*60)
+    
+    tracer = SourceTracedVerification()
+    
+    # Simulate verification with multiple sources
+    source1 = SourceReference(
+        source_type="url",
+        source_url="https://halilit.com/product/roland-rd88",
+        source_snippet="Roland RD-88 - ₪45,990",
+        extraction_method="scrape",
+        confidence=0.95
+    )
+    
+    source2 = SourceReference(
+        source_type="manufacturer_data",
+        source_url="https://roland.com/specs/rd88",
+        source_snippet="Professional 88-key stage keyboard",
+        extraction_method="api",
+        confidence=1.0
+    )
+    
+    # Record verification with first source
+    trace = tracer.verify_with_source(
+        product_id="halilit_roland_rd88",
+        field="official_price",
+        value=45990,
+        source=source1,
+        agent_name="OfficialVerifier",
+        confidence=0.95
+    )
+    
+    # Add second source to the same verification
+    tracer.add_verification_source(trace.verification_id, source2)
+    
+    # Get complete audit trail
+    audit = tracer.get_verification_audit("halilit_roland_rd88")
+    print(f"\n📋 Verification Audit:\n{json.dumps(audit, indent=2)}")
+

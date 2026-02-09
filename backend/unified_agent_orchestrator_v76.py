@@ -111,7 +111,7 @@ class AgentBase(MemoryAwareMixin):
         print(f"🧠 [{self.name}] Initialized with learning capabilities")
 
     def think(self, prompt: str, dynamic_system_instruction: Optional[str] = None):
-        """Generate content using Gemini with learning integration."""
+        """Generate content using Gemini with learning integration and rate limiting."""
         print(f"🤖 [{self.name}] Thinking...")
         if not self.client:
             return "Simulation: Client not initialized."
@@ -120,17 +120,33 @@ class AgentBase(MemoryAwareMixin):
         active_instruction = dynamic_system_instruction if dynamic_system_instruction else self.system_instruction
 
         try:
-            response = self.client.models.generate_content(
+            # Import here to avoid circular imports
+            from backend.unified_quality_gates_v76 import call_gemini_with_rate_limit
+            
+            # Use rate-limited API call
+            text, success = call_gemini_with_rate_limit(
+                agent_name=self.name,
+                prompt=prompt,
                 model=self.model_name,
-                contents=prompt,
-                config={
-                    "system_instruction": active_instruction} if active_instruction else {}
+                system_instruction=active_instruction
             )
-            text = response.text if hasattr(
-                response, 'text') else str(response)
+            
+            if not success:
+                print(f"   ❌ API call failed: {text}")
+                # LEARN from API failures
+                self.learn_from_action(
+                    action_type="think",
+                    input_data=prompt[:200],
+                    output_data=text[:200],
+                    success=False,
+                    confidence=0,
+                    patterns=["api-error"]
+                )
+                return text
+            
             print(f"   -> {text[:100]}...")
 
-            # LEARN from every thought
+            # LEARN from every successful thought
             self.learn_from_action(
                 action_type="think",
                 input_data=prompt[:200],
