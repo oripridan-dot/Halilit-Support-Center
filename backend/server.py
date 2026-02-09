@@ -11,6 +11,7 @@ from datetime import datetime
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
+from backend.api.streams import router as streams_router
 
 # Ensure parent directory is in path
 _parent_dir = str(Path(__file__).parent.parent)
@@ -130,6 +131,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(streams_router, tags=["Real-time Streams"])
 
 # Include learning endpoints
 try:

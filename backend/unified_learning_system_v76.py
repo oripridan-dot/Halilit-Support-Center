@@ -172,6 +172,15 @@ class LearningPatternRepository:
         # Filter for this brand or 'ALL'
         return [p['insight'] for p in patterns if p['brand'].lower() == brand.lower() or p['brand'] == "ALL"]
 
+    def get_most_recent_insight(self) -> Optional[Dict]:
+        """Retrieve the single most recent insight added to the system."""
+        patterns = self._load_patterns()
+        if not patterns:
+            return None
+        # Assuming patterns are appended, last is newest. 
+        # Or sort by created_at if structure allows.
+        return patterns[-1]
+
     def _load_patterns(self) -> List[dict]:
         try:
             with open(self.patterns_file, "r") as f:
@@ -179,6 +188,29 @@ class LearningPatternRepository:
         except (json.JSONDecodeError, FileNotFoundError):
             return []
 
+
+
+class LearningSystem:
+    def __init__(self):
+        self.repo = LearningPatternRepository()
+
+    def get_brand_insights(self, brand: str):
+        return self.repo.get_brand_insights(brand)
+    
+    def get_most_recent_insight(self):
+        return self.repo.get_most_recent_insight()
+    
+    def save_insight(self, brand, insight, product_id, category='General'):
+        # Wrapper for simple usage
+         self.repo.save_pattern(LearningPattern(
+            pattern_id=f"auto_{int(datetime.now().timestamp())}",
+            brand=brand,
+            category=category,
+            insight=insight,
+            confidence=0.95,
+            created_at=datetime.now().isoformat(),
+            source="Manual_Override_or_Bulk"
+         ))
 
 @dataclass
 class LearningMetric:

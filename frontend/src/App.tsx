@@ -13,6 +13,8 @@ import React, { lazy, Suspense } from "react";
 import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { useNavigationStore } from "./store/navigationStore";
+import { LearningFeed } from "./components/LearningFeed";
+import { useLearningStream } from "./hooks/useLearningStream";
 
 // Lazy load heavy views for code-splitting
 const GalaxyDashboard = lazy(() =>
@@ -41,6 +43,9 @@ const LoadingPlaceholder = () => (
 function App() {
   // Extract strictly what we need
   const { currentView, activeProductId } = useNavigationStore();
+  
+  // Initialize Learning Stream listener
+  useLearningStream();
 
   return (
     <GlobalErrorBoundary>
@@ -57,6 +62,9 @@ function App() {
 
         {/* Main Stage */}
         <main className="flex-1 relative overflow-hidden">
+          {/* Real-time Learning Feed Overlay */}
+          <LearningFeed />
+
           {/* Screen 1: Galaxy Dashboard */}
           {currentView === "GALAXY" && (
             <div className="absolute inset-0 animate-fade-in">
@@ -84,6 +92,9 @@ function App() {
             </div>
           )}
         </main>
+        
+        {/* Real-time Learning Feed Overlay */}
+        <LearningFeed />
       </div>
     </GlobalErrorBoundary>
   );

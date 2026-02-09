@@ -37,10 +37,19 @@ export interface BatchOperation {
     progress_percent: number;
 }
 
+
+export interface LearningInsight {
+    brand: string;
+    insight: string;
+    timestamp: string;
+    productId?: string;
+}
+
 interface ProductStoreState {
     // Products
     products: ProductItem[];
     allProductsLoaded: boolean;
+    learningInsights: LearningInsight[];
 
     // Batch tracking
     activeBatches: Map<string, BatchOperation>;
@@ -66,6 +75,7 @@ interface ProductStoreState {
     addProducts: (products: ProductItem[]) => void;
     updateProduct: (id: string, updates: Partial<ProductItem>) => void;
     removeProduct: (id: string) => void;
+    addInsight: (insight: LearningInsight) => void;
 
     // Batch operations
     startBatch: (batchId: string, totalProducts: number) => void;
@@ -104,6 +114,7 @@ export const useProductStore = create<ProductStoreState>()(
                 // Initial state
                 products: [],
                 allProductsLoaded: false,
+                learningInsights: [],
                 activeBatches: new Map(),
                 batchHistory: [],
                 totalProducts: 0,
@@ -112,7 +123,12 @@ export const useProductStore = create<ProductStoreState>()(
                 pendingCount: 0,
                 activeFilters: {},
 
-                // Add single product
+                // Actions
+
+                addInsight: (newInsight) => set((state) => ({
+                    learningInsights: [newInsight, ...state.learningInsights].slice(0, 10)
+                })),
+
                 addProduct: (product: ProductItem) => {
                     set((state) => {
                         const exists = state.products.find((p) => p.id === product.id);
@@ -194,6 +210,11 @@ export const useProductStore = create<ProductStoreState>()(
                         };
                     });
                 },
+
+                addInsight: (newInsight) => set((state) => ({
+                    // Keep the last 10 insights for the live feed
+                    learningInsights: [newInsight, ...state.learningInsights].slice(0, 10)
+                })),
 
                 // Remove product
                 removeProduct: (id: string) => {
