@@ -37,12 +37,12 @@ const imageResolutionTraces: ImageResolutionTrace[] = [];
  */
 function logImageResolution(trace: ImageResolutionTrace): void {
   imageResolutionTraces.push(trace);
-  
+
   // Keep only last 100 traces in memory
   if (imageResolutionTraces.length > 100) {
     imageResolutionTraces.shift();
   }
-  
+
   // Log failed resolutions to console in debug mode
   if (trace.attempted_sources.some(s => !s.valid)) {
     console.debug(`[ImageResolver] ${trace.product_id}: Used fallback chain`, trace);
@@ -58,19 +58,19 @@ export function getImageResolutionAnalytics() {
     fallback_rate: 0,
     failed_sources: 0,
   };
-  
-  const failedAttempts = imageResolutionTraces.filter(t => 
+
+  const failedAttempts = imageResolutionTraces.filter(t =>
     t.attempted_sources.some(s => !s.valid)
   );
-  
-  stats.fallback_rate = imageResolutionTraces.length > 0 
-    ? (failedAttempts.length / imageResolutionTraces.length) * 100 
+
+  stats.fallback_rate = imageResolutionTraces.length > 0
+    ? (failedAttempts.length / imageResolutionTraces.length) * 100
     : 0;
-  
-  stats.failed_sources = imageResolutionTraces.reduce((acc, t) => 
+
+  stats.failed_sources = imageResolutionTraces.reduce((acc, t) =>
     acc + t.attempted_sources.filter(s => !s.valid).length, 0
   );
-  
+
   return stats;
 }
 
@@ -86,7 +86,7 @@ function isValidImageUrl(url: string | null | undefined): boolean {
   // Accept URLs with image extensions or known CDN domains
   const imageExtensions = /\.(jpg|jpeg|png|gif|svg|webp|webm)$/i;
   const cdnPattern = /(cloudfront|cdn|imgix|fastly|akamai|amazonaws|halilit\.com)/i;
-  
+
   // Reject obviously fake URLs
   if (url.includes("brand.com") || url.includes("example.com") || url === "undefined") {
     return false;
@@ -104,11 +104,11 @@ function extractManufacturerImage(product: Product): string | null {
   if (product.official_specs && typeof product.official_specs === "object") {
     // Common patterns for manufacturer image fields
     const specs = product.official_specs as Record<string, any>;
-    
+
     if (specs.manufacturer_image && isValidImageUrl(specs.manufacturer_image)) {
       return specs.manufacturer_image;
     }
-    
+
     if (specs.hero_image && isValidImageUrl(specs.hero_image)) {
       return specs.hero_image;
     }
@@ -117,11 +117,11 @@ function extractManufacturerImage(product: Product): string | null {
   // Check external_data for manufacturer links
   if (product.external_data && typeof product.external_data === "object") {
     const external = product.external_data as Record<string, any>;
-    
+
     if (external.manufacturer_image && isValidImageUrl(external.manufacturer_image)) {
       return external.manufacturer_image;
     }
-    
+
     if (external.featured_image && isValidImageUrl(external.featured_image)) {
       return external.featured_image;
     }
@@ -145,7 +145,7 @@ export function resolveProductImage(
 ): string {
   const startTime = performance.now();
   const traces: ImageResolutionTrace["attempted_sources"] = [];
-  
+
   if (!product) {
     return TRANSPARENT_PIXEL;
   }
@@ -161,19 +161,19 @@ export function resolveProductImage(
       valid: true,
       timestamp: new Date().toISOString(),
     });
-    
+
     logImageResolution({
       product_id: productId,
       attempted_sources: traces,
       final_image: manufacturerImage,
       resolution_time_ms: performance.now() - startTime,
     });
-    
+
     return manufacturerImage;
   }
 
   // === PRIORITY 2: Halilit.com Commercial Image ===
-  
+
   // 2a. Top-level image_url (preferred structure)
   if ((product as any).image_url && isValidImageUrl((product as any).image_url)) {
     traces.push({
@@ -182,14 +182,14 @@ export function resolveProductImage(
       valid: true,
       timestamp: new Date().toISOString(),
     });
-    
+
     logImageResolution({
       product_id: productId,
       attempted_sources: traces,
       final_image: (product as any).image_url,
       resolution_time_ms: performance.now() - startTime,
     });
-    
+
     return (product as any).image_url;
   }
 
@@ -203,14 +203,14 @@ export function resolveProductImage(
         valid: true,
         timestamp: new Date().toISOString(),
       });
-      
+
       logImageResolution({
         product_id: productId,
         attempted_sources: traces,
         final_image: heroUrl,
         resolution_time_ms: performance.now() - startTime,
       });
-      
+
       return heroUrl;
     }
   }
@@ -223,19 +223,19 @@ export function resolveProductImage(
       valid: true,
       timestamp: new Date().toISOString(),
     });
-    
+
     logImageResolution({
       product_id: productId,
       attempted_sources: traces,
       final_image: (product as any).commercial_image,
       resolution_time_ms: performance.now() - startTime,
     });
-    
+
     return (product as any).commercial_image;
   }
 
   // === PRIORITY 3: Gallery/Additional Images ===
-  
+
   // 3a. Gallery from official_images
   if ((product as any).official_images && Array.isArray((product as any).official_images)) {
     for (const image of (product as any).official_images) {
@@ -247,14 +247,14 @@ export function resolveProductImage(
           valid: true,
           timestamp: new Date().toISOString(),
         });
-        
+
         logImageResolution({
           product_id: productId,
           attempted_sources: traces,
           final_image: imageUrl,
           resolution_time_ms: performance.now() - startTime,
         });
-        
+
         return imageUrl;
       }
     }
@@ -271,14 +271,14 @@ export function resolveProductImage(
           valid: true,
           timestamp: new Date().toISOString(),
         });
-        
+
         logImageResolution({
           product_id: productId,
           attempted_sources: traces,
           final_image: imageUrl,
           resolution_time_ms: performance.now() - startTime,
         });
-        
+
         return imageUrl;
       }
     }
@@ -292,14 +292,14 @@ export function resolveProductImage(
       valid: true,
       timestamp: new Date().toISOString(),
     });
-    
+
     logImageResolution({
       product_id: productId,
       attempted_sources: traces,
       final_image: (product as any).image_thumbnail.url,
       resolution_time_ms: performance.now() - startTime,
     });
-    
+
     return (product as any).image_thumbnail.url;
   }
 
@@ -311,21 +311,21 @@ export function resolveProductImage(
       valid: true,
       timestamp: new Date().toISOString(),
     });
-    
+
     logImageResolution({
       product_id: productId,
       attempted_sources: traces,
       final_image: (product as any).image_hero.url,
       resolution_time_ms: performance.now() - startTime,
     });
-    
+
     return (product as any).image_hero.url;
   }
 
   // === FALLBACK: Transparent Pixel ===
   // Log that all sources failed
   traces.forEach(t => { t.valid = false; });
-  
+
   logImageResolution({
     product_id: productId,
     attempted_sources: traces,

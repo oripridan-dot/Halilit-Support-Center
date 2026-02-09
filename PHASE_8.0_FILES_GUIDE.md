@@ -19,8 +19,10 @@ This guide documents all files created/modified for Phase 8.0 (Async Task Queue 
 ### Core Infrastructure
 
 #### `backend/celery_config.py` (160 lines)
+
 **Purpose**: Celery application configuration  
 **What it does**:
+
 - Initializes Celery app with Redis broker
 - Configures result backend (Redis)
 - Defines task routing (harvest/enrich/validate/learn queues)
@@ -28,6 +30,7 @@ This guide documents all files created/modified for Phase 8.0 (Async Task Queue 
 - Configures worker prefetch & acknowledgment settings
 
 **Key Functions**:
+
 - `celery_app`: Global Celery application instance
 - `health_check()`: Check broker connectivity
 
@@ -36,13 +39,16 @@ This guide documents all files created/modified for Phase 8.0 (Async Task Queue 
 ---
 
 #### `backend/tasks.py` (420 lines)
+
 **Purpose**: Celery task definitions  
 **What it does**:
+
 - Defines distributed tasks for Trinity Swarm agents
 - Implements retry logic & error handling
 - Provides progress tracking for long-running tasks
 
 **Key Tasks**:
+
 - `harvest_brand_products()`: CommercialScout agent task
 - `enrich_product()`: OfficialVerifier agent task
 - `validate_product()`: ExternalValidator agent task
@@ -50,6 +56,7 @@ This guide documents all files created/modified for Phase 8.0 (Async Task Queue 
 - `sync_brand_pipeline()`: Full pipeline orchestration
 
 **Error Handling**:
+
 - Automatic retry (3x with exponential backoff)
 - Soft time limits (56 min) with graceful timeouts
 - Hard time limits (1h) for safety
@@ -60,14 +67,17 @@ This guide documents all files created/modified for Phase 8.0 (Async Task Queue 
 ### FastAPI Integration
 
 #### `backend/api/task_router.py` (380 lines)
+
 **Purpose**: FastAPI endpoints for async task management  
 **What it does**:
+
 - Exposes REST API endpoints for queuing tasks
 - Provides result retrieval & status monitoring
 - Includes task cancellation & health checks
 - Debug endpoints for development
 
 **Endpoints**:
+
 ```
 POST   /api/v8/tasks/harvest/{brand}      Queue harvest
 GET    /api/v8/tasks/result/{task_id}     Get result (blocking)
@@ -79,6 +89,7 @@ WS     /api/v8/tasks/debug/active-tasks   Debug info
 ```
 
 **Integration**: Include router in `backend/server.py`:
+
 ```python
 from backend.api.task_router import router as task_router
 app.include_router(task_router)
@@ -87,19 +98,23 @@ app.include_router(task_router)
 ---
 
 #### `backend/api/websocket_manager.py` (330 lines)
+
 **Purpose**: Real-time WebSocket updates for tasks  
 **What it does**:
+
 - Manages WebSocket connections
 - Broadcasts task status updates to subscribers
 - Implements connection pooling
 - Handles client disconnections gracefully
 
 **WebSocket Endpoint**:
+
 ```
 WS /ws/tasks/{task_id}
 ```
 
 **Message Format**:
+
 ```json
 {
   "type": "task_status",
@@ -114,6 +129,7 @@ WS /ws/tasks/{task_id}
 ```
 
 **Key Classes**:
+
 - `TaskConnectionManager`: Manages all WebSocket connections
 - `connection_manager`: Global instance (use in routes)
 
@@ -122,8 +138,10 @@ WS /ws/tasks/{task_id}
 ### Docker & Infrastructure
 
 #### `docker-compose.yml` (200 lines)
+
 **Purpose**: Complete development/production stack  
 **Services**:
+
 - `redis`: Message broker & cache (Redis 7-alpine)
 - `postgres`: Results backend & audit log (PostgreSQL 15-alpine)
 - `flower`: Worker monitoring dashboard (Flower 2.0)
@@ -133,12 +151,14 @@ WS /ws/tasks/{task_id}
 - `worker_learn`: Learning system worker (concurrency=1)
 
 **Key Features**:
+
 - Health checks for each service
 - Volume persistence for Redis & PostgreSQL
 - Flexible environment configuration
 - Logging configuration (10MB max per file)
 
 **Usage**:
+
 ```bash
 # Start all services
 docker-compose up -d
@@ -153,14 +173,17 @@ docker-compose down
 ---
 
 #### `Dockerfile` (25 lines)
+
 **Purpose**: Container image for workers & API  
 **What it does**:
+
 - Builds on Python 3.11-slim
 - Installs system dependencies
 - Installs Python packages from requirements.txt
 - Sets working directory & Python path
 
 **Build**:
+
 ```bash
 docker build -t halilit:v8.0 .
 ```
@@ -168,8 +191,10 @@ docker build -t halilit:v8.0 .
 ---
 
 #### `backend/config/init_db.sql` (140 lines)
+
 **Purpose**: PostgreSQL initialization script  
 **What it does**:
+
 - Creates tables for task results
 - Sets up audit logging tables
 - Initializes enrichment history tracking
@@ -178,6 +203,7 @@ docker build -t halilit:v8.0 .
 - Creates useful views (success rate, recent failures, etc.)
 
 **Key Tables**:
+
 - `celery_taskmeta`: Celery result storage
 - `task_audit_log`: Task execution audit trail
 - `product_enrichment_history`: Enrichment tracking
@@ -186,6 +212,7 @@ docker build -t halilit:v8.0 .
 - `sync_progress`: Real-time sync progress tracking
 
 **Usage**:
+
 ```bash
 # Auto-initialized by docker-compose
 # Or manually:
@@ -197,14 +224,17 @@ psql postgresql://user@localhost/halilit_tasks < backend/config/init_db.sql
 ### Scripts & Tools
 
 #### `backend/scripts/start_workers.sh` (120 lines)
+
 **Purpose**: Start Celery workers locally  
 **What it does**:
+
 - Validates Redis connectivity
 - Sets up Python environment
 - Starts 4 specialized workers (or 1 combined worker)
 - Logs worker processes & PIDs
 
 **Modes**:
+
 ```bash
 # 4 specialized workers (recommended)
 bash backend/scripts/start_workers.sh
@@ -221,8 +251,10 @@ bash backend/scripts/start_workers.sh --debug
 ---
 
 #### `backend/scripts/monitor_workers.py` (350 lines)
+
 **Purpose**: Real-time worker monitoring & health checks  
 **What it does**:
+
 - Displays active workers & their status
 - Shows queue assignments
 - Tracks active tasks
@@ -230,6 +262,7 @@ bash backend/scripts/start_workers.sh --debug
 - Supports continuous monitoring
 
 **Modes**:
+
 ```bash
 # One-time snapshot
 python3 backend/scripts/monitor_workers.py
@@ -242,6 +275,7 @@ python3 backend/scripts/monitor_workers.py --json
 ```
 
 **Output Fields**:
+
 - Worker name & status (ACTIVE/IDLE)
 - Pool concurrency & active tasks
 - Assigned queues
@@ -250,8 +284,10 @@ python3 backend/scripts/monitor_workers.py --json
 ---
 
 #### `backend/scripts/setup_infrastructure.sh` (190 lines)
+
 **Purpose**: One-command infrastructure setup  
 **What it does**:
+
 - Checks Docker/Docker Compose availability
 - Creates .env file if missing
 - Starts Redis, PostgreSQL, Flower in Docker
@@ -260,6 +296,7 @@ python3 backend/scripts/monitor_workers.py --json
 - Optionally starts workers
 
 **Modes**:
+
 ```bash
 # Full setup (services + dependencies + workers)
 bash backend/scripts/setup_infrastructure.sh
@@ -281,8 +318,10 @@ bash backend/scripts/setup_infrastructure.sh --stop
 ### Testing
 
 #### `backend/tests/test_parallel_v7_v8.py` (480 lines)
+
 **Purpose**: Parallel validation of v7.6 vs v8.0  
 **What it does**:
+
 - Runs harvest/enrich/validate on both versions simultaneously
 - Compares accuracy (product count match)
 - Measures performance delta
@@ -290,6 +329,7 @@ bash backend/scripts/setup_infrastructure.sh --stop
 - Saves results to JSON
 
 **Classes**:
+
 - `V76TestRunner`: Runs synchronous agents (baseline)
 - `V80TestRunner`: Runs async Celery tasks
 - `TestCoordinator`: Orchestrates parallel execution
@@ -297,6 +337,7 @@ bash backend/scripts/setup_infrastructure.sh --stop
 - `ComparisonResult`: Compares v7.6 vs v8.0
 
 **Usage**:
+
 ```bash
 # Test 3 brands
 python3 backend/tests/test_parallel_v7_v8.py \
@@ -317,8 +358,10 @@ python3 backend/tests/test_parallel_v7_v8.py \
 ### Configuration
 
 #### `.env.example`
+
 **Purpose**: Environment variable template  
 **Variables**:
+
 - Celery broker & result backend URLs
 - PostgreSQL credentials
 - Flower authentication
@@ -328,6 +371,7 @@ python3 backend/tests/test_parallel_v7_v8.py \
 - Feature flags
 
 **Usage**:
+
 ```bash
 cp .env.example .env
 # Edit .env with your values
@@ -373,14 +417,14 @@ Client Polling / WebSocket
 
 ## 📊 Queue Routing Strategy
 
-| Queue | Worker | Task | Concurrency | Purpose |
-|-------|--------|------|-------------|---------|
-| harvest | harvest_worker | harvest_brand_products() | 2 | Web scraping (rate-limit friendly) |
-| enrich | enrich_worker 1-2 | enrich_product() | 3 each | Gemini agent processing |
-| validate | validate_worker | validate_product() | 2 | Compliance auditing |
-| learn | learn_worker | record_learning_feedback() | 1 | Background learning system |
-| feedback | learn_worker | (same worker) | 1 | User feedback collection |
-| default | learn_worker | fallback | 1 | Any unrouted tasks |
+| Queue    | Worker            | Task                       | Concurrency | Purpose                            |
+| -------- | ----------------- | -------------------------- | ----------- | ---------------------------------- |
+| harvest  | harvest_worker    | harvest_brand_products()   | 2           | Web scraping (rate-limit friendly) |
+| enrich   | enrich_worker 1-2 | enrich_product()           | 3 each      | Gemini agent processing            |
+| validate | validate_worker   | validate_product()         | 2           | Compliance auditing                |
+| learn    | learn_worker      | record_learning_feedback() | 1           | Background learning system         |
+| feedback | learn_worker      | (same worker)              | 1           | User feedback collection           |
+| default  | learn_worker      | fallback                   | 1           | Any unrouted tasks                 |
 
 **Total Capacity**: ~11 concurrent tasks (horizontally scalable)
 
@@ -406,14 +450,17 @@ To fully integrate Phase 8.0 into the application:
 ## 🎓 Learning Resources
 
 **Celery**:
+
 - [Official Docs](https://docs.celeryproject.io/)
 - [Best Practices](https://docs.celeryproject.io/en/stable/getting-started/first-steps-with-celery.html)
 
 **Redis**:
+
 - [Redis CLI](https://redis.io/commands/)
 - [Persistence Guide](https://redis.io/docs/management/persistence/)
 
 **Task Queues**:
+
 - [Martin Fowler: Task Queue Pattern](https://martinfowler.com/articles/patterns-of-distributed-systems/)
 - [Scaling with Queues](https://www.youtube.com/watch?v=8lzJvAI4N5A)
 

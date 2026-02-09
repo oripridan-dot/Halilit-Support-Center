@@ -122,7 +122,7 @@ class AgentBase(MemoryAwareMixin):
         try:
             # Import here to avoid circular imports
             from backend.unified_quality_gates_v76 import call_gemini_with_rate_limit
-            
+
             # Use rate-limited API call
             text, success = call_gemini_with_rate_limit(
                 agent_name=self.name,
@@ -130,7 +130,7 @@ class AgentBase(MemoryAwareMixin):
                 model=self.model_name,
                 system_instruction=active_instruction
             )
-            
+
             if not success:
                 print(f"   ❌ API call failed: {text}")
                 # LEARN from API failures
@@ -143,7 +143,7 @@ class AgentBase(MemoryAwareMixin):
                     patterns=["api-error"]
                 )
                 return text
-            
+
             print(f"   -> {text[:100]}...")
 
             # LEARN from every successful thought

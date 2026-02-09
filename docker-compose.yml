@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 
 services:
   # =========================================================================
@@ -18,7 +18,7 @@ services:
       --maxmemory-policy allkeys-lru
       --loglevel notice
     healthcheck:
-      test: [ "CMD", "redis-cli", "ping" ]
+      test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -50,7 +50,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secure_password_change_me}
       POSTGRES_INITDB_ARGS: "-c shared_buffers=256MB -c max_connections=100"
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-halilit_user}" ]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-halilit_user}"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -87,20 +87,20 @@ services:
         max-size: "10m"
         max-file: "3"
     healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:5555/" ]
+      test: ["CMD", "curl", "-f", "http://localhost:5555/"]
       interval: 30s
       timeout: 10s
       retries: 3
 
   # =========================================================================
   # Celery Worker - Harvest Queue
-  # 
+  #
   # Dedicated worker for CommercialScout (web scraping tasks)
   # =========================================================================
   worker_harvest:
     build:
       context: .
-      dockerfile: Dockerfile  # See backend/Dockerfile
+      dockerfile: Dockerfile # See backend/Dockerfile
     container_name: halilit_worker_harvest
     command: >
       celery -A backend.tasks worker
@@ -296,7 +296,6 @@ services:
   #   networks:
   #     - halilit-network
   #   restart: unless-stopped
-
 
 volumes:
   redis_data:

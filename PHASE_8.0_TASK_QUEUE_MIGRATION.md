@@ -19,6 +19,7 @@ The current FastAPI server processes batch product ingestions **synchronously**,
 - **Scale** to enterprise-grade throughput (100+ concurrent ingestions)
 
 **Phase 8.0 Status**: ✅ Core infrastructure deployed and ready for testing
+
 - ✅ Celery + Redis configured
 - ✅ Task endpoints in FastAPI
 - ✅ WebSocket real-time updates
@@ -36,20 +37,20 @@ The current FastAPI server processes batch product ingestions **synchronously**,
 
 **Files Created/Updated**:
 
-| File | Status | Purpose |
-|------|--------|---------|
-| `backend/celery_config.py` | ✅ Created | Celery broker, result backend, queue routing configuration |
-| `backend/tasks.py` | ✅ Created | Task definitions for all Trinity Swarm agents (harvest, enrich, validate, learn) |
-| `backend/api/task_router.py` | ✅ Created | FastAPI async endpoints for task queueing and monitoring |
-| `backend/api/websocket_manager.py` | ✅ Created | WebSocket connection manager for real-time task status updates |
-| `docker-compose.yml` | ✅ Created | Complete dev/prod infrastructure (Redis, PostgreSQL, Flower, 5 workers) |
-| `Dockerfile` | ✅ Created | Container image for workers and API |
-| `backend/config/init_db.sql` | ✅ Created | PostgreSQL schema: task audit log, enrichment history, learning feedback, metrics |
-| `backend/scripts/start_workers.sh` | ✅ Created | Worker startup orchestration (4 specialized worker types) |
-| `backend/scripts/monitor_workers.py` | ✅ Created | Real-time worker monitoring & health checks |
-| `backend/scripts/setup_infrastructure.sh` | ✅ Created | One-command infrastructure setup & startup |
-| `backend/tests/test_parallel_v7_v8.py` | ✅ Created | Parallel testing harness (v7.6 vs v8.0 validation) |
-| `backend/requirements.txt` | ✅ Updated | Added celery, redis, flower, prometheus-client |
+| File                                      | Status     | Purpose                                                                           |
+| ----------------------------------------- | ---------- | --------------------------------------------------------------------------------- |
+| `backend/celery_config.py`                | ✅ Created | Celery broker, result backend, queue routing configuration                        |
+| `backend/tasks.py`                        | ✅ Created | Task definitions for all Trinity Swarm agents (harvest, enrich, validate, learn)  |
+| `backend/api/task_router.py`              | ✅ Created | FastAPI async endpoints for task queueing and monitoring                          |
+| `backend/api/websocket_manager.py`        | ✅ Created | WebSocket connection manager for real-time task status updates                    |
+| `docker-compose.yml`                      | ✅ Created | Complete dev/prod infrastructure (Redis, PostgreSQL, Flower, 5 workers)           |
+| `Dockerfile`                              | ✅ Created | Container image for workers and API                                               |
+| `backend/config/init_db.sql`              | ✅ Created | PostgreSQL schema: task audit log, enrichment history, learning feedback, metrics |
+| `backend/scripts/start_workers.sh`        | ✅ Created | Worker startup orchestration (4 specialized worker types)                         |
+| `backend/scripts/monitor_workers.py`      | ✅ Created | Real-time worker monitoring & health checks                                       |
+| `backend/scripts/setup_infrastructure.sh` | ✅ Created | One-command infrastructure setup & startup                                        |
+| `backend/tests/test_parallel_v7_v8.py`    | ✅ Created | Parallel testing harness (v7.6 vs v8.0 validation)                                |
+| `backend/requirements.txt`                | ✅ Updated | Added celery, redis, flower, prometheus-client                                    |
 
 **Total Lines of Code**: ~2,500+ (production-ready)
 
@@ -58,12 +59,14 @@ The current FastAPI server processes batch product ingestions **synchronously**,
 ### ⚙️ Infrastructure Components
 
 **Services**:
+
 - ✅ Redis 7-alpine (broker + result backend)
 - ✅ PostgreSQL 15-alpine (task persistence + audit log)
 - ✅ Flower 2.0 (worker monitoring dashboard)
 - ✅ Specialized workers (harvest, enrich, validate, learn)
 
 **API Endpoints** (New in v8.0):
+
 - ✅ `POST /api/v8/tasks/harvest/{brand}` - Queue harvest job
 - ✅ `GET /api/v8/tasks/result/{task_id}` - Get task result (blocking)
 - ✅ `GET /api/v8/tasks/status/{task_id}` - Real-time task status (non-blocking)
@@ -665,7 +668,8 @@ By end of Phase 8.0:
    - Troubleshooting runbook
    - Monitoring & alerting setup
 
-**Expected Timeline**: 
+**Expected Timeline**:
+
 - Start: Week of Feb 10, 2026
 - Complete: Week of Feb 17, 2026
 
@@ -714,18 +718,19 @@ Frontend (polling /api/v8/tasks/result/{task_id} or WebSocket)
 
 ### Worker Concurrency Strategy
 
-| Queue | Worker | Concurrency | Task Type | Comment |
-|-------|--------|-------------|-----------|---------|
-| harvest | 1 | 2 | Web scraping | Single concurrency to prevent site blocking; 2 handle parallel brands |
-| enrich | 2 | 3 each | Gemini API | Higher concurrency safe (AI processing is async) |
-| validate | 1 | 2 | Auditing | Token efficiency; compliance work is critical |
-| learn | 1 | 1 | Background | Low priority; prevents resource contention |
+| Queue    | Worker | Concurrency | Task Type    | Comment                                                               |
+| -------- | ------ | ----------- | ------------ | --------------------------------------------------------------------- |
+| harvest  | 1      | 2           | Web scraping | Single concurrency to prevent site blocking; 2 handle parallel brands |
+| enrich   | 2      | 3 each      | Gemini API   | Higher concurrency safe (AI processing is async)                      |
+| validate | 1      | 2           | Auditing     | Token efficiency; compliance work is critical                         |
+| learn    | 1      | 1           | Background   | Low priority; prevents resource contention                            |
 
 **Total System Capacity**: ~11 concurrent tasks (scalable via worker count in Kubernetes)
 
 ### Retry & Failure Handling
 
 All tasks use ExponentialBackoff retry strategy:
+
 - Initial retry: 1 minute
 - Max retries: 3
 - Backoff multiplier: exponential
@@ -742,6 +747,7 @@ Failed tasks are logged to PostgreSQL with full traceback for debugging.
 Access at `http://localhost:5555` (default creds: admin / flower_password_change_me)
 
 Shows:
+
 - Worker pool status
 - Queue depths
 - Task history & results
@@ -794,9 +800,9 @@ A: Flower dashboard + PostgreSQL audit logs + custom Prometheus metrics (optiona
 
 ## 📝 Document History
 
-| Date | Version | Status | Notes |
-|------|---------|--------|-------|
+| Date        | Version           | Status                     | Notes                                 |
+| ----------- | ----------------- | -------------------------- | ------------------------------------- |
 | Feb 9, 2026 | 8.0-impl-20260209 | ✅ Infrastructure Complete | Phase 8.0a deployed; 2,500+ LOC added |
-| Feb 3, 2026 | 8.0-spec-20260203 | ✅ Specification | Detailed design doc completed |
+| Feb 3, 2026 | 8.0-spec-20260203 | ✅ Specification           | Detailed design doc completed         |
 
 **Next Review**: After Phase 8.0b completion (Feb 17, 2026)
