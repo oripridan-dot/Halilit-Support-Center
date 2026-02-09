@@ -128,8 +128,8 @@ class TaxonomyManager:
                 "Nord Keyboard": TaxonomyNode(
                     category="Keyboards & Synthesizers",
                     subcategory="Nord Keyboard",
-                    keywords=["nord grand", "nord lead",
-                              "nord stage", "nord clavia"],
+                    keywords=["nord grand", "nord lead", "nord stage",
+                              "nord clavia", "nord piano", "nord electro", "nord wave"],
                     aliases=["Nord", "Nord Synth"],
                     display_order=5,
                 ),

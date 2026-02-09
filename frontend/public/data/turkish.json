@@ -14,7 +14,16 @@
       "extracted_name": "Turkish Vintage Soul Crash 18\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -44,12 +53,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -521,10 +553,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-8661502592358200582",
@@ -541,7 +597,16 @@
       "extracted_name": "Turkish Vintage Soul Crash 16\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -571,12 +636,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1048,10 +1136,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-2611924822184583142",
@@ -1068,7 +1180,16 @@
       "extracted_name": "Turkish Ride Apex 20\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1098,12 +1219,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1575,10 +1719,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2416995855976131083",
@@ -1595,7 +1763,16 @@
       "extracted_name": "Turkish John Blackwell 21\" Ride Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1625,12 +1802,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2102,10 +2302,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-4231283252280361783",
@@ -2122,7 +2346,16 @@
       "extracted_name": "Turkish Fusion Crash Ride 18\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2152,12 +2385,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2629,10 +2885,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8126723874840487455",
@@ -2649,7 +2929,16 @@
       "extracted_name": "Turkish Euphonic Ride 22\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2679,12 +2968,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3156,10 +3468,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--7114706970690409048",
@@ -3176,7 +3512,16 @@
       "extracted_name": "Turkish Dark Hammer Ride 20\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3206,12 +3551,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3683,10 +4051,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-5862279823004339045",
@@ -3703,7 +4095,16 @@
       "extracted_name": "Turkish Dark Hammer 18\" Crash"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3733,12 +4134,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4218,10 +4642,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--707712816092726956",
@@ -4238,7 +4686,16 @@
       "extracted_name": "Turkish Euphonic Crash 18\" Cymbal"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4268,12 +4725,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4745,9 +5225,33 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/turkish_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   }
 ]

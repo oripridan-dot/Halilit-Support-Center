@@ -1,6 +1,6 @@
 from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
 from backend.auto_sync_engine import get_auto_sync_engine
-from backend.unified_data_service_v73 import get_conductor_data_service
+from backend.unified_data_service_v76 import get_conductor_data_service
 from backend.ingestion_to_frontend import get_frontend_data
 import os
 import sys
@@ -133,7 +133,7 @@ app.add_middleware(
 
 # Include learning endpoints
 try:
-    from backend.unified_learning_system_v73 import router as learning_router
+    from backend.unified_learning_system_v75 import router as learning_router
     app.include_router(learning_router)
     logger.info("✅ Learning endpoints registered")
 except Exception as e:
@@ -221,7 +221,7 @@ async def get_conductor_catalog():
     Get the unified conductor catalog by aggregating generated frontend data files.
     This serves as the single source of truth for the frontend app.
 
-    CRITICAL UPDATES v7.5:
+    CRITICAL UPDATES v7.6:
     - Normalizes data structure for frontend (Price, Image, Name)
     - Deduplicates products by ID
     - Filters out 'junk' (Price=0 or No Image)
@@ -319,8 +319,8 @@ async def get_conductor_catalog():
                                         image_url = official_images[0].get(
                                             'url')
 
-                            # Filter out placeholder images
-                            if image_url and ("brand.com" in image_url or "placeholder" in image_url):
+                            # Filter out placeholder images (allow local placeholder)
+                            if image_url and ("brand.com" in image_url):
                                 image_url = ""
 
                             if not image_url:
@@ -340,8 +340,8 @@ async def get_conductor_catalog():
                                     image_url = p_source.get(
                                         'image', "")  # rare but possible
 
-                            # Filter out placeholder images (Final Check)
-                            if image_url and ("brand.com" in image_url or "placeholder" in image_url):
+                            # Filter out placeholder images (Final Check) - Allow local placeholder
+                            if image_url and ("brand.com" in image_url):
                                 image_url = ""
 
                             # QUALITY GATE 2: Must have an image
@@ -638,7 +638,7 @@ async def clear_execution_history():
     return {"status": "cleared"}
 
 
-# ========== CONDUCTOR UNIFIED DATA ENDPOINTS v7.3 ==========
+# ========== CONDUCTOR UNIFIED DATA ENDPOINTS v7.6 ==========
 # These are the PRIMARY endpoints for frontend data loading
 # All data is Conductor-verified and taxonomy-compliant
 

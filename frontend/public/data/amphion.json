@@ -14,7 +14,16 @@
       "extracted_name": "מוניטור אולפני אקטיבי Amphion One25A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -44,12 +53,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -521,10 +553,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-7426448033377013172",
@@ -541,7 +597,16 @@
       "extracted_name": "Amphion Amp400.12"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -571,12 +636,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1048,10 +1136,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2064005879133160829",
@@ -1068,7 +1180,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion One18X"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1098,12 +1219,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1575,10 +1719,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--1848653576401503200",
@@ -1595,7 +1763,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion One12"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1625,12 +1802,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2102,10 +2302,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2382875773275200111",
@@ -2122,7 +2346,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion Two18X"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2152,12 +2385,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2629,10 +2885,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-7648844341925592750",
@@ -2649,7 +2929,16 @@
       "extracted_name": "Amphion Amp700"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2679,12 +2968,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3156,10 +3468,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--6650911522371389374",
@@ -3176,7 +3512,16 @@
       "extracted_name": "Amphion Amp100 Mono"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3206,12 +3551,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3683,10 +4051,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-4327447639550168521",
@@ -3703,7 +4095,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion One18"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3733,12 +4134,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4210,10 +4634,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-7656640800580679367",
@@ -4230,7 +4678,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion Two18"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4260,12 +4717,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4737,10 +5217,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--1946839748384756952",
@@ -4757,7 +5261,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion One15"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4787,12 +5300,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5264,10 +5800,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8915515031592032402",
@@ -5284,7 +5844,16 @@
       "extracted_name": "מוניטור פאסיבי Amphion Two15"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5314,12 +5883,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5791,10 +6383,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--6835799508207656267",
@@ -5811,7 +6427,16 @@
       "extracted_name": "Amphion Amp500"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5841,12 +6466,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6318,10 +6966,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-7757135684221385077",
@@ -6338,7 +7010,16 @@
       "extracted_name": "Amphion Amp400.8"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -6368,12 +7049,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6845,10 +7549,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-4557029916519838340",
@@ -6865,7 +7593,16 @@
       "extracted_name": "Amphion BaseTwo25 System"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -6895,12 +7632,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -7372,10 +8132,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-7878422421441133678",
@@ -7392,7 +8176,16 @@
       "extracted_name": "Amphion FlexBase25"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -7422,12 +8215,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -7899,9 +8715,33 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/amphion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   }
 ]

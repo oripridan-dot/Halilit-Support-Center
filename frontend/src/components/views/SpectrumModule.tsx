@@ -20,6 +20,7 @@ import { useMemo, useState, useEffect } from "react";
 import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
+import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 import type { Product } from "../../types";
 import {
   useConductorCatalog,
@@ -79,14 +80,12 @@ const BrandLogo = ({
 }) => {
   const [error, setError] = useState(false);
 
-  // Normalize brand name for file path
-  // e.g., "Universal Audio" -> "universal-audio"
-  const brandSlug = brand.toLowerCase().replace(/\s+/g, "-");
+  // Use the helper to get the correct mapped logo (handles SVGs, special cases)
+  const logoPath =
+    getBrandLogoUrl(brand) ||
+    `/assets/logos/${brand.toLowerCase().replace(/\s+/g, "-")}_logo.png`;
 
-  // Try to load the logo
-  const logoPath = `/assets/logos/${brandSlug}_logo.png`;
-
-  if (error) {
+  if (error || !logoPath) {
     return (
       <span
         className={`font-black italic uppercase text-lg text-transparent bg-clip-text bg-gradient-to-br from-zinc-500 to-zinc-800 ${className} flex items-center justify-center text-center`}
@@ -103,6 +102,16 @@ const BrandLogo = ({
       className={`object-contain transition-all duration-500 ${className}`}
       onError={(e) => {
         const target = e.currentTarget as HTMLImageElement;
+        console.warn(
+          `[BrandLogo] Failed to load logo for ${brand}: ${target.src}`,
+        );
+
+        // If we started with an SVG and it failed, fail immediately to text
+        if (target.src.endsWith(".svg")) {
+          setError(true);
+          return;
+        }
+
         // Fallback chain: png -> jpg -> svg -> text
         if (target.src.endsWith(".png")) {
           target.src = target.src.replace(".png", ".jpg");
@@ -117,23 +126,39 @@ const BrandLogo = ({
 };
 
 // --- DATA SOURCES BADGE ---
-const DataSourcesBadge = ({ sources = [], brand }: { sources?: string[]; brand: string }) => {
+const DataSourcesBadge = ({
+  sources = [],
+  brand,
+}: {
+  sources?: string[];
+  brand: string;
+}) => {
   return (
     <div className="flex gap-4 items-center mt-1">
       {/* Halilit Source (Use pseudo-logo since no image file exists) */}
-      <div className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity" title="Commercial Source: Halilit.com">
+      <div
+        className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity"
+        title="Commercial Source: Halilit.com"
+      >
         <div className="h-8 w-8 bg-blue-600 rounded-md flex items-center justify-center shadow-lg shadow-blue-900/20 text-white font-black italic text-[10px] tracking-tighter">
           ZL
         </div>
-        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Halilit</span>
+        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">
+          Halilit
+        </span>
       </div>
 
       <div className="h-6 w-px bg-zinc-800" />
 
       {/* Official Source (Brand Logo) */}
-      <div className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity" title={`Official Source: ${brand} Website`}>
+      <div
+        className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity"
+        title={`Official Source: ${brand} Website`}
+      >
         <BrandLogo brand={brand} className="h-8 w-auto max-w-[60px]" />
-        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">Official</span>
+        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">
+          Official
+        </span>
       </div>
     </div>
   );
@@ -152,28 +177,31 @@ const EnrichmentPanel = ({
   return (
     <div className="space-y-4 text-[11px]">
       {/* Official Specs Section */}
-      {product.official_specs && Object.keys(product.official_specs).length > 0 && (
-        <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
-          <div className="flex items-center gap-2 mb-2">
-            <CheckCircle className="w-3 h-3 text-emerald-500" />
-            <span className="font-bold text-emerald-400 uppercase tracking-widest">
-              Official Specs
-            </span>
+      {product.official_specs &&
+        Object.keys(product.official_specs).length > 0 && (
+          <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <CheckCircle className="w-3 h-3 text-emerald-500" />
+              <span className="font-bold text-emerald-400 uppercase tracking-widest">
+                Official Specs
+              </span>
+            </div>
+            <div className="space-y-1 text-zinc-300">
+              {Object.entries(product.official_specs)
+                .filter(([key]) => key !== "note" && key !== "extracted_name") // Filter out metadata
+                .slice(0, 5) // Limit just in case
+                .map(([key, value]) => (
+                  <div key={key} className="flex gap-1 break-words">
+                    <span className="text-emerald-600 mt-0.5">◆</span>
+                    <span className="text-emerald-500/80 capitalize">
+                      {key.replace(/_/g, " ")}:
+                    </span>
+                    <span className="text-zinc-200">{String(value)}</span>
+                  </div>
+                ))}
+            </div>
           </div>
-          <div className="space-y-1 text-zinc-300">
-            {Object.entries(product.official_specs)
-              .filter(([key]) => key !== 'note' && key !== 'extracted_name') // Filter out metadata
-              .slice(0, 5) // Limit just in case
-              .map(([key, value]) => (
-              <div key={key} className="flex gap-1 break-words">
-                <span className="text-emerald-600 mt-0.5">◆</span> 
-                <span className="text-emerald-500/80 capitalize">{key.replace(/_/g, ' ')}:</span>
-                <span className="text-zinc-200">{String(value)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+        )}
 
       {/* Review Data Section */}
       {product.review_data && product.review_data.aggregate_rating && (
@@ -229,15 +257,14 @@ const EnrichmentPanel = ({
             Data Sources
           </span>
         </div>
-        <DataSourcesBadge 
-          sources={product.sources || ["halilit_direct"]} 
+        <DataSourcesBadge
+          sources={product.sources || ["halilit_direct"]}
           brand={product.brand || "Unknown"}
         />
       </div>
     </div>
   );
 };
-
 
 export const SpectrumModule = () => {
   const { activeTribeId, goToGalaxy, openProductPage } = useNavigationStore();
@@ -388,14 +415,23 @@ export const SpectrumModule = () => {
     // 2. Group by Brand
     const grouped: Record<string, Product[]> = {};
     filteredProducts.forEach((p) => {
-      const brand = p.brand_id || "Other";
+      const brand = p.brand_id || p.brand || "Other";
       if (!grouped[brand]) grouped[brand] = [];
       grouped[brand].push(p);
     });
 
-    // 3. Sort Brands Alphabetically
+    // 3. Sort Brands Alphabetically (with Nord priority)
     const sortedBrands = Object.entries(grouped)
-      .sort((a, b) => a[0].localeCompare(b[0]))
+      .sort((a, b) => {
+        const brandA = a[0].toLowerCase();
+        const brandB = b[0].toLowerCase();
+
+        // Strict priority for Nord
+        if (brandA === "nord") return -1;
+        if (brandB === "nord") return 1;
+
+        return a[0].localeCompare(b[0]);
+      })
       .map(([brand, products]) => ({ brand, products }));
 
     return { brands: sortedBrands, minPrice, maxPrice };
@@ -459,7 +495,7 @@ export const SpectrumModule = () => {
       </Surface>
 
       {/* --- DATA SCREENS (Visualizer) --- */}
-      <div className="h-[45vh] grid grid-cols-12 gap-1 p-1 bg-black border-b border-zinc-800 z-40 shrink-0 shadow-2xl relative transition-all duration-300">
+      <div className="h-[35vh] grid grid-cols-12 gap-1 p-1 bg-black border-b border-zinc-800 z-40 shrink-0 shadow-2xl relative transition-all duration-300">
         {/* LEFT: VISUAL FEED (IMAGE ONLY) */}
         <Surface
           variant="screen"
@@ -508,8 +544,9 @@ export const SpectrumModule = () => {
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
-                      ID REF:{" "}
-                      {(hoveredProduct.id || "").split("-")[1] ||
+                      HALILIT SKU:{" "}
+                      {hoveredProduct.sku ||
+                        (hoveredProduct.id || "").split("-")[1] ||
                         hoveredProduct.id ||
                         "N/A"}
                     </span>
@@ -696,7 +733,7 @@ export const SpectrumModule = () => {
                 return (
                   <div
                     key={brand}
-                    className="flex h-20 border-b transition-all duration-200 group/row hover:h-24 hover:shadow-lg"
+                    className="flex h-24 border-b transition-colors duration-200 group/row hover:bg-white/5 hover:shadow-lg"
                     style={{
                       borderColor: `rgba(${rgbColor}, 0.2)`,
                       backgroundColor: `rgba(${rgbColor}, 0.04)`,
@@ -710,13 +747,18 @@ export const SpectrumModule = () => {
                         backgroundColor: `rgba(${rgbColor}, 0.08)`,
                       }}
                     >
-                      <div className="flex flex-col gap-1 items-center justify-center flex-1">
-                        <BrandLogo
-                          brand={brand}
-                          className="max-h-12 max-w-[100px] w-auto h-auto transition-opacity"
-                        />
+                      <div className="flex flex-col gap-1 items-center justify-center flex-1 w-full h-full relative">
+                        {/* Centered Logo Container */}
+                        <div className="absolute inset-0 flex items-center justify-center p-2">
+                          <BrandLogo
+                            brand={brand}
+                            className="max-h-full max-w-full w-auto h-auto object-contain transition-opacity opacity-90 hover:opacity-100"
+                          />
+                        </div>
+
+                        {/* Badge Count - Absolute positioned to not interfere with centering */}
                         <span
-                          className="text-[9px] font-bold uppercase tracking-widest"
+                          className="text-[9px] font-bold uppercase tracking-widest absolute bottom-1 right-2 bg-black/50 px-1 rounded backdrop-blur-sm"
                           style={{ color: brandTheme.primary }}
                         >
                           {products.length}
@@ -731,15 +773,12 @@ export const SpectrumModule = () => {
                         */}
                       {products.map((product) => {
                         const price = getPriceValue(product);
-                        // Avoid DBZ
                         const safePrice = price > 0 ? price : 1;
                         const safeMin =
                           brandMatrix.minPrice > 0 ? brandMatrix.minPrice : 1;
                         const safeMax = brandMatrix.maxPrice;
 
-                        // Log scale calculation:
-                        // pos = (log(price) - log(min)) / (log(max) - log(min))
-                        let pct = 0; // Default (TBD prices go to left)
+                        let pct = 0;
                         if (price > 0 && safeMax > safeMin) {
                           pct =
                             (Math.log(safePrice) - Math.log(safeMin)) /
@@ -753,12 +792,12 @@ export const SpectrumModule = () => {
                           <div
                             key={product.id}
                             className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
-                            style={{ left: `${pct * 90}%` }}
+                            style={{ left: `${5 + pct * 90}%` }}
                           >
                             {/* The Dot / Thumbnail */}
                             <div
-                              className="w-10 h-10 rounded shadow-lg bg-zinc-900 cursor-pointer 
-                                    hover:scale-150 transition-all duration-200 overflow-hidden relative"
+                              className="w-[60px] h-[60px] rounded shadow-lg bg-zinc-900 cursor-pointer 
+                                    hover:scale-110 transition-all duration-200 overflow-hidden relative"
                               style={{
                                 borderWidth: "2px",
                                 borderColor: brandTheme.primary,
@@ -768,17 +807,13 @@ export const SpectrumModule = () => {
                               onClick={() => openProductPage(product.id!)}
                               onMouseEnter={() => handleHoverProduct(product)}
                             >
-                              {product.image_thumbnail ? (
-                                <img
-                                  src={resolveProductImage(product)}
-                                  className="w-full h-full object-cover"
-                                  alt={product.name}
-                                />
-                              ) : (
-                                <div className="w-full h-full bg-zinc-800 flex items-center justify-center text-[8px] text-zinc-500">
-                                  IMG
-                                </div>
-                              )}
+                              <img
+                                src={resolveProductImage(product)}
+                                className="w-full h-full object-contain rounded-sm absolute inset-0 bg-white"
+                                style={{ objectFit: "contain" }}
+                                alt={product.name}
+                              />
+
                               {/* Hover Glow */}
                               <div
                                 className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-200"

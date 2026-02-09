@@ -17,7 +17,7 @@ def test_scrape(brand="Arturia"):
 
     soup = BeautifulSoup(resp.text, 'html.parser')
 
-    # Check selectors from unified_agent_orchestrator_v73
+    # Check selectors from unified_agent_orchestrator_v75
     items = soup.select(".box, .item, .product_item, .product_box")
     print(f"Found {len(items)} items with selectors")
 

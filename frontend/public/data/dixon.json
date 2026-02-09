@@ -14,7 +14,16 @@
       "extracted_name": "Dixon Zebra Wood/Red Silkwood 14\" Snare"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -44,12 +53,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -529,10 +561,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-8557367897059324057",
@@ -549,7 +605,16 @@
       "extracted_name": "Dixon Australian Rose Gum 14\" Snare"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -579,12 +644,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1064,10 +1152,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--4518997532779445533",
@@ -1084,7 +1196,16 @@
       "extracted_name": "Dixon Practice 6\" Pad"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1114,12 +1235,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1591,10 +1735,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--5867964084960126545",
@@ -1611,7 +1779,16 @@
       "extracted_name": "Dixon PA-HCM-SP Hoop Cymbal Mount"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1641,12 +1818,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2118,10 +2318,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--806019739826241353",
@@ -2138,7 +2362,16 @@
       "extracted_name": "Dixon PA-HMM-SP Microphone Clamp"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2168,12 +2401,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2645,10 +2901,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--93803409114806287",
@@ -2665,7 +2945,16 @@
       "extracted_name": "Dixon Practice 4\" Pad"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2695,12 +2984,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3172,10 +3484,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-2061050919876285061",
@@ -3192,7 +3528,16 @@
       "extracted_name": "Dixon PRWBDS Rock Block Set"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3222,12 +3567,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3707,10 +4075,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8825082841874248840",
@@ -3727,7 +4119,16 @@
       "extracted_name": "Dixon Tambourine 16 Jingle"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3757,12 +4158,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4242,10 +4666,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--7054172917362368205",
@@ -4262,7 +4710,16 @@
       "extracted_name": "Dixon PSG9000 Bongo Stand"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4292,12 +4749,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4777,10 +5257,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-1999075770320917603",
@@ -4797,7 +5301,16 @@
       "extracted_name": "סט תופים Dixon Artisan"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4827,12 +5340,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5312,10 +5848,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--5617036877088906654",
@@ -5332,7 +5892,16 @@
       "extracted_name": "סט תופים Dixon Fuse"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5362,12 +5931,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5847,10 +6439,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-8773151650097768375",
@@ -5867,7 +6483,16 @@
       "extracted_name": "סט תופים Dixon Spark"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5897,12 +6522,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6382,9 +7030,33 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/dixon_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   }
 ]

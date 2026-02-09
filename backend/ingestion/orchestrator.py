@@ -30,7 +30,7 @@ from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.ingestion.pricing_engine import get_pricing_engine
 from backend.ingestion.display_engine import get_display_engine
 from backend.ingestion.guardrails import verify_critical_facts
-from backend.unified_agent_orchestrator_v73 import CommercialAgent, OfficialAgent, ContextualAgent
+from backend.unified_agent_orchestrator_v75 import CommercialAgent, OfficialAgent, ContextualAgent
 
 logger = logging.getLogger("IngestionOrchestrator")
 
@@ -360,7 +360,8 @@ class IngestionOrchestrator:
                 extraction_notes=f"Scraped from {brand} catalog"
             ),
             # Flatten raw_snapshot to prevent recursive nesting (Matryoshka effect)
-            raw_snapshot=raw_product.get('raw_snapshot') if isinstance(raw_product.get('raw_snapshot'), dict) else raw_product,
+            raw_snapshot=raw_product.get('raw_snapshot') if isinstance(
+                raw_product.get('raw_snapshot'), dict) else raw_product,
             status=IngestionStatus.HARVESTED,
             pipeline_phase="harvest"
         )

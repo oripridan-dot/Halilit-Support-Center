@@ -14,7 +14,16 @@
       "extracted_name": "Innovative Percussion IP-SR"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -44,12 +53,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -521,10 +553,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-2327181175429640535",
@@ -541,7 +597,16 @@
       "extracted_name": "Innovative Percussion IP-HB"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -571,12 +636,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1048,10 +1136,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-8494055511277135680",
@@ -1068,7 +1180,16 @@
       "extracted_name": "Innovative Percussion NZ-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1098,12 +1219,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1575,10 +1719,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-1335710345840118984",
@@ -1595,7 +1763,16 @@
       "extracted_name": "מקלות תופים Innovative Percussion LAX-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1625,12 +1802,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2102,10 +2302,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2872446422765367437",
@@ -2122,7 +2346,16 @@
       "extracted_name": "Innovative Percussion IP-7A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2152,12 +2385,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2629,10 +2885,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8617807830000758840",
@@ -2649,7 +2929,16 @@
       "extracted_name": "Innovative Percussion BZW-2"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2679,12 +2968,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3156,10 +3468,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--4196488809465375978",
@@ -3176,7 +3512,16 @@
       "extracted_name": "Innovative Percussion IP-5A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3206,12 +3551,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3683,10 +4051,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--3300838210036367895",
@@ -3703,7 +4095,16 @@
       "extracted_name": "Innovative Percussion SE-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3733,12 +4134,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4210,10 +4634,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-2354346521774040367",
@@ -4230,7 +4678,16 @@
       "extracted_name": "Innovative Percussion IP-5AB"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4260,12 +4717,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4737,10 +5217,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-3886685494515125893",
@@ -4757,7 +5261,16 @@
       "extracted_name": "Innovative Percussion IP-5AM"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4787,12 +5300,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5264,10 +5800,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2530100908094642286",
@@ -5284,7 +5844,16 @@
       "extracted_name": "Innovative Percussion IP-5B"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5314,12 +5883,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5791,10 +6383,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--3978463184503054835",
@@ -5811,7 +6427,16 @@
       "extracted_name": "Innovative Percussion JD-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5841,12 +6466,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6318,10 +6966,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2154491045904259267",
@@ -6338,7 +7010,16 @@
       "extracted_name": "Innovative Percussion IP-2B"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -6368,12 +7049,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6845,10 +7549,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--5685363534421565319",
@@ -6865,7 +7593,16 @@
       "extracted_name": "Innovative Percussion IP-L8A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -6895,12 +7632,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -7372,10 +8132,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--1751695413116689833",
@@ -7392,7 +8176,16 @@
       "extracted_name": "Innovative Percussion IP-L3A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -7422,12 +8215,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -7899,10 +8715,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-7054432563904899744",
@@ -7919,7 +8759,16 @@
       "extracted_name": "Innovative Percussion IP-L9A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -7949,12 +8798,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -8426,10 +9298,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--5332368567409357392",
@@ -8446,7 +9342,16 @@
       "extracted_name": "Innovative Percussion JR-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -8476,12 +9381,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -8953,10 +9881,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-5233157253406803197",
@@ -8973,7 +9925,16 @@
       "extracted_name": "Innovative Percussion IP-L1A"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -9003,12 +9964,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -9480,10 +10464,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--7547928060105042158",
@@ -9500,7 +10508,16 @@
       "extracted_name": "מקלות תופים Innovative Percussion MATT-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -9530,12 +10547,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -10007,10 +11047,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-172028856140095080",
@@ -10027,7 +11091,16 @@
       "extracted_name": "Innovative Percussion BB-2"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -10057,12 +11130,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -10534,10 +11630,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2070458290188604004",
@@ -10554,7 +11674,16 @@
       "extracted_name": "Innovative Percussion CW-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -10584,12 +11713,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -11061,10 +12213,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--6479920813667169104",
@@ -11081,7 +12257,16 @@
       "extracted_name": "Innovative Percussion BR-JR2"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -11111,12 +12296,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -11588,10 +12796,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-3393623093380552745",
@@ -11608,7 +12840,16 @@
       "extracted_name": "Innovative Percussion BR-JR1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -11638,12 +12879,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -12115,10 +13379,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2974802891469240047",
@@ -12135,7 +13423,16 @@
       "extracted_name": "Innovative Percussion BR-CW"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -12165,12 +13462,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -12642,10 +13962,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8840170605624908593",
@@ -12662,7 +14006,16 @@
       "extracted_name": "Innovative Percussion BZB-1"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -12692,12 +14045,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -13169,9 +14545,33 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/innovative-percussion_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   }
 ]

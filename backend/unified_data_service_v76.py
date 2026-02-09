@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-UNIFIED DATA SERVICE v7.3
+UNIFIED DATA SERVICE v7.5
 
 Consolidated data pipeline that handles:
 1. Product normalization (raw → IngestionProductDraft)
@@ -84,14 +84,25 @@ class DataNormalizer:
             or "unknown"
         )
 
+        # UPDATED v7.5: Prefer Official Name if available (User Request)
         product_name = (
-            raw_product.get("product_name")
+            raw_product.get("official_name")
+            or raw_product.get("product_name")
             or raw_product.get("name")
-            or raw_product.get("official_name")
             or "Unknown Product"
         )
 
         brand_name = raw_product.get("brand") or brand or "Generic"
+        brand_slug = brand_name.lower().replace(" ", "-") if brand_name else "generic"
+
+        # Check for SVG logo first, then PNG, else default
+        # Note: In a real app we'd check file existence. For now we assume logic.
+        # Actually, let's just make it flexible in the Frontend or standardize here.
+        # Since we just created sequential_logo.svg, let's use a helper or simple logic.
+        if brand_slug in ["sequential", "roland", "boss", "yamaha"]:  # Known SVGs or preferred
+            brand_logo_url = f"/assets/logos/{brand_slug}_logo.svg"
+        else:
+            brand_logo_url = f"/assets/logos/{brand_slug}_logo.png"
 
         # ════════════════════════════════════════════════════════════════
         # PHASE 2: EXTRACT PRICING DATA (CRITICAL FOR UI)
@@ -244,6 +255,7 @@ class DataNormalizer:
             # ===== FRONTEND-SPECIFIC FIELDS =====
             "price": float(pricing_data.get("price_il", 0)),
             "currency": "ILS",
+            "brand_logo": brand_logo_url,
             "image_hero": hero_image,
             "image_thumbnail": thumbnail_image,
             "image_gallery": official_images,
@@ -310,8 +322,14 @@ class DataNormalizer:
         if isinstance(product.get("official_images"), list):
             for img in product["official_images"]:
                 if isinstance(img, dict):
+                    raw_url = img.get("url") or img.get("src") or ""
+
+                    # FIX: Handle placeholder URLs from ingestion
+                    if "brand.com/hero.jpg" in raw_url:
+                        raw_url = "/assets/images/placeholder_product.svg"
+
                     normalized_img = {
-                        "url": img.get("url") or img.get("src") or "",
+                        "url": raw_url,
                         "alt": img.get("alt") or img.get("alt_text", "Product image"),
                         "type": img.get("type", "official"),
                         "display_purpose": img.get("display_purpose", "display"),
@@ -321,8 +339,12 @@ class DataNormalizer:
                     if normalized_img["url"]:
                         images.append(normalized_img)
                 elif isinstance(img, str):
+                    clean_url = img
+                    if "brand.com/hero.jpg" in clean_url:
+                        clean_url = "/assets/images/placeholder_product.svg"
+
                     images.append({
-                        "url": img,
+                        "url": clean_url,
                         "alt": "Product image",
                         "type": "official",
                         "display_purpose": "display",
@@ -362,13 +384,28 @@ class DataNormalizer:
 
         # Priority 4: direct image_url field
         if product.get("image_url") and not images:
+            direct_url = product["image_url"]
+            if "brand.com/hero.jpg" in direct_url:
+                direct_url = "/assets/images/placeholder_product.svg"
+
             images.append({
-                "url": product["image_url"],
+                "url": direct_url,
                 "alt": "Product image",
                 "type": "standard",
                 "display_purpose": "display",
                 "priority": 0,
                 "source": "direct",
+            })
+
+        # Final Fallback: If no images found at all, use placeholder
+        if not images:
+            images.append({
+                "url": "/assets/images/placeholder_product.svg",
+                "alt": "No Image Available",
+                "type": "placeholder",
+                "display_purpose": "hero",
+                "priority": 0,
+                "source": "fallback",
             })
 
         return images
@@ -395,7 +432,7 @@ class DataNormalizer:
         """
         Validate that a normalized product has all REQUIRED fields.
 
-        ✅ v7.3 CHANGE: Only require core commercial fields
+        ✅ v7.5 CHANGE: Only require core commercial fields
         ❌ No longer strict about images, specs, or description
 
         Returns (is_valid, list_of_errors)
@@ -872,7 +909,7 @@ class IngestToFrontendSyncEngine:
             for product in frontend_products:
                 is_valid, errors = DataNormalizer.validate_normalized(product)
 
-                # ✅ RELAXED VALIDATION (v7.3) - Include more products
+                # ✅ RELAXED VALIDATION (v7.5) - Include more products
                 # Only reject if there are core validation errors
                 # (missing required fields), not quality issues
 

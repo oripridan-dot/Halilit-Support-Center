@@ -14,7 +14,16 @@
       "extracted_name": "Lynx Mesa Thunderbolt 3 Audio Interface"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -44,12 +53,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -521,10 +553,34 @@
     "validation_warnings": [],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-527691014197640290",
@@ -541,7 +597,16 @@
       "extracted_name": "Lynx E22"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -571,12 +636,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1056,10 +1144,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--4331316924620106427",
@@ -1076,7 +1188,16 @@
       "extracted_name": "Lynx Aurora(n) 8 HD"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1106,12 +1227,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -1591,10 +1735,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-6368029955945342097",
@@ -1611,7 +1779,16 @@
       "extracted_name": "Lynx Aurora(n) 32 DNT"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -1641,12 +1818,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2126,10 +2326,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-1696949433934255134",
@@ -2146,7 +2370,16 @@
       "extracted_name": "Lynx Aurora(n) 8 Thunderbolt"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2176,12 +2409,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -2661,10 +2917,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-5103882292905335187",
@@ -2681,7 +2961,16 @@
       "extracted_name": "Lynx Aurora(n) 8 USB"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -2711,12 +3000,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3196,10 +3508,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--5344029431694335895",
@@ -3216,7 +3552,16 @@
       "extracted_name": "Lynx LT-USB"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3246,12 +3591,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -3731,10 +4099,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8620490484927827149",
@@ -3751,7 +4143,16 @@
       "extracted_name": "Lynx Aurora(n) 8 DNT"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -3781,12 +4182,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4266,10 +4690,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-3438354245081552522",
@@ -4286,7 +4734,16 @@
       "extracted_name": "Lynx E44"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4316,12 +4773,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -4801,10 +5281,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-5467009898650715640",
@@ -4821,7 +5325,16 @@
       "extracted_name": "Lynx Aurora(n) 16 USB"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -4851,12 +5364,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5336,10 +5872,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-3703186754684999777",
@@ -5356,7 +5916,16 @@
       "extracted_name": "Lynx Aurora(n) 16 HD"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5386,12 +5955,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -5871,10 +6463,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-74859804539999784",
@@ -5891,7 +6507,16 @@
       "extracted_name": "Lynx AES16e"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -5921,12 +6546,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6406,10 +7054,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--8571267327829184697",
@@ -6426,7 +7098,16 @@
       "extracted_name": "Lynx Aurora(n) 16 Dante"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -6456,12 +7137,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -6941,10 +7645,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2482013516916448681",
@@ -6961,7 +7689,16 @@
       "extracted_name": "Lynx Aurora(n) 24 HD"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -6991,12 +7728,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -7476,10 +8236,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--1936760040443736983",
@@ -7496,7 +8280,16 @@
       "extracted_name": "Lynx Aurora 8 Thunderbolt"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -7526,12 +8319,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -8011,10 +8827,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-6554149502200922990",
@@ -8031,7 +8871,16 @@
       "extracted_name": "Lynx Aurora(n) 24 Thunderbolt"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -8061,12 +8910,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -8546,10 +9418,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped-1849133426381979127",
@@ -8566,7 +9462,16 @@
       "extracted_name": "Lynx Aurora(n) 24 Dante"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -8596,12 +9501,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -9081,10 +10009,34 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   },
   {
     "halilit_id": "scraped--2525778912094127045",
@@ -9101,7 +10053,16 @@
       "extracted_name": "Lynx Aurora(n) 32 HD"
     },
     "official_description": null,
-    "official_images": [],
+    "official_images": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
     "official_url": null,
     "reviews": [],
     "review_synthesis": null,
@@ -9131,12 +10092,35 @@
     },
     "display": {
       "display_role": "entry",
-      "hero_image": null,
-      "thumbnail_image": null,
+      "hero_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
+      "thumbnail_image": {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      },
       "should_highlight": false,
       "display_tier_level": 1,
       "color_hint": "bg-gray-300",
-      "media_assets": []
+      "media_assets": [
+        {
+          "url": "/assets/images/placeholder_product.svg",
+          "alt": "No Image Available",
+          "type": "placeholder",
+          "display_purpose": "hero",
+          "priority": 0,
+          "source": "fallback"
+        }
+      ]
     },
     "specifications": {
       "note": "Standardized via Halilit Commercial Source",
@@ -9616,9 +10600,33 @@
     ],
     "price": 0.0,
     "currency": "ILS",
-    "image_hero": null,
-    "image_thumbnail": null,
-    "image_gallery": [],
-    "image_url": ""
+    "brand_logo": "/assets/logos/lynx_logo.png",
+    "image_hero": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_thumbnail": {
+      "url": "/assets/images/placeholder_product.svg",
+      "alt": "No Image Available",
+      "type": "placeholder",
+      "display_purpose": "hero",
+      "priority": 0,
+      "source": "fallback"
+    },
+    "image_gallery": [
+      {
+        "url": "/assets/images/placeholder_product.svg",
+        "alt": "No Image Available",
+        "type": "placeholder",
+        "display_purpose": "hero",
+        "priority": 0,
+        "source": "fallback"
+      }
+    ],
+    "image_url": "/assets/images/placeholder_product.svg"
   }
 ]

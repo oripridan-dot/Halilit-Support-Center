@@ -145,11 +145,24 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           >
             <ArrowLeft size={20} />
           </button>
-          <div>
-            <p className="text-xs text-blue-400 font-mono">{product.brand}</p>
-            <h1 className="text-xl font-bold text-white truncate">
-              {product.name}
-            </h1>
+          <div className="flex items-center gap-4">
+            {/* Brand Logo - Added per v7.5 request */}
+            {(product as any).brand_logo && (
+              <div className="w-12 h-12 bg-white rounded-lg p-1 flex items-center justify-center overflow-hidden shrink-0">
+                <img
+                  src={(product as any).brand_logo}
+                  alt={product.brand}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => (e.currentTarget.style.display = "none")}
+                />
+              </div>
+            )}
+            <div>
+              <p className="text-xs text-blue-400 font-mono">{product.brand}</p>
+              <h1 className="text-xl font-bold text-white truncate">
+                {product.name}
+              </h1>
+            </div>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -289,26 +302,35 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           {/* Column 3: Specifications & Details */}
           <div className="space-y-6">
             {/* Description */}
-            {(product?.description_short || product?.official_description || product?.specifications?.short_description) && (
+            {(product?.description_short ||
+              product?.official_description ||
+              product?.specifications?.short_description) && (
               <div className="bg-slate-900 rounded p-4 border border-slate-800">
                 <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                   Overview
                 </h2>
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  {product.description_short || product.official_description || product.specifications?.short_description}
+                  {product.description_short ||
+                    product.official_description ||
+                    product.specifications?.short_description}
                 </p>
               </div>
             )}
 
             {/* Features */}
             {(product?.feature_list || product?.specifications?.features) &&
-              (product.feature_list || product.specifications?.features || []).length > 0 && (
+              (product.feature_list || product.specifications?.features || [])
+                .length > 0 && (
                 <div className="bg-slate-900 rounded p-4 border border-slate-800">
                   <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                     Features
                   </h2>
                   <ul className="space-y-1 text-sm text-zinc-300">
-                    {(product.feature_list || product.specifications?.features || [])
+                    {(
+                      product.feature_list ||
+                      product.specifications?.features ||
+                      []
+                    )
                       .slice(0, 5)
                       .map((feature: string, idx: number) => (
                         <li key={idx} className="flex items-start gap-2">
@@ -324,15 +346,23 @@ export const ProductPage = ({ productId }: { productId: string }) => {
 
             {/* Specs */}
             {product?.specifications &&
-              (Object.keys(product.specifications).length > 0) && (
+              Object.keys(product.specifications).length > 0 && (
                 <div className="bg-slate-900 rounded p-4 border border-slate-800">
                   <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                     Specifications
                   </h2>
                   <div className="space-y-2 text-sm">
                     {/* Handle both unified (direct dict) and legacy (nested .specs) structures */}
-                    {Object.entries(product.specifications?.specs || product.specifications)
-                      .filter(([key]) => key !== 'specs' && key !== 'features' && key !== 'short_description' && key !== 'long_description')
+                    {Object.entries(
+                      product.specifications?.specs || product.specifications,
+                    )
+                      .filter(
+                        ([key]) =>
+                          key !== "specs" &&
+                          key !== "features" &&
+                          key !== "short_description" &&
+                          key !== "long_description",
+                      )
                       .slice(0, 8)
                       .map(([key, value]) => (
                         <div key={key} className="flex justify-between">
@@ -340,7 +370,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                             {key}:
                           </span>
                           <span className="text-white font-medium text-right ml-4">
-                            {typeof value === 'object' ? JSON.stringify(value) : String(value)}
+                            {typeof value === "object"
+                              ? JSON.stringify(value)
+                              : String(value)}
                           </span>
                         </div>
                       ))}
@@ -351,13 +383,15 @@ export const ProductPage = ({ productId }: { productId: string }) => {
         </div>
 
         {/* Full Specifications Section (if there are more) */}
-        {(product?.description_long || product?.specifications?.long_description) && (
+        {(product?.description_long ||
+          product?.specifications?.long_description) && (
           <div className="bg-slate-900 rounded p-6 border border-slate-800 mt-6">
             <h2 className="text-lg font-bold text-white mb-4">
               Full Description
             </h2>
             <p className="text-sm text-zinc-300 leading-relaxed whitespace-pre-wrap">
-              {product.description_long || product.specifications?.long_description}
+              {product.description_long ||
+                product.specifications?.long_description}
             </p>
           </div>
         )}
@@ -402,15 +436,50 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="text-zinc-500">Sources</p>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {product.provenance.sources?.map((source, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2 py-1 bg-blue-600/30 text-blue-400 rounded text-xs font-bold"
-                    >
-                      {source}
+                <div className="flex flex-wrap gap-3 mt-2 items-center">
+                  {/* Halilit Source (Local Commercial) */}
+                  <div
+                    className="flex items-center gap-2 bg-white/5 pr-3 rounded-lg overflow-hidden border border-white/10"
+                    title="Halilit (Commercial Data)"
+                  >
+                    <div className="bg-blue-600 h-8 w-8 flex items-center justify-center font-bold text-white text-xs">
+                      H
+                    </div>
+                    <span className="text-zinc-300 font-medium text-xs">
+                      Halilit.com
                     </span>
-                  ))}
+                  </div>
+
+                  {/* Brand Source (Official) */}
+                  {(product as any).brand_logo && (
+                    <div
+                      className="flex items-center gap-2 bg-white/5 pr-3 rounded-lg overflow-hidden border border-white/10"
+                      title="Official Brand Data"
+                    >
+                      <div className="bg-white h-8 w-8 p-1 flex items-center justify-center">
+                        <img
+                          src={(product as any).brand_logo}
+                          alt="Brand"
+                          className="max-w-full max-h-full object-contain"
+                        />
+                      </div>
+                      <span className="text-zinc-300 font-medium text-xs">
+                        Official
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Other sources */}
+                  {product.provenance.sources
+                    ?.filter((s) => s !== "halilit" && !s.includes("official"))
+                    .map((source, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-slate-800 text-zinc-400 rounded text-xs border border-slate-700"
+                      >
+                        {source}
+                      </span>
+                    ))}
                 </div>
               </div>
               <div>

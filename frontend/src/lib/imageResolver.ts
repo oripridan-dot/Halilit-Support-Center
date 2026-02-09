@@ -10,6 +10,18 @@ export const PLACEHOLDER_COLORS = {
   accent: "#ff9900",
 };
 
+// Map categories to local thumbnail assets (public/assets/thumbs/)
+// REMOVED: User prefers "real" images only or raw placeholder
+/*
+const CATEGORY_THUMB_MAP: Record<string, string> = {
+  ...
+};
+*/
+
+
+// Transparent pixel for "no image" state (User request: "real images only")
+const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 /**
  * Resolve a valid image URL for a product
  * Uses: image_hero > image_thumbnail > image_gallery > placeholder
@@ -18,7 +30,7 @@ export function resolveProductImage(
   product: Product | null | undefined,
 ): string {
   if (!product) {
-    return generatePlaceholderImage("Unknown");
+    return TRANSPARENT_PIXEL;
   }
 
   // 1. Try hero image (new structure: display.hero_image.url OR top-level image_url)
@@ -49,19 +61,35 @@ export function resolveProductImage(
     }
   }
 
-  // 4. Return placeholder
-  return generatePlaceholderImage(product.name || "Product");
+  // 4. Return transparent pixel (No generated placeholders)
+  return TRANSPARENT_PIXEL;
 }
+
 
 /**
  * Check if image URL looks valid
  */
 function isValidImageUrl(url: string): boolean {
   if (!url || typeof url !== "string") return false;
+
   // Accept URLs with image extensions or cloudfront URLs
   const imageExtensions = /\.(jpg|jpeg|png|gif|svg|webp)$/i;
+  // Reject known dummy domains
+  if (url.includes("brand.com") || url.includes("example.com")) return false;
+
   return imageExtensions.test(url) || url.includes("cloudfront.net");
 }
+
+/**
+ * Resolve category thumbnail based on product metadata
+ * DISABLED: User requested "only real images"
+ */
+/*
+function resolveCategoryThumbnail(product: Product): string | null {
+ ...
+}
+*/
+
 
 /**
  * Generate a data URL placeholder image

@@ -1,0 +1,18 @@
+{
+  "brand": "nord",
+  "version_id": "batch_1770644105",
+  "batch_id": "batch_1770644105",
+  "created_at": "2026-02-09T13:35:24.480087+00:00",
+  "phase": "harvested",
+  "product_count": 23,
+  "products_enriched": 0,
+  "products_validated": 23,
+  "products_approved": 23,
+  "agent_responsible": "",
+  "completeness_score": 0.6842105263157894,
+  "accuracy_score": 0.0,
+  "compliance_score": 100.0,
+  "source": "automatic_ingestion",
+  "notes": "Recommendations: \u2705 Pipeline running smoothly - no issues detected",
+  "errors": []
+}

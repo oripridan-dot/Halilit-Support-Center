@@ -3,10 +3,12 @@ import logging
 from pathlib import Path
 from typing import Dict, Optional, Any
 
+
 class MatchLearningSystem:
     """
     Persists and retrieves confirmed product matches to avoid re-running expense AI checks.
     """
+
     def __init__(self, data_path: Path):
         self.file_path = data_path / "learned_matches.json"
         self.matches: Dict[str, Any] = {}
@@ -18,7 +20,8 @@ class MatchLearningSystem:
             try:
                 with open(self.file_path, 'r') as f:
                     self.matches = json.load(f)
-                self.logger.info(f"Loaded {len(self.matches)} learned matches.")
+                self.logger.info(
+                    f"Loaded {len(self.matches)} learned matches.")
             except Exception as e:
                 self.logger.warning(f"Failed to load matches: {e}")
                 self.matches = {}
@@ -39,7 +42,7 @@ class MatchLearningSystem:
         self.matches[product_id] = {
             "candidate": candidate,
             "confidence": confidence,
-            "timestamp": "iso_timestamp_here" # Add datetime logic if needed
+            "timestamp": "iso_timestamp_here"  # Add datetime logic if needed
         }
         self._save()
 

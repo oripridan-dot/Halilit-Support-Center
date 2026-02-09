@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CONDUCTOR MAIN - Central Hub for Halilit Support Center v7.3
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v7.6
 
 The Conductor CLI orchestrates all operations:
 - Data ingestion (Trinity Swarm)
@@ -21,10 +21,11 @@ Usage:
 from backend.ingestion_versioning import get_version_manager, IngestionVersion
 from backend.ingestion.ingestion_database import get_ingestion_database
 from backend.ingestion.trinity_integration import TrinityIngestionBridge
-from backend.unified_data_service_v73 import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
+from backend.unified_data_service_v76 import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
 from backend.ingestion.orchestrator import IngestionOrchestrator
-from backend.unified_agent_orchestrator_v73 import CommercialAgent
-from backend.unified_quality_gates_v73 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
+from backend.unified_agent_orchestrator_v76 import CommercialAgent
+from backend.unified_quality_gates_v76 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
+
 from backend.ingestion.visual_validator import visual_validator
 from backend.ingestion.match_learning import MatchLearningSystem
 import sys
@@ -60,11 +61,12 @@ class ConductorCLI:
         self.version_manager = get_version_manager()
         self.data_dir = Path("/workspaces/Halilit-Support-Center/backend/data")
         self.frontend_dir = Path("/workspaces/Halilit-Support-Center/frontend")
-        self.config_dir = Path("/workspaces/Halilit-Support-Center/backend/config")
-        
+        self.config_dir = Path(
+            "/workspaces/Halilit-Support-Center/backend/config")
+
         # Initialize Learning System
         self.match_learner = MatchLearningSystem(self.data_dir)
-        
+
         # Load Brand Tiers
         self.brand_tiers = self._load_tiers()
 
@@ -103,8 +105,8 @@ class ConductorCLI:
                 brands = self.brand_tiers.get(tier_key, [])
                 logger.info(f"🎯 Ingesting Tier {tier}: {len(brands)} brands")
                 if not brands:
-                   logger.warning(f"No brands found for Tier {tier}")
-                   return False
+                    logger.warning(f"No brands found for Tier {tier}")
+                    return False
             else:
                 logger.info(
                     "No brand specified, using Trinity to detect brands...")
@@ -129,13 +131,14 @@ class ConductorCLI:
                     continue
 
                 # --- VISUAL VALIDATION PRE-FLIGHT ---
-                # v7.3: Check if candidates exist and validate them
+                # v7.6: Check if candidates exist and validate them
                 validated_products = []
                 for p in raw_products:
                     if 'candidates' in p and isinstance(p['candidates'], list) and p['candidates']:
                         logger.info(
                             f"🔎 Running Visual Validator for {p.get('product_name')}")
-                        match = process_candidates(p, p['candidates'], self.match_learner)
+                        match = process_candidates(
+                            p, p['candidates'], self.match_learner)
                         if match:
                             p['verified_match'] = match
                             validated_products.append(p)
@@ -187,16 +190,35 @@ class ConductorCLI:
 
                         version = IngestionVersion(
                             brand=b,
+                            version_id=report.batch_id,
                             batch_id=report.batch_id,
-                            approved_count=report.approved_count,
-                            rejected_count=report.rejected_count,
-                            total_processed=report.total_products_processed,
-                            execution_time_seconds=report.execution_time_seconds,
-                            data_completeness=avg_completeness,
-                            quality_score=avg_quality,
-                            recommendations=report.recommendations,
+                            product_count=report.total_products_processed,
+                            products_approved=report.approved_count,
+                            products_validated=report.approved_count + report.rejected_count,
+                            completeness_score=avg_completeness,
+                            compliance_score=avg_quality,
+                            notes=f"Recommendations: {'; '.join(report.recommendations)}",
+                            source="automatic_ingestion"
                         )
-                        self.version_manager.save_version(version)
+                        # NOTE: IngestionVersion definition has:
+                        # brand: str
+                        # version_id: str
+                        # batch_id: str
+                        # created_at: datetime
+                        # phase: IngestionPhase
+                        # product_count: int
+                        # products_enriched: int
+                        # products_validated: int
+                        # products_approved: int
+
+                        # Just in case, let's update checks since we don't have all args in definition
+
+                        version.execution_time_seconds = report.execution_time_seconds
+                        version.data_completeness = avg_completeness
+                        version.quality_score = avg_quality
+                        version.recommendations = report.recommendations
+
+                        self.version_manager.update_version(version)
                         logger.info(
                             f"   📌 Version tracked: {version.version_id}")
                     except Exception as e:
@@ -281,22 +303,23 @@ class ConductorCLI:
             # 1. Load ALL valid frontend data
             all_products = []
             frontend_brands = self.get_all_brands()
-            
+
             for b in frontend_brands:
                 data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
                 if data_file.exists():
-                     try:
+                    try:
                         with open(data_file) as f:
                             data = json.load(f)
                             if isinstance(data, list):
                                 all_products.extend(data)
-                     except Exception as e:
-                         logger.warning(f"Skipping {b} in artifacts build: {e}")
+                    except Exception as e:
+                        logger.warning(f"Skipping {b} in artifacts build: {e}")
 
             # 2. Generate artifacts
             if all_products:
                 engine.generate_smart_artifacts(all_products)
-                logger.info(f"✅ Global build complete ({len(all_products)} products indexed)")
+                logger.info(
+                    f"✅ Global build complete ({len(all_products)} products indexed)")
                 return True
             else:
                 logger.warning("⚠️  No products found for global build")
@@ -305,7 +328,6 @@ class ConductorCLI:
         except Exception as e:
             logger.error(f"❌ Global build failed: {e}")
             return False
-
 
     def full_build(self, brand: Optional[str] = None, tier: Optional[int] = None, force: bool = False) -> bool:
         """Run full build: ingest + sync."""
@@ -556,7 +578,8 @@ class ConductorCLI:
 
         # Last resort: Fresh Scrape via CommercialScout
         if force:
-             logger.info(f"   ⚡ FORCE ENABLED: Skipping local files. Launching CommercialScout for {brand}...")
+            logger.info(
+                f"   ⚡ FORCE ENABLED: Skipping local files. Launching CommercialScout for {brand}...")
         else:
             logger.info(
                 f"   🔎 No local data found for {brand}. Launching CommercialScout...")
@@ -574,8 +597,8 @@ class ConductorCLI:
                 return raw_data
 
         except Exception as e:
-             logger.error(f"   ❌ Scout failed: {e}")
-             
+            logger.error(f"   ❌ Scout failed: {e}")
+
         return []
 
     def _detect_brands_from_sources(self) -> List[str]:
@@ -603,7 +626,7 @@ class ConductorCLI:
 
 
 def process_candidates(
-    halilit_product: Dict[str, Any], 
+    halilit_product: Dict[str, Any],
     thomann_candidates: List[Dict[str, Any]],
     match_learner: Optional[MatchLearningSystem] = None
 ) -> Optional[Dict[str, Any]]:
@@ -611,14 +634,15 @@ def process_candidates(
     Filters a list of potential matches using AI Visual Verification.
     Uses MatchLearningSystem to skip expensive AI checks if match is already known.
     """
-    
+
     # 0. Check cache first
     # Use name as ID primarily as it's the stable identifier in this pipeline iteration
     product_id = halilit_product.get('name') or halilit_product.get('id')
     if match_learner and product_id:
         cached = match_learner.get_match(str(product_id))
         if cached:
-            print(f"      🧠 Using LEARNED MATCH for {halilit_product.get('name')} (Conf: {cached.get('confidence', 0)*100:.1f}%)")
+            print(
+                f"      🧠 Using LEARNED MATCH for {halilit_product.get('name')} (Conf: {cached.get('confidence', 0)*100:.1f}%)")
             return cached.get('candidate')
 
     best_match = None
@@ -663,8 +687,8 @@ def process_candidates(
     # Register the best successful match
     if best_match and match_learner and product_id:
         match_learner.register_match(
-            str(product_id), 
-            best_match, 
+            str(product_id),
+            best_match,
             highest_confidence
         )
 
@@ -673,7 +697,7 @@ def process_candidates(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Conductor CLI - Halilit Support Center v7.3",
+        description="Conductor CLI - Halilit Support Center v7.6",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

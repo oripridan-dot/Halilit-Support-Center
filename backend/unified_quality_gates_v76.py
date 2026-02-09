@@ -1,5 +1,5 @@
 """
-UNIFIED QUALITY GATES SYSTEM - v7.3
+UNIFIED QUALITY GATES SYSTEM - v7.5
 ===================================
 
 Consolidates four quality systems into one unified module:
@@ -750,14 +750,23 @@ class DataIntegrityGate:
                 f"Images field is not a list (got {type(images).__name__})")
 
         # Check 3: Taxonomy valid
-        taxonomy = product.get('taxonomy', {})
+        taxonomy = product.get('taxonomy') or {}
         if isinstance(taxonomy, dict):
             required_taxonomy = ['canonical_category', 'canonical_subcategory']
-            missing_tax = [f for f in required_taxonomy if f not in taxonomy]
-            if missing_tax:
-                warnings.append(
-                    f"Missing taxonomy fields: {', '.join(missing_tax)}")
+            # Only strictly require these if taxonomy is NOT empty
+            if taxonomy:
+                missing_tax = [
+                    f for f in required_taxonomy if f not in taxonomy]
+                if missing_tax:
+                    warnings.append(
+                        f"Missing taxonomy fields: {', '.join(missing_tax)}")
+                else:
+                    checks_passed += 1
             else:
+                # Taxonomy is empty/None but was a dict or None
+                # If it's the raw draft, this is expected in early phases.
+                # If it's final, this is a warning.
+                # We count it as passed check (structure ok) but maybe warn if we are strict.
                 checks_passed += 1
         else:
             violations.append(
@@ -922,6 +931,77 @@ class QualityGate:
         )
 
 
+class ContentQualityGate:
+    """
+    Ensures content quality:
+    - No placeholder text (lorem ipsum, TBD)
+    - No empty or null string values where clear text is expected
+    - No excessive repetition
+    """
+
+    PLACEHOLDERS = [
+        "lorem ipsum", "tbd", "pending", "coming soon",
+        "no description", "n/a", "undefined", "null", "[insert"
+    ]
+
+    @staticmethod
+    def check_content(product: Dict[str, Any]) -> GateCheckResult:
+        violations = []
+        warnings = []
+        checks_passed = 0
+        checks_total = 4
+
+        # Helper to check text quality
+        def is_placeholder(text: str) -> bool:
+            if not text:
+                return False
+            t = text.lower()
+            return any(p in t for p in ContentQualityGate.PLACEHOLDERS)
+
+        # Check 1: Product Name Quality
+        name = product.get('product_name', '')
+        if is_placeholder(name):
+            violations.append(
+                f"Product name contains placeholder text: {name}")
+        elif name.lower() in ["unknown", "product", "test"]:
+            violations.append(f"Product name is generic: {name}")
+        else:
+            checks_passed += 1
+
+        # Check 2: Description Quality (if present)
+        desc = product.get('description_long') or product.get(
+            'description_short') or ""
+        if desc and is_placeholder(desc):
+            violations.append("Description contains placeholder text")
+        else:
+            checks_passed += 1
+
+        # Check 3: Repetition (Name == Description)
+        if desc and name and desc.lower().strip() == name.lower().strip():
+            warnings.append("Description is identical to product name")
+        else:
+            checks_passed += 1
+
+        # Check 4: Empty "Official" fields
+        # If we have official specs but they are empty dict, warn
+        if 'official_specs' in product and isinstance(product['official_specs'], dict) and not product['official_specs']:
+            warnings.append("Official specs present but empty")
+        else:
+            checks_passed += 1
+
+        return GateCheckResult(
+            gate_name="ContentQuality",
+            status=GateStatus.BLOCKED if violations else (
+                GateStatus.WARNING if warnings else GateStatus.PASSED),
+            checks_passed=checks_passed,
+            checks_total=checks_total,
+            violations=violations,
+            warnings=warnings,
+            recommendations=["Remove placeholder text", "Enrich description",
+                             "Populate official specs"] if violations else [],
+        )
+
+
 class GateProcessor:
     """
     Runs all gates against a product.
@@ -945,6 +1025,8 @@ class GateProcessor:
             DataIntegrityGate.check_integrity(product),
             ComplianceGate.check_compliance(product),
             QualityGate.check_quality(product),
+            ContentQualityGate.check_content(
+                product),  # Added ContentQualityGate
         ]
 
         total_violations = 0

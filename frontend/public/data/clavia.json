@@ -16,7 +16,7 @@
     "official_description": null,
     "official_images": [
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -24,7 +24,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -32,7 +32,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -40,7 +40,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -48,7 +48,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -56,7 +56,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -64,7 +64,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -72,7 +72,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -80,7 +80,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -88,7 +88,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -96,7 +96,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -104,7 +104,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -112,7 +112,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -120,7 +120,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -128,7 +128,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -166,7 +166,7 @@
     "display": {
       "display_role": "specialist",
       "hero_image": {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -174,7 +174,7 @@
         "source": "official"
       },
       "thumbnail_image": {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -186,7 +186,7 @@
       "color_hint": "bg-green-400",
       "media_assets": [
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
@@ -194,7 +194,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
@@ -202,7 +202,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -210,7 +210,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
@@ -218,7 +218,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -226,7 +226,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -234,7 +234,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -242,7 +242,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "hero",
@@ -250,7 +250,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -258,7 +258,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -266,7 +266,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -274,7 +274,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -282,7 +282,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -290,7 +290,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -298,7 +298,7 @@
           "source": "official"
         },
         {
-          "url": "https://brand.com/hero.jpg",
+          "url": "/assets/images/placeholder_product.svg",
           "alt": null,
           "type": "image",
           "display_purpose": "gallery",
@@ -1302,8 +1302,9 @@
     "validation_warnings": [],
     "price": 18500.0,
     "currency": "ILS",
+    "brand_logo": "/assets/logos/clavia_logo.png",
     "image_hero": {
-      "url": "https://brand.com/hero.jpg",
+      "url": "/assets/images/placeholder_product.svg",
       "alt": null,
       "type": "image",
       "display_purpose": "hero",
@@ -1311,7 +1312,7 @@
       "source": "official"
     },
     "image_thumbnail": {
-      "url": "https://brand.com/hero.jpg",
+      "url": "/assets/images/placeholder_product.svg",
       "alt": null,
       "type": "image",
       "display_purpose": "hero",
@@ -1320,7 +1321,7 @@
     },
     "image_gallery": [
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -1328,7 +1329,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -1336,7 +1337,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1344,7 +1345,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -1352,7 +1353,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1360,7 +1361,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1368,7 +1369,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1376,7 +1377,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "hero",
@@ -1384,7 +1385,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1392,7 +1393,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1400,7 +1401,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1408,7 +1409,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1416,7 +1417,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1424,7 +1425,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1432,7 +1433,7 @@
         "source": "official"
       },
       {
-        "url": "https://brand.com/hero.jpg",
+        "url": "/assets/images/placeholder_product.svg",
         "alt": null,
         "type": "image",
         "display_purpose": "gallery",
@@ -1440,6 +1441,6 @@
         "source": "official"
       }
     ],
-    "image_url": "https://brand.com/hero.jpg"
+    "image_url": "/assets/images/placeholder_product.svg"
   }
 ]

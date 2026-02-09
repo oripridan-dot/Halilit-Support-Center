@@ -147,6 +147,22 @@ class DisplayPreparationEngine:
         return DisplayRole.SPECIALIST
 
     # ============================================================================
+    # VISUAL ENHANCEMENT TOOLS (v7.5)
+    # ============================================================================
+    def _enhance_image_presentation(self, image_url: str) -> str:
+        """
+        [FUTURE CAPABILITY]
+        Refine and crop image, apply proper background and lighting.
+
+        Planned Implementation:
+        1. Smart Crop: Center subject using object detection.
+        2. Background Removal: Use 'rembg' or Gemini Vision to isolate product.
+        3. Studio Lighting: Generative fill to add professional lighting and shadows.
+        """
+        # Currently a pass-through until GenAI image editing is fully integrated
+        return image_url
+
+    # ============================================================================
     # MEDIA ASSET ORGANIZATION
     # ============================================================================
 

@@ -18,6 +18,8 @@ const BRAND_LOGO_MAP: Record<string, string> = {
     "drumdots": "drumdots_logo.png",
     "universal audio": "universal-audio_logo.jpg",
     "universal-audio": "universal-audio_logo.jpg",
+    sequential: "sequential_logo.svg",
+    "sequential circuits": "sequential_logo.svg",
 };
 
 /**
@@ -50,7 +52,7 @@ export function extractBrandsForCategory(
             || (typeof product === 'object' ? Object.values(product).find(v => typeof v === 'string' && v.includes(categoryId)) : null);
 
         // Simple string matching (adjust based on your category mapping)
-        if (productCategory && productCategory.toString().includes(categoryId)) {
+        if (productCategory && productCategory.toString().toLowerCase().includes(categoryId.toLowerCase())) {
             if (product.brand) {
                 uniqueBrands.add(product.brand);
             }

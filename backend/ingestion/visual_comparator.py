@@ -93,23 +93,25 @@ class VisualComparator:
 
         prompt = """
         You are an expert Production Validator.
-        Compare these two product images.
+        Compare these two product images to verify they represent the SAME SKU/Model.
         Image 1: Commercial Product (Store)
         Image 2: Official Product (Manufacturer)
         
-        Task: Determine if these two images show the EXACT SAME product model.
-        Ignore minor differences in lighting, angle, or color (unless color defines the model).
-        Focus on:
-        - Knob/button layout
-        - Screen placement
-        - Text/Labels
-        - Physical form factor
+        TASK: Determine if these images refer to the same product model.
+        
+        CRITICAL RULES:
+        1. IGNORE: Lighting, background, exact angle, or minor color variations (unless the product is SOLD by color).
+        2. IGNORE: Presence of packaging/boxes in one image vs naked product in the other.
+        3. IGNORE: Included accessories (cables, stands) shown in one image but not the other.
+        4. FOCUS ON: Unique identifiers - Knob layouts, screen position, port definitions, logo placement, specific shape.
+        5. REJECT: If one image is a generic "No Image Available" or placeholder logo.
+        6. REJECT: If the products are clearly different models (e.g., 61 keys vs 88 keys, different button count).
         
         Respond ONLY with a JSON object:
         {
             "is_match": boolean,
             "confidence": float (0.0 to 1.0),
-            "reasoning": "string explanation"
+            "reasoning": "Concise explanation of key visual anchors matched or mismatched."
         }
         """
 

@@ -1,5 +1,5 @@
 """
-Halilit Support Center v7.3 - ADK Backend (Trinity Swarm + Consolidated)
+Halilit Support Center v7.6 - ADK Backend (Trinity Swarm + Consolidated)
 =========================================================================
 
 Lightweight module exports for the Halilit Support Center API.
@@ -8,7 +8,7 @@ Lightweight module exports for the Halilit Support Center API.
 - Skills & Workflow: Verified capabilities with state machines
 - Security: Multi-layer protection
 
-Version: 7.2 (Production-Ready)
+Version: 7.6.0 (Production-Ready)
 """
 
 import sys

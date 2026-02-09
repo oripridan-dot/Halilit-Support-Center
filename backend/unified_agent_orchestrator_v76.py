@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unified Agent Orchestrator v7.3
+Unified Agent Orchestrator v7.5
 ================================
 
 Consolidates three core systems:
@@ -32,7 +32,7 @@ import logging
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import google.genai as genai
-from backend.unified_quality_gates_v73 import MemoryAwareMixin
+from backend.unified_quality_gates_v75 import MemoryAwareMixin
 from backend.ingestion.visual_comparator import get_visual_comparator_engine
 from backend.ingestion.data_models import IngestionProductDraft
 
@@ -448,7 +448,7 @@ class OfficialAgent(AgentBase):
         # We only add fields if we actually have data.
         # However, to pass validation, we must ensure 'official_specs' exists.
         # tailored to the user's request: "all of halilit's products has images, use those..."
-        
+
         # --- AI ENRICHMENT (Gemini 2.0) ---
         # Generate rich metadata (Description, Specs, Category) using the Agent's brain
         try:
@@ -467,14 +467,15 @@ class OfficialAgent(AgentBase):
             
             Do not include markdown blocks. Just the raw JSON.
             """
-            
+
             # Call the LLM
             response_text = self.think(prompt)
-            
+
             # Clean response (remove markdown if present)
-            cleaned_text = response_text.replace("```json", "").replace("```", "").strip()
+            cleaned_text = response_text.replace(
+                "```json", "").replace("```", "").strip()
             ai_data = json.loads(cleaned_text)
-            
+
             official_data = {
                 # 1. Official Schema Fields
                 "official_specs": ai_data.get("specifications", {}),
@@ -482,7 +483,7 @@ class OfficialAgent(AgentBase):
                 "description_short": ai_data.get("description_short"),
                 "description_long": ai_data.get("description_long"),
                 "feature_list": ai_data.get("features", []),
-                
+
                 # 2. Legacy/Frontend Fields (Ensuring UI compatibility)
                 "specifications": {
                     "short_description": ai_data.get("description_short"),
@@ -494,16 +495,17 @@ class OfficialAgent(AgentBase):
                 # We can store the AI category recommendation in metadata for the TaxonomyManager to ignore or use
                 "_ai_category_suggestion": ai_data.get("category")
             }
-            
+
             # Ensure specs has at least the minimum if AI failed to give a dict
             if not isinstance(official_data["official_specs"], dict):
-                 official_data["official_specs"] = {
+                official_data["official_specs"] = {
                     "note": "Standardized via Halilit Commercial Source",
                     "extracted_name": draft.get("product_name")
                 }
-                
+
         except Exception as e:
-            print(f"   ⚠️ AI Enrichment failed: {e}. Falling back to standard.")
+            print(
+                f"   ⚠️ AI Enrichment failed: {e}. Falling back to standard.")
             official_data = {
                 "official_specs": {
                     "note": "Standardized via Halilit Commercial Source",
@@ -745,7 +747,7 @@ class AgentImprovementEngine:
         }
 
         # Get feedback summary
-        from backend.unified_quality_gates_v73 import feedback_engine
+        from backend.unified_quality_gates_v75 import feedback_engine
         health = feedback_engine.get_pipeline_health_report()
 
         # CommercialScout improvements
@@ -922,7 +924,7 @@ class TrinitySwarm:
 
     def process_brand(self, brand_name: str):
         """Process a single brand through the full Trinity Swarm pipeline."""
-        print(f"\n🚀 STARTING TRINITY SWARM (v7.3) FOR: {brand_name}\n")
+        print(f"\n🚀 STARTING TRINITY SWARM (v7.5) FOR: {brand_name}\n")
 
         # Step 1: Scout (Commercial - Golden List)
         raw_data = self.scout.harvest(brand_name)
@@ -1065,7 +1067,7 @@ class TrinitySwarm:
 
         if report.status == "APPROVED":
             print("✅ Product Accepted into Golden Record.")
-            print("\n🔍 STRICT DATA STRUCTURE (v7.3):")
+            print("\n🔍 STRICT DATA STRUCTURE (v7.5):")
             print(json.dumps(data, indent=2, default=str))
         else:
             print("🛑 Product REJECTED.")

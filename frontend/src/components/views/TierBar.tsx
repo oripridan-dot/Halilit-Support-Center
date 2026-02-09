@@ -210,8 +210,15 @@ export const TierBar: React.FC<TierBarProps> = ({
           <div key={brand.name} className="flex flex-col gap-2">
             {/* Brand Header */}
             <div className="flex items-center justify-between px-2">
-              <div className="flex items-center gap-2">
-                <Music className="w-4 h-4 text-blue-500" />
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 bg-white rounded p-0.5 flex items-center justify-center overflow-hidden shrink-0">
+                  <img
+                    src={`/assets/logos/${brand.name.toLowerCase().replace(/ /g, "-")}_logo.png`}
+                    alt={brand.name}
+                    className="max-w-full max-h-full object-contain"
+                    onError={(e) => (e.currentTarget.style.display = "none")}
+                  />
+                </div>
                 <h2 className="text-lg font-semibold text-white">
                   {brand.name}
                 </h2>
