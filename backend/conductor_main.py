@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.1
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.2
 
 The Conductor CLI orchestrates all operations:
 - Data ingestion (Trinity Swarm)
@@ -21,10 +21,10 @@ Usage:
 from backend.ingestion_versioning import get_version_manager, IngestionVersion
 from backend.ingestion.ingestion_database import get_ingestion_database
 from backend.ingestion.trinity_integration import TrinityIngestionBridge
-from backend.unified_data_service_v76 import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
+from backend.unified_data_service import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
 from backend.ingestion.orchestrator import IngestionOrchestrator
-from backend.unified_agent_orchestrator_v76 import CommercialAgent
-from backend.unified_quality_gates_v76 import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
+from backend.unified_agent_orchestrator import CommercialAgent
+from backend.unified_quality_gates import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
 
 from backend.ingestion.visual_validator import visual_validator
 from backend.ingestion.match_learning import MatchLearningSystem
@@ -697,7 +697,7 @@ def process_candidates(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Conductor CLI - Halilit Support Center v7.6",
+        description="Conductor CLI - Halilit Support Center v8.2",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

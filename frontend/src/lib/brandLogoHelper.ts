@@ -4,6 +4,7 @@
  */
 
 import type { Product } from "../types";
+import { getConsolidatedProductCategory, getGalaxyForSpectrum } from "./categoryConsolidator";
 
 // Map brand names to their logo file names (in public/assets/logos/)
 const BRAND_LOGO_MAP: Record<string, string> = {
@@ -11,15 +12,16 @@ const BRAND_LOGO_MAP: Record<string, string> = {
     roland: "roland_logo.png",
     moog: "moog_logo.png",
     boss: "boss_logo.png",
-    korg: "korg_logo.png", // Fallback if exists
-    yamaha: "yamaha_logo.png", // Fallback
-    rode: "rode_logo.png", // Assuming exists
-    shure: "shure_logo.png", // Assuming exists
+    korg: "korg_logo.png",
+    yamaha: "yamaha_logo.png",
+    rode: "rode_logo.png",
+    shure: "shure_logo.png",
     "drumdots": "drumdots_logo.png",
     "universal audio": "universal-audio_logo.jpg",
     "universal-audio": "universal-audio_logo.jpg",
     sequential: "sequential_logo.svg",
     "sequential circuits": "sequential_logo.svg",
+    oberheim: "sequential_logo.svg",
 };
 
 /**
@@ -37,7 +39,8 @@ export function getBrandLogoUrl(brandName: string): string | null {
 }
 
 /**
- * Extract unique brands from products in a specific category
+ * Extract unique brands from products in a specific spectrum/category
+ * Uses the consolidator to properly map products to spectrum IDs
  */
 export function extractBrandsForCategory(
     products: Product[] | any[],
@@ -46,15 +49,22 @@ export function extractBrandsForCategory(
     const uniqueBrands = new Set<string>();
 
     products.forEach((product: any) => {
-        // Check if product belongs to this category
-        const productCategory = product.taxonomy?.canonical_category
-            || product.category
-            || (typeof product === 'object' ? Object.values(product).find(v => typeof v === 'string' && v.includes(categoryId)) : null);
-
-        // Simple string matching (adjust based on your category mapping)
-        if (productCategory && productCategory.toString().toLowerCase().includes(categoryId.toLowerCase())) {
-            if (product.brand) {
-                uniqueBrands.add(product.brand);
+        try {
+            const { spectrumId, galaxyId } = getConsolidatedProductCategory(product);
+            // Match by spectrum ID or galaxy ID
+            if (spectrumId === categoryId || galaxyId === categoryId) {
+                if (product.brand) {
+                    uniqueBrands.add(product.brand);
+                }
+            }
+        } catch {
+            // Fallback: simple string matching
+            const productCategory = product.taxonomy?.canonical_category
+                || product.category || '';
+            if (productCategory.toString().toLowerCase().includes(categoryId.toLowerCase())) {
+                if (product.brand) {
+                    uniqueBrands.add(product.brand);
+                }
             }
         }
     });

@@ -1,5 +1,5 @@
 """
-Task Definitions for Halilit Support Center v8.0
+Task Definitions for Halilit Support Center v8.2
 
 These tasks wrap the Trinity Swarm agents into distributed Celery tasks
 that can run in parallel across multiple workers.
@@ -120,7 +120,7 @@ def harvest_brand_products(self, brand: str, task_id: str) -> Dict[str, Any]:
             f"🌾 [HARVEST] Starting harvest for brand: {brand} (task_id={task_id})")
 
         # Import agent here to avoid circular imports
-        from backend.unified_agent_orchestrator_v76 import CommercialAgent
+        from backend.unified_agent_orchestrator import CommercialAgent
 
         # Initialize and run harvest agent
         agent = CommercialAgent()
@@ -198,7 +198,7 @@ def enrich_product(self, product_draft: Dict[str, Any], learned_insights: Option
             f"📖 [ENRICH] Starting enrichment for product: {product_id}")
 
         # Import agent
-        from backend.unified_agent_orchestrator_v76 import OfficialAgent
+        from backend.unified_agent_orchestrator import OfficialAgent
 
         # Initialize and run enrichment agent
         agent = OfficialAgent()
@@ -267,7 +267,7 @@ def validate_product(self, product: Dict[str, Any], risk_threshold: int = 50) ->
             f"🔍 [VALIDATE] Starting validation for product: {product_id}")
 
         # Import agent
-        from backend.unified_agent_orchestrator_v76 import ContextualAgent
+        from backend.unified_agent_orchestrator import ContextualAgent
 
         # Initialize and run validation agent
         agent = ContextualAgent()
@@ -341,7 +341,7 @@ def record_learning_feedback(self, product_id: str, feedback: Dict[str, Any],
         )
 
         # Import learning system
-        from backend.unified_learning_system_v76 import LearningSystem
+        from backend.unified_learning_system import LearningSystem
 
         learning_system = LearningSystem()
         learning_system.record_feedback(product_id, feedback, feedback_type)

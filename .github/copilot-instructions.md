@@ -1,8 +1,8 @@
-# Repository Instructions & Context (v8.1)
+# Repository Instructions & Context (v8.2)
 
 ## Project Overview
 
-**Halilit Support Center v8.1** — AI-powered product catalog system for musical instruments.
+**Halilit Support Center v8.2** — AI-powered product catalog system for musical instruments.
 
 - **Architecture**: Trinity Swarm (3 Gemini 2.0-flash agents) + Celery async task queue
 - **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS
@@ -33,35 +33,38 @@ docker-compose up -d
 
 ```
 backend/
-├── server.py                          # FastAPI server + enriched catalog API
-├── celery_config.py                   # Celery + Redis configuration
-├── tasks.py                           # Distributed agent tasks
-├── unified_agent_orchestrator_v76.py  # Trinity Swarm (Scout, Verifier, Auditor)
-├── unified_data_service_v76.py        # Product normalization & data pipeline
-├── unified_quality_gates_v76.py       # Audit, security gates, feedback engine
-├── unified_learning_system_v76.py     # Agent learning & improvement loops
-├── conductor_main.py                  # CLI for all operations
-├── auto_sync_engine.py                # Real-time SSE sync to frontend
-├── api/                               # Routers (copilot, tasks, streams, ws)
-├── ingestion/                         # 7-phase pipeline + visual validator
-├── skills/                            # Modular verified capabilities
-├── data/                              # Generated pipeline data (gitignored)
-└── tests/                             # Test suite
+├── server.py                      # FastAPI server + enriched catalog API
+├── celery_config.py               # Celery + Redis configuration
+├── tasks.py                       # Distributed agent tasks
+├── unified_agent_orchestrator.py  # Trinity Swarm (Scout, Verifier, Auditor)
+├── unified_data_service.py        # Product normalization & data pipeline
+├── unified_quality_gates.py       # Audit, security gates, feedback engine
+├── unified_learning_system.py     # Agent learning & improvement loops
+├── product_normalizer.py          # Product shape normalization
+├── conductor_main.py              # CLI for all operations
+├── auto_sync_engine.py            # Real-time SSE sync to frontend
+├── api/                           # Routers (copilot, tasks, streams, ws)
+├── ingestion/                     # 7-phase pipeline + visual validator
+├── skills/                        # Modular verified capabilities
+├── agents/                        # Multi-cycle runner & perfection map
+├── scripts/                       # Utilities (type gen, search index, workers)
+├── data/                          # Generated pipeline data (gitignored)
+└── tests/                         # Test suite
 
 frontend/
 ├── src/
-│   ├── main.tsx                       # React entry + QueryClient
-│   ├── App.tsx                        # 3-view router (Galaxy, Spectrum, ProductPage)
-│   ├── components/views/              # GalaxyDashboard, SpectrumModule, ProductPage
-│   ├── hooks/                         # Data fetching hooks (React Query)
-│   ├── store/                         # Zustand stores (navigation, products)
-│   ├── types/                         # TypeScript definitions
-│   ├── lib/                           # Utilities (categories, search, images)
-│   └── workers/                       # Web Worker (search)
+│   ├── main.tsx                   # React entry + QueryClient
+│   ├── App.tsx                    # 3-view router (Galaxy, Spectrum, ProductPage)
+│   ├── components/views/          # GalaxyDashboard, SpectrumModule, ProductPage
+│   ├── hooks/                     # Data fetching hooks (React Query)
+│   ├── store/                     # Zustand stores (navigation, products)
+│   ├── types/                     # TypeScript definitions
+│   ├── lib/                       # Utilities (categories, search, images)
+│   └── workers/                   # Web Worker (search)
 ├── public/
-│   ├── data/category_thumbnails/      # Static category images (tracked)
-│   └── assets/                        # Logos, backgrounds (tracked)
-└── vite.config.ts                     # Dev proxy → localhost:8000
+│   ├── data/category_thumbnails/  # Static category images (tracked)
+│   └── assets/                    # Logos, backgrounds (tracked)
+└── vite.config.ts                 # Dev proxy → localhost:8000
 ```
 
 ## Code Standards
@@ -72,12 +75,12 @@ frontend/
 - **State**: Zustand for app state, React Query for server state
 - **Styling**: Tailwind CSS with `slate-900` dark theme, `blue-500` accents
 - **Components**: Functional components with hooks only (class components only for ErrorBoundary)
-- **Data**: All product data comes from `/api/conductor/catalog` (enriched v8.1)
+- **Data**: All product data comes from `/api/conductor/catalog` (enriched catalog)
 - **NEVER** leave a file empty or < 100 bytes
 
 ### Backend (Python)
 
-- **Agents**: Trinity Swarm in `unified_agent_orchestrator_v76.py` — do NOT hardcode into Agent classes
+- **Agents**: Trinity Swarm in `unified_agent_orchestrator.py` — do NOT hardcode into Agent classes
 - **Skills**: Modular capabilities in `backend/skills/`
 - **Tasks**: Async operations via Celery tasks in `tasks.py`
 - **Data Models**: Pydantic v2 (`IngestionProductDraft`, `AuditReport`)

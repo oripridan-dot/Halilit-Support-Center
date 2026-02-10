@@ -1,7 +1,7 @@
 from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
 from backend.auto_sync_engine import get_auto_sync_engine
-from backend.unified_data_service_v76 import get_conductor_data_service
-from backend.ingestion_to_frontend import get_frontend_data
+from backend.unified_data_service import get_conductor_data_service
+from backend.product_normalizer import build_catalog
 import os
 import sys
 import logging
@@ -144,13 +144,13 @@ except Exception as e:
 
 # Include learning endpoints
 try:
-    from backend.unified_learning_system_v76 import router as learning_router
+    from backend.unified_learning_system import router as learning_router
     app.include_router(learning_router)
     logger.info("✅ Learning endpoints registered")
 except Exception as e:
     logger.warning(f"⚠️ Failed to load learning endpoints: {e}")
 
-# v8.0 Async Task Queue API
+# Async Task Queue API
 try:
     from backend.api.task_router import router as task_router
     app.include_router(task_router, tags=["Task Queue"])
@@ -208,308 +208,32 @@ async def get_versions():
 
 @app.get("/api/galaxy-view")
 async def galaxy_view():
-    return get_frontend_data()
+    """Legacy endpoint — redirects to conductor catalog."""
+    return await get_conductor_catalog()
 
 
 @app.get("/api/catalog")
 async def get_catalog():
-    """Get all product data from CONDUCTOR INGESTED files filtered by Halilit's golden list"""
-    try:
-        golden_brands = get_golden_list_brands()
-        golden_products = get_ingestion_products_for_golden_brands()
-
-        all_products = []
-        brand_counts = {}
-
-        for brand_name in sorted(golden_products.keys()):
-            brand_data = golden_products[brand_name]
-            all_products.extend(brand_data["products"])
-            brand_counts[brand_name] = brand_data["product_count"]
-
-        logger.info(
-            f"✅ Loaded {len(all_products)} real ingested products from {len(golden_products)} GOLDEN LIST brands")
-
-        return {
-            "total_products": len(all_products),
-            "total_brands": len(golden_products),
-            "brands": sorted(list(golden_products.keys())),
-            "brand_product_counts": brand_counts,
-            "products": all_products,
-            "source": "halilit_commercial_database_with_conductor_enrichment",
-            "note": "Products are from Halilit's golden list brands, enriched with Conductor ingestion pipeline"
-        }
-    except Exception as e:
-        logger.error(f"Error loading catalog: {e}")
-        return {"error": str(e), "products": [], "source": "error"}
+    """Legacy endpoint — redirects to conductor catalog."""
+    return await get_conductor_catalog()
 
 
 @app.get("/api/conductor/catalog")
 async def get_conductor_catalog():
     """
-    Get the unified conductor catalog by aggregating generated frontend data files.
-    This serves as the single source of truth for the frontend app.
-
-    CRITICAL UPDATES v8.0+:
-    - Normalizes data structure for frontend (Price, Image, Name)
-    - Deduplicates products by ID
-    - Filters out 'junk' (Price=0 or No Image)
-    - Ensures official Halilit data takes precedence
-    - ✅ NEW: Extracts FULL enriched data (real images, descriptions, specs)
+    Single source of truth for the frontend.
+    Reads brand JSONs from frontend/public/data/, normalizes every product
+    through product_normalizer.normalize_product(), deduplicates by ID,
+    and applies quality gates (price > 0, valid image).
     """
     try:
-        data_dir = Path(FRONTEND_PUBLIC_DATA)
-        brands_found = set()
-        categories_count = {}
-
-        # Deduplication map: ID -> Product
-        products_map = {}
-
-        # Files to exclude from product aggregation
-        excluded_files = {
-            'index.json',
-            'search_index.json',
-            'search_index_min.json',
-            'galaxy_db.json',
-            'package.json'
-        }
-
-        if not data_dir.exists():
-            logger.warning(f"Frontend data dir not found: {data_dir}")
-            return {"products": [], "metadata": {"total_products": 0, "brands": [], "categories": {}, "timestamp": datetime.now().isoformat(), "source": "conductor_verified", "verification_status": "error", "cache_ttl_seconds": 300}}
-
-        # Iterate over all JSON files
-        json_files = list(data_dir.glob("*.json"))
-
-        for json_file in json_files:
-            if json_file.name in excluded_files:
-                continue
-
-            try:
-                with open(json_file, 'r') as f:
-                    file_data = json.load(f)
-
-                    # Handle both list and dict-wrapper formats (nord.json is dict wrapper)
-                    brand_products = []
-                    if isinstance(file_data, list):
-                        brand_products = file_data
-                    elif isinstance(file_data, dict) and "products" in file_data:
-                        brand_products = file_data["products"]
-
-                    if brand_products:
-                        for p in brand_products:
-                            # --- NORMALIZATION & CLEANING ---
-
-                            # 1. ID Strategy
-                            pid = p.get('id') or p.get('halilit_id')
-                            if not pid:
-                                continue  # Skip invalid ID
-
-                            # 2. Name Strategy
-                            name = p.get('name') or p.get('product_name') or p.get(
-                                'official_name') or "Unknown Product"
-
-                            # 3. Category Strategy
-                            category = p.get('category')
-                            if not category:
-                                category = p.get('taxonomy', {}).get(
-                                    'canonical_category', 'Other')
-                            if category == 'Uncategorized':
-                                category = 'Other'
-
-                            # 4. Price Strategy
-                            # Check root price first, then pricing object, then price_il specific
-                            price = p.get('price')
-                            if not price or price == 0:
-                                price = p.get('price_il', 0)
-                            if not price or price == 0:
-                                price = p.get('pricing', {}).get('price_il', 0)
-
-                            # QUALITY GATE 1: Price must be > 0
-                            if float(price) <= 0:
-                                continue
-
-                            # 5. Image Strategy - ENRICHED to capture hero image
-                            image_url = ""
-
-                            # Try image_hero first (enriched field)
-                            image_hero = p.get('image_hero')
-                            if image_hero:
-                                if isinstance(image_hero, dict):
-                                    image_url = image_hero.get('url', "")
-                                elif isinstance(image_hero, str):
-                                    image_url = image_hero
-
-                            # Try official_images second (array of images)
-                            if not image_url:
-                                official_images = p.get('official_images', [])
-                                if official_images and isinstance(official_images, list):
-                                    # Prefer hero display purpose
-                                    for img in official_images:
-                                        if img.get('display_purpose') == 'hero' and img.get('url'):
-                                            image_url = img.get('url')
-                                            break
-                                    # Fallback: take first image with valid URL
-                                    if not image_url:
-                                        for img in official_images:
-                                            if isinstance(img, dict) and img.get('url'):
-                                                image_url = img.get('url')
-                                                break
-                                            elif isinstance(img, str) and img:
-                                                image_url = img
-                                                break
-
-                            # Try image_gallery (fallback array)
-                            if not image_url:
-                                image_gallery = p.get('image_gallery', [])
-                                if image_gallery and isinstance(image_gallery, list):
-                                    for img in image_gallery:
-                                        if isinstance(img, dict) and img.get('url'):
-                                            image_url = img.get('url')
-                                            break
-                                        elif isinstance(img, str) and img:
-                                            image_url = img
-                                            break
-
-                            # Try display object hero_image
-                            if not image_url:
-                                disp_hero = p.get(
-                                    'display', {}).get('hero_image')
-                                if disp_hero:
-                                    if isinstance(disp_hero, dict):
-                                        image_url = disp_hero.get('url') or ""
-                                    elif isinstance(disp_hero, str):
-                                        image_url = disp_hero
-
-                            # Try primary_source (Halilit scraper fallback)
-                            if not image_url:
-                                p_source = p.get('primary_source', {})
-                                if isinstance(p_source, dict):
-                                    image_url = p_source.get('image', "")
-
-                            # Filter out placeholder/invalid images
-                            if image_url and ("/assets/images/placeholder" in image_url or "brand.com" in image_url):
-                                image_url = ""
-
-                            # QUALITY GATE 2: Must have a valid image
-                            if not image_url:
-                                continue
-
-                            # --- DESCRIPTION STRATEGY - ENRICHED ---
-                            # Prefer official_description (full), then description_long, then description_short
-                            description = p.get('official_description', "") or \
-                                p.get('description_long', "") or \
-                                p.get('description_short', "") or ""
-
-                            # --- SPECIFICATIONS & ENRICHMENT ---
-                            # Merge official_specs and specifications
-                            specs = {}
-                            if p.get('official_specs'):
-                                specs.update(p.get('official_specs', {}))
-                            if p.get('specifications'):
-                                specs.update(p.get('specifications', {}))
-
-                            # Gather all images (hero, gallery, official)
-                            all_images = []
-                            if image_hero:
-                                if isinstance(image_hero, dict):
-                                    all_images.append(image_hero)
-                                else:
-                                    all_images.append({"url": image_hero})
-
-                            # Add gallery images
-                            image_gallery = p.get('image_gallery', [])
-                            if isinstance(image_gallery, list):
-                                # Limit to 20 images
-                                for img in image_gallery[:20]:
-                                    if isinstance(img, dict):
-                                        all_images.append(img)
-                                    elif isinstance(img, str):
-                                        all_images.append({"url": img})
-
-                            # Deduce sources if missing
-                            sources = p.get('sources', [])
-                            if not sources:
-                                sources = []
-                                sources.append('halilit_direct')
-                                if specs or description:
-                                    sources.append('official_specs')
-                                if p.get('reviews') or p.get('average_rating'):
-                                    sources.append('trusted_reviews')
-
-                            # --- CONSTRUCT FINAL ENRICHED OBJECT ---
-                            normalized_product = {
-                                "id": pid,
-                                "halilit_id": pid,
-                                "name": name,
-                                "product_name": name,
-                                "brand": p.get('brand', json_file.stem),
-                                "category": category,
-                                "price": float(price),
-                                "currency": "ILS",
-                                "image_url": image_url,
-                                "description": description,
-                                "image_hero": image_hero,
-                                "image_gallery": all_images,
-                                "official_images": p.get('official_images', []),
-                                "taxonomy": p.get('taxonomy', {"canonical_category": category}),
-                                "display": {
-                                    "hero_image": {"url": image_url},
-                                    "color_hint": p.get('display', {}).get('color_hint', 'bg-slate-800'),
-                                    "display_role": p.get('display', {}).get('display_role', 'entry'),
-                                    "should_highlight": p.get('display', {}).get('should_highlight', False)
-                                },
-                                # --- ENRICHMENT FIELDS (Full Data) ---
-                                "sources": sources,
-                                "official_specs": specs,
-                                "specifications": specs,
-                                "quality_score": p.get('quality_score', 0),
-                                "data_completeness": p.get('data_completeness', 0),
-                                "review_data": {
-                                    "aggregate_rating": p.get('average_rating') or p.get('review_data', {}).get('aggregate_rating', 0),
-                                    "total_reviews": len(p.get('reviews', [])) or p.get('review_data', {}).get('total_reviews', 0),
-                                    "pros_and_cons": p.get('pros_and_cons') or p.get('review_data', {}).get('pros_and_cons', {})
-                                },
-                                "pricing": {
-                                    "price_il": float(price),
-                                    "price_eilat": p.get('price_eilat') or 0,
-                                    "tier": p.get('pricing', {}).get('tier') or ("pro" if float(price) > 2000 else "mid" if float(price) > 500 else "entry")
-                                }
-                            }
-
-                            # Deduplicate: Overwrite with newest/best
-                            products_map[pid] = normalized_product
-                            # Mark brand as having valid products
-                            brands_found.add(json_file.stem)
-
-            except Exception as e:
-                logger.error(f"Error loading {json_file.name}: {e}")
-
-        # Final List
-        all_products = list(products_map.values())
-
-        # Re-calc categories from final list
-        categories_count = {}
-        for p in all_products:
-            c = p.get('category', 'Other')
-            categories_count[c] = categories_count.get(c, 0) + 1
+        products, metadata = build_catalog(FRONTEND_PUBLIC_DATA)
+        metadata["timestamp"] = datetime.now().isoformat()
 
         logger.info(
-            f"✅ Served Enriched Catalog: {len(all_products)} products with full data from {len(brands_found)} brands")
+            f"✅ Served Enriched Catalog: {metadata['total_products']} products from {len(metadata['brands'])} brands")
 
-        catalog = {
-            'products': all_products,
-            'metadata': {
-                'total_products': len(all_products),
-                'brands': sorted(list(brands_found)),
-                'categories': categories_count,
-                'timestamp': datetime.now().isoformat(),
-                'source': 'conductor_verified_enriched_v8.1',
-                'verification_status': 'complete',
-                'cache_ttl_seconds': 300
-            }
-        }
-
-        return catalog
+        return {"products": products, "metadata": metadata}
 
     except Exception as e:
         logger.error(f"Failed to generate conductor catalog: {e}")
@@ -607,13 +331,12 @@ async def search_products(q: str = ""):
 
 
 # ========== COPILOTKIT SKILL ENDPOINTS ==========
-# NOTE: CopilotKit skill executor endpoints have been removed in v8.0.
-# Skill execution is now handled via the Celery task queue (see tasks.py)
+# Skill execution is handled via the Celery task queue (see tasks.py)
 # and the CopilotKit chat router (see api/copilot_router.py).
-# The v8.0 task API is served by api/task_router.py.
+# The task API is served by api/task_router.py.
 
 
-# ========== CONDUCTOR UNIFIED DATA ENDPOINTS v8.0 ==========
+# ========== CONDUCTOR UNIFIED DATA ENDPOINTS ==========
 # These are the PRIMARY endpoints for frontend data loading
 # All data is Conductor-verified and taxonomy-compliant
 

@@ -1,48 +1,63 @@
 /**
- * useConductorCatalog v8.0
+ * useConductorCatalog v9.0
  *
  * PRIMARY HOOK for all frontend data loading.
  *
- * All product data is fetched from /api/conductor/catalog endpoint,
- * which serves ONLY Conductor-verified products.
- *
- * This ensures:
- * ✅ 100% of data has been through the 6-phase Conductor pipeline
- * ✅ Consistent taxonomy across the entire catalog
- * ✅ Data validity and compliance verification
- * ✅ Single source of truth (no conflicting data sources)
+ * All product data is fetched from /api/conductor/catalog endpoint.
+ * Backend normalizes every product into a predictable flat shape via
+ * product_normalizer.normalize_product(), so the frontend can trust
+ * that price, image_url, name, etc. always exist and are valid.
  */
 
 import { useQuery } from '@tanstack/react-query';
 
+/**
+ * Canonical product shape — matches backend product_normalizer output exactly.
+ * No fallback chains needed: every field is guaranteed present by the backend.
+ */
 export interface ConductorProduct {
     id: string;
+    halilit_id: string;
+    name: string;
     product_name: string;
     brand: string;
+    category: string;
+    /** Always > 0 (backend quality gate) */
+    price: number;
+    price_il: number;
+    currency: string;
+    /** Always a valid URL (backend quality gate) */
+    image_url: string;
+    description: string;
+    image_hero: string;
+    image_gallery: Array<{ url: string }>;
+    official_images: Array<{ url?: string; display_purpose?: string }>;
     taxonomy: {
         canonical_category: string;
-        canonical_subcategory: string;
-        keywords: string[];
+        canonical_subcategory?: string;
+        keywords?: string[];
+    };
+    display: {
+        hero_image: { url: string };
+        color_hint: string;
+        display_role: string;
+        should_highlight: boolean;
+    };
+    sources: string[];
+    official_specs: Record<string, any>;
+    specifications: Record<string, any>;
+    quality_score: number;
+    data_completeness: number;
+    review_data: {
+        aggregate_rating: number;
+        total_reviews: number;
+        pros_and_cons: Record<string, any>;
     };
     pricing: {
         price_il: number;
         price_eilat: number;
-        tier: 'entry' | 'mid' | 'pro' | 'flagship' | 'legacy';
-        currency: string;
+        tier: string;
     };
-    display: {
-        display_role: 'hero' | 'cornerstone' | 'specialist' | 'entry' | 'hidden';
-        hero_image?: string;
-        thumbnail_image?: string;
-        color_hint?: string;
-        should_highlight: boolean;
-    };
-    specifications: Record<string, any>;
-    description_short: string;
-    description_long: string;
-    validation_status: string;
-    source: string;
-    confidence: string;
 }
 
 export interface ConductorCatalog {
@@ -70,7 +85,7 @@ export const useConductorCatalog = () => {
                 throw new Error(`Failed to load Conductor catalog: ${response.statusText}`);
             }
             const data = await response.json();
-            console.log(`✅ Enriched Catalog v8.1: ${data.metadata.total_products} products with full descriptions, images, and specs from ${data.metadata.brands.length} brands`);
+            console.log(`✅ Enriched Catalog v8.2: ${data.metadata.total_products} products with full descriptions, images, and specs from ${data.metadata.brands.length} brands`);
             console.log(`📊 Data Quality: ${data.metadata.source}`);
             return data;
         },
@@ -95,12 +110,18 @@ export const useConductorCatalog = () => {
 
 /**
  * Get products by category (uses cached catalog data)
+ * Supports both canonical category names and galaxy IDs
  */
 export const useConductorProductsByCategory = (category: string | null) => {
     const { catalog, isLoading: catalogLoading } = useConductorCatalog();
 
     const products = (catalog?.products || []).filter(
-        p => p.taxonomy.canonical_category === category
+        p => {
+            if (!category) return true;
+            // Match by canonical category name or galaxy ID
+            return p.taxonomy.canonical_category === category
+                || p.taxonomy.canonical_category?.toLowerCase().includes(category.toLowerCase());
+        }
     );
 
     return {

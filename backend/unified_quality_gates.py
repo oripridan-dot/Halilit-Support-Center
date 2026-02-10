@@ -1,5 +1,5 @@
 """
-UNIFIED QUALITY GATES SYSTEM - v8.0
+UNIFIED QUALITY GATES SYSTEM - v8.2
 ===================================
 
 Consolidates four quality systems into one unified module:

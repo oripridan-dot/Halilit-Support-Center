@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unified Agent Orchestrator v8.0
+Unified Agent Orchestrator v8.2
 ================================
 
 Consolidates three core systems:
@@ -33,7 +33,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import google.genai as genai
 from google.genai import types
-from backend.unified_quality_gates_v76 import MemoryAwareMixin
+from backend.unified_quality_gates import MemoryAwareMixin
 from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 
 # Configure logging
@@ -121,7 +121,7 @@ class AgentBase(MemoryAwareMixin):
 
         try:
             # Import here to avoid circular imports
-            from backend.unified_quality_gates_v76 import call_gemini_with_rate_limit
+            from backend.unified_quality_gates import call_gemini_with_rate_limit
 
             # Use rate-limited API call
             text, success = call_gemini_with_rate_limit(
@@ -800,7 +800,7 @@ class AgentImprovementEngine:
         }
 
         # Get feedback summary
-        from backend.unified_quality_gates_v76 import feedback_engine
+        from backend.unified_quality_gates import feedback_engine
         health = feedback_engine.get_pipeline_health_report()
 
         # CommercialScout improvements

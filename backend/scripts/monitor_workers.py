@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Monitor Celery Workers & Queues for Halilit Support Center v8.0
+Monitor Celery Workers & Queues for Halilit Support Center v8.2
 
 Usage:
     python3 backend/scripts/monitor_workers.py
@@ -151,7 +151,7 @@ def print_status(data: Dict[str, Any], json_output: bool = False):
         return
 
     print("\n" + color("═" * 80, Colors.BLUE))
-    print(color("🚀 Celery Worker Monitor - Halilit Support Center v8.0", Colors.BLUE))
+    print(color("🚀 Celery Worker Monitor - Halilit Support Center v8.2", Colors.BLUE))
     print(color("═" * 80, Colors.BLUE))
     print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
 

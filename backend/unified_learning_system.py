@@ -1,5 +1,5 @@
 """
-Unified Learning System v8.0
+Unified Learning System v8.2
 
 Consolidates four learning modules:
 - learning_engine.py: Core learning functionality with LearningEnabledAgent
@@ -41,14 +41,14 @@ from backend.agents.perfection_map import (
     create_improvement_plan,
     DimensionScorecard,
 )
-from backend.unified_agent_orchestrator_v76 import (
+from backend.unified_agent_orchestrator import (
     TrinitySwarm,
     CommercialAgent,
     OfficialAgent,
     ContextualAgent,
     AuditReport,
 )
-from backend.unified_quality_gates_v76 import feedback_engine, FeedbackType, audit_logger, AuditLevel, AuditCategory
+from backend.unified_quality_gates import feedback_engine, FeedbackType, audit_logger, AuditLevel, AuditCategory
 from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 
 # ============================================================================
@@ -988,7 +988,7 @@ def run_enhanced_training(num_cycles: int = 5, log_file: Optional[Path] = None) 
             "/workspaces/Halilit-Support-Center/backend/logs/enhanced_training.log")
     log_file.parent.mkdir(parents=True, exist_ok=True)
 
-    from backend.unified_agent_orchestrator_v76 import AgentImprovementEngine
+    from backend.unified_agent_orchestrator import AgentImprovementEngine
 
     log_progress("\n" + "="*75, log_file)
     log_progress(

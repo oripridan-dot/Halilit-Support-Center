@@ -30,7 +30,7 @@ from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.ingestion.pricing_engine import get_pricing_engine
 from backend.ingestion.display_engine import get_display_engine
 from backend.ingestion.guardrails import verify_critical_facts
-from backend.unified_agent_orchestrator_v76 import CommercialAgent, OfficialAgent, ContextualAgent
+from backend.unified_agent_orchestrator import CommercialAgent, OfficialAgent, ContextualAgent
 
 logger = logging.getLogger("IngestionOrchestrator")
 
@@ -651,13 +651,12 @@ class IngestionOrchestrator:
         legacy_products: List[ProductDraft],
     ) -> IngestionReport:
         """
-        ❌ DEPRECATED - DO NOT USE (v5.x/v6.0 legacy method)
+        ❌ DEPRECATED - DO NOT USE (legacy method)
 
         Ingest legacy ProductDraft format.
         Converts to new unified model and processes through pipeline.
 
         REPLACEMENT: Use sync_brand_to_frontend() instead.
-        This method will be REMOVED in v8.0.
         """
         log_deprecation_warning(
             "ingest_legacy_products",

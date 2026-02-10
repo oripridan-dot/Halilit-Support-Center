@@ -1,6 +1,6 @@
 // frontend/src/App.tsx
 /**
- * UNIFIED DATA PIPELINE v8.0
+ * UNIFIED DATA PIPELINE v8.2
  *
  * Three screens that share the same data source:
  * 1. GalaxyDashboard - Category browser

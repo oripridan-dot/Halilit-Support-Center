@@ -86,15 +86,11 @@ export type Tier = PricingTier;
 
 /**
  * Get product price formatted for display
+ * @deprecated Use getPrice() from lib/priceFormatter.ts instead
  */
 export function formatPrice(product: Product): string {
-  // Adaptation for V6 model: price_il is standard
-  const price = product.pricing?.price_il || product.price_il;
+  const price = (product as any).price || product.pricing?.price_il || product.price_il;
   if (!price) return 'Price on request';
-
-  const currency = product.pricing?.currency || 'ILS';
-  // Note: V6 model uses price_il (NIS) usually.
-
   return new Intl.NumberFormat('en-IL', {
     style: 'currency',
     currency: 'ILS'

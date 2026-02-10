@@ -5,7 +5,7 @@ import json
 import logging
 from fastapi import APIRouter, Request
 from sse_starlette.sse import EventSourceResponse
-from backend.unified_learning_system_v76 import LearningSystem
+from backend.unified_learning_system import LearningSystem
 
 logger = logging.getLogger("LearningStream")
 router = APIRouter()

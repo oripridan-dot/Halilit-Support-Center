@@ -25,7 +25,7 @@ from datetime import datetime
 from pathlib import Path
 import json
 
-from backend.unified_agent_orchestrator_v76 import TrinitySwarm
+from backend.unified_agent_orchestrator import TrinitySwarm
 from backend.ingestion import (
     get_ingestion_orchestrator,
     get_spectrum_adapter,

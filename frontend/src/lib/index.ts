@@ -1,5 +1,5 @@
 /**
- * v8.1 Static Catalog Library
+ * v8.2 Static Catalog Library
  * Exports for easy importing
  */
 

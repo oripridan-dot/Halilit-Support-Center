@@ -7,7 +7,7 @@ import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import type { Product } from "../../types";
 
 /**
- * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v8.0
+ * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v8.2
  *
  * Complete product analysis and inspection page.
  * Loads product from conductor API cache first, falls back to static JSON.
@@ -131,7 +131,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
   }
 
   // Extract images — handle multiple data shapes with enrichment priority
-  // Priority: image_gallery (v8.1) > official_images > display.hero_image > image_url
+  // Priority: image_gallery (v8.2) > official_images > display.hero_image > image_url
   const galleryImages = (product as any)?.image_gallery || [];
   const officialImgs = product?.official_images || [];
   const displayHero = product?.display?.hero_image
@@ -375,7 +375,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                     Specifications
                   </h2>
                   <div className="space-y-2 text-sm">
-                    {/* Use official_specs (enriched v8.1) or fallback to specifications */}
+                    {/* Use official_specs (enriched v8.2) or fallback to specifications */}
                     {Object.entries(
                       (product as any)?.official_specs || product?.specifications?.specs || product?.specifications || {},
                     )

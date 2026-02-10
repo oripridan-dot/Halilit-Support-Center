@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useCallback } from "react";
 import {
   LayoutGrid,
   Guitar,
@@ -16,6 +16,7 @@ import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
 import { getContextBackground } from "../../lib/slotBackgrounds";
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import { getBrandsWithLogos } from "../../lib/brandLogoHelper";
+import { getConsolidatedProductCategory } from "../../lib/categoryConsolidator";
 
 // Icon mapping for sectors
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -52,22 +53,36 @@ export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
   const { products, isLoading, totalProducts } = useConductorCatalog();
 
-  // Directly handle navigation to a subcategory
-  const onSlotClick = (mainId: string, subId: string) => {
-    goToSpectrum(mainId, subId, []);
-  };
+  // Stable callback — avoids re-creating on every render
+  const onSlotClick = useCallback(
+    (mainId: string, subId: string) => goToSpectrum(mainId, subId, []),
+    [goToSpectrum],
+  );
 
-  // Helper to get brands for a specific spectrum ID
-  const getBrandsForSpectrum = (spectrumId: string) => {
-    return getBrandsWithLogos(products, spectrumId, 4);
-  };
+  // Pre-compute category counts by galaxy ID (maps products through consolidator)
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const p of products) {
+      try {
+        const { galaxyId } = getConsolidatedProductCategory(p as any);
+        if (galaxyId) counts[galaxyId] = (counts[galaxyId] || 0) + 1;
+      } catch {
+        // skip unmappable products
+      }
+    }
+    return counts;
+  }, [products]);
 
-  // Count products per subcategory
-  const getCategoryCount = (categoryName: string): number => {
-    return products.filter(
-      (p) => p.taxonomy.canonical_category === categoryName,
-    ).length;
-  };
+  // Pre-compute brand logos per spectrum (avoids recalc every slot render)
+  const brandsBySpectrum = useMemo(() => {
+    const map: Record<string, Array<{ brand: string; logoUrl: string }>> = {};
+    for (const sector of galaxy) {
+      for (const sub of sector.children) {
+        map[sub.id] = getBrandsWithLogos(products, sub.id, 4);
+      }
+    }
+    return map;
+  }, [products]);
 
   return (
     <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
@@ -129,24 +144,22 @@ export const GalaxyDashboard = () => {
 
               {/* Subcategory Grid */}
               <div className="flex-1 p-3 grid grid-cols-4 gap-3 content-start overflow-hidden">
-                {sector.children.map((sub) => {
-                  return (
-                    <CategorySlot
-                      key={sub.id}
-                      id={sub.id}
-                      name={sub.name}
-                      image={sub.image}
-                      fallbackGradient={sub.fallbackGradient}
-                      icon={sector.iconComponent}
-                      mainColor={sector.color}
-                      count={
-                        isLoading ? undefined : getCategoryCount(sector.name)
-                      }
-                      brands={getBrandsForSpectrum(sub.id)}
-                      onClick={() => onSlotClick(sector.id, sub.id)}
-                    />
-                  );
-                })}
+                {sector.children.map((sub) => (
+                  <CategorySlot
+                    key={sub.id}
+                    id={sub.id}
+                    name={sub.name}
+                    image={sub.image}
+                    fallbackGradient={sub.fallbackGradient}
+                    icon={sector.iconComponent}
+                    mainColor={sector.color}
+                    count={
+                      isLoading ? undefined : (categoryCounts[sector.id] ?? 0)
+                    }
+                    brands={brandsBySpectrum[sub.id] ?? []}
+                    onClick={() => onSlotClick(sector.id, sub.id)}
+                  />
+                ))}
               </div>
             </div>
           ))}

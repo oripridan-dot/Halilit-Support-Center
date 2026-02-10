@@ -6,8 +6,8 @@ Executes multiple learning cycles with detailed progress tracking,
 showing how agents improve from 0% toward 98% accuracy.
 """
 
-from backend.unified_quality_gates_v76 import audit_logger, feedback_engine
-from backend.unified_learning_system_v76 import LearningOptimizerEngine
+from backend.unified_quality_gates import audit_logger, feedback_engine
+from backend.unified_learning_system import LearningOptimizerEngine
 import json
 import sys
 from pathlib import Path

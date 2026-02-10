@@ -117,6 +117,7 @@ body {
 
 #root {
   overflow: hidden;
+  min-height: 100vh;
 }
 
 /* Custom animations */

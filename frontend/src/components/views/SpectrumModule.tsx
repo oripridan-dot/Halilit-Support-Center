@@ -16,7 +16,7 @@ import {
   Tag,
   Zap,
 } from "lucide-react";
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useCallback } from "react";
 import { resolveProductImage } from "../../lib/imageResolver";
 import { getPrice, getPriceValue } from "../../lib/priceFormatter";
 import { useNavigationStore } from "../../store/navigationStore";
@@ -26,7 +26,7 @@ import {
   useConductorCatalog,
   useConductorProductsByCategory,
 } from "../../hooks/useConductorCatalog";
-import { getCanonicalCategoryFromGalaxyId } from "../../lib/categoryConsolidator";
+import { getConsolidatedProductCategory } from "../../lib/categoryConsolidator";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
 import { getBrandTheme } from "../../styles/brandThemes";
@@ -71,59 +71,57 @@ const isProductHealthy = (p: Product): boolean => {
 };
 
 // --- BRAND LOGO HELPER ---
-const BrandLogo = ({
-  brand,
-  className = "h-8",
-}: {
-  brand: string;
-  className?: string;
-}) => {
-  const [error, setError] = useState(false);
+const BrandLogo = React.memo(
+  ({ brand, className = "h-8" }: { brand: string; className?: string }) => {
+    const [error, setError] = useState(false);
 
-  // Use the helper to get the correct mapped logo (handles SVGs, special cases)
-  const logoPath =
-    getBrandLogoUrl(brand) ||
-    `/assets/logos/${brand.toLowerCase().replace(/\s+/g, "-")}_logo.png`;
+    // Use the helper to get the correct mapped logo (handles SVGs, special cases)
+    const logoPath =
+      getBrandLogoUrl(brand) ||
+      `/assets/logos/${brand.toLowerCase().replace(/\s+/g, "-")}_logo.png`;
 
-  if (error || !logoPath) {
+    if (error || !logoPath) {
+      return (
+        <span
+          className={`font-black italic uppercase text-lg text-transparent bg-clip-text bg-gradient-to-br from-zinc-500 to-zinc-800 ${className} flex items-center justify-center text-center`}
+        >
+          {brand}
+        </span>
+      );
+    }
+
     return (
-      <span
-        className={`font-black italic uppercase text-lg text-transparent bg-clip-text bg-gradient-to-br from-zinc-500 to-zinc-800 ${className} flex items-center justify-center text-center`}
-      >
-        {brand}
-      </span>
+      <img
+        src={logoPath}
+        alt={brand}
+        className={`object-contain transition-all duration-500 ${className}`}
+        onError={(e) => {
+          const target = e.currentTarget as HTMLImageElement;
+          console.warn(
+            `[BrandLogo] Failed to load logo for ${brand}: ${target.src}`,
+          );
+
+          // If we started with an SVG and it failed, fail immediately to text
+          if (target.src.endsWith(".svg")) {
+            setError(true);
+            return;
+          }
+
+          // Fallback chain: png -> jpg -> svg -> text
+          if (target.src.endsWith(".png")) {
+            target.src = target.src.replace(".png", ".jpg");
+          } else if (target.src.endsWith(".jpg")) {
+            target.src = target.src.replace(".jpg", ".svg");
+          } else {
+            setError(true);
+          }
+        }}
+      />
     );
-  }
+  },
+);
 
-  return (
-    <img
-      src={logoPath}
-      alt={brand}
-      className={`object-contain transition-all duration-500 ${className}`}
-      onError={(e) => {
-        const target = e.currentTarget as HTMLImageElement;
-        console.warn(
-          `[BrandLogo] Failed to load logo for ${brand}: ${target.src}`,
-        );
-
-        // If we started with an SVG and it failed, fail immediately to text
-        if (target.src.endsWith(".svg")) {
-          setError(true);
-          return;
-        }
-
-        // Fallback chain: png -> jpg -> svg -> text
-        if (target.src.endsWith(".png")) {
-          target.src = target.src.replace(".png", ".jpg");
-        } else if (target.src.endsWith(".jpg")) {
-          target.src = target.src.replace(".jpg", ".svg");
-        } else {
-          setError(true);
-        }
-      }}
-    />
-  );
-};
+BrandLogo.displayName = "BrandLogo";
 
 // --- DATA SOURCES BADGE ---
 const DataSourcesBadge = ({
@@ -165,105 +163,229 @@ const DataSourcesBadge = ({
 };
 
 // --- ENRICHMENT INFO PANEL ---
-const EnrichmentPanel = ({
-  product,
-}: {
-  product: Product & {
-    official_specs?: any;
-    review_data?: any;
-    sources?: string[];
-  };
-}) => {
-  return (
-    <div className="space-y-4 text-[11px]">
-      {/* Official Specs Section */}
-      {product.official_specs &&
-        Object.keys(product.official_specs).length > 0 && (
-          <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
+const EnrichmentPanel = React.memo(
+  ({
+    product,
+  }: {
+    product: Product & {
+      official_specs?: any;
+      review_data?: any;
+      sources?: string[];
+    };
+  }) => {
+    return (
+      <div className="space-y-4 text-[11px]">
+        {/* Official Specs Section */}
+        {product.official_specs &&
+          Object.keys(product.official_specs).length > 0 && (
+            <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
+              <div className="flex items-center gap-2 mb-2">
+                <CheckCircle className="w-3 h-3 text-emerald-500" />
+                <span className="font-bold text-emerald-400 uppercase tracking-widest">
+                  Official Specs
+                </span>
+              </div>
+              <div className="space-y-1 text-zinc-300">
+                {Object.entries(product.official_specs)
+                  .filter(([key]) => key !== "note" && key !== "extracted_name") // Filter out metadata
+                  .slice(0, 5) // Limit just in case
+                  .map(([key, value]) => (
+                    <div key={key} className="flex gap-1 break-words">
+                      <span className="text-emerald-600 mt-0.5">◆</span>
+                      <span className="text-emerald-500/80 capitalize">
+                        {key.replace(/_/g, " ")}:
+                      </span>
+                      <span className="text-zinc-200">{String(value)}</span>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
+
+        {/* Review Data Section */}
+        {product.review_data && product.review_data.aggregate_rating && (
+          <div className="border-l-2 border-amber-600/50 bg-amber-950/30 p-3 rounded-sm">
             <div className="flex items-center gap-2 mb-2">
-              <CheckCircle className="w-3 h-3 text-emerald-500" />
-              <span className="font-bold text-emerald-400 uppercase tracking-widest">
-                Official Specs
+              <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
+              <span className="font-bold text-amber-400 uppercase tracking-widest">
+                Trusted Reviews
               </span>
             </div>
-            <div className="space-y-1 text-zinc-300">
-              {Object.entries(product.official_specs)
-                .filter(([key]) => key !== "note" && key !== "extracted_name") // Filter out metadata
-                .slice(0, 5) // Limit just in case
-                .map(([key, value]) => (
-                  <div key={key} className="flex gap-1 break-words">
-                    <span className="text-emerald-600 mt-0.5">◆</span>
-                    <span className="text-emerald-500/80 capitalize">
-                      {key.replace(/_/g, " ")}:
-                    </span>
-                    <span className="text-zinc-200">{String(value)}</span>
+            <div className="space-y-2 text-zinc-300">
+              <div className="flex items-center gap-2">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-2.5 h-2.5 ${
+                        i < Math.floor(product.review_data.aggregate_rating)
+                          ? "fill-amber-400 text-amber-400"
+                          : "text-zinc-700"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <span className="font-bold text-amber-400">
+                  {product.review_data.aggregate_rating.toFixed(1)}
+                </span>
+                <span className="text-zinc-600">
+                  ({product.review_data.total_reviews} reviews)
+                </span>
+              </div>
+              {product.review_data.pros_and_cons?.pros && (
+                <div>
+                  <span className="text-amber-500 text-[10px] font-bold">
+                    Pros:
+                  </span>
+                  <div className="text-[10px] text-zinc-400">
+                    {product.review_data.pros_and_cons.pros
+                      .slice(0, 2)
+                      .join(" • ")}
                   </div>
-                ))}
+                </div>
+              )}
             </div>
           </div>
         )}
 
-      {/* Review Data Section */}
-      {product.review_data && product.review_data.aggregate_rating && (
-        <div className="border-l-2 border-amber-600/50 bg-amber-950/30 p-3 rounded-sm">
+        {/* Data Provenance */}
+        <div className="border-l-2 border-blue-600/50 bg-blue-950/30 p-3 rounded-sm">
           <div className="flex items-center gap-2 mb-2">
-            <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
-            <span className="font-bold text-amber-400 uppercase tracking-widest">
-              Trusted Reviews
+            <Package className="w-3 h-3 text-blue-500" />
+            <span className="font-bold text-blue-400 uppercase tracking-widest">
+              Data Sources
             </span>
           </div>
-          <div className="space-y-2 text-zinc-300">
-            <div className="flex items-center gap-2">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`w-2.5 h-2.5 ${
-                      i < Math.floor(product.review_data.aggregate_rating)
-                        ? "fill-amber-400 text-amber-400"
-                        : "text-zinc-700"
-                    }`}
-                  />
-                ))}
-              </div>
-              <span className="font-bold text-amber-400">
-                {product.review_data.aggregate_rating.toFixed(1)}
-              </span>
-              <span className="text-zinc-600">
-                ({product.review_data.total_reviews} reviews)
-              </span>
+          <DataSourcesBadge
+            sources={product.sources || ["halilit_direct"]}
+            brand={product.brand || "Unknown"}
+          />
+        </div>
+      </div>
+    );
+  },
+);
+
+EnrichmentPanel.displayName = "EnrichmentPanel";
+
+// --- BRAND SWIM LANE (memoized to avoid re-rendering all tracks on hover) ---
+interface BrandTrackProps {
+  brand: string;
+  products: Product[];
+  rgbColor: string;
+  brandPrimary: string;
+  minPrice: number;
+  maxPrice: number;
+  onHoverProduct: (product: Product | null) => void;
+  onClickProduct: (id: string) => void;
+}
+
+const BrandTrack = React.memo(
+  ({
+    brand,
+    products,
+    rgbColor,
+    brandPrimary,
+    minPrice,
+    maxPrice,
+    onHoverProduct,
+    onClickProduct,
+  }: BrandTrackProps) => {
+    const safeMin = minPrice > 0 ? minPrice : 1;
+
+    return (
+      <div
+        className="flex h-24 border-b transition-colors duration-200 group/row hover:bg-white/5 hover:shadow-lg"
+        style={{
+          borderColor: `rgba(${rgbColor}, 0.2)`,
+          backgroundColor: `rgba(${rgbColor}, 0.04)`,
+        }}
+      >
+        {/* Brand Header */}
+        <div
+          className="w-32 flex-shrink-0 flex items-center justify-center pl-4 border-r transition-all duration-200"
+          style={{
+            borderColor: `rgba(${rgbColor}, 0.3)`,
+            backgroundColor: `rgba(${rgbColor}, 0.08)`,
+          }}
+        >
+          <div className="flex flex-col gap-1 items-center justify-center flex-1 w-full h-full relative">
+            <div className="absolute inset-0 flex items-center justify-center p-2">
+              <BrandLogo
+                brand={brand}
+                className="max-h-full max-w-full w-auto h-auto object-contain transition-opacity opacity-90 hover:opacity-100"
+              />
             </div>
-            {product.review_data.pros_and_cons?.pros && (
-              <div>
-                <span className="text-amber-500 text-[10px] font-bold">
-                  Pros:
-                </span>
-                <div className="text-[10px] text-zinc-400">
-                  {product.review_data.pros_and_cons.pros
-                    .slice(0, 2)
-                    .join(" • ")}
-                </div>
-              </div>
-            )}
+            <span
+              className="text-[9px] font-bold uppercase tracking-widest absolute bottom-1 right-2 bg-black/50 px-1 rounded backdrop-blur-sm"
+              style={{ color: brandPrimary }}
+            >
+              {products.length}
+            </span>
           </div>
         </div>
-      )}
 
-      {/* Data Provenance */}
-      <div className="border-l-2 border-blue-600/50 bg-blue-950/30 p-3 rounded-sm">
-        <div className="flex items-center gap-2 mb-2">
-          <Package className="w-3 h-3 text-blue-500" />
-          <span className="font-bold text-blue-400 uppercase tracking-widest">
-            Data Sources
-          </span>
+        {/* The Track */}
+        <div className="flex-1 relative flex items-center px-4">
+          {products.map((product) => {
+            const price = getPriceValue(product);
+            const safePrice = price > 0 ? price : 1;
+
+            let pct = 0;
+            if (price > 0 && maxPrice > safeMin) {
+              pct =
+                (Math.log(safePrice) - Math.log(safeMin)) /
+                (Math.log(maxPrice) - Math.log(safeMin));
+            }
+            pct = Math.max(0, Math.min(1, pct));
+
+            return (
+              <div
+                key={product.id}
+                className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
+                style={{ left: `${5 + pct * 90}%` }}
+              >
+                <div
+                  className="w-[60px] h-[60px] rounded shadow-lg bg-zinc-900 cursor-pointer hover:scale-110 transition-all duration-200 overflow-hidden relative"
+                  style={{
+                    borderWidth: "2px",
+                    borderColor: brandPrimary,
+                    boxShadow:
+                      "0 0 0 1px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)",
+                  }}
+                  onClick={() => onClickProduct(product.id!)}
+                  onMouseEnter={() => onHoverProduct(product)}
+                >
+                  <img
+                    src={resolveProductImage(product)}
+                    className="w-full h-full object-contain rounded-sm absolute inset-0 bg-white"
+                    loading="lazy"
+                    alt={product.name}
+                  />
+                  <div
+                    className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-200"
+                    style={{
+                      boxShadow: `0 0 12px ${brandPrimary}80, inset 0 0 8px ${brandPrimary}40`,
+                    }}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
-        <DataSourcesBadge
-          sources={product.sources || ["halilit_direct"]}
-          brand={product.brand || "Unknown"}
-        />
       </div>
-    </div>
-  );
+    );
+  },
+);
+
+BrandTrack.displayName = "BrandTrack";
+
+// --- UTILITY: hex to RGB string ---
+const hexToRgb = (hex: string): string => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+    : "100, 100, 100";
 };
 
 export const SpectrumModule = () => {
@@ -280,24 +402,19 @@ export const SpectrumModule = () => {
     categories,
   } = useConductorCatalog();
 
-  // Filter by category (activeTribeId maps to canonical_category)
+  // Filter by category (activeTribeId is a galaxy ID like "keys-production")
   const fetchedProducts = useMemo(() => {
     if (!activeTribeId) return allProducts;
 
-    // Map the galaxy ID (e.g., "drums-percussion") to the actual category name (e.g., "Drums & Percussion")
-    const canonicalCategory = getCanonicalCategoryFromGalaxyId(activeTribeId);
-
-    if (!canonicalCategory) {
-      console.warn(
-        "[SpectrumModule] No canonical category found for tribeId:",
-        activeTribeId,
-      );
-      return [];
-    }
-
-    return allProducts.filter(
-      (p) => p.taxonomy.canonical_category === canonicalCategory,
-    );
+    // Use the consolidator to map each product to its galaxy ID and match
+    return allProducts.filter((p) => {
+      try {
+        const { galaxyId } = getConsolidatedProductCategory(p as any);
+        return galaxyId === activeTribeId;
+      } catch {
+        return false;
+      }
+    });
   }, [allProducts, activeTribeId]);
 
   const availableFilters = useMemo(() => {
@@ -311,18 +428,11 @@ export const SpectrumModule = () => {
   }, [fetchedProducts]);
 
   const rawProducts = useMemo(() => {
-    // Convert Conductor products to Product type with relevance scoring
+    // Backend normalizer guarantees consistent shape — just add relevance score
     return fetchedProducts.map(
       (p: any) =>
         ({
           ...p,
-          id: p.id,
-          product_name: p.product_name,
-          brand: p.brand,
-          price: p.pricing.price_il,
-          image_hero: p.display.hero_image,
-          image_thumbnail: p.display.thumbnail_image,
-          is_bestseller: p.display.should_highlight,
           score: calculateRelevance(p as any),
         }) as Product,
     );
@@ -348,34 +458,18 @@ export const SpectrumModule = () => {
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null);
   const [imageLoadError, setImageLoadError] = useState(false);
-  const [scrollPositions, setScrollPositions] = useState<
-    Record<string, number>
-  >({});
 
-  const handleHoverProduct = (product: Product | null) => {
+  const handleHoverProduct = useCallback((product: Product | null) => {
     setHoveredProduct(product);
     setImageLoadError(false);
-  };
+  }, []);
 
-  const handleScroll = (trackId: string, direction: "left" | "right") => {
-    const trackElement = document.getElementById(`track-${trackId}`);
-    if (!trackElement) return;
-
-    const scrollAmount = 400;
-    const newPosition =
-      (scrollPositions[trackId] || 0) +
-      (direction === "right" ? scrollAmount : -scrollAmount);
-
-    trackElement.scrollTo({
-      left: newPosition,
-      behavior: "smooth",
-    });
-
-    setScrollPositions((prev) => ({
-      ...prev,
-      [trackId]: newPosition,
-    }));
-  };
+  const handleClickProduct = useCallback(
+    (id: string) => {
+      openProductPage(id);
+    },
+    [openProductPage],
+  );
 
   const filteredProducts = useMemo(() => {
     let base = cleanProducts;
@@ -408,7 +502,7 @@ export const SpectrumModule = () => {
       grouped[brand].push(p);
     });
 
-    // 3. Sort Brands Alphabetically (with Nord priority)
+    // 3. Sort Brands Alphabetically (with Nord priority) + pre-compute RGB
     const sortedBrands = Object.entries(grouped)
       .sort((a, b) => {
         const brandA = a[0].toLowerCase();
@@ -420,7 +514,15 @@ export const SpectrumModule = () => {
 
         return a[0].localeCompare(b[0]);
       })
-      .map(([brand, products]) => ({ brand, products }));
+      .map(([brand, products]) => {
+        const theme = getBrandTheme(brand);
+        return {
+          brand,
+          products,
+          brandPrimary: theme.primary,
+          rgbColor: hexToRgb(theme.primary),
+        };
+      });
 
     return { brands: sortedBrands, minPrice, maxPrice };
   }, [filteredProducts]);
@@ -706,117 +808,21 @@ export const SpectrumModule = () => {
 
             {/* Scrollable Matrix */}
             <div className="flex-1 overflow-y-auto custom-scrollbar">
-              {brandMatrix.brands.map(({ brand, products }) => {
-                const brandTheme = getBrandTheme(brand);
-                // Convert hex to RGB for opacity effects
-                const hexToRgb = (hex: string) => {
-                  const result =
-                    /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-                  return result
-                    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
-                    : "100, 100, 100";
-                };
-                const rgbColor = hexToRgb(brandTheme.primary);
-
-                return (
-                  <div
+              {brandMatrix.brands.map(
+                ({ brand, products, rgbColor, brandPrimary }) => (
+                  <BrandTrack
                     key={brand}
-                    className="flex h-24 border-b transition-colors duration-200 group/row hover:bg-white/5 hover:shadow-lg"
-                    style={{
-                      borderColor: `rgba(${rgbColor}, 0.2)`,
-                      backgroundColor: `rgba(${rgbColor}, 0.04)`,
-                    }}
-                  >
-                    {/* Brand Header */}
-                    <div
-                      className="w-32 flex-shrink-0 flex items-center justify-center pl-4 border-r transition-all duration-200"
-                      style={{
-                        borderColor: `rgba(${rgbColor}, 0.3)`,
-                        backgroundColor: `rgba(${rgbColor}, 0.08)`,
-                      }}
-                    >
-                      <div className="flex flex-col gap-1 items-center justify-center flex-1 w-full h-full relative">
-                        {/* Centered Logo Container */}
-                        <div className="absolute inset-0 flex items-center justify-center p-2">
-                          <BrandLogo
-                            brand={brand}
-                            className="max-h-full max-w-full w-auto h-auto object-contain transition-opacity opacity-90 hover:opacity-100"
-                          />
-                        </div>
-
-                        {/* Badge Count - Absolute positioned to not interfere with centering */}
-                        <span
-                          className="text-[9px] font-bold uppercase tracking-widest absolute bottom-1 right-2 bg-black/50 px-1 rounded backdrop-blur-sm"
-                          style={{ color: brandTheme.primary }}
-                        >
-                          {products.length}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* The Track */}
-                    <div className="flex-1 relative flex items-center px-4">
-                      {/* We use specific positioning logic: 
-                            Logarithmic scale to prevent overlap at low prices 
-                        */}
-                      {products.map((product) => {
-                        const price = getPriceValue(product);
-                        const safePrice = price > 0 ? price : 1;
-                        const safeMin =
-                          brandMatrix.minPrice > 0 ? brandMatrix.minPrice : 1;
-                        const safeMax = brandMatrix.maxPrice;
-
-                        let pct = 0;
-                        if (price > 0 && safeMax > safeMin) {
-                          pct =
-                            (Math.log(safePrice) - Math.log(safeMin)) /
-                            (Math.log(safeMax) - Math.log(safeMin));
-                        }
-
-                        // Clamp
-                        pct = Math.max(0, Math.min(1, pct));
-
-                        return (
-                          <div
-                            key={product.id}
-                            className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
-                            style={{ left: `${5 + pct * 90}%` }}
-                          >
-                            {/* The Dot / Thumbnail */}
-                            <div
-                              className="w-[60px] h-[60px] rounded shadow-lg bg-zinc-900 cursor-pointer 
-                                    hover:scale-110 transition-all duration-200 overflow-hidden relative"
-                              style={{
-                                borderWidth: "2px",
-                                borderColor: brandTheme.primary,
-                                boxShadow:
-                                  "0 0 0 1px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)",
-                              }}
-                              onClick={() => openProductPage(product.id!)}
-                              onMouseEnter={() => handleHoverProduct(product)}
-                            >
-                              <img
-                                src={resolveProductImage(product)}
-                                className="w-full h-full object-contain rounded-sm absolute inset-0 bg-white"
-                                style={{ objectFit: "contain" }}
-                                alt={product.name}
-                              />
-
-                              {/* Hover Glow */}
-                              <div
-                                className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-200"
-                                style={{
-                                  boxShadow: `0 0 12px ${brandTheme.primary}80, inset 0 0 8px ${brandTheme.primary}40`,
-                                }}
-                              />
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              })}
+                    brand={brand}
+                    products={products}
+                    rgbColor={rgbColor}
+                    brandPrimary={brandPrimary}
+                    minPrice={brandMatrix.minPrice}
+                    maxPrice={brandMatrix.maxPrice}
+                    onHoverProduct={handleHoverProduct}
+                    onClickProduct={handleClickProduct}
+                  />
+                ),
+              )}
             </div>
           </div>
         )}
