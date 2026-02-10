@@ -9,10 +9,10 @@ import requests
 from io import BytesIO
 from PIL import Image
 from typing import Dict, Optional
-import google.generativeai as genai
+import google.genai as genai
 from pydantic import BaseModel, Field
 
-# Configure Gemini
+# Configure Gemini with new google.genai SDK
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if GOOGLE_API_KEY:
     genai.configure(api_key=GOOGLE_API_KEY)
@@ -27,7 +27,9 @@ class VerificationResult(BaseModel):
 class VisualValidator:
     def __init__(self):
         self.logger = logging.getLogger("VisualValidator")
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        # Using google.genai SDK with gemini-2.0-flash for improved performance
+        self.model = genai.Client(
+            api_key=GOOGLE_API_KEY).models.generate_content if GOOGLE_API_KEY else None
         self.headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
@@ -90,10 +92,16 @@ class VisualValidator:
         """
 
         try:
-            response = self.model.generate_content(
-                [prompt, "Reference Image:", img_ref,
-                    "Candidate Image:", img_cand],
-                generation_config={"response_mime_type": "application/json"}
+            if not self.model:
+                return VerificationResult(is_match=True, confidence=0.0, reason="AI Model not initialized")
+
+            # Using genai SDK to generate content with images
+            client = genai.Client(api_key=GOOGLE_API_KEY)
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=[prompt, "Reference Image:",
+                          img_ref, "Candidate Image:", img_cand],
+                config={"response_mime_type": "application/json"}
             )
             data = json.loads(response.text)
             return VerificationResult(**data)

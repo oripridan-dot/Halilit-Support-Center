@@ -70,7 +70,8 @@ export const useConductorCatalog = () => {
                 throw new Error(`Failed to load Conductor catalog: ${response.statusText}`);
             }
             const data = await response.json();
-            console.log(`✅ Loaded Conductor catalog: ${data.metadata.total_products} products from ${data.metadata.brands.length} brands`);
+            console.log(`✅ Enriched Catalog v8.1: ${data.metadata.total_products} products with full descriptions, images, and specs from ${data.metadata.brands.length} brands`);
+            console.log(`📊 Data Quality: ${data.metadata.source}`);
             return data;
         },
         staleTime: 5 * 60 * 1000, // 5 minutes

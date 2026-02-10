@@ -130,7 +130,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
     );
   }
 
-  // Extract images — handle multiple data shapes
+  // Extract images — handle multiple data shapes with enrichment priority
+  // Priority: image_gallery (v8.1) > official_images > display.hero_image > image_url
+  const galleryImages = (product as any)?.image_gallery || [];
   const officialImgs = product?.official_images || [];
   const displayHero = product?.display?.hero_image
     ? [{ url: product.display.hero_image }]
@@ -138,12 +140,16 @@ export const ProductPage = ({ productId }: { productId: string }) => {
   const fallbackImg = (product as any)?.image_url
     ? [{ url: (product as any).image_url }]
     : [];
+  
+  // Use the richest image source available
   const images =
-    officialImgs.length > 0
-      ? officialImgs
-      : displayHero.length > 0
-        ? displayHero
-        : fallbackImg;
+    galleryImages.length > 0
+      ? galleryImages
+      : officialImgs.length > 0
+        ? officialImgs
+        : displayHero.length > 0
+          ? displayHero
+          : fallbackImg;
 
   const currentImage =
     images[activeImageIndex]?.url || String(images[activeImageIndex]) || "";
@@ -317,17 +323,19 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           {/* Column 3: Specifications & Details */}
           <div className="space-y-6">
             {/* Description */}
-            {(product?.description_short ||
+            {(product?.description ||
+              product?.description_short ||
               product?.official_description ||
-              product?.specifications?.short_description) && (
+              (product as any)?.description_long) && (
               <div className="bg-slate-900 rounded p-4 border border-slate-800">
                 <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                   Overview
                 </h2>
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  {product.description_short ||
-                    product.official_description ||
-                    product.specifications?.short_description}
+                  {product.description ||
+                    product?.description_short ||
+                    product?.official_description ||
+                    (product as any)?.description_long}
                 </p>
               </div>
             )}
@@ -360,16 +368,16 @@ export const ProductPage = ({ productId }: { productId: string }) => {
               )}
 
             {/* Specs */}
-            {product?.specifications &&
-              Object.keys(product.specifications).length > 0 && (
+            {((product?.specifications && Object.keys(product.specifications).length > 0) ||
+              ((product as any)?.official_specs && Object.keys((product as any).official_specs).length > 0)) && (
                 <div className="bg-slate-900 rounded p-4 border border-slate-800">
                   <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                     Specifications
                   </h2>
                   <div className="space-y-2 text-sm">
-                    {/* Handle both unified (direct dict) and legacy (nested .specs) structures */}
+                    {/* Use official_specs (enriched v8.1) or fallback to specifications */}
                     {Object.entries(
-                      product.specifications?.specs || product.specifications,
+                      (product as any)?.official_specs || product?.specifications?.specs || product?.specifications || {},
                     )
                       .filter(
                         ([key]) =>
@@ -398,15 +406,21 @@ export const ProductPage = ({ productId }: { productId: string }) => {
         </div>
 
         {/* Full Specifications Section (if there are more) */}
-        {(product?.description_long ||
+        {((product as any)?.description_long || 
+          product?.description ||
+          product?.description_short ||
+          product?.official_description ||
           product?.specifications?.long_description) && (
           <div className="bg-slate-900 rounded p-6 border border-slate-800 mt-6">
             <h2 className="text-lg font-bold text-white mb-4">
               Full Description
             </h2>
             <p className="text-sm text-zinc-300 leading-relaxed whitespace-pre-wrap">
-              {product.description_long ||
-                product.specifications?.long_description}
+              {(product as any)?.description_long ||
+                product?.description ||
+                product?.official_description ||
+                product?.description_short ||
+                product?.specifications?.long_description}
             </p>
           </div>
         )}

@@ -1,0 +1,258 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-01-23T03:54:49.576657+00:00",
+  "categories": {
+    "keys": {
+      "label": "Keys & Pianos",
+      "icon": "\ud83c\udfb9",
+      "color": "#f59e0b",
+      "thumbnail": "/data/category_thumbnails/keys_thumbnail.svg",
+      "product_count": 10,
+      "products_with_images": 5,
+      "selected_product": "RD-2000",
+      "selected_image": "/data/product_images/roland/roland-rd-2000_thumb.jpg",
+      "all_products": [
+        {
+          "id": "roland-fantom-8",
+          "name": "FANTOM-8",
+          "brand": "roland",
+          "image": "/data/product_images/roland/roland-fantom-8_thumb.svg"
+        },
+        {
+          "id": "roland-rd-2000",
+          "name": "RD-2000",
+          "brand": "roland",
+          "image": "/data/product_images/roland/roland-rd-2000_thumb.jpg"
+        },
+        {
+          "id": "nord-nord-stage-4-88",
+          "name": "Nord Stage 4 88",
+          "brand": "nord",
+          "image": "/data/product_images/nord/nord-nord-stage-4-88_thumb.jpg"
+        },
+        {
+          "id": "nord-nord-piano-5-88",
+          "name": "Nord Piano 5 88",
+          "brand": "nord",
+          "image": "/data/product_images/nord/nord-nord-piano-5-88_thumb.jpg"
+        },
+        {
+          "id": "nord-nord-electro-7-hp",
+          "name": "Nord Electro 7 HP",
+          "brand": "nord",
+          "image": "/data/product_images/nord/nord-nord-electro-7-hp_thumb.jpg"
+        },
+        {
+          "id": "moog-moog-one-16",
+          "name": "Moog One 16",
+          "brand": "moog",
+          "image": "/data/product_images/moog/moog-moog-one-16_thumb.svg"
+        },
+        {
+          "id": "moog-subsequent-37",
+          "name": "Subsequent 37",
+          "brand": "moog",
+          "image": "/data/product_images/moog/moog-subsequent-37_thumb.svg"
+        },
+        {
+          "id": "moog-matriarch",
+          "name": "Matriarch",
+          "brand": "moog",
+          "image": "/data/product_images/moog/moog-matriarch_thumb.svg"
+        },
+        {
+          "id": "akai-professional-mpk-mini-mk3",
+          "name": "MPK Mini MK3",
+          "brand": "akai-professional",
+          "image": "/data/product_images/akai-professional/akai-professional-mpk-mini-mk3_thumb.svg"
+        },
+        {
+          "id": "teenage-engineering-op-1-field",
+          "name": "OP-1 Field",
+          "brand": "teenage-engineering",
+          "image": "/data/product_images/teenage-engineering/teenage-engineering-op-1-field_thumb.jpg"
+        }
+      ]
+    },
+    "drums": {
+      "label": "Drums & Percussion",
+      "icon": "\ud83e\udd41",
+      "color": "#ef4444",
+      "thumbnail": "/data/category_thumbnails/drums_thumbnail.svg",
+      "product_count": 1,
+      "products_with_images": 1,
+      "selected_product": "TD-50K2",
+      "selected_image": "/data/product_images/roland/roland-td-50k2_thumb.jpg",
+      "all_products": [
+        {
+          "id": "roland-td-50k2",
+          "name": "TD-50K2",
+          "brand": "roland",
+          "image": "/data/product_images/roland/roland-td-50k2_thumb.jpg"
+        }
+      ]
+    },
+    "guitars": {
+      "label": "Guitars & Amps",
+      "icon": "\ud83c\udfb8",
+      "color": "#3b82f6",
+      "thumbnail": "/data/category_thumbnails/guitars_thumbnail.svg",
+      "product_count": 2,
+      "products_with_images": 0,
+      "selected_product": "KATANA-100 MkII",
+      "selected_image": "/data/product_images/boss/boss-katana-100-mkii_thumb.svg",
+      "all_products": [
+        {
+          "id": "boss-katana-100-mkii",
+          "name": "KATANA-100 MkII",
+          "brand": "boss",
+          "image": "/data/product_images/boss/boss-katana-100-mkii_thumb.svg"
+        },
+        {
+          "id": "boss-gt-1000",
+          "name": "GT-1000",
+          "brand": "boss",
+          "image": "/data/product_images/boss/boss-gt-1000_thumb.svg"
+        }
+      ]
+    },
+    "dj": {
+      "label": "DJ & Production",
+      "icon": "\ud83c\udfa7",
+      "color": "#ec4899",
+      "thumbnail": "/data/category_thumbnails/dj_thumbnail.svg",
+      "product_count": 5,
+      "products_with_images": 2,
+      "selected_product": "EP-133 K.O. II",
+      "selected_image": "/data/product_images/teenage-engineering/teenage-engineering-ep-133-k-o-ii_thumb.jpg",
+      "all_products": [
+        {
+          "id": "boss-rc-505mkii",
+          "name": "RC-505mkII",
+          "brand": "boss",
+          "image": "/data/product_images/boss/boss-rc-505mkii_thumb.svg"
+        },
+        {
+          "id": "akai-professional-mpc-live-ii",
+          "name": "MPC Live II",
+          "brand": "akai-professional",
+          "image": "/data/product_images/akai-professional/akai-professional-mpc-live-ii_thumb.svg"
+        },
+        {
+          "id": "akai-professional-mpc-one",
+          "name": "MPC One+",
+          "brand": "akai-professional",
+          "image": "/data/product_images/akai-professional/akai-professional-mpc-one_thumb.svg"
+        },
+        {
+          "id": "teenage-engineering-ep-133-k-o-ii",
+          "name": "EP-133 K.O. II",
+          "brand": "teenage-engineering",
+          "image": "/data/product_images/teenage-engineering/teenage-engineering-ep-133-k-o-ii_thumb.jpg"
+        },
+        {
+          "id": "teenage-engineering-op-z",
+          "name": "OP-Z",
+          "brand": "teenage-engineering",
+          "image": "/data/product_images/teenage-engineering/teenage-engineering-op-z_thumb.jpg"
+        }
+      ]
+    },
+    "studio": {
+      "label": "Studio & Recording",
+      "icon": "\ud83c\udf99\ufe0f",
+      "color": "#10b981",
+      "thumbnail": "/data/category_thumbnails/studio_thumbnail.svg",
+      "product_count": 10,
+      "products_with_images": 8,
+      "selected_product": "Apollo Twin X",
+      "selected_image": "/data/product_images/universal-audio/universal-audio-apollo-twin-x_thumb.jpg",
+      "all_products": [
+        {
+          "id": "universal-audio-apollo-twin-x",
+          "name": "Apollo Twin X",
+          "brand": "universal-audio",
+          "image": "/data/product_images/universal-audio/universal-audio-apollo-twin-x_thumb.jpg"
+        },
+        {
+          "id": "universal-audio-apollo-x8p",
+          "name": "Apollo x8p",
+          "brand": "universal-audio",
+          "image": "/data/product_images/universal-audio/universal-audio-apollo-x8p_thumb.jpg"
+        },
+        {
+          "id": "universal-audio-volt-276",
+          "name": "Volt 276",
+          "brand": "universal-audio",
+          "image": "/data/product_images/universal-audio/universal-audio-volt-276_thumb.svg"
+        },
+        {
+          "id": "adam-audio-a77h",
+          "name": "A77H",
+          "brand": "adam-audio",
+          "image": "/data/product_images/adam-audio/adam-audio-a77h_thumb.jpg"
+        },
+        {
+          "id": "adam-audio-t7v",
+          "name": "T7V",
+          "brand": "adam-audio",
+          "image": "/data/product_images/adam-audio/adam-audio-t7v_thumb.jpg"
+        },
+        {
+          "id": "adam-audio-s3h",
+          "name": "S3H",
+          "brand": "adam-audio",
+          "image": "/data/product_images/adam-audio/adam-audio-s3h_thumb.jpg"
+        },
+        {
+          "id": "mackie-cr3-x",
+          "name": "CR3-X",
+          "brand": "mackie",
+          "image": "/data/product_images/mackie/mackie-cr3-x_thumb.svg"
+        },
+        {
+          "id": "warm-audio-wa-87-r2",
+          "name": "WA-87 R2",
+          "brand": "warm-audio",
+          "image": "/data/product_images/warm-audio/warm-audio-wa-87-r2_thumb.jpg"
+        },
+        {
+          "id": "warm-audio-wa-2a",
+          "name": "WA-2A",
+          "brand": "warm-audio",
+          "image": "/data/product_images/warm-audio/warm-audio-wa-2a_thumb.jpg"
+        },
+        {
+          "id": "warm-audio-wa73-eq",
+          "name": "WA73-EQ",
+          "brand": "warm-audio",
+          "image": "/data/product_images/warm-audio/warm-audio-wa73-eq_thumb.jpg"
+        }
+      ]
+    },
+    "live": {
+      "label": "Live Sound",
+      "icon": "\ud83d\udd0a",
+      "color": "#8b5cf6",
+      "thumbnail": "/data/category_thumbnails/live_thumbnail.svg",
+      "product_count": 2,
+      "products_with_images": 0,
+      "selected_product": "ProFX12v3",
+      "selected_image": "/data/product_images/mackie/mackie-profx12v3_thumb.svg",
+      "all_products": [
+        {
+          "id": "mackie-profx12v3",
+          "name": "ProFX12v3",
+          "brand": "mackie",
+          "image": "/data/product_images/mackie/mackie-profx12v3_thumb.svg"
+        },
+        {
+          "id": "mackie-thump15a",
+          "name": "Thump15A",
+          "brand": "mackie",
+          "image": "/data/product_images/mackie/mackie-thump15a_thumb.svg"
+        }
+      ]
+    }
+  }
+}

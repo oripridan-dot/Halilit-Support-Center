@@ -1,126 +1,58 @@
-# Halilit Support Center v8.1 - Async Task Queue & Distributed Pipeline
+# Halilit Support Center v8.1
 
-**Status**: ✅ **PRODUCTION READY**  
-**Version**: v8.1.0  
-**Branch**: `v8.0`  
-**Pipeline**: Trinity Swarm + Celery Async Workers  
-**Product Catalog**: 1,200+ verified products
+**AI-powered product intelligence platform** for musical instruments.  
+Trinity Swarm (3 Gemini 2.0-flash agents) + Celery async workers + React frontend.
 
----
-
-## What is Halilit Support Center?
-
-An **AI-powered product intelligence platform** that automatically:
-
-1. **Harvests** product data from Halilit.com (CommercialScout agent)
-2. **Enriches** with manufacturer specs and categorization (OfficialVerifier agent)
-3. **Validates** data quality and compliance (ExternalValidator agent)
-4. **Syncs** approved products to the frontend in real-time (Unified Data Service)
-5. **Learns** from every operation via agent memory (Trinity Swarm)
-
-Uses **Google Gemini 2.0-flash** agents working in unison to ensure data accuracy.
-
-### What's New in v8.1
-
-- **Async Task Queue**: Celery + Redis distributed pipeline replaces synchronous agent execution
-- **Parallel Workers**: Multiple Celery workers process products concurrently (15x+ throughput)
-- **Docker Infrastructure**: Full `docker-compose.yml` with Redis, PostgreSQL, Flower monitoring
-- **Stress Testing**: Comprehensive test harness for baseline comparisons
-- **SSE Streaming**: Real-time Server-Sent Events for pipeline progress
+**1,200+ verified products** | **100+ brands** | **Enriched catalog with images, specs & descriptions**
 
 ---
 
-## One-Minute Setup
+## Quick Start
 
 ```bash
-# Prerequisites: Python 3.11+, Node.js 18+, GOOGLE_API_KEY
+# Prerequisites: Python 3.11+, Node.js 18+, GOOGLE_API_KEY env var
 
-# 1. Install backend
-cd /workspaces/Halilit-Support-Center
+# Install
 pip install -r backend/requirements.txt
+cd frontend && pnpm install && cd ..
 
-# 2. Install frontend
-cd frontend && pnpm install
-
-# 3. Start backend (Terminal 1)
-cd /workspaces/Halilit-Support-Center
+# Run backend (Terminal 1)
 PYTHONPATH=. python3 backend/server.py
 
-# 4. Start frontend (Terminal 2)
+# Run frontend (Terminal 2)
 cd frontend && pnpm dev
 
 # Open http://localhost:5173
 ```
 
-### Docker (for async workers)
+### Docker (async workers)
 
 ```bash
 docker-compose up -d redis postgres
-# Start Celery workers
 celery -A backend.tasks worker --loglevel=info --concurrency=4
-# Monitor with Flower
-celery -A backend.tasks flower --port=5555
+celery -A backend.tasks flower --port=5555  # monitoring UI
 ```
 
 ---
 
-## Documentation
-
-| Document                                                       | Purpose                                              |
-| -------------------------------------------------------------- | ---------------------------------------------------- |
-| **[ARCHITECTURE.md](ARCHITECTURE.md)**                         | Technical architecture, API reference, system design |
-| **[backend/ingestion/README.md](backend/ingestion/README.md)** | Ingestion pipeline details                           |
-
----
-
-## System Architecture
+## Architecture
 
 ```
-┌────────────────────────────────────────┐
-│ FRONTEND (React 18 + CopilotKit)       │
-│ - GalaxyDashboard (category browser)   │
-│ - SpectrumModule (product spectrum)    │
-│ - ProductPage (full analysis)          │
-│ - Zustand Store + React Query          │
-└──────────────┬─────────────────────────┘
-               │ SSE + REST
-┌──────────────▼─────────────────────────┐
-│ FASTAPI BACKEND (server.py)            │
-│ - Conductor endpoints (/api/conductor) │
-│ - Skills endpoints (/api/copilot)      │
-│ - Sync endpoints (/api/copilot/sync)   │
-│ - Task queue endpoints (/api/tasks)    │
-└──────────────┬─────────────────────────┘
-               │
-┌──────────────▼─────────────────────────┐
-│ ASYNC TASK QUEUE (v8.0)                │
-│ - Celery + Redis broker                │
-│ - Distributed worker pool              │
-│ - Task monitoring (Flower)             │
-└──────────────┬─────────────────────────┘
-               │
-┌──────────────▼─────────────────────────┐
-│ TRINITY SWARM (3 Gemini Agents)        │
-│ - CommercialScout (harvest)            │
-│ - OfficialVerifier (enrich + images)   │
-│ - ExternalValidator (audit + score)    │
-│ + Learning System + Quality Gates      │
-└────────────────────────────────────────┘
+Frontend (React 18 + Vite + Zustand + React Query)
+    ↕ REST + SSE + WebSocket
+FastAPI Backend (server.py)
+    ↕
+Celery Task Queue (Redis broker → distributed workers)
+    ↕
+Trinity Swarm (3 Gemini 2.0-flash agents)
+    → CommercialScout  (harvest from Halilit.com)
+    → OfficialVerifier (enrich with specs, images, taxonomy)
+    → ExternalValidator (audit, compliance, risk scoring)
+    ↕
+Ingestion Pipeline (7 phases: Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve)
+    → Real-time SSE sync to frontend
+    → Learning system (agent memory + feedback loops)
 ```
-
----
-
-## The Trinity Swarm
-
-Three specialized Gemini 2.0-flash agents:
-
-| Agent                 | Role                                   | Output                      |
-| --------------------- | -------------------------------------- | --------------------------- |
-| **CommercialScout**   | Harvests product data from Halilit.com | ProductDraft with price     |
-| **OfficialVerifier**  | Enriches with specs, images, taxonomy  | EnrichedProduct with images |
-| **ExternalValidator** | Audits compliance, risk scoring 0-100  | AuditReport with risk score |
-
-All agents have **learning capabilities** — they improve over time via feedback loops.
 
 ---
 
@@ -128,61 +60,67 @@ All agents have **learning capabilities** — they improve over time via feedbac
 
 ```
 backend/
-├── server.py                      # FastAPI main server
-├── conductor_main.py              # CLI interface
-├── celery_config.py               # Celery task queue (v8.0)
-├── tasks.py                       # Distributed task definitions (v8.0)
-├── auto_sync_engine.py            # Real-time SSE sync
+├── server.py                          # FastAPI server + enriched catalog API
+├── celery_config.py                   # Celery + Redis configuration
+├── tasks.py                           # Distributed agent tasks
 ├── unified_agent_orchestrator_v76.py  # Trinity Swarm orchestration
-├── unified_data_service_v76.py        # Data pipeline & normalization
-├── unified_quality_gates_v76.py       # Quality gates & audit
-├── unified_learning_system_v76.py     # Agent learning system
-├── agents/                        # Multi-cycle runner, perfection map
-├── api/                           # Routers (copilot, tasks, streams, ws)
-├── ingestion/                     # 6-phase pipeline modules
-├── skills/                        # Modular skill framework
-├── scripts/                       # Utilities & stress tests
-├── tests/                         # Test suites
-└── config/                        # Brand tiers, DB schema
+├── unified_data_service_v76.py        # Product normalization & data pipeline
+├── unified_quality_gates_v76.py       # Quality gates, audit & feedback
+├── unified_learning_system_v76.py     # Agent learning & improvement
+├── conductor_main.py                  # CLI interface
+├── auto_sync_engine.py                # Real-time SSE sync
+├── api/                               # Routers (copilot, tasks, streams, ws)
+├── ingestion/                         # 7-phase pipeline modules
+├── skills/                            # Modular skill framework
+├── scripts/                           # Utilities & stress tests
+├── tests/                             # Test suites
+├── config/                            # Brand tiers, DB schema
+└── data/                              # Generated pipeline data (gitignored)
 
 frontend/
 ├── src/
-│   ├── App.tsx                    # Three-screen router
-│   ├── components/views/          # Galaxy, Spectrum, ProductPage
-│   ├── hooks/                     # React Query hooks
-│   ├── lib/                       # Utilities
-│   ├── store/                     # Zustand state
-│   └── types/                     # TypeScript definitions
-└── public/data/                   # Static product data (100+ brands)
+│   ├── App.tsx                        # Three-screen router
+│   ├── components/views/              # Galaxy, Spectrum, ProductPage
+│   ├── hooks/                         # React Query hooks
+│   ├── lib/                           # Utilities (categories, search, images)
+│   ├── store/                         # Zustand state management
+│   ├── types/                         # TypeScript definitions
+│   └── workers/                       # Web Worker (search)
+├── public/
+│   ├── data/category_thumbnails/      # Static category images (tracked)
+│   └── assets/                        # Logos, backgrounds (tracked)
+└── vite.config.ts                     # Dev proxy → localhost:8000
 
-docker-compose.yml                 # Redis + PostgreSQL + Workers
-Dockerfile                         # Worker container image
+docker-compose.yml                     # Redis + PostgreSQL + Workers
+Dockerfile                             # Worker container image
 ```
+
+> **Note**: Product data files (brand JSONs, shards, galaxy_db) are **generated by the backend pipeline** and gitignored. Run the ingestion pipeline or `conductor_main.py sync` to populate them.
 
 ---
 
 ## API Reference
 
-### Conductor Endpoints
+### Conductor (catalog data)
 
-| Method | Path                        | Description             |
-| ------ | --------------------------- | ----------------------- |
-| GET    | `/api/conductor/catalog`    | All verified products   |
-| GET    | `/api/conductor/taxonomy`   | Category & brand schema |
-| POST   | `/api/conductor/filter`     | Filtered product query  |
-| GET    | `/api/conductor/categories` | Category summary        |
-| GET    | `/api/conductor/refresh`    | Force cache refresh     |
+| Method | Path                        | Description                                            |
+| ------ | --------------------------- | ------------------------------------------------------ |
+| GET    | `/api/conductor/catalog`    | Enriched product catalog (images, specs, descriptions) |
+| GET    | `/api/conductor/taxonomy`   | Category & brand schema                                |
+| POST   | `/api/conductor/filter`     | Filtered product query                                 |
+| GET    | `/api/conductor/categories` | Category summary                                       |
+| GET    | `/api/conductor/refresh`    | Force cache refresh                                    |
 
-### Skills & Pipeline Endpoints
+### Skills & Pipeline
 
-| Method | Path                         | Description           |
-| ------ | ---------------------------- | --------------------- |
-| GET    | `/api/copilot/skills`        | List available skills |
-| POST   | `/api/copilot/execute-skill` | Execute single skill  |
-| POST   | `/api/copilot/pipeline`      | Run full pipeline     |
-| POST   | `/api/copilot/batch-ingest`  | Batch processing      |
+| Method | Path                         | Description                 |
+| ------ | ---------------------------- | --------------------------- |
+| POST   | `/api/copilot/pipeline`      | Run full ingestion pipeline |
+| POST   | `/api/copilot/batch-ingest`  | Batch processing            |
+| POST   | `/api/copilot/execute-skill` | Execute single skill        |
+| GET    | `/api/copilot/skills`        | List available skills       |
 
-### Task Queue Endpoints (v8.0)
+### Task Queue (async)
 
 | Method | Path                     | Description       |
 | ------ | ------------------------ | ----------------- |
@@ -192,17 +130,43 @@ Dockerfile                         # Worker container image
 
 ---
 
-## Running Tests
+## CLI
+
+```bash
+PYTHONPATH=. python3 backend/conductor_main.py catalog        # Catalog stats
+PYTHONPATH=. python3 backend/conductor_main.py ingest [brand] # Run ingestion
+PYTHONPATH=. python3 backend/conductor_main.py sync           # Sync to frontend
+PYTHONPATH=. python3 backend/conductor_main.py learning       # Learning status
+PYTHONPATH=. python3 backend/conductor_main.py audit          # Audit trail
+```
+
+## Tests
 
 ```bash
 PYTHONPATH=. python3 -m pytest backend/tests/ -v
-
-# Stress test (requires Redis)
-PYTHONPATH=. python3 backend/scripts/phase8b_stress_test.py
+PYTHONPATH=. python3 backend/scripts/phase8b_stress_test.py   # requires Redis
 ```
 
 ---
 
-**Halilit Support Center v8.1**  
-**Async Pipeline — Distributed Workers — Production Ready**  
-Last Updated: February 9, 2026
+## What's New in v8.1
+
+- **Enriched Catalog API**: Full descriptions, image galleries, merged official specs, quality scores
+- **Image Strategy**: Hero → gallery → official_images → display → primary_source fallback chain
+- **Visual Validator**: Migrated to `google-genai` SDK with Gemini 2.0-flash
+- **Lean Repository**: Generated data removed from git (97 MB → 4.2 MB tracked data)
+- **Clean Dependencies**: Root `concurrently` removed, no root node_modules
+- **Async Task Queue** (v8.0): Celery + Redis distributed pipeline, Flower monitoring
+
+---
+
+## Documentation
+
+| Document                                                   | Purpose                                         |
+| ---------------------------------------------------------- | ----------------------------------------------- |
+| [ARCHITECTURE.md](ARCHITECTURE.md)                         | System design, API details, component reference |
+| [backend/ingestion/README.md](backend/ingestion/README.md) | Ingestion pipeline details                      |
+
+---
+
+**v8.1.0** · Last updated: February 10, 2026

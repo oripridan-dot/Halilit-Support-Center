@@ -161,7 +161,8 @@ except Exception as e:
 # WebSocket real-time task updates
 try:
     from backend.api.websocket_manager import create_websocket_route
-    create_websocket_route(app)
+    import asyncio
+    asyncio.run(create_websocket_route(app))
     logger.info("✅ WebSocket endpoint registered at /ws/tasks/{{task_id}}")
 except Exception as e:
     logger.warning(f"⚠️ Failed to register WebSocket: {e}")
@@ -248,11 +249,12 @@ async def get_conductor_catalog():
     Get the unified conductor catalog by aggregating generated frontend data files.
     This serves as the single source of truth for the frontend app.
 
-    CRITICAL UPDATES v8.0:
+    CRITICAL UPDATES v8.0+:
     - Normalizes data structure for frontend (Price, Image, Name)
     - Deduplicates products by ID
     - Filters out 'junk' (Price=0 or No Image)
     - Ensures official Halilit data takes precedence
+    - ✅ NEW: Extracts FULL enriched data (real images, descriptions, specs)
     """
     try:
         data_dir = Path(FRONTEND_PUBLIC_DATA)
@@ -277,8 +279,6 @@ async def get_conductor_catalog():
 
         # Iterate over all JSON files
         json_files = list(data_dir.glob("*.json"))
-        # Sort files to potentially process newer/better ones last or first?
-        # Actually, let's just process.
 
         for json_file in json_files:
             if json_file.name in excluded_files:
@@ -296,8 +296,6 @@ async def get_conductor_catalog():
                         brand_products = file_data["products"]
 
                     if brand_products:
-                        # brands_found.add(json_file.stem)  # MOVED: Only add if products survive filter
-
                         for p in brand_products:
                             # --- NORMALIZATION & CLEANING ---
 
@@ -330,62 +328,115 @@ async def get_conductor_catalog():
                             if float(price) <= 0:
                                 continue
 
-                            # 5. Image Strategy
-                            image_url = p.get('image_url') or ""
+                            # 5. Image Strategy - ENRICHED to capture hero image
+                            image_url = ""
+
+                            # Try image_hero first (enriched field)
+                            image_hero = p.get('image_hero')
+                            if image_hero:
+                                if isinstance(image_hero, dict):
+                                    image_url = image_hero.get('url', "")
+                                elif isinstance(image_hero, str):
+                                    image_url = image_hero
+
+                            # Try official_images second (array of images)
                             if not image_url:
-                                # Try official images (best quality)
                                 official_images = p.get('official_images', [])
                                 if official_images and isinstance(official_images, list):
-                                    # Prefer hero
+                                    # Prefer hero display purpose
                                     for img in official_images:
-                                        if img.get('display_purpose') == 'hero':
+                                        if img.get('display_purpose') == 'hero' and img.get('url'):
                                             image_url = img.get('url')
                                             break
-                                    # Fallback to first
-                                    if not image_url and len(official_images) > 0:
-                                        image_url = official_images[0].get(
-                                            'url')
+                                    # Fallback: take first image with valid URL
+                                    if not image_url:
+                                        for img in official_images:
+                                            if isinstance(img, dict) and img.get('url'):
+                                                image_url = img.get('url')
+                                                break
+                                            elif isinstance(img, str) and img:
+                                                image_url = img
+                                                break
 
-                            # Filter out placeholder images (allow local placeholder)
-                            if image_url and ("brand.com" in image_url):
-                                image_url = ""
-
+                            # Try image_gallery (fallback array)
                             if not image_url:
-                                # Try display object
+                                image_gallery = p.get('image_gallery', [])
+                                if image_gallery and isinstance(image_gallery, list):
+                                    for img in image_gallery:
+                                        if isinstance(img, dict) and img.get('url'):
+                                            image_url = img.get('url')
+                                            break
+                                        elif isinstance(img, str) and img:
+                                            image_url = img
+                                            break
+
+                            # Try display object hero_image
+                            if not image_url:
                                 disp_hero = p.get(
                                     'display', {}).get('hero_image')
                                 if disp_hero:
                                     if isinstance(disp_hero, dict):
-                                        image_url = disp_hero.get('url')
+                                        image_url = disp_hero.get('url') or ""
                                     elif isinstance(disp_hero, str):
                                         image_url = disp_hero
 
+                            # Try primary_source (Halilit scraper fallback)
                             if not image_url:
-                                # Try primary source (Halilit scraper fallback)
                                 p_source = p.get('primary_source', {})
                                 if isinstance(p_source, dict):
-                                    image_url = p_source.get(
-                                        'image', "")  # rare but possible
+                                    image_url = p_source.get('image', "")
 
-                            # Filter out placeholder images (Final Check) - Allow local placeholder
-                            if image_url and ("brand.com" in image_url):
+                            # Filter out placeholder/invalid images
+                            if image_url and ("/assets/images/placeholder" in image_url or "brand.com" in image_url):
                                 image_url = ""
 
-                            # QUALITY GATE 2: Must have an image
-                            # (We can relax this if strictly needed, but user asked for "only junk data")
+                            # QUALITY GATE 2: Must have a valid image
                             if not image_url:
                                 continue
 
-                            # --- CONSTRUCT FINAL OBJECT ---
+                            # --- DESCRIPTION STRATEGY - ENRICHED ---
+                            # Prefer official_description (full), then description_long, then description_short
+                            description = p.get('official_description', "") or \
+                                p.get('description_long', "") or \
+                                p.get('description_short', "") or ""
+
+                            # --- SPECIFICATIONS & ENRICHMENT ---
+                            # Merge official_specs and specifications
+                            specs = {}
+                            if p.get('official_specs'):
+                                specs.update(p.get('official_specs', {}))
+                            if p.get('specifications'):
+                                specs.update(p.get('specifications', {}))
+
+                            # Gather all images (hero, gallery, official)
+                            all_images = []
+                            if image_hero:
+                                if isinstance(image_hero, dict):
+                                    all_images.append(image_hero)
+                                else:
+                                    all_images.append({"url": image_hero})
+
+                            # Add gallery images
+                            image_gallery = p.get('image_gallery', [])
+                            if isinstance(image_gallery, list):
+                                # Limit to 20 images
+                                for img in image_gallery[:20]:
+                                    if isinstance(img, dict):
+                                        all_images.append(img)
+                                    elif isinstance(img, str):
+                                        all_images.append({"url": img})
+
                             # Deduce sources if missing
                             sources = p.get('sources', [])
                             if not sources:
+                                sources = []
                                 sources.append('halilit_direct')
-                                if p.get('official_specs') or p.get('official_description'):
+                                if specs or description:
                                     sources.append('official_specs')
                                 if p.get('reviews') or p.get('average_rating'):
                                     sources.append('trusted_reviews')
 
+                            # --- CONSTRUCT FINAL ENRICHED OBJECT ---
                             normalized_product = {
                                 "id": pid,
                                 "halilit_id": pid,
@@ -396,7 +447,10 @@ async def get_conductor_catalog():
                                 "price": float(price),
                                 "currency": "ILS",
                                 "image_url": image_url,
-                                "description": p.get('description_short') or p.get('official_description') or "",
+                                "description": description,
+                                "image_hero": image_hero,
+                                "image_gallery": all_images,
+                                "official_images": p.get('official_images', []),
                                 "taxonomy": p.get('taxonomy', {"canonical_category": category}),
                                 "display": {
                                     "hero_image": {"url": image_url},
@@ -404,9 +458,12 @@ async def get_conductor_catalog():
                                     "display_role": p.get('display', {}).get('display_role', 'entry'),
                                     "should_highlight": p.get('display', {}).get('should_highlight', False)
                                 },
-                                # --- ENRICHMENT FIELDS (The "Three Pillars") ---
+                                # --- ENRICHMENT FIELDS (Full Data) ---
                                 "sources": sources,
-                                "official_specs": p.get('official_specs', {}),
+                                "official_specs": specs,
+                                "specifications": specs,
+                                "quality_score": p.get('quality_score', 0),
+                                "data_completeness": p.get('data_completeness', 0),
                                 "review_data": {
                                     "aggregate_rating": p.get('average_rating') or p.get('review_data', {}).get('aggregate_rating', 0),
                                     "total_reviews": len(p.get('reviews', [])) or p.get('review_data', {}).get('total_reviews', 0),
@@ -414,13 +471,12 @@ async def get_conductor_catalog():
                                 },
                                 "pricing": {
                                     "price_il": float(price),
-                                    # Simple heuristic
-                                    "tier": "pro" if float(price) > 2000 else "entry"
+                                    "price_eilat": p.get('price_eilat') or 0,
+                                    "tier": p.get('pricing', {}).get('tier') or ("pro" if float(price) > 2000 else "mid" if float(price) > 500 else "entry")
                                 }
                             }
 
-                            # Deduplicate: Overwrite with newest/best?
-                            # For now simply overwrite (last one wins)
+                            # Deduplicate: Overwrite with newest/best
                             products_map[pid] = normalized_product
                             # Mark brand as having valid products
                             brands_found.add(json_file.stem)
@@ -438,7 +494,7 @@ async def get_conductor_catalog():
             categories_count[c] = categories_count.get(c, 0) + 1
 
         logger.info(
-            f"✅ Served Clean Catalog: {len(all_products)} verified products from {len(brands_found)} brands")
+            f"✅ Served Enriched Catalog: {len(all_products)} products with full data from {len(brands_found)} brands")
 
         catalog = {
             'products': all_products,
@@ -447,7 +503,7 @@ async def get_conductor_catalog():
                 'brands': sorted(list(brands_found)),
                 'categories': categories_count,
                 'timestamp': datetime.now().isoformat(),
-                'source': 'conductor_verified_clean',
+                'source': 'conductor_verified_enriched_v8.1',
                 'verification_status': 'complete',
                 'cache_ttl_seconds': 300
             }

@@ -67,4 +67,8 @@ frontend/public/assets/manuals/
 frontend/public/assets/images/
 frontend/public/assets/media/
 generation_results.json
-pnpm-lock.yaml
+
+# === ROOT-LEVEL GENERATED ===
+/pnpm-lock.yaml
+.agent_memory/
+.agent_memory/

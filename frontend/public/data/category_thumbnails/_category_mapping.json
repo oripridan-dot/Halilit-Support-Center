@@ -1,0 +1,270 @@
+{
+  "keys": {
+    "synths": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/keys-synths_thumb.webp"
+    },
+    "stage-pianos": {
+      "product_id": "roland-gopiano_go-88p",
+      "product_name": "GO:PIANO88",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/keys-stage-pianos_thumb.webp"
+    },
+    "controllers": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/keys-controllers_thumb.webp"
+    },
+    "arrangers": {
+      "product_id": "roland-e-x10",
+      "product_name": "E-X10\nArranger Keyboard",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/keys-arrangers_thumb.webp"
+    },
+    "organs": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/keys-organs_thumb.webp"
+    },
+    "workstations": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/keys-workstations_thumb.webp"
+    }
+  },
+  "drums": {
+    "electronic-drums": {
+      "product_id": "roland-rh-5",
+      "product_name": "RH-5\nMonitor Headphones",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/drums-electronic-drums_thumb.webp"
+    },
+    "acoustic-drums": {
+      "product_id": "roland-cb-404",
+      "product_name": "CB-404\nCarrying Case",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/drums-acoustic-drums_thumb.webp"
+    },
+    "cymbals": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/drums-cymbals_thumb.webp"
+    },
+    "percussion": {
+      "product_id": "roland-e-x50",
+      "product_name": "E-X50",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/drums-percussion_thumb.webp"
+    },
+    "drum-machines": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/drums-drum-machines_thumb.webp"
+    },
+    "pads": {
+      "product_id": "roland-ks-11z",
+      "product_name": "KS-11Z\nKeyboard Stand",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/drums-pads_thumb.webp"
+    }
+  },
+  "guitars": {
+    "electric-guitars": {
+      "product_id": "roland-e-x50",
+      "product_name": "E-X50",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/guitars-electric-guitars_thumb.webp"
+    },
+    "bass-guitars": {
+      "product_id": "roland-cb-404",
+      "product_name": "CB-404\nCarrying Case",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/guitars-bass-guitars_thumb.webp"
+    },
+    "amplifiers": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/guitars-amplifiers_thumb.webp"
+    },
+    "effects-pedals": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/guitars-effects-pedals_thumb.webp"
+    },
+    "multi-effects": {
+      "product_id": "roland-e-x10",
+      "product_name": "E-X10\nArranger Keyboard",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/guitars-multi-effects_thumb.webp"
+    },
+    "accessories": {
+      "product_id": "roland-cb-b88s",
+      "product_name": "CB-B88S\nKeyboard Bag",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/guitars-accessories_thumb.webp"
+    }
+  },
+  "studio": {
+    "audio-interfaces": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/studio-audio-interfaces_thumb.webp"
+    },
+    "studio-monitors": {
+      "product_id": "roland-rh-5",
+      "product_name": "RH-5\nMonitor Headphones",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/studio-studio-monitors_thumb.webp"
+    },
+    "microphones": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/studio-microphones_thumb.webp"
+    },
+    "outboard-gear": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/studio-outboard-gear_thumb.webp"
+    },
+    "preamps": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/studio-preamps_thumb.webp"
+    },
+    "software": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/studio-software_thumb.webp"
+    }
+  },
+  "live": {
+    "pa-speakers": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/live-pa-speakers_thumb.webp"
+    },
+    "mixers": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/live-mixers_thumb.webp"
+    },
+    "wireless-systems": {
+      "product_id": "roland-gokeys_3",
+      "product_name": "GO:KEYS 3\nMusic Creation Keyboard",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/live-wireless-systems_thumb.webp"
+    },
+    "in-ear-monitoring": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/live-in-ear-monitoring_thumb.webp"
+    },
+    "stage-boxes": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/live-stage-boxes_thumb.webp"
+    }
+  },
+  "dj": {
+    "grooveboxes": {
+      "product_id": "roland-rmc-b20-hiz",
+      "product_name": "RMC-B20-HIZ",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/dj-grooveboxes_thumb.webp"
+    },
+    "samplers": {
+      "product_id": "roland-cb-404",
+      "product_name": "CB-404\nCarrying Case",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/dj-samplers_thumb.webp"
+    },
+    "dj-headphones": {
+      "product_id": "roland-rh-5",
+      "product_name": "RH-5\nMonitor Headphones",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/dj-dj-headphones_thumb.webp"
+    },
+    "production": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/dj-production_thumb.webp"
+    },
+    "accessories": {
+      "product_id": "roland-rh-5",
+      "product_name": "RH-5\nMonitor Headphones",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/dj-accessories_thumb.webp"
+    }
+  },
+  "software": {
+    "plugins": {
+      "product_id": "roland-bridge_cast",
+      "product_name": "BRIDGE CAST",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/software-plugins_thumb.webp"
+    },
+    "daw": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/software-daw_thumb.webp"
+    },
+    "sound-libraries": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/software-sound-libraries_thumb.webp"
+    }
+  },
+  "accessories": {
+    "cables": {
+      "product_id": "roland-ric-g3",
+      "product_name": "RIC-G3",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/accessories-cables_thumb.webp"
+    },
+    "stands": {
+      "product_id": "roland-ks-11z",
+      "product_name": "KS-11Z\nKeyboard Stand",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/accessories-stands_thumb.webp"
+    },
+    "cases": {
+      "product_id": "roland-cb-404",
+      "product_name": "CB-404\nCarrying Case",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/accessories-cases_thumb.webp"
+    },
+    "pedals": {
+      "product_id": "roland-a-88mk2",
+      "product_name": "A-88MKII\nMIDI Keyboard Controller",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/accessories-pedals_thumb.webp"
+    },
+    "power": {
+      "product_id": "roland-fantom_series",
+      "product_name": "FANTOM EX",
+      "brand": "Roland",
+      "thumbnail": "/data/category_thumbnails/accessories-power_thumb.webp"
+    }
+  }
+}
