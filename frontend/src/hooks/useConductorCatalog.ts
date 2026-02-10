@@ -14,7 +14,6 @@
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { useCallback } from 'react';
 
 export interface ConductorProduct {
     id: string;
@@ -59,21 +58,6 @@ export interface ConductorCatalog {
     };
 }
 
-export interface ConductorTaxonomy {
-    universal_categories: Array<{
-        id: string;
-        name: string;
-        icon?: string;
-        subcategories?: string[];
-    }>;
-    all_brands: string[];
-    pricing_tiers: string[];
-    display_roles: string[];
-    statuses: string[];
-    confidence_levels: string[];
-    timestamp: string;
-}
-
 /**
  * Load unified Conductor catalog
  */
@@ -109,104 +93,7 @@ export const useConductorCatalog = () => {
 };
 
 /**
- * Load Conductor taxonomy schema
- */
-export const useConductorTaxonomy = () => {
-    const { data, isLoading, error } = useQuery<ConductorTaxonomy>({
-        queryKey: ['conductor-taxonomy'],
-        queryFn: async () => {
-            const response = await fetch('/api/conductor/taxonomy');
-            if (!response.ok) {
-                throw new Error(`Failed to load taxonomy: ${response.statusText}`);
-            }
-            const data = await response.json();
-            console.log(`✅ Loaded Conductor taxonomy with ${data.universal_categories.length} categories`);
-            return data;
-        },
-        staleTime: 30 * 60 * 1000, // 30 minutes (taxonomy changes less frequently)
-        gcTime: 60 * 60 * 1000, // 1 hour
-        retry: 2,
-    });
-
-    return {
-        taxonomy: data || null,
-        categories: data?.universal_categories || [],
-        brands: data?.all_brands || [],
-        pricingTiers: data?.pricing_tiers || [],
-        displayRoles: data?.display_roles || [],
-        isLoading,
-        error: error ? (error as Error).message : null,
-    };
-};
-
-/**
- * Filter Conductor products with flexible options
- */
-export const useConductorFilter = (filters: {
-    brand?: string | string[];
-    category?: string | string[];
-    subcategory?: string | string[];
-    pricing_tier?: string | string[];
-    min_price?: number;
-    max_price?: number;
-    display_role?: string | string[];
-    search_query?: string;
-}) => {
-    const { data, isLoading, error, refetch } = useQuery<any>({
-        queryKey: ['conductor-filter', filters],
-        queryFn: async () => {
-            const response = await fetch('/api/conductor/filter', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(filters),
-            });
-            if (!response.ok) {
-                throw new Error(`Filter failed: ${response.statusText}`);
-            }
-            return response.json();
-        },
-        enabled: Object.keys(filters).length > 0,
-        staleTime: 2 * 60 * 1000, // 2 minutes
-        gcTime: 5 * 60 * 1000, // 5 minutes
-    });
-
-    return {
-        products: data?.products || [],
-        totalResults: data?.total_results || 0,
-        filtersApplied: data?.filters_applied || {},
-        isLoading,
-        error: error ? (error as Error).message : null,
-        refetch,
-    };
-};
-
-/**
- * Get category summary for navigation
- */
-export const useConductorCategories = () => {
-    const { data, isLoading, error } = useQuery<any>({
-        queryKey: ['conductor-categories'],
-        queryFn: async () => {
-            const response = await fetch('/api/conductor/categories');
-            if (!response.ok) {
-                throw new Error(`Failed to load categories: ${response.statusText}`);
-            }
-            return response.json();
-        },
-        staleTime: 10 * 60 * 1000, // 10 minutes
-        gcTime: 30 * 60 * 1000, // 30 minutes
-        retry: 2,
-    });
-
-    return {
-        categories: data?.categories || [],
-        isLoading,
-        error: error ? (error as Error).message : null,
-    };
-};
-
-/**
- * Get products by category
+ * Get products by category (uses cached catalog data)
  */
 export const useConductorProductsByCategory = (category: string | null) => {
     const { catalog, isLoading: catalogLoading } = useConductorCatalog();
@@ -220,43 +107,4 @@ export const useConductorProductsByCategory = (category: string | null) => {
         count: products.length,
         isLoading: catalogLoading,
     };
-};
-
-/**
- * Get products by brand
- */
-export const useConductorProductsByBrand = (brand: string | null) => {
-    const { catalog, isLoading: catalogLoading } = useConductorCatalog();
-
-    const products = (catalog?.products || []).filter(
-        p => p.brand.toLowerCase() === brand?.toLowerCase()
-    );
-
-    return {
-        products,
-        count: products.length,
-        isLoading: catalogLoading,
-    };
-};
-
-/**
- * Trigger catalog refresh after Conductor pipeline completes
- */
-export const useConductorCatalogRefresh = () => {
-    const refresh = useCallback(async () => {
-        try {
-            const response = await fetch('/api/conductor/refresh');
-            if (!response.ok) {
-                throw new Error('Refresh failed');
-            }
-            const result = await response.json();
-            console.log(`✅ Catalog refreshed: ${result.product_count} products`);
-            return result;
-        } catch (error) {
-            console.error('❌ Catalog refresh failed:', error);
-            throw error;
-        }
-    }, []);
-
-    return { refresh };
 };

@@ -1,5 +1,5 @@
 """
-PRICING STRATEGY ENGINE v8.0
+PRICING STRATEGY ENGINE v8.1
 
 Handles all pricing logic:
 - Automatic tier determination

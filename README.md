@@ -1,10 +1,10 @@
-# Halilit Support Center v8.0 - Async Task Queue & Distributed Pipeline
+# Halilit Support Center v8.1 - Async Task Queue & Distributed Pipeline
 
 **Status**: ✅ **PRODUCTION READY**  
-**Version**: v8.0.0  
+**Version**: v8.1.0  
 **Branch**: `v8.0`  
 **Pipeline**: Trinity Swarm + Celery Async Workers  
-**Product Catalog**: 1,200+ verified products  
+**Product Catalog**: 1,200+ verified products
 
 ---
 
@@ -20,7 +20,7 @@ An **AI-powered product intelligence platform** that automatically:
 
 Uses **Google Gemini 2.0-flash** agents working in unison to ensure data accuracy.
 
-### What's New in v8.0
+### What's New in v8.1
 
 - **Async Task Queue**: Celery + Redis distributed pipeline replaces synchronous agent execution
 - **Parallel Workers**: Multiple Celery workers process products concurrently (15x+ throughput)
@@ -66,10 +66,10 @@ celery -A backend.tasks flower --port=5555
 
 ## Documentation
 
-| Document | Purpose |
-|---|---|
-| **[ARCHITECTURE.md](ARCHITECTURE.md)** | Technical architecture, API reference, system design |
-| **[backend/ingestion/README.md](backend/ingestion/README.md)** | Ingestion pipeline details |
+| Document                                                       | Purpose                                              |
+| -------------------------------------------------------------- | ---------------------------------------------------- |
+| **[ARCHITECTURE.md](ARCHITECTURE.md)**                         | Technical architecture, API reference, system design |
+| **[backend/ingestion/README.md](backend/ingestion/README.md)** | Ingestion pipeline details                           |
 
 ---
 
@@ -114,11 +114,11 @@ celery -A backend.tasks flower --port=5555
 
 Three specialized Gemini 2.0-flash agents:
 
-| Agent | Role | Output |
-|---|---|---|
-| **CommercialScout** | Harvests product data from Halilit.com | ProductDraft with price |
-| **OfficialVerifier** | Enriches with specs, images, taxonomy | EnrichedProduct with images |
-| **ExternalValidator** | Audits compliance, risk scoring 0-100 | AuditReport with risk score |
+| Agent                 | Role                                   | Output                      |
+| --------------------- | -------------------------------------- | --------------------------- |
+| **CommercialScout**   | Harvests product data from Halilit.com | ProductDraft with price     |
+| **OfficialVerifier**  | Enriches with specs, images, taxonomy  | EnrichedProduct with images |
+| **ExternalValidator** | Audits compliance, risk scoring 0-100  | AuditReport with risk score |
 
 All agents have **learning capabilities** — they improve over time via feedback loops.
 
@@ -165,30 +165,30 @@ Dockerfile                         # Worker container image
 
 ### Conductor Endpoints
 
-| Method | Path | Description |
-|---|---|---|
-| GET | `/api/conductor/catalog` | All verified products |
-| GET | `/api/conductor/taxonomy` | Category & brand schema |
-| POST | `/api/conductor/filter` | Filtered product query |
-| GET | `/api/conductor/categories` | Category summary |
-| GET | `/api/conductor/refresh` | Force cache refresh |
+| Method | Path                        | Description             |
+| ------ | --------------------------- | ----------------------- |
+| GET    | `/api/conductor/catalog`    | All verified products   |
+| GET    | `/api/conductor/taxonomy`   | Category & brand schema |
+| POST   | `/api/conductor/filter`     | Filtered product query  |
+| GET    | `/api/conductor/categories` | Category summary        |
+| GET    | `/api/conductor/refresh`    | Force cache refresh     |
 
 ### Skills & Pipeline Endpoints
 
-| Method | Path | Description |
-|---|---|---|
-| GET | `/api/copilot/skills` | List available skills |
-| POST | `/api/copilot/execute-skill` | Execute single skill |
-| POST | `/api/copilot/pipeline` | Run full pipeline |
-| POST | `/api/copilot/batch-ingest` | Batch processing |
+| Method | Path                         | Description           |
+| ------ | ---------------------------- | --------------------- |
+| GET    | `/api/copilot/skills`        | List available skills |
+| POST   | `/api/copilot/execute-skill` | Execute single skill  |
+| POST   | `/api/copilot/pipeline`      | Run full pipeline     |
+| POST   | `/api/copilot/batch-ingest`  | Batch processing      |
 
 ### Task Queue Endpoints (v8.0)
 
-| Method | Path | Description |
-|---|---|---|
-| POST | `/api/tasks/submit` | Submit async task |
-| GET | `/api/tasks/{id}/status` | Task status |
-| GET | `/api/tasks/queue/stats` | Queue statistics |
+| Method | Path                     | Description       |
+| ------ | ------------------------ | ----------------- |
+| POST   | `/api/tasks/submit`      | Submit async task |
+| GET    | `/api/tasks/{id}/status` | Task status       |
+| GET    | `/api/tasks/queue/stats` | Queue statistics  |
 
 ---
 
@@ -203,6 +203,6 @@ PYTHONPATH=. python3 backend/scripts/phase8b_stress_test.py
 
 ---
 
-**Halilit Support Center v8.0**  
+**Halilit Support Center v8.1**  
 **Async Pipeline — Distributed Workers — Production Ready**  
 Last Updated: February 9, 2026

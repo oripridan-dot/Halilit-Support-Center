@@ -36,7 +36,7 @@ export interface ConsolidatedCategory {
 export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   {
     id: "guitars-bass",
-    label: "Amplifiers & Effects",
+    label: "Guitars & Bass",
     icon: "🎸",
     color: "#3b82f6",
     description: "The Plucked Universe",
@@ -70,7 +70,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "keys-production",
-    label: "Keyboards & Synthesizers",
+    label: "Keys & Production",
     icon: "🎹",
     color: "#f59e0b",
     description: "The Synthesis Universe",
@@ -86,7 +86,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "studio-recording",
-    label: "Audio Interfaces & Mixers",
+    label: "Studio & Recording",
     icon: "🎙️",
     color: "#10b981",
     description: "The Engineer's Universe",
@@ -102,7 +102,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "live-dj",
-    label: "Microphones & Recording",
+    label: "Live & DJ",
     icon: "🔊",
     color: "#8b5cf6",
     description: "The Stage Universe",
@@ -118,7 +118,7 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
   },
   {
     id: "accessories-utility",
-    label: "Studio Monitors & Speakers",
+    label: "Accessories & Utility",
     icon: "🔌",
     color: "#64748b",
     description: "The Connection Universe",

@@ -121,7 +121,7 @@ def get_ingestion_products_for_golden_brands():
     return result
 
 
-app = FastAPI(title="Halilit Support Center API", version="8.0")
+app = FastAPI(title="Halilit Support Center API", version="8.1")
 
 # Add CORS middleware for frontend development
 app.add_middleware(
@@ -183,7 +183,7 @@ async def health_check():
     """Health check endpoint for monitoring"""
     return {
         "status": "healthy",
-        "version": "8.0",
+        "version": "8.1",
         "service": "Halilit Support Center"
     }
 

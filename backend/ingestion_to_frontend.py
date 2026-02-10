@@ -90,6 +90,6 @@ class FrontendAdapter:
 
 def get_frontend_data():
     # Helper to load from your unified service
-    from backend.unified_data_service_v75 import unified_data_service
+    from backend.unified_data_service_v76 import unified_data_service
     raw_data = unified_data_service.get_all_products()
     return FrontendAdapter.transform_catalog(raw_data)

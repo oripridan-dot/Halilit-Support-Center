@@ -1,28 +1,29 @@
 /**
  * Price Formatter and Extractor
- * Works with backend-normalized data (price field is now guaranteed to exist)
+ * Works with both conductor API shape and static JSON shape
  */
 
 import type { Product } from "../types";
 
 /**
  * Get displayable price from product
- * Now works with backend-normalized price field
+ * Handles: conductor API (price field), static JSON (price_il), pricing object
  */
 export function getPrice(product: Product): string {
-  // Top-level price field (from backend normalization)
-  if (product.price && typeof product.price === "number" && product.price > 0) {
-    return formatPrice(product.price, product.currency || "ILS");
-  }
-
-  // Fallback: price_il from ingestion format
+  // price_il is the canonical field from IngestionProductDraft
   if (product.price_il && typeof product.price_il === "number" && product.price_il > 0) {
     return formatPrice(product.price_il, "ILS");
   }
 
+  // Conductor API also adds a top-level "price" field
+  const topPrice = (product as any).price;
+  if (topPrice && typeof topPrice === "number" && topPrice > 0) {
+    return formatPrice(topPrice, "ILS");
+  }
+
   // Check pricing object
-  if (product.pricing?.regular_price && product.pricing.regular_price > 0) {
-    return formatPrice(product.pricing.regular_price, product.pricing.currency || "ILS");
+  if (product.pricing?.price_il && product.pricing.price_il > 0) {
+    return formatPrice(product.pricing.price_il, "ILS");
   }
 
   return "TBD";
@@ -40,16 +41,11 @@ export function formatPrice(price: number | string, currency: string = "ILS", di
 
   const opts = { minimumFractionDigits: digits, maximumFractionDigits: digits };
 
-  // Format based on currency
-  if (currency === "ILS" || currency === "₪") {
-    return `₪${numPrice.toLocaleString("he-IL", opts)}`;
-  }
-
   if (currency === "USD" || currency === "$") {
     return `$${numPrice.toLocaleString("en-US", opts)}`;
   }
 
-  // Default: shekel format
+  // Default: ILS format
   return `₪${numPrice.toLocaleString("he-IL", opts)}`;
 }
 
@@ -57,14 +53,15 @@ export function formatPrice(price: number | string, currency: string = "ILS", di
  * Extract numeric price value
  */
 export function getPriceValue(product: Product): number {
-  if (product.price && typeof product.price === "number") {
-    return product.price;
-  }
   if (product.price_il && typeof product.price_il === "number") {
     return product.price_il;
   }
-  if (product.pricing?.regular_price) {
-    return product.pricing.regular_price;
+  const topPrice = (product as any).price;
+  if (topPrice && typeof topPrice === "number") {
+    return topPrice;
+  }
+  if (product.pricing?.price_il) {
+    return product.pricing.price_il;
   }
   return 0;
 }

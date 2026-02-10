@@ -1,6 +1,6 @@
 // frontend/src/store/navigationStore.ts
 /**
- * Navigation Store v8.0 - UNIFIED DATA PIPELINE
+ * Navigation Store v8.1 - UNIFIED DATA PIPELINE
  * The Central State Machine for the 3-Screen User Journey.
  * 
  * Screens:
@@ -13,7 +13,7 @@
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'MODEL_SHOWCASE';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE';
 
 /**
  * Core navigation state that determines what the user sees
@@ -37,7 +37,6 @@ export interface NavigationState {
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
   openProductPage: (productId: string) => void;
   closeProductPage: () => void;
-  showModelShowcase: () => void;
 
   // Utility actions
   updateFilters: (filters: string[]) => void;
@@ -119,14 +118,6 @@ export const useNavigationStore = create<NavigationState>((set) => ({
   closeProductPage: () => set({
     currentView: 'SPECTRUM',
     activeProductId: null,
-    lastError: null,
-  }),
-
-  /**
-   * Navigate to 3D Model Showcase
-   */
-  showModelShowcase: () => set({
-    currentView: 'MODEL_SHOWCASE',
     lastError: null,
   }),
 

@@ -3,22 +3,18 @@ import React, { useEffect, useState } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { ImageWithFallback } from "../ImageWithFallback";
 import { getPrice } from "../../lib/priceFormatter";
+import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import type { Product } from "../../types";
 
 /**
  * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v8.0
  *
  * Complete product analysis and inspection page.
- * Displays all available product information:
- * - High-res images and gallery
- * - Complete specifications
- * - Reviews and ratings
- * - Enrichment data (sources, confidence)
- * - Related products
- * - Full pricing across regions
+ * Loads product from conductor API cache first, falls back to static JSON.
  */
 export const ProductPage = ({ productId }: { productId: string }) => {
   const { closeProductPage, goToSpectrum } = useNavigationStore();
+  const { products: conductorProducts } = useConductorCatalog();
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -27,6 +23,17 @@ export const ProductPage = ({ productId }: { productId: string }) => {
     const loadProduct = async () => {
       try {
         setLoading(true);
+
+        // Try conductor API cache first (same data source as Galaxy/Spectrum)
+        const fromConductor = conductorProducts.find(
+          (p) => p.id === productId || (p as any).halilit_id === productId,
+        );
+        if (fromConductor) {
+          setProduct(fromConductor as unknown as Product);
+          return;
+        }
+
+        // Fallback to static JSON
         const { catalogLoader } = await import("../../lib/catalogLoader");
         const loaded = await catalogLoader.findProductById(productId);
         if (loaded) {
@@ -42,7 +49,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
     if (productId) {
       loadProduct();
     }
-  }, [productId]);
+  }, [productId, conductorProducts]);
 
   if (!productId) return null;
 
@@ -116,19 +123,27 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             </button>
           </div>
           <div className="mt-8 pt-4 border-t border-white/5 text-[10px] text-zinc-700 font-mono">
-            ID: {product.halilit_id || product.id}
+            ID: {product.halilit_id || (product as any).id}
           </div>
         </div>
       </div>
     );
   }
 
-  // Extract images
-  const images = Array.isArray(product?.images)
-    ? product.images
-    : [(product?.image_hero || product?.image_url || "") as any].filter(
-        (img) => img,
-      );
+  // Extract images — handle multiple data shapes
+  const officialImgs = product?.official_images || [];
+  const displayHero = product?.display?.hero_image
+    ? [{ url: product.display.hero_image }]
+    : [];
+  const fallbackImg = (product as any)?.image_url
+    ? [{ url: (product as any).image_url }]
+    : [];
+  const images =
+    officialImgs.length > 0
+      ? officialImgs
+      : displayHero.length > 0
+        ? displayHero
+        : fallbackImg;
 
   const currentImage =
     images[activeImageIndex]?.url || String(images[activeImageIndex]) || "";
@@ -160,7 +175,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             <div>
               <p className="text-xs text-blue-400 font-mono">{product.brand}</p>
               <h1 className="text-xl font-bold text-white truncate">
-                {product.name}
+                {product.product_name || (product as any).name}
               </h1>
             </div>
           </div>
@@ -197,7 +212,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             <div className="relative h-64 bg-slate-800 rounded overflow-hidden border border-slate-700">
               <ImageWithFallback
                 src={currentImage}
-                alt={product.name || "Product"}
+                alt={product.product_name || (product as any).name || "Product"}
                 className="w-full h-full object-cover"
               />
             </div>

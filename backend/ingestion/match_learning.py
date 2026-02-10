@@ -1,6 +1,7 @@
 import json
 import logging
 from pathlib import Path
+from datetime import datetime, timezone
 from typing import Dict, Optional, Any
 
 
@@ -42,7 +43,7 @@ class MatchLearningSystem:
         self.matches[product_id] = {
             "candidate": candidate,
             "confidence": confidence,
-            "timestamp": "iso_timestamp_here"  # Add datetime logic if needed
+            "timestamp": datetime.now(timezone.utc).isoformat()
         }
         self._save()
 

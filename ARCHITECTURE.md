@@ -1,6 +1,6 @@
-# Halilit Support Center v8.0 - Architecture & Operations
+# Halilit Support Center v8.1 - Architecture & Operations
 
-**Version**: 8.0 (Async Task Queue + Distributed Pipeline)  
+**Version**: 8.1 (Async Task Queue + Distributed Pipeline)  
 **Release Date**: February 9, 2026  
 **Status**: ✅ **PRODUCTION READY**
 
@@ -138,12 +138,12 @@ The key v8.0 enhancement: agent operations run as **distributed Celery tasks**.
 
 ### Components
 
-| Component | Technology | Purpose |
-|---|---|---|
-| **Broker** | Redis 7 | Message queue between API and workers |
-| **Workers** | Celery 5.3 | Execute agent tasks in parallel |
-| **Results** | Redis/PostgreSQL | Store task results and status |
-| **Monitor** | Flower | Web UI for task monitoring |
+| Component   | Technology       | Purpose                               |
+| ----------- | ---------------- | ------------------------------------- |
+| **Broker**  | Redis 7          | Message queue between API and workers |
+| **Workers** | Celery 5.3       | Execute agent tasks in parallel       |
+| **Results** | Redis/PostgreSQL | Store task results and status         |
+| **Monitor** | Flower           | Web UI for task monitoring            |
 
 ### Task Flow
 
@@ -186,12 +186,14 @@ cd frontend && pnpm install && cd ..
 ### Running
 
 **Terminal 1: Backend**
+
 ```bash
 PYTHONPATH=. python3 backend/server.py
 # → http://localhost:8000
 ```
 
 **Terminal 2: Frontend**
+
 ```bash
 cd frontend && pnpm dev
 # → http://localhost:5173
@@ -262,29 +264,31 @@ PYTHONPATH=. python3 backend/conductor_main.py sync           # Sync to frontend
 
 ## Core Components
 
-| Module | File | Purpose |
-|---|---|---|
-| **Agent Orchestrator** | `unified_agent_orchestrator_v76.py` | Trinity Swarm (3 agents + orchestration) |
-| **Data Service** | `unified_data_service_v76.py` | Product normalization, aggregation, frontend sync |
-| **Quality Gates** | `unified_quality_gates_v76.py` | Audit, security, feedback, agent memory |
-| **Learning System** | `unified_learning_system_v76.py` | Agent learning loops & improvement tracking |
-| **Task Queue** | `celery_config.py` + `tasks.py` | v8.0 async distributed execution |
-| **Ingestion Pipeline** | `ingestion/orchestrator.py` | 7-phase pipeline orchestration |
-| **Skills Framework** | `skills/` | 6 modular, verifiable capabilities |
-| **API Server** | `server.py` | FastAPI with all endpoints |
-| **CLI** | `conductor_main.py` | Command-line interface |
+| Module                 | File                                | Purpose                                           |
+| ---------------------- | ----------------------------------- | ------------------------------------------------- |
+| **Agent Orchestrator** | `unified_agent_orchestrator_v76.py` | Trinity Swarm (3 agents + orchestration)          |
+| **Data Service**       | `unified_data_service_v76.py`       | Product normalization, aggregation, frontend sync |
+| **Quality Gates**      | `unified_quality_gates_v76.py`      | Audit, security, feedback, agent memory           |
+| **Learning System**    | `unified_learning_system_v76.py`    | Agent learning loops & improvement tracking       |
+| **Task Queue**         | `celery_config.py` + `tasks.py`     | v8.0 async distributed execution                  |
+| **Ingestion Pipeline** | `ingestion/orchestrator.py`         | 7-phase pipeline orchestration                    |
+| **Skills Framework**   | `skills/`                           | 6 modular, verifiable capabilities                |
+| **API Server**         | `server.py`                         | FastAPI with all endpoints                        |
+| **CLI**                | `conductor_main.py`                 | Command-line interface                            |
 
 ---
 
 ## Code Quality Standards
 
 ### Python
+
 - Type hints on all functions and classes
 - Docstrings for all modules, functions, classes
 - Pydantic v2 for data validation
 - Comprehensive error handling
 
 ### TypeScript
+
 - Strict mode enabled
 - Type definitions for all props and state
 - Component composition over inheritance
@@ -295,24 +299,27 @@ PYTHONPATH=. python3 backend/conductor_main.py sync           # Sync to frontend
 ## Troubleshooting
 
 ### Backend Won't Start
+
 ```bash
 rm -rf backend/__pycache__
 PYTHONPATH=. python3 backend/server.py
 ```
 
 ### Frontend Shows "No Products"
+
 ```bash
 curl http://localhost:8000/api/conductor/catalog
 # If empty, run: PYTHONPATH=. python3 backend/conductor_main.py sync
 ```
 
 ### Port Already in Use
+
 ```bash
 lsof -i :8000 && kill -9 <PID>
 ```
 
 ---
 
-**Version**: 8.0 (Async Task Queue + Distributed Pipeline)  
+**Version**: 8.1 (Async Task Queue + Distributed Pipeline)  
 **Last Updated**: February 9, 2026  
 **Status**: ✅ **PRODUCTION READY**

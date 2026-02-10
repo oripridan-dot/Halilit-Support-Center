@@ -9,7 +9,6 @@
  * 📊 UNIFIED TAXONOMY: Integrates with TaxonomyService for categorization
  */
 
-import { normalizeProducts } from "./dataNormalizer";
 import { TaxonomyService } from "./taxonomyService";
 
 import type {
@@ -485,7 +484,7 @@ class CatalogLoader {
       brand_identity: brandIdentity,
       // Normalize products to handle different data structures
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      products: normalizeProducts(data.products).map((p: any): Product => {
+      products: (data.products as Product[]).map((p: any): Product => {
         // v7.2 ADAPTER: Polyfill ingestion fields to frontend fields
         // This ensures compatibility between "halilit_id" (backend) and "id" (frontend)
         if (!p.id && p.halilit_id) p.id = p.halilit_id;

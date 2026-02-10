@@ -988,7 +988,7 @@ def run_enhanced_training(num_cycles: int = 5, log_file: Optional[Path] = None) 
             "/workspaces/Halilit-Support-Center/backend/logs/enhanced_training.log")
     log_file.parent.mkdir(parents=True, exist_ok=True)
 
-    from backend.unified_agent_orchestrator_v75 import AgentImprovementEngine
+    from backend.unified_agent_orchestrator_v76 import AgentImprovementEngine
 
     log_progress("\n" + "="*75, log_file)
     log_progress(

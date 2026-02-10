@@ -1,8 +1,8 @@
-# Repository Instructions & Context (v8.0)
+# Repository Instructions & Context (v8.1)
 
 ## Project Overview
 
-**Halilit Support Center v8.0** — AI-powered product catalog system for musical instruments.
+**Halilit Support Center v8.1** — AI-powered product catalog system for musical instruments.
 
 - **Architecture**: Trinity Swarm (3 Gemini agents) + Celery async task queue
 - **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.0
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.1
 
 The Conductor CLI orchestrates all operations:
 - Data ingestion (Trinity Swarm)

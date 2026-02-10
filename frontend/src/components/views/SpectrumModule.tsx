@@ -310,18 +310,6 @@ export const SpectrumModule = () => {
     return Array.from(filters);
   }, [fetchedProducts]);
 
-  // DEBUG: Log data loading status
-  console.log("[SpectrumModule] activeTribeId:", activeTribeId);
-  console.log("[SpectrumModule] isLoading:", isLoading);
-  console.log("[SpectrumModule] error:", error);
-  console.log(
-    "[SpectrumModule] fetchedProducts count:",
-    fetchedProducts.length,
-  );
-  if (fetchedProducts.length > 0) {
-    console.log("[SpectrumModule] first product:", fetchedProducts[0]);
-  }
-
   const rawProducts = useMemo(() => {
     // Convert Conductor products to Product type with relevance scoring
     return fetchedProducts.map(
