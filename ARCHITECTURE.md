@@ -1,302 +1,183 @@
-# Halilit Support Center v8.2 - Architecture
+# Halilit Support Center — Architecture
 
-**Version**: 8.2.0  
-**Updated**: February 10, 2026
-
----
-
-## Table of Contents
-
-1. [System Overview](#system-overview)
-2. [Architecture](#architecture)
-3. [Enriched Catalog](#enriched-catalog)
-4. [Async Task Queue](#async-task-queue)
-5. [API Reference](#api-reference)
-6. [Core Components](#core-components)
+**Version**: 8.3.0  
+**Updated**: February 11, 2026
 
 ---
 
 ## System Overview
 
-### What is Halilit Support Center?
+AI-powered product catalog system using Google's Trinity Swarm (3 Gemini 2.0-flash agents) to harvest, enrich, validate, and deliver musical instrument data.
 
-An **AI-powered product catalog intelligence system** using Google's multi-agent architecture (Trinity Swarm) to:
-
-- **Harvest** product data from Halilit.com (CommercialScout)
-- **Enrich** with vendor specifications, images, and descriptions (OfficialVerifier)
-- **Resolve** and validate visual assets (VisualValidator + Gemini 2.0-flash)
-- **Validate** data quality and compliance (ExternalValidator)
-- **Deliver** enriched data to the frontend via REST + SSE
-
-### Key Statistics
-
-| Metric              | Value                                                                |
-| ------------------- | -------------------------------------------------------------------- |
-| Verified Products   | 1,200+                                                               |
-| Brands Indexed      | 100+                                                                 |
-| API Endpoints       | 15+                                                                  |
-| Pipeline Phases     | 7 (Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve) |
-| Tracked Source Code | ~400 KB (lean repo, all generated data gitignored)                   |
+| Metric            | Value                                                                |
+| ----------------- | -------------------------------------------------------------------- |
+| Pipeline Products | 500+ (across 7 indexed brands)                                       |
+| API Endpoints     | 15+                                                                  |
+| Pipeline Phases   | 7 (Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve) |
+| Source Code       | ~27k lines (lean repo, all generated data gitignored)                |
 
 ---
 
-## Architecture
-
-### System Layers
+## Architecture Layers
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                    USER LAYER (Frontend)                          │
-│  Browser (React 18) → Zustand + React Query                     │
-│  - GalaxyDashboard (category navigation)                        │
-│  - SpectrumModule (product browsing)                            │
-│  - ProductPage (full analysis view)                             │
-│  - Real-time sync via SSE                                       │
+│                    FRONTEND (React 18 + Vite)                    │
+│  Zustand state · React Query fetching · Tailwind CSS             │
+│  Views: GalaxyDashboard · SpectrumModule · ProductPage           │
 └────────────────────────┬─────────────────────────────────────────┘
-                         ↓  HTTP / SSE / WebSocket
-┌────────────────────────────────────────────────────────────────────┐
-│              API LAYER (FastAPI Server - Port 8000)                │
-│                                                                    │
-│  Conductor Endpoints:  /api/conductor/* (catalog, taxonomy, etc.)  │
-│  Skills Endpoints:     /api/copilot/*  (pipeline, batch-ingest)    │
-│  Sync Endpoints:       /api/copilot/sync/* (real-time sync)        │
-│  Task Endpoints:       /api/tasks/*    (async queue)               │
-│  Learning Endpoint:    /api/learning/health                        │
-└────────────────────────┬───────────────────────────────────────────┘
+                         ↓  REST / SSE / WebSocket
+┌──────────────────────────────────────────────────────────────────┐
+│              API LAYER (FastAPI — port 8000)                      │
+│  /api/conductor/*  Catalog, taxonomy, filtering                  │
+│  /api/copilot/*    Pipeline, batch-ingest, skills                │
+│  /api/tasks/*      Async queue submission & status               │
+└────────────────────────┬─────────────────────────────────────────┘
                          ↓
-┌────────────────────────────────────────────────────────────────────┐
-│           DATA ACCESS LAYER (ConductorDataService)                 │
-│  ├─ get_unified_catalog() - All verified products                  │
-│  ├─ get_taxonomy_schema() - Dynamic categories                     │
-│  ├─ filter_products() - Multi-criteria filtering                   │
-│  └─ get_category_summary() - Navigation data                      │
-└────────────────────────┬───────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│           DATA SERVICE (ConductorDataService)                    │
+│  get_unified_catalog() · get_taxonomy_schema()                   │
+│  filter_products() · get_category_summary()                      │
+└────────────────────────┬─────────────────────────────────────────┘
                          ↓
-┌────────────────────────────────────────────────────────────────────┐
-│              ASYNC TASK QUEUE (Celery + Redis)                      │
-│  ├─ harvest_brand_products  (CommercialScout task)                 │
-│  ├─ enrich_product          (OfficialVerifier task)                │
-│  ├─ validate_product        (ExternalValidator task)               │
-│  └─ record_learning_feedback (Learning System task)                │
-│                                                                    │
-│  Infrastructure: Redis broker → Celery workers → Flower monitor    │
-└────────────────────────┬───────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│              CELERY TASK QUEUE (Redis broker)                     │
+│  harvest_brand_products · enrich_product                         │
+│  validate_product · record_learning_feedback                     │
+│  Flower monitoring · Docker worker containers                    │
+└────────────────────────┬─────────────────────────────────────────┘
                          ↓
-┌────────────────────────────────────────────────────────────────────┐
-│          INGESTION PIPELINE (7 Phases + Learning)                  │
-│                                                                    │
-│  Phase 1: HARVEST      (CommercialScout extracts products)         │
-│  Phase 2: ENRICH       (OfficialVerifier adds specs + images)      │
-│  Phase 3: VISUALS      (VisualValidator resolves images)           │
-│  Phase 4: TIER         (PricingEngine categorizes price tiers)     │
-│  Phase 5: PREPARE      (DisplayEngine formats output)              │
-│  Phase 6: VALIDATE     (ExternalValidator checks compliance)       │
-│  Phase 7: APPROVE      (Final verification gate)                   │
-│  → Auto-Sync to Frontend (real-time SSE updates)                   │
-│  → Learning Loop (Feedback → Improvements → Next Cycle)            │
-└────────────────────────┬───────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│          INGESTION PIPELINE (7 Phases)                            │
+│  Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve│
+│  Auto-Sync (SSE) · Learning Loop (feedback → next cycle)         │
+└────────────────────────┬─────────────────────────────────────────┘
                          ↓
-┌────────────────────────────────────────────────────────────────────┐
-│              TRINITY SWARM (3 Gemini 2.0-flash Agents)             │
-│                                                                    │
-│  CommercialScout (Harvest)                                         │
-│     → Harvests product data from Halilit.com                       │
-│     → Categorizes into taxonomy                                    │
-│     → Outputs: ProductDraft with price                             │
-│                                                                    │
-│  OfficialVerifier (Enrich)                                         │
-│     → Enriches with manufacturer specs                             │
-│     → Finds official images                                        │
-│     → Outputs: EnrichedProduct with images                         │
-│                                                                    │
-│  ExternalValidator (Audit)                                         │
-│     → Audits data completeness                                     │
-│     → Identifies compliance issues                                 │
-│     → Outputs: AuditReport with risk score (0-100)                 │
-│                                                                    │
-│  Each Agent Has: Memory, Learning, Confidence Scoring, Audit Trail │
-└────────────────────────┬───────────────────────────────────────────┘
-                         ↓
-┌────────────────────────────────────────────────────────────────────┐
-│            STORAGE (IngestionDatabase + Cache)                      │
-│  ├─ Approved Products (1,200+ verified)                            │
-│  ├─ Rejected Products (with reasons)                               │
-│  ├─ Agent Decisions (decision log)                                 │
-│  ├─ Learning Feedback (30+ cycles)                                 │
-│  ├─ Audit Trail (all operations)                                   │
-│  └─ Performance Metrics                                            │
-└────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│              TRINITY SWARM (3 Gemini 2.0-flash Agents)           │
+│                                                                  │
+│  CommercialScout   → Harvests from Halilit.com, categorizes      │
+│  OfficialVerifier  → Enriches with specs, images, descriptions   │
+│  ExternalValidator → Audits completeness, risk scoring (0–100)   │
+│                                                                  │
+│  Each agent: memory, learning, confidence scoring, audit trail   │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## Enriched Catalog
 
-The catalog API returns **fully enriched products** with:
+The `/api/conductor/catalog` endpoint returns products with:
 
-- **Image Strategy**: Cascading fallback chain: `image_hero` → `image_gallery` → `official_images` → `display.hero_image` → `primary_source`
-- **Description Strategy**: `official_description` → `description_long` → `description_short`
-- **Merged Specifications**: `official_specs` + `specifications` combined
-- **Quality Metadata**: `quality_score`, `data_completeness`, price tiers (entry/mid/pro)
-- **Image Gallery**: Up to 20 images per product for the ProductPage viewer
+- **Images**: Cascading fallback — `image_hero` → `image_gallery` → `official_images` → `display.hero_image` → `primary_source`
+- **Descriptions**: `official_description` → `description_long` → `description_short`
+- **Specs**: Merged from `official_specs` + `specifications`
+- **Quality**: `quality_score`, `data_completeness`, price tier (entry/mid/pro)
+- **Gallery**: Up to 20 images per product
 
-### Data Flow (server.py → Frontend)
+### Data Flow
 
 ```
-Brand JSON files (generated by pipeline)
-    → server.py get_conductor_catalog()
-        → Normalize (ID, name, brand, category, price)
-        → Enrich (images, descriptions, specs, quality)
-        → Filter (price > 0, must have image)
-        → Deduplicate
-    → /api/conductor/catalog response
-        → React Query (useConductorCatalog hook)
-            → Zustand store → UI rendering
+Brand JSON files (pipeline-generated, gitignored)
+  → server.py normalize → enrich → filter (price > 0, has image) → dedup
+    → /api/conductor/catalog
+      → React Query → Zustand → UI
 ```
 
 ---
 
 ## Async Task Queue
 
-Agent operations run as **distributed Celery tasks**.
-
-### Components
-
-| Component   | Technology       | Purpose                               |
-| ----------- | ---------------- | ------------------------------------- |
-| **Broker**  | Redis 7          | Message queue between API and workers |
-| **Workers** | Celery 5.3       | Execute agent tasks in parallel       |
-| **Results** | Redis/PostgreSQL | Store task results and status         |
-| **Monitor** | Flower           | Web UI for task monitoring            |
-
-### Task Flow
-
-```
-API Request → Celery Task Submitted → Redis Queue
-                                         ↓
-                              Worker Pool (N workers)
-                                         ↓
-                              Agent Execution (Gemini)
-                                         ↓
-                              Result → SSE → Frontend
-```
-
-### Docker Infrastructure
+| Component   | Technology | Purpose                  |
+| ----------- | ---------- | ------------------------ |
+| **Broker**  | Redis 7    | Message queue            |
+| **Workers** | Celery 5.3 | Parallel agent execution |
+| **Results** | Redis      | Task result storage      |
+| **Monitor** | Flower     | Web UI (port 5555)       |
 
 ```bash
-docker-compose up -d redis postgres
-celery -A backend.tasks worker --loglevel=info --concurrency=4
-celery -A backend.tasks flower --port=5555
+docker-compose up -d          # Start Redis + Postgres + Flower + Workers
 ```
 
 ---
 
 ## API Reference
 
-### Conductor Endpoints
+### Conductor (Catalog)
 
-```
-GET  /api/conductor/catalog       # Enriched product catalog (images, specs, descriptions)
-GET  /api/conductor/taxonomy      # Category & brand schema
-POST /api/conductor/filter        # Filtered product query
-GET  /api/conductor/categories    # Category summary
-GET  /api/conductor/refresh       # Force cache refresh
-```
+| Method | Path                        | Description              |
+| ------ | --------------------------- | ------------------------ |
+| GET    | `/api/conductor/catalog`    | Enriched product catalog |
+| GET    | `/api/conductor/taxonomy`   | Category & brand schema  |
+| POST   | `/api/conductor/filter`     | Filtered product query   |
+| GET    | `/api/conductor/categories` | Category summary         |
+| GET    | `/api/conductor/refresh`    | Force cache refresh      |
 
-### Skills Endpoints
+### Skills & Pipeline
 
-```
-GET  /api/copilot/skills          # List available skills
-POST /api/copilot/execute-skill   # Execute single skill
-POST /api/copilot/pipeline        # Run full pipeline
-POST /api/copilot/batch-ingest    # Batch processing
-GET  /api/copilot/status          # Pipeline status
-GET  /api/copilot/history         # Execution history
-```
+| Method | Path                         | Description          |
+| ------ | ---------------------------- | -------------------- |
+| POST   | `/api/copilot/pipeline`      | Run full pipeline    |
+| POST   | `/api/copilot/batch-ingest`  | Batch processing     |
+| POST   | `/api/copilot/execute-skill` | Execute single skill |
+| GET    | `/api/copilot/skills`        | List skills          |
 
-### Sync Endpoints
+### Sync
 
-```
-POST /api/copilot/sync            # Sync single product
-POST /api/copilot/sync-batch      # Batch sync
-GET  /api/copilot/sync/history    # Sync history
-```
+| Method | Path                        | Description  |
+| ------ | --------------------------- | ------------ |
+| POST   | `/api/copilot/sync`         | Sync product |
+| POST   | `/api/copilot/sync-batch`   | Batch sync   |
+| GET    | `/api/copilot/sync/history` | Sync history |
 
-### Task Queue Endpoints
+### Task Queue
 
-```
-POST /api/tasks/submit            # Submit async task
-GET  /api/tasks/{id}/status       # Task status
-GET  /api/tasks/queue/stats       # Queue statistics
-```
+| Method | Path                     | Description |
+| ------ | ------------------------ | ----------- |
+| POST   | `/api/tasks/submit`      | Submit task |
+| GET    | `/api/tasks/{id}/status` | Task status |
+| GET    | `/api/tasks/queue/stats` | Queue stats |
 
 ---
 
 ## Core Components
 
-| Module                 | File                            | Purpose                                           |
-| ---------------------- | ------------------------------- | ------------------------------------------------- |
-| **Agent Orchestrator** | `unified_agent_orchestrator.py` | Trinity Swarm (3 agents + orchestration)          |
-| **Data Service**       | `unified_data_service.py`       | Product normalization, aggregation, frontend sync |
-| **Quality Gates**      | `unified_quality_gates.py`      | Audit, security, feedback, agent memory           |
-| **Learning System**    | `unified_learning_system.py`    | Agent learning loops & improvement tracking       |
-| **Task Queue**         | `celery_config.py` + `tasks.py` | Async distributed execution                       |
-| **Ingestion Pipeline** | `ingestion/orchestrator.py`     | 7-phase pipeline orchestration                    |
-| **Skills Framework**   | `skills/`                       | Modular, verifiable capabilities                  |
-| **Visual Validator**   | `ingestion/visual_validator.py` | Image verification via Gemini 2.0-flash           |
-| **API Server**         | `server.py`                     | FastAPI + enriched catalog API                    |
-| **CLI**                | `conductor_main.py`             | Command-line interface                            |
-
----
-
-## Code Quality Standards
-
-### Python
-
-- Type hints on all functions and classes
-- Docstrings for all modules, functions, classes
-- Pydantic v2 for data validation
-- Comprehensive error handling
-
-### TypeScript
-
-- Strict mode enabled
-- Type definitions for all props and state
-- Component composition over inheritance
-- Error boundaries for resilience
+| Module                 | File                            | Purpose                                  |
+| ---------------------- | ------------------------------- | ---------------------------------------- |
+| **Agent Orchestrator** | `unified_agent_orchestrator.py` | Trinity Swarm (3 agents + orchestration) |
+| **Data Service**       | `unified_data_service.py`       | Normalization, aggregation, sync         |
+| **Quality Gates**      | `unified_quality_gates.py`      | Audit, security, feedback, memory        |
+| **Learning System**    | `unified_learning_system.py`    | Agent learning & improvement loops       |
+| **Task Queue**         | `celery_config.py` + `tasks.py` | Async distributed execution              |
+| **Ingestion Pipeline** | `ingestion/orchestrator.py`     | 7-phase pipeline orchestration           |
+| **Skills Framework**   | `skills/`                       | Modular verified capabilities            |
+| **Visual Validator**   | `ingestion/visual_validator.py` | Image verification via Gemini 2.0-flash  |
+| **API Server**         | `server.py`                     | FastAPI + enriched catalog               |
+| **CLI**                | `conductor_main.py`             | Command-line interface                   |
 
 ---
 
 ## Troubleshooting
 
-### Backend Won't Start
-
 ```bash
-rm -rf backend/__pycache__
-PYTHONPATH=. python3 backend/server.py
-```
+# Backend won't start
+rm -rf backend/__pycache__ && PYTHONPATH=. python3 backend/server.py
 
-### Frontend Shows "No Products"
-
-```bash
+# Frontend shows "No Products"
 curl http://localhost:8000/api/conductor/catalog
-# If empty, run: PYTHONPATH=. python3 backend/conductor_main.py sync
-```
+# If empty: PYTHONPATH=. python3 backend/conductor_main.py sync
 
-### Port Already in Use
-
-```bash
+# Port in use
 lsof -i :8000 && kill -9 <PID>
 ```
 
-### Repository Structure
+### Repo Strategy
 
-The repo is kept lean — all generated data is gitignored:
-
-- **Tracked**: Source code, static assets (category thumbnails, logos, backgrounds), config
-- **Gitignored**: Brand JSON files, shards, galaxy_db, search indexes, backend pipeline data, `dist/`, `node_modules/`
-- **Generated at runtime**: Product data populated by the ingestion pipeline or `conductor_main.py sync`
+- **Tracked**: Source code, static assets (thumbnails, logos, backgrounds), config
+- **Gitignored**: Brand JSONs, shards, search indexes, pipeline data, `dist/`, `node_modules/`
+- **Generated at runtime**: Product data from ingestion pipeline or `conductor_main.py sync`
 
 ---
 
-**v8.2.0** · February 10, 2026
+**v8.3.0** · February 11, 2026
