@@ -1,5 +1,5 @@
 /**
- * Product Store v8.2 — Learning Insights Feed
+ * Product Store v8.3 — Learning Insights Feed
  *
  * Lean store for SSE learning insights from the backend.
  * Product data comes from conductor API via React Query (useConductorCatalog).

@@ -1,5 +1,5 @@
 """
-Celery Configuration for Halilit Support Center v8.2
+Celery Configuration for Halilit Support Center v8.3
 
 Defines task queues, worker routing, and distributed execution settings
 for async product sync pipeline (CommercialScout → OfficialVerifier → ExternalValidator).

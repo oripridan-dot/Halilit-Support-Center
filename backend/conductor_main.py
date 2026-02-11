@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.2
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.3
 
 The Conductor CLI orchestrates all operations:
 - Data ingestion (Trinity Swarm)
@@ -359,6 +359,28 @@ class ConductorCLI:
         logger.info("=" * 60)
         logger.info(f"Total Brands: {len(brands)}")
 
+        total_products = 0
+        for b in brands:
+            data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
+            if data_file.exists():
+                try:
+                    with open(data_file) as f:
+                        data = json.load(f)
+                        if isinstance(data, list):
+                            count = len(data)
+                        elif isinstance(data, dict):
+                            count = len(data.get("products", []))
+                        else:
+                            count = 0
+                        total_products += count
+                        logger.info(f"  • {b}: {count} products")
+                except Exception as e:
+                    logger.warning(f"  • {b}: Error reading ({e})")
+
+        logger.info(f"\nTotal Products: {total_products}")
+        logger.info("=" * 60)
+        return True
+
     def show_agent_learning(self) -> bool:
         """Display agent learning progress and health."""
         logger.info(f"\n🧠 AGENT LEARNING & HEALTH REPORT")
@@ -463,29 +485,6 @@ class ConductorCLI:
             logger.info(
                 f"    Total Execution: {metrics['total_execution_time_ms']:.2f}ms")
 
-        return True
-
-        total_products = 0
-        for b in brands:
-            data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
-            if data_file.exists():
-                try:
-                    with open(data_file) as f:
-                        data = json.load(f)
-                        # Data can be either a list or dict
-                        if isinstance(data, list):
-                            count = len(data)
-                        elif isinstance(data, dict):
-                            count = len(data.get("products", []))
-                        else:
-                            count = 0
-                        total_products += count
-                        logger.info(f"  • {b}: {count} products")
-                except Exception as e:
-                    logger.warning(f"  • {b}: Error reading ({e})")
-
-        logger.info(f"\nTotal Products: {total_products}")
-        logger.info("=" * 60)
         return True
 
     def start_dev_server(self) -> bool:

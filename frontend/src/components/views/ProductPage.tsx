@@ -1,21 +1,29 @@
-import { X, ArrowLeft, Share2, Heart } from "lucide-react";
+import {
+  X,
+  ArrowLeft,
+  Share2,
+  Heart,
+  ExternalLink,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { ImageWithFallback } from "../ImageWithFallback";
-import { getPrice } from "../../lib/priceFormatter";
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import type { Product } from "../../types";
+import type { ConductorProduct } from "../../hooks/useConductorCatalog";
+import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 
 /**
- * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v8.2
+ * PRODUCT PAGE - Screen 3 in Unified Data Pipeline v10
  *
  * Complete product analysis and inspection page.
- * Loads product from conductor API cache first, falls back to static JSON.
+ * Uses flat ConductorProduct shape — no fallback chains or (as any) casts.
  */
 export const ProductPage = ({ productId }: { productId: string }) => {
   const { closeProductPage, goToSpectrum } = useNavigationStore();
   const { products: conductorProducts } = useConductorCatalog();
-  const [product, setProduct] = useState<Product | null>(null);
+  const [product, setProduct] = useState<ConductorProduct | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -24,12 +32,10 @@ export const ProductPage = ({ productId }: { productId: string }) => {
       try {
         setLoading(true);
 
-        // Try conductor API cache first (same data source as Galaxy/Spectrum)
-        const fromConductor = conductorProducts.find(
-          (p) => p.id === productId || (p as any).halilit_id === productId,
-        );
+        // Find product in conductor catalog (pre-loaded via React Query)
+        const fromConductor = conductorProducts.find((p) => p.id === productId);
         if (fromConductor) {
-          setProduct(fromConductor as unknown as Product);
+          setProduct(fromConductor);
           return;
         }
 
@@ -37,7 +43,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
         const { catalogLoader } = await import("../../lib/catalogLoader");
         const loaded = await catalogLoader.findProductById(productId);
         if (loaded) {
-          setProduct(loaded);
+          setProduct(loaded as unknown as ConductorProduct);
         }
       } catch (err) {
         console.error("Failed to load product:", err);
@@ -81,12 +87,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
   }
 
   // --- HEALTH CHECK ---
-  // Ensure we don't display broken products with missing core data
-  const hasName =
-    product.product_name && product.product_name.trim().length > 0;
-  const hasPrice = getPrice(product) !== "TBD" && getPrice(product) !== "0"; // getPrice handles formatting
+  const hasName = product.name && product.name.trim().length > 0;
 
-  if (!hasName || !hasPrice) {
+  if (!hasName) {
     return (
       <div className="w-full h-full flex items-center justify-center bg-slate-950 rounded-lg p-6 font-mono">
         <div className="text-center max-w-md border border-amber-900/50 bg-amber-950/20 p-8 rounded-xl">
@@ -123,36 +126,22 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             </button>
           </div>
           <div className="mt-8 pt-4 border-t border-white/5 text-[10px] text-zinc-700 font-mono">
-            ID: {product.halilit_id || (product as any).id}
+            ID: {product.id}
           </div>
         </div>
       </div>
     );
   }
 
-  // Extract images — handle multiple data shapes with enrichment priority
-  // Priority: image_gallery (v8.2) > official_images > display.hero_image > image_url
-  const galleryImages = (product as any)?.image_gallery || [];
-  const officialImgs = product?.official_images || [];
-  const displayHero = product?.display?.hero_image
-    ? [{ url: product.display.hero_image }]
-    : [];
-  const fallbackImg = (product as any)?.image_url
-    ? [{ url: (product as any).image_url }]
-    : [];
-  
-  // Use the richest image source available
+  // Extract images — v10 provides flat image_url and image_gallery
   const images =
-    galleryImages.length > 0
-      ? galleryImages
-      : officialImgs.length > 0
-        ? officialImgs
-        : displayHero.length > 0
-          ? displayHero
-          : fallbackImg;
+    product.image_gallery && product.image_gallery.length > 0
+      ? product.image_gallery.map((url) => ({ url }))
+      : product.image_url
+        ? [{ url: product.image_url }]
+        : [];
 
-  const currentImage =
-    images[activeImageIndex]?.url || String(images[activeImageIndex]) || "";
+  const currentImage = images[activeImageIndex]?.url || "";
 
   return (
     <div className="w-full h-full bg-slate-950 rounded-lg overflow-hidden flex flex-col">
@@ -167,11 +156,11 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             <ArrowLeft size={20} />
           </button>
           <div className="flex items-center gap-4">
-            {/* Brand Logo - Added per v7.5 request */}
-            {(product as any).brand_logo && (
+            {/* Brand Logo */}
+            {product.brand_logo && (
               <div className="w-12 h-12 bg-white rounded-lg p-1 flex items-center justify-center overflow-hidden shrink-0">
                 <img
-                  src={(product as any).brand_logo}
+                  src={product.brand_logo}
                   alt={product.brand}
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => (e.currentTarget.style.display = "none")}
@@ -181,7 +170,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             <div>
               <p className="text-xs text-blue-400 font-mono">{product.brand}</p>
               <h1 className="text-xl font-bold text-white truncate">
-                {product.product_name || (product as any).name}
+                {product.name}
               </h1>
             </div>
           </div>
@@ -218,7 +207,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             <div className="relative h-64 bg-slate-800 rounded overflow-hidden border border-slate-700">
               <ImageWithFallback
                 src={currentImage}
-                alt={product.product_name || (product as any).name || "Product"}
+                alt={product.name || "Product"}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -237,7 +226,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                     }`}
                   >
                     <ImageWithFallback
-                      src={(img?.url || String(img)) as string}
+                      src={img.url}
                       alt={`Gallery ${idx + 1}`}
                       className="w-full h-full object-cover"
                     />
@@ -257,23 +246,17 @@ export const ProductPage = ({ productId }: { productId: string }) => {
               <div className="space-y-2">
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-black text-green-400">
-                    {getPrice(product) || "TBD"}
+                    {product.price > 0
+                      ? `₪${product.price.toLocaleString("he-IL")}`
+                      : "Price on request"}
                   </span>
                   <span className="text-sm text-zinc-500">
-                    {product?.pricing_tier && `(${product.pricing_tier})`}
+                    {product.tier && `(${product.tier})`}
                   </span>
                 </div>
-                {product?.in_stock !== undefined && (
-                  <div className="text-sm">
-                    <span
-                      className={`px-2 py-1 rounded text-xs font-bold ${
-                        product.in_stock
-                          ? "bg-green-600/30 text-green-400"
-                          : "bg-red-600/30 text-red-400"
-                      }`}
-                    >
-                      {product.in_stock ? "In Stock" : "Out of Stock"}
-                    </span>
+                {product.price_eilat > 0 && (
+                  <div className="text-sm text-zinc-400">
+                    Eilat price: ₪{product.price_eilat.toLocaleString("he-IL")}
                   </div>
                 )}
               </div>
@@ -286,22 +269,22 @@ export const ProductPage = ({ productId }: { productId: string }) => {
               </h2>
               <div className="space-y-2 text-sm">
                 <div>
-                  <p className="text-zinc-500">Category</p>
-                  <p className="text-white font-medium">
-                    {product?.taxonomy?.canonical_category || "N/A"}
+                  <p className="text-zinc-500">Galaxy</p>
+                  <p className="text-white font-medium capitalize">
+                    {product.galaxy_id?.replace(/-/g, " ") || "N/A"}
                   </p>
                 </div>
                 <div>
-                  <p className="text-zinc-500">Subcategory</p>
-                  <p className="text-white font-medium">
-                    {product?.taxonomy?.canonical_subcategory || "N/A"}
+                  <p className="text-zinc-500">Spectrum</p>
+                  <p className="text-white font-medium capitalize">
+                    {product.spectrum_id?.replace(/-/g, " ") || "N/A"}
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Ratings */}
-            {product?.reviews?.average_rating && (
+            {product.rating > 0 && (
               <div className="bg-slate-900 rounded p-4 border border-slate-800">
                 <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                   Rating
@@ -309,10 +292,10 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl font-black text-amber-400">
-                      {product.reviews.average_rating.toFixed(1)}
+                      {product.rating.toFixed(1)}
                     </span>
                     <span className="text-xs text-zinc-500">
-                      / 5 ({product.reviews.total_reviews} reviews)
+                      / 5 ({product.review_count} reviews)
                     </span>
                   </div>
                 </div>
@@ -323,133 +306,102 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           {/* Column 3: Specifications & Details */}
           <div className="space-y-6">
             {/* Description */}
-            {(product?.description ||
-              product?.description_short ||
-              product?.official_description ||
-              (product as any)?.description_long) && (
+            {product.description && (
               <div className="bg-slate-900 rounded p-4 border border-slate-800">
                 <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
                   Overview
                 </h2>
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  {product.description ||
-                    product?.description_short ||
-                    product?.official_description ||
-                    (product as any)?.description_long}
+                  {product.description_short || product.description}
                 </p>
               </div>
             )}
 
             {/* Features */}
-            {(product?.feature_list || product?.specifications?.features) &&
-              (product.feature_list || product.specifications?.features || [])
-                .length > 0 && (
-                <div className="bg-slate-900 rounded p-4 border border-slate-800">
-                  <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
-                    Features
-                  </h2>
-                  <ul className="space-y-1 text-sm text-zinc-300">
-                    {(
-                      product.feature_list ||
-                      product.specifications?.features ||
-                      []
-                    )
-                      .slice(0, 5)
-                      .map((feature: string, idx: number) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <span className="text-blue-400 font-bold mt-0.5">
-                            ▸
-                          </span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              )}
+            {product.features && product.features.length > 0 && (
+              <div className="bg-slate-900 rounded p-4 border border-slate-800">
+                <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
+                  Features
+                </h2>
+                <ul className="space-y-1 text-sm text-zinc-300">
+                  {product.features
+                    .slice(0, 5)
+                    .map((feature: string, idx: number) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-blue-400 font-bold mt-0.5">
+                          ▸
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                </ul>
+              </div>
+            )}
 
             {/* Specs */}
-            {((product?.specifications && Object.keys(product.specifications).length > 0) ||
-              ((product as any)?.official_specs && Object.keys((product as any).official_specs).length > 0)) && (
-                <div className="bg-slate-900 rounded p-4 border border-slate-800">
-                  <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
-                    Specifications
-                  </h2>
-                  <div className="space-y-2 text-sm">
-                    {/* Use official_specs (enriched v8.2) or fallback to specifications */}
-                    {Object.entries(
-                      (product as any)?.official_specs || product?.specifications?.specs || product?.specifications || {},
-                    )
-                      .filter(
-                        ([key]) =>
-                          key !== "specs" &&
-                          key !== "features" &&
-                          key !== "short_description" &&
-                          key !== "long_description",
-                      )
-                      .slice(0, 8)
-                      .map(([key, value]) => (
-                        <div key={key} className="flex justify-between">
-                          <span className="text-zinc-500 capitalize">
-                            {key}:
-                          </span>
-                          <span className="text-white font-medium text-right ml-4">
-                            {typeof value === "object"
-                              ? JSON.stringify(value)
-                              : String(value)}
-                          </span>
-                        </div>
-                      ))}
-                  </div>
+            {product.specs && Object.keys(product.specs).length > 0 && (
+              <div className="bg-slate-900 rounded p-4 border border-slate-800">
+                <h2 className="text-sm font-bold text-zinc-400 uppercase mb-3">
+                  Specifications
+                </h2>
+                <div className="space-y-2 text-sm">
+                  {Object.entries(product.specs)
+                    .slice(0, 8)
+                    .map(([key, value]) => (
+                      <div key={key} className="flex justify-between">
+                        <span className="text-zinc-500 capitalize">
+                          {key.replace(/_/g, " ")}:
+                        </span>
+                        <span className="text-white font-medium text-right ml-4">
+                          {typeof value === "object"
+                            ? JSON.stringify(value)
+                            : String(value)}
+                        </span>
+                      </div>
+                    ))}
                 </div>
-              )}
+              </div>
+            )}
           </div>
         </div>
 
-        {/* Full Specifications Section (if there are more) */}
-        {((product as any)?.description_long || 
-          product?.description ||
-          product?.description_short ||
-          product?.official_description ||
-          product?.specifications?.long_description) && (
+        {/* Full Description Section */}
+        {product.description && product.description.length > 200 && (
           <div className="bg-slate-900 rounded p-6 border border-slate-800 mt-6">
             <h2 className="text-lg font-bold text-white mb-4">
               Full Description
             </h2>
             <p className="text-sm text-zinc-300 leading-relaxed whitespace-pre-wrap">
-              {(product as any)?.description_long ||
-                product?.description ||
-                product?.official_description ||
-                product?.description_short ||
-                product?.specifications?.long_description}
+              {product.description}
             </p>
           </div>
         )}
 
         {/* Reviews Section */}
-        {product?.reviews && (
+        {(product.pros.length > 0 || product.cons.length > 0) && (
           <div className="bg-slate-900 rounded p-6 border border-slate-800">
             <h2 className="text-lg font-bold text-white mb-4">
               Reviews & Feedback
             </h2>
-            {product.reviews.pros && product.reviews.pros.length > 0 && (
+            {product.pros.length > 0 && (
               <div className="mb-4">
                 <h3 className="text-sm font-bold text-green-400 uppercase mb-2">
                   Pros
                 </h3>
                 <ul className="space-y-1 text-sm text-zinc-300">
-                  {product.reviews.pros.map((pro, idx) => (
+                  {product.pros.map((pro, idx) => (
                     <li key={idx}>✓ {pro}</li>
                   ))}
                 </ul>
               </div>
             )}
-            {product.reviews.cons && product.reviews.cons.length > 0 && (
+            {product.cons.length > 0 && (
               <div>
                 <h3 className="text-sm font-bold text-orange-400 uppercase mb-2">
                   Cons
                 </h3>
                 <ul className="space-y-1 text-sm text-zinc-300">
-                  {product.reviews.cons.map((con, idx) => (
+                  {product.cons.map((con, idx) => (
                     <li key={idx}>✗ {con}</li>
                   ))}
                 </ul>
@@ -458,65 +410,155 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           </div>
         )}
 
-        {/* Data Provenance */}
-        {product?.provenance && (
-          <div className="bg-slate-900 rounded p-6 border border-slate-800">
-            <h2 className="text-lg font-bold text-white mb-4">Data Sources</h2>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="text-zinc-500">Sources</p>
-                <div className="flex flex-wrap gap-3 mt-2 items-center">
-                  {/* Halilit Source (Local Commercial) */}
-                  <div
-                    className="flex items-center gap-2 bg-white/5 pr-3 rounded-lg overflow-hidden border border-white/10"
-                    title="Halilit (Commercial Data)"
-                  >
-                    <div className="bg-blue-600 h-8 w-8 flex items-center justify-center font-bold text-white text-xs">
-                      H
-                    </div>
-                    <span className="text-zinc-300 font-medium text-xs">
-                      Halilit.com
+        {/* Data Provenance — Three Pillars */}
+        <div className="bg-slate-900 rounded p-6 border border-slate-800">
+          <h2 className="text-lg font-bold text-white mb-4">Data Sources</h2>
+          <div className="grid grid-cols-3 gap-4">
+            {/* Pillar 1: Halilit */}
+            <div
+              className={`rounded-lg border p-4 ${product.sources?.includes("halilit") ? "border-blue-500/40 bg-blue-950/20" : "border-slate-700/40 bg-slate-800/20 opacity-40"}`}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <img
+                  src="/assets/logos/halilit_logo.svg"
+                  alt="Halilit"
+                  className="h-6 rounded"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+                <span className="text-xs font-bold text-blue-400 uppercase">
+                  Halilit
+                </span>
+              </div>
+              <p className="text-[10px] text-zinc-500 leading-relaxed">
+                Prices, SKU, product catalog, spectrum classification
+              </p>
+              {product.data_trust && (
+                <div className="mt-2 space-y-1">
+                  {product.data_trust.price_source === "halilit" && (
+                    <span className="block text-[10px] text-blue-400/70">
+                      ✓ Price
                     </span>
-                  </div>
-
-                  {/* Brand Source (Official) */}
-                  {(product as any).brand_logo && (
-                    <div
-                      className="flex items-center gap-2 bg-white/5 pr-3 rounded-lg overflow-hidden border border-white/10"
-                      title="Official Brand Data"
-                    >
-                      <div className="bg-white h-8 w-8 p-1 flex items-center justify-center">
-                        <img
-                          src={(product as any).brand_logo}
-                          alt="Brand"
-                          className="max-w-full max-h-full object-contain"
-                        />
-                      </div>
-                      <span className="text-zinc-300 font-medium text-xs">
-                        Official
-                      </span>
-                    </div>
                   )}
+                </div>
+              )}
+            </div>
 
-                  {/* Other sources */}
-                  {product.provenance.sources
-                    ?.filter((s) => s !== "halilit" && !s.includes("official"))
-                    .map((source, idx) => (
+            {/* Pillar 2: Official Brand */}
+            <div
+              className={`rounded-lg border p-4 ${product.sources?.includes("official") ? "border-emerald-500/40 bg-emerald-950/20" : "border-slate-700/40 bg-slate-800/20 opacity-40"}`}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                {(() => {
+                  const logoUrl = getBrandLogoUrl(product.brand);
+                  return logoUrl ? (
+                    <div className="h-6 w-6 bg-white rounded p-0.5 flex items-center justify-center">
+                      <img
+                        src={logoUrl}
+                        alt={product.brand}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                  ) : null;
+                })()}
+                <span className="text-xs font-bold text-emerald-400 uppercase">
+                  Official
+                </span>
+              </div>
+              <p className="text-[10px] text-zinc-500 leading-relaxed">
+                Specs, descriptions, images from {product.brand}
+              </p>
+              {product.data_trust && (
+                <div className="mt-2 space-y-1">
+                  {product.data_trust.specs_source === "official" && (
+                    <span className="block text-[10px] text-emerald-400/70">
+                      ✓ Specs
+                    </span>
+                  )}
+                  {product.data_trust.description_source === "official" && (
+                    <span className="block text-[10px] text-emerald-400/70">
+                      ✓ Description
+                    </span>
+                  )}
+                  {product.data_trust.image_source === "official" && (
+                    <span className="block text-[10px] text-emerald-400/70">
+                      ✓ Images
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Pillar 3: Contextual */}
+            <div
+              className={`rounded-lg border p-4 ${product.sources?.includes("contextual") ? "border-amber-500/40 bg-amber-950/20" : "border-slate-700/40 bg-slate-800/20 opacity-40"}`}
+            >
+              <div className="flex items-center gap-2 mb-3">
+                <Sparkles size={14} className="text-amber-400" />
+                <span className="text-xs font-bold text-amber-400 uppercase">
+                  Contextual
+                </span>
+              </div>
+              <p className="text-[10px] text-zinc-500 leading-relaxed">
+                Reviews, community feedback, audience insights
+              </p>
+              {product.data_trust && (
+                <div className="mt-2 space-y-1">
+                  {product.data_trust.review_source === "contextual" && (
+                    <span className="block text-[10px] text-amber-400/70">
+                      ✓ Reviews
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Audiences & FAQ (contextual data) */}
+        {((product.audiences && product.audiences.length > 0) ||
+          (product.faq && product.faq.length > 0)) && (
+          <div className="bg-slate-900 rounded p-6 border border-slate-800">
+            <h2 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <Users size={18} className="text-amber-400" />
+              Community & Context
+            </h2>
+            <div className="grid grid-cols-2 gap-6">
+              {product.audiences && product.audiences.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-bold text-amber-400 uppercase mb-2">
+                    Target Audiences
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {product.audiences.map((audience: string, idx: number) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-slate-800 text-zinc-400 rounded text-xs border border-slate-700"
+                        className="px-2 py-1 bg-amber-500/10 text-amber-300 rounded text-xs border border-amber-500/20"
                       >
-                        {source}
+                        {audience}
                       </span>
                     ))}
+                  </div>
                 </div>
-              </div>
-              <div>
-                <p className="text-zinc-500">Verification</p>
-                <p className="text-white font-medium mt-2 uppercase text-xs">
-                  {product.provenance.verification_status}
-                </p>
-              </div>
+              )}
+              {product.faq && product.faq.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-bold text-zinc-400 uppercase mb-2">
+                    FAQ
+                  </h3>
+                  <div className="space-y-2">
+                    {product.faq
+                      .slice(0, 3)
+                      .map((item: { q: string; a: string }, idx: number) => (
+                        <div key={idx} className="text-xs">
+                          <p className="text-zinc-300 font-medium">{item.q}</p>
+                          <p className="text-zinc-500 mt-0.5">{item.a}</p>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -526,21 +568,26 @@ export const ProductPage = ({ productId }: { productId: string }) => {
       <div className="px-6 py-4 border-t border-slate-800 bg-slate-900 flex gap-3">
         <button
           onClick={() => {
-            if (product?.taxonomy?.canonical_subcategory) {
-              goToSpectrum(
-                product.taxonomy.canonical_category || "",
-                product.taxonomy.canonical_subcategory,
-                [],
-              );
+            if (product.galaxy_id) {
+              goToSpectrum(product.galaxy_id, product.spectrum_id, []);
             }
           }}
           className="flex-1 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded transition font-medium"
         >
           Back to Spectrum
         </button>
+        {product.official_url && (
+          <button
+            onClick={() => window.open(product.official_url!, "_blank")}
+            className="flex-1 px-4 py-2 bg-emerald-700 hover:bg-emerald-600 text-white rounded transition font-medium flex items-center justify-center gap-2"
+          >
+            <ExternalLink size={16} />
+            View on {product.brand}
+          </button>
+        )}
         <button
           onClick={() => {
-            if (product?.halilit_url) {
+            if (product.halilit_url) {
               window.open(product.halilit_url, "_blank");
             }
           }}

@@ -12,11 +12,9 @@ import {
 import { useNavigationStore } from "../../store/navigationStore";
 import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
 import { CategorySlot } from "./galaxy/CategorySlot";
-import { extractBrandFromSpectrumId } from "../../lib/brandExtraction";
 import { getContextBackground } from "../../lib/slotBackgrounds";
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import { getBrandsWithLogos } from "../../lib/brandLogoHelper";
-import { getConsolidatedProductCategory } from "../../lib/categoryConsolidator";
+import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 
 // Icon mapping for sectors
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -51,7 +49,8 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
 
 export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
-  const { products, isLoading, totalProducts } = useConductorCatalog();
+  const { products, isLoading, galaxyCounts, spectrumCounts, indexes } =
+    useConductorCatalog();
 
   // Stable callback — avoids re-creating on every render
   const onSlotClick = useCallback(
@@ -59,30 +58,33 @@ export const GalaxyDashboard = () => {
     [goToSpectrum],
   );
 
-  // Pre-compute category counts by galaxy ID (maps products through consolidator)
-  const categoryCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    for (const p of products) {
-      try {
-        const { galaxyId } = getConsolidatedProductCategory(p as any);
-        if (galaxyId) counts[galaxyId] = (counts[galaxyId] || 0) + 1;
-      } catch {
-        // skip unmappable products
-      }
-    }
-    return counts;
-  }, [products]);
+  // Use spectrum-level counts for individual subcategory slots
+  const categorySpectrumCounts = spectrumCounts;
 
-  // Pre-compute brand logos per spectrum (avoids recalc every slot render)
+  // Pre-compute brand logos per spectrum using index-based lookups
   const brandsBySpectrum = useMemo(() => {
     const map: Record<string, Array<{ brand: string; logoUrl: string }>> = {};
     for (const sector of galaxy) {
       for (const sub of sector.children) {
-        map[sub.id] = getBrandsWithLogos(products, sub.id, 4);
+        const specIdxs = indexes.by_spectrum[sub.id] || [];
+        // Extract unique brands from pre-filtered products
+        const seen = new Set<string>();
+        const logos: Array<{ brand: string; logoUrl: string }> = [];
+        for (const i of specIdxs) {
+          const p = products[i];
+          if (!p?.brand || seen.has(p.brand)) continue;
+          seen.add(p.brand);
+          const logoUrl = getBrandLogoUrl(p.brand);
+          if (logoUrl) {
+            logos.push({ brand: p.brand, logoUrl });
+            if (logos.length >= 4) break;
+          }
+        }
+        map[sub.id] = logos;
       }
     }
     return map;
-  }, [products]);
+  }, [products, indexes]);
 
   return (
     <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
@@ -154,7 +156,9 @@ export const GalaxyDashboard = () => {
                     icon={sector.iconComponent}
                     mainColor={sector.color}
                     count={
-                      isLoading ? undefined : (categoryCounts[sector.id] ?? 0)
+                      isLoading
+                        ? undefined
+                        : (categorySpectrumCounts[sub.id] ?? 0)
                     }
                     brands={brandsBySpectrum[sub.id] ?? []}
                     onClick={() => onSlotClick(sector.id, sub.id)}

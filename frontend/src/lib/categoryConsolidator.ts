@@ -127,7 +127,8 @@ export const CONSOLIDATED_CATEGORIES: ConsolidatedCategory[] = [
       { id: "cables", label: "All Cables" },
       { id: "stands", label: "All Stands" },
       { id: "cases-bags", label: "Cases & Bags" },
-      { id: "power-supplies", label: "Power & Batteries" }
+      { id: "power-supplies", label: "Power & Batteries" },
+      { id: "general-accessories", label: "General Accessories" }
     ]
   }
 ];

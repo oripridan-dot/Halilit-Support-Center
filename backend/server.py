@@ -121,7 +121,7 @@ def get_ingestion_products_for_golden_brands():
     return result
 
 
-app = FastAPI(title="Halilit Support Center API", version="8.1")
+app = FastAPI(title="Halilit Support Center API", version="8.3")
 
 # Add CORS middleware for frontend development
 app.add_middleware(
@@ -158,12 +158,33 @@ try:
 except Exception as e:
     logger.warning(f"⚠️ Failed to register task router: {e}")
 
+# MCP (Model Context Protocol) Integration
+try:
+    from backend.api.mcp_router import router as mcp_router
+    from backend.mcp.startup import init_mcp, shutdown_mcp
+    app.include_router(mcp_router)
+
+    @app.on_event("startup")
+    async def _mcp_startup():
+        await init_mcp()
+
+    @app.on_event("shutdown")
+    async def _mcp_shutdown():
+        await shutdown_mcp()
+
+    logger.info("✅ MCP endpoints registered at /api/mcp")
+except Exception as e:
+    logger.warning(f"⚠️ Failed to register MCP: {e}")
+
 # WebSocket real-time task updates
 try:
     from backend.api.websocket_manager import create_websocket_route
-    import asyncio
-    asyncio.run(create_websocket_route(app))
-    logger.info("✅ WebSocket endpoint registered at /ws/tasks/{{task_id}}")
+
+    @app.on_event("startup")
+    async def _register_websocket():
+        await create_websocket_route(app)
+
+    logger.info("✅ WebSocket endpoint will register at /ws/tasks/{{task_id}}")
 except Exception as e:
     logger.warning(f"⚠️ Failed to register WebSocket: {e}")
 
@@ -184,7 +205,7 @@ async def health_check():
     """Health check endpoint for monitoring"""
     return {
         "status": "healthy",
-        "version": "8.1",
+        "version": "8.3",
         "service": "Halilit Support Center"
     }
 
@@ -221,19 +242,20 @@ async def get_catalog():
 @app.get("/api/conductor/catalog")
 async def get_conductor_catalog():
     """
-    Single source of truth for the frontend.
-    Reads brand JSONs from frontend/public/data/, normalizes every product
-    through product_normalizer.normalize_product(), deduplicates by ID,
-    and applies quality gates (price > 0, valid image).
+    Single source of truth for the frontend — v10 pre-indexed catalog.
+    Returns { products, indexes, metadata } where indexes contain
+    by_galaxy, by_spectrum, by_brand mappings for instant frontend lookup.
     """
     try:
-        products, metadata = build_catalog(FRONTEND_PUBLIC_DATA)
-        metadata["timestamp"] = datetime.now().isoformat()
+        catalog = build_catalog(FRONTEND_PUBLIC_DATA)
+        catalog["metadata"]["timestamp"] = datetime.now().isoformat()
 
         logger.info(
-            f"✅ Served Enriched Catalog: {metadata['total_products']} products from {len(metadata['brands'])} brands")
+            f"✅ Catalog v10: {catalog['metadata']['total_products']} products, "
+            f"{len(catalog['metadata']['brands'])} brands, "
+            f"{len(catalog['metadata']['galaxy_counts'])} galaxies")
 
-        return {"products": products, "metadata": metadata}
+        return catalog
 
     except Exception as e:
         logger.error(f"Failed to generate conductor catalog: {e}")

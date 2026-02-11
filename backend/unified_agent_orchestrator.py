@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unified Agent Orchestrator v8.2
+Unified Agent Orchestrator v8.3
 ================================
 
 Consolidates three core systems:
@@ -240,185 +240,80 @@ class CommercialAgent(AgentBase):
 
     def _validate_product_structure(self, product: Dict) -> bool:
         """
-        Validates that a product has all required fields for Golden List.
+        Validates that a product has required fields for Golden List.
         Returns True if valid, False otherwise.
         """
-        required_fields = ['halilit_id', 'product_name', 'price_il', 'brand']
+        # Must have identity
+        if not product.get('halilit_id') or not product.get('product_name'):
+            return False
+        if not product.get('brand'):
+            return False
 
-        # Check required fields exist
-        for field in required_fields:
-            if field not in product or product[field] is None:
-                return False
+        # product_name must be non-empty string
+        if not isinstance(product['product_name'], str) or not product['product_name'].strip():
+            return False
 
-        # Validate price is a number
+        # price can be 0 ("Price on request") but not negative
         try:
-            price = float(product['price_il'])
+            price = float(product.get('price_il', 0))
             if price < 0:
                 return False
         except (ValueError, TypeError):
             return False
 
-        # Validate product_name is not empty
-        if not isinstance(product['product_name'], str) or not product['product_name'].strip():
-            return False
-
         return True
 
     def _scrape_halilit_brand(self, brand: str) -> List[Dict]:
-        """Real scraping logic for Halilit brand page with Pagination."""
-        from urllib.parse import quote
-        encoded_brand = quote(brand)
+        """
+        Scrape Halilit product data using the HalilitPageScraper.
 
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        }
+        Two-phase approach:
+        1. Scrape search results to get product URLs
+        2. Scrape each product's individual page for rich JSON-LD data
+           (price, SKU, description, images, features, FAQ)
+        """
+        from backend.ingestion.halilit_page_scraper import HalilitPageScraper
 
-        all_products = []
-        page = 1
-        max_pages = 10  # Safety limit
+        scraper = HalilitPageScraper()
+        products = scraper.scrape_brand_full(brand)
 
-        while page <= max_pages:
-            search_url = f"https://www.halilit.com/search?q={encoded_brand}&page={page}"
-            print(f"   🔎 Scraping Page {page}: {search_url}")
+        # Convert from page scraper format to pipeline format
+        result = []
+        for p in products:
+            # Use the URL-based item ID from page scraper, or fall back to hash
+            halilit_id = p.get("halilit_id", "")
+            if not halilit_id:
+                halilit_id = f"scraped-{abs(hash(p.get('halilit_url', '')))}"
 
-            try:
-                resp = requests.get(search_url, headers=headers, timeout=10)
-                if resp.status_code != 200:
-                    print(
-                        f"   ⚠️ Page {page} failed with status {resp.status_code}")
-                    break
+            p_obj = {
+                "halilit_id": halilit_id,
+                "product_name": p.get("product_name", ""),
+                "official_name": p.get("official_name", ""),
+                "model_number": p.get("model_number", ""),
+                "brand": p.get("brand", brand),
+                "sku": p.get("sku", ""),
+                "price_il": float(p.get("price_il", 0)),
+                "price_eilat": float(p.get("price_eilat", 0)),
+                "halilit_url": p.get("halilit_url", ""),
+                # Images from product page (gallery + hero)
+                "image_url": p.get("image_url", ""),
+                "image_gallery": p.get("image_gallery", []),
+                "commercial_image": p.get("image_url", ""),
+                "official_images": p.get("official_images", []),
+                # Content from product page JSON-LD
+                "description": p.get("description", ""),
+                "description_short": (p.get("description", "") or p.get("page_description", ""))[:200],
+                "official_description": p.get("description", "") or p.get("page_description", ""),
+                "feature_list": p.get("features", []),
+                "faq": p.get("faq", []),
+                # Pipeline status
+                "pipeline_phase": "harvest",
+                "status": "harvested",
+                "source": p.get("source", "halilit_product_page"),
+            }
+            result.append(p_obj)
 
-                soup = BeautifulSoup(resp.text, 'html.parser')
-
-                # Update selector based on debug_output
-                items = soup.select(".box, .item, .product_item, .product_box")
-
-                if not items:
-                    print(f"   ℹ️ No items found on page {page}. Stopping.")
-                    break
-
-                print(f"   ℹ️ Found {len(items)} items on page {page}...")
-
-                page_products = []
-                for item in items:
-                    try:
-                        # Extract Name
-                        title_el = item.select_one(
-                            ".title, .product-title, h3, h4, .title_with_brand, .item-title")
-                        if not title_el:
-                            print("   x Skipped item (No title element)")
-                            continue
-
-                        name = title_el.get_text(strip=True)
-
-                        # Fix potential truncation (e.g., "Ynthesizer" -> "Synthesizer")
-                        # If first letter is lowercase and second is lowercaseCheck if it looks like a truncation
-                        if len(name) > 1 and name[0].islower() and name[1].islower():
-                            # Heuristic: Try to find a preceding sibling or parent's previous text
-                            # This is a blind fix without seeing HTML, but generally safe to Title Case if it looks like a proper noun
-                            pass
-
-                        # Basic filtering - RELAXED MODE
-                        # We trust the search result page to return relevant items.
-                        # We just flag it if brand seems missing, but we KEEP it.
-                        brand_match = True
-                        if brand.lower() not in name.lower() and brand.replace(" ", "").lower() not in name.lower():
-                            # Check if brand is in the item text anywhere
-                            item_text = item.get_text(strip=True).lower()
-                            if brand.lower() not in item_text:
-                                brand_match = False
-
-                        if not brand_match:
-                            # Verify if it's an accessory or related item
-                            # We keep it but mark confidence lower? For now, we needed "Golden List",
-                            # implying EVERYTHING on the brand page is relevant.
-                            # So we keep it.
-                            pass
-
-                        # Extract Price
-                        price_el = item.select_one(
-                            ".price, .price-new, .current-price, .price_value, .item_price")
-                        price = 0.0
-                        if price_el:
-                            price_txt = price_el.get_text(strip=True)
-                            clean_price = ''.join(
-                                c for c in price_txt if c.isdigit() or c == '.')
-                            try:
-                                if clean_price:
-                                    price = float(clean_price)
-                            except:
-                                pass
-
-                        # Extract URL
-                        link_el = item.select_one("a")
-                        url = ""
-                        if link_el:
-                            url = link_el.get('href', "")
-                            if url and not url.startswith("http"):
-                                url = "https://www.halilit.com" + url
-
-                        # Extract Image
-                        image_el = item.select_one("img")
-                        image_url = ""
-                        if image_el:
-                            # Try multiple src attributes common in lazy loading
-                            image_url = image_el.get(
-                                'data-src') or image_el.get('src') or ""
-                            if image_url:
-                                if image_url.startswith("//"):
-                                    image_url = "https:" + image_url
-                                elif not image_url.startswith("http"):
-                                    image_url = "https://www.halilit.com" + image_url
-
-                        # ID Generation
-                        # Robust ID generation to prevent duplicates
-                        if not url:
-                            product_id = f"scraped-{abs(hash(name))}"
-                        else:
-                            product_id = f"scraped-{abs(hash(url))}"
-
-                        p_obj = {
-                            "halilit_id": product_id,
-                            "product_name": name,
-                            "brand": brand,
-                            "price_il": price,
-                            "price_eilat": price * 0.85,  # approx
-                            "halilit_url": url,
-                            "commercial_image": image_url,
-                            "official_images": [{
-                                "url": image_url,
-                                "type": "image",
-                                "display_purpose": "hero",
-                                "source": "halilit_commercial"
-                            }] if image_url else [],
-                            "pipeline_phase": "harvest",
-                            "status": "harvested"
-                        }
-                        page_products.append(p_obj)
-
-                    except Exception as e:
-                        continue
-
-                if not page_products:
-                    # Found items but failed to parse them?
-                    # If we parsed 0 products from N items, maybe our selectors are wrong for this page type, or they are just placeholders?
-                    print(
-                        f"   ⚠️ Parsed 0 products from {len(items)} items on page {page}.")
-
-                all_products.extend(page_products)
-
-                # Stop if we found fewer items than typical page size (usually 20-30), implying last page
-                # But 'debug_scraper' showed 25. Let's assume pagination exists if we found items.
-                # Only way to know for sure is check next page.
-                # Optimization: if len(items) < 10, probably last page.
-
-                page += 1
-
-            except Exception as e:
-                print(f"   ⚠️ Error scraping page {page}: {e}")
-                break
-
-        return all_products
+        return result
 
 
 class OfficialAgent(AgentBase):
@@ -441,7 +336,13 @@ class OfficialAgent(AgentBase):
 
     def enrich(self, draft: Dict, context_insights: List[str] = None) -> Dict:
         """
-        Takes a Commercial Draft and injects Official Knowledge.
+        Takes a Commercial Draft and injects Official Knowledge
+        from the brand's OFFICIAL product page.
+
+        Strategy:
+        1. Try scraping the brand's official product page for real specs
+        2. Fall back to AI enrichment only if real scraping fails
+        3. Never fabricate data — only add what we actually find
 
         Validates:
         - Input draft is not None and has required fields
@@ -460,7 +361,6 @@ class OfficialAgent(AgentBase):
             f"🤖 [{self.name}] 📘 Injecting Official Documentation for {product_name}...")
 
         # --- DYNAMIC LEARNING INJECTION ---
-        # If we have insights, update the system prompt for this execution
         active_system_prompt = self.system_instruction
         if context_insights:
             print(
@@ -473,18 +373,12 @@ class OfficialAgent(AgentBase):
         preserved_price = draft.get('price_il')
 
         # Determine images - STRICT POLICY: NO MOCK DATA
-        # User Instruction: "all of halilit's products has images, use those images"
         current_images = draft.get("official_images", [])
-
-        # If we have scraped images (from CommercialAgent), we treat them as the current standard source
-        # unless we have a REAL official source (which we don't in simulation).
         halilit_image = draft.get("commercial_image")
 
         final_images = []
         if isinstance(current_images, list) and len(current_images) > 0:
             final_images = current_images
-
-        # If no images yet, but we have a commercial image, promote it
         if not final_images and halilit_image:
             final_images = [{
                 "url": halilit_image,
@@ -493,75 +387,109 @@ class OfficialAgent(AgentBase):
                 "source": "commercial_as_official_standard"
             }]
 
-        # Simulating fetching from Official Site - DISABLED MOCK
-        # We only add fields if we actually have data.
-        # However, to pass validation, we must ensure 'official_specs' exists.
-        # tailored to the user's request: "all of halilit's products has images, use those..."
+        # ═══════════════════════════════════════════════════════════════
+        # PHASE 1: Try REAL official brand page scraping first
+        # ═══════════════════════════════════════════════════════════════
+        official_data = {}
+        real_data_found = False
 
-        # --- AI ENRICHMENT (Gemini 2.0) ---
-        # Generate rich metadata (Description, Specs, Category) using the Agent's brain
         try:
-            prompt = f"""
-            You are the Official Verifier for Halilit's Catalog.
-            Enrich the following product with official data:
-            PRODUCT: "{product_name}"
-            BRAND: "{draft.get('brand', 'Unknown')}"
+            from backend.ingestion.official_page_scraper import OfficialBrandScraper
+            from backend.ingestion.halilit_page_scraper import extract_model_name
 
-            OUTPUT: JSON object ONLY with these keys:
-            - description_short (1 sentence summary)
-            - description_long (2 paragraphs max)
-            - specifications (key-value dictionary of 5-8 core specs)
-            - category (Best fit from: Keyboards & Synthesizers, Pro Audio, Drums, Guitars, DJ, Studio)
-            - features (list of 3-5 key selling points)
-            
-            Do not include markdown blocks. Just the raw JSON.
-            """
+            brand = draft.get("brand", "")
+            model_name = (
+                draft.get("official_name")
+                or draft.get("model_number")
+                or extract_model_name(product_name, brand)
+            )
 
-            # Call the LLM (passing the dynamic system prompt)
-            response_text = self.think(
-                prompt, dynamic_system_instruction=active_system_prompt)
-
-            # Clean response (remove markdown if present)
-            cleaned_text = response_text.replace(
-                "```json", "").replace("```", "").strip()
-            ai_data = json.loads(cleaned_text)
-
-            official_data = {
-                # 1. Official Schema Fields
-                "official_specs": ai_data.get("specifications", {}),
-                "official_description": ai_data.get("description_long"),
-                "description_short": ai_data.get("description_short"),
-                "description_long": ai_data.get("description_long"),
-                "feature_list": ai_data.get("features", []),
-
-                # 2. Legacy/Frontend Fields (Ensuring UI compatibility)
-                "specifications": {
-                    "short_description": ai_data.get("description_short"),
-                    "specs_dict": ai_data.get("specifications", {}),
-                    "specs_source": "official",
-                    "specs_completeness": 0.9
-                },
-
-                # We can store the AI category recommendation in metadata for the TaxonomyManager to ignore or use
-                "_ai_category_suggestion": ai_data.get("category")
-            }
-
-            # Ensure specs has at least the minimum if AI failed to give a dict
-            if not isinstance(official_data["official_specs"], dict):
-                official_data["official_specs"] = {
-                    "note": "Standardized via Halilit Commercial Source",
-                    "extracted_name": draft.get("product_name")
-                }
+            if model_name and brand:
+                scraper = OfficialBrandScraper()
+                real_official = scraper.scrape_official(
+                    model_name, brand, product_name)
+                if real_official and (real_official.get("official_specs") or real_official.get("official_description")):
+                    print(
+                        f"      ✅ Found REAL official data from {real_official.get('official_url', 'brand site')}")
+                    official_data = {
+                        "official_specs": real_official.get("official_specs", {}),
+                        "official_description": real_official.get("official_description"),
+                        "official_url": real_official.get("official_url"),
+                    }
+                    # Add official images (higher priority)
+                    if real_official.get("official_images"):
+                        official_data["official_images"] = real_official["official_images"]
+                    real_data_found = True
 
         except Exception as e:
-            print(
-                f"   ⚠️ AI Enrichment failed: {e}. Falling back to standard.")
-            official_data = {
-                "official_specs": {
-                    "note": "Standardized via Halilit Commercial Source",
-                    "extracted_name": draft.get("product_name")
+            print(f"      ⚠️ Official brand scraping failed: {e}")
+
+        # ═══════════════════════════════════════════════════════════════
+        # PHASE 2: If no real data, use Halilit page data we already have
+        # ═══════════════════════════════════════════════════════════════
+        if not real_data_found:
+            # Use data already extracted from Halilit product page
+            if draft.get("description") or draft.get("official_description"):
+                official_data["official_description"] = (
+                    draft.get("official_description")
+                    or draft.get("description")
+                )
+            if draft.get("feature_list"):
+                official_data["feature_list"] = draft["feature_list"]
+
+            # Build specs from features if available
+            features = draft.get("feature_list", [])
+            if features and not draft.get("official_specs", {}).get("feature_1"):
+                specs = {}
+                for i, feat in enumerate(features):
+                    specs[f"feature_{i+1}"] = feat
+                if draft.get("sku"):
+                    specs["sku"] = draft["sku"]
+                official_data["official_specs"] = specs
+
+        # ═══════════════════════════════════════════════════════════════
+        # PHASE 3: Only if no data at all, try minimal AI enrichment
+        # ═══════════════════════════════════════════════════════════════
+        if not official_data.get("official_specs") and not official_data.get("official_description"):
+            try:
+                prompt = f"""
+                You are the Official Verifier for Halilit's Catalog.
+                Provide FACTUAL specifications for this product.
+                DO NOT fabricate data. Only include information you are confident about.
+                
+                PRODUCT: "{product_name}"
+                BRAND: "{draft.get('brand', 'Unknown')}"
+
+                OUTPUT: JSON object ONLY with these keys:
+                - description_short (1 sentence, factual)
+                - specifications (key-value dictionary of 3-5 CONFIRMED specs only)
+                - category (Best fit from: Keyboards & Synthesizers, Pro Audio, Drums, Guitars, DJ, Studio)
+                
+                Do not include markdown blocks. Just the raw JSON.
+                If unsure about a spec, DO NOT include it.
+                """
+
+                response_text = self.think(
+                    prompt, dynamic_system_instruction=active_system_prompt)
+
+                cleaned_text = response_text.replace(
+                    "```json", "").replace("```", "").strip()
+                ai_data = json.loads(cleaned_text)
+
+                official_data = {
+                    "official_specs": ai_data.get("specifications", {}),
+                    "official_description": ai_data.get("description_short"),
+                    "description_short": ai_data.get("description_short"),
+                    "_ai_category_suggestion": ai_data.get("category"),
+                    "_source": "ai_enrichment",
                 }
-            }
+
+                if not isinstance(official_data["official_specs"], dict):
+                    official_data["official_specs"] = {}
+
+            except Exception as e:
+                print(f"   ⚠️ AI Enrichment failed: {e}")
+                official_data = {}
 
         # Force the Halilit image to be the Official Standard if list is empty
         if not draft.get("official_images") and halilit_image:

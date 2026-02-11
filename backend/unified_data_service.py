@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-UNIFIED DATA SERVICE v8.2
+UNIFIED DATA SERVICE v8.3
 
 Consolidated data pipeline that handles:
 1. Product normalization (raw → IngestionProductDraft)
@@ -1050,7 +1050,7 @@ class IngestToFrontendSyncEngine:
             })
 
         index_data = {
-            "version": "7.3.0",
+            "version": "8.3.0",
             "build_timestamp": datetime.now().isoformat(),
             "total_products": len(all_products),
             "total_verified": total_verified,

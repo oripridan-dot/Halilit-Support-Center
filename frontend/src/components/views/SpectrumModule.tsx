@@ -2,8 +2,6 @@ import React from "react";
 import {
   Activity,
   ArrowLeft,
-  ChevronLeft,
-  ChevronRight,
   Maximize2,
   ScanLine,
   Search,
@@ -11,45 +9,40 @@ import {
   Star,
   CheckCircle,
   AlertCircle,
-  ExternalLink,
   Package,
   Tag,
   Zap,
 } from "lucide-react";
-import { useMemo, useState, useCallback } from "react";
-import { resolveProductImage } from "../../lib/imageResolver";
-import { getPrice, getPriceValue } from "../../lib/priceFormatter";
+import { useMemo, useState, useCallback, useEffect } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
-import type { Product } from "../../types";
+import type { ConductorProduct } from "../../hooks/useConductorCatalog";
 import {
   useConductorCatalog,
-  useConductorProductsByCategory,
+  useProductsBySpectrum,
 } from "../../hooks/useConductorCatalog";
-import { getConsolidatedProductCategory } from "../../lib/categoryConsolidator";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
 import { getBrandTheme } from "../../styles/brandThemes";
+import { generateSmartTags } from "../../lib/smartTags";
 
 // --- RELEVANCE ENGINE ---
 // Calculates a 0-100 score for Y-Axis positioning
-const calculateRelevance = (p: Product): number => {
+const calculateRelevance = (p: ConductorProduct): number => {
   let score = 50; // Base score
 
   // 1. Data Quality Bonuses
-  if (p.image_hero || p.image_thumbnail) score += 20;
-  if (p.is_bestseller) score += 15;
-  if (p.price) score += 10;
+  if (p.image_url) score += 20;
+  if (p.price > 0) score += 10;
+  if (p.rating > 0) score += 10;
 
-  // 2. "Flagship" detection (Arbitrary heuristic for demo)
-  // In a real app, this would come from analytics or sales data
-  const price = getPriceValue(p);
-  if (price > 2000 && price < 15000) score += 10; // Sweet spot for pro gear
+  // 2. "Flagship" detection
+  if (p.price > 2000 && p.price < 15000) score += 10;
 
-  // 3. Penalty for "Ghost" items
-  if (!p.image_hero && !p.image_thumbnail) score -= 30;
+  // 3. Penalty for missing images
+  if (!p.image_url) score -= 30;
 
-  // 4. Deterministic "Random" spice based on ID (so it stays consistent)
+  // 4. Deterministic "Random" spice based on ID
   const idSpice =
     (p.id || "").split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
     20;
@@ -58,15 +51,11 @@ const calculateRelevance = (p: Product): number => {
 };
 
 // --- HEALTH CHECK ENGINE ---
-const isProductHealthy = (p: Product): boolean => {
-  // 1. Critical: Must have a name
-  if (!p.product_name || p.product_name.trim().length === 0) return false;
-
-  // 2. Critical: Must have a valid price
-  // (We use getPriceValue which handles multiple fields. If 0, it's effectively TBD or invalid)
-  const price = getPriceValue(p);
-  if (price <= 0) return false;
-
+const isProductHealthy = (p: ConductorProduct): boolean => {
+  // Must have a name
+  if (!p.name || p.name.trim().length === 0) return false;
+  // Must have a price (0 = "Price on request" → still show it)
+  // Only hide truly broken entries
   return true;
 };
 
@@ -124,38 +113,71 @@ const BrandLogo = React.memo(
 BrandLogo.displayName = "BrandLogo";
 
 // --- DATA SOURCES BADGE ---
+// Shows three data pillars: Halilit (commercial) | Official (brand) | Contextual (community)
 const DataSourcesBadge = ({
   sources = [],
   brand,
+  dataTrust,
 }: {
   sources?: string[];
   brand: string;
+  dataTrust?: ConductorProduct["data_trust"];
 }) => {
+  const hasHalilit = sources.includes("halilit");
+  const hasOfficial = sources.includes("official");
+  const hasContextual = sources.includes("contextual");
+
   return (
-    <div className="flex gap-4 items-center mt-1">
-      {/* Halilit Source (Use pseudo-logo since no image file exists) */}
+    <div className="flex gap-3 items-center mt-1">
+      {/* Halilit Source (Golden List — commercial data) */}
       <div
-        className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity"
-        title="Commercial Source: Halilit.com"
+        className={`flex flex-col items-center gap-1 transition-opacity ${hasHalilit ? "opacity-100" : "opacity-30"}`}
+        title="Commercial Source: Halilit.com (Prices, SKU, Availability)"
       >
-        <div className="h-8 w-8 bg-blue-600 rounded-md flex items-center justify-center shadow-lg shadow-blue-900/20 text-white font-black italic text-[10px] tracking-tighter">
-          ZL
+        <div className="h-7 w-16 bg-blue-600 rounded flex items-center justify-center shadow-lg shadow-blue-900/20 overflow-hidden">
+          <img
+            src="/assets/logos/halilit_logo.svg"
+            alt="Halilit"
+            className="h-5 w-auto"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
+              e.currentTarget.parentElement!.innerHTML =
+                '<span class="text-white font-black italic text-[10px] tracking-tight">Halilit</span>';
+            }}
+          />
         </div>
-        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">
-          Halilit
+        <span className="text-[8px] font-bold text-blue-400 uppercase tracking-widest">
+          Prices
         </span>
       </div>
 
-      <div className="h-6 w-px bg-zinc-800" />
+      <div className="h-5 w-px bg-zinc-800" />
 
-      {/* Official Source (Brand Logo) */}
+      {/* Official Source (Brand — specs, descriptions, images) */}
       <div
-        className="flex flex-col items-center gap-1 opacity-80 hover:opacity-100 transition-opacity"
-        title={`Official Source: ${brand} Website`}
+        className={`flex flex-col items-center gap-1 transition-opacity ${hasOfficial ? "opacity-100" : "opacity-30"}`}
+        title={`Official Source: ${brand} (Specs, Description, Images)`}
       >
-        <BrandLogo brand={brand} className="h-8 w-auto max-w-[60px]" />
-        <span className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest">
+        <div className="h-7 w-auto max-w-[60px] flex items-center justify-center">
+          <BrandLogo brand={brand} className="h-7 w-auto max-w-[60px]" />
+        </div>
+        <span className="text-[8px] font-bold text-emerald-400 uppercase tracking-widest">
           Official
+        </span>
+      </div>
+
+      <div className="h-5 w-px bg-zinc-800" />
+
+      {/* Contextual Source (Community — reviews, insights) */}
+      <div
+        className={`flex flex-col items-center gap-1 transition-opacity ${hasContextual ? "opacity-100" : "opacity-30"}`}
+        title="Contextual Source: Reviews, Community Insights"
+      >
+        <div className="h-7 w-7 bg-amber-600/80 rounded flex items-center justify-center shadow-lg shadow-amber-900/20">
+          <Sparkles className="w-3.5 h-3.5 text-amber-100" />
+        </div>
+        <span className="text-[8px] font-bold text-amber-400 uppercase tracking-widest">
+          Context
         </span>
       </div>
     </div>
@@ -164,101 +186,116 @@ const DataSourcesBadge = ({
 
 // --- ENRICHMENT INFO PANEL ---
 const EnrichmentPanel = React.memo(
-  ({
-    product,
-  }: {
-    product: Product & {
-      official_specs?: any;
-      review_data?: any;
-      sources?: string[];
-    };
-  }) => {
+  ({ product }: { product: ConductorProduct }) => {
     return (
-      <div className="space-y-4 text-[11px]">
+      <div className="space-y-3 text-[11px]">
         {/* Official Specs Section */}
-        {product.official_specs &&
-          Object.keys(product.official_specs).length > 0 && (
-            <div className="border-l-2 border-emerald-600/50 bg-emerald-950/30 p-3 rounded-sm">
-              <div className="flex items-center gap-2 mb-2">
-                <CheckCircle className="w-3 h-3 text-emerald-500" />
-                <span className="font-bold text-emerald-400 uppercase tracking-widest">
-                  Official Specs
-                </span>
-              </div>
-              <div className="space-y-1 text-zinc-300">
-                {Object.entries(product.official_specs)
-                  .filter(([key]) => key !== "note" && key !== "extracted_name") // Filter out metadata
-                  .slice(0, 5) // Limit just in case
-                  .map(([key, value]) => (
-                    <div key={key} className="flex gap-1 break-words">
-                      <span className="text-emerald-600 mt-0.5">◆</span>
-                      <span className="text-emerald-500/80 capitalize">
-                        {key.replace(/_/g, " ")}:
-                      </span>
-                      <span className="text-zinc-200">{String(value)}</span>
-                    </div>
-                  ))}
-              </div>
+        {product.specs && Object.keys(product.specs).length > 0 && (
+          <div className="border-l-2 border-emerald-600/50 bg-emerald-950/20 p-2.5 rounded-sm">
+            <div className="flex items-center gap-2 mb-1.5">
+              <CheckCircle className="w-3 h-3 text-emerald-500" />
+              <span className="font-bold text-emerald-400 uppercase tracking-widest text-[9px]">
+                Official Specs
+              </span>
+              <BrandLogo
+                brand={product.brand}
+                className="h-3.5 w-auto ml-auto opacity-60"
+              />
             </div>
-          )}
+            <div className="space-y-0.5 text-zinc-300">
+              {Object.entries(product.specs)
+                .filter(
+                  ([key]) =>
+                    key !== "note" && key !== "extracted_name" && key !== "sku",
+                )
+                .slice(0, 4)
+                .map(([key, value]) => (
+                  <div key={key} className="flex gap-1 break-words">
+                    <span className="text-emerald-600 mt-0.5 text-[8px]">
+                      ◆
+                    </span>
+                    <span className="text-emerald-500/70 capitalize text-[10px]">
+                      {key.replace(/_/g, " ")}:
+                    </span>
+                    <span className="text-zinc-200 text-[10px]">
+                      {String(value)}
+                    </span>
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
 
-        {/* Review Data Section */}
-        {product.review_data && product.review_data.aggregate_rating && (
-          <div className="border-l-2 border-amber-600/50 bg-amber-950/30 p-3 rounded-sm">
-            <div className="flex items-center gap-2 mb-2">
-              <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
-              <span className="font-bold text-amber-400 uppercase tracking-widest">
-                Trusted Reviews
+        {/* Contextual Data Section — Reviews & Community */}
+        {(product.rating > 0 ||
+          (product.audiences && product.audiences.length > 0)) && (
+          <div className="border-l-2 border-amber-600/50 bg-amber-950/20 p-2.5 rounded-sm">
+            <div className="flex items-center gap-2 mb-1.5">
+              <Sparkles className="w-3 h-3 text-amber-500" />
+              <span className="font-bold text-amber-400 uppercase tracking-widest text-[9px]">
+                Community & Context
               </span>
             </div>
-            <div className="space-y-2 text-zinc-300">
-              <div className="flex items-center gap-2">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-2.5 h-2.5 ${
-                        i < Math.floor(product.review_data.aggregate_rating)
-                          ? "fill-amber-400 text-amber-400"
-                          : "text-zinc-700"
-                      }`}
-                    />
-                  ))}
-                </div>
-                <span className="font-bold text-amber-400">
-                  {product.review_data.aggregate_rating.toFixed(1)}
-                </span>
-                <span className="text-zinc-600">
-                  ({product.review_data.total_reviews} reviews)
-                </span>
-              </div>
-              {product.review_data.pros_and_cons?.pros && (
-                <div>
-                  <span className="text-amber-500 text-[10px] font-bold">
-                    Pros:
-                  </span>
-                  <div className="text-[10px] text-zinc-400">
-                    {product.review_data.pros_and_cons.pros
-                      .slice(0, 2)
-                      .join(" • ")}
+            <div className="space-y-1.5 text-zinc-300">
+              {/* Rating */}
+              {product.rating > 0 && (
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-2.5 h-2.5 ${
+                          i < Math.floor(product.rating)
+                            ? "fill-amber-400 text-amber-400"
+                            : "text-zinc-700"
+                        }`}
+                      />
+                    ))}
                   </div>
+                  <span className="font-bold text-amber-400 text-[10px]">
+                    {product.rating.toFixed(1)}
+                  </span>
+                  {product.review_count > 0 && (
+                    <span className="text-zinc-600 text-[10px]">
+                      ({product.review_count})
+                    </span>
+                  )}
+                </div>
+              )}
+              {/* Pros */}
+              {product.pros && product.pros.length > 0 && (
+                <div className="text-[10px] text-zinc-400 leading-snug">
+                  <span className="text-emerald-500">▸</span>{" "}
+                  {product.pros.slice(0, 2).join(" • ")}
+                </div>
+              )}
+              {/* Audiences */}
+              {product.audiences && product.audiences.length > 0 && (
+                <div className="text-[10px]">
+                  <span className="text-amber-500/70 text-[9px] font-bold">
+                    For:{" "}
+                  </span>
+                  <span className="text-zinc-400">
+                    {product.audiences.slice(0, 2).join(" · ")}
+                  </span>
                 </div>
               )}
             </div>
           </div>
         )}
 
-        {/* Data Provenance */}
-        <div className="border-l-2 border-blue-600/50 bg-blue-950/30 p-3 rounded-sm">
-          <div className="flex items-center gap-2 mb-2">
-            <Package className="w-3 h-3 text-blue-500" />
-            <span className="font-bold text-blue-400 uppercase tracking-widest">
+        {/* Data Provenance — Three Pillars */}
+        <div className="border-l-2 border-zinc-700/50 bg-zinc-900/30 p-2.5 rounded-sm">
+          <div className="flex items-center gap-2 mb-1.5">
+            <Package className="w-3 h-3 text-zinc-500" />
+            <span className="font-bold text-zinc-400 uppercase tracking-widest text-[9px]">
               Data Sources
             </span>
           </div>
           <DataSourcesBadge
-            sources={product.sources || ["halilit_direct"]}
+            sources={product.sources || ["halilit"]}
             brand={product.brand || "Unknown"}
+            dataTrust={product.data_trust}
           />
         </div>
       </div>
@@ -271,12 +308,12 @@ EnrichmentPanel.displayName = "EnrichmentPanel";
 // --- BRAND SWIM LANE (memoized to avoid re-rendering all tracks on hover) ---
 interface BrandTrackProps {
   brand: string;
-  products: Product[];
+  products: ConductorProduct[];
   rgbColor: string;
   brandPrimary: string;
   minPrice: number;
   maxPrice: number;
-  onHoverProduct: (product: Product | null) => void;
+  onHoverProduct: (product: ConductorProduct | null) => void;
   onClickProduct: (id: string) => void;
 }
 
@@ -328,7 +365,7 @@ const BrandTrack = React.memo(
         {/* The Track */}
         <div className="flex-1 relative flex items-center px-4">
           {products.map((product) => {
-            const price = getPriceValue(product);
+            const price = product.price;
             const safePrice = price > 0 ? price : 1;
 
             let pct = 0;
@@ -353,15 +390,23 @@ const BrandTrack = React.memo(
                     boxShadow:
                       "0 0 0 1px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)",
                   }}
-                  onClick={() => onClickProduct(product.id!)}
+                  onClick={() => onClickProduct(product.id)}
                   onMouseEnter={() => onHoverProduct(product)}
                 >
-                  <img
-                    src={resolveProductImage(product)}
-                    className="w-full h-full object-contain rounded-sm absolute inset-0 bg-white"
-                    loading="lazy"
-                    alt={product.name}
-                  />
+                  {product.image_url ? (
+                    <img
+                      src={product.image_url}
+                      className="w-full h-full object-contain rounded-sm absolute inset-0 bg-white"
+                      loading="lazy"
+                      alt={product.name}
+                    />
+                  ) : (
+                    <div className="w-full h-full absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
+                      <span className="text-[7px] font-mono text-zinc-400 text-center leading-tight px-1 uppercase tracking-wider">
+                        {product.name.split(" ").slice(0, 2).join(" ")}
+                      </span>
+                    </div>
+                  )}
                   <div
                     className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-200"
                     style={{
@@ -389,53 +434,39 @@ const hexToRgb = (hex: string): string => {
 };
 
 export const SpectrumModule = () => {
-  const { activeTribeId, goToGalaxy, openProductPage } = useNavigationStore();
+  const { activeTribeId, activeSubcategoryId, goToGalaxy, openProductPage } =
+    useNavigationStore();
 
   // --------------------------------------------------------------------------
-  // 1. DATA INGESTION - Using Conductor Verified Data
+  // 1. DATA INGESTION - Using pre-indexed Conductor data (v10)
+  //    Now filtering by SPECTRUM (subcategory) instead of galaxy
   // --------------------------------------------------------------------------
-  // Get all products from Conductor catalog
-  const {
-    products: allProducts,
-    isLoading,
-    error,
-    categories,
-  } = useConductorCatalog();
+  const { isLoading, error, galaxies } = useConductorCatalog();
 
-  // Filter by category (activeTribeId is a galaxy ID like "keys-production")
-  const fetchedProducts = useMemo(() => {
-    if (!activeTribeId) return allProducts;
+  // Get products for this spectrum via pre-computed index — O(1) lookup
+  const { products: fetchedProducts } =
+    useProductsBySpectrum(activeSubcategoryId);
 
-    // Use the consolidator to map each product to its galaxy ID and match
-    return allProducts.filter((p) => {
-      try {
-        const { galaxyId } = getConsolidatedProductCategory(p as any);
-        return galaxyId === activeTribeId;
-      } catch {
-        return false;
+  // Resolve the spectrum display label from galaxies metadata
+  const spectrumLabel = useMemo(() => {
+    if (!activeTribeId || !activeSubcategoryId) return "";
+    for (const g of galaxies) {
+      if (g.id === activeTribeId) {
+        for (const s of g.spectrums) {
+          if (s.id === activeSubcategoryId) return s.label;
+        }
       }
-    });
-  }, [allProducts, activeTribeId]);
-
-  const availableFilters = useMemo(() => {
-    // Extract unique display roles, pricing tiers, etc. from fetched products
-    const filters = new Set<string>();
-    fetchedProducts.forEach((p) => {
-      filters.add(p.display.display_role || "All");
-      filters.add(p.pricing.tier || "All");
-    });
-    return Array.from(filters);
-  }, [fetchedProducts]);
+    }
+    // Fallback: humanize the ID
+    return activeSubcategoryId.replace(/-/g, " ");
+  }, [activeTribeId, activeSubcategoryId, galaxies]);
 
   const rawProducts = useMemo(() => {
     // Backend normalizer guarantees consistent shape — just add relevance score
-    return fetchedProducts.map(
-      (p: any) =>
-        ({
-          ...p,
-          score: calculateRelevance(p as any),
-        }) as Product,
-    );
+    return fetchedProducts.map((p) => ({
+      ...p,
+      score: calculateRelevance(p),
+    }));
   }, [fetchedProducts]);
 
   // --- HEALTH SEGREGATION LAYER ---
@@ -453,13 +484,28 @@ export const SpectrumModule = () => {
   }, [rawProducts]);
 
   // --------------------------------------------------------------------------
-  // 2. THE 1176 ENGINE (Filtering)
+  // 2. THE 1176 ENGINE (Filtering) + SMART TAGS
   // --------------------------------------------------------------------------
   const [activeFilter, setActiveFilter] = useState("ALL");
-  const [hoveredProduct, setHoveredProduct] = useState<Product | null>(null);
+  const [activeSmartTag, setActiveSmartTag] = useState<string | null>(null);
+  const [hoveredProduct, setHoveredProduct] = useState<ConductorProduct | null>(
+    null,
+  );
   const [imageLoadError, setImageLoadError] = useState(false);
 
-  const handleHoverProduct = useCallback((product: Product | null) => {
+  // Generate smart tags from clean products
+  const smartTags = useMemo(() => {
+    return generateSmartTags(cleanProducts, activeSubcategoryId || "");
+  }, [cleanProducts, activeSubcategoryId]);
+
+  // Reset smart tag and tier filter when subcategory changes
+  useEffect(() => {
+    setActiveSmartTag(null);
+    setActiveFilter("ALL");
+    setHoveredProduct(null);
+  }, [activeSubcategoryId]);
+
+  const handleHoverProduct = useCallback((product: ConductorProduct | null) => {
     setHoveredProduct(product);
     setImageLoadError(false);
   }, []);
@@ -473,14 +519,36 @@ export const SpectrumModule = () => {
 
   const filteredProducts = useMemo(() => {
     let base = cleanProducts;
-    if (activeFilter !== "ALL") {
-      base = cleanProducts.filter((p) =>
-        (p.filter_tags || [])?.includes(activeFilter),
-      );
+    // Apply tier filter
+    if (activeFilter === "ALL") {
+      // no tier filter
+    } else if (
+      activeFilter === "entry" ||
+      activeFilter === "mid" ||
+      activeFilter === "pro" ||
+      activeFilter === "flagship"
+    ) {
+      base = base.filter((p) => p.tier === activeFilter);
     }
-    // Sort primarily by Price (X-Axis), secondary by Score (Y-Axis)
-    return base.sort((a, b) => getPriceValue(a) - getPriceValue(b));
-  }, [cleanProducts, activeFilter]);
+    // Apply smart tag filter
+    if (activeSmartTag) {
+      const tag = smartTags.find((t) => t.label === activeSmartTag);
+      if (tag) {
+        base = base.filter((p) => tag.matchedIds.has(p.id));
+      }
+    }
+    // Sort by Price (X-Axis)
+    return base.sort((a, b) => a.price - b.price);
+  }, [cleanProducts, activeFilter, activeSmartTag, smartTags]);
+
+  // Available tier filters from the data
+  const availableFilters = useMemo(() => {
+    const tiers = new Set<string>();
+    cleanProducts.forEach((p) => {
+      if (p.tier) tiers.add(p.tier);
+    });
+    return Array.from(tiers);
+  }, [cleanProducts]);
 
   // --- BRAND MATRIX ENGINE ---
   const brandMatrix = useMemo(() => {
@@ -488,16 +556,14 @@ export const SpectrumModule = () => {
       return { brands: [], minPrice: 0, maxPrice: 0 };
 
     // 1. Calculate Global Range
-    const prices = filteredProducts
-      .map((p) => getPriceValue(p))
-      .filter((p) => p > 0);
+    const prices = filteredProducts.map((p) => p.price).filter((p) => p > 0);
     const minPrice = Math.min(...prices) || 0;
     const maxPrice = Math.max(...prices) || 10000;
 
     // 2. Group by Brand
-    const grouped: Record<string, Product[]> = {};
+    const grouped: Record<string, ConductorProduct[]> = {};
     filteredProducts.forEach((p) => {
-      const brand = p.brand_id || p.brand || "Other";
+      const brand = p.brand || "Other";
       if (!grouped[brand]) grouped[brand] = [];
       grouped[brand].push(p);
     });
@@ -546,7 +612,6 @@ export const SpectrumModule = () => {
   // --------------------------------------------------------------------------
   // 3. THE RENDER
   // --------------------------------------------------------------------------
-  const stripHtml = (html: string) => html.replace(/<[^>]*>?/gm, "");
 
   return (
     <div className="flex flex-col h-full bg-[#0b0c10] text-white overflow-hidden relative">
@@ -564,7 +629,9 @@ export const SpectrumModule = () => {
         <div className="h-8 w-px bg-zinc-800 mx-2" />
         <div className="flex-1 flex items-center gap-3">
           <h2 className="text-2xl font-black italic tracking-tighter text-white uppercase">
-            {activeTribeId?.toUpperCase().replace("-", " ")}
+            {spectrumLabel ||
+              activeSubcategoryId?.replace(/-/g, " ") ||
+              "SPECTRUM"}
           </h2>
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-zinc-500 border border-zinc-800 rounded-full px-3 py-1 bg-black/50">
             <Search className="w-3 h-3" />
@@ -594,9 +661,9 @@ export const SpectrumModule = () => {
         >
           {hoveredProduct ? (
             <div className="w-full h-full flex items-center justify-center relative bg-white/5 p-4 rounded-sm">
-              {!imageLoadError ? (
+              {hoveredProduct.image_url && !imageLoadError ? (
                 <img
-                  src={resolveProductImage(hoveredProduct)}
+                  src={hoveredProduct.image_url}
                   className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-500 will-change-transform"
                   alt="Preview"
                   onError={() => setImageLoadError(true)}
@@ -627,64 +694,71 @@ export const SpectrumModule = () => {
           className="col-span-5 bg-zinc-950 flex flex-col p-6 relative overflow-hidden"
         >
           {hoveredProduct ? (
-            <div className="flex flex-col h-full gap-4 overflow-y-auto custom-scrollbar">
-              {/* Header */}
+            <div className="flex flex-col h-full gap-3 overflow-y-auto custom-scrollbar">
+              {/* Header — Brand logo + product identity */}
               <div className="flex items-center justify-between border-b border-zinc-800 pb-2 shrink-0">
-                <div className="flex flex-col overflow-hidden">
+                <div className="flex flex-col overflow-hidden flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
-                      HALILIT SKU:{" "}
-                      {hoveredProduct.sku ||
-                        (hoveredProduct.id || "").split("-")[1] ||
-                        hoveredProduct.id ||
-                        "N/A"}
+                      SKU: {hoveredProduct.id || "N/A"}
                     </span>
                   </div>
-                  <h1 className="text-2xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
+                  <h1 className="text-xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
                     {hoveredProduct.name}
                   </h1>
-                  <div className="text-xs text-amber-500 font-bold uppercase tracking-widest">
-                    {hoveredProduct.brand ||
-                      hoveredProduct.brand_id ||
-                      "Unknown Brand"}
-                  </div>
+                </div>
+                {/* Brand logo beside name */}
+                <div className="flex-shrink-0 ml-3">
+                  <BrandLogo
+                    brand={hoveredProduct.brand}
+                    className="h-10 w-auto max-w-[80px] opacity-80"
+                  />
                 </div>
               </div>
 
               {/* Description */}
-              <div className="text-xs text-zinc-400 font-sans leading-relaxed line-clamp-4 border-l-2 border-zinc-800 pl-3 shrink-0">
-                {hoveredProduct.description_short ||
-                  stripHtml(
-                    hoveredProduct.description_full ||
-                      hoveredProduct.description || // v6.0 field
-                      "No description available.",
-                  )}
-              </div>
-
-              {/* Halilit Specs Grid */}
-              {hoveredProduct.specs && hoveredProduct.specs.length > 0 && (
-                <div>
-                  <div className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-2">
-                    Halilit Specs
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 text-[10px] font-mono text-zinc-500">
-                    {hoveredProduct.specs.slice(0, 4).map((spec, i) => (
-                      <div
-                        key={i}
-                        className="flex flex-col bg-zinc-900/50 p-2 border border-zinc-800/50 rounded-sm"
-                      >
-                        <span className="text-amber-500/50 uppercase text-[9px] mb-1">
-                          {spec.name}
-                        </span>
-                        <span className="text-zinc-300 truncate">
-                          {spec.value}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+              {(hoveredProduct.description_short ||
+                hoveredProduct.description) && (
+                <div className="text-[11px] text-zinc-400 font-sans leading-relaxed line-clamp-3 border-l-2 border-zinc-800 pl-3 shrink-0">
+                  {hoveredProduct.description_short ||
+                    hoveredProduct.description}
                 </div>
               )}
+
+              {/* Specs Grid — more compact */}
+              {hoveredProduct.specs &&
+                Object.keys(hoveredProduct.specs).length > 0 && (
+                  <div>
+                    <div className="text-[9px] font-bold text-zinc-500 uppercase tracking-widest mb-1.5 flex items-center gap-1.5">
+                      <CheckCircle className="w-2.5 h-2.5 text-emerald-500" />
+                      Specifications
+                    </div>
+                    <div className="grid grid-cols-2 gap-1.5 text-[10px] font-mono text-zinc-500">
+                      {Object.entries(hoveredProduct.specs)
+                        .filter(
+                          ([key]) =>
+                            key !== "sku" &&
+                            key !== "note" &&
+                            key !== "extracted_name",
+                        )
+                        .slice(0, 4)
+                        .map(([key, value], i) => (
+                          <div
+                            key={i}
+                            className="flex flex-col bg-zinc-900/50 p-1.5 border border-zinc-800/50 rounded-sm"
+                          >
+                            <span className="text-emerald-500/50 uppercase text-[8px] mb-0.5 truncate">
+                              {key.replace(/_/g, " ")}
+                            </span>
+                            <span className="text-zinc-300 truncate">
+                              {String(value)}
+                            </span>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                )}
 
               {/* Enrichment Data Section */}
               <EnrichmentPanel product={hoveredProduct} />
@@ -712,7 +786,9 @@ export const SpectrumModule = () => {
               {/* Price Section */}
               <div className="space-y-2">
                 <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
-                  {getPrice(hoveredProduct)}
+                  {hoveredProduct.price > 0
+                    ? `₪${hoveredProduct.price.toLocaleString("he-IL")}`
+                    : "Price on request"}
                 </div>
                 <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
                   Price (VAT Included)
@@ -730,7 +806,9 @@ export const SpectrumModule = () => {
                       Category
                     </div>
                     <div className="text-zinc-200 font-semibold truncate">
-                      {hoveredProduct.category || "Other"}
+                      {hoveredProduct.spectrum_id?.replace(/-/g, " ") ||
+                        hoveredProduct.category ||
+                        "Other"}
                     </div>
                   </div>
                 </div>
@@ -744,17 +822,6 @@ export const SpectrumModule = () => {
                       </div>
                       <div className="text-zinc-200 font-semibold capitalize">
                         {hoveredProduct.tier}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {hoveredProduct.is_bestseller && (
-                  <div className="flex items-start gap-2">
-                    <Star className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />
-                    <div className="flex-1">
-                      <div className="text-zinc-500 uppercase text-[9px] tracking-widest">
-                        Bestseller
                       </div>
                     </div>
                   </div>
@@ -828,28 +895,77 @@ export const SpectrumModule = () => {
         )}
       </div>
 
-      {/* --- BOTTOM DECK: 1176 FILTER CONTROLS --- */}
+      {/* --- BOTTOM DECK: SMART TAG FILTERS + 1176 TIER CONTROLS --- */}
       <Surface
         variant="panel"
-        className="h-16 flex items-center px-4 gap-4 z-30 !bg-zinc-900/90 backdrop-blur-md border-t border-zinc-800 shadow-2xl shrink-0"
+        className="flex flex-col gap-0 z-30 !bg-zinc-900/90 backdrop-blur-md border-t border-zinc-800 shadow-2xl shrink-0"
       >
-        <div className="flex items-center justify-center gap-1 overflow-x-auto no-scrollbar py-2 mask-linear-fade flex-1">
-          <Control
-            variant="1176"
-            label="ALL"
-            active={activeFilter === "ALL"}
-            onClick={() => setActiveFilter("ALL")}
-          />
-          <div className="w-px h-4 bg-zinc-800 mx-1" />
-          {availableFilters.map((filter) => (
+        {/* Smart Tags Row */}
+        {smartTags.length > 0 && (
+          <div className="flex items-center gap-1 overflow-x-auto no-scrollbar px-4 py-2 border-b border-zinc-800/50">
+            <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest mr-2 shrink-0">
+              Filter
+            </span>
+            <button
+              className={`px-3 py-1.5 rounded-full text-[11px] font-bold tracking-wide transition-all duration-200 shrink-0 ${
+                !activeSmartTag
+                  ? "bg-blue-600 text-white shadow-lg shadow-blue-900/30"
+                  : "bg-zinc-800/80 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200"
+              }`}
+              onClick={() => setActiveSmartTag(null)}
+            >
+              ALL
+            </button>
+            {smartTags.map((tag) => (
+              <button
+                key={tag.id}
+                className={`px-3 py-1.5 rounded-full text-[11px] font-bold tracking-wide transition-all duration-200 shrink-0 ${
+                  activeSmartTag === tag.label
+                    ? "bg-amber-500 text-black shadow-lg shadow-amber-900/30"
+                    : "bg-zinc-800/80 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200"
+                }`}
+                onClick={() =>
+                  setActiveSmartTag(
+                    activeSmartTag === tag.label ? null : tag.label,
+                  )
+                }
+                title={`${tag.count} products`}
+              >
+                {tag.label}
+                <span
+                  className={`ml-1.5 text-[9px] ${
+                    activeSmartTag === tag.label
+                      ? "text-black/60"
+                      : "text-zinc-600"
+                  }`}
+                >
+                  {tag.count}
+                </span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Tier Filter Row */}
+        <div className="flex items-center px-4 gap-4 h-12">
+          <div className="flex items-center justify-center gap-1 overflow-x-auto no-scrollbar py-2 mask-linear-fade flex-1">
             <Control
-              key={filter}
               variant="1176"
-              label={filter}
-              active={activeFilter === filter}
-              onClick={() => setActiveFilter(filter)}
+              label="ALL"
+              active={activeFilter === "ALL"}
+              onClick={() => setActiveFilter("ALL")}
             />
-          ))}
+            <div className="w-px h-4 bg-zinc-800 mx-1" />
+            {availableFilters.map((filter) => (
+              <Control
+                key={filter}
+                variant="1176"
+                label={filter}
+                active={activeFilter === filter}
+                onClick={() => setActiveFilter(filter)}
+              />
+            ))}
+          </div>
         </div>
       </Surface>
     </div>

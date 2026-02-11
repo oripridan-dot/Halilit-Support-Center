@@ -75,6 +75,7 @@ const SPECTRUM_IMAGES: Record<string, string> = {
   stands: "/data/category_thumbnails/accessories-stands_thumb.webp",
   "cases-bags": "/data/category_thumbnails/accessories-cases_thumb.webp",
   "power-supplies": "/data/category_thumbnails/accessories-power_thumb.webp",
+  "general-accessories": "/data/category_thumbnails/accessories-cables_thumb.webp",
 };
 
 // Brand Colors
@@ -134,6 +135,7 @@ const SPECTRUM_GLOW: Record<string, string> = {
   stands: GLOW_COLORS.roland,
   "cases-bags": GLOW_COLORS.roland,
   "power-supplies": GLOW_COLORS.boss,
+  "general-accessories": GLOW_COLORS.roland,
 };
 
 // Map Galaxy ID -> Lucide Icon Name

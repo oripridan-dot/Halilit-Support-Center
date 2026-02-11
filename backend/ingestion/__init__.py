@@ -1,5 +1,5 @@
 """
-INGESTION PIPELINE v6.0
+INGESTION PIPELINE v8.3
 
 High-level imports for the complete refactored ingestion system.
 

@@ -10,6 +10,7 @@ from typing import Dict, Any, Tuple, Optional
 from .ingestion_skills import (
     HarvestSkill, EnrichSkill, TierSkill, PrepareSkill, ValidateSkill, ApproveSkill
 )
+from .mcp_tool_skill import MCPToolSkill
 
 
 class SkillRegistry:
@@ -35,6 +36,8 @@ class SkillRegistry:
         self.register('prepare', PrepareSkill(self.orchestrator))
         self.register('validate', ValidateSkill(self.orchestrator))
         self.register('approve', ApproveSkill(self.orchestrator))
+        # MCP bridge skill — routes to external MCP servers
+        self.register('mcp_tool', MCPToolSkill(self.orchestrator))
 
     def register(self, name: str, skill):
         """Register a new skill."""

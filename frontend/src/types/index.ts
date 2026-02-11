@@ -86,7 +86,7 @@ export type Tier = PricingTier;
 
 /**
  * Get product price formatted for display
- * @deprecated Use getPrice() from lib/priceFormatter.ts instead
+ * @deprecated Prefer inline formatting in components
  */
 export function formatPrice(product: Product): string {
   const price = (product as any).price || product.pricing?.price_il || product.price_il;

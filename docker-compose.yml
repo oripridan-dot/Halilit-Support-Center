@@ -297,6 +297,80 @@ services:
   #     - halilit-network
   #   restart: unless-stopped
 
+  # =========================================================================
+  # MCP Servers (optional — enable with: docker-compose --profile mcp up -d)
+  # =========================================================================
+  mcp-catalog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_mcp_catalog
+    command: python3 backend/mcp/servers/catalog_db.py
+    ports:
+      - "8102:8102"
+    volumes:
+      - ./backend/data:/app/backend/data:ro
+      - ./frontend/public/data:/app/frontend/public/data:ro
+    environment:
+      MCP_CATALOG_PORT: "8102"
+      PYTHONUNBUFFERED: "1"
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - mcp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  mcp-web-search:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_mcp_web_search
+    command: python3 backend/mcp/servers/web_search.py
+    ports:
+      - "8100:8100"
+    environment:
+      MCP_SEARCH_PORT: "8100"
+      BRAVE_API_KEY: ${BRAVE_API_KEY:-}
+      SERPER_API_KEY: ${SERPER_API_KEY:-}
+      PYTHONUNBUFFERED: "1"
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - mcp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  mcp-image-tools:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: halilit_mcp_image_tools
+    command: python3 backend/mcp/servers/image_tools.py
+    ports:
+      - "8101:8101"
+    environment:
+      MCP_IMAGE_PORT: "8101"
+      PYTHONUNBUFFERED: "1"
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - mcp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
 volumes:
   redis_data:
     driver: local

@@ -1,5 +1,5 @@
 """
-FastAPI Task Router for Halilit Support Center v8.2
+FastAPI Task Router for Halilit Support Center v8.3
 
 Provides async HTTP endpoints for queuing and monitoring distributed tasks:
 - POST /api/v8/tasks/harvest/{brand} - Queue harvest

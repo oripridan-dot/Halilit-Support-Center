@@ -154,6 +154,10 @@ PYTHONPATH=. python3 -m pytest backend/tests/ -v
 - **Documentation overhaul**: Cleaned all docs, removed stale references to nonexistent files, accurate metrics
 - **Lean docs**: Replaced 400+ line ingestion README index (referencing deleted docs) with concise module reference
 - **Version consistency**: All files aligned to v8.3
+- **Removed dead code**: Deleted legacy `product_normalizer_v8.py`, 5 unused frontend modules
+- **Fixed bugs**: Restored broken `show_catalog()` in conductor CLI, fixed WebSocket startup race condition
+- **Cleanup**: Removed 3 unused Python packages (pandas, colorlog, prometheus-client), fixed phantom TS import
+- **Frontend**: Fixed missing favicon, CSP double-semicolon, updated data source comment
 
 ### v8.2 (February 10, 2026)
 
