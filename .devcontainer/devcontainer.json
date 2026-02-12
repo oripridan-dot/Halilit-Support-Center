@@ -1,13 +1,15 @@
 {
-  "name": "Halilit Support Center v5.0",
+  "name": "Halilit Support Center v8.3",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.11"
-    }
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "containerEnv": {
-    "NODE_OPTIONS": "--max-old-space-size=2048"
+    "NODE_OPTIONS": "--max-old-space-size=2048",
+    "PYTHONPATH": "${containerWorkspaceFolder}"
   },
   "customizations": {
     "vscode": {
@@ -25,17 +27,33 @@
         "files.eol": "\n",
         "typescript.tsserver.maxTsServerMemory": 2048,
         "python.analysis.memory.keepLibraryAst": false,
-        "python.analysis.memory.keepLibraryLocalVariables": false
+        "python.analysis.memory.keepLibraryLocalVariables": false,
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   },
-  "postCreateCommand": "npm install -g pnpm",
-  "postStartCommand": "cd frontend && pnpm install",
-  "forwardPorts": [5173],
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "forwardPorts": [5173, 8000, 6379, 5555, 5432],
   "portsAttributes": {
     "5173": {
-      "label": "Frontend",
+      "label": "Frontend (Vite)",
       "onAutoForward": "notify"
+    },
+    "8000": {
+      "label": "Backend (FastAPI)",
+      "onAutoForward": "notify"
+    },
+    "6379": {
+      "label": "Redis",
+      "onAutoForward": "ignore"
+    },
+    "5555": {
+      "label": "Flower (Celery Monitor)",
+      "onAutoForward": "silent"
+    },
+    "5432": {
+      "label": "PostgreSQL",
+      "onAutoForward": "ignore"
     }
   }
 }
