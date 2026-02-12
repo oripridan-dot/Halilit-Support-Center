@@ -71,8 +71,7 @@ backend/
 ├── ingestion_versioning.py        # Pipeline version tracking
 ├── api/                           # Routers (copilot, tasks, streams, ws)
 ├── ingestion/                     # 7-phase pipeline modules
-├── skills/                        # Modular skill framework
-├── agents/                        # Multi-cycle runner & perfection map
+├── agents/                        # Perfection map & quality tracking
 ├── scripts/                       # Utilities (type gen, search index, images)
 ├── config/                        # Brand tiers, DB schema
 ├── tests/                         # Test suites

@@ -151,7 +151,6 @@ docker-compose up -d          # Start Redis + Postgres + Flower + Workers
 | **Learning System**    | `unified_learning_system.py`    | Agent learning & improvement loops       |
 | **Task Queue**         | `celery_config.py` + `tasks.py` | Async distributed execution              |
 | **Ingestion Pipeline** | `ingestion/orchestrator.py`     | 7-phase pipeline orchestration           |
-| **Skills Framework**   | `skills/`                       | Modular verified capabilities            |
 | **Visual Validator**   | `ingestion/visual_validator.py` | Image verification via Gemini 2.0-flash  |
 | **API Server**         | `server.py`                     | FastAPI + enriched catalog               |
 | **CLI**                | `conductor_main.py`             | Command-line interface                   |

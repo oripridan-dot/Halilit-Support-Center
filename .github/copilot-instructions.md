@@ -6,13 +6,14 @@
 
 ### The Three Authorized Data Sources
 
-| # | Scout | Source | Owns | Rules |
-|---|-------|--------|------|-------|
-| 1 | **CommercialScout** | Halilit.com | Golden List, Prices (IL+Eilat), SKUs, Product existence | If not on Halilit → does NOT exist. Prices ONLY from here. |
-| 2 | **OfficialScout** | Brand's official product page | Titles, Descriptions, Specs, Media, Documentation | Single source of truth for product knowledge. ONLY from official brand page. |
-| 3 | **ContextualScout** | 3+ trusted review websites | Pros/Cons, Real-world experience, User insights, Ratings | AT LEAST 3 well-trusted review sites per product. Product-specific only. |
+| #   | Scout               | Source                        | Owns                                                     | Rules                                                                        |
+| --- | ------------------- | ----------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 1   | **CommercialScout** | Halilit.com                   | Golden List, Prices (IL+Eilat), SKUs, Product existence  | If not on Halilit → does NOT exist. Prices ONLY from here.                   |
+| 2   | **OfficialScout**   | Brand's official product page | Titles, Descriptions, Specs, Media, Documentation        | Single source of truth for product knowledge. ONLY from official brand page. |
+| 3   | **ContextualScout** | 3+ trusted review websites    | Pros/Cons, Real-world experience, User insights, Ratings | AT LEAST 3 well-trusted review sites per product. Product-specific only.     |
 
 ### Zero Tolerance Policy
+
 - **NO synthesized/generated data** — empty fields are BETTER than fake fields
 - **NO mock data** in any pipeline stage
 - **NO AI-generated specs** presented as real specs
@@ -23,6 +24,7 @@
 - Confidence score requires data from **ALL 3 sources** to reach "HIGH"
 
 ### How It Works
+
 1. CommercialScout scrapes Halilit → produces the **Golden List** (what exists + prices)
 2. OfficialScout uses the Golden List → scrapes brand pages for **real specs, media, docs**
 3. ContextualScout uses the Golden List → fetches **real reviews from 3+ trusted sites**
@@ -77,8 +79,7 @@ backend/
 ├── auto_sync_engine.py            # Real-time SSE sync to frontend
 ├── api/                           # Routers (copilot, tasks, streams, ws)
 ├── ingestion/                     # 7-phase pipeline + visual validator
-├── skills/                        # Modular verified capabilities
-├── agents/                        # Multi-cycle runner & perfection map
+├── agents/                        # Perfection map & quality tracking
 ├── scripts/                       # Utilities (type gen, search index, workers)
 ├── data/                          # Generated pipeline data (gitignored)
 └── tests/                         # Test suite
@@ -113,7 +114,6 @@ frontend/
 ### Backend (Python)
 
 - **Agents**: Trinity Swarm in `unified_agent_orchestrator.py` — do NOT hardcode into Agent classes
-- **Skills**: Modular capabilities in `backend/skills/`
 - **Tasks**: Async operations via Celery tasks in `tasks.py`
 - **Data Models**: Pydantic v2 (`IngestionProductDraft`, `AuditReport`)
 - **Imports**: Use `backend.` prefix for all internal imports (e.g., `from backend.celery_config import celery_app`)

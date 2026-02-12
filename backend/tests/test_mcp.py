@@ -414,42 +414,6 @@ class TestMCPStartup:
             mock_registry.close.assert_awaited_once()
 
 
-# ═══════════════════════════ SKILL TESTS ═══════════════════════════
-
-
-class TestMCPToolSkill:
-    """Test the MCP skill bridge."""
-
-    def test_skill_missing_tool_param(self):
-        from backend.skills.mcp_tool_skill import MCPToolSkill
-
-        skill = MCPToolSkill()
-        success, result = skill.execute({"arguments": {}})
-        assert success is False
-        assert "tool" in result.lower()
-
-    def test_skill_inherits_base(self):
-        from backend.skills.mcp_tool_skill import MCPToolSkill
-        from backend.skills.base_skill import BaseSkill
-
-        skill = MCPToolSkill()
-        assert isinstance(skill, BaseSkill)
-
-    def test_skill_metadata(self):
-        from backend.skills.mcp_tool_skill import SKILL_META
-
-        assert SKILL_META["name"] == "mcp_tool"
-        assert "tool" in SKILL_META["params_schema"]
-
-    def test_skill_registered_in_registry(self):
-        """Verify mcp_tool is in the SkillRegistry default skills."""
-        from backend.skills.skill_registry import SkillRegistry
-
-        registry = SkillRegistry()
-        skills = registry.list_skills()
-        assert "mcp_tool" in skills
-
-
 # ═══════════════════════════ CATALOG SERVER TESTS ═══════════════════════════
 
 
