@@ -15,8 +15,11 @@ Key changes from v8:
 
 import json
 import logging
+import os
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+
+from backend.catalog_validator import validate_product as _validate_product
 
 logger = logging.getLogger(__name__)
 
@@ -338,6 +341,17 @@ _BRAND_DEFAULT_SPECTRUM: Dict[str, str] = {
     "tombo": "folk-instruments", "oberheim": "synthesizers",
     "rogers": "acoustic-drums", "sonarworks": "studio-monitors",
     "turkish": "cymbals",
+    # Fourth wave — canonical brand name variants
+    "allen & heath": "live-mixers",
+    "innovative percussion": "sticks-heads",
+    "jasmine": "acoustic-guitars",
+    "m audio": "audio-interfaces", "m-audio": "audio-interfaces",
+    "marimba one": "percussion",
+    "maybach": "electric-guitars",
+    "mjc ironworks": "snares",
+    "playdifferently": "dj-equipment",
+    "santos martinez": "acoustic-guitars",
+    "sequential": "synthesizers",
 }
 
 
@@ -368,6 +382,114 @@ _HEBREW_KEYWORD_SPECTRUM: List[Tuple[str, str]] = [
     ("תאורה", "lighting"), ("תאורת במה", "lighting"),
     ("יוקולילי", "folk-instruments"), ("אוקלילי", "folk-instruments"),
 ]
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# BRAND NAME NORMALIZATION — Consistent casing & dedup
+# ═══════════════════════════════════════════════════════════════════════════
+
+# Canonical display names for brands (lowercase key → proper display name)
+_BRAND_CANONICAL_NAMES: Dict[str, str] = {
+    "adam audio": "ADAM Audio", "adam-audio": "ADAM Audio",
+    "akai": "Akai Professional", "akai professional": "Akai Professional",
+    "allen heath": "Allen & Heath", "allen & heath": "Allen & Heath",
+    "allen  heath": "Allen & Heath",
+    "ampeg": "Ampeg", "amphion": "Amphion", "antigua": "Antigua",
+    "arturia": "Arturia", "asm": "ASM", "adams": "Adams",
+    "alesis": "Alesis",
+    "ashdown engineering": "Ashdown Engineering",
+    "audio-technica": "Audio-Technica", "audio technica": "Audio-Technica",
+    "austrian audio": "Austrian Audio", "avid": "Avid",
+    "behringer": "Behringer", "bespeco": "Bespeco",
+    "blackstar": "Blackstar", "boss": "Boss",
+    "bohemian ukuleles guitars basses": "Bohemian",
+    "breedlove guitars": "Breedlove", "breedlove": "Breedlove",
+    "casio": "Casio", "clavia": "Clavia",
+    "cordoba guitars": "Cordoba", "cordoba": "Cordoba",
+    "denon dj": "Denon DJ", "denon-dj": "Denon DJ",
+    "dixon": "Dixon", "drumdots": "DrumDots", "dw": "DW",
+    "dynaudio": "Dynaudio",
+    "eaw eastern acoustic works": "EAW", "eaw": "EAW",
+    "eden": "Eden", "electro-harmonix": "Electro-Harmonix",
+    "electro harmonix": "Electro-Harmonix",
+    "encore": "Encore", "esp": "ESP",
+    "eve audio": "EVE Audio", "eventide": "Eventide",
+    "expressive e": "Expressive E",
+    "fender": "Fender", "fender studio": "Fender",
+    "focusrite": "Focusrite",
+    "foxgear guitar effects and pedals": "FoxGear", "foxgear": "FoxGear",
+    "fusion": "Fusion", "fzone": "FZone",
+    "genelec": "Genelec", "gibson": "Gibson",
+    "gon bops percussion": "Gon Bops", "gon bops": "Gon Bops",
+    "guild": "Guild",
+    "headliner la equipment stands": "Headliner", "headliner": "Headliner",
+    "headrush fx": "HeadRush", "headrush": "HeadRush",
+    "heritage audio": "Heritage Audio", "hiwatt": "Hiwatt",
+    "innovative percussion": "Innovative Percussion",
+    "jasmine guitars": "Jasmine", "jasmine": "Jasmine",
+    "keith mcmillen instruments kmi": "Keith McMillen", "keith mcmillen": "Keith McMillen",
+    "krk systems": "KRK", "krk": "KRK",
+    "lag guitars": "LAG Guitars", "lag": "LAG Guitars",
+    "lynx": "Lynx",
+    "m audio": "M-Audio", "m-audio": "M-Audio",
+    "mackie": "Mackie", "magma": "Magma",
+    "maestro guitar pedals and effects": "Maestro", "maestro": "Maestro",
+    "marimba one": "Marimba One",
+    "maton guitars": "Maton", "maton": "Maton",
+    "maybach": "Maybach", "medeli": "Medeli",
+    "mjc ironworks": "MJC Ironworks",
+    "montarbo": "Montarbo", "moog": "Moog",
+    "nord": "Nord", "oberheim": "Oberheim",
+    "on stage": "On-Stage", "on-stage": "On-Stage",
+    "oscar schmidt acoustic guitars": "Oscar Schmidt", "oscar schmidt": "Oscar Schmidt",
+    "paiste cymbals": "Paiste", "paiste": "Paiste",
+    "pearl": "Pearl",
+    "perri s leathers": "Perri's", "perris": "Perri's",
+    "playdifferently": "PLAYdifferently",
+    "presonus": "PreSonus",
+    "rapier 33 electric guitars": "Rapier", "rapier": "Rapier",
+    "rcf": "RCF", "regal tip": "Regal Tip",
+    "remo": "Remo", "rhythm tech": "Rhythm Tech",
+    "rode": "Rode", "rogers": "Rogers", "roland": "Roland",
+    "santos martinez": "Santos Martinez",
+    "sequential": "Sequential", "show": "Show",
+    "shure": "Shure",
+    "solar guitars": "Solar Guitars", "solar": "Solar Guitars",
+    "sonarworks": "Sonarworks", "spector": "Spector",
+    "steinberg": "Steinberg",
+    "studio logic": "Studiologic", "studiologic": "Studiologic",
+    "tombo": "Tombo", "topp pro": "Topp Pro",
+    "turkish": "Turkish",
+    "ultimate support": "Ultimate Support",
+    "universal audio": "Universal Audio", "universal-audio": "Universal Audio",
+    "v moda": "V-MODA", "v-moda": "V-MODA",
+    "vintage": "Vintage", "warm audio": "Warm Audio",
+    "washburn": "Washburn", "xotic": "Xotic", "xvive": "Xvive",
+}
+
+
+def _normalize_brand_name(raw_brand: str) -> str:
+    """Normalize brand name to canonical display form.
+
+    Resolves case inconsistencies, hyphen/space variants, and verbose
+    file-name-style brand names (e.g., 'foxgear guitar effects and pedals' → 'FoxGear').
+    """
+    if not raw_brand:
+        return "Unknown"
+    key = raw_brand.lower().strip().replace("-", " ").replace("  ", " ")
+    # Direct lookup
+    if key in _BRAND_CANONICAL_NAMES:
+        return _BRAND_CANONICAL_NAMES[key]
+    # Try with hyphens replaced
+    if raw_brand.lower().strip() in _BRAND_CANONICAL_NAMES:
+        return _BRAND_CANONICAL_NAMES[raw_brand.lower().strip()]
+    # Fallback: title-case the raw string
+    return raw_brand.strip().title() if raw_brand.strip() else "Unknown"
+
+
+def _brand_dedup_key(brand: str) -> str:
+    """Create a dedup key from a brand name (lowercase, no hyphens/spaces)."""
+    return brand.lower().strip().replace("-", "").replace(" ", "").replace("&", "")
 
 
 def _extract_english_name(name: str) -> str:
@@ -593,7 +715,8 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     if not name:
         return None
 
-    brand = (p.get("brand") or fallback_brand or "Unknown").strip()
+    raw_brand = (p.get("brand") or fallback_brand or "Unknown").strip()
+    brand = _normalize_brand_name(raw_brand)
 
     raw_category = (
         p.get("category")
@@ -730,18 +853,8 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     pros = review_data.get("pros_and_cons", {}).get("pros") or []
     cons = review_data.get("pros_and_cons", {}).get("cons") or []
 
-    # Quality score
-    quality = 0
-    if name:
-        quality += 20
-    if price > 0:
-        quality += 25
-    if image_url:
-        quality += 25
-    if description:
-        quality += 15
-    if specs:
-        quality += 15
+    # Quality score — use smart validator that scores on what the UI renders
+    # (computed after the full dict is built, see below)
 
     # Brand logo
     brand_slug = brand.lower().replace(" ", "-")
@@ -796,7 +909,7 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     # Pre-computed search text
     search_text = f"{name} {brand} {raw_category} {raw_subcategory} {description_short}".lower()
 
-    return {
+    product_dict = {
         "id": str(pid),
         "name": name,
         "brand": brand,
@@ -822,7 +935,9 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "pros": pros,
         "cons": cons,
         "contextual_data": contextual_data,
-        "quality_score": quality,
+        "quality_score": 0,  # computed below
+        "data_status": "MINIMAL",  # computed below
+        "data_missing": [],  # computed below
         "halilit_url": halilit_url,
         "official_url": official_url,
         "sources": sources,
@@ -830,15 +945,28 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "search_text": search_text,
     }
 
+    # Smart quality scoring — scores on what the UI actually renders
+    validation = _validate_product(product_dict)
+    product_dict["quality_score"] = validation["score"]
+    product_dict["data_status"] = validation["status"]
+    product_dict["data_missing"] = validation["missing"]
+
+    return product_dict
+
 
 # ═══════════════════════════════════════════════════════════════════════════
 # CATALOG BUILDER — Returns pre-indexed catalog for instant frontend use
 # ═══════════════════════════════════════════════════════════════════════════
 
-def build_catalog(data_dir: str) -> dict:
+# Feature flag — set ENABLE_PRODUCT_GRAPH=true to activate family/relationship discovery
+ENABLE_PRODUCT_GRAPH = os.environ.get(
+    "ENABLE_PRODUCT_GRAPH", "true").lower() in ("1", "true", "yes")
+
+
+def build_catalog(data_dir: str, resolve: bool = True) -> dict:
     """
-    Read all brand JSON files, normalize every product, and return
-    a pre-indexed catalog ready for direct frontend consumption.
+    Read all brand JSON files, normalize every product, optionally resolve
+    missing data, and return a pre-indexed catalog with health metrics.
     """
     data_path = Path(data_dir)
     if not data_path.exists():
@@ -876,7 +1004,7 @@ def build_catalog(data_dir: str) -> dict:
                 # Dedup: check for same brand + English model name
                 eng_model = _extract_english_name(
                     product["name"]).lower().strip()
-                brand_key = product["brand"].lower().strip()
+                brand_key = _brand_dedup_key(product["brand"])
                 dedup_key = f"{brand_key}::{eng_model}" if eng_model else ""
 
                 if dedup_key and dedup_key in brand_model_map:
@@ -913,12 +1041,76 @@ def build_catalog(data_dir: str) -> dict:
 
     products = list(products_map.values())
 
+    # Smart resolution — auto-fill missing data using peer heuristics
+    if resolve and products:
+        from backend.catalog_validator import resolve_catalog, validate_catalog
+        products, resolve_summary = resolve_catalog(products)
+        logger.info(
+            f"Resolver: improved {resolve_summary['products_improved']} products "
+            f"with {resolve_summary['total_changes']} changes"
+        )
+
     # Sort: products with price & image first, then by quality
     products.sort(key=lambda p: (
         -(1 if p["price"] > 0 else 0),
         -(1 if p["image_url"] else 0),
         -p["quality_score"],
     ))
+
+    # ── Product Graph: Family & Relationship Discovery ──
+    graph_indexes = {}
+    graph_stats = {}
+    if ENABLE_PRODUCT_GRAPH:
+        try:
+            from backend.product_graph import ProductGraph
+            from backend.product_graph_store import get_graph_store
+            from backend.ingestion.relationship_discovery import (
+                get_relationship_discovery,
+            )
+
+            # Build graph from flat products
+            graph = ProductGraph.from_flat_products(products)
+
+            # Load persisted families/relationships (curated data survives rebuilds)
+            store = get_graph_store()
+            graph = store.load_graph_overlay(graph)
+
+            # Run pattern-based discovery for NEW products not yet in families
+            discovery = get_relationship_discovery(use_ai=False)
+            graph = discovery.discover_all(graph)
+
+            # Persist discovered graph back to JSON snapshot
+            store.export_json_snapshot(graph)
+
+            # Merge graph data back into flat products
+            for i, p in enumerate(products):
+                pid = p["id"]
+                if pid in graph.products:
+                    cp = graph.products[pid]
+                    p["family_id"] = cp.family_id
+                    p["variant_key"] = cp.variant.variant_key if cp.variant else None
+                    p["variant_is_default"] = cp.variant.is_default if cp.variant else None
+
+            # Build graph-specific indexes
+            product_id_to_idx = {p["id"]: i for i, p in enumerate(products)}
+            graph_indexes = graph.to_catalog_indexes(product_id_to_idx)
+            graph_stats = graph.get_graph_stats()
+
+            logger.info(
+                f"Product graph: {graph_stats.get('total_families', 0)} families, "
+                f"{graph_stats.get('total_relationships', 0)} relationships, "
+                f"{graph_stats.get('products_in_families', 0)} products in families"
+            )
+        except Exception as e:
+            logger.warning(f"Product graph discovery failed (non-fatal): {e}")
+            graph_indexes = {"by_family": {}, "relationships": {}}
+            graph_stats = {}
+    else:
+        # Graph disabled — add empty fields for consistent shape
+        for p in products:
+            p["family_id"] = None
+            p["variant_key"] = None
+            p["variant_is_default"] = None
 
     # Build indexes
     by_galaxy: Dict[str, List[int]] = {}
@@ -941,6 +1133,10 @@ def build_catalog(data_dir: str) -> dict:
         spectrum_counts[sid] = spectrum_counts.get(sid, 0) + 1
         brand_counts[b] = brand_counts.get(b, 0) + 1
 
+    # Catalog health metrics
+    from backend.catalog_validator import validate_catalog as _validate_catalog
+    health = _validate_catalog(products)
+
     metadata = {
         "total_products": len(products),
         "brands": sorted(brands_found),
@@ -950,6 +1146,14 @@ def build_catalog(data_dir: str) -> dict:
         "galaxies": GALAXIES,
         "source": "conductor_v10",
         "cache_ttl_seconds": 300,
+        # Health metrics for the UI
+        "health_score": health["health_score"],
+        "health_status": health["health_status"],
+        "status_counts": health["status_counts"],
+        "field_coverage": health["field_coverage"],
+        "top_issues": health["top_issues"][:5],
+        # Product graph metrics
+        "graph_stats": graph_stats,
     }
 
     logger.info(
@@ -957,13 +1161,19 @@ def build_catalog(data_dir: str) -> dict:
         f"{len(galaxy_counts)} galaxies, {len(spectrum_counts)} spectrums"
     )
 
+    # Merge graph indexes with standard indexes
+    all_indexes = {
+        "by_galaxy": by_galaxy,
+        "by_spectrum": by_spectrum,
+        "by_brand": by_brand,
+    }
+    if graph_indexes:
+        all_indexes["by_family"] = graph_indexes.get("by_family", {})
+        all_indexes["relationships"] = graph_indexes.get("relationships", {})
+
     return {
         "products": products,
-        "indexes": {
-            "by_galaxy": by_galaxy,
-            "by_spectrum": by_spectrum,
-            "by_brand": by_brand,
-        },
+        "indexes": all_indexes,
         "metadata": metadata,
     }
 
@@ -971,10 +1181,14 @@ def build_catalog(data_dir: str) -> dict:
 def _empty_catalog() -> dict:
     return {
         "products": [],
-        "indexes": {"by_galaxy": {}, "by_spectrum": {}, "by_brand": {}},
+        "indexes": {
+            "by_galaxy": {}, "by_spectrum": {}, "by_brand": {},
+            "by_family": {}, "relationships": {},
+        },
         "metadata": {
             "total_products": 0, "brands": [], "galaxy_counts": {},
             "spectrum_counts": {}, "brand_counts": {}, "galaxies": GALAXIES,
             "source": "conductor_v10", "cache_ttl_seconds": 300,
+            "graph_stats": {},
         },
     }

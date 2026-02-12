@@ -20,6 +20,8 @@ import type { ConductorProduct } from "../../hooks/useConductorCatalog";
 import {
   useConductorCatalog,
   useProductsBySpectrum,
+  useProductVariants,
+  useProductRelationships,
 } from "../../hooks/useConductorCatalog";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
@@ -86,9 +88,11 @@ const BrandLogo = React.memo(
         className={`object-contain transition-all duration-500 ${className}`}
         onError={(e) => {
           const target = e.currentTarget as HTMLImageElement;
-          console.warn(
-            `[BrandLogo] Failed to load logo for ${brand}: ${target.src}`,
-          );
+          if (import.meta.env.DEV) {
+            console.warn(
+              `[BrandLogo] Failed to load logo for ${brand}: ${target.src}`,
+            );
+          }
 
           // If we started with an SVG and it failed, fail immediately to text
           if (target.src.endsWith(".svg")) {
@@ -291,6 +295,20 @@ const EnrichmentPanel = React.memo(
             <span className="font-bold text-zinc-400 uppercase tracking-widest text-[9px]">
               Data Sources
             </span>
+            {/* Quality Score Badge */}
+            <span
+              className={`ml-auto text-[9px] font-black px-1.5 py-0.5 rounded ${
+                (product.quality_score || 0) >= 90
+                  ? "bg-emerald-500/20 text-emerald-400"
+                  : (product.quality_score || 0) >= 70
+                    ? "bg-green-500/20 text-green-400"
+                    : (product.quality_score || 0) >= 40
+                      ? "bg-amber-500/20 text-amber-400"
+                      : "bg-red-500/20 text-red-400"
+              }`}
+            >
+              {product.quality_score || 0}%
+            </span>
           </div>
           <DataSourcesBadge
             sources={product.sources || ["halilit"]}
@@ -304,6 +322,147 @@ const EnrichmentPanel = React.memo(
 );
 
 EnrichmentPanel.displayName = "EnrichmentPanel";
+
+// --- HOVER RIGHT PANEL (Price, Category, Variants, Accessories) ---
+const HoverRightPanel = React.memo(
+  ({
+    product,
+    openProductPage,
+  }: {
+    product: ConductorProduct;
+    openProductPage: (id: string) => void;
+  }) => {
+    const { variants } = useProductVariants(product.id);
+    const { accessories } = useProductRelationships(product.id);
+
+    return (
+      <div className="w-full space-y-3 flex flex-col">
+        {/* Price Section */}
+        <div className="space-y-1">
+          <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
+            {product.price > 0
+              ? `₪${product.price.toLocaleString("he-IL")}`
+              : "Price on request"}
+          </div>
+          <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
+            Price (VAT Included)
+          </div>
+        </div>
+
+        <div className="w-full h-px bg-zinc-800/50" />
+
+        {/* Category & Tier */}
+        <div className="space-y-2 text-xs">
+          <div className="flex items-start gap-2">
+            <Tag className="w-3 h-3 text-blue-400 mt-0.5 flex-shrink-0" />
+            <div className="flex-1">
+              <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-0.5">
+                Category
+              </div>
+              <div className="text-zinc-200 font-semibold truncate">
+                {product.spectrum_id?.replace(/-/g, " ") ||
+                  product.category ||
+                  "Other"}
+              </div>
+            </div>
+          </div>
+          {product.tier && (
+            <div className="flex items-start gap-2">
+              <Zap className="w-3 h-3 text-amber-400 mt-0.5 flex-shrink-0" />
+              <div className="flex-1">
+                <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-0.5">
+                  Tier
+                </div>
+                <div className="text-zinc-200 font-semibold capitalize">
+                  {product.tier}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Variants — if this product belongs to a family */}
+        {variants.length > 0 && (
+          <div className="space-y-1.5">
+            <div className="w-full h-px bg-zinc-800/50" />
+            <div className="text-[9px] font-bold text-blue-400 uppercase tracking-widest flex items-center gap-1">
+              <Sparkles className="w-2.5 h-2.5" />
+              Also in this Series ({variants.length + 1})
+            </div>
+            <div className="flex gap-1.5 overflow-x-auto pb-1">
+              {variants.slice(0, 4).map((v) => (
+                <button
+                  key={v.id}
+                  onClick={() => openProductPage(v.id)}
+                  className="flex-shrink-0 w-10 h-10 rounded border border-zinc-700 bg-zinc-900 overflow-hidden hover:border-blue-500 transition-colors group/var"
+                  title={v.variant_key || v.name}
+                >
+                  {v.image_url ? (
+                    <img
+                      src={v.image_url}
+                      className="w-full h-full object-contain bg-white"
+                      alt={v.name}
+                    />
+                  ) : (
+                    <span className="text-[6px] text-zinc-500 flex items-center justify-center w-full h-full">
+                      {v.variant_key || "?"}
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Accessories */}
+        {accessories.length > 0 && (
+          <div className="space-y-1.5">
+            <div className="w-full h-px bg-zinc-800/50" />
+            <div className="text-[9px] font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-1">
+              <Package className="w-2.5 h-2.5" />
+              Accessories ({accessories.length})
+            </div>
+            <div className="flex gap-1.5 overflow-x-auto pb-1">
+              {accessories.slice(0, 3).map((a) => (
+                <button
+                  key={a.id}
+                  onClick={() => openProductPage(a.id)}
+                  className="flex-shrink-0 w-10 h-10 rounded border border-zinc-700 bg-zinc-900 overflow-hidden hover:border-emerald-500 transition-colors"
+                  title={a.name}
+                >
+                  {a.image_url ? (
+                    <img
+                      src={a.image_url}
+                      className="w-full h-full object-contain bg-white"
+                      alt={a.name}
+                    />
+                  ) : (
+                    <span className="text-[6px] text-zinc-500 flex items-center justify-center w-full h-full">
+                      ACC
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="flex-1" />
+
+        {/* CTA Button */}
+        <button
+          onClick={() => product.id && openProductPage(product.id)}
+          className="w-full bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-black font-extrabold py-3 uppercase text-sm tracking-widest transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 rounded-lg shadow-lg shadow-amber-900/30"
+        >
+          <Maximize2 className="w-4 h-4" />
+          <span>View Details</span>
+        </button>
+      </div>
+    );
+  },
+);
+
+HoverRightPanel.displayName = "HoverRightPanel";
 
 // --- BRAND SWIM LANE (memoized to avoid re-rendering all tracks on hover) ---
 interface BrandTrackProps {
@@ -364,7 +523,7 @@ const BrandTrack = React.memo(
 
         {/* The Track */}
         <div className="flex-1 relative flex items-center px-4">
-          {products.map((product) => {
+          {products.map((product, pidx) => {
             const price = product.price;
             const safePrice = price > 0 ? price : 1;
 
@@ -375,6 +534,15 @@ const BrandTrack = React.memo(
                 (Math.log(maxPrice) - Math.log(safeMin));
             }
             pct = Math.max(0, Math.min(1, pct));
+
+            // Family badge: count siblings in this track
+            const familySiblings = product.family_id
+              ? products.filter((p) => p.family_id === product.family_id).length
+              : 0;
+            const isFirstInFamily = product.family_id
+              ? products.findIndex((p) => p.family_id === product.family_id) ===
+                pidx
+              : false;
 
             return (
               <div
@@ -413,6 +581,18 @@ const BrandTrack = React.memo(
                       boxShadow: `0 0 12px ${brandPrimary}80, inset 0 0 8px ${brandPrimary}40`,
                     }}
                   />
+                  {/* Family badge — shows sibling count on first family member */}
+                  {isFirstInFamily && familySiblings > 1 && (
+                    <div className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-blue-500 text-white text-[8px] font-black flex items-center justify-center z-10 shadow-md">
+                      {familySiblings}
+                    </div>
+                  )}
+                  {/* Variant key label */}
+                  {product.variant_key && (
+                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-black/80 text-[7px] text-zinc-300 px-1 rounded-sm font-mono whitespace-nowrap backdrop-blur-sm">
+                      {product.variant_key}
+                    </div>
+                  )}
                 </div>
               </div>
             );
@@ -474,7 +654,7 @@ export const SpectrumModule = () => {
     const valid = rawProducts.filter(isProductHealthy);
     const broken = rawProducts.length - valid.length;
 
-    if (broken > 0) {
+    if (broken > 0 && import.meta.env.DEV) {
       console.warn(
         `[HealthGuard] Flagged ${broken} products as broken/incomplete.`,
       );
@@ -596,15 +776,34 @@ export const SpectrumModule = () => {
   // Handle errors
   if (error) {
     return (
-      <div className="flex h-full w-full items-center justify-center flex-col gap-4 bg-red-950/20 border border-red-900 rounded-lg">
-        <div className="text-red-400 font-bold">Failed to load catalog</div>
-        <div className="text-sm text-red-300">{error}</div>
-        <button
-          onClick={() => window.location.reload()}
-          className="px-4 py-2 bg-red-900 hover:bg-red-800 text-red-100 rounded text-xs"
-        >
-          Retry
-        </button>
+      <div className="flex h-full w-full items-center justify-center flex-col gap-4 p-8">
+        <div className="max-w-md w-full border border-red-900/40 bg-red-950/10 rounded-xl p-8 text-center backdrop-blur-sm">
+          <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-red-500/10 flex items-center justify-center">
+            <svg
+              className="w-7 h-7 text-red-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"
+              />
+            </svg>
+          </div>
+          <h3 className="text-red-400 font-bold text-lg mb-2">
+            Failed to load catalog
+          </h3>
+          <p className="text-sm text-red-300/70 mb-6">{error}</p>
+          <button
+            onClick={() => window.location.reload()}
+            className="px-6 py-2.5 bg-red-900/30 hover:bg-red-900/50 text-red-200 rounded-lg text-sm font-medium transition-all duration-200 border border-red-800/30 hover:border-red-700/50"
+          >
+            Reload Page
+          </button>
+        </div>
       </div>
     );
   }
@@ -664,24 +863,28 @@ export const SpectrumModule = () => {
               {hoveredProduct.image_url && !imageLoadError ? (
                 <img
                   src={hoveredProduct.image_url}
-                  className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-500 will-change-transform"
+                  className="max-w-full max-h-full object-contain drop-shadow-2xl transition-all duration-500 will-change-transform animate-scale-in"
                   alt="Preview"
                   onError={() => setImageLoadError(true)}
                 />
               ) : (
-                <div className="flex flex-col items-center gap-2 text-zinc-600 text-center p-2">
-                  <ScanLine className="w-8 h-8 opacity-50" />
+                <div className="flex flex-col items-center gap-3 text-zinc-600 text-center p-2">
+                  <div className="w-16 h-16 rounded-full bg-zinc-800/30 flex items-center justify-center">
+                    <ScanLine className="w-7 h-7 opacity-50" />
+                  </div>
                   <span className="text-[10px] font-mono uppercase tracking-widest">
-                    NO VISUAL
+                    No Image Available
                   </span>
                 </div>
               )}
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center gap-4 text-zinc-800">
-              <Sparkles className="w-12 h-12 opacity-20" />
-              <div className="text-xs font-mono tracking-[0.2em] uppercase opacity-50">
-                AWAITING SIGNAL
+              <div className="w-16 h-16 rounded-full bg-zinc-900/50 flex items-center justify-center">
+                <Sparkles className="w-8 h-8 opacity-20" />
+              </div>
+              <div className="text-xs font-mono tracking-[0.15em] uppercase opacity-50">
+                Hover a product to preview
               </div>
             </div>
           )}
@@ -782,65 +985,10 @@ export const SpectrumModule = () => {
           className="col-span-3 bg-zinc-950 flex flex-col justify-between items-center p-6 relative overflow-y-auto custom-scrollbar"
         >
           {hoveredProduct ? (
-            <div className="w-full space-y-4 flex flex-col">
-              {/* Price Section */}
-              <div className="space-y-2">
-                <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
-                  {hoveredProduct.price > 0
-                    ? `₪${hoveredProduct.price.toLocaleString("he-IL")}`
-                    : "Price on request"}
-                </div>
-                <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
-                  Price (VAT Included)
-                </div>
-              </div>
-
-              <div className="w-full h-px bg-zinc-800/50" />
-
-              {/* Category & Tier Info */}
-              <div className="space-y-2 text-xs">
-                <div className="flex items-start gap-2">
-                  <Tag className="w-3 h-3 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <div className="flex-1">
-                    <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-1">
-                      Category
-                    </div>
-                    <div className="text-zinc-200 font-semibold truncate">
-                      {hoveredProduct.spectrum_id?.replace(/-/g, " ") ||
-                        hoveredProduct.category ||
-                        "Other"}
-                    </div>
-                  </div>
-                </div>
-
-                {hoveredProduct.tier && (
-                  <div className="flex items-start gap-2">
-                    <Zap className="w-3 h-3 text-amber-400 mt-0.5 flex-shrink-0" />
-                    <div className="flex-1">
-                      <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-1">
-                        Tier
-                      </div>
-                      <div className="text-zinc-200 font-semibold capitalize">
-                        {hoveredProduct.tier}
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div className="flex-1" />
-
-              {/* CTA Button */}
-              <button
-                onClick={() =>
-                  hoveredProduct.id && openProductPage(hoveredProduct.id)
-                }
-                className="w-full bg-amber-500 hover:bg-amber-400 text-black font-extrabold py-3 uppercase text-sm tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 clip-corner shadow-amber-900/20 shadow-xl"
-              >
-                <Maximize2 className="w-4 h-4" />
-                <span>Analyze</span>
-              </button>
-            </div>
+            <HoverRightPanel
+              product={hoveredProduct}
+              openProductPage={openProductPage}
+            />
           ) : null}
         </Surface>
       </div>
@@ -848,15 +996,42 @@ export const SpectrumModule = () => {
       {/* --- BOTTOM: BRAND SWIMLANES ENGINE --- */}
       <div className="flex-1 relative bg-[#050505] overflow-hidden flex flex-col">
         {isLoading ? (
-          <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono animate-pulse">
-            <Sparkles className="w-4 h-4 mr-2 animate-spin" /> INITIALIZING
-            MATRIX...
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex flex-col items-center gap-4">
+              <div className="relative w-14 h-14">
+                <div className="absolute inset-0 rounded-full border-2 border-zinc-800" />
+                <div className="absolute inset-0 rounded-full border-2 border-t-blue-500 animate-spin" />
+              </div>
+              <div className="flex items-center gap-2 text-zinc-600 font-mono text-xs tracking-widest uppercase">
+                <span>Loading Spectrum</span>
+              </div>
+            </div>
           </div>
         ) : filteredProducts.length === 0 ? (
-          <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono">
-            <div className="text-center">
-              <ScanLine className="w-8 h-8 mx-auto mb-4 opacity-50" />
-              <span>No products in this sector</span>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center max-w-sm">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-zinc-800/30 flex items-center justify-center">
+                <ScanLine className="w-7 h-7 text-zinc-700" />
+              </div>
+              <h3 className="text-zinc-400 font-semibold mb-2">
+                No products found
+              </h3>
+              <p className="text-zinc-600 text-sm mb-4">
+                {activeSmartTag || activeFilter !== "ALL"
+                  ? "Try adjusting your filters to see more products."
+                  : "This spectrum doesn't have any products yet."}
+              </p>
+              {(activeSmartTag || activeFilter !== "ALL") && (
+                <button
+                  onClick={() => {
+                    setActiveSmartTag(null);
+                    setActiveFilter("ALL");
+                  }}
+                  className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-lg text-sm transition-colors"
+                >
+                  Clear All Filters
+                </button>
+              )}
             </div>
           </div>
         ) : (

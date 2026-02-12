@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.3
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.4
 
 The Conductor CLI orchestrates all operations:
 - Data ingestion (Trinity Swarm)
@@ -602,25 +602,47 @@ class ConductorCLI:
 
     def _detect_brands_from_sources(self) -> List[str]:
         """
-        Auto-detect available brands ONLY from Halilit's golden list.
-        Golden list is the ONLY source of truth: /frontend/public/data/*.json
+        Auto-detect available brands from ALL sources:
+        1. Halilit.com brands page (authoritative — discovers ALL brands)
+        2. Existing frontend JSON files (golden list already processed)
+        3. Brand tiers config (configured brands)
+
+        This ensures we capture every brand Halilit carries, not just
+        the ones we've already processed.
         """
         brands = set()
 
-        # From frontend/public/data/ - use exact filenames (GOLDEN LIST ONLY)
+        # Source 1: Discover ALL brands from Halilit.com (authoritative)
+        try:
+            from backend.ingestion.halilit_page_scraper import HalilitPageScraper
+            scraper = HalilitPageScraper()
+            halilit_brands = scraper.discover_all_brands()
+            for b in halilit_brands:
+                brands.add(b["name"].lower())
+                logger.debug(f"   🌐 Halilit brand: {b['name']}")
+            logger.info(
+                f"🌐 Discovered {len(halilit_brands)} brands from Halilit.com")
+        except Exception as e:
+            logger.warning(
+                f"⚠️ Failed to discover brands from Halilit.com: {e}")
+
+        # Source 2: Existing frontend data (golden list already processed)
         data_dir = self.frontend_dir / "public" / "data"
         if data_dir.exists():
-            # Metadata files to exclude
             metadata = {"index.json", "search_index.json",
                         "search_index_min.json"}
-
             for f in data_dir.glob("*.json"):
                 if f.name not in metadata:
-                    brands.add(f.stem)
+                    brands.add(f.stem.lower())
                     logger.debug(f"   📋 Golden list brand: {f.stem}")
 
+        # Source 3: Brand tiers config
+        for tier_key, tier_brands in self.brand_tiers.items():
+            for b in tier_brands:
+                brands.add(b.lower())
+
         logger.info(
-            f"🔒 Locked to {len(brands)} golden list brands (source: /frontend/public/data/)")
+            f"🔒 Total brands from all sources: {len(brands)}")
         return sorted(list(brands))
 
 

@@ -1,4 +1,4 @@
-import { Search, X } from "lucide-react";
+import { Search, X, Command } from "lucide-react";
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useRealtimeSearch } from "../hooks/useRealtimeSearch";
 import { useNavigationStore } from "../store/navigationStore";
@@ -14,7 +14,8 @@ interface GlobalSearchProps extends BaseComponentProps {
  *
  * Provides real-time product search functionality with:
  * - Debounced search input
- * - Dropdown results display
+ * - Keyboard shortcuts (Ctrl/Cmd+K to focus, Escape to close)
+ * - Dropdown results display with result count
  * - Click-outside detection for dropdown close
  * - Accessible keyboard navigation
  */
@@ -25,10 +26,13 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
 }) => {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const searchResult = useRealtimeSearch(query, { limit: maxResults });
   const { data: results = [], loading, error } = searchResult;
   const { openProductPage } = useNavigationStore();
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -38,10 +42,24 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
         !wrapperRef.current.contains(event.target as Node)
       ) {
         setIsOpen(false);
+        setIsFocused(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Keyboard shortcut: Ctrl/Cmd+K to focus
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        inputRef.current?.focus();
+        setIsFocused(true);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   const handleSelect = useCallback(
@@ -50,103 +68,248 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       onSelect?.(productId);
       setIsOpen(false);
       setQuery("");
+      setSelectedIndex(-1);
+      inputRef.current?.blur();
     },
     [openProductPage, onSelect],
   );
 
+  // Keyboard navigation in results
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setQuery("");
+        setIsOpen(false);
+        setSelectedIndex(-1);
+        inputRef.current?.blur();
+      } else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        setSelectedIndex((prev) =>
+          Math.min(prev + 1, (results?.length || 0) - 1),
+        );
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        setSelectedIndex((prev) => Math.max(prev - 1, -1));
+      } else if (
+        e.key === "Enter" &&
+        selectedIndex >= 0 &&
+        results?.[selectedIndex]
+      ) {
+        handleSelect(results[selectedIndex].id);
+      }
+    },
+    [results, selectedIndex, handleSelect],
+  );
+
   return (
     <div className="relative w-full max-w-md hidden md:block" ref={wrapperRef}>
-      <div className="relative group">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Search
-            className={`h-4 w-4 ${isOpen ? "text-emerald-500" : "text-zinc-500"}`}
-          />
-        </div>
+      <div
+        className={`relative group flex items-center gap-2 px-3 py-1.5 rounded-lg border transition-all duration-200 ${
+          isFocused
+            ? "bg-zinc-900 border-zinc-600 shadow-lg shadow-blue-500/5 ring-1 ring-blue-500/20"
+            : "bg-zinc-900/80 border-zinc-800 hover:border-zinc-700"
+        }`}
+      >
+        <Search
+          className={`h-4 w-4 shrink-0 transition-colors ${isFocused ? "text-blue-400" : "text-zinc-500"}`}
+        />
         <input
+          ref={inputRef}
           type="text"
-          className="block w-full pl-10 pr-3 py-1.5 border border-zinc-800 rounded-md leading-5 bg-zinc-900 text-zinc-300 placeholder-zinc-500 focus:outline-none focus:bg-zinc-950 focus:border-zinc-700 focus:ring-1 focus:ring-zinc-700 sm:text-sm transition-all"
-          placeholder={loading ? "Initializing..." : "Search catalog..."}
+          className="flex-1 bg-transparent text-zinc-300 placeholder-zinc-500 focus:outline-none sm:text-sm"
+          placeholder={loading ? "Initializing..." : "Search products..."}
           value={query}
           onChange={(e) => {
             setQuery(e.target.value);
             setIsOpen(true);
+            setSelectedIndex(-1);
           }}
-          onFocus={() => setIsOpen(true)}
+          onFocus={() => {
+            setIsFocused(true);
+            setIsOpen(true);
+          }}
+          onBlur={() => setIsFocused(false)}
+          onKeyDown={handleKeyDown}
         />
+
+        {/* Result count */}
+        {query && !loading && results.length > 0 && (
+          <span className="text-[10px] text-zinc-500 tabular-nums shrink-0">
+            {results.length} found
+          </span>
+        )}
+
+        {/* Clear button */}
         {query && (
           <button
-            className="absolute inset-y-0 right-0 pr-3 flex items-center text-zinc-500 hover:text-white"
+            className="p-0.5 text-zinc-500 hover:text-white transition-colors rounded hover:bg-zinc-700/50"
             onClick={() => {
               setQuery("");
               setIsOpen(false);
+              setSelectedIndex(-1);
+              inputRef.current?.focus();
             }}
           >
-            <X className="h-4 w-4" />
+            <X className="h-3.5 w-3.5" />
           </button>
+        )}
+
+        {/* Keyboard shortcut hint */}
+        {!query && !isFocused && (
+          <kbd
+            className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 text-[10px] 
+                          text-zinc-600 bg-zinc-800/80 rounded border border-zinc-700/50 font-mono"
+          >
+            <Command className="w-2.5 h-2.5" />K
+          </kbd>
         )}
       </div>
 
       {/* Search Results Dropdown */}
       {isOpen && query.length > 1 && (
-        <div className="absolute mt-1 w-full bg-zinc-900 border border-zinc-800 rounded-md shadow-xl z-50 overflow-hidden max-h-96 overflow-y-auto">
+        <div className="absolute mt-2 w-full bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl shadow-black/50 z-50 overflow-hidden max-h-[420px] overflow-y-auto custom-scrollbar animate-fade-in">
           {error ? (
             // Error State
-            <div className="p-4 text-center text-red-500 text-xs">
-              <p>{error.message}</p>
+            <div className="p-6 text-center">
+              <div className="w-10 h-10 mx-auto mb-3 rounded-full bg-red-500/10 flex items-center justify-center">
+                <svg
+                  className="w-5 h-5 text-red-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
+                </svg>
+              </div>
+              <p className="text-sm text-red-400 mb-2">{error.message}</p>
               <button
                 onClick={searchResult.retry}
-                className="mt-2 text-xs text-red-400 hover:text-red-300 underline"
+                className="text-xs text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors"
               >
-                Retry
+                Retry search
               </button>
             </div>
           ) : loading ? (
-            // Loading State
-            <div className="p-4 text-center text-zinc-500 text-xs">
-              <div className="inline-block h-3 w-3 animate-spin rounded-full border border-zinc-600 border-r-transparent" />
-              <p className="mt-2">Searching...</p>
+            // Loading State — skeleton
+            <div className="p-3 space-y-2">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 px-3 py-2.5 animate-pulse"
+                >
+                  <div className="w-10 h-10 bg-zinc-800 rounded-lg" />
+                  <div className="flex-1 space-y-1.5">
+                    <div className="h-3.5 bg-zinc-800 rounded w-3/4" />
+                    <div className="h-2.5 bg-zinc-800/60 rounded w-1/2" />
+                  </div>
+                </div>
+              ))}
             </div>
           ) : (results || []).length === 0 ? (
             // Empty State
-            <div className="p-4 text-center text-zinc-500 text-xs">
-              No products found for "{query}"
+            <div className="p-8 text-center">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-zinc-800/50 flex items-center justify-center">
+                <Search className="w-5 h-5 text-zinc-600" />
+              </div>
+              <p className="text-sm text-zinc-400 mb-1">No results found</p>
+              <p className="text-xs text-zinc-600">
+                Try a different search term for "{query}"
+              </p>
             </div>
           ) : (
             // Results List
-            <div className="py-1">
-              {(results || []).map((item) => (
+            <div className="py-1.5">
+              <div className="px-4 py-1.5 text-[10px] text-zinc-600 font-mono uppercase tracking-wider">
+                {results.length} result{results.length !== 1 ? "s" : ""}
+              </div>
+              {(results || []).map((item, idx) => (
                 <button
                   key={item.id}
                   onClick={() => handleSelect(item.id)}
-                  className="w-full text-left px-4 py-3 hover:bg-zinc-800 flex items-center gap-3 group transition-colors border-b border-zinc-800/50 last:border-0"
+                  onMouseEnter={() => setSelectedIndex(idx)}
+                  className={`w-full text-left px-4 py-3 flex items-center gap-3 group transition-all duration-100 ${
+                    idx === selectedIndex
+                      ? "bg-blue-500/10 border-l-2 border-blue-500"
+                      : "hover:bg-zinc-800/50 border-l-2 border-transparent"
+                  }`}
                 >
                   {item.image_url ? (
                     <img
                       src={item.image_url}
                       alt=""
-                      className="w-8 h-8 object-contain bg-white/5 rounded-sm"
+                      className="w-10 h-10 object-contain bg-white/5 rounded-lg border border-zinc-700/50 p-0.5"
                       onError={(e) => (e.currentTarget.style.display = "none")}
                     />
                   ) : (
-                    <div className="w-8 h-8 bg-zinc-800 rounded-sm flex items-center justify-center text-xs font-bold text-zinc-600">
+                    <div className="w-10 h-10 bg-zinc-800/80 rounded-lg flex items-center justify-center text-xs font-bold text-zinc-500 border border-zinc-700/30">
                       {item.brand_name.charAt(0)}
                     </div>
                   )}
 
                   <div className="min-w-0 flex-1">
-                    <div className="text-sm font-medium text-zinc-200 group-hover:text-emerald-400 truncate">
+                    <div
+                      className={`text-sm font-medium truncate transition-colors ${
+                        idx === selectedIndex
+                          ? "text-blue-300"
+                          : "text-zinc-200 group-hover:text-blue-300"
+                      }`}
+                    >
                       {item.label}
                     </div>
-                    <div className="text-xs text-zinc-500 flex items-center gap-2">
-                      <span className="text-zinc-600 uppercase tracking-wider text-[10px]">
+                    <div className="text-xs text-zinc-500 flex items-center gap-2 mt-0.5">
+                      <span className="text-zinc-600 uppercase tracking-wider text-[10px] font-semibold">
                         {item.brand_name}
                       </span>
-                      <span>•</span>
-                      <span>{item.category}</span>
+                      <span className="text-zinc-700">·</span>
+                      <span className="text-zinc-500">{item.category}</span>
                     </div>
                   </div>
+
+                  {/* Arrow indicator for selected */}
+                  {idx === selectedIndex && (
+                    <svg
+                      className="w-4 h-4 text-blue-400 shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  )}
                 </button>
               ))}
+
+              {/* Keyboard hint footer */}
+              <div className="px-4 py-2 border-t border-zinc-800/50 flex items-center gap-4 text-[10px] text-zinc-600">
+                <span className="flex items-center gap-1">
+                  <kbd className="px-1 py-0.5 bg-zinc-800 rounded text-[9px]">
+                    ↑↓
+                  </kbd>{" "}
+                  navigate
+                </span>
+                <span className="flex items-center gap-1">
+                  <kbd className="px-1 py-0.5 bg-zinc-800 rounded text-[9px]">
+                    ↵
+                  </kbd>{" "}
+                  select
+                </span>
+                <span className="flex items-center gap-1">
+                  <kbd className="px-1 py-0.5 bg-zinc-800 rounded text-[9px]">
+                    esc
+                  </kbd>{" "}
+                  close
+                </span>
+              </div>
             </div>
           )}
         </div>

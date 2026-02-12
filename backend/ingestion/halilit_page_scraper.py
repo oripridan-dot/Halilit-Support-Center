@@ -53,8 +53,12 @@ HEADERS = {
 }
 REQUEST_TIMEOUT = 12
 RATE_LIMIT_DELAY = 0.3  # seconds between requests
-MAX_SEARCH_PAGES = 15
+MAX_SEARCH_PAGES = 50  # Up from 15 — support brands with 500+ products
 MAX_WORKERS = 4  # parallel page scrapes
+ITEMS_PER_PAGE = 25  # Halilit shows 25 items per search/brand page
+BRANDS_PAGE_URL = f"{HALILIT_BASE}/pages/4367"  # "המותגים שלנו" page
+BRAND_GROUP_PREFIX = f"{HALILIT_BASE}/g/5193"  # Brand group page pattern
+MAX_SITEMAP_PAGES = 20  # Halilit sitemap has 20 sub-pages
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -159,64 +163,220 @@ class HalilitPageScraper:
             time.sleep(RATE_LIMIT_DELAY - elapsed)
         self._last_request_time = time.time()
 
-    def _get(self, url: str) -> Optional[requests.Response]:
-        """Make a rate-limited GET request."""
-        self._rate_limit()
-        try:
-            resp = self.session.get(url, timeout=REQUEST_TIMEOUT)
-            if resp.status_code == 200:
+    @staticmethod
+    def _is_anti_bot_page(html: str) -> bool:
+        """Detect Konimbo's anti-bot referrer check page (page_no_referer)."""
+        return (len(html) < 2000
+                and ("page_no_referer" in html or "limit_no_referer" in html))
+
+    def _get(self, url: str, retries: int = 2) -> Optional[requests.Response]:
+        """Make a rate-limited GET request with anti-bot detection and retry."""
+        for attempt in range(retries + 1):
+            self._rate_limit()
+            try:
+                resp = self.session.get(url, timeout=REQUEST_TIMEOUT)
+                if resp.status_code != 200:
+                    logger.warning(f"HTTP {resp.status_code} for {url}")
+                    return None
+                # Check for Konimbo anti-bot page
+                if self._is_anti_bot_page(resp.text):
+                    if attempt < retries:
+                        wait = (attempt + 1) * 3  # 3s, 6s backoff
+                        logger.debug(
+                            f"Anti-bot detected for {url}, retry in {wait}s...")
+                        time.sleep(wait)
+                        continue
+                    logger.debug(f"Anti-bot blocked: {url}")
+                    return None
                 return resp
-            logger.warning(f"HTTP {resp.status_code} for {url}")
-            return None
-        except requests.RequestException as e:
-            logger.warning(f"Request failed for {url}: {e}")
-            return None
+            except requests.RequestException as e:
+                logger.warning(f"Request failed for {url}: {e}")
+                if attempt < retries:
+                    time.sleep(2)
+                    continue
+                return None
+        return None
 
-    # ─── Phase 1: Search Results (Product Listing) ──────────────────────
+    # ─── Phase 1: Search/Brand Results (Product Listing) ──────────────
 
-    def scrape_brand_listing(self, brand: str) -> List[Dict[str, Any]]:
+    def _extract_total_results(self, soup: BeautifulSoup) -> int:
+        """Extract total result count from Halilit search/brand page (Hebrew text 'תוצאות: NNN')."""
+        text = soup.get_text()
+        match = re.search(r'תוצאות:\s*(\d[\d,]*)', text)
+        if match:
+            return int(match.group(1).replace(',', ''))
+        return 0
+
+    def _extract_max_page(self, soup: BeautifulSoup) -> int:
+        """Extract the last page number from pagination div."""
+        pagination = soup.select_one('.pagination')
+        if not pagination:
+            return 1
+        max_page = 1
+        for link in pagination.find_all('a', href=True):
+            page_match = re.search(r'page=(\d+)', link.get('href', ''))
+            if page_match:
+                pg = int(page_match.group(1))
+                if pg > max_page:
+                    max_page = pg
+        return max_page
+
+    def _parse_listing_page(
+        self, soup: BeautifulSoup, brand: str, seen_urls: set
+    ) -> Tuple[List[Dict[str, Any]], int]:
+        """Parse products from a search/brand listing page. Returns (items, new_count)."""
+        items = soup.select(
+            ".layout_list_item, .box, .item, .product_item, .product_box"
+        )
+        results = []
+        new_count = 0
+        for item in items:
+            try:
+                parsed = self._parse_listing_item(item, brand)
+                if parsed and parsed["url"] and parsed["url"] not in seen_urls:
+                    seen_urls.add(parsed["url"])
+                    results.append(parsed)
+                    new_count += 1
+            except Exception as e:
+                logger.debug(f"  Skip item parse error: {e}")
+        return results, new_count
+
+    def scrape_brand_listing(self, brand: str, brand_group_url: str = "") -> List[Dict[str, Any]]:
         """
-        Scrape Halilit search results to get product URLs for a brand.
+        Scrape Halilit to get ALL product URLs for a brand.
+
+        Strategy (ordered by reliability):
+        1. Brand group page (/g/5193-Brand/...) — most accurate, no cross-brand noise
+        2. Search results (/search?q=brand) — fallback if no group page
+
+        Uses proper pagination: reads total result count, calculates expected
+        pages, and iterates through ALL of them.
 
         Returns list of {url, name, price, image_url} dicts.
         """
+        # Try brand group page first (more accurate than search)
+        if brand_group_url:
+            result = self._scrape_brand_group_listing(brand, brand_group_url)
+            if result:
+                return result
+
+        # Fallback to search
+        return self._scrape_search_listing(brand)
+
+    def _scrape_brand_group_listing(self, brand: str, group_url: str) -> List[Dict[str, Any]]:
+        """Scrape brand group page with full pagination."""
+        all_items = []
+        seen_urls = set()
+
+        logger.info(f"  📋 Scraping brand group page: {group_url}")
+        resp = self._get(group_url)
+        if not resp:
+            logger.warning(
+                f"  Brand group page failed, falling back to search")
+            return []
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        total_results = self._extract_total_results(soup)
+        max_page_from_dom = self._extract_max_page(soup)
+        expected_pages = max(
+            max_page_from_dom,
+            (total_results + ITEMS_PER_PAGE -
+             1) // ITEMS_PER_PAGE if total_results > 0 else 1
+        )
+        expected_pages = min(expected_pages, MAX_SEARCH_PAGES)
+
+        logger.info(
+            f"  📊 Brand group: {total_results} total products, {expected_pages} pages")
+
+        # Parse page 1
+        items, new_count = self._parse_listing_page(soup, brand, seen_urls)
+        all_items.extend(items)
+        logger.info(f"  Page 1: {new_count} new products")
+
+        if new_count == 0:
+            return all_items
+
+        # Pages 2..N
+        consecutive_empty = 0
+        for page in range(2, expected_pages + 1):
+            separator = "&" if "?" in group_url else "?"
+            page_url = f"{group_url}{separator}page={page}"
+            logger.info(
+                f"  Scraping brand group page {page}/{expected_pages}: {page_url}")
+
+            resp = self._get(page_url)
+            if not resp:
+                consecutive_empty += 1
+                if consecutive_empty >= 2:
+                    break
+                continue
+
+            soup = BeautifulSoup(resp.text, "html.parser")
+            items, new_count = self._parse_listing_page(soup, brand, seen_urls)
+            all_items.extend(items)
+            logger.info(
+                f"  Page {page}: {new_count} new products (total: {len(all_items)})")
+
+            if new_count == 0:
+                consecutive_empty += 1
+                if consecutive_empty >= 2:
+                    logger.info(f"  2 consecutive empty pages, stopping.")
+                    break
+            else:
+                consecutive_empty = 0
+
+        logger.info(
+            f"  ✅ Brand group listing for {brand}: {len(all_items)} products (expected ~{total_results})")
+        return all_items
+
+    def _scrape_search_listing(self, brand: str) -> List[Dict[str, Any]]:
+        """Scrape Halilit search results with full pagination."""
         from urllib.parse import quote
         encoded = quote(brand)
         all_items = []
         seen_urls = set()
+        expected_pages = MAX_SEARCH_PAGES  # Will be refined after page 1
 
         for page in range(1, MAX_SEARCH_PAGES + 1):
             url = f"{HALILIT_BASE}/search?q={encoded}&page={page}"
-            logger.info(f"  Scraping listing page {page}: {url}")
+            logger.info(f"  Scraping search page {page}: {url}")
 
             resp = self._get(url)
             if not resp:
                 break
 
             soup = BeautifulSoup(resp.text, "html.parser")
-            items = soup.select(".box, .item, .product_item, .product_box")
 
-            if not items:
-                logger.info(f"  No items on page {page}, stopping.")
+            # On page 1, extract total results and calculate expected pages
+            if page == 1:
+                total_results = self._extract_total_results(soup)
+                max_page_from_dom = self._extract_max_page(soup)
+                if total_results > 0:
+                    calculated_pages = (
+                        total_results + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE
+                    expected_pages = min(
+                        max(max_page_from_dom, calculated_pages), MAX_SEARCH_PAGES)
+                else:
+                    expected_pages = min(max_page_from_dom, MAX_SEARCH_PAGES)
+                logger.info(
+                    f"  📊 Search: {total_results} total results, {expected_pages} pages to scrape")
+
+            items, new_count = self._parse_listing_page(soup, brand, seen_urls)
+            all_items.extend(items)
+            logger.info(
+                f"  Page {page}/{expected_pages}: {new_count} new products (total: {len(all_items)})")
+
+            if new_count == 0:
                 break
 
-            page_count = 0
-            for item in items:
-                try:
-                    parsed = self._parse_listing_item(item, brand)
-                    if parsed and parsed["url"] and parsed["url"] not in seen_urls:
-                        seen_urls.add(parsed["url"])
-                        all_items.append(parsed)
-                        page_count += 1
-                except Exception as e:
-                    logger.debug(f"  Skip item parse error: {e}")
-
-            logger.info(f"  Page {page}: {page_count} new products")
-
-            if page_count == 0:
+            # Stop if we've exceeded expected pages
+            if page >= expected_pages:
+                logger.info(
+                    f"  Reached expected page count ({expected_pages}), stopping.")
                 break
 
-        logger.info(f"  Total listing items for {brand}: {len(all_items)}")
+        logger.info(
+            f"  ✅ Search listing for {brand}: {len(all_items)} products")
         return all_items
 
     def _parse_listing_item(self, item, brand: str) -> Optional[Dict]:
@@ -235,9 +395,13 @@ class HalilitPageScraper:
         link_el = item.select_one("a")
         url = ""
         if link_el:
-            href = link_el.get("href", "")
+            href = link_el.get("href", "").strip()
             if href:
+                # Clean any whitespace/newlines in href before constructing URL
+                href = href.replace("\n", "").replace("\r", "").strip()
                 url = href if href.startswith("http") else HALILIT_BASE + href
+                # Collapse any spaces in the final URL
+                url = url.replace(" ", "")
 
         # Extract price
         price = 0.0
@@ -355,7 +519,7 @@ class HalilitPageScraper:
         # Compute stable ID from URL
         item_id_match = re.search(r"/items/(\d+)", url)
         halilit_id = item_id_match.group(
-            1) if item_id_match else f"h-{abs(hash(url))}"
+            1) if item_id_match else f"h-{hashlib.md5(url.encode()).hexdigest()[:10]}"
 
         # Merge gallery from JSON-LD images + DOM gallery
         all_images = []
@@ -508,16 +672,21 @@ class HalilitPageScraper:
     def scrape_brand_full(
         self,
         brand: str,
-        max_products: int = 200,
+        max_products: int = 0,
         skip_existing_urls: set = None,
+        brand_group_url: str = "",
     ) -> List[Dict[str, Any]]:
         """
-        Full pipeline: scrape search listing → scrape each product page.
+        Full pipeline: scrape brand listing → scrape each product page.
+
+        Uses brand group page for listing when available (more reliable),
+        falls back to search. NO artificial product cap — scrapes ALL products.
 
         Args:
             brand: Brand name to search on Halilit
-            max_products: Maximum products to scrape
+            max_products: Maximum products to scrape (0 = unlimited)
             skip_existing_urls: URLs to skip (already scraped)
+            brand_group_url: Direct brand group page URL (preferred over search)
 
         Returns:
             List of fully enriched product dicts
@@ -526,15 +695,18 @@ class HalilitPageScraper:
 
         logger.info(f"🛒 Starting full scrape for brand: {brand}")
 
-        # Phase 1: Get product URLs from search
-        listings = self.scrape_brand_listing(brand)
-        logger.info(f"  Found {len(listings)} products in search results")
+        # Phase 1: Get product URLs from brand group page or search
+        listings = self.scrape_brand_listing(
+            brand, brand_group_url=brand_group_url)
+        logger.info(f"  Found {len(listings)} products in listing")
 
         # Filter to products we haven't scraped yet
         to_scrape = [
             item for item in listings
             if item["url"] and item["url"] not in skip_existing_urls
-        ][:max_products]
+        ]
+        if max_products > 0:
+            to_scrape = to_scrape[:max_products]
 
         logger.info(f"  Scraping {len(to_scrape)} product pages...")
 
@@ -542,23 +714,34 @@ class HalilitPageScraper:
         products = []
         failed = 0
 
-        # Use ThreadPoolExecutor for parallel scraping
-        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            future_to_listing = {
-                executor.submit(self._scrape_and_merge, item): item
-                for item in to_scrape
-            }
-            for future in as_completed(future_to_listing):
-                listing = future_to_listing[future]
-                try:
-                    result = future.result()
-                    if result:
-                        products.append(result)
-                    else:
+        # Process in batches to log progress for large brands
+        batch_size = 50
+        for batch_start in range(0, len(to_scrape), batch_size):
+            batch = to_scrape[batch_start:batch_start + batch_size]
+            batch_num = batch_start // batch_size + 1
+            total_batches = (len(to_scrape) + batch_size - 1) // batch_size
+
+            if total_batches > 1:
+                logger.info(
+                    f"  📦 Batch {batch_num}/{total_batches} ({len(batch)} products)")
+
+            with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+                future_to_listing = {
+                    executor.submit(self._scrape_and_merge, item): item
+                    for item in batch
+                }
+                for future in as_completed(future_to_listing):
+                    listing = future_to_listing[future]
+                    try:
+                        result = future.result()
+                        if result:
+                            products.append(result)
+                        else:
+                            failed += 1
+                    except Exception as e:
+                        logger.warning(
+                            f"  Failed to scrape {listing['url']}: {e}")
                         failed += 1
-                except Exception as e:
-                    logger.warning(f"  Failed to scrape {listing['url']}: {e}")
-                    failed += 1
 
         logger.info(
             f"  ✅ Scraped {len(products)} products, {failed} failures"
@@ -572,7 +755,7 @@ class HalilitPageScraper:
         if not page_data:
             # Fall back to listing data only
             return {
-                "halilit_id": f"scraped-{abs(hash(listing['url']))}",
+                "halilit_id": f"scraped-{hashlib.md5(listing['url'].encode()).hexdigest()[:10]}",
                 "product_name": listing["name"],
                 "brand": listing["brand"],
                 "price_il": listing["price"],
@@ -595,6 +778,163 @@ class HalilitPageScraper:
             page_data["image_url"] = listing["image_url"]
 
         return page_data
+
+    # ─── Brand Discovery (Golden List Foundation) ───────────────────────
+
+    def discover_all_brands(self) -> List[Dict[str, str]]:
+        """
+        Discover ALL brands from Halilit's official brands page (/pages/4367).
+
+        Scrapes the "המותגים שלנו" (Our Brands) page which lists every brand
+        with their group page URL. This is the AUTHORITATIVE source for what
+        brands exist on Halilit.
+
+        Returns list of {name, slug, group_url, brand_id} dicts.
+        """
+        from urllib.parse import unquote
+
+        logger.info(f"🔍 Discovering all brands from {BRANDS_PAGE_URL}")
+
+        resp = self._get(BRANDS_PAGE_URL)
+        if not resp:
+            logger.warning(
+                "Failed to fetch brands page, falling back to sitemap")
+            return self._discover_brands_from_sitemap()
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        brands = {}
+
+        for a in soup.find_all('a', href=True):
+            href = a.get('href', '').strip()
+            # Match /g/5193-Brand/NNN-Name or /g/5193-יצרן/NNN-Name
+            match = re.search(r'/g/5193[^/]*/(\d+)-(.+?)(?:\s|$)', href)
+            if not match:
+                continue
+
+            brand_id = match.group(1)
+            brand_slug = unquote(match.group(2)).replace('-', ' ').strip()
+
+            # Build canonical URL
+            clean_href = href.replace('\n', '').replace(
+                '\r', '').replace(' ', '').strip()
+            if clean_href.startswith('..'):
+                clean_href = HALILIT_BASE + clean_href[2:]
+            elif clean_href.startswith('/'):
+                clean_href = HALILIT_BASE + clean_href
+            elif 'konimbo.co.il' in clean_href:
+                clean_href = clean_href.replace(
+                    'http://halilit.konimbo.co.il', HALILIT_BASE
+                ).replace(
+                    'https://halilit.konimbo.co.il', HALILIT_BASE
+                )
+
+            # Use lowercase slug as dedup key
+            key = brand_slug.lower()
+            if key not in brands:
+                brands[key] = {
+                    "name": brand_slug,
+                    "slug": key,
+                    "group_url": clean_href,
+                    "brand_id": brand_id,
+                }
+
+        result = sorted(brands.values(), key=lambda b: b["name"].lower())
+        logger.info(
+            f"✅ Discovered {len(result)} brands from Halilit brands page")
+        return result
+
+    def _discover_brands_from_sitemap(self) -> List[Dict[str, str]]:
+        """
+        Fallback brand discovery from sitemap product URLs.
+        Scrapes sitemap pages and extracts unique brands from product page data.
+        """
+        from urllib.parse import unquote
+
+        logger.info("🗺️ Discovering brands from sitemap (fallback)...")
+
+        brands = set()
+        for page in range(1, MAX_SITEMAP_PAGES + 1):
+            url = f"{HALILIT_BASE}/sitemap.xml?page={page}"
+            resp = self._get(url)
+            if not resp:
+                break
+
+            # Extract product URLs from sitemap XML
+            product_urls = re.findall(r'<loc>(.*?/items/.*?)</loc>', resp.text)
+            if not product_urls:
+                break
+
+            # Sample a few products per page to discover brands
+            sample = product_urls[:5]  # Just need a few to find brands
+            for product_url in sample:
+                try:
+                    page_resp = self._get(product_url)
+                    if page_resp:
+                        page_soup = BeautifulSoup(
+                            page_resp.text, "html.parser")
+                        brand_el = page_soup.select_one('.item_brand')
+                        if brand_el:
+                            brand_name = brand_el.get_text(strip=True)
+                            if brand_name:
+                                brands.add(brand_name)
+                except Exception:
+                    continue
+
+        result = [{"name": b, "slug": b.lower(), "group_url": "", "brand_id": ""}
+                  for b in sorted(brands)]
+        logger.info(f"🗺️ Discovered {len(result)} brands from sitemap")
+        return result
+
+    def scrape_all_product_urls_from_sitemap(self) -> List[str]:
+        """
+        Get ALL product URLs from Halilit's sitemap (all 20 pages).
+
+        This is the most complete way to discover every product on Halilit.com.
+        Returns list of product page URLs (/items/...).
+        """
+        all_product_urls = []
+
+        logger.info(
+            f"🗺️ Fetching all product URLs from sitemap ({MAX_SITEMAP_PAGES} pages)...")
+
+        for page in range(1, MAX_SITEMAP_PAGES + 1):
+            url = f"{HALILIT_BASE}/sitemap.xml?page={page}"
+            resp = self._get(url)
+            if not resp:
+                logger.warning(f"  Sitemap page {page} failed")
+                break
+
+            product_urls = re.findall(r'<loc>(.*?/items/.*?)</loc>', resp.text)
+            if not product_urls:
+                logger.info(
+                    f"  Sitemap page {page}: no product URLs, stopping")
+                break
+
+            all_product_urls.extend(product_urls)
+            logger.info(
+                f"  Sitemap page {page}: {len(product_urls)} products (total: {len(all_product_urls)})")
+
+        logger.info(f"✅ Sitemap total: {len(all_product_urls)} product URLs")
+        return all_product_urls
+
+    def get_brand_product_count(self, brand: str, brand_group_url: str = "") -> int:
+        """
+        Quick check: how many products does a brand have on Halilit?
+        Just reads page 1 and extracts the total result count.
+        """
+        from urllib.parse import quote
+
+        if brand_group_url:
+            url = brand_group_url
+        else:
+            url = f"{HALILIT_BASE}/search?q={quote(brand)}"
+
+        resp = self._get(url)
+        if not resp:
+            return 0
+
+        soup = BeautifulSoup(resp.text, "html.parser")
+        return self._extract_total_results(soup)
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -649,6 +989,10 @@ def enrich_product_from_page(
         product["model_number"] = page_data["model_number"]
 
     # Description: update if missing or placeholder
+    # NOTE: Halilit descriptions are COMMERCIAL data used for matching/display
+    # until the OfficialBrandScraper replaces them with real official content.
+    # We store them in description_commercial first, and only fall back to
+    # official_description if it's truly empty (no official data yet).
     current_desc = product.get("official_description") or product.get(
         "description_short") or ""
     is_placeholder = (
@@ -658,11 +1002,16 @@ def enrich_product_from_page(
     )
     if is_placeholder:
         if page_data.get("description"):
-            product["official_description"] = page_data["description"]
+            product["description_commercial"] = page_data["description"]
             product["description_short"] = page_data["description"][:200]
+            # Only set official_description if nothing better exists
+            if not product.get("official_description"):
+                product["official_description"] = page_data["description"]
         elif page_data.get("page_description"):
-            product["official_description"] = page_data["page_description"]
+            product["description_commercial"] = page_data["page_description"]
             product["description_short"] = page_data["page_description"][:200]
+            if not product.get("official_description"):
+                product["official_description"] = page_data["page_description"]
 
     # Images: update if missing or placeholder
     current_img = product.get("image_url", "")

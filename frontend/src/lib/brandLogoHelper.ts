@@ -61,6 +61,7 @@ const BRAND_LOGO_MAP: Record<string, string> = {
     "gon-bops": "gon-bops-percussion_logo.jpg",
     guild: "guild_logo.jpg",
     // --- H ---
+    halilit: "halilit_logo.svg",
     headliner: "headliner-la-equipment-stands-_logo.png",
     "headrush fx": "headrush-fx_logo.png",
     "headrush-fx": "headrush-fx_logo.png",
@@ -123,14 +124,14 @@ const BRAND_LOGO_MAP: Record<string, string> = {
     "rhythm-tech": "rhythm-tech_logo.jpg",
     rogers: "rogers_logo.png",
     roland: "roland_logo.png",
-    rode: "rode_logo.png",
+    // rode: no official logo on disk
     // --- S ---
     "santos martinez": "santos-martinez_logo.png",
     "santos-martinez": "santos-martinez_logo.png",
     sequential: "sequential_logo.svg",
     "sequential circuits": "sequential_logo.svg",
     show: "show_logo.png",
-    shure: "shure_logo.png",
+    // shure: no official logo on disk
     "solar guitars": "solar-guitars_logo.jpg",
     "solar-guitars": "solar-guitars_logo.jpg",
     solar: "solar-guitars_logo.jpg",

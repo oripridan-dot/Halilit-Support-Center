@@ -118,55 +118,46 @@ export const CategorySlot = React.memo(
         </div>
 
         {/* Label Area - Title + Brand Logos */}
-        <div className="flex-1 bg-gradient-to-t from-[#0a0a0a] to-[#101010] flex flex-col items-center justify-center border-t border-white/10 shrink-0 px-3 py-2 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.5)] gap-2">
-          {/* Title Section - With improved readability */}
-          <div className="flex flex-col items-center gap-1 w-full">
+        <div className="flex-1 bg-zinc-950 flex flex-col items-center justify-center border-t border-zinc-800/50 shrink-0 px-2 py-1.5 relative z-10 gap-1">
+          {/* Title */}
+          <span
+            className="text-[10px] font-semibold uppercase tracking-wider text-center line-clamp-2 transition-colors duration-200 leading-tight"
+            style={{
+              color: isHovered ? mainColor : "#d4d4d8",
+            }}
+          >
+            {name}
+          </span>
+
+          {/* Product Count Badge */}
+          {count !== undefined && count > 0 && (
             <span
-              className="text-[11px] font-bold uppercase tracking-[0.08em] text-center line-clamp-2 transition-all duration-300 leading-tight"
+              className="text-[8px] font-medium px-1.5 py-px rounded-full transition-colors duration-200"
               style={{
-                color: isHovered ? mainColor : "#e4e4e7",
-                textShadow: isHovered
-                  ? `0 0 12px ${mainColor}80, 0 2px 4px rgba(0,0,0,0.8)`
-                  : "0 1px 2px rgba(0,0,0,0.5)",
-                letterSpacing: isHovered ? "0.1em" : "0.08em",
+                backgroundColor: isHovered
+                  ? `${mainColor}15`
+                  : "rgba(255,255,255,0.04)",
+                color: isHovered ? mainColor : "#71717a",
               }}
             >
-              {name}
+              {count}
             </span>
+          )}
 
-            {/* Product Count Badge */}
-            {count !== undefined && count > 0 && (
-              <span
-                className="text-[9px] font-semibold px-2 py-0.5 rounded-full transition-all duration-300"
-                style={{
-                  backgroundColor: isHovered
-                    ? `${mainColor}20`
-                    : "rgba(255,255,255,0.05)",
-                  color: isHovered ? mainColor : "#a1a1a1",
-                  border: isHovered
-                    ? `1px solid ${mainColor}50`
-                    : "1px solid rgba(255,255,255,0.1)",
-                }}
-              >
-                {count} {count === 1 ? "item" : "items"}
-              </span>
-            )}
-          </div>
-
-          {/* Brand Logos - Bottom panel */}
+          {/* Brand Logos */}
           {brands.length > 0 && (
-            <div className="w-full flex flex-wrap items-center justify-center gap-1.5 pt-1 border-t border-white/5">
+            <div className="w-full flex flex-wrap items-center justify-center gap-1 pt-1 border-t border-zinc-800/30">
               {brands.slice(0, 4).map((brandLogo, idx) => (
                 <div
                   key={`${brandLogo.brand}-${idx}`}
-                  className="flex-shrink-0 h-5 flex items-center justify-center bg-white/5 rounded px-1 py-0.5 hover:bg-white/10 transition-colors duration-200 group"
+                  className="flex-shrink-0 h-4 flex items-center justify-center bg-white/5 rounded px-1 hover:bg-white/10 transition-colors duration-200"
                   title={brandLogo.brand}
                 >
                   <img
                     src={brandLogo.logoUrl}
                     alt={brandLogo.brand}
                     loading="lazy"
-                    className="h-full object-contain max-w-[30px] opacity-70 group-hover:opacity-90 transition-opacity duration-200"
+                    className="h-full object-contain max-w-[24px] opacity-60 hover:opacity-80 transition-opacity duration-200"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = "none";
                     }}

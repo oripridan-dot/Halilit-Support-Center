@@ -1,4 +1,4 @@
-# Halilit Support Center v8.3
+# Halilit Support Center v8.4
 
 **AI-powered product intelligence platform** for musical instruments.  
 Trinity Swarm (3 Gemini 2.0-flash agents) + Celery async workers + React frontend.
@@ -149,6 +149,11 @@ PYTHONPATH=. python3 -m pytest backend/tests/ -v
 
 ## Changelog
 
+### v8.4 (February 12, 2026)
+
+- **Version bump**: All module headers updated to v8.4
+- **Visual Validator**: Updated from v7.5 to v8.4
+
 ### v8.3 (February 11, 2026)
 
 - **Documentation overhaul**: Cleaned all docs, removed stale references to nonexistent files, accurate metrics
@@ -189,4 +194,4 @@ PYTHONPATH=. python3 -m pytest backend/tests/ -v
 
 ---
 
-**v8.3.0** · Last updated: February 11, 2026
+**v8.4.0** · Last updated: February 12, 2026

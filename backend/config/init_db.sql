@@ -163,6 +163,91 @@ FROM worker_health_metrics
 WHERE timestamp = (SELECT MAX(timestamp) FROM worker_health_metrics);
 
 -- =========================================================================
+-- Product Families (Canonical Product Graph)
+-- Groups of related product variants sharing a common identity
+-- e.g., "Nord Stage 4" family with variants: 88, 73, Compact
+-- =========================================================================
+CREATE TABLE IF NOT EXISTS product_families (
+    id VARCHAR(255) PRIMARY KEY,
+    brand VARCHAR(255) NOT NULL,
+    family_name VARCHAR(500) NOT NULL,
+    series VARCHAR(255),
+    generation INTEGER,
+    product_line VARCHAR(500),
+    official_family_url TEXT,
+    description TEXT,
+    hero_image TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_family_brand ON product_families(brand);
+CREATE INDEX idx_family_series ON product_families(series);
+
+-- =========================================================================
+-- Product Relationships (Edges in the Product Graph)
+-- Multi-parent capable: one accessory can link to multiple products
+-- =========================================================================
+CREATE TABLE IF NOT EXISTS product_relationships (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    source_product_id VARCHAR(255) NOT NULL,
+    target_product_id VARCHAR(255) NOT NULL,
+    relationship_type VARCHAR(50) NOT NULL,
+    confidence FLOAT DEFAULT 0.0,
+    ai_discovered BOOLEAN DEFAULT true,
+    manually_curated BOOLEAN DEFAULT false,
+    compatibility_notes TEXT,
+    discovered_from TEXT,
+    bidirectional BOOLEAN DEFAULT false,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_rel_source ON product_relationships(source_product_id);
+CREATE INDEX idx_rel_target ON product_relationships(target_product_id);
+CREATE INDEX idx_rel_type ON product_relationships(relationship_type);
+CREATE INDEX idx_rel_confidence ON product_relationships(confidence);
+CREATE INDEX idx_rel_curated ON product_relationships(manually_curated);
+
+-- =========================================================================
+-- Canonical Products (Graph-augmented product data)
+-- Stores family_id and variant info; full product data stays in JSON pipeline
+-- =========================================================================
+CREATE TABLE IF NOT EXISTS canonical_products (
+    id VARCHAR(255) PRIMARY KEY,
+    family_id VARCHAR(255) REFERENCES product_families(id) ON DELETE SET NULL,
+    variant_key VARCHAR(100),
+    brand VARCHAR(255),
+    product_data JSONB NOT NULL DEFAULT '{}',
+    graph_version INTEGER DEFAULT 1,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_canonical_family ON canonical_products(family_id);
+CREATE INDEX idx_canonical_brand ON canonical_products(brand);
+CREATE INDEX idx_canonical_variant ON canonical_products(variant_key);
+
+-- =========================================================================
+-- Product Graph overview (reporting view)
+-- =========================================================================
+CREATE OR REPLACE VIEW product_graph_overview AS
+SELECT
+    pf.id AS family_id,
+    pf.brand,
+    pf.family_name,
+    pf.series,
+    pf.generation,
+    COUNT(DISTINCT cp.id) AS variant_count,
+    COUNT(DISTINCT CASE WHEN pr.relationship_type = 'accessory_for' THEN pr.source_product_id END) AS accessory_count,
+    COUNT(DISTINCT pr.id) AS total_relationships
+FROM product_families pf
+LEFT JOIN canonical_products cp ON cp.family_id = pf.id
+LEFT JOIN product_relationships pr ON pr.target_product_id = cp.id
+GROUP BY pf.id, pf.brand, pf.family_name, pf.series, pf.generation
+ORDER BY pf.brand, pf.family_name;
+
+-- =========================================================================
 -- Initialize permissions (if using non-superuser)
 -- =========================================================================
 GRANT SELECT, INSERT, UPDATE ON celery_taskmeta TO "halilit_user";
@@ -174,3 +259,7 @@ GRANT SELECT, INSERT, UPDATE ON sync_progress TO "halilit_user";
 GRANT SELECT ON audit_brand_success_rate TO "halilit_user";
 GRANT SELECT ON recent_failures TO "halilit_user";
 GRANT SELECT ON current_queue_depths TO "halilit_user";
+GRANT SELECT, INSERT, UPDATE, DELETE ON product_families TO "halilit_user";
+GRANT SELECT, INSERT, UPDATE, DELETE ON product_relationships TO "halilit_user";
+GRANT SELECT, INSERT, UPDATE ON canonical_products TO "halilit_user";
+GRANT SELECT ON product_graph_overview TO "halilit_user";

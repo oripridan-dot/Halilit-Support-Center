@@ -13,7 +13,7 @@
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'CURATION';
 
 /**
  * Core navigation state that determines what the user sees
@@ -37,6 +37,9 @@ export interface NavigationState {
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
   openProductPage: (productId: string) => void;
   closeProductPage: () => void;
+
+  // Admin views
+  goToCuration: () => void;
 
   // Utility actions
   updateFilters: (filters: string[]) => void;
@@ -117,6 +120,15 @@ export const useNavigationStore = create<NavigationState>((set) => ({
    */
   closeProductPage: () => set({
     currentView: 'SPECTRUM',
+    activeProductId: null,
+    lastError: null,
+  }),
+
+  /**
+   * Navigate to curation dashboard (admin view)
+   */
+  goToCuration: () => set({
+    currentView: 'CURATION',
     activeProductId: null,
     lastError: null,
   }),

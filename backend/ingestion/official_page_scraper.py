@@ -1,21 +1,29 @@
 """
-OFFICIAL BRAND PAGE SCRAPER v1.0
+OFFICIAL BRAND PAGE SCRAPER v8.4
 
 Finds and extracts product data from OFFICIAL manufacturer websites.
 
 The flow:
 1. Given a product name + brand, construct search URL for the brand's official site
 2. Scrape the official product page for specs, descriptions, images
-3. Return structured data that is clearly sourced from the official brand
+3. Extract RELATIONSHIP HINTS — related products, accessories, series links
+4. Return structured data that is clearly sourced from the official brand
 
 This is the "Official Knowledge" layer — separate from Halilit commercial data.
 
+KEY IMPROVEMENT (v8.4): The scraper now discovers product connections EARLY
+by extracting "related products", "in this series", "accessories", and
+breadcrumb hierarchy from official brand pages. These relationship hints
+are returned alongside product data and fed directly into the product graph.
+
 Supported brands have their official site URL patterns defined below.
-For unknown brands, falls back to Google search.
+For unknown brands, falls back to structured-data-only extraction via
+JSON-LD/Schema.org metadata (works on any modern product page).
 
 Usage:
     scraper = OfficialBrandScraper()
     data = scraper.scrape_official("ADAM Audio T5V", "ADAM Audio")
+    # data now includes 'relationship_hints' list
 """
 
 import json
@@ -167,7 +175,51 @@ BRAND_ALIASES = {
     "adam-audio": "adam audio",
     "ua": "universal audio",
     "boss": "roland",  # Boss is a Roland subsidiary
+    "steinberg": "steinberg",
+    "krk systems": "krk",
+    "krk-systems": "krk",
+    "studio logic": "studiologic",
+    "studio-logic": "studiologic",
+    "m-audio": "m-audio",
+    "headrush fx": "headrush",
+    "headrush-fx": "headrush",
+    "eve-audio": "eve audio",
 }
+
+# ═══════════════════════════════════════════════════════════════════════════
+# RELATIONSHIP HINT KEYWORDS — Sections on brand pages that reveal connections
+# ═══════════════════════════════════════════════════════════════════════════
+
+# CSS selectors + headings to look for related products on official pages
+RELATED_PRODUCT_SELECTORS = [
+    # Common CSS classes/IDs for related product sections
+    ".related-products", ".related-items", "#related-products",
+    ".also-like", ".you-may-also-like", ".similar-products",
+    ".accessories", ".compatible-accessories", "#accessories",
+    ".in-this-series", ".series-products", ".product-range",
+    ".more-from-series", ".other-models", ".product-family",
+    "[data-section='related']", "[data-section='accessories']",
+    ".product-recommendations", ".cross-sell",
+    # Schema.org attributes
+    "[itemprop='isSimilarTo']", "[itemprop='isRelatedTo']",
+    "[itemprop='isAccessoryOrSparePartFor']",
+]
+
+# Heading text patterns that indicate related product sections
+RELATED_HEADING_PATTERNS = [
+    r"related\s+products?",
+    r"you\s+may\s+also\s+like",
+    r"similar\s+products?",
+    r"in\s+this\s+series",
+    r"other\s+models?",
+    r"accessories",
+    r"compatible\s+(?:products?|accessories)",
+    r"also\s+available",
+    r"complete\s+(?:your\s+)?setup",
+    r"explore\s+(?:the\s+)?range",
+    r"other\s+(?:products?\s+)?in\s+(?:the\s+)?(?:range|series|family)",
+    r"more\s+from\s+(?:the\s+)?(?:range|series|line)",
+]
 
 
 class OfficialBrandScraper:
@@ -389,6 +441,12 @@ class OfficialBrandScraper:
             if meta:
                 description = meta.get("content", "")
 
+        # ── NEW in v8.4: Extract relationship hints from the page ──
+        relationship_hints = self._extract_relationship_hints(
+            soup, url, config)
+        # Also extract breadcrumb hierarchy for series/family detection
+        breadcrumbs = self._extract_breadcrumbs(soup)
+
         return {
             "official_url": url,
             "official_description": description,
@@ -405,7 +463,222 @@ class OfficialBrandScraper:
             ],
             "official_features": [],
             "source_confidence": "official",
+            # v8.4: Early product connections
+            "relationship_hints": relationship_hints,
+            "breadcrumbs": breadcrumbs,
         }
+
+    def _extract_relationship_hints(
+        self,
+        soup: BeautifulSoup,
+        page_url: str,
+        config: Dict,
+    ) -> List[Dict[str, Any]]:
+        """
+        Extract product relationship hints from an official brand page.
+
+        Looks for:
+        1. "Related products" / "Accessories" sections with product links
+        2. JSON-LD isSimilarTo / isRelatedTo / isAccessoryOrSparePartFor
+        3. Schema.org structured data for related items
+        4. Product grid/list sections near relevant headings
+
+        Returns list of hint dicts:
+            {
+                "related_name": "Product Name",
+                "related_url": "https://...",
+                "hint_type": "related" | "accessory" | "series" | "compatible",
+                "source": "official_brand_page",
+                "confidence": 0.7-0.95,
+            }
+        """
+        hints: List[Dict[str, Any]] = []
+        seen_urls: set = set()
+
+        base_url = config.get("base_url", "")
+
+        # ── Strategy 1: CSS selector-based discovery ──
+        for selector in RELATED_PRODUCT_SELECTORS:
+            try:
+                sections = soup.select(selector)
+                for section in sections:
+                    self._extract_products_from_section(
+                        section, hints, seen_urls, base_url,
+                        hint_type=self._classify_section(selector),
+                        confidence=0.85,
+                    )
+            except Exception:
+                continue
+
+        # ── Strategy 2: Heading-based discovery ──
+        # Find headings (h2-h4) that match relationship patterns,
+        # then extract product links from sibling/following sections
+        for heading in soup.find_all(["h2", "h3", "h4"]):
+            heading_text = heading.get_text(strip=True).lower()
+            for pattern in RELATED_HEADING_PATTERNS:
+                if re.search(pattern, heading_text, re.IGNORECASE):
+                    hint_type = self._classify_heading(heading_text)
+                    # Look at the next sibling container
+                    container = heading.find_next_sibling(
+                        ["div", "section", "ul", "ol"]
+                    )
+                    if container:
+                        self._extract_products_from_section(
+                            container, hints, seen_urls, base_url,
+                            hint_type=hint_type, confidence=0.80,
+                        )
+                    break  # Only match first pattern per heading
+
+        # ── Strategy 3: JSON-LD structured data ──
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = json.loads(script.string or "")
+                items = data if isinstance(data, list) else [data]
+                for item in items:
+                    if not isinstance(item, dict):
+                        continue
+                    # Schema.org relationships
+                    for rel_prop, hint_type in [
+                        ("isSimilarTo", "related"),
+                        ("isRelatedTo", "related"),
+                        ("isAccessoryOrSparePartFor", "accessory"),
+                        ("isPartOf", "series"),
+                    ]:
+                        related = item.get(rel_prop, [])
+                        if not isinstance(related, list):
+                            related = [related]
+                        for rel_item in related:
+                            if isinstance(rel_item, dict):
+                                name = rel_item.get("name", "")
+                                url = rel_item.get("url", "")
+                            elif isinstance(rel_item, str):
+                                name = ""
+                                url = rel_item
+                            else:
+                                continue
+                            if url and url not in seen_urls:
+                                seen_urls.add(url)
+                                hints.append({
+                                    "related_name": name,
+                                    "related_url": url,
+                                    "hint_type": hint_type,
+                                    "source": "official_brand_page",
+                                    "confidence": 0.90,
+                                })
+            except (json.JSONDecodeError, TypeError):
+                continue
+
+        logger.debug(
+            f"Extracted {len(hints)} relationship hints from {page_url}"
+        )
+        return hints
+
+    def _extract_products_from_section(
+        self,
+        section,
+        hints: List[Dict[str, Any]],
+        seen_urls: set,
+        base_url: str,
+        hint_type: str = "related",
+        confidence: float = 0.80,
+    ) -> None:
+        """Extract product names/URLs from a DOM section."""
+        for link in section.find_all("a", href=True):
+            href = link["href"]
+            text = link.get_text(strip=True)
+
+            # Skip navigation/footer links
+            if not text or len(text) < 3 or len(text) > 200:
+                continue
+            # Skip obvious non-product links
+            lower_text = text.lower()
+            if any(skip in lower_text for skip in [
+                "shop all", "view all", "see all", "learn more",
+                "read more", "contact", "support", "home",
+            ]):
+                continue
+
+            full_url = href if href.startswith(
+                "http") else urljoin(base_url, href)
+
+            # Only count links that look like product pages
+            if "/product" in full_url.lower() or "/items/" in full_url.lower():
+                if full_url not in seen_urls:
+                    seen_urls.add(full_url)
+                    hints.append({
+                        "related_name": text,
+                        "related_url": full_url,
+                        "hint_type": hint_type,
+                        "source": "official_brand_page",
+                        "confidence": confidence,
+                    })
+
+    def _classify_section(self, selector: str) -> str:
+        """Classify a CSS selector into a relationship hint type."""
+        sel_lower = selector.lower()
+        if "accessor" in sel_lower:
+            return "accessory"
+        if "series" in sel_lower or "family" in sel_lower or "range" in sel_lower:
+            return "series"
+        if "compatible" in sel_lower:
+            return "compatible"
+        return "related"
+
+    def _classify_heading(self, heading_text: str) -> str:
+        """Classify a heading into a relationship hint type."""
+        text = heading_text.lower()
+        if "accessor" in text:
+            return "accessory"
+        if "series" in text or "range" in text or "family" in text or "model" in text:
+            return "series"
+        if "compatible" in text:
+            return "compatible"
+        if "setup" in text or "complete" in text:
+            return "accessory"
+        return "related"
+
+    def _extract_breadcrumbs(self, soup: BeautifulSoup) -> List[str]:
+        """
+        Extract breadcrumb hierarchy from the page.
+        e.g., ["Roland", "Synthesizers", "Jupiter", "Jupiter-X"]
+        reveals that Jupiter-X belongs to the Jupiter series.
+        """
+        breadcrumbs = []
+
+        # Try JSON-LD BreadcrumbList
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = json.loads(script.string or "")
+                items = data if isinstance(data, list) else [data]
+                for item in items:
+                    if isinstance(item, dict) and item.get("@type") == "BreadcrumbList":
+                        elements = item.get("itemListElement", [])
+                        for el in sorted(elements, key=lambda x: x.get("position", 0)):
+                            name = ""
+                            if isinstance(el.get("item"), dict):
+                                name = el["item"].get("name", "")
+                            elif isinstance(el.get("name"), str):
+                                name = el["name"]
+                            if name:
+                                breadcrumbs.append(name)
+                        if breadcrumbs:
+                            return breadcrumbs
+            except (json.JSONDecodeError, TypeError):
+                continue
+
+        # Try HTML breadcrumb elements
+        for nav in soup.select(
+            "nav.breadcrumb, .breadcrumbs, [aria-label='breadcrumb'], "
+            "ol.breadcrumb, ul.breadcrumb"
+        ):
+            for item in nav.find_all("li"):
+                text = item.get_text(strip=True)
+                if text and text not in ("›", ">", "/", "»"):
+                    breadcrumbs.append(text)
+            if breadcrumbs:
+                return breadcrumbs
+
+        return breadcrumbs
 
     def _parse_spec_table(self, element) -> Dict[str, str]:
         """Parse a spec table or definition list into key-value pairs."""
@@ -503,5 +776,14 @@ def enrich_product_with_official(
     # Official URL
     if official_data.get("official_url"):
         product["official_url"] = official_data["official_url"]
+
+    # v8.4: Propagate relationship hints for early graph building
+    if official_data.get("relationship_hints"):
+        existing_hints = product.get("relationship_hints", [])
+        product["relationship_hints"] = existing_hints + \
+            official_data["relationship_hints"]
+
+    if official_data.get("breadcrumbs"):
+        product["official_breadcrumbs"] = official_data["breadcrumbs"]
 
     return product

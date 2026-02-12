@@ -12,6 +12,7 @@
 import React, { lazy, Suspense } from "react";
 import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
+import { Breadcrumbs } from "./components/ui/Breadcrumbs";
 import { useNavigationStore } from "./store/navigationStore";
 import { LearningFeed } from "./components/LearningFeed";
 import { useLearningStream } from "./hooks/useLearningStream";
@@ -32,11 +33,24 @@ const ProductPage = lazy(() =>
     default: m.ProductPage,
   })),
 );
+const CurationDashboard = lazy(() =>
+  import("./components/views/CurationDashboard").then((m) => ({
+    default: m.CurationDashboard,
+  })),
+);
 
-// Loading placeholder
+// Loading placeholder with skeleton animation
 const LoadingPlaceholder = () => (
-  <div className="flex items-center justify-center w-full h-full text-zinc-500">
-    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zinc-600" />
+  <div className="flex items-center justify-center w-full h-full bg-black/50">
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative w-12 h-12">
+        <div className="absolute inset-0 rounded-full border-2 border-zinc-800" />
+        <div className="absolute inset-0 rounded-full border-2 border-t-blue-500 animate-spin" />
+      </div>
+      <p className="text-xs text-zinc-600 font-mono tracking-widest uppercase animate-pulse">
+        Loading
+      </p>
+    </div>
   </div>
 );
 
@@ -50,22 +64,30 @@ function App() {
   return (
     <GlobalErrorBoundary>
       <div className="flex h-screen w-screen flex-col bg-black text-white font-sans overflow-hidden">
-        {/* Global Header */}
-        <header className="h-12 bg-black border-b border-zinc-900 flex items-center justify-between px-6 z-50 relative">
-          <div className="flex items-center gap-2.5 shrink-0">
-            <img
-              src="/assets/logos/halilit_logo.svg"
-              alt="Halilit"
-              className="h-6 w-auto"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
-            <span className="text-zinc-600 text-xs font-mono tracking-widest">
-              SC
-            </span>
+        {/* Global Header — refined with breadcrumbs */}
+        <header className="h-14 bg-black/95 backdrop-blur-md border-b border-zinc-800/60 flex items-center justify-between px-6 z-50 relative shadow-lg shadow-black/50">
+          <div className="flex items-center gap-3 shrink-0">
+            <button
+              onClick={() => useNavigationStore.getState().goToGalaxy()}
+              className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
+              title="Go to Dashboard"
+            >
+              <img
+                src="/assets/logos/halilit_logo.svg"
+                alt="Halilit"
+                className="h-6 w-auto"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+              <span className="text-zinc-600 text-[10px] font-mono tracking-[0.15em] uppercase">
+                Support Center
+              </span>
+            </button>
+            <div className="h-5 w-px bg-zinc-800 mx-1" />
+            <Breadcrumbs />
           </div>
-          <div className="flex-1 max-w-2xl px-8 flex justify-center">
+          <div className="flex-1 max-w-xl px-6 flex justify-end">
             <GlobalSearch />
           </div>
         </header>
@@ -98,6 +120,15 @@ function App() {
             <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
               <Suspense fallback={<LoadingPlaceholder />}>
                 <ProductPage productId={activeProductId} />
+              </Suspense>
+            </div>
+          )}
+
+          {/* Screen 4: Curation Dashboard (Admin) */}
+          {currentView === "CURATION" && (
+            <div className="absolute inset-0 animate-slide-up">
+              <Suspense fallback={<LoadingPlaceholder />}>
+                <CurationDashboard />
               </Suspense>
             </div>
           )}

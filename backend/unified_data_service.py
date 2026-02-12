@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 """
-UNIFIED DATA SERVICE v8.3
+UNIFIED DATA SERVICE v8.4
 
 Consolidated data pipeline that handles:
 1. Product normalization (raw → IngestionProductDraft)
 2. Data aggregation & filtering
 3. Frontend synchronization
 
-This file consolidates:
-- conductor_data_service.py
-- data_normalizer.py
-- ingestion_to_frontend.py
+SOURCE RULES (see backend/source_rules.py for the full law):
+─────────────────────────────────────────────────────────────
+1. COMMERCIAL (Halilit.com) → Golden List, Prices, SKUs
+2. OFFICIAL (Brand pages)   → Titles, Descriptions, Specs, Media
+3. CONTEXTUAL (3+ Reviews)  → Pros/Cons, Real-world insights
+
+NO SYNTHETIC DATA. NO MOCKING. ONLY REAL DATA.
+All data passing through this service is validated against source rules.
 
 Single source of truth for all product data processing in Halilit Support Center.
 """
@@ -26,6 +30,10 @@ from datetime import datetime, timedelta
 
 from backend.ingestion.ingestion_database import get_ingestion_database
 from backend.ingestion.taxonomy_manager import get_taxonomy_manager
+from backend.source_rules import (
+    validate_no_synthetic_data, enforce_source_rules,
+    AuthorizedSource, SourceCoverage, MIN_REVIEW_SOURCES,
+)
 
 logger = logging.getLogger("UnifiedDataService")
 
@@ -260,7 +268,38 @@ class DataNormalizer:
             "image_thumbnail": thumbnail_image,
             "image_gallery": official_images,
             "image_url": hero_image.get("url") if hero_image else "",
+
+            # ===== SOURCE COVERAGE TRACKING =====
+            "source_coverage_commercial": raw_product.get("source_coverage_commercial", False),
+            "source_coverage_official": raw_product.get("source_coverage_official", False),
+            "source_coverage_contextual": raw_product.get("source_coverage_contextual", False),
+            "contextual_source_count": raw_product.get("contextual_source_count", 0),
+            "cross_validation_confidence": raw_product.get("cross_validation_confidence", 0.0),
+            "cross_validation_status": raw_product.get("cross_validation_status", "pending"),
+
+            # ===== CONTEXTUAL DATA (Reviews from 3+ trusted sources) =====
+            "reviews": raw_product.get("reviews", []),
+            "review_sources": raw_product.get("review_sources", []),
+            "review_pros": raw_product.get("review_pros", []),
+            "review_cons": raw_product.get("review_cons", []),
+            "review_synthesis": raw_product.get("review_synthesis"),
+            "average_rating": raw_product.get("average_rating"),
+            "user_sentiment": raw_product.get("user_sentiment", "pending"),
+            "real_world_insights": raw_product.get("real_world_insights", []),
         }
+
+        # ═══════════════════════════════════════════════════════════════
+        # SOURCE RULES ENFORCEMENT: Reject synthetic data at normalization
+        # ═══════════════════════════════════════════════════════════════
+        synthetic_violations = validate_no_synthetic_data(normalized)
+        if synthetic_violations:
+            for sv in synthetic_violations:
+                logger.warning(
+                    f"⛔ SYNTHETIC DATA in {halilit_id}: {sv.message}")
+                if "validation_warnings" not in normalized:
+                    normalized["validation_warnings"] = []
+                normalized["validation_warnings"].append(
+                    f"SOURCE RULE VIOLATION: {sv.message}")
 
         return normalized
 

@@ -1,5 +1,5 @@
 """
-Ingestion Versioning System - v8.3
+Ingestion Versioning System - v8.4
 
 Manages version tracking for ingested product data across the Trinity Swarm pipeline.
 Tracks when data was harvested, enriched, validated, and approved.

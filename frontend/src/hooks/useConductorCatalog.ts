@@ -20,6 +20,41 @@ import { useMemo } from 'react';
  * Canonical product shape — matches backend product_normalizer.normalize_product() exactly.
  * Every field is guaranteed present; no fallback chains needed.
  */
+// ── Product Graph Types ──
+
+export type RelationshipType =
+    | 'variant_of'
+    | 'accessory_for'
+    | 'compatible_with'
+    | 'successor_of'
+    | 'bundle_with'
+    | 'alternative_to';
+
+export interface ProductRelationship {
+    source_id: string;
+    target_id: string;
+    relationship_type: RelationshipType;
+    direction: 'unidirectional' | 'bidirectional';
+    confidence: number;
+    ai_discovered: boolean;
+    manually_curated: boolean;
+    compatibility_notes: string;
+    discovered_from: string;
+}
+
+export interface ProductFamily {
+    id: string;
+    brand: string;
+    family_name: string;
+    series: string;
+    generation: number | null;
+    product_line: string;
+    variant_ids: string[];
+    accessory_ids: string[];
+    hero_image: string;
+    description: string;
+}
+
 export interface ConductorProduct {
     id: string;
     name: string;
@@ -47,23 +82,42 @@ export interface ConductorProduct {
     cons: string[];
     contextual_data: Record<string, any>;
     quality_score: number;
+    data_status: 'COMPLETE' | 'GOOD' | 'PARTIAL' | 'MINIMAL';
+    data_missing: string[];
     halilit_url: string;
     official_url: string;
     sources: string[];
     data_trust: {
-        price_source: 'halilit' | 'official' | 'none';
+        price_source: 'halilit' | 'official' | 'estimated' | 'none';
         specs_source: 'halilit' | 'official' | 'none';
-        description_source: 'halilit' | 'official' | 'none';
+        description_source: 'halilit' | 'official' | 'synthesized' | 'none';
         image_source: 'halilit' | 'official' | 'none';
         review_source: 'contextual' | 'none';
     };
     search_text: string;
+    // ── Product Graph fields (additive) ──
+    family_id: string | null;
+    variant_key: string | null;
+    variant_is_default: boolean | null;
 }
 
 export interface CatalogIndexes {
     by_galaxy: Record<string, number[]>;
     by_spectrum: Record<string, number[]>;
     by_brand: Record<string, number[]>;
+    // Product Graph indexes
+    by_family?: Record<string, number[]>;
+    relationships?: Record<string, ProductRelationship[]>;
+}
+
+export interface GraphStats {
+    total_families: number;
+    total_relationships: number;
+    confirmed_relationships: number;
+    pending_review: number;
+    products_in_families: number;
+    products_without_family: number;
+    relationship_type_counts: Record<string, number>;
 }
 
 export interface GalaxyDef {
@@ -82,6 +136,14 @@ export interface CatalogMetadata {
     source: string;
     cache_ttl_seconds: number;
     timestamp?: string;
+    // Health metrics from catalog validator
+    health_score?: number;
+    health_status?: 'COMPLETE' | 'GOOD' | 'PARTIAL' | 'MINIMAL';
+    status_counts?: Record<string, number>;
+    field_coverage?: Record<string, number>;
+    top_issues?: string[];
+    // Product Graph metrics
+    graph_stats?: GraphStats;
 }
 
 export interface ConductorCatalog {
@@ -102,11 +164,14 @@ export const useConductorCatalog = () => {
                 throw new Error(`Failed to load catalog: ${response.statusText}`);
             }
             const catalog: ConductorCatalog = await response.json();
-            console.log(
-                `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
-                `${catalog.metadata.brands.length} brands, ` +
-                `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies`
-            );
+            if (import.meta.env.DEV) {
+                console.log(
+                    `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
+                    `${catalog.metadata.brands.length} brands, ` +
+                    `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies, ` +
+                    `health: ${catalog.metadata.health_score ?? '?'}/100`
+                );
+            }
             return catalog;
         },
         staleTime: 5 * 60 * 1000,
@@ -129,6 +194,7 @@ export const useConductorCatalog = () => {
         galaxyCounts: data?.metadata.galaxy_counts || {},
         spectrumCounts: data?.metadata.spectrum_counts || {},
         galaxies: data?.metadata.galaxies || [],
+        graphStats: data?.metadata.graph_stats || null,
     };
 };
 
@@ -186,5 +252,99 @@ export const useConductorProductsByCategory = (category: string | null) => {
     }, [category, indexes, products]);
 
     return { products: filtered, count: filtered.length, isLoading };
+};
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PRODUCT GRAPH HOOKS — Family & Relationship Awareness
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Get all products in the same family as a given product.
+ * O(1) index lookup.
+ */
+export const useProductFamily = (familyId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const familyProducts = useMemo(() => {
+        if (!familyId || !indexes.by_family?.[familyId]) return [];
+        return indexes.by_family[familyId].map(idx => products[idx]).filter(Boolean);
+    }, [familyId, indexes, products]);
+
+    return {
+        products: familyProducts,
+        count: familyProducts.length,
+        isLoading,
+    };
+};
+
+/**
+ * Get all variants in the same family as this product (excludes self).
+ */
+export const useProductVariants = (productId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const variants = useMemo(() => {
+        if (!productId) return [];
+        const product = products.find(p => p.id === productId);
+        if (!product?.family_id || !indexes.by_family?.[product.family_id]) return [];
+        return indexes.by_family[product.family_id]
+            .map(idx => products[idx])
+            .filter(p => p && p.id !== productId);
+    }, [productId, indexes, products]);
+
+    return {
+        variants,
+        count: variants.length,
+        isLoading,
+    };
+};
+
+/**
+ * Get all relationships for a product from the pre-computed index.
+ */
+export const useProductRelationships = (productId: string | null) => {
+    const { products, indexes, isLoading } = useConductorCatalog();
+
+    const result = useMemo(() => {
+        if (!productId || !indexes.relationships?.[productId]) {
+            return { accessories: [], compatible: [], alternatives: [], all: [] };
+        }
+
+        const rels = indexes.relationships[productId];
+        const productMap = new Map(products.map(p => [p.id, p]));
+
+        const accessories: ConductorProduct[] = [];
+        const compatible: ConductorProduct[] = [];
+        const alternatives: ConductorProduct[] = [];
+
+        for (const rel of rels) {
+            const otherId = rel.source_id === productId ? rel.target_id : rel.source_id;
+            const other = productMap.get(otherId);
+            if (!other) continue;
+
+            switch (rel.relationship_type) {
+                case 'accessory_for':
+                    // Source is the accessory, target is the main product
+                    if (rel.target_id === productId) accessories.push(productMap.get(rel.source_id)!);
+                    break;
+                case 'compatible_with':
+                    compatible.push(other);
+                    break;
+                case 'alternative_to':
+                    alternatives.push(other);
+                    break;
+            }
+        }
+
+        return {
+            accessories: accessories.filter(Boolean),
+            compatible: compatible.filter(Boolean),
+            alternatives: alternatives.filter(Boolean),
+            all: rels,
+        };
+    }, [productId, indexes, products]);
+
+    return { ...result, isLoading };
 };
 

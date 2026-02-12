@@ -1,5 +1,5 @@
 """
-INGESTION PIPELINE v8.3
+INGESTION PIPELINE v8.4
 
 High-level imports for the complete refactored ingestion system.
 
@@ -70,6 +70,54 @@ from backend.ingestion.ingestion_database import (
     get_ingestion_database,
 )
 
+# Enhanced pipeline components (v2.0)
+from backend.ingestion.enhanced_harvester import (
+    EnhancedHarvester,
+    FingerprintStore,
+    RateLimiter,
+    RetryConfig,
+    HarvestResult,
+    get_enhanced_harvester,
+)
+
+from backend.ingestion.cross_validator import (
+    CrossValidator,
+    CrossValidationResult,
+    ValidationIssue,
+    get_cross_validator,
+)
+
+from backend.ingestion.image_processor import (
+    ImageProcessor,
+    ImageVariant,
+    ImageProcessingResult,
+    get_image_processor,
+)
+
+from backend.ingestion.diff_publisher import (
+    DiffPublisher,
+    PublishDiff,
+    PublishResult,
+    get_diff_publisher,
+)
+
+from backend.ingestion.pipeline_telemetry import (
+    PipelineTelemetry,
+    PhaseMetrics,
+    PipelineRun,
+    get_pipeline_telemetry,
+)
+
+from backend.ingestion.ai_cache import (
+    AIResponseCache,
+    get_ai_cache,
+)
+
+from backend.ingestion.enhanced_pipeline import (
+    EnhancedPipeline,
+    get_enhanced_pipeline,
+)
+
 __all__ = [
     # Data Models
     'PricingTier',
@@ -114,6 +162,46 @@ __all__ = [
     # Database
     'IngestionDatabase',
     'get_ingestion_database',
+
+    # Enhanced Harvester
+    'EnhancedHarvester',
+    'FingerprintStore',
+    'RateLimiter',
+    'RetryConfig',
+    'HarvestResult',
+    'get_enhanced_harvester',
+
+    # Cross-Validator
+    'CrossValidator',
+    'CrossValidationResult',
+    'ValidationIssue',
+    'get_cross_validator',
+
+    # Image Processor
+    'ImageProcessor',
+    'ImageVariant',
+    'ImageProcessingResult',
+    'get_image_processor',
+
+    # Diff Publisher
+    'DiffPublisher',
+    'PublishDiff',
+    'PublishResult',
+    'get_diff_publisher',
+
+    # Pipeline Telemetry
+    'PipelineTelemetry',
+    'PhaseMetrics',
+    'PipelineRun',
+    'get_pipeline_telemetry',
+
+    # AI Cache
+    'AIResponseCache',
+    'get_ai_cache',
+
+    # Enhanced Pipeline
+    'EnhancedPipeline',
+    'get_enhanced_pipeline',
 
     # Helpers
     'validate_pricing_consistency',
