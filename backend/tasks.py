@@ -1,5 +1,5 @@
 """
-Task Definitions for Halilit Support Center v8.2
+Task Definitions for Halilit Support Center v8.4
 
 These tasks wrap the Trinity Swarm agents into distributed Celery tasks
 that can run in parallel across multiple workers.

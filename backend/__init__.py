@@ -1,5 +1,5 @@
 """
-Halilit Support Center v8.2 - ADK Backend (Trinity Swarm + Async Task Queue)
+Halilit Support Center v8.4 - ADK Backend (Trinity Swarm + Async Task Queue)
 =============================================================================
 
 Lightweight module exports for the Halilit Support Center API.
@@ -9,7 +9,7 @@ Lightweight module exports for the Halilit Support Center API.
 - Skills & Workflow: Verified capabilities with state machines
 - Security: Multi-layer protection
 
-Version: 8.2.0 (Production-Ready)
+Version: 8.3.0 (Production-Ready)
 """
 
 import sys
@@ -20,7 +20,7 @@ _parent_dir = str(Path(__file__).parent.parent)
 if _parent_dir not in sys.path:
     sys.path.insert(0, _parent_dir)
 
-__version__ = "8.2.0"
+__version__ = "8.3.0"
 __adk_enabled__ = True
 
 __all__ = [

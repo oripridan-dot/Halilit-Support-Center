@@ -15,7 +15,6 @@ import type {
   BrandIdentity,
   ProductImagesType,
   Product as ProductType,
-  ImageAsset,
 } from "../types/index";
 import { SchemaValidator } from "./schemas";
 

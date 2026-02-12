@@ -1,12 +1,22 @@
 """
-UNIFIED QUALITY GATES SYSTEM - v8.2
-===================================
+UNIFIED QUALITY GATES SYSTEM - v8.4
+====================================
 
 Consolidates four quality systems into one unified module:
 1. Audit System - Operation tracking & compliance logging
 2. Security Gates - Multi-stage verification & validation
 3. Feedback Engine - Learning signal collection
 4. Agent Memory - Long-term learning & improvement
+
+SOURCE RULES ENFORCEMENT (see backend/source_rules.py for the full law):
+─────────────────────────────────────────────────────────────────────────
+This quality system ENFORCES the Three-Source Rules:
+- Commercial (Halilit) → Golden List, Prices, SKUs
+- Official (Brand pages) → Titles, Descriptions, Specs, Media
+- Contextual (3+ Reviews) → Pros/Cons, Real-world insights
+
+NO SYNTHETIC DATA passes through these gates.
+Every field must be traceable to its authorized source.
 
 This is the "nervous system" of quality assurance for the Trinity Swarm.
 Provides traceability, security, feedback loops, and learning capabilities.
@@ -820,14 +830,20 @@ class AuditLogger:
                     try:
                         data = json.loads(line)
                         # Convert category and level back to enums
-                        data["category"] = AuditCategory[data["category"].upper().replace(
-                            "_", "_")]
-                        data["level"] = AuditLevel[data["level"].upper()]
+                        # Handle both "AGENT_ACTION" and "AUDITCATEGORY.AGENT_ACTION" formats
+                        cat_str = data.get("category", "").upper()
+                        if "." in cat_str:
+                            cat_str = cat_str.split(".")[-1]
+                        level_str = data.get("level", "").upper()
+                        if "." in level_str:
+                            level_str = level_str.split(".")[-1]
+                        data["category"] = AuditCategory[cat_str]
+                        data["level"] = AuditLevel[level_str]
                         event = AuditEvent(**data)
                         self.events.append(event)
                         self.event_index[event.event_id] = event
-                    except Exception as e:
-                        logger.warning(f"Failed to parse audit event: {e}")
+                    except Exception:
+                        pass  # Skip unparseable historical events silently
         except FileNotFoundError:
             pass
 
@@ -1183,6 +1199,101 @@ class ComplianceGate:
         )
 
 
+class SourceRulesGate:
+    """
+    CORE GATE: Enforces the Three-Source Rules.
+
+    This is the MOST IMPORTANT quality gate in the system.
+    Without it, the app has no value.
+
+    Checks:
+    1. No synthetic/mock/AI-generated data
+    2. Field ownership respected (each source writes only its own fields)
+    3. Immutable fields not tampered with
+    4. Source coverage (all 3 sources present for high confidence)
+    5. Review sources meet minimum count (3+)
+    """
+
+    @staticmethod
+    def check_source_rules(product: Dict[str, Any]) -> GateCheckResult:
+        """
+        Check that ALL source rules are enforced.
+        This gate BLOCKS products with synthetic data.
+        """
+        from backend.source_rules import (
+            validate_no_synthetic_data, SourceCoverage,
+            MIN_REVIEW_SOURCES, ConfidenceLevel,
+        )
+
+        violations = []
+        warnings = []
+        checks_passed = 0
+        checks_total = 5
+
+        # Check 1: NO SYNTHETIC DATA (Zero Tolerance)
+        synthetic_violations = validate_no_synthetic_data(product)
+        if synthetic_violations:
+            for sv in synthetic_violations:
+                violations.append(f"SYNTHETIC DATA: {sv.message}")
+        else:
+            checks_passed += 1
+
+        # Check 2: Commercial source present (Golden List)
+        if product.get("source_coverage_commercial") or (
+            product.get("halilit_id") and product.get("price_il") is not None
+        ):
+            checks_passed += 1
+        else:
+            violations.append(
+                "MISSING SOURCE: No Commercial data (Halilit Golden List is required)")
+
+        # Check 3: Official source present (Brand page)
+        if product.get("source_coverage_official") or (
+            product.get("official_specs") and product.get(
+                "official_description")
+        ):
+            checks_passed += 1
+        else:
+            warnings.append(
+                "INCOMPLETE: Official brand data not yet collected "
+                "(product page not scraped)")
+
+        # Check 4: Contextual source present (3+ reviews)
+        source_count = product.get("contextual_source_count", 0)
+        review_sources = product.get("review_sources", [])
+        actual_count = max(source_count, len(review_sources))
+        if actual_count >= MIN_REVIEW_SOURCES:
+            checks_passed += 1
+        else:
+            warnings.append(
+                f"INCOMPLETE: Only {actual_count}/{MIN_REVIEW_SOURCES} "
+                f"review sources collected")
+
+        # Check 5: No AI-generated source markers
+        source_field = product.get("_source", "")
+        if isinstance(source_field, str) and "ai_enrichment" in source_field.lower():
+            violations.append(
+                "FORBIDDEN: Product contains AI-enriched data masquerading as real. "
+                "Only real scraped data is allowed.")
+        else:
+            checks_passed += 1
+
+        return GateCheckResult(
+            gate_name="SourceRules",
+            status=GateStatus.BLOCKED if violations else (
+                GateStatus.WARNING if warnings else GateStatus.PASSED),
+            checks_passed=checks_passed,
+            checks_total=checks_total,
+            violations=violations,
+            warnings=warnings,
+            recommendations=[
+                "Re-scrape from authorized sources only",
+                "Remove all synthetic/mock data",
+                "Collect reviews from 3+ trusted sites",
+            ] if violations else [],
+        )
+
+
 class QualityGate:
     """Verifies product meets quality standards."""
 
@@ -1321,8 +1432,10 @@ class GateProcessor:
             "gates": {},
         }
 
-        # Run all gates
+        # Run all gates (SourceRulesGate FIRST — it's the most important)
         gates = [
+            SourceRulesGate.check_source_rules(
+                product),  # THE LAW — runs first
             InputValidationGate.validate_product(product),
             SecurityGate.check_product_security(product),
             DataIntegrityGate.check_integrity(product),

@@ -1,17 +1,21 @@
 """
-UNIFIED INGESTION ORCHESTRATOR v7.0 ⭐ CURRENT VERSION
+UNIFIED INGESTION ORCHESTRATOR v8.4
 
 Master orchestrator for the complete scraping & ingestion pipeline:
 
-Phase 1: HARVEST - Scrape raw data (CommercialScout)
-Phase 2: ENRICH - Apply brand specifications (OfficialVerifier)
-Phase 3: VALIDATE - Check compliance (ExternalValidator)
-Phase 4: APPROVE - Final decision
+Phase 1: HARVEST - Scrape raw data (CommercialScout → Halilit.com)
+Phase 2: ENRICH - Apply official brand specifications (OfficialScout → Brand pages)
+Phase 3: REVIEW - Gather real user reviews (ContextualScout → 3+ review sites)
+Phase 4: VALIDATE - Cross-validate across all 3 sources
+Phase 5: APPROVE - Final decision
 
-Coordinated by Google Conductor for version v7.0+
+SOURCE RULES (see backend/source_rules.py for the full law):
+─────────────────────────────────────────────────────────────
+1. COMMERCIAL (Halilit.com) → Golden List, Prices, SKUs
+2. OFFICIAL (Brand pages)   → Titles, Descriptions, Specs, Media
+3. CONTEXTUAL (3+ Reviews)  → Pros/Cons, Real-world insights
 
-DO NOT USE: Legacy v6.0 methods. They are deprecated.
-USE INSTEAD: sync_brand_to_frontend for all data pipeline needs.
+NO SYNTHETIC DATA. NO MOCKING. ONLY REAL DATA.
 """
 
 import logging
@@ -31,6 +35,11 @@ from backend.ingestion.pricing_engine import get_pricing_engine
 from backend.ingestion.display_engine import get_display_engine
 from backend.ingestion.guardrails import verify_critical_facts
 from backend.unified_agent_orchestrator import CommercialAgent, OfficialAgent, ContextualAgent
+from backend.source_rules import (
+    validate_no_synthetic_data, enforce_source_rules,
+    AuthorizedSource, SourceCoverage, MIN_REVIEW_SOURCES,
+    log_source_rule_summary,
+)
 
 logger = logging.getLogger("IngestionOrchestrator")
 
@@ -62,6 +71,7 @@ class IngestionOrchestrator:
 
         self.logger.info(
             "✅ Orchestrator initialized with Trinity Swarm agents")
+        log_source_rule_summary()
 
     def ingest_batch(
         self,
@@ -314,11 +324,6 @@ class IngestionOrchestrator:
         if official_specs:
             self.logger.info(
                 f"   📘 Found official specs for {product_name}: {list(official_specs.keys())}")
-        else:
-            # Debug why it is missing
-            if 'Moog' in brand and product_name.startswith('סינתיסייזר Moog Mavis'):
-                self.logger.warning(
-                    f"   ⚠️ MISSING official specs for {product_name}. Keys in raw: {list(raw_product.keys())}")
 
         # Create draft with Strict Commercial Data + Seed Content
         draft = IngestionProductDraft(
@@ -363,7 +368,8 @@ class IngestionOrchestrator:
             raw_snapshot=raw_product.get('raw_snapshot') if isinstance(
                 raw_product.get('raw_snapshot'), dict) else raw_product,
             status=IngestionStatus.HARVESTED,
-            pipeline_phase="harvest"
+            pipeline_phase="harvest",
+            source_coverage_commercial=True,  # Mark: Commercial Scout provided data
         )
 
         self.logger.debug(
@@ -392,6 +398,7 @@ class IngestionOrchestrator:
         )
 
         # STEP 2: Call OfficialVerifier agent to enrich with official data
+        # SOURCE RULE: Only Official Scout can set spec/description/media fields
         try:
             enriched_dict = self.official_verifier.enrich(
                 draft.model_dump() if hasattr(draft, 'model_dump') else dict(draft))
@@ -403,13 +410,23 @@ class IngestionOrchestrator:
                 draft.official_images = enriched_dict['official_images']
             if enriched_dict.get('official_description'):
                 draft.official_description = enriched_dict['official_description']
+            if enriched_dict.get('official_url'):
+                draft.official_url = enriched_dict['official_url']
+
+            # Track source coverage
+            draft.source_coverage_official = enriched_dict.get(
+                'source_coverage_official', bool(
+                    enriched_dict.get('official_specs') or enriched_dict.get(
+                        'official_description')
+                ))
 
             self.logger.info(
-                f"   📘 OfficialVerifier enriched: {draft.product_name}")
+                f"   📘 OfficialVerifier enriched: {draft.product_name} "
+                f"(official_data={'✅' if draft.source_coverage_official else '⚠️ pending'})")
         except Exception as e:
             self.logger.warning(
                 f"   ⚠️  OfficialVerifier failed for {draft.product_name}: {e}")
-            # Continue without agent enrichment - not critical
+            draft.source_coverage_official = False
 
         # Update validation status
         draft.validation_status = IngestionStatus.ENRICHED
@@ -549,17 +566,39 @@ class IngestionOrchestrator:
         if not draft.brand:
             errors.append("❌ Missing required field: brand")
 
-        # RELAXED VALIDATION (v7.5) - Release all blocks
-        # 1. Allow 0 price (Call for price)
-        # 2. Allow low price (Accessories)
+        # Price validation
         if draft.pricing.price_il < 0:
             errors.append("❌ Invalid price_il (must be non-negative)")
 
-        # Check that at least ONE image exists (CRITICAL for frontend display)
-        # RELAXED: Allow placeholders if needed, but we prefer real images.
-        # has_images = len(draft.official_images) > 0 if draft.official_images else False
-        # if not has_images:
-        #    errors.append("❌ Missing official_images (at least 1 required for frontend)")
+        # ═══════════════════════════════════════════════════════════════
+        # SOURCE RULES ENFORCEMENT (THE LAW)
+        # ═══════════════════════════════════════════════════════════════
+        draft_dict = draft.model_dump() if hasattr(draft, 'model_dump') else {}
+        synthetic_violations = validate_no_synthetic_data(draft_dict)
+        for sv in synthetic_violations:
+            errors.append(f"❌ SOURCE RULE: {sv.message}")
+
+        # Track source coverage in validation warnings
+        if not draft.source_coverage_commercial:
+            errors.append(
+                "❌ SOURCE RULE: Missing Commercial Scout data (Golden List required)")
+        if not draft.source_coverage_official:
+            draft.validation_warnings.append(
+                "⚠ SOURCE: Official brand data not yet collected")
+        if not draft.source_coverage_contextual:
+            draft.validation_warnings.append(
+                f"⚠ SOURCE: Need {MIN_REVIEW_SOURCES}+ review sources "
+                f"(have {draft.contextual_source_count})")
+
+        # Calculate cross-validation confidence
+        coverage = SourceCoverage(
+            commercial_complete=draft.source_coverage_commercial,
+            official_complete=draft.source_coverage_official,
+            contextual_complete=draft.source_coverage_contextual,
+            contextual_source_count=draft.contextual_source_count,
+        )
+        draft.cross_validation_confidence = coverage.confidence_score
+        draft.cross_validation_status = coverage.confidence_level.value
 
         # Check taxonomy validity (warn but don't reject)
         if not self.taxonomy_manager.validate_category(
@@ -569,11 +608,12 @@ class IngestionOrchestrator:
             draft.validation_warnings.append(f"⚠ Category may not be standard: {draft.taxonomy.canonical_category} > "
                                              f"{draft.taxonomy.canonical_subcategory}")
 
-        # Check data completeness threshold - STRICT: require 40% minimum
-        # RELAXED VALIDATION (v7.5) - Release all blocks
-        # if draft.data_completeness < 0.4:
-        #    errors.append(
-        #        f"❌ Data completeness too low ({draft.data_completeness:.0%}) - requires 40% minimum")
+        # Check data completeness threshold — require 20% minimum
+        # (relaxed from 40% to allow products through early pipeline stages)
+        if draft.data_completeness < 0.2:
+            errors.append(
+                f"❌ Data completeness too low ({draft.data_completeness:.0%}) — requires 20% minimum"
+            )
 
         # Check pricing consistency
         pricing_errors = validate_pricing_consistency(draft.pricing)
@@ -640,44 +680,6 @@ class IngestionOrchestrator:
                 "✅ Pipeline running smoothly - no issues detected")
 
         return recommendations
-
-    # ============================================================================
-    # LEGACY COMPATIBILITY
-    # ============================================================================
-
-    def ingest_legacy_products(
-        self,
-        brand: str,
-        legacy_products: List[ProductDraft],
-    ) -> IngestionReport:
-        """
-        ❌ DEPRECATED - DO NOT USE (legacy method)
-
-        Ingest legacy ProductDraft format.
-        Converts to new unified model and processes through pipeline.
-
-        REPLACEMENT: Use sync_brand_to_frontend() instead.
-        """
-        log_deprecation_warning(
-            "ingest_legacy_products",
-            "sync_brand_to_frontend (in ingestion_to_frontend.py)"
-        )
-
-        # Still works for backward compatibility, but warn
-        raw_products = []
-        for legacy_product in legacy_products:
-            raw_products.append({
-                'id': legacy_product.id,
-                'name': legacy_product.name,
-                'brand': legacy_product.brand,
-                'price_il': legacy_product.price_il,
-                'price_eilat': legacy_product.price_eilat,
-                'image_url': legacy_product.image_url,
-                'source_url': legacy_product.source_url,
-                'official_match': legacy_product.official_match,
-            })
-
-        return self.ingest_batch(brand, raw_products)
 
 
 # Global singleton

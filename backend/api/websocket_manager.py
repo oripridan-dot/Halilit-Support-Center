@@ -1,5 +1,5 @@
 """
-WebSocket Manager for Halilit Support Center v8.2
+WebSocket Manager for Halilit Support Center v8.4
 
 Manages real-time task status updates via WebSocket,
 allowing frontend to receive live progress without polling.

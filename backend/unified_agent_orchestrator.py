@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """
-Unified Agent Orchestrator v8.2
+Unified Agent Orchestrator v8.4
 ================================
 
 Consolidates three core systems:
-1. Trinity Swarm - Three-agent autonomous data pipeline (Scout → Verifier → Auditor)
+1. Trinity Swarm - Three-agent autonomous data pipeline
 2. Agent Improvement Engine - Applies learned optimizations to agents
 3. Agent Memory & Learning Integration - Extends agents with memory capabilities
 
-Architecture:
-- CommercialAgent (Scout): Harvests raw product data from Halilit
-- OfficialAgent (Verifier): Adds manufacturer specs & official documentation
-- ContextualAgent (Auditor): Performs final validation & approval
-- AgentImprovementEngine: Applies cycle-based improvements
-- TrinitySwarm: Orchestrates the three agents in strict data flow
+ARCHITECTURE — THE THREE SOURCES (see backend/source_rules.py for full law):
+─────────────────────────────────────────────────────────────
+│ CommercialScout  │ Halilit.com        │ Golden List, Prices, SKUs         │
+│ OfficialScout    │ Brand product page  │ Titles, Specs, Media, Docs        │
+│ ContextualScout  │ 3+ Review websites  │ Pros/Cons, Real-world insights     │
+─────────────────────────────────────────────────────────────
+
+ZERO TOLERANCE: No synthetic, mock, or AI-generated data.
+Each source has strict field ownership. Cross-validation required.
 
 Status: ✅ UNIFIED (was: agent_improver.py + trinity_swarm.py)
 """
@@ -35,6 +38,15 @@ import google.genai as genai
 from google.genai import types
 from backend.unified_quality_gates import MemoryAwareMixin
 from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
+from backend.source_rules import (
+    AuthorizedSource, FieldOwnership, FIELD_OWNERSHIP, IMMUTABLE_FIELDS,
+    COMMERCIAL_SCOUT_SYSTEM_PROMPT, OFFICIAL_SCOUT_SYSTEM_PROMPT,
+    CONTEXTUAL_SCOUT_SYSTEM_PROMPT, TRUSTED_REVIEW_SOURCES,
+    MIN_REVIEW_SOURCES, ConfidenceLevel, SourceCoverage,
+    enforce_source_rules, validate_no_synthetic_data,
+    cross_validate_product, get_source_for_agent, get_allowed_fields,
+    log_source_rule_summary,
+)
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -176,21 +188,23 @@ class AgentBase(MemoryAwareMixin):
 # --- MODULE 5: AGENT IMPLEMENTATIONS ---
 
 class CommercialAgent(AgentBase):
-    """Scout Agent - Harvests raw product data from Halilit (Source of Truth)."""
+    """
+    COMMERCIAL SCOUT — Keeper of the Golden List.
+
+    SOURCE: Halilit.com (ONLY)
+    OWNS: Golden List, Prices (IL + Eilat), SKUs, Product existence
+    RULE: If it's not on Halilit.com → it DOES NOT EXIST
+
+    Halilit's descriptions are collected ONLY for validation/matching.
+    They are REPLACED by official brand data in the OfficialScout phase.
+    """
+
+    AUTHORIZED_SOURCE = AuthorizedSource.COMMERCIAL
 
     def __init__(self):
         super().__init__(
             name="CommercialScout",
-            system_instruction="""
-            You are the KEEPER OF THE GOLDEN LIST. 
-            Your ONLY job is to extract the exact product inventory from Halilit.com.
-            
-            RULES:
-            1. SINGLE SOURCE OF TRUTH: If it is not on Halilit.com ("Sold by Halilit"), it DOES NOT EXIST.
-            2. IMMUTABLE CORE DATA: The extracted 'product_name', 'halilit_id', and 'price_il' are FINAL.
-            3. GOLDEN LIST: You produce the map of what is commercially available.
-            4. SCOPE: You fetch core identity only (Name, Price, ID). You do NOT fetch specs or reviews.
-            """
+            system_instruction=COMMERCIAL_SCOUT_SYSTEM_PROMPT,
         )
 
     def harvest(self, brand: str) -> List[Dict]:
@@ -232,216 +246,196 @@ class CommercialAgent(AgentBase):
             print(f"   ⚠️ Real scraping failed: {e}. Falling back.")
 
         # If we are here, scraping failed or returned 0 items.
-        # DO NOT return fallback mock data if we want to be "clean".
-        # But for dev continuity, maybe we should return empty list and let pipeline handle it?
-        # The user said "full data replacement with freshly scraped", so mock data is bad.
-        print(f"   ⚠️ No products found for {brand}. Returning empty list.")
+        # ZERO TOLERANCE: No mock data. No fallback. Empty is honest.
+        print(
+            f"   ⚠️ No products found for {brand}. Returning empty list (real data only).")
         return []
+
+    def _enforce_commercial_output(self, product: Dict) -> Dict:
+        """
+        Enforce source rules on Commercial Scout output.
+        Strips any fields that Commercial Scout should NOT be setting.
+        Marks Halilit descriptions as validation-only data.
+        """
+        allowed = get_allowed_fields(AuthorizedSource.COMMERCIAL)
+        # Also allow pipeline metadata and validation seed fields
+        pipeline_fields = {
+            "pipeline_phase", "status", "source", "image_url",
+            "image_gallery", "commercial_image", "description",
+            "description_short", "faq", "feature_list",
+            "_halilit_description_for_matching",
+        }
+
+        cleaned = {}
+        for key, value in product.items():
+            if key in allowed or key in pipeline_fields:
+                cleaned[key] = value
+
+        # Mark Halilit descriptions as validation-only
+        # (will be replaced by Official Scout data)
+        if cleaned.get("description"):
+            cleaned["_halilit_description_for_matching"] = cleaned.get(
+                "description", "")
+        if cleaned.get("description_short"):
+            cleaned["_halilit_description_short_for_matching"] = cleaned.get(
+                "description_short", "")
+
+        # Tag source
+        cleaned["_data_source"] = "commercial"
+        cleaned["source_coverage_commercial"] = True
+
+        return cleaned
 
     def _validate_product_structure(self, product: Dict) -> bool:
         """
-        Validates that a product has all required fields for Golden List.
+        Validates that a product has required fields for Golden List.
         Returns True if valid, False otherwise.
         """
-        required_fields = ['halilit_id', 'product_name', 'price_il', 'brand']
+        # Must have identity
+        if not product.get('halilit_id') or not product.get('product_name'):
+            return False
+        if not product.get('brand'):
+            return False
 
-        # Check required fields exist
-        for field in required_fields:
-            if field not in product or product[field] is None:
-                return False
+        # product_name must be non-empty string
+        if not isinstance(product['product_name'], str) or not product['product_name'].strip():
+            return False
 
-        # Validate price is a number
+        # price can be 0 ("Price on request") but not negative
         try:
-            price = float(product['price_il'])
+            price = float(product.get('price_il', 0))
             if price < 0:
                 return False
         except (ValueError, TypeError):
             return False
 
-        # Validate product_name is not empty
-        if not isinstance(product['product_name'], str) or not product['product_name'].strip():
-            return False
-
         return True
 
+    def _find_brand_group_url(self, scraper, brand: str) -> str:
+        """
+        Find the brand's group page URL from Halilit's brands page.
+
+        The brand group page (/g/5193-Brand/...) is more reliable than search
+        because it only returns products for THAT specific brand, without
+        cross-brand noise from search results.
+        """
+        try:
+            # Use cached brand registry if available
+            if not hasattr(self, '_brand_registry') or not self._brand_registry:
+                self._brand_registry = scraper.discover_all_brands()
+
+            brand_lower = brand.lower().strip()
+            for b in self._brand_registry:
+                if b["slug"] == brand_lower or b["name"].lower() == brand_lower:
+                    if b.get("group_url"):
+                        print(f"   📋 Found brand group page: {b['group_url']}")
+                        return b["group_url"]
+
+            # Try fuzzy match (e.g. "boss" matches "Boss")
+            for b in self._brand_registry:
+                if brand_lower in b["slug"] or b["slug"] in brand_lower:
+                    if b.get("group_url"):
+                        print(
+                            f"   📋 Found brand group page (fuzzy): {b['group_url']}")
+                        return b["group_url"]
+
+        except Exception as e:
+            print(f"   ⚠️ Brand registry lookup failed: {e}")
+
+        return ""
+
     def _scrape_halilit_brand(self, brand: str) -> List[Dict]:
-        """Real scraping logic for Halilit brand page with Pagination."""
-        from urllib.parse import quote
-        encoded_brand = quote(brand)
+        """
+        Scrape Halilit product data using the HalilitPageScraper.
 
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        }
+        Two-phase approach:
+        1. Discover brand's group page URL for accurate listing
+        2. Scrape ALL pages with proper pagination (no artificial cap)
+        3. Scrape each product's individual page for rich JSON-LD data
+           (price, SKU, description, images, features, FAQ)
+        """
+        from backend.ingestion.halilit_page_scraper import HalilitPageScraper
 
-        all_products = []
-        page = 1
-        max_pages = 10  # Safety limit
+        scraper = HalilitPageScraper()
 
-        while page <= max_pages:
-            search_url = f"https://www.halilit.com/search?q={encoded_brand}&page={page}"
-            print(f"   🔎 Scraping Page {page}: {search_url}")
+        # Try to find the brand's dedicated group page URL for more accurate results
+        brand_group_url = self._find_brand_group_url(scraper, brand)
 
-            try:
-                resp = requests.get(search_url, headers=headers, timeout=10)
-                if resp.status_code != 200:
-                    print(
-                        f"   ⚠️ Page {page} failed with status {resp.status_code}")
-                    break
+        products = scraper.scrape_brand_full(
+            brand, brand_group_url=brand_group_url)
 
-                soup = BeautifulSoup(resp.text, 'html.parser')
+        # Convert from page scraper format to pipeline format
+        result = []
+        for p in products:
+            # Use the URL-based item ID from page scraper, or fall back to hash
+            halilit_id = p.get("halilit_id", "")
+            if not halilit_id:
+                halilit_id = f"scraped-{abs(hash(p.get('halilit_url', '')))}"
 
-                # Update selector based on debug_output
-                items = soup.select(".box, .item, .product_item, .product_box")
+            p_obj = {
+                "halilit_id": halilit_id,
+                "product_name": p.get("product_name", ""),
+                "official_name": p.get("official_name", ""),
+                "model_number": p.get("model_number", ""),
+                "brand": p.get("brand", brand),
+                "sku": p.get("sku", ""),
+                "price_il": float(p.get("price_il", 0)),
+                "price_eilat": float(p.get("price_eilat", 0)),
+                "halilit_url": p.get("halilit_url", ""),
+                # Images from product page (gallery + hero)
+                "image_url": p.get("image_url", ""),
+                "image_gallery": p.get("image_gallery", []),
+                "commercial_image": p.get("image_url", ""),
+                "official_images": p.get("official_images", []),
+                # Content from product page JSON-LD
+                "description": p.get("description", ""),
+                "description_short": (p.get("description", "") or p.get("page_description", ""))[:200],
+                "official_description": p.get("description", "") or p.get("page_description", ""),
+                "feature_list": p.get("features", []),
+                "faq": p.get("faq", []),
+                # Pipeline status
+                "pipeline_phase": "harvest",
+                "status": "harvested",
+                "source": p.get("source", "halilit_product_page"),
+            }
+            result.append(p_obj)
 
-                if not items:
-                    print(f"   ℹ️ No items found on page {page}. Stopping.")
-                    break
+        # Enforce source rules on all harvested products
+        result = [self._enforce_commercial_output(p) for p in result]
 
-                print(f"   ℹ️ Found {len(items)} items on page {page}...")
-
-                page_products = []
-                for item in items:
-                    try:
-                        # Extract Name
-                        title_el = item.select_one(
-                            ".title, .product-title, h3, h4, .title_with_brand, .item-title")
-                        if not title_el:
-                            print("   x Skipped item (No title element)")
-                            continue
-
-                        name = title_el.get_text(strip=True)
-
-                        # Fix potential truncation (e.g., "Ynthesizer" -> "Synthesizer")
-                        # If first letter is lowercase and second is lowercaseCheck if it looks like a truncation
-                        if len(name) > 1 and name[0].islower() and name[1].islower():
-                            # Heuristic: Try to find a preceding sibling or parent's previous text
-                            # This is a blind fix without seeing HTML, but generally safe to Title Case if it looks like a proper noun
-                            pass
-
-                        # Basic filtering - RELAXED MODE
-                        # We trust the search result page to return relevant items.
-                        # We just flag it if brand seems missing, but we KEEP it.
-                        brand_match = True
-                        if brand.lower() not in name.lower() and brand.replace(" ", "").lower() not in name.lower():
-                            # Check if brand is in the item text anywhere
-                            item_text = item.get_text(strip=True).lower()
-                            if brand.lower() not in item_text:
-                                brand_match = False
-
-                        if not brand_match:
-                            # Verify if it's an accessory or related item
-                            # We keep it but mark confidence lower? For now, we needed "Golden List",
-                            # implying EVERYTHING on the brand page is relevant.
-                            # So we keep it.
-                            pass
-
-                        # Extract Price
-                        price_el = item.select_one(
-                            ".price, .price-new, .current-price, .price_value, .item_price")
-                        price = 0.0
-                        if price_el:
-                            price_txt = price_el.get_text(strip=True)
-                            clean_price = ''.join(
-                                c for c in price_txt if c.isdigit() or c == '.')
-                            try:
-                                if clean_price:
-                                    price = float(clean_price)
-                            except:
-                                pass
-
-                        # Extract URL
-                        link_el = item.select_one("a")
-                        url = ""
-                        if link_el:
-                            url = link_el.get('href', "")
-                            if url and not url.startswith("http"):
-                                url = "https://www.halilit.com" + url
-
-                        # Extract Image
-                        image_el = item.select_one("img")
-                        image_url = ""
-                        if image_el:
-                            # Try multiple src attributes common in lazy loading
-                            image_url = image_el.get(
-                                'data-src') or image_el.get('src') or ""
-                            if image_url:
-                                if image_url.startswith("//"):
-                                    image_url = "https:" + image_url
-                                elif not image_url.startswith("http"):
-                                    image_url = "https://www.halilit.com" + image_url
-
-                        # ID Generation
-                        # Robust ID generation to prevent duplicates
-                        if not url:
-                            product_id = f"scraped-{abs(hash(name))}"
-                        else:
-                            product_id = f"scraped-{abs(hash(url))}"
-
-                        p_obj = {
-                            "halilit_id": product_id,
-                            "product_name": name,
-                            "brand": brand,
-                            "price_il": price,
-                            "price_eilat": price * 0.85,  # approx
-                            "halilit_url": url,
-                            "commercial_image": image_url,
-                            "official_images": [{
-                                "url": image_url,
-                                "type": "image",
-                                "display_purpose": "hero",
-                                "source": "halilit_commercial"
-                            }] if image_url else [],
-                            "pipeline_phase": "harvest",
-                            "status": "harvested"
-                        }
-                        page_products.append(p_obj)
-
-                    except Exception as e:
-                        continue
-
-                if not page_products:
-                    # Found items but failed to parse them?
-                    # If we parsed 0 products from N items, maybe our selectors are wrong for this page type, or they are just placeholders?
-                    print(
-                        f"   ⚠️ Parsed 0 products from {len(items)} items on page {page}.")
-
-                all_products.extend(page_products)
-
-                # Stop if we found fewer items than typical page size (usually 20-30), implying last page
-                # But 'debug_scraper' showed 25. Let's assume pagination exists if we found items.
-                # Only way to know for sure is check next page.
-                # Optimization: if len(items) < 10, probably last page.
-
-                page += 1
-
-            except Exception as e:
-                print(f"   ⚠️ Error scraping page {page}: {e}")
-                break
-
-        return all_products
+        return result
 
 
 class OfficialAgent(AgentBase):
-    """Verifier Agent - Enriches data with manufacturer specs & official documentation."""
+    """
+    OFFICIAL SCOUT — The Single Source of Truth for Product Knowledge.
+
+    SOURCE: Official Brand Product Pages (ONLY)
+    OWNS: Titles, Descriptions, Specs, Media, Documentation
+    RULE: Fetches ONLY from the brand's official product page
+    RULE: NEVER changes prices or SKUs (those belong to Commercial Scout)
+    RULE: Empty fields are BETTER than fake fields — no AI-generated specs
+
+    REQUIRES: Golden List from Commercial Scout to know what to look up.
+    """
+
+    AUTHORIZED_SOURCE = AuthorizedSource.OFFICIAL
 
     def __init__(self):
         super().__init__(
             name="OfficialVerifier",
-            system_instruction="""
-            You are the OFFICIAL DOCUMENTARIAN.
-            Your job is to ingest ALL official content for the provided Golden List.
-            
-            RULES:
-            1. SCOPE: You ingest content ONLY for items provided in the Golden List (Commercial Map).
-            2. CONTENT: You must fetch ALL official text, descriptions, documentation, and media (images/videos).
-            3. SOURCE: You search ONLY the official manufacturer website.
-            4. RESTRICTION: You DO NOT change the Price or Commercial ID. You ONLY adds spec/docs.
-            """
+            system_instruction=OFFICIAL_SCOUT_SYSTEM_PROMPT,
         )
 
     def enrich(self, draft: Dict, context_insights: List[str] = None) -> Dict:
         """
-        Takes a Commercial Draft and injects Official Knowledge.
+        Takes a Commercial Draft and injects Official Knowledge
+        from the brand's OFFICIAL product page.
+
+        Strategy:
+        1. Try scraping the brand's official product page for real specs
+        2. Fall back to AI enrichment only if real scraping fails
+        3. Never fabricate data — only add what we actually find
 
         Validates:
         - Input draft is not None and has required fields
@@ -460,7 +454,6 @@ class OfficialAgent(AgentBase):
             f"🤖 [{self.name}] 📘 Injecting Official Documentation for {product_name}...")
 
         # --- DYNAMIC LEARNING INJECTION ---
-        # If we have insights, update the system prompt for this execution
         active_system_prompt = self.system_instruction
         if context_insights:
             print(
@@ -473,18 +466,12 @@ class OfficialAgent(AgentBase):
         preserved_price = draft.get('price_il')
 
         # Determine images - STRICT POLICY: NO MOCK DATA
-        # User Instruction: "all of halilit's products has images, use those images"
         current_images = draft.get("official_images", [])
-
-        # If we have scraped images (from CommercialAgent), we treat them as the current standard source
-        # unless we have a REAL official source (which we don't in simulation).
         halilit_image = draft.get("commercial_image")
 
         final_images = []
         if isinstance(current_images, list) and len(current_images) > 0:
             final_images = current_images
-
-        # If no images yet, but we have a commercial image, promote it
         if not final_images and halilit_image:
             final_images = [{
                 "url": halilit_image,
@@ -493,106 +480,103 @@ class OfficialAgent(AgentBase):
                 "source": "commercial_as_official_standard"
             }]
 
-        # Simulating fetching from Official Site - DISABLED MOCK
-        # We only add fields if we actually have data.
-        # However, to pass validation, we must ensure 'official_specs' exists.
-        # tailored to the user's request: "all of halilit's products has images, use those..."
+        # ═══════════════════════════════════════════════════════════════
+        # PHASE 1: Try REAL official brand page scraping first
+        # ═══════════════════════════════════════════════════════════════
+        official_data = {}
+        real_data_found = False
 
-        # --- AI ENRICHMENT (Gemini 2.0) ---
-        # Generate rich metadata (Description, Specs, Category) using the Agent's brain
         try:
-            prompt = f"""
-            You are the Official Verifier for Halilit's Catalog.
-            Enrich the following product with official data:
-            PRODUCT: "{product_name}"
-            BRAND: "{draft.get('brand', 'Unknown')}"
+            from backend.ingestion.official_page_scraper import OfficialBrandScraper
+            from backend.ingestion.halilit_page_scraper import extract_model_name
 
-            OUTPUT: JSON object ONLY with these keys:
-            - description_short (1 sentence summary)
-            - description_long (2 paragraphs max)
-            - specifications (key-value dictionary of 5-8 core specs)
-            - category (Best fit from: Keyboards & Synthesizers, Pro Audio, Drums, Guitars, DJ, Studio)
-            - features (list of 3-5 key selling points)
-            
-            Do not include markdown blocks. Just the raw JSON.
-            """
+            brand = draft.get("brand", "")
+            model_name = (
+                draft.get("official_name")
+                or draft.get("model_number")
+                or extract_model_name(product_name, brand)
+            )
 
-            # Call the LLM (passing the dynamic system prompt)
-            response_text = self.think(
-                prompt, dynamic_system_instruction=active_system_prompt)
-
-            # Clean response (remove markdown if present)
-            cleaned_text = response_text.replace(
-                "```json", "").replace("```", "").strip()
-            ai_data = json.loads(cleaned_text)
-
-            official_data = {
-                # 1. Official Schema Fields
-                "official_specs": ai_data.get("specifications", {}),
-                "official_description": ai_data.get("description_long"),
-                "description_short": ai_data.get("description_short"),
-                "description_long": ai_data.get("description_long"),
-                "feature_list": ai_data.get("features", []),
-
-                # 2. Legacy/Frontend Fields (Ensuring UI compatibility)
-                "specifications": {
-                    "short_description": ai_data.get("description_short"),
-                    "specs_dict": ai_data.get("specifications", {}),
-                    "specs_source": "official",
-                    "specs_completeness": 0.9
-                },
-
-                # We can store the AI category recommendation in metadata for the TaxonomyManager to ignore or use
-                "_ai_category_suggestion": ai_data.get("category")
-            }
-
-            # Ensure specs has at least the minimum if AI failed to give a dict
-            if not isinstance(official_data["official_specs"], dict):
-                official_data["official_specs"] = {
-                    "note": "Standardized via Halilit Commercial Source",
-                    "extracted_name": draft.get("product_name")
-                }
+            if model_name and brand:
+                scraper = OfficialBrandScraper()
+                real_official = scraper.scrape_official(
+                    model_name, brand, product_name)
+                if real_official and (real_official.get("official_specs") or real_official.get("official_description")):
+                    print(
+                        f"      ✅ Found REAL official data from {real_official.get('official_url', 'brand site')}")
+                    official_data = {
+                        "official_specs": real_official.get("official_specs", {}),
+                        "official_description": real_official.get("official_description"),
+                        "official_url": real_official.get("official_url"),
+                    }
+                    # Add official images (higher priority)
+                    if real_official.get("official_images"):
+                        official_data["official_images"] = real_official["official_images"]
+                    real_data_found = True
 
         except Exception as e:
-            print(
-                f"   ⚠️ AI Enrichment failed: {e}. Falling back to standard.")
-            official_data = {
-                "official_specs": {
-                    "note": "Standardized via Halilit Commercial Source",
-                    "extracted_name": draft.get("product_name")
-                }
-            }
+            print(f"      ⚠️ Official brand scraping failed: {e}")
 
-        # Force the Halilit image to be the Official Standard if list is empty
+        # ═══════════════════════════════════════════════════════════════
+        # PHASE 2: If no real official data found, leave fields empty.
+        # SOURCE RULE: Empty is BETTER than fake. No AI-generated specs.
+        # Halilit descriptions are kept ONLY for matching, not as truth.
+        # ═══════════════════════════════════════════════════════════════
+        if not real_data_found:
+            print(f"      ⚠️ No real official data found for {product_name}. "
+                  f"Fields left empty (empty > fake). Will retry on next pipeline run.")
+            # Mark that official data is MISSING — do NOT substitute with Halilit data
+            official_data["_official_data_status"] = "missing"
+            official_data["_official_data_note"] = (
+                "Official brand page data not yet scraped. "
+                "Halilit descriptions available for matching only."
+            )
+            # Store Halilit description as matching reference ONLY (not as official truth)
+            if draft.get("description") or draft.get("official_description"):
+                official_data["_halilit_description_for_matching"] = (
+                    draft.get("official_description") or draft.get(
+                        "description")
+                )
+
+        # ═══════════════════════════════════════════════════════════════
+        # SOURCE RULE: NO AI ENRICHMENT. NO SYNTHESIZED SPECS.
+        # If scraping the official page failed, we accept incomplete data.
+        # The product stays in the pipeline with empty official fields
+        # until the next successful scrape. This is by design.
+        # ═══════════════════════════════════════════════════════════════
+
+        # Temporary: use Halilit image as placeholder (clearly tagged as commercial)
         if not draft.get("official_images") and halilit_image:
             official_data["official_images"] = [{
                 "url": halilit_image,
                 "type": "image",
                 "display_purpose": "hero",
-                "source": "halilit_standard"
+                "source": "commercial_placeholder_pending_official"
             }]
 
         # Ensure we don't lose the array
         if "official_images" not in official_data and "official_images" not in draft:
             official_data["official_images"] = []
 
-        # MERGE STRATEGY: nondestructive update of official fields only
-        draft.update(official_data)
+        # ═══════════════════════════════════════════════════════════════
+        # MERGE STRATEGY — Source Rule Enforcement
+        # Only set fields that Official Scout is AUTHORIZED to set.
+        # Never touch price, SKU, or other Commercial-owned fields.
+        # ═══════════════════════════════════════════════════════════════
+        official_allowed = get_allowed_fields(AuthorizedSource.OFFICIAL)
+        pipeline_meta = {"_official_data_status", "_official_data_note",
+                         "_halilit_description_for_matching", "official_images",
+                         "pipeline_phase"}
 
-        # INTELLIGENT RESOLUTION (Visuals)
-        # We already handled promotion above.
+        for key, value in official_data.items():
+            if key in official_allowed or key in pipeline_meta:
+                draft[key] = value
+            elif key.startswith("_"):
+                draft[key] = value  # Allow internal metadata fields
+            # else: silently drop — this source cannot set that field
 
-        # If we have a commercial image but no distinct official image,
-        # we validate the commercial image and adopt it if high quality.
-        if draft.get('commercial_image') and not draft.get('official_images'):
-            comm_img = draft.get('commercial_image')
-            if comm_img:
-                draft['official_images'] = [{
-                    "type": "image",
-                    "url": comm_img,
-                    "display_purpose": "hero",
-                    "source": "commercial_standard"
-                }]
+        # Track source coverage
+        draft["source_coverage_official"] = real_data_found
 
         # VERIFY immutable fields were preserved
         if draft.get('halilit_id') != preserved_halilit_id:
@@ -608,22 +592,26 @@ class OfficialAgent(AgentBase):
 
 
 class ContextualAgent(AgentBase):
-    """Auditor Agent - Provides validation, contextual insights, and user sentiment."""
+    """
+    CONTEXTUAL SCOUT — The Voice of Real Users.
+
+    SOURCE: 3+ Well-Trusted Review Websites (ONLY)
+    OWNS: Reviews, Pros/Cons, Real-world experience, User insights, Ratings
+    RULE: Must fetch from AT LEAST 3 trusted review sources per product
+    RULE: Each review must be SPECIFIC to the exact product
+    RULE: NEVER changes specs, prices, or product identity
+    RULE: NO AI-generated reviews — ONLY real user/critic reviews
+
+    REQUIRES: Golden List from Commercial Scout to know what to review.
+    """
+
+    AUTHORIZED_SOURCE = AuthorizedSource.CONTEXTUAL
 
     def __init__(self):
         super().__init__(
             name="ExternalValidator",
             model_name="gemini-2.0-flash",
-            system_instruction="""
-            You are the PUBLIC CONSCIENCE.
-            Your job is to provide contextual insights and user sentiment.
-            
-            RULES:
-            1. SCOPE: Validate based on the provided Golden List product.
-            2. SOURCES: You MUST synthesize insights from at least 3 TRUSTED review websites (e.g., SoundOnSound, MusicRadar, Reddit, YouTube, GearPage).
-            3. OUTPUT: Summarize Pros/Cons and provide a normalized 0-5 rating.
-            4. RESTRICTION: You DO NOT change Specs or Price.
-            """
+            system_instruction=CONTEXTUAL_SCOUT_SYSTEM_PROMPT,
         )
 
     def validate_and_review(self, draft: Dict) -> AuditReport:
@@ -731,37 +719,126 @@ class ContextualAgent(AgentBase):
             # Do not fail request, just log
             # violations.append(f"Visual validation error: {str(e)}")
 
-        # AI-Based Contextual Data Gathering
-        # We rely on the Agent's internal knowledge base to validate the product's existence and reputation.
-        trusted_sources = ["Internal Knowledge Base"]
-        synthesis = "Pending external validation."
-        avg_rating = 0.0
+        # ═══════════════════════════════════════════════════════════════
+        # SOURCE RULE ENFORCEMENT: Check for synthetic data
+        # ═══════════════════════════════════════════════════════════════
+        synthetic_violations = validate_no_synthetic_data(draft)
+        for sv in synthetic_violations:
+            violations.append(f"SYNTHETIC DATA: {sv.message}")
+            risk_score += 25  # Synthetic data is a serious violation
+
+        # ═══════════════════════════════════════════════════════════════
+        # SOURCE RULE ENFORCEMENT: Verify source coverage
+        # ═══════════════════════════════════════════════════════════════
+        if not draft.get("source_coverage_commercial"):
+            violations.append(
+                "MISSING SOURCE: No Commercial Scout data (Golden List required)")
+            risk_score += 30
+
+        # ═══════════════════════════════════════════════════════════════
+        # CONTEXTUAL DATA: Real reviews from real sources
+        # This agent's PRIMARY job is gathering real review data.
+        # We do NOT generate fake reviews or ratings.
+        # ═══════════════════════════════════════════════════════════════
+        review_sources = []
+        review_data = {"reviews": [], "review_pros": [], "review_cons": [],
+                       "review_sources": [], "average_rating": None,
+                       "user_sentiment": "pending_review_collection"}
 
         if self.client and product_name != "Unknown" and product_name != "Test Product":
             try:
-                # We ask the model to validate if this is a real product
-                prompt = (f"You are a music equipment expert. "
-                          f"Is '{draft.get('brand')} {product_name}' a real, known product? "
-                          f"If yes, provide a 1-sentence summary of its key reputation. "
-                          f"If no, say 'Unknown product'.")
+                # Ask Gemini to find and summarize REAL reviews from trusted sources
+                prompt = (
+                    f"Find REAL product reviews for '{draft.get('brand')} {product_name}'.\n\n"
+                    f"Search these trusted music gear review sites:\n"
+                    f"SoundOnSound, MusicRadar, Sweetwater, Thomann, YouTube, Reddit, "
+                    f"GearPage, Premier Guitar, Guitar World, Reverb.com\n\n"
+                    f"For EACH review found, provide:\n"
+                    f"1. The exact source URL\n"
+                    f"2. The reviewer's key pros\n"
+                    f"3. The reviewer's key cons\n"
+                    f"4. One real-world insight from the review\n"
+                    f"5. The rating given (if any)\n\n"
+                    f"OUTPUT: JSON object with:\n"
+                    f"- reviews: array of {{source_url, source_name, pros: [], cons: [], insight, rating}}\n"
+                    f"- overall_pros: top 3 most common pros across reviews\n"
+                    f"- overall_cons: top 3 most common cons across reviews\n"
+                    f"- average_rating: normalized 0-5\n"
+                    f"- is_real_product: boolean\n\n"
+                    f"If you CANNOT find real reviews, set reviews to empty array.\n"
+                    f"Do NOT fabricate reviews. Do NOT make up URLs.\n"
+                    f"Only include markdown-free raw JSON."
+                )
 
                 response_text = self.think(prompt).strip()
-                if "Unknown product" in response_text:
+                cleaned = response_text.replace(
+                    "```json", "").replace("```", "").strip()
+                contextual_data = json.loads(cleaned)
+
+                if contextual_data.get("is_real_product") is False:
                     violations.append(
-                        "Product not recognized by Knowledge Base")
+                        "Product not recognized in review sources")
                     risk_score += 20
-                    synthesis = "Product not recognized."
+
+                found_reviews = contextual_data.get("reviews", [])
+                review_sources = [r.get("source_url", "")
+                                  for r in found_reviews if r.get("source_url")]
+
+                if len(review_sources) >= MIN_REVIEW_SOURCES:
+                    review_data = {
+                        "reviews": found_reviews,
+                        "review_sources": review_sources,
+                        "review_pros": contextual_data.get("overall_pros", []),
+                        "review_cons": contextual_data.get("overall_cons", []),
+                        "average_rating": contextual_data.get("average_rating"),
+                        "user_sentiment": "collected",
+                        "real_world_insights": [r.get("insight", "") for r in found_reviews if r.get("insight")],
+                    }
+                    print(
+                        f"   ✅ Found {len(found_reviews)} real reviews from {len(review_sources)} sources")
                 else:
-                    synthesis = response_text
-                    avg_rating = 4.5  # Assume good standing if recognized
+                    print(f"   ⚠️ Only {len(review_sources)} review sources found "
+                          f"(need {MIN_REVIEW_SOURCES}). Reviews marked incomplete.")
+                    review_data["user_sentiment"] = "insufficient_sources"
+
             except Exception as e:
-                print(f"   ⚠️ Contextual think failed: {e}")
+                print(f"   ⚠️ Review collection failed: {e}")
+                review_data["user_sentiment"] = "collection_failed"
+
+        # Apply contextual data to draft (ONLY fields this agent owns)
+        contextual_allowed = get_allowed_fields(AuthorizedSource.CONTEXTUAL)
+        for key, value in review_data.items():
+            if key in contextual_allowed:
+                draft[key] = value
+
+        # Track source coverage
+        draft["source_coverage_contextual"] = len(
+            review_sources) >= MIN_REVIEW_SOURCES
+        draft["contextual_source_count"] = len(review_sources)
+
+        # ═══════════════════════════════════════════════════════════════
+        # CROSS-VALIDATION: Check consistency across all 3 sources
+        # ═══════════════════════════════════════════════════════════════
+        coverage = SourceCoverage(
+            commercial_complete=bool(draft.get("source_coverage_commercial")),
+            official_complete=bool(draft.get("source_coverage_official")),
+            contextual_complete=len(review_sources) >= MIN_REVIEW_SOURCES,
+            contextual_source_count=len(review_sources),
+        )
+
+        draft["cross_validation_confidence"] = coverage.confidence_score
+        draft["cross_validation_status"] = coverage.confidence_level.value
+
+        if coverage.missing_sources:
+            for ms in coverage.missing_sources:
+                violations.append(f"INCOMPLETE COVERAGE: Missing {ms}")
 
         # Ensure risk_score is in valid range
         risk_score = min(100, max(0, risk_score))
 
         # Determine approval status
-        is_valid = len(violations) == 0 and risk_score < 50
+        is_valid = len(
+            [v for v in violations if "SYNTHETIC DATA" in v]) == 0 and risk_score < 50
         status = "APPROVED" if is_valid else "REJECTED"
 
         return AuditReport(
@@ -769,7 +846,12 @@ class ContextualAgent(AgentBase):
             status=status,
             risk_score=risk_score,
             violations=violations,
-            auditor_notes=f"Contextual Validation {'Passed' if is_valid else 'Failed'}. Rating: {avg_rating}/5. Sources: {', '.join(trusted_sources)}. {synthesis}"
+            auditor_notes=(
+                f"Contextual Validation {'Passed' if is_valid else 'Failed'}. "
+                f"Confidence: {coverage.confidence_level.value} ({coverage.confidence_score:.0%}). "
+                f"Review Sources: {len(review_sources)}/{MIN_REVIEW_SOURCES}. "
+                f"Missing: {', '.join(coverage.missing_sources) if coverage.missing_sources else 'None'}."
+            )
         )
 
 

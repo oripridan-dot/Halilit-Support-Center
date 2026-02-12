@@ -21,6 +21,8 @@ from .frontend_builder import ReactComponentBuilder
 from .ingestion_skills import (
     HarvestSkill, EnrichSkill, TierSkill, PrepareSkill, ValidateSkill, ApproveSkill
 )
+from .mcp_tool_skill import MCPToolSkill
+from .catalog_skills import CatalogValidateSkill, CatalogResolveSkill
 from .skill_registry import SkillRegistry, SkillPipeline
 
 __all__ = [
@@ -32,6 +34,9 @@ __all__ = [
     'PrepareSkill',
     'ValidateSkill',
     'ApproveSkill',
+    'MCPToolSkill',
+    'CatalogValidateSkill',
+    'CatalogResolveSkill',
     'SkillRegistry',
     'SkillPipeline'
 ]

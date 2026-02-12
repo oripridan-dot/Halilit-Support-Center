@@ -1,10 +1,17 @@
 """
-UNIFIED DATA MODELS FOR INGESTION PIPELINE v6.0
+UNIFIED DATA MODELS FOR INGESTION PIPELINE v6.1
 
 Consolidates taxonomy, pricing, and display considerations into a single
 data flow from scraping through verification.
 
 These models are the "language" that all ingestion components speak.
+
+SOURCE RULES (see backend/source_rules.py for the full law):
+  1. COMMERCIAL (Halilit.com)  -> Golden List, Prices, SKUs
+  2. OFFICIAL (Brand pages)    -> Titles, Descriptions, Specs, Media
+  3. CONTEXTUAL (3+ Reviews)   -> Pros/Cons, Real-world insights
+
+NO SYNTHETIC DATA. NO MOCKING. ONLY REAL DATA.
 """
 
 from pydantic import BaseModel, Field
@@ -149,12 +156,12 @@ class ProductSpecifications(BaseModel):
 
 class IngestionProductDraft(BaseModel):
     """
-    UNIFIED PRODUCT MODEL (v6.0 - Strict Separation): Single source of separation.
+    UNIFIED PRODUCT MODEL(v6.0 - Strict Separation): Single source of separation.
 
     This model enforces the "Iron Rules" of source-of-truth:
-    1. COMMERCIAL (Halilit) -> Inventory, Price, SKU (The Golden List)
-    2. OFFICIAL (Brand) -> Specs, Media, Description (The Knowledge)
-    3. CONTEXTUAL (Reviews) -> Ratings, Pros/Cons (The Insight)
+    1. COMMERCIAL(Halilit) -> Inventory, Price, SKU(The Golden List)
+    2. OFFICIAL(Brand) -> Specs, Media, Description(The Knowledge)
+    3. CONTEXTUAL(Reviews) -> Ratings, Pros/Cons(The Insight)
     """
 
     # --- 1. COMMERCIAL DATA (The Golden List - Source: Halilit) ---
@@ -179,13 +186,26 @@ class IngestionProductDraft(BaseModel):
     official_url: Optional[str] = Field(
         None, description="URL of the official product page")
 
-    # --- 3. CONTEXTUAL DATA (The Insight - Source: Trusted Reviews) ---
+    # --- 3. CONTEXTUAL DATA (The Insight - Source: 3+ Trusted Review Sites) ---
+    # RULE: Must come from AT LEAST 3 well-trusted review websites
+    # RULE: Each review must be SPECIFIC to this exact product
+    # RULE: NO AI-generated reviews. ONLY real user/critic reviews.
     reviews: List[Dict[str, Any]] = Field(
-        default_factory=list, description="Reviews from trusted sites")
+        default_factory=list, description="Reviews from 3+ trusted sites")
+    review_sources: List[str] = Field(
+        default_factory=list, description="URLs of review sources (minimum 3 required)")
+    review_pros: List[str] = Field(
+        default_factory=list, description="Real pros from user reviews")
+    review_cons: List[str] = Field(
+        default_factory=list, description="Real cons from user reviews")
     review_synthesis: Optional[str] = Field(
-        None, description="AI summary of pros/cons")
+        None, description="Summary of real reviews (not AI-generated opinions)")
+    user_sentiment: Optional[str] = Field(
+        None, description="Overall user sentiment from review aggregation")
+    real_world_insights: List[str] = Field(
+        default_factory=list, description="Practical insights from real users")
     average_rating: Optional[float] = Field(
-        None, description="Normalized 0-5 rating")
+        None, description="Normalized 0-5 rating from aggregated reviews")
 
     # --- PIPELINE METADATA ---
     status: IngestionStatus = IngestionStatus.HARVESTED
@@ -225,6 +245,20 @@ class IngestionProductDraft(BaseModel):
         0.0, description="Confidence that commercial and official images match")
     visual_match_reasoning: Optional[str] = None
     visual_match_status: str = "pending"  # pending, matched, mismatch, skipped
+
+    # --- SOURCE COVERAGE TRACKING ---
+    source_coverage_commercial: bool = Field(
+        False, description="Whether Commercial Scout has provided its data")
+    source_coverage_official: bool = Field(
+        False, description="Whether Official Scout has provided its data")
+    source_coverage_contextual: bool = Field(
+        False, description="Whether Contextual Scout has provided its data")
+    contextual_source_count: int = Field(
+        0, description="How many review sources contributed (must be >= 3)")
+    cross_validation_confidence: float = Field(
+        0.0, description="Cross-validation confidence score 0.0-1.0")
+    cross_validation_status: str = Field(
+        "pending", description="pending, validated, conflicts_found, incomplete")
 
     class Config:
         arbitrary_types_allowed = True
