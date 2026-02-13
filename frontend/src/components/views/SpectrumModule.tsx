@@ -12,10 +12,8 @@ import {
   Package,
   Tag,
   Zap,
-  X,
-  ExternalLink,
 } from "lucide-react";
-import { useMemo, useState, useCallback, useEffect, useRef } from "react";
+import { useMemo, useState, useCallback, useEffect } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 import type { ConductorProduct } from "../../hooks/useConductorCatalog";
@@ -29,6 +27,41 @@ import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
 import { getBrandTheme } from "../../styles/brandThemes";
 import { generateSmartTags } from "../../lib/smartTags";
+
+// --- PRODUCT TYPE CLASSIFIER ---
+// Determines whether a product is the "primary" item for its subcategory
+// or a related accessory (bag, stand, cable, string, etc.)
+// Only primary products appear in the tracks; accessories surface via hover.
+const ACCESSORY_PATTERNS =
+  /\b(bag|gig bag|case|hardcase|hard case|cover|strap|string|strings|pick|picks|plectrum|stand|mount|bracket|clamp|adapter|cable|cord|lead|tuner|capo|pedal|footswitch|power supply|charger|battery|replacement|spare|pad set|head set|mute|dampener|polish|cleaner|wax|oil|lube|cloth|toolkit|wrench|key|allen|screw|bolt|felt|washer|sleeve|bushing|grommet|wing nut|cymbal felt|hi hat clutch|drum key|practice pad)\b/i;
+
+const isAccessoryProduct = (
+  product: ConductorProduct,
+  spectrumId: string,
+): boolean => {
+  const name = product.name || "";
+  const nameLower = name.toLowerCase();
+
+  // If the spectrum is about the main product category, accessories don't belong
+  // E.g., in "electric-guitars", a guitar bag is an accessory
+  // But in "guitar-accessories", a guitar bag IS the product
+  if (
+    spectrumId.includes("accessor") ||
+    spectrumId.includes("parts") ||
+    spectrumId.includes("supplies") ||
+    spectrumId.includes("cables") ||
+    spectrumId.includes("stands") ||
+    spectrumId.includes("bags") ||
+    spectrumId.includes("strings")
+  ) {
+    return false; // In an accessory category, nothing is "accessory"
+  }
+
+  // Check if product name matches accessory patterns
+  if (ACCESSORY_PATTERNS.test(nameLower)) return true;
+
+  return false;
+};
 
 // --- RELEVANCE ENGINE ---
 // Calculates a 0-100 score for Y-Axis positioning
@@ -329,13 +362,36 @@ EnrichmentPanel.displayName = "EnrichmentPanel";
 const HoverRightPanel = React.memo(
   ({
     product,
+    familyProducts,
     openProductPage,
   }: {
     product: ConductorProduct;
+    familyProducts: ConductorProduct[];
     openProductPage: (id: string) => void;
   }) => {
     const { variants } = useProductVariants(product.id);
     const { accessories } = useProductRelationships(product.id);
+
+    // Merge family products and graph variants into one variant list (deduplicated)
+    const allVariants = useMemo(() => {
+      const seen = new Set<string>([product.id]);
+      const result: ConductorProduct[] = [];
+      // Family products first (from BrandTrack collapse)
+      for (const p of familyProducts) {
+        if (!seen.has(p.id)) {
+          result.push(p);
+          seen.add(p.id);
+        }
+      }
+      // Then any graph-based variants
+      for (const v of variants) {
+        if (!seen.has(v.id)) {
+          result.push(v);
+          seen.add(v.id);
+        }
+      }
+      return result;
+    }, [product.id, familyProducts, variants]);
 
     return (
       <div className="w-full space-y-3 flex flex-col">
@@ -407,20 +463,20 @@ const HoverRightPanel = React.memo(
           )}
         </div>
 
-        {/* Variants — if this product belongs to a family */}
-        {variants.length > 0 && (
+        {/* Variants — family members + graph variants */}
+        {allVariants.length > 0 && (
           <div className="space-y-1.5">
             <div className="w-full h-px bg-zinc-800/50" />
             <div className="text-[9px] font-bold text-blue-400 uppercase tracking-widest flex items-center gap-1">
               <Sparkles className="w-2.5 h-2.5" />
-              Also in this Series ({variants.length + 1})
+              Variants & Colors ({allVariants.length + 1})
             </div>
-            <div className="flex gap-1.5 overflow-x-auto pb-1">
-              {variants.slice(0, 4).map((v) => (
+            <div className="flex flex-wrap gap-1.5 pb-1">
+              {allVariants.slice(0, 8).map((v) => (
                 <button
                   key={v.id}
                   onClick={() => openProductPage(v.id)}
-                  className="flex-shrink-0 w-10 h-10 rounded border border-zinc-700 bg-zinc-900 overflow-hidden hover:border-blue-500 transition-colors group/var"
+                  className="flex-shrink-0 w-12 h-12 rounded border border-zinc-700 bg-zinc-900 overflow-hidden hover:border-blue-500 transition-colors group/var relative"
                   title={v.variant_key || v.name}
                 >
                   {v.image_url ? (
@@ -430,12 +486,19 @@ const HoverRightPanel = React.memo(
                       alt={v.name}
                     />
                   ) : (
-                    <span className="text-[6px] text-zinc-500 flex items-center justify-center w-full h-full">
-                      {v.variant_key || "?"}
+                    <span className="text-[6px] text-zinc-500 flex items-center justify-center w-full h-full p-0.5 text-center leading-tight">
+                      {v.variant_key || v.name.split(" ").slice(-2).join(" ")}
                     </span>
                   )}
                 </button>
               ))}
+              {allVariants.length > 8 && (
+                <div className="flex-shrink-0 w-12 h-12 rounded border border-zinc-800 bg-zinc-900/50 flex items-center justify-center">
+                  <span className="text-[9px] text-zinc-500 font-bold">
+                    +{allVariants.length - 8}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -496,9 +559,12 @@ interface BrandTrackProps {
   products: ConductorProduct[];
   rgbColor: string;
   brandPrimary: string;
-  onHoverProduct: (product: ConductorProduct | null) => void;
+  onHoverProduct: (
+    product: ConductorProduct,
+    familyProducts: ConductorProduct[],
+  ) => void;
+  onHoverOut: () => void;
   onClickProduct: (id: string) => void;
-  onClickFamily: (familyId: string, products: ConductorProduct[]) => void;
 }
 
 // Represents either a single product or a collapsed family
@@ -518,8 +584,8 @@ const BrandTrack = React.memo(
     rgbColor,
     brandPrimary,
     onHoverProduct,
+    onHoverOut,
     onClickProduct,
-    onClickFamily,
   }: BrandTrackProps) => {
     // Build display items: collapse families, keep singletons
     const displayItems = useMemo(() => {
@@ -633,12 +699,11 @@ const BrandTrack = React.memo(
                         ? `0 0 8px ${brandPrimary}30, 0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)`
                         : "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
                     }}
-                    onClick={() =>
-                      isFamily
-                        ? onClickFamily(item.familyId!, item.familyProducts)
-                        : onClickProduct(product.id)
+                    onClick={() => onClickProduct(product.id)}
+                    onMouseEnter={() =>
+                      onHoverProduct(product, item.familyProducts)
                     }
-                    onMouseEnter={() => onHoverProduct(product)}
+                    onMouseLeave={onHoverOut}
                   >
                     {product.image_url ? (
                       <img
@@ -699,154 +764,6 @@ const BrandTrack = React.memo(
 );
 
 BrandTrack.displayName = "BrandTrack";
-
-// --- FAMILY POPOVER (floating panel showing all variants in a family) ---
-interface FamilyPopoverState {
-  familyId: string;
-  products: ConductorProduct[];
-}
-
-const FamilyPopover = React.memo(
-  ({
-    familyData,
-    onClose,
-    onSelectProduct,
-  }: {
-    familyData: FamilyPopoverState;
-    onClose: () => void;
-    onSelectProduct: (id: string) => void;
-  }) => {
-    const overlayRef = useRef<HTMLDivElement>(null);
-    const { products } = familyData;
-
-    // Sort: products with images first, then by price desc
-    const sorted = useMemo(() => {
-      return [...products].sort((a, b) => {
-        const aImg = a.image_url ? 1 : 0;
-        const bImg = b.image_url ? 1 : 0;
-        if (aImg !== bImg) return bImg - aImg;
-        return (b.price || 0) - (a.price || 0);
-      });
-    }, [products]);
-
-    const familyName = useMemo(() => {
-      // Derive family name from the common prefix of all product names
-      if (products.length === 0) return "";
-      const brand = products[0].brand || "";
-      const names = products.map((p) => p.name);
-      // Find common prefix
-      const words0 = names[0].split(" ");
-      let common = 0;
-      for (let w = 0; w < words0.length; w++) {
-        if (names.every((n) => n.split(" ")[w] === words0[w])) {
-          common = w + 1;
-        } else break;
-      }
-      const prefix = words0.slice(0, Math.max(common, 2)).join(" ");
-      return prefix || brand;
-    }, [products]);
-
-    // Close on escape
-    useEffect(() => {
-      const handler = (e: KeyboardEvent) => {
-        if (e.key === "Escape") onClose();
-      };
-      window.addEventListener("keydown", handler);
-      return () => window.removeEventListener("keydown", handler);
-    }, [onClose]);
-
-    return (
-      <div
-        ref={overlayRef}
-        className="fixed inset-0 z-[100] flex items-center justify-center"
-        onClick={(e) => {
-          if (e.target === overlayRef.current) onClose();
-        }}
-      >
-        {/* Backdrop */}
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-
-        {/* Popover card */}
-        <div className="relative z-10 bg-zinc-900 border border-zinc-700/80 rounded-xl shadow-2xl max-w-xl w-full mx-4 max-h-[70vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-          {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800 bg-zinc-900/95 shrink-0">
-            <div className="flex items-center gap-2">
-              <Package className="w-4 h-4 text-blue-400" />
-              <h3 className="text-sm font-bold text-zinc-200 tracking-wide">
-                {familyName}
-              </h3>
-              <span className="text-[10px] font-mono text-zinc-500 bg-zinc-800 px-1.5 py-0.5 rounded">
-                {products.length} variants
-              </span>
-            </div>
-            <button
-              onClick={onClose}
-              className="w-6 h-6 rounded-md flex items-center justify-center text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800 transition-colors"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
-          {/* Variants grid */}
-          <div className="overflow-y-auto flex-1 p-3 custom-scrollbar">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-              {sorted.map((product) => {
-                const hasPrice = product.price > 0;
-                const estimate = (product as any).market_price_estimate || 0;
-
-                return (
-                  <button
-                    key={product.id}
-                    onClick={() => onSelectProduct(product.id)}
-                    className="group flex flex-col bg-zinc-850 border border-zinc-800 rounded-lg hover:border-blue-500/50 hover:bg-zinc-800/80 transition-all duration-150 overflow-hidden text-left"
-                  >
-                    {/* Image */}
-                    <div className="aspect-square w-full bg-white relative overflow-hidden">
-                      {product.image_url ? (
-                        <img
-                          src={product.image_url}
-                          alt={product.name}
-                          className="w-full h-full object-contain p-1"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center bg-zinc-800">
-                          <Package className="w-8 h-8 text-zinc-700" />
-                        </div>
-                      )}
-                      {/* View overlay */}
-                      <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
-                        <ExternalLink className="w-5 h-5 text-blue-400 drop-shadow-lg" />
-                      </div>
-                    </div>
-
-                    {/* Info */}
-                    <div className="px-2 py-1.5 flex flex-col gap-0.5 min-h-[48px]">
-                      <span className="text-[10px] leading-tight text-zinc-300 font-medium line-clamp-2">
-                        {product.name}
-                      </span>
-                      <span
-                        className={`text-[10px] font-mono mt-auto ${hasPrice ? "text-emerald-400" : estimate > 0 ? "text-amber-400/80" : "text-zinc-600"}`}
-                      >
-                        {hasPrice
-                          ? `₪${product.price.toLocaleString("he-IL")}`
-                          : estimate > 0
-                            ? `~₪${estimate.toLocaleString("he-IL")}`
-                            : "Price on request"}
-                      </span>
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  },
-);
-
-FamilyPopover.displayName = "FamilyPopover";
 
 // --- UTILITY: hex to RGB string ---
 const hexToRgb = (hex: string): string => {
@@ -914,9 +831,10 @@ export const SpectrumModule = () => {
   const [hoveredProduct, setHoveredProduct] = useState<ConductorProduct | null>(
     null,
   );
+  const [hoveredFamilyProducts, setHoveredFamilyProducts] = useState<
+    ConductorProduct[]
+  >([]);
   const [imageLoadError, setImageLoadError] = useState(false);
-  const [familyPopover, setFamilyPopover] =
-    useState<FamilyPopoverState | null>(null);
 
   // Generate smart tags from clean products
   const smartTags = useMemo(() => {
@@ -928,12 +846,21 @@ export const SpectrumModule = () => {
     setActiveSmartTag(null);
     setActiveFilter("ALL");
     setHoveredProduct(null);
-    setFamilyPopover(null);
+    setHoveredFamilyProducts([]);
   }, [activeSubcategoryId]);
 
-  const handleHoverProduct = useCallback((product: ConductorProduct | null) => {
-    setHoveredProduct(product);
-    setImageLoadError(false);
+  const handleHoverProduct = useCallback(
+    (product: ConductorProduct, familyProducts: ConductorProduct[]) => {
+      setHoveredProduct(product);
+      setHoveredFamilyProducts(familyProducts);
+      setImageLoadError(false);
+    },
+    [],
+  );
+
+  const handleHoverOut = useCallback(() => {
+    // Don't clear on mouse leave from tile — keeps panel stable
+    // Panel clears when hovering a different product
   }, []);
 
   const handleClickProduct = useCallback(
@@ -943,27 +870,13 @@ export const SpectrumModule = () => {
     [openProductPage],
   );
 
-  const handleClickFamily = useCallback(
-    (familyId: string, products: ConductorProduct[]) => {
-      setFamilyPopover({ familyId, products });
-    },
-    [],
-  );
-
-  const handleCloseFamily = useCallback(() => {
-    setFamilyPopover(null);
-  }, []);
-
-  const handleSelectFromFamily = useCallback(
-    (id: string) => {
-      setFamilyPopover(null);
-      openProductPage(id);
-    },
-    [openProductPage],
-  );
-
   const filteredProducts = useMemo(() => {
     let base = cleanProducts;
+
+    // Filter out accessories — tracks show only primary products for this spectrum
+    const spectrumId = activeSubcategoryId || "";
+    base = base.filter((p) => !isAccessoryProduct(p, spectrumId));
+
     // Apply tier filter
     if (activeFilter === "ALL") {
       // no tier filter
@@ -1262,6 +1175,7 @@ export const SpectrumModule = () => {
           {hoveredProduct ? (
             <HoverRightPanel
               product={hoveredProduct}
+              familyProducts={hoveredFamilyProducts}
               openProductPage={openProductPage}
             />
           ) : null}
@@ -1337,8 +1251,8 @@ export const SpectrumModule = () => {
                     rgbColor={rgbColor}
                     brandPrimary={brandPrimary}
                     onHoverProduct={handleHoverProduct}
+                    onHoverOut={handleHoverOut}
                     onClickProduct={handleClickProduct}
-                    onClickFamily={handleClickFamily}
                   />
                 ),
               )}
@@ -1421,14 +1335,6 @@ export const SpectrumModule = () => {
         </div>
       </Surface>
 
-      {/* Family Popover Overlay */}
-      {familyPopover && (
-        <FamilyPopover
-          familyData={familyPopover}
-          onClose={handleCloseFamily}
-          onSelectProduct={handleSelectFromFamily}
-        />
-      )}
     </div>
   );
 };
