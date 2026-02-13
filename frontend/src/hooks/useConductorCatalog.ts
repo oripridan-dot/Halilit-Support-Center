@@ -68,6 +68,8 @@ export interface ConductorProduct {
     price_eilat: number;
     currency: string;
     tier: string;
+    market_price_estimate: number;
+    market_price_peers: number;
     image_url: string;
     image_gallery: string[];
     description: string;
@@ -146,10 +148,20 @@ export interface CatalogMetadata {
     graph_stats?: GraphStats;
 }
 
+export interface FamilyMeta {
+    id: string;
+    family_name: string;
+    brand: string;
+    series: string;
+    hero_image: string;
+    variant_count: number;
+}
+
 export interface ConductorCatalog {
     products: ConductorProduct[];
     indexes: CatalogIndexes;
     metadata: CatalogMetadata;
+    families?: Record<string, FamilyMeta>;
 }
 
 /**
@@ -186,6 +198,7 @@ export const useConductorCatalog = () => {
         products: data?.products || [],
         indexes: data?.indexes || { by_galaxy: {}, by_spectrum: {}, by_brand: {} },
         metadata: data?.metadata || null,
+        families: data?.families || {},
         isLoading,
         error: error ? (error as Error).message : null,
         refetch,

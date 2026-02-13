@@ -359,22 +359,24 @@ def resolve_product(p: dict, catalog_products: List[dict] = None) -> Tuple[dict,
     resolved = dict(p)  # shallow copy
     changes = []
 
-    # 1. Price estimation from peers
+    # 1. Price estimation from peers — flagged as market estimation, NOT real price
     price = resolved.get("price", 0)
     if not price or float(price) <= 0:
         if catalog_products:
             peer_prices = _get_peer_prices(resolved, catalog_products)
             if peer_prices:
                 estimated = round(sum(peer_prices) / len(peer_prices), 2)
-                resolved["price"] = estimated
-                resolved["price_eilat"] = round(estimated / 1.17, 2)
-                resolved["tier"] = _compute_tier_from_price(estimated)
-                # Mark as estimated
+                # Store estimation as supplementary data, NOT as the real price
+                # The main price stays 0 (= "Price on request")
+                resolved["market_price_estimate"] = estimated
+                resolved["market_price_peers"] = len(peer_prices)
+                resolved["price_eilat"] = 0.0
+                # Mark as no real price
                 dt = resolved.get("data_trust") or {}
-                dt["price_source"] = "estimated"
+                dt["price_source"] = "none"
                 resolved["data_trust"] = dt
                 changes.append(
-                    f"Estimated price ₪{estimated:.0f} from {len(peer_prices)} peers")
+                    f"Market estimate ₪{estimated:.0f} from {len(peer_prices)} peers (not shown as price)")
 
     # 2. Description synthesis from specs + features + name
     desc = resolved.get("description") or ""

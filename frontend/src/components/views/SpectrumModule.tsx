@@ -12,8 +12,10 @@ import {
   Package,
   Tag,
   Zap,
+  X,
+  ExternalLink,
 } from "lucide-react";
-import { useMemo, useState, useCallback, useEffect } from "react";
+import { useMemo, useState, useCallback, useEffect, useRef } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 import type { ConductorProduct } from "../../hooks/useConductorCatalog";
@@ -339,14 +341,38 @@ const HoverRightPanel = React.memo(
       <div className="w-full space-y-3 flex flex-col">
         {/* Price Section */}
         <div className="space-y-1">
-          <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
-            {product.price > 0
-              ? `₪${product.price.toLocaleString("he-IL")}`
-              : "Price on request"}
-          </div>
-          <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
-            Price (VAT Included)
-          </div>
+          {product.price > 0 ? (
+            <>
+              <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
+                ₪{product.price.toLocaleString("he-IL")}
+              </div>
+              <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
+                Price (VAT Included)
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="text-xl font-bold text-zinc-400 tracking-tight">
+                Price on request
+              </div>
+              {(product as any).market_price_estimate > 0 && (
+                <div className="flex items-center gap-1.5 mt-1">
+                  <span className="text-[10px] text-amber-500/70 font-bold uppercase tracking-widest">
+                    Est. market:
+                  </span>
+                  <span className="text-sm text-amber-400/60 font-mono">
+                    ~₪
+                    {(product as any).market_price_estimate.toLocaleString(
+                      "he-IL",
+                    )}
+                  </span>
+                </div>
+              )}
+              <div className="text-[10px] text-zinc-600 font-bold tracking-widest uppercase">
+                Contact Halilit for pricing
+              </div>
+            </>
+          )}
         </div>
 
         <div className="w-full h-px bg-zinc-800/50" />
@@ -472,6 +498,17 @@ interface BrandTrackProps {
   brandPrimary: string;
   onHoverProduct: (product: ConductorProduct | null) => void;
   onClickProduct: (id: string) => void;
+  onClickFamily: (familyId: string, products: ConductorProduct[]) => void;
+}
+
+// Represents either a single product or a collapsed family
+interface DisplayItem {
+  type: "product" | "family";
+  representative: ConductorProduct;
+  variantCount: number;
+  familyId: string | null;
+  familyProducts: ConductorProduct[];
+  sortPrice: number;
 }
 
 const BrandTrack = React.memo(
@@ -482,12 +519,63 @@ const BrandTrack = React.memo(
     brandPrimary,
     onHoverProduct,
     onClickProduct,
+    onClickFamily,
   }: BrandTrackProps) => {
-    // Sort products by price (ascending) for consistent display
-    const sorted = useMemo(
-      () => [...products].sort((a, b) => a.price - b.price),
-      [products],
-    );
+    // Build display items: collapse families, keep singletons
+    const displayItems = useMemo(() => {
+      const items: DisplayItem[] = [];
+      const familyGroups = new Map<string, ConductorProduct[]>();
+      const standalones: ConductorProduct[] = [];
+
+      // Group by family
+      for (const p of products) {
+        if (p.family_id) {
+          const existing = familyGroups.get(p.family_id);
+          if (existing) {
+            existing.push(p);
+          } else {
+            familyGroups.set(p.family_id, [p]);
+          }
+        } else {
+          standalones.push(p);
+        }
+      }
+
+      // Convert families to display items
+      for (const [familyId, members] of familyGroups) {
+        // Pick the default variant, or the one with the best image
+        const representative =
+          members.find((m) => m.variant_is_default) ||
+          members.find((m) => m.image_url) ||
+          members[0];
+        // Use min price in family for sorting
+        const minPrice = Math.min(...members.map((m) => m.price || 0));
+        items.push({
+          type: members.length > 1 ? "family" : "product",
+          representative,
+          variantCount: members.length,
+          familyId,
+          familyProducts: members,
+          sortPrice: minPrice,
+        });
+      }
+
+      // Add standalone products
+      for (const p of standalones) {
+        items.push({
+          type: "product",
+          representative: p,
+          variantCount: 1,
+          familyId: null,
+          familyProducts: [p],
+          sortPrice: p.price || 0,
+        });
+      }
+
+      // Sort by price ascending
+      items.sort((a, b) => a.sortPrice - b.sortPrice);
+      return items;
+    }, [products]);
 
     return (
       <div
@@ -522,34 +610,34 @@ const BrandTrack = React.memo(
         {/* Product Grid — horizontal flow, scrollable */}
         <div className="flex-1 overflow-x-auto py-1.5 px-2 custom-scrollbar">
           <div
-            className="flex flex-wrap gap-1 content-start"
+            className="flex flex-wrap gap-1.5 content-start"
             style={{ minWidth: "fit-content" }}
           >
-            {sorted.map((product) => {
-              // Family badge: count siblings in this track
-              const familySiblings = product.family_id
-                ? products.filter((p) => p.family_id === product.family_id)
-                    .length
-                : 0;
-              const isFirstInFamily = product.family_id
-                ? sorted.findIndex((p) => p.family_id === product.family_id) ===
-                  sorted.indexOf(product)
-                : false;
+            {displayItems.map((item) => {
+              const product = item.representative;
+              const isFamily = item.type === "family";
 
               return (
                 <div
-                  key={product.id}
+                  key={isFamily ? `fam-${item.familyId}` : product.id}
                   className="group/item relative flex-shrink-0"
                 >
                   <div
-                    className="w-[52px] h-[52px] rounded shadow-md bg-zinc-900 cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative"
+                    className={`rounded shadow-md bg-zinc-900 cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative ${
+                      isFamily ? "w-[58px] h-[58px]" : "w-[52px] h-[52px]"
+                    }`}
                     style={{
-                      borderWidth: "1.5px",
-                      borderColor: brandPrimary,
-                      boxShadow:
-                        "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
+                      borderWidth: isFamily ? "2px" : "1.5px",
+                      borderColor: isFamily ? `${brandPrimary}` : brandPrimary,
+                      boxShadow: isFamily
+                        ? `0 0 8px ${brandPrimary}30, 0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)`
+                        : "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
                     }}
-                    onClick={() => onClickProduct(product.id)}
+                    onClick={() =>
+                      isFamily
+                        ? onClickFamily(item.familyId!, item.familyProducts)
+                        : onClickProduct(product.id)
+                    }
                     onMouseEnter={() => onHoverProduct(product)}
                   >
                     {product.image_url ? (
@@ -573,18 +661,32 @@ const BrandTrack = React.memo(
                         boxShadow: `0 0 10px ${brandPrimary}80, inset 0 0 6px ${brandPrimary}40`,
                       }}
                     />
-                    {/* Family badge */}
-                    {isFirstInFamily && familySiblings > 1 && (
-                      <div className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-blue-500 text-white text-[7px] font-black flex items-center justify-center z-10 shadow-md">
-                        {familySiblings}
+                    {/* Family variant count badge */}
+                    {isFamily && item.variantCount > 1 && (
+                      <div
+                        className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full text-white text-[8px] font-black flex items-center justify-center z-10 shadow-lg"
+                        style={{ backgroundColor: brandPrimary }}
+                      >
+                        {item.variantCount}
                       </div>
+                    )}
+                    {/* No-price indicator */}
+                    {product.price <= 0 && (
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500/40" />
                     )}
                   </div>
                   {/* Price label on hover */}
                   <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/item:block bg-black/90 text-[7px] text-zinc-300 px-1 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
                     {product.price > 0
                       ? `₪${product.price.toLocaleString("he-IL")}`
-                      : "POA"}
+                      : (product as any).market_price_estimate > 0
+                        ? `~₪${(product as any).market_price_estimate.toLocaleString("he-IL")}`
+                        : "POA"}
+                    {isFamily && item.variantCount > 1 && (
+                      <span className="text-blue-400 ml-1">
+                        +{item.variantCount - 1}
+                      </span>
+                    )}
                   </div>
                 </div>
               );
@@ -597,6 +699,154 @@ const BrandTrack = React.memo(
 );
 
 BrandTrack.displayName = "BrandTrack";
+
+// --- FAMILY POPOVER (floating panel showing all variants in a family) ---
+interface FamilyPopoverState {
+  familyId: string;
+  products: ConductorProduct[];
+}
+
+const FamilyPopover = React.memo(
+  ({
+    familyData,
+    onClose,
+    onSelectProduct,
+  }: {
+    familyData: FamilyPopoverState;
+    onClose: () => void;
+    onSelectProduct: (id: string) => void;
+  }) => {
+    const overlayRef = useRef<HTMLDivElement>(null);
+    const { products } = familyData;
+
+    // Sort: products with images first, then by price desc
+    const sorted = useMemo(() => {
+      return [...products].sort((a, b) => {
+        const aImg = a.image_url ? 1 : 0;
+        const bImg = b.image_url ? 1 : 0;
+        if (aImg !== bImg) return bImg - aImg;
+        return (b.price || 0) - (a.price || 0);
+      });
+    }, [products]);
+
+    const familyName = useMemo(() => {
+      // Derive family name from the common prefix of all product names
+      if (products.length === 0) return "";
+      const brand = products[0].brand || "";
+      const names = products.map((p) => p.name);
+      // Find common prefix
+      const words0 = names[0].split(" ");
+      let common = 0;
+      for (let w = 0; w < words0.length; w++) {
+        if (names.every((n) => n.split(" ")[w] === words0[w])) {
+          common = w + 1;
+        } else break;
+      }
+      const prefix = words0.slice(0, Math.max(common, 2)).join(" ");
+      return prefix || brand;
+    }, [products]);
+
+    // Close on escape
+    useEffect(() => {
+      const handler = (e: KeyboardEvent) => {
+        if (e.key === "Escape") onClose();
+      };
+      window.addEventListener("keydown", handler);
+      return () => window.removeEventListener("keydown", handler);
+    }, [onClose]);
+
+    return (
+      <div
+        ref={overlayRef}
+        className="fixed inset-0 z-[100] flex items-center justify-center"
+        onClick={(e) => {
+          if (e.target === overlayRef.current) onClose();
+        }}
+      >
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+
+        {/* Popover card */}
+        <div className="relative z-10 bg-zinc-900 border border-zinc-700/80 rounded-xl shadow-2xl max-w-xl w-full mx-4 max-h-[70vh] flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+          {/* Header */}
+          <div className="flex items-center justify-between px-4 py-3 border-b border-zinc-800 bg-zinc-900/95 shrink-0">
+            <div className="flex items-center gap-2">
+              <Package className="w-4 h-4 text-blue-400" />
+              <h3 className="text-sm font-bold text-zinc-200 tracking-wide">
+                {familyName}
+              </h3>
+              <span className="text-[10px] font-mono text-zinc-500 bg-zinc-800 px-1.5 py-0.5 rounded">
+                {products.length} variants
+              </span>
+            </div>
+            <button
+              onClick={onClose}
+              className="w-6 h-6 rounded-md flex items-center justify-center text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800 transition-colors"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          {/* Variants grid */}
+          <div className="overflow-y-auto flex-1 p-3 custom-scrollbar">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {sorted.map((product) => {
+                const hasPrice = product.price > 0;
+                const estimate = (product as any).market_price_estimate || 0;
+
+                return (
+                  <button
+                    key={product.id}
+                    onClick={() => onSelectProduct(product.id)}
+                    className="group flex flex-col bg-zinc-850 border border-zinc-800 rounded-lg hover:border-blue-500/50 hover:bg-zinc-800/80 transition-all duration-150 overflow-hidden text-left"
+                  >
+                    {/* Image */}
+                    <div className="aspect-square w-full bg-white relative overflow-hidden">
+                      {product.image_url ? (
+                        <img
+                          src={product.image_url}
+                          alt={product.name}
+                          className="w-full h-full object-contain p-1"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-zinc-800">
+                          <Package className="w-8 h-8 text-zinc-700" />
+                        </div>
+                      )}
+                      {/* View overlay */}
+                      <div className="absolute inset-0 bg-blue-500/0 group-hover:bg-blue-500/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <ExternalLink className="w-5 h-5 text-blue-400 drop-shadow-lg" />
+                      </div>
+                    </div>
+
+                    {/* Info */}
+                    <div className="px-2 py-1.5 flex flex-col gap-0.5 min-h-[48px]">
+                      <span className="text-[10px] leading-tight text-zinc-300 font-medium line-clamp-2">
+                        {product.name}
+                      </span>
+                      <span
+                        className={`text-[10px] font-mono mt-auto ${hasPrice ? "text-emerald-400" : estimate > 0 ? "text-amber-400/80" : "text-zinc-600"}`}
+                      >
+                        {hasPrice
+                          ? `₪${product.price.toLocaleString("he-IL")}`
+                          : estimate > 0
+                            ? `~₪${estimate.toLocaleString("he-IL")}`
+                            : "Price on request"}
+                      </span>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  },
+);
+
+FamilyPopover.displayName = "FamilyPopover";
 
 // --- UTILITY: hex to RGB string ---
 const hexToRgb = (hex: string): string => {
@@ -665,6 +915,8 @@ export const SpectrumModule = () => {
     null,
   );
   const [imageLoadError, setImageLoadError] = useState(false);
+  const [familyPopover, setFamilyPopover] =
+    useState<FamilyPopoverState | null>(null);
 
   // Generate smart tags from clean products
   const smartTags = useMemo(() => {
@@ -676,6 +928,7 @@ export const SpectrumModule = () => {
     setActiveSmartTag(null);
     setActiveFilter("ALL");
     setHoveredProduct(null);
+    setFamilyPopover(null);
   }, [activeSubcategoryId]);
 
   const handleHoverProduct = useCallback((product: ConductorProduct | null) => {
@@ -685,6 +938,25 @@ export const SpectrumModule = () => {
 
   const handleClickProduct = useCallback(
     (id: string) => {
+      openProductPage(id);
+    },
+    [openProductPage],
+  );
+
+  const handleClickFamily = useCallback(
+    (familyId: string, products: ConductorProduct[]) => {
+      setFamilyPopover({ familyId, products });
+    },
+    [],
+  );
+
+  const handleCloseFamily = useCallback(() => {
+    setFamilyPopover(null);
+  }, []);
+
+  const handleSelectFromFamily = useCallback(
+    (id: string) => {
+      setFamilyPopover(null);
       openProductPage(id);
     },
     [openProductPage],
@@ -1066,6 +1338,7 @@ export const SpectrumModule = () => {
                     brandPrimary={brandPrimary}
                     onHoverProduct={handleHoverProduct}
                     onClickProduct={handleClickProduct}
+                    onClickFamily={handleClickFamily}
                   />
                 ),
               )}
@@ -1147,6 +1420,15 @@ export const SpectrumModule = () => {
           </div>
         </div>
       </Surface>
+
+      {/* Family Popover Overlay */}
+      {familyPopover && (
+        <FamilyPopover
+          familyData={familyPopover}
+          onClose={handleCloseFamily}
+          onSelectProduct={handleSelectFromFamily}
+        />
+      )}
     </div>
   );
 };

@@ -922,6 +922,8 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "price_eilat": price_eilat,
         "currency": "ILS",
         "tier": tier,
+        "market_price_estimate": 0,
+        "market_price_peers": 0,
         "image_url": image_url,
         "image_gallery": image_gallery,
         "description": description,
@@ -1060,6 +1062,7 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
     # ── Product Graph: Family & Relationship Discovery ──
     graph_indexes = {}
     graph_stats = {}
+    families_meta = {}  # family_id → {family_name, brand, series, hero_image, variant_count}
     if ENABLE_PRODUCT_GRAPH:
         try:
             from backend.product_graph import ProductGraph
@@ -1095,6 +1098,17 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             product_id_to_idx = {p["id"]: i for i, p in enumerate(products)}
             graph_indexes = graph.to_catalog_indexes(product_id_to_idx)
             graph_stats = graph.get_graph_stats()
+
+            # Serialize family metadata for frontend
+            for fam_id, fam in graph.families.items():
+                families_meta[fam_id] = {
+                    "id": fam.id,
+                    "family_name": fam.family_name,
+                    "brand": fam.brand,
+                    "series": fam.series,
+                    "hero_image": fam.hero_image,
+                    "variant_count": len(fam.variant_ids),
+                }
 
             logger.info(
                 f"Product graph: {graph_stats.get('total_families', 0)} families, "
@@ -1175,6 +1189,7 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         "products": products,
         "indexes": all_indexes,
         "metadata": metadata,
+        "families": families_meta,
     }
 
 
@@ -1191,4 +1206,5 @@ def _empty_catalog() -> dict:
             "source": "conductor_v10", "cache_ttl_seconds": 300,
             "graph_stats": {},
         },
+        "families": {},
     }

@@ -89,6 +89,8 @@ BRAND_SERIES_PATTERNS: Dict[str, List[Dict[str, Any]]] = {
         {"series": "Matriarch", "pattern": r"matriarch"},
         {"series": "Grandmother", "pattern": r"grandmother"},
         {"series": "Sub", "pattern": r"moog\s+sub\s*(\d+)"},
+        {"series": "Moogerfooger", "pattern": r"moogerfooger"},
+        {"series": "Minitaur", "pattern": r"minitaur"},
     ],
     "arturia": [
         {"series": "KeyLab", "pattern": r"keylab\s*(essential\s*)?(\d+)"},
@@ -175,6 +177,21 @@ BRAND_SERIES_PATTERNS: Dict[str, List[Dict[str, Any]]] = {
         {"series": "LTD MH", "pattern": r"ltd\s+mh[- ]?(\d+\w*)"},
         {"series": "LTD TE", "pattern": r"ltd\s+te[- ]?(\d+\w*)"},
         {"series": "LTD KH", "pattern": r"ltd\s+kh[- ]?(\d+\w*)"},
+        {"series": "LTD EX", "pattern": r"ltd\s+ex[- ]?(\d+\w*)"},
+        {"series": "LTD Viper", "pattern": r"ltd\s+viper[- ]?(\d+\w*)"},
+        {"series": "LTD M", "pattern": r"ltd\s+m[- ](\d+\w*)"},
+        {"series": "LTD H", "pattern": r"ltd\s+h[- ]?(\d+\w*)"},
+        {"series": "LTD F", "pattern": r"ltd\s+f[- ]?(\d+\w*)"},
+        {"series": "LTD B", "pattern": r"ltd\s+b[- ]?(\d+\w*)"},
+        {"series": "LTD AP", "pattern": r"ltd\s+ap[- ]?(\d+\w*)"},
+        {"series": "LTD Vulture", "pattern": r"ltd\s+vulture"},
+        {"series": "LTD Arrow", "pattern": r"ltd\s+arrow"},
+        {"series": "LTD Snapper", "pattern": r"snapper"},
+        {"series": "E-II Eclipse", "pattern": r"e\s*ii\s+eclipse"},
+        {"series": "E-II Horizon", "pattern": r"e\s*ii\s+horizon"},
+        {"series": "E-II Arrow", "pattern": r"e\s*ii\s+arrow"},
+        {"series": "E-II M-II", "pattern": r"e\s*ii\s+m[- ]?ii"},
+        {"series": "E-II ST", "pattern": r"e\s*ii\s+st[- ]?(\d*)"},
     ],
     "m-audio": [
         {"series": "Keystation", "pattern": r"keystation\s*(\d+\w*)"},
@@ -189,6 +206,195 @@ BRAND_SERIES_PATTERNS: Dict[str, List[Dict[str, Any]]] = {
     "warm audio": [
         {"series": "WA", "pattern": r"wa[- ]?(\d+\w*)"},
     ],
+    # ── New brand patterns (v8.4.1) ──
+    "guild": [
+        {"series": "Starfire", "pattern": r"guild\s+starfire\s*(\w*)"},
+        {"series": "S-100", "pattern": r"guild\s+s[- ]?100"},
+        {"series": "D-Series", "pattern": r"guild\s+d[- ]?(\d+\w*)"},
+        {"series": "F-Series", "pattern": r"guild\s+f[- ]?(\d+\w*)"},
+        {"series": "M-Series", "pattern": r"guild\s+m[- ]?(\d+\w*)"},
+        {"series": "OM", "pattern": r"guild\s+om[- ]?(\d+\w*)"},
+        {"series": "Jumbo Junior", "pattern": r"guild\s+jumbo\s+junior"},
+    ],
+    "solar guitars": [
+        {"series": "A1", "pattern": r"solar\s+a1[- ]?(\w*)"},
+        {"series": "A2", "pattern": r"solar\s+a2[- ]?(\w*)"},
+        {"series": "E1", "pattern": r"solar\s+e1[- ]?(\w*)"},
+        {"series": "E2", "pattern": r"solar\s+e2[- ]?(\w*)"},
+        {"series": "S1", "pattern": r"solar\s+s1[- ]?(\w*)"},
+        {"series": "T1", "pattern": r"solar\s+t1[- ]?(\w*)"},
+        {"series": "T2", "pattern": r"solar\s+t2[- ]?(\w*)"},
+        {"series": "V1", "pattern": r"solar\s+v1[- ]?(\w*)"},
+        {"series": "V2", "pattern": r"solar\s+v2[- ]?(\w*)"},
+        {"series": "GC1", "pattern": r"solar\s+gc1[- ]?(\w*)"},
+        {"series": "AB", "pattern": r"solar\s+ab[- ]?(\w*)"},
+    ],
+    "spector": [
+        {"series": "Euro", "pattern": r"spector\s+euro\s*(\d+\w*)"},
+        {"series": "Legend", "pattern": r"spector\s+legend\s*(\d+\w*)"},
+        {"series": "Performer", "pattern": r"spector\s+performer\s*(\d*)"},
+        {"series": "Bantam", "pattern": r"spector\s+bantam"},
+    ],
+    "vintage": [
+        {"series": "V6", "pattern": r"vintage\s+v6\w*"},
+        {"series": "V10", "pattern": r"vintage\s+v10\b"},
+        {"series": "V100", "pattern": r"vintage\s+v100\w*"},
+        {"series": "V52", "pattern": r"vintage\s+v52\w*"},
+        {"series": "V60", "pattern": r"vintage\s+v60\w*"},
+        {"series": "V62", "pattern": r"vintage\s+v62\w*"},
+        {"series": "V65", "pattern": r"vintage\s+v65\w*"},
+        {"series": "V72", "pattern": r"vintage\s+v72\w*"},
+        {"series": "V74", "pattern": r"vintage\s+v74\w*"},
+        {"series": "V75", "pattern": r"vintage\s+v75\w*"},
+        {"series": "V96", "pattern": r"vintage\s+v96\w*"},
+        {"series": "V300", "pattern": r"vintage\s+v300\w*"},
+        {"series": "V400", "pattern": r"vintage\s+v400\w*"},
+        {"series": "V500", "pattern": r"vintage\s+v500\w*"},
+        {"series": "LV", "pattern": r"vintage\s+lv\w*"},
+    ],
+    "novation": [
+        {"series": "Launchpad", "pattern": r"novation\s+launchpad\s*(\w*)"},
+        {"series": "Launchkey", "pattern": r"novation\s+launchkey\s*(\w*)"},
+        {"series": "SL MkIII", "pattern": r"novation\s+sl\d+mk"},
+        {"series": "Impulse", "pattern": r"novation\s+impulse\s*(\d*)"},
+        {"series": "Summit", "pattern": r"novation\s+summit"},
+        {"series": "Peak", "pattern": r"novation\s+peak"},
+        {"series": "Circuit", "pattern": r"novation\s+circuit\s*(\w*)"},
+    ],
+    "sequential": [
+        {"series": "Prophet", "pattern": r"sequential\s+prophet\s*(\w*)"},
+        {"series": "Pro 3", "pattern": r"sequential\s+pro\s+3"},
+        {"series": "Take 5", "pattern": r"sequential\s+take\s+5"},
+        {"series": "Trigon", "pattern": r"sequential\s+trigon\s*(\d*)"},
+        {"series": "OB-X8", "pattern": r"sequential\s+ob[- ]?x8"},
+    ],
+    "marshall": [
+        {"series": "Mode", "pattern": r"marshall\s+mode"},
+        {"series": "Monitor", "pattern": r"marshall\s+monitor"},
+        {"series": "Major", "pattern": r"marshall\s+major"},
+        {"series": "Minor", "pattern": r"marshall\s+minor"},
+        {"series": "Stanmore", "pattern": r"marshall\s+stanmore"},
+        {"series": "Woburn", "pattern": r"marshall\s+woburn"},
+        {"series": "ORI", "pattern": r"marshall\s+ori\d+"},
+        {"series": "Studio", "pattern": r"marshall\s+studio\s+(\w+)"},
+        {"series": "PEDL", "pattern": r"marshall\s+pedl?\s*(\d+)"},
+    ],
+    "cordoba": [
+        {"series": "C5", "pattern": r"cordoba\s+c5\w*"},
+        {"series": "C7", "pattern": r"cordoba\s+c7\w*"},
+        {"series": "C9", "pattern": r"cordoba\s+c9\w*"},
+        {"series": "C10", "pattern": r"cordoba\s+c10\w*"},
+        {"series": "C12", "pattern": r"cordoba\s+c12\w*"},
+        {"series": "GK Studio", "pattern": r"cordoba\s+gk\s+studio"},
+        {"series": "Mini", "pattern": r"cordoba\s+mini\s*(\w*)"},
+        {"series": "Fusion", "pattern": r"cordoba\s+fusion\s*(\w*)"},
+        {"series": "Stage", "pattern": r"cordoba\s+stage\s*(\w*)"},
+    ],
+    "paiste": [
+        {"series": "2002", "pattern": r"paiste.*2002"},
+        {"series": "PST 7", "pattern": r"paiste\s+pst\s*7"},
+        {"series": "PST 5", "pattern": r"paiste\s+pst\s*5"},
+        {"series": "PST 3", "pattern": r"paiste\s+pst\s*3"},
+        {"series": "PST 8", "pattern": r"paiste\s+pst\s*8"},
+        {"series": "Giant Beat", "pattern": r"paiste\s+giant\s+beat"},
+        {"series": "RUDE", "pattern": r"paiste\s+rude"},
+        {"series": "Signature", "pattern": r"paiste\s+signature"},
+        {"series": "Formula 602", "pattern": r"paiste.*formula\s*602"},
+        {"series": "Masters", "pattern": r"paiste\s+masters"},
+    ],
+    "remo": [
+        {"series": "Ambassador", "pattern": r"remo\s+ambassador"},
+        {"series": "Emperor", "pattern": r"remo\s+emperor"},
+        {"series": "Diplomat", "pattern": r"remo\s+diplomat"},
+        {"series": "Pinstripe", "pattern": r"remo\s+pinstripe"},
+        {"series": "Powerstroke", "pattern": r"remo\s+powerstroke"},
+        {"series": "Controlled Sound", "pattern": r"remo\s+controlled\s+sound"},
+        {"series": "Buffalo Drum", "pattern": r"remo\s+buffalo"},
+        {"series": "Ocean Drum", "pattern": r"remo\s+.*ocean\s+drum"},
+        {"series": "Kids Percussion", "pattern": r"remo\s+kids?\s+percussion"},
+    ],
+    "beyerdynamic": [
+        {"series": "DT", "pattern": r"beyerdynamic\s+dt\s*(\d+\w*)"},
+        {"series": "M", "pattern": r"beyerdynamic\s+m\s*(\d+\w*)"},
+        {"series": "TG", "pattern": r"beyerdynamic\s+tg\s*(\w*)"},
+        {"series": "FOX", "pattern": r"beyerdynamic\s+fox"},
+    ],
+    "austrian audio": [
+        {"series": "OC", "pattern": r"austrian\s+audio\s+oc\s*(\d+\w*)"},
+        {"series": "OD", "pattern": r"austrian\s+audio\s+od\s*(\d+\w*)"},
+        {"series": "Hi-X",
+            "pattern": r"austrian\s+audio\s+hi[- ]?x\s*(\d+\w*)"},
+    ],
+    "heritage audio": [
+        {"series": "HA-73", "pattern": r"heritage\s+audio\s+ha[- ]?73\w*"},
+        {"series": "Successor", "pattern": r"heritage\s+audio\s+successor"},
+        {"series": "BritStrip", "pattern": r"heritage\s+audio\s+britstrip"},
+        {"series": "OST", "pattern": r"heritage\s+audio\s+ost\s*(\d*)"},
+    ],
+    "steinberg": [
+        {"series": "UR", "pattern": r"steinberg\s+ur[- ]?\s*(\w+)"},
+        {"series": "IXO", "pattern": r"steinberg\s+ixo\s*(\d+)"},
+        {"series": "Cubase", "pattern": r"steinberg\s+cubase\s*(\w*)"},
+    ],
+    "medeli": [
+        {"series": "SP", "pattern": r"medeli\s+sp[- ]?\s*(\w+)"},
+        {"series": "DP", "pattern": r"medeli\s+dp\s*(\w+)"},
+        {"series": "M", "pattern": r"medeli\s+m(\d+)"},
+        {"series": "DD", "pattern": r"medeli\s+dd[- ]?\s*(\d+\w*)"},
+    ],
+    "v-moda": [
+        {"series": "Crossfade", "pattern": r"v-?moda\s+crossfade\s*(\w*)"},
+        {"series": "M-100", "pattern": r"v-?moda\s+m[- ]?100"},
+        {"series": "M-200", "pattern": r"v-?moda\s+m[- ]?200"},
+    ],
+    "ashdown engineering": [
+        {"series": "RM", "pattern": r"ashdown\s+rm[- ]?(\d+\w*)"},
+        {"series": "Studio", "pattern": r"ashdown\s+studio\s*(\w*)"},
+        {"series": "ABM", "pattern": r"ashdown\s+abm\s*(\w*)"},
+        {"series": "CTM", "pattern": r"ashdown\s+ctm\s*(\w*)"},
+    ],
+    "akai professional": [
+        {"series": "MPC", "pattern": r"(?:akai\s+)?mpc\s*(\w*)"},
+        {"series": "MPK Mini", "pattern": r"(?:akai\s+)?mpk\s*mini\s*(\w*)"},
+        {"series": "MPK", "pattern": r"(?:akai\s+)?mpk\s*(\d+\w*)"},
+        {"series": "MPD", "pattern": r"(?:akai\s+)?mpd\s*(\d+\w*)"},
+    ],
+    "fender": [
+        {"series": "Quantum HD", "pattern": r"fender\s+quantum\s+hd\s*(\w*)"},
+        {"series": "Quantum LT", "pattern": r"fender\s+quantum\s+lt\s*(\w*)"},
+    ],
+    "eve audio": [
+        {"series": "SC", "pattern": r"eve\s+audio\s+sc(\d+\w*)"},
+        {"series": "TS", "pattern": r"eve\s+audio\s+ts(\d+\w*)"},
+    ],
+    "amphion": [
+        {"series": "One", "pattern": r"amphion\s+one(\d+)"},
+        {"series": "Two", "pattern": r"amphion\s+two(\d+)"},
+    ],
+    "headrush": [
+        {"series": "Pedalboard", "pattern": r"headrush\s+pedalboard"},
+        {"series": "Gigboard", "pattern": r"headrush\s+gigboard"},
+        {"series": "MX5", "pattern": r"headrush\s+mx5"},
+        {"series": "FRFR", "pattern": r"headrush\s+frfr\s*(\d+\w*)"},
+    ],
+    "oberheim": [
+        {"series": "OB-X8", "pattern": r"oberheim\s+ob[- ]?x8"},
+        {"series": "TEA", "pattern": r"oberheim\s+tea"},
+    ],
+    "lag guitars": [
+        {"series": "Tramontane", "pattern": r"lag\s+tramonte?\s*(\w*)"},
+        {"series": "Tiki Uku", "pattern": r"lag\s+tiki\s+uku"},
+        {"series": "T Series", "pattern": r"lag\s+t(\d+\w*)"},
+        {"series": "HyVibe", "pattern": r"lag\s+hyvibe"},
+    ],
+    "xvive": [
+        {"series": "U", "pattern": r"xvive\s+u(\d+\w*)"},
+    ],
+    "eaw": [
+        {"series": "JF", "pattern": r"eaw\s+jf\s*(\w+)"},
+        {"series": "RSX", "pattern": r"eaw\s+rsx\s*(\w+)"},
+        {"series": "MK", "pattern": r"eaw\s+mk\s*(\w+)"},
+    ],
 }
 
 
@@ -197,12 +403,68 @@ def _normalize_name(name: str) -> str:
     return re.sub(r"\s+", " ", name.lower().strip())
 
 
+# ── Color / Finish / Material / Config words to strip for base-name grouping ──
+# These are variant differentiators — two products that share a base name once
+# these are stripped should belong to the same family.
+_COLOR_WORDS = {
+    "black", "white", "red", "blue", "green", "gold", "silver", "grey", "gray",
+    "orange", "purple", "pink", "brown", "cream", "ivory", "amber", "aqua",
+    "turquoise", "charcoal", "wine", "burgundy", "tobacco", "cherry", "honey",
+    "pearl", "arctic", "desert", "ocean", "midnight", "snow", "ice",
+}
+
+_FINISH_WORDS = {
+    "satin", "gloss", "matte", "metallic", "transparent", "translucent",
+    "vintage", "antique", "aged", "relic", "faded", "worn", "distressed",
+    "sunburst", "burst", "fade", "flamed", "flame", "quilted", "quilt",
+    "natural", "stain", "lacquer",
+}
+
+_MATERIAL_WORDS = {
+    "mahogany", "maple", "ash", "alder", "basswood", "rosewood", "ebony",
+    "walnut", "poplar", "spruce", "cedar", "koa", "sapele", "nato", "brass",
+    "chrome", "nickel", "steel",
+}
+
+_CONFIG_WORDS = {
+    "duncan", "fluence", "piezo", "floyd", "tremolo", "hardtail",
+    "lefty", "left", "lh",
+}
+
+# Common guitar-finish color combos and abbreviations
+_FINISH_ABBREVS = {
+    "sb", "tsb", "3tsb", "2tsb", "hsb", "csb", "dsb", "vsb", "bsb",
+    "dbsb", "stbc", "stbs", "blk", "wht", "nat", "vwh", "see",
+    "thru", "fm", "qm", "nt", "sw", "bk", "rd", "bl", "gd", "sv",
+    "cb", "vb", "ab", "tb", "hb", "rdb", "redb", "mg", "sg", "ag",
+}
+
+# All variant words combined for regex (update set when adding above)
+_ALL_VARIANT_WORDS = _COLOR_WORDS | _FINISH_WORDS | _MATERIAL_WORDS | _CONFIG_WORDS
+
+# Precompiled regex for variant word removal (word boundaries, case-insensitive)
+_VARIANT_WORDS_RE = re.compile(
+    r"\b(?:" + "|".join(sorted(_ALL_VARIANT_WORDS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
+_FINISH_ABBREVS_RE = re.compile(
+    r"\b(?:" + "|".join(sorted(_FINISH_ABBREVS, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
+
+
 def _extract_base_name(name: str, brand: str) -> str:
     """
     Extract the base product name by removing variant suffixes.
-    e.g., "Nord Stage 4 88" → "Nord Stage 4"
-    e.g., "Nord Stage 4 73-Key" → "Nord Stage 4"
-    e.g., "Nord Stage 4 Compact" → "Nord Stage 4"
+
+    Strips: key counts, color words, finish words, material words,
+    config words (pickups, tremolo, left-hand), finish abbreviations,
+    and parenthetical suffixes.
+
+    e.g., "ESP LTD EC 1000 Duncan Vintage Black" → "esp ltd ec 1000"
+    e.g., "Nord Stage 4 88" → "nord stage 4"
+    e.g., "Fender Player Stratocaster HSS 3-Color Sunburst" → "fender player stratocaster hss"
     """
     normalized = _normalize_name(name)
 
@@ -212,13 +474,36 @@ def _extract_base_name(name: str, brand: str) -> str:
     if brand.lower() in stripped:
         normalized = stripped
 
-    # Remove common variant suffixes
-    # Remove trailing key counts: "88", "73-key", "73 keys", etc.
-    base = re.sub(r"\s+\d{2,3}[-\s]*(?:keys?)?$", "", normalized)
-    # Remove "compact", "hp", etc. at end
-    base = re.sub(r"\s+(?:compact|hp|ha|studio)$", "", base)
     # Remove trailing parenthetical
-    base = re.sub(r"\s*\(.*\)\s*$", "", base)
+    base = re.sub(r"\s*\(.*\)\s*$", "", normalized)
+
+    # Remove trailing key counts: "88", "73-key", "73 keys", etc.
+    base = re.sub(r"\s+\d{2,3}[-\s]*(?:keys?)?$", "", base)
+
+    # Remove "compact", "hp", "ha", "studio" at end
+    base = re.sub(r"\s+(?:compact|hp|ha|studio)$", "", base)
+
+    # Remove color / finish / material / config words anywhere after the model
+    # We protect the first 3 words (brand + model core) from stripping
+    words = base.split()
+    if len(words) > 3:
+        core = " ".join(words[:3])
+        tail = " ".join(words[3:])
+        # Strip variant words from the tail
+        tail = _VARIANT_WORDS_RE.sub("", tail)
+        # Strip finish abbreviations from the tail (only at word boundaries)
+        tail = _FINISH_ABBREVS_RE.sub("", tail)
+        # Remove standalone single/double-char remnants (often color codes)
+        tail = re.sub(r"\b[a-z]{1,2}\b", "", tail)
+        # Collapse whitespace
+        tail = re.sub(r"\s+", " ", tail).strip()
+        base = f"{core} {tail}".strip() if tail else core
+    else:
+        base = " ".join(words)
+
+    # Final cleanup — remove trailing dashes and extra spaces
+    base = re.sub(r"[-\s]+$", "", base)
+    base = re.sub(r"\s+", " ", base)
 
     return base.strip()
 
@@ -260,6 +545,49 @@ def _extract_variant_key(name: str, base_name: str) -> str:
 
     # Title case the remainder for display
     return remainder.title()
+
+
+def _pick_default_index(members: List["CanonicalProduct"]) -> int:
+    """
+    Pick the best variant to represent a family.
+
+    Scoring:
+    - Has image_url:   +10
+    - Has description:  +5
+    - Has real price:   +3
+    - Shortest name (closer to canonical): +2
+    - First in list (tie-break):           +0.01*(len-i)
+
+    Returns the index of the best candidate.
+    """
+    if not members:
+        return 0
+
+    best_idx = 0
+    best_score = -1.0
+
+    max_name_len = max((len(m.name) for m in members), default=1)
+
+    for i, m in enumerate(members):
+        score = 0.0
+        if getattr(m, "image_url", None):
+            score += 10
+        if getattr(m, "description", None) and len(m.description) > 20:
+            score += 5
+        if getattr(m, "price", 0) and m.price > 0:
+            score += 3
+        # Prefer shorter names (closer to the canonical/base product)
+        name_len = len(m.name)
+        if max_name_len > 0:
+            score += 2 * (1 - name_len / max_name_len)
+        # Tiny tie-break: earlier in list
+        score += 0.01 * (len(members) - i)
+
+        if score > best_score:
+            best_score = score
+            best_idx = i
+
+    return best_idx
 
 
 def _is_accessory(name: str, description: str = "") -> bool:
@@ -448,6 +776,9 @@ class RelationshipDiscovery:
                 gen_match = re.search(r"(\d+)", group_key)
                 generation = int(gen_match.group(1)) if gen_match else None
 
+                # Pick best default variant (image, data, price, name length)
+                default_idx = _pick_default_index(members)
+
                 family = ProductFamily(
                     id=family_id,
                     brand=brand.title(),
@@ -456,7 +787,7 @@ class RelationshipDiscovery:
                     generation=generation,
                     product_line=f"{brand.title()} {sp['series']}",
                     variant_ids=[m.id for m in members],
-                    hero_image=members[0].image_url if members else "",
+                    hero_image=members[default_idx].image_url if members else "",
                 )
                 families.append(family)
 
@@ -477,7 +808,7 @@ class RelationshipDiscovery:
                     member.variant = ProductVariant(
                         variant_key=variant_key or member.name.split()[-1],
                         sort_order=i,
-                        is_default=(i == 0),
+                        is_default=(i == default_idx),
                     )
                     assigned_ids.add(member.id)
 
@@ -513,13 +844,16 @@ class RelationshipDiscovery:
             gen_match = re.search(r"(\d+)", base_name)
             generation = int(gen_match.group(1)) if gen_match else None
 
+            # Pick best default variant (image, data, price, name length)
+            default_idx = _pick_default_index(members)
+
             family = ProductFamily(
                 id=family_id,
                 brand=brand.title(),
                 family_name=base_name.title(),
                 generation=generation,
                 variant_ids=[m.id for m in members],
-                hero_image=members[0].image_url if members else "",
+                hero_image=members[default_idx].image_url if members else "",
             )
             families.append(family)
 
@@ -528,7 +862,7 @@ class RelationshipDiscovery:
                 member.variant = ProductVariant(
                     variant_key=variant_key or str(i + 1),
                     sort_order=i,
-                    is_default=(i == 0),
+                    is_default=(i == default_idx),
                 )
 
         return families
