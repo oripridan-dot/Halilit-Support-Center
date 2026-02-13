@@ -294,11 +294,42 @@ export const ProductPage = ({ productId }: { productId: string }) => {
           <div className="space-y-3">
             {/* Hero Image */}
             <div className="relative aspect-square bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl overflow-hidden border border-slate-700/40 group">
-              <ImageWithFallback
-                src={currentImage}
-                alt={product.name || "Product"}
-                className="w-full h-full object-contain p-6"
-              />
+              {currentImage ? (
+                <ImageWithFallback
+                  src={currentImage}
+                  alt={product.name || "Product"}
+                  className="w-full h-full object-contain p-6"
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center gap-4 p-8">
+                  {product.brand_logo ? (
+                    <img
+                      src={product.brand_logo}
+                      alt={product.brand}
+                      className="max-w-[50%] max-h-[30%] object-contain opacity-15"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  ) : null}
+                  <div className="text-center space-y-2">
+                    <p className="text-xs text-zinc-600 font-mono uppercase tracking-widest">
+                      No image available yet
+                    </p>
+                    {product.halilit_url && (
+                      <a
+                        href={product.halilit_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs text-blue-500/70 hover:text-blue-400 transition-colors"
+                      >
+                        <ExternalLink size={12} />
+                        See on Halilit.com
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
               {/* Image counter badge */}
               {images.length > 1 && (
                 <div className="absolute bottom-3 right-3 px-2 py-1 bg-black/70 backdrop-blur-sm rounded-md text-[10px] text-zinc-300 font-mono">
@@ -543,9 +574,61 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   <span className="w-1.5 h-1.5 rounded-full bg-violet-400" />
                   Overview
                 </h2>
-                <p className="text-sm text-zinc-300 leading-relaxed">
-                  {product.description_short || product.description}
+                <p className="text-sm text-zinc-300 leading-relaxed whitespace-pre-line">
+                  {product.description}
                 </p>
+              </div>
+            )}
+
+            {/* Quick Source Links — always visible for transparency */}
+            {(product.halilit_url || product.official_url) && (
+              <div className="bg-slate-900/80 rounded-xl p-5 border border-slate-800/60">
+                <h2 className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                  Source Documents
+                </h2>
+                <div className="space-y-2">
+                  {product.halilit_url && (
+                    <a
+                      href={product.halilit_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2.5 text-sm text-blue-400 hover:text-blue-300 transition-colors group"
+                    >
+                      <div className="w-7 h-7 rounded-md bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors shrink-0">
+                        <ExternalLink size={13} className="text-blue-400" />
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-medium text-xs">
+                          Halilit Product Page
+                        </span>
+                        <p className="text-[10px] text-zinc-600 truncate">
+                          {product.halilit_url}
+                        </p>
+                      </div>
+                    </a>
+                  )}
+                  {product.official_url && (
+                    <a
+                      href={product.official_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2.5 text-sm text-emerald-400 hover:text-emerald-300 transition-colors group"
+                    >
+                      <div className="w-7 h-7 rounded-md bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors shrink-0">
+                        <ExternalLink size={13} className="text-emerald-400" />
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-medium text-xs">
+                          {product.brand} Official Page
+                        </span>
+                        <p className="text-[10px] text-zinc-600 truncate">
+                          {product.official_url}
+                        </p>
+                      </div>
+                    </a>
+                  )}
+                </div>
               </div>
             )}
 

@@ -569,10 +569,23 @@ const BrandTrack = React.memo(
                       alt={product.name}
                     />
                   ) : (
-                    <div className="w-full h-full absolute inset-0 bg-gradient-to-br from-zinc-800 to-zinc-900 flex items-center justify-center">
-                      <span className="text-[7px] font-mono text-zinc-400 text-center leading-tight px-1 uppercase tracking-wider">
-                        {product.name.split(" ").slice(0, 2).join(" ")}
+                    <div className="w-full h-full absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-850 to-zinc-900 flex flex-col items-center justify-center gap-0.5 p-1">
+                      {product.brand_logo ? (
+                        <img
+                          src={product.brand_logo}
+                          alt={product.brand}
+                          className="w-8 h-8 object-contain opacity-30"
+                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                        />
+                      ) : null}
+                      <span className="text-[7px] font-semibold text-zinc-500 text-center leading-[1.1] px-0.5 line-clamp-2">
+                        {product.name.split(" ").slice(0, 3).join(" ")}
                       </span>
+                      {product.price > 0 && (
+                        <span className="text-[6px] font-mono text-zinc-600">
+                          ₪{product.price.toLocaleString("he-IL")}
+                        </span>
+                      )}
                     </div>
                   )}
                   <div
@@ -868,13 +881,32 @@ export const SpectrumModule = () => {
                   onError={() => setImageLoadError(true)}
                 />
               ) : (
-                <div className="flex flex-col items-center gap-3 text-zinc-600 text-center p-2">
-                  <div className="w-16 h-16 rounded-full bg-zinc-800/30 flex items-center justify-center">
-                    <ScanLine className="w-7 h-7 opacity-50" />
-                  </div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest">
-                    No Image Available
+                <div className="flex flex-col items-center justify-center gap-3 text-zinc-600 text-center p-4 w-full h-full">
+                  {hoveredProduct.brand_logo ? (
+                    <img
+                      src={hoveredProduct.brand_logo}
+                      alt={hoveredProduct.brand}
+                      className="max-w-[60%] max-h-[40%] object-contain opacity-20"
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-full bg-zinc-800/30 flex items-center justify-center">
+                      <ScanLine className="w-7 h-7 opacity-50" />
+                    </div>
+                  )}
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-700">
+                    Image not yet scraped
                   </span>
+                  {hoveredProduct.halilit_url && (
+                    <a
+                      href={hoveredProduct.halilit_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[9px] text-blue-500/60 hover:text-blue-400 transition-colors underline underline-offset-2"
+                    >
+                      View on Halilit.com
+                    </a>
+                  )}
                 </div>
               )}
             </div>

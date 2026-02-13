@@ -103,10 +103,11 @@ def enrich_product(product: dict, scraper: HalilitPageScraper,
     has_desc = bool(product.get("official_description")
                     or product.get("description"))
     has_price = bool(product.get("price") or product.get("price_il"))
+    has_image = bool(product.get("image_url"))
     has_gallery = len(product.get("gallery_images")
                       or product.get("image_gallery") or []) > 1
 
-    if has_desc and has_price and has_gallery:
+    if has_desc and has_price and has_image and has_gallery:
         stats["skipped_already_rich"] += 1
         return product
 
@@ -131,9 +132,22 @@ def enrich_product(product: dict, scraper: HalilitPageScraper,
 
         if page_data.get("gallery_images") and not has_gallery:
             enriched["gallery_images"] = page_data["gallery_images"]
+        # Also pull image_gallery from scraper (different key name)
+        if page_data.get("image_gallery") and not has_gallery:
+            enriched["image_gallery"] = page_data["image_gallery"]
+            if not enriched.get("gallery_images"):
+                enriched["gallery_images"] = page_data["image_gallery"]
 
-        if page_data.get("image") and not product.get("image_url"):
-            enriched["image_url"] = page_data["image"]
+        # image_url from scraper (scraper uses "image_url" key)
+        if not product.get("image_url"):
+            if page_data.get("image_url"):
+                enriched["image_url"] = page_data["image_url"]
+            elif page_data.get("image"):
+                enriched["image_url"] = page_data["image"]
+
+        # Also save official_images for the normalizer gallery collector
+        if page_data.get("official_images") and not product.get("official_images"):
+            enriched["official_images"] = page_data["official_images"]
 
         if page_data.get("sku") and not product.get("sku"):
             enriched["sku"] = page_data["sku"]
