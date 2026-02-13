@@ -470,8 +470,6 @@ interface BrandTrackProps {
   products: ConductorProduct[];
   rgbColor: string;
   brandPrimary: string;
-  minPrice: number;
-  maxPrice: number;
   onHoverProduct: (product: ConductorProduct | null) => void;
   onClickProduct: (id: string) => void;
 }
@@ -482,38 +480,38 @@ const BrandTrack = React.memo(
     products,
     rgbColor,
     brandPrimary,
-    minPrice,
-    maxPrice,
     onHoverProduct,
     onClickProduct,
   }: BrandTrackProps) => {
-    const safeMin = minPrice > 0 ? minPrice : 1;
+    // Sort products by price (ascending) for consistent display
+    const sorted = useMemo(
+      () => [...products].sort((a, b) => a.price - b.price),
+      [products],
+    );
 
     return (
       <div
-        className="flex h-24 border-b transition-colors duration-200 group/row hover:bg-white/5 hover:shadow-lg"
+        className="flex border-b transition-colors duration-200 group/row hover:bg-white/5"
         style={{
-          borderColor: `rgba(${rgbColor}, 0.2)`,
-          backgroundColor: `rgba(${rgbColor}, 0.04)`,
+          borderColor: `rgba(${rgbColor}, 0.15)`,
+          backgroundColor: `rgba(${rgbColor}, 0.03)`,
         }}
       >
         {/* Brand Header */}
         <div
-          className="w-32 flex-shrink-0 flex items-center justify-center pl-4 border-r transition-all duration-200"
+          className="w-28 flex-shrink-0 flex items-center justify-center border-r"
           style={{
-            borderColor: `rgba(${rgbColor}, 0.3)`,
-            backgroundColor: `rgba(${rgbColor}, 0.08)`,
+            borderColor: `rgba(${rgbColor}, 0.25)`,
+            backgroundColor: `rgba(${rgbColor}, 0.06)`,
           }}
         >
-          <div className="flex flex-col gap-1 items-center justify-center flex-1 w-full h-full relative">
-            <div className="absolute inset-0 flex items-center justify-center p-2">
-              <BrandLogo
-                brand={brand}
-                className="max-h-full max-w-full w-auto h-auto object-contain transition-opacity opacity-90 hover:opacity-100"
-              />
-            </div>
+          <div className="flex flex-col gap-0.5 items-center justify-center w-full py-2 px-2 relative">
+            <BrandLogo
+              brand={brand}
+              className="max-h-10 max-w-[88px] w-auto object-contain opacity-90"
+            />
             <span
-              className="text-[9px] font-bold uppercase tracking-widest absolute bottom-1 right-2 bg-black/50 px-1 rounded backdrop-blur-sm"
+              className="text-[9px] font-bold uppercase tracking-widest bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-sm"
               style={{ color: brandPrimary }}
             >
               {products.length}
@@ -521,95 +519,77 @@ const BrandTrack = React.memo(
           </div>
         </div>
 
-        {/* The Track */}
-        <div className="flex-1 relative flex items-center px-4">
-          {products.map((product, pidx) => {
-            const price = product.price;
-            const safePrice = price > 0 ? price : 1;
+        {/* Product Grid — horizontal flow, scrollable */}
+        <div className="flex-1 overflow-x-auto py-1.5 px-2 custom-scrollbar">
+          <div
+            className="flex flex-wrap gap-1 content-start"
+            style={{ minWidth: "fit-content" }}
+          >
+            {sorted.map((product) => {
+              // Family badge: count siblings in this track
+              const familySiblings = product.family_id
+                ? products.filter((p) => p.family_id === product.family_id)
+                    .length
+                : 0;
+              const isFirstInFamily = product.family_id
+                ? sorted.findIndex((p) => p.family_id === product.family_id) ===
+                  sorted.indexOf(product)
+                : false;
 
-            let pct = 0;
-            if (price > 0 && maxPrice > safeMin) {
-              pct =
-                (Math.log(safePrice) - Math.log(safeMin)) /
-                (Math.log(maxPrice) - Math.log(safeMin));
-            }
-            pct = Math.max(0, Math.min(1, pct));
-
-            // Family badge: count siblings in this track
-            const familySiblings = product.family_id
-              ? products.filter((p) => p.family_id === product.family_id).length
-              : 0;
-            const isFirstInFamily = product.family_id
-              ? products.findIndex((p) => p.family_id === product.family_id) ===
-                pidx
-              : false;
-
-            return (
-              <div
-                key={product.id}
-                className="absolute top-1/2 -translate-y-1/2 group/item z-0 hover:z-50"
-                style={{ left: `${5 + pct * 90}%` }}
-              >
+              return (
                 <div
-                  className="w-[60px] h-[60px] rounded shadow-lg bg-zinc-900 cursor-pointer hover:scale-110 transition-all duration-200 overflow-hidden relative"
-                  style={{
-                    borderWidth: "2px",
-                    borderColor: brandPrimary,
-                    boxShadow:
-                      "0 0 0 1px rgba(0,0,0,0.5), 0 4px 6px rgba(0,0,0,0.4)",
-                  }}
-                  onClick={() => onClickProduct(product.id)}
-                  onMouseEnter={() => onHoverProduct(product)}
+                  key={product.id}
+                  className="group/item relative flex-shrink-0"
                 >
-                  {product.image_url ? (
-                    <img
-                      src={product.image_url}
-                      className="w-full h-full object-contain rounded-sm absolute inset-0 bg-white"
-                      loading="lazy"
-                      alt={product.name}
-                    />
-                  ) : (
-                    <div className="w-full h-full absolute inset-0 bg-gradient-to-br from-zinc-800 via-zinc-850 to-zinc-900 flex flex-col items-center justify-center gap-0.5 p-1">
-                      {product.brand_logo ? (
-                        <img
-                          src={product.brand_logo}
-                          alt={product.brand}
-                          className="w-8 h-8 object-contain opacity-30"
-                          onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                        />
-                      ) : null}
-                      <span className="text-[7px] font-semibold text-zinc-500 text-center leading-[1.1] px-0.5 line-clamp-2">
-                        {product.name.split(" ").slice(0, 3).join(" ")}
-                      </span>
-                      {product.price > 0 && (
-                        <span className="text-[6px] font-mono text-zinc-600">
-                          ₪{product.price.toLocaleString("he-IL")}
-                        </span>
-                      )}
-                    </div>
-                  )}
                   <div
-                    className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-200"
+                    className="w-[52px] h-[52px] rounded shadow-md bg-zinc-900 cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative"
                     style={{
-                      boxShadow: `0 0 12px ${brandPrimary}80, inset 0 0 8px ${brandPrimary}40`,
+                      borderWidth: "1.5px",
+                      borderColor: brandPrimary,
+                      boxShadow:
+                        "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
                     }}
-                  />
-                  {/* Family badge — shows sibling count on first family member */}
-                  {isFirstInFamily && familySiblings > 1 && (
-                    <div className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-blue-500 text-white text-[8px] font-black flex items-center justify-center z-10 shadow-md">
-                      {familySiblings}
-                    </div>
-                  )}
-                  {/* Variant key label */}
-                  {product.variant_key && (
-                    <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 bg-black/80 text-[7px] text-zinc-300 px-1 rounded-sm font-mono whitespace-nowrap backdrop-blur-sm">
-                      {product.variant_key}
-                    </div>
-                  )}
+                    onClick={() => onClickProduct(product.id)}
+                    onMouseEnter={() => onHoverProduct(product)}
+                  >
+                    {product.image_url ? (
+                      <img
+                        src={product.image_url}
+                        className="w-full h-full object-contain bg-white"
+                        loading="lazy"
+                        alt={product.name}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900 flex flex-col items-center justify-center gap-0.5 p-0.5">
+                        <span className="text-[6px] font-semibold text-zinc-500 text-center leading-[1.1] line-clamp-2">
+                          {product.name.split(" ").slice(0, 3).join(" ")}
+                        </span>
+                      </div>
+                    )}
+                    {/* Hover glow */}
+                    <div
+                      className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-150"
+                      style={{
+                        boxShadow: `0 0 10px ${brandPrimary}80, inset 0 0 6px ${brandPrimary}40`,
+                      }}
+                    />
+                    {/* Family badge */}
+                    {isFirstInFamily && familySiblings > 1 && (
+                      <div className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-blue-500 text-white text-[7px] font-black flex items-center justify-center z-10 shadow-md">
+                        {familySiblings}
+                      </div>
+                    )}
+                  </div>
+                  {/* Price label on hover */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/item:block bg-black/90 text-[7px] text-zinc-300 px-1 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
+                    {product.price > 0
+                      ? `₪${product.price.toLocaleString("he-IL")}`
+                      : "POA"}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     );
@@ -745,15 +725,9 @@ export const SpectrumModule = () => {
 
   // --- BRAND MATRIX ENGINE ---
   const brandMatrix = useMemo(() => {
-    if (filteredProducts.length === 0)
-      return { brands: [], minPrice: 0, maxPrice: 0 };
+    if (filteredProducts.length === 0) return { brands: [] };
 
-    // 1. Calculate Global Range
-    const prices = filteredProducts.map((p) => p.price).filter((p) => p > 0);
-    const minPrice = Math.min(...prices) || 0;
-    const maxPrice = Math.max(...prices) || 10000;
-
-    // 2. Group by Brand
+    // 1. Group by Brand
     const grouped: Record<string, ConductorProduct[]> = {};
     filteredProducts.forEach((p) => {
       const brand = p.brand || "Other";
@@ -761,16 +735,11 @@ export const SpectrumModule = () => {
       grouped[brand].push(p);
     });
 
-    // 3. Sort Brands Alphabetically (with Nord priority) + pre-compute RGB
+    // 2. Sort Brands: most products first, then alphabetically
     const sortedBrands = Object.entries(grouped)
       .sort((a, b) => {
-        const brandA = a[0].toLowerCase();
-        const brandB = b[0].toLowerCase();
-
-        // Strict priority for Nord
-        if (brandA === "nord") return -1;
-        if (brandB === "nord") return 1;
-
+        // Sort by product count descending, then alphabetically
+        if (b[1].length !== a[1].length) return b[1].length - a[1].length;
         return a[0].localeCompare(b[0]);
       })
       .map(([brand, products]) => {
@@ -783,7 +752,7 @@ export const SpectrumModule = () => {
         };
       });
 
-    return { brands: sortedBrands, minPrice, maxPrice };
+    return { brands: sortedBrands };
   }, [filteredProducts]);
 
   // Handle errors
@@ -887,7 +856,9 @@ export const SpectrumModule = () => {
                       src={hoveredProduct.brand_logo}
                       alt={hoveredProduct.brand}
                       className="max-w-[60%] max-h-[40%] object-contain opacity-20"
-                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
                     />
                   ) : (
                     <div className="w-16 h-16 rounded-full bg-zinc-800/30 flex items-center justify-center">
@@ -1068,16 +1039,19 @@ export const SpectrumModule = () => {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col">
-            {/* Header / Axis Labels (Logarithmic approx labels) */}
-            <div className="h-8 flex border-b border-zinc-800/50 bg-black/40 text-[9px] text-zinc-600 font-mono items-end pb-1 px-32 relative">
-              <span className="absolute left-32">LOW PRICE</span>
-              <div className="flex-1 flex justify-between px-10">
-                <span>Entry</span>
-                <span>Mid-Range</span>
-                <span>Premium</span>
-                <span>Elite</span>
+            {/* Header */}
+            <div className="h-8 flex border-b border-zinc-800/50 bg-black/40 text-[9px] text-zinc-600 font-mono items-center px-4">
+              <div className="w-28 shrink-0 text-center uppercase tracking-widest font-bold text-zinc-500">
+                Brand
               </div>
-              <span className="absolute right-8">HIGH PRICE</span>
+              <div className="flex-1 flex items-center gap-2 pl-2">
+                <span className="text-zinc-500">
+                  Products sorted by price (low → high)
+                </span>
+                <span className="ml-auto text-zinc-600">
+                  {filteredProducts.length} total
+                </span>
+              </div>
             </div>
 
             {/* Scrollable Matrix */}
@@ -1090,8 +1064,6 @@ export const SpectrumModule = () => {
                     products={products}
                     rgbColor={rgbColor}
                     brandPrimary={brandPrimary}
-                    minPrice={brandMatrix.minPrice}
-                    maxPrice={brandMatrix.maxPrice}
                     onHoverProduct={handleHoverProduct}
                     onClickProduct={handleClickProduct}
                   />
