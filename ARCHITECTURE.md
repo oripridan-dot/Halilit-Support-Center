@@ -179,4 +179,4 @@ lsof -i :8000 && kill -9 <PID>
 
 ---
 
-**v8.4.0** · February 12, 2026
+**v8.5.0** · February 13, 2026

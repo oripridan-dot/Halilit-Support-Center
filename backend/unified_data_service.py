@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-UNIFIED DATA SERVICE v8.4
+UNIFIED DATA SERVICE v8.5
 
 Consolidated data pipeline that handles:
 1. Product normalization (raw → IngestionProductDraft)

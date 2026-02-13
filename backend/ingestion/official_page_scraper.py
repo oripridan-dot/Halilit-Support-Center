@@ -1,5 +1,5 @@
 """
-OFFICIAL BRAND PAGE SCRAPER v8.4
+OFFICIAL BRAND PAGE SCRAPER v8.5
 
 Finds and extracts product data from OFFICIAL manufacturer websites.
 

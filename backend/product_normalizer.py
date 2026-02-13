@@ -1,5 +1,5 @@
 """
-Product Normalizer v10.0 — Single Source of Truth
+Product Normalizer v8.5 — Single Source of Truth
 
 ALL products served to the frontend pass through normalize_product().
 This guarantees a clean, flat, predictable shape that maps DIRECTLY

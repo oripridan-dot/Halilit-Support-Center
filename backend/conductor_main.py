@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.4
+CONDUCTOR MAIN - Central Hub for Halilit Support Center v8.5
 
 The Conductor CLI orchestrates all operations:
 - Data ingestion (Trinity Swarm)
@@ -718,7 +718,7 @@ def process_candidates(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Conductor CLI - Halilit Support Center v8.2",
+        description="Conductor CLI - Halilit Support Center v8.5",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

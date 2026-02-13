@@ -1,5 +1,5 @@
 """
-Halilit Support Center v8.4 - ADK Backend (Trinity Swarm + Async Task Queue)
+Halilit Support Center v8.5 - ADK Backend (Trinity Swarm + Async Task Queue)
 =============================================================================
 
 Lightweight module exports for the Halilit Support Center API.

@@ -1,5 +1,5 @@
 """
-PerfectionMap - The Quality Standards & Learning Framework (v8.2)
+PerfectionMap - The Quality Standards & Learning Framework (v8.5)
 
 This module defines what "perfect product data" looks like and tracks
 the Trinity Swarm's journey toward that perfection across multiple dimensions.

@@ -16,7 +16,10 @@ import {
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
-import type { ConductorProduct, FamilyMeta } from "../../hooks/useConductorCatalog";
+import type {
+  ConductorProduct,
+  FamilyMeta,
+} from "../../hooks/useConductorCatalog";
 import {
   useConductorCatalog,
   useProductsBySpectrum,
@@ -670,9 +673,7 @@ const ProductTile = React.memo(
               ? `~₪${(product as any).market_price_estimate.toLocaleString("he-IL")}`
               : "POA"}
           {isFamily && item.variantCount > 1 && (
-            <span className="text-blue-400 ml-1">
-              +{item.variantCount - 1}
-            </span>
+            <span className="text-blue-400 ml-1">+{item.variantCount - 1}</span>
           )}
         </div>
       </div>
@@ -782,10 +783,7 @@ const BrandTrack = React.memo(
       const overflow: DisplayItem[] = [...ungrouped];
 
       for (const [series, items] of seriesMap) {
-        const totalProducts = items.reduce(
-          (sum, i) => sum + i.variantCount,
-          0,
-        );
+        const totalProducts = items.reduce((sum, i) => sum + i.variantCount, 0);
         if (items.length >= MIN_SERIES_PRODUCTS) {
           qualifyingSeries.push({ series, items, totalProducts });
         } else {

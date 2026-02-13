@@ -198,6 +198,14 @@ try:
 except Exception as e:
     logger.warning(f"⚠️ Failed to register pipeline router: {e}")
 
+# Spectrum Redesign API (model grouping, instrument families, zoom levels)
+try:
+    from backend.api.spectrum_router import router as spectrum_router
+    app.include_router(spectrum_router, tags=["Spectrum"])
+    logger.info("✅ Spectrum endpoints registered at /api/spectrum")
+except Exception as e:
+    logger.warning(f"⚠️ Failed to register spectrum router: {e}")
+
 # Product Graph Curation API
 try:
     from backend.api.curation_router import router as curation_router

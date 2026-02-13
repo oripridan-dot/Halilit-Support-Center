@@ -1,5 +1,5 @@
 """
-DISPLAY PREPARATION ENGINE v8.2
+DISPLAY PREPARATION ENGINE v8.5
 
 Prepares products for display by:
 - Determining display role (hero, cornerstone, specialist, entry)

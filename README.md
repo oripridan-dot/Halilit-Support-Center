@@ -1,4 +1,4 @@
-# Halilit Support Center v8.4
+# Halilit Support Center v8.5
 
 **AI-powered product intelligence platform** for musical instruments.  
 Trinity Swarm (3 Gemini 2.0-flash agents) + Celery async workers + React frontend.
@@ -69,7 +69,8 @@ backend/
 ├── conductor_main.py              # CLI interface
 ├── auto_sync_engine.py            # Real-time SSE sync
 ├── ingestion_versioning.py        # Pipeline version tracking
-├── api/                           # Routers (copilot, tasks, streams, ws)
+├── model_grouper.py               # Model grouping engine for Spectrum V2
+├── api/                           # Routers (copilot, tasks, streams, ws, spectrum)
 ├── ingestion/                     # 7-phase pipeline modules
 ├── agents/                        # Perfection map & quality tracking
 ├── scripts/                       # Utilities (type gen, search index, images)
@@ -79,8 +80,9 @@ backend/
 
 frontend/
 ├── src/
-│   ├── App.tsx                    # Three-view router (Galaxy, Spectrum, ProductPage)
-│   ├── components/views/          # View components
+│   ├── App.tsx                    # 4-view router (Galaxy, Spectrum, SpectrumV2, ProductPage)
+│   ├── components/views/          # GalaxyDashboard, SpectrumModule, ProductPage
+│   ├── components/spectrum/       # SpectrumV2, SpectrumTrack, FamilySidebar, ZoomControl
 │   ├── hooks/                     # React Query hooks
 │   ├── lib/                       # Utilities (categories, search, images)
 │   ├── store/                     # Zustand state management
@@ -148,6 +150,15 @@ PYTHONPATH=. python3 -m pytest backend/tests/ -v
 
 ## Changelog
 
+### v8.5 (February 13, 2026)
+
+- **Spectrum V2**: New model-grouping view with semantic zoom, instrument families, and series sub-tracks
+- **Backend**: Model grouper engine + Spectrum API router (`/api/spectrum`)
+- **Frontend**: 4 new Spectrum components (SpectrumV2, SpectrumTrack, FamilySidebar, ZoomControl)
+- **Navigation**: Smart back-navigation from product page to originating Spectrum view
+- **Version consistency**: All 36 module headers aligned to v8.5
+- **Cleanup**: Removed dead `backend/skills/` directory, fixed stale version references
+
 ### v8.4 (February 12, 2026)
 
 - **Version bump**: All module headers updated to v8.4
@@ -193,4 +204,4 @@ PYTHONPATH=. python3 -m pytest backend/tests/ -v
 
 ---
 
-**v8.4.0** · Last updated: February 12, 2026
+**v8.5.0** · Last updated: February 13, 2026

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Startup Script for Halilit Support Center v8.2 Infrastructure
+# Startup Script for Halilit Support Center v8.5 Infrastructure
 #
 # Usage:
 #   ./backend/scripts/setup_infrastructure.sh              # Full setup (Redis + PostgreSQL + Workers)
@@ -26,7 +26,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${BLUE}🚀 Halilit Support Center v8.2 - Infrastructure Setup${NC}"
+echo -e "${BLUE}🚀 Halilit Support Center v8.5 - Infrastructure Setup${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo ""
 

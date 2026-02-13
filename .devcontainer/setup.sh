@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "🚀 Setting up Halilit Support Center v8.3..."
+echo "🚀 Setting up Halilit Support Center v8.5..."
 
 # Install pnpm globally
 echo "📦 Installing pnpm..."

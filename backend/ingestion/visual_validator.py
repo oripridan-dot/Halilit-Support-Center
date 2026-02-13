@@ -1,5 +1,5 @@
 """
-AI VISUAL VALIDATOR v8.4
+AI VISUAL VALIDATOR v8.5
 Ensures product matches are visually and semantically identical using Google Gemini 1.5.
 """
 import logging

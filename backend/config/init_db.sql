@@ -1,4 +1,4 @@
--- Initialize PostgreSQL for Halilit Support Center v8.0
+-- Initialize PostgreSQL for Halilit Support Center v8.5
 -- Creates tables for task results, audit logs, and learning system
 
 -- Enable extensions

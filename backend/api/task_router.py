@@ -1,5 +1,5 @@
 """
-FastAPI Task Router for Halilit Support Center v8.4
+FastAPI Task Router for Halilit Support Center v8.5
 
 Provides async HTTP endpoints for queuing and monitoring distributed tasks:
 - POST /api/v8/tasks/harvest/{brand} - Queue harvest
@@ -30,7 +30,7 @@ from backend.tasks import (
 
 logger = logging.getLogger(__name__)
 
-# Create router with v8.2 prefix
+# Create router with v8 prefix
 router = APIRouter(prefix="/api/v8/tasks", tags=["async-tasks-v8"])
 
 

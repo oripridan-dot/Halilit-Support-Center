@@ -1,5 +1,5 @@
 """
-Unified Learning System v8.4
+Unified Learning System v8.5
 
 Consolidates four learning modules:
 - learning_engine.py: Core learning functionality with LearningEnabledAgent

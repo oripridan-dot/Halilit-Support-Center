@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v8.4)
+# Repository Instructions & Context (v8.5)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -35,7 +35,7 @@
 
 ## Project Overview
 
-**Halilit Support Center v8.4** — AI-powered product catalog system for musical instruments.
+**Halilit Support Center v8.5** — AI-powered product catalog system for musical instruments.
 
 - **Architecture**: Trinity Swarm (3 Gemini 2.0-flash agents) + Celery async task queue
 - **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS
@@ -77,7 +77,7 @@ backend/
 ├── product_normalizer.py          # Product shape normalization
 ├── conductor_main.py              # CLI for all operations
 ├── auto_sync_engine.py            # Real-time SSE sync to frontend
-├── api/                           # Routers (copilot, tasks, streams, ws)
+├── api/                           # Routers (copilot, tasks, streams, ws, spectrum)
 ├── ingestion/                     # 7-phase pipeline + visual validator
 ├── agents/                        # Perfection map & quality tracking
 ├── scripts/                       # Utilities (type gen, search index, workers)
@@ -87,8 +87,9 @@ backend/
 frontend/
 ├── src/
 │   ├── main.tsx                   # React entry + QueryClient
-│   ├── App.tsx                    # 3-view router (Galaxy, Spectrum, ProductPage)
+│   ├── App.tsx                    # 4-view router (Galaxy, Spectrum, SpectrumV2, ProductPage)
 │   ├── components/views/          # GalaxyDashboard, SpectrumModule, ProductPage
+│   ├── components/spectrum/       # SpectrumV2, SpectrumTrack, FamilySidebar, ZoomControl
 │   ├── hooks/                     # Data fetching hooks (React Query)
 │   ├── store/                     # Zustand stores (navigation, products)
 │   ├── types/                     # TypeScript definitions

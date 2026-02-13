@@ -1,6 +1,6 @@
 // frontend/src/App.tsx
 /**
- * UNIFIED DATA PIPELINE v8.3
+ * UNIFIED DATA PIPELINE v8.5
  *
  * Three screens that share the same data source:
  * 1. GalaxyDashboard - Category browser
@@ -36,6 +36,11 @@ const ProductPage = lazy(() =>
 const CurationDashboard = lazy(() =>
   import("./components/views/CurationDashboard").then((m) => ({
     default: m.CurationDashboard,
+  })),
+);
+const SpectrumV2 = lazy(() =>
+  import("./components/spectrum/SpectrumV2").then((m) => ({
+    default: m.SpectrumV2,
   })),
 );
 
@@ -111,6 +116,15 @@ function App() {
             <div className="absolute inset-0 animate-slide-up">
               <Suspense fallback={<LoadingPlaceholder />}>
                 <SpectrumModule />
+              </Suspense>
+            </div>
+          )}
+
+          {/* Screen 2b: Spectrum V2 (Redesigned with Model Grouping & Zoom) */}
+          {currentView === "SPECTRUM_V2" && (
+            <div className="absolute inset-0 animate-slide-up">
+              <Suspense fallback={<LoadingPlaceholder />}>
+                <SpectrumV2 />
               </Suspense>
             </div>
           )}

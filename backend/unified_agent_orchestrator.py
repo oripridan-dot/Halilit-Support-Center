@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Unified Agent Orchestrator v8.4
+Unified Agent Orchestrator v8.5
 ================================
 
 Consolidates three core systems:
