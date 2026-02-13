@@ -16,7 +16,7 @@ import {
 import { useMemo, useState, useCallback, useEffect } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
-import type { ConductorProduct } from "../../hooks/useConductorCatalog";
+import type { ConductorProduct, FamilyMeta } from "../../hooks/useConductorCatalog";
 import {
   useConductorCatalog,
   useProductsBySpectrum,
@@ -559,6 +559,7 @@ interface BrandTrackProps {
   products: ConductorProduct[];
   rgbColor: string;
   brandPrimary: string;
+  families: Record<string, FamilyMeta>;
   onHoverProduct: (
     product: ConductorProduct,
     familyProducts: ConductorProduct[],
@@ -575,7 +576,116 @@ interface DisplayItem {
   familyId: string | null;
   familyProducts: ConductorProduct[];
   sortPrice: number;
+  series: string | null;
 }
+
+// A series sub-lane within a brand track
+interface SeriesLane {
+  series: string;
+  items: DisplayItem[];
+  totalProducts: number;
+}
+
+// Reusable product tile component
+const ProductTile = React.memo(
+  ({
+    item,
+    brandPrimary,
+    onHoverProduct,
+    onHoverOut,
+    onClickProduct,
+  }: {
+    item: DisplayItem;
+    brandPrimary: string;
+    onHoverProduct: (
+      product: ConductorProduct,
+      familyProducts: ConductorProduct[],
+    ) => void;
+    onHoverOut: () => void;
+    onClickProduct: (id: string) => void;
+  }) => {
+    const product = item.representative;
+    const isFamily = item.type === "family";
+
+    return (
+      <div
+        key={isFamily ? `fam-${item.familyId}` : product.id}
+        className="group/item relative flex-shrink-0"
+      >
+        <div
+          className={`rounded shadow-md bg-zinc-900 cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative ${
+            isFamily ? "w-[58px] h-[58px]" : "w-[52px] h-[52px]"
+          }`}
+          style={{
+            borderWidth: isFamily ? "2px" : "1.5px",
+            borderColor: isFamily ? `${brandPrimary}` : brandPrimary,
+            boxShadow: isFamily
+              ? `0 0 8px ${brandPrimary}30, 0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)`
+              : "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
+          }}
+          onClick={() => onClickProduct(product.id)}
+          onMouseEnter={() => onHoverProduct(product, item.familyProducts)}
+          onMouseLeave={onHoverOut}
+        >
+          {product.image_url ? (
+            <img
+              src={product.image_url}
+              className="w-full h-full object-contain bg-white"
+              loading="lazy"
+              alt={product.name}
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900 flex flex-col items-center justify-center gap-0.5 p-0.5">
+              <span className="text-[6px] font-semibold text-zinc-500 text-center leading-[1.1] line-clamp-2">
+                {product.name.split(" ").slice(0, 3).join(" ")}
+              </span>
+            </div>
+          )}
+          {/* Hover glow */}
+          <div
+            className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-150"
+            style={{
+              boxShadow: `0 0 10px ${brandPrimary}80, inset 0 0 6px ${brandPrimary}40`,
+            }}
+          />
+          {/* Family variant count badge */}
+          {isFamily && item.variantCount > 1 && (
+            <div
+              className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full text-white text-[8px] font-black flex items-center justify-center z-10 shadow-lg"
+              style={{ backgroundColor: brandPrimary }}
+            >
+              {item.variantCount}
+            </div>
+          )}
+          {/* No-price indicator */}
+          {product.price <= 0 && (
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500/40" />
+          )}
+        </div>
+        {/* Price label on hover */}
+        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/item:block bg-black/90 text-[7px] text-zinc-300 px-1 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
+          {product.price > 0
+            ? `₪${product.price.toLocaleString("he-IL")}`
+            : (product as any).market_price_estimate > 0
+              ? `~₪${(product as any).market_price_estimate.toLocaleString("he-IL")}`
+              : "POA"}
+          {isFamily && item.variantCount > 1 && (
+            <span className="text-blue-400 ml-1">
+              +{item.variantCount - 1}
+            </span>
+          )}
+        </div>
+      </div>
+    );
+  },
+);
+
+ProductTile.displayName = "ProductTile";
+
+// Minimum products in a series to show it as a sub-lane (otherwise merged into "Other")
+const MIN_SERIES_PRODUCTS = 3;
+// Minimum number of qualifying series to enable sub-lane layout
+const MIN_SERIES_FOR_SUBLANES = 2;
 
 const BrandTrack = React.memo(
   ({
@@ -583,6 +693,7 @@ const BrandTrack = React.memo(
     products,
     rgbColor,
     brandPrimary,
+    families,
     onHoverProduct,
     onHoverOut,
     onClickProduct,
@@ -616,6 +727,8 @@ const BrandTrack = React.memo(
           members[0];
         // Use min price in family for sorting
         const minPrice = Math.min(...members.map((m) => m.price || 0));
+        // Resolve series from families metadata
+        const familyMeta = families[familyId];
         items.push({
           type: members.length > 1 ? "family" : "product",
           representative,
@@ -623,6 +736,7 @@ const BrandTrack = React.memo(
           familyId,
           familyProducts: members,
           sortPrice: minPrice,
+          series: familyMeta?.series || null,
         });
       }
 
@@ -635,13 +749,74 @@ const BrandTrack = React.memo(
           familyId: null,
           familyProducts: [p],
           sortPrice: p.price || 0,
+          series: null,
         });
       }
 
       // Sort by price ascending
       items.sort((a, b) => a.sortPrice - b.sortPrice);
       return items;
-    }, [products]);
+    }, [products, families]);
+
+    // Group display items into series sub-lanes
+    const seriesLanes = useMemo(() => {
+      // Count products per series
+      const seriesMap = new Map<string, DisplayItem[]>();
+      const ungrouped: DisplayItem[] = [];
+
+      for (const item of displayItems) {
+        if (item.series) {
+          const existing = seriesMap.get(item.series);
+          if (existing) {
+            existing.push(item);
+          } else {
+            seriesMap.set(item.series, [item]);
+          }
+        } else {
+          ungrouped.push(item);
+        }
+      }
+
+      // Only create sub-lanes if enough qualifying series exist
+      const qualifyingSeries: SeriesLane[] = [];
+      const overflow: DisplayItem[] = [...ungrouped];
+
+      for (const [series, items] of seriesMap) {
+        const totalProducts = items.reduce(
+          (sum, i) => sum + i.variantCount,
+          0,
+        );
+        if (items.length >= MIN_SERIES_PRODUCTS) {
+          qualifyingSeries.push({ series, items, totalProducts });
+        } else {
+          overflow.push(...items);
+        }
+      }
+
+      // Sort series by total products descending
+      qualifyingSeries.sort((a, b) => b.totalProducts - a.totalProducts);
+
+      if (qualifyingSeries.length < MIN_SERIES_FOR_SUBLANES) {
+        // Not enough series — return null to use flat layout
+        return null;
+      }
+
+      // Build final lanes: qualifying series + "Other" overflow
+      const lanes: SeriesLane[] = [...qualifyingSeries];
+      if (overflow.length > 0) {
+        overflow.sort((a, b) => a.sortPrice - b.sortPrice);
+        lanes.push({
+          series: "Other",
+          items: overflow,
+          totalProducts: overflow.reduce((s, i) => s + i.variantCount, 0),
+        });
+      }
+
+      return lanes;
+    }, [displayItems]);
+
+    // Use sub-lane layout or flat layout
+    const useSubLanes = seriesLanes !== null;
 
     return (
       <div
@@ -673,91 +848,88 @@ const BrandTrack = React.memo(
           </div>
         </div>
 
-        {/* Product Grid — horizontal flow, scrollable */}
-        <div className="flex-1 overflow-x-auto py-1.5 px-2 custom-scrollbar">
-          <div
-            className="flex flex-wrap gap-1.5 content-start"
-            style={{ minWidth: "fit-content" }}
-          >
-            {displayItems.map((item) => {
-              const product = item.representative;
-              const isFamily = item.type === "family";
-
-              return (
+        {/* Product Grid — series sub-lanes or flat layout */}
+        {useSubLanes ? (
+          <div className="flex-1 overflow-x-auto custom-scrollbar">
+            {seriesLanes!.map((lane) => (
+              <div
+                key={lane.series}
+                className="flex items-start border-b last:border-b-0"
+                style={{
+                  borderColor: `rgba(${rgbColor}, 0.08)`,
+                }}
+              >
+                {/* Series label */}
                 <div
-                  key={isFamily ? `fam-${item.familyId}` : product.id}
-                  className="group/item relative flex-shrink-0"
+                  className="w-20 flex-shrink-0 flex items-center justify-center py-1.5 px-1"
+                  style={{
+                    backgroundColor: `rgba(${rgbColor}, 0.04)`,
+                  }}
                 >
-                  <div
-                    className={`rounded shadow-md bg-zinc-900 cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative ${
-                      isFamily ? "w-[58px] h-[58px]" : "w-[52px] h-[52px]"
-                    }`}
+                  <span
+                    className="text-[8px] font-bold uppercase tracking-wider text-center leading-tight px-1 py-0.5 rounded bg-black/30 backdrop-blur-sm max-w-full truncate"
                     style={{
-                      borderWidth: isFamily ? "2px" : "1.5px",
-                      borderColor: isFamily ? `${brandPrimary}` : brandPrimary,
-                      boxShadow: isFamily
-                        ? `0 0 8px ${brandPrimary}30, 0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)`
-                        : "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
+                      color:
+                        lane.series === "Other"
+                          ? "rgb(161, 161, 170)"
+                          : brandPrimary,
                     }}
-                    onClick={() => onClickProduct(product.id)}
-                    onMouseEnter={() =>
-                      onHoverProduct(product, item.familyProducts)
-                    }
-                    onMouseLeave={onHoverOut}
+                    title={`${lane.series} (${lane.totalProducts})`}
                   >
-                    {product.image_url ? (
-                      <img
-                        src={product.image_url}
-                        className="w-full h-full object-contain bg-white"
-                        loading="lazy"
-                        alt={product.name}
+                    {lane.series}
+                    <span className="block text-[7px] font-medium opacity-60">
+                      {lane.totalProducts}
+                    </span>
+                  </span>
+                </div>
+                {/* Series products */}
+                <div className="flex-1 py-1 px-1.5">
+                  <div
+                    className="flex flex-wrap gap-1.5 content-start"
+                    style={{ minWidth: "fit-content" }}
+                  >
+                    {lane.items.map((item) => (
+                      <ProductTile
+                        key={
+                          item.type === "family"
+                            ? `fam-${item.familyId}`
+                            : item.representative.id
+                        }
+                        item={item}
+                        brandPrimary={brandPrimary}
+                        onHoverProduct={onHoverProduct}
+                        onHoverOut={onHoverOut}
+                        onClickProduct={onClickProduct}
                       />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900 flex flex-col items-center justify-center gap-0.5 p-0.5">
-                        <span className="text-[6px] font-semibold text-zinc-500 text-center leading-[1.1] line-clamp-2">
-                          {product.name.split(" ").slice(0, 3).join(" ")}
-                        </span>
-                      </div>
-                    )}
-                    {/* Hover glow */}
-                    <div
-                      className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-150"
-                      style={{
-                        boxShadow: `0 0 10px ${brandPrimary}80, inset 0 0 6px ${brandPrimary}40`,
-                      }}
-                    />
-                    {/* Family variant count badge */}
-                    {isFamily && item.variantCount > 1 && (
-                      <div
-                        className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full text-white text-[8px] font-black flex items-center justify-center z-10 shadow-lg"
-                        style={{ backgroundColor: brandPrimary }}
-                      >
-                        {item.variantCount}
-                      </div>
-                    )}
-                    {/* No-price indicator */}
-                    {product.price <= 0 && (
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500/40" />
-                    )}
-                  </div>
-                  {/* Price label on hover */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/item:block bg-black/90 text-[7px] text-zinc-300 px-1 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
-                    {product.price > 0
-                      ? `₪${product.price.toLocaleString("he-IL")}`
-                      : (product as any).market_price_estimate > 0
-                        ? `~₪${(product as any).market_price_estimate.toLocaleString("he-IL")}`
-                        : "POA"}
-                    {isFamily && item.variantCount > 1 && (
-                      <span className="text-blue-400 ml-1">
-                        +{item.variantCount - 1}
-                      </span>
-                    )}
+                    ))}
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
-        </div>
+        ) : (
+          <div className="flex-1 overflow-x-auto py-1.5 px-2 custom-scrollbar">
+            <div
+              className="flex flex-wrap gap-1.5 content-start"
+              style={{ minWidth: "fit-content" }}
+            >
+              {displayItems.map((item) => (
+                <ProductTile
+                  key={
+                    item.type === "family"
+                      ? `fam-${item.familyId}`
+                      : item.representative.id
+                  }
+                  item={item}
+                  brandPrimary={brandPrimary}
+                  onHoverProduct={onHoverProduct}
+                  onHoverOut={onHoverOut}
+                  onClickProduct={onClickProduct}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     );
   },
@@ -781,7 +953,7 @@ export const SpectrumModule = () => {
   // 1. DATA INGESTION - Using pre-indexed Conductor data (v10)
   //    Now filtering by SPECTRUM (subcategory) instead of galaxy
   // --------------------------------------------------------------------------
-  const { isLoading, error, galaxies } = useConductorCatalog();
+  const { isLoading, error, galaxies, families } = useConductorCatalog();
 
   // Get products for this spectrum via pre-computed index — O(1) lookup
   const { products: fetchedProducts } =
@@ -1250,6 +1422,7 @@ export const SpectrumModule = () => {
                     products={products}
                     rgbColor={rgbColor}
                     brandPrimary={brandPrimary}
+                    families={families}
                     onHoverProduct={handleHoverProduct}
                     onHoverOut={handleHoverOut}
                     onClickProduct={handleClickProduct}
@@ -1334,7 +1507,6 @@ export const SpectrumModule = () => {
           </div>
         </div>
       </Surface>
-
     </div>
   );
 };
