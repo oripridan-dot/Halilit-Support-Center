@@ -1,7 +1,6 @@
 from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
 from backend.auto_sync_engine import get_auto_sync_engine
-from backend.unified_data_service import get_conductor_data_service
-from backend.product_normalizer import build_catalog
+from backend.product_normalizer import build_catalog, GALAXIES
 import os
 import sys
 import logging
@@ -20,6 +19,7 @@ from backend.api.streams import router as streams_router
 # ── Server-side catalog cache ──
 _catalog_cache_json: bytes | None = None   # Pre-serialized JSON bytes
 _catalog_cache_gzip: bytes | None = None   # Pre-compressed gzip bytes
+_catalog_cache_dict: dict | None = None    # Pre-built catalog dict
 _catalog_cache_time: float = 0
 _catalog_build_lock = threading.Lock()
 CATALOG_CACHE_TTL = 300  # 5 minutes
@@ -237,13 +237,14 @@ INGESTION_DATA = os.path.join(
 def _build_catalog_cache():
     """Build catalog and cache the pre-serialized JSON response.
     Thread-safe, called at startup and on cache expiry."""
-    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_time
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
     with _catalog_build_lock:
         # Double-check after acquiring lock
         if _catalog_cache_json is not None and (time.time() - _catalog_cache_time) < CATALOG_CACHE_TTL:
             return
         t0 = time.time()
         catalog = build_catalog(FRONTEND_PUBLIC_DATA)
+        _catalog_cache_dict = catalog  # Store dict for secondary endpoints
 
         # Strip fields the frontend never renders
         for p in catalog["products"]:
@@ -279,6 +280,18 @@ def _startup_catalog_build():
 
 _startup_thread = threading.Thread(target=_startup_catalog_build, daemon=True)
 _startup_thread.start()
+
+
+def _get_catalog() -> dict:
+    """Get the cached catalog dict, building if needed. Used by secondary endpoints."""
+    global _catalog_cache_dict, _catalog_cache_time
+    now = time.time()
+    if _catalog_cache_dict is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
+        _build_catalog_cache()
+    if _catalog_cache_dict is None:
+        _startup_thread.join(timeout=60)
+    return _catalog_cache_dict or {"products": [], "metadata": {}, "indexes": {}}
+
 
 # --- API ENDPOINTS (must be before frontend catch-all) ---
 
@@ -505,83 +518,170 @@ async def search_products(q: str = ""):
 @app.get("/api/conductor/taxonomy")
 async def get_conductor_taxonomy():
     """
-    Get the flexible taxonomy schema.
-
-    Frontend and backend use this to:
-    - Display category/subcategory hierarchies
-    - Filter products by taxonomy
-    - Understand available pricing tiers and display roles
-    - Dynamically build UI controls based on what's available
+    Get the taxonomy schema derived from the live catalog + GALAXIES.
+    Used by frontend for category/subcategory hierarchies and filter controls.
     """
     try:
-        service = get_conductor_data_service()
-        taxonomy = service.get_taxonomy_schema()
-        return taxonomy
+        catalog = _get_catalog()
+        products = catalog.get("products", [])
+        brands = sorted(catalog.get("metadata", {}).get("brands", []))
+
+        # Build universal categories from GALAXIES (canonical source)
+        universal_categories = []
+        for galaxy in GALAXIES:
+            universal_categories.append({
+                "id": galaxy["id"],
+                "name": galaxy["label"],
+                "subcategories": [
+                    {"id": s["id"], "name": s["label"]}
+                    for s in galaxy.get("spectrums", [])
+                ],
+            })
+
+        return {
+            "universal_categories": universal_categories,
+            "all_brands": brands,
+            "pricing_tiers": ["entry", "mid", "pro", "flagship", "legacy"],
+            "display_roles": ["hero", "cornerstone", "specialist", "entry", "hidden"],
+            "statuses": ["harvested", "enriched", "validated", "approved", "rejected", "archived"],
+            "confidence_levels": ["official", "trusted", "commercial", "user", "inferred"],
+            "total_products": len(products),
+            "timestamp": datetime.now().isoformat(),
+        }
     except Exception as e:
-        logger.error(f"❌ Failed to get taxonomy: {e}")
+        logger.error(f"Failed to get taxonomy: {e}")
         return {"error": str(e)}
 
 
 @app.post("/api/conductor/filter")
 async def filter_conductor_products(filters: dict):
     """
-    Apply flexible filtering to Conductor-verified products.
+    Apply flexible filtering to the pre-built catalog.
 
-    Supported filters:
-    - brand: str or [str]
-    - category: str or [str]
-    - subcategory: str or [str]
-    - pricing_tier: str or [str]
-    - min_price: float
-    - max_price: float
-    - display_role: str or [str]
-    - search_query: str
+    Supported filters: brand, category, pricing_tier, min_price, max_price,
+    display_role, search_query.
     """
     try:
-        service = get_conductor_data_service()
-        results = service.filter_products(filters)
-        return results
+        catalog = _get_catalog()
+        products = catalog.get("products", [])
+        filters_applied = {}
+
+        if "brand" in filters:
+            vals = [filters["brand"]] if isinstance(
+                filters["brand"], str) else filters["brand"]
+            vals_lower = [v.lower() for v in vals]
+            products = [p for p in products if p.get(
+                "brand", "").lower() in vals_lower]
+            filters_applied["brand"] = filters["brand"]
+
+        if "category" in filters:
+            vals = [filters["category"]] if isinstance(
+                filters["category"], str) else filters["category"]
+            vals_lower = [v.lower() for v in vals]
+            products = [p for p in products if p.get("galaxy_id", "").lower() in vals_lower
+                        or p.get("spectrum_id", "").lower() in vals_lower]
+            filters_applied["category"] = filters["category"]
+
+        if "search_query" in filters:
+            q = filters["search_query"].lower()
+            products = [p for p in products if q in (p.get("search_text") or
+                        f"{p.get('name','')} {p.get('brand','')}").lower()]
+            filters_applied["search_query"] = filters["search_query"]
+
+        if "pricing_tier" in filters:
+            tiers = [filters["pricing_tier"]] if isinstance(
+                filters["pricing_tier"], str) else filters["pricing_tier"]
+            products = [p for p in products if p.get("tier") in tiers]
+            filters_applied["pricing_tier"] = filters["pricing_tier"]
+
+        if "min_price" in filters:
+            mp = float(filters["min_price"])
+            products = [p for p in products if (p.get("price") or 0) >= mp]
+            filters_applied["min_price"] = mp
+
+        if "max_price" in filters:
+            mp = float(filters["max_price"])
+            products = [p for p in products if 0 < (p.get("price") or 0) <= mp]
+            filters_applied["max_price"] = mp
+
+        return {
+            "products": products,
+            "filters_applied": filters_applied,
+            "total_results": len(products),
+            "source": "conductor_verified",
+        }
     except Exception as e:
-        logger.error(f"❌ Filter failed: {e}")
+        logger.error(f"Filter failed: {e}")
         return {"error": str(e), "products": []}
 
 
 @app.get("/api/conductor/categories")
 async def get_conductor_categories():
     """
-    Get category summary for navigation UI.
-
-    Returns category stats including product count, brands, subcategories, and average price.
+    Get category summary from the pre-built catalog for navigation UI.
+    Returns category stats: product count, brands, avg price.
     """
     try:
-        service = get_conductor_data_service()
-        summary = service.get_category_summary()
-        return summary
+        catalog = _get_catalog()
+        products = catalog.get("products", [])
+
+        categories: dict = {}
+        for p in products:
+            cat = p.get("galaxy_id") or "uncategorized"
+            brand = p.get("brand", "Unknown")
+            price = p.get("price") or 0
+
+            if cat not in categories:
+                categories[cat] = {"name": cat, "count": 0,
+                                   "brands": set(), "prices": []}
+            categories[cat]["count"] += 1
+            categories[cat]["brands"].add(brand)
+            if price > 0:
+                categories[cat]["prices"].append(price)
+
+        result = []
+        for cat_data in categories.values():
+            prices = cat_data["prices"]
+            result.append({
+                "name": cat_data["name"],
+                "product_count": cat_data["count"],
+                "brands": sorted(cat_data["brands"]),
+                "avg_price": round(sum(prices) / len(prices), 2) if prices else 0,
+            })
+
+        return {
+            "categories": sorted(result, key=lambda x: x["product_count"], reverse=True)
+        }
     except Exception as e:
-        logger.error(f"❌ Failed to get categories: {e}")
+        logger.error(f"Failed to get categories: {e}")
         return {"error": str(e), "categories": []}
 
 
 @app.get("/api/conductor/refresh")
 async def refresh_conductor_catalog():
     """
-    Force refresh of the unified catalog cache.
-    Use after running Conductor pipeline to update frontend with new data.
+    Force rebuild of the catalog cache.
+    Use after running a pipeline stage to update frontend with new data.
     """
     try:
-        service = get_conductor_data_service()
-        service._catalog_cache = None  # Clear cache
-        service._cache_timestamp = None
+        global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+        _catalog_cache_json = None
+        _catalog_cache_gzip = None
+        _catalog_cache_dict = None
+        _catalog_cache_time = 0
+        _build_catalog_cache()
 
-        catalog = service.get_unified_catalog()
+        catalog = _catalog_cache_dict or {}
+        meta = catalog.get("metadata", {})
         return {
             "status": "refreshed",
-            "product_count": catalog['metadata']['total_products'],
-            "brands": len(catalog['metadata']['brands']),
-            "timestamp": catalog['metadata']['timestamp']
+            "product_count": meta.get("total_products", 0),
+            "brands": len(meta.get("brands", [])),
+            "health_score": meta.get("health_score"),
+            "timestamp": meta.get("timestamp"),
         }
     except Exception as e:
-        logger.error(f"❌ Refresh failed: {e}")
+        logger.error(f"Refresh failed: {e}")
         return {"error": str(e), "status": "failed"}
 
 

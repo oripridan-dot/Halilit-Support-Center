@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """
-UNIFIED DATA SERVICE v8.5
+UNIFIED DATA SERVICE v9.0 — Simplified
 
-Consolidated data pipeline that handles:
-1. Product normalization (raw → IngestionProductDraft)
-2. Data aggregation & filtering
-3. Frontend synchronization
+Two responsibilities only:
+1. DataNormalizer  — raw ingestion data → nested IngestionProductDraft shape (write path)
+2. IngestToFrontendSyncEngine — sync approved products to frontend JSON files
+
+The *read* path (serving products to the frontend) is handled entirely by
+product_normalizer.build_catalog() called from server.py.  ConductorDataService
+was removed because it duplicated the read path using a different data source
+(ingestion DB vs JSON files), causing inconsistencies.
 
 SOURCE RULES (see backend/source_rules.py for the full law):
 ─────────────────────────────────────────────────────────────
@@ -14,22 +18,16 @@ SOURCE RULES (see backend/source_rules.py for the full law):
 3. CONTEXTUAL (3+ Reviews)  → Pros/Cons, Real-world insights
 
 NO SYNTHETIC DATA. NO MOCKING. ONLY REAL DATA.
-All data passing through this service is validated against source rules.
-
-Single source of truth for all product data processing in Halilit Support Center.
 """
 
 import json
 import logging
 import re
-import sys
 import os
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
-from datetime import datetime, timedelta
+from typing import Dict, List, Any
+from datetime import datetime
 
-from backend.ingestion.ingestion_database import get_ingestion_database
-from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.source_rules import (
     validate_no_synthetic_data, enforce_source_rules,
     AuthorizedSource, SourceCoverage, MIN_REVIEW_SOURCES,
@@ -41,13 +39,9 @@ logger = logging.getLogger("UnifiedDataService")
 # CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════════════
 
-INGESTION_DIR = Path(
-    "/workspaces/Halilit-Support-Center/backend/data/ingestion")
-FRONTEND_DATA_DIR = Path(
-    "/workspaces/Halilit-Support-Center/frontend/public/data")
-
-# Cache with 5-minute TTL
-CACHE_TTL_SECONDS = 300
+_BACKEND_DIR = Path(__file__).resolve().parent
+INGESTION_DIR = _BACKEND_DIR / "data" / "ingestion"
+FRONTEND_DATA_DIR = _BACKEND_DIR.parent / "frontend" / "public" / "data"
 _catalog_cache = None
 _cache_timestamp = None
 
@@ -493,394 +487,7 @@ class DataNormalizer:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# SECTION 2: CONDUCTOR DATA SERVICE (from conductor_data_service.py)
-# ═══════════════════════════════════════════════════════════════════════════
-
-class ConductorDataService:
-    """
-    Single source of truth for product data aggregation and filtering.
-    All data delivered to frontend goes through Conductor verification.
-
-    Features:
-    - Aggregates all verified products
-    - Provides flexible filtering
-    - Manages cache
-    - Returns canonical product structure
-    """
-
-    def __init__(self):
-        self.logger = logging.getLogger(__name__)
-        self.database = get_ingestion_database()
-        self.taxonomy_manager = get_taxonomy_manager()
-        self._catalog_cache = None
-        self._cache_timestamp = None
-
-    def get_all_products(self) -> List[Dict[str, Any]]:
-        """
-        Get flat list of all products.
-        Wrapper for get_unified_catalog()['products'].
-        """
-        catalog = self.get_unified_catalog()
-        return catalog.get('products', [])
-
-    def get_unified_catalog(self) -> Dict[str, Any]:
-        """
-        Get all Conductor-verified products aggregated from all brands.
-
-        Returns: {
-            'products': [List of verified products],
-            'metadata': {
-                'total_products': count,
-                'brands': [list of brands],
-                'categories': {category -> count},
-                'timestamp': when built,
-                'source': 'conductor_verified'
-            }
-        }
-        """
-        # Check cache first
-        now = datetime.utcnow()
-        if self._catalog_cache and self._cache_timestamp:
-            if (now - self._cache_timestamp).total_seconds() < CACHE_TTL_SECONDS:
-                self.logger.info("✓ Returning cached catalog")
-                return self._catalog_cache
-
-        self.logger.info("🔄 Aggregating unified catalog from all brands...")
-
-        all_products = []
-        brands_set = set()
-        categories_count = {}
-
-        try:
-            approved_products_by_brand = self.database.get_all_approved_products()
-
-            for brand, products in approved_products_by_brand.items():
-                if not products:
-                    continue
-
-                brands_set.add(brand)
-
-                for product in products:
-                    normalized = self._normalize_product(product, brand)
-                    all_products.append(normalized)
-
-                    category = normalized.get('taxonomy', {}).get(
-                        'canonical_category', 'Uncategorized')
-                    categories_count[category] = categories_count.get(
-                        category, 0) + 1
-
-            self.logger.info(
-                f"✅ Aggregated {len(all_products)} products from {len(brands_set)} brands")
-
-        except Exception as e:
-            self.logger.error(f"❌ Aggregation failed: {e}")
-            return self._empty_catalog()
-
-        # Build response
-        catalog = {
-            'products': all_products,
-            'metadata': {
-                'total_products': len(all_products),
-                'brands': sorted(list(brands_set)),
-                'categories': categories_count,
-                'timestamp': now.isoformat(),
-                'source': 'conductor_verified',
-                'verification_status': 'complete',
-                'cache_ttl_seconds': CACHE_TTL_SECONDS
-            }
-        }
-
-        # Cache it
-        self._catalog_cache = catalog
-        self._cache_timestamp = now
-
-        return catalog
-
-    def get_taxonomy_schema(self) -> Dict[str, Any]:
-        """
-        Get the taxonomy system for backend and frontend.
-
-        Returns: {
-            'universal_categories': [...],
-            'all_brands': [...],
-            'pricing_tiers': [...],
-            'display_roles': [...]
-        }
-        """
-        try:
-            all_categories = self.taxonomy_manager.get_all_categories()
-
-            universal_categories = []
-            for category in all_categories:
-                subcats = self.taxonomy_manager.get_subcategories(category)
-                universal_categories.append({
-                    'id': category.lower().replace(' ', '-'),
-                    'name': category,
-                    'subcategories': [
-                        {
-                            'id': subcat.lower().replace(' ', '-'),
-                            'name': subcat
-                        }
-                        for subcat in subcats
-                    ]
-                })
-
-            approved_by_brand = self.database.get_all_approved_products()
-            all_brands = sorted(list(approved_by_brand.keys()))
-
-            return {
-                'universal_categories': universal_categories,
-                'all_brands': all_brands,
-                'pricing_tiers': ['entry', 'mid', 'pro', 'flagship', 'legacy'],
-                'display_roles': ['hero', 'cornerstone', 'specialist', 'entry', 'hidden'],
-                'statuses': ['harvested', 'enriched', 'validated', 'approved', 'rejected', 'archived'],
-                'confidence_levels': ['official', 'trusted', 'commercial', 'user', 'inferred'],
-                'timestamp': datetime.utcnow().isoformat()
-            }
-        except Exception as e:
-            self.logger.error(f"❌ Failed to get taxonomy schema: {e}")
-            return {
-                'universal_categories': [],
-                'all_brands': [],
-                'pricing_tiers': ['entry', 'mid', 'pro', 'flagship'],
-                'display_roles': ['hero', 'cornerstone', 'specialist', 'entry'],
-                'error': str(e)
-            }
-
-    def filter_products(
-        self,
-        filters: Dict[str, Any]
-    ) -> Dict[str, Any]:
-        """
-        Apply flexible filtering to products.
-
-        Supported filters:
-        - brand: str or [str]
-        - category: str or [str]
-        - subcategory: str or [str]
-        - pricing_tier: str or [str]
-        - min_price / max_price: float
-        - display_role: str or [str]
-        - search_query: str
-
-        Returns: {
-            'products': [filtered],
-            'filters_applied': {...},
-            'total_results': count
-        }
-        """
-        catalog = self.get_unified_catalog()
-        products = catalog['products']
-        filters_applied = {}
-
-        # Apply each filter
-        if 'brand' in filters:
-            brands = filters['brand']
-            if isinstance(brands, str):
-                brands = [brands]
-            brands_lower = [b.lower() for b in brands]
-            products = [p for p in products if (
-                p.get('brand', '').lower() in brands_lower)]
-            filters_applied['brand'] = filters['brand']
-
-        if 'category' in filters:
-            categories = filters['category']
-            if isinstance(categories, str):
-                categories = [categories]
-            categories_lower = [c.lower() for c in categories]
-            products = [p for p in products if (
-                p.get('taxonomy', {}).get('canonical_category',
-                                          '').lower() in categories_lower
-            )]
-            filters_applied['category'] = filters['category']
-
-        if 'search_query' in filters:
-            query = filters['search_query'].lower()
-            products = [p for p in products if self._matches_search(p, query)]
-            filters_applied['search_query'] = filters['search_query']
-
-        if 'pricing_tier' in filters:
-            tiers = filters['pricing_tier']
-            if isinstance(tiers, str):
-                tiers = [tiers]
-            products = [p for p in products if (
-                p.get('pricing', {}).get('tier') in tiers
-            )]
-            filters_applied['pricing_tier'] = filters['pricing_tier']
-
-        if 'min_price' in filters:
-            min_price = float(filters['min_price'])
-            products = [p for p in products if (
-                p.get('pricing', {}).get('price_il', 0) >= min_price
-            )]
-            filters_applied['min_price'] = min_price
-
-        if 'max_price' in filters:
-            max_price = float(filters['max_price'])
-            products = [p for p in products if (
-                p.get('pricing', {}).get('price_il', float('inf')) <= max_price
-            )]
-            filters_applied['max_price'] = max_price
-
-        if 'display_role' in filters:
-            roles = filters['display_role']
-            if isinstance(roles, str):
-                roles = [roles]
-            products = [p for p in products if (
-                p.get('display', {}).get('display_role') in roles
-            )]
-            filters_applied['display_role'] = filters['display_role']
-
-        return {
-            'products': products,
-            'filters_applied': filters_applied,
-            'total_results': len(products),
-            'source': 'conductor_verified'
-        }
-
-    def get_category_summary(self) -> Dict[str, Any]:
-        """
-        Get category summary for navigation/filtering UI.
-
-        Returns: {
-            'categories': [
-                {
-                    'name': str,
-                    'product_count': int,
-                    'brands': [str],
-                    'subcategories': [str],
-                    'avg_price': float
-                }
-            ]
-        }
-        """
-        catalog = self.get_unified_catalog()
-        products = catalog['products']
-
-        categories = {}
-
-        for product in products:
-            cat = product.get('taxonomy', {}).get(
-                'canonical_category', 'Uncategorized')
-            subcat = product.get('taxonomy', {}).get('canonical_subcategory')
-            brand = product.get('brand', 'Unknown')
-            price = product.get('pricing', {}).get('price_il', 0)
-
-            if cat not in categories:
-                categories[cat] = {
-                    'name': cat,
-                    'product_count': 0,
-                    'brands': set(),
-                    'subcategories': set(),
-                    'prices': []
-                }
-
-            categories[cat]['product_count'] += 1
-            if brand:
-                categories[cat]['brands'].add(brand)
-            if subcat:
-                categories[cat]['subcategories'].add(subcat)
-            if price > 0:
-                categories[cat]['prices'].append(price)
-
-        # Convert to API format
-        result = []
-        for cat_name, cat_data in categories.items():
-            result.append({
-                'name': cat_name,
-                'product_count': cat_data['product_count'],
-                'brands': sorted(list(cat_data['brands'])),
-                'subcategories': sorted(list(cat_data['subcategories'])),
-                'avg_price': (sum(cat_data['prices']) / len(cat_data['prices']))
-                if cat_data['prices'] else 0
-            })
-
-        return {
-            'categories': sorted(result, key=lambda x: x['product_count'], reverse=True)
-        }
-
-    # =========================================================================
-    # PRIVATE HELPERS
-    # =========================================================================
-
-    def _normalize_product(self, product: Dict[str, Any], brand: str) -> Dict[str, Any]:
-        """Ensure product has canonical structure for frontend consumption."""
-        return {
-            'id': product.get('id') or product.get('halilit_id') or f"{brand}-{product.get('product_name')}",
-            'product_name': product.get('product_name', 'Unknown'),
-            'brand': product.get('brand', brand),
-            'taxonomy': {
-                'canonical_category': product.get('taxonomy', {}).get('canonical_category', 'Uncategorized'),
-                'canonical_subcategory': product.get('taxonomy', {}).get('canonical_subcategory', ''),
-                'keywords': product.get('taxonomy', {}).get('keywords', [])
-            },
-            'pricing': {
-                'price_il': product.get('pricing', {}).get('price_il', 0),
-                'price_eilat': product.get('pricing', {}).get('price_eilat', 0),
-                'tier': product.get('pricing', {}).get('tier', 'mid'),
-                'currency': 'NIS'
-            },
-            'display': {
-                'display_role': product.get('display', {}).get('display_role', 'entry'),
-                'hero_image': self._extract_image_url(product, 'hero'),
-                'thumbnail_image': self._extract_image_url(product, 'thumbnail'),
-                'color_hint': product.get('display', {}).get('color_hint'),
-                'should_highlight': product.get('display', {}).get('should_highlight', False)
-            },
-            'specifications': product.get('specifications', {}) or product.get('specs_dict', {}),
-            'description_short': product.get('description_short', ''),
-            'description_long': product.get('description_long', ''),
-            'validation_status': product.get('validation_status', 'approved'),
-            'source': product.get('primary_source', {}).get('source_name', 'unknown'),
-            'confidence': product.get('primary_source', {}).get('confidence', 'commercial')
-        }
-
-    def _extract_image_url(self, product: Dict[str, Any], purpose: str) -> Optional[str]:
-        """Extract image URL from product media assets."""
-        if 'display' in product:
-            if purpose == 'hero' and product['display'].get('hero_image'):
-                return product['display']['hero_image']
-            if purpose == 'thumbnail' and product['display'].get('thumbnail_image'):
-                return product['display']['thumbnail_image']
-
-        media_assets = product.get('media_assets', []) or product.get(
-            'display', {}).get('media_assets', [])
-        for asset in media_assets:
-            if asset.get('display_purpose') == purpose:
-                return asset.get('url')
-
-        return None
-
-    def _matches_search(self, product: Dict[str, Any], query: str) -> bool:
-        """Check if product matches search query."""
-        searchable = [
-            product.get('product_name', '').lower(),
-            product.get('brand', '').lower(),
-            product.get('taxonomy', {}).get('canonical_category', '').lower(),
-            product.get('description_short', '').lower(),
-        ]
-
-        search_text = ' '.join(searchable)
-        return query in search_text
-
-    def _empty_catalog(self) -> Dict[str, Any]:
-        """Return empty but valid catalog structure."""
-        return {
-            'products': [],
-            'metadata': {
-                'total_products': 0,
-                'brands': [],
-                'categories': {},
-                'timestamp': datetime.utcnow().isoformat(),
-                'source': 'conductor_verified',
-                'verification_status': 'error',
-                'error': 'Failed to aggregate products'
-            }
-        }
-
-
-# ═══════════════════════════════════════════════════════════════════════════
-# SECTION 3: INGESTION-TO-FRONTEND SYNC (from ingestion_to_frontend.py)
+# SECTION 2: INGESTION-TO-FRONTEND SYNC (from ingestion_to_frontend.py)
 # ═══════════════════════════════════════════════════════════════════════════
 
 class IngestToFrontendSyncEngine:
@@ -1105,18 +712,8 @@ class IngestToFrontendSyncEngine:
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# SECTION 4: SINGLETON ACCESSORS
+# SECTION 3: SINGLETON ACCESSORS
 # ═══════════════════════════════════════════════════════════════════════════
-
-_conductor_service = None
-
-
-def get_conductor_data_service() -> ConductorDataService:
-    """Get or create singleton instance of ConductorDataService."""
-    global _conductor_service
-    if _conductor_service is None:
-        _conductor_service = ConductorDataService()
-    return _conductor_service
 
 
 def get_ingest_to_frontend_engine() -> IngestToFrontendSyncEngine:
@@ -1124,5 +721,14 @@ def get_ingest_to_frontend_engine() -> IngestToFrontendSyncEngine:
     return IngestToFrontendSyncEngine()
 
 
-# Compatibility for external modules
-unified_data_service = get_conductor_data_service()
+def get_conductor_data_service():
+    """Backward-compat stub — ConductorDataService was removed in v9.0.
+    All catalog reads now go through product_normalizer.build_catalog() in server.py.
+    Returns None; callers should be updated to use the new path."""
+    import warnings
+    warnings.warn(
+        "get_conductor_data_service() is deprecated. "
+        "Use product_normalizer.build_catalog() instead.",
+        DeprecationWarning, stacklevel=2,
+    )
+    return None

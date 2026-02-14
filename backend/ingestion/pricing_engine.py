@@ -14,7 +14,7 @@ This is where pricing expertise lives.
 import logging
 from typing import Dict, Optional, Tuple, List
 from dataclasses import dataclass
-from datetime import datetime, timedelta
+from datetime import datetime
 
 from backend.ingestion.data_models import PricingTier, PricingData
 

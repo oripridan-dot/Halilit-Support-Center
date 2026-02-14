@@ -1,6 +1,7 @@
 """
-AI VISUAL VALIDATOR v8.5
-Ensures product matches are visually and semantically identical using Google Gemini 1.5.
+AI VISUAL VALIDATOR v9.0
+Ensures product matches are visually and semantically identical using Google Gemini.
+Uses the centralized LLM gateway for API calls.
 """
 import logging
 import json
@@ -9,13 +10,10 @@ import requests
 from io import BytesIO
 from PIL import Image
 from typing import Dict, Optional
-import google.genai as genai
-from pydantic import BaseModel, Field
+from google import genai
+from pydantic import BaseModel
 
-# Configure Gemini with new google.genai SDK
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-if GOOGLE_API_KEY:
-    genai.configure(api_key=GOOGLE_API_KEY)
 
 
 class VerificationResult(BaseModel):
@@ -43,8 +41,10 @@ class VisualValidator:
             if not url.startswith('http'):
                 # Try to resolve relative to workspace if it starts with /
                 if url.startswith('/assets/'):
-                    # HACK: Hardcoded path mapping for this environment
-                    local_path = f"/workspaces/Halilit-Support-Center/frontend/public{url}"
+                    import os
+                    workspace = os.environ.get(
+                        "WORKSPACE_ROOT", "/workspaces/Halilit-Support-Center")
+                    local_path = f"{workspace}/frontend/public{url}"
                     self.logger.info(f"Trying local path: {local_path}")
                     if os.path.exists(local_path):
                         return Image.open(local_path)
@@ -70,7 +70,7 @@ class VisualValidator:
         Compares a Halilit product (reference) vs Thomann product (candidate).
         """
         if not GOOGLE_API_KEY:
-            return VerificationResult(is_match=True, confidence=0.0, reason="AI Key Missing - Auto Approve")
+            return VerificationResult(is_match=False, confidence=0.0, reason="Cannot verify — API key not configured")
 
         img_ref = self._download_image(reference.get('image_url'))
         img_cand = self._download_image(candidate.get('image_url'))
@@ -93,7 +93,7 @@ class VisualValidator:
 
         try:
             if not self.model:
-                return VerificationResult(is_match=True, confidence=0.0, reason="AI Model not initialized")
+                return VerificationResult(is_match=False, confidence=0.0, reason="AI Model not initialized")
 
             # Using genai SDK to generate content with images
             client = genai.Client(api_key=GOOGLE_API_KEY)

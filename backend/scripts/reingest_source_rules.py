@@ -65,7 +65,7 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Tuple
 
 # Add project root
 PROJECT_ROOT = Path(__file__).parent.parent.parent
@@ -78,11 +78,10 @@ logging.basicConfig(
 )
 logger = logging.getLogger("ReIngestion")
 
-FRONTEND_DATA_DIR = Path(
-    "/workspaces/Halilit-Support-Center/frontend/public/data")
-INGESTION_DATA_DIR = Path(
-    "/workspaces/Halilit-Support-Center/backend/data/ingestion")
-CONFIG_DIR = Path("/workspaces/Halilit-Support-Center/backend/config")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+FRONTEND_DATA_DIR = _PROJECT_ROOT / "frontend" / "public" / "data"
+INGESTION_DATA_DIR = _PROJECT_ROOT / "backend" / "data" / "ingestion"
+CONFIG_DIR = _PROJECT_ROOT / "backend" / "config"
 
 # ═══════════════════════════════════════════════════════════════════════════
 # DATA CLEANING — Strip placeholder/dummy/synthetic data
@@ -574,8 +573,9 @@ class ReIngestionEngine:
                             data = json.load(fh)
                             if isinstance(data, list):
                                 all_products.extend(data)
-                    except Exception:
-                        pass
+                    except Exception as exc:
+                        logger.debug(
+                            "Skipping corrupt file %s: %s", f.name, exc)
 
             if all_products:
                 IngestToFrontendSyncEngine.generate_smart_artifacts(

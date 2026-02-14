@@ -7,7 +7,7 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException
 
 from backend.mcp.registry import get_registry
-from backend.catalog_validator import validate_product, validate_catalog, resolve_product, resolve_catalog
+from backend.catalog_validator import validate_product, validate_catalog, resolve_catalog
 from backend.product_normalizer import build_catalog
 
 router = APIRouter(prefix="/api/mcp", tags=["MCP"])

@@ -68,8 +68,9 @@ def _load_catalog() -> list[dict[str, Any]]:
                         _catalog.extend(data)
                     elif isinstance(data, dict) and "products" in data:
                         _catalog.extend(data["products"])
-                except Exception:
-                    pass
+                except Exception as exc:
+                    logger.debug("Skipping corrupt shard %s: %s",
+                                 shard.name, exc)
 
     logger.info("Loaded %d products into catalog", len(_catalog))
     return _catalog

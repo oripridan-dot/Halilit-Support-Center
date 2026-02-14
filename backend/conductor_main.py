@@ -21,10 +21,10 @@ Usage:
 from backend.ingestion_versioning import get_version_manager, IngestionVersion
 from backend.ingestion.ingestion_database import get_ingestion_database
 from backend.ingestion.trinity_integration import TrinityIngestionBridge
-from backend.unified_data_service import IngestToFrontendSyncEngine, get_ingest_to_frontend_engine
+from backend.unified_data_service import get_ingest_to_frontend_engine
 from backend.ingestion.orchestrator import IngestionOrchestrator
 from backend.unified_agent_orchestrator import CommercialAgent
-from backend.unified_quality_gates import feedback_engine, FeedbackType, audit_logger, AuditCategory, AuditLevel
+from backend.unified_quality_gates import feedback_engine, audit_logger
 
 from backend.ingestion.visual_validator import visual_validator
 from backend.ingestion.match_learning import MatchLearningSystem
@@ -59,10 +59,10 @@ class ConductorCLI:
         self.trinity_bridge = TrinityIngestionBridge()
         self.database = get_ingestion_database()
         self.version_manager = get_version_manager()
-        self.data_dir = Path("/workspaces/Halilit-Support-Center/backend/data")
-        self.frontend_dir = Path("/workspaces/Halilit-Support-Center/frontend")
-        self.config_dir = Path(
-            "/workspaces/Halilit-Support-Center/backend/config")
+        _backend = Path(__file__).resolve().parent
+        self.data_dir = _backend / "data"
+        self.frontend_dir = _backend.parent / "frontend"
+        self.config_dir = _backend / "config"
 
         # Initialize Learning System
         self.match_learner = MatchLearningSystem(self.data_dir)

@@ -9,14 +9,13 @@ Provides async HTTP endpoints for queuing and monitoring distributed tasks:
 - DELETE /api/v8/tasks/cancel/{task_id} - Cancel pending task
 """
 
-from fastapi import APIRouter, HTTPException, Query, BackgroundTasks
+from fastapi import APIRouter, HTTPException, Query
 from celery.result import AsyncResult
 from celery.exceptions import TimeoutError
 from typing import Dict, List, Optional, Any
 import uuid
 import logging
 from datetime import datetime
-import json
 
 # Import Celery app and tasks
 from backend.celery_config import celery_app

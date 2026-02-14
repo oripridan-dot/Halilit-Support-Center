@@ -223,23 +223,17 @@ class TrinityIngestionBridge:
                     f"   ✓ Received {len(raw_data)} products from Swarm (Live)")
                 return raw_data
             elif isinstance(raw_data, dict) and raw_data:
-                # If it returned a single dict, it might be the simulation fallback
-                # Check if it looks like a real scraped item or the hardcoded mock
-                if raw_data.get("halilit_id") == "123456":  # The mock ID
-                    logger.info(
-                        "   ⚠ Swarm returned Mock data. Checking file cache...")
-                else:
-                    return [raw_data]
+                return [raw_data]
 
-            # OPTION 2: Fallback to Local File Cache
+            # Fallback to Local File Cache
             raw_products = self._load_brand_from_file(brand)
             if raw_products:
                 logger.info(
                     f"✅ Loaded {len(raw_products)} products from file for {brand} (Fallback)")
                 return raw_products
 
-            # OPTION 3: Return the Mock/Empty result from Swarm if file failed
-            return [raw_data] if raw_data else []
+            # No data — return empty (never return mock data)
+            return []
 
         except Exception as e:
             logger.error(f"Trinity harvest failed: {e}")
@@ -252,11 +246,10 @@ class TrinityIngestionBridge:
         Returns:
             List of product dicts
         """
-        import os
         from pathlib import Path
 
         brand_file = (
-            Path("/workspaces/Halilit-Support-Center/backend/data/brands")
+            Path(__file__).resolve().parent.parent / "data" / "brands"
             / brand
             / "products.json"
         )
@@ -317,7 +310,8 @@ class TrinityIngestionBridge:
 
         # Save Spectrum payload
         spectrum_file = (
-            Path("/workspaces/Halilit-Support-Center/backend/data/ingestion/spectrum")
+            Path(__file__).resolve().parent.parent /
+            "data" / "ingestion" / "spectrum"
             / brand
             / f"spectrum_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json"
         )

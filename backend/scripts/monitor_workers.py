@@ -20,7 +20,6 @@ import sys
 import json
 import time
 import argparse
-import logging
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Any, Optional

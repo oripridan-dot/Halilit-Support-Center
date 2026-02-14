@@ -12,7 +12,7 @@ Features:
 """
 
 from fastapi import WebSocket, WebSocketDisconnect
-from typing import Set, Dict, List, Optional, Any
+from typing import Set, Dict, Any
 import json
 import asyncio
 import logging

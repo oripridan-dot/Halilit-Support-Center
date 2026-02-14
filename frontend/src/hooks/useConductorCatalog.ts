@@ -248,25 +248,6 @@ export const useProductsBySpectrum = (spectrumId: string | null) => {
     };
 };
 
-/**
- * @deprecated Use useProductsByGalaxy or useProductsBySpectrum instead.
- */
-export const useConductorProductsByCategory = (category: string | null) => {
-    const { products, indexes, isLoading } = useConductorCatalog();
-
-    const filtered = useMemo(() => {
-        if (!category) return products;
-        // Try galaxy index first, then spectrum
-        const galaxyIdxs = indexes.by_galaxy[category];
-        if (galaxyIdxs) return galaxyIdxs.map(i => products[i]).filter(Boolean);
-        const specIdxs = indexes.by_spectrum[category];
-        if (specIdxs) return specIdxs.map(i => products[i]).filter(Boolean);
-        return [];
-    }, [category, indexes, products]);
-
-    return { products: filtered, count: filtered.length, isLoading };
-};
-
 
 // ═══════════════════════════════════════════════════════════════════════════
 // PRODUCT GRAPH HOOKS — Family & Relationship Awareness

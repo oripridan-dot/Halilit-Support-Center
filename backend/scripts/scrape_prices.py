@@ -15,7 +15,6 @@ import sys
 import os
 import logging
 from pathlib import Path
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Add project root
 sys.path.insert(0, os.path.dirname(os.path.dirname(

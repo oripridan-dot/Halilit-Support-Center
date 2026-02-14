@@ -90,8 +90,8 @@ class VersionManager:
     def __init__(self, storage_path: Optional[Path] = None):
         """Initialize version manager"""
         if storage_path is None:
-            storage_path = Path(
-                "/workspaces/Halilit-Support-Center/backend/data/ingestion/versions")
+            storage_path = Path(__file__).resolve().parent / \
+                "data" / "ingestion" / "versions"
 
         self.storage_path = Path(storage_path)
         self.storage_path.mkdir(parents=True, exist_ok=True)

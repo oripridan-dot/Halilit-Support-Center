@@ -23,29 +23,21 @@ Status: ✅ UNIFIED (was: agent_improver.py + trinity_swarm.py)
 
 # --- MODULE 1: IMPORTS ---
 
-from bs4 import BeautifulSoup
-import requests
-import os
 import json
-from pathlib import Path
 from typing import List, Dict, Optional, Any
 from datetime import datetime
-from dataclasses import dataclass
 import logging
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
-import google.genai as genai
-from google.genai import types
+from backend.llm import get_llm, _get_client
 from backend.unified_quality_gates import MemoryAwareMixin
 from backend.unified_learning_repository import LearningPatternRepository, LearningPattern
 from backend.source_rules import (
-    AuthorizedSource, FieldOwnership, FIELD_OWNERSHIP, IMMUTABLE_FIELDS,
+    AuthorizedSource,
     COMMERCIAL_SCOUT_SYSTEM_PROMPT, OFFICIAL_SCOUT_SYSTEM_PROMPT,
     CONTEXTUAL_SCOUT_SYSTEM_PROMPT, TRUSTED_REVIEW_SOURCES,
-    MIN_REVIEW_SOURCES, ConfidenceLevel, SourceCoverage,
-    enforce_source_rules, validate_no_synthetic_data,
-    cross_validate_product, get_source_for_agent, get_allowed_fields,
-    log_source_rule_summary,
+    MIN_REVIEW_SOURCES, SourceCoverage,
+    validate_no_synthetic_data, get_allowed_fields,
 )
 
 # Configure logging
@@ -55,13 +47,6 @@ logger = logging.getLogger(__name__)
 
 # Load environment variables (API keys)
 load_dotenv()
-
-# Initialize the Genai client
-try:
-    client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
-except Exception as e:
-    print(f"Warning: Could not initialize Gemini client: {e}")
-    client = None
 
 
 # --- MODULE 3: DATA MODELS ---
@@ -73,17 +58,6 @@ class AuditReport(BaseModel):
     risk_score: int = Field(..., description="0-100 (0 is safe, 100 is risky)")
     violations: List[str]
     auditor_notes: str
-
-
-@dataclass
-class AgentImprovement:
-    """Represents an improvement applied to an agent."""
-    agent_name: str
-    improvement_type: str
-    description: str
-    focus_area: str
-    effectiveness_score: float  # 0-100
-    applied_at: str
 
 
 # --- MODULE 4.1: CROSS-CUTTING LOGIC ---
@@ -118,71 +92,36 @@ class AgentBase(MemoryAwareMixin):
         super().__init__()  # Initialize memory capabilities
         self.model_name = model_name
         self.system_instruction = system_instruction
-        self.client = client  # Use global client
 
         print(f"🧠 [{self.name}] Initialized with learning capabilities")
 
     def think(self, prompt: str, dynamic_system_instruction: Optional[str] = None):
-        """Generate content using Gemini with learning integration and rate limiting."""
+        """Generate content using Gemini via the centralized LLM gateway."""
         print(f"🤖 [{self.name}] Thinking...")
-        if not self.client:
-            return "Simulation: Client not initialized."
+        active_instruction = dynamic_system_instruction or self.system_instruction
 
-        # Use dynamic instruction if provided, else fall back to static
-        active_instruction = dynamic_system_instruction if dynamic_system_instruction else self.system_instruction
+        llm = get_llm()
+        text, success = llm.call(
+            agent_name=self.name,
+            prompt=prompt,
+            system=active_instruction,
+            model=self.model_name,
+        )
 
-        try:
-            # Import here to avoid circular imports
-            from backend.unified_quality_gates import call_gemini_with_rate_limit
+        self.learn_from_action(
+            action_type="think",
+            input_data=prompt[:200],
+            output_data=text[:200],
+            success=success,
+            confidence=95 if success else 0,
+            patterns=["gemini-response" if success else "api-error"],
+        )
 
-            # Use rate-limited API call
-            text, success = call_gemini_with_rate_limit(
-                agent_name=self.name,
-                prompt=prompt,
-                model=self.model_name,
-                system_instruction=active_instruction
-            )
-
-            if not success:
-                print(f"   ❌ API call failed: {text}")
-                # LEARN from API failures
-                self.learn_from_action(
-                    action_type="think",
-                    input_data=prompt[:200],
-                    output_data=text[:200],
-                    success=False,
-                    confidence=0,
-                    patterns=["api-error"]
-                )
-                return text
-
+        if not success:
+            print(f"   ❌ API call failed: {text}")
+        else:
             print(f"   -> {text[:100]}...")
-
-            # LEARN from every successful thought
-            self.learn_from_action(
-                action_type="think",
-                input_data=prompt[:200],
-                output_data=text[:200],
-                success=len(text) > 0,
-                confidence=95,
-                patterns=["gemini-response"]
-            )
-
-            return text
-        except Exception as e:
-            error_msg = f"Error generating content: {e}"
-
-            # LEARN from failures too
-            self.learn_from_action(
-                action_type="think",
-                input_data=prompt[:200],
-                output_data=error_msg,
-                success=False,
-                confidence=0,
-                patterns=["api-error"]
-            )
-
-            return error_msg
+        return text
 
 
 # --- MODULE 5: AGENT IMPLEMENTATIONS ---
@@ -691,7 +630,7 @@ class ContextualAgent(AgentBase):
 
             if 'halilit_id' in draft and 'product_name' in draft and 'brand' in draft:
                 draft_obj = IngestionProductDraft(**filtered_draft)
-                comparator = get_visual_comparator_engine(self.client)
+                comparator = get_visual_comparator_engine(_get_client())
                 conf, reasoning, status = comparator.compare_product_images(
                     draft_obj)
 
@@ -745,7 +684,7 @@ class ContextualAgent(AgentBase):
                        "review_sources": [], "average_rating": None,
                        "user_sentiment": "pending_review_collection"}
 
-        if self.client and product_name != "Unknown" and product_name != "Test Product":
+        if _get_client() and product_name != "Unknown" and product_name != "Test Product":
             try:
                 # Ask Gemini to find and summarize REAL reviews from trusted sources
                 prompt = (
@@ -855,195 +794,7 @@ class ContextualAgent(AgentBase):
         )
 
 
-# --- MODULE 6: IMPROVEMENT ENGINE ---
-
-class AgentImprovementEngine:
-    """Applies learned improvements to agent behavior based on feedback."""
-
-    def __init__(self):
-        self.improvements_dir = Path(
-            "/workspaces/Halilit-Support-Center/backend/logs/improvements")
-        self.improvements_dir.mkdir(exist_ok=True)
-        self.data_dir = Path(
-            "/workspaces/Halilit-Support-Center/frontend/public/data")
-
-    def apply_improvements_from_feedback(self, cycle_number: int) -> Dict[str, Any]:
-        """
-        Apply improvements based on feedback from a learning cycle.
-        """
-        logger.info(
-            f"🔧 Applying improvements from cycle #{cycle_number} feedback...")
-
-        improvements_applied = {
-            "cycle_number": cycle_number,
-            "timestamp": datetime.now().isoformat(),
-            "improvements": {},
-            "results": {},
-        }
-
-        # Get feedback summary
-        from backend.unified_quality_gates import feedback_engine
-        health = feedback_engine.get_pipeline_health_report()
-
-        # CommercialScout improvements
-        improvements_applied["improvements"]["CommercialScout"] = self._improve_commercial_scout(
-        )
-
-        # OfficialVerifier improvements
-        improvements_applied["improvements"]["OfficialVerifier"] = self._improve_official_verifier(
-        )
-
-        # ExternalValidator improvements
-        improvements_applied["improvements"]["ExternalValidator"] = self._improve_external_validator(
-        )
-
-        # Save improvements record
-        record_file = self.improvements_dir / \
-            f"cycle_{cycle_number}_improvements.json"
-        try:
-            with open(record_file, 'w') as f:
-                json.dump(improvements_applied, f, indent=2)
-            logger.info(f"✅ Improvements saved to {record_file.name}")
-        except Exception as e:
-            logger.error(f"Failed to save improvements: {e}")
-
-        return improvements_applied
-
-    def _improve_commercial_scout(self) -> Dict[str, Any]:
-        """Apply improvements to CommercialScout (categorization specialist)."""
-        improvements = {
-            "agent": "CommercialScout",
-            "focus_areas": ["categorization", "data_quality"],
-            "improvements_applied": [],
-            "effectiveness": 0.0,
-        }
-
-        try:
-            # Apply categorization improvements
-            improvement = AgentImprovement(
-                agent_name="CommercialScout",
-                improvement_type="taxonomy_expansion",
-                description="Expanded product taxonomy to include 15 new categories",
-                focus_area="categorization",
-                effectiveness_score=35.0,
-                applied_at=datetime.now().isoformat(),
-            )
-            improvements["improvements_applied"].append({
-                "type": improvement.improvement_type,
-                "description": improvement.description,
-                "effectiveness": improvement.effectiveness_score,
-            })
-
-            improvements["effectiveness"] = improvement.effectiveness_score
-
-        except Exception as e:
-            logger.warning(f"Error applying CommercialScout improvements: {e}")
-
-        return improvements
-
-    def _improve_official_verifier(self) -> Dict[str, Any]:
-        """Apply improvements to OfficialVerifier (enrichment specialist)."""
-        improvements = {
-            "agent": "OfficialVerifier",
-            "focus_areas": ["image_detection", "pricing"],
-            "improvements_applied": [],
-            "effectiveness": 0.0,
-        }
-
-        try:
-            # OfficialVerifier is already performing well (100% images and prices)
-            # Apply confidence calibration improvement
-            improvement = AgentImprovement(
-                agent_name="OfficialVerifier",
-                improvement_type="confidence_calibration",
-                description="Refined confidence scoring for image and pricing detection",
-                focus_area="confidence",
-                effectiveness_score=15.0,
-                applied_at=datetime.now().isoformat(),
-            )
-            improvements["improvements_applied"].append({
-                "type": improvement.improvement_type,
-                "description": improvement.description,
-                "effectiveness": improvement.effectiveness_score,
-            })
-
-            improvements["effectiveness"] = improvement.effectiveness_score
-
-        except Exception as e:
-            logger.warning(
-                f"Error applying OfficialVerifier improvements: {e}")
-
-        return improvements
-
-    def _improve_external_validator(self) -> Dict[str, Any]:
-        """Apply improvements to ExternalValidator (quality gate specialist)."""
-        improvements = {
-            "agent": "ExternalValidator",
-            "focus_areas": ["edge_cases", "validation_rules"],
-            "improvements_applied": [],
-            "effectiveness": 0.0,
-        }
-
-        try:
-            # Relax validation rules based on feedback
-            improvement = AgentImprovement(
-                agent_name="ExternalValidator",
-                improvement_type="rule_relaxation",
-                description="Relaxed quality gates to accept valid edge cases",
-                focus_area="validation_rules",
-                effectiveness_score=50.0,
-                applied_at=datetime.now().isoformat(),
-            )
-            improvements["improvements_applied"].append({
-                "type": improvement.improvement_type,
-                "description": improvement.description,
-                "effectiveness": improvement.effectiveness_score,
-            })
-
-            improvements["effectiveness"] = improvement.effectiveness_score
-
-        except Exception as e:
-            logger.warning(
-                f"Error applying ExternalValidator improvements: {e}")
-
-        return improvements
-
-    def calculate_projected_accuracy(self, current_accuracy: float, cycle_number: int) -> float:
-        """
-        Calculate projected accuracy based on improvements applied.
-
-        Model: Each focused improvement provides measurable gains
-        """
-        if cycle_number == 0:
-            return 0.0
-
-        # Base accuracy starts at previous level
-        base = current_accuracy
-
-        # CommercialScout improvement (categorization): +35% effectiveness
-        # But only applies if uncategorized products > 0
-        commercial_gain = 35 * 0.5  # 50% effectiveness in first cycles
-
-        # OfficialVerifier improvement (confidence): +15% effectiveness
-        verifier_gain = 15 * 0.7
-
-        # ExternalValidator improvement (rule relaxation): +50% effectiveness
-        validator_gain = 50 * 0.9
-
-        # Total improvement per cycle
-        total_improvement = (
-            commercial_gain + verifier_gain + validator_gain) / 100
-
-        # Diminishing returns as we get closer to 98%
-        diminishing_factor = 1.0 - (base / 98.0)
-
-        improvement = total_improvement * diminishing_factor * 2  # Scale factor
-
-        new_accuracy = min(98.0, base + improvement)
-        return new_accuracy
-
-
-# --- MODULE 7: SWARM ORCHESTRATOR ---
+# --- MODULE 6: SWARM ORCHESTRATOR ---
 
 class TrinitySwarm:
     """Orchestrates the three autonomous agents in strict data flow."""
@@ -1056,28 +807,9 @@ class TrinitySwarm:
         self.learning_repo = LearningPatternRepository()
         # Initialize Visual Comparator with global client
         from backend.ingestion.visual_comparator import get_visual_comparator_engine
-        self.visual_comparator = get_visual_comparator_engine(client)
+        self.visual_comparator = get_visual_comparator_engine(_get_client())
 
-        # Load Taxonomy (Mock for now)
-        self.taxonomy = ["Nord", "Roland", "Yamaha", "Korg"]
-
-    def process_brand(self, brand_name: str):
-        """Process a single brand through the full Trinity Swarm pipeline."""
-        print(f"\n🚀 STARTING TRINITY SWARM (v7.5) FOR: {brand_name}\n")
-
-        # Step 1: Scout (Commercial - Golden List)
-        raw_data = self.scout.harvest(brand_name)
-        print(
-            f"   Draft Created: {raw_data.get('product_name')} | {raw_data.get('price_il')} NIS")
-
-        # Step 2: Verify & Enrich (Official - Knowledge)
-        enriched_data = self.verifier.enrich(raw_data)
-
-        # Step 3: EXTERNAL AUDIT (Contextual - Insight)
-        print(f"⚖️ [System] Submitting to Contextual Validator...")
-        audit_result = self.auditor.validate_and_review(enriched_data)
-
-        self.handle_audit_outcome(enriched_data, audit_result)
+        # Taxonomy handled by ingestion/taxonomy_manager.py
 
     def resolve_conflict(self, product_name: str, claims: Dict, visual_evidence: str, discrepancy: str, image_url: str) -> Dict[str, Any]:
         """
@@ -1115,13 +847,12 @@ class TrinitySwarm:
         """
 
         try:
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json")
+            llm = get_llm()
+            data, ok = llm.call_json(
+                agent_name="TrinitySwarm",
+                prompt=prompt,
             )
-            return json.loads(response.text)
+            return data if ok else {"winner": "Text", "corrected_claims": {}}
         except Exception as e:
             logger.error(f"Arbitration failed: {e}")
             return {"winner": "Text", "corrected_claims": {}}
@@ -1301,33 +1032,3 @@ class TrinitySwarm:
             "total_processed": len(raw_products),
             "errors": errors
         }
-
-    def handle_audit_outcome(self, data, report: AuditReport):
-        """Display audit results and approved product data."""
-        print(f"\n📋 --- AUDIT REPORT FOR {data.get('product_name')} ---")
-        print(f"STATUS: {report.status}")
-        print(f"RISK:   {report.risk_score}/100")
-
-        if report.status == "APPROVED":
-            print("✅ Product Accepted into Golden Record.")
-            print("\n🔍 STRICT DATA STRUCTURE (v7.5):")
-            print(json.dumps(data, indent=2, default=str))
-        else:
-            print("🛑 Product REJECTED.")
-            print("VIOLATIONS:")
-            for v in report.violations:
-                print(f" - {v}")
-            print(f"NOTES: {report.auditor_notes}")
-
-
-# --- MODULE 8: MAIN / RUNNER ---
-
-def main():
-    """Demonstrate agent orchestrator."""
-    swarm = TrinitySwarm()
-    swarm.process_brand("Nord")
-
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    main()

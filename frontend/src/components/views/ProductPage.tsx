@@ -47,14 +47,6 @@ export const ProductPage = ({ productId }: { productId: string }) => {
         const fromConductor = conductorProducts.find((p) => p.id === productId);
         if (fromConductor) {
           setProduct(fromConductor);
-          return;
-        }
-
-        // Fallback to static JSON
-        const { catalogLoader } = await import("../../lib/catalogLoader");
-        const loaded = await catalogLoader.findProductById(productId);
-        if (loaded) {
-          setProduct(loaded as unknown as ConductorProduct);
         }
       } catch (err) {
         if (import.meta.env.DEV) console.error("Failed to load product:", err);

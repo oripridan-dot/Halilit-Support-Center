@@ -29,7 +29,6 @@ import re
 import time
 import hashlib
 from typing import Any, Dict, List, Optional, Tuple
-from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests

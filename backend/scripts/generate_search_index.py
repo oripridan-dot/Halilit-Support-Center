@@ -10,7 +10,8 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 # Constants
-FRONTEND_DATA = Path("../frontend/public/data")
+FRONTEND_DATA = Path(__file__).resolve(
+).parent.parent.parent / "frontend" / "public" / "data"
 SEARCH_INDEX_FILE = FRONTEND_DATA / "search_index.json"
 
 

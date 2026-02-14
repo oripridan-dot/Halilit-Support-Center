@@ -7,7 +7,7 @@ import asyncio
 import json
 import logging
 from datetime import datetime
-from typing import AsyncGenerator, Dict, List, Optional, Any
+from typing import AsyncGenerator, Dict, List, Optional
 from dataclasses import dataclass, asdict
 
 logger = logging.getLogger("AutoSyncEngine")

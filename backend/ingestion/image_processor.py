@@ -297,10 +297,8 @@ class ImageProcessor:
                         "WARNING: Image appears to be a solid color "
                         "or placeholder"
                     )
-            except Exception:
-                pass
-
-        return issues
+            except Exception as exc:
+                logger.debug("Placeholder detection skipped: %s", exc)
 
     def _ensure_rgb(self, img):
         """Convert image to RGB mode for WebP/JPEG output."""

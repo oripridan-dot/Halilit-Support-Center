@@ -17,7 +17,6 @@ import logging
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
-from dataclasses import asdict
 
 from backend.ingestion.data_models import (
     IngestionProductDraft, IngestionReport, IngestionStatus
@@ -29,7 +28,10 @@ logger = logging.getLogger("IngestionDatabase")
 class IngestionDatabase:
     """Manages persistent storage of ingestion data"""
 
-    def __init__(self, base_path: str = "/workspaces/Halilit-Support-Center/backend/data/ingestion"):
+    def __init__(self, base_path: str = ""):
+        if not base_path:
+            base_path = str(Path(__file__).resolve(
+            ).parent.parent / "data" / "ingestion")
         self.base_path = Path(base_path)
         self.base_path.mkdir(parents=True, exist_ok=True)
         logger.info(f"IngestionDatabase initialized at {self.base_path}")
@@ -337,7 +339,7 @@ _db = None
 
 
 def get_ingestion_database(
-    base_path: str = "/workspaces/Halilit-Support-Center/backend/data/ingestion",
+    base_path: str = "",
 ) -> IngestionDatabase:
     """Get singleton IngestionDatabase instance"""
     global _db

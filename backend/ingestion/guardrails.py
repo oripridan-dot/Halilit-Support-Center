@@ -1,6 +1,6 @@
 import re
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Optional
 from backend.ingestion.data_models import IngestionProductDraft
 
 logger = logging.getLogger("Guardrails")

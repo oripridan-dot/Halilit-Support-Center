@@ -13,6 +13,11 @@ import React, { lazy, Suspense } from "react";
 import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { Breadcrumbs } from "./components/ui/Breadcrumbs";
+import {
+  SpectrumSkeleton,
+  ProductPageSkeleton,
+  ProductGridSkeleton,
+} from "./components/ui/Skeleton";
 import { useNavigationStore } from "./store/navigationStore";
 import { LearningFeed } from "./components/LearningFeed";
 import { useLearningStream } from "./hooks/useLearningStream";
@@ -42,21 +47,6 @@ const SpectrumV2 = lazy(() =>
   import("./components/spectrum/SpectrumV2").then((m) => ({
     default: m.SpectrumV2,
   })),
-);
-
-// Loading placeholder with skeleton animation
-const LoadingPlaceholder = () => (
-  <div className="flex items-center justify-center w-full h-full bg-black/50">
-    <div className="flex flex-col items-center gap-4">
-      <div className="relative w-12 h-12">
-        <div className="absolute inset-0 rounded-full border-2 border-zinc-800" />
-        <div className="absolute inset-0 rounded-full border-2 border-t-blue-500 animate-spin" />
-      </div>
-      <p className="text-xs text-zinc-600 font-mono tracking-widest uppercase animate-pulse">
-        Loading
-      </p>
-    </div>
-  </div>
 );
 
 function App() {
@@ -105,7 +95,13 @@ function App() {
           {/* Screen 1: Galaxy Dashboard */}
           {currentView === "GALAXY" && (
             <div className="absolute inset-0 animate-fade-in">
-              <Suspense fallback={<LoadingPlaceholder />}>
+              <Suspense
+                fallback={
+                  <div className="p-8">
+                    <ProductGridSkeleton count={12} />
+                  </div>
+                }
+              >
                 <GalaxyDashboard />
               </Suspense>
             </div>
@@ -114,7 +110,7 @@ function App() {
           {/* Screen 2: Spectrum Module (includes TierBar/product spectrum) */}
           {currentView === "SPECTRUM" && (
             <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
+              <Suspense fallback={<SpectrumSkeleton />}>
                 <SpectrumModule />
               </Suspense>
             </div>
@@ -123,7 +119,7 @@ function App() {
           {/* Screen 2b: Spectrum V2 (Redesigned with Model Grouping & Zoom) */}
           {currentView === "SPECTRUM_V2" && (
             <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
+              <Suspense fallback={<SpectrumSkeleton />}>
                 <SpectrumV2 />
               </Suspense>
             </div>
@@ -132,7 +128,7 @@ function App() {
           {/* Screen 3: Product Page (Full Analysis View) */}
           {currentView === "PRODUCT_PAGE" && activeProductId && (
             <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
-              <Suspense fallback={<LoadingPlaceholder />}>
+              <Suspense fallback={<ProductPageSkeleton />}>
                 <ProductPage productId={activeProductId} />
               </Suspense>
             </div>
@@ -141,7 +137,13 @@ function App() {
           {/* Screen 4: Curation Dashboard (Admin) */}
           {currentView === "CURATION" && (
             <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
+              <Suspense
+                fallback={
+                  <div className="p-8">
+                    <ProductGridSkeleton count={6} />
+                  </div>
+                }
+              >
                 <CurationDashboard />
               </Suspense>
             </div>

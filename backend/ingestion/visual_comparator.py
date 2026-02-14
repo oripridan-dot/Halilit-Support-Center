@@ -10,9 +10,8 @@ This solves the "Same Name, Different Product" problem by looking at the pixels.
 import logging
 import os
 import requests
-import base64
 from typing import Dict, Tuple, Optional
-from backend.ingestion.data_models import IngestionProductDraft, DataSourceConfidence
+from backend.ingestion.data_models import IngestionProductDraft
 import google.genai as genai
 from google.genai import types
 
