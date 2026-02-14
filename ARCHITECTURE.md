@@ -1,20 +1,21 @@
 # Halilit Support Center — Architecture
 
-**Version**: 8.3.0  
-**Updated**: February 11, 2026
+**Version**: 9.0.0 (JIT Architecture)  
+**Updated**: February 14, 2026
 
 ---
 
 ## System Overview
 
-AI-powered product catalog system using Google's Trinity Swarm (3 Gemini 2.0-flash agents) to harvest, enrich, validate, and deliver musical instrument data.
+AI-powered product intelligence platform using a **Just-in-Time (JIT)** architecture. Instead of heavy upfront ingestion, the system maintains a lightweight skeleton inventory and streams live intelligence on demand via Gemini 2.0 Flash.
 
-| Metric            | Value                                                                |
-| ----------------- | -------------------------------------------------------------------- |
-| Pipeline Products | 500+ (across 7 indexed brands)                                       |
-| API Endpoints     | 15+                                                                  |
-| Pipeline Phases   | 7 (Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve) |
-| Source Code       | ~27k lines (lean repo, all generated data gitignored)                |
+| Metric            | Value                                              |
+| ----------------- | -------------------------------------------------- |
+| Products          | 500+ (skeleton inventory from Halilit.com)         |
+| API Endpoints     | 10                                                 |
+| Intelligence      | JIT — live per-product research via Gemini 2.0     |
+| Trusted Sources   | 10 (Golden Circle — Sound On Sound, Sweetwater...) |
+| Cache TTL         | 7 days (file-based per product)                    |
 
 ---
 
@@ -23,82 +24,53 @@ AI-powered product catalog system using Google's Trinity Swarm (3 Gemini 2.0-fla
 ```
 ┌──────────────────────────────────────────────────────────────────┐
 │                    FRONTEND (React 18 + Vite)                    │
-│  Zustand state · React Query fetching · Tailwind CSS             │
-│  Views: GalaxyDashboard · SpectrumModule · ProductPage           │
+│  Zustand state · React Query · Tailwind CSS · Framer Motion      │
+│  Views: GalaxyDashboard · SpectrumModule · Product Cockpit       │
+│  Hooks: useConductorCatalog · useJITIntelligence (SSE)           │
 └────────────────────────┬─────────────────────────────────────────┘
-                         ↓  REST / SSE / WebSocket
+                         ↓  REST / SSE
 ┌──────────────────────────────────────────────────────────────────┐
 │              API LAYER (FastAPI — port 8000)                      │
-│  /api/conductor/*  Catalog, taxonomy, filtering                  │
-│  /api/copilot/*    Pipeline, batch-ingest, skills                │
-│  /api/tasks/*      Async queue submission & status               │
+│  /api/conductor/*    Catalog, taxonomy, filtering                │
+│  /api/jit/product/*  Live product intelligence (SSE stream)      │
+│  /api/health         Service health check                        │
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓
 ┌──────────────────────────────────────────────────────────────────┐
-│           DATA SERVICE (ConductorDataService)                    │
-│  get_unified_catalog() · get_taxonomy_schema()                   │
-│  filter_products() · get_category_summary()                      │
+│             SKELETON INVENTORY (Nightly sync)                    │
+│  skeleton_sync.py → inventory.json (ID, Name, Price, URL, Thumb)│
+│  Zero AI calls — listing pages only — ~30 seconds for all brands│
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓
 ┌──────────────────────────────────────────────────────────────────┐
-│              CELERY TASK QUEUE (Redis broker)                     │
-│  harvest_brand_products · enrich_product                         │
-│  validate_product · record_learning_feedback                     │
-│  Flower monitoring · Docker worker containers                    │
-└────────────────────────┬─────────────────────────────────────────┘
-                         ↓
-┌──────────────────────────────────────────────────────────────────┐
-│          INGESTION PIPELINE (7 Phases)                            │
-│  Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve│
-│  Auto-Sync (SSE) · Learning Loop (feedback → next cycle)         │
-└────────────────────────┬─────────────────────────────────────────┘
-                         ↓
-┌──────────────────────────────────────────────────────────────────┐
-│              TRINITY SWARM (3 Gemini 2.0-flash Agents)           │
+│              JIT AGENT (On-Demand Intelligence)                  │
 │                                                                  │
-│  CommercialScout   → Harvests from Halilit.com, categorizes      │
-│  OfficialVerifier  → Enriches with specs, images, descriptions   │
-│  ExternalValidator → Audits completeness, risk scoring (0–100)   │
+│  Triggered when user clicks a product. Streams SSE events:       │
 │                                                                  │
-│  Each agent: memory, learning, confidence scoring, audit trail   │
+│  Phase 1 — SNAP:    Inventory data (instant, <200ms)             │
+│  Phase 2 — INTEL:   Halilit page scrape (specs, images)          │
+│  Phase 3 — WISDOM:  Gemini reasoning (verdict, pro tips)         │
+│  Phase 4 — EXPLORE: Suggested next actions                       │
+│                                                                  │
+│  Tools: read_halilit_page · search_trusted_reviews               │
+│  Cache: 7-day file-based TTL per product                         │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Enriched Catalog
+## Source Rules (THE LAW)
 
-The `/api/conductor/catalog` endpoint returns products with:
+All data strictly adheres to three authorized sources:
 
-- **Images**: Cascading fallback — `image_hero` → `image_gallery` → `official_images` → `display.hero_image` → `primary_source`
-- **Descriptions**: `official_description` → `description_long` → `description_short`
-- **Specs**: Merged from `official_specs` + `specifications`
-- **Quality**: `quality_score`, `data_completeness`, price tier (entry/mid/pro)
-- **Gallery**: Up to 20 images per product
+| Source             | Owner    | Fields                              |
+| ------------------ | -------- | ----------------------------------- |
+| **Commercial**     | Halilit  | Price, SKU, stock, catalog position |
+| **Official**       | Brand    | Specs, images, descriptions         |
+| **Contextual**     | Reviews  | Opinions, ratings (3+ sources)      |
 
-### Data Flow
-
-```
-Brand JSON files (pipeline-generated, gitignored)
-  → server.py normalize → enrich → filter (price > 0, has image) → dedup
-    → /api/conductor/catalog
-      → React Query → Zustand → UI
-```
-
----
-
-## Async Task Queue
-
-| Component   | Technology | Purpose                  |
-| ----------- | ---------- | ------------------------ |
-| **Broker**  | Redis 7    | Message queue            |
-| **Workers** | Celery 5.3 | Parallel agent execution |
-| **Results** | Redis      | Task result storage      |
-| **Monitor** | Flower     | Web UI (port 5555)       |
-
-```bash
-docker-compose up -d          # Start Redis + Postgres + Flower + Workers
-```
+- **Zero Tolerance**: If the JIT agent can't find data, the field stays empty — never fabricated.
+- **Golden Circle**: Only trusted review domains (Sound On Sound, MusicRadar, Sweetwater, Thomann, Equipboard, Sonic State, etc.)
 
 ---
 
@@ -114,46 +86,45 @@ docker-compose up -d          # Start Redis + Postgres + Flower + Workers
 | GET    | `/api/conductor/categories` | Category summary         |
 | GET    | `/api/conductor/refresh`    | Force cache refresh      |
 
-### Skills & Pipeline
+### JIT Intelligence
 
-| Method | Path                         | Description          |
-| ------ | ---------------------------- | -------------------- |
-| POST   | `/api/copilot/pipeline`      | Run full pipeline    |
-| POST   | `/api/copilot/batch-ingest`  | Batch processing     |
-| POST   | `/api/copilot/execute-skill` | Execute single skill |
-| GET    | `/api/copilot/skills`        | List skills          |
+| Method | Path                           | Description                        |
+| ------ | ------------------------------ | ---------------------------------- |
+| POST   | `/api/jit/product/{id}`       | SSE stream of live intelligence    |
 
-### Sync
+### System
 
-| Method | Path                        | Description  |
-| ------ | --------------------------- | ------------ |
-| POST   | `/api/copilot/sync`         | Sync product |
-| POST   | `/api/copilot/sync-batch`   | Batch sync   |
-| GET    | `/api/copilot/sync/history` | Sync history |
-
-### Task Queue
-
-| Method | Path                     | Description |
-| ------ | ------------------------ | ----------- |
-| POST   | `/api/tasks/submit`      | Submit task |
-| GET    | `/api/tasks/{id}/status` | Task status |
-| GET    | `/api/tasks/queue/stats` | Queue stats |
+| Method | Path                | Description        |
+| ------ | ------------------- | ------------------ |
+| GET    | `/api/health`       | Service health     |
+| GET    | `/api/catalog/health` | Data quality     |
 
 ---
 
 ## Core Components
 
-| Module                 | File                            | Purpose                                  |
-| ---------------------- | ------------------------------- | ---------------------------------------- |
-| **Agent Orchestrator** | `unified_agent_orchestrator.py` | Trinity Swarm (3 agents + orchestration) |
-| **Data Service**       | `unified_data_service.py`       | Normalization, aggregation, sync         |
-| **Quality Gates**      | `unified_quality_gates.py`      | Audit, security, feedback, memory        |
-| **Learning System**    | `unified_learning_system.py`    | Agent learning & improvement loops       |
-| **Task Queue**         | `celery_config.py` + `tasks.py` | Async distributed execution              |
-| **Ingestion Pipeline** | `ingestion/orchestrator.py`     | 7-phase pipeline orchestration           |
-| **Visual Validator**   | `ingestion/visual_validator.py` | Image verification via Gemini 2.0-flash  |
-| **API Server**         | `server.py`                     | FastAPI + enriched catalog               |
-| **CLI**                | `conductor_main.py`             | Command-line interface                   |
+| Module               | File                        | Purpose                             |
+| -------------------- | --------------------------- | ----------------------------------- |
+| **API Server**       | `server.py`                 | FastAPI + catalog + JIT endpoint    |
+| **JIT Agent**        | `jit_agent.py`              | Gemini-powered live intelligence    |
+| **Trusted Sources**  | `trusted_sources.py`        | Golden Circle whitelist             |
+| **Skeleton Sync**    | `skeleton_sync.py`          | Lightweight Halilit inventory fetch |
+| **Source Rules**     | `source_rules.py`           | THE LAW — data provenance rules    |
+| **Data Service**     | `unified_data_service.py`   | Catalog aggregation                 |
+| **Product Normalizer** | `product_normalizer.py`   | Catalog building & normalization    |
+| **CLI**              | `conductor_main.py`         | Command-line interface              |
+| **MCP**              | `mcp/`                      | Model Context Protocol tools        |
+
+### Frontend
+
+| Module               | File                              | Purpose                          |
+| -------------------- | --------------------------------- | -------------------------------- |
+| **Galaxy Dashboard** | `views/GalaxyDashboard.tsx`       | Category browser                 |
+| **Product Cockpit**  | `views/ProductPage.tsx`           | Mission Control product view     |
+| **JIT Hook**         | `hooks/useJITIntelligence.ts`     | SSE consumer for JIT stream      |
+| **Brand Themes**     | `styles/brandThemes.ts`           | Brand visual DNA                 |
+| **Slot Backgrounds** | `lib/slotBackgrounds.ts`          | Category contextual backgrounds  |
+| **Cockpit Cards**    | `components/cockpit/*`            | VerdictCard, FieldNotes, etc.    |
 
 ---
 
@@ -165,7 +136,7 @@ rm -rf backend/__pycache__ && PYTHONPATH=. python3 backend/server.py
 
 # Frontend shows "No Products"
 curl http://localhost:8000/api/conductor/catalog
-# If empty: PYTHONPATH=. python3 backend/conductor_main.py sync
+# If empty: PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync
 
 # Port in use
 lsof -i :8000 && kill -9 <PID>
@@ -173,10 +144,10 @@ lsof -i :8000 && kill -9 <PID>
 
 ### Repo Strategy
 
-- **Tracked**: Source code, static assets (thumbnails, logos, backgrounds), config
-- **Gitignored**: Brand JSONs, shards, search indexes, pipeline data, `dist/`, `node_modules/`
-- **Generated at runtime**: Product data from ingestion pipeline or `conductor_main.py sync`
+- **Tracked**: Source code, static assets (logos, backgrounds), config
+- **Gitignored**: Brand JSONs, inventory, search indexes, pipeline data, `dist/`, `node_modules/`
+- **Generated at runtime**: inventory.json from skeleton-sync, JIT cache from agent
 
 ---
 
-**v8.5.0** · February 13, 2026
+**v9.0.0** · February 14, 2026

@@ -42,41 +42,57 @@ let items: SearchItem[] = [];
 let initialized = false;
 
 /**
- * Initialize search engine with items from search_index.json
+ * Initialize search engine with items from search_index.json or search_index_min.json.
+ * If the file is missing or returns HTML (e.g. SPA fallback), uses empty array so the app does not crash.
  */
 async function initializeSearch(): Promise<void> {
   if (initialized) return;
 
-  try {
-    const response = await fetch(`/data/search_index.json?v=${Date.now()}`);
-    if (!response.ok) {
-      throw new Error(`Failed to load search index: ${response.status}`);
+  const urls = [
+    `/data/search_index_min.json?v=${Date.now()}`,
+    `/data/search_index.json?v=${Date.now()}`,
+  ];
+
+  for (const url of urls) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) continue;
+
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/json")) continue;
+
+      const text = await response.text();
+      if (!text.trim() || text.trimStart().startsWith("<")) continue;
+
+      const parsed = JSON.parse(text) as SearchItem[];
+      items = Array.isArray(parsed) ? parsed : [];
+      break;
+    } catch {
+      continue;
     }
+  }
 
-    items = (await response.json()) as SearchItem[];
+  fuse = new Fuse(items, {
+    keys: [
+      { name: "label", weight: 2.0 },
+      { name: "brand_name", weight: 1.5 },
+      { name: "keywords", weight: 1.2 },
+      { name: "category", weight: 1.0 },
+      { name: "subcategory", weight: 0.8 },
+      { name: "description", weight: 0.5 },
+    ],
+    threshold: 0.3,
+    includeScore: true,
+    useExtendedSearch: true,
+    minMatchCharLength: 2,
+    ignoreLocation: true,
+  });
 
-    // Configure Fuse.js for fuzzy search
-    fuse = new Fuse(items, {
-      keys: [
-        { name: "label", weight: 2.0 }, // Product name
-        { name: "brand_name", weight: 1.5 }, // Brand name
-        { name: "keywords", weight: 1.2 }, // Keywords
-        { name: "category", weight: 1.0 }, // Category
-        { name: "subcategory", weight: 0.8 }, // Subcategory
-        { name: "description", weight: 0.5 }, // Description
-      ],
-      threshold: 0.3, // 70% match required
-      includeScore: true,
-      useExtendedSearch: true,
-      minMatchCharLength: 2,
-      ignoreLocation: true,
-    });
-
-    initialized = true;
+  initialized = true;
+  if (import.meta.env?.DEV && items.length === 0) {
+    console.log("[SearchWorker] Initialized with 0 items (no search index or empty catalog)");
+  } else {
     console.log(`[SearchWorker] Initialized with ${items.length} items`);
-  } catch (error) {
-    console.error("[SearchWorker] Initialization failed:", error);
-    throw error;
   }
 }
 

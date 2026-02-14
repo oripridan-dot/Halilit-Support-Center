@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import {
   LayoutGrid,
   Guitar,
@@ -17,7 +17,6 @@ import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
 import { CategorySlot } from "./galaxy/CategorySlot";
 import { getContextBackground } from "../../lib/slotBackgrounds";
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 
 // Icon mapping for sectors
 const ICON_MAP: Record<string, React.ElementType> = {
@@ -30,76 +29,89 @@ const ICON_MAP: Record<string, React.ElementType> = {
   HelpCircle,
 };
 
-// --- ADAPTATION LAYER: Map Universal Categories to "Galaxy" shape ---
-const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
-  return {
-    id: cat.id,
-    name: cat.label,
-    icon: cat.iconName,
-    iconComponent: ICON_MAP[cat.iconName] || HelpCircle,
-    color: cat.color,
-    children: cat.spectrum.map((sub) => {
-      const bgConfig = getContextBackground(sub.id);
-      return {
-        id: sub.id,
-        name: sub.label,
-        image: bgConfig.imageUrl,
-        fallbackGradient: bgConfig.fallbackGradient,
-      };
-    }),
-  };
-});
+// Map Universal Categories to "Galaxy" shape
+const galaxy = UNIVERSAL_CATEGORIES.map((cat) => ({
+  id: cat.id,
+  name: cat.label,
+  icon: cat.iconName,
+  iconComponent: ICON_MAP[cat.iconName] || HelpCircle,
+  color: cat.color,
+  children: cat.spectrum.map((sub) => {
+    const bgConfig = getContextBackground(sub.id);
+    return {
+      id: sub.id,
+      name: sub.label,
+      image: bgConfig.imageUrl,
+      fallbackGradient: bgConfig.fallbackGradient,
+    };
+  }),
+}));
 
 export const GalaxyDashboard = () => {
   const { goToSpectrum, goToCuration, goToSpectrumV2 } = useNavigationStore();
+  const [dismissedHint, setDismissedHint] = useState(false);
   const {
-    products,
     isLoading,
+    error,
+    refetch,
     galaxyCounts,
     spectrumCounts,
-    indexes,
     metadata,
   } = useConductorCatalog();
 
-  // Stable callback — avoids re-creating on every render
+  const isSampleOnly =
+    !isLoading &&
+    metadata?.brands?.length === 1 &&
+    metadata.brands[0]?.toLowerCase() === "sample";
+
   const onSlotClick = useCallback(
     (mainId: string, subId: string) => goToSpectrum(mainId, subId, []),
     [goToSpectrum],
   );
 
-  // Use spectrum-level counts for individual subcategory slots
-  const categorySpectrumCounts = spectrumCounts;
-
-  // Pre-compute brand logos per spectrum using index-based lookups
-  const brandsBySpectrum = useMemo(() => {
-    const map: Record<string, Array<{ brand: string; logoUrl: string }>> = {};
-    for (const sector of galaxy) {
-      for (const sub of sector.children) {
-        const specIdxs = indexes.by_spectrum[sub.id] || [];
-        // Extract unique brands from pre-filtered products
-        const seen = new Set<string>();
-        const logos: Array<{ brand: string; logoUrl: string }> = [];
-        for (const i of specIdxs) {
-          const p = products[i];
-          if (!p?.brand || seen.has(p.brand)) continue;
-          seen.add(p.brand);
-          const logoUrl = getBrandLogoUrl(p.brand);
-          if (logoUrl) {
-            logos.push({ brand: p.brand, logoUrl });
-            if (logos.length >= 4) break;
-          }
-        }
-        map[sub.id] = logos;
-      }
-    }
-    return map;
-  }, [products, indexes]);
-
   return (
     <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
-      {/* ------------------------------------------------------------------
-          HEADER
-         ------------------------------------------------------------------ */}
+      {/* Sample-only hint */}
+      {isSampleOnly && !dismissedHint && (
+        <div className="shrink-0 bg-blue-950/80 border-b border-blue-600/40 px-6 py-2.5 flex items-center justify-between gap-4">
+          <p className="text-blue-200 text-sm">
+            Showing <strong>sample data</strong>. Run{" "}
+            <code className="bg-black/30 px-1 rounded font-mono text-xs">
+              skeleton-sync
+            </code>{" "}
+            to load real products from Halilit.com.
+          </p>
+          <button
+            type="button"
+            onClick={() => setDismissedHint(true)}
+            className="shrink-0 text-blue-400 hover:text-blue-300 text-xs"
+          >
+            Dismiss
+          </button>
+        </div>
+      )}
+
+      {/* Error banner */}
+      {error && !isLoading && (
+        <div className="shrink-0 bg-amber-950/90 border-b border-amber-600/40 px-6 py-3 flex items-center justify-between gap-4">
+          <p className="text-amber-200 text-sm">
+            Could not load catalog. Run{" "}
+            <code className="bg-black/30 px-1.5 py-0.5 rounded font-mono text-xs">
+              ./start.sh
+            </code>{" "}
+            to start the backend.
+          </p>
+          <button
+            type="button"
+            onClick={() => refetch()}
+            className="shrink-0 px-3 py-1.5 bg-amber-600/30 hover:bg-amber-600/50 border border-amber-500/40 rounded text-amber-200 text-xs font-medium"
+          >
+            Retry
+          </button>
+        </div>
+      )}
+
+      {/* Header */}
       <header className="h-14 flex items-center justify-between px-6 bg-zinc-950/80 backdrop-blur-md z-10 border-b border-zinc-800/50 shrink-0">
         <div className="flex items-center gap-3">
           <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
@@ -121,87 +133,63 @@ export const GalaxyDashboard = () => {
           )}
         </div>
 
-        {/* Catalog Health Indicator */}
-        {metadata?.health_score !== undefined && (
-          <div className="flex items-center gap-2 bg-zinc-900/60 border border-zinc-800/50 rounded-lg px-3 py-1.5">
-            <Database className="w-3 h-3 text-zinc-500" />
-            <div className="flex items-center gap-1.5">
-              <div
-                className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-                  metadata.health_status === "COMPLETE"
-                    ? "bg-emerald-400"
-                    : metadata.health_status === "GOOD"
-                      ? "bg-green-400"
-                      : metadata.health_status === "PARTIAL"
-                        ? "bg-amber-400"
-                        : "bg-red-400"
-                }`}
-              />
-              <span
-                className={`text-xs font-bold tabular-nums ${
-                  metadata.health_status === "COMPLETE"
-                    ? "text-emerald-400"
-                    : metadata.health_status === "GOOD"
-                      ? "text-green-400"
-                      : metadata.health_status === "PARTIAL"
-                        ? "text-amber-400"
-                        : "text-red-400"
-                }`}
-              >
-                {metadata.health_score}%
-              </span>
-            </div>
-            {metadata.status_counts && (
-              <div className="flex gap-1 ml-1 border-l border-zinc-800 pl-2">
-                {Object.entries(metadata.status_counts).map(
-                  ([status, count]) =>
-                    (count as number) > 0 && (
-                      <span
-                        key={status}
-                        className={`text-[9px] px-1.5 py-0.5 rounded-md font-semibold ${
-                          status === "COMPLETE"
-                            ? "bg-emerald-500/10 text-emerald-400"
-                            : status === "GOOD"
-                              ? "bg-green-500/10 text-green-400"
-                              : status === "PARTIAL"
-                                ? "bg-amber-500/10 text-amber-400"
-                                : "bg-red-500/10 text-red-400"
-                        }`}
-                      >
-                        {count as number}
-                      </span>
-                    ),
-                )}
+        <div className="flex items-center gap-2">
+          {/* Catalog Health */}
+          {metadata?.health_score !== undefined && (
+            <div className="flex items-center gap-2 bg-zinc-900/60 border border-zinc-800/50 rounded-lg px-3 py-1.5">
+              <Database className="w-3 h-3 text-zinc-500" />
+              <div className="flex items-center gap-1.5">
+                <div
+                  className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                    metadata.health_status === "COMPLETE"
+                      ? "bg-emerald-400"
+                      : metadata.health_status === "GOOD"
+                        ? "bg-green-400"
+                        : metadata.health_status === "PARTIAL"
+                          ? "bg-amber-400"
+                          : "bg-red-400"
+                  }`}
+                />
+                <span
+                  className={`text-xs font-bold tabular-nums ${
+                    metadata.health_status === "COMPLETE"
+                      ? "text-emerald-400"
+                      : metadata.health_status === "GOOD"
+                        ? "text-green-400"
+                        : metadata.health_status === "PARTIAL"
+                          ? "text-amber-400"
+                          : "text-red-400"
+                  }`}
+                >
+                  {metadata.health_score}%
+                </span>
               </div>
-            )}
-          </div>
-        )}
-        {/* Spectrum V2 button */}
-        <button
-          onClick={goToSpectrumV2}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600/15 hover:bg-blue-600/30 border border-blue-500/20 rounded-lg text-blue-400 text-xs font-semibold transition-all ml-2"
-          title="Spectrum V2 — Model Grouping & Semantic Zoom"
-        >
-          <Telescope size={12} />
-          Spectrum V2
-        </button>
-        {/* Curation button */}
-        <button
-          onClick={goToCuration}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600/15 hover:bg-violet-600/30 border border-violet-500/20 rounded-lg text-violet-400 text-xs font-semibold transition-all ml-2"
-          title="Product Graph Curation"
-        >
-          <Layers size={12} />
-          Curation
-        </button>
+            </div>
+          )}
+
+          <button
+            onClick={goToSpectrumV2}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600/15 hover:bg-blue-600/30 border border-blue-500/20 rounded-lg text-blue-400 text-xs font-semibold transition-all"
+            title="Spectrum V2"
+          >
+            <Telescope size={12} />
+            Spectrum V2
+          </button>
+
+          <button
+            onClick={goToCuration}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600/15 hover:bg-violet-600/30 border border-violet-500/20 rounded-lg text-violet-400 text-xs font-semibold transition-all"
+            title="Product Graph Curation"
+          >
+            <Layers size={12} />
+            Curation
+          </button>
+        </div>
       </header>
 
-      {/* ------------------------------------------------------------------
-          MAIN CONTENT: 6 SECTOR CARDS GRID WITH SUBCATEGORIES
-         ------------------------------------------------------------------ */}
+      {/* Main Content Grid */}
       <div className="flex-1 p-5 min-h-0 w-full h-full text-[10px]">
         {isLoading ? (
-          /* Loading skeleton grid */
           <div className="grid grid-cols-3 grid-rows-2 gap-5 h-full w-full mx-auto animate-pulse">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
@@ -224,7 +212,6 @@ export const GalaxyDashboard = () => {
             ))}
           </div>
         ) : (
-          /* Sector cards grid */
           <div className="grid grid-cols-3 grid-rows-2 gap-5 h-full w-full mx-auto">
             {galaxy.map((sector, sectorIdx) => (
               <div
@@ -249,7 +236,6 @@ export const GalaxyDashboard = () => {
                   <h2 className="font-semibold uppercase tracking-wider text-zinc-200 text-xs truncate">
                     {sector.name}
                   </h2>
-                  {/* Sector product count */}
                   {galaxyCounts[sector.id] !== undefined && (
                     <span className="ml-auto text-[9px] text-zinc-600 font-medium tabular-nums shrink-0">
                       {galaxyCounts[sector.id]}
@@ -257,7 +243,7 @@ export const GalaxyDashboard = () => {
                   )}
                 </div>
 
-                {/* Subcategory Grid */}
+                {/* Subcategory Slots */}
                 <div className="flex-1 p-3 grid grid-cols-4 gap-3 content-start overflow-hidden">
                   {sector.children.map((sub) => (
                     <CategorySlot
@@ -271,9 +257,8 @@ export const GalaxyDashboard = () => {
                       count={
                         isLoading
                           ? undefined
-                          : (categorySpectrumCounts[sub.id] ?? 0)
+                          : (spectrumCounts[sub.id] ?? 0)
                       }
-                      brands={brandsBySpectrum[sub.id] ?? []}
                       onClick={() => onSlotClick(sector.id, sub.id)}
                     />
                   ))}

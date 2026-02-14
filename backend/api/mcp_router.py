@@ -2,19 +2,15 @@
 
 from __future__ import annotations
 
-import os
-from pathlib import Path
 from fastapi import APIRouter, HTTPException
 
 from backend.mcp.registry import get_registry
 from backend.catalog_validator import validate_product, validate_catalog, resolve_product, resolve_catalog
 from backend.product_normalizer import build_catalog
+from backend.project_config import FRONTEND_PUBLIC_DATA
 
 router = APIRouter(prefix="/api/mcp", tags=["MCP"])
-
-# Data directory for catalog operations
-_DATA_DIR = str(Path(__file__).parent.parent.parent /
-                "frontend" / "public" / "data")
+_DATA_DIR = str(FRONTEND_PUBLIC_DATA)
 
 
 @router.get("/servers")

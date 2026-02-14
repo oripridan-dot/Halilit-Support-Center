@@ -4,7 +4,7 @@
  * This is the SINGLE source of truth for all TypeScript types.
  * Types are aligned with the backend pipeline output format.
  *
- * Run `python -m backend.pipeline types` to regenerate generated.ts
+ * Types auto-generated from backend data models.
  */
 
 // Re-export auto-generated types from backend

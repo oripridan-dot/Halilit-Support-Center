@@ -14,6 +14,7 @@ from typing import Any
 
 import httpx
 
+from backend import __version__
 from backend.mcp.schemas import (
     MCPError,
     MCPRequest,
@@ -194,7 +195,7 @@ class MCPClient:
                 method="initialize",
                 params={
                     "protocolVersion": "2024-11-05",
-                    "clientInfo": {"name": "halilit-support-center", "version": "8.3"},
+                    "clientInfo": {"name": "halilit-support-center", "version": __version__},
                     "capabilities": {},
                 },
             )

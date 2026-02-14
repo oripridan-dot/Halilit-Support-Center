@@ -28,6 +28,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime, timedelta
 
+from backend import __version__
 from backend.ingestion.ingestion_database import get_ingestion_database
 from backend.ingestion.taxonomy_manager import get_taxonomy_manager
 from backend.source_rules import (
@@ -41,10 +42,10 @@ logger = logging.getLogger("UnifiedDataService")
 # CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════════════
 
-INGESTION_DIR = Path(
-    "/workspaces/Halilit-Support-Center/backend/data/ingestion")
-FRONTEND_DATA_DIR = Path(
-    "/workspaces/Halilit-Support-Center/frontend/public/data")
+from backend.project_config import INGESTION_DATA_DIR, FRONTEND_PUBLIC_DATA
+
+INGESTION_DIR = INGESTION_DATA_DIR
+FRONTEND_DATA_DIR = FRONTEND_PUBLIC_DATA
 
 # Cache with 5-minute TTL
 CACHE_TTL_SECONDS = 300
@@ -202,11 +203,6 @@ class DataNormalizer:
             "official_images": official_images,
             "official_url": raw_product.get("official_url"),
 
-            # ===== REVIEWS & RATINGS =====
-            "reviews": raw_product.get("reviews") or [],
-            "review_synthesis": raw_product.get("review_synthesis"),
-            "average_rating": raw_product.get("average_rating"),
-
             # ===== WORKFLOW STATUS =====
             "status": raw_product.get("status", "approved"),
             "pipeline_phase": raw_product.get("pipeline_phase", "complete"),
@@ -278,7 +274,7 @@ class DataNormalizer:
             "cross_validation_status": raw_product.get("cross_validation_status", "pending"),
 
             # ===== CONTEXTUAL DATA (Reviews from 3+ trusted sources) =====
-            "reviews": raw_product.get("reviews", []),
+            "reviews": raw_product.get("reviews") or [],
             "review_sources": raw_product.get("review_sources", []),
             "review_pros": raw_product.get("review_pros", []),
             "review_cons": raw_product.get("review_cons", []),
@@ -606,6 +602,7 @@ class ConductorDataService:
             'pricing_tiers': [...],
             'display_roles': [...]
         }
+        Uses cached catalog for all_brands when cache is valid to avoid extra I/O.
         """
         try:
             all_categories = self.taxonomy_manager.get_all_categories()
@@ -625,8 +622,13 @@ class ConductorDataService:
                     ]
                 })
 
-            approved_by_brand = self.database.get_all_approved_products()
-            all_brands = sorted(list(approved_by_brand.keys()))
+            # Use cached catalog for brands when valid (avoids second get_all_approved_products)
+            now = datetime.utcnow()
+            if self._catalog_cache and self._cache_timestamp and (now - self._cache_timestamp).total_seconds() < CACHE_TTL_SECONDS:
+                all_brands = sorted(self._catalog_cache.get('metadata', {}).get('brands', []))
+            else:
+                approved_by_brand = self.database.get_all_approved_products()
+                all_brands = sorted(list(approved_by_brand.keys()))
 
             return {
                 'universal_categories': universal_categories,
@@ -673,68 +675,66 @@ class ConductorDataService:
         products = catalog['products']
         filters_applied = {}
 
-        # Apply each filter
+        # Normalize filter values once
+        brands_lower = None
         if 'brand' in filters:
-            brands = filters['brand']
-            if isinstance(brands, str):
-                brands = [brands]
-            brands_lower = [b.lower() for b in brands]
-            products = [p for p in products if (
-                p.get('brand', '').lower() in brands_lower)]
+            b = filters['brand']
+            brands_lower = [b.lower()] if isinstance(b, str) else [x.lower() for x in b]
             filters_applied['brand'] = filters['brand']
 
+        categories_lower = None
         if 'category' in filters:
-            categories = filters['category']
-            if isinstance(categories, str):
-                categories = [categories]
-            categories_lower = [c.lower() for c in categories]
-            products = [p for p in products if (
-                p.get('taxonomy', {}).get('canonical_category',
-                                          '').lower() in categories_lower
-            )]
+            c = filters['category']
+            categories_lower = [c.lower()] if isinstance(c, str) else [x.lower() for x in c]
             filters_applied['category'] = filters['category']
 
-        if 'search_query' in filters:
-            query = filters['search_query'].lower()
-            products = [p for p in products if self._matches_search(p, query)]
+        search_query = filters.get('search_query', '').lower() if 'search_query' in filters else None
+        if search_query is not None:
             filters_applied['search_query'] = filters['search_query']
 
+        tiers = None
         if 'pricing_tier' in filters:
-            tiers = filters['pricing_tier']
-            if isinstance(tiers, str):
-                tiers = [tiers]
-            products = [p for p in products if (
-                p.get('pricing', {}).get('tier') in tiers
-            )]
+            t = filters['pricing_tier']
+            tiers = [t] if isinstance(t, str) else list(t)
             filters_applied['pricing_tier'] = filters['pricing_tier']
 
-        if 'min_price' in filters:
-            min_price = float(filters['min_price'])
-            products = [p for p in products if (
-                p.get('pricing', {}).get('price_il', 0) >= min_price
-            )]
+        min_price = float(filters['min_price']) if 'min_price' in filters else None
+        if min_price is not None:
             filters_applied['min_price'] = min_price
-
-        if 'max_price' in filters:
-            max_price = float(filters['max_price'])
-            products = [p for p in products if (
-                p.get('pricing', {}).get('price_il', float('inf')) <= max_price
-            )]
+        max_price = float(filters['max_price']) if 'max_price' in filters else None
+        if max_price is not None:
             filters_applied['max_price'] = max_price
 
+        roles = None
         if 'display_role' in filters:
-            roles = filters['display_role']
-            if isinstance(roles, str):
-                roles = [roles]
-            products = [p for p in products if (
-                p.get('display', {}).get('display_role') in roles
-            )]
+            r = filters['display_role']
+            roles = [r] if isinstance(r, str) else list(r)
             filters_applied['display_role'] = filters['display_role']
 
+        # Single-pass filter: one iteration over products
+        def passes(p):
+            if brands_lower is not None and p.get('brand', '').lower() not in brands_lower:
+                return False
+            if categories_lower is not None and (p.get('taxonomy', {}).get('canonical_category') or '').lower() not in categories_lower:
+                return False
+            if search_query is not None and not self._matches_search(p, search_query):
+                return False
+            if tiers is not None and p.get('pricing', {}).get('tier') not in tiers:
+                return False
+            if min_price is not None and (p.get('pricing', {}).get('price_il', 0) or 0) < min_price:
+                return False
+            if max_price is not None and (p.get('pricing', {}).get('price_il') or float('inf')) > max_price:
+                return False
+            if roles is not None and p.get('display', {}).get('display_role') not in roles:
+                return False
+            return True
+
+        filtered = [p for p in products if passes(p)]
+
         return {
-            'products': products,
+            'products': filtered,
             'filters_applied': filters_applied,
-            'total_results': len(products),
+            'total_results': len(filtered),
             'source': 'conductor_verified'
         }
 
@@ -831,23 +831,59 @@ class ConductorDataService:
             'description_short': product.get('description_short', ''),
             'description_long': product.get('description_long', ''),
             'validation_status': product.get('validation_status', 'approved'),
-            'source': product.get('primary_source', {}).get('source_name', 'unknown'),
-            'confidence': product.get('primary_source', {}).get('confidence', 'commercial')
+            'source': (product.get('primary_source') or {}).get('source_name', 'unknown') if isinstance(product.get('primary_source'), dict) else 'unknown',
+            'confidence': (product.get('primary_source') or {}).get('confidence', 'commercial') if isinstance(product.get('primary_source'), dict) else 'commercial'
         }
 
     def _extract_image_url(self, product: Dict[str, Any], purpose: str) -> Optional[str]:
-        """Extract image URL from product media assets."""
-        if 'display' in product:
-            if purpose == 'hero' and product['display'].get('hero_image'):
-                return product['display']['hero_image']
-            if purpose == 'thumbnail' and product['display'].get('thumbnail_image'):
-                return product['display']['thumbnail_image']
+        """Extract image URL from product; supports display, media_assets, official_images, image_hero."""
+        def url_from(val) -> Optional[str]:
+            if val is None:
+                return None
+            if isinstance(val, str) and val.strip():
+                return val.strip()
+            if isinstance(val, dict) and val.get('url'):
+                return val.get('url')
+            return None
 
-        media_assets = product.get('media_assets', []) or product.get(
-            'display', {}).get('media_assets', [])
+        if 'display' in product:
+            disp = product['display']
+            if purpose == 'hero':
+                u = url_from(disp.get('hero_image'))
+                if u:
+                    return u
+            if purpose == 'thumbnail':
+                u = url_from(disp.get('thumbnail_image'))
+                if u:
+                    return u
+
+        media_assets = product.get('media_assets', []) or product.get('display', {}).get('media_assets', [])
         for asset in media_assets:
-            if asset.get('display_purpose') == purpose:
-                return asset.get('url')
+            if isinstance(asset, dict) and asset.get('display_purpose') == purpose:
+                u = asset.get('url')
+                if u:
+                    return u
+
+        # Fallbacks: top-level image_hero / official_images (pipeline output shape)
+        if purpose == 'hero':
+            u = url_from(product.get('image_hero'))
+            if u:
+                return u
+            official = product.get('official_images') or product.get('image_gallery')
+            if isinstance(official, list) and official:
+                u = url_from(official[0])
+                if u:
+                    return u
+        if purpose == 'thumbnail':
+            official = product.get('official_images') or product.get('image_gallery')
+            if isinstance(official, list) and len(official) > 1:
+                u = url_from(official[1])
+                if u:
+                    return u
+            if isinstance(official, list) and official:
+                u = url_from(official[0])
+                if u:
+                    return u
 
         return None
 
@@ -1089,7 +1125,7 @@ class IngestToFrontendSyncEngine:
             })
 
         index_data = {
-            "version": "8.3.0",
+            "version": __version__,
             "build_timestamp": datetime.now().isoformat(),
             "total_products": len(all_products),
             "total_verified": total_verified,

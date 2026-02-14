@@ -52,9 +52,27 @@ HEADERS = {
     "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 REQUEST_TIMEOUT = 12
-RATE_LIMIT_DELAY = 0.3  # seconds between requests
-MAX_SEARCH_PAGES = 50  # Up from 15 — support brands with 500+ products
-MAX_WORKERS = 4  # parallel page scrapes
+# Rate and concurrency from ingestion_config (sustainable defaults)
+def _ingestion_settings():
+    try:
+        from backend.ingestion.ingestion_config import (
+            RATE_LIMIT_DELAY as _R,
+            MAX_WORKERS as _W,
+            SCRAPE_BATCH_SIZE as _B,
+            BATCH_DELAY_SECONDS as _D,
+            MAX_PRODUCTS_PER_BRAND as _M,
+        )
+        return _R, _W, _B, _D, _M
+    except Exception:
+        return 0.5, 3, 40, 1.0, 0
+
+_RATE, _WORKERS, _BATCH, _BATCH_DELAY, _MAX_PRODUCTS = _ingestion_settings()
+RATE_LIMIT_DELAY = _RATE
+MAX_WORKERS = _WORKERS
+SCRAPE_BATCH_SIZE = _BATCH
+BATCH_DELAY_SECONDS = _BATCH_DELAY
+MAX_PRODUCTS_PER_BRAND = _MAX_PRODUCTS
+MAX_SEARCH_PAGES = 50  # support brands with 500+ products
 ITEMS_PER_PAGE = 25  # Halilit shows 25 items per search/brand page
 BRANDS_PAGE_URL = f"{HALILIT_BASE}/pages/4367"  # "המותגים שלנו" page
 BRAND_GROUP_PREFIX = f"{HALILIT_BASE}/g/5193"  # Brand group page pattern
@@ -708,15 +726,19 @@ class HalilitPageScraper:
         if max_products > 0:
             to_scrape = to_scrape[:max_products]
 
+        if MAX_PRODUCTS_PER_BRAND > 0:
+            to_scrape = to_scrape[:MAX_PRODUCTS_PER_BRAND]
+            logger.info(f"  Capped at {len(to_scrape)} products (INGESTION_MAX_PRODUCTS)")
+
         logger.info(f"  Scraping {len(to_scrape)} product pages...")
 
-        # Phase 2: Scrape each product page (with parallelism)
+        # Phase 2: Scrape each product page (with parallelism + inter-batch delay)
         products = []
         failed = 0
-
-        # Process in batches to log progress for large brands
-        batch_size = 50
+        batch_size = SCRAPE_BATCH_SIZE
         for batch_start in range(0, len(to_scrape), batch_size):
+            if batch_start > 0 and BATCH_DELAY_SECONDS > 0:
+                time.sleep(BATCH_DELAY_SECONDS)
             batch = to_scrape[batch_start:batch_start + batch_size]
             batch_num = batch_start // batch_size + 1
             total_batches = (len(to_scrape) + batch_size - 1) // batch_size
@@ -742,6 +764,22 @@ class HalilitPageScraper:
                         logger.warning(
                             f"  Failed to scrape {listing['url']}: {e}")
                         failed += 1
+
+            # Progress file for monitoring (scrape phase)
+            try:
+                from backend.ingestion.ingestion_config import get_progress_dir
+                prog = get_progress_dir() / f"{brand}.json"
+                import json
+                prog.write_text(json.dumps({
+                    "brand": brand,
+                    "phase": "scrape",
+                    "batch_num": batch_num,
+                    "total_batches": total_batches,
+                    "scraped_so_far": len(products),
+                    "failed_so_far": failed,
+                }, indent=2))
+            except Exception:
+                pass
 
         logger.info(
             f"  ✅ Scraped {len(products)} products, {failed} failures"

@@ -1,11 +1,12 @@
 // frontend/src/App.tsx
 /**
- * UNIFIED DATA PIPELINE v8.5
+ * HALILIT SUPPORT CENTER — JIT Architecture
  *
- * Three screens that share the same data source:
- * 1. GalaxyDashboard - Category browser
- * 2. SpectrumModule - Product spectrum (TierBar is integrated)
- * 3. ProductPage - Full product analysis
+ * Four screens that share the same data source:
+ * 1. GalaxyDashboard - Category browser (galaxy view)
+ * 2. SpectrumModule - Product spectrum
+ * 3. ProductPage - Mission Control Cockpit (JIT intelligence)
+ * 4. CurationDashboard - Admin curation
  *
  * All screens consume data from: useConductorCatalog (React Query)
  */
@@ -14,8 +15,6 @@ import { GlobalSearch } from "./components/GlobalSearch";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
 import { Breadcrumbs } from "./components/ui/Breadcrumbs";
 import { useNavigationStore } from "./store/navigationStore";
-import { LearningFeed } from "./components/LearningFeed";
-import { useLearningStream } from "./hooks/useLearningStream";
 
 // Lazy load heavy views for code-splitting
 const GalaxyDashboard = lazy(() =>
@@ -63,9 +62,6 @@ function App() {
   // Extract strictly what we need
   const { currentView, activeProductId } = useNavigationStore();
 
-  // Initialize Learning Stream listener
-  useLearningStream();
-
   return (
     <GlobalErrorBoundary>
       <div className="flex h-screen w-screen flex-col bg-black text-white font-sans overflow-hidden">
@@ -99,9 +95,6 @@ function App() {
 
         {/* Main Stage */}
         <main className="flex-1 relative overflow-hidden">
-          {/* Real-time Learning Feed Overlay */}
-          <LearningFeed />
-
           {/* Screen 1: Galaxy Dashboard */}
           {currentView === "GALAXY" && (
             <div className="absolute inset-0 animate-fade-in">

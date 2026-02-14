@@ -1,11 +1,12 @@
 {
   "name": "halilit-support-center-root",
-  "version": "8.3.0",
+  "version": "9.0.0",
   "scripts": {
     "install:all": "pip install -r backend/requirements.txt && cd frontend && pnpm install",
-    "dev": "PYTHONPATH=/workspaces/Halilit-Support-Center python -m uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000 & cd frontend && pnpm dev",
-    "dev:backend": "PYTHONPATH=/workspaces/Halilit-Support-Center python -m uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000",
+    "dev": "PYTHONPATH=. python -m uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000 & cd frontend && pnpm dev",
+    "dev:backend": "PYTHONPATH=. python -m uvicorn backend.server:app --reload --host 0.0.0.0 --port 8000",
     "dev:frontend": "cd frontend && pnpm dev",
-    "prod": "PYTHONPATH=/workspaces/Halilit-Support-Center python -m uvicorn backend.server:app --host 0.0.0.0 --port 8000"
+    "prod": "PYTHONPATH=. python -m uvicorn backend.server:app --host 0.0.0.0 --port 8000",
+    "skeleton-sync": "PYTHONPATH=. python3 backend/skeleton_sync.py"
   }
 }

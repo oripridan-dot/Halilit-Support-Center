@@ -19,7 +19,10 @@ from backend.ingestion.data_models import (
     DisplayRole, PricingTier, MediaAsset, DisplayProperties,
     IngestionProductDraft, DataSourceConfidence
 )
-from backend.ingestion.visual_validator import get_visual_validator
+try:
+    from backend.ingestion.visual_validator import get_visual_validator
+except ImportError:
+    get_visual_validator = None  # JIT architecture — visual validator removed
 
 logger = logging.getLogger("DisplayPreparationEngine")
 
@@ -426,14 +429,19 @@ class DisplayPreparationEngine:
             data_completeness > 0.75
         )
 
-        # Visual Validation
-        validator = get_visual_validator()
-        _, issues = validator.validate_display_readiness(
-            pricing_tier=pricing_tier,
-            display_role=display_role,
-            media_assets=sorted_media,
-            hero_image_url=hero_image
-        )
+        # Visual Validation (skip if visual_validator removed in JIT architecture)
+        issues = []
+        if get_visual_validator is not None:
+            try:
+                validator = get_visual_validator()
+                _, issues = validator.validate_display_readiness(
+                    pricing_tier=pricing_tier,
+                    display_role=display_role,
+                    media_assets=sorted_media,
+                    hero_image_url=hero_image
+                )
+            except Exception:
+                pass  # visual_validator unavailable
 
         if issues:
             self.logger.warning(

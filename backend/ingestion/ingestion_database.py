@@ -29,7 +29,10 @@ logger = logging.getLogger("IngestionDatabase")
 class IngestionDatabase:
     """Manages persistent storage of ingestion data"""
 
-    def __init__(self, base_path: str = "/workspaces/Halilit-Support-Center/backend/data/ingestion"):
+    def __init__(self, base_path: str | None = None):
+        if base_path is None:
+            from backend.project_config import INGESTION_DATA_DIR
+            base_path = str(INGESTION_DATA_DIR)
         self.base_path = Path(base_path)
         self.base_path.mkdir(parents=True, exist_ok=True)
         logger.info(f"IngestionDatabase initialized at {self.base_path}")
@@ -337,7 +340,7 @@ _db = None
 
 
 def get_ingestion_database(
-    base_path: str = "/workspaces/Halilit-Support-Center/backend/data/ingestion",
+    base_path: str | None = None,
 ) -> IngestionDatabase:
     """Get singleton IngestionDatabase instance"""
     global _db

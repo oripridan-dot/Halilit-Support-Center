@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState, useCallback, useMemo } from "react";
 
-interface BrandLogo {
-  brand: string;
-  logoUrl: string;
-}
-
 interface CategorySlotProps {
   id: string;
   name: string;
@@ -13,8 +8,7 @@ interface CategorySlotProps {
   fallbackGradient?: string;
   icon?: React.ElementType;
   mainColor?: string;
-  count?: number; // Optional product count
-  brands?: BrandLogo[]; // Brand logos for this category
+  count?: number;
   onClick: () => void;
 }
 
@@ -27,32 +21,24 @@ export const CategorySlot = React.memo(
     icon: Icon,
     mainColor = "#fff",
     count,
-    brands = [],
     onClick,
   }: CategorySlotProps) => {
     const [isHovered, setIsHovered] = useState(false);
     const [imgError, setImgError] = useState(false);
 
-    const isDisabled = false; // Allow clicking even with 0 count for now
-
     const handleMouseEnter = useCallback(() => setIsHovered(true), []);
     const handleMouseLeave = useCallback(() => setIsHovered(false), []);
     const handleImgError = useCallback(() => setImgError(true), []);
 
-    // Pre-compute spotlight gradient (stable across renders when mainColor doesn't change)
     const spotlightBg = useMemo(
       () =>
-        `radial-gradient(circle at 50% 0%, ${mainColor}15, transparent 60%)`,
+        `radial-gradient(circle at 50% 0%, ${mainColor}20, transparent 60%)`,
       [mainColor],
     );
 
     return (
       <motion.div
-        className={`relative aspect-square rounded-xl overflow-hidden group w-full flex flex-col transition-all duration-300 ring-1 shadow-2xl ${
-          isDisabled
-            ? "bg-[#0a0a0a] opacity-40 border border-zinc-900 cursor-not-allowed grayscale pointer-events-none"
-            : "bg-[#030303] cursor-pointer ring-white/5 hover:ring-white/20"
-        }`}
+        className="relative aspect-square rounded-xl overflow-hidden group w-full flex flex-col transition-all duration-300 ring-1 shadow-2xl bg-[#030303] cursor-pointer ring-white/5 hover:ring-white/20"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={onClick}
@@ -61,10 +47,9 @@ export const CategorySlot = React.memo(
         }}
         transition={{ duration: 0.1 }}
       >
-        {/* Container for the "Cave" effect */}
+        {/* Background Image Container */}
         <div className="flex-[3] relative w-full h-full overflow-hidden bg-[#050505]">
-          {/* The "Floor/Background" Image */}
-          {!imgError && !isDisabled ? (
+          {!imgError ? (
             <img
               src={image}
               alt={name}
@@ -73,41 +58,34 @@ export const CategorySlot = React.memo(
               className="w-full h-full object-cover transition-[transform,filter] duration-700 ease-out will-change-transform"
               style={{
                 filter: isHovered
-                  ? "contrast(110%) brightness(1.1)"
-                  : "contrast(100%) brightness(0.8)",
-                transform: isHovered ? "scale(1.1)" : "scale(1.0)",
+                  ? "contrast(110%) brightness(1.15) saturate(1.1)"
+                  : "contrast(105%) brightness(1.0) saturate(1.05)",
+                transform: isHovered ? "scale(1.08)" : "scale(1.0)",
               }}
             />
-          ) : isDisabled ? (
-            <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-950 text-zinc-800">
-              <div className="text-2xl opacity-20 selection:bg-none select-none">
-                ∅
-              </div>
-            </div>
           ) : (
-            <div className="flex items-center justify-center w-full h-full">
+            <div
+              className="flex items-center justify-center w-full h-full"
+              style={{ background: fallbackGradient || `linear-gradient(135deg, ${mainColor}20, #111)` }}
+            >
               {Icon &&
                 React.createElement(Icon, {
-                  className: "w-8 h-8",
+                  className: "w-8 h-8 opacity-40",
                   color: mainColor,
                 })}
             </div>
           )}
 
-          {/* -------------------------------------------------------- */}
-          {/* DEPTH OVERLAYS: Creating the "Carved In" Illusion        */}
-          {/* -------------------------------------------------------- */}
+          {/* Inner shadow for depth */}
+          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_10px_30px_rgba(0,0,0,0.7),inset_0_0_15px_rgba(0,0,0,0.6)] z-10" />
 
-          {/* 1. Deep Inner Shadow (Top/Sides) - The "Overhang" */}
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_10px_30px_rgba(0,0,0,0.9),inset_0_0_15px_rgba(0,0,0,0.8)] z-10" />
+          {/* Bottom edge highlight */}
+          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-white/15 z-20 mix-blend-overlay" />
 
-          {/* 2. Bottom Lip Highlight - The "Ledge" catching light */}
-          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-white/20 z-20 mix-blend-overlay" />
+          {/* Top cut shadow */}
+          <div className="absolute inset-x-0 top-0 h-[4px] bg-gradient-to-b from-black to-transparent z-20 opacity-70" />
 
-          {/* 3. Top Edge Shadow - Defining the cut */}
-          <div className="absolute inset-x-0 top-0 h-[4px] bg-gradient-to-b from-black to-transparent z-20 opacity-80" />
-
-          {/* Hover Spotlight */}
+          {/* Hover spotlight glow */}
           <div
             className="absolute inset-0 pointer-events-none transition-opacity duration-300"
             style={{
@@ -115,24 +93,34 @@ export const CategorySlot = React.memo(
               opacity: isHovered ? 1 : 0,
             }}
           />
+
+          {/* Bottom brand-color shine line on hover */}
+          <div
+            className="absolute inset-x-0 bottom-0 h-[2px] z-30 transition-opacity duration-300"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${mainColor}80, transparent)`,
+              opacity: isHovered ? 1 : 0,
+            }}
+          />
         </div>
 
-        {/* Label Area - Title + Brand Logos */}
-        <div className="flex-1 bg-zinc-950 flex flex-col items-center justify-center border-t border-zinc-800/50 shrink-0 px-2 py-1.5 relative z-10 gap-1">
-          {/* Title */}
+        {/* Label Area — crisp text, no logos */}
+        <div className="flex-1 bg-zinc-950 flex flex-col items-center justify-center border-t border-zinc-800/50 shrink-0 px-2 py-1.5 relative z-10 gap-0.5">
           <span
-            className="text-[10px] font-semibold uppercase tracking-wider text-center line-clamp-2 transition-colors duration-200 leading-tight"
+            className="text-[10px] font-bold uppercase tracking-[0.12em] text-center line-clamp-2 transition-colors duration-200 leading-tight"
             style={{
-              color: isHovered ? mainColor : "#d4d4d8",
+              color: isHovered ? mainColor : "#e4e4e7",
+              textShadow: isHovered
+                ? `0 0 12px ${mainColor}40`
+                : "0 1px 3px rgba(0,0,0,0.8)",
             }}
           >
             {name}
           </span>
 
-          {/* Product Count Badge */}
           {count !== undefined && count > 0 && (
             <span
-              className="text-[8px] font-medium px-1.5 py-px rounded-full transition-colors duration-200"
+              className="text-[8px] font-semibold px-1.5 py-px rounded-full transition-colors duration-200 tabular-nums"
               style={{
                 backgroundColor: isHovered
                   ? `${mainColor}15`
@@ -142,29 +130,6 @@ export const CategorySlot = React.memo(
             >
               {count}
             </span>
-          )}
-
-          {/* Brand Logos */}
-          {brands.length > 0 && (
-            <div className="w-full flex flex-wrap items-center justify-center gap-1 pt-1 border-t border-zinc-800/30">
-              {brands.slice(0, 4).map((brandLogo, idx) => (
-                <div
-                  key={`${brandLogo.brand}-${idx}`}
-                  className="flex-shrink-0 h-4 flex items-center justify-center bg-white/5 rounded px-1 hover:bg-white/10 transition-colors duration-200"
-                  title={brandLogo.brand}
-                >
-                  <img
-                    src={brandLogo.logoUrl}
-                    alt={brandLogo.brand}
-                    loading="lazy"
-                    className="h-full object-contain max-w-[24px] opacity-60 hover:opacity-80 transition-opacity duration-200"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
           )}
         </div>
       </motion.div>
