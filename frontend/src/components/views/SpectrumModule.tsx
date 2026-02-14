@@ -12,8 +12,9 @@ import {
   Package,
   Tag,
   Zap,
+  RotateCcw,
 } from "lucide-react";
-import { useMemo, useState, useCallback, useEffect } from "react";
+import { useMemo, useState, useCallback, useEffect, useRef } from "react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { getBrandLogoUrl } from "../../lib/brandLogoHelper";
 import type {
@@ -31,12 +32,48 @@ import { Surface } from "../ui/Surface";
 import { getBrandTheme } from "../../styles/brandThemes";
 import { generateSmartTags } from "../../lib/smartTags";
 
-// --- PRODUCT TYPE CLASSIFIER ---
-// Determines whether a product is the "primary" item for its subcategory
-// or a related accessory (bag, stand, cable, string, etc.)
-// Only primary products appear in the tracks; accessories surface via hover.
+// ===================================================================
+// CONSTANTS
+// ===================================================================
+
 const ACCESSORY_PATTERNS =
   /\b(bag|gig bag|case|hardcase|hard case|cover|strap|string|strings|pick|picks|plectrum|stand|mount|bracket|clamp|adapter|cable|cord|lead|tuner|capo|pedal|footswitch|power supply|charger|battery|replacement|spare|pad set|head set|mute|dampener|polish|cleaner|wax|oil|lube|cloth|toolkit|wrench|key|allen|screw|bolt|felt|washer|sleeve|bushing|grommet|wing nut|cymbal felt|hi hat clutch|drum key|practice pad)\b/i;
+
+// Tier price boundaries (ILS)
+const TIER_BOUNDARIES: Record<
+  string,
+  { min: number; max: number; color: string; label: string }
+> = {
+  entry: { min: 0, max: 500, color: "#22c55e", label: "Entry" },
+  mid: { min: 500, max: 1500, color: "#3b82f6", label: "Mid" },
+  pro: { min: 1500, max: 4000, color: "#a855f7", label: "Pro" },
+  flagship: { min: 4000, max: 200000, color: "#f59e0b", label: "Flagship" },
+};
+
+
+// ===================================================================
+// TYPES
+// ===================================================================
+
+interface DisplayItem {
+  type: "product" | "family";
+  representative: ConductorProduct;
+  variantCount: number;
+  familyId: string | null;
+  familyProducts: ConductorProduct[];
+  sortPrice: number;
+  series: string | null;
+}
+
+interface SubTrackData {
+  key: string;
+  label: string;
+  items: DisplayItem[];
+}
+
+// ===================================================================
+// UTILITY FUNCTIONS
+// ===================================================================
 
 const isAccessoryProduct = (
   product: ConductorProduct,
@@ -44,10 +81,6 @@ const isAccessoryProduct = (
 ): boolean => {
   const name = product.name || "";
   const nameLower = name.toLowerCase();
-
-  // If the spectrum is about the main product category, accessories don't belong
-  // E.g., in "electric-guitars", a guitar bag is an accessory
-  // But in "guitar-accessories", a guitar bag IS the product
   if (
     spectrumId.includes("accessor") ||
     spectrumId.includes("parts") ||
@@ -57,54 +90,324 @@ const isAccessoryProduct = (
     spectrumId.includes("bags") ||
     spectrumId.includes("strings")
   ) {
-    return false; // In an accessory category, nothing is "accessory"
+    return false;
   }
-
-  // Check if product name matches accessory patterns
   if (ACCESSORY_PATTERNS.test(nameLower)) return true;
-
   return false;
 };
 
-// --- RELEVANCE ENGINE ---
-// Calculates a 0-100 score for Y-Axis positioning
 const calculateRelevance = (p: ConductorProduct): number => {
-  let score = 50; // Base score
-
-  // 1. Data Quality Bonuses
+  let score = 50;
   if (p.image_url) score += 20;
   if (p.price > 0) score += 10;
   if (p.rating > 0) score += 10;
-
-  // 2. "Flagship" detection
   if (p.price > 2000 && p.price < 15000) score += 10;
-
-  // 3. Penalty for missing images
   if (!p.image_url) score -= 30;
-
-  // 4. Deterministic "Random" spice based on ID
   const idSpice =
     (p.id || "").split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) %
     20;
-
   return Math.min(100, Math.max(0, score + idSpice));
 };
 
-// --- HEALTH CHECK ENGINE ---
 const isProductHealthy = (p: ConductorProduct): boolean => {
-  // Must have a name
   if (!p.name || p.name.trim().length === 0) return false;
-  // Must have a price (0 = "Price on request" → still show it)
-  // Only hide truly broken entries
   return true;
 };
 
-// --- BRAND LOGO HELPER ---
+const isRealImage = (url: string | undefined): boolean => {
+  if (!url) return false;
+  return (
+    url.startsWith("http") &&
+    !url.includes("placeholder") &&
+    !url.includes("brand.com") &&
+    !url.includes("example.com") &&
+    url.length > 20
+  );
+};
+
+const stringToHue = (str: string): number => {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return Math.abs(hash) % 360;
+};
+
+const hexToRgb = (hex: string): string => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+    : "100, 100, 100";
+};
+
+/** Get effective price for positioning (uses market estimate as fallback) */
+const getEffectivePrice = (p: ConductorProduct): number => {
+  if (p.price > 0) return p.price;
+  if (p.market_price_estimate > 0) return p.market_price_estimate;
+  return 0;
+};
+
+/**
+ * Focus-zone image preloader — debounced preloading of images for products
+ * that enter the focus zone. Two strategies:
+ *   1. Browser preload: for products that already have image URLs
+ *   2. Batch lookup: for products missing images, check JIT cache via API
+ * Context-zone products never trigger any image requests.
+ */
+const useFocusImagePreloader = (
+  products: ConductorProduct[],
+  focusRange: [number, number],
+) => {
+  const preloadedRef = useRef(new Set<string>());
+  const lookedUpRef = useRef(new Set<string>());
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+
+    // Debounce: wait 400ms after focus range stops changing
+    timerRef.current = setTimeout(() => {
+      const [fMin, fMax] = focusRange;
+      const toPreload: string[] = [];
+      const missingImageIds: string[] = [];
+
+      for (const p of products) {
+        const price = getEffectivePrice(p);
+        const inFocus = (price >= fMin && price <= fMax) || price === 0;
+        if (!inFocus) continue;
+
+        if (isRealImage(p.image_url)) {
+          // Strategy 1: preload existing images
+          if (!preloadedRef.current.has(p.image_url)) {
+            toPreload.push(p.image_url);
+            preloadedRef.current.add(p.image_url);
+          }
+        } else if (!lookedUpRef.current.has(p.id)) {
+          // Strategy 2: check JIT cache for missing images
+          missingImageIds.push(p.id);
+          lookedUpRef.current.add(p.id);
+        }
+      }
+
+      // Preload existing images in batches
+      const BATCH_SIZE = 10;
+      for (let i = 0; i < Math.min(toPreload.length, 50); i += BATCH_SIZE) {
+        const batch = toPreload.slice(i, i + BATCH_SIZE);
+        setTimeout(() => {
+          for (const url of batch) {
+            const img = new Image();
+            img.src = url;
+          }
+        }, (i / BATCH_SIZE) * 200);
+      }
+
+      // Batch lookup for missing images (non-blocking, fire and forget)
+      if (missingImageIds.length > 0 && missingImageIds.length <= 100) {
+        fetch("/api/batch-image-lookup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ product_ids: missingImageIds.slice(0, 50) }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            // If images were found in JIT cache, preload them
+            const images = data?.images || {};
+            for (const url of Object.values(images) as string[]) {
+              if (url && !preloadedRef.current.has(url)) {
+                const img = new Image();
+                img.src = url;
+                preloadedRef.current.add(url);
+              }
+            }
+          })
+          .catch(() => {
+            /* silently fail — this is best-effort enrichment */
+          });
+      }
+    }, 400);
+
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [products, focusRange]);
+};
+
+/** Get the tier color for a given price */
+const getTierColor = (price: number): string => {
+  if (price <= 0) return "#71717a"; // zinc-500 for POA
+  if (price < 500) return TIER_BOUNDARIES.entry.color;
+  if (price < 1500) return TIER_BOUNDARIES.mid.color;
+  if (price < 4000) return TIER_BOUNDARIES.pro.color;
+  return TIER_BOUNDARIES.flagship.color;
+};
+
+/** Log-space price to 0-1 normalized position */
+const priceToNorm = (
+  price: number,
+  pMin: number,
+  pMax: number,
+): number => {
+  if (pMax <= pMin || price <= 0) return 0;
+  const logMin = Math.log(Math.max(pMin, 1));
+  const logMax = Math.log(Math.max(pMax, 2));
+  const logP = Math.log(Math.max(price, 1));
+  return Math.max(0, Math.min(1, (logP - logMin) / (logMax - logMin)));
+};
+
+/** Normalized 0-1 position back to price (log-space) */
+const normToPrice = (
+  t: number,
+  pMin: number,
+  pMax: number,
+): number => {
+  const logMin = Math.log(Math.max(pMin, 1));
+  const logMax = Math.log(Math.max(pMax, 2));
+  return Math.exp(logMin + t * (logMax - logMin));
+};
+
+/** Snap a price to the nearest logical grid line (₪50, ₪100, ₪250, …) */
+const snapToGrid = (price: number, pMin: number, pMax: number): number => {
+  const range = pMax - pMin;
+  let step: number;
+  if (range > 100000) step = 5000;
+  else if (range > 50000) step = 2500;
+  else if (range > 10000) step = 1000;
+  else if (range > 5000) step = 500;
+  else if (range > 2000) step = 250;
+  else if (range > 500) step = 100;
+  else step = 50;
+  const snapped = Math.round(price / step) * step;
+  return Math.max(pMin, Math.min(pMax, snapped));
+};
+
+/** Convert a price to a percentage position within the current focus window (log-space) */
+const priceToFocusPercent = (
+  price: number,
+  focusRange: [number, number],
+  priceExtent: [number, number],
+): number => {
+  const [pMin, pMax] = priceExtent;
+  const normP = priceToNorm(price, pMin, pMax);
+  const normFMin = priceToNorm(focusRange[0], pMin, pMax);
+  const normFMax = priceToNorm(focusRange[1], pMin, pMax);
+  const focusWidth = normFMax - normFMin;
+  if (focusWidth <= 0) return 50;
+  return ((normP - normFMin) / focusWidth) * 100;
+};
+
+/** Generate price axis tick marks for the current focus window */
+const generatePriceTicks = (
+  focusRange: [number, number],
+  priceExtent: [number, number],
+): Array<{ price: number; percent: number; label: string; isMajor: boolean }> => {
+  const [fMin, fMax] = focusRange;
+  const range = fMax - fMin;
+
+  let majorInterval: number;
+  let minorInterval: number;
+  if (range > 100000) { majorInterval = 50000; minorInterval = 10000; }
+  else if (range > 50000) { majorInterval = 10000; minorInterval = 5000; }
+  else if (range > 10000) { majorInterval = 5000; minorInterval = 1000; }
+  else if (range > 5000) { majorInterval = 2000; minorInterval = 500; }
+  else if (range > 2000) { majorInterval = 1000; minorInterval = 250; }
+  else if (range > 500) { majorInterval = 500; minorInterval = 100; }
+  else { majorInterval = 100; minorInterval = 50; }
+
+  const ticks: Array<{ price: number; percent: number; label: string; isMajor: boolean }> = [];
+  const start = Math.ceil(fMin / minorInterval) * minorInterval;
+
+  for (let price = start; price <= fMax; price += minorInterval) {
+    const percent = priceToFocusPercent(price, focusRange, priceExtent);
+    if (percent >= 2 && percent <= 98) {
+      const isMajor = price % majorInterval === 0;
+      ticks.push({
+        price,
+        percent,
+        label: isMajor
+          ? price >= 1000
+            ? `₪${(price / 1000).toFixed(price % 1000 === 0 ? 0 : 1)}K`
+            : `₪${price}`
+          : "",
+        isMajor,
+      });
+    }
+  }
+  return ticks;
+};
+
+/** Detect product series/line from name (e.g., "RCF ART 910" → "ART") */
+const detectSeries = (product: ConductorProduct): string | null => {
+  const name = product.name || "";
+  const brand = (product.brand || "").trim();
+  let cleaned = name;
+  if (brand && cleaned.toLowerCase().startsWith(brand.toLowerCase())) {
+    cleaned = cleaned.slice(brand.length).trim();
+  }
+  // Strip leading Hebrew characters
+  cleaned = cleaned.replace(/^[^\u0000-\u007F]+\s*/u, "").trim();
+  // Match first series identifier: 2+ uppercase alphanumeric characters
+  const match = cleaned.match(/^([A-Z][A-Z0-9\-]{1,12})/);
+  if (match && match[1].length >= 2) return match[1];
+  return null;
+};
+
+/** Group display items into series-based sub-tracks within a brand */
+const buildSubTracks = (
+  items: DisplayItem[],
+): SubTrackData[] => {
+  const seriesMap = new Map<string, DisplayItem[]>();
+  const noSeries: DisplayItem[] = [];
+
+  for (const item of items) {
+    const series =
+      item.series || detectSeries(item.representative);
+    if (series) {
+      const existing = seriesMap.get(series);
+      if (existing) existing.push(item);
+      else seriesMap.set(series, [item]);
+    } else {
+      noSeries.push(item);
+    }
+  }
+
+  // Series with only 1 item merge into the general track
+  for (const [series, members] of seriesMap) {
+    if (members.length < 2) {
+      noSeries.push(...members);
+      seriesMap.delete(series);
+    }
+  }
+
+  const tracks: SubTrackData[] = [];
+
+  // Named series tracks (sorted by minimum price)
+  const sortedSeries = [...seriesMap.entries()].sort((a, b) => {
+    const aMin = a[1][0]?.sortPrice || 0;
+    const bMin = b[1][0]?.sortPrice || 0;
+    return aMin - bMin;
+  });
+
+  for (const [series, members] of sortedSeries) {
+    members.sort((a, b) => a.sortPrice - b.sortPrice);
+    tracks.push({ key: series, label: series, items: members });
+  }
+
+  // General track for ungrouped items
+  if (noSeries.length > 0) {
+    noSeries.sort((a, b) => a.sortPrice - b.sortPrice);
+    tracks.push({ key: "_general", label: "", items: noSeries });
+  }
+
+  return tracks;
+};
+
+// ===================================================================
+// SMALL COMPONENTS
+// ===================================================================
+
 const BrandLogo = React.memo(
   ({ brand, className = "h-8" }: { brand: string; className?: string }) => {
     const [error, setError] = useState(false);
-
-    // Use the helper to get the correct mapped logo (handles SVGs, special cases)
     const logoPath =
       getBrandLogoUrl(brand) ||
       `/assets/logos/${brand.toLowerCase().replace(/\s+/g, "-")}_logo.png`;
@@ -126,19 +429,10 @@ const BrandLogo = React.memo(
         className={`object-contain transition-all duration-500 ${className}`}
         onError={(e) => {
           const target = e.currentTarget as HTMLImageElement;
-          if (import.meta.env.DEV) {
-            console.warn(
-              `[BrandLogo] Failed to load logo for ${brand}: ${target.src}`,
-            );
-          }
-
-          // If we started with an SVG and it failed, fail immediately to text
           if (target.src.endsWith(".svg")) {
             setError(true);
             return;
           }
-
-          // Fallback chain: png -> jpg -> svg -> text
           if (target.src.endsWith(".png")) {
             target.src = target.src.replace(".png", ".jpg");
           } else if (target.src.endsWith(".jpg")) {
@@ -151,11 +445,8 @@ const BrandLogo = React.memo(
     );
   },
 );
-
 BrandLogo.displayName = "BrandLogo";
 
-// --- DATA SOURCES BADGE ---
-// Shows three data pillars: Halilit (commercial) | Official (brand) | Contextual (community)
 const DataSourcesBadge = ({
   sources = [],
   brand,
@@ -171,7 +462,6 @@ const DataSourcesBadge = ({
 
   return (
     <div className="flex gap-3 items-center mt-1">
-      {/* Halilit Source (Golden List — commercial data) */}
       <div
         className={`flex flex-col items-center gap-1 transition-opacity ${hasHalilit ? "opacity-100" : "opacity-30"}`}
         title="Commercial Source: Halilit.com (Prices, SKU, Availability)"
@@ -192,10 +482,7 @@ const DataSourcesBadge = ({
           Prices
         </span>
       </div>
-
       <div className="h-5 w-px bg-zinc-800" />
-
-      {/* Official Source (Brand — specs, descriptions, images) */}
       <div
         className={`flex flex-col items-center gap-1 transition-opacity ${hasOfficial ? "opacity-100" : "opacity-30"}`}
         title={`Official Source: ${brand} (Specs, Description, Images)`}
@@ -207,10 +494,7 @@ const DataSourcesBadge = ({
           Official
         </span>
       </div>
-
       <div className="h-5 w-px bg-zinc-800" />
-
-      {/* Contextual Source (Community — reviews, insights) */}
       <div
         className={`flex flex-col items-center gap-1 transition-opacity ${hasContextual ? "opacity-100" : "opacity-30"}`}
         title="Contextual Source: Reviews, Community Insights"
@@ -226,18 +510,38 @@ const DataSourcesBadge = ({
   );
 };
 
-// --- ENRICHMENT INFO PANEL ---
+// ===================================================================
+// ENRICHMENT PANEL (unchanged)
+// ===================================================================
+
 const EnrichmentPanel = React.memo(
   ({ product }: { product: ConductorProduct }) => {
     return (
       <div className="space-y-3 text-[11px]">
-        {/* Official Specs Section */}
         {product.specs && Object.keys(product.specs).length > 0 && (
-          <div className="border-l-2 border-emerald-600/50 bg-emerald-950/20 p-2.5 rounded-sm">
+          <div
+            className={
+              product.data_trust?.specs_source === "official"
+                ? "border-l-2 border-emerald-600/50 bg-emerald-950/20 p-2.5 rounded-sm"
+                : "border-l-2 border-zinc-600/50 bg-zinc-900/20 p-2.5 rounded-sm"
+            }
+          >
             <div className="flex items-center gap-2 mb-1.5">
-              <CheckCircle className="w-3 h-3 text-emerald-500" />
-              <span className="font-bold text-emerald-400 uppercase tracking-widest text-[9px]">
-                Official Specs
+              {product.data_trust?.specs_source === "official" ? (
+                <CheckCircle className="w-3 h-3 text-emerald-500" />
+              ) : (
+                <Package className="w-3 h-3 text-zinc-500" />
+              )}
+              <span
+                className={
+                  product.data_trust?.specs_source === "official"
+                    ? "font-bold text-emerald-400 uppercase tracking-widest text-[9px]"
+                    : "font-bold text-zinc-400 uppercase tracking-widest text-[9px]"
+                }
+              >
+                {product.data_trust?.specs_source === "official"
+                  ? "Official Specs"
+                  : "Specifications"}
               </span>
               <BrandLogo
                 brand={product.brand}
@@ -253,10 +557,22 @@ const EnrichmentPanel = React.memo(
                 .slice(0, 4)
                 .map(([key, value]) => (
                   <div key={key} className="flex gap-1 break-words">
-                    <span className="text-emerald-600 mt-0.5 text-[8px]">
+                    <span
+                      className={
+                        product.data_trust?.specs_source === "official"
+                          ? "text-emerald-600 mt-0.5 text-[8px]"
+                          : "text-zinc-500 mt-0.5 text-[8px]"
+                      }
+                    >
                       ◆
                     </span>
-                    <span className="text-emerald-500/70 capitalize text-[10px]">
+                    <span
+                      className={
+                        product.data_trust?.specs_source === "official"
+                          ? "text-emerald-500/70 capitalize text-[10px]"
+                          : "text-zinc-400 capitalize text-[10px]"
+                      }
+                    >
                       {key.replace(/_/g, " ")}:
                     </span>
                     <span className="text-zinc-200 text-[10px]">
@@ -268,7 +584,6 @@ const EnrichmentPanel = React.memo(
           </div>
         )}
 
-        {/* Contextual Data Section — Reviews & Community */}
         {(product.rating > 0 ||
           (product.audiences && product.audiences.length > 0)) && (
           <div className="border-l-2 border-amber-600/50 bg-amber-950/20 p-2.5 rounded-sm">
@@ -279,7 +594,6 @@ const EnrichmentPanel = React.memo(
               </span>
             </div>
             <div className="space-y-1.5 text-zinc-300">
-              {/* Rating */}
               {product.rating > 0 && (
                 <div className="flex items-center gap-2">
                   <div className="flex gap-0.5">
@@ -304,14 +618,12 @@ const EnrichmentPanel = React.memo(
                   )}
                 </div>
               )}
-              {/* Pros */}
               {product.pros && product.pros.length > 0 && (
                 <div className="text-[10px] text-zinc-400 leading-snug">
                   <span className="text-emerald-500">▸</span>{" "}
                   {product.pros.slice(0, 2).join(" • ")}
                 </div>
               )}
-              {/* Audiences */}
               {product.audiences && product.audiences.length > 0 && (
                 <div className="text-[10px]">
                   <span className="text-amber-500/70 text-[9px] font-bold">
@@ -326,14 +638,12 @@ const EnrichmentPanel = React.memo(
           </div>
         )}
 
-        {/* Data Provenance — Three Pillars */}
         <div className="border-l-2 border-zinc-700/50 bg-zinc-900/30 p-2.5 rounded-sm">
           <div className="flex items-center gap-2 mb-1.5">
             <Package className="w-3 h-3 text-zinc-500" />
             <span className="font-bold text-zinc-400 uppercase tracking-widest text-[9px]">
               Data Sources
             </span>
-            {/* Quality Score Badge */}
             <span
               className={`ml-auto text-[9px] font-black px-1.5 py-0.5 rounded ${
                 (product.quality_score || 0) >= 90
@@ -358,10 +668,12 @@ const EnrichmentPanel = React.memo(
     );
   },
 );
-
 EnrichmentPanel.displayName = "EnrichmentPanel";
 
-// --- HOVER RIGHT PANEL (Price, Category, Variants, Accessories) ---
+// ===================================================================
+// HOVER RIGHT PANEL (unchanged)
+// ===================================================================
+
 const HoverRightPanel = React.memo(
   ({
     product,
@@ -375,18 +687,15 @@ const HoverRightPanel = React.memo(
     const { variants } = useProductVariants(product.id);
     const { accessories } = useProductRelationships(product.id);
 
-    // Merge family products and graph variants into one variant list (deduplicated)
     const allVariants = useMemo(() => {
       const seen = new Set<string>([product.id]);
       const result: ConductorProduct[] = [];
-      // Family products first (from BrandTrack collapse)
       for (const p of familyProducts) {
         if (!seen.has(p.id)) {
           result.push(p);
           seen.add(p.id);
         }
       }
-      // Then any graph-based variants
       for (const v of variants) {
         if (!seen.has(v.id)) {
           result.push(v);
@@ -398,7 +707,6 @@ const HoverRightPanel = React.memo(
 
     return (
       <div className="w-full space-y-3 flex flex-col">
-        {/* Price Section */}
         <div className="space-y-1">
           {product.price > 0 ? (
             <>
@@ -414,16 +722,14 @@ const HoverRightPanel = React.memo(
               <div className="text-xl font-bold text-zinc-400 tracking-tight">
                 Price on request
               </div>
-              {(product as any).market_price_estimate > 0 && (
+              {product.market_price_estimate > 0 && (
                 <div className="flex items-center gap-1.5 mt-1">
                   <span className="text-[10px] text-amber-500/70 font-bold uppercase tracking-widest">
                     Est. market:
                   </span>
                   <span className="text-sm text-amber-400/60 font-mono">
                     ~₪
-                    {(product as any).market_price_estimate.toLocaleString(
-                      "he-IL",
-                    )}
+                    {product.market_price_estimate.toLocaleString("he-IL")}
                   </span>
                 </div>
               )}
@@ -436,7 +742,6 @@ const HoverRightPanel = React.memo(
 
         <div className="w-full h-px bg-zinc-800/50" />
 
-        {/* Category & Tier */}
         <div className="space-y-2 text-xs">
           <div className="flex items-start gap-2">
             <Tag className="w-3 h-3 text-blue-400 mt-0.5 flex-shrink-0" />
@@ -466,7 +771,6 @@ const HoverRightPanel = React.memo(
           )}
         </div>
 
-        {/* Variants — family members + graph variants */}
         {allVariants.length > 0 && (
           <div className="space-y-1.5">
             <div className="w-full h-px bg-zinc-800/50" />
@@ -506,7 +810,6 @@ const HoverRightPanel = React.memo(
           </div>
         )}
 
-        {/* Accessories */}
         {accessories.length > 0 && (
           <div className="space-y-1.5">
             <div className="w-full h-px bg-zinc-800/50" />
@@ -541,7 +844,6 @@ const HoverRightPanel = React.memo(
 
         <div className="flex-1" />
 
-        {/* CTA Button */}
         <button
           onClick={() => product.id && openProductPage(product.id)}
           className="w-full bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-black font-extrabold py-3 uppercase text-sm tracking-widest transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 rounded-lg shadow-lg shadow-amber-900/30"
@@ -553,53 +855,26 @@ const HoverRightPanel = React.memo(
     );
   },
 );
-
 HoverRightPanel.displayName = "HoverRightPanel";
 
-// --- BRAND SWIM LANE (memoized to avoid re-rendering all tracks on hover) ---
-interface BrandTrackProps {
-  brand: string;
-  products: ConductorProduct[];
-  rgbColor: string;
-  brandPrimary: string;
-  families: Record<string, FamilyMeta>;
-  onHoverProduct: (
-    product: ConductorProduct,
-    familyProducts: ConductorProduct[],
-  ) => void;
-  onHoverOut: () => void;
-  onClickProduct: (id: string) => void;
-}
+// ===================================================================
+// PRODUCT TILE — LOD-aware (size adapts based on zoom)
+// ===================================================================
 
-// Represents either a single product or a collapsed family
-interface DisplayItem {
-  type: "product" | "family";
-  representative: ConductorProduct;
-  variantCount: number;
-  familyId: string | null;
-  familyProducts: ConductorProduct[];
-  sortPrice: number;
-  series: string | null;
-}
-
-// A series sub-lane within a brand track
-interface SeriesLane {
-  series: string;
-  items: DisplayItem[];
-  totalProducts: number;
-}
-
-// Reusable product tile component
 const ProductTile = React.memo(
   ({
     item,
     brandPrimary,
+    tileSize,
+    isPinned,
     onHoverProduct,
     onHoverOut,
     onClickProduct,
   }: {
     item: DisplayItem;
     brandPrimary: string;
+    tileSize: number;
+    isPinned?: boolean;
     onHoverProduct: (
       product: ConductorProduct,
       familyProducts: ConductorProduct[],
@@ -609,41 +884,109 @@ const ProductTile = React.memo(
   }) => {
     const product = item.representative;
     const isFamily = item.type === "family";
+    const [imageError, setImageError] = React.useState(false);
+    const hasImage = isRealImage(product.image_url) && !imageError;
+    const placeholderHue = useMemo(
+      () => stringToHue(product.id || product.name),
+      [product.id, product.name],
+    );
+    const tierColor = getTierColor(item.sortPrice);
+
+    // LOD: All sizes now show images when available
+    // Large (72+) → image + name + price overlay
+    // Medium (48) → image + price on hover
+    // Small (32) → tiny image thumbnail or tier-colored placeholder
+    const showImage = hasImage; // always show image if we have one
+    const showName = tileSize >= 64;
+    const showPrice = tileSize >= 32;
 
     return (
-      <div
-        key={isFamily ? `fam-${item.familyId}` : product.id}
-        className="group/item relative flex-shrink-0"
-      >
+      <div className="group/item relative flex-shrink-0">
         <div
-          className={`rounded shadow-md bg-zinc-900 cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative ${
-            isFamily ? "w-[58px] h-[58px]" : "w-[52px] h-[52px]"
+          className={`rounded shadow-md cursor-pointer hover:scale-110 hover:z-50 transition-all duration-150 overflow-hidden relative ${
+            isPinned ? "ring-2 ring-amber-400 ring-offset-1 ring-offset-black scale-110 z-50" : ""
           }`}
           style={{
-            borderWidth: isFamily ? "2px" : "1.5px",
-            borderColor: isFamily ? `${brandPrimary}` : brandPrimary,
-            boxShadow: isFamily
-              ? `0 0 8px ${brandPrimary}30, 0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)`
-              : "0 0 0 1px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3)",
+            width: tileSize,
+            height: tileSize,
+            borderWidth: isFamily ? "2px" : tileSize >= 48 ? "1.5px" : "1px",
+            borderColor: isPinned ? "#f59e0b" : tileSize >= 32 ? brandPrimary : tierColor,
+            boxShadow: isPinned
+              ? `0 0 16px rgba(245, 158, 11, 0.4), 0 0 0 1px rgba(0,0,0,0.4)`
+              : isFamily
+                ? `0 0 8px ${brandPrimary}30, 0 0 0 1px rgba(0,0,0,0.4)`
+                : "0 0 0 1px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3)",
+            backgroundColor: showImage ? "#ffffff" : undefined,
+            background: showImage
+              ? "#ffffff"
+              : `linear-gradient(135deg, hsl(${placeholderHue}, 25%, 15%) 0%, hsl(${placeholderHue + 30}, 20%, 8%) 100%)`,
           }}
-          onClick={() => onClickProduct(product.id)}
+          onClick={(e) => { e.stopPropagation(); onClickProduct(product.id); }}
           onMouseEnter={() => onHoverProduct(product, item.familyProducts)}
           onMouseLeave={onHoverOut}
         >
-          {product.image_url ? (
-            <img
-              src={product.image_url}
-              className="w-full h-full object-contain bg-white"
-              loading="lazy"
-              alt={product.name}
-            />
+          {showImage ? (
+            <>
+              <img
+                src={product.image_url}
+                className="w-full h-full object-contain"
+                style={{ padding: tileSize >= 48 ? 2 : 1 }}
+                loading="lazy"
+                alt={product.name}
+                onError={() => setImageError(true)}
+              />
+              {tileSize >= 48 && (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+              )}
+            </>
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-zinc-800 to-zinc-900 flex flex-col items-center justify-center gap-0.5 p-0.5">
-              <span className="text-[6px] font-semibold text-zinc-500 text-center leading-[1.1] line-clamp-2">
+            /* No image: show brand-tinted placeholder with name */
+            <div
+              className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+              style={{
+                background: `linear-gradient(135deg, hsl(${placeholderHue}, 25%, 15%) 0%, hsl(${placeholderHue + 30}, 20%, 8%) 100%)`,
+              }}
+            >
+              <span
+                className="font-black uppercase tracking-wider opacity-40 text-center leading-tight px-0.5"
+                style={{
+                  color: brandPrimary,
+                  fontSize: tileSize >= 48 ? 7 : 5,
+                }}
+              >
+                {product.name
+                  .replace(/^[^\w]*/, "")
+                  .split(" ")
+                  .slice(0, tileSize >= 48 ? 2 : 1)
+                  .join("\n")}
+              </span>
+              {/* Tier accent bar on all non-image tiles */}
+              <div
+                className="absolute bottom-0 left-0 right-0"
+                style={{
+                  height: tileSize >= 48 ? 3 : 2,
+                  backgroundColor: tierColor,
+                  opacity: 0.7,
+                }}
+              />
+            </div>
+          )}
+
+          {/* Name overlay for large tiles */}
+          {showName && (
+            <div className="absolute inset-0 flex flex-col items-center justify-end p-0.5 pb-1 pointer-events-none">
+              <span
+                className={`text-[7px] font-semibold text-center leading-[1.1] line-clamp-2 ${
+                  hasImage
+                    ? "text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+                    : "text-white/70"
+                }`}
+              >
                 {product.name.split(" ").slice(0, 3).join(" ")}
               </span>
             </div>
           )}
+
           {/* Hover glow */}
           <div
             className="absolute inset-0 rounded pointer-events-none opacity-0 group-hover/item:opacity-100 transition-opacity duration-150"
@@ -651,43 +994,357 @@ const ProductTile = React.memo(
               boxShadow: `0 0 10px ${brandPrimary}80, inset 0 0 6px ${brandPrimary}40`,
             }}
           />
-          {/* Family variant count badge */}
-          {isFamily && item.variantCount > 1 && (
+
+          {/* Family badge */}
+          {isFamily && item.variantCount > 1 && tileSize >= 32 && (
             <div
-              className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full text-white text-[8px] font-black flex items-center justify-center z-10 shadow-lg"
+              className="absolute -top-1 -right-1 min-w-[14px] h-[14px] px-0.5 rounded-full text-white text-[7px] font-black flex items-center justify-center z-10 shadow-lg"
               style={{ backgroundColor: brandPrimary }}
             >
               {item.variantCount}
             </div>
           )}
+
           {/* No-price indicator */}
-          {product.price <= 0 && (
+          {product.price <= 0 && tileSize >= 48 && (
             <div className="absolute bottom-0 left-0 right-0 h-1 bg-amber-500/40" />
           )}
-        </div>
-        {/* Price label on hover */}
-        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/item:block bg-black/90 text-[7px] text-zinc-300 px-1 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
-          {product.price > 0
-            ? `₪${product.price.toLocaleString("he-IL")}`
-            : (product as any).market_price_estimate > 0
-              ? `~₪${(product as any).market_price_estimate.toLocaleString("he-IL")}`
-              : "POA"}
-          {isFamily && item.variantCount > 1 && (
-            <span className="text-blue-400 ml-1">+{item.variantCount - 1}</span>
+
+          {/* Pinned indicator */}
+          {isPinned && tileSize >= 32 && (
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-amber-400 rounded-t" />
           )}
+        </div>
+
+        {/* Price label on hover */}
+        {showPrice && (
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/item:block bg-black/90 text-[7px] text-zinc-300 px-1 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
+            {product.price > 0
+              ? `₪${product.price.toLocaleString("he-IL")}`
+              : product.market_price_estimate > 0
+                ? `~₪${product.market_price_estimate.toLocaleString("he-IL")}`
+                : "POA"}
+            {isFamily && item.variantCount > 1 && (
+              <span className="text-blue-400 ml-1">
+                +{item.variantCount - 1}
+              </span>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  },
+);
+ProductTile.displayName = "ProductTile";
+
+// ===================================================================
+// STACK TILE — wider tile showing family/variant group as a unit
+// ===================================================================
+
+const StackTile = React.memo(
+  ({
+    item,
+    brandPrimary,
+    tileSize,
+    isPinned,
+    onHoverProduct,
+    onHoverOut,
+    onClickProduct,
+  }: {
+    item: DisplayItem;
+    brandPrimary: string;
+    tileSize: number;
+    isPinned?: boolean;
+    onHoverProduct: (
+      product: ConductorProduct,
+      familyProducts: ConductorProduct[],
+    ) => void;
+    onHoverOut: () => void;
+    onClickProduct: (id: string) => void;
+  }) => {
+    const rep = item.representative;
+    const members = item.familyProducts;
+    const count = members.length;
+    const [imageError, setImageError] = React.useState(false);
+    const hasImage = isRealImage(rep.image_url) && !imageError;
+    const tierColor = getTierColor(item.sortPrice);
+
+    // Variant thumbnails (excluding representative)
+    const variants = useMemo(
+      () => members.filter((m) => m.id !== rep.id),
+      [members, rep.id],
+    );
+    const thumbSize = Math.max(14, Math.floor(tileSize * 0.35));
+    const showThumbs = tileSize >= 36 && variants.length > 0;
+    const maxThumbs = tileSize >= 46 ? 4 : 2;
+    const visibleThumbs = showThumbs ? variants.slice(0, maxThumbs) : [];
+    const thumbCols = Math.min(visibleThumbs.length, tileSize >= 46 ? 2 : 1);
+
+    // Stack width: main image + variant strip
+    const stackWidth = showThumbs && thumbCols > 0
+      ? tileSize + thumbCols * (thumbSize + 2) + 10
+      : tileSize + 8;
+
+    // Price range
+    const prices = useMemo(
+      () => members.map((m) => getEffectivePrice(m)).filter((p) => p > 0),
+      [members],
+    );
+    const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
+    const maxPrice = prices.length > 0 ? Math.max(...prices) : 0;
+
+    return (
+      <div className="group/stack relative flex-shrink-0">
+        <div
+          className={`rounded-lg shadow-md cursor-pointer hover:z-50 transition-all duration-150 overflow-hidden flex ${
+            isPinned
+              ? "ring-2 ring-amber-400 ring-offset-1 ring-offset-black z-50"
+              : ""
+          }`}
+          style={{
+            width: stackWidth,
+            height: tileSize,
+            border: `2px solid ${isPinned ? "#f59e0b" : `${brandPrimary}60`}`,
+            backgroundColor: `${brandPrimary}08`,
+            boxShadow: isPinned
+              ? "0 0 16px rgba(245, 158, 11, 0.4)"
+              : `0 0 8px ${brandPrimary}20, 0 0 0 1px rgba(0,0,0,0.4)`,
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            onClickProduct(rep.id);
+          }}
+          onMouseEnter={() => onHoverProduct(rep, members)}
+          onMouseLeave={onHoverOut}
+        >
+          {/* Representative image */}
+          <div
+            className="flex-shrink-0 overflow-hidden"
+            style={{
+              width: tileSize - 4,
+              height: tileSize - 4,
+              background: hasImage
+                ? "#fff"
+                : `hsl(${stringToHue(rep.id)}, 20%, 12%)`,
+            }}
+          >
+            {hasImage ? (
+              <img
+                src={rep.image_url}
+                className="w-full h-full object-contain p-0.5"
+                loading="lazy"
+                alt={rep.name}
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center">
+                <span
+                  className="text-[6px] font-black opacity-40 text-center leading-tight"
+                  style={{ color: brandPrimary }}
+                >
+                  {rep.name
+                    .split(" ")
+                    .slice(0, 2)
+                    .join("\n")}
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Variant strip + info */}
+          {showThumbs ? (
+            <div className="flex-1 flex flex-col justify-between p-0.5 overflow-hidden min-w-0">
+              {/* Variant thumbnails */}
+              <div className="flex flex-wrap gap-[2px]">
+                {visibleThumbs.map((v) => {
+                  const vHasImage = isRealImage(v.image_url);
+                  return (
+                    <div
+                      key={v.id}
+                      className="rounded-sm overflow-hidden border border-white/10 cursor-pointer hover:border-white/30 transition-colors"
+                      style={{
+                        width: thumbSize,
+                        height: thumbSize,
+                        background: vHasImage ? "#fff" : `${brandPrimary}15`,
+                      }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onClickProduct(v.id);
+                      }}
+                      onMouseEnter={() => onHoverProduct(v, members)}
+                    >
+                      {vHasImage ? (
+                        <img
+                          src={v.image_url}
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                          alt={v.variant_key || ""}
+                        />
+                      ) : (
+                        <span
+                          className="text-[5px] font-bold flex items-center justify-center w-full h-full opacity-40"
+                          style={{ color: brandPrimary }}
+                        >
+                          {v.variant_key || "?"}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+                {variants.length > maxThumbs && (
+                  <div
+                    className="rounded-sm flex items-center justify-center"
+                    style={{
+                      width: thumbSize,
+                      height: thumbSize,
+                      backgroundColor: `${brandPrimary}15`,
+                    }}
+                  >
+                    <span
+                      className="text-[7px] font-bold"
+                      style={{ color: brandPrimary }}
+                    >
+                      +{variants.length - maxThumbs}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Family label + count */}
+              <div className="flex items-center justify-between mt-auto">
+                <span
+                  className="text-[6px] font-bold uppercase tracking-wider truncate opacity-60"
+                  style={{ color: brandPrimary }}
+                >
+                  {item.series ||
+                    rep.name.split(" ").slice(0, 2).join(" ")}
+                </span>
+                <span
+                  className="text-[7px] font-black ml-0.5 flex-shrink-0 px-1 rounded-sm"
+                  style={{
+                    backgroundColor: `${brandPrimary}25`,
+                    color: brandPrimary,
+                  }}
+                >
+                  ×{count}
+                </span>
+              </div>
+            </div>
+          ) : (
+            /* Compact: just count badge */
+            <div className="flex-1 flex items-center justify-center">
+              <span
+                className="text-[8px] font-black"
+                style={{ color: brandPrimary }}
+              >
+                ×{count}
+              </span>
+            </div>
+          )}
+        </div>
+
+        {/* Hover price tooltip */}
+        <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 hidden group-hover/stack:block bg-black/90 text-[7px] text-zinc-300 px-1.5 py-0.5 rounded whitespace-nowrap backdrop-blur-sm z-50 font-mono">
+          {minPrice > 0 ? (
+            maxPrice > minPrice ? (
+              <span>
+                ₪{minPrice.toLocaleString("he-IL")} – ₪
+                {maxPrice.toLocaleString("he-IL")}
+              </span>
+            ) : (
+              <span>₪{minPrice.toLocaleString("he-IL")}</span>
+            )
+          ) : (
+            "POA"
+          )}
+          <span className="text-blue-400 ml-1">×{count}</span>
         </div>
       </div>
     );
   },
 );
+StackTile.displayName = "StackTile";
 
-ProductTile.displayName = "ProductTile";
+// ===================================================================
+// TIER PILLS — aggregate view for full zoom-out
+// ===================================================================
 
-// Minimum products in a series to show it as a sub-lane (otherwise merged into "Other")
-const MIN_SERIES_PRODUCTS = 3;
-// Minimum number of qualifying series to enable sub-lane layout
-const MIN_SERIES_FOR_SUBLANES = 2;
+const TierPills = React.memo(
+  ({
+    items,
+    brandPrimary,
+    onClickTier,
+  }: {
+    items: DisplayItem[];
+    brandPrimary: string;
+    onClickTier: (tier: string) => void;
+  }) => {
+    const tierCounts: Record<string, number> = {};
+    for (const item of items) {
+      const tier = item.representative.tier || "poa";
+      tierCounts[tier] = (tierCounts[tier] || 0) + 1;
+    }
 
+    const tierOrder = ["entry", "mid", "pro", "flagship", "poa"];
+
+    return (
+      <div className="flex items-center gap-1.5 px-2 py-1 flex-wrap">
+        {tierOrder
+          .filter((t) => tierCounts[t])
+          .map((tier) => (
+            <button
+              key={tier}
+              className="flex items-center gap-1 px-2 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider border transition-all hover:scale-105 hover:brightness-125"
+              style={{
+                borderColor: `${TIER_BOUNDARIES[tier]?.color || brandPrimary}40`,
+                backgroundColor: `${TIER_BOUNDARIES[tier]?.color || brandPrimary}15`,
+                color: TIER_BOUNDARIES[tier]?.color || brandPrimary,
+              }}
+              onClick={() => onClickTier(tier)}
+              title={`${tier}: ${tierCounts[tier]} products — click to zoom`}
+            >
+              <div
+                className="w-2 h-2 rounded-full"
+                style={{
+                  backgroundColor: TIER_BOUNDARIES[tier]?.color || brandPrimary,
+                }}
+              />
+              <span>{TIER_BOUNDARIES[tier]?.label || "POA"}</span>
+              <span className="opacity-60">{tierCounts[tier]}</span>
+            </button>
+          ))}
+      </div>
+    );
+  },
+);
+TierPills.displayName = "TierPills";
+
+// ===================================================================
+// BRAND TRACK — sub-track layout with horizontal scroll support
+// ===================================================================
+
+interface BrandTrackProps {
+  brand: string;
+  products: ConductorProduct[];
+  rgbColor: string;
+  brandPrimary: string;
+  families: Record<string, FamilyMeta>;
+  priceExtent: [number, number];
+  focusRange: [number, number]; // for tick generation
+  isAggregate: boolean;
+  pinnedProductId: string | null;
+  onHoverProduct: (
+    product: ConductorProduct,
+    familyProducts: ConductorProduct[],
+  ) => void;
+  onHoverOut: () => void;
+  onClickProduct: (id: string) => void;
+  onSnapTier: (tier: string) => void;
+}
+
+const TRACK_PAD = 4;
+const TRACK_GAP = 4;
+const MAX_LANES = 4;
 const BrandTrack = React.memo(
   ({
     brand,
@@ -695,40 +1352,57 @@ const BrandTrack = React.memo(
     rgbColor,
     brandPrimary,
     families,
+    priceExtent,
+    focusRange,
+    isAggregate,
+    pinnedProductId,
     onHoverProduct,
     onHoverOut,
     onClickProduct,
+    onSnapTier,
   }: BrandTrackProps) => {
+    const trackRef = useRef<HTMLDivElement>(null);
+    const [trackWidth, setTrackWidth] = useState(600);
+
+    // Measure track width via ResizeObserver
+    useEffect(() => {
+      const el = trackRef.current;
+      if (!el) return;
+      const observer = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          setTrackWidth(entry.contentRect.width);
+        }
+      });
+      observer.observe(el);
+      setTrackWidth(el.clientWidth);
+      return () => observer.disconnect();
+    }, []);
+
     // Build display items: collapse families, keep singletons
     const displayItems = useMemo(() => {
       const items: DisplayItem[] = [];
       const familyGroups = new Map<string, ConductorProduct[]>();
       const standalones: ConductorProduct[] = [];
 
-      // Group by family
       for (const p of products) {
         if (p.family_id) {
           const existing = familyGroups.get(p.family_id);
-          if (existing) {
-            existing.push(p);
-          } else {
-            familyGroups.set(p.family_id, [p]);
-          }
+          if (existing) existing.push(p);
+          else familyGroups.set(p.family_id, [p]);
         } else {
           standalones.push(p);
         }
       }
 
-      // Convert families to display items
       for (const [familyId, members] of familyGroups) {
-        // Pick the default variant, or the one with the best image
         const representative =
           members.find((m) => m.variant_is_default) ||
           members.find((m) => m.image_url) ||
           members[0];
-        // Use min price in family for sorting
-        const minPrice = Math.min(...members.map((m) => m.price || 0));
-        // Resolve series from families metadata
+        const prices = members
+          .map((m) => getEffectivePrice(m))
+          .filter((p) => p > 0);
+        const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
         const familyMeta = families[familyId];
         items.push({
           type: members.length > 1 ? "family" : "product",
@@ -741,7 +1415,6 @@ const BrandTrack = React.memo(
         });
       }
 
-      // Add standalone products
       for (const p of standalones) {
         items.push({
           type: "product",
@@ -749,215 +1422,720 @@ const BrandTrack = React.memo(
           variantCount: 1,
           familyId: null,
           familyProducts: [p],
-          sortPrice: p.price || 0,
+          sortPrice: getEffectivePrice(p),
           series: null,
         });
       }
 
-      // Sort by price ascending
       items.sort((a, b) => a.sortPrice - b.sortPrice);
       return items;
     }, [products, families]);
 
-    // Group display items into series sub-lanes
-    const seriesLanes = useMemo(() => {
-      // Count products per series
-      const seriesMap = new Map<string, DisplayItem[]>();
-      const ungrouped: DisplayItem[] = [];
+    // Adaptive tile size from zoom ratio
+    const tileSize = useMemo(() => {
+      const normMin = priceToNorm(focusRange[0], priceExtent[0], priceExtent[1]);
+      const normMax = priceToNorm(focusRange[1], priceExtent[0], priceExtent[1]);
+      const zoomRatio = normMax - normMin;
+      if (zoomRatio > 0.65) return 30;
+      if (zoomRatio > 0.4) return 38;
+      if (zoomRatio > 0.2) return 46;
+      return 54;
+    }, [focusRange, priceExtent]);
 
-      for (const item of displayItems) {
-        if (item.series) {
-          const existing = seriesMap.get(item.series);
-          if (existing) {
-            existing.push(item);
-          } else {
-            seriesMap.set(item.series, [item]);
+    // Build sub-tracks by series
+    const subTracks = useMemo(
+      () => buildSubTracks(displayItems),
+      [displayItems],
+    );
+
+    // Compute item width for lane assignment (StackTile is wider)
+    const getItemWidthPx = useCallback(
+      (item: DisplayItem): number => {
+        if (item.type === "family" && item.variantCount > 1) {
+          const thumbSize = Math.max(14, Math.floor(tileSize * 0.35));
+          const thumbCols = Math.min(
+            item.variantCount - 1,
+            tileSize >= 46 ? 2 : 1,
+          );
+          return tileSize + thumbCols * (thumbSize + 2) + 10;
+        }
+        return tileSize;
+      },
+      [tileSize],
+    );
+
+    // Position items per sub-track with lane assignment (full price range)
+    const [pMin, pMax] = priceExtent;
+    type PositionedItem = DisplayItem & { xPercent: number; lane: number };
+
+    const renderedSubTracks = useMemo(() => {
+      return subTracks.map((st) => {
+        const positioned: PositionedItem[] = [];
+        for (const item of st.items) {
+          const price = item.sortPrice;
+          const xPercent =
+            price > 0
+              ? priceToNorm(price, pMin, pMax) * 100
+              : 1; // POA at left edge
+          positioned.push({ ...item, xPercent, lane: 0 });
+        }
+
+        // Greedy lane assignment
+        positioned.sort((a, b) => a.xPercent - b.xPercent);
+        const lanes: number[] = [];
+        for (const item of positioned) {
+          const halfW =
+            trackWidth > 0
+              ? (getItemWidthPx(item) / 2 / trackWidth) * 100
+              : 3;
+          const gapPct =
+            trackWidth > 0 ? (TRACK_GAP / trackWidth) * 100 : 0.5;
+
+          let assigned = -1;
+          for (let i = 0; i < lanes.length; i++) {
+            if (item.xPercent - halfW - lanes[i] >= gapPct) {
+              assigned = i;
+              break;
+            }
           }
-        } else {
-          ungrouped.push(item);
+          if (assigned === -1) {
+            if (lanes.length < MAX_LANES) {
+              assigned = lanes.length;
+              lanes.push(-Infinity);
+            } else {
+              assigned = MAX_LANES - 1;
+            }
+          }
+          lanes[assigned] = item.xPercent + halfW;
+          item.lane = assigned;
         }
+
+        return {
+          ...st,
+          positioned,
+          laneCount: Math.max(1, lanes.length),
+        };
+      });
+    }, [subTracks, pMin, pMax, trackWidth, getItemWidthPx]);
+
+    // Pre-compute sub-track y-offsets and total height
+    const { subTrackOffsets, totalHeight } = useMemo(() => {
+      const offsets: number[] = [];
+      let h = 0;
+      for (const st of renderedSubTracks) {
+        offsets.push(h);
+        const stHeight =
+          st.laneCount * (tileSize + TRACK_GAP) + TRACK_PAD;
+        h += stHeight + (st.label ? 14 : 0);
       }
+      return {
+        subTrackOffsets: offsets,
+        totalHeight: Math.max(h + TRACK_PAD, 40),
+      };
+    }, [renderedSubTracks, tileSize]);
 
-      // Only create sub-lanes if enough qualifying series exist
-      const qualifyingSeries: SeriesLane[] = [];
-      const overflow: DisplayItem[] = [...ungrouped];
+    // Tier bands (positioned in full price range)
+    const tierBands = useMemo(
+      () =>
+        Object.entries(TIER_BOUNDARIES)
+          .map(([key, tier]) => {
+            const l = priceToNorm(Math.max(tier.min, 1), pMin, pMax) * 100;
+            const r = priceToNorm(tier.max, pMin, pMax) * 100;
+            if (r < 0 || l > 100) return null;
+            const cl = Math.max(0, l);
+            const cr = Math.min(100, r);
+            if (cr - cl < 0.5) return null;
+            return { key, cl, cr, color: tier.color, label: tier.label };
+          })
+          .filter(Boolean) as Array<{
+          key: string;
+          cl: number;
+          cr: number;
+          color: string;
+          label: string;
+        }>,
+      [pMin, pMax],
+    );
 
-      for (const [series, items] of seriesMap) {
-        const totalProducts = items.reduce((sum, i) => sum + i.variantCount, 0);
-        if (items.length >= MIN_SERIES_PRODUCTS) {
-          qualifyingSeries.push({ series, items, totalProducts });
-        } else {
-          overflow.push(...items);
-        }
-      }
+    // Price ticks (generated for visible range, positioned in full range)
+    const ticks = useMemo(() => {
+      const raw = generatePriceTicks(focusRange, priceExtent);
+      // Re-map tick percent to full-range coordinates
+      return raw.map((t) => ({
+        ...t,
+        percent: priceToNorm(t.price, pMin, pMax) * 100,
+      }));
+    }, [focusRange, priceExtent, pMin, pMax]);
 
-      // Sort series by total products descending
-      qualifyingSeries.sort((a, b) => b.totalProducts - a.totalProducts);
-
-      if (qualifyingSeries.length < MIN_SERIES_FOR_SUBLANES) {
-        // Not enough series — return null to use flat layout
-        return null;
-      }
-
-      // Build final lanes: qualifying series + "Other" overflow
-      const lanes: SeriesLane[] = [...qualifyingSeries];
-      if (overflow.length > 0) {
-        overflow.sort((a, b) => a.sortPrice - b.sortPrice);
-        lanes.push({
-          series: "Other",
-          items: overflow,
-          totalProducts: overflow.reduce((s, i) => s + i.variantCount, 0),
-        });
-      }
-
-      return lanes;
-    }, [displayItems]);
-
-    // Use sub-lane layout or flat layout
-    const useSubLanes = seriesLanes !== null;
-
-    return (
-      <div
-        className="flex border-b transition-colors duration-200 group/row hover:bg-white/5"
-        style={{
-          borderColor: `rgba(${rgbColor}, 0.15)`,
-          backgroundColor: `rgba(${rgbColor}, 0.03)`,
-        }}
-      >
-        {/* Brand Header */}
+    // ── Aggregate view (full zoom-out): tier pills ──────────────
+    if (isAggregate) {
+      return (
         <div
-          className="w-28 flex-shrink-0 flex items-center justify-center border-r"
+          className="flex border-b transition-colors duration-200 group/row hover:bg-white/[0.02]"
           style={{
-            borderColor: `rgba(${rgbColor}, 0.25)`,
-            backgroundColor: `rgba(${rgbColor}, 0.06)`,
+            borderColor: `rgba(${rgbColor}, 0.15)`,
+            backgroundColor: `rgba(${rgbColor}, 0.03)`,
           }}
         >
-          <div className="flex flex-col gap-0.5 items-center justify-center w-full py-2 px-2 relative">
+          <div
+            className="sticky left-0 z-20 w-28 flex-shrink-0 flex items-center justify-center border-r"
+            style={{
+              borderColor: `rgba(${rgbColor}, 0.25)`,
+              backgroundColor: `rgba(${rgbColor}, 0.06)`,
+            }}
+          >
+            <div className="flex flex-col gap-0.5 items-center justify-center w-full py-1.5 px-2">
+              <BrandLogo
+                brand={brand}
+                className="max-h-8 max-w-[80px] w-auto object-contain opacity-90"
+              />
+              <span
+                className="text-[9px] font-bold uppercase tracking-widest bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-sm"
+                style={{ color: brandPrimary }}
+              >
+                {products.length}
+              </span>
+            </div>
+          </div>
+          <div className="flex-1 flex items-center">
+            <TierPills
+              items={displayItems}
+              brandPrimary={brandPrimary}
+              onClickTier={onSnapTier}
+            />
+          </div>
+        </div>
+      );
+    }
+
+    // ── Sub-track layout with price-axis positioning ─────────────
+    return (
+      <div
+        className="flex border-b transition-colors duration-200 group/row"
+        style={{
+          borderColor: `rgba(${rgbColor}, 0.1)`,
+          backgroundColor: `rgba(${rgbColor}, 0.015)`,
+        }}
+      >
+        {/* Brand Header — sticky on horizontal scroll */}
+        <div
+          className="sticky left-0 z-20 w-28 flex-shrink-0 flex items-center justify-center border-r"
+          style={{
+            borderColor: `rgba(${rgbColor}, 0.2)`,
+            backgroundColor: `rgba(${rgbColor}, 0.04)`,
+          }}
+        >
+          <div className="flex flex-col gap-1 items-center justify-center w-full py-2 px-2">
             <BrandLogo
               brand={brand}
               className="max-h-10 max-w-[88px] w-auto object-contain opacity-90"
             />
-            <span
-              className="text-[9px] font-bold uppercase tracking-widest bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-sm"
-              style={{ color: brandPrimary }}
-            >
-              {products.length}
-            </span>
+            <div className="flex items-baseline gap-1">
+              <span
+                className="text-[10px] font-black tabular-nums"
+                style={{ color: brandPrimary }}
+              >
+                {products.length}
+              </span>
+            </div>
           </div>
         </div>
 
-        {/* Product Grid — series sub-lanes or flat layout */}
-        {useSubLanes ? (
-          <div className="flex-1 overflow-x-auto custom-scrollbar">
-            {seriesLanes!.map((lane) => (
-              <div
-                key={lane.series}
-                className="flex items-start border-b last:border-b-0"
-                style={{
-                  borderColor: `rgba(${rgbColor}, 0.08)`,
-                }}
-              >
-                {/* Series label */}
-                <div
-                  className="w-20 flex-shrink-0 flex items-center justify-center py-1.5 px-1"
+        {/* Price-axis Track with sub-tracks */}
+        <div
+          ref={trackRef}
+          className="flex-1 relative"
+          style={{ minHeight: Math.max(totalHeight, 40) }}
+        >
+          {/* Tier background bands */}
+          {tierBands.map((b) => (
+            <div
+              key={b.key}
+              className="absolute top-0 bottom-0 pointer-events-none"
+              style={{
+                left: `${b.cl}%`,
+                width: `${b.cr - b.cl}%`,
+                backgroundColor: `${b.color}05`,
+                borderRight:
+                  b.cr < 98 ? `1px dashed ${b.color}15` : "none",
+              }}
+            />
+          ))}
+
+          {/* Price tick marks */}
+          {ticks.map((tick) => (
+            <div
+              key={tick.price}
+              className="absolute top-0 bottom-0 pointer-events-none"
+              style={{
+                left: `${tick.percent}%`,
+                width: 1,
+                backgroundColor: tick.isMajor
+                  ? "rgba(255,255,255,0.05)"
+                  : "rgba(255,255,255,0.02)",
+              }}
+            >
+              {tick.label && (
+                <span
+                  className="absolute bottom-0.5 left-1 text-[7px] font-mono whitespace-nowrap select-none"
                   style={{
-                    backgroundColor: `rgba(${rgbColor}, 0.04)`,
+                    color: tick.isMajor
+                      ? "rgba(255,255,255,0.18)"
+                      : "rgba(255,255,255,0.08)",
                   }}
                 >
-                  <span
-                    className="text-[8px] font-bold uppercase tracking-wider text-center leading-tight px-1 py-0.5 rounded bg-black/30 backdrop-blur-sm max-w-full truncate"
-                    style={{
-                      color:
-                        lane.series === "Other"
-                          ? "rgb(161, 161, 170)"
-                          : brandPrimary,
-                    }}
-                    title={`${lane.series} (${lane.totalProducts})`}
-                  >
-                    {lane.series}
-                    <span className="block text-[7px] font-medium opacity-60">
-                      {lane.totalProducts}
-                    </span>
-                  </span>
-                </div>
-                {/* Series products */}
-                <div className="flex-1 py-1 px-1.5">
+                  {tick.label}
+                </span>
+              )}
+            </div>
+          ))}
+
+          {/* Sub-tracks */}
+          {renderedSubTracks.map((st, stIdx) => {
+            const stLaneH =
+              st.laneCount * (tileSize + TRACK_GAP) + TRACK_PAD;
+            const labelH = st.label ? 14 : 0;
+            const stTop = subTrackOffsets[stIdx] ?? 0;
+
+            return (
+              <div
+                key={st.key}
+                className="absolute left-0 right-0"
+                style={{ top: stTop, height: stLaneH + labelH }}
+              >
+                {/* Sub-track label */}
+                {st.label && (
                   <div
-                    className="flex flex-wrap gap-1.5 content-start"
-                    style={{ minWidth: "fit-content" }}
+                    className="sticky left-0 z-10 inline-block px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-widest rounded-br-sm"
+                    style={{
+                      color: `${brandPrimary}90`,
+                      backgroundColor: `${brandPrimary}0a`,
+                      borderBottom: `1px solid ${brandPrimary}15`,
+                      borderRight: `1px solid ${brandPrimary}15`,
+                    }}
                   >
-                    {lane.items.map((item) => (
-                      <ProductTile
-                        key={
-                          item.type === "family"
-                            ? `fam-${item.familyId}`
-                            : item.representative.id
-                        }
+                    {st.label}
+                    <span className="text-zinc-600 ml-1 font-mono text-[7px]">
+                      {st.items.length}
+                    </span>
+                  </div>
+                )}
+
+                {/* Items positioned on price axis */}
+                {st.positioned.map((item) => (
+                  <div
+                    key={item.representative.id}
+                    className="absolute"
+                    style={{
+                      left: `${item.xPercent}%`,
+                      top:
+                        labelH +
+                        TRACK_PAD +
+                        item.lane * (tileSize + TRACK_GAP),
+                      transform: "translateX(-50%)",
+                      zIndex:
+                        pinnedProductId === item.representative.id
+                          ? 20
+                          : 1,
+                    }}
+                  >
+                    {item.type === "family" && item.variantCount > 1 ? (
+                      <StackTile
                         item={item}
                         brandPrimary={brandPrimary}
+                        tileSize={tileSize}
+                        isPinned={
+                          pinnedProductId === item.representative.id
+                        }
                         onHoverProduct={onHoverProduct}
                         onHoverOut={onHoverOut}
                         onClickProduct={onClickProduct}
                       />
-                    ))}
+                    ) : (
+                      <ProductTile
+                        item={item}
+                        brandPrimary={brandPrimary}
+                        tileSize={tileSize}
+                        isPinned={
+                          pinnedProductId === item.representative.id
+                        }
+                        onHoverProduct={onHoverProduct}
+                        onHoverOut={onHoverOut}
+                        onClickProduct={onClickProduct}
+                      />
+                    )}
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="flex-1 overflow-x-auto py-1.5 px-2 custom-scrollbar">
-            <div
-              className="flex flex-wrap gap-1.5 content-start"
-              style={{ minWidth: "fit-content" }}
-            >
-              {displayItems.map((item) => (
-                <ProductTile
-                  key={
-                    item.type === "family"
-                      ? `fam-${item.familyId}`
-                      : item.representative.id
-                  }
-                  item={item}
-                  brandPrimary={brandPrimary}
-                  onHoverProduct={onHoverProduct}
-                  onHoverOut={onHoverOut}
-                  onClickProduct={onClickProduct}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+            );
+          })}
+        </div>
       </div>
     );
   },
 );
-
 BrandTrack.displayName = "BrandTrack";
 
-// --- UTILITY: hex to RGB string ---
-const hexToRgb = (hex: string): string => {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
-    : "100, 100, 100";
-};
+// ===================================================================
+// MINI SPECTRUM — product dots minimap with draggable focus range
+// ===================================================================
+
+const MiniSpectrum = React.memo(
+  ({
+    focusRange,
+    priceExtent,
+    products,
+    onFocusRangeChange,
+    onReset,
+  }: {
+    focusRange: [number, number];
+    priceExtent: [number, number];
+    products: ConductorProduct[];
+    onFocusRangeChange: (range: [number, number]) => void;
+    onReset: () => void;
+  }) => {
+    const barRef = useRef<HTMLDivElement>(null);
+    const [dragging, setDragging] = useState<
+      "left" | "right" | "middle" | null
+    >(null);
+    const dragStartRef = useRef<{
+      x: number;
+      rangeNorm: [number, number];
+    }>({ x: 0, rangeNorm: [0, 1] });
+
+    const [pMin, pMax] = priceExtent;
+    const [fMin, fMax] = focusRange;
+
+    // Build product dots: position each product by price (log-space)
+    const productDots = useMemo(() => {
+      const dots: Array<{
+        id: string;
+        percent: number;
+        color: string;
+        hasImage: boolean;
+        imageUrl: string;
+        tier: string;
+        y: number; // vertical offset (0-1) to avoid overlap
+      }> = [];
+
+      // Sort by price for consistent y-stacking
+      const sorted = [...products]
+        .filter((p) => getEffectivePrice(p) > 0)
+        .sort((a, b) => getEffectivePrice(a) - getEffectivePrice(b));
+
+      // Use buckets to compute y offset (avoid overlap)
+      const MINI_BUCKETS = 120;
+      const bucketCounts = new Array(MINI_BUCKETS).fill(0);
+
+      for (const p of sorted) {
+        const price = getEffectivePrice(p);
+        const norm = priceToNorm(price, pMin, pMax);
+        const bucket = Math.min(
+          MINI_BUCKETS - 1,
+          Math.floor(norm * MINI_BUCKETS),
+        );
+        const yOffset = bucketCounts[bucket];
+        bucketCounts[bucket]++;
+
+        dots.push({
+          id: p.id,
+          percent: norm * 100,
+          color: getTierColor(price),
+          hasImage: isRealImage(p.image_url),
+          imageUrl: p.image_url || "",
+          tier: p.tier || "poa",
+          y: yOffset,
+        });
+      }
+
+      // Normalize y offsets
+      const maxStack = Math.max(...bucketCounts, 1);
+      for (const dot of dots) {
+        dot.y = maxStack > 1 ? dot.y / maxStack : 0.5;
+      }
+
+      return dots;
+    }, [products, pMin, pMax]);
+
+    const leftPercent = priceToNorm(fMin, pMin, pMax) * 100;
+    const rightPercent = priceToNorm(fMax, pMin, pMax) * 100;
+
+    // Tier boundary positions
+    const tierMarkers = useMemo(
+      () =>
+        Object.entries(TIER_BOUNDARIES)
+          .filter(
+            ([, t]) => t.max < 200000 && t.max > pMin && t.max < pMax,
+          )
+          .map(([key, t]) => ({
+            key,
+            percent: priceToNorm(t.max, pMin, pMax) * 100,
+            label: t.label,
+            color: t.color,
+          })),
+      [pMin, pMax],
+    );
+
+    // Mouse handlers for dragging
+    const handleMouseDown = useCallback(
+      (e: React.MouseEvent, handle: "left" | "right" | "middle") => {
+        e.preventDefault();
+        e.stopPropagation();
+        setDragging(handle);
+        dragStartRef.current = {
+          x: e.clientX,
+          rangeNorm: [
+            priceToNorm(fMin, pMin, pMax),
+            priceToNorm(fMax, pMin, pMax),
+          ],
+        };
+      },
+      [fMin, fMax, pMin, pMax],
+    );
+
+    useEffect(() => {
+      if (!dragging) return;
+
+      const handleMouseMove = (e: MouseEvent) => {
+        const bar = barRef.current;
+        if (!bar) return;
+        const rect = bar.getBoundingClientRect();
+        const barWidth = rect.width;
+        if (barWidth <= 0) return;
+
+        const currentNorm = Math.max(
+          0,
+          Math.min(1, (e.clientX - rect.left) / barWidth),
+        );
+
+        if (dragging === "left") {
+          const rightNorm = priceToNorm(fMax, pMin, pMax);
+          const newLeftNorm = Math.min(currentNorm, rightNorm - 0.05);
+          const rawPrice = normToPrice(Math.max(0, newLeftNorm), pMin, pMax);
+          const snapped = snapToGrid(rawPrice, pMin, pMax);
+          // Ensure min gap from right handle
+          if (snapped < fMax - 30) {
+            onFocusRangeChange([snapped, fMax]);
+          }
+        } else if (dragging === "right") {
+          const leftNorm = priceToNorm(fMin, pMin, pMax);
+          const newRightNorm = Math.max(currentNorm, leftNorm + 0.05);
+          const rawPrice = normToPrice(Math.min(1, newRightNorm), pMin, pMax);
+          const snapped = snapToGrid(rawPrice, pMin, pMax);
+          // Ensure min gap from left handle
+          if (snapped > fMin + 30) {
+            onFocusRangeChange([fMin, snapped]);
+          }
+        } else if (dragging === "middle") {
+          const dx = e.clientX - dragStartRef.current.x;
+          const dNorm = dx / barWidth;
+          const [startMinN, startMaxN] = dragStartRef.current.rangeNorm;
+          const rangeWidth = startMaxN - startMinN;
+          let newMinN = startMinN + dNorm;
+          let newMaxN = startMaxN + dNorm;
+          if (newMinN < 0) {
+            newMinN = 0;
+            newMaxN = rangeWidth;
+          }
+          if (newMaxN > 1) {
+            newMaxN = 1;
+            newMinN = 1 - rangeWidth;
+          }
+          onFocusRangeChange([
+            normToPrice(newMinN, pMin, pMax),
+            normToPrice(newMaxN, pMin, pMax),
+          ]);
+        }
+      };
+
+      const handleMouseUp = () => setDragging(null);
+
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", handleMouseUp);
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+        window.removeEventListener("mouseup", handleMouseUp);
+      };
+    }, [dragging, fMin, fMax, pMin, pMax, onFocusRangeChange]);
+
+    // Click on dimmed region to shift focus there
+    const handleBarClick = useCallback(
+      (e: React.MouseEvent) => {
+        const bar = barRef.current;
+        if (!bar || dragging) return;
+        const rect = bar.getBoundingClientRect();
+        const norm = Math.max(
+          0,
+          Math.min(1, (e.clientX - rect.left) / rect.width),
+        );
+        const clickPrice = normToPrice(norm, pMin, pMax);
+        const halfWidth = (fMax - fMin) / 2;
+        const newMin = Math.max(pMin, clickPrice - halfWidth);
+        const newMax = Math.min(pMax, clickPrice + halfWidth);
+        onFocusRangeChange([newMin, newMax]);
+      },
+      [dragging, fMin, fMax, pMin, pMax, onFocusRangeChange],
+    );
+
+    // Is the focus range close to the full extent?
+    const isFullRange =
+      Math.abs(fMin - pMin) < 10 && Math.abs(fMax - pMax) < 10;
+
+    return (
+      <div className="flex items-center gap-2 mx-4 my-1.5 select-none">
+        {/* Reset / zoom-out button */}
+        {!isFullRange && (
+          <button
+            className="flex-shrink-0 w-7 h-7 flex items-center justify-center rounded-md bg-zinc-800/80 hover:bg-zinc-700 text-zinc-400 hover:text-zinc-200 transition-all border border-zinc-700/50 hover:border-zinc-600"
+            onClick={(e) => {
+              e.stopPropagation();
+              onReset();
+            }}
+            title="Reset zoom — show all products"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+          </button>
+        )}
+
+        <div
+          className="relative h-12 flex-1 rounded-lg overflow-hidden bg-zinc-950 border border-zinc-800/60"
+          ref={barRef}
+          onClick={handleBarClick}
+        >
+        {/* Product dots — mini spectrum visualization */}
+        <div className="absolute inset-0 px-0.5 pointer-events-none">
+          {productDots.map((dot) => {
+            const inFocus =
+              dot.percent >= leftPercent && dot.percent <= rightPercent;
+            return (
+              <div
+                key={dot.id}
+                className="absolute rounded-full transition-opacity duration-200"
+                style={{
+                  left: `${dot.percent}%`,
+                  top: `${10 + dot.y * 70}%`,
+                  width: dot.hasImage ? 6 : 4,
+                  height: dot.hasImage ? 6 : 4,
+                  backgroundColor: dot.color,
+                  opacity: inFocus ? 0.9 : 0.2,
+                  transform: "translate(-50%, -50%)",
+                  boxShadow: inFocus
+                    ? `0 0 4px ${dot.color}60`
+                    : "none",
+                }}
+              />
+            );
+          })}
+        </div>
+
+        {/* Left curtain */}
+        <div
+          className="absolute top-0 bottom-0 left-0 bg-black/60 backdrop-blur-[1px] z-[1] transition-all duration-100"
+          style={{ width: `${leftPercent}%` }}
+        />
+
+        {/* Right curtain */}
+        <div
+          className="absolute top-0 bottom-0 right-0 bg-black/60 backdrop-blur-[1px] z-[1] transition-all duration-100"
+          style={{ width: `${100 - rightPercent}%` }}
+        />
+
+        {/* Focus window — draggable center */}
+        <div
+          className={`absolute top-0 bottom-0 z-[2] transition-colors duration-100 ${
+            dragging === "middle"
+              ? "cursor-grabbing bg-blue-500/10"
+              : "cursor-grab hover:bg-blue-500/8"
+          }`}
+          style={{
+            left: `${leftPercent}%`,
+            right: `${100 - rightPercent}%`,
+            borderLeft: "2px solid rgba(96, 165, 250, 0.5)",
+            borderRight: "2px solid rgba(96, 165, 250, 0.5)",
+          }}
+          onMouseDown={(e) => handleMouseDown(e, "middle")}
+        />
+
+        {/* Left handle */}
+        <div
+          className={`absolute top-0 bottom-0 w-5 -ml-2.5 z-[3] flex items-center justify-center ${
+            dragging === "left" ? "cursor-grabbing" : "cursor-ew-resize"
+          }`}
+          style={{ left: `${leftPercent}%` }}
+          onMouseDown={(e) => handleMouseDown(e, "left")}
+        >
+          <div className="w-1 h-8 bg-blue-400 rounded-full shadow-lg shadow-blue-500/40 hover:bg-blue-300 hover:w-1.5 transition-all" />
+        </div>
+
+        {/* Right handle */}
+        <div
+          className={`absolute top-0 bottom-0 w-5 -ml-2.5 z-[3] flex items-center justify-center ${
+            dragging === "right" ? "cursor-grabbing" : "cursor-ew-resize"
+          }`}
+          style={{ left: `${rightPercent}%` }}
+          onMouseDown={(e) => handleMouseDown(e, "right")}
+        >
+          <div className="w-1 h-8 bg-blue-400 rounded-full shadow-lg shadow-blue-500/40 hover:bg-blue-300 hover:w-1.5 transition-all" />
+        </div>
+
+        {/* Tier markers */}
+        {tierMarkers.map((m) => (
+          <div
+            key={m.key}
+            className="absolute top-0 bottom-0 w-px z-[4] pointer-events-none"
+            style={{ left: `${m.percent}%`, backgroundColor: `${m.color}35` }}
+          >
+            <span
+              className="absolute top-0.5 left-1/2 -translate-x-1/2 text-[7px] font-bold uppercase tracking-wider whitespace-nowrap px-1 py-0.5 bg-black/80 rounded-sm"
+              style={{ color: m.color }}
+            >
+              {m.label}
+            </span>
+          </div>
+        ))}
+
+        {/* Price labels at handles */}
+        <div
+          className="absolute bottom-0.5 z-[5] text-[7px] text-blue-400/80 font-mono font-bold"
+          style={{
+            left: `${leftPercent}%`,
+            transform: "translateX(-100%)",
+            paddingRight: 4,
+          }}
+        >
+          ₪{Math.round(fMin).toLocaleString()}
+        </div>
+        <div
+          className="absolute bottom-0.5 z-[5] text-[7px] text-blue-400/80 font-mono font-bold"
+          style={{
+            left: `${rightPercent}%`,
+            paddingLeft: 4,
+          }}
+        >
+          ₪{Math.round(fMax).toLocaleString()}
+        </div>
+        </div>
+      </div>
+    );
+  },
+);
+MiniSpectrum.displayName = "MiniSpectrum";
+
+// ===================================================================
+// MAIN: SPECTRUM MODULE
+// ===================================================================
 
 export const SpectrumModule = () => {
   const { activeTribeId, activeSubcategoryId, goToGalaxy, openProductPage } =
     useNavigationStore();
 
   // --------------------------------------------------------------------------
-  // 1. DATA INGESTION - Using pre-indexed Conductor data (v10)
-  //    Now filtering by SPECTRUM (subcategory) instead of galaxy
+  // 1. DATA INGESTION
   // --------------------------------------------------------------------------
   const { isLoading, error, galaxies, families } = useConductorCatalog();
-
-  // Get products for this spectrum via pre-computed index — O(1) lookup
   const { products: fetchedProducts } =
     useProductsBySpectrum(activeSubcategoryId);
 
-  // Resolve the spectrum display label from galaxies metadata
   const spectrumLabel = useMemo(() => {
     if (!activeTribeId || !activeSubcategoryId) return "";
     for (const g of galaxies) {
@@ -967,36 +2145,25 @@ export const SpectrumModule = () => {
         }
       }
     }
-    // Fallback: humanize the ID
     return activeSubcategoryId.replace(/-/g, " ");
   }, [activeTribeId, activeSubcategoryId, galaxies]);
 
   const rawProducts = useMemo(() => {
-    // Backend normalizer guarantees consistent shape — just add relevance score
     return fetchedProducts.map((p) => ({
       ...p,
       score: calculateRelevance(p),
     }));
   }, [fetchedProducts]);
 
-  // --- HEALTH SEGREGATION LAYER ---
   const { cleanProducts, flaggedCount } = useMemo(() => {
     const valid = rawProducts.filter(isProductHealthy);
     const broken = rawProducts.length - valid.length;
-
-    if (broken > 0 && import.meta.env.DEV) {
-      console.warn(
-        `[HealthGuard] Flagged ${broken} products as broken/incomplete.`,
-      );
-    }
-
     return { cleanProducts: valid, flaggedCount: broken };
   }, [rawProducts]);
 
   // --------------------------------------------------------------------------
-  // 2. THE 1176 ENGINE (Filtering) + SMART TAGS
+  // 2. FILTERING ENGINE
   // --------------------------------------------------------------------------
-  const [activeFilter, setActiveFilter] = useState("ALL");
   const [activeSmartTag, setActiveSmartTag] = useState<string | null>(null);
   const [hoveredProduct, setHoveredProduct] = useState<ConductorProduct | null>(
     null,
@@ -1005,69 +2172,164 @@ export const SpectrumModule = () => {
     ConductorProduct[]
   >([]);
   const [imageLoadError, setImageLoadError] = useState(false);
+  const [pinnedProductId, setPinnedProductId] = useState<string | null>(null);
+  const hoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pendingHoverRef = useRef<{
+    product: ConductorProduct;
+    familyProducts: ConductorProduct[];
+  } | null>(null);
 
-  // Generate smart tags from clean products
   const smartTags = useMemo(() => {
     return generateSmartTags(cleanProducts, activeSubcategoryId || "");
   }, [cleanProducts, activeSubcategoryId]);
 
-  // Reset smart tag and tier filter when subcategory changes
+  // --------------------------------------------------------------------------
+  // 3. ZOOM LENS STATE + SCROLL SYNC
+  // --------------------------------------------------------------------------
+  const [focusRange, setFocusRange] = useState<[number, number]>([0, 200000]);
+  const tracksRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const isScrollProgrammatic = useRef(false);
+
+  // Compute price extent from all products (log-scale friendly)
+  const priceExtent = useMemo((): [number, number] => {
+    let min = Infinity;
+    let max = -Infinity;
+    for (const p of cleanProducts) {
+      const price = getEffectivePrice(p);
+      if (price > 0) {
+        min = Math.min(min, price);
+        max = Math.max(max, price);
+      }
+    }
+    if (min === Infinity) return [10, 10000];
+    // Small padding
+    return [Math.max(1, min * 0.8), max * 1.1];
+  }, [cleanProducts]);
+
+  // Reset zoom and filters when spectrum changes
   useEffect(() => {
     setActiveSmartTag(null);
-    setActiveFilter("ALL");
+    setFocusRange(priceExtent);
     setHoveredProduct(null);
     setHoveredFamilyProducts([]);
-  }, [activeSubcategoryId]);
+    setPinnedProductId(null);
+  }, [activeSubcategoryId]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleHoverProduct = useCallback(
-    (product: ConductorProduct, familyProducts: ConductorProduct[]) => {
-      setHoveredProduct(product);
-      setHoveredFamilyProducts(familyProducts);
-      setImageLoadError(false);
-    },
-    [],
+  // Also reset focus range when priceExtent is first calculated
+  const priceExtentRef = useRef(priceExtent);
+  useEffect(() => {
+    if (
+      priceExtent[0] !== priceExtentRef.current[0] ||
+      priceExtent[1] !== priceExtentRef.current[1]
+    ) {
+      priceExtentRef.current = priceExtent;
+      setFocusRange(priceExtent);
+    }
+  }, [priceExtent]);
+
+  // Determine if we're in aggregate (full zoom-out) mode
+  const isAggregate = useMemo(() => {
+    const focusSpan = focusRange[1] - focusRange[0];
+    const totalSpan = priceExtent[1] - priceExtent[0];
+    return totalSpan > 0 && focusSpan / totalSpan > 0.85;
+  }, [focusRange, priceExtent]);
+
+  // Zoom ratio and canvas width for horizontal scrolling
+  const zoomRatio = useMemo(() => {
+    const [pMin, pMax] = priceExtent;
+    const normFMin = priceToNorm(focusRange[0], pMin, pMax);
+    const normFMax = priceToNorm(focusRange[1], pMin, pMax);
+    return Math.max(0.01, normFMax - normFMin);
+  }, [focusRange, priceExtent]);
+
+  const canvasWidthPercent = useMemo(
+    () => Math.min(100 / zoomRatio, 2000), // cap at 2000% to prevent perf issues
+    [zoomRatio],
   );
 
-  const handleHoverOut = useCallback(() => {
-    // Don't clear on mouse leave from tile — keeps panel stable
-    // Panel clears when hovering a different product
-  }, []);
+  // Sync focus range → scroll position
+  useEffect(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    const [pMin, pMax] = priceExtent;
+    const normFMin = priceToNorm(focusRange[0], pMin, pMax);
+    const innerWidth = el.scrollWidth;
+    const scrollTarget = normFMin * innerWidth;
+    isScrollProgrammatic.current = true;
+    el.scrollLeft = scrollTarget;
+    // Reset flag after browser paints
+    requestAnimationFrame(() => {
+      isScrollProgrammatic.current = false;
+    });
+  }, [focusRange, priceExtent, canvasWidthPercent]);
 
-  const handleClickProduct = useCallback(
-    (id: string) => {
-      openProductPage(id);
+  // Sync scroll position → focus range
+  const handleScrollSync = useCallback(
+    (e: React.UIEvent<HTMLDivElement>) => {
+      if (isScrollProgrammatic.current) return;
+      const el = e.currentTarget;
+      const scrollWidth = el.scrollWidth;
+      if (scrollWidth <= 0) return;
+      const normFMin = el.scrollLeft / scrollWidth;
+      const normFMax = (el.scrollLeft + el.clientWidth) / scrollWidth;
+      const [pMin, pMax] = priceExtent;
+      const newFMin = normToPrice(
+        Math.max(0, Math.min(1, normFMin)),
+        pMin,
+        pMax,
+      );
+      const newFMax = normToPrice(
+        Math.max(0, Math.min(1, normFMax)),
+        pMin,
+        pMax,
+      );
+      if (
+        Math.abs(newFMin - focusRange[0]) > 1 ||
+        Math.abs(newFMax - focusRange[1]) > 1
+      ) {
+        setFocusRange([newFMin, newFMax]);
+      }
     },
-    [openProductPage],
+    [priceExtent, focusRange],
   );
 
+  // Preload images for products entering the focus zone
+  useFocusImagePreloader(cleanProducts, focusRange);
+
+  // --------------------------------------------------------------------------
+  // 4. FILTERED + SORTED PRODUCTS
+  // --------------------------------------------------------------------------
   const filteredProducts = useMemo(() => {
     let base = cleanProducts;
-
-    // Filter out accessories — tracks show only primary products for this spectrum
     const spectrumId = activeSubcategoryId || "";
     base = base.filter((p) => !isAccessoryProduct(p, spectrumId));
-
-    // Apply tier filter
-    if (activeFilter === "ALL") {
-      // no tier filter
-    } else if (
-      activeFilter === "entry" ||
-      activeFilter === "mid" ||
-      activeFilter === "pro" ||
-      activeFilter === "flagship"
-    ) {
-      base = base.filter((p) => p.tier === activeFilter);
-    }
-    // Apply smart tag filter
+    // Smart tag filter only (tiers now control zoom, not filtering)
     if (activeSmartTag) {
       const tag = smartTags.find((t) => t.label === activeSmartTag);
       if (tag) {
         base = base.filter((p) => tag.matchedIds.has(p.id));
       }
     }
-    // Sort by Price (X-Axis)
-    return base.sort((a, b) => a.price - b.price);
-  }, [cleanProducts, activeFilter, activeSmartTag, smartTags]);
+    return base.sort((a, b) => getEffectivePrice(a) - getEffectivePrice(b));
+  }, [cleanProducts, activeSmartTag, smartTags, activeSubcategoryId]);
+
+  // Count products with images in focus range (for stats)
+  const focusStats = useMemo(() => {
+    let inFocus = 0;
+    let withImage = 0;
+    for (const p of filteredProducts) {
+      const price = getEffectivePrice(p);
+      if (
+        (price >= focusRange[0] && price <= focusRange[1]) ||
+        price === 0
+      ) {
+        inFocus++;
+        if (isRealImage(p.image_url)) withImage++;
+      }
+    }
+    return { inFocus, withImage };
+  }, [filteredProducts, focusRange]);
 
   // Available tier filters from the data
   const availableFilters = useMemo(() => {
@@ -1078,22 +2340,19 @@ export const SpectrumModule = () => {
     return Array.from(tiers);
   }, [cleanProducts]);
 
-  // --- BRAND MATRIX ENGINE ---
+  // --------------------------------------------------------------------------
+  // 5. BRAND MATRIX
+  // --------------------------------------------------------------------------
   const brandMatrix = useMemo(() => {
     if (filteredProducts.length === 0) return { brands: [] };
-
-    // 1. Group by Brand
     const grouped: Record<string, ConductorProduct[]> = {};
     filteredProducts.forEach((p) => {
       const brand = p.brand || "Other";
       if (!grouped[brand]) grouped[brand] = [];
       grouped[brand].push(p);
     });
-
-    // 2. Sort Brands: most products first, then alphabetically
     const sortedBrands = Object.entries(grouped)
       .sort((a, b) => {
-        // Sort by product count descending, then alphabetically
         if (b[1].length !== a[1].length) return b[1].length - a[1].length;
         return a[0].localeCompare(b[0]);
       })
@@ -1106,11 +2365,155 @@ export const SpectrumModule = () => {
           rgbColor: hexToRgb(theme.primary),
         };
       });
-
     return { brands: sortedBrands };
   }, [filteredProducts]);
 
-  // Handle errors
+  // --------------------------------------------------------------------------
+  // 6. EVENT HANDLERS
+  // --------------------------------------------------------------------------
+  // Debounced hover: only update preview after cursor rests for 180ms.
+  // If a product is pinned, hover previews are suppressed.
+  const handleHoverProduct = useCallback(
+    (product: ConductorProduct, familyProducts: ConductorProduct[]) => {
+      // If this product is already displayed, skip
+      if (hoveredProduct?.id === product.id) return;
+      // If a product is pinned, don't allow hover to override
+      if (pinnedProductId) return;
+
+      // Store pending hover and start debounce timer
+      pendingHoverRef.current = { product, familyProducts };
+      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = setTimeout(() => {
+        const pending = pendingHoverRef.current;
+        if (pending) {
+          setHoveredProduct(pending.product);
+          setHoveredFamilyProducts(pending.familyProducts);
+          setImageLoadError(false);
+          pendingHoverRef.current = null;
+        }
+      }, 180);
+    },
+    [hoveredProduct?.id, pinnedProductId],
+  );
+
+  const handleHoverOut = useCallback(() => {
+    // Cancel any pending hover (cursor left before debounce fired)
+    if (hoverTimerRef.current) {
+      clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = null;
+    }
+    pendingHoverRef.current = null;
+    // Don't clear the preview — keep the last product visible (sticky)
+  }, []);
+
+  // Click-to-pin: first click pins the product in the preview panel.
+  // Second click on the same pinned product navigates to the detail page.
+  // Clicking a different product pins that one instead.
+  const handleClickProduct = useCallback(
+    (id: string) => {
+      if (pinnedProductId === id) {
+        // Second click on same product → navigate to detail page
+        setPinnedProductId(null);
+        openProductPage(id);
+      } else {
+        // First click → pin this product
+        setPinnedProductId(id);
+        // Find the product in filtered data and set it in the preview
+        const product = filteredProducts.find((p) => p.id === id);
+        if (product) {
+          setHoveredProduct(product);
+          setHoveredFamilyProducts([product]);
+          setImageLoadError(false);
+        }
+      }
+    },
+    [pinnedProductId, openProductPage, filteredProducts],
+  );
+
+  // Unpin when clicking outside the tiles (on the background)
+  const handleBackgroundClick = useCallback(() => {
+    if (pinnedProductId) {
+      setPinnedProductId(null);
+    }
+  }, [pinnedProductId]);
+
+  // Clean up hover timer on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
+    };
+  }, []);
+
+  const handleFocusRangeChange = useCallback(
+    (range: [number, number]) => {
+      setFocusRange([
+        Math.max(priceExtent[0], range[0]),
+        Math.min(priceExtent[1], range[1]),
+      ]);
+    },
+    [priceExtent],
+  );
+
+  // Snap to a tier
+  const handleSnapTier = useCallback(
+    (tier: string) => {
+      const tb = TIER_BOUNDARIES[tier];
+      if (tb) {
+        const min = Math.max(priceExtent[0], tb.min || 1);
+        const max = Math.min(priceExtent[1], tb.max);
+        setFocusRange([min, max]);
+      }
+    },
+    [priceExtent],
+  );
+
+  // --------------------------------------------------------------------------
+  // 7. MOUSE WHEEL ZOOM (Ctrl/Cmd+wheel or pinch only — regular scroll is free)
+  // --------------------------------------------------------------------------
+  const handleWheel = useCallback(
+    (e: React.WheelEvent) => {
+      // Only intercept Ctrl+wheel (pinch-to-zoom on trackpads reports ctrlKey=true)
+      // or Meta+wheel. Regular scroll (vertical + horizontal) passes through natively.
+      if (!e.ctrlKey && !e.metaKey) return;
+
+      e.preventDefault();
+      const [fMin, fMax] = focusRange;
+      const [pMin, pMax] = priceExtent;
+      const span = fMax - fMin;
+      const totalSpan = pMax - pMin;
+
+      // Zoom factor — use smaller steps for pinch gestures (ctrlKey)
+      const zoomSpeed = e.ctrlKey ? 0.08 : 0.15;
+      const delta = e.deltaY > 0 ? 1 + zoomSpeed : 1 - zoomSpeed;
+
+      // Calculate where the mouse is pointing (as a ratio of the visible viewport)
+      const el = scrollContainerRef.current;
+      const rect = el?.getBoundingClientRect();
+      const mouseRatio = rect
+        ? Math.max(
+            0,
+            Math.min(1, (e.clientX - rect.left) / rect.width),
+          )
+        : 0.5;
+
+      // The price at the cursor position
+      const cursorPrice = fMin + mouseRatio * span;
+
+      // New span
+      const newSpan = Math.max(50, Math.min(totalSpan, span * delta));
+
+      // Anchor on cursor position
+      const newMin = Math.max(pMin, cursorPrice - mouseRatio * newSpan);
+      const newMax = Math.min(pMax, newMin + newSpan);
+
+      setFocusRange([newMin, newMax]);
+    },
+    [focusRange, priceExtent],
+  );
+
+  // --------------------------------------------------------------------------
+  // 8. RENDER
+  // --------------------------------------------------------------------------
   if (error) {
     return (
       <div className="flex h-full w-full items-center justify-center flex-col gap-4 p-8">
@@ -1145,10 +2548,6 @@ export const SpectrumModule = () => {
     );
   }
 
-  // --------------------------------------------------------------------------
-  // 3. THE RENDER
-  // --------------------------------------------------------------------------
-
   return (
     <div className="flex flex-col h-full bg-[#0b0c10] text-white overflow-hidden relative">
       {/* --- TOP DECK --- */}
@@ -1175,6 +2574,19 @@ export const SpectrumModule = () => {
               {filteredProducts.length} units
             </span>
           </div>
+          {!isAggregate && (
+            <div className="hidden md:flex items-center gap-2 text-xs font-mono text-blue-500/70 border border-blue-900/30 rounded-full px-3 py-1 bg-blue-950/20">
+              <Zap className="w-3 h-3" />
+              <span>
+                {focusStats.inFocus} in focus
+                {focusStats.withImage > 0 && (
+                  <span className="text-zinc-600 ml-1">
+                    ({focusStats.withImage} with image)
+                  </span>
+                )}
+              </span>
+            </div>
+          )}
           {flaggedCount > 0 && (
             <div
               className="hidden md:flex items-center gap-2 text-xs font-mono text-amber-500/80 border border-amber-900/30 rounded-full px-3 py-1 bg-amber-950/20"
@@ -1189,7 +2601,7 @@ export const SpectrumModule = () => {
 
       {/* --- DATA SCREENS (Visualizer) --- */}
       <div className="h-[35vh] grid grid-cols-12 gap-1 p-1 bg-black border-b border-zinc-800 z-40 shrink-0 shadow-2xl relative transition-all duration-300">
-        {/* LEFT: VISUAL FEED (IMAGE ONLY) */}
+        {/* LEFT: VISUAL FEED */}
         <Surface
           variant="screen"
           active={!!hoveredProduct}
@@ -1197,7 +2609,7 @@ export const SpectrumModule = () => {
         >
           {hoveredProduct ? (
             <div className="w-full h-full flex items-center justify-center relative bg-white/5 p-4 rounded-sm">
-              {hoveredProduct.image_url && !imageLoadError ? (
+              {isRealImage(hoveredProduct.image_url) && !imageLoadError ? (
                 <img
                   src={hoveredProduct.image_url}
                   className="max-w-full max-h-full object-contain drop-shadow-2xl transition-all duration-500 will-change-transform animate-scale-in"
@@ -1206,33 +2618,24 @@ export const SpectrumModule = () => {
                 />
               ) : (
                 <div className="flex flex-col items-center justify-center gap-3 text-zinc-600 text-center p-4 w-full h-full">
-                  {hoveredProduct.brand_logo ? (
-                    <img
-                      src={hoveredProduct.brand_logo}
-                      alt={hoveredProduct.brand}
-                      className="max-w-[60%] max-h-[40%] object-contain opacity-20"
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                      }}
-                    />
-                  ) : (
-                    <div className="w-16 h-16 rounded-full bg-zinc-800/30 flex items-center justify-center">
-                      <ScanLine className="w-7 h-7 opacity-50" />
-                    </div>
-                  )}
+                  <BrandLogo
+                    brand={hoveredProduct.brand}
+                    className="max-h-16 max-w-[60%] w-auto opacity-30"
+                  />
                   <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-700">
                     Image not yet scraped
                   </span>
-                  {hoveredProduct.halilit_url && (
-                    <a
-                      href={hoveredProduct.halilit_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[9px] text-blue-500/60 hover:text-blue-400 transition-colors underline underline-offset-2"
-                    >
-                      View on Halilit.com
-                    </a>
-                  )}
+                  {hoveredProduct.halilit_url &&
+                    hoveredProduct.halilit_url !== "https://halilit.com" && (
+                      <a
+                        href={hoveredProduct.halilit_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[9px] text-blue-500/60 hover:text-blue-400 transition-colors underline underline-offset-2"
+                      >
+                        View on Halilit.com
+                      </a>
+                    )}
                 </div>
               )}
             </div>
@@ -1241,8 +2644,9 @@ export const SpectrumModule = () => {
               <div className="w-16 h-16 rounded-full bg-zinc-900/50 flex items-center justify-center">
                 <Sparkles className="w-8 h-8 opacity-20" />
               </div>
-              <div className="text-xs font-mono tracking-[0.15em] uppercase opacity-50">
-                Hover a product to preview
+              <div className="text-xs font-mono tracking-[0.15em] uppercase opacity-50 text-center leading-relaxed">
+                Hover to preview<br/>
+                <span className="text-[9px] text-zinc-700">Click to pin &middot; Double-click for details</span>
               </div>
             </div>
           )}
@@ -1256,20 +2660,26 @@ export const SpectrumModule = () => {
         >
           {hoveredProduct ? (
             <div className="flex flex-col h-full gap-3 overflow-y-auto custom-scrollbar">
-              {/* Header — Brand logo + product identity */}
               <div className="flex items-center justify-between border-b border-zinc-800 pb-2 shrink-0">
                 <div className="flex flex-col overflow-hidden flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[10px] text-emerald-500 font-mono tracking-widest">
-                      SKU: {hoveredProduct.id || "N/A"}
+                    <div className={`w-1.5 h-1.5 rounded-full ${pinnedProductId === hoveredProduct.id ? 'bg-amber-400' : 'bg-emerald-500 animate-pulse'}`} />
+                    <span className={`text-[10px] font-mono tracking-widest ${pinnedProductId === hoveredProduct.id ? 'text-amber-400' : 'text-emerald-500'}`}>
+                      {pinnedProductId === hoveredProduct.id ? 'PINNED' : 'SKU:'} {hoveredProduct.id || "N/A"}
                     </span>
+                    {pinnedProductId === hoveredProduct.id && (
+                      <button
+                        onClick={() => setPinnedProductId(null)}
+                        className="text-[9px] text-zinc-500 hover:text-zinc-300 transition-colors ml-1 px-1.5 py-0.5 rounded bg-zinc-800/50 hover:bg-zinc-700/50"
+                      >
+                        unpin
+                      </button>
+                    )}
                   </div>
                   <h1 className="text-xl font-black text-white uppercase tracking-tight mt-1 truncate w-full">
                     {hoveredProduct.name}
                   </h1>
                 </div>
-                {/* Brand logo beside name */}
                 <div className="flex-shrink-0 ml-3">
                   <BrandLogo
                     brand={hoveredProduct.brand}
@@ -1278,7 +2688,6 @@ export const SpectrumModule = () => {
                 </div>
               </div>
 
-              {/* Description */}
               {(hoveredProduct.description_short ||
                 hoveredProduct.description) && (
                 <div className="text-[11px] text-zinc-400 font-sans leading-relaxed line-clamp-3 border-l-2 border-zinc-800 pl-3 shrink-0">
@@ -1287,7 +2696,6 @@ export const SpectrumModule = () => {
                 </div>
               )}
 
-              {/* Specs Grid — more compact */}
               {hoveredProduct.specs &&
                 Object.keys(hoveredProduct.specs).length > 0 && (
                   <div>
@@ -1321,7 +2729,6 @@ export const SpectrumModule = () => {
                   </div>
                 )}
 
-              {/* Enrichment Data Section */}
               <EnrichmentPanel product={hoveredProduct} />
             </div>
           ) : (
@@ -1352,8 +2759,45 @@ export const SpectrumModule = () => {
         </Surface>
       </div>
 
-      {/* --- BOTTOM: BRAND SWIMLANES ENGINE --- */}
-      <div className="flex-1 relative bg-[#050505] overflow-hidden flex flex-col">
+      {/* --- PRICE RANGE SLIDER --- */}
+      {!isLoading && filteredProducts.length > 0 && (
+        <div className="shrink-0 bg-[#080808] border-b border-zinc-800/50 pt-4 pb-2">
+          <div className="flex items-center px-4 mb-1">
+            <div className="w-28 shrink-0 text-center">
+              <span className="text-[9px] font-bold text-zinc-600 uppercase tracking-widest">
+                Brand
+              </span>
+            </div>
+            <div className="flex-1 flex items-center gap-2 text-[9px] text-zinc-600 font-mono">
+              <span className="text-zinc-500 uppercase tracking-widest font-bold">
+                Price Spectrum
+              </span>
+              <span className="ml-auto text-zinc-600">
+                {filteredProducts.length} total
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="w-28 shrink-0" />
+            <div className="flex-1">
+              <MiniSpectrum
+                focusRange={focusRange}
+                priceExtent={priceExtent}
+                products={filteredProducts}
+                onFocusRangeChange={handleFocusRangeChange}
+                onReset={() => setFocusRange(priceExtent)}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* --- BRAND SWIMLANES ENGINE (scrollable) --- */}
+      <div
+        className="flex-1 relative bg-[#050505] overflow-hidden flex flex-col"
+        ref={tracksRef}
+        onWheel={handleWheel}
+      >
         {isLoading ? (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex flex-col items-center gap-4">
@@ -1376,16 +2820,13 @@ export const SpectrumModule = () => {
                 No products found
               </h3>
               <p className="text-zinc-600 text-sm mb-4">
-                {activeSmartTag || activeFilter !== "ALL"
+                {activeSmartTag
                   ? "Try adjusting your filters to see more products."
                   : "This spectrum doesn't have any products yet."}
               </p>
-              {(activeSmartTag || activeFilter !== "ALL") && (
+              {activeSmartTag && (
                 <button
-                  onClick={() => {
-                    setActiveSmartTag(null);
-                    setActiveFilter("ALL");
-                  }}
+                  onClick={() => setActiveSmartTag(null)}
                   className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-zinc-300 rounded-lg text-sm transition-colors"
                 >
                   Clear All Filters
@@ -1394,24 +2835,18 @@ export const SpectrumModule = () => {
             </div>
           </div>
         ) : (
-          <div className="w-full h-full flex flex-col">
-            {/* Header */}
-            <div className="h-8 flex border-b border-zinc-800/50 bg-black/40 text-[9px] text-zinc-600 font-mono items-center px-4">
-              <div className="w-28 shrink-0 text-center uppercase tracking-widest font-bold text-zinc-500">
-                Brand
-              </div>
-              <div className="flex-1 flex items-center gap-2 pl-2">
-                <span className="text-zinc-500">
-                  Products sorted by price (low → high)
-                </span>
-                <span className="ml-auto text-zinc-600">
-                  {filteredProducts.length} total
-                </span>
-              </div>
-            </div>
-
-            {/* Scrollable Matrix */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar">
+          <div
+            ref={scrollContainerRef}
+            className="flex-1 overflow-auto custom-scrollbar"
+            onScroll={handleScrollSync}
+            onClick={handleBackgroundClick}
+          >
+            <div
+              style={{
+                width: `${canvasWidthPercent}%`,
+                minWidth: "100%",
+              }}
+            >
               {brandMatrix.brands.map(
                 ({ brand, products, rgbColor, brandPrimary }) => (
                   <BrandTrack
@@ -1421,9 +2856,14 @@ export const SpectrumModule = () => {
                     rgbColor={rgbColor}
                     brandPrimary={brandPrimary}
                     families={families}
+                    priceExtent={priceExtent}
+                    focusRange={focusRange}
+                    isAggregate={isAggregate}
+                    pinnedProductId={pinnedProductId}
                     onHoverProduct={handleHoverProduct}
                     onHoverOut={handleHoverOut}
                     onClickProduct={handleClickProduct}
+                    onSnapTier={handleSnapTier}
                   />
                 ),
               )}
@@ -1432,7 +2872,7 @@ export const SpectrumModule = () => {
         )}
       </div>
 
-      {/* --- BOTTOM DECK: SMART TAG FILTERS + 1176 TIER CONTROLS --- */}
+      {/* --- BOTTOM DECK: SMART TAG FILTERS + TIER ZOOM CONTROLS --- */}
       <Surface
         variant="panel"
         className="flex flex-col gap-0 z-30 !bg-zinc-900/90 backdrop-blur-md border-t border-zinc-800 shadow-2xl shrink-0"
@@ -1483,25 +2923,33 @@ export const SpectrumModule = () => {
           </div>
         )}
 
-        {/* Tier Filter Row */}
+        {/* Tier Zoom Controls — these snap the focus range to a tier */}
         <div className="flex items-center px-4 gap-4 h-12">
           <div className="flex items-center justify-center gap-1 overflow-x-auto no-scrollbar py-2 mask-linear-fade flex-1">
             <Control
               variant="1176"
               label="ALL"
-              active={activeFilter === "ALL"}
-              onClick={() => setActiveFilter("ALL")}
+              active={isAggregate}
+              onClick={() => setFocusRange(priceExtent)}
             />
             <div className="w-px h-4 bg-zinc-800 mx-1" />
-            {availableFilters.map((filter) => (
-              <Control
-                key={filter}
-                variant="1176"
-                label={filter}
-                active={activeFilter === filter}
-                onClick={() => setActiveFilter(filter)}
-              />
-            ))}
+            {availableFilters.map((filter) => {
+              const tb = TIER_BOUNDARIES[filter];
+              const isActive =
+                !isAggregate &&
+                tb &&
+                Math.abs(focusRange[0] - Math.max(priceExtent[0], tb.min || 1)) < 50 &&
+                Math.abs(focusRange[1] - Math.min(priceExtent[1], tb.max)) < 50;
+              return (
+                <Control
+                  key={filter}
+                  variant="1176"
+                  label={filter}
+                  active={isActive}
+                  onClick={() => handleSnapTier(filter)}
+                />
+              );
+            })}
           </div>
         </div>
       </Surface>

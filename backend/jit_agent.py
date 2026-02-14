@@ -133,24 +133,107 @@ def read_halilit_page(url: str) -> Dict[str, Any]:
     return {"source": "halilit", "error": "Could not read page"}
 
 
+def read_brand_page(brand: str, product_name: str) -> Dict[str, Any]:
+    """
+    Search and read the official brand page for a product.
+    Attempts to find the product on the brand's official website.
+
+    NOTE: In production, this would use Google Custom Search API
+    to find the exact product page on the brand domain. For now,
+    we construct a likely URL and attempt to fetch it.
+    """
+    import requests
+
+    # Common brand domain patterns
+    brand_domains = {
+        "roland": "roland.com",
+        "yamaha": "yamaha.com",
+        "fender": "fender.com",
+        "gibson": "gibson.com",
+        "boss": "boss.info",
+        "korg": "korg.com",
+        "casio": "casio.com",
+        "shure": "shure.com",
+        "sennheiser": "sennheiser.com",
+        "audio-technica": "audio-technica.com",
+        "jbl": "jbl.com",
+        "harman": "harman.com",
+        "pioneer": "pioneerdj.com",
+        "native instruments": "native-instruments.com",
+        "arturia": "arturia.com",
+        "focusrite": "focusrite.com",
+        "universal audio": "uaudio.com",
+        "akai": "akaipro.com",
+        "novation": "novationmusic.com",
+        "moog": "moogmusic.com",
+        "nord": "nordkeyboards.com",
+        "kawai": "kawai.co.jp",
+        "marshall": "marshall.com",
+        "orange": "orangeamps.com",
+        "vox": "voxamps.com",
+        "line 6": "line6.com",
+        "tc electronic": "tcelectronic.com",
+        "behringer": "behringer.com",
+        "mackie": "mackie.com",
+        "presonus": "presonus.com",
+    }
+
+    brand_lower = brand.lower().strip()
+    domain = brand_domains.get(brand_lower, f"{brand_lower.replace(' ', '')}.com")
+
+    # Build a search query for the brand's official page
+    search_query = f"{product_name} site:{domain}"
+
+    result = {
+        "source": "brand_official",
+        "brand": brand,
+        "domain": domain,
+        "search_query": search_query,
+    }
+
+    # Attempt to reach the brand's website
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        }
+        resp = requests.get(
+            f"https://{domain}/",
+            headers=headers,
+            timeout=8,
+            allow_redirects=True,
+        )
+        if resp.status_code == 200:
+            result["brand_site_reachable"] = True
+            result["note"] = f"Brand site {domain} is reachable. Search query prepared."
+        else:
+            result["brand_site_reachable"] = False
+            result["note"] = f"Brand site returned status {resp.status_code}"
+    except Exception as e:
+        result["brand_site_reachable"] = False
+        result["note"] = f"Could not reach brand site: {str(e)[:100]}"
+
+    return result
+
+
 def search_trusted_reviews(product_name: str) -> Dict[str, Any]:
     """
     Build a site-restricted search query for the Golden Circle sources.
     Returns the query and source info for the frontend to display.
 
     NOTE: In production, this would call Google Custom Search API.
-    For now, returns the structured query and source metadata.
+    For now, returns the structured query and source metadata
+    so the frontend can display which sources were consulted.
     """
     query = build_site_restricted_query(product_name)
-    sources = [
-        {
-            "name": s["name"],
+    sources = []
+    for s in TRUSTED_SOURCES[:6]:
+        sources.append({
+            "source": s["name"],
             "domain": s["domain"],
             "logo": s["logo"],
-            "specialty": s["specialty"],
-        }
-        for s in TRUSTED_SOURCES[:6]
-    ]
+            "summary": f"{s['specialty']} — search prepared for {product_name}",
+            "sentiment": "neutral",
+        })
     return {
         "query": query,
         "sources": sources,
@@ -177,13 +260,14 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
     Main entry point: streams JIT intelligence for a product as SSE events.
 
     Event types:
-      status    — Phase updates ("Reading Halilit page...")
-      snap      — Instant inventory data (name, price, brand)
+      status         — Phase updates ("Reading Halilit page...")
+      snap           — Instant inventory data (name, price, brand)
       official_specs — Specs from brand/Halilit page
-      verdict   — AI summary with pros/cons
-      field_notes — Pro tips and warnings
-      exploration — Suggested next actions
-      complete  — Done signal with cache status
+      trusted_reviews — Golden Circle source metadata
+      verdict        — AI summary with pros/cons
+      field_notes    — Pro tips and warnings
+      exploration    — Suggested next actions
+      complete       — Done signal with cache status
     """
     logger.info(f"JIT stream starting for: {product_id}")
 
@@ -198,6 +282,8 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
             yield _sse_event("snap", cached["snap"])
         if "official_specs" in cached:
             yield _sse_event("official_specs", cached["official_specs"])
+        if "trusted_reviews" in cached:
+            yield _sse_event("trusted_reviews", cached["trusted_reviews"])
         if "verdict" in cached:
             yield _sse_event("verdict", cached["verdict"])
         if "field_notes" in cached:
@@ -245,11 +331,27 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
             yield _sse_event("official_specs", official_specs)
             cache_result["official_specs"] = official_specs
 
-    # ── Phase 3: WISDOM — AI Reasoning ──
+    # ── Phase 2b: INTEL — Read brand page (if we have brand info) ──
     product_name = snap_data.get("name", "") or product_id
     brand_name = snap_data.get("brand", "")
 
+    brand_data = {}
+    if brand_name:
+        yield _sse_event("status", {"phase": "intel", "message": f"Checking {brand_name} official page..."})
+        try:
+            brand_data = read_brand_page(brand_name, product_name)
+        except Exception as e:
+            logger.warning(f"Brand page read failed: {e}")
+
+    # ── Phase 3: WISDOM — Trusted reviews + AI Reasoning ──
     yield _sse_event("status", {"phase": "wisdom", "message": f"Consulting trusted sources for {product_name}..."})
+
+    # Search trusted review sources
+    trusted_data = search_trusted_reviews(product_name)
+    trusted_reviews = trusted_data.get("sources", [])
+    if trusted_reviews:
+        yield _sse_event("trusted_reviews", {"reviews": trusted_reviews})
+        cache_result["trusted_reviews"] = {"reviews": trusted_reviews}
 
     # Try to use Gemini for intelligent analysis
     verdict_data = None

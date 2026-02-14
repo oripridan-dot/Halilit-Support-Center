@@ -50,6 +50,7 @@ HEADERS = {
         "Chrome/120.0.0.0 Safari/537.36"
     ),
     "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Referer": "https://www.halilit.com/",
 }
 REQUEST_TIMEOUT = 12
 # Rate and concurrency from ingestion_config (sustainable defaults)

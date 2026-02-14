@@ -624,6 +624,10 @@ def _extract_hero_image(p: dict) -> str:
     if isinstance(src, dict) and _is_valid_image(src.get("image")):
         return src["image"]
 
+    # Skeleton sync / inventory shape uses "thumbnail"
+    if _is_valid_image(p.get("thumbnail")):
+        return p["thumbnail"]
+
     return ""
 
 
@@ -635,6 +639,12 @@ def _collect_gallery(p: dict, hero_url: str) -> List[str]:
     if hero_url:
         gallery.append(hero_url)
         seen.add(hero_url)
+
+    # Include thumbnail (skeleton/inventory) if not already in gallery
+    thumb = p.get("thumbnail")
+    if _is_valid_image(thumb) and thumb not in seen:
+        gallery.append(thumb)
+        seen.add(thumb)
 
     for src_key in ("image_gallery", "official_images", "gallery_images"):
         for img in (p.get(src_key) or []):
@@ -882,26 +892,33 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     if p.get("review_synthesis") and isinstance(p["review_synthesis"], dict):
         contextual_data.setdefault("review_synthesis", p["review_synthesis"])
 
+    # Per source_rules: official only when we have real official-scout data
+    has_official_specs = bool(
+        p.get("official_specs")
+        and isinstance(p["official_specs"], dict)
+        and any(v for v in (p["official_specs"] or {}).values() if v)
+    )
+
     # Sources — clearly track the three pillars
     sources = p.get("sources") or []
     if not sources:
         sources = []
-        if halilit_url:  # We have Halilit data
+        if halilit_url:
             sources.append("halilit")
-        if official_url:  # We have official brand data
-            sources.append("official")
-        elif specs and any(k not in ("sku",) for k in specs):
+        if official_url or has_official_specs or _is_real_desc(
+            (p.get("official_description") or "")
+        ):
             sources.append("official")
         if contextual_data or rating > 0 or pros or cons:
             sources.append("contextual")
         if not sources:
             sources = ["halilit"]
 
-    # Data trust — provenance indicator per field
+    # Data trust — provenance per field (app rules)
     data_trust = {
         "price_source": "halilit" if price > 0 else "none",
-        "specs_source": "official" if specs and any(k not in ("sku",) for k in specs) else ("halilit" if specs else "none"),
-        "description_source": "official" if p.get("official_description") else ("halilit" if description else "none"),
+        "specs_source": "official" if has_official_specs else ("halilit" if specs else "none"),
+        "description_source": "official" if _is_real_desc(p.get("official_description") or "") else ("halilit" if description else "none"),
         "image_source": "halilit" if image_url and "halilit" in image_url else ("official" if image_url else "none"),
         "review_source": "contextual" if rating > 0 else "none",
     }

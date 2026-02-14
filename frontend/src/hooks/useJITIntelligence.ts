@@ -194,6 +194,13 @@ function processEvent(
       }));
       break;
 
+    case "trusted_reviews":
+      setState((prev) => ({
+        ...prev,
+        trustedReviews: data.reviews || [],
+      }));
+      break;
+
     case "verdict":
       setState((prev) => ({
         ...prev,

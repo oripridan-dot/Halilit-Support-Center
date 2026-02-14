@@ -284,6 +284,56 @@ async def refresh_conductor_catalog():
 
 
 # ═══════════════════════════════════════════════════════════════════════════
+# BATCH IMAGE LOOKUP — lightweight endpoint for focus-zone enrichment
+# Checks JIT cache for images without triggering full JIT pipeline.
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+@app.post("/api/batch-image-lookup")
+async def batch_image_lookup(request: Request):
+    """
+    Look up cached images for a batch of product IDs.
+    Returns {product_id: image_url} for any products that have images
+    in the JIT cache. Does NOT trigger new scraping — purely cache lookup.
+
+    This endpoint supports the zoom-lens focus-zone enrichment:
+    when the user zooms into a price range, the frontend can request
+    images for visible products that lack them.
+    """
+    try:
+        body = await request.json()
+        product_ids = body.get("product_ids", [])
+        if not isinstance(product_ids, list) or len(product_ids) > 200:
+            return JSONResponse(
+                status_code=400,
+                content={"error": "product_ids must be a list of max 200 IDs"},
+            )
+
+        from backend.jit_agent import _read_cache
+
+        results: dict[str, str] = {}
+        for pid in product_ids:
+            cached = _read_cache(pid)
+            if cached:
+                # Check for images in the cached JIT data
+                snap = cached.get("snap", {})
+                official = cached.get("official_specs", {})
+                thumbnail = snap.get("thumbnail", "")
+                official_images = official.get("images", [])
+
+                if official_images:
+                    results[pid] = official_images[0]
+                elif thumbnail and thumbnail.startswith("http"):
+                    results[pid] = thumbnail
+
+        return {"images": results, "found": len(results), "requested": len(product_ids)}
+
+    except Exception as e:
+        logger.error(f"Batch image lookup failed: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # JIT INTELLIGENCE ENDPOINT
 # ═══════════════════════════════════════════════════════════════════════════
 
