@@ -30,12 +30,20 @@ Delete all branches except `main`, `v8.4`, and `v8.6`
 
 ## How to Execute
 
-### Option 1: Using the provided script
+### Option 1: Using GitHub Actions Workflow (RECOMMENDED)
+1. Go to https://github.com/oripridan-dot/Halilit-Support-Center/actions/workflows/delete-old-branches.yml
+2. Click "Run workflow"
+3. Type "DELETE" in the confirmation field
+4. Click "Run workflow" button
+5. Wait for the workflow to complete
+6. Verify results in the workflow logs
+
+### Option 2: Using the provided script
 ```bash
 ./delete_branches.sh
 ```
 
-### Option 2: Manual deletion via git commands
+### Option 3: Manual deletion via git commands
 ```bash
 # Delete each branch remotely
 git push origin --delete <branch-name>
@@ -44,7 +52,7 @@ git push origin --delete <branch-name>
 git branch -D <branch-name>
 ```
 
-### Option 3: Via GitHub Web Interface
+### Option 4: Via GitHub Web Interface
 1. Go to https://github.com/oripridan-dot/Halilit-Support-Center/branches
 2. Click the delete (trash) icon next to each branch listed above
 
