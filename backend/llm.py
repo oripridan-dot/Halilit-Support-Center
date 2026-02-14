@@ -1,38 +1,20 @@
 """
-LLM Gateway — Single point of contact for all Gemini API calls.
-═══════════════════════════════════════════════════════════════
+LLM Gateway v9 — Centralized Gemini API access with built-in cache.
 
-Replaces scattered Gemini call patterns across the codebase with ONE
-centralized module that handles:
-
-1. Rate limiting (token-bucket per agent)
-2. Caching (content-addressed, via ai_cache)
-3. Batching (group N products into fewer API calls)
-4. Retries with exponential backoff
-5. Audit logging
-
-Previously these concerns were scattered across:
-- unified_quality_gates.call_gemini_with_rate_limit() (rate limiting + audit)
-- ingestion/ai_cache.py (caching)
-- Individual agent classes (retry logic)
-
-Now: ONE import → llm.call() or llm.batch()
+All Gemini calls in the app go through this gateway:
+  - Rate limiting (token-bucket per agent)
+  - File-based content-addressed cache (7-day TTL)
+  - Retries with exponential backoff
 
 Usage:
     from backend.llm import get_llm
 
     llm = get_llm()
-
-    # Single call (cached + rate-limited)
-    text, ok = llm.call("CommercialScout", prompt, system="You are...")
-
-    # Batch call (groups products into fewer API calls)
-    results = llm.batch("OfficialScout", prompts, system="You are...")
-
-    # JSON mode (parsed response)
-    data, ok = llm.call_json("CommercialScout", prompt)
+    text, ok = llm.call("JITAgent", prompt, system="You are...")
+    data, ok = llm.call_json("JITAgent", prompt)
 """
 
+import hashlib
 import json
 import logging
 import os
@@ -40,6 +22,7 @@ import time
 import threading
 from collections import deque
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Any, Optional, Tuple
 
 from dotenv import load_dotenv
@@ -47,6 +30,67 @@ from dotenv import load_dotenv
 load_dotenv()
 
 logger = logging.getLogger(__name__)
+
+# ── Cache directory ──
+CACHE_DIR = Path(__file__).parent / "data" / "ai_cache"
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+
+# ── Built-in File Cache ──────────────────────────────────────────────────
+
+class _FileCache:
+    """Content-addressed file cache with configurable TTL."""
+
+    def __init__(self, cache_dir: Path = CACHE_DIR, default_ttl_hours: float = 168.0):
+        self.cache_dir = cache_dir
+        self.default_ttl = default_ttl_hours * 3600  # Convert to seconds
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._hits = 0
+        self._misses = 0
+
+    def _key(self, namespace: str, inputs: dict) -> str:
+        raw = json.dumps({"ns": namespace, **inputs}, sort_keys=True)
+        return hashlib.sha256(raw.encode()).hexdigest()[:32]
+
+    def _path(self, key: str) -> Path:
+        return self.cache_dir / f"{key}.json"
+
+    def get(self, namespace: str, inputs: dict) -> Any | None:
+        key = self._key(namespace, inputs)
+        path = self._path(key)
+        if not path.exists():
+            self._misses += 1
+            return None
+        try:
+            data = json.loads(path.read_text())
+            if time.time() - data.get("ts", 0) > self.default_ttl:
+                path.unlink(missing_ok=True)
+                self._misses += 1
+                return None
+            self._hits += 1
+            return data["value"]
+        except Exception:
+            self._misses += 1
+            return None
+
+    def put(self, namespace: str, inputs: dict, value: Any, ttl_hours: float | None = None):
+        key = self._key(namespace, inputs)
+        path = self._path(key)
+        try:
+            path.write_text(json.dumps(
+                {"ts": time.time(), "value": value}, ensure_ascii=False))
+        except Exception as e:
+            logger.warning(f"Cache write failed: {e}")
+
+    def get_stats(self) -> dict:
+        total = self._hits + self._misses
+        return {
+            "hits": self._hits,
+            "misses": self._misses,
+            "hit_rate": f"{self._hits / max(total, 1):.1%}",
+            "cache_files": len(list(self.cache_dir.glob("*.json"))),
+        }
+
 
 # ── Lazy Gemini client ─────────────────────────────────────────────────────
 _genai_client = None
@@ -69,8 +113,8 @@ def _get_client():
 class _RateLimiter:
     """Token-bucket rate limiter with per-agent exponential backoff."""
 
-    __slots__ = ("max_rpm", "request_times", "agent_backoff",
-                 "agent_counts", "lock")
+    __slots__ = ("max_rpm", "request_times",
+                 "agent_backoff", "agent_counts", "lock")
 
     def __init__(self, max_rpm: int = 60):
         self.max_rpm = max_rpm
@@ -82,22 +126,18 @@ class _RateLimiter:
     def wait_if_needed(self, agent: str) -> float:
         with self.lock:
             now = datetime.now()
-
-            # Per-agent backoff
             if agent in self.agent_backoff:
                 wait = (self.agent_backoff[agent] - now).total_seconds()
                 if wait > 0:
                     return wait
                 del self.agent_backoff[agent]
 
-            # Global RPM check
             cutoff = now - timedelta(minutes=1)
             while self.request_times and self.request_times[0] < cutoff:
                 self.request_times.popleft()
 
             if len(self.request_times) >= self.max_rpm:
-                return (self.request_times[0] +
-                        timedelta(minutes=1) - now).total_seconds()
+                return (self.request_times[0] + timedelta(minutes=1) - now).total_seconds()
             return 0.0
 
     def record(self, agent: str):
@@ -117,10 +157,9 @@ class _RateLimiter:
                 delay = 30.0
             else:
                 delay = 5.0
-            # Double existing backoff up to 5 min cap
             if agent in self.agent_backoff:
-                remaining = (self.agent_backoff[agent] -
-                             datetime.now()).total_seconds()
+                remaining = (
+                    self.agent_backoff[agent] - datetime.now()).total_seconds()
                 delay = min(300, max(delay, remaining * 2))
             self.agent_backoff[agent] = datetime.now() + \
                 timedelta(seconds=delay)
@@ -142,36 +181,22 @@ class _RateLimiter:
 # ── LLM Gateway ───────────────────────────────────────────────────────────
 
 class LLMGateway:
-    """
-    Centralized Gemini API gateway with caching, rate limiting, and batching.
+    """Centralized Gemini API gateway with caching and rate limiting."""
 
-    Replaces:
-    - unified_quality_gates.call_gemini_with_rate_limit()
-    - Direct genai_client.models.generate_content() calls in agents
-    - Scattered retry logic
-
-    All Gemini calls in the app should go through this gateway.
-    """
-
-    def __init__(self, max_rpm: int = 60, cache_ttl_hours: float = 72.0,
+    def __init__(self, max_rpm: int = 60, cache_ttl_hours: float = 168.0,
                  model: str = "gemini-2.0-flash"):
         self.model = model
         self._limiter = _RateLimiter(max_rpm)
-        self._cache_ttl = cache_ttl_hours
-        self._cache = None  # Lazy — avoid circular imports
+        self._cache = _FileCache(default_ttl_hours=cache_ttl_hours)
         self._call_count = 0
         self._cache_hits = 0
 
     @property
     def cache(self):
-        if self._cache is None:
-            from backend.ingestion.ai_cache import get_ai_cache
-            self._cache = get_ai_cache()
         return self._cache
 
     @property
     def rate_limiter(self) -> _RateLimiter:
-        """Expose rate limiter for status checks."""
         return self._limiter
 
     def call(
@@ -184,28 +209,14 @@ class LLMGateway:
         use_cache: bool = True,
         cache_namespace: str = "llm",
     ) -> Tuple[str, bool]:
-        """
-        Make a single Gemini call with rate limiting + caching.
-
-        Args:
-            agent: Agent name (for rate-limit tracking)
-            prompt: The user/content prompt
-            system: Optional system instruction
-            model: Override default model
-            use_cache: Whether to check/store cache
-            cache_namespace: Cache category key
-
-        Returns:
-            (response_text, success_bool)
-        """
+        """Single Gemini call with rate limiting + caching."""
         # 1. Check cache
         if use_cache:
-            cache_input = {"prompt": prompt, "system": system or "",
-                           "model": model or self.model}
-            cached = self.cache.get(cache_namespace, cache_input)
+            cache_input = {"prompt": prompt,
+                           "system": system or "", "model": model or self.model}
+            cached = self._cache.get(cache_namespace, cache_input)
             if cached is not None:
                 self._cache_hits += 1
-                logger.debug(f"[{agent}] LLM cache hit")
                 return cached, True
 
         # 2. Rate limit
@@ -232,15 +243,13 @@ class LLMGateway:
                 contents=prompt,
                 config=config if config else None,
             )
-            text = response.text if hasattr(response, "text") else str(
-                response)
+            text = response.text if hasattr(
+                response, "text") else str(response)
 
             self._limiter.on_success(agent)
 
-            # 4. Cache the result
             if use_cache:
-                self.cache.put(cache_namespace, cache_input, text,
-                               ttl_hours=self._cache_ttl)
+                self._cache.put(cache_namespace, cache_input, text)
 
             return text, True
 
@@ -261,28 +270,21 @@ class LLMGateway:
         model: Optional[str] = None,
         use_cache: bool = True,
         cache_namespace: str = "llm_json",
+        response_schema: Optional[dict] = None,
     ) -> Tuple[Any, bool]:
-        """
-        Call Gemini and parse the response as JSON.
-
-        Returns:
-            (parsed_dict_or_list, success_bool)
-        """
-        # 1. Check cache (stores parsed JSON directly)
+        """Call Gemini and parse response as JSON."""
         if use_cache:
-            cache_input = {"prompt": prompt, "system": system or "",
-                           "model": model or self.model}
-            cached = self.cache.get(cache_namespace, cache_input)
+            cache_input = {"prompt": prompt,
+                           "system": system or "", "model": model or self.model}
+            cached = self._cache.get(cache_namespace, cache_input)
             if cached is not None:
                 self._cache_hits += 1
                 return cached, True
 
-        # 2. Rate limit
         wait = self._limiter.wait_if_needed(agent)
         if wait > 0:
             time.sleep(wait)
 
-        # 3. Call with JSON response config
         client = _get_client()
         if not client:
             return {"error": "Client not initialized"}, False
@@ -297,6 +299,11 @@ class LLMGateway:
                 response_mime_type="application/json",
                 temperature=0.1,
             )
+            if response_schema:
+                try:
+                    config.response_schema = response_schema
+                except Exception:
+                    pass  # Older SDK versions may not support this
             if system:
                 config.system_instruction = system
 
@@ -305,15 +312,15 @@ class LLMGateway:
                 contents=prompt,
                 config=config,
             )
-            text = response.text if hasattr(response, "text") else str(
-                response)
+            text = response.text if hasattr(
+                response, "text") else str(response)
 
             parsed = json.loads(text)
             self._limiter.on_success(agent)
 
             if use_cache:
-                self.cache.put(cache_namespace, cache_input, parsed,
-                               ttl_hours=self._cache_ttl)
+                self._cache.put(cache_namespace, {"prompt": prompt, "system": system or "",
+                                                  "model": model or self.model}, parsed)
 
             return parsed, True
 
@@ -328,85 +335,15 @@ class LLMGateway:
             logger.error(f"[{agent}] Gemini JSON call failed: {error_msg}")
             return {"error": error_msg}, False
 
-    def batch(
-        self,
-        agent: str,
-        prompts: list[str],
-        *,
-        system: Optional[str] = None,
-        model: Optional[str] = None,
-        use_cache: bool = True,
-        batch_size: int = 5,
-        cache_namespace: str = "llm_batch",
-    ) -> list[Tuple[Any, bool]]:
-        """
-        Process multiple prompts efficiently by batching cached lookups
-        and rate-limiting uncached calls.
-
-        Does NOT combine prompts into mega-prompts (unreliable for structured
-        extraction). Instead, it:
-        1. Resolves all cache hits first (free)
-        2. Fires uncached calls sequentially with rate limiting
-
-        Args:
-            agent: Agent name
-            prompts: List of prompts to process
-            system: Optional system instruction
-            batch_size: How many uncached calls before a cooldown pause
-            cache_namespace: Cache namespace
-
-        Returns:
-            List of (response, success) tuples in same order as prompts
-        """
-        results: list[Tuple[Any, bool]] = [("", False)] * len(prompts)
-        uncached_indices: list[int] = []
-
-        # Phase 1: Resolve cache hits
-        for i, prompt in enumerate(prompts):
-            if use_cache:
-                cache_input = {"prompt": prompt, "system": system or "",
-                               "model": model or self.model}
-                cached = self.cache.get(cache_namespace, cache_input)
-                if cached is not None:
-                    results[i] = (cached, True)
-                    self._cache_hits += 1
-                    continue
-            uncached_indices.append(i)
-
-        if not uncached_indices:
-            logger.info(f"[{agent}] Batch: all {len(prompts)} from cache")
-            return results
-
-        logger.info(
-            f"[{agent}] Batch: {len(prompts) - len(uncached_indices)}"
-            f" cached, {len(uncached_indices)} to call"
-        )
-
-        # Phase 2: Call uncached prompts with rate limiting
-        for count, idx in enumerate(uncached_indices, 1):
-            text, ok = self.call(
-                agent, prompts[idx],
-                system=system, model=model,
-                use_cache=use_cache, cache_namespace=cache_namespace,
-            )
-            results[idx] = (text, ok)
-
-            # Small cooldown every batch_size calls to stay within RPM
-            if count % batch_size == 0 and count < len(uncached_indices):
-                time.sleep(1.0)
-
-        return results
-
     def stats(self) -> dict:
-        """Combined stats from rate limiter + cache."""
         total = self._call_count + self._cache_hits
         return {
             "total_requests": total,
             "api_calls": self._call_count,
             "cache_hits": self._cache_hits,
-            "cache_hit_rate": (f"{self._cache_hits / max(total, 1):.1%}"),
+            "cache_hit_rate": f"{self._cache_hits / max(total, 1):.1%}",
             "rate_limiter": self._limiter.status(),
-            "cache": self.cache.get_stats(),
+            "cache": self._cache.get_stats(),
         }
 
 

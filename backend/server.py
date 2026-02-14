@@ -1,252 +1,106 @@
-from fastapi.responses import StreamingResponse, FileResponse, JSONResponse
-from backend.auto_sync_engine import get_auto_sync_engine
-from backend.product_normalizer import build_catalog, GALAXIES
-import os
-import sys
-import logging
+"""
+Halilit Support Center — Lean FastAPI Server (JIT Architecture v9)
+
+Endpoints:
+  GET  /api/health                         — Health check
+  GET  /api/conductor/catalog              — Lightweight inventory catalog
+  GET  /api/conductor/taxonomy             — Category hierarchy
+  GET  /api/conductor/categories           — Category stats
+  POST /api/conductor/filter               — Filter products
+  GET  /api/conductor/refresh              — Force catalog rebuild
+  GET  /api/product/{id}/intelligence      — JIT product enrichment
+  GET  /api/product/{id}/compare/{other}   — JIT product comparison
+  POST /api/sync/inventory                 — Trigger skeleton sync
+  GET  /api/catalog/health                 — Catalog quality metrics
+  GET  /api/search                         — Text search
+  +    /api/spectrum/*                     — Spectrum model grouping
+  +    /api/curation/*                     — Product graph curation
+"""
+
 import json
 import gzip
 import time
+import logging
 import asyncio
 import threading
 from pathlib import Path
 from datetime import datetime
+
 from fastapi import FastAPI, Request, Response
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api.streams import router as streams_router
+
+from backend.product_normalizer import build_catalog, GALAXIES
+
+# ── Logging ──
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# ── Paths ──
+BASE_DIR = Path(__file__).parent
+FRONTEND_DIST = BASE_DIR.parent / "frontend" / "dist"
+FRONTEND_PUBLIC_DATA = BASE_DIR.parent / "frontend" / "public" / "data"
 
 # ── Server-side catalog cache ──
-_catalog_cache_json: bytes | None = None   # Pre-serialized JSON bytes
-_catalog_cache_gzip: bytes | None = None   # Pre-compressed gzip bytes
-_catalog_cache_dict: dict | None = None    # Pre-built catalog dict
+_catalog_cache_json: bytes | None = None
+_catalog_cache_gzip: bytes | None = None
+_catalog_cache_dict: dict | None = None
 _catalog_cache_time: float = 0
 _catalog_build_lock = threading.Lock()
 CATALOG_CACHE_TTL = 300  # 5 minutes
 
-# Fields to strip from products in the catalog response (never rendered by frontend)
+# Fields to strip from catalog response (never rendered by frontend)
 STRIP_FIELDS = {"contextual_data", "search_text", "subcategory", "currency"}
 
-# Ensure parent directory is in path
-_parent_dir = str(Path(__file__).parent.parent)
-if _parent_dir not in sys.path:
-    sys.path.insert(0, _parent_dir)
+# ── App ──
+app = FastAPI(title="Halilit Support Center", version="9.0-jit")
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-
-def get_golden_list_brands() -> set:
-    """
-    Load Halilit's actual commercial database brands from frontend/public/data/
-    Returns set of brand names (as stored in the golden list files)
-    """
-    frontend_data_dir = Path(__file__).parent.parent / \
-        "frontend" / "public" / "data"
-
-    if not frontend_data_dir.exists():
-        logger.warning(f"Golden list dir not found: {frontend_data_dir}")
-        return set()
-
-    golden_brands = set()
-    for json_file in frontend_data_dir.glob("*.json"):
-        brand_name = json_file.stem
-        # Skip metadata files
-        if brand_name not in ("index", "search_index", "search_index_min"):
-            golden_brands.add(brand_name)
-
-    logger.info(
-        f"Loaded {len(golden_brands)} brands from Halilit's golden list")
-    return golden_brands
-
-
-def normalize_brand_name(brand: str) -> str:
-    """
-    Normalize brand name to canonical form:
-    - lowercase
-    - trim whitespace
-    - replace hyphens with spaces (hyphenated and spaced are same brand)
-    """
-    normalized = brand.strip().lower()
-    # Replace hyphens with spaces to handle "Adam-Audio" == "Adam Audio"
-    normalized = normalized.replace('-', ' ')
-    return normalized
-
-
-def get_ingestion_products_for_golden_brands():
-    """
-    Get all products from ingestion database that match Halilit's golden list.
-    Maps golden list brands to their ingestion products.
-
-    Returns: dict of {golden_brand_name -> product_list}
-    """
-    golden_brands = get_golden_list_brands()
-    ingestion_products_dir = Path(INGESTION_DATA) / "products"
-
-    if not ingestion_products_dir.exists():
-        logger.warning(
-            f"Ingestion products dir not found: {ingestion_products_dir}")
-        return {}
-
-    # Map golden brand -> normalized -> ingestion directory name -> products
-    result = {}
-
-    for golden_brand in sorted(golden_brands):
-        golden_normalized = normalize_brand_name(golden_brand)
-
-        # Look for matching ingestion directories
-        all_products = []
-        sources_found = []
-
-        for ingestion_dir in ingestion_products_dir.iterdir():
-            if not ingestion_dir.is_dir():
-                continue
-
-            ingestion_normalized = normalize_brand_name(ingestion_dir.name)
-
-            # If normalized names match, this ingestion directory has products for this golden brand
-            if ingestion_normalized == golden_normalized:
-                approved_files = sorted(ingestion_dir.glob(
-                    "approved_*.json"), reverse=True)
-                if approved_files:
-                    try:
-                        with open(approved_files[0]) as f:
-                            data = json.load(f)
-                            if isinstance(data, list):
-                                all_products.extend(data)
-                            elif isinstance(data, dict) and "products" in data:
-                                all_products.extend(data["products"])
-                            sources_found.append(ingestion_dir.name)
-                    except Exception as e:
-                        logger.warning(
-                            f"Failed to load {approved_files[0]}: {e}")
-
-        if all_products:
-            result[golden_brand] = {
-                "products": all_products,
-                "product_count": len(all_products),
-                "ingestion_sources": sources_found
-            }
-        else:
-            logger.warning(
-                f"No approved products found for golden brand '{golden_brand}'")
-
-    return result
-
-
-app = FastAPI(title="Halilit Support Center API", version="8.3")
-
-# Add CORS middleware for frontend development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update for production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-app.include_router(streams_router, tags=["Real-time Streams"])
-
-# CopilotKit Integration
-try:
-    from backend.api.copilot_router import router as copilot_router
-    app.include_router(copilot_router, prefix="/api", tags=["CopilotKit"])
-    logger.info("✅ CopilotKit endpoint registered at /api/copilot/chat")
-except Exception as e:
-    logger.warning(f"⚠️ Failed to register CopilotKit: {e}")
-
-# Include learning endpoints
-try:
-    from backend.unified_learning_system import router as learning_router
-    app.include_router(learning_router)
-    logger.info("✅ Learning endpoints registered")
-except Exception as e:
-    logger.warning(f"⚠️ Failed to load learning endpoints: {e}")
-
-# Async Task Queue API
-try:
-    from backend.api.task_router import router as task_router
-    app.include_router(task_router, tags=["Task Queue"])
-    logger.info("✅ Task queue endpoints registered at /api/v8/tasks")
-except Exception as e:
-    logger.warning(f"⚠️ Failed to register task router: {e}")
-
-# MCP (Model Context Protocol) Integration
-try:
-    from backend.api.mcp_router import router as mcp_router
-    from backend.mcp.startup import init_mcp, shutdown_mcp
-    app.include_router(mcp_router)
-
-    @app.on_event("startup")
-    async def _mcp_startup():
-        await init_mcp()
-
-    @app.on_event("shutdown")
-    async def _mcp_shutdown():
-        await shutdown_mcp()
-
-    logger.info("✅ MCP endpoints registered at /api/mcp")
-except Exception as e:
-    logger.warning(f"⚠️ Failed to register MCP: {e}")
-
-# Enhanced Pipeline API
-try:
-    from backend.api.pipeline_router import router as pipeline_router
-    app.include_router(pipeline_router, tags=["Pipeline"])
-    logger.info("✅ Pipeline endpoints registered at /api/pipeline")
-except Exception as e:
-    logger.warning(f"⚠️ Failed to register pipeline router: {e}")
-
-# Spectrum Redesign API (model grouping, instrument families, zoom levels)
+# ── Sub-routers ──
 try:
     from backend.api.spectrum_router import router as spectrum_router
     app.include_router(spectrum_router, tags=["Spectrum"])
-    logger.info("✅ Spectrum endpoints registered at /api/spectrum")
+    logger.info("✅ Spectrum endpoints registered")
 except Exception as e:
-    logger.warning(f"⚠️ Failed to register spectrum router: {e}")
+    logger.warning(f"⚠️ Spectrum router: {e}")
 
-# Product Graph Curation API
 try:
     from backend.api.curation_router import router as curation_router
     app.include_router(curation_router, tags=["Product Graph Curation"])
-    logger.info("✅ Curation endpoints registered at /api/curation")
+    logger.info("✅ Curation endpoints registered")
 except Exception as e:
-    logger.warning(f"⚠️ Failed to register curation router: {e}")
+    logger.warning(f"⚠️ Curation router: {e}")
 
-# WebSocket real-time task updates
 try:
-    from backend.api.websocket_manager import create_websocket_route
-
-    @app.on_event("startup")
-    async def _register_websocket():
-        await create_websocket_route(app)
-
-    logger.info("✅ WebSocket endpoint will register at /ws/tasks/{{task_id}}")
+    from backend.api.jit_router import router as jit_router
+    app.include_router(jit_router, tags=["JIT Intelligence"])
+    logger.info("✅ JIT Intelligence endpoints registered")
 except Exception as e:
-    logger.warning(f"⚠️ Failed to register WebSocket: {e}")
+    logger.warning(f"⚠️ JIT router: {e}")
 
-# Robust path handling
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-FRONTEND_DIST = os.path.join(BASE_DIR, "../frontend/dist")
-FRONTEND_PUBLIC_DATA = os.path.join(BASE_DIR, "../frontend/public/data")
-INGESTION_DATA = os.path.join(
-    BASE_DIR, "./data/ingestion")  # Real ingested data
 
+# ═══════════════════════════════════════════════════════════════════════════
+# CATALOG CACHE
+# ═══════════════════════════════════════════════════════════════════════════
 
 def _build_catalog_cache():
-    """Build catalog and cache the pre-serialized JSON response.
-    Thread-safe, called at startup and on cache expiry."""
+    """Build catalog and cache pre-serialized JSON + gzip. Thread-safe."""
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
     with _catalog_build_lock:
-        # Double-check after acquiring lock
         if _catalog_cache_json is not None and (time.time() - _catalog_cache_time) < CATALOG_CACHE_TTL:
             return
         t0 = time.time()
-        catalog = build_catalog(FRONTEND_PUBLIC_DATA)
-        _catalog_cache_dict = catalog  # Store dict for secondary endpoints
+        catalog = build_catalog(str(FRONTEND_PUBLIC_DATA))
+        _catalog_cache_dict = catalog
 
-        # Strip fields the frontend never renders
         for p in catalog["products"]:
             for field in STRIP_FIELDS:
                 p.pop(field, None)
@@ -259,18 +113,17 @@ def _build_catalog_cache():
         _catalog_cache_json = json_bytes
         _catalog_cache_gzip = gzip_bytes
         _catalog_cache_time = time.time()
-        build_ms = int((time.time() - t0) * 1000)
+        ms = int((time.time() - t0) * 1000)
 
+        meta = catalog["metadata"]
         logger.info(
-            f"✅ Catalog v10: {catalog['metadata']['total_products']} products, "
-            f"{len(catalog['metadata']['brands'])} brands, "
-            f"{len(catalog['metadata']['galaxy_counts'])} galaxies, "
-            f"health: {catalog['metadata'].get('health_score', '?')}/100 "
-            f"(built in {build_ms}ms, {len(json_bytes)//1024}KB → {len(gzip_bytes)//1024}KB gzip)")
+            f"✅ Catalog: {meta['total_products']} products, "
+            f"{len(meta['brands'])} brands, "
+            f"health: {meta.get('health_score', '?')}/100 "
+            f"({ms}ms, {len(json_bytes)//1024}KB → {len(gzip_bytes)//1024}KB gzip)"
+        )
 
 
-# Eagerly build catalog at import time in a background thread
-# so the first request is instant instead of blocking for 14s
 def _startup_catalog_build():
     try:
         _build_catalog_cache()
@@ -283,543 +136,314 @@ _startup_thread.start()
 
 
 def _get_catalog() -> dict:
-    """Get the cached catalog dict, building if needed. Used by secondary endpoints."""
+    """Get cached catalog dict, rebuilding if expired."""
     global _catalog_cache_dict, _catalog_cache_time
-    now = time.time()
-    if _catalog_cache_dict is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
+    if _catalog_cache_dict is None or (time.time() - _catalog_cache_time) > CATALOG_CACHE_TTL:
         _build_catalog_cache()
     if _catalog_cache_dict is None:
         _startup_thread.join(timeout=60)
     return _catalog_cache_dict or {"products": [], "metadata": {}, "indexes": {}}
 
 
-# --- API ENDPOINTS (must be before frontend catch-all) ---
-
-# Health check endpoint
-
+# ═══════════════════════════════════════════════════════════════════════════
+# API ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════
 
 @app.get("/api/health")
-async def health_check():
-    """Health check endpoint for monitoring"""
-    return {
-        "status": "healthy",
-        "version": "8.3",
-        "service": "Halilit Support Center"
-    }
-
-
-@app.get("/api/versions")
-async def get_versions():
-    """Get ingestion version information"""
-    try:
-        from backend.ingestion_versioning import get_version_manager
-        manager = get_version_manager()
-        return manager.export_for_frontend()
-    except Exception as e:
-        logger.error(f"Error getting versions: {e}")
-        return {
-            "error": str(e),
-            "total_brands": 0,
-            "total_products": 0,
-            "active_versions": {}
-        }
-
-
-@app.get("/api/galaxy-view")
-async def galaxy_view():
-    """Legacy endpoint — redirects to conductor catalog."""
-    return await get_conductor_catalog()
-
-
-@app.get("/api/catalog")
-async def get_catalog():
-    """Legacy endpoint — redirects to conductor catalog."""
-    return await get_conductor_catalog()
+async def health():
+    return {"status": "healthy", "version": "9.0-jit", "service": "Halilit Support Center"}
 
 
 @app.get("/api/conductor/catalog")
 async def get_conductor_catalog(request: Request):
-    """
-    Single source of truth for the frontend — v10 pre-indexed catalog.
-    Returns { products, indexes, metadata } where indexes contain
-    by_galaxy, by_spectrum, by_brand mappings for instant frontend lookup.
-
-    Optimizations:
-    - Pre-built at server startup in background thread
-    - Pre-serialized JSON + pre-compressed gzip cached server-side (5 min TTL)
-    - Strips unused fields (contextual_data, search_text, subcategory, currency)
-    - Cached response served in <50ms
-    """
+    """Primary data endpoint — pre-indexed inventory catalog with gzip support."""
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_time
     try:
-        now = time.time()
-        if _catalog_cache_json is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
-            # Build in thread pool to avoid blocking the event loop
+        if _catalog_cache_json is None or (time.time() - _catalog_cache_time) > CATALOG_CACHE_TTL:
             loop = asyncio.get_event_loop()
             await loop.run_in_executor(None, _build_catalog_cache)
 
-        # Wait for startup build if still in progress
         if _catalog_cache_json is None:
             _startup_thread.join(timeout=60)
 
         if _catalog_cache_json is None:
             return JSONResponse(status_code=503, content={"error": "Catalog still building"})
 
-        # Serve pre-compressed gzip if client accepts it, otherwise raw JSON
-        accept_encoding = request.headers.get("accept-encoding", "")
-        if "gzip" in accept_encoding and _catalog_cache_gzip is not None:
-            return Response(
-                content=_catalog_cache_gzip,
-                media_type="application/json",
-                headers={"Content-Encoding": "gzip"},
-            )
+        accept = request.headers.get("accept-encoding", "")
+        if "gzip" in accept and _catalog_cache_gzip:
+            return Response(content=_catalog_cache_gzip, media_type="application/json",
+                            headers={"Content-Encoding": "gzip"})
 
-        return Response(
-            content=_catalog_cache_json,
-            media_type="application/json",
-        )
-
+        return Response(content=_catalog_cache_json, media_type="application/json")
     except Exception as e:
-        logger.error(f"Failed to generate conductor catalog: {e}")
-        return JSONResponse(
-            status_code=500,
-            content={"error": "Failed to generate catalog", "details": str(e)}
-        )
+        logger.error(f"Catalog error: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+@app.get("/api/conductor/taxonomy")
+async def get_taxonomy():
+    """Category hierarchy from GALAXIES taxonomy."""
+    catalog = _get_catalog()
+    brands = sorted(catalog.get("metadata", {}).get("brands", []))
+
+    categories = []
+    for galaxy in GALAXIES:
+        categories.append({
+            "id": galaxy["id"],
+            "name": galaxy["label"],
+            "subcategories": [{"id": s["id"], "name": s["label"]} for s in galaxy.get("spectrums", [])],
+        })
+
+    return {
+        "universal_categories": categories,
+        "all_brands": brands,
+        "pricing_tiers": ["entry", "mid", "pro", "flagship", "legacy"],
+        "total_products": len(catalog.get("products", [])),
+        "timestamp": datetime.now().isoformat(),
+    }
+
+
+@app.post("/api/conductor/filter")
+async def filter_products(filters: dict):
+    """Filter products by brand, category, price range, tier, search query."""
+    catalog = _get_catalog()
+    products = catalog.get("products", [])
+    applied = {}
+
+    if "brand" in filters:
+        vals = [filters["brand"]] if isinstance(
+            filters["brand"], str) else filters["brand"]
+        lower = [v.lower() for v in vals]
+        products = [p for p in products if p.get("brand", "").lower() in lower]
+        applied["brand"] = filters["brand"]
+
+    if "category" in filters:
+        vals = [filters["category"]] if isinstance(
+            filters["category"], str) else filters["category"]
+        lower = [v.lower() for v in vals]
+        products = [p for p in products if p.get("galaxy_id", "").lower() in lower
+                    or p.get("spectrum_id", "").lower() in lower]
+        applied["category"] = filters["category"]
+
+    if "search_query" in filters:
+        q = filters["search_query"].lower()
+        products = [p for p in products if q in (p.get("search_text") or
+                    f"{p.get('name','')} {p.get('brand','')}").lower()]
+        applied["search_query"] = filters["search_query"]
+
+    if "pricing_tier" in filters:
+        tiers = [filters["pricing_tier"]] if isinstance(
+            filters["pricing_tier"], str) else filters["pricing_tier"]
+        products = [p for p in products if p.get("tier") in tiers]
+        applied["pricing_tier"] = filters["pricing_tier"]
+
+    if "min_price" in filters:
+        mp = float(filters["min_price"])
+        products = [p for p in products if (p.get("price") or 0) >= mp]
+        applied["min_price"] = mp
+
+    if "max_price" in filters:
+        mp = float(filters["max_price"])
+        products = [p for p in products if 0 < (p.get("price") or 0) <= mp]
+        applied["max_price"] = mp
+
+    return {"products": products, "filters_applied": applied, "total_results": len(products)}
+
+
+@app.get("/api/conductor/categories")
+async def get_categories():
+    """Category summary with product counts, brands, avg prices."""
+    catalog = _get_catalog()
+    cats: dict = {}
+    for p in catalog.get("products", []):
+        cat = p.get("galaxy_id") or "uncategorized"
+        if cat not in cats:
+            cats[cat] = {"name": cat, "count": 0,
+                         "brands": set(), "prices": []}
+        cats[cat]["count"] += 1
+        cats[cat]["brands"].add(p.get("brand", "Unknown"))
+        price = p.get("price") or 0
+        if price > 0:
+            cats[cat]["prices"].append(price)
+
+    result = []
+    for c in cats.values():
+        prices = c["prices"]
+        result.append({
+            "name": c["name"],
+            "product_count": c["count"],
+            "brands": sorted(c["brands"]),
+            "avg_price": round(sum(prices) / len(prices), 2) if prices else 0,
+        })
+    return {"categories": sorted(result, key=lambda x: x["product_count"], reverse=True)}
+
+
+@app.get("/api/conductor/refresh")
+async def refresh_catalog():
+    """Force rebuild of catalog cache."""
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+    _catalog_cache_json = None
+    _catalog_cache_gzip = None
+    _catalog_cache_dict = None
+    _catalog_cache_time = 0
+    _build_catalog_cache()
+    meta = (_catalog_cache_dict or {}).get("metadata", {})
+    return {
+        "status": "refreshed",
+        "product_count": meta.get("total_products", 0),
+        "brands": len(meta.get("brands", [])),
+        "health_score": meta.get("health_score"),
+    }
 
 
 @app.get("/api/catalog/health")
-async def get_catalog_health():
-    """
-    Catalog health dashboard — real-time data quality metrics.
-    Returns health_score, status_counts, field_coverage, top_issues,
-    brand_health, and resolution_queue.
-    """
+async def catalog_health():
+    """Catalog quality metrics."""
     try:
         from backend.catalog_validator import validate_catalog
-
-        # Use cached catalog build (run in executor to avoid blocking)
         loop = asyncio.get_event_loop()
-        catalog = await loop.run_in_executor(
-            None, build_catalog, FRONTEND_PUBLIC_DATA)
-        health = validate_catalog(catalog["products"])
-
-        logger.info(
-            f"📊 Catalog health: {health['health_score']}/100 "
-            f"({health['status_counts']})")
-
-        return health
-
+        catalog = await loop.run_in_executor(None, build_catalog, str(FRONTEND_PUBLIC_DATA))
+        return validate_catalog(catalog["products"])
     except Exception as e:
-        logger.error(f"Failed to get catalog health: {e}")
-        return JSONResponse(
-            status_code=500,
-            content={"error": "Failed to compute health", "details": str(e)}
-        )
-
-
-@app.get("/api/brands/{brand}")
-async def get_brand_products(brand: str):
-    """Get products for a specific brand from CONDUCTOR INGESTED data filtered by Halilit's golden list"""
-    try:
-        golden_products = get_ingestion_products_for_golden_brands()
-
-        if brand not in golden_products:
-            return {
-                "error": f"Brand '{brand}' not found in Halilit's golden list",
-                "products": [],
-                "brand": brand,
-                "source": "error"
-            }
-
-        brand_data = golden_products[brand]
-
-        logger.info(
-            f"Loaded {len(brand_data['products'])} products for brand '{brand}'")
-
-        return {
-            "brand": brand,
-            "product_count": brand_data["product_count"],
-            "products": brand_data["products"],
-            "ingestion_sources": brand_data["ingestion_sources"],
-            "source": "halilit_commercial_database_with_conductor_enrichment"
-        }
-    except Exception as e:
-        logger.error(f"Error loading brand products: {e}")
-        return {"error": str(e), "products": [], "brand": brand, "source": "error"}
+        logger.error(f"Health check error: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 
 @app.get("/api/search")
 async def search_products(q: str = ""):
-    """Search across CONDUCTOR INGESTED products (real data)"""
-    try:
-        if not q or len(q) < 2:
-            return {"query": q, "results": []}
+    """Search across catalog products."""
+    if not q or len(q) < 2:
+        return {"query": q, "results": [], "total_results": 0}
 
-        ingestion_products_dir = Path(INGESTION_DATA) / "products"
-        results = []
-        q_lower = q.lower()
+    catalog = _get_catalog()
+    q_lower = q.lower()
+    results = []
+    for p in catalog.get("products", []):
+        text = (p.get("search_text")
+                or f"{p.get('name','')} {p.get('brand','')} {p.get('description','')}").lower()
+        if q_lower in text:
+            results.append(p)
+            if len(results) >= 50:
+                break
 
-        for brand_dir in ingestion_products_dir.iterdir():
-            if not brand_dir.is_dir():
-                continue
-
-            # Find latest approved products
-            approved_files = sorted(brand_dir.glob(
-                "approved_*.json"), reverse=True)
-            if not approved_files:
-                continue
-
-            try:
-                with open(approved_files[0]) as f:
-                    data = json.load(f)
-                    products = data if isinstance(
-                        data, list) else data.get("products", [])
-
-                    for product in products:
-                        # Search in key fields
-                        search_text = " ".join([
-                            str(product.get("product_name", "")),
-                            str(product.get("brand", "")),
-                            str(product.get("description_short", "")),
-                            str(product.get("official_description", ""))
-                        ]).lower()
-
-                        if q_lower in search_text:
-                            results.append(product)
-                            if len(results) >= 50:  # Limit results
-                                break
-            except Exception as e:
-                logger.warning(f"Error searching {brand_dir}: {e}")
-
-        logger.info(f"✅ Found {len(results)} products matching '{q}'")
-
-        return {
-            "query": q,
-            "total_results": len(results),
-            "results": results[:50],
-            "source": "conductor_ingestion_database"
-        }
-    except Exception as e:
-        logger.error(f"Search error: {e}")
-        return {"error": str(e), "results": [], "source": "error"}
+    return {"query": q, "total_results": len(results), "results": results}
 
 
-# ========== COPILOTKIT SKILL ENDPOINTS ==========
-# Skill execution is handled via the Celery task queue (see tasks.py)
-# and the CopilotKit chat router (see api/copilot_router.py).
-# The task API is served by api/task_router.py.
+# ═══════════════════════════════════════════════════════════════════════════
+# JIT INTELLIGENCE ENDPOINTS
+# ═══════════════════════════════════════════════════════════════════════════
 
-
-# ========== CONDUCTOR UNIFIED DATA ENDPOINTS ==========
-# These are the PRIMARY endpoints for frontend data loading
-# All data is Conductor-verified and taxonomy-compliant
-
-
-@app.get("/api/conductor/taxonomy")
-async def get_conductor_taxonomy():
+@app.get("/api/product/{product_id}/intelligence")
+async def get_product_intelligence(product_id: str):
     """
-    Get the taxonomy schema derived from the live catalog + GALAXIES.
-    Used by frontend for category/subcategory hierarchies and filter controls.
+    JIT product enrichment — fetches live data from brand sites,
+    trusted review sources, and returns a fully enriched product.
+    Cached for 7 days server-side.
     """
     try:
+        from backend.jit_cache import get_cached_intelligence, cache_intelligence
+        from backend.jit_agent import ProductSynthesizer
+
+        # Check cache first
+        cached = get_cached_intelligence(product_id)
+        if cached:
+            return cached
+
+        # Find product in catalog
         catalog = _get_catalog()
-        products = catalog.get("products", [])
-        brands = sorted(catalog.get("metadata", {}).get("brands", []))
+        product = None
+        for p in catalog.get("products", []):
+            if p.get("id") == product_id:
+                product = p
+                break
 
-        # Build universal categories from GALAXIES (canonical source)
-        universal_categories = []
-        for galaxy in GALAXIES:
-            universal_categories.append({
-                "id": galaxy["id"],
-                "name": galaxy["label"],
-                "subcategories": [
-                    {"id": s["id"], "name": s["label"]}
-                    for s in galaxy.get("spectrums", [])
-                ],
-            })
+        if not product:
+            return JSONResponse(status_code=404, content={"error": f"Product '{product_id}' not found"})
 
-        return {
-            "universal_categories": universal_categories,
-            "all_brands": brands,
-            "pricing_tiers": ["entry", "mid", "pro", "flagship", "legacy"],
-            "display_roles": ["hero", "cornerstone", "specialist", "entry", "hidden"],
-            "statuses": ["harvested", "enriched", "validated", "approved", "rejected", "archived"],
-            "confidence_levels": ["official", "trusted", "commercial", "user", "inferred"],
-            "total_products": len(products),
-            "timestamp": datetime.now().isoformat(),
-        }
+        # Run JIT synthesis
+        synthesizer = ProductSynthesizer()
+        enriched = await synthesizer.synthesize(product)
+
+        # Cache result
+        cache_intelligence(product_id, enriched)
+
+        return enriched
+
+    except ImportError:
+        return JSONResponse(status_code=501, content={"error": "JIT agent not yet configured"})
     except Exception as e:
-        logger.error(f"Failed to get taxonomy: {e}")
-        return {"error": str(e)}
+        logger.error(f"JIT intelligence error for {product_id}: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 
-@app.post("/api/conductor/filter")
-async def filter_conductor_products(filters: dict):
-    """
-    Apply flexible filtering to the pre-built catalog.
-
-    Supported filters: brand, category, pricing_tier, min_price, max_price,
-    display_role, search_query.
-    """
+@app.get("/api/product/{product_id}/compare/{other_id}")
+async def compare_products(product_id: str, other_id: str):
+    """JIT comparison of two products — specs, pricing, reviews side by side."""
     try:
+        from backend.jit_agent import ProductSynthesizer
+
         catalog = _get_catalog()
-        products = catalog.get("products", [])
-        filters_applied = {}
+        products_map = {p["id"]: p for p in catalog.get("products", [])}
 
-        if "brand" in filters:
-            vals = [filters["brand"]] if isinstance(
-                filters["brand"], str) else filters["brand"]
-            vals_lower = [v.lower() for v in vals]
-            products = [p for p in products if p.get(
-                "brand", "").lower() in vals_lower]
-            filters_applied["brand"] = filters["brand"]
+        if product_id not in products_map:
+            return JSONResponse(status_code=404, content={"error": f"Product '{product_id}' not found"})
+        if other_id not in products_map:
+            return JSONResponse(status_code=404, content={"error": f"Product '{other_id}' not found"})
 
-        if "category" in filters:
-            vals = [filters["category"]] if isinstance(
-                filters["category"], str) else filters["category"]
-            vals_lower = [v.lower() for v in vals]
-            products = [p for p in products if p.get("galaxy_id", "").lower() in vals_lower
-                        or p.get("spectrum_id", "").lower() in vals_lower]
-            filters_applied["category"] = filters["category"]
+        synthesizer = ProductSynthesizer()
+        comparison = await synthesizer.compare(products_map[product_id], products_map[other_id])
+        return comparison
 
-        if "search_query" in filters:
-            q = filters["search_query"].lower()
-            products = [p for p in products if q in (p.get("search_text") or
-                        f"{p.get('name','')} {p.get('brand','')}").lower()]
-            filters_applied["search_query"] = filters["search_query"]
-
-        if "pricing_tier" in filters:
-            tiers = [filters["pricing_tier"]] if isinstance(
-                filters["pricing_tier"], str) else filters["pricing_tier"]
-            products = [p for p in products if p.get("tier") in tiers]
-            filters_applied["pricing_tier"] = filters["pricing_tier"]
-
-        if "min_price" in filters:
-            mp = float(filters["min_price"])
-            products = [p for p in products if (p.get("price") or 0) >= mp]
-            filters_applied["min_price"] = mp
-
-        if "max_price" in filters:
-            mp = float(filters["max_price"])
-            products = [p for p in products if 0 < (p.get("price") or 0) <= mp]
-            filters_applied["max_price"] = mp
-
-        return {
-            "products": products,
-            "filters_applied": filters_applied,
-            "total_results": len(products),
-            "source": "conductor_verified",
-        }
+    except ImportError:
+        return JSONResponse(status_code=501, content={"error": "JIT agent not yet configured"})
     except Exception as e:
-        logger.error(f"Filter failed: {e}")
-        return {"error": str(e), "products": []}
+        logger.error(f"Comparison error: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 
-@app.get("/api/conductor/categories")
-async def get_conductor_categories():
-    """
-    Get category summary from the pre-built catalog for navigation UI.
-    Returns category stats: product count, brands, avg price.
-    """
+@app.post("/api/sync/inventory")
+async def sync_inventory():
+    """Trigger skeleton inventory sync from Halilit.com."""
     try:
-        catalog = _get_catalog()
-        products = catalog.get("products", [])
+        from backend.skeleton_sync import run_skeleton_sync
+        loop = asyncio.get_event_loop()
+        result = await loop.run_in_executor(None, run_skeleton_sync)
 
-        categories: dict = {}
-        for p in products:
-            cat = p.get("galaxy_id") or "uncategorized"
-            brand = p.get("brand", "Unknown")
-            price = p.get("price") or 0
-
-            if cat not in categories:
-                categories[cat] = {"name": cat, "count": 0,
-                                   "brands": set(), "prices": []}
-            categories[cat]["count"] += 1
-            categories[cat]["brands"].add(brand)
-            if price > 0:
-                categories[cat]["prices"].append(price)
-
-        result = []
-        for cat_data in categories.values():
-            prices = cat_data["prices"]
-            result.append({
-                "name": cat_data["name"],
-                "product_count": cat_data["count"],
-                "brands": sorted(cat_data["brands"]),
-                "avg_price": round(sum(prices) / len(prices), 2) if prices else 0,
-            })
-
-        return {
-            "categories": sorted(result, key=lambda x: x["product_count"], reverse=True)
-        }
-    except Exception as e:
-        logger.error(f"Failed to get categories: {e}")
-        return {"error": str(e), "categories": []}
-
-
-@app.get("/api/conductor/refresh")
-async def refresh_conductor_catalog():
-    """
-    Force rebuild of the catalog cache.
-    Use after running a pipeline stage to update frontend with new data.
-    """
-    try:
+        # Refresh catalog cache after sync
         global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
         _catalog_cache_json = None
         _catalog_cache_gzip = None
         _catalog_cache_dict = None
         _catalog_cache_time = 0
-        _build_catalog_cache()
 
-        catalog = _catalog_cache_dict or {}
-        meta = catalog.get("metadata", {})
-        return {
-            "status": "refreshed",
-            "product_count": meta.get("total_products", 0),
-            "brands": len(meta.get("brands", [])),
-            "health_score": meta.get("health_score"),
-            "timestamp": meta.get("timestamp"),
-        }
+        return {"status": "synced", **result}
+    except ImportError:
+        return JSONResponse(status_code=501, content={"error": "Skeleton sync not yet configured"})
     except Exception as e:
-        logger.error(f"Refresh failed: {e}")
-        return {"error": str(e), "status": "failed"}
+        logger.error(f"Inventory sync error: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
 
 
-# ========== AUTO-SYNC ENDPOINTS (Phase 1E) ==========
+# ═══════════════════════════════════════════════════════════════════════════
+# FRONTEND ROUTING (SPA)
+# ═══════════════════════════════════════════════════════════════════════════
 
-
-def get_sync_engine():
-    """Get auto-sync engine singleton."""
-    return get_auto_sync_engine()
-
-
-@app.post("/api/copilot/sync")
-async def sync_product(request_data: dict):
-    """Sync a single product result to frontend after pipeline completion."""
-    try:
-        sync_engine = get_sync_engine()
-
-        # Extract product data
-        product_id = request_data.get(
-            "product_id") or request_data.get("halilit_id")
-        product_name = request_data.get("product_name")
-        brand = request_data.get("brand", "Unknown")
-        category = request_data.get("category", "Uncategorized")
-        status = request_data.get("status", "APPROVED")
-        risk_score = request_data.get("risk_score", 50)
-        pricing_tier = request_data.get("pricing_tier")
-
-        async def sync_stream():
-            """Stream sync events as SSE."""
-            async for event in sync_engine.sync_pipeline_result(
-                product_id=product_id,
-                product_name=product_name,
-                brand=brand,
-                category=category,
-                status=status,
-                risk_score=risk_score,
-                pricing_tier=pricing_tier
-            ):
-                yield f"data: {json.dumps(event)}\n\n"
-
-        return StreamingResponse(sync_stream(), media_type="text/event-stream")
-    except Exception as e:
-        logger.error(f"Sync error: {str(e)}")
-        return JSONResponse(status_code=400, content={"error": str(e)})
-
-
-@app.post("/api/copilot/sync-batch")
-async def sync_batch(request_data: dict):
-    """Sync multiple products to frontend (batch sync with progress)."""
-    try:
-        sync_engine = get_sync_engine()
-
-        # Extract batch data
-        products = request_data.get("products", [])
-        brand = request_data.get("brand", "Unknown")
-
-        if not products:
-            return JSONResponse(status_code=400, content={"error": "No products provided"})
-
-        async def batch_sync_stream():
-            """Stream batch sync events as SSE."""
-            async for event in sync_engine.sync_batch(
-                products=products,
-                brand=brand
-            ):
-                yield f"data: {json.dumps(event)}\n\n"
-
-        return StreamingResponse(batch_sync_stream(), media_type="text/event-stream")
-    except Exception as e:
-        logger.error(f"Batch sync error: {str(e)}")
-        return JSONResponse(status_code=400, content={"error": str(e)})
-
-
-@app.get("/api/copilot/sync/history")
-async def sync_history(limit: int = 50):
-    """Get sync history."""
-    sync_engine = get_sync_engine()
-    return {
-        "history": sync_engine.get_sync_history(limit),
-        "total_syncs": len(sync_engine.sync_history)
-    }
-
-
-@app.get("/api/copilot/sync/batch-status/{batch_id}")
-async def sync_batch_status(batch_id: str):
-    """Get status of a specific sync batch."""
-    sync_engine = get_sync_engine()
-    status = sync_engine.get_batch_status(batch_id)
-
-    if status is None:
-        return JSONResponse(status_code=404, content={"error": "Batch not found"})
-
-    return {"batch_status": status}
-
-
-@app.post("/api/copilot/sync/toggle")
-async def toggle_sync(request_data: dict):
-    """Enable or disable auto-sync."""
-    sync_engine = get_sync_engine()
-    enabled = request_data.get("enabled", True)
-    sync_engine.toggle_sync(enabled)
-
-    return {
-        "status": "enabled" if enabled else "disabled",
-        "sync_enabled": enabled
-    }
-
-
-@app.delete("/api/copilot/sync/history")
-async def clear_sync_history():
-    """Clear sync history."""
-    sync_engine = get_sync_engine()
-    sync_engine.clear_history()
-    return {"status": "cleared"}
-
-
-# ========== FRONTEND ROUTING ==========
-
-# Ensure you run 'npm run build' in frontend/ first!
-if os.path.exists(FRONTEND_DIST):
+if FRONTEND_DIST.exists():
     app.mount(
-        "/assets", StaticFiles(directory=os.path.join(FRONTEND_DIST, "assets")), name="assets")
+        "/assets", StaticFiles(directory=str(FRONTEND_DIST / "assets")), name="assets")
 
-    # Mount data if it exists
-    if os.path.exists(FRONTEND_PUBLIC_DATA):
-        app.mount("/data", StaticFiles(directory=FRONTEND_PUBLIC_DATA), name="data")
+    if FRONTEND_PUBLIC_DATA.exists():
+        app.mount(
+            "/data", StaticFiles(directory=str(FRONTEND_PUBLIC_DATA)), name="data")
 
     @app.get("/{catchall:path}")
-    async def serve_react_app(catchall: str):
-        # Return index.html for any path (SPA routing)
-        # Check if file exists in dist, otherwise serve index.html
-        file_path = os.path.join(FRONTEND_DIST, catchall)
-        if os.path.exists(file_path) and os.path.isfile(file_path):
-            return FileResponse(file_path)
-        return FileResponse(os.path.join(FRONTEND_DIST, "index.html"))
+    async def serve_spa(catchall: str):
+        file_path = FRONTEND_DIST / catchall
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(str(file_path))
+        return FileResponse(str(FRONTEND_DIST / "index.html"))
 else:
-    logger.warning(
-        f"WARNING: Frontend build not found at {FRONTEND_DIST}. Run 'npm run build' in frontend/ folder.")
+    logger.warning(f"Frontend build not found at {FRONTEND_DIST}")
 
 
 if __name__ == "__main__":

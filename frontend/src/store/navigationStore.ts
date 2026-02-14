@@ -13,7 +13,7 @@
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'SPECTRUM_V2' | 'PRODUCT_PAGE' | 'CURATION';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'CURATION';
 
 /**
  * Core navigation state that determines what the user sees
@@ -37,9 +37,6 @@ export interface NavigationState {
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
   openProductPage: (productId: string) => void;
   closeProductPage: () => void;
-
-  // Spectrum V2 (redesigned)
-  goToSpectrumV2: () => void;
 
   // Admin views
   goToCuration: () => void;
@@ -122,23 +119,12 @@ export const useNavigationStore = create<NavigationState>((set) => ({
    * Close product analysis page
    * Returns to the previous Spectrum view while keeping state
    */
-  closeProductPage: () => set((state) => {
-    // Return to whichever spectrum was active, default to SPECTRUM_V2
-    const returnTo = (state as any)._previousView === 'SPECTRUM' ? 'SPECTRUM' : 'SPECTRUM_V2';
+  closeProductPage: () => set(() => {
     return {
-      currentView: returnTo,
+      currentView: 'SPECTRUM' as AppView,
       activeProductId: null,
       lastError: null,
     };
-  }),
-
-  /**
-   * Navigate to Spectrum V2 (redesigned with model grouping & zoom)
-   */
-  goToSpectrumV2: () => set({
-    currentView: 'SPECTRUM_V2',
-    activeProductId: null,
-    lastError: null,
   }),
 
   /**

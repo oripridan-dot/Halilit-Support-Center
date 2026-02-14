@@ -1,0 +1,92 @@
+{
+  "id": "halilit-7627029",
+  "name": "Hiwatt Hi 5 1x10 Amp Combo",
+  "brand": "Hiwatt",
+  "brand_logo": "/assets/logos/hiwatt_logo.png",
+  "galaxy_id": "guitars-bass",
+  "spectrum_id": "guitar-amps",
+  "category": "guitars-bass",
+  "price": 1670.0,
+  "price_eilat": 1427.35,
+  "tier": "pro",
+  "market_price_estimate": 0,
+  "market_price_peers": 0,
+  "image_url": "https://d3m9l0v76dty0.cloudfront.net/system/photos/15939961/large/a9c8fe58bd6f0c69e00d2f73f4ad1694.jpg",
+  "image_gallery": [
+    "https://d3m9l0v76dty0.cloudfront.net/system/photos/15939961/large/a9c8fe58bd6f0c69e00d2f73f4ad1694.jpg",
+    "https://d3m9l0v76dty0.cloudfront.net/system/photos/15939962/large/4a6fe4b994d096b4e30797d2078fae4e.jpg"
+  ],
+  "description": "The Hiwatt Hi-5 combo amplifier delivers classic Hiwatt tone in a compact, portable package. Featuring a 10-inch speaker and tube circuitry, it's perfect for practice, recording, or small gigs, offering a responsive and dynamic playing experience.",
+  "description_short": "Classic Hiwatt tube tone in a compact 1x10 combo amp.",
+  "specs": {
+    "type": "Guitar Amplifier Combo",
+    "speaker": "1x10 inch",
+    "amplifier_type": "Tube",
+    "power_output": "5 Watts",
+    "connectivity": "Single Input"
+  },
+  "features": [
+    "All-tube circuitry for classic Hiwatt tone",
+    "10-inch speaker delivers focused sound",
+    "Compact and portable design",
+    "Single input for straightforward operation",
+    "Ideal for practice, recording, and small gigs",
+    "Responsive and dynamic playing experience"
+  ],
+  "faq": [],
+  "audiences": [],
+  "rating": 4.0,
+  "review_count": 0,
+  "pros": [
+    "Classic Hiwatt tube tone",
+    "Portable and convenient size",
+    "Great for practice and recording",
+    "Simple and easy to use"
+  ],
+  "cons": [
+    "Limited power for larger venues",
+    "Single input limits connectivity"
+  ],
+  "quality_score": 75,
+  "data_status": "GOOD",
+  "data_missing": [
+    "specs",
+    "features",
+    "rating"
+  ],
+  "halilit_url": "https://www.halilit.com/items/7627029-hiwatt-hi-5-1x10-amp-combo",
+  "official_url": "",
+  "sources": [
+    "halilit",
+    "official"
+  ],
+  "data_trust": {
+    "price_source": "halilit",
+    "specs_source": "none",
+    "description_source": "official",
+    "image_source": "official",
+    "review_source": "none"
+  },
+  "family_id": null,
+  "variant_key": null,
+  "variant_is_default": null,
+  "review_verdicts": [],
+  "brand_theme": "#00305e",
+  "famous_users": [],
+  "known_issues": [],
+  "suggested_accessories": [
+    "Instrument cable",
+    "Guitar effects pedals",
+    "Microphone for recording"
+  ],
+  "layout_hints": [
+    "description",
+    "specs",
+    "features",
+    "pros_cons",
+    "media_gallery"
+  ],
+  "enriched": true,
+  "enriched_at": 1771066527.1743686,
+  "_cached_at": 1771066527.174709
+}

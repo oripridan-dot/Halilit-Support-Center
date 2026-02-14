@@ -1067,9 +1067,6 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         try:
             from backend.product_graph import ProductGraph
             from backend.product_graph_store import get_graph_store
-            from backend.ingestion.relationship_discovery import (
-                get_relationship_discovery,
-            )
 
             # Build graph from flat products
             graph = ProductGraph.from_flat_products(products)
@@ -1077,10 +1074,6 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             # Load persisted families/relationships (curated data survives rebuilds)
             store = get_graph_store()
             graph = store.load_graph_overlay(graph)
-
-            # Run pattern-based discovery for NEW products not yet in families
-            discovery = get_relationship_discovery(use_ai=False)
-            graph = discovery.discover_all(graph)
 
             # Persist discovered graph back to JSON snapshot
             store.export_json_snapshot(graph)

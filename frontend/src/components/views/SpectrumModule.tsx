@@ -563,6 +563,8 @@ interface BrandTrackProps {
   rgbColor: string;
   brandPrimary: string;
   families: Record<string, FamilyMeta>;
+  priceToX: (price: number) => number;
+  axisWidth: number;
   onHoverProduct: (
     product: ConductorProduct,
     familyProducts: ConductorProduct[],
@@ -688,6 +690,52 @@ const MIN_SERIES_PRODUCTS = 3;
 // Minimum number of qualifying series to enable sub-lane layout
 const MIN_SERIES_FOR_SUBLANES = 2;
 
+// --- PRICE AXIS ENGINE ---
+const PRICE_TILE_W = 60; // px — collision detection width
+const PRICE_ROW_GAP = 6; // px — vertical gap between stacked tiles
+const PRICE_AXIS_PADDING = 40; // px padding each side of axis
+const BRAND_HEADER_W = 112; // px — w-28 = 7rem
+
+/** Generate nice price ticks for the ruler */
+const generatePriceTicks = (min: number, max: number): number[] => {
+  const range = max - min;
+  if (range <= 0) return [min || 0];
+  let step: number;
+  if (range <= 200) step = 50;
+  else if (range <= 500) step = 100;
+  else if (range <= 2000) step = 250;
+  else if (range <= 5000) step = 500;
+  else if (range <= 15000) step = 1000;
+  else if (range <= 50000) step = 5000;
+  else step = 10000;
+  const ticks: number[] = [];
+  const start = Math.ceil(min / step) * step;
+  for (let v = start; v <= max; v += step) ticks.push(v);
+  return ticks;
+};
+
+/** Compute price-positioned layout for items in a brand lane with stacking */
+const computePriceLayout = (
+  items: DisplayItem[],
+  priceToX: (price: number) => number,
+): Array<{ item: DisplayItem; x: number; row: number }> => {
+  const placed: Array<{ x: number; row: number }> = [];
+  return items.map((item) => {
+    const x = priceToX(item.sortPrice);
+    let row = 0;
+    while (
+      placed.some(
+        (p) =>
+          Math.abs(p.x - x) < PRICE_TILE_W + PRICE_ROW_GAP && p.row === row,
+      )
+    ) {
+      row++;
+    }
+    placed.push({ x, row });
+    return { item, x, row };
+  });
+};
+
 const BrandTrack = React.memo(
   ({
     brand,
@@ -695,6 +743,8 @@ const BrandTrack = React.memo(
     rgbColor,
     brandPrimary,
     families,
+    priceToX,
+    axisWidth,
     onHoverProduct,
     onHoverOut,
     onClickProduct,
@@ -759,75 +809,31 @@ const BrandTrack = React.memo(
       return items;
     }, [products, families]);
 
-    // Group display items into series sub-lanes
-    const seriesLanes = useMemo(() => {
-      // Count products per series
-      const seriesMap = new Map<string, DisplayItem[]>();
-      const ungrouped: DisplayItem[] = [];
-
-      for (const item of displayItems) {
-        if (item.series) {
-          const existing = seriesMap.get(item.series);
-          if (existing) {
-            existing.push(item);
-          } else {
-            seriesMap.set(item.series, [item]);
-          }
-        } else {
-          ungrouped.push(item);
-        }
-      }
-
-      // Only create sub-lanes if enough qualifying series exist
-      const qualifyingSeries: SeriesLane[] = [];
-      const overflow: DisplayItem[] = [...ungrouped];
-
-      for (const [series, items] of seriesMap) {
-        const totalProducts = items.reduce((sum, i) => sum + i.variantCount, 0);
-        if (items.length >= MIN_SERIES_PRODUCTS) {
-          qualifyingSeries.push({ series, items, totalProducts });
-        } else {
-          overflow.push(...items);
-        }
-      }
-
-      // Sort series by total products descending
-      qualifyingSeries.sort((a, b) => b.totalProducts - a.totalProducts);
-
-      if (qualifyingSeries.length < MIN_SERIES_FOR_SUBLANES) {
-        // Not enough series — return null to use flat layout
-        return null;
-      }
-
-      // Build final lanes: qualifying series + "Other" overflow
-      const lanes: SeriesLane[] = [...qualifyingSeries];
-      if (overflow.length > 0) {
-        overflow.sort((a, b) => a.sortPrice - b.sortPrice);
-        lanes.push({
-          series: "Other",
-          items: overflow,
-          totalProducts: overflow.reduce((s, i) => s + i.variantCount, 0),
-        });
-      }
-
-      return lanes;
-    }, [displayItems]);
-
-    // Use sub-lane layout or flat layout
-    const useSubLanes = seriesLanes !== null;
+    // --- PRICE-AXIS LAYOUT ---
+    const positionedItems = useMemo(
+      () => computePriceLayout(displayItems, priceToX),
+      [displayItems, priceToX],
+    );
+    const maxRow = useMemo(
+      () => positionedItems.reduce((max, p) => Math.max(max, p.row), 0),
+      [positionedItems],
+    );
+    const laneHeight = (maxRow + 1) * (PRICE_TILE_W + PRICE_ROW_GAP) + 12;
 
     return (
       <div
-        className="flex border-b transition-colors duration-200 group/row hover:bg-white/5"
+        className="flex border-b transition-colors duration-200 group/row hover:bg-white/[0.03]"
         style={{
           borderColor: `rgba(${rgbColor}, 0.15)`,
-          backgroundColor: `rgba(${rgbColor}, 0.03)`,
+          backgroundColor: `rgba(${rgbColor}, 0.02)`,
         }}
       >
-        {/* Brand Header */}
+        {/* Brand Header — sticks to left edge on horizontal scroll */}
         <div
-          className="w-28 flex-shrink-0 flex items-center justify-center border-r"
+          className="flex-shrink-0 flex items-center justify-center border-r sticky left-0 z-[5] bg-[#050505]"
           style={{
+            width: `${BRAND_HEADER_W}px`,
+            minWidth: `${BRAND_HEADER_W}px`,
             borderColor: `rgba(${rgbColor}, 0.25)`,
             backgroundColor: `rgba(${rgbColor}, 0.06)`,
           }}
@@ -846,88 +852,47 @@ const BrandTrack = React.memo(
           </div>
         </div>
 
-        {/* Product Grid — series sub-lanes or flat layout */}
-        {useSubLanes ? (
-          <div className="flex-1 overflow-x-auto custom-scrollbar">
-            {seriesLanes!.map((lane) => (
+        {/* Price-positioned Product Grid */}
+        <div
+          className="relative"
+          style={{
+            width: `${axisWidth}px`,
+            minHeight: `${laneHeight}px`,
+          }}
+        >
+          {/* Subtle vertical grid lines at price points */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.04]">
+            {positionedItems.map(({ x }, i) => (
               <div
-                key={lane.series}
-                className="flex items-start border-b last:border-b-0"
-                style={{
-                  borderColor: `rgba(${rgbColor}, 0.08)`,
-                }}
-              >
-                {/* Series label */}
-                <div
-                  className="w-20 flex-shrink-0 flex items-center justify-center py-1.5 px-1"
-                  style={{
-                    backgroundColor: `rgba(${rgbColor}, 0.04)`,
-                  }}
-                >
-                  <span
-                    className="text-[8px] font-bold uppercase tracking-wider text-center leading-tight px-1 py-0.5 rounded bg-black/30 backdrop-blur-sm max-w-full truncate"
-                    style={{
-                      color:
-                        lane.series === "Other"
-                          ? "rgb(161, 161, 170)"
-                          : brandPrimary,
-                    }}
-                    title={`${lane.series} (${lane.totalProducts})`}
-                  >
-                    {lane.series}
-                    <span className="block text-[7px] font-medium opacity-60">
-                      {lane.totalProducts}
-                    </span>
-                  </span>
-                </div>
-                {/* Series products */}
-                <div className="flex-1 py-1 px-1.5">
-                  <div
-                    className="flex flex-wrap gap-1.5 content-start"
-                    style={{ minWidth: "fit-content" }}
-                  >
-                    {lane.items.map((item) => (
-                      <ProductTile
-                        key={
-                          item.type === "family"
-                            ? `fam-${item.familyId}`
-                            : item.representative.id
-                        }
-                        item={item}
-                        brandPrimary={brandPrimary}
-                        onHoverProduct={onHoverProduct}
-                        onHoverOut={onHoverOut}
-                        onClickProduct={onClickProduct}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
+                key={i}
+                className="absolute top-0 bottom-0 w-px bg-white"
+                style={{ left: `${x + PRICE_TILE_W / 2}px` }}
+              />
             ))}
           </div>
-        ) : (
-          <div className="flex-1 overflow-x-auto py-1.5 px-2 custom-scrollbar">
+          {positionedItems.map(({ item, x, row }) => (
             <div
-              className="flex flex-wrap gap-1.5 content-start"
-              style={{ minWidth: "fit-content" }}
+              key={
+                item.type === "family"
+                  ? `fam-${item.familyId}`
+                  : item.representative.id
+              }
+              className="absolute"
+              style={{
+                left: `${x}px`,
+                top: `${6 + row * (PRICE_TILE_W + PRICE_ROW_GAP)}px`,
+              }}
             >
-              {displayItems.map((item) => (
-                <ProductTile
-                  key={
-                    item.type === "family"
-                      ? `fam-${item.familyId}`
-                      : item.representative.id
-                  }
-                  item={item}
-                  brandPrimary={brandPrimary}
-                  onHoverProduct={onHoverProduct}
-                  onHoverOut={onHoverOut}
-                  onClickProduct={onClickProduct}
-                />
-              ))}
+              <ProductTile
+                item={item}
+                brandPrimary={brandPrimary}
+                onHoverProduct={onHoverProduct}
+                onHoverOut={onHoverOut}
+                onClickProduct={onClickProduct}
+              />
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     );
   },
@@ -1109,6 +1074,39 @@ export const SpectrumModule = () => {
 
     return { brands: sortedBrands };
   }, [filteredProducts]);
+
+  // --- PRICE AXIS COMPUTATIONS ---
+  const priceRange = useMemo(() => {
+    const prices = filteredProducts
+      .filter((p) => p.price > 0)
+      .map((p) => p.price);
+    if (prices.length === 0) return { min: 0, max: 1000 };
+    return { min: Math.min(...prices), max: Math.max(...prices) };
+  }, [filteredProducts]);
+
+  const axisWidth = useMemo(() => {
+    // Scale axis width with product count, minimum 1200px
+    return Math.max(1200, filteredProducts.length * 55 + 200);
+  }, [filteredProducts]);
+
+  const priceTicks = useMemo(
+    () => generatePriceTicks(priceRange.min, priceRange.max),
+    [priceRange],
+  );
+
+  const priceToX = useCallback(
+    (price: number) => {
+      const effectivePrice = Math.max(price, priceRange.min);
+      if (priceRange.max <= priceRange.min) return PRICE_AXIS_PADDING;
+      return (
+        PRICE_AXIS_PADDING +
+        ((effectivePrice - priceRange.min) /
+          (priceRange.max - priceRange.min)) *
+          (axisWidth - 2 * PRICE_AXIS_PADDING - PRICE_TILE_W)
+      );
+    },
+    [priceRange, axisWidth],
+  );
 
   // Handle errors
   if (error) {
@@ -1395,38 +1393,82 @@ export const SpectrumModule = () => {
           </div>
         ) : (
           <div className="w-full h-full flex flex-col">
-            {/* Header */}
-            <div className="h-8 flex border-b border-zinc-800/50 bg-black/40 text-[9px] text-zinc-600 font-mono items-center px-4">
-              <div className="w-28 shrink-0 text-center uppercase tracking-widest font-bold text-zinc-500">
-                Brand
-              </div>
-              <div className="flex-1 flex items-center gap-2 pl-2">
-                <span className="text-zinc-500">
-                  Products sorted by price (low → high)
-                </span>
-                <span className="ml-auto text-zinc-600">
-                  {filteredProducts.length} total
-                </span>
-              </div>
-            </div>
+            {/* Scrollable Price-Axis Matrix (horizontal + vertical scroll) */}
+            <div className="flex-1 overflow-auto custom-scrollbar">
+              <div
+                style={{
+                  width: `${BRAND_HEADER_W + axisWidth}px`,
+                  minWidth: "100%",
+                }}
+              >
+                {/* Price Ruler Header — sticks to top */}
+                <div className="sticky top-0 z-10 flex border-b border-zinc-800/50 bg-black/95 backdrop-blur-sm">
+                  {/* Brand column label */}
+                  <div
+                    className="shrink-0 flex items-center justify-center text-center uppercase tracking-widest font-bold text-zinc-500 text-[9px] font-mono sticky left-0 z-20 bg-black/95 border-r border-zinc-800/40"
+                    style={{
+                      width: `${BRAND_HEADER_W}px`,
+                      minWidth: `${BRAND_HEADER_W}px`,
+                    }}
+                  >
+                    <div className="flex flex-col items-center gap-0.5">
+                      <span>Brand</span>
+                      <span className="text-zinc-600 text-[8px] font-normal">
+                        {filteredProducts.length} total
+                      </span>
+                    </div>
+                  </div>
+                  {/* Price Tick Ruler */}
+                  <div
+                    className="relative h-9"
+                    style={{ width: `${axisWidth}px` }}
+                  >
+                    {/* Gradient bar */}
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-blue-500/20 via-amber-500/30 to-red-500/20" />
+                    {priceTicks.map((price) => {
+                      const x = priceToX(price);
+                      return (
+                        <div
+                          key={price}
+                          className="absolute bottom-0 flex flex-col items-center"
+                          style={{ left: `${x + PRICE_TILE_W / 2}px` }}
+                        >
+                          <span className="text-[9px] text-zinc-400 font-mono whitespace-nowrap mb-1 font-semibold">
+                            ₪
+                            {price >= 1000
+                              ? `${(price / 1000).toFixed(price % 1000 === 0 ? 0 : 1)}k`
+                              : price.toLocaleString("he-IL")}
+                          </span>
+                          <div className="h-2 w-px bg-zinc-600/50" />
+                        </div>
+                      );
+                    })}
+                    {/* Price direction label */}
+                    <div className="absolute top-1 right-4 text-[8px] text-zinc-600 font-mono tracking-widest uppercase">
+                      price →
+                    </div>
+                  </div>
+                </div>
 
-            {/* Scrollable Matrix */}
-            <div className="flex-1 overflow-y-auto custom-scrollbar">
-              {brandMatrix.brands.map(
-                ({ brand, products, rgbColor, brandPrimary }) => (
-                  <BrandTrack
-                    key={brand}
-                    brand={brand}
-                    products={products}
-                    rgbColor={rgbColor}
-                    brandPrimary={brandPrimary}
-                    families={families}
-                    onHoverProduct={handleHoverProduct}
-                    onHoverOut={handleHoverOut}
-                    onClickProduct={handleClickProduct}
-                  />
-                ),
-              )}
+                {/* Brand Lanes */}
+                {brandMatrix.brands.map(
+                  ({ brand, products, rgbColor, brandPrimary }) => (
+                    <BrandTrack
+                      key={brand}
+                      brand={brand}
+                      products={products}
+                      rgbColor={rgbColor}
+                      brandPrimary={brandPrimary}
+                      families={families}
+                      priceToX={priceToX}
+                      axisWidth={axisWidth}
+                      onHoverProduct={handleHoverProduct}
+                      onHoverOut={handleHoverOut}
+                      onClickProduct={handleClickProduct}
+                    />
+                  ),
+                )}
+              </div>
             </div>
           </div>
         )}

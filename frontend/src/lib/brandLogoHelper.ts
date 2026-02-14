@@ -166,7 +166,8 @@ const BRAND_LOGO_MAP: Record<string, string> = {
 /**
  * Get logo URL for a brand
  */
-export function getBrandLogoUrl(brandName: string): string | null {
+export function getBrandLogoUrl(brandName: string | undefined | null): string | null {
+    if (!brandName) return null;
     const normalized = brandName.toLowerCase().trim();
     const logoFile = BRAND_LOGO_MAP[normalized];
 

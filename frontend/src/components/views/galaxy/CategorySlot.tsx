@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback } from "react";
 
-interface BrandLogo {
-  brand: string;
-  logoUrl: string;
-}
+/**
+ * CategorySlot — Galaxy Dashboard tile (v2)
+ *
+ * Image on top, label BENEATH the image (not overlaid).
+ * Clean, readable layout with hover effects.
+ */
 
 interface CategorySlotProps {
   id: string;
@@ -13,161 +14,121 @@ interface CategorySlotProps {
   fallbackGradient?: string;
   icon?: React.ElementType;
   mainColor?: string;
-  count?: number; // Optional product count
-  brands?: BrandLogo[]; // Brand logos for this category
+  count?: number;
+  brands?: unknown[];
   onClick: () => void;
 }
 
 export const CategorySlot = React.memo(
   ({
-    id,
     name,
     image,
     fallbackGradient,
     icon: Icon,
     mainColor = "#fff",
     count,
-    brands = [],
     onClick,
   }: CategorySlotProps) => {
     const [isHovered, setIsHovered] = useState(false);
     const [imgError, setImgError] = useState(false);
 
-    const isDisabled = false; // Allow clicking even with 0 count for now
-
     const handleMouseEnter = useCallback(() => setIsHovered(true), []);
     const handleMouseLeave = useCallback(() => setIsHovered(false), []);
     const handleImgError = useCallback(() => setImgError(true), []);
 
-    // Pre-compute spotlight gradient (stable across renders when mainColor doesn't change)
-    const spotlightBg = useMemo(
-      () =>
-        `radial-gradient(circle at 50% 0%, ${mainColor}15, transparent 60%)`,
-      [mainColor],
-    );
-
     return (
-      <motion.div
-        className={`relative aspect-square rounded-xl overflow-hidden group w-full flex flex-col transition-all duration-300 ring-1 shadow-2xl ${
-          isDisabled
-            ? "bg-[#0a0a0a] opacity-40 border border-zinc-900 cursor-not-allowed grayscale pointer-events-none"
-            : "bg-[#030303] cursor-pointer ring-white/5 hover:ring-white/20"
-        }`}
+      <div
+        className="flex flex-col cursor-pointer group"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={onClick}
         style={{
-          transform: isHovered ? "translateY(1px)" : "translateY(0)",
+          transform: isHovered ? "translateY(-3px)" : "translateY(0)",
+          transition: "transform 0.25s cubic-bezier(.22,1,.36,1)",
         }}
-        transition={{ duration: 0.1 }}
       >
-        {/* Container for the "Cave" effect */}
-        <div className="flex-[3] relative w-full h-full overflow-hidden bg-[#050505]">
-          {/* The "Floor/Background" Image */}
-          {!imgError && !isDisabled ? (
-            <img
-              src={image}
-              alt={name}
-              loading="lazy"
-              onError={handleImgError}
-              className="w-full h-full object-cover transition-[transform,filter] duration-700 ease-out will-change-transform"
-              style={{
-                filter: isHovered
-                  ? "contrast(110%) brightness(1.1)"
-                  : "contrast(100%) brightness(0.8)",
-                transform: isHovered ? "scale(1.1)" : "scale(1.0)",
-              }}
-            />
-          ) : isDisabled ? (
-            <div className="w-full h-full flex flex-col items-center justify-center bg-zinc-950 text-zinc-800">
-              <div className="text-2xl opacity-20 selection:bg-none select-none">
-                ∅
+        {/* ── IMAGE AREA ── */}
+        <div className="relative aspect-square rounded-xl overflow-hidden bg-[#0a0a0a] ring-1 ring-white/10 group-hover:ring-white/25 shadow-xl transition-shadow duration-300 group-hover:shadow-[0_0_24px_-5px_rgba(255,255,255,0.06)]">
+          {/* Background image */}
+          <div className="absolute inset-0">
+            {!imgError ? (
+              <img
+                src={image}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                onError={handleImgError}
+                className="w-full h-full object-cover will-change-transform"
+                style={{
+                  filter: isHovered
+                    ? "contrast(115%) brightness(1.15) saturate(1.1)"
+                    : "contrast(105%) brightness(0.8) saturate(0.9)",
+                  transform: isHovered ? "scale(1.08)" : "scale(1.0)",
+                  transition: "transform 0.6s ease-out, filter 0.6s ease-out",
+                }}
+              />
+            ) : fallbackGradient ? (
+              <div
+                className="w-full h-full"
+                style={{ background: fallbackGradient }}
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-zinc-950">
+                {Icon ? (
+                  <Icon className="w-10 h-10 opacity-15" color={mainColor} />
+                ) : (
+                  <div className="text-xl opacity-15 text-zinc-700 select-none">
+                    ∅
+                  </div>
+                )}
               </div>
-            </div>
-          ) : (
-            <div className="flex items-center justify-center w-full h-full">
-              {Icon &&
-                React.createElement(Icon, {
-                  className: "w-8 h-8",
-                  color: mainColor,
-                })}
-            </div>
-          )}
+            )}
+          </div>
 
-          {/* -------------------------------------------------------- */}
-          {/* DEPTH OVERLAYS: Creating the "Carved In" Illusion        */}
-          {/* -------------------------------------------------------- */}
+          {/* Subtle vignette for depth */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/5 via-transparent to-black/40" />
 
-          {/* 1. Deep Inner Shadow (Top/Sides) - The "Overhang" */}
-          <div className="absolute inset-0 pointer-events-none shadow-[inset_0_10px_30px_rgba(0,0,0,0.9),inset_0_0_15px_rgba(0,0,0,0.8)] z-10" />
+          {/* Top edge shine */}
+          <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-50" />
 
-          {/* 2. Bottom Lip Highlight - The "Ledge" catching light */}
-          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-white/20 z-20 mix-blend-overlay" />
-
-          {/* 3. Top Edge Shadow - Defining the cut */}
-          <div className="absolute inset-x-0 top-0 h-[4px] bg-gradient-to-b from-black to-transparent z-20 opacity-80" />
-
-          {/* Hover Spotlight */}
+          {/* Hover glow */}
           <div
-            className="absolute inset-0 pointer-events-none transition-opacity duration-300"
+            className="absolute inset-0 pointer-events-none transition-opacity duration-500"
             style={{
-              background: spotlightBg,
+              background: `radial-gradient(circle at 50% 50%, ${mainColor}15, transparent 70%)`,
               opacity: isHovered ? 1 : 0,
             }}
           />
+
+          {/* Product count badge */}
+          {count !== undefined && count > 0 && (
+            <div
+              className="absolute top-1.5 right-1.5 z-10 text-[8px] font-bold px-1.5 py-0.5 rounded-md backdrop-blur-sm"
+              style={{
+                backgroundColor: "rgba(0,0,0,0.55)",
+                color: isHovered ? mainColor : "rgba(255,255,255,0.5)",
+                transition: "color 0.3s ease",
+              }}
+            >
+              {count}
+            </div>
+          )}
         </div>
 
-        {/* Label Area - Title + Brand Logos */}
-        <div className="flex-1 bg-zinc-950 flex flex-col items-center justify-center border-t border-zinc-800/50 shrink-0 px-2 py-1.5 relative z-10 gap-1">
-          {/* Title */}
+        {/* ── TEXT BENEATH IMAGE ── */}
+        <div className="mt-1.5 px-0.5 text-center">
           <span
-            className="text-[10px] font-semibold uppercase tracking-wider text-center line-clamp-2 transition-colors duration-200 leading-tight"
+            className="text-[10px] font-bold uppercase tracking-[0.12em] leading-tight block"
             style={{
-              color: isHovered ? mainColor : "#d4d4d8",
+              color: isHovered ? "#ffffff" : "#a1a1aa",
+              textShadow: isHovered ? `0 0 12px ${mainColor}60` : "none",
+              transition: "color 0.3s ease, text-shadow 0.3s ease",
             }}
           >
             {name}
           </span>
-
-          {/* Product Count Badge */}
-          {count !== undefined && count > 0 && (
-            <span
-              className="text-[8px] font-medium px-1.5 py-px rounded-full transition-colors duration-200"
-              style={{
-                backgroundColor: isHovered
-                  ? `${mainColor}15`
-                  : "rgba(255,255,255,0.04)",
-                color: isHovered ? mainColor : "#71717a",
-              }}
-            >
-              {count}
-            </span>
-          )}
-
-          {/* Brand Logos */}
-          {brands.length > 0 && (
-            <div className="w-full flex flex-wrap items-center justify-center gap-1 pt-1 border-t border-zinc-800/30">
-              {brands.slice(0, 4).map((brandLogo, idx) => (
-                <div
-                  key={`${brandLogo.brand}-${idx}`}
-                  className="flex-shrink-0 h-4 flex items-center justify-center bg-white/5 rounded px-1 hover:bg-white/10 transition-colors duration-200"
-                  title={brandLogo.brand}
-                >
-                  <img
-                    src={brandLogo.logoUrl}
-                    alt={brandLogo.brand}
-                    loading="lazy"
-                    className="h-full object-contain max-w-[24px] opacity-60 hover:opacity-80 transition-opacity duration-200"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
         </div>
-      </motion.div>
+      </div>
     );
   },
 );

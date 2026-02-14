@@ -26,56 +26,56 @@ export interface UniversalCategoryDef extends Omit<
   spectrum: SpectrumUIDef[];
 }
 
-// Map Spectrum ID -> Thumbnail Path
+// Map Spectrum ID -> Thumbnail Path (each slot has a UNIQUE image)
 const SPECTRUM_IMAGES: Record<string, string> = {
-  // GUITARS
+  // GUITARS — each sub-spectrum gets its own distinct image
   "electric-guitars": "/data/category_thumbnails/guitars-electric-guitars_thumb.webp",
-  "acoustic-guitars": "/data/category_thumbnails/guitars-electric-guitars_thumb.webp",
+  "acoustic-guitars": "/data/category_thumbnails/guitars-acoustic-guitars_thumb.webp",
   "bass-guitars": "/data/category_thumbnails/guitars-bass-guitars_thumb.webp",
-  "guitar-amps": "/data/category_thumbnails/guitars-amplifiers_thumb.webp",
-  "guitar-pedals": "/data/category_thumbnails/guitars-effects-pedals_thumb.webp",
-  "folk-instruments": "/data/category_thumbnails/guitars-electric-guitars_thumb.webp",
-  "guitar-accessories": "/data/category_thumbnails/guitars-accessories_thumb.webp",
+  "guitar-amps": "/data/category_thumbnails/guitars-guitar-amps_thumb.webp",
+  "guitar-pedals": "/data/category_thumbnails/guitars-guitar-pedals_thumb.webp",
+  "folk-instruments": "/data/category_thumbnails/guitars-folk-instruments_thumb.webp",
+  "guitar-accessories": "/data/category_thumbnails/guitars-guitar-accessories_thumb.webp",
 
-  // DRUMS
+  // DRUMS — unique per sub-spectrum
   "acoustic-drums": "/data/category_thumbnails/drums-acoustic-drums_thumb.webp",
   "electronic-drums": "/data/category_thumbnails/drums-electronic-drums_thumb.webp",
   cymbals: "/data/category_thumbnails/drums-cymbals_thumb.webp",
-  snares: "/data/category_thumbnails/drums-cymbals_thumb.webp",
-  "sticks-heads": "/data/category_thumbnails/drums-percussion_thumb.webp",
+  snares: "/data/category_thumbnails/drums-snares_thumb.webp",
+  "sticks-heads": "/data/category_thumbnails/drums-sticks-heads_thumb.webp",
   percussion: "/data/category_thumbnails/drums-percussion_thumb.webp",
-  "drum-hardware": "/data/category_thumbnails/drums-pads_thumb.webp",
+  "drum-hardware": "/data/category_thumbnails/drums-drum-hardware_thumb.webp",
 
-  // KEYS
-  synthesizers: "/data/category_thumbnails/keys-synths_thumb.webp",
+  // KEYS — unique per sub-spectrum
+  synthesizers: "/data/category_thumbnails/keys-synthesizers_thumb.webp",
   "stage-pianos": "/data/category_thumbnails/keys-stage-pianos_thumb.webp",
-  "midi-controllers": "/data/category_thumbnails/keys-controllers_thumb.webp",
-  grooveboxes: "/data/category_thumbnails/dj-grooveboxes_thumb.webp",
-  eurorack: "/data/category_thumbnails/keys-synths_thumb.webp",
-  "keys-accessories": "/data/category_thumbnails/keys-controllers_thumb.webp",
+  "midi-controllers": "/data/category_thumbnails/keys-midi-controllers_thumb.webp",
+  grooveboxes: "/data/category_thumbnails/keys-grooveboxes_thumb.webp",
+  eurorack: "/data/category_thumbnails/keys-eurorack_thumb.webp",
+  "keys-accessories": "/data/category_thumbnails/keys-keys-accessories_thumb.webp",
 
-  // STUDIO
+  // STUDIO — unique per sub-spectrum
   "audio-interfaces": "/data/category_thumbnails/studio-audio-interfaces_thumb.webp",
   "studio-monitors": "/data/category_thumbnails/studio-studio-monitors_thumb.webp",
-  "studio-microphones": "/data/category_thumbnails/studio-microphones_thumb.webp",
+  "studio-microphones": "/data/category_thumbnails/studio-studio-microphones_thumb.webp",
   "outboard-gear": "/data/category_thumbnails/studio-outboard-gear_thumb.webp",
-  "software-plugins": "/data/category_thumbnails/studio-software_thumb.webp",
+  "software-plugins": "/data/category_thumbnails/studio-software-plugins_thumb.webp",
   "studio-accessories": "/data/category_thumbnails/studio-studio-accessories_thumb.webp",
 
-  // LIVE
+  // LIVE — unique per sub-spectrum
   "pa-systems": "/data/category_thumbnails/live-pa-systems_thumb.webp",
-  "live-mixers": "/data/category_thumbnails/live-mixers_thumb.webp",
+  "live-mixers": "/data/category_thumbnails/live-live-mixers_thumb.webp",
   "dj-equipment": "/data/category_thumbnails/live-dj-equipment_thumb.webp",
   lighting: "/data/category_thumbnails/live-lighting_thumb.webp",
-  "live-mics": "/data/category_thumbnails/live-live-mics_thumb.webp",
+  "live-mics": "/data/category_thumbnails/live-wireless-systems_thumb.webp",
   "live-accessories": "/data/category_thumbnails/live-live-accessories_thumb.webp",
 
-  // UTILITY
+  // UTILITY — unique per sub-spectrum
   cables: "/data/category_thumbnails/accessories-cables_thumb.webp",
   stands: "/data/category_thumbnails/accessories-stands_thumb.webp",
-  "cases-bags": "/data/category_thumbnails/accessories-cases_thumb.webp",
-  "power-supplies": "/data/category_thumbnails/accessories-power_thumb.webp",
-  "general-accessories": "/data/category_thumbnails/accessories-cables_thumb.webp",
+  "cases-bags": "/data/category_thumbnails/accessories-cases-bags_thumb.webp",
+  "power-supplies": "/data/category_thumbnails/accessories-power-supplies_thumb.webp",
+  "general-accessories": "/data/category_thumbnails/accessories-pedals_thumb.webp",
 };
 
 // Brand Colors

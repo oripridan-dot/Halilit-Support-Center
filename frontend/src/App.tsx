@@ -19,8 +19,6 @@ import {
   ProductGridSkeleton,
 } from "./components/ui/Skeleton";
 import { useNavigationStore } from "./store/navigationStore";
-import { LearningFeed } from "./components/LearningFeed";
-import { useLearningStream } from "./hooks/useLearningStream";
 
 // Lazy load heavy views for code-splitting
 const GalaxyDashboard = lazy(() =>
@@ -43,18 +41,10 @@ const CurationDashboard = lazy(() =>
     default: m.CurationDashboard,
   })),
 );
-const SpectrumV2 = lazy(() =>
-  import("./components/spectrum/SpectrumV2").then((m) => ({
-    default: m.SpectrumV2,
-  })),
-);
 
 function App() {
   // Extract strictly what we need
   const { currentView, activeProductId } = useNavigationStore();
-
-  // Initialize Learning Stream listener
-  useLearningStream();
 
   return (
     <GlobalErrorBoundary>
@@ -89,9 +79,6 @@ function App() {
 
         {/* Main Stage */}
         <main className="flex-1 relative overflow-hidden">
-          {/* Real-time Learning Feed Overlay */}
-          <LearningFeed />
-
           {/* Screen 1: Galaxy Dashboard */}
           {currentView === "GALAXY" && (
             <div className="absolute inset-0 animate-fade-in">
@@ -112,15 +99,6 @@ function App() {
             <div className="absolute inset-0 animate-slide-up">
               <Suspense fallback={<SpectrumSkeleton />}>
                 <SpectrumModule />
-              </Suspense>
-            </div>
-          )}
-
-          {/* Screen 2b: Spectrum V2 (Redesigned with Model Grouping & Zoom) */}
-          {currentView === "SPECTRUM_V2" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<SpectrumSkeleton />}>
-                <SpectrumV2 />
               </Suspense>
             </div>
           )}

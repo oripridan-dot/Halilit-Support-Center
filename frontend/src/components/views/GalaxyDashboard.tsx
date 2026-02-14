@@ -10,7 +10,6 @@ import {
   HelpCircle,
   Database,
   Layers,
-  Telescope,
 } from "lucide-react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
@@ -51,7 +50,7 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => {
 });
 
 export const GalaxyDashboard = () => {
-  const { goToSpectrum, goToCuration, goToSpectrumV2 } = useNavigationStore();
+  const { goToSpectrum, goToCuration } = useNavigationStore();
   const {
     products,
     isLoading,
@@ -176,15 +175,6 @@ export const GalaxyDashboard = () => {
             )}
           </div>
         )}
-        {/* Spectrum V2 button */}
-        <button
-          onClick={goToSpectrumV2}
-          className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600/15 hover:bg-blue-600/30 border border-blue-500/20 rounded-lg text-blue-400 text-xs font-semibold transition-all ml-2"
-          title="Spectrum V2 — Model Grouping & Semantic Zoom"
-        >
-          <Telescope size={12} />
-          Spectrum V2
-        </button>
         {/* Curation button */}
         <button
           onClick={goToCuration}
