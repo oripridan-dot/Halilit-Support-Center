@@ -48,6 +48,22 @@ class RelationshipDirection(str, Enum):
     BIDIRECTIONAL = "bidirectional"     # A ↔ B (variants, alternatives)
 
 
+# Confidence by source priority (Official → Commercial → Contextual → Spectrum)
+CONFIDENCE_WEIGHTS: Dict[str, float] = {
+    "official": 1.0,    # ProductFamily / official_url overlap — hard links
+    "commercial": 0.9,   # ACCESSORY_FOR from catalog
+    "contextual": 0.7,   # Real-world insights, reviews
+    "spectrum": 0.5,     # ALTERNATIVE_TO heuristic, same spectrum/tier
+}
+
+# Confidence by relationship source (Official → Commercial → Contextual → Spectrum)
+CONFIDENCE_BY_SOURCE: Dict[str, float] = {
+    "official": 1.0,
+    "commercial": 0.9,
+    "contextual": 0.7,
+    "spectrum": 0.5,
+}
+
 # Default directionality per relationship type
 RELATIONSHIP_DEFAULTS: Dict[RelationshipType, RelationshipDirection] = {
     RelationshipType.VARIANT_OF: RelationshipDirection.BIDIRECTIONAL,
@@ -309,6 +325,7 @@ class CanonicalProduct(BaseModel):
             "family_id": self.family_id,
             "variant_key": self.variant.variant_key if self.variant else None,
             "variant_is_default": self.variant.is_default if self.variant else None,
+            "relationship_ids": list(self.relationship_ids),
         }
         return flat
 
@@ -362,6 +379,7 @@ class CanonicalProduct(BaseModel):
             search_text=flat.get("search_text", ""),
             family_id=flat.get("family_id"),
             variant=variant,
+            relationship_ids=flat.get("relationship_ids") or [],
         )
 
 
@@ -409,6 +427,24 @@ class ProductGraph(BaseModel):
             if rel.direction == RelationshipDirection.BIDIRECTIONAL:
                 self._rel_by_source.setdefault(rel.target_id, []).append(idx)
                 self._rel_by_target.setdefault(rel.source_id, []).append(idx)
+
+    def sync_relationship_ids_to_products(self) -> None:
+        """
+        Populate each CanonicalProduct.relationship_ids from the graph edges.
+        Call after discovery/merge so frontend can 'hop' from neuron to neuron.
+        """
+        for pid, product in self.products.items():
+            rels = self.get_relationships_for(pid)
+            other_ids: List[str] = []
+            for r in rels:
+                other = r.target_id if r.source_id == pid else r.source_id
+                if other != pid and other not in other_ids:
+                    other_ids.append(other)
+            product.relationship_ids = other_ids
+        logger.debug(
+            "Synced relationship_ids to %d products",
+            len(self.products),
+        )
 
     # ── Query Methods ──
 

@@ -126,12 +126,13 @@ def extract_contextual_relationship_candidates(graph: ProductGraph) -> List[Prod
                 else RelationshipDirection.UNIDIRECTIONAL
             )
 
+            from backend.product_graph import CONFIDENCE_BY_SOURCE
             rel = ProductRelationship(
                 source_id=pid,
                 target_id=target_id,
                 relationship_type=rel_type,
                 direction=direction,
-                confidence=0.75,
+                confidence=CONFIDENCE_BY_SOURCE.get("contextual", 0.7),
                 ai_discovered=True,
                 discovered_from="contextual",
                 compatibility_notes=f"From reviews: '{mention[:80]}'",

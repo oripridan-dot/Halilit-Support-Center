@@ -14,7 +14,7 @@ No AI required — pure heuristic matching on product names, categories, and spe
 import logging
 import re
 import unicodedata
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Tuple
 
 from backend.product_graph import (
     ProductGraph,
@@ -24,6 +24,7 @@ from backend.product_graph import (
     RelationshipType,
     RelationshipDirection,
     CanonicalProduct,
+    CONFIDENCE_BY_SOURCE,
 )
 
 logger = logging.getLogger("RelationshipDiscovery")
@@ -127,6 +128,37 @@ def _extract_variant_key(name: str, base_model: str, brand: str) -> str:
     return clean
 
 
+def _official_family_key(product: CanonicalProduct) -> Optional[Tuple[str, str]]:
+    """
+    Extract (brand_lower, family_path) from official_url for Official-priority grouping.
+    E.g. https://nordkeyboards.com/products/stage-4-88 -> ("nord", "stage-4").
+    Returns None if product has no official_url or path cannot be derived.
+    """
+    url = (product.official_url or "").strip()
+    if not url or not url.startswith("http"):
+        return None
+    try:
+        from urllib.parse import urlparse
+        parsed = urlparse(url)
+        path = (parsed.path or "").strip("/")
+        if not path:
+            return None
+        # Last path segment often encodes model + variant (e.g. stage-4-88, stage-4-73)
+        segments = path.split("/")
+        last = segments[-1] if segments else ""
+        # Strip variant suffix (88, 73, color names) to get family base
+        base = last
+        base = COLOR_PATTERN.sub("", base).strip("- ")
+        base = SIZE_PATTERN.sub("", base).strip("- ")
+        base = re.sub(r"\s+", "-", base).lower().strip("-")
+        if len(base) < 2:
+            return None
+        brand_key = (product.brand or "").lower().replace(" ", "-")
+        return (brand_key, base)
+    except Exception:
+        return None
+
+
 def _is_accessory(product: CanonicalProduct) -> bool:
     """Check if a product is an accessory."""
     name_lower = (product.name or "").lower()
@@ -210,43 +242,99 @@ class RelationshipDiscovery:
 
     def _discover_variant_families(self, graph: ProductGraph) -> ProductGraph:
         """
-        Group products into families based on base model name matching.
-        Products with same brand + base model name → same family.
+        Group products into families with Official priority first, then Commercial fallback.
+
+        1. Official: group by (brand, official_url family path). Same brand + same
+           official URL base path (e.g. nord.com/.../stage-4) → one family, confidence 1.0.
+        2. Commercial: group by brand + normalized model name (name-stripping), confidence 0.9.
         """
-        # Skip products already in families
         orphans = [p for p in graph.products.values() if not p.family_id]
         if not orphans:
             return graph
 
-        # Group by brand + normalized model name
-        model_groups: Dict[str, List[CanonicalProduct]] = {}
+        # ── Pass 1: Official — group by official_url overlap ──
+        official_groups: Dict[Tuple[str, str], List[CanonicalProduct]] = {}
         for p in orphans:
             if _is_accessory(p):
                 continue
-            base = _normalize_model_name(p.name, p.brand)
-            if not base or len(base) < 3:
-                continue
-            key = f"{p.brand.lower()}::{base}"
-            model_groups.setdefault(key, []).append(p)
+            key = _official_family_key(p)
+            if key:
+                official_groups.setdefault(key, []).append(p)
 
         families_created = 0
-        for key, members in model_groups.items():
+        for (brand_key, base_path), members in official_groups.items():
             if len(members) < 2:
                 continue
-
-            # Create a family
+            family_id = f"fam_{brand_key}_{base_path.replace(' ', '-')[:40]}"
             brand = members[0].brand
-            base_name = _normalize_model_name(members[0].name, brand)
-            family_id = f"fam_{brand.lower().replace(' ', '-')}_{base_name.replace(' ', '-')[:40]}"
-
-            # Find the best representative (has image, highest quality)
+            base_name = base_path.replace("-", " ").title()
             members.sort(key=lambda p: (
                 -(1 if p.image_url else 0),
                 -p.quality_score,
                 -(p.price if p.price > 0 else 0),
             ))
             hero = members[0]
+            family = ProductFamily(
+                id=family_id,
+                brand=brand,
+                family_name=f"{brand} {base_name}".strip(),
+                series=_detect_series(hero.name, brand),
+                hero_image=hero.image_url,
+                variant_ids=[m.id for m in members],
+                accessory_ids=[],
+                description=hero.description_short or hero.description,
+                official_family_url=hero.official_url or "",
+            )
+            graph.add_family(family)
+            conf = CONFIDENCE_BY_SOURCE.get("official", 1.0)
+            for i, m in enumerate(members):
+                m.family_id = family_id
+                vkey = _extract_variant_key(m.name, base_name, brand)
+                m.variant = ProductVariant(
+                    variant_key=vkey,
+                    is_default=(i == 0),
+                    sort_order=i,
+                )
+                graph.products[m.id] = m
+            # Variant_of edges between siblings (optional; family membership already implies it)
+            for i, a in enumerate(members):
+                for b in members[i + 1:]:
+                    rel = ProductRelationship(
+                        source_id=a.id,
+                        target_id=b.id,
+                        relationship_type=RelationshipType.VARIANT_OF,
+                        direction=RelationshipDirection.BIDIRECTIONAL,
+                        confidence=conf,
+                        ai_discovered=False,
+                        discovered_from="official_url_overlap",
+                        compatibility_notes="Same official product family URL",
+                        sources_verified=["official"],
+                    )
+                    graph.add_relationship(rel)
+            families_created += 1
 
+        # ── Pass 2: Commercial — name-based grouping for remaining orphans ──
+        still_orphans = [p for p in orphans if not p.family_id and not _is_accessory(p)]
+        model_groups: Dict[str, List[CanonicalProduct]] = {}
+        for p in still_orphans:
+            base = _normalize_model_name(p.name, p.brand)
+            if not base or len(base) < 3:
+                continue
+            key = f"{p.brand.lower()}::{base}"
+            model_groups.setdefault(key, []).append(p)
+
+        for key, members in model_groups.items():
+            if len(members) < 2:
+                continue
+            brand = members[0].brand
+            base_name = _normalize_model_name(members[0].name, brand)
+            family_id = f"fam_{brand.lower().replace(' ', '-')}_{base_name.replace(' ', '-')[:40]}"
+            members.sort(key=lambda p: (
+                -(1 if p.image_url else 0),
+                -p.quality_score,
+                -(p.price if p.price > 0 else 0),
+            ))
+            hero = members[0]
             family = ProductFamily(
                 id=family_id,
                 brand=brand,
@@ -258,8 +346,7 @@ class RelationshipDiscovery:
                 description=hero.description_short or hero.description,
             )
             graph.add_family(family)
-
-            # Update products with family info
+            conf = CONFIDENCE_BY_SOURCE.get("commercial", 0.9)
             for i, m in enumerate(members):
                 m.family_id = family_id
                 vkey = _extract_variant_key(m.name, base_name, brand)
@@ -269,7 +356,20 @@ class RelationshipDiscovery:
                     sort_order=i,
                 )
                 graph.products[m.id] = m
-
+            for i, a in enumerate(members):
+                for b in members[i + 1:]:
+                    rel = ProductRelationship(
+                        source_id=a.id,
+                        target_id=b.id,
+                        relationship_type=RelationshipType.VARIANT_OF,
+                        direction=RelationshipDirection.BIDIRECTIONAL,
+                        confidence=conf,
+                        ai_discovered=False,
+                        discovered_from="commercial_catalog",
+                        compatibility_notes=f"Name match: {base_name}",
+                        sources_verified=["commercial"],
+                    )
+                    graph.add_relationship(rel)
             families_created += 1
 
         logger.info(f"Variant discovery: created {families_created} new families")
@@ -309,7 +409,7 @@ class RelationshipDiscovery:
                         target_id=product.id,
                         relationship_type=RelationshipType.ACCESSORY_FOR,
                         direction=RelationshipDirection.UNIDIRECTIONAL,
-                        confidence=0.6,
+                        confidence=CONFIDENCE_BY_SOURCE.get("commercial", 0.9),
                         ai_discovered=False,
                         discovered_from="commercial_catalog",
                         compatibility_notes=f"Name overlap: {', '.join(shared)}",
@@ -371,7 +471,7 @@ class RelationshipDiscovery:
                                         target_id=pb.id,
                                         relationship_type=RelationshipType.ALTERNATIVE_TO,
                                         direction=RelationshipDirection.BIDIRECTIONAL,
-                                        confidence=0.5,
+                                        confidence=CONFIDENCE_BY_SOURCE.get("spectrum", 0.5),
                                         ai_discovered=False,
                                         discovered_from="spectrum_tier_matching",
                                         compatibility_notes=f"Same spectrum ({spectrum_id}), same tier ({tier})",

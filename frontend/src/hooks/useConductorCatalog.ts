@@ -40,6 +40,8 @@ export interface ProductRelationship {
     manually_curated: boolean;
     compatibility_notes: string;
     discovered_from: string;
+    sources_verified?: string[];
+    is_triple_checked?: boolean;
 }
 
 export interface ProductFamily {
@@ -83,6 +85,12 @@ export interface ConductorProduct {
     pros: string[];
     cons: string[];
     contextual_data: Record<string, any>;
+    /** Summary from 3+ trusted review sources (contextual pillar) */
+    review_synthesis_summary?: string;
+    /** Real-world insights from reviews (contextual pillar) */
+    real_world_insights?: string[];
+    /** Names/URLs of review sources (contextual pillar) */
+    review_sources?: string[];
     quality_score: number;
     data_status: 'COMPLETE' | 'GOOD' | 'PARTIAL' | 'MINIMAL';
     data_missing: string[];
@@ -101,6 +109,8 @@ export interface ConductorProduct {
     family_id: string | null;
     variant_key: string | null;
     variant_is_default: boolean | null;
+    /** IDs of related products (variants, accessories, alternatives) for neuron-hop without new API call */
+    relationship_ids?: string[];
 }
 
 export interface CatalogIndexes {
@@ -357,15 +367,20 @@ export const useProductRelationships = (productId: string | null) => {
         const accessories: ConductorProduct[] = [];
         const compatible: ConductorProduct[] = [];
         const alternatives: ConductorProduct[] = [];
+        const relationshipMeta: Record<string, { confidence: number; sources_verified: string[] }> = {};
 
         for (const rel of rels) {
             const otherId = rel.source_id === productId ? rel.target_id : rel.source_id;
             const other = productMap.get(otherId);
             if (!other) continue;
 
+            relationshipMeta[otherId] = {
+                confidence: rel.confidence ?? 0,
+                sources_verified: rel.sources_verified ?? [],
+            };
+
             switch (rel.relationship_type) {
                 case 'accessory_for':
-                    // Source is the accessory, target is the main product
                     if (rel.target_id === productId) accessories.push(productMap.get(rel.source_id)!);
                     break;
                 case 'compatible_with':
@@ -382,9 +397,84 @@ export const useProductRelationships = (productId: string | null) => {
             compatible: compatible.filter(Boolean),
             alternatives: alternatives.filter(Boolean),
             all: rels,
+            relationshipMeta,
         };
     }, [productId, indexes, products]);
 
     return { ...result, isLoading };
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SPECTRUM STAR (NEURON) VIEW — ModelGroups + relationships by spectrum
+// ═══════════════════════════════════════════════════════════════════════════
+
+export type ZoomLevel = 'galaxy' | 'constellation' | 'cluster' | 'star';
+
+export interface ModelVariation {
+    id: string;
+    name: string;
+    variation: string;
+    price: number;
+    price_eilat?: number;
+    tier?: string;
+    image_url?: string;
+    sources?: string[];
+    quality_score?: number;
+    data_status?: string;
+    specs?: Record<string, unknown>;
+    rating?: number;
+    family_id?: string | null;
+}
+
+export interface ModelGroup {
+    modelName: string;
+    modelKey: string;
+    brand: string;
+    family: string;
+    subCategory: string;
+    bodyType: string;
+    variations: ModelVariation[];
+    priceRange: { min: number; max: number; currency: string };
+    heroImage: string;
+    variationCount: number;
+    avgConfidence: number;
+}
+
+export interface SpectrumStarResponse {
+    spectrum_id: string;
+    model_groups: ModelGroup[];
+    relationships: Record<string, ProductRelationship[]>;
+    zoom_levels: ZoomLevel[];
+    product_count: number;
+}
+
+/**
+ * Fetch the neuron view for a spectrum: ModelGroups (nucleus + variations)
+ * and relationships (outer connections). Use for star-level (inner) and
+ * cluster-level (outer) display in the Spectrum Module.
+ */
+export const useSpectrumStar = (spectrumId: string | null) => {
+    const { data, isLoading, error, refetch } = useQuery<SpectrumStarResponse>({
+        queryKey: ['spectrumStar', spectrumId],
+        queryFn: async () => {
+            if (!spectrumId) throw new Error('No spectrum');
+            const res = await fetch(`/api/spectrum/${encodeURIComponent(spectrumId)}`);
+            if (!res.ok) throw new Error(res.statusText);
+            return res.json();
+        },
+        enabled: !!spectrumId,
+        staleTime: 5 * 60 * 1000,
+    });
+
+    return {
+        modelGroups: data?.model_groups ?? [],
+        relationships: data?.relationships ?? {},
+        zoomLevels: data?.zoom_levels ?? ['galaxy', 'constellation', 'cluster', 'star'],
+        productCount: data?.product_count ?? 0,
+        spectrumId: data?.spectrum_id ?? spectrumId ?? null,
+        isLoading,
+        error: error?.message ?? null,
+        refetch,
+    };
 };
 

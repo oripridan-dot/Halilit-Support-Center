@@ -34,8 +34,8 @@ _catalog_cache_time: float = 0
 _catalog_build_lock = threading.Lock()
 CATALOG_CACHE_TTL = 300  # 5 minutes
 
-# Fields to strip from products in the catalog response
-STRIP_FIELDS = {"contextual_data", "search_text", "subcategory", "currency"}
+# Fields to strip from products in the catalog response (keep contextual_data so UI can show review_synthesis, real_world_insights, review_sources)
+STRIP_FIELDS = {"search_text", "subcategory", "currency"}
 
 # Ensure parent directory is in path
 _parent_dir = str(Path(__file__).parent.parent)
@@ -202,6 +202,53 @@ async def galaxy_view(request: Request):
 @app.get("/api/catalog")
 async def get_catalog(request: Request):
     return await get_conductor_catalog(request)
+
+
+@app.get("/api/spectrum/{spectrum_id}")
+async def get_spectrum_star_view(spectrum_id: str):
+    """
+    Spectrum Module neuron view: ModelGroups (nucleus + inner variations)
+    and ProductRelationship (outer connections) for a given spectrum.
+
+    - Nucleus: ModelGroup (e.g. Nord Stage 4)
+    - Inner electrons: ModelVariation (88, 73, Compact)
+    - Outer connections: ProductRelationship[] for accessories/alternatives
+
+    Use ZoomLevel (galaxy → constellation → cluster → star) to show
+    inner connections at 'star' and outer at 'cluster'.
+    """
+    global _catalog_cache_dict, _catalog_cache_time
+    now = time.time()
+    if _catalog_cache_dict is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
+        loop = asyncio.get_event_loop()
+        await loop.run_in_executor(None, _build_catalog_cache)
+    if _catalog_cache_dict is None:
+        return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+
+    catalog = _catalog_cache_dict
+    products = catalog.get("products", [])
+    indexes = catalog.get("indexes", {})
+    by_spectrum = indexes.get("by_spectrum", {})
+    inds = by_spectrum.get(spectrum_id, [])
+    spectrum_products = [products[i] for i in inds if 0 <= i < len(products)]
+
+    try:
+        from backend.model_grouper import group_products_by_model
+        model_groups = group_products_by_model(spectrum_products)
+    except Exception as e:
+        logger.warning(f"model_grouper failed for spectrum {spectrum_id}: {e}")
+        model_groups = []
+
+    # Relationships keyed by product id (for frontend to "hop" from neuron to neuron)
+    relationships_by_product = dict(indexes.get("relationships", {}))
+
+    return {
+        "spectrum_id": spectrum_id,
+        "model_groups": model_groups,
+        "relationships": relationships_by_product,
+        "zoom_levels": ["galaxy", "constellation", "cluster", "star"],
+        "product_count": len(spectrum_products),
+    }
 
 
 @app.get("/api/catalog/health")

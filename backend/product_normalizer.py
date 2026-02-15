@@ -854,14 +854,36 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     else:
         faq = []
 
-    # Reviews
+    # Reviews — combine from review_data, top-level contextual fields, and contextual_data blob
     review_data = p.get("review_data") or {}
     rating = review_data.get("aggregate_rating") or p.get(
         "average_rating") or 0
     review_count = review_data.get(
         "total_reviews") or len(p.get("reviews") or [])
-    pros = review_data.get("pros_and_cons", {}).get("pros") or []
-    cons = review_data.get("pros_and_cons", {}).get("cons") or []
+    pros = list(review_data.get("pros_and_cons", {}).get("pros") or [])
+    cons = list(review_data.get("pros_and_cons", {}).get("cons") or [])
+    # Merge contextual pillar fields (review_pros, review_cons) so all sources are combined
+    for x in (p.get("review_pros") or []):
+        if isinstance(x, str) and x.strip() and x.strip() not in pros:
+            pros.append(x.strip())
+    for x in (p.get("review_cons") or []):
+        if isinstance(x, str) and x.strip() and x.strip() not in cons:
+            cons.append(x.strip())
+    ctx_data = p.get("contextual_data") or {}
+    if isinstance(ctx_data, dict):
+        for x in (ctx_data.get("review_pros") or []):
+            if isinstance(x, str) and x.strip() and x.strip() not in pros:
+                pros.append(x.strip())
+        for x in (ctx_data.get("review_cons") or []):
+            if isinstance(x, str) and x.strip() and x.strip() not in cons:
+                cons.append(x.strip())
+        if not rating and ctx_data.get("average_rating"):
+            try:
+                rating = float(ctx_data["average_rating"])
+            except (TypeError, ValueError):
+                pass
+        if not review_count and (ctx_data.get("reviews") or ctx_data.get("review_sources")):
+            review_count = len(ctx_data.get("reviews") or []) or len(ctx_data.get("review_sources") or [])
 
     # Quality score — use smart validator that scores on what the UI renders
     # (computed after the full dict is built, see below)
@@ -888,9 +910,30 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     contextual_data = p.get("contextual_data") or {}
     if not isinstance(contextual_data, dict):
         contextual_data = {}
-    # Merge in any review synthesis available
-    if p.get("review_synthesis") and isinstance(p["review_synthesis"], dict):
-        contextual_data.setdefault("review_synthesis", p["review_synthesis"])
+    # Merge in any review synthesis available (dict or string)
+    if p.get("review_synthesis"):
+        rs = p["review_synthesis"]
+        if isinstance(rs, dict) and "review_synthesis" not in contextual_data:
+            contextual_data.setdefault("review_synthesis", rs)
+        elif isinstance(rs, str) and rs.strip():
+            contextual_data.setdefault("review_synthesis", {"summary": rs})
+    # Flatten for UI: summary text, real-world insights, review sources
+    review_synthesis_summary = ""
+    if isinstance(contextual_data.get("review_synthesis"), dict):
+        rs = contextual_data["review_synthesis"]
+        review_synthesis_summary = (rs.get("summary") or rs.get("text") or "").strip() if isinstance(rs, dict) else ""
+    elif isinstance(contextual_data.get("review_synthesis"), str):
+        review_synthesis_summary = (contextual_data["review_synthesis"] or "").strip()
+    real_world_insights = list(p.get("real_world_insights") or [])
+    if isinstance(contextual_data.get("real_world_insights"), list):
+        for i in contextual_data["real_world_insights"]:
+            if isinstance(i, str) and i.strip() and i.strip() not in real_world_insights:
+                real_world_insights.append(i.strip())
+    review_sources = list(p.get("review_sources") or [])
+    if isinstance(contextual_data.get("review_sources"), list):
+        for s in contextual_data["review_sources"]:
+            if isinstance(s, str) and s.strip() and s.strip() not in review_sources:
+                review_sources.append(s.strip())
 
     # Per source_rules: official only when we have real official-scout data
     has_official_specs = bool(
@@ -954,6 +997,9 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "pros": pros,
         "cons": cons,
         "contextual_data": contextual_data,
+        "review_synthesis_summary": review_synthesis_summary,
+        "real_world_insights": real_world_insights,
+        "review_sources": review_sources,
         "quality_score": 0,  # computed below
         "data_status": "MINIMAL",  # computed below
         "data_missing": [],  # computed below
@@ -1130,10 +1176,13 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             except ImportError:
                 pass
 
+            # Sync relationship_ids onto each product so frontend can "hop" without new API call
+            graph.sync_relationship_ids_to_products()
+
             # Persist discovered graph back to JSON snapshot
             store.export_json_snapshot(graph)
 
-            # Merge graph data back into flat products
+            # Merge graph data back into flat products (family + variant + relationship_ids)
             for i, p in enumerate(products):
                 pid = p["id"]
                 if pid in graph.products:
@@ -1141,6 +1190,7 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                     p["family_id"] = cp.family_id
                     p["variant_key"] = cp.variant.variant_key if cp.variant else None
                     p["variant_is_default"] = cp.variant.is_default if cp.variant else None
+                    p["relationship_ids"] = list(cp.relationship_ids)
 
             # Build graph-specific indexes
             product_id_to_idx = {p["id"]: i for i, p in enumerate(products)}
@@ -1167,12 +1217,16 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             logger.warning(f"Product graph discovery failed (non-fatal): {e}")
             graph_indexes = {"by_family": {}, "relationships": {}}
             graph_stats = {}
+            for p in products:
+                p.setdefault("relationship_ids", [])
+
     else:
         # Graph disabled — add empty fields for consistent shape
         for p in products:
             p["family_id"] = None
             p["variant_key"] = None
             p["variant_is_default"] = None
+            p["relationship_ids"] = []
 
     # Build indexes
     by_galaxy: Dict[str, List[int]] = {}

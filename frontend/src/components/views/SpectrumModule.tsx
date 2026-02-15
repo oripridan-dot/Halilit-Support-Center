@@ -26,6 +26,7 @@ import {
   useProductsBySpectrum,
   useProductVariants,
   useProductRelationships,
+  useSpectrumStar,
 } from "../../hooks/useConductorCatalog";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
@@ -1303,6 +1304,8 @@ StackTile.displayName = "StackTile";
 interface BrandTrackProps {
   brand: string;
   products: ConductorProduct[];
+  /** When provided (from spectrum star API model_groups), use neuron view: nucleus + inner variations */
+  displayItems?: DisplayItem[] | null;
   rgbColor: string;
   brandPrimary: string;
   families: Record<string, FamilyMeta>;
@@ -1324,6 +1327,7 @@ const BrandTrack = React.memo(
   ({
     brand,
     products,
+    displayItems: displayItemsProp,
     rgbColor,
     brandPrimary,
     families,
@@ -1351,8 +1355,11 @@ const BrandTrack = React.memo(
       return () => observer.disconnect();
     }, []);
 
-    // Build display items: collapse explicit families, auto-group by base model
+    // Use neuron display items (from spectrum star API) when provided; else build from products
     const displayItems = useMemo(() => {
+      if (displayItemsProp != null && displayItemsProp.length > 0) {
+        return displayItemsProp;
+      }
       const items: DisplayItem[] = [];
       const familyGroups = new Map<string, ConductorProduct[]>();
       const standalones: ConductorProduct[] = [];
@@ -1434,7 +1441,7 @@ const BrandTrack = React.memo(
 
       items.sort((a, b) => a.sortPrice - b.sortPrice);
       return items;
-    }, [products, families]);
+    }, [products, families, displayItemsProp]);
 
     // Continuous tile size: 4px micro-dot at full zoom-out → 54px at max zoom
     const tileSize = useMemo(() => {
@@ -2335,6 +2342,13 @@ export const SpectrumModule = () => {
   const { isLoading, error, galaxies, families } = useConductorCatalog();
   const { products: fetchedProducts } =
     useProductsBySpectrum(activeSubcategoryId);
+  const {
+    modelGroups: spectrumStarModelGroups,
+    relationships: spectrumStarRelationships,
+    zoomLevels: spectrumZoomLevels,
+    productCount: spectrumStarProductCount,
+    isLoading: spectrumStarLoading,
+  } = useSpectrumStar(activeSubcategoryId);
 
   const spectrumLabel = useMemo(() => {
     if (!activeTribeId || !activeSubcategoryId) return "";
@@ -2518,6 +2532,76 @@ export const SpectrumModule = () => {
     }
     return base.sort((a, b) => getEffectivePrice(a) - getEffectivePrice(b));
   }, [cleanProducts, activeSmartTag, smartTags, activeSubcategoryId]);
+
+  // Neuron view: when spectrum star API returns model_groups, build display items
+  // by brand so the track shows ModelGroups (nucleus) + variations (inner) instead of flat list.
+  const neuronDisplayItemsByBrand = useMemo((): Record<string, DisplayItem[]> | null => {
+    if (!activeSubcategoryId || spectrumStarModelGroups.length === 0 || cleanProducts.length === 0) {
+      return null;
+    }
+    const spectrumId = activeSubcategoryId;
+    const productPool = cleanProducts.filter((p) => !isAccessoryProduct(p, spectrumId));
+    const productMap = new Map(productPool.map((p) => [p.id, p]));
+
+    const idsInGroups = new Set(
+      spectrumStarModelGroups.flatMap((g) => g.variations.map((v) => v.id)),
+    );
+    const byBrand = new Map<string, DisplayItem[]>();
+
+    for (const group of spectrumStarModelGroups) {
+      const familyProducts: ConductorProduct[] = group.variations
+                        .map((v) => productMap.get(v.id))
+                        .filter((p): p is ConductorProduct => p != null);
+      if (familyProducts.length === 0) continue;
+      const representative =
+                        familyProducts.find((m) => isRealImage(m.image_url)) ?? familyProducts[0];
+      const prices = familyProducts
+                        .map((m) => getEffectivePrice(m))
+                        .filter((p) => p > 0);
+      const sortPrice = prices.length > 0 ? Math.min(...prices) : 0;
+      const brand = group.brand || "Other";
+      const item: DisplayItem = {
+        type: familyProducts.length > 1 ? "family" : "product",
+        representative,
+        variantCount: familyProducts.length,
+        familyId: group.modelKey,
+        familyProducts,
+        sortPrice,
+        series: null,
+      };
+      const arr = byBrand.get(brand) ?? [];
+      arr.push(item);
+      byBrand.set(brand, arr);
+    }
+
+    const standalones = productPool.filter((p) => !idsInGroups.has(p.id));
+    for (const p of standalones) {
+      const brand = p.brand || "Other";
+      const item: DisplayItem = {
+        type: "product",
+        representative: p,
+        variantCount: 1,
+        familyId: null,
+        familyProducts: [p],
+        sortPrice: getEffectivePrice(p),
+        series: null,
+      };
+      const arr = byBrand.get(brand) ?? [];
+      arr.push(item);
+      byBrand.set(brand, arr);
+    }
+
+    const out: Record<string, DisplayItem[]> = {};
+    for (const [brand, items] of byBrand) {
+      items.sort((a, b) => a.sortPrice - b.sortPrice);
+      out[brand] = items;
+    }
+    return out;
+  }, [
+    activeSubcategoryId,
+    spectrumStarModelGroups,
+    cleanProducts,
+  ]);
 
   // Count products with images in focus range (for stats)
   const focusStats = useMemo(() => {
@@ -2783,6 +2867,11 @@ export const SpectrumModule = () => {
             <span className="text-zinc-300">
               {filteredProducts.length} units
             </span>
+            {neuronDisplayItemsByBrand != null && (
+              <span className="text-[9px] text-emerald-400/80 font-bold uppercase tracking-wider ml-1" title="View grouped by model (nucleus + variations)">
+                Neuron
+              </span>
+            )}
           </div>
           {!isAggregate && (
             <div className="hidden md:flex items-center gap-2 text-xs font-mono text-blue-500/70 border border-blue-900/30 rounded-full px-3 py-1 bg-blue-950/20">
@@ -3040,6 +3129,7 @@ export const SpectrumModule = () => {
                     key={brand}
                     brand={brand}
                     products={products}
+                    displayItems={neuronDisplayItemsByBrand?.[brand]}
                     rgbColor={rgbColor}
                     brandPrimary={brandPrimary}
                     families={families}

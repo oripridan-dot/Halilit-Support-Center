@@ -196,10 +196,20 @@ export const GalaxyDashboard = () => {
               {metadata.total_products} products
             </span>
           )}
-          {metadata?.graph_stats && metadata.graph_stats.total_families > 0 && (
-            <span className="flex items-center gap-1 text-[10px] text-blue-400/70 font-medium ml-2 bg-blue-500/10 border border-blue-500/15 rounded-full px-2 py-0.5">
-              <Layers size={10} />
-              {metadata.graph_stats.total_families} families
+          {metadata?.graph_stats && (metadata.graph_stats.total_families > 0 || (metadata.graph_stats.total_relationships ?? 0) > 0) && (
+            <span className="flex items-center gap-1.5 text-[10px] text-blue-400/80 font-semibold ml-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-2.5 py-1" title="Canonical Product Graph: families and relationships">
+              <Layers size={11} />
+              <span>Graph</span>
+              {metadata.graph_stats.total_families > 0 && (
+                <span className="text-zinc-400 font-medium">
+                  · {metadata.graph_stats.total_families} families
+                </span>
+              )}
+              {(metadata.graph_stats.total_relationships ?? 0) > 0 && (
+                <span className="text-zinc-500 font-medium">
+                  · {metadata.graph_stats.total_relationships} links
+                </span>
+              )}
             </span>
           )}
         </div>

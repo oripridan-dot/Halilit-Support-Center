@@ -54,7 +54,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
   const [loading, setLoading] = useState(true);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const { variants } = useProductVariants(productId);
-  const { accessories, compatible, alternatives } =
+  const { accessories, compatible, alternatives, relationshipMeta } =
     useProductRelationships(productId);
 
   // JIT Intelligence — connects to SSE stream for live product research
@@ -471,6 +471,11 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                       style={{ backgroundColor: brandColor }}
                     />
                     Overview
+                    {product.data_trust?.description_source && product.data_trust.description_source !== "none" && (
+                      <span className="ml-auto text-[9px] font-medium text-zinc-500">
+                        Source: {product.data_trust.description_source === "official" ? "Official" : "Halilit"}
+                      </span>
+                    )}
                   </h3>
                   <p className="text-sm text-zinc-300 leading-relaxed line-clamp-4">
                     {product.description}
@@ -512,15 +517,14 @@ export const ProductPage = ({ productId }: { productId: string }) => {
 
               {/* JIT Intelligence Cards — streamed in progressively */}
               <AnimatePresence>
-                {/* Verdict Card */}
                 <VerdictCard
+                  key="verdict"
                   verdict={verdict}
                   brandColor={brandColor}
                   isLoading={jitPhase === "intel"}
                 />
 
-                {/* Two-column row: Specs + Trusted Reviews */}
-                <div className="grid grid-cols-2 gap-4">
+                <div key="specs-reviews" className="grid grid-cols-2 gap-4">
                   {/* Official Specs — show ALL specs */}
                   {product.specs && Object.keys(product.specs).length > 0 && (
                     <motion.div
@@ -532,8 +536,15 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                       <h3 className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                         Specifications
-                        <span className="ml-auto text-[9px] text-zinc-600 font-mono">
-                          {Object.keys(product.specs).length} fields
+                        <span className="ml-auto flex items-center gap-2">
+                          {product.data_trust?.specs_source && product.data_trust.specs_source !== "none" && (
+                            <span className="text-[9px] text-zinc-500">
+                              {product.data_trust.specs_source === "official" ? "Official" : "Halilit"}
+                            </span>
+                          )}
+                          <span className="text-[9px] text-zinc-600 font-mono">
+                            {Object.keys(product.specs).length} fields
+                          </span>
                         </span>
                       </h3>
                       <div className="space-y-0.5 text-sm max-h-[300px] overflow-y-auto custom-scrollbar">
@@ -541,7 +552,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                           .filter(([key]) => key !== "sku" && key !== "note" && key !== "extracted_name")
                           .map(([key, value], idx) => (
                             <div
-                              key={key}
+                              key={`spec-${key}-${idx}`}
                               className={`flex justify-between py-1.5 px-2 rounded ${idx % 2 === 0 ? "bg-zinc-800/20" : ""}`}
                             >
                               <span className="text-zinc-500 capitalize text-[11px]">
@@ -566,9 +577,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   />
                 </div>
 
-                {/* Features */}
                 {product.features && product.features.length > 0 && (
                   <motion.div
+                    key="features"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.15 }}
@@ -597,16 +608,16 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Field Notes (Pro Tips + Warnings) */}
                 <FieldNotes
+                  key="field-notes"
                   notes={fieldNotes}
                   brandColor={brandColor}
                   isLoading={jitPhase === "wisdom"}
                 />
 
-                {/* Pros & Cons */}
                 {(product.pros?.length > 0 || product.cons?.length > 0) && (
                   <motion.div
+                    key="pros-cons"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.2 }}
@@ -655,9 +666,70 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Audiences / Target Users */}
+                {/* Contextual: review synthesis (3+ trusted sources) */}
+                {(product.review_synthesis_summary ||
+                  (product.contextual_data?.review_synthesis &&
+                    (typeof product.contextual_data.review_synthesis === "string"
+                      ? product.contextual_data.review_synthesis
+                      : product.contextual_data.review_synthesis?.summary || product.contextual_data.review_synthesis?.text))) && (
+                  <motion.div
+                    key="review-synthesis"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                    className="rounded-xl bg-amber-950/15 border border-amber-500/20 p-5"
+                  >
+                    <h3 className="text-[11px] font-bold text-amber-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                      Review consensus
+                    </h3>
+                    <p className="text-sm text-zinc-300 leading-relaxed">
+                      {product.review_synthesis_summary ||
+                        (typeof product.contextual_data!.review_synthesis === "string"
+                          ? product.contextual_data.review_synthesis
+                          : (product.contextual_data!.review_synthesis as { summary?: string; text?: string })?.summary ||
+                            (product.contextual_data!.review_synthesis as { summary?: string; text?: string })?.text) ||
+                        ""}
+                    </p>
+                    {product.review_sources && product.review_sources.length > 0 && (
+                      <p className="text-[9px] text-zinc-500 mt-2">
+                        Sources: {product.review_sources.slice(0, 5).join(", ")}
+                        {product.review_sources.length > 5 ? ` +${product.review_sources.length - 5}` : ""}
+                      </p>
+                    )}
+                  </motion.div>
+                )}
+
+                {/* Contextual: real-world insights */}
+                {((product.real_world_insights && product.real_world_insights.length > 0) ||
+                  (product.contextual_data?.real_world_insights && Array.isArray(product.contextual_data.real_world_insights) && product.contextual_data.real_world_insights.length > 0)) && (
+                  <motion.div
+                    key="real-world-insights"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.21 }}
+                    className="rounded-xl bg-zinc-900/70 border border-amber-500/15 p-5"
+                  >
+                    <h3 className="text-[11px] font-bold text-amber-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                      Real-world insights
+                    </h3>
+                    <ul className="space-y-2">
+                      {(product.real_world_insights || product.contextual_data?.real_world_insights || []).map(
+                        (insight: string, idx: number) => (
+                          <li key={idx} className="flex items-start gap-2 text-[11px] text-zinc-300">
+                            <span className="text-amber-400 mt-0.5 shrink-0">◆</span>
+                            {insight}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </motion.div>
+                )}
+
                 {product.audiences && product.audiences.length > 0 && (
                   <motion.div
+                    key="audiences"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.22 }}
@@ -680,9 +752,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* FAQ Section */}
                 {product.faq && product.faq.length > 0 && (
                   <motion.div
+                    key="faq"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.24 }}
@@ -708,21 +780,29 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Smart Accessories — must-have products */}
-                <SmartAccessories
-                  accessories={accessories.map((a) => ({
-                    id: a.id,
-                    name: a.name || "",
-                    price: a.price,
-                    image_url: a.image_url,
-                  }))}
-                  brandColor={brandColor}
-                  onProductClick={openProductPage}
-                />
+                <div key="accessories">
+                  {accessories.length > 0 && accessories.some((a) => relationshipMeta[a.id]?.sources_verified?.includes("commercial")) && (
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-[9px] font-bold text-blue-400/90 bg-blue-500/10 border border-blue-500/20 rounded px-1.5 py-0.5" title="Commercial relationship">
+                        Commercial
+                      </span>
+                    </div>
+                  )}
+                  <SmartAccessories
+                    accessories={accessories.map((a) => ({
+                      id: a.id,
+                      name: a.name || "",
+                      price: a.price,
+                      image_url: a.image_url,
+                    }))}
+                    brandColor={brandColor}
+                    onProductClick={openProductPage}
+                  />
+                </div>
 
-                {/* Compatible Products */}
                 {compatible.length > 0 && (
                   <motion.div
+                    key="compatible"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.28 }}
@@ -763,9 +843,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Alternatives */}
                 {alternatives.length > 0 && (
                   <motion.div
+                    key="alternatives"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.3 }}
@@ -776,6 +856,11 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                       <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
                         Alternatives to Consider
                       </span>
+                      {alternatives.some((a) => relationshipMeta[a.id]?.sources_verified?.includes("spectrum")) && (
+                        <span className="text-[9px] font-bold text-amber-400/90 bg-amber-500/10 border border-amber-500/20 rounded px-1.5 py-0.5" title="Spectrum tier match">
+                          Spectrum
+                        </span>
+                      )}
                       <span className="ml-auto text-[10px] text-zinc-600">
                         {alternatives.length} option{alternatives.length !== 1 ? "s" : ""}
                       </span>
@@ -807,9 +892,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Variants strip */}
                 {variants.length > 0 && (
                   <motion.div
+                    key="variants"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.25 }}
@@ -820,6 +905,11 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                       <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
                         Also in this Series
                       </span>
+                      {product.family_id && (
+                        <span className="text-[9px] font-bold text-emerald-400/90 bg-emerald-500/10 border border-emerald-500/20 rounded px-1.5 py-0.5" title="Product graph family">
+                          Official
+                        </span>
+                      )}
                       <span className="ml-auto text-[10px] text-zinc-600">
                         {variants.length} variant
                         {variants.length !== 1 ? "s" : ""}
@@ -865,9 +955,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Data Sources / Trust Indicators */}
                 {product.sources && product.sources.length > 0 && (
                   <motion.div
+                    key="data-sources"
                     initial={{ opacity: 0, y: 8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, delay: 0.32 }}
