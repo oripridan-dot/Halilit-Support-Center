@@ -28,6 +28,7 @@ import json
 import logging
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -90,83 +91,72 @@ def is_real_halilit_url(url: str) -> bool:
     )
 
 
-def enrich_product(product: dict, scraper: HalilitPageScraper,
-                   stats: dict) -> dict:
-    """Enrich a single product by scraping its Halilit page."""
+def _enrich_one(product: dict, scraper: HalilitPageScraper) -> Tuple[dict, Dict[str, int]]:
+    """
+    Enrich a single product; returns (enriched_product, stats_delta).
+    Used for parallel processing so we don't share mutable stats.
+    """
     url = product.get("halilit_url") or product.get("source_url") or ""
 
     if not is_real_halilit_url(url):
-        stats["skipped_no_url"] += 1
-        return product
+        return product, {"skipped_no_url": 1}
 
-    # Check if product already has rich data
-    has_desc = bool(product.get("official_description")
-                    or product.get("description"))
+    has_desc = bool(product.get("official_description") or product.get("description"))
     has_price = bool(product.get("price") or product.get("price_il"))
     has_image = bool(product.get("image_url"))
-    has_gallery = len(product.get("gallery_images")
-                      or product.get("image_gallery") or []) > 1
+    has_gallery = len(product.get("gallery_images") or product.get("image_gallery") or []) > 1
 
     if has_desc and has_price and has_image and has_gallery:
-        stats["skipped_already_rich"] += 1
-        return product
+        return product, {"skipped_already_rich": 1}
 
-    # Scrape the page
     try:
         page_data = scraper.scrape_product_page(url)
         if not page_data:
-            stats["scrape_failed"] += 1
-            return product
+            return product, {"scrape_failed": 1}
 
-        stats["scraped"] += 1
-        enriched = dict(product)  # Copy
-
-        # Merge page data — only fill missing fields, never overwrite existing real data
+        enriched = dict(product)
         if page_data.get("description") and not has_desc:
             enriched["official_description"] = page_data["description"]
             enriched["page_description"] = page_data["description"]
-
         if page_data.get("price") and not has_price:
             enriched["price"] = page_data["price"]
             enriched["price_il"] = page_data["price"]
-
         if page_data.get("gallery_images") and not has_gallery:
             enriched["gallery_images"] = page_data["gallery_images"]
-        # Also pull image_gallery from scraper (different key name)
         if page_data.get("image_gallery") and not has_gallery:
             enriched["image_gallery"] = page_data["image_gallery"]
             if not enriched.get("gallery_images"):
                 enriched["gallery_images"] = page_data["image_gallery"]
-
-        # image_url from scraper (scraper uses "image_url" key)
         if not product.get("image_url"):
             if page_data.get("image_url"):
                 enriched["image_url"] = page_data["image_url"]
             elif page_data.get("image"):
                 enriched["image_url"] = page_data["image"]
-
-        # Also save official_images for the normalizer gallery collector
         if page_data.get("official_images") and not product.get("official_images"):
             enriched["official_images"] = page_data["official_images"]
-
         if page_data.get("sku") and not product.get("sku"):
             enriched["sku"] = page_data["sku"]
-
         if page_data.get("features") and not product.get("features"):
             enriched["features"] = page_data["features"]
-
         if page_data.get("faq") and not product.get("faq"):
             enriched["faq"] = page_data["faq"]
-
         if page_data.get("audiences") and not product.get("audiences"):
             enriched["audiences"] = page_data["audiences"]
 
-        return enriched
+        return enriched, {"scraped": 1}
 
     except Exception as e:
         logger.warning(f"Error scraping {url}: {e}")
-        stats["scrape_error"] += 1
-        return product
+        return product, {"scrape_error": 1}
+
+
+def enrich_product(product: dict, scraper: HalilitPageScraper,
+                   stats: dict) -> dict:
+    """Enrich a single product by scraping its Halilit page (mutates stats)."""
+    enriched, delta = _enrich_one(product, scraper)
+    for k, v in delta.items():
+        stats[k] = stats.get(k, 0) + v
+    return enriched
 
 
 def find_duplicate_brand_files() -> List[Tuple[str, List[Path]]]:
@@ -229,9 +219,14 @@ def merge_duplicate_brands(dry_run: bool = False):
                 logger.info(f"  Deleted duplicate: {f.name}")
 
 
-def enrich_brand_file(path: Path, scraper: HalilitPageScraper,
-                      dry_run: bool = False, delay: float = 0.5) -> dict:
-    """Enrich all products in a brand JSON file."""
+def enrich_brand_file(
+    path: Path,
+    scraper: HalilitPageScraper,
+    dry_run: bool = False,
+    delay: float = 0.5,
+    concurrent_products: int = 1,
+) -> dict:
+    """Enrich all products in a brand JSON file. Use concurrent_products > 1 to scrape multiple pages at once per file."""
     products, fmt = load_brand_file(path)
     if not products:
         return {"file": path.name, "total": 0}
@@ -246,18 +241,38 @@ def enrich_brand_file(path: Path, scraper: HalilitPageScraper,
         "scrape_error": 0,
     }
 
-    enriched_products = []
-    for i, product in enumerate(products):
-        enriched = enrich_product(product, scraper, stats)
-        enriched_products.append(enriched)
+    if concurrent_products <= 1:
+        # Sequential (original behavior)
+        enriched_products = []
+        for i, product in enumerate(products):
+            enriched = enrich_product(product, scraper, stats)
+            enriched_products.append(enriched)
+            if stats["scraped"] > 0 and stats["scraped"] % 5 == 0:
+                logger.info(f"  [{path.stem}] Processed {i+1}/{len(products)}, scraped {stats['scraped']}")
+            if stats["scraped"] > 0:
+                time.sleep(delay)
+    else:
+        # Parallel: process in chunks to preserve order and rate-limit
+        concurrency = min(concurrent_products, len(products))
+        enriched_products = [None] * len(products)  # type: ignore
 
-        if stats["scraped"] > 0 and stats["scraped"] % 5 == 0:
-            logger.info(f"  [{path.stem}] Processed {i+1}/{len(products)}, "
-                        f"scraped {stats['scraped']}")
+        with ThreadPoolExecutor(max_workers=concurrency) as executor:
+            for chunk_start in range(0, len(products), concurrency):
+                chunk = products[chunk_start : chunk_start + concurrency]
+                futures = [executor.submit(_enrich_one, p, scraper) for p in chunk]
+                for j, future in enumerate(futures):
+                    enriched, delta = future.result()
+                    idx = chunk_start + j
+                    enriched_products[idx] = enriched
+                    for k, v in delta.items():
+                        stats[k] = stats.get(k, 0) + v
+                done = min(chunk_start + concurrency, len(products))
+                if done % max(5, concurrency * 2) < concurrency or done == len(products):
+                    logger.info(f"  [{path.stem}] Processed {done}/{len(products)}, scraped {stats['scraped']}")
+                # One delay per chunk to keep rate limit
+                time.sleep(delay * min(len(chunk), concurrency))
 
-        # Rate limit
-        if stats["scraped"] > 0:
-            time.sleep(delay)
+        enriched_products = [p for p in enriched_products if p is not None]
 
     if not dry_run and stats["scraped"] > 0:
         save_brand_file(path, enriched_products, fmt)
@@ -279,6 +294,10 @@ def main():
                         help="Merge duplicate brand files first")
     parser.add_argument("--delay", type=float, default=0.5,
                         help="Delay between HTTP requests (seconds)")
+    parser.add_argument("--workers", type=int, default=1,
+                        help="Number of brand files to process in parallel (default 1)")
+    parser.add_argument("--concurrent-products", type=int, default=1,
+                        help="Within each brand file, scrape this many products at once (default 1; try 4–6 to speed up)")
     args = parser.parse_args()
 
     logger.info("=" * 60)
@@ -308,19 +327,45 @@ def main():
         files = sorted(DATA_DIR.glob("*.json"))
         files = [f for f in files if f.name not in EXCLUDED_FILES]
 
-    logger.info(f"\nProcessing {len(files)} brand files...")
+    workers = max(1, getattr(args, "workers", 1))
+    concurrent_products = max(1, getattr(args, "concurrent_products", 1))
+    logger.info(f"\nProcessing {len(files)} brand files (workers={workers}, concurrent_products={concurrent_products})...")
     if args.dry_run:
         logger.info("(DRY RUN — no files will be modified)")
 
     all_stats = []
     total_scraped = 0
 
-    for i, path in enumerate(files):
+    def process_file(item):
+        i, path = item
         logger.info(f"\n[{i+1}/{len(files)}] {path.name}")
-        stats = enrich_brand_file(path, scraper, dry_run=args.dry_run,
-                                  delay=args.delay)
-        all_stats.append(stats)
-        total_scraped += stats.get("scraped", 0)
+        # Each worker gets its own scraper to avoid shared state
+        worker_scraper = HalilitPageScraper()
+        return enrich_brand_file(
+            path, worker_scraper,
+            dry_run=args.dry_run,
+            delay=args.delay,
+            concurrent_products=concurrent_products,
+        )
+
+    if workers <= 1:
+        for i, path in enumerate(files):
+            stats = process_file((i, path))
+            all_stats.append(stats)
+            total_scraped += stats.get("scraped", 0)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            future_to_path = {
+                executor.submit(process_file, (i, path)): (i, path)
+                for i, path in enumerate(files)
+            }
+            for future in as_completed(future_to_path):
+                try:
+                    stats = future.result()
+                    all_stats.append(stats)
+                    total_scraped += stats.get("scraped", 0)
+                except Exception as e:
+                    logger.error(f"Enrich task failed: {e}", exc_info=True)
 
     # Summary
     total_products = sum(s.get("total", 0) for s in all_stats)

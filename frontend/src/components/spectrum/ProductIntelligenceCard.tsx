@@ -14,8 +14,8 @@ import {
   useConductorCatalog,
   useProductVariants,
   useProductRelationships,
-} from "../../../hooks/useConductorCatalog";
-import type { ConductorProduct } from "../../../hooks/useConductorCatalog";
+} from "../../hooks/useConductorCatalog";
+import type { ConductorProduct } from "../../hooks/useConductorCatalog";
 
 // ═══════════════════════════════════════════════════════════════════════════
 // Stock indicator — JIT: show availability across variants when we have data

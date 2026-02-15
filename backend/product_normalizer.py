@@ -125,6 +125,7 @@ _CATEGORY_TO_SPECTRUM: Dict[str, str] = {
     "amplifiers & effects": "guitar-amps",
     "headphones & earphones": "studio-accessories",
     "cables & connectors": "cables",
+    "accessories & utility": "general-accessories",
 }
 
 # Brand-specific classification patterns (longest match wins)
@@ -1135,61 +1136,22 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
 
             # Load persisted families/relationships (curated data survives rebuilds)
             store = get_graph_store()
+            has_snapshot = store.has_json_snapshot()
             graph = store.load_graph_overlay(graph)
 
-            # Strict backbone: Brand → Series → Model → Variant (before any discovery)
-            try:
-                from backend.ingestion.brand_hierarchy import BrandHierarchyEngine
-                engine = BrandHierarchyEngine()
-                engine.organize_catalog(graph)
-                graph.rebuild_indexes()
-            except ImportError as e:
-                logger.debug(f"Brand hierarchy skipped: {e}")
-
-            # Relationship priority: 1=official, 2=commercial, 3=contextual, 4=spectrum
-            # 1) Primary — official (brand product pages)
-            try:
-                from backend.ingestion.relationship_merge import merge_relationship_candidates
-                from backend.ingestion.relationship_enrichment_official import (
-                    extract_official_relationship_candidates,
+            # CRITICAL: Skip expensive discovery on every load — use cached graph for instant startup.
+            # Discovery only runs on explicit GET /api/conductor/refresh.
+            if not has_snapshot:
+                logger.warning(
+                    "⚠️  Graph snapshot not found. Starting with EMPTY graph for fast load."
                 )
-                official_candidates = extract_official_relationship_candidates(graph)
-                merge_relationship_candidates(graph, official_candidates, [])
-            except ImportError as e:
-                logger.debug(f"Official relationship enrichment skipped: {e}")
-
-            # 2) Secondary — commercial (catalog: variant families + accessories)
-            try:
-                from backend.ingestion.relationship_discovery import get_relationship_discovery
-                discovery = get_relationship_discovery(use_ai=False)
-                graph = discovery.discover_commercial(graph)
-            except ImportError:
-                pass
-
-            # 3) Third — contextual (reviews, trusted sites)
-            try:
-                from backend.ingestion.relationship_merge import merge_relationship_candidates
-                from backend.ingestion.relationship_enrichment_contextual import (
-                    extract_contextual_relationship_candidates,
+                logger.warning(
+                    "👉 Call GET /api/conductor/refresh to trigger full relationship discovery."
                 )
-                contextual_candidates = extract_contextual_relationship_candidates(graph)
-                merge_relationship_candidates(graph, [], contextual_candidates)
-            except ImportError as e:
-                logger.debug(f"Contextual relationship enrichment skipped: {e}")
-
-            # 4) Fourth — spectrum module relations (alternatives by spectrum/tier)
-            try:
-                from backend.ingestion.relationship_discovery import get_relationship_discovery
-                discovery = get_relationship_discovery(use_ai=False)
-                graph = discovery.discover_spectrum_relations(graph)
-            except ImportError:
-                pass
-
-            # CPG sync: populate each product's relationship_ids from graph edges (neural synapses)
-            graph.sync_relationship_ids_to_products()
-
-            # Persist discovered graph back to JSON snapshot
-            store.export_json_snapshot(graph)
+            else:
+                # Snapshot exists — use cached families/relationships, skip re-discovery.
+                # sync_relationship_ids_to_products populates each product from loaded graph edges.
+                graph.sync_relationship_ids_to_products()
 
             # Merge graph data back into flat products (family + variant + relationship_ids)
             for i, p in enumerate(products):

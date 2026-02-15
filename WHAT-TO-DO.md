@@ -89,7 +89,11 @@ PYTHONPATH=. python3 backend/conductor_main.py commercial-ingest
 # optional: PYTHONPATH=. python3 backend/conductor_main.py enrich
 ```
 
-Or run both in one go: `PYTHONPATH=. python3 backend/conductor_main.py ingest-all`
+Or run both in one go:  
+`PYTHONPATH=. python3 backend/conductor_main.py ingest-all`
+
+For **maximum data quality** with parallel workers and a review agent (validates each phase, retries on failure, suggests improvements):  
+`PYTHONPATH=. python3 backend/conductor_main.py ingest-all --workers 4 --with-review-agent`
 
 After scraping, rebuild catalog and product graph:  
 `PYTHONPATH=. python3 backend/conductor_main.py rebuild-catalog`
@@ -123,6 +127,7 @@ The JIT Agent requires:
 | Optional .env     | `cp .env.example .env` then edit |
 | Skeleton sync     | `PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync` |
 | Full pipeline     | `PYTHONPATH=. python3 backend/conductor_main.py ingest-all` |
+| Full + parallel + review | `PYTHONPATH=. python3 backend/conductor_main.py ingest-all --workers 4 --with-review-agent` |
 | Rebuild catalog  | `PYTHONPATH=. python3 backend/conductor_main.py rebuild-catalog` |
 | Start app         | `./start.sh` or `PYTHONPATH=. python backend/conductor_main.py dev` |
 

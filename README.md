@@ -31,6 +31,7 @@ PYTHONPATH=. python backend/conductor_main.py dev
 source .venv/bin/activate
 PYTHONPATH=. python backend/conductor_main.py skeleton-sync        # Fast (~30s)
 PYTHONPATH=. python backend/conductor_main.py ingest-all           # Full: commercial → enrich → sync → graph
+PYTHONPATH=. python backend/conductor_main.py ingest-all --workers 4 --with-review-agent   # Parallel + review agent (validate, retry, improve)
 PYTHONPATH=. python backend/conductor_main.py rebuild-catalog      # Rebuild catalog + graph (brand hierarchy + discovery + purge)
 PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: remove weak relationships from persisted graph
 ```
@@ -148,9 +149,9 @@ frontend/
 | Command           | Description |
 | ----------------- | ----------- |
 | `skeleton-sync`   | Fast inventory from Halilit.com (~30s) |
-| `commercial-ingest` | Golden List (sitemap + optional page scrape) |
-| `enrich`          | Enrich from Halilit product pages (delay, merge-dupes) |
-| `ingest-all`      | Full pipeline: commercial-ingest → enrich → sync → rebuild-catalog |
+| `commercial-ingest` | Golden List (sitemap + optional page scrape). Use `--workers N` for parallel brands. |
+| `enrich`          | Enrich from Halilit product pages (delay, merge-dupes). Use `--workers N` for parallel brands. |
+| `ingest-all`      | Full pipeline: commercial-ingest → enrich → sync → rebuild-catalog. Use `--workers N` for parallel runs; `--with-review-agent` to validate each phase, retry on failure, and suggest improvements. |
 | `sync`            | Rebuild frontend data and search index from brand JSONs |
 | `rebuild-catalog` | Rebuild catalog and product graph (official→commercial→contextual→spectrum) |
 | `catalog`         | Print catalog stats |

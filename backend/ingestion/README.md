@@ -23,6 +23,9 @@ has been replaced by **skeleton sync** (fast inventory) + **JIT Agent** (on-dema
 Run full pipeline from project root:
 `PYTHONPATH=. python backend/conductor_main.py ingest-all`
 
+For **best data quality**: run with multiple workers and the pipeline review agent (validates each phase, retries on failure, suggests improvements):
+`PYTHONPATH=. python backend/conductor_main.py ingest-all --workers 4 --with-review-agent`
+
 ## Active Modules
 
 | Module                                | Purpose                                          |

@@ -1,19 +1,20 @@
 """
-TAXONOMY MANAGER v6.0
+TAXONOMY MANAGER v6.0 — Active Classifier
 
 Manages universal product taxonomy, brand-specific mappings, and
 validates products against the taxonomy system.
 
-This is the single source of truth for "what categories exist and how to map to them".
+Active Classifier: when keyword matching fails, uses Brand context, Price hints,
+and generic accessory detection to force a classification and avoid "Other".
 """
 
 import logging
 import json
 import os
+import re
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from dataclasses import dataclass, field
-from enum import Enum
 
 logger = logging.getLogger("TaxonomyManager")
 
@@ -54,6 +55,30 @@ class TaxonomyManager:
 
         # KEYWORD INDEX: Fast lookup from any keyword to categories
         self.keyword_index = self._build_keyword_index()
+
+        # Brand hints: when keywords fail, guess from brand's main category + price
+        self.brand_hints: Dict[str, str] = {
+            "Nord": "Keyboards & Synthesizers",
+            "Roland": "Keyboards & Synthesizers",
+            "Fender": "Amplifiers & Effects",
+            "Gibson": "Amplifiers & Effects",
+            "Pearl": "Drums & Percussion",
+            "Tama": "Drums & Percussion",
+            "Shure": "Microphones & Recording",
+            "Sennheiser": "Microphones & Recording",
+            "Pioneer": "Studio Monitors & Speakers",
+            "Numark": "Studio Monitors & Speakers",
+            "Yamaha": "Keyboards & Synthesizers",
+            "Korg": "Keyboards & Synthesizers",
+            "Moog": "Keyboards & Synthesizers",
+            "Boss": "Amplifiers & Effects",
+            "Rode": "Microphones & Recording",
+            "Universal Audio": "Audio Interfaces & Mixers",
+            "PreSonus": "Audio Interfaces & Mixers",
+            "Focusrite": "Audio Interfaces & Mixers",
+            "Adam Audio": "Studio Monitors & Speakers",
+            "Genelec": "Studio Monitors & Speakers",
+        }
 
     def _load_learned_mappings(self) -> Dict[str, str]:
         """Load AI-learned mappings from disk"""
@@ -380,6 +405,18 @@ class TaxonomyManager:
                     display_order=20,
                 ),
             },
+
+            # ACCESSORIES & UTILITY (catch-all for case, stand, cable, etc.)
+            "Accessories & Utility": {
+                "General Accessories": TaxonomyNode(
+                    category="Accessories & Utility",
+                    subcategory="General Accessories",
+                    keywords=["case", "bag", "cover", "stand", "cable", "adapter", "supply", "power supply", "battery"],
+                    aliases=["Accessory", "Utility", "Misc"],
+                    description="Generic accessories and utility items",
+                    display_order=10,
+                ),
+            },
         }
 
     def _build_brand_mappings(self) -> Dict[str, Dict[str, str]]:
@@ -504,19 +541,27 @@ class TaxonomyManager:
         brand: str,
         description: str = "",
         specifications: Dict = None,
+        price: Optional[float] = None,
     ) -> Tuple[str, str, float]:
         """
-        Classify a product into the universal taxonomy.
+        Classify a product into the universal taxonomy (Active Classifier).
 
-        Uses 3-layer strategy:
+        Uses 4-layer strategy:
         1. Learned Mappings (AI/Manual overrides)
         2. Brand Specific Rules (Longest pattern match wins)
         3. Keyword Analysis (Name > Description)
+        4. Fallback: Brand + Price heuristic, then generic accessory words.
 
         Returns: (category, subcategory, confidence_score)
         """
         if specifications is None:
             specifications = {}
+        # Extract price from specs if not provided
+        if price is None:
+            try:
+                price = float(specifications.get("price_il") or specifications.get("price") or 0)
+            except (TypeError, ValueError):
+                price = 0.0
 
         # Step 0: CHECK LEARNED MAPPINGS (AI Overrides)
         # Check against learned pattern matching (longest match wins)
@@ -570,9 +615,39 @@ class TaxonomyManager:
                 f"✓ {product_name} → {cat} > {subcat} (keyword match, conf={best_confidence:.2f})")
             return cat, subcat, best_confidence
 
-        # Step 3: Fallback - use "Other" category
+        # Step 3: Brand + Price heuristic (Active Classifier)
+        brand_normalized = (brand or "").strip()
+        for hint_brand, hint_category in self.brand_hints.items():
+            if hint_brand.lower() in brand_normalized.lower():
+                # Expensive item (> 200) → trust brand's main category
+                if price and float(price) > 200:
+                    subcats = self.universal_taxonomy.get(hint_category, {})
+                    subcat = list(subcats.keys())[0] if subcats else "Uncategorized"
+                    self.logger.info(
+                        f"✓ {product_name} → {hint_category} > {subcat} (brand+price, conf=0.6)")
+                    return hint_category, subcat, 0.6
+                # Cheap → treat as accessory
+                if "Accessories & Utility" in self.universal_taxonomy:
+                    self.logger.info(
+                        f"✓ {product_name} → Accessories & Utility > General Accessories (brand+low price, conf=0.55)")
+                    return "Accessories & Utility", "General Accessories", 0.55
+                break
+
+        # Step 4: Generic accessory words (case, stand, cable, etc.)
+        name_lower = product_name.lower()
+        generic_accessories = [
+            "case", "bag", "cover", "stand", "cable", "adapter", "supply",
+            "pedal", "mount", "holder", "strap", "clip",
+        ]
+        if any(re.search(r"\b" + re.escape(w) + r"\b", name_lower) for w in generic_accessories):
+            if "Accessories & Utility" in self.universal_taxonomy:
+                self.logger.info(
+                    f"✓ {product_name} → Accessories & Utility > General Accessories (generic, conf=0.5)")
+                return "Accessories & Utility", "General Accessories", 0.5
+
+        # Final fallback
         self.logger.warning(
-            f"⚠ {product_name} → No category match (using fallback)")
+            f"⚠ {product_name} → No category match (using Other)")
         return "Other", "Uncategorized", 0.3
 
     def normalize_category(self, category: str, force_universal: bool = True) -> Optional[str]:

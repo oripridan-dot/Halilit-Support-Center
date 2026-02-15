@@ -24,7 +24,11 @@ from datetime import datetime
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR
+from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
+
+# Disk cache: load pre-built catalog to avoid slow first build on restart
+CATALOG_CACHE_PATH = DATA_DIR / "catalog_cache.json.gz"
+CATALOG_CACHE_MAX_AGE_SEC = 86400  # 24 hours; rebuild if older
 
 # ── Server-side catalog cache ──
 _catalog_cache_json: bytes | None = None
@@ -103,16 +107,48 @@ def _invalidate_catalog_cache():
         _catalog_cache_gzip = None
         _catalog_cache_dict = None
         _catalog_cache_time = 0
+        try:
+            if CATALOG_CACHE_PATH.exists():
+                CATALOG_CACHE_PATH.unlink()
+        except OSError:
+            pass
+
+
+def _load_catalog_from_disk() -> bool:
+    """Load pre-built catalog from disk. Returns True if loaded successfully."""
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+    if not CATALOG_CACHE_PATH.exists():
+        return False
+    try:
+        age = time.time() - CATALOG_CACHE_PATH.stat().st_mtime
+        if age > CATALOG_CACHE_MAX_AGE_SEC:
+            return False
+        with gzip.open(CATALOG_CACHE_PATH, "rb") as f:
+            json_bytes = f.read()
+        catalog = json.loads(json_bytes.decode("utf-8"))
+        gzip_bytes = gzip.compress(json_bytes, compresslevel=6)
+        _catalog_cache_json = json_bytes
+        _catalog_cache_gzip = gzip_bytes
+        _catalog_cache_dict = catalog
+        _catalog_cache_time = time.time()
+        n = catalog.get("metadata", {}).get("total_products", 0)
+        logger.info(f"Catalog: loaded from disk ({n} products, {len(json_bytes)//1024}KB)")
+        return True
+    except Exception as e:
+        logger.warning(f"Catalog disk cache load failed: {e}")
+        return False
 
 
 def _build_catalog_cache():
-    """Build catalog and cache the pre-serialized JSON response.
-    Uses resolve=False for faster first load (~30-60s vs 2+ min with 7k products).
-    """
+    """Build catalog and cache. Uses disk cache if fresh, else builds from scratch."""
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
     with _catalog_build_lock:
         if _catalog_cache_json is not None and (time.time() - _catalog_cache_time) < CATALOG_CACHE_TTL:
             return
+        # Fast path: load from disk cache
+        if _load_catalog_from_disk():
+            return
+        # Slow path: full build
         t0 = time.time()
         catalog = build_catalog(str(FRONTEND_PUBLIC_DATA), resolve=False)
 
@@ -130,6 +166,14 @@ def _build_catalog_cache():
         _catalog_cache_dict = catalog
         _catalog_cache_time = time.time()
         build_ms = int((time.time() - t0) * 1000)
+
+        # Persist for fast restarts
+        try:
+            DATA_DIR.mkdir(parents=True, exist_ok=True)
+            with gzip.open(CATALOG_CACHE_PATH, "wb", compresslevel=6) as f:
+                f.write(json_bytes)
+        except OSError as e:
+            logger.warning(f"Could not write catalog cache: {e}")
 
         logger.info(
             f"Catalog: {catalog['metadata']['total_products']} products, "

@@ -40,6 +40,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
@@ -334,6 +336,81 @@ def backup_existing(slug: str):
         shutil.copy2(src, dst)
 
 
+def process_one_brand(
+    brand_name: str,
+    urls: List[str],
+    dry_run: bool,
+    try_scrape: bool,
+    sitemap_only: bool,
+    scrape_delay: float,
+) -> Tuple[str, Dict]:
+    """
+    Process a single brand: scrape/derive products, merge with existing, optionally write file.
+    Returns (slug, stats). Uses its own scraper for thread safety when run in parallel.
+    """
+    scraper = HalilitPageScraper()
+    slug = slugify(brand_name)
+    existing_index = load_existing_products(slug)
+    products = []
+    scraped_count = 0
+    url_only_count = 0
+    merged_count = 0
+    anti_bot_active = True
+    if try_scrape and not sitemap_only:
+        test_product = try_scrape_product(scraper, urls[0])
+        if test_product:
+            anti_bot_active = False
+        else:
+            pass  # use URL data + existing
+
+    for url in urls:
+        product = None
+        if try_scrape and not sitemap_only and not anti_bot_active:
+            product = try_scrape_product(scraper, url)
+            if product:
+                scraped_count += 1
+                time.sleep(scrape_delay)
+            else:
+                anti_bot_active = True
+        if product is None:
+            product = build_product_from_url(url, brand_name)
+            url_only_count += 1
+        merged = merge_product(product, existing_index)
+        if merged is not product:
+            merged_count += 1
+        products.append(merged)
+
+    sitemap_urls = set(urls)
+    for key, old_p in existing_index.items():
+        if key.startswith("name:"):
+            continue
+        if key not in sitemap_urls:
+            old_p["_possibly_delisted"] = True
+            products.append(old_p)
+
+    stats = {
+        "brand": brand_name,
+        "slug": slug,
+        "total": len(products),
+        "from_sitemap": len(urls),
+        "scraped": scraped_count,
+        "url_only": url_only_count,
+        "merged": merged_count,
+        "extra_existing": len(products) - len(urls),
+    }
+
+    if not dry_run and products:
+        clean_products = [
+            {k: v for k, v in p.items() if not k.startswith("_")}
+            for p in products
+        ]
+        backup_existing(slug)
+        output_file = OUTPUT_DIR / f"{slug}.json"
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(clean_products, f, indent=2, ensure_ascii=False)
+    return slug, stats
+
+
 # ═══════════════════════════════════════════════════════════════════════════
 # MAIN
 # ═══════════════════════════════════════════════════════════════════════════
@@ -352,6 +429,8 @@ def main():
                         help="Resume from last saved progress")
     parser.add_argument("--scrape-delay", type=float, default=2.0,
                         help="Delay between page scrape attempts (seconds)")
+    parser.add_argument("--workers", type=int, default=1,
+                        help="Number of brands to process in parallel (default 1)")
     args = parser.parse_args()
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -424,7 +503,11 @@ def main():
             f"  Resuming — skipping {before - len(brand_urls)} completed brands")
 
     # ── Step 4: Process each brand ─────────────────────────────────────
-    logger.info(f"\nStep 4: Processing {len(brand_urls)} brands...")
+    workers = max(1, getattr(args, "workers", 1))
+    if workers > 1:
+        logger.info(f"\nStep 4: Processing {len(brand_urls)} brands (parallel, workers={workers})...")
+    else:
+        logger.info(f"\nStep 4: Processing {len(brand_urls)} brands...")
 
     all_stats = []
     total_products = 0
@@ -432,97 +515,63 @@ def main():
     total_from_url = 0
     total_merged = 0
     start_time = time.time()
+    progress_lock = threading.Lock()
 
     sorted_brands = sorted(brand_urls.items(), key=lambda x: -len(x[1]))
 
-    for i, (brand_name, urls) in enumerate(sorted_brands, 1):
-        slug = slugify(brand_name)
+    def do_one(item_index_brand_urls):
+        i, (brand_name, urls) = item_index_brand_urls
+        logger.info(f"\n[{i}/{len(sorted_brands)}] {brand_name} ({len(urls)} from sitemap)")
+        slug, stats = process_one_brand(
+            brand_name,
+            urls,
+            dry_run=args.dry_run,
+            try_scrape=args.try_scrape,
+            sitemap_only=args.sitemap_only,
+            scrape_delay=args.scrape_delay,
+        )
         logger.info(
-            f"\n[{i}/{len(sorted_brands)}] {brand_name} ({len(urls)} from sitemap)")
+            f"  -> {stats['total']} total | {stats['merged']} enriched | "
+            f"{stats['extra_existing']} kept from existing"
+        )
+        if not args.dry_run and stats["total"] > 0:
+            logger.info(f"  Saved {stats['total']} products -> {slug}.json")
+        return slug, stats
 
-        # Load existing data for this brand
-        existing_index = load_existing_products(slug)
-        existing_url_count = len(
-            [k for k in existing_index if not k.startswith("name:")])
-
-        products = []
-        scraped_count = 0
-        url_only_count = 0
-        merged_count = 0
-
-        # Check if anti-bot is blocking (test first URL)
-        anti_bot_active = True
-        if args.try_scrape and not args.sitemap_only:
-            test_product = try_scrape_product(scraper, urls[0])
-            if test_product:
-                anti_bot_active = False
-                logger.info(f"  Pages accessible — scraping product details")
-            else:
-                logger.info(
-                    f"  Anti-bot active — using URL data + existing enrichment")
-
-        for url in urls:
-            product = None
-
-            # Try page scrape if not blocked
-            if args.try_scrape and not args.sitemap_only and not anti_bot_active:
-                product = try_scrape_product(scraper, url)
-                if product:
-                    scraped_count += 1
-                    time.sleep(args.scrape_delay)
-                else:
-                    anti_bot_active = True
-
-            # Fall back to URL-derived data
-            if product is None:
-                product = build_product_from_url(url, brand_name)
-                url_only_count += 1
-
-            # Merge with existing enriched data
-            merged = merge_product(product, existing_index)
-            if merged is not product:
-                merged_count += 1
-
-            products.append(merged)
-
-        # Add existing products not in sitemap (keep enriched data)
-        sitemap_urls = set(urls)
-        for key, old_p in existing_index.items():
-            if key.startswith("name:"):
-                continue
-            if key not in sitemap_urls:
-                old_p["_possibly_delisted"] = True
-                products.append(old_p)
-
-        stats = {
-            "brand": brand_name, "slug": slug,
-            "total": len(products), "from_sitemap": len(urls),
-            "scraped": scraped_count, "url_only": url_only_count,
-            "merged": merged_count,
-            "extra_existing": len(products) - len(urls),
-        }
-        all_stats.append(stats)
-        total_products += len(products)
-        total_scraped += scraped_count
-        total_from_url += url_only_count
-        total_merged += merged_count
-
-        logger.info(f"  -> {len(products)} total | {merged_count} enriched | "
-                    f"{len(products) - len(urls)} kept from existing")
-
-        if not args.dry_run and products:
-            clean_products = [{k: v for k, v in p.items() if not k.startswith("_")}
-                              for p in products]
-            backup_existing(slug)
-            output_file = OUTPUT_DIR / f"{slug}.json"
-            with open(output_file, "w", encoding="utf-8") as f:
-                json.dump(clean_products, f, indent=2, ensure_ascii=False)
-            logger.info(
-                f"  Saved {len(clean_products)} products -> {output_file.name}")
-
-            completed_set.add(slug)
-            progress["completed_brands"] = list(completed_set)
-            save_progress(progress)
+    if workers <= 1:
+        for i, (brand_name, urls) in enumerate(sorted_brands, 1):
+            slug, stats = do_one((i, (brand_name, urls)))
+            all_stats.append(stats)
+            total_products += stats["total"]
+            total_scraped += stats["scraped"]
+            total_from_url += stats["url_only"]
+            total_merged += stats["merged"]
+            if not args.dry_run and stats["total"] > 0:
+                with progress_lock:
+                    completed_set.add(slug)
+                    progress["completed_brands"] = list(completed_set)
+                    save_progress(progress)
+    else:
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            future_to_item = {
+                executor.submit(do_one, (i, (brand_name, urls))): (i, brand_name, urls)
+                for i, (brand_name, urls) in enumerate(sorted_brands, 1)
+            }
+            for future in as_completed(future_to_item):
+                try:
+                    slug, stats = future.result()
+                    all_stats.append(stats)
+                    total_products += stats["total"]
+                    total_scraped += stats["scraped"]
+                    total_from_url += stats["url_only"]
+                    total_merged += stats["merged"]
+                    if not args.dry_run and stats["total"] > 0:
+                        with progress_lock:
+                            completed_set.add(slug)
+                            progress["completed_brands"] = list(completed_set)
+                            save_progress(progress)
+                except Exception as e:
+                    logger.error(f"Brand task failed: {e}", exc_info=True)
 
     elapsed = time.time() - start_time
 

@@ -417,15 +417,36 @@ class RelationshipDiscovery:
         Find accessory relationships (strict "Essentials / Look" logic).
         Only link when the accessory is *designed for* the product: same brand and
         accessory name mentions the product's model/family name.
+
+        PERFORMANCE: Limits candidates to 50 per accessory (same brand, prefer same
+        category) to avoid O(accessories × products) freeze with large catalogs.
         """
         accessories = [p for p in graph.products.values() if _is_accessory(p)]
         non_accessories = [p for p in graph.products.values() if not _is_accessory(p)]
 
+        # Build index: (brand_lower, category) -> products for fast candidate lookup
+        by_brand_category: Dict[Tuple[str, str], List[CanonicalProduct]] = {}
+        for p in non_accessories:
+            key = ((p.brand or "").lower(), (p.category or ""))
+            by_brand_category.setdefault(key, []).append(p)
+
+        MAX_CANDIDATES = 50
         relationships_created = 0
         for acc in accessories:
-            for product in non_accessories:
-                if (acc.brand or "").lower() != (product.brand or "").lower():
-                    continue
+            brand_lower = (acc.brand or "").lower()
+            acc_category = (acc.category or "").strip()
+            # Same brand only
+            candidates = [
+                p for (b, c), prods in by_brand_category.items()
+                if b == brand_lower for p in prods
+            ]
+            # Prefer same category, limit to MAX_CANDIDATES
+            sorted_candidates = sorted(
+                candidates,
+                key=lambda x: (1 if (x.category or "").strip() == acc_category else 0, -x.quality_score),
+                reverse=True,
+            )[:MAX_CANDIDATES]
+            for product in sorted_candidates:
                 # Use strict classification: only ACCESSORY_FOR when B names A's model
                 if classify_relationship(product, acc, graph) != RelationshipType.ACCESSORY_FOR:
                     continue

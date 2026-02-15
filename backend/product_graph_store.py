@@ -105,6 +105,10 @@ class GraphStore:
                 backup_path.rename(snapshot_path)
             raise
 
+    def has_json_snapshot(self) -> bool:
+        """Check if a graph snapshot exists (fast, no parse)."""
+        return (GRAPH_DATA_DIR / "product_graph.json").exists()
+
     def import_json_snapshot(self) -> Optional[Dict[str, Any]]:
         """
         Load the graph snapshot from JSON.

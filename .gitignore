@@ -63,6 +63,7 @@ backend/data/4_validated/
 backend/data/5_golden/
 backend/data/reports/
 backend/data/*.json
+backend/data/*.json.gz
 backend/data/*.txt
 backend/data/*.html
 backend/logs/

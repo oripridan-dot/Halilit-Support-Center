@@ -942,16 +942,31 @@ class IngestToFrontendSyncEngine:
         """
         Sync approved products from ingestion to frontend format.
 
+        Prefers INGESTION_DIR/products/{brand}/approved_*.json when present.
+        When that path does not exist (e.g. Golden List pipeline), falls back to
+        FRONTEND_DATA_DIR/{brand}.json so sync succeeds and index/artifacts can be rebuilt.
+
         Args:
-            brand: Brand name (e.g., "Nord")
+            brand: Brand slug / file stem (e.g. "roland", "ashdown engineering")
 
         Returns:
-            (Success boolean, List of normalized frontend products)
+            (Success boolean, List of products)
         """
         try:
             brand_dir = INGESTION_DIR / "products" / brand
+            frontend_file = FRONTEND_DATA_DIR / f"{brand}.json"
 
+            # Fallback: Golden List writes directly to frontend/public/data/*.json
             if not brand_dir.exists():
+                if frontend_file.exists():
+                    with open(frontend_file, encoding="utf-8") as f:
+                        data = json.load(f)
+                    products = (
+                        data if isinstance(data, list)
+                        else data.get("products", []) if isinstance(data, dict)
+                        else []
+                    )
+                    return len(products) > 0, products
                 logger.warning(f"No product directory for {brand}")
                 return False, []
 

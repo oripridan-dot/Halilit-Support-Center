@@ -80,16 +80,18 @@ class ConductorCLI:
             logger.error(f"Skeleton sync failed: {e}")
             return False
 
-    def commercial_ingest(self, brand: Optional[str] = None, try_scrape: bool = False, resume: bool = False) -> bool:
+    def commercial_ingest(
+        self,
+        brand: Optional[str] = None,
+        try_scrape: bool = False,
+        resume: bool = False,
+        workers: int = 1,
+    ) -> bool:
         """
-        Run full Halilit commercial ingestion (Golden List) per source rules:
-        1. Discover all brands from Halilit.com
-        2. Get all product URLs from sitemap
-        3. Match URLs to brands
-        4. For each brand: build products (page scrape when possible, else URL-derived), merge with existing, save to frontend/public/data
+        Run full Halilit commercial ingestion (Golden List) per source rules.
+        Use workers > 1 to process multiple brands in parallel.
         """
         try:
-            import subprocess
             cmd = [sys.executable, str(PROJECT_ROOT / "backend" / "scripts" / "full_rescrape.py")]
             if brand:
                 cmd.extend(["--brand", brand])
@@ -97,6 +99,8 @@ class ConductorCLI:
                 cmd.append("--try-scrape")
             if resume:
                 cmd.append("--resume")
+            if workers > 1:
+                cmd.extend(["--workers", str(workers)])
             logger.info("Running commercial ingestion (Golden List builder)...")
             env = os.environ.copy()
             env["PYTHONPATH"] = str(PROJECT_ROOT)
@@ -128,10 +132,17 @@ class ConductorCLI:
             engine.generate_index_metadata(all_products)
             logger.info(f"Rebuilt index and search for {len(all_products)} products")
 
-    def enrich(self, brand: Optional[str] = None, delay: float = 0.5, merge_dupes: bool = False) -> bool:
+    def enrich(
+        self,
+        brand: Optional[str] = None,
+        delay: float = 0.5,
+        merge_dupes: bool = False,
+        workers: int = 1,
+        concurrent_products: int = 1,
+    ) -> bool:
         """
         Enrich catalog from Halilit product pages (description, images, features, FAQ).
-        Uses Golden List in frontend/public/data; fills missing fields per product page.
+        Use workers > 1 for parallel brand files; concurrent_products > 1 for parallel pages within each file.
         """
         try:
             cmd = [sys.executable, str(PROJECT_ROOT / "backend" / "scripts" / "enrich_catalog.py")]
@@ -140,6 +151,10 @@ class ConductorCLI:
             cmd.extend(["--delay", str(delay)])
             if merge_dupes:
                 cmd.append("--merge-dupes")
+            if workers > 1:
+                cmd.extend(["--workers", str(workers)])
+            if concurrent_products > 1:
+                cmd.extend(["--concurrent-products", str(concurrent_products)])
             env = os.environ.copy()
             env["PYTHONPATH"] = str(PROJECT_ROOT)
             logger.info("Running catalog enrichment (Halilit page detail)...")
@@ -149,26 +164,77 @@ class ConductorCLI:
             logger.error(f"Enrich failed: {e}")
             return False
 
-    def ingest_all(self, try_scrape: bool = False) -> bool:
+    def ingest_all(
+        self,
+        try_scrape: bool = False,
+        workers: int = 1,
+        concurrent_products: int = 1,
+        with_review_agent: bool = False,
+    ) -> bool:
         """
         Run full ingestion pipeline in order:
         1. Commercial ingest (Golden List: sitemap + optional page scrape, prices, SKUs)
         2. Enrich (Halilit product pages: description, images, features, media)
-        3. Sync (rebuild catalog + product graph with relationships in priority order:
-           primary=official, secondary=commercial, 3rd=contextual, 4th=spectrum)
-        Official and contextual product data (specs, reviews) remain JIT on-demand.
+        3. Sync (rebuild catalog + product graph with relationships in priority order)
+        Use workers > 1 to run commercial and enrich with multiple parallel instances.
+        Use with_review_agent=True to validate each phase and retry/improve on the fly.
         """
+        if with_review_agent:
+            return self._ingest_all_with_review(
+                try_scrape=try_scrape, workers=workers, concurrent_products=concurrent_products
+            )
+
         logger.info("=== Running full ingestion (commercial → enrich → sync) ===")
-        if not self.commercial_ingest(brand=None, try_scrape=try_scrape, resume=False):
+        if not self.commercial_ingest(brand=None, try_scrape=try_scrape, resume=False, workers=workers):
             logger.error("Commercial ingest failed; stopping.")
             return False
-        if not self.enrich(brand=None, delay=0.5):
+        if not self.enrich(brand=None, delay=0.5, workers=workers, concurrent_products=concurrent_products):
             logger.warning("Enrich had errors; check log.")
         if not self.sync_to_frontend(brand=None):
             logger.warning("Sync had errors; catalog/graph may be incomplete.")
         self._rebuild_catalog_and_graph()
         logger.info("=== Full ingestion complete (products, media, relationships) ===")
         return True
+
+    def _ingest_all_with_review(
+        self, try_scrape: bool = False, workers: int = 1, concurrent_products: int = 1
+    ) -> bool:
+        """Run full pipeline with Pipeline Review Agent: validate each phase, retry on failure, suggest improvements."""
+        try:
+            from backend.ingestion.pipeline_review_agent import PipelineReviewAgent
+        except ImportError as e:
+            logger.error(f"Pipeline review agent not available: {e}")
+            return self.ingest_all(
+                try_scrape=try_scrape, workers=workers,
+                concurrent_products=concurrent_products, with_review_agent=False,
+            )
+
+        frontend_data = self.frontend_dir / "public" / "data"
+        agent = PipelineReviewAgent(frontend_data_dir=frontend_data)
+
+        def run_commercial() -> bool:
+            return self.commercial_ingest(brand=None, try_scrape=try_scrape, resume=False, workers=workers)
+
+        def run_enrich() -> bool:
+            return self.enrich(brand=None, delay=0.5, workers=workers, concurrent_products=concurrent_products)
+
+        def run_sync() -> bool:
+            return self.sync_to_frontend(brand=None)
+
+        logger.info("=== Running full ingestion WITH REVIEW AGENT (validate + retry + improve) ===")
+        success = agent.run_with_review(
+            run_commercial=run_commercial,
+            run_enrich=run_enrich,
+            run_sync=run_sync,
+            run_rebuild_catalog=self._rebuild_catalog_and_graph,
+        )
+        for d in agent.get_decisions():
+            logger.info(f"  [Review] {d['phase']}: {d['action']} — {d['reason']}")
+        if success:
+            logger.info("=== Full ingestion complete (review agent passed all phases) ===")
+        else:
+            logger.error("=== Full ingestion stopped (review agent reported failure) ===")
+        return success
 
     def _rebuild_catalog_and_graph(self) -> None:
         """Build catalog and product graph (official → commercial → contextual → spectrum), persist graph snapshot."""
@@ -222,7 +288,7 @@ class ConductorCLI:
         return success_count > 0
 
     def _rebuild_search_index(self, engine) -> None:
-        """Rebuild global search index."""
+        """Rebuild global search index and index.json metadata."""
         logger.info("Rebuilding search index...")
         try:
             all_products = []
@@ -233,8 +299,11 @@ class ConductorCLI:
                         data = json.load(f)
                         if isinstance(data, list):
                             all_products.extend(data)
+                        elif isinstance(data, dict) and "products" in data:
+                            all_products.extend(data["products"])
             if all_products:
                 engine.generate_smart_artifacts(all_products)
+                engine.generate_index_metadata(all_products)
                 logger.info(f"  {len(all_products)} products indexed")
         except Exception as e:
             logger.error(f"Search index rebuild failed: {e}")
@@ -340,10 +409,15 @@ Examples:
     en.add_argument("brand", nargs="?", help="Brand name (optional)")
     en.add_argument("--delay", type=float, default=0.5, help="Delay between HTTP requests (seconds)")
     en.add_argument("--merge-dupes", action="store_true", help="Merge duplicate brand files first")
+    en.add_argument("--workers", type=int, default=1, help="Process brand files in parallel")
+    en.add_argument("--concurrent-products", type=int, default=4, help="Scrape N product pages at once per brand (default 4)")
 
     # ingest-all
     ia = subparsers.add_parser("ingest-all", help="Run all planned ingestions: commercial-ingest then enrich")
     ia.add_argument("--try-scrape", action="store_true", help="Use page scrape during commercial ingest")
+    ia.add_argument("--workers", type=int, default=1, help="Process multiple brands in parallel (commercial + enrich)")
+    ia.add_argument("--concurrent-products", type=int, default=4, help="Scrape N product pages at once per brand file during enrich (default 4)")
+    ia.add_argument("--with-review-agent", action="store_true", help="Validate each phase, retry on failure, suggest improvements")
 
     # sync
     sync_p = subparsers.add_parser("sync", help="Rebuild frontend data from existing files")
@@ -386,9 +460,16 @@ Examples:
                 getattr(args, "brand", None),
                 delay=getattr(args, "delay", 0.5),
                 merge_dupes=getattr(args, "merge_dupes", False),
+                workers=getattr(args, "workers", 1),
+                concurrent_products=getattr(args, "concurrent_products", 4),
             )
         elif args.command == "ingest-all":
-            success = conductor.ingest_all(try_scrape=getattr(args, "try_scrape", False))
+            success = conductor.ingest_all(
+                try_scrape=getattr(args, "try_scrape", False),
+                workers=getattr(args, "workers", 1),
+                concurrent_products=getattr(args, "concurrent_products", 4),
+                with_review_agent=getattr(args, "with_review_agent", False),
+            )
         elif args.command == "sync":
             success = conductor.sync_to_frontend(getattr(args, "brand", None))
         elif args.command == "rebuild-catalog":

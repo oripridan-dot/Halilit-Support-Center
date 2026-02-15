@@ -282,6 +282,9 @@ services:
   #   container_name: halilit_api
   #   ports:
   #     - "8000:8000"
+  #   volumes:
+  #     - ./backend/data:/app/backend/data  # Persist product_graph.json for fast restarts
+  #     - ./frontend/public/data:/app/frontend/public/data  # Golden list JSONs
   #   command: >
   #     uvicorn backend.server:app
   #     --host 0.0.0.0
