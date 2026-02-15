@@ -31,7 +31,8 @@ PYTHONPATH=. python backend/conductor_main.py dev
 source .venv/bin/activate
 PYTHONPATH=. python backend/conductor_main.py skeleton-sync        # Fast (~30s)
 PYTHONPATH=. python backend/conductor_main.py ingest-all           # Full: commercial → enrich → sync → graph
-PYTHONPATH=. python backend/conductor_main.py rebuild-catalog     # Rebuild catalog + graph only
+PYTHONPATH=. python backend/conductor_main.py rebuild-catalog      # Rebuild catalog + graph (brand hierarchy + discovery + purge)
+PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: remove weak relationships from persisted graph
 ```
 
 ---

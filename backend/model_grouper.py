@@ -579,6 +579,79 @@ def _family_from_spectrum_id(spectrum_id: str) -> str | None:
 # MODEL GROUPING ENGINE
 # ═══════════════════════════════════════════════════════════════════════════
 
+def group_products_by_model_from_cpg(
+    products: list[dict[str, Any]],
+    families_meta: dict[str, dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """
+    Build ModelGroups from CPG family_id (neural nucleus). Products with the same
+    family_id form one group; family metadata (family_name, brand, hero_image) comes
+    from families_meta. Returns (cpg_model_groups, orphan_products) so caller can
+    run group_products_by_model(orphan_products) for products without a family.
+    """
+    by_family: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for p in products:
+        fid = (p.get("family_id") or "").strip()
+        if fid:
+            by_family[fid].append(p)
+
+    cpg_groups: list[dict[str, Any]] = []
+    for family_id, variations in by_family.items():
+        meta = families_meta.get(family_id, {})
+        family_name = meta.get("family_name", family_id)
+        brand = meta.get("brand", variations[0].get("brand", "")) if variations else ""
+        hero_image = meta.get("hero_image", "")
+        if not hero_image and variations:
+            for v in variations:
+                img = v.get("image_url", "")
+                if img:
+                    hero_image = img
+                    break
+
+        classification = classify_instrument_family(variations[0]) if variations else {}
+        prices = [v.get("price", 0) for v in variations if v.get("price", 0) and v.get("price", 0) > 0]
+        scores = [v.get("quality_score", 0) for v in variations if v.get("quality_score")]
+
+        group = {
+            "modelName": family_name,
+            "modelKey": family_id.replace("fam_", "")[:50],
+            "brand": brand,
+            "family": classification.get("family", "uncategorized"),
+            "subCategory": classification.get("sub_category", "general"),
+            "bodyType": classification.get("body_type", "general"),
+            "variations": [
+                {
+                    "id": v.get("id", ""),
+                    "name": v.get("name", ""),
+                    "variation": v.get("variant_key") or "Standard",
+                    "price": v.get("price", 0),
+                    "price_eilat": v.get("price_eilat", 0),
+                    "tier": v.get("tier", ""),
+                    "image_url": v.get("image_url", ""),
+                    "sources": v.get("sources", []),
+                    "quality_score": v.get("quality_score", 0),
+                    "data_status": v.get("data_status", "MINIMAL"),
+                    "specs": v.get("specs", {}),
+                    "rating": v.get("rating", 0),
+                    "family_id": v.get("family_id"),
+                }
+                for v in variations
+            ],
+            "priceRange": {
+                "min": min(prices) if prices else 0,
+                "max": max(prices) if prices else 0,
+                "currency": "ILS",
+            },
+            "heroImage": hero_image,
+            "variationCount": len(variations),
+            "avgConfidence": round(sum(scores) / len(scores), 1) if scores else 0,
+        }
+        cpg_groups.append(group)
+
+    orphans = [p for p in products if not (p.get("family_id") or "").strip()]
+    return (cpg_groups, orphans)
+
+
 def group_products_by_model(products: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """
     Groups a flat list of products into ModelGroups.

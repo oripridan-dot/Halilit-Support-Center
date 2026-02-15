@@ -430,8 +430,10 @@ class ProductGraph(BaseModel):
 
     def sync_relationship_ids_to_products(self) -> None:
         """
-        Populate each CanonicalProduct.relationship_ids from the graph edges.
-        Call after discovery/merge so frontend can 'hop' from neuron to neuron.
+        CPG sync: populate each CanonicalProduct.relationship_ids from the graph edges.
+        Call after all discovery phases (official → commercial → contextual → spectrum)
+        so every product's relationship_ids list is populated and the frontend can
+        "hop" from neuron to neuron without new API calls.
         """
         for pid, product in self.products.items():
             rels = self.get_relationships_for(pid)

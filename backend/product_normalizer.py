@@ -1137,6 +1137,15 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             store = get_graph_store()
             graph = store.load_graph_overlay(graph)
 
+            # Strict backbone: Brand → Series → Model → Variant (before any discovery)
+            try:
+                from backend.ingestion.brand_hierarchy import BrandHierarchyEngine
+                engine = BrandHierarchyEngine()
+                engine.organize_catalog(graph)
+                graph.rebuild_indexes()
+            except ImportError as e:
+                logger.debug(f"Brand hierarchy skipped: {e}")
+
             # Relationship priority: 1=official, 2=commercial, 3=contextual, 4=spectrum
             # 1) Primary — official (brand product pages)
             try:
@@ -1176,7 +1185,7 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             except ImportError:
                 pass
 
-            # Sync relationship_ids onto each product so frontend can "hop" without new API call
+            # CPG sync: populate each product's relationship_ids from graph edges (neural synapses)
             graph.sync_relationship_ids_to_products()
 
             # Persist discovered graph back to JSON snapshot

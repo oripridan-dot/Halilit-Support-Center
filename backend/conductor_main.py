@@ -180,6 +180,15 @@ class ConductorCLI:
         except Exception as e:
             logger.warning(f"Catalog/graph rebuild failed (non-fatal): {e}")
 
+    def purge_weak_graph(self) -> bool:
+        """Remove weak relationships from persisted graph snapshot (keep strict tiers only)."""
+        try:
+            from backend.scripts.purge_weak_graph_relationships import main as purge_main
+            return purge_main() == 0
+        except Exception as e:
+            logger.error(f"Purge graph failed: {e}")
+            return False
+
     def sync_to_frontend(self, brand: Optional[str] = None) -> bool:
         """Rebuild frontend catalog from existing data files."""
         from backend.unified_data_service import get_ingest_to_frontend_engine
@@ -343,6 +352,9 @@ Examples:
     # rebuild-catalog
     subparsers.add_parser("rebuild-catalog", help="Rebuild catalog and product graph (official → commercial → contextual → spectrum), persist graph snapshot")
 
+    # purge-graph
+    subparsers.add_parser("purge-graph", help="Remove weak relationships from persisted graph (keep variant_of, accessory_for, alternative_to only)")
+
     # catalog
     subparsers.add_parser("catalog", help="Show catalog statistics")
 
@@ -382,6 +394,8 @@ Examples:
         elif args.command == "rebuild-catalog":
             conductor._rebuild_catalog_and_graph()
             success = True
+        elif args.command == "purge-graph":
+            success = conductor.purge_weak_graph()
         elif args.command == "catalog":
             success = conductor.show_catalog()
         elif args.command == "dev":

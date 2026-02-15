@@ -10,7 +10,6 @@ import {
   CheckCircle,
   AlertCircle,
   Package,
-  Tag,
   Zap,
   RotateCcw,
 } from "lucide-react";
@@ -24,12 +23,11 @@ import type {
 import {
   useConductorCatalog,
   useProductsBySpectrum,
-  useProductVariants,
-  useProductRelationships,
   useSpectrumStar,
 } from "../../hooks/useConductorCatalog";
 import { Control } from "../ui/Control";
 import { Surface } from "../ui/Surface";
+import { ProductIntelligenceCard } from "../spectrum/ProductIntelligenceCard";
 import { getBrandTheme } from "../../styles/brandThemes";
 import { generateSmartTags } from "../../lib/smartTags";
 
@@ -690,193 +688,6 @@ const EnrichmentPanel = React.memo(
   },
 );
 EnrichmentPanel.displayName = "EnrichmentPanel";
-
-// ===================================================================
-// HOVER RIGHT PANEL (unchanged)
-// ===================================================================
-
-const HoverRightPanel = React.memo(
-  ({
-    product,
-    familyProducts,
-    openProductPage,
-  }: {
-    product: ConductorProduct;
-    familyProducts: ConductorProduct[];
-    openProductPage: (id: string) => void;
-  }) => {
-    const { variants } = useProductVariants(product.id);
-    const { accessories } = useProductRelationships(product.id);
-
-    const allVariants = useMemo(() => {
-      const seen = new Set<string>([product.id]);
-      const result: ConductorProduct[] = [];
-      for (const p of familyProducts) {
-        if (!seen.has(p.id)) {
-          result.push(p);
-          seen.add(p.id);
-        }
-      }
-      for (const v of variants) {
-        if (!seen.has(v.id)) {
-          result.push(v);
-          seen.add(v.id);
-        }
-      }
-      return result;
-    }, [product.id, familyProducts, variants]);
-
-    return (
-      <div className="w-full space-y-3 flex flex-col">
-        <div className="space-y-1">
-          {product.price > 0 ? (
-            <>
-              <div className="text-3xl lg:text-4xl font-black text-white tracking-tighter tabular-nums text-shadow-glow">
-                ₪{product.price.toLocaleString("he-IL")}
-              </div>
-              <div className="text-[10px] text-zinc-500 font-bold tracking-widest uppercase">
-                Price (VAT Included)
-              </div>
-            </>
-          ) : (
-            <>
-              <div className="text-xl font-bold text-zinc-400 tracking-tight">
-                Price on request
-              </div>
-              {product.market_price_estimate > 0 && (
-                <div className="flex items-center gap-1.5 mt-1">
-                  <span className="text-[10px] text-amber-500/70 font-bold uppercase tracking-widest">
-                    Est. market:
-                  </span>
-                  <span className="text-sm text-amber-400/60 font-mono">
-                    ~₪
-                    {product.market_price_estimate.toLocaleString("he-IL")}
-                  </span>
-                </div>
-              )}
-              <div className="text-[10px] text-zinc-600 font-bold tracking-widest uppercase">
-                Contact Halilit for pricing
-              </div>
-            </>
-          )}
-        </div>
-
-        <div className="w-full h-px bg-zinc-800/50" />
-
-        <div className="space-y-2 text-xs">
-          <div className="flex items-start gap-2">
-            <Tag className="w-3 h-3 text-blue-400 mt-0.5 flex-shrink-0" />
-            <div className="flex-1">
-              <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-0.5">
-                Category
-              </div>
-              <div className="text-zinc-200 font-semibold truncate">
-                {product.spectrum_id?.replace(/-/g, " ") ||
-                  product.category ||
-                  "Other"}
-              </div>
-            </div>
-          </div>
-          {product.tier && (
-            <div className="flex items-start gap-2">
-              <Zap className="w-3 h-3 text-amber-400 mt-0.5 flex-shrink-0" />
-              <div className="flex-1">
-                <div className="text-zinc-500 uppercase text-[9px] tracking-widest mb-0.5">
-                  Tier
-                </div>
-                <div className="text-zinc-200 font-semibold capitalize">
-                  {product.tier}
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {allVariants.length > 0 && (
-          <div className="space-y-1.5">
-            <div className="w-full h-px bg-zinc-800/50" />
-            <div className="text-[9px] font-bold text-blue-400 uppercase tracking-widest flex items-center gap-1">
-              <Sparkles className="w-2.5 h-2.5" />
-              Variants & Colors ({allVariants.length + 1})
-            </div>
-            <div className="flex flex-wrap gap-1.5 pb-1">
-              {allVariants.slice(0, 8).map((v) => (
-                <button
-                  key={v.id}
-                  onClick={() => openProductPage(v.id)}
-                  className="flex-shrink-0 w-12 h-12 rounded border border-zinc-700 bg-zinc-900 overflow-hidden hover:border-blue-500 transition-colors group/var relative"
-                  title={v.variant_key || v.name}
-                >
-                  {v.image_url ? (
-                    <img
-                      src={v.image_url}
-                      className="w-full h-full object-contain bg-white"
-                      alt={v.name}
-                    />
-                  ) : (
-                    <span className="text-[6px] text-zinc-500 flex items-center justify-center w-full h-full p-0.5 text-center leading-tight">
-                      {v.variant_key || v.name.split(" ").slice(-2).join(" ")}
-                    </span>
-                  )}
-                </button>
-              ))}
-              {allVariants.length > 8 && (
-                <div className="flex-shrink-0 w-12 h-12 rounded border border-zinc-800 bg-zinc-900/50 flex items-center justify-center">
-                  <span className="text-[9px] text-zinc-500 font-bold">
-                    +{allVariants.length - 8}
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
-        {accessories.length > 0 && (
-          <div className="space-y-1.5">
-            <div className="w-full h-px bg-zinc-800/50" />
-            <div className="text-[9px] font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-1">
-              <Package className="w-2.5 h-2.5" />
-              Accessories ({accessories.length})
-            </div>
-            <div className="flex gap-1.5 overflow-x-auto pb-1">
-              {accessories.slice(0, 3).map((a) => (
-                <button
-                  key={a.id}
-                  onClick={() => openProductPage(a.id)}
-                  className="flex-shrink-0 w-10 h-10 rounded border border-zinc-700 bg-zinc-900 overflow-hidden hover:border-emerald-500 transition-colors"
-                  title={a.name}
-                >
-                  {a.image_url ? (
-                    <img
-                      src={a.image_url}
-                      className="w-full h-full object-contain bg-white"
-                      alt={a.name}
-                    />
-                  ) : (
-                    <span className="text-[6px] text-zinc-500 flex items-center justify-center w-full h-full">
-                      ACC
-                    </span>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <div className="flex-1" />
-
-        <button
-          onClick={() => product.id && openProductPage(product.id)}
-          className="w-full bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-black font-extrabold py-3 uppercase text-sm tracking-widest transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 rounded-lg shadow-lg shadow-amber-900/30"
-        >
-          <Maximize2 className="w-4 h-4" />
-          <span>View Details</span>
-        </button>
-      </div>
-    );
-  },
-);
-HoverRightPanel.displayName = "HoverRightPanel";
 
 // ===================================================================
 // PRODUCT TILE — LOD-aware (size adapts based on zoom)
@@ -2342,6 +2153,7 @@ export const SpectrumModule = () => {
   const { isLoading, error, galaxies, families } = useConductorCatalog();
   const { products: fetchedProducts } =
     useProductsBySpectrum(activeSubcategoryId);
+  // CPG neuron view: SpectrumStarResponse (ModelGroups = nucleus + variations, relationships = synapses)
   const {
     modelGroups: spectrumStarModelGroups,
     relationships: spectrumStarRelationships,
@@ -3025,7 +2837,7 @@ export const SpectrumModule = () => {
           className="col-span-3 bg-zinc-950 flex flex-col justify-between items-center p-6 relative overflow-y-auto custom-scrollbar"
         >
           {hoveredProduct ? (
-            <HoverRightPanel
+            <ProductIntelligenceCard
               product={hoveredProduct}
               familyProducts={hoveredFamilyProducts}
               openProductPage={openProductPage}

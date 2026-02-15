@@ -231,10 +231,19 @@ async def get_spectrum_star_view(spectrum_id: str):
     by_spectrum = indexes.get("by_spectrum", {})
     inds = by_spectrum.get(spectrum_id, [])
     spectrum_products = [products[i] for i in inds if 0 <= i < len(products)]
+    families_meta = catalog.get("families", {})
 
     try:
-        from backend.model_grouper import group_products_by_model
-        model_groups = group_products_by_model(spectrum_products)
+        from backend.model_grouper import (
+            group_products_by_model,
+            group_products_by_model_from_cpg,
+        )
+        cpg_groups, orphans = group_products_by_model_from_cpg(
+            spectrum_products, families_meta
+        )
+        orphan_groups = group_products_by_model(orphans) if orphans else []
+        model_groups = cpg_groups + orphan_groups
+        model_groups.sort(key=lambda g: (g["brand"].lower(), g["priceRange"]["min"]))
     except Exception as e:
         logger.warning(f"model_grouper failed for spectrum {spectrum_id}: {e}")
         model_groups = []
