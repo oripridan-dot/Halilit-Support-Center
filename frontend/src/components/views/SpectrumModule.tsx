@@ -265,21 +265,6 @@ const normToPrice = (
   return Math.exp(logMin + t * (logMax - logMin));
 };
 
-/** Snap a price to the nearest logical grid line (₪50, ₪100, ₪250, …) */
-const snapToGrid = (price: number, pMin: number, pMax: number): number => {
-  const range = pMax - pMin;
-  let step: number;
-  if (range > 100000) step = 5000;
-  else if (range > 50000) step = 2500;
-  else if (range > 10000) step = 1000;
-  else if (range > 5000) step = 500;
-  else if (range > 2000) step = 250;
-  else if (range > 500) step = 100;
-  else step = 50;
-  const snapped = Math.round(price / step) * step;
-  return Math.max(pMin, Math.min(pMax, snapped));
-};
-
 /** Convert a price to a percentage position within the current focus window (log-space) */
 const priceToFocusPercent = (
   price: number,
@@ -349,6 +334,41 @@ const detectSeries = (product: ConductorProduct): string | null => {
   const match = cleaned.match(/^([A-Z][A-Z0-9\-]{1,12})/);
   if (match && match[1].length >= 2) return match[1];
   return null;
+};
+
+/** Extract a base-model key for implicit family grouping (strips color/variant suffixes) */
+const COLOR_SUFFIXES =
+  /\s*[-–]\s*(Black|White|Red|Blue|Silver|Gold|Gray|Grey|Green|Natural|Sunburst|Vintage|Matte|Satin|Gloss|Chrome|Walnut|Cherry|Ebony|Ivory|Maple|Ash|Mahogany|Pink|Purple|Orange|Yellow|Tobacco|Burst|Sparkle|Metallic|Transparent|Trans|Brown|Cream|Clear|Sand|Light|Dark)\s*$/i;
+const VERSION_SUFFIXES =
+  /\s*[-–]?\s*(MK\s*II|MK\s*2|MK\s*III|MK\s*3|MK\s*IV|MK\s*4|V2|V3|GEN\s*\d|II|III|IV)\s*$/i;
+
+const detectBaseModel = (product: ConductorProduct): string => {
+  let name = product.name || "";
+  const brand = (product.brand || "").trim();
+  if (brand && name.toLowerCase().startsWith(brand.toLowerCase())) {
+    name = name.slice(brand.length).trim();
+  }
+  // Strip Hebrew prefix
+  name = name.replace(/^[^\u0000-\u007F]+\s*/u, "").trim();
+  // Strip color and version suffixes
+  name = name.replace(COLOR_SUFFIXES, "");
+  name = name.replace(VERSION_SUFFIXES, "");
+  // Normalize whitespace and case
+  name = name.replace(/\s+/g, " ").trim().toLowerCase();
+  return `${brand.toLowerCase()} ${name}`.trim();
+};
+
+/** Product-line key for visual stacking: brand + first meaningful word of name (e.g. "yamaha pacifica", "squier classic"). */
+const productLineKey = (product: ConductorProduct): string => {
+  let name = (product.name || "").trim();
+  const brand = (product.brand || "").trim().toLowerCase();
+  if (brand && name.toLowerCase().startsWith(brand)) {
+    name = name.slice(brand.length).trim();
+  }
+  name = name.replace(/^[^\u0000-\u007F]+\s*/u, "").trim();
+  const firstWord = name.split(/\s+/)[0]?.toLowerCase() || "";
+  if (!firstWord) return brand || "other";
+  return `${brand} ${firstWord}`.trim();
 };
 
 /** Group display items into series-based sub-tracks within a brand */
@@ -1080,10 +1100,10 @@ const StackTile = React.memo(
     const visibleThumbs = showThumbs ? variants.slice(0, maxThumbs) : [];
     const thumbCols = Math.min(visibleThumbs.length, tileSize >= 46 ? 2 : 1);
 
-    // Stack width: main image + variant strip
+    // Stack width: adapts to tile size
     const stackWidth = showThumbs && thumbCols > 0
       ? tileSize + thumbCols * (thumbSize + 2) + 10
-      : tileSize + 8;
+      : tileSize + Math.max(6, Math.floor(tileSize * 0.4));
 
     // Price range
     const prices = useMemo(
@@ -1096,19 +1116,24 @@ const StackTile = React.memo(
     return (
       <div className="group/stack relative flex-shrink-0">
         <div
-          className={`rounded-lg shadow-md cursor-pointer hover:z-50 transition-all duration-150 overflow-hidden flex ${
+          className={`cursor-pointer hover:z-50 transition-all duration-150 overflow-hidden flex ${
             isPinned
-              ? "ring-2 ring-amber-400 ring-offset-1 ring-offset-black z-50"
+              ? tileSize >= 20
+                ? "ring-2 ring-amber-400 ring-offset-1 ring-offset-black z-50"
+                : "ring-1 ring-amber-400 z-50"
               : ""
           }`}
           style={{
             width: stackWidth,
             height: tileSize,
-            border: `2px solid ${isPinned ? "#f59e0b" : `${brandPrimary}60`}`,
+            borderRadius: tileSize >= 20 ? 8 : 4,
+            border: `${tileSize >= 20 ? 2 : 1}px solid ${isPinned ? "#f59e0b" : `${brandPrimary}60`}`,
             backgroundColor: `${brandPrimary}08`,
             boxShadow: isPinned
-              ? "0 0 16px rgba(245, 158, 11, 0.4)"
-              : `0 0 8px ${brandPrimary}20, 0 0 0 1px rgba(0,0,0,0.4)`,
+              ? "0 0 12px rgba(245, 158, 11, 0.3)"
+              : tileSize >= 20
+                ? `0 0 6px ${brandPrimary}18, 0 0 0 1px rgba(0,0,0,0.3)`
+                : `0 0 3px ${brandPrimary}15`,
           }}
           onClick={(e) => {
             e.stopPropagation();
@@ -1121,8 +1146,8 @@ const StackTile = React.memo(
           <div
             className="flex-shrink-0 overflow-hidden"
             style={{
-              width: tileSize - 4,
-              height: tileSize - 4,
+              width: Math.max(tileSize - 4, 8),
+              height: Math.max(tileSize - 4, 8),
               background: hasImage
                 ? "#fff"
                 : `hsl(${stringToHue(rep.id)}, 20%, 12%)`,
@@ -1131,23 +1156,26 @@ const StackTile = React.memo(
             {hasImage ? (
               <img
                 src={rep.image_url}
-                className="w-full h-full object-contain p-0.5"
+                className="w-full h-full object-contain"
+                style={{ padding: tileSize >= 24 ? 2 : 0 }}
                 loading="lazy"
                 alt={rep.name}
                 onError={() => setImageError(true)}
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center">
-                <span
-                  className="text-[6px] font-black opacity-40 text-center leading-tight"
-                  style={{ color: brandPrimary }}
-                >
-                  {rep.name
-                    .split(" ")
-                    .slice(0, 2)
-                    .join("\n")}
-                </span>
-              </div>
+              tileSize >= 20 ? (
+                <div className="w-full h-full flex items-center justify-center">
+                  <span
+                    className="font-black opacity-40 text-center leading-tight"
+                    style={{ color: brandPrimary, fontSize: Math.max(5, tileSize * 0.12) }}
+                  >
+                    {rep.name
+                      .split(" ")
+                      .slice(0, 2)
+                      .join("\n")}
+                  </span>
+                </div>
+              ) : null
             )}
           </div>
 
@@ -1231,13 +1259,16 @@ const StackTile = React.memo(
               </div>
             </div>
           ) : (
-            /* Compact: just count badge */
-            <div className="flex-1 flex items-center justify-center">
+            /* Compact: count badge — scales with tile size */
+            <div className="flex-1 flex items-center justify-center min-w-0">
               <span
-                className="text-[8px] font-black"
-                style={{ color: brandPrimary }}
+                className="font-black leading-none"
+                style={{
+                  color: brandPrimary,
+                  fontSize: Math.max(5, Math.min(8, tileSize * 0.3)),
+                }}
               >
-                ×{count}
+                {count}
               </span>
             </div>
           )}
@@ -1266,60 +1297,6 @@ const StackTile = React.memo(
 StackTile.displayName = "StackTile";
 
 // ===================================================================
-// TIER PILLS — aggregate view for full zoom-out
-// ===================================================================
-
-const TierPills = React.memo(
-  ({
-    items,
-    brandPrimary,
-    onClickTier,
-  }: {
-    items: DisplayItem[];
-    brandPrimary: string;
-    onClickTier: (tier: string) => void;
-  }) => {
-    const tierCounts: Record<string, number> = {};
-    for (const item of items) {
-      const tier = item.representative.tier || "poa";
-      tierCounts[tier] = (tierCounts[tier] || 0) + 1;
-    }
-
-    const tierOrder = ["entry", "mid", "pro", "flagship", "poa"];
-
-    return (
-      <div className="flex items-center gap-1.5 px-2 py-1 flex-wrap">
-        {tierOrder
-          .filter((t) => tierCounts[t])
-          .map((tier) => (
-            <button
-              key={tier}
-              className="flex items-center gap-1 px-2 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider border transition-all hover:scale-105 hover:brightness-125"
-              style={{
-                borderColor: `${TIER_BOUNDARIES[tier]?.color || brandPrimary}40`,
-                backgroundColor: `${TIER_BOUNDARIES[tier]?.color || brandPrimary}15`,
-                color: TIER_BOUNDARIES[tier]?.color || brandPrimary,
-              }}
-              onClick={() => onClickTier(tier)}
-              title={`${tier}: ${tierCounts[tier]} products — click to zoom`}
-            >
-              <div
-                className="w-2 h-2 rounded-full"
-                style={{
-                  backgroundColor: TIER_BOUNDARIES[tier]?.color || brandPrimary,
-                }}
-              />
-              <span>{TIER_BOUNDARIES[tier]?.label || "POA"}</span>
-              <span className="opacity-60">{tierCounts[tier]}</span>
-            </button>
-          ))}
-      </div>
-    );
-  },
-);
-TierPills.displayName = "TierPills";
-
-// ===================================================================
 // BRAND TRACK — sub-track layout with horizontal scroll support
 // ===================================================================
 
@@ -1330,8 +1307,7 @@ interface BrandTrackProps {
   brandPrimary: string;
   families: Record<string, FamilyMeta>;
   priceExtent: [number, number];
-  focusRange: [number, number]; // for tick generation
-  isAggregate: boolean;
+  focusRange: [number, number]; // for tick generation + tile sizing
   pinnedProductId: string | null;
   onHoverProduct: (
     product: ConductorProduct,
@@ -1339,7 +1315,6 @@ interface BrandTrackProps {
   ) => void;
   onHoverOut: () => void;
   onClickProduct: (id: string) => void;
-  onSnapTier: (tier: string) => void;
 }
 
 const TRACK_PAD = 4;
@@ -1354,12 +1329,10 @@ const BrandTrack = React.memo(
     families,
     priceExtent,
     focusRange,
-    isAggregate,
     pinnedProductId,
     onHoverProduct,
     onHoverOut,
     onClickProduct,
-    onSnapTier,
   }: BrandTrackProps) => {
     const trackRef = useRef<HTMLDivElement>(null);
     const [trackWidth, setTrackWidth] = useState(600);
@@ -1378,12 +1351,13 @@ const BrandTrack = React.memo(
       return () => observer.disconnect();
     }, []);
 
-    // Build display items: collapse families, keep singletons
+    // Build display items: collapse explicit families, auto-group by base model
     const displayItems = useMemo(() => {
       const items: DisplayItem[] = [];
       const familyGroups = new Map<string, ConductorProduct[]>();
       const standalones: ConductorProduct[] = [];
 
+      // 1. Separate products with explicit family_id
       for (const p of products) {
         if (p.family_id) {
           const existing = familyGroups.get(p.family_id);
@@ -1394,10 +1368,11 @@ const BrandTrack = React.memo(
         }
       }
 
+      // 2. Emit explicit families
       for (const [familyId, members] of familyGroups) {
         const representative =
           members.find((m) => m.variant_is_default) ||
-          members.find((m) => m.image_url) ||
+          members.find((m) => isRealImage(m.image_url)) ||
           members[0];
         const prices = members
           .map((m) => getEffectivePrice(m))
@@ -1415,31 +1390,60 @@ const BrandTrack = React.memo(
         });
       }
 
+      // 3. Group standalones by product line (brand + first word of name) so StackTiles appear
+      const lineGroups = new Map<string, ConductorProduct[]>();
       for (const p of standalones) {
-        items.push({
-          type: "product",
-          representative: p,
-          variantCount: 1,
-          familyId: null,
-          familyProducts: [p],
-          sortPrice: getEffectivePrice(p),
-          series: null,
-        });
+        const key = productLineKey(p);
+        const existing = lineGroups.get(key);
+        if (existing) existing.push(p);
+        else lineGroups.set(key, [p]);
+      }
+
+      for (const [, members] of lineGroups) {
+        // Sort by price so representative and ordering are consistent
+        members.sort((a, b) => getEffectivePrice(a) - getEffectivePrice(b));
+        if (members.length > 1) {
+          const representative =
+            members.find((m) => isRealImage(m.image_url)) || members[0];
+          const prices = members
+            .map((m) => getEffectivePrice(m))
+            .filter((p) => p > 0);
+          const minPrice = prices.length > 0 ? Math.min(...prices) : 0;
+          items.push({
+            type: "family",
+            representative,
+            variantCount: members.length,
+            familyId: null,
+            familyProducts: members,
+            sortPrice: minPrice,
+            series: detectSeries(representative),
+          });
+        } else {
+          const p = members[0];
+          items.push({
+            type: "product",
+            representative: p,
+            variantCount: 1,
+            familyId: null,
+            familyProducts: [p],
+            sortPrice: getEffectivePrice(p),
+            series: null,
+          });
+        }
       }
 
       items.sort((a, b) => a.sortPrice - b.sortPrice);
       return items;
     }, [products, families]);
 
-    // Adaptive tile size from zoom ratio
+    // Continuous tile size: 4px micro-dot at full zoom-out → 54px at max zoom
     const tileSize = useMemo(() => {
       const normMin = priceToNorm(focusRange[0], priceExtent[0], priceExtent[1]);
       const normMax = priceToNorm(focusRange[1], priceExtent[0], priceExtent[1]);
-      const zoomRatio = normMax - normMin;
-      if (zoomRatio > 0.65) return 30;
-      if (zoomRatio > 0.4) return 38;
-      if (zoomRatio > 0.2) return 46;
-      return 54;
+      const zoomRatio = Math.max(0.01, normMax - normMin);
+      // Continuous curve: grows faster at the micro end for responsive feel
+      const t = Math.pow(1 - zoomRatio, 0.7);
+      return Math.round(Math.max(4, Math.min(54, 4 + t * 50)));
     }, [focusRange, priceExtent]);
 
     // Build sub-tracks by series
@@ -1448,16 +1452,23 @@ const BrandTrack = React.memo(
       [displayItems],
     );
 
-    // Compute item width for lane assignment (StackTile is wider)
+    // Compute item width for lane assignment (StackTile is wider at all sizes)
     const getItemWidthPx = useCallback(
       (item: DisplayItem): number => {
+        // At micro-dot sizes, everything is the same width
+        if (tileSize < 12) return tileSize;
         if (item.type === "family" && item.variantCount > 1) {
-          const thumbSize = Math.max(14, Math.floor(tileSize * 0.35));
-          const thumbCols = Math.min(
-            item.variantCount - 1,
-            tileSize >= 46 ? 2 : 1,
-          );
-          return tileSize + thumbCols * (thumbSize + 2) + 10;
+          if (tileSize >= 36) {
+            // Full thumb layout
+            const thumbSize = Math.max(14, Math.floor(tileSize * 0.35));
+            const thumbCols = Math.min(
+              item.variantCount - 1,
+              tileSize >= 46 ? 2 : 1,
+            );
+            return tileSize + thumbCols * (thumbSize + 2) + 10;
+          }
+          // Compact StackTile: image + count badge
+          return tileSize + Math.max(6, Math.floor(tileSize * 0.4));
         }
         return tileSize;
       },
@@ -1520,17 +1531,18 @@ const BrandTrack = React.memo(
 
     // Pre-compute sub-track y-offsets and total height
     const { subTrackOffsets, totalHeight } = useMemo(() => {
+      const labelsVisible = tileSize >= 16;
       const offsets: number[] = [];
       let h = 0;
       for (const st of renderedSubTracks) {
         offsets.push(h);
         const stHeight =
           st.laneCount * (tileSize + TRACK_GAP) + TRACK_PAD;
-        h += stHeight + (st.label ? 14 : 0);
+        h += stHeight + (labelsVisible && st.label ? 14 : 0);
       }
       return {
         subTrackOffsets: offsets,
-        totalHeight: Math.max(h + TRACK_PAD, 40),
+        totalHeight: Math.max(h + TRACK_PAD, tileSize < 12 ? 20 : 40),
       };
     }, [renderedSubTracks, tileSize]);
 
@@ -1567,48 +1579,10 @@ const BrandTrack = React.memo(
       }));
     }, [focusRange, priceExtent, pMin, pMax]);
 
-    // ── Aggregate view (full zoom-out): tier pills ──────────────
-    if (isAggregate) {
-      return (
-        <div
-          className="flex border-b transition-colors duration-200 group/row hover:bg-white/[0.02]"
-          style={{
-            borderColor: `rgba(${rgbColor}, 0.15)`,
-            backgroundColor: `rgba(${rgbColor}, 0.03)`,
-          }}
-        >
-          <div
-            className="sticky left-0 z-20 w-28 flex-shrink-0 flex items-center justify-center border-r"
-            style={{
-              borderColor: `rgba(${rgbColor}, 0.25)`,
-              backgroundColor: `rgba(${rgbColor}, 0.06)`,
-            }}
-          >
-            <div className="flex flex-col gap-0.5 items-center justify-center w-full py-1.5 px-2">
-              <BrandLogo
-                brand={brand}
-                className="max-h-8 max-w-[80px] w-auto object-contain opacity-90"
-              />
-              <span
-                className="text-[9px] font-bold uppercase tracking-widest bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-sm"
-                style={{ color: brandPrimary }}
-              >
-                {products.length}
-              </span>
-            </div>
-          </div>
-          <div className="flex-1 flex items-center">
-            <TierPills
-              items={displayItems}
-              brandPrimary={brandPrimary}
-              onClickTier={onSnapTier}
-            />
-          </div>
-        </div>
-      );
-    }
+    // Show sub-track labels only at readable sizes
+    const showLabels = tileSize >= 16;
 
-    // ── Sub-track layout with price-axis positioning ─────────────
+    // ── Always render price-axis layout (micro-dots at zoom-out → tiles at zoom-in) ──
     return (
       <div
         className="flex border-b transition-colors duration-200 group/row"
@@ -1694,7 +1668,7 @@ const BrandTrack = React.memo(
           {renderedSubTracks.map((st, stIdx) => {
             const stLaneH =
               st.laneCount * (tileSize + TRACK_GAP) + TRACK_PAD;
-            const labelH = st.label ? 14 : 0;
+            const labelH = showLabels && st.label ? 14 : 0;
             const stTop = subTrackOffsets[stIdx] ?? 0;
 
             return (
@@ -1703,8 +1677,8 @@ const BrandTrack = React.memo(
                 className="absolute left-0 right-0"
                 style={{ top: stTop, height: stLaneH + labelH }}
               >
-                {/* Sub-track label */}
-                {st.label && (
+                {/* Sub-track label (hidden at micro-dot sizes) */}
+                {showLabels && st.label && (
                   <div
                     className="sticky left-0 z-10 inline-block px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-widest rounded-br-sm"
                     style={{
@@ -1722,50 +1696,114 @@ const BrandTrack = React.memo(
                 )}
 
                 {/* Items positioned on price axis */}
-                {st.positioned.map((item) => (
-                  <div
-                    key={item.representative.id}
-                    className="absolute"
-                    style={{
-                      left: `${item.xPercent}%`,
-                      top:
-                        labelH +
-                        TRACK_PAD +
-                        item.lane * (tileSize + TRACK_GAP),
-                      transform: "translateX(-50%)",
-                      zIndex:
-                        pinnedProductId === item.representative.id
-                          ? 20
-                          : 1,
-                    }}
-                  >
-                    {item.type === "family" && item.variantCount > 1 ? (
-                      <StackTile
-                        item={item}
-                        brandPrimary={brandPrimary}
-                        tileSize={tileSize}
-                        isPinned={
-                          pinnedProductId === item.representative.id
-                        }
-                        onHoverProduct={onHoverProduct}
-                        onHoverOut={onHoverOut}
-                        onClickProduct={onClickProduct}
-                      />
-                    ) : (
-                      <ProductTile
-                        item={item}
-                        brandPrimary={brandPrimary}
-                        tileSize={tileSize}
-                        isPinned={
-                          pinnedProductId === item.representative.id
-                        }
-                        onHoverProduct={onHoverProduct}
-                        onHoverOut={onHoverOut}
-                        onClickProduct={onClickProduct}
-                      />
-                    )}
-                  </div>
-                ))}
+                {st.positioned.map((item) => {
+                  const isMicro = tileSize < 12;
+                  const isPinned =
+                    pinnedProductId === item.representative.id;
+
+                  // ── Micro-dot mode (< 12px): starfield glow dots ──
+                  if (isMicro) {
+                    const dotSize = tileSize;
+                    const tierColor = getTierColor(item.sortPrice);
+                    const isFamily =
+                      item.type === "family" && item.variantCount > 1;
+                    // Pseudo-random animation offset — very slow, staggered shimmer
+                    const hash =
+                      ((item.representative.id.charCodeAt(0) || 0) * 37 +
+                        (item.representative.id.charCodeAt(2) || 0) * 13) %
+                      100;
+                    const starDelay = (hash / 100) * 12; // 0-12s wide stagger
+                    const starDur = 7 + (hash % 40) / 5; // 7-15s very slow cycle
+                    return (
+                      <div
+                        key={item.representative.id}
+                        className="absolute"
+                        style={{
+                          left: `${item.xPercent}%`,
+                          top:
+                            (showLabels && st.label ? labelH : 0) +
+                            TRACK_PAD +
+                            item.lane * (tileSize + TRACK_GAP),
+                          transform: "translateX(-50%)",
+                        }}
+                      >
+                        <div
+                          className={`rounded-full cursor-pointer hover:!opacity-80 hover:!brightness-150 transition-opacity duration-300 ${
+                            isPinned ? "" : "animate-star"
+                          }`}
+                          style={{
+                            width: isFamily
+                              ? dotSize +
+                                Math.min(item.variantCount, 4) * 2
+                              : dotSize,
+                            height: dotSize,
+                            backgroundColor: tierColor,
+                            opacity: isPinned ? 0.9 : undefined,
+                            boxShadow: isPinned
+                              ? `0 0 6px ${tierColor}80`
+                              : `0 0 ${dotSize * 0.8}px ${tierColor}25`,
+                            borderRadius: isFamily
+                              ? dotSize / 2
+                              : "50%",
+                            ["--star-delay" as string]: `${starDelay}s`,
+                            ["--star-dur" as string]: `${starDur}s`,
+                          }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            onClickProduct(item.representative.id);
+                          }}
+                          onMouseEnter={() =>
+                            onHoverProduct(
+                              item.representative,
+                              item.familyProducts,
+                            )
+                          }
+                          onMouseLeave={onHoverOut}
+                        />
+                      </div>
+                    );
+                  }
+
+                  // ── Normal tile / stack tile mode (≥ 12px) ──
+                  return (
+                    <div
+                      key={item.representative.id}
+                      className="absolute"
+                      style={{
+                        left: `${item.xPercent}%`,
+                        top:
+                          (showLabels && st.label ? labelH : 0) +
+                          TRACK_PAD +
+                          item.lane * (tileSize + TRACK_GAP),
+                        transform: "translateX(-50%)",
+                        zIndex: isPinned ? 20 : 1,
+                      }}
+                    >
+                      {item.type === "family" &&
+                      item.variantCount > 1 ? (
+                        <StackTile
+                          item={item}
+                          brandPrimary={brandPrimary}
+                          tileSize={tileSize}
+                          isPinned={isPinned}
+                          onHoverProduct={onHoverProduct}
+                          onHoverOut={onHoverOut}
+                          onClickProduct={onClickProduct}
+                        />
+                      ) : (
+                        <ProductTile
+                          item={item}
+                          brandPrimary={brandPrimary}
+                          tileSize={tileSize}
+                          isPinned={isPinned}
+                          onHoverProduct={onHoverProduct}
+                          onHoverOut={onHoverOut}
+                          onClickProduct={onClickProduct}
+                        />
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             );
           })}
@@ -1787,12 +1825,14 @@ const MiniSpectrum = React.memo(
     products,
     onFocusRangeChange,
     onReset,
+    onDragStateChange,
   }: {
     focusRange: [number, number];
     priceExtent: [number, number];
     products: ConductorProduct[];
     onFocusRangeChange: (range: [number, number]) => void;
     onReset: () => void;
+    onDragStateChange?: (isDragging: boolean) => void;
   }) => {
     const barRef = useRef<HTMLDivElement>(null);
     const [dragging, setDragging] = useState<
@@ -1802,6 +1842,17 @@ const MiniSpectrum = React.memo(
       x: number;
       rangeNorm: [number, number];
     }>({ x: 0, rangeNorm: [0, 1] });
+    // Track recent drag to prevent click-after-drag repositioning
+    const justDraggedRef = useRef(false);
+    // Refs for current values to avoid stale closures in drag handlers
+    const focusRangeRef = useRef(focusRange);
+    const priceExtentRef = useRef(priceExtent);
+    const onChangeRef = useRef(onFocusRangeChange);
+    const onDragStateChangeRef = useRef(onDragStateChange);
+    focusRangeRef.current = focusRange;
+    priceExtentRef.current = priceExtent;
+    onChangeRef.current = onFocusRangeChange;
+    onDragStateChangeRef.current = onDragStateChange;
 
     const [pMin, pMax] = priceExtent;
     const [fMin, fMax] = focusRange;
@@ -1876,21 +1927,25 @@ const MiniSpectrum = React.memo(
       [pMin, pMax],
     );
 
-    // Mouse handlers for dragging
+    // Mouse handlers for dragging — uses refs to avoid stale closures
     const handleMouseDown = useCallback(
       (e: React.MouseEvent, handle: "left" | "right" | "middle") => {
         e.preventDefault();
         e.stopPropagation();
+        const [curFMin, curFMax] = focusRangeRef.current;
+        const [curPMin, curPMax] = priceExtentRef.current;
         setDragging(handle);
+        justDraggedRef.current = false;
+        onDragStateChangeRef.current?.(true);
         dragStartRef.current = {
           x: e.clientX,
           rangeNorm: [
-            priceToNorm(fMin, pMin, pMax),
-            priceToNorm(fMax, pMin, pMax),
+            priceToNorm(curFMin, curPMin, curPMax),
+            priceToNorm(curFMax, curPMin, curPMax),
           ],
         };
       },
-      [fMin, fMax, pMin, pMax],
+      [],
     );
 
     useEffect(() => {
@@ -1903,29 +1958,28 @@ const MiniSpectrum = React.memo(
         const barWidth = rect.width;
         if (barWidth <= 0) return;
 
+        // Read current values from refs — always fresh, no stale closure issues
+        const [curFMin, curFMax] = focusRangeRef.current;
+        const [curPMin, curPMax] = priceExtentRef.current;
+
         const currentNorm = Math.max(
           0,
           Math.min(1, (e.clientX - rect.left) / barWidth),
         );
 
+        // Pure cursor-following: no snapping, no rounding, no zones.
+        // Only constraint: handles cannot cross each other.
+        const eps = 1e-9;
         if (dragging === "left") {
-          const rightNorm = priceToNorm(fMax, pMin, pMax);
-          const newLeftNorm = Math.min(currentNorm, rightNorm - 0.05);
-          const rawPrice = normToPrice(Math.max(0, newLeftNorm), pMin, pMax);
-          const snapped = snapToGrid(rawPrice, pMin, pMax);
-          // Ensure min gap from right handle
-          if (snapped < fMax - 30) {
-            onFocusRangeChange([snapped, fMax]);
-          }
+          const rightNorm = priceToNorm(curFMax, curPMin, curPMax);
+          const newLeftNorm = Math.min(currentNorm, Math.max(0, rightNorm - eps));
+          const newPrice = normToPrice(newLeftNorm, curPMin, curPMax);
+          onChangeRef.current([newPrice, curFMax]);
         } else if (dragging === "right") {
-          const leftNorm = priceToNorm(fMin, pMin, pMax);
-          const newRightNorm = Math.max(currentNorm, leftNorm + 0.05);
-          const rawPrice = normToPrice(Math.min(1, newRightNorm), pMin, pMax);
-          const snapped = snapToGrid(rawPrice, pMin, pMax);
-          // Ensure min gap from left handle
-          if (snapped > fMin + 30) {
-            onFocusRangeChange([fMin, snapped]);
-          }
+          const leftNorm = priceToNorm(curFMin, curPMin, curPMax);
+          const newRightNorm = Math.max(currentNorm, Math.min(1, leftNorm + eps));
+          const newPrice = normToPrice(newRightNorm, curPMin, curPMax);
+          onChangeRef.current([curFMin, newPrice]);
         } else if (dragging === "middle") {
           const dx = e.clientX - dragStartRef.current.x;
           const dNorm = dx / barWidth;
@@ -1941,14 +1995,21 @@ const MiniSpectrum = React.memo(
             newMaxN = 1;
             newMinN = 1 - rangeWidth;
           }
-          onFocusRangeChange([
-            normToPrice(newMinN, pMin, pMax),
-            normToPrice(newMaxN, pMin, pMax),
+          onChangeRef.current([
+            normToPrice(newMinN, curPMin, curPMax),
+            normToPrice(newMaxN, curPMin, curPMax),
           ]);
         }
+        justDraggedRef.current = true;
       };
 
-      const handleMouseUp = () => setDragging(null);
+      const handleMouseUp = () => {
+        setDragging(null);
+        onDragStateChangeRef.current?.(false);
+        // Keep justDraggedRef true so the bar click is suppressed
+        // Reset it after a tick so subsequent genuine clicks work
+        setTimeout(() => { justDraggedRef.current = false; }, 50);
+      };
 
       window.addEventListener("mousemove", handleMouseMove);
       window.addEventListener("mouseup", handleMouseUp);
@@ -1956,25 +2017,28 @@ const MiniSpectrum = React.memo(
         window.removeEventListener("mousemove", handleMouseMove);
         window.removeEventListener("mouseup", handleMouseUp);
       };
-    }, [dragging, fMin, fMax, pMin, pMax, onFocusRangeChange]);
+    }, [dragging]); // Only re-register when drag mode changes — values come from refs
 
     // Click on dimmed region to shift focus there
+    // Suppressed immediately after a drag to prevent handle jumping
     const handleBarClick = useCallback(
       (e: React.MouseEvent) => {
         const bar = barRef.current;
-        if (!bar || dragging) return;
+        if (!bar || dragging || justDraggedRef.current) return;
+        const [curFMin, curFMax] = focusRangeRef.current;
+        const [curPMin, curPMax] = priceExtentRef.current;
         const rect = bar.getBoundingClientRect();
         const norm = Math.max(
           0,
           Math.min(1, (e.clientX - rect.left) / rect.width),
         );
-        const clickPrice = normToPrice(norm, pMin, pMax);
-        const halfWidth = (fMax - fMin) / 2;
-        const newMin = Math.max(pMin, clickPrice - halfWidth);
-        const newMax = Math.min(pMax, clickPrice + halfWidth);
-        onFocusRangeChange([newMin, newMax]);
+        const clickPrice = normToPrice(norm, curPMin, curPMax);
+        const halfWidth = (curFMax - curFMin) / 2;
+        const newMin = Math.max(curPMin, clickPrice - halfWidth);
+        const newMax = Math.min(curPMax, clickPrice + halfWidth);
+        onChangeRef.current([newMin, newMax]);
       },
-      [dragging, fMin, fMax, pMin, pMax, onFocusRangeChange],
+      [dragging],
     );
 
     // Is the focus range close to the full extent?
@@ -2030,13 +2094,13 @@ const MiniSpectrum = React.memo(
 
         {/* Left curtain */}
         <div
-          className="absolute top-0 bottom-0 left-0 bg-black/60 backdrop-blur-[1px] z-[1] transition-all duration-100"
+          className="absolute top-0 bottom-0 left-0 bg-black/60 backdrop-blur-[1px] z-[1]"
           style={{ width: `${leftPercent}%` }}
         />
 
         {/* Right curtain */}
         <div
-          className="absolute top-0 bottom-0 right-0 bg-black/60 backdrop-blur-[1px] z-[1] transition-all duration-100"
+          className="absolute top-0 bottom-0 right-0 bg-black/60 backdrop-blur-[1px] z-[1]"
           style={{ width: `${100 - rightPercent}%` }}
         />
 
@@ -2120,6 +2184,142 @@ const MiniSpectrum = React.memo(
   },
 );
 MiniSpectrum.displayName = "MiniSpectrum";
+
+// ===================================================================
+// VISUAL FEED PANEL — shows hovered product + variant images side by side
+// ===================================================================
+
+const VisualFeedPanel = React.memo(
+  ({
+    product,
+    familyProducts,
+    imageLoadError,
+    onImageError,
+    onProductClick,
+  }: {
+    product: ConductorProduct;
+    familyProducts: ConductorProduct[];
+    imageLoadError: boolean;
+    onImageError: () => void;
+    onProductClick: (id: string) => void;
+  }) => {
+    const [hoveredVariantId, setHoveredVariantId] = useState<string | null>(
+      null,
+    );
+
+    // Get related variant products (excluding self) that have images
+    const variantsWithImages = useMemo(() => {
+      const seen = new Set<string>([product.id]);
+      const result: ConductorProduct[] = [];
+      for (const p of familyProducts) {
+        if (!seen.has(p.id) && isRealImage(p.image_url)) {
+          result.push(p);
+          seen.add(p.id);
+        }
+      }
+      return result;
+    }, [product.id, familyProducts]);
+
+    const hasVariants = variantsWithImages.length > 0;
+    const hoveredVariant = hoveredVariantId
+      ? variantsWithImages.find((v) => v.id === hoveredVariantId) || null
+      : null;
+
+    const mainHasImage = isRealImage(product.image_url) && !imageLoadError;
+
+    return (
+      <div className="w-full h-full flex flex-col gap-1.5">
+        {/* Main image area — split into two if a variant is hovered */}
+        <div className={`flex-1 flex gap-1.5 min-h-0 ${hasVariants ? "" : ""}`}>
+          {/* Primary product image */}
+          <div
+            className={`relative bg-white/5 rounded-sm flex items-center justify-center overflow-hidden transition-all duration-300 ${
+              hoveredVariant ? "flex-1" : "flex-1"
+            }`}
+          >
+            {mainHasImage ? (
+              <img
+                src={product.image_url}
+                className="max-w-full max-h-full object-contain drop-shadow-2xl transition-all duration-400 will-change-transform animate-scale-in p-2"
+                alt="Preview"
+                onError={onImageError}
+              />
+            ) : (
+              <div className="flex flex-col items-center justify-center gap-2 text-zinc-600 text-center p-3 w-full h-full">
+                <BrandLogo
+                  brand={product.brand}
+                  className="max-h-12 max-w-[60%] w-auto opacity-30"
+                />
+                <span className="text-[9px] font-mono uppercase tracking-widest text-zinc-700">
+                  No image
+                </span>
+              </div>
+            )}
+            {/* Tiny product name label */}
+            <div className="absolute bottom-1 left-1 right-1 text-center">
+              <span className="text-[7px] font-bold text-zinc-500 bg-black/60 px-1.5 py-0.5 rounded-sm truncate inline-block max-w-full">
+                {product.variant_key || product.name?.split(" ").slice(-2).join(" ")}
+              </span>
+            </div>
+          </div>
+
+          {/* Variant large preview — appears when a variant thumbnail is hovered */}
+          {hoveredVariant && (
+            <div
+              className="flex-1 relative bg-white/5 rounded-sm flex items-center justify-center overflow-hidden animate-scale-in cursor-pointer"
+              onClick={() => onProductClick(hoveredVariant.id)}
+            >
+              <img
+                src={hoveredVariant.image_url}
+                className="max-w-full max-h-full object-contain drop-shadow-2xl p-2 transition-all duration-300"
+                alt={hoveredVariant.name}
+              />
+              <div className="absolute bottom-1 left-1 right-1 text-center">
+                <span className="text-[7px] font-bold text-blue-400 bg-black/60 px-1.5 py-0.5 rounded-sm truncate inline-block max-w-full">
+                  {hoveredVariant.variant_key || hoveredVariant.name?.split(" ").slice(-2).join(" ")}
+                </span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Variant thumbnail strip at the bottom */}
+        {hasVariants && (
+          <div className="flex gap-1 overflow-x-auto shrink-0 py-0.5 px-0.5">
+            {variantsWithImages.slice(0, 8).map((v) => (
+              <button
+                key={v.id}
+                className={`flex-shrink-0 w-10 h-10 rounded border overflow-hidden transition-all duration-150 ${
+                  hoveredVariantId === v.id
+                    ? "border-blue-400 ring-1 ring-blue-400/40 scale-105"
+                    : "border-zinc-700/60 hover:border-zinc-500"
+                }`}
+                onMouseEnter={() => setHoveredVariantId(v.id)}
+                onMouseLeave={() => setHoveredVariantId(null)}
+                onClick={() => onProductClick(v.id)}
+                title={v.variant_key || v.name}
+              >
+                <img
+                  src={v.image_url}
+                  className="w-full h-full object-contain bg-white p-0.5"
+                  alt={v.variant_key || v.name}
+                />
+              </button>
+            ))}
+            {variantsWithImages.length > 8 && (
+              <div className="flex-shrink-0 w-10 h-10 rounded border border-zinc-800 bg-zinc-900/50 flex items-center justify-center">
+                <span className="text-[8px] text-zinc-500 font-bold">
+                  +{variantsWithImages.length - 8}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  },
+);
+VisualFeedPanel.displayName = "VisualFeedPanel";
 
 // ===================================================================
 // MAIN: SPECTRUM MODULE
@@ -2248,7 +2448,7 @@ export const SpectrumModule = () => {
     [zoomRatio],
   );
 
-  // Sync focus range → scroll position
+  // Sync focus range → scroll position (one-way: minimap drives scroll)
   useEffect(() => {
     const el = scrollContainerRef.current;
     if (!el) return;
@@ -2258,16 +2458,21 @@ export const SpectrumModule = () => {
     const scrollTarget = normFMin * innerWidth;
     isScrollProgrammatic.current = true;
     el.scrollLeft = scrollTarget;
-    // Reset flag after browser paints
+    // Reset flag after TWO frames to ensure no race condition with scroll events
     requestAnimationFrame(() => {
-      isScrollProgrammatic.current = false;
+      requestAnimationFrame(() => {
+        isScrollProgrammatic.current = false;
+      });
     });
   }, [focusRange, priceExtent, canvasWidthPercent]);
 
-  // Sync scroll position → focus range
+  // Sync scroll position → focus range (suppressed during minimap drag)
   const handleScrollSync = useCallback(
     (e: React.UIEvent<HTMLDivElement>) => {
+      // Skip if this scroll was caused by our programmatic update
       if (isScrollProgrammatic.current) return;
+      // Skip if user is actively dragging the minimap handles
+      if (isDraggingMinimapRef.current) return;
       const el = e.currentTarget;
       const scrollWidth = el.scrollWidth;
       if (scrollWidth <= 0) return;
@@ -2444,8 +2649,13 @@ export const SpectrumModule = () => {
     };
   }, []);
 
+  // Track whether the minimap handles are being dragged to suppress scroll sync
+  const isDraggingMinimapRef = useRef(false);
+
   const handleFocusRangeChange = useCallback(
     (range: [number, number]) => {
+      // Direct range update — no rounding, no snapping, no zones.
+      // Only clamp to absolute boundaries.
       setFocusRange([
         Math.max(priceExtent[0], range[0]),
         Math.min(priceExtent[1], range[1]),
@@ -2454,7 +2664,7 @@ export const SpectrumModule = () => {
     [priceExtent],
   );
 
-  // Snap to a tier
+  // Tier zoom presets (user clicks a tier button → jump to that range)
   const handleSnapTier = useCallback(
     (tier: string) => {
       const tb = TIER_BOUNDARIES[tier];
@@ -2601,44 +2811,20 @@ export const SpectrumModule = () => {
 
       {/* --- DATA SCREENS (Visualizer) --- */}
       <div className="h-[35vh] grid grid-cols-12 gap-1 p-1 bg-black border-b border-zinc-800 z-40 shrink-0 shadow-2xl relative transition-all duration-300">
-        {/* LEFT: VISUAL FEED */}
+        {/* LEFT: VISUAL FEED — main product + variant images */}
         <Surface
           variant="screen"
           active={!!hoveredProduct}
-          className="col-span-4 bg-zinc-950 flex flex-col justify-center items-center p-4 relative overflow-hidden"
+          className="col-span-4 bg-zinc-950 flex flex-col justify-center items-center p-2 relative overflow-hidden"
         >
           {hoveredProduct ? (
-            <div className="w-full h-full flex items-center justify-center relative bg-white/5 p-4 rounded-sm">
-              {isRealImage(hoveredProduct.image_url) && !imageLoadError ? (
-                <img
-                  src={hoveredProduct.image_url}
-                  className="max-w-full max-h-full object-contain drop-shadow-2xl transition-all duration-500 will-change-transform animate-scale-in"
-                  alt="Preview"
-                  onError={() => setImageLoadError(true)}
-                />
-              ) : (
-                <div className="flex flex-col items-center justify-center gap-3 text-zinc-600 text-center p-4 w-full h-full">
-                  <BrandLogo
-                    brand={hoveredProduct.brand}
-                    className="max-h-16 max-w-[60%] w-auto opacity-30"
-                  />
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-700">
-                    Image not yet scraped
-                  </span>
-                  {hoveredProduct.halilit_url &&
-                    hoveredProduct.halilit_url !== "https://halilit.com" && (
-                      <a
-                        href={hoveredProduct.halilit_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[9px] text-blue-500/60 hover:text-blue-400 transition-colors underline underline-offset-2"
-                      >
-                        View on Halilit.com
-                      </a>
-                    )}
-                </div>
-              )}
-            </div>
+            <VisualFeedPanel
+              product={hoveredProduct}
+              familyProducts={hoveredFamilyProducts}
+              imageLoadError={imageLoadError}
+              onImageError={() => setImageLoadError(true)}
+              onProductClick={openProductPage}
+            />
           ) : (
             <div className="flex flex-col items-center justify-center gap-4 text-zinc-800">
               <div className="w-16 h-16 rounded-full bg-zinc-900/50 flex items-center justify-center">
@@ -2786,6 +2972,7 @@ export const SpectrumModule = () => {
                 products={filteredProducts}
                 onFocusRangeChange={handleFocusRangeChange}
                 onReset={() => setFocusRange(priceExtent)}
+                onDragStateChange={(isDragging) => { isDraggingMinimapRef.current = isDragging; }}
               />
             </div>
           </div>
@@ -2858,12 +3045,10 @@ export const SpectrumModule = () => {
                     families={families}
                     priceExtent={priceExtent}
                     focusRange={focusRange}
-                    isAggregate={isAggregate}
                     pinnedProductId={pinnedProductId}
                     onHoverProduct={handleHoverProduct}
                     onHoverOut={handleHoverOut}
                     onClickProduct={handleClickProduct}
-                    onSnapTier={handleSnapTier}
                   />
                 ),
               )}

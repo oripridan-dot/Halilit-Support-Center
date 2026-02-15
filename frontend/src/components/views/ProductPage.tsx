@@ -5,6 +5,12 @@ import {
   Layers,
   Shield,
   CheckCircle,
+  Users,
+  GitCompare,
+  Puzzle,
+  HelpCircle,
+  Database,
+  BarChart3,
 } from "lucide-react";
 import React, { useEffect, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -515,7 +521,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
 
                 {/* Two-column row: Specs + Trusted Reviews */}
                 <div className="grid grid-cols-2 gap-4">
-                  {/* Official Specs */}
+                  {/* Official Specs — show ALL specs */}
                   {product.specs && Object.keys(product.specs).length > 0 && (
                     <motion.div
                       initial={{ opacity: 0, y: 8 }}
@@ -525,11 +531,14 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                     >
                       <h3 className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                        Key Specs
+                        Specifications
+                        <span className="ml-auto text-[9px] text-zinc-600 font-mono">
+                          {Object.keys(product.specs).length} fields
+                        </span>
                       </h3>
-                      <div className="space-y-0.5 text-sm">
+                      <div className="space-y-0.5 text-sm max-h-[300px] overflow-y-auto custom-scrollbar">
                         {Object.entries(product.specs)
-                          .slice(0, 8)
+                          .filter(([key]) => key !== "sku" && key !== "note" && key !== "extracted_name")
                           .map(([key, value], idx) => (
                             <div
                               key={key}
@@ -573,7 +582,7 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                       Key Features
                     </h3>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                      {product.features.slice(0, 8).map((feature: string, idx: number) => (
+                      {product.features.map((feature: string, idx: number) => (
                         <div key={idx} className="flex items-start gap-2">
                           <span
                             className="mt-1.5 w-1 h-1 rounded-full shrink-0"
@@ -646,7 +655,60 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                {/* Smart Accessories */}
+                {/* Audiences / Target Users */}
+                {product.audiences && product.audiences.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.22 }}
+                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
+                  >
+                    <h3 className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                      <Users size={12} className="text-violet-400" />
+                      Best For
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {product.audiences.map((audience, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1.5 text-[11px] font-medium bg-violet-500/10 text-violet-300 border border-violet-500/20 rounded-full"
+                        >
+                          {audience}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* FAQ Section */}
+                {product.faq && product.faq.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.24 }}
+                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
+                  >
+                    <h3 className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider mb-4 flex items-center gap-2">
+                      <HelpCircle size={12} className="text-cyan-400" />
+                      Frequently Asked Questions
+                      <span className="ml-auto text-[9px] text-zinc-600">{product.faq.length}</span>
+                    </h3>
+                    <div className="space-y-3">
+                      {product.faq.map((item, idx) => (
+                        <div key={idx} className="border-l-2 border-cyan-500/30 pl-3">
+                          <p className="text-[11px] font-semibold text-cyan-300 mb-1">
+                            {item.question}
+                          </p>
+                          <p className="text-[11px] text-zinc-400 leading-relaxed">
+                            {item.answer}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Smart Accessories — must-have products */}
                 <SmartAccessories
                   accessories={accessories.map((a) => ({
                     id: a.id,
@@ -657,6 +719,93 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   brandColor={brandColor}
                   onProductClick={openProductPage}
                 />
+
+                {/* Compatible Products */}
+                {compatible.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.28 }}
+                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <Puzzle size={14} className="text-blue-400" />
+                      <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
+                        Compatible Products
+                      </span>
+                      <span className="ml-auto text-[10px] text-zinc-600">
+                        {compatible.length} product{compatible.length !== 1 ? "s" : ""}
+                      </span>
+                    </div>
+                    <div className="flex gap-3 overflow-x-auto pb-1">
+                      {compatible.map((c) => (
+                        <button
+                          key={c.id}
+                          onClick={() => openProductPage(c.id)}
+                          className="group shrink-0 w-36 bg-zinc-800/40 hover:bg-zinc-800/70 border border-zinc-700/40 hover:border-blue-500/30 rounded-xl p-3 transition-all duration-200 text-left"
+                        >
+                          <div className="aspect-square bg-zinc-900/60 rounded-lg overflow-hidden mb-2">
+                            <ImageWithFallback
+                              src={c.image_url || ""}
+                              alt={c.name || "Compatible"}
+                              className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200"
+                            />
+                          </div>
+                          <p className="text-[11px] text-white font-medium truncate">{c.name}</p>
+                          {c.price > 0 && (
+                            <p className="text-[10px] text-zinc-400 mt-0.5">
+                              {"\u20AA"}{c.price.toLocaleString("he-IL")}
+                            </p>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Alternatives */}
+                {alternatives.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.3 }}
+                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <GitCompare size={14} className="text-amber-400" />
+                      <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
+                        Alternatives to Consider
+                      </span>
+                      <span className="ml-auto text-[10px] text-zinc-600">
+                        {alternatives.length} option{alternatives.length !== 1 ? "s" : ""}
+                      </span>
+                    </div>
+                    <div className="flex gap-3 overflow-x-auto pb-1">
+                      {alternatives.map((a) => (
+                        <button
+                          key={a.id}
+                          onClick={() => openProductPage(a.id)}
+                          className="group shrink-0 w-36 bg-zinc-800/40 hover:bg-zinc-800/70 border border-zinc-700/40 hover:border-amber-500/30 rounded-xl p-3 transition-all duration-200 text-left"
+                        >
+                          <div className="aspect-square bg-zinc-900/60 rounded-lg overflow-hidden mb-2">
+                            <ImageWithFallback
+                              src={a.image_url || ""}
+                              alt={a.name || "Alternative"}
+                              className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200"
+                            />
+                          </div>
+                          <p className="text-[11px] text-white font-medium truncate">{a.name}</p>
+                          <p className="text-[9px] text-zinc-500 truncate">{a.brand}</p>
+                          {a.price > 0 && (
+                            <p className="text-[10px] text-zinc-400 mt-0.5">
+                              {"\u20AA"}{a.price.toLocaleString("he-IL")}
+                            </p>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
 
                 {/* Variants strip */}
                 {variants.length > 0 && (
@@ -682,9 +831,6 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                           key={v.id}
                           onClick={() => openProductPage(v.id)}
                           className="group shrink-0 w-40 bg-zinc-800/40 hover:bg-zinc-800/70 border border-zinc-700/40 rounded-xl p-3 transition-all duration-200 text-left"
-                          style={{
-                            borderColor: undefined,
-                          }}
                         >
                           <div className="aspect-square bg-zinc-900/60 rounded-lg overflow-hidden mb-2">
                             <ImageWithFallback
@@ -716,6 +862,95 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                         </button>
                       ))}
                     </div>
+                  </motion.div>
+                )}
+
+                {/* Data Sources / Trust Indicators */}
+                {product.sources && product.sources.length > 0 && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 0.32 }}
+                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
+                  >
+                    <div className="flex items-center gap-2 mb-4">
+                      <Database size={12} className="text-zinc-500" />
+                      <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
+                        Data Sources & Trust
+                      </span>
+                      <span className="ml-auto">
+                        <span
+                          className={`text-[9px] font-black px-1.5 py-0.5 rounded ${
+                            (product.quality_score || 0) >= 90
+                              ? "bg-emerald-500/20 text-emerald-400"
+                              : (product.quality_score || 0) >= 70
+                                ? "bg-green-500/20 text-green-400"
+                                : (product.quality_score || 0) >= 40
+                                  ? "bg-amber-500/20 text-amber-400"
+                                  : "bg-red-500/20 text-red-400"
+                          }`}
+                        >
+                          Quality: {product.quality_score || 0}%
+                        </span>
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-3 gap-3 mb-3">
+                      {/* Commercial */}
+                      <div className={`rounded-lg p-3 border ${
+                        product.sources.includes("halilit")
+                          ? "bg-blue-500/5 border-blue-500/20"
+                          : "bg-zinc-800/20 border-zinc-800/40 opacity-40"
+                      }`}>
+                        <p className="text-[9px] font-bold text-blue-400 uppercase tracking-wider mb-1">Commercial</p>
+                        <p className="text-[10px] text-zinc-400">Halilit.com</p>
+                        <p className="text-[9px] text-zinc-600 mt-1">
+                          Price: <span className={product.data_trust?.price_source === "halilit" ? "text-emerald-400" : "text-zinc-500"}>
+                            {product.data_trust?.price_source || "none"}
+                          </span>
+                        </p>
+                      </div>
+                      {/* Official */}
+                      <div className={`rounded-lg p-3 border ${
+                        product.sources.includes("official")
+                          ? "bg-emerald-500/5 border-emerald-500/20"
+                          : "bg-zinc-800/20 border-zinc-800/40 opacity-40"
+                      }`}>
+                        <p className="text-[9px] font-bold text-emerald-400 uppercase tracking-wider mb-1">Official</p>
+                        <p className="text-[10px] text-zinc-400">{product.brand}</p>
+                        <p className="text-[9px] text-zinc-600 mt-1">
+                          Specs: <span className={product.data_trust?.specs_source === "official" ? "text-emerald-400" : "text-zinc-500"}>
+                            {product.data_trust?.specs_source || "none"}
+                          </span>
+                        </p>
+                      </div>
+                      {/* Contextual */}
+                      <div className={`rounded-lg p-3 border ${
+                        product.sources.includes("contextual")
+                          ? "bg-amber-500/5 border-amber-500/20"
+                          : "bg-zinc-800/20 border-zinc-800/40 opacity-40"
+                      }`}>
+                        <p className="text-[9px] font-bold text-amber-400 uppercase tracking-wider mb-1">Contextual</p>
+                        <p className="text-[10px] text-zinc-400">Reviews</p>
+                        <p className="text-[9px] text-zinc-600 mt-1">
+                          Reviews: <span className={product.data_trust?.review_source === "contextual" ? "text-emerald-400" : "text-zinc-500"}>
+                            {product.data_trust?.review_source || "none"}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    {/* Data completeness indicator */}
+                    {product.data_missing && product.data_missing.length > 0 && (
+                      <div className="mt-2 pt-2 border-t border-zinc-800/30">
+                        <p className="text-[9px] text-zinc-600 mb-1 font-semibold uppercase tracking-wider">Missing Data</p>
+                        <div className="flex flex-wrap gap-1">
+                          {product.data_missing.map((field, idx) => (
+                            <span key={idx} className="text-[9px] px-1.5 py-0.5 rounded bg-red-500/10 text-red-400/70 border border-red-500/15">
+                              {field}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </motion.div>
                 )}
               </AnimatePresence>

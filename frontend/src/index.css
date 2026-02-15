@@ -458,3 +458,20 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.3s ease-in-out forwards;
 }
+
+/* Starfield twinkle — very slow dimmed background glow */
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0.12;
+    filter: brightness(0.6);
+  }
+  50% {
+    opacity: 0.38;
+    filter: brightness(1.15);
+  }
+}
+.animate-star {
+  animation: starTwinkle var(--star-dur, 8s) ease-in-out infinite;
+  animation-delay: var(--star-delay, 0s);
+}
