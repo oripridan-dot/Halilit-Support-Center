@@ -1,130 +1,147 @@
 # Halilit Support Center — Architecture
 
-**Version**: 9.0.0 (JIT Architecture)  
-**Updated**: February 14, 2026
+**Version**: 9.2.0 (JIT + Product Graph)  
+**Updated**: February 2026
 
 ---
 
-## System Overview
+## System overview
 
-AI-powered product intelligence platform using a **Just-in-Time (JIT)** architecture. Instead of heavy upfront ingestion, the system maintains a lightweight skeleton inventory and streams live intelligence on demand via Gemini 2.0 Flash.
+AI-powered product intelligence platform using a **Just-in-Time (JIT)** architecture. A lightweight skeleton or full catalog (from Halilit ingestion) is enriched with a **product graph** (families, relationships in priority order). Live intelligence is streamed on demand per product via Gemini 2.0 Flash.
 
-| Metric            | Value                                              |
-| ----------------- | -------------------------------------------------- |
-| Products          | 500+ (skeleton inventory from Halilit.com)         |
-| API Endpoints     | 10                                                 |
-| Intelligence      | JIT — live per-product research via Gemini 2.0     |
-| Trusted Sources   | 10 (Golden Circle — Sound On Sound, Sweetwater...) |
-| Cache TTL         | 7 days (file-based per product)                    |
+| Metric            | Value |
+| ----------------- | ----- |
+| Catalog           | Built from `frontend/public/data/*.json` (commercial + enrich) |
+| Product graph     | Families + relationships (official → commercial → contextual → spectrum) |
+| Intelligence      | JIT — live per-product research via Gemini 2.0 |
+| Trusted sources   | Golden Circle (Sound On Sound, Sweetwater, Thomann, …) |
+| Cache             | Catalog: 5 min server TTL; JIT: 7-day file-based per product |
 
 ---
 
-## Architecture Layers
+## Architecture layers
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
 │                    FRONTEND (React 18 + Vite)                    │
-│  Zustand state · React Query · Tailwind CSS · Framer Motion      │
-│  Views: GalaxyDashboard · SpectrumModule · Product Cockpit       │
-│  Hooks: useConductorCatalog · useJITIntelligence (SSE)           │
+│  Zustand · React Query · Tailwind · Framer Motion                │
+│  Views: GalaxyDashboard · SpectrumModule · ProductPage ·         │
+│         CurationDashboard · DesignArena                          │
+│  Data: useConductorCatalog() · useJITIntelligence(SSE)             │
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓  REST / SSE
 ┌──────────────────────────────────────────────────────────────────┐
-│              API LAYER (FastAPI — port 8000)                      │
-│  /api/conductor/*    Catalog, taxonomy, filtering                │
-│  /api/jit/product/*  Live product intelligence (SSE stream)      │
-│  /api/health         Service health check                        │
+│              API (FastAPI — port 8000)                            │
+│  /api/conductor/*   Catalog, taxonomy, filter, refresh            │
+│  /api/jit/product/* Live product intelligence (SSE)             │
+│  /api/curation/*    Relationships, pending, confirm/reject        │
+│  /api/mcp/*         MCP tools                                    │
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓
 ┌──────────────────────────────────────────────────────────────────┐
-│             SKELETON INVENTORY (Nightly sync)                    │
-│  skeleton_sync.py → inventory.json (ID, Name, Price, URL, Thumb)│
-│  Zero AI calls — listing pages only — ~30 seconds for all brands│
+│             CATALOG + PRODUCT GRAPH                               │
+│  product_normalizer.build_catalog(data_dir)                       │
+│  → Normalize brand JSONs → ProductGraph.from_flat_products()      │
+│  → Relationship pipeline (see below) → GraphStore.export_json()   │
+│  → Indexes: by_galaxy, by_spectrum, by_brand, by_family,          │
+│             relationships                                          │
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓
 ┌──────────────────────────────────────────────────────────────────┐
-│              JIT AGENT (On-Demand Intelligence)                  │
-│                                                                  │
-│  Triggered when user clicks a product. Streams SSE events:       │
-│                                                                  │
-│  Phase 1 — SNAP:    Inventory data (instant, <200ms)             │
-│  Phase 2 — INTEL:   Halilit page scrape (specs, images)          │
-│  Phase 3 — WISDOM:  Gemini reasoning (verdict, pro tips)         │
-│  Phase 4 — EXPLORE: Suggested next actions                       │
-│                                                                  │
-│  Tools: read_halilit_page · search_trusted_reviews               │
-│  Cache: 7-day file-based TTL per product                         │
+│             RELATIONSHIP PIPELINE (priority order)                │
+│  1. Official   — relationship_enrichment_official (brand pages)    │
+│  2. Commercial — relationship_discovery (variants + accessories)   │
+│  3. Contextual — relationship_enrichment_contextual (reviews)      │
+│  4. Spectrum   — relationship_discovery (alternatives by spectrum)  │
+│  Persisted: backend/data/graph/product_graph.json                 │
+└────────────────────────┬─────────────────────────────────────────┘
+                         ↓
+┌──────────────────────────────────────────────────────────────────┐
+│             JIT AGENT (on-demand)                                 │
+│  Trigger: user opens product. SSE: snap → intel → wisdom → explore│
+│  Tools: read_halilit_page · search_trusted_reviews                │
+│  Cache: 7-day file-based TTL per product                          │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Source Rules (THE LAW)
+## Source rules (THE LAW)
 
-All data strictly adheres to three authorized sources:
+All data adheres to three authorized sources:
 
-| Source             | Owner    | Fields                              |
-| ------------------ | -------- | ----------------------------------- |
-| **Commercial**     | Halilit  | Price, SKU, stock, catalog position |
-| **Official**       | Brand    | Specs, images, descriptions         |
-| **Contextual**     | Reviews  | Opinions, ratings (3+ sources)      |
+| Source         | Owner   | Fields |
+| -------------- | ------- | ------ |
+| **Commercial** | Halilit | Price, SKU, catalog position, Golden List |
+| **Official**   | Brand   | Specs, images, descriptions, official_url |
+| **Contextual** | Reviews | Opinions, ratings (3+ trusted sources) |
 
-- **Zero Tolerance**: If the JIT agent can't find data, the field stays empty — never fabricated.
-- **Golden Circle**: Only trusted review domains (Sound On Sound, MusicRadar, Sweetwater, Thomann, Equipboard, Sonic State, etc.)
+- **Zero tolerance**: No synthetic data. Empty fields over fabricated.
+- **Golden Circle**: Only trusted review domains (e.g. Sound On Sound, Sweetwater, Thomann).
+- **Enforcement**: `backend/source_rules.py`.
 
 ---
 
-## API Reference
+## API reference
 
-### Conductor (Catalog)
+### Conductor (catalog)
 
 | Method | Path                        | Description              |
 | ------ | --------------------------- | ------------------------ |
-| GET    | `/api/conductor/catalog`    | Enriched product catalog |
+| GET    | `/api/conductor/catalog`    | Full catalog + graph indexes |
 | GET    | `/api/conductor/taxonomy`   | Category & brand schema  |
 | POST   | `/api/conductor/filter`     | Filtered product query   |
 | GET    | `/api/conductor/categories` | Category summary         |
-| GET    | `/api/conductor/refresh`    | Force cache refresh      |
+| GET    | `/api/conductor/refresh`    | Force catalog rebuild    |
 
-### JIT Intelligence
+### JIT
 
-| Method | Path                           | Description                        |
-| ------ | ------------------------------ | ---------------------------------- |
-| POST   | `/api/jit/product/{id}`       | SSE stream of live intelligence    |
+| Method | Path                     | Description              |
+| ------ | ------------------------ | ------------------------ |
+| POST   | `/api/jit/product/{id}`  | SSE stream of intelligence |
+
+### Curation
+
+| Method | Path                          | Description                |
+| ------ | ----------------------------- | -------------------------- |
+| GET    | `/api/curation/relationships/pending` | Pending relationships |
+| GET    | `/api/curation/relationships/{product_id}` | Relationships for product |
+| POST   | `/api/curation/relationships` | Create/confirm relationship |
+| DELETE | `/api/curation/relationships` | Reject/remove relationship |
 
 ### System
 
-| Method | Path                | Description        |
-| ------ | ------------------- | ------------------ |
-| GET    | `/api/health`       | Service health     |
-| GET    | `/api/catalog/health` | Data quality     |
+| Method | Path                  | Description   |
+| ------ | --------------------- | -------------- |
+| GET    | `/api/health`         | Service health |
+| GET    | `/api/catalog/health` | Data quality   |
 
 ---
 
-## Core Components
+## Core components
 
-| Module               | File                        | Purpose                             |
-| -------------------- | --------------------------- | ----------------------------------- |
-| **API Server**       | `server.py`                 | FastAPI + catalog + JIT endpoint    |
-| **JIT Agent**        | `jit_agent.py`              | Gemini-powered live intelligence    |
-| **Trusted Sources**  | `trusted_sources.py`        | Golden Circle whitelist             |
-| **Skeleton Sync**    | `skeleton_sync.py`          | Lightweight Halilit inventory fetch |
-| **Source Rules**     | `source_rules.py`           | THE LAW — data provenance rules    |
-| **Data Service**     | `unified_data_service.py`   | Catalog aggregation                 |
-| **Product Normalizer** | `product_normalizer.py`   | Catalog building & normalization    |
-| **CLI**              | `conductor_main.py`         | Command-line interface              |
-| **MCP**              | `mcp/`                      | Model Context Protocol tools        |
+| Module             | File / path              | Purpose |
+| ------------------ | ------------------------ | ------- |
+| API server         | `server.py`              | FastAPI, catalog, JIT, curation, MCP |
+| Catalog builder    | `product_normalizer.py` | build_catalog(), graph pipeline |
+| Product graph      | `product_graph.py`       | ProductGraph, families, relationships |
+| Graph store        | `product_graph_store.py` | JSON snapshot, optional PostgreSQL |
+| JIT agent          | `jit_agent.py`           | On-demand intelligence stream |
+| Conductor CLI      | `conductor_main.py`      | ingest, sync, rebuild-catalog, dev |
+| Source rules       | `source_rules.py`        | Commercial / Official / Contextual law |
+| MCP                | `mcp/`                   | catalog_db, design_director, ui_bridge, … |
 
 ### Frontend
 
-| Module               | File                              | Purpose                          |
-| -------------------- | --------------------------------- | -------------------------------- |
-| **Galaxy Dashboard** | `views/GalaxyDashboard.tsx`       | Category browser                 |
-| **Product Cockpit**  | `views/ProductPage.tsx`           | Mission Control product view     |
-| **JIT Hook**         | `hooks/useJITIntelligence.ts`     | SSE consumer for JIT stream      |
-| **Brand Themes**     | `styles/brandThemes.ts`           | Brand visual DNA                 |
-| **Slot Backgrounds** | `lib/slotBackgrounds.ts`          | Category contextual backgrounds  |
-| **Cockpit Cards**    | `components/cockpit/*`            | VerdictCard, FieldNotes, etc.    |
+| Module            | Path / file                  | Purpose |
+| ----------------- | ---------------------------- | ------- |
+| App router        | `App.tsx`                    | Galaxy, Spectrum, Product, Curation, DesignArena |
+| Galaxy            | `views/GalaxyDashboard.tsx`   | Category browser |
+| Spectrum          | `views/SpectrumModule.tsx`   | Product grid, filters |
+| Product           | `views/ProductPage.tsx`      | Mission Control, JIT |
+| Curation          | `views/CurationDashboard.tsx`| Relationship review |
+| Design Arena      | `views/DesignArena.tsx`     | Variant experiments |
+| Catalog hook      | `hooks/useConductorCatalog.ts` | React Query catalog |
 
 ---
 
@@ -132,22 +149,25 @@ All data strictly adheres to three authorized sources:
 
 ```bash
 # Backend won't start
-rm -rf backend/__pycache__ && PYTHONPATH=. python3 backend/server.py
+rm -rf backend/__pycache__ && PYTHONPATH=. python backend/server.py
 
-# Frontend shows "No Products"
-curl http://localhost:8000/api/conductor/catalog
-# If empty: PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync
+# No products / empty catalog
+PYTHONPATH=. python backend/conductor_main.py skeleton-sync
+# or full: ingest-all then restart server
+
+# Rebuild catalog + graph only (no scrape)
+PYTHONPATH=. python backend/conductor_main.py rebuild-catalog
 
 # Port in use
 lsof -i :8000 && kill -9 <PID>
 ```
 
-### Repo Strategy
+### Repo strategy
 
-- **Tracked**: Source code, static assets (logos, backgrounds), config
-- **Gitignored**: Brand JSONs, inventory, search indexes, pipeline data, `dist/`, `node_modules/`
-- **Generated at runtime**: inventory.json from skeleton-sync, JIT cache from agent
+- **Tracked**: Source code, static assets (logos, backgrounds), config.
+- **Gitignored**: Brand JSONs, inventory, search indexes, pipeline data, `dist/`, `node_modules/`, `backend/data/`.
+- **Generated**: Catalog and graph built at runtime or via `rebuild-catalog`.
 
 ---
 
-**v9.0.0** · February 14, 2026
+**v9.2.0** · February 2026

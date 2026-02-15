@@ -10,7 +10,6 @@ import {
   HelpCircle,
   Database,
   Layers,
-  Telescope,
 } from "lucide-react";
 import { useNavigationStore } from "../../store/navigationStore";
 import { UNIVERSAL_CATEGORIES } from "../../lib/universalCategories";
@@ -47,9 +46,34 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => ({
   }),
 }));
 
+const BACKEND_HEALTH_TIMEOUT_MS = 6000;
+
 export const GalaxyDashboard = () => {
-  const { goToSpectrum, goToCuration, goToSpectrumV2 } = useNavigationStore();
+  const { goToSpectrum, goToCuration } = useNavigationStore();
   const [dismissedHint, setDismissedHint] = useState(false);
+  const [slowLoadShown, setSlowLoadShown] = useState(false);
+  const [backendReachable, setBackendReachable] = useState<boolean | null>(null);
+
+  // Check backend connectivity first so we don't hang on catalog fetch
+  React.useEffect(() => {
+    let cancelled = false;
+    const controller = new AbortController();
+    const t = setTimeout(() => controller.abort(), BACKEND_HEALTH_TIMEOUT_MS);
+    fetch("/api/health", { signal: controller.signal })
+      .then((r) => (r.ok ? true : Promise.reject(new Error(`${r.status}`))))
+      .then(() => {
+        if (!cancelled) setBackendReachable(true);
+      })
+      .catch(() => {
+        if (!cancelled) setBackendReachable(false);
+      })
+      .finally(() => clearTimeout(t));
+    return () => {
+      cancelled = true;
+      controller.abort();
+    };
+  }, []);
+
   const {
     isLoading,
     error,
@@ -59,15 +83,63 @@ export const GalaxyDashboard = () => {
     metadata,
   } = useConductorCatalog();
 
+  // Show "taking a while" message after 12s so user knows first load can be slow
+  React.useEffect(() => {
+    if (!isLoading) {
+      setSlowLoadShown(false);
+      return;
+    }
+    const t = setTimeout(() => setSlowLoadShown(true), 12_000);
+    return () => clearTimeout(t);
+  }, [isLoading]);
+
+  // Must be called unconditionally (Rules of Hooks) — before any early return
+  const onSlotClick = useCallback(
+    (mainId: string, subId: string) => goToSpectrum(mainId, subId, []),
+    [goToSpectrum],
+  );
+
   const isSampleOnly =
     !isLoading &&
     metadata?.brands?.length === 1 &&
     metadata.brands[0]?.toLowerCase() === "sample";
 
-  const onSlotClick = useCallback(
-    (mainId: string, subId: string) => goToSpectrum(mainId, subId, []),
-    [goToSpectrum],
-  );
+  // Full-screen when backend is unreachable
+  if (backendReachable === false) {
+    return (
+      <div className="flex h-full bg-[#050505] text-white flex-col items-center justify-center p-8 text-center">
+        <div className="max-w-md space-y-4">
+          <h2 className="text-xl font-semibold text-red-400">Cannot reach server</h2>
+          <p className="text-zinc-400 text-sm">
+            The app could not connect to the backend. Start both servers from the project root:
+          </p>
+          <pre className="bg-zinc-900 border border-zinc-700 rounded-lg p-4 text-left text-sm text-zinc-300 overflow-x-auto">
+            ./start.sh
+          </pre>
+          <p className="text-zinc-500 text-xs">
+            Or run the backend on port 8000 and the frontend (e.g. npm run dev) on 5173.
+          </p>
+          <button
+            type="button"
+            onClick={() => window.location.reload()}
+            className="mt-4 px-4 py-2 bg-zinc-700 hover:bg-zinc-600 rounded text-sm font-medium"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // Brief "Connecting..." while health check is in progress
+  if (backendReachable === null) {
+    return (
+      <div className="flex h-full bg-[#050505] text-white flex-col items-center justify-center gap-4">
+        <div className="w-10 h-10 rounded-full border-2 border-zinc-700 border-t-blue-500 animate-spin" />
+        <p className="text-zinc-500 text-sm">Connecting to server…</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex h-full bg-[#050505] text-white overflow-hidden relative flex-col">
@@ -95,11 +167,10 @@ export const GalaxyDashboard = () => {
       {error && !isLoading && (
         <div className="shrink-0 bg-amber-950/90 border-b border-amber-600/40 px-6 py-3 flex items-center justify-between gap-4">
           <p className="text-amber-200 text-sm">
-            Could not load catalog. Run{" "}
-            <code className="bg-black/30 px-1.5 py-0.5 rounded font-mono text-xs">
-              ./start.sh
-            </code>{" "}
-            to start the backend.
+            {error}
+            <span className="block mt-1 text-amber-200/80 text-xs">
+              Ensure backend is running: <code className="bg-black/30 px-1 rounded font-mono">./start.sh</code> or port 8000.
+            </span>
           </p>
           <button
             type="button"
@@ -168,15 +239,6 @@ export const GalaxyDashboard = () => {
           )}
 
           <button
-            onClick={goToSpectrumV2}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-600/15 hover:bg-blue-600/30 border border-blue-500/20 rounded-lg text-blue-400 text-xs font-semibold transition-all"
-            title="Spectrum V2"
-          >
-            <Telescope size={12} />
-            Spectrum V2
-          </button>
-
-          <button
             onClick={goToCuration}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600/15 hover:bg-violet-600/30 border border-violet-500/20 rounded-lg text-violet-400 text-xs font-semibold transition-all"
             title="Product Graph Curation"
@@ -188,29 +250,48 @@ export const GalaxyDashboard = () => {
       </header>
 
       {/* Main Content Grid */}
-      <div className="flex-1 p-5 min-h-0 w-full h-full text-[10px]">
+      <div className="flex-1 p-5 min-h-0 w-full h-full text-[10px] flex flex-col">
         {isLoading ? (
-          <div className="grid grid-cols-3 grid-rows-2 gap-5 h-full w-full mx-auto animate-pulse">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div
-                key={i}
-                className="bg-zinc-900/50 rounded-xl border border-zinc-800/40 overflow-hidden flex flex-col"
-              >
-                <div className="h-11 border-b border-zinc-800/30 bg-zinc-900/30 flex items-center gap-3 px-4">
-                  <div className="w-6 h-6 rounded-lg bg-zinc-800/60" />
-                  <div className="h-3 w-24 bg-zinc-800/60 rounded" />
+          <>
+            <div className="grid grid-cols-3 grid-rows-2 gap-5 h-full w-full mx-auto animate-pulse">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="bg-zinc-900/50 rounded-xl border border-zinc-800/40 overflow-hidden flex flex-col"
+                >
+                  <div className="h-11 border-b border-zinc-800/30 bg-zinc-900/30 flex items-center gap-3 px-4">
+                    <div className="w-6 h-6 rounded-lg bg-zinc-800/60" />
+                    <div className="h-3 w-24 bg-zinc-800/60 rounded" />
+                  </div>
+                  <div className="flex-1 p-3 grid grid-cols-4 gap-3 content-start">
+                    {Array.from({ length: 4 }).map((_, j) => (
+                      <div
+                        key={j}
+                        className="aspect-square rounded-xl bg-zinc-800/30"
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div className="flex-1 p-3 grid grid-cols-4 gap-3 content-start">
-                  {Array.from({ length: 4 }).map((_, j) => (
-                    <div
-                      key={j}
-                      className="aspect-square rounded-xl bg-zinc-800/30"
-                    />
-                  ))}
-                </div>
+              ))}
+            </div>
+            {slowLoadShown && (
+              <div className="mt-4 p-4 bg-amber-950/40 border border-amber-600/30 rounded-lg text-center shrink-0">
+                <p className="text-amber-200 text-sm mb-2">
+                  First load is building the catalog (7,000+ products). This can take 1–2 minutes.
+                </p>
+                <p className="text-amber-200/80 text-xs mb-3">
+                  Ensure the backend is running: <code className="bg-black/30 px-1 rounded">./start.sh</code> or backend on port 8000.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => refetch()}
+                  className="px-4 py-2 bg-amber-600/30 hover:bg-amber-600/50 border border-amber-500/40 rounded text-amber-200 text-sm font-medium"
+                >
+                  Retry
+                </button>
               </div>
-            ))}
-          </div>
+            )}
+          </>
         ) : (
           <div className="grid grid-cols-3 grid-rows-2 gap-5 h-full w-full mx-auto">
             {galaxy.map((sector, sectorIdx) => (

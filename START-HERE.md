@@ -45,16 +45,18 @@ After that, run `./start.sh` whenever you want to open the app.
 
 ---
 
-## Populating the catalog (skeleton sync)
+## Populating the catalog
 
-The v9.0 JIT architecture uses a lightweight skeleton sync (~30 seconds) instead of heavy ingestion:
+**Fast option (skeleton sync, ~30 seconds):**
 
 ```bash
 source .venv/bin/activate
 PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync
 ```
 
-This fetches product names, prices, and thumbnails from Halilit.com. Detailed intelligence is loaded on-demand when users view individual products.
+**Full catalog (Golden List):** `PYTHONPATH=. python3 backend/conductor_main.py ingest-all` (commercial → enrich → sync → graph). Then optionally `rebuild-catalog` to refresh catalog and product graph. See [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md).
+
+Detailed intelligence is loaded on-demand when users view individual products (JIT). **v9.2**
 
 ---
 

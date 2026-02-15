@@ -3,15 +3,21 @@
 CONDUCTOR MAIN — JIT Architecture CLI
 
 Lightweight orchestrator for the Halilit Support Center:
-  skeleton-sync    Fetch basic inventory from Halilit.com (no AI needed)
-  sync             Sync data to frontend
-  catalog          Show catalog statistics
-  dev              Start dev environment (backend + frontend)
-  server           Start API server only
+  skeleton-sync       Fetch basic inventory from Halilit.com (no AI needed)
+  commercial-ingest   Full Halilit commercial ingestion (Golden List: sitemap + optional page scrape)
+  enrich              Enrich catalog from Halilit product pages (description, images, features)
+  ingest-all          Full pipeline: commercial-ingest → enrich → sync → catalog+graph
+                      (Relationships: official → commercial → contextual → spectrum)
+  sync                Sync data to frontend
+  catalog             Show catalog statistics
+  dev                 Start dev environment (backend + frontend)
+  server              Start API server only
 
 Usage:
     python3 backend/conductor_main.py skeleton-sync          # Fetch all brands
     python3 backend/conductor_main.py skeleton-sync "Roland"  # Fetch one brand
+    python3 backend/conductor_main.py commercial-ingest      # Full Golden List (all brands)
+    python3 backend/conductor_main.py commercial-ingest "Roland"  # One brand
     python3 backend/conductor_main.py sync                    # Rebuild frontend data
     python3 backend/conductor_main.py catalog                 # Show stats
     python3 backend/conductor_main.py dev                     # Start dev
@@ -73,6 +79,106 @@ class ConductorCLI:
         except Exception as e:
             logger.error(f"Skeleton sync failed: {e}")
             return False
+
+    def commercial_ingest(self, brand: Optional[str] = None, try_scrape: bool = False, resume: bool = False) -> bool:
+        """
+        Run full Halilit commercial ingestion (Golden List) per source rules:
+        1. Discover all brands from Halilit.com
+        2. Get all product URLs from sitemap
+        3. Match URLs to brands
+        4. For each brand: build products (page scrape when possible, else URL-derived), merge with existing, save to frontend/public/data
+        """
+        try:
+            import subprocess
+            cmd = [sys.executable, str(PROJECT_ROOT / "backend" / "scripts" / "full_rescrape.py")]
+            if brand:
+                cmd.extend(["--brand", brand])
+            if try_scrape:
+                cmd.append("--try-scrape")
+            if resume:
+                cmd.append("--resume")
+            logger.info("Running commercial ingestion (Golden List builder)...")
+            env = os.environ.copy()
+            env["PYTHONPATH"] = str(PROJECT_ROOT)
+            result = subprocess.run(cmd, cwd=str(PROJECT_ROOT), env=env)
+            if result.returncode == 0:
+                self._rebuild_index_after_commercial_ingest()
+            return result.returncode == 0
+        except Exception as e:
+            logger.error(f"Commercial ingest failed: {e}")
+            return False
+
+    def _rebuild_index_after_commercial_ingest(self) -> None:
+        """Rebuild index.json and search artifacts from frontend/public/data brand JSONs."""
+        from backend.unified_data_service import get_ingest_to_frontend_engine
+        engine = get_ingest_to_frontend_engine()
+        all_products = []
+        for b in self.get_all_brands():
+            data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
+            if data_file.exists():
+                try:
+                    with open(data_file) as f:
+                        data = json.load(f)
+                        if isinstance(data, list):
+                            all_products.extend(data)
+                except Exception as e:
+                    logger.warning(f"  Skip {b}: {e}")
+        if all_products:
+            engine.generate_smart_artifacts(all_products)
+            engine.generate_index_metadata(all_products)
+            logger.info(f"Rebuilt index and search for {len(all_products)} products")
+
+    def enrich(self, brand: Optional[str] = None, delay: float = 0.5, merge_dupes: bool = False) -> bool:
+        """
+        Enrich catalog from Halilit product pages (description, images, features, FAQ).
+        Uses Golden List in frontend/public/data; fills missing fields per product page.
+        """
+        try:
+            cmd = [sys.executable, str(PROJECT_ROOT / "backend" / "scripts" / "enrich_catalog.py")]
+            if brand:
+                cmd.extend(["--brand", brand])
+            cmd.extend(["--delay", str(delay)])
+            if merge_dupes:
+                cmd.append("--merge-dupes")
+            env = os.environ.copy()
+            env["PYTHONPATH"] = str(PROJECT_ROOT)
+            logger.info("Running catalog enrichment (Halilit page detail)...")
+            result = subprocess.run(cmd, cwd=str(PROJECT_ROOT), env=env)
+            return result.returncode == 0
+        except Exception as e:
+            logger.error(f"Enrich failed: {e}")
+            return False
+
+    def ingest_all(self, try_scrape: bool = False) -> bool:
+        """
+        Run full ingestion pipeline in order:
+        1. Commercial ingest (Golden List: sitemap + optional page scrape, prices, SKUs)
+        2. Enrich (Halilit product pages: description, images, features, media)
+        3. Sync (rebuild catalog + product graph with relationships in priority order:
+           primary=official, secondary=commercial, 3rd=contextual, 4th=spectrum)
+        Official and contextual product data (specs, reviews) remain JIT on-demand.
+        """
+        logger.info("=== Running full ingestion (commercial → enrich → sync) ===")
+        if not self.commercial_ingest(brand=None, try_scrape=try_scrape, resume=False):
+            logger.error("Commercial ingest failed; stopping.")
+            return False
+        if not self.enrich(brand=None, delay=0.5):
+            logger.warning("Enrich had errors; check log.")
+        if not self.sync_to_frontend(brand=None):
+            logger.warning("Sync had errors; catalog/graph may be incomplete.")
+        self._rebuild_catalog_and_graph()
+        logger.info("=== Full ingestion complete (products, media, relationships) ===")
+        return True
+
+    def _rebuild_catalog_and_graph(self) -> None:
+        """Build catalog and product graph (official → commercial → contextual → spectrum), persist graph snapshot."""
+        try:
+            from backend.product_normalizer import build_catalog
+            data_dir = str(self.frontend_dir / "public" / "data")
+            build_catalog(data_dir, resolve=False)
+            logger.info("Catalog and relationship graph rebuilt and persisted.")
+        except Exception as e:
+            logger.warning(f"Catalog/graph rebuild failed (non-fatal): {e}")
 
     def sync_to_frontend(self, brand: Optional[str] = None) -> bool:
         """Rebuild frontend catalog from existing data files."""
@@ -197,6 +303,11 @@ def main():
 Examples:
   %(prog)s skeleton-sync              # Fetch all brands from Halilit.com
   %(prog)s skeleton-sync "Roland"     # Fetch one brand
+  %(prog)s commercial-ingest         # Full Golden List (all brands, sitemap)
+  %(prog)s commercial-ingest "Roland" --try-scrape   # One brand, attempt page scrape
+  %(prog)s enrich                     # Enrich all brands from Halilit pages
+  %(prog)s enrich "Roland" --delay 0.3   # Enrich one brand, faster delay
+  %(prog)s ingest-all                 # Commercial + enrich (all planned batch ingestions)
   %(prog)s sync                       # Rebuild frontend data
   %(prog)s catalog                    # Show statistics
   %(prog)s dev                        # Start dev environment
@@ -209,9 +320,28 @@ Examples:
     ss = subparsers.add_parser("skeleton-sync", help="Fetch inventory from Halilit.com")
     ss.add_argument("brand", nargs="?", help="Brand name (optional)")
 
+    # commercial-ingest
+    ci = subparsers.add_parser("commercial-ingest", help="Full Halilit Golden List (sitemap + optional page scrape)")
+    ci.add_argument("brand", nargs="?", help="Brand name (optional)")
+    ci.add_argument("--try-scrape", action="store_true", help="Attempt to scrape product pages for prices/details")
+    ci.add_argument("--resume", action="store_true", help="Resume from last progress")
+
+    # enrich
+    en = subparsers.add_parser("enrich", help="Enrich catalog from Halilit product pages (description, images, features)")
+    en.add_argument("brand", nargs="?", help="Brand name (optional)")
+    en.add_argument("--delay", type=float, default=0.5, help="Delay between HTTP requests (seconds)")
+    en.add_argument("--merge-dupes", action="store_true", help="Merge duplicate brand files first")
+
+    # ingest-all
+    ia = subparsers.add_parser("ingest-all", help="Run all planned ingestions: commercial-ingest then enrich")
+    ia.add_argument("--try-scrape", action="store_true", help="Use page scrape during commercial ingest")
+
     # sync
     sync_p = subparsers.add_parser("sync", help="Rebuild frontend data from existing files")
     sync_p.add_argument("brand", nargs="?", help="Brand name (optional)")
+
+    # rebuild-catalog
+    subparsers.add_parser("rebuild-catalog", help="Rebuild catalog and product graph (official → commercial → contextual → spectrum), persist graph snapshot")
 
     # catalog
     subparsers.add_parser("catalog", help="Show catalog statistics")
@@ -233,8 +363,25 @@ Examples:
     try:
         if args.command == "skeleton-sync":
             success = conductor.skeleton_sync(getattr(args, "brand", None))
+        elif args.command == "commercial-ingest":
+            success = conductor.commercial_ingest(
+                getattr(args, "brand", None),
+                try_scrape=getattr(args, "try_scrape", False),
+                resume=getattr(args, "resume", False),
+            )
+        elif args.command == "enrich":
+            success = conductor.enrich(
+                getattr(args, "brand", None),
+                delay=getattr(args, "delay", 0.5),
+                merge_dupes=getattr(args, "merge_dupes", False),
+            )
+        elif args.command == "ingest-all":
+            success = conductor.ingest_all(try_scrape=getattr(args, "try_scrape", False))
         elif args.command == "sync":
             success = conductor.sync_to_frontend(getattr(args, "brand", None))
+        elif args.command == "rebuild-catalog":
+            conductor._rebuild_catalog_and_graph()
+            success = True
         elif args.command == "catalog":
             success = conductor.show_catalog()
         elif args.command == "dev":

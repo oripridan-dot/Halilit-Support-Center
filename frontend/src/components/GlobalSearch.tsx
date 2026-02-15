@@ -247,7 +247,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
                     />
                   ) : (
                     <div className="w-10 h-10 bg-zinc-800/80 rounded-lg flex items-center justify-center text-xs font-bold text-zinc-500 border border-zinc-700/30">
-                      {item.brand_name.charAt(0)}
+                      {(item.brand_name ?? "").charAt(0) || "?"}
                     </div>
                   )}
 
@@ -263,7 +263,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
                     </div>
                     <div className="text-xs text-zinc-500 flex items-center gap-2 mt-0.5">
                       <span className="text-zinc-600 uppercase tracking-wider text-[10px] font-semibold">
-                        {item.brand_name}
+                        {item.brand_name ?? "—"}
                       </span>
                       <span className="text-zinc-700">·</span>
                       <span className="text-zinc-500">{item.category}</span>

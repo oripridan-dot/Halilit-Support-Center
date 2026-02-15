@@ -7,6 +7,7 @@
  * 2. SpectrumModule - Product spectrum
  * 3. ProductPage - Mission Control Cockpit (JIT intelligence)
  * 4. CurationDashboard - Admin curation
+ * 5. DesignArena - Design competition (Galaxy/Spectrum variants)
  *
  * All screens consume data from: useConductorCatalog (React Query)
  */
@@ -37,12 +38,11 @@ const CurationDashboard = lazy(() =>
     default: m.CurationDashboard,
   })),
 );
-const SpectrumV2 = lazy(() =>
-  import("./components/spectrum/SpectrumV2").then((m) => ({
-    default: m.SpectrumV2,
+const DesignArena = lazy(() =>
+  import("./components/views/DesignArena").then((m) => ({
+    default: m.DesignArena,
   })),
 );
-
 // Loading placeholder with skeleton animation
 const LoadingPlaceholder = () => (
   <div className="flex items-center justify-center w-full h-full bg-black/50">
@@ -88,7 +88,14 @@ function App() {
             <div className="h-5 w-px bg-zinc-800 mx-1" />
             <Breadcrumbs />
           </div>
-          <div className="flex-1 max-w-xl px-6 flex justify-end">
+          <div className="flex-1 max-w-xl px-6 flex justify-end items-center gap-3">
+            <button
+              onClick={() => useNavigationStore.getState().goToArena()}
+              className="text-zinc-500 hover:text-zinc-300 text-xs font-mono uppercase tracking-wider transition-colors"
+              title="Design Competition"
+            >
+              Arena
+            </button>
             <GlobalSearch />
           </div>
         </header>
@@ -113,15 +120,6 @@ function App() {
             </div>
           )}
 
-          {/* Screen 2b: Spectrum V2 (Redesigned with Model Grouping & Zoom) */}
-          {currentView === "SPECTRUM_V2" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <SpectrumV2 />
-              </Suspense>
-            </div>
-          )}
-
           {/* Screen 3: Product Page (Full Analysis View) */}
           {currentView === "PRODUCT_PAGE" && activeProductId && (
             <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
@@ -136,6 +134,15 @@ function App() {
             <div className="absolute inset-0 animate-slide-up">
               <Suspense fallback={<LoadingPlaceholder />}>
                 <CurationDashboard />
+              </Suspense>
+            </div>
+          )}
+
+          {/* Screen 5: Design Arena (Design Competition) */}
+          {currentView === "ARENA" && (
+            <div className="absolute inset-0 animate-fade-in">
+              <Suspense fallback={<LoadingPlaceholder />}>
+                <DesignArena />
               </Suspense>
             </div>
           )}

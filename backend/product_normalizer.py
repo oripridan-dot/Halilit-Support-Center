@@ -1091,13 +1091,44 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             store = get_graph_store()
             graph = store.load_graph_overlay(graph)
 
-            # Run pattern-based discovery for NEW products not yet in families
+            # Relationship priority: 1=official, 2=commercial, 3=contextual, 4=spectrum
+            # 1) Primary — official (brand product pages)
+            try:
+                from backend.ingestion.relationship_merge import merge_relationship_candidates
+                from backend.ingestion.relationship_enrichment_official import (
+                    extract_official_relationship_candidates,
+                )
+                official_candidates = extract_official_relationship_candidates(graph)
+                merge_relationship_candidates(graph, official_candidates, [])
+            except ImportError as e:
+                logger.debug(f"Official relationship enrichment skipped: {e}")
+
+            # 2) Secondary — commercial (catalog: variant families + accessories)
             try:
                 from backend.ingestion.relationship_discovery import get_relationship_discovery
                 discovery = get_relationship_discovery(use_ai=False)
-                graph = discovery.discover_all(graph)
+                graph = discovery.discover_commercial(graph)
             except ImportError:
-                pass  # JIT architecture — relationship_discovery removed
+                pass
+
+            # 3) Third — contextual (reviews, trusted sites)
+            try:
+                from backend.ingestion.relationship_merge import merge_relationship_candidates
+                from backend.ingestion.relationship_enrichment_contextual import (
+                    extract_contextual_relationship_candidates,
+                )
+                contextual_candidates = extract_contextual_relationship_candidates(graph)
+                merge_relationship_candidates(graph, [], contextual_candidates)
+            except ImportError as e:
+                logger.debug(f"Contextual relationship enrichment skipped: {e}")
+
+            # 4) Fourth — spectrum module relations (alternatives by spectrum/tier)
+            try:
+                from backend.ingestion.relationship_discovery import get_relationship_discovery
+                discovery = get_relationship_discovery(use_ai=False)
+                graph = discovery.discover_spectrum_relations(graph)
+            except ImportError:
+                pass
 
             # Persist discovered graph back to JSON snapshot
             store.export_json_snapshot(graph)

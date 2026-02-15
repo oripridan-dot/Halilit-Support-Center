@@ -160,6 +160,13 @@ class GraphStore:
         # Load relationships
         for rel_data in snapshot.get("relationships", []):
             try:
+                # Backfill sources_verified from discovered_from for old snapshots
+                if not rel_data.get("sources_verified"):
+                    df = rel_data.get("discovered_from", "") or ""
+                    if "pattern" in df or "spectrum" in df or "tier" in df:
+                        rel_data = {**rel_data, "sources_verified": ["pattern"]}
+                    elif df:
+                        rel_data = {**rel_data, "sources_verified": [df]}
                 rel = ProductRelationship(**rel_data)
                 # Only keep relationships where both products exist
                 if rel.source_id in graph.products and rel.target_id in graph.products:
@@ -221,15 +228,18 @@ class GraphStore:
             await conn.execute("DELETE FROM product_relationships")
 
             for rel in graph.relationships:
+                sources_json = json.dumps(rel.sources_verified)
                 await conn.execute("""
                     INSERT INTO product_relationships
                         (source_product_id, target_product_id, relationship_type,
                          confidence, ai_discovered, manually_curated,
-                         compatibility_notes, bidirectional, created_at)
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW())
+                         compatibility_notes, discovered_from, sources_verified,
+                         bidirectional, created_at)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9::jsonb, $10, NOW())
                 """, rel.source_id, rel.target_id, rel.relationship_type.value,
                                    rel.confidence, rel.ai_discovered, rel.manually_curated,
-                                   rel.compatibility_notes,
+                                   rel.compatibility_notes, rel.discovered_from or "",
+                                   sources_json,
                                    rel.direction == RelationshipDirection.BIDIRECTIONAL)
                 counts["relationships"] += 1
 
@@ -289,6 +299,9 @@ class GraphStore:
             )
             for row in rows:
                 try:
+                    sv = row.get("sources_verified")
+                    if sv is not None and not isinstance(sv, list):
+                        sv = list(sv) if sv else []
                     rel = ProductRelationship(
                         source_id=row["source_product_id"],
                         target_id=row["target_product_id"],
@@ -298,6 +311,8 @@ class GraphStore:
                         ai_discovered=row["ai_discovered"],
                         manually_curated=row["manually_curated"],
                         compatibility_notes=row.get("compatibility_notes", ""),
+                        discovered_from=row.get("discovered_from") or "",
+                        sources_verified=sv or [],
                         direction=(RelationshipDirection.BIDIRECTIONAL
                                    if row.get("bidirectional") else
                                    RelationshipDirection.UNIDIRECTIONAL),
@@ -342,6 +357,7 @@ class GraphStore:
             ai_discovered=False,
             manually_curated=True,
             compatibility_notes=notes,
+            sources_verified=["curated"],
         )
         graph.add_relationship(rel)
         # Persist immediately
@@ -381,6 +397,7 @@ class GraphStore:
                 target = graph.products.get(rel.target_id, _unknown)
                 pending.append({
                     **rel.model_dump(),
+                    "is_triple_checked": rel.is_triple_checked,
                     "source_name": source.name,
                     "target_name": target.name,
                     "source_brand": source.brand,

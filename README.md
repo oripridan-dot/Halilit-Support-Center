@@ -1,207 +1,203 @@
-# Halilit Support Center v8.5
+# Halilit Support Center v9.2
 
-**AI-powered product intelligence platform** for musical instruments.  
-Trinity Swarm (3 Gemini 2.0-flash agents) + Celery async workers + React frontend.
+**JIT (Just-in-Time) product intelligence platform** for musical instruments.  
+Skeleton catalog + full ingestion pipeline (commercial → enrich → sync → graph) + on-demand AI intelligence via Gemini 2.0 Flash.
 
-**500+ pipeline products** | **7 indexed brands** | **Enriched catalog with images, specs & descriptions**
+**6k+ products** | **Product graph** (families, relationships: official → commercial → contextual → spectrum) | **Design Arena & Curation**
 
 ---
 
 ## Quick Start
 
 ```bash
-# Prerequisites: Python 3.11+, Node.js 18+, GOOGLE_API_KEY env var
+# Prerequisites: Python 3.11+, Node.js 18+; optional: GOOGLE_API_KEY for JIT
 
 # Install
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r backend/requirements.txt
-cd frontend && pnpm install && cd ..
+cd frontend && (pnpm install || npm install) && cd ..
 
-# Run backend (Terminal 1)
-PYTHONPATH=. python3 backend/server.py
+# Run both servers (recommended)
+PYTHONPATH=. python backend/conductor_main.py dev
+# → Backend http://localhost:8000 · Frontend http://localhost:5173 (or next free port)
 
-# Run frontend (Terminal 2)
-cd frontend && pnpm dev
-
-# Open http://localhost:5173
+# Or run separately: Terminal 1 — PYTHONPATH=. python backend/server.py
+#                   Terminal 2 — cd frontend && pnpm dev
 ```
 
-### Docker (async workers)
+### Populate catalog
 
 ```bash
-docker-compose up -d                # Redis + Postgres + Flower + Workers
+source .venv/bin/activate
+PYTHONPATH=. python backend/conductor_main.py skeleton-sync        # Fast (~30s)
+PYTHONPATH=. python backend/conductor_main.py ingest-all           # Full: commercial → enrich → sync → graph
+PYTHONPATH=. python backend/conductor_main.py rebuild-catalog     # Rebuild catalog + graph only
 ```
 
 ---
 
-## Architecture
+## Architecture (v9.2)
 
 ```
-Frontend (React 18 + Vite + Zustand + React Query + Tailwind CSS)
-    ↕ REST + SSE + WebSocket
-FastAPI Backend (server.py — port 8000)
-    ↕
-Celery Task Queue (Redis broker → distributed workers)
-    ↕
-Trinity Swarm (3 Gemini 2.0-flash agents)
-    → CommercialScout  (harvest from Halilit.com)
-    → OfficialVerifier (enrich with specs, images, taxonomy)
-    → ExternalValidator (audit, compliance, risk scoring)
-    ↕
-Ingestion Pipeline (7 phases: Harvest → Enrich → Visuals → Tier → Prepare → Validate → Approve)
-    → Real-time SSE sync to frontend
-    → Learning system (agent memory + feedback loops)
+┌─────────────────────────────────────────────────────────────────────────┐
+│  FRONTEND (React 18 + Vite + Zustand + React Query + Tailwind)          │
+│  Views: GalaxyDashboard · SpectrumModule · ProductPage · Curation ·     │
+│         DesignArena   Data: useConductorCatalog()                        │
+└──────────────────────────────┬──────────────────────────────────────────┘
+                               │ REST / SSE
+┌──────────────────────────────▼──────────────────────────────────────────┐
+│  API (FastAPI — port 8000)                                              │
+│  /api/conductor/*  Catalog, taxonomy, filter, refresh                   │
+│  /api/jit/product/{id}  SSE stream (JIT intelligence)                  │
+│  /api/curation/*   Relationships, families, pending review             │
+│  /api/mcp/*        MCP tools (catalog, design_director, ui_bridge)      │
+└──────────────────────────────┬──────────────────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────────────────┐
+│  DATA LAYER                                                              │
+│  · frontend/public/data/*.json  (brand product files, generated)         │
+│  · product_normalizer.build_catalog()  → indexes, health, graph         │
+│  · backend/data/graph/product_graph.json  (families + relationships)     │
+└──────────────────────────────┬──────────────────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────────────────┐
+│  INGESTION (Conductor CLI)                                               │
+│  commercial-ingest → full_rescrape (Golden List from Halilit sitemap)   │
+│  enrich → Halilit product pages (description, images, features)         │
+│  sync → Rebuild index + artifacts                                       │
+│  rebuild-catalog → build_catalog() + graph (relationship priority)      │
+└──────────────────────────────┬──────────────────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────────────────┐
+│  RELATIONSHIP GRAPH (priority order)                                    │
+│  1. Official   — Brand page “accessories/related” + text                │
+│  2. Commercial — Variant families + accessory links (catalog)            │
+│  3. Contextual — Reviews: “works with X”                                │
+│  4. Spectrum   — Same spectrum/tier alternatives (cross-brand)           │
+└──────────────────────────────┬──────────────────────────────────────────┘
+                               │
+┌──────────────────────────────▼──────────────────────────────────────────┐
+│  JIT AGENT (on-demand, per product)                                     │
+│  Trigger: user opens product. Streams: snap → intel → wisdom → explore   │
+│  Tools: read_halilit_page, search_trusted_reviews. Cache: 7-day TTL      │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Project Structure
+## Main application flow
+
+1. **Galaxy** — Category tiles (galaxies/spectrums) with product counts.
+2. **Spectrum** — Subcategory product grid (filter by brand, price).
+3. **Product page** — Full detail; JIT stream fills specs, verdict, pros/cons when opened.
+4. **Curation** — Review/confirm AI-discovered relationships.
+5. **Design Arena** — Galaxy/Spectrum variant experiments.
+
+All views use **useConductorCatalog()** (React Query); catalog is built once per server start (or on refresh) and includes product graph indexes.
+
+---
+
+## System overview
+
+| Layer        | Technology / Location |
+| ------------ | --------------------- |
+| **Frontend** | React 18, TypeScript, Vite 5, Zustand, React Query, Tailwind, Framer Motion |
+| **Backend**  | Python 3.11+, FastAPI, Pydantic v2, google-genai (Gemini 2.0 Flash) |
+| **Catalog**  | build_catalog() in product_normalizer.py; reads frontend/public/data/*.json |
+| **Graph**    | ProductGraph (product_graph.py), GraphStore (JSON snapshot + optional PostgreSQL) |
+| **Ingestion**| Conductor CLI → full_rescrape, enrich_catalog, sync, rebuild-catalog |
+| **JIT**      | jit_agent.py; SSE stream per product; file-based cache |
+
+---
+
+## Project structure
 
 ```
 backend/
-├── server.py                      # FastAPI server + enriched catalog API
-├── celery_config.py               # Celery + Redis configuration
-├── tasks.py                       # Distributed agent tasks
-├── unified_agent_orchestrator.py  # Trinity Swarm orchestration
-├── unified_data_service.py        # Product normalization & data pipeline
-├── unified_quality_gates.py       # Quality gates, audit & feedback
-├── unified_learning_system.py     # Agent learning & improvement
-├── product_normalizer.py          # Product shape normalization
-├── conductor_main.py              # CLI interface
-├── auto_sync_engine.py            # Real-time SSE sync
-├── ingestion_versioning.py        # Pipeline version tracking
-├── model_grouper.py               # Model grouping engine for Spectrum V2
-├── api/                           # Routers (copilot, tasks, streams, ws, spectrum)
-├── ingestion/                     # 7-phase pipeline modules
-├── agents/                        # Perfection map & quality tracking
-├── scripts/                       # Utilities (type gen, search index, images)
-├── config/                        # Brand tiers, DB schema
-├── tests/                         # Test suites
-└── data/                          # Generated pipeline data (gitignored)
+├── server.py              # FastAPI: catalog, JIT, curation, MCP, static
+├── conductor_main.py      # CLI: skeleton-sync, commercial-ingest, enrich, ingest-all, sync, rebuild-catalog, catalog, dev, server
+├── product_normalizer.py  # build_catalog(), normalize_product(), graph pipeline
+├── product_graph.py       # ProductGraph, CanonicalProduct, ProductRelationship, families
+├── product_graph_store.py # JSON snapshot + optional PostgreSQL
+├── jit_agent.py           # On-demand product intelligence (SSE)
+├── unified_data_service.py # Sync engine, search artifacts, index metadata
+├── source_rules.py        # Three Source Rules (Commercial / Official / Contextual)
+├── api/                   # curation_router, mcp_router
+├── ingestion/             # halilit_page_scraper, relationship_*, taxonomy, data_models
+├── mcp/                   # MCP servers (catalog_db, design_director, ui_bridge, …)
+├── scripts/               # full_rescrape, enrich_catalog, generate_search_index, …
+├── config/                # init_db.sql, mcp_servers.json
+└── data/                  # graph/, ingestion/ (gitignored)
 
 frontend/
 ├── src/
-│   ├── App.tsx                    # 4-view router (Galaxy, Spectrum, SpectrumV2, ProductPage)
-│   ├── components/views/          # GalaxyDashboard, SpectrumModule, ProductPage
-│   ├── components/spectrum/       # SpectrumV2, SpectrumTrack, FamilySidebar, ZoomControl
-│   ├── hooks/                     # React Query hooks
-│   ├── lib/                       # Utilities (categories, search, images)
-│   ├── store/                     # Zustand state management
-│   ├── types/                     # TypeScript definitions
-│   └── workers/                   # Web Worker (search)
-├── public/                        # Static assets (tracked)
-└── vite.config.ts                 # Dev proxy → localhost:8000
-
-docker-compose.yml                 # Redis + PostgreSQL + Celery workers + Flower
-Dockerfile                         # Worker container image
-```
-
-> **Note**: Product data files (brand JSONs, shards) are **generated by the pipeline** and gitignored. Run the ingestion pipeline or `conductor_main.py sync` to populate.
-
----
-
-## API Reference
-
-### Conductor (catalog data)
-
-| Method | Path                        | Description              |
-| ------ | --------------------------- | ------------------------ |
-| GET    | `/api/conductor/catalog`    | Enriched product catalog |
-| GET    | `/api/conductor/taxonomy`   | Category & brand schema  |
-| POST   | `/api/conductor/filter`     | Filtered product query   |
-| GET    | `/api/conductor/categories` | Category summary         |
-| GET    | `/api/conductor/refresh`    | Force cache refresh      |
-
-### Skills & Pipeline
-
-| Method | Path                         | Description          |
-| ------ | ---------------------------- | -------------------- |
-| POST   | `/api/copilot/pipeline`      | Run full pipeline    |
-| POST   | `/api/copilot/batch-ingest`  | Batch processing     |
-| POST   | `/api/copilot/execute-skill` | Execute single skill |
-| GET    | `/api/copilot/skills`        | List skills          |
-
-### Task Queue (async)
-
-| Method | Path                     | Description |
-| ------ | ------------------------ | ----------- |
-| POST   | `/api/tasks/submit`      | Submit task |
-| GET    | `/api/tasks/{id}/status` | Task status |
-| GET    | `/api/tasks/queue/stats` | Queue stats |
-
----
-
-## CLI
-
-```bash
-PYTHONPATH=. python3 backend/conductor_main.py catalog        # Catalog stats
-PYTHONPATH=. python3 backend/conductor_main.py ingest [brand] # Run ingestion
-PYTHONPATH=. python3 backend/conductor_main.py sync           # Sync to frontend
-PYTHONPATH=. python3 backend/conductor_main.py learning       # Learning status
-PYTHONPATH=. python3 backend/conductor_main.py audit          # Audit trail
-```
-
-## Tests
-
-```bash
-PYTHONPATH=. python3 -m pytest backend/tests/ -v
+│   ├── App.tsx            # Router: Galaxy, Spectrum, ProductPage, Curation, DesignArena
+│   ├── components/views/  # GalaxyDashboard, SpectrumModule, ProductPage, CurationDashboard, DesignArena
+│   ├── hooks/             # useConductorCatalog, useJITIntelligence
+│   ├── store/             # navigationStore
+│   └── types/
+├── public/data/           # Brand JSONs, index.json, search_index_min.json (generated)
+└── vite.config.ts         # Proxy to backend :8000
 ```
 
 ---
 
-## Changelog
+## CLI (Conductor)
 
-### v8.5 (February 13, 2026)
+| Command           | Description |
+| ----------------- | ----------- |
+| `skeleton-sync`   | Fast inventory from Halilit.com (~30s) |
+| `commercial-ingest` | Golden List (sitemap + optional page scrape) |
+| `enrich`          | Enrich from Halilit product pages (delay, merge-dupes) |
+| `ingest-all`      | Full pipeline: commercial-ingest → enrich → sync → rebuild-catalog |
+| `sync`            | Rebuild frontend data and search index from brand JSONs |
+| `rebuild-catalog` | Rebuild catalog and product graph (official→commercial→contextual→spectrum) |
+| `catalog`         | Print catalog stats |
+| `dev`             | Start backend + frontend |
+| `server`          | API server only |
 
-- **Spectrum V2**: New model-grouping view with semantic zoom, instrument families, and series sub-tracks
-- **Backend**: Model grouper engine + Spectrum API router (`/api/spectrum`)
-- **Frontend**: 4 new Spectrum components (SpectrumV2, SpectrumTrack, FamilySidebar, ZoomControl)
-- **Navigation**: Smart back-navigation from product page to originating Spectrum view
-- **Version consistency**: All 36 module headers aligned to v8.5
-- **Cleanup**: Removed dead `backend/skills/` directory, fixed stale version references
+---
 
-### v8.4 (February 12, 2026)
+## API (summary)
 
-- **Version bump**: All module headers updated to v8.4
-- **Visual Validator**: Updated from v7.5 to v8.4
-
-### v8.3 (February 11, 2026)
-
-- **Documentation overhaul**: Cleaned all docs, removed stale references to nonexistent files, accurate metrics
-- **Lean docs**: Replaced 400+ line ingestion README index (referencing deleted docs) with concise module reference
-- **Version consistency**: All files aligned to v8.3
-- **Removed dead code**: Deleted legacy `product_normalizer_v8.py`, 5 unused frontend modules
-- **Fixed bugs**: Restored broken `show_catalog()` in conductor CLI, fixed WebSocket startup race condition
-- **Cleanup**: Removed 3 unused Python packages (pandas, colorlog, prometheus-client), fixed phantom TS import
-- **Frontend**: Fixed missing favicon, CSP double-semicolon, updated data source comment
-
-### v8.2 (February 10, 2026)
-
-- Simplified codebase: removed legacy `_v76` suffixes, dead code, broken tests
-- Clean file structure: removed 12 unused files
-- Unified naming: core modules use clean names
-- Fixed Dockerfile: corrected requirements.txt path
-- Consistent versioning across all files
-
-### v8.1
-
-- Enriched Catalog API with descriptions, image galleries, merged specs, quality scores
-- Image fallback chain: hero → gallery → official_images → display → primary_source
-- Visual Validator migrated to `google-genai` SDK with Gemini 2.0-flash
-- Lean repository: generated data removed from git
-
-### v8.0
-
-- Async Task Queue: Celery + Redis distributed pipeline, Flower monitoring
+| Area        | Path / method | Description |
+| ----------- | ------------- | ----------- |
+| Catalog     | GET `/api/conductor/catalog` | Full catalog (products, indexes, metadata, graph_stats) |
+| Taxonomy    | GET `/api/conductor/taxonomy` | Category/brand schema |
+| Refresh     | GET `/api/conductor/refresh` | Force catalog cache rebuild |
+| JIT         | POST `/api/jit/product/{id}` | SSE stream of product intelligence |
+| Curation    | GET/POST/DELETE `/api/curation/*` | Relationships, pending, confirm, reject |
+| MCP         | POST `/api/mcp/*` | MCP tools |
+| Health      | GET `/api/health` | Service health |
 
 ---
 
 ## Documentation
 
-| Document                                                   | Purpose                    |
-| ---------------------------------------------------------- | -------------------------- |
-| [ARCHITECTURE.md](ARCHITECTURE.md)                         | System design & API detail |
-| [backend/ingestion/README.md](backend/ingestion/README.md) | Ingestion pipeline modules |
+| Document | Purpose |
+| -------- | -------- |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | System design, source rules, API reference |
+| [START-HERE.md](START-HERE.md) | Open app in browser, first-time install |
+| [WHAT-TO-DO.md](WHAT-TO-DO.md) | Get app running (v9.2), env, sync, ingest |
+| [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md) | Feature checklist, run/verify steps |
+| [backend/ingestion/README.md](backend/ingestion/README.md) | Ingestion pipeline, relationship priority |
 
 ---
 
-**v8.5.0** · Last updated: February 13, 2026
+## Changelog
+
+### v9.2 (February 2026)
+
+- **Version**: Bumped to 9.2.0 across backend and docs.
+- **Ingestion**: Full pipeline documented: commercial → enrich → sync → rebuild-catalog; relationship priority (official → commercial → contextual → spectrum).
+- **CLI**: Added `rebuild-catalog` to rebuild catalog and product graph without re-scraping.
+- **Docs**: README, ARCHITECTURE, WHAT-TO-DO, START-HERE, IMPLEMENTATION-COMPLETE, and copilot-instructions aligned to v9.2; removed obsolete Celery/Trinity/7-phase references.
+- **Cleanup**: Removed one-time branch-cleanup doc; repo trimmed for current JIT + graph architecture.
+
+### v9.1 / v9.0
+
+- JIT architecture; product graph (families, relationships); Design Arena; Curation dashboard.
+
+---
+
+**v9.2.0** · Last updated: February 2026

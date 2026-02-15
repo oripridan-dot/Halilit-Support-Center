@@ -88,12 +88,20 @@ class ProductRelationship(BaseModel):
                                      description="Why these products are related")
     discovered_from: str = Field(default="",
                                  description="Which source/page revealed this relationship")
+    # Triple-check: which sources verified this relationship (commercial, official, contextual, pattern/heuristic)
+    sources_verified: List[str] = Field(default_factory=list,
+                                       description="Sources that support this edge for cross-validation")
 
     # Timestamps
     created_at: str = Field(
         default_factory=lambda: datetime.utcnow().isoformat())
     updated_at: str = Field(
         default_factory=lambda: datetime.utcnow().isoformat())
+
+    @property
+    def is_triple_checked(self) -> bool:
+        """True when at least two sources have verified this relationship."""
+        return len(self.sources_verified) >= 2
 
     @property
     def is_confirmed(self) -> bool:
@@ -490,14 +498,21 @@ class ProductGraph(BaseModel):
             )
             relationship.direction = default_dir
 
-        # Deduplicate: skip if same source+target+type already exists
+        # Deduplicate: merge if same source+target+type already exists
         for existing in self.relationships:
             if (existing.source_id == relationship.source_id
                     and existing.target_id == relationship.target_id
                     and existing.relationship_type == relationship.relationship_type):
-                # Update confidence if new one is higher
-                if relationship.confidence > existing.confidence:
-                    existing.confidence = relationship.confidence
+                # Merge sources_verified (union) and bump confidence
+                for src in relationship.sources_verified:
+                    if src not in existing.sources_verified:
+                        existing.sources_verified.append(src)
+                existing.confidence = max(
+                    existing.confidence,
+                    relationship.confidence,
+                    min(1.0, 0.5 + 0.2 * len(existing.sources_verified)),
+                )
+                existing.updated_at = datetime.utcnow().isoformat()
                 return
 
         self.relationships.append(relationship)
@@ -541,7 +556,7 @@ class ProductGraph(BaseModel):
         # Relationship index (per product)
         # Index under BOTH source and target so either side can look up the rel
         for rel in self.relationships:
-            rel_dict = rel.model_dump()
+            rel_dict = {**rel.model_dump(), "is_triple_checked": rel.is_triple_checked}
             relationships_map.setdefault(rel.source_id, []).append(rel_dict)
             # Always index the target side too — product pages need to find
             # e.g., what accessories exist for them (target of accessory_for)
@@ -558,6 +573,7 @@ class ProductGraph(BaseModel):
         """Summary statistics for metadata."""
         confirmed = sum(1 for r in self.relationships if r.is_confirmed)
         pending = sum(1 for r in self.relationships if r.needs_review)
+        triple_checked = sum(1 for r in self.relationships if r.is_triple_checked)
         type_counts = {}
         for r in self.relationships:
             type_counts[r.relationship_type.value] = type_counts.get(
@@ -572,6 +588,7 @@ class ProductGraph(BaseModel):
             "total_relationships": len(self.relationships),
             "confirmed_relationships": confirmed,
             "pending_review": pending,
+            "triple_checked_relationships": triple_checked,
             "products_in_families": products_in_families,
             "products_without_family": len(self.products) - products_in_families,
             "relationship_type_counts": type_counts,

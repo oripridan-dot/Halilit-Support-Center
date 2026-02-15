@@ -79,14 +79,6 @@ try:
 except Exception as e:
     logger.warning(f"Failed to register MCP: {e}")
 
-# ── Spectrum API ──
-try:
-    from backend.api.spectrum_router import router as spectrum_router
-    app.include_router(spectrum_router, tags=["Spectrum"])
-    logger.info("Spectrum endpoints registered at /api/spectrum")
-except Exception as e:
-    logger.warning(f"Failed to register spectrum router: {e}")
-
 # ── Product Graph Curation API ──
 try:
     from backend.api.curation_router import router as curation_router
@@ -114,13 +106,15 @@ def _invalidate_catalog_cache():
 
 
 def _build_catalog_cache():
-    """Build catalog and cache the pre-serialized JSON response."""
+    """Build catalog and cache the pre-serialized JSON response.
+    Uses resolve=False for faster first load (~30-60s vs 2+ min with 7k products).
+    """
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
     with _catalog_build_lock:
         if _catalog_cache_json is not None and (time.time() - _catalog_cache_time) < CATALOG_CACHE_TTL:
             return
         t0 = time.time()
-        catalog = build_catalog(str(FRONTEND_PUBLIC_DATA))
+        catalog = build_catalog(str(FRONTEND_PUBLIC_DATA), resolve=False)
 
         for p in catalog["products"]:
             for field in STRIP_FIELDS:

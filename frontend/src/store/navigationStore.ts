@@ -13,7 +13,7 @@
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'SPECTRUM_V2' | 'PRODUCT_PAGE' | 'CURATION';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'CURATION' | 'ARENA';
 
 /**
  * Core navigation state that determines what the user sees
@@ -38,11 +38,11 @@ export interface NavigationState {
   openProductPage: (productId: string) => void;
   closeProductPage: () => void;
 
-  // Spectrum V2 (redesigned)
-  goToSpectrumV2: () => void;
-
   // Admin views
   goToCuration: () => void;
+
+  // Design competition
+  goToArena: () => void;
 
   // Utility actions
   updateFilters: (filters: string[]) => void;
@@ -120,11 +120,12 @@ export const useNavigationStore = create<NavigationState>((set) => ({
 
   /**
    * Close product analysis page
-   * Returns to the previous Spectrum view while keeping state
+   * Returns to the previous view (Spectrum or Galaxy) while keeping state
    */
   closeProductPage: () => set((state) => {
-    // Return to whichever spectrum was active, default to SPECTRUM_V2
-    const returnTo = (state as any)._previousView === 'SPECTRUM' ? 'SPECTRUM' : 'SPECTRUM_V2';
+    const prev = (state as { _previousView?: AppView })._previousView;
+    const returnTo: AppView =
+      prev === 'SPECTRUM' || prev === 'ARENA' ? prev : 'GALAXY';
     return {
       currentView: returnTo,
       activeProductId: null,
@@ -133,19 +134,19 @@ export const useNavigationStore = create<NavigationState>((set) => ({
   }),
 
   /**
-   * Navigate to Spectrum V2 (redesigned with model grouping & zoom)
+   * Navigate to curation dashboard (admin view)
    */
-  goToSpectrumV2: () => set({
-    currentView: 'SPECTRUM_V2',
+  goToCuration: () => set({
+    currentView: 'CURATION',
     activeProductId: null,
     lastError: null,
   }),
 
   /**
-   * Navigate to curation dashboard (admin view)
+   * Navigate to Design Arena (design competition view)
    */
-  goToCuration: () => set({
-    currentView: 'CURATION',
+  goToArena: () => set({
+    currentView: 'ARENA',
     activeProductId: null,
     lastError: null,
   }),

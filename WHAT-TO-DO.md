@@ -1,4 +1,4 @@
-# What to do — get the app running (v9.0 JIT)
+# What to do — get the app running (v9.2 JIT)
 
 Do these in order, from the **project root** (the folder that contains `backend/` and `frontend/`).
 
@@ -70,22 +70,31 @@ Keep the terminal open. To stop: **Ctrl+C**.
 
 ## If you see "No products" or empty catalog
 
-Product data comes from a **skeleton sync** — a lightweight scrape of Halilit.com that collects only ID, Name, Price, URL, and Thumbnail.
+Product data can come from either:
 
-Run the skeleton sync:
+**Option A — Skeleton sync** (fast, ~30 seconds): ID, Name, Price, URL, Thumbnail only.
 
 ```bash
 source .venv/bin/activate
 PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync
 ```
 
-Or directly:
+This writes `frontend/public/data/inventory.json`.
+
+**Option B — Full catalog** (Golden List + optional enrich): full commercial data, many brands.
 
 ```bash
-PYTHONPATH=. python3 backend/skeleton_sync.py
+source .venv/bin/activate
+PYTHONPATH=. python3 backend/conductor_main.py commercial-ingest
+# optional: PYTHONPATH=. python3 backend/conductor_main.py enrich
 ```
 
-This takes ~30 seconds for all brands and writes `frontend/public/data/inventory.json`.
+Or run both in one go: `PYTHONPATH=. python3 backend/conductor_main.py ingest-all`
+
+After scraping, rebuild catalog and product graph:  
+`PYTHONPATH=. python3 backend/conductor_main.py rebuild-catalog`
+
+See [backend/ingestion/README.md](backend/ingestion/README.md) and [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md) for the full pipeline.
 
 ---
 
@@ -113,4 +122,8 @@ The JIT Agent requires:
 | Install frontend  | `cd frontend && (pnpm install \|\| npm install) && cd ..` |
 | Optional .env     | `cp .env.example .env` then edit |
 | Skeleton sync     | `PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync` |
-| Start app         | `./start.sh` |
+| Full pipeline     | `PYTHONPATH=. python3 backend/conductor_main.py ingest-all` |
+| Rebuild catalog  | `PYTHONPATH=. python3 backend/conductor_main.py rebuild-catalog` |
+| Start app         | `./start.sh` or `PYTHONPATH=. python backend/conductor_main.py dev` |
+
+Planned features and implementation status: [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md).

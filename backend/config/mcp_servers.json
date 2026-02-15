@@ -1,25 +1,9 @@
 {
   "servers": [
-    {
-      "name": "catalog-db",
-      "transport": "sse",
-      "url": "http://localhost:8102/mcp",
-      "timeout_seconds": 5.0,
-      "enabled": false
-    },
-    {
-      "name": "web-search",
-      "transport": "sse",
-      "url": "http://localhost:8100/mcp",
-      "timeout_seconds": 15.0,
-      "enabled": false
-    },
-    {
-      "name": "image-tools",
-      "transport": "sse",
-      "url": "http://localhost:8101/mcp",
-      "timeout_seconds": 20.0,
-      "enabled": false
-    }
+    {"name": "catalog-db", "transport": "sse", "url": "http://localhost:8102/mcp", "timeout_seconds": 5, "enabled": false},
+    {"name": "web-search", "transport": "sse", "url": "http://localhost:8100/mcp", "timeout_seconds": 15, "enabled": false},
+    {"name": "image-tools", "transport": "sse", "url": "http://localhost:8101/mcp", "timeout_seconds": 20, "enabled": false},
+    {"name": "ui-bridge", "transport": "sse", "url": "http://localhost:8200/mcp", "timeout_seconds": 30, "enabled": true},
+    {"name": "design-director", "transport": "sse", "url": "http://localhost:8300/mcp", "timeout_seconds": 15, "enabled": true}
   ]
 }

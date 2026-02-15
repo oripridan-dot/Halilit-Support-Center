@@ -187,6 +187,27 @@ class RelationshipDiscovery:
         
         return graph
 
+    def discover_commercial(self, graph: ProductGraph) -> ProductGraph:
+        """
+        Phase 2 in relationship priority: commercial (catalog/Halilit data).
+        Variant families + accessory links from same brand. Sources tagged "commercial".
+        """
+        logger.info("Relationship discovery (commercial): variants + accessories")
+        graph = self._discover_variant_families(graph)
+        graph = self._discover_accessories(graph)
+        graph.rebuild_indexes()
+        return graph
+
+    def discover_spectrum_relations(self, graph: ProductGraph) -> ProductGraph:
+        """
+        Phase 4 in relationship priority: spectrum module relations.
+        Alternatives (same spectrum, tier, cross-brand). Sources tagged "spectrum".
+        """
+        logger.info("Relationship discovery (spectrum): alternatives by spectrum/tier")
+        graph = self._discover_alternatives(graph)
+        graph.rebuild_indexes()
+        return graph
+
     def _discover_variant_families(self, graph: ProductGraph) -> ProductGraph:
         """
         Group products into families based on base model name matching.
@@ -290,8 +311,9 @@ class RelationshipDiscovery:
                         direction=RelationshipDirection.UNIDIRECTIONAL,
                         confidence=0.6,
                         ai_discovered=False,
-                        discovered_from="pattern_matching",
+                        discovered_from="commercial_catalog",
                         compatibility_notes=f"Name overlap: {', '.join(shared)}",
+                        sources_verified=["commercial"],
                     )
                     graph.add_relationship(rel)
                     relationships_created += 1
@@ -353,6 +375,7 @@ class RelationshipDiscovery:
                                         ai_discovered=False,
                                         discovered_from="spectrum_tier_matching",
                                         compatibility_notes=f"Same spectrum ({spectrum_id}), same tier ({tier})",
+                                        sources_verified=["spectrum"],
                                     )
                                     graph.add_relationship(rel)
                                     relationships_created += 1

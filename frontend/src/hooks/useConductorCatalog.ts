@@ -164,6 +164,9 @@ export interface ConductorCatalog {
     families?: Record<string, FamilyMeta>;
 }
 
+/** Catalog request timeout (first load can take 1–2 min with 7k+ products). */
+const CATALOG_FETCH_TIMEOUT_MS = 120_000;
+
 /**
  * Load unified Conductor catalog — the single data source for all 3 screens.
  */
@@ -171,20 +174,44 @@ export const useConductorCatalog = () => {
     const { data, isLoading, error, refetch } = useQuery<ConductorCatalog>({
         queryKey: ['conductor-catalog'],
         queryFn: async () => {
-            const response = await fetch('/api/conductor/catalog');
-            if (!response.ok) {
-                throw new Error(`Failed to load catalog: ${response.statusText}`);
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), CATALOG_FETCH_TIMEOUT_MS);
+            try {
+                const response = await fetch('/api/conductor/catalog', {
+                    signal: controller.signal,
+                });
+                clearTimeout(timeoutId);
+                if (response.status === 503) {
+                    const body = await response.json().catch(() => ({}));
+                    throw new Error(
+                        body?.error || 'Catalog is still building. Wait a minute and click Retry.'
+                    );
+                }
+                if (!response.ok) {
+                    throw new Error(`Failed to load catalog: ${response.status} ${response.statusText}`);
+                }
+                const catalog: ConductorCatalog = await response.json();
+                if (import.meta.env.DEV) {
+                    console.log(
+                        `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
+                        `${catalog.metadata.brands.length} brands, ` +
+                        `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies, ` +
+                        `health: ${catalog.metadata.health_score ?? '?'}/100`
+                    );
+                }
+                return catalog;
+            } catch (err) {
+                clearTimeout(timeoutId);
+                if (err instanceof Error) {
+                    if (err.name === 'AbortError') {
+                        throw new Error(
+                            'Catalog request timed out. The first load can take 1–2 minutes. Click Retry.'
+                        );
+                    }
+                    throw err;
+                }
+                throw err;
             }
-            const catalog: ConductorCatalog = await response.json();
-            if (import.meta.env.DEV) {
-                console.log(
-                    `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
-                    `${catalog.metadata.brands.length} brands, ` +
-                    `${Object.keys(catalog.metadata.galaxy_counts).length} galaxies, ` +
-                    `health: ${catalog.metadata.health_score ?? '?'}/100`
-                );
-            }
-            return catalog;
         },
         staleTime: 5 * 60 * 1000,
         gcTime: 10 * 60 * 1000,

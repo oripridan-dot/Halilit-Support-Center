@@ -182,13 +182,14 @@ async def get_product_relationships(product_id: str):
         rels = graph.get_relationships_for(product_id)
         product = graph.products[product_id]
 
-        # Enrich relationship data with product names
+        # Enrich relationship data with product names and triple-check fields
         enriched = []
         for rel in rels:
             source = graph.products.get(rel.source_id)
             target = graph.products.get(rel.target_id)
             enriched.append({
                 **rel.model_dump(),
+                "is_triple_checked": rel.is_triple_checked,
                 "source_name": source.name if source else "Unknown",
                 "target_name": target.name if target else "Unknown",
                 "source_image": source.image_url if source else "",
@@ -269,7 +270,10 @@ async def create_relationship(req: CreateRelationshipRequest):
         rel = store.add_curated_relationship(
             graph, req.source_id, req.target_id, rel_type, req.notes
         )
-        return {"status": "created", "relationship": rel.model_dump()}
+        return {
+            "status": "created",
+            "relationship": {**rel.model_dump(), "is_triple_checked": rel.is_triple_checked},
+        }
 
     except HTTPException:
         raise
