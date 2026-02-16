@@ -2,12 +2,10 @@
 /**
  * HALILIT SUPPORT CENTER — JIT Architecture
  *
- * Four screens that share the same data source:
+ * Three screens that share the same data source:
  * 1. GalaxyDashboard - Category browser (galaxy view)
  * 2. SpectrumModule - Product spectrum
  * 3. ProductPage - Mission Control Cockpit (JIT intelligence)
- * 4. CurationDashboard - Admin curation
- * 5. DesignArena - Design competition (Galaxy/Spectrum variants)
  *
  * All screens consume data from: useConductorCatalog (React Query)
  */
@@ -31,16 +29,6 @@ const SpectrumModule = lazy(() =>
 const ProductPage = lazy(() =>
   import("./components/views/ProductPage").then((m) => ({
     default: m.ProductPage,
-  })),
-);
-const CurationDashboard = lazy(() =>
-  import("./components/views/CurationDashboard").then((m) => ({
-    default: m.CurationDashboard,
-  })),
-);
-const DesignArena = lazy(() =>
-  import("./components/views/DesignArena").then((m) => ({
-    default: m.DesignArena,
   })),
 );
 // Loading placeholder with skeleton animation
@@ -89,13 +77,6 @@ function App() {
             <Breadcrumbs />
           </div>
           <div className="flex-1 max-w-xl px-6 flex justify-end items-center gap-3">
-            <button
-              onClick={() => useNavigationStore.getState().goToArena()}
-              className="text-zinc-500 hover:text-zinc-300 text-xs font-mono uppercase tracking-wider transition-colors"
-              title="Design Competition"
-            >
-              Arena
-            </button>
             <GlobalSearch />
           </div>
         </header>
@@ -129,23 +110,6 @@ function App() {
             </div>
           )}
 
-          {/* Screen 4: Curation Dashboard (Admin) */}
-          {currentView === "CURATION" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <CurationDashboard />
-              </Suspense>
-            </div>
-          )}
-
-          {/* Screen 5: Design Arena (Design Competition) */}
-          {currentView === "ARENA" && (
-            <div className="absolute inset-0 animate-fade-in">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <DesignArena />
-              </Suspense>
-            </div>
-          )}
         </main>
       </div>
     </GlobalErrorBoundary>

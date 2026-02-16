@@ -31,7 +31,6 @@ app = FastAPI(title="Halilit Design Director")
 # Project root
 _PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
 _FRONTEND_VIEWS = _PROJECT_ROOT / "frontend" / "src" / "components" / "views"
-_ARENA_DIR = _FRONTEND_VIEWS / "arena"
 
 # -------------------------------------------------------------------------
 # 1. THE LOGIC (Data Contracts & Requirements)
@@ -95,7 +94,7 @@ COMPONENT_LOGIC = {
 STYLES = {
     "A": {
         "name": "The Industrial Pro",
-        "vibe": "High density, data-heavy, Sweetwater/Thomann vibes. Dark grays, amber warnings, monospace fonts. For serious audio engineers. Use 'Geist Mono' or 'JetBrains Mono' feel. Dense information layout, minimal ornamentation.",
+        "vibe": "High density, data-heavy, Sweetwater vibes. Dark grays, amber warnings, monospace fonts. For serious audio engineers. Use 'Geist Mono' or 'JetBrains Mono' feel. Dense information layout, minimal ornamentation.",
     },
     "B": {
         "name": "The Cyber-Futurist",
@@ -145,7 +144,7 @@ TASK: Create a React/TypeScript/Tailwind component for '{component}'.
 
     return {
         "status": "success",
-        "instructions": f"Paste these 3 prompts into Lovable.dev or v0.dev. Save results as '{component}A.tsx', '{component}B.tsx', '{component}C.tsx' in frontend/src/components/views/arena/.",
+        "instructions": f"Paste these 3 prompts into Lovable.dev or v0.dev. Save results as '{component}A.tsx', '{component}B.tsx', '{component}C.tsx' in frontend/src/components/views/.",
         "prompts": briefs,
     }
 
@@ -153,110 +152,6 @@ TASK: Create a React/TypeScript/Tailwind component for '{component}'.
 # -------------------------------------------------------------------------
 # TOOL 2: SCAFFOLD DESIGN ARENA
 # -------------------------------------------------------------------------
-
-
-def _handle_scaffold_arena(arguments: dict[str, Any]) -> dict[str, Any]:
-    component_name = arguments.get("component_name", "GalaxyDashboard")
-    target_path = _FRONTEND_VIEWS / "DesignArena.tsx"
-
-    # Arena supports both Galaxy and Spectrum - scaffold (plain string, no f-string)
-    code = '''import React, { useState } from "react";
-import { Monitor, Zap, Hexagon, LayoutGrid, ScanLine } from "lucide-react";
-
-// Arena variant components - create these files and uncomment
-// import { GalaxyDashboardA } from "./arena/GalaxyDashboardA";
-// import { GalaxyDashboardB } from "./arena/GalaxyDashboardB";
-// import { GalaxyDashboardC } from "./arena/GalaxyDashboardC";
-// import { SpectrumModuleA } from "./arena/SpectrumModuleA";
-// import { SpectrumModuleB } from "./arena/SpectrumModuleB";
-// import { SpectrumModuleC } from "./arena/SpectrumModuleC";
-
-type ComponentType = "GalaxyDashboard" | "SpectrumModule";
-type Variant = "A" | "B" | "C";
-
-export const DesignArena = () => {
-  const [activeComponent, setActiveComponent] = useState<ComponentType>("GalaxyDashboard");
-  const [activeVariant, setActiveVariant] = useState<Variant>("A");
-
-  return (
-    <div className="w-full h-full flex flex-col bg-[#050505] text-white">
-      {/* Tab bar: Component + Variant switcher */}
-      <div className="h-16 border-b border-zinc-800 flex items-center justify-between px-6 bg-zinc-950/95 z-50 shrink-0">
-        <div className="flex items-center gap-4">
-          <span className="text-zinc-500 font-mono text-xs tracking-widest uppercase mr-2">
-            Design Competition
-          </span>
-          <div className="flex gap-2">
-            <button
-              onClick={() => setActiveComponent("GalaxyDashboard")}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 ${activeComponent === "GalaxyDashboard" ? "bg-blue-600/80 text-white" : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"}`}
-            >
-              <LayoutGrid size={14} /> Galaxy
-            </button>
-            <button
-              onClick={() => setActiveComponent("SpectrumModule")}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 ${activeComponent === "SpectrumModule" ? "bg-blue-600/80 text-white" : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"}`}
-            >
-              <ScanLine size={14} /> Spectrum
-            </button>
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setActiveVariant("A")}
-            className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${activeVariant === "A" ? "bg-amber-600 text-white shadow-lg shadow-amber-900/50" : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"}`}
-          >
-            <Monitor size={14} /> Industrial
-          </button>
-          <button
-            onClick={() => setActiveVariant("B")}
-            className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${activeVariant === "B" ? "bg-purple-600 text-white shadow-lg shadow-purple-900/50" : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"}`}
-          >
-            <Zap size={14} /> Futurist
-          </button>
-          <button
-            onClick={() => setActiveVariant("C")}
-            className={`px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${activeVariant === "C" ? "bg-white text-black shadow-lg shadow-white/20" : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700"}`}
-          >
-            <Hexagon size={14} /> Minimalist
-          </button>
-        </div>
-      </div>
-
-      {/* Stage - replace with actual components once files exist */}
-      <div className="flex-1 overflow-hidden relative">
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-zinc-500 font-mono text-sm pointer-events-none">
-          <p className="mb-2">Create arena variants and uncomment imports above.</p>
-          <p className="text-xs opacity-60">
-            {activeComponent} variant {activeVariant}
-          </p>
-        </div>
-        {/* Uncomment when variant files exist:
-        <div className="w-full h-full overflow-auto">
-          {activeComponent === "GalaxyDashboard" && activeVariant === "A" && <GalaxyDashboardA />}
-          {activeComponent === "GalaxyDashboard" && activeVariant === "B" && <GalaxyDashboardB />}
-          {activeComponent === "GalaxyDashboard" && activeVariant === "C" && <GalaxyDashboardC />}
-          {activeComponent === "SpectrumModule" && activeVariant === "A" && <SpectrumModuleA />}
-          {activeComponent === "SpectrumModule" && activeVariant === "B" && <SpectrumModuleB />}
-          {activeComponent === "SpectrumModule" && activeVariant === "C" && <SpectrumModuleC />}
-        </div>
-        */}
-      </div>
-    </div>
-  );
-};
-'''
-
-    _ARENA_DIR.mkdir(parents=True, exist_ok=True)
-    target_path.parent.mkdir(parents=True, exist_ok=True)
-    target_path.write_text(code, encoding="utf-8")
-
-    return {
-        "status": "success",
-        "file_created": str(target_path.relative_to(_PROJECT_ROOT)),
-        "arena_dir": str(_ARENA_DIR.relative_to(_PROJECT_ROOT)),
-        "message": f"Design Arena scaffolded. Create GalaxyDashboardA/B/C.tsx and SpectrumModuleA/B/C.tsx in arena/, then uncomment the imports in DesignArena.tsx.",
-    }
 
 
 # -------------------------------------------------------------------------
@@ -279,21 +174,6 @@ TOOLS = {
             "required": ["component_name"],
         },
         "handler": _handle_generate_briefs,
-    },
-    "scaffold_design_arena": {
-        "name": "scaffold_design_arena",
-        "description": "Creates the React DesignArena component to view 3 design variants side-by-side for Galaxy and Spectrum.",
-        "inputSchema": {
-            "type": "object",
-            "properties": {
-                "component_name": {
-                    "type": "string",
-                    "description": "Optional: component name for context (default GalaxyDashboard)",
-                    "default": "GalaxyDashboard",
-                },
-            },
-        },
-        "handler": _handle_scaffold_arena,
     },
 }
 

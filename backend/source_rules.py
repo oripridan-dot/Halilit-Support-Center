@@ -43,7 +43,7 @@ THE THREE SOURCES AND THEIR STRICT BOUNDARIES
    RULE: Must fetch from AT LEAST 3 well-trusted review websites
    RULE: Each review must be SPECIFIC to the exact product (not generic)
    RULE: Sources must be reputable (SoundOnSound, MusicRadar, Sweetwater,
-         Thomann, YouTube reviewers, Reddit, GearPage, etc.)
+         YouTube reviewers, Reddit, GearPage, etc.)
    RULE: Does NOT change specs, prices, or product identity
    REQUIRES: Golden List from Commercial Scout
 
@@ -161,7 +161,7 @@ MIN_REVIEW_SOURCES = 3
 # Well-known trusted review sources
 TRUSTED_REVIEW_SOURCES: Set[str] = {
     "soundonsound.com", "musicradar.com", "sweetwater.com",
-    "thomann.de", "youtube.com", "reddit.com",
+    "youtube.com", "reddit.com",
     "gearslutz.com", "gearpage.net", "premierguitar.com",
     "guitarworld.com", "keyboardmag.com", "attackmagazine.com",
     "synthtopia.com", "sonicstate.com", "bonedo.de",
@@ -664,7 +664,7 @@ YOUR RESPONSIBILITIES:
 3. Each review must be SPECIFIC to the exact product (not generic brand reviews)
 
 TRUSTED SOURCES (examples):
-SoundOnSound, MusicRadar, Sweetwater, Thomann, YouTube (verified reviewers),
+SoundOnSound, MusicRadar, Sweetwater, YouTube (verified reviewers),
 Reddit (r/synthesizers, r/guitar, etc.), GearPage, Premier Guitar,
 Guitar World, Keyboard Magazine, Reverb.com, Bonedo, Amazona, AudioFanzine
 

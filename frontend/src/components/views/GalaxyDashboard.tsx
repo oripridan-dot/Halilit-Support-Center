@@ -49,7 +49,7 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => ({
 const BACKEND_HEALTH_TIMEOUT_MS = 6000;
 
 export const GalaxyDashboard = () => {
-  const { goToSpectrum, goToCuration } = useNavigationStore();
+  const { goToSpectrum } = useNavigationStore();
   const [dismissedHint, setDismissedHint] = useState(false);
   const [slowLoadShown, setSlowLoadShown] = useState(false);
   const [backendReachable, setBackendReachable] = useState<boolean | null>(null);
@@ -105,26 +105,37 @@ export const GalaxyDashboard = () => {
     metadata.brands[0]?.toLowerCase() === "sample";
 
   // Full-screen when backend is unreachable
+  const retryBackendCheck = useCallback(() => {
+    setBackendReachable(null);
+    const controller = new AbortController();
+    const t = setTimeout(() => controller.abort(), BACKEND_HEALTH_TIMEOUT_MS);
+    fetch("/api/health", { signal: controller.signal })
+      .then((r) => (r.ok ? true : Promise.reject(new Error(`${r.status}`))))
+      .then(() => setBackendReachable(true))
+      .catch(() => setBackendReachable(false))
+      .finally(() => clearTimeout(t));
+  }, []);
+
   if (backendReachable === false) {
     return (
       <div className="flex h-full bg-[#050505] text-white flex-col items-center justify-center p-8 text-center">
         <div className="max-w-md space-y-4">
           <h2 className="text-xl font-semibold text-red-400">Cannot reach server</h2>
           <p className="text-zinc-400 text-sm">
-            The app could not connect to the backend. Start both servers from the project root:
+            The app could not connect to the backend. From the project root, run:
           </p>
           <pre className="bg-zinc-900 border border-zinc-700 rounded-lg p-4 text-left text-sm text-zinc-300 overflow-x-auto">
             ./start.sh
           </pre>
           <p className="text-zinc-500 text-xs">
-            Or run the backend on port 8000 and the frontend (e.g. npm run dev) on 5173.
+            This kills stale processes and waits for the backend before starting the frontend.
           </p>
           <button
             type="button"
-            onClick={() => window.location.reload()}
-            className="mt-4 px-4 py-2 bg-zinc-700 hover:bg-zinc-600 rounded text-sm font-medium"
+            onClick={retryBackendCheck}
+            className="mt-4 px-4 py-2 bg-zinc-700 hover:bg-zinc-600 rounded text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
-            Retry
+            Retry connection
           </button>
         </div>
       </div>
@@ -248,14 +259,6 @@ export const GalaxyDashboard = () => {
             </div>
           )}
 
-          <button
-            onClick={goToCuration}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-600/15 hover:bg-violet-600/30 border border-violet-500/20 rounded-lg text-violet-400 text-xs font-semibold transition-all"
-            title="Product Graph Curation"
-          >
-            <Layers size={12} />
-            Curation
-          </button>
         </div>
       </header>
 

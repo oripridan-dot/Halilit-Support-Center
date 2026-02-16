@@ -6,14 +6,14 @@
  * Screens:
  * 1. GALAXY - Category dashboard
  * 2. SPECTRUM - Product spectrum by brand & price
- * 3. PRODUCT_PAGE - Full product analysis (renamed from PRODUCT_POP)
+ * 3. PRODUCT_PAGE - Full product analysis
  * 
  * Follows unified action patterns and error handling
  */
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'CURATION' | 'ARENA';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE';
 
 /**
  * Core navigation state that determines what the user sees
@@ -37,12 +37,6 @@ export interface NavigationState {
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
   openProductPage: (productId: string) => void;
   closeProductPage: () => void;
-
-  // Admin views
-  goToCuration: () => void;
-
-  // Design competition
-  goToArena: () => void;
 
   // Utility actions
   updateFilters: (filters: string[]) => void;
@@ -124,31 +118,12 @@ export const useNavigationStore = create<NavigationState>((set) => ({
    */
   closeProductPage: () => set((state) => {
     const prev = (state as { _previousView?: AppView })._previousView;
-    const returnTo: AppView =
-      prev === 'SPECTRUM' || prev === 'ARENA' ? prev : 'GALAXY';
+    const returnTo: AppView = prev === 'SPECTRUM' ? prev : 'GALAXY';
     return {
       currentView: returnTo,
       activeProductId: null,
       lastError: null,
     };
-  }),
-
-  /**
-   * Navigate to curation dashboard (admin view)
-   */
-  goToCuration: () => set({
-    currentView: 'CURATION',
-    activeProductId: null,
-    lastError: null,
-  }),
-
-  /**
-   * Navigate to Design Arena (design competition view)
-   */
-  goToArena: () => set({
-    currentView: 'ARENA',
-    activeProductId: null,
-    lastError: null,
   }),
 
   /**

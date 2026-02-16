@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v9.2)
+# Repository Instructions & Context (v9.3)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -28,10 +28,10 @@
 
 ## Project Overview
 
-**Halilit Support Center v9.2** — JIT product intelligence platform for musical instruments.
+**Halilit Support Center v9.3** — JIT product intelligence platform for musical instruments.
 
 - **Architecture**: JIT (Just-in-Time) — skeleton or full catalog + on-demand Gemini 2.0 Flash intelligence. Product graph: families and relationships in priority order (official → commercial → contextual → spectrum).
-- **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Views: GalaxyDashboard, SpectrumModule, ProductPage, CurationDashboard, DesignArena.
+- **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Views: GalaxyDashboard, SpectrumModule, ProductPage.
 - **Backend**: Python 3.11+ + FastAPI + Pydantic v2 + google-genai (Gemini 2.0 Flash). No Celery/Trinity; ingestion via Conductor CLI (commercial-ingest, enrich, sync, rebuild-catalog).
 - **Repo strategy**: Lean — generated data (brand JSONs, graph snapshot, search indexes) is gitignored. Only source code and static assets are tracked.
 
@@ -60,19 +60,19 @@ cd frontend && pnpm dev                  # Frontend only
 
 ---
 
-## File Structure (v9.2)
+## File Structure (v9.3)
 
 ```
 backend/
 ├── source_rules.py           # ⚠️ THE LAW — Three Source Rules (read first!)
-├── server.py                 # FastAPI: catalog, JIT, curation, MCP
+├── server.py                 # FastAPI: catalog, JIT, MCP
 ├── conductor_main.py         # CLI: skeleton-sync, commercial-ingest, enrich, ingest-all, sync, rebuild-catalog, catalog, dev, server
 ├── product_normalizer.py     # build_catalog(), graph pipeline
 ├── product_graph.py          # ProductGraph, families, relationships
 ├── product_graph_store.py    # JSON snapshot (+ optional PostgreSQL)
 ├── jit_agent.py              # On-demand product intelligence (SSE)
 ├── unified_data_service.py    # Sync engine, search artifacts
-├── api/                      # curation_router, mcp_router
+├── api/                      # mcp_router
 ├── ingestion/                # halilit_page_scraper, relationship_*, taxonomy, data_models
 ├── mcp/                      # MCP servers (catalog_db, design_director, ui_bridge, …)
 ├── scripts/                  # full_rescrape, enrich_catalog, generate_search_index, …
@@ -81,8 +81,8 @@ backend/
 
 frontend/
 ├── src/
-│   ├── App.tsx               # Router: Galaxy, Spectrum, ProductPage, Curation, DesignArena
-│   ├── components/views/     # GalaxyDashboard, SpectrumModule, ProductPage, CurationDashboard, DesignArena
+│   ├── App.tsx               # Router: Galaxy, Spectrum, ProductPage
+│   ├── components/views/     # GalaxyDashboard, SpectrumModule, ProductPage
 │   ├── hooks/                # useConductorCatalog, useJITIntelligence
 │   ├── store/                # navigationStore
 │   └── types/
@@ -123,4 +123,4 @@ frontend/
 
 ---
 
-**v9.2.0** · February 2026
+**v9.3.0** · February 2026

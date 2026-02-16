@@ -33,12 +33,6 @@ TRUSTED_SOURCES: List[Dict[str, str]] = [
         "specialty": "Detailed product specs and expert reviews",
     },
     {
-        "name": "Thomann",
-        "domain": "thomann.de",
-        "logo": "/assets/trusted/thomann.png",
-        "specialty": "Europe's largest music store — community reviews",
-    },
-    {
         "name": "Attack Magazine",
         "domain": "attackmagazine.com",
         "logo": "/assets/trusted/attack.png",

@@ -1,9 +1,9 @@
-# Halilit Support Center v9.2
+# Halilit Support Center v9.3
 
 **JIT (Just-in-Time) product intelligence platform** for musical instruments.  
 Skeleton catalog + full ingestion pipeline (commercial → enrich → sync → graph) + on-demand AI intelligence via Gemini 2.0 Flash.
 
-**6k+ products** | **Product graph** (families, relationships: official → commercial → contextual → spectrum) | **Design Arena & Curation**
+**6k+ products** | **Product graph** (families, relationships: official → commercial → contextual → spectrum)
 
 ---
 
@@ -25,6 +25,15 @@ PYTHONPATH=. python backend/conductor_main.py dev
 #                   Terminal 2 — cd frontend && pnpm dev
 ```
 
+### Pre-build catalog (optional, faster first load)
+
+After first ingest, pre-build the catalog cache so the first browser load is instant:
+
+```bash
+source .venv/bin/activate
+PYTHONPATH=. python backend/scripts/prebuild_catalog_cache.py
+```
+
 ### Populate catalog
 
 ```bash
@@ -38,20 +47,19 @@ PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: rem
 
 ---
 
-## Architecture (v9.2)
+## Architecture (v9.3)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │  FRONTEND (React 18 + Vite + Zustand + React Query + Tailwind)          │
-│  Views: GalaxyDashboard · SpectrumModule · ProductPage · Curation ·     │
-│         DesignArena   Data: useConductorCatalog()                        │
+│  Views: GalaxyDashboard · SpectrumModule · ProductPage                   │
+│  Data: useConductorCatalog()                                            │
 └──────────────────────────────┬──────────────────────────────────────────┘
                                │ REST / SSE
 ┌──────────────────────────────▼──────────────────────────────────────────┐
 │  API (FastAPI — port 8000)                                              │
 │  /api/conductor/*  Catalog, taxonomy, filter, refresh                   │
 │  /api/jit/product/{id}  SSE stream (JIT intelligence)                  │
-│  /api/curation/*   Relationships, families, pending review             │
 │  /api/mcp/*        MCP tools (catalog, design_director, ui_bridge)      │
 └──────────────────────────────┬──────────────────────────────────────────┘
                                │
@@ -92,8 +100,6 @@ PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: rem
 1. **Galaxy** — Category tiles (galaxies/spectrums) with product counts.
 2. **Spectrum** — Subcategory product grid (filter by brand, price).
 3. **Product page** — Full detail; JIT stream fills specs, verdict, pros/cons when opened.
-4. **Curation** — Review/confirm AI-discovered relationships.
-5. **Design Arena** — Galaxy/Spectrum variant experiments.
 
 All views use **useConductorCatalog()** (React Query); catalog is built once per server start (or on refresh) and includes product graph indexes.
 
@@ -116,7 +122,7 @@ All views use **useConductorCatalog()** (React Query); catalog is built once per
 
 ```
 backend/
-├── server.py              # FastAPI: catalog, JIT, curation, MCP, static
+├── server.py              # FastAPI: catalog, JIT, MCP, static
 ├── conductor_main.py      # CLI: skeleton-sync, commercial-ingest, enrich, ingest-all, sync, rebuild-catalog, catalog, dev, server
 ├── product_normalizer.py  # build_catalog(), normalize_product(), graph pipeline
 ├── product_graph.py       # ProductGraph, CanonicalProduct, ProductRelationship, families
@@ -124,7 +130,7 @@ backend/
 ├── jit_agent.py           # On-demand product intelligence (SSE)
 ├── unified_data_service.py # Sync engine, search artifacts, index metadata
 ├── source_rules.py        # Three Source Rules (Commercial / Official / Contextual)
-├── api/                   # curation_router, mcp_router
+├── api/                   # mcp_router
 ├── ingestion/             # halilit_page_scraper, relationship_*, taxonomy, data_models
 ├── mcp/                   # MCP servers (catalog_db, design_director, ui_bridge, …)
 ├── scripts/               # full_rescrape, enrich_catalog, generate_search_index, …
@@ -133,8 +139,8 @@ backend/
 
 frontend/
 ├── src/
-│   ├── App.tsx            # Router: Galaxy, Spectrum, ProductPage, Curation, DesignArena
-│   ├── components/views/  # GalaxyDashboard, SpectrumModule, ProductPage, CurationDashboard, DesignArena
+│   ├── App.tsx            # Router: Galaxy, Spectrum, ProductPage
+│   ├── components/views/  # GalaxyDashboard, SpectrumModule, ProductPage
 │   ├── hooks/             # useConductorCatalog, useJITIntelligence
 │   ├── store/             # navigationStore
 │   └── types/
@@ -166,9 +172,9 @@ frontend/
 | ----------- | ------------- | ----------- |
 | Catalog     | GET `/api/conductor/catalog` | Full catalog (products, indexes, metadata, graph_stats) |
 | Taxonomy    | GET `/api/conductor/taxonomy` | Category/brand schema |
-| Refresh     | GET `/api/conductor/refresh` | Force catalog cache rebuild |
+| Refresh     | GET `/api/conductor/refresh` | Trigger catalog rebuild (async by default; `?block=true` for legacy blocking) |
+| Refresh status | GET `/api/conductor/refresh/status` | Poll progress: idle \| running \| complete \| failed |
 | JIT         | POST `/api/jit/product/{id}` | SSE stream of product intelligence |
-| Curation    | GET/POST/DELETE `/api/curation/*` | Relationships, pending, confirm, reject |
 | MCP         | POST `/api/mcp/*` | MCP tools |
 | Health      | GET `/api/health` | Service health |
 
@@ -180,7 +186,7 @@ frontend/
 | -------- | -------- |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System design, source rules, API reference |
 | [START-HERE.md](START-HERE.md) | Open app in browser, first-time install |
-| [WHAT-TO-DO.md](WHAT-TO-DO.md) | Get app running (v9.2), env, sync, ingest |
+| [WHAT-TO-DO.md](WHAT-TO-DO.md) | Get app running (v9.3), env, sync, ingest |
 | [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md) | Feature checklist, run/verify steps |
 | [backend/ingestion/README.md](backend/ingestion/README.md) | Ingestion pipeline, relationship priority |
 
@@ -188,18 +194,18 @@ frontend/
 
 ## Changelog
 
-### v9.2 (February 2026)
+### v9.3 (February 2026)
 
-- **Version**: Bumped to 9.2.0 across backend and docs.
-- **Ingestion**: Full pipeline documented: commercial → enrich → sync → rebuild-catalog; relationship priority (official → commercial → contextual → spectrum).
-- **CLI**: Added `rebuild-catalog` to rebuild catalog and product graph without re-scraping.
-- **Docs**: README, ARCHITECTURE, WHAT-TO-DO, START-HERE, IMPLEMENTATION-COMPLETE, and copilot-instructions aligned to v9.2; removed obsolete Celery/Trinity/7-phase references.
-- **Cleanup**: Removed one-time branch-cleanup doc; repo trimmed for current JIT + graph architecture.
+- **Version**: Bumped to 9.3.0 across backend, frontend, and docs.
+- **Async catalog refresh**: Non-blocking refresh; poll `/api/conductor/refresh/status`.
+- **Catalog build monitoring**: Prebuild script with progress bar; `/api/conductor/build/status` for first-load monitoring.
+- **FastAPI lifespan**: Migrated from deprecated `on_event` to lifespan context manager.
+- **Tests**: Added pytest-asyncio; fixed MCP config test for flexible server count.
 
 ### v9.1 / v9.0
 
-- JIT architecture; product graph (families, relationships); Design Arena; Curation dashboard.
+- JIT architecture; product graph (families, relationships).
 
 ---
 
-**v9.2.0** · Last updated: February 2026
+**v9.3.0** · Last updated: February 2026

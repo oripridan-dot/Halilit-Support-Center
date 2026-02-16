@@ -1,6 +1,6 @@
 # Halilit Support Center — Architecture
 
-**Version**: 9.2.0 (JIT + Product Graph)  
+**Version**: 9.3.0 (JIT + Product Graph)  
 **Updated**: February 2026
 
 ---
@@ -14,7 +14,7 @@ AI-powered product intelligence platform using a **Just-in-Time (JIT)** architec
 | Catalog           | Built from `frontend/public/data/*.json` (commercial + enrich) |
 | Product graph     | Families + relationships (official → commercial → contextual → spectrum) |
 | Intelligence      | JIT — live per-product research via Gemini 2.0 |
-| Trusted sources   | Golden Circle (Sound On Sound, Sweetwater, Thomann, …) |
+| Trusted sources   | Golden Circle (Sound On Sound, Sweetwater, …) |
 | Cache             | Catalog: 5 min server TTL; JIT: 7-day file-based per product |
 
 ---
@@ -25,8 +25,7 @@ AI-powered product intelligence platform using a **Just-in-Time (JIT)** architec
 ┌──────────────────────────────────────────────────────────────────┐
 │                    FRONTEND (React 18 + Vite)                    │
 │  Zustand · React Query · Tailwind · Framer Motion                │
-│  Views: GalaxyDashboard · SpectrumModule · ProductPage ·         │
-│         CurationDashboard · DesignArena                          │
+│  Views: GalaxyDashboard · SpectrumModule · ProductPage             │
 │  Data: useConductorCatalog() · useJITIntelligence(SSE)             │
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓  REST / SSE
@@ -34,7 +33,6 @@ AI-powered product intelligence platform using a **Just-in-Time (JIT)** architec
 │              API (FastAPI — port 8000)                            │
 │  /api/conductor/*   Catalog, taxonomy, filter, refresh            │
 │  /api/jit/product/* Live product intelligence (SSE)             │
-│  /api/curation/*    Relationships, pending, confirm/reject        │
 │  /api/mcp/*         MCP tools                                    │
 └────────────────────────┬─────────────────────────────────────────┘
                          ↓
@@ -77,7 +75,7 @@ All data adheres to three authorized sources:
 | **Contextual** | Reviews | Opinions, ratings (3+ trusted sources) |
 
 - **Zero tolerance**: No synthetic data. Empty fields over fabricated.
-- **Golden Circle**: Only trusted review domains (e.g. Sound On Sound, Sweetwater, Thomann).
+- **Golden Circle**: Only trusted review domains (e.g. Sound On Sound, Sweetwater).
 - **Enforcement**: `backend/source_rules.py`.
 
 ---
@@ -100,15 +98,6 @@ All data adheres to three authorized sources:
 | ------ | ------------------------ | ------------------------ |
 | POST   | `/api/jit/product/{id}`  | SSE stream of intelligence |
 
-### Curation
-
-| Method | Path                          | Description                |
-| ------ | ----------------------------- | -------------------------- |
-| GET    | `/api/curation/relationships/pending` | Pending relationships |
-| GET    | `/api/curation/relationships/{product_id}` | Relationships for product |
-| POST   | `/api/curation/relationships` | Create/confirm relationship |
-| DELETE | `/api/curation/relationships` | Reject/remove relationship |
-
 ### System
 
 | Method | Path                  | Description   |
@@ -122,7 +111,7 @@ All data adheres to three authorized sources:
 
 | Module             | File / path              | Purpose |
 | ------------------ | ------------------------ | ------- |
-| API server         | `server.py`              | FastAPI, catalog, JIT, curation, MCP |
+| API server         | `server.py`              | FastAPI, catalog, JIT, MCP |
 | Catalog builder    | `product_normalizer.py` | build_catalog(), graph pipeline |
 | Product graph      | `product_graph.py`       | ProductGraph, families, relationships |
 | Graph store        | `product_graph_store.py` | JSON snapshot, optional PostgreSQL |
@@ -135,12 +124,10 @@ All data adheres to three authorized sources:
 
 | Module            | Path / file                  | Purpose |
 | ----------------- | ---------------------------- | ------- |
-| App router        | `App.tsx`                    | Galaxy, Spectrum, Product, Curation, DesignArena |
+| App router        | `App.tsx`                    | Galaxy, Spectrum, Product |
 | Galaxy            | `views/GalaxyDashboard.tsx`   | Category browser |
 | Spectrum          | `views/SpectrumModule.tsx`   | Product grid, filters |
 | Product           | `views/ProductPage.tsx`      | Mission Control, JIT |
-| Curation          | `views/CurationDashboard.tsx`| Relationship review |
-| Design Arena      | `views/DesignArena.tsx`     | Variant experiments |
 | Catalog hook      | `hooks/useConductorCatalog.ts` | React Query catalog |
 
 ---
@@ -170,4 +157,4 @@ lsof -i :8000 && kill -9 <PID>
 
 ---
 
-**v9.2.0** · February 2026
+**v9.3.0** · February 2026

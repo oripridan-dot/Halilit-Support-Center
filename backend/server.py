@@ -19,12 +19,19 @@ import gzip
 import time
 import asyncio
 import threading
+from contextlib import asynccontextmanager
 from pathlib import Path
 from datetime import datetime
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
+from backend.memory_utils import (
+    start_memory_tracking,
+    log_memory_snapshot,
+    check_memory_limit,
+    cleanup_large_caches,
+)
 
 # Disk cache: load pre-built catalog to avoid slow first build on restart
 CATALOG_CACHE_PATH = DATA_DIR / "catalog_cache.json.gz"
@@ -33,13 +40,28 @@ CATALOG_CACHE_MAX_AGE_SEC = 86400  # 24 hours; rebuild if older
 # ── Server-side catalog cache ──
 _catalog_cache_json: bytes | None = None
 _catalog_cache_gzip: bytes | None = None
-_catalog_cache_dict: dict | None = None
+_catalog_cache_dict: dict | None = None  # Only keep dict when actively needed
 _catalog_cache_time: float = 0
 _catalog_build_lock = threading.Lock()
 CATALOG_CACHE_TTL = 300  # 5 minutes
 
 # Fields to strip from products in the catalog response (keep contextual_data so UI can show review_synthesis, real_world_insights, review_sources)
 STRIP_FIELDS = {"search_text", "subcategory", "currency"}
+
+# Async refresh state (thread-safe) — non-blocking catalog rebuild
+_refresh_state: dict = {
+    "status": "idle",  # idle | running | complete | failed
+    "started_at": None,
+    "finished_at": None,
+    "product_count": None,
+    "brands_count": None,
+    "error": None,
+}
+_refresh_state_lock = threading.Lock()
+
+# Catalog build progress (thread-safe) — for first-load monitoring
+_build_progress: dict = {"status": "idle", "step": "", "pct": 0.0, "message": "", "elapsed_s": 0}
+_build_progress_lock = threading.Lock()
 
 # Ensure parent directory is in path
 _parent_dir = str(Path(__file__).parent.parent)
@@ -50,10 +72,52 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # ═══════════════════════════════════════════════════════════════════════════
+# LIFESPAN (startup / shutdown)
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Startup and shutdown lifecycle."""
+    # Start memory tracking
+    start_memory_tracking()
+    log_memory_snapshot("startup")
+    
+    try:
+        from backend.mcp.startup import init_mcp
+        await init_mcp()
+        logger.info("MCP: Ready")
+    except Exception as e:
+        logger.warning(f"MCP init failed: {e}")
+    
+    log_memory_snapshot("after_mcp_init")
+    
+    # Periodic memory check and cleanup
+    async def periodic_memory_check():
+        while True:
+            await asyncio.sleep(60)  # Check every minute
+            check_memory_limit()
+            cleanup_large_caches()
+    
+    asyncio.create_task(periodic_memory_check())
+    
+    yield
+    
+    try:
+        from backend.mcp.startup import shutdown_mcp
+        await shutdown_mcp()
+        logger.info("MCP: Shutdown complete")
+    except Exception as e:
+        logger.warning(f"MCP shutdown: {e}")
+    
+    log_memory_snapshot("shutdown")
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # APP SETUP
 # ═══════════════════════════════════════════════════════════════════════════
 
-app = FastAPI(title="Halilit Support Center API", version=__version__)
+app = FastAPI(title="Halilit Support Center API", version=__version__, lifespan=lifespan)
 
 _origins = os.environ.get("CORS_ORIGINS", "*").strip()
 _cors_origins = _origins.split(",") if _origins else ["*"]
@@ -65,31 +129,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── MCP Integration ──
+# ── MCP Router ──
 try:
     from backend.api.mcp_router import router as mcp_router
-    from backend.mcp.startup import init_mcp, shutdown_mcp
     app.include_router(mcp_router)
-
-    @app.on_event("startup")
-    async def _mcp_startup():
-        await init_mcp()
-
-    @app.on_event("shutdown")
-    async def _mcp_shutdown():
-        await shutdown_mcp()
-
     logger.info("MCP endpoints registered at /api/mcp")
 except Exception as e:
     logger.warning(f"Failed to register MCP: {e}")
-
-# ── Product Graph Curation API ──
-try:
-    from backend.api.curation_router import router as curation_router
-    app.include_router(curation_router, tags=["Product Graph Curation"])
-    logger.info("Curation endpoints registered at /api/curation")
-except Exception as e:
-    logger.warning(f"Failed to register curation router: {e}")
 
 # Paths
 FRONTEND_DIST = str(FRONTEND_DIR / "dist")
@@ -148,9 +194,33 @@ def _build_catalog_cache():
         # Fast path: load from disk cache
         if _load_catalog_from_disk():
             return
-        # Slow path: full build
+        # Slow path: full build with progress reporting
         t0 = time.time()
-        catalog = build_catalog(str(FRONTEND_PUBLIC_DATA), resolve=False)
+
+        def on_progress(step: str, pct: float, msg: str) -> None:
+            with _build_progress_lock:
+                _build_progress["status"] = "building"
+                _build_progress["step"] = step
+                _build_progress["pct"] = pct
+                _build_progress["message"] = msg
+                _build_progress["elapsed_s"] = int(time.time() - t0)
+
+        with _build_progress_lock:
+            _build_progress["status"] = "building"
+            _build_progress["step"] = "start"
+            _build_progress["pct"] = 0.0
+            _build_progress["message"] = "Building catalog..."
+            _build_progress["elapsed_s"] = 0
+
+        catalog = build_catalog(
+            str(FRONTEND_PUBLIC_DATA),
+            resolve=False,
+            on_progress=on_progress,
+        )
+
+        with _build_progress_lock:
+            _build_progress["status"] = "idle"
+            _build_progress["pct"] = 1.0
 
         for p in catalog["products"]:
             for field in STRIP_FIELDS:
@@ -163,9 +233,17 @@ def _build_catalog_cache():
 
         _catalog_cache_json = json_bytes
         _catalog_cache_gzip = gzip_bytes
-        _catalog_cache_dict = catalog
+        # Only keep dict in memory if memory is available (will rebuild from JSON when needed)
+        mem_check = check_memory_limit()
+        if mem_check:
+            _catalog_cache_dict = catalog
+        else:
+            _catalog_cache_dict = None  # Free memory, will rebuild from JSON when needed
+            logger.info("Memory limit high — keeping catalog dict out of memory")
         _catalog_cache_time = time.time()
         build_ms = int((time.time() - t0) * 1000)
+        
+        log_memory_snapshot("after_catalog_build")
 
         # Persist for fast restarts
         try:
@@ -186,6 +264,37 @@ def _startup_catalog_build():
         _build_catalog_cache()
     except Exception as e:
         logger.error(f"Startup catalog build failed: {e}")
+
+
+def _run_refresh_background():
+    """Run catalog refresh in background thread. Updates _refresh_state when done."""
+    global _refresh_state
+    with _refresh_state_lock:
+        _refresh_state["status"] = "running"
+        _refresh_state["started_at"] = datetime.now().isoformat()
+        _refresh_state["finished_at"] = None
+        _refresh_state["product_count"] = None
+        _refresh_state["brands_count"] = None
+        _refresh_state["error"] = None
+    try:
+        _invalidate_catalog_cache()
+        service = get_conductor_data_service()
+        service._catalog_cache = None
+        service._cache_timestamp = None
+        _build_catalog_cache()
+        meta = _catalog_cache_dict.get("metadata", {}) if _catalog_cache_dict else {}
+        with _refresh_state_lock:
+            _refresh_state["status"] = "complete"
+            _refresh_state["finished_at"] = datetime.now().isoformat()
+            _refresh_state["product_count"] = meta.get("total_products", 0)
+            _refresh_state["brands_count"] = len(meta.get("brands", []))
+        logger.info(f"Background refresh complete: {_refresh_state['product_count']} products")
+    except Exception as e:
+        logger.error(f"Background refresh failed: {e}")
+        with _refresh_state_lock:
+            _refresh_state["status"] = "failed"
+            _refresh_state["finished_at"] = datetime.now().isoformat()
+            _refresh_state["error"] = str(e)
 
 
 _startup_thread = threading.Thread(target=_startup_catalog_build, daemon=True)
@@ -261,11 +370,20 @@ async def get_spectrum_star_view(spectrum_id: str):
     Use ZoomLevel (galaxy → constellation → cluster → star) to show
     inner connections at 'star' and outer at 'cluster'.
     """
-    global _catalog_cache_dict, _catalog_cache_time
+    global _catalog_cache_dict, _catalog_cache_time, _catalog_cache_json
     now = time.time()
     if _catalog_cache_dict is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
         loop = asyncio.get_event_loop()
         await loop.run_in_executor(None, _build_catalog_cache)
+    
+    # Rebuild dict from JSON if needed (memory-efficient)
+    if _catalog_cache_dict is None and _catalog_cache_json is not None:
+        try:
+            _catalog_cache_dict = json.loads(_catalog_cache_json.decode("utf-8"))
+        except Exception as e:
+            logger.error(f"Failed to rebuild catalog dict: {e}")
+            return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+    
     if _catalog_cache_dict is None:
         return JSONResponse(status_code=503, content={"error": "Catalog still building"})
 
@@ -310,10 +428,13 @@ async def get_catalog_health():
     try:
         from backend.catalog_validator import validate_catalog
 
-        global _catalog_cache_dict, _catalog_cache_time
+        global _catalog_cache_dict, _catalog_cache_time, _catalog_cache_json
         now = time.time()
         if _catalog_cache_dict is not None and (now - _catalog_cache_time) <= CATALOG_CACHE_TTL:
             catalog = _catalog_cache_dict
+        elif _catalog_cache_json is not None:
+            # Rebuild from JSON if dict not in memory
+            catalog = json.loads(_catalog_cache_json.decode("utf-8"))
         else:
             loop = asyncio.get_event_loop()
             catalog = await loop.run_in_executor(
@@ -345,6 +466,13 @@ async def filter_conductor_products(filters: dict):
         return {"error": str(e), "products": []}
 
 
+@app.get("/api/conductor/build/status")
+async def get_catalog_build_status():
+    """Poll catalog build progress during first load. Returns status, pct (0-1), message, elapsed_s."""
+    with _build_progress_lock:
+        return dict(_build_progress)
+
+
 @app.get("/api/conductor/categories")
 async def get_conductor_categories():
     """Category summary for navigation."""
@@ -356,25 +484,64 @@ async def get_conductor_categories():
 
 
 @app.get("/api/conductor/refresh")
-async def refresh_conductor_catalog():
-    """Force refresh of all catalog caches."""
-    try:
-        _invalidate_catalog_cache()
-        service = get_conductor_data_service()
-        service._catalog_cache = None
-        service._cache_timestamp = None
+async def refresh_conductor_catalog(block: bool = False):
+    """
+    Trigger catalog refresh. By default returns immediately (async).
+    - block=true: Wait for completion (legacy behavior; can freeze API for 30s+).
+    - block=false: Start background refresh, return immediately. Poll /api/conductor/refresh/status.
+    """
+    with _refresh_state_lock:
+        is_running = _refresh_state["status"] == "running"
 
-        _build_catalog_cache()
-        meta = _catalog_cache_dict.get("metadata", {}) if _catalog_cache_dict else {}
+    if is_running:
         return {
-            "status": "refreshed",
-            "product_count": meta.get("total_products", 0),
-            "brands": len(meta.get("brands", [])),
-            "timestamp": meta.get("timestamp", datetime.now().isoformat()),
+            "status": "running",
+            "message": "Refresh already in progress. Poll /api/conductor/refresh/status",
         }
-    except Exception as e:
-        logger.error(f"Refresh failed: {e}")
-        return {"error": str(e), "status": "failed"}
+
+    if block:
+        try:
+            _invalidate_catalog_cache()
+            service = get_conductor_data_service()
+            service._catalog_cache = None
+            service._cache_timestamp = None
+            _build_catalog_cache()
+            meta = _catalog_cache_dict.get("metadata", {}) if _catalog_cache_dict else {}
+            return {
+                "status": "refreshed",
+                "product_count": meta.get("total_products", 0),
+                "brands": len(meta.get("brands", [])),
+                "timestamp": meta.get("timestamp", datetime.now().isoformat()),
+            }
+        except Exception as e:
+            logger.error(f"Refresh failed: {e}")
+            return {"error": str(e), "status": "failed"}
+
+    # Non-blocking: start background thread and return immediately
+    thread = threading.Thread(target=_run_refresh_background, daemon=True)
+    thread.start()
+    return {
+        "status": "started",
+        "message": "Refresh in progress. Poll GET /api/conductor/refresh/status for progress.",
+    }
+
+
+@app.get("/api/conductor/refresh/status")
+async def refresh_conductor_status():
+    """Poll refresh progress. Returns status (idle|running|complete|failed) and result when done."""
+    with _refresh_state_lock:
+        state = dict(_refresh_state)
+    result = {"status": state["status"]}
+    if state["status"] == "complete":
+        result["product_count"] = state["product_count"]
+        result["brands"] = state["brands_count"]
+        result["finished_at"] = state["finished_at"]
+    elif state["status"] == "failed":
+        result["error"] = state["error"]
+        result["finished_at"] = state["finished_at"]
+    elif state["status"] == "running":
+        result["started_at"] = state["started_at"]
+    return result
 
 
 # ═══════════════════════════════════════════════════════════════════════════
