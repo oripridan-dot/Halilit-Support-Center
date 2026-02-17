@@ -31,6 +31,11 @@ const ProductPage = lazy(() =>
     default: m.ProductPage,
   })),
 );
+const ItemsView = lazy(() =>
+  import("./components/views/ItemsView").then((m) => ({
+    default: m.ItemsView,
+  })),
+);
 // Loading placeholder with skeleton animation
 const LoadingPlaceholder = () => (
   <div className="flex items-center justify-center w-full h-full bg-black/50">
@@ -48,7 +53,7 @@ const LoadingPlaceholder = () => (
 
 function App() {
   // Extract strictly what we need
-  const { currentView, activeProductId } = useNavigationStore();
+  const { currentView, activeProductId, goToItems, goToGalaxy } = useNavigationStore();
 
   return (
     <GlobalErrorBoundary>
@@ -74,6 +79,24 @@ function App() {
               </span>
             </button>
             <div className="h-5 w-px bg-zinc-800 mx-1" />
+            <nav className="flex items-center gap-1" aria-label="Main">
+              <button
+                type="button"
+                onClick={goToGalaxy}
+                className="px-2 py-1.5 rounded text-xs font-medium text-zinc-500 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
+              >
+                Dashboard
+              </button>
+              <span className="text-zinc-700">/</span>
+              <button
+                type="button"
+                onClick={goToItems}
+                className="px-2 py-1.5 rounded text-xs font-medium text-zinc-500 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
+              >
+                Items
+              </button>
+            </nav>
+            <div className="h-5 w-px bg-zinc-800 mx-1" />
             <Breadcrumbs />
           </div>
           <div className="flex-1 max-w-xl px-6 flex justify-end items-center gap-3">
@@ -97,6 +120,15 @@ function App() {
             <div className="absolute inset-0 animate-slide-up">
               <Suspense fallback={<LoadingPlaceholder />}>
                 <SpectrumModule />
+              </Suspense>
+            </div>
+          )}
+
+          {/* Screen 4: Structured Items (brand → type → series, variants, accessories, related) */}
+          {currentView === "ITEMS" && (
+            <div className="absolute inset-0 animate-fade-in">
+              <Suspense fallback={<LoadingPlaceholder />}>
+                <ItemsView />
               </Suspense>
             </div>
           )}

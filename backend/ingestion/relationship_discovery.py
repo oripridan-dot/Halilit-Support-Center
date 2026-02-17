@@ -1,20 +1,18 @@
 """
-Relationship Discovery Engine
-==============================
+Relationship Discovery Engine (High Confidence Edition)
+========================================================
+1. Variants: Grouped by strict Family ID or Official URL match.
+2. Accessories: Linked ONLY if:
+    a) Explicitly named in the parent's Official Description/Specs (Confidence 1.0)
+    b) Strong "Designed For" name match (Confidence 0.9)
+3. Alternatives: Same Spectrum + Same Tier (Confidence 0.5 - purely navigational)
 
-Pattern-based discovery of product relationships:
-  - Variants: same brand + base model, different color/size/config
-  - Accessories: bags, cases, stands, strings, cables for instruments
-  - Compatible: same brand products that work together
-  - Alternatives: similar products from different brands in same spectrum
-
-No AI required — pure heuristic matching on product names, categories, and specs.
+No "Compatible With" guessing. No weak regex links.
 """
 
 import logging
 import re
-import unicodedata
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple, Set
 
 from backend.product_graph import (
     ProductGraph,
@@ -30,611 +28,340 @@ from backend.product_graph import (
 logger = logging.getLogger("RelationshipDiscovery")
 
 # ═══════════════════════════════════════════════════════════════════════════
-# PATTERNS
+# PATTERNS (Strict Helpers)
 # ═══════════════════════════════════════════════════════════════════════════
 
-# Color/finish suffixes that indicate variants
+# Suffixes that indicate a Variant (Color/Size)
 COLOR_PATTERN = re.compile(
-    r'\s*[-–]\s*'
-    r'(Black|White|Red|Blue|Silver|Gold|Gray|Grey|Green|Natural|Sunburst|'
-    r'Vintage|Matte|Satin|Gloss|Chrome|Walnut|Cherry|Ebony|Ivory|Maple|'
-    r'Ash|Mahogany|Pink|Purple|Orange|Yellow|Tobacco|Burst|Sparkle|'
-    r'Metallic|Transparent|Trans|Brown|Cream|Clear|Sand|Light|Dark|'
-    r'Seafoam|Surf|Fiesta|Olympic|Candy|Shell|Polar|Midnight|'
-    r'Arctic|Sonic|Daphne|Lake Placid|Sherwood|Pelham|TV Yellow|'
+    r'\s*[-–]\s*(Black|White|Red|Blue|Silver|Gold|Gray|Grey|Green|Natural|Sunburst|'
+    r'Vintage|Matte|Satin|Gloss|Chrome|Walnut|Cherry|Ebony|Ivory|Maple|Ash|Mahogany|'
+    r'Pink|Purple|Orange|Yellow|Tobacco|Burst|Sparkle|Metallic|Transparent|Trans|'
+    r'Brown|Cream|Clear|Sand|Light|Dark|Seafoam|Surf|Fiesta|Olympic|Candy|Shell|'
+    r'Polar|Midnight|Arctic|Sonic|Daphne|Lake Placid|Sherwood|Pelham|TV Yellow|'
     r'Firemist|Wine|Aged|Relic|Road Worn|Faded)\s*$',
     re.IGNORECASE
 )
 
-# Size/config suffixes for keyboard/piano variants
 SIZE_PATTERN = re.compile(
-    r'\s*[-–]?\s*'
-    r'(88|73|61|49|37|25|Compact|Stage|Studio|'
-    r'HP|AW|HA|EX|DX|LX|SE|LE|Plus|Pro|Standard|'
-    r'Mark\s*\d|MK\s*\d|MK\s*I+V?|Gen\s*\d|'
-    r'4-String|5-String|6-String|7-String|8-String|'
-    r'Left Hand|Left Handed|Lefty|LH)\s*$',
+    r'\s*[-–]?\s*(88|73|61|49|37|25|Compact|Stage|Studio|HP|AW|HA|EX|DX|LX|SE|LE|'
+    r'Plus|Pro|Standard|Mark\s*\d|MK\s*\d|Gen\s*\d|4-String|5-String|6-String|'
+    r'7-String|8-String|Left Hand|Left Handed|Lefty|LH)\s*$',
     re.IGNORECASE
 )
 
-# Accessory indicators
-ACCESSORY_PATTERNS = re.compile(
-    r'\b(bag|gig bag|case|hardcase|hard case|soft case|cover|strap|'
-    r'string|strings|pick|picks|plectrum|stand|mount|bracket|clamp|'
-    r'adapter|cable|cord|lead|tuner|capo|pedal|footswitch|foot switch|'
-    r'power supply|charger|battery|replacement|spare|pad set|head set|'
-    r'mute|dampener|polish|cleaner|wax|oil|lube|cloth|toolkit|wrench|'
-    r'key|allen|screw|bolt|felt|washer|sleeve|bushing|grommet|wing nut|'
-    r'cymbal felt|hi hat clutch|drum key|practice pad|dust cover|'
-    r'music stand|sheet music|book|method|tutorial|lesson|'
-    r'headphones|earbuds|ear tips|ear pads|'
-    r'mic clip|mic stand|pop filter|windscreen|shock mount)\b',
-    re.IGNORECASE
-)
+# Accessories keywords
+ACCESSORY_KEYWORDS = {
+    "bag", "case", "cover", "stand", "pedal", "bench", "adapter", "cable",
+    "mount", "holder", "clamp", "kit", "pack", "bundle", "footswitch"
+}
 
-# Hebrew character detection
 HEBREW_PATTERN = re.compile(r'[\u0590-\u05FF]')
 
 
 def _strip_hebrew(text: str) -> str:
-    """Remove Hebrew characters and clean up."""
     return HEBREW_PATTERN.sub('', text).strip()
 
 
 def _normalize_model_name(name: str, brand: str) -> str:
-    """
-    Normalize a product name to a base model identifier.
-    Strips brand prefix, Hebrew, color/size suffixes.
-    """
     clean = name.strip()
-    # Strip brand prefix
     if brand and clean.lower().startswith(brand.lower()):
         clean = clean[len(brand):].strip()
-    # Strip Hebrew
     clean = _strip_hebrew(clean)
-    # Strip color suffix
     clean = COLOR_PATTERN.sub('', clean)
-    # Strip size suffix
     clean = SIZE_PATTERN.sub('', clean)
-    # Normalize whitespace
-    clean = re.sub(r'\s+', ' ', clean).strip()
-    return clean.lower()
+    return re.sub(r'\s+', ' ', clean).strip().lower()
 
 
 def _extract_variant_key(name: str, base_model: str, brand: str) -> str:
-    """Extract what makes this variant different from the base model."""
     clean = name.strip()
     if brand and clean.lower().startswith(brand.lower()):
         clean = clean[len(brand):].strip()
     clean = _strip_hebrew(clean)
-    
-    # Find the color/size suffix
+
     color_match = COLOR_PATTERN.search(clean)
     size_match = SIZE_PATTERN.search(clean)
-    
+
     parts = []
     if size_match:
         parts.append(size_match.group(1).strip())
     if color_match:
         parts.append(color_match.group(1).strip())
-    
-    if parts:
-        return " ".join(parts)
-    
-    # Fallback: last meaningful word
-    words = clean.split()
-    if len(words) > 1:
-        return words[-1]
-    return clean
+
+    return " ".join(parts) if parts else (clean.split()[-1] if " " in clean else clean)
 
 
 def _official_family_key(product: CanonicalProduct) -> Optional[Tuple[str, str]]:
-    """
-    Extract (brand_lower, family_path) from official_url for Official-priority grouping.
-    E.g. https://nordkeyboards.com/products/stage-4-88 -> ("nord", "stage-4").
-    Returns None if product has no official_url or path cannot be derived.
-    """
     url = (product.official_url or "").strip()
     if not url or not url.startswith("http"):
         return None
     try:
-        from urllib.parse import urlparse
-        parsed = urlparse(url)
-        path = (parsed.path or "").strip("/")
-        if not path:
-            return None
-        # Last path segment often encodes model + variant (e.g. stage-4-88, stage-4-73)
-        segments = path.split("/")
-        last = segments[-1] if segments else ""
-        # Strip variant suffix (88, 73, color names) to get family base
-        base = last
-        base = COLOR_PATTERN.sub("", base).strip("- ")
+        path = url.split("?")[0].rstrip("/").split("/")[-1]
+        base = COLOR_PATTERN.sub("", path).strip("- ")
         base = SIZE_PATTERN.sub("", base).strip("- ")
         base = re.sub(r"\s+", "-", base).lower().strip("-")
         if len(base) < 2:
             return None
-        brand_key = (product.brand or "").lower().replace(" ", "-")
-        return (brand_key, base)
+        return ((product.brand or "").lower().replace(" ", "-"), base)
     except Exception:
         return None
 
 
-def _share_official_family_url(a: CanonicalProduct, b: CanonicalProduct) -> bool:
+# ═══════════════════════════════════════════════════════════════════════════
+# VERIFICATION ENGINE
+# ═══════════════════════════════════════════════════════════════════════════
+
+
+def verify_against_official_text(parent: CanonicalProduct, accessory: CanonicalProduct) -> bool:
     """
-    True when both products have official_url and share the same official brand family URL
-    (same host + same family path). Such pairs get confidence 1.0 as high-priority variants.
+    CHECK 1: Does Parent's official text explicitly name the Accessory?
+    Sources checked: description (official/commercial), specs, features list.
     """
-    ka = _official_family_key(a)
-    kb = _official_family_key(b)
-    return ka is not None and kb is not None and ka == kb
+    # Prepare text corpus from parent (description holds merged official/commercial content)
+    corpus = (parent.description or "") + " "
+    if parent.specs:
+        corpus += " " + " ".join(str(v) for v in parent.specs.values())
+    if parent.features:
+        corpus += " " + " ".join(parent.features)
 
+    corpus = corpus.lower()
 
-def _is_accessory(product: CanonicalProduct) -> bool:
-    """Check if a product is an accessory."""
-    name_lower = (product.name or "").lower()
-    return bool(ACCESSORY_PATTERNS.search(name_lower))
+    # Check for Accessory Model Number (High Precision)
+    # e.g. "KSC-70" inside FP-30X description
+    acc_name_parts = _strip_hebrew(accessory.name or "").split()
 
+    # Heuristic: If accessory name is short (e.g. "Bag"), ignore.
+    # We need a specific model code (e.g. "SC-88", "CB-B88", "KSC-70")
+    relevant_model_codes = [
+        w for w in acc_name_parts
+        if any(c.isdigit() for c in w) and len(w) > 3
+    ]
 
-def _same_spectrum(a: CanonicalProduct, b: CanonicalProduct) -> bool:
-    """Check if two products are in the same spectrum."""
-    return a.spectrum_id == b.spectrum_id and a.spectrum_id != ""
+    for code in relevant_model_codes:
+        if code.lower() in corpus:
+            return True
 
+    # CHECK 2: Does Accessory's name contain the Parent's exact model name?
+    # e.g. Accessory: "Roland KSC-70 Stand for FP-30" -> Parent: "Roland FP-30"
+    parent_model = _normalize_model_name(parent.name, parent.brand)
+    if len(parent_model) > 3 and parent_model in (accessory.name or "").lower():
+        return True
 
-def _price_similar(a: CanonicalProduct, b: CanonicalProduct, 
-                   tolerance: float = 0.5) -> bool:
-    """Check if prices are within tolerance ratio of each other."""
-    pa = a.price if a.price > 0 else 0
-    pb = b.price if b.price > 0 else 0
-    if pa == 0 or pb == 0:
-        return True  # Can't compare, assume possible
-    ratio = min(pa, pb) / max(pa, pb)
-    return ratio >= (1 - tolerance)
+    return False
 
 
 # ═══════════════════════════════════════════════════════════════════════════
-# MAIN DISCOVERY ENGINE
+# DISCOVERY CLASS
 # ═══════════════════════════════════════════════════════════════════════════
+
 
 class RelationshipDiscovery:
-    """
-    Discovers product relationships using pattern matching.
-    No AI calls — pure heuristic matching.
-    """
-
     def __init__(self, use_ai: bool = False):
-        self.use_ai = use_ai  # Reserved for future AI-assisted discovery
+        self.use_ai = use_ai
 
     def discover_all(self, graph: ProductGraph) -> ProductGraph:
-        """Run all discovery passes on the graph."""
-        logger.info(f"Starting relationship discovery for {len(graph.products)} products")
-        
-        # Pass 1: Discover variant families
+        logger.info(f"Starting High-Confidence Discovery for {len(graph.products)} products")
+
+        # 1. Families (Structure)
         graph = self._discover_variant_families(graph)
-        
-        # Pass 2: Discover accessory relationships (strict: "designed for" only)
+
+        # 2. Accessories (Strict Verified Links)
         graph = self._discover_accessories(graph)
-        
-        # Pass 3: Discover alternatives (Ecosystem / See Also)
+
+        # 3. Alternatives (Navigation Peers)
         graph = self._discover_alternatives(graph)
-        
-        # Purge weak links: keep only VARIANT_OF, ACCESSORY_FOR, ALTERNATIVE_TO
-        graph = self.purge_weak_relationships(graph)
-        
-        # Rebuild indexes after all mutations
-        graph.rebuild_indexes()
-        
-        stats = graph.get_graph_stats()
-        logger.info(
-            f"Discovery complete: {stats['total_families']} families, "
-            f"{stats['total_relationships']} relationships, "
-            f"{stats['products_in_families']} products in families"
-        )
-        
-        return graph
 
-    def discover_commercial(self, graph: ProductGraph) -> ProductGraph:
-        """
-        Phase 2 in relationship priority: commercial (catalog/Halilit data).
-        Variant families + accessory links from same brand. Sources tagged "commercial".
-        """
-        logger.info("Relationship discovery (commercial): variants + accessories")
-        graph = self._discover_variant_families(graph)
-        graph = self._discover_accessories(graph)
-        graph = self.purge_weak_relationships(graph)
         graph.rebuild_indexes()
-        return graph
-
-    def discover_spectrum_relations(self, graph: ProductGraph) -> ProductGraph:
-        """
-        Phase 4 in relationship priority: spectrum module relations.
-        Alternatives (same spectrum, tier, cross-brand). Sources tagged "spectrum".
-        """
-        logger.info("Relationship discovery (spectrum): alternatives by spectrum/tier")
-        graph = self._discover_alternatives(graph)
-        graph.rebuild_indexes()
-        return graph
-
-    def purge_weak_relationships(self, graph: ProductGraph) -> ProductGraph:
-        """
-        Remove relationships that are not strict catalog tiers.
-        Keep only: VARIANT_OF, ACCESSORY_FOR, ALTERNATIVE_TO (Families, Essentials, Ecosystem).
-        """
-        allowed = {
-            RelationshipType.VARIANT_OF,
-            RelationshipType.ACCESSORY_FOR,
-            RelationshipType.ALTERNATIVE_TO,
-        }
-        removed = 0
-        new_rels = []
-        for r in graph.relationships:
-            if r.relationship_type in allowed:
-                new_rels.append(r)
-            else:
-                removed += 1
-        graph.relationships = new_rels
-        if removed:
-            logger.info(f"Purged {removed} weak relationship(s); kept strict tiers only")
         return graph
 
     def _discover_variant_families(self, graph: ProductGraph) -> ProductGraph:
         """
-        Group products into families with Official priority first, then Commercial fallback.
-
-        1. Official: group by (brand, official_url family path). Same brand + same
-           official URL base path (e.g. nord.com/.../stage-4) → one family, confidence 1.0.
-        2. Commercial: group by brand + normalized model name (name-stripping), confidence 0.9.
+        Group products into families.
+        Priority 1: Official URL overlap (Confidence 1.0)
+        Priority 2: Strict Name Matching (Confidence 0.9)
         """
         orphans = [p for p in graph.products.values() if not p.family_id]
         if not orphans:
             return graph
 
-        # ── Pass 1: Official — group by official_url overlap ──
-        official_groups: Dict[Tuple[str, str], List[CanonicalProduct]] = {}
+        # Pass 1: Official URL Grouping
+        official_groups: Dict[str, List[CanonicalProduct]] = {}
         for p in orphans:
-            if _is_accessory(p):
-                continue
-            key = _official_family_key(p)
-            if key:
-                official_groups.setdefault(key, []).append(p)
+            key_tuple = _official_family_key(p)
+            if key_tuple:
+                key_str = f"{key_tuple[0]}::{key_tuple[1]}"
+                official_groups.setdefault(key_str, []).append(p)
 
         families_created = 0
-        for (brand_key, base_path), members in official_groups.items():
+        for key, members in official_groups.items():
             if len(members) < 2:
                 continue
-            family_id = f"fam_{brand_key}_{base_path.replace(' ', '-')[:40]}"
-            brand = members[0].brand
-            base_name = base_path.replace("-", " ").title()
-            members.sort(key=lambda p: (
-                -(1 if p.image_url else 0),
-                -p.quality_score,
-                -(p.price if p.price > 0 else 0),
-            ))
-            hero = members[0]
-            family = ProductFamily(
-                id=family_id,
-                brand=brand,
-                family_name=f"{brand} {base_name}".strip(),
-                series=_detect_series(hero.name, brand),
-                hero_image=hero.image_url,
-                variant_ids=[m.id for m in members],
-                accessory_ids=[],
-                description=hero.description_short or hero.description,
-                official_family_url=hero.official_url or "",
-            )
-            graph.add_family(family)
-            # Official synapses: same official brand family URL → confidence 1.0 (highest priority)
-            official_confidence = 1.0
-            for i, m in enumerate(members):
-                m.family_id = family_id
-                vkey = _extract_variant_key(m.name, base_name, brand)
-                m.variant = ProductVariant(
-                    variant_key=vkey,
-                    is_default=(i == 0),
-                    sort_order=i,
-                )
-                graph.products[m.id] = m
-            # Variant_of edges between siblings; official_url overlap = 1.0
-            for i, a in enumerate(members):
-                for b in members[i + 1:]:
-                    rel = ProductRelationship(
-                        source_id=a.id,
-                        target_id=b.id,
-                        relationship_type=RelationshipType.VARIANT_OF,
-                        direction=RelationshipDirection.BIDIRECTIONAL,
-                        confidence=official_confidence,
-                        ai_discovered=False,
-                        discovered_from="official_url_overlap",
-                        compatibility_notes="Same official product family URL",
-                        sources_verified=["official"],
-                    )
-                    graph.add_relationship(rel)
+            self._create_family(graph, members, "official_url_match", 1.0)
             families_created += 1
 
-        # ── Pass 2: Commercial — name-based grouping for remaining orphans ──
-        still_orphans = [p for p in orphans if not p.family_id and not _is_accessory(p)]
-        model_groups: Dict[str, List[CanonicalProduct]] = {}
+        # Pass 2: Name-Based Grouping (Fallback)
+        still_orphans = [p for p in orphans if not p.family_id]
+        name_groups: Dict[str, List[CanonicalProduct]] = {}
         for p in still_orphans:
-            base = _normalize_model_name(p.name, p.brand)
-            if not base or len(base) < 3:
+            # Skip accessories from being family roots
+            if any(k in (p.name or "").lower() for k in ACCESSORY_KEYWORDS):
                 continue
-            key = f"{p.brand.lower()}::{base}"
-            model_groups.setdefault(key, []).append(p)
 
-        for key, members in model_groups.items():
+            base = _normalize_model_name(p.name, p.brand)
+            if len(base) < 3:
+                continue
+            name_groups.setdefault(f"{p.brand}::{base}", []).append(p)
+
+        for key, members in name_groups.items():
             if len(members) < 2:
                 continue
-            brand = members[0].brand
-            base_name = _normalize_model_name(members[0].name, brand)
-            family_id = f"fam_{brand.lower().replace(' ', '-')}_{base_name.replace(' ', '-')[:40]}"
-            members.sort(key=lambda p: (
-                -(1 if p.image_url else 0),
-                -p.quality_score,
-                -(p.price if p.price > 0 else 0),
-            ))
-            hero = members[0]
-            family = ProductFamily(
-                id=family_id,
-                brand=brand,
-                family_name=f"{brand} {base_name}".title(),
-                series=_detect_series(hero.name, brand),
-                hero_image=hero.image_url,
-                variant_ids=[m.id for m in members],
-                accessory_ids=[],
-                description=hero.description_short or hero.description,
-            )
-            graph.add_family(family)
-            conf = CONFIDENCE_BY_SOURCE.get("commercial", 0.9)
-            for i, m in enumerate(members):
-                m.family_id = family_id
-                vkey = _extract_variant_key(m.name, base_name, brand)
-                m.variant = ProductVariant(
-                    variant_key=vkey,
-                    is_default=(i == 0),
-                    sort_order=i,
-                )
-                graph.products[m.id] = m
-            for i, a in enumerate(members):
-                for b in members[i + 1:]:
-                    rel = ProductRelationship(
-                        source_id=a.id,
-                        target_id=b.id,
-                        relationship_type=RelationshipType.VARIANT_OF,
-                        direction=RelationshipDirection.BIDIRECTIONAL,
-                        confidence=conf,
-                        ai_discovered=False,
-                        discovered_from="commercial_catalog",
-                        compatibility_notes=f"Name match: {base_name}",
-                        sources_verified=["commercial"],
-                    )
-                    graph.add_relationship(rel)
+            # Extra check: Variants must share category
+            cat = members[0].category
+            if not all(m.category == cat for m in members):
+                continue
+
+            self._create_family(graph, members, "commercial_name_match", 0.9)
             families_created += 1
 
-        logger.info(f"Variant discovery: created {families_created} new families")
+        logger.info(f"Family Discovery: Created {families_created} families")
         return graph
+
+    def _create_family(
+        self,
+        graph: ProductGraph,
+        members: List[CanonicalProduct],
+        method: str,
+        confidence: float,
+    ) -> None:
+        brand = members[0].brand
+        base_name = _normalize_model_name(members[0].name, brand)
+        fid = f"fam_{brand.lower().replace(' ', '-')}_{base_name.replace(' ', '-')[:30]}"
+
+        members.sort(key=lambda p: (-(1 if p.image_url else 0), -p.price))
+        hero = members[0]
+
+        fam = ProductFamily(
+            id=fid,
+            brand=brand,
+            family_name=f"{brand} {base_name}".title(),
+            hero_image=hero.image_url or "",
+            variant_ids=[m.id for m in members],
+            official_family_url=hero.official_url or "",
+        )
+        graph.add_family(fam)
+
+        for i, m in enumerate(members):
+            m.family_id = fid
+            vkey = _extract_variant_key(m.name, base_name, brand)
+            m.variant = ProductVariant(variant_key=vkey, is_default=(i == 0))
+            graph.products[m.id] = m
+
+        # Link siblings
+        for i, a in enumerate(members):
+            for b in members[i + 1 :]:
+                rel = ProductRelationship(
+                    source_id=a.id,
+                    target_id=b.id,
+                    relationship_type=RelationshipType.VARIANT_OF,
+                    direction=RelationshipDirection.BIDIRECTIONAL,
+                    confidence=confidence,
+                    discovered_from=method,
+                    sources_verified=["official"] if confidence == 1.0 else ["commercial"],
+                )
+                graph.add_relationship(rel)
 
     def _discover_accessories(self, graph: ProductGraph) -> ProductGraph:
         """
-        Find accessory relationships (strict "Essentials / Look" logic).
-        Only link when the accessory is *designed for* the product: same brand and
-        accessory name mentions the product's model/family name.
-
-        PERFORMANCE: Limits candidates to 50 per accessory (same brand, prefer same
-        category) to avoid O(accessories × products) freeze with large catalogs.
+        Find accessories with strict verification.
+        ONLY create link if:
+        1. Same Brand.
+        2. Verified by Official Text OR Strong Name Match.
         """
-        accessories = [p for p in graph.products.values() if _is_accessory(p)]
-        non_accessories = [p for p in graph.products.values() if not _is_accessory(p)]
+        accessories = [
+            p
+            for p in graph.products.values()
+            if any(k in (p.name or "").lower() for k in ACCESSORY_KEYWORDS)
+        ]
+        main_units = [p for p in graph.products.values() if p not in accessories]
 
-        # Build index: (brand_lower, category) -> products for fast candidate lookup
-        by_brand_category: Dict[Tuple[str, str], List[CanonicalProduct]] = {}
-        for p in non_accessories:
-            key = ((p.brand or "").lower(), (p.category or ""))
-            by_brand_category.setdefault(key, []).append(p)
+        # Index main units by Brand for speed
+        by_brand: Dict[str, List[CanonicalProduct]] = {}
+        for p in main_units:
+            by_brand.setdefault((p.brand or "").lower(), []).append(p)
 
-        MAX_CANDIDATES = 50
-        relationships_created = 0
+        count = 0
         for acc in accessories:
-            brand_lower = (acc.brand or "").lower()
-            acc_category = (acc.category or "").strip()
-            # Same brand only
-            candidates = [
-                p for (b, c), prods in by_brand_category.items()
-                if b == brand_lower for p in prods
-            ]
-            # Prefer same category, limit to MAX_CANDIDATES
-            sorted_candidates = sorted(
-                candidates,
-                key=lambda x: (1 if (x.category or "").strip() == acc_category else 0, -x.quality_score),
-                reverse=True,
-            )[:MAX_CANDIDATES]
-            for product in sorted_candidates:
-                # Use strict classification: only ACCESSORY_FOR when B names A's model
-                if classify_relationship(product, acc, graph) != RelationshipType.ACCESSORY_FOR:
-                    continue
-                rel = ProductRelationship(
-                    source_id=acc.id,
-                    target_id=product.id,
-                    relationship_type=RelationshipType.ACCESSORY_FOR,
-                    direction=RelationshipDirection.UNIDIRECTIONAL,
-                    confidence=CONFIDENCE_BY_SOURCE.get("commercial", 0.9),
-                    ai_discovered=False,
-                    discovered_from="commercial_catalog",
-                    compatibility_notes="Accessory designed for this product (name match)",
-                    sources_verified=["commercial"],
-                )
-                graph.add_relationship(rel)
-                relationships_created += 1
+            candidates = by_brand.get((acc.brand or "").lower(), [])
+            if not candidates:
+                continue
 
-        logger.info(f"Accessory discovery: created {relationships_created} relationships")
+            for parent in candidates:
+                is_verified = verify_against_official_text(parent, acc)
+
+                if is_verified:
+                    rel = ProductRelationship(
+                        source_id=acc.id,
+                        target_id=parent.id,
+                        relationship_type=RelationshipType.ACCESSORY_FOR,
+                        direction=RelationshipDirection.UNIDIRECTIONAL,
+                        confidence=1.0,
+                        discovered_from="official_text_verification",
+                        compatibility_notes="Explicitly mentioned in official product text",
+                        sources_verified=["official_text_match"],
+                    )
+                    graph.add_relationship(rel)
+                    count += 1
+
+        logger.info(f"Accessory Discovery: Found {count} VERIFIED accessory links")
         return graph
 
     def _discover_alternatives(self, graph: ProductGraph) -> ProductGraph:
         """
-        Find alternative products: same spectrum, different brand, similar tier.
-        Only connect products that are clearly comparable.
+        Alternatives = Navigation Peers.
+        Same Spectrum, Same Tier, Different Brand.
+        Confidence capped at 0.5 because it's an opinion, not a fact.
         """
-        # Group products by spectrum
-        by_spectrum: Dict[str, List[CanonicalProduct]] = {}
+        by_spectrum_tier: Dict[str, List[CanonicalProduct]] = {}
         for p in graph.products.values():
-            if _is_accessory(p) or not p.spectrum_id:
+            if not p.spectrum_id or not p.tier:
                 continue
-            by_spectrum.setdefault(p.spectrum_id, []).append(p)
+            key = f"{p.spectrum_id}::{p.tier}"
+            by_spectrum_tier.setdefault(key, []).append(p)
 
-        relationships_created = 0
-        for spectrum_id, products in by_spectrum.items():
-            if len(products) < 2:
+        count = 0
+        for key, group in by_spectrum_tier.items():
+            if len(group) < 2:
                 continue
 
-            # Group by tier within the spectrum
-            by_tier: Dict[str, List[CanonicalProduct]] = {}
-            for p in products:
-                by_tier.setdefault(p.tier, []).append(p)
+            # Sort by quality, take top 5 representative products per group
+            group.sort(key=lambda x: -x.quality_score)
+            top_group = group[:5]
 
-            for tier, tier_products in by_tier.items():
-                if len(tier_products) < 2:
-                    continue
+            for i, a in enumerate(top_group):
+                for b in top_group[i + 1 :]:
+                    if a.brand == b.brand:
+                        continue  # Skip same brand (that's what families/series are for)
 
-                # Find cross-brand pairs with similar prices
-                brands_seen: Dict[str, List[CanonicalProduct]] = {}
-                for p in tier_products:
-                    brands_seen.setdefault(p.brand, []).append(p)
+                    rel = ProductRelationship(
+                        source_id=a.id,
+                        target_id=b.id,
+                        relationship_type=RelationshipType.ALTERNATIVE_TO,
+                        direction=RelationshipDirection.BIDIRECTIONAL,
+                        confidence=0.5,
+                        discovered_from="spectrum_peer_logic",
+                        compatibility_notes="Similar category and price tier",
+                        sources_verified=["spectrum_logic"],
+                    )
+                    graph.add_relationship(rel)
+                    count += 1
 
-                brand_list = list(brands_seen.keys())
-                for i in range(len(brand_list)):
-                    for j in range(i + 1, len(brand_list)):
-                        brand_a = brand_list[i]
-                        brand_b = brand_list[j]
-                        # Connect the best product from each brand as alternatives
-                        products_a = sorted(brands_seen[brand_a], 
-                                          key=lambda p: -p.quality_score)[:2]
-                        products_b = sorted(brands_seen[brand_b],
-                                          key=lambda p: -p.quality_score)[:2]
-
-                        for pa in products_a:
-                            for pb in products_b:
-                                if _price_similar(pa, pb, tolerance=0.6):
-                                    rel = ProductRelationship(
-                                        source_id=pa.id,
-                                        target_id=pb.id,
-                                        relationship_type=RelationshipType.ALTERNATIVE_TO,
-                                        direction=RelationshipDirection.BIDIRECTIONAL,
-                                        confidence=CONFIDENCE_BY_SOURCE.get("spectrum", 0.5),
-                                        ai_discovered=False,
-                                        discovered_from="spectrum_tier_matching",
-                                        compatibility_notes=f"Same spectrum ({spectrum_id}), same tier ({tier})",
-                                        sources_verified=["spectrum"],
-                                    )
-                                    graph.add_relationship(rel)
-                                    relationships_created += 1
-
-        logger.info(f"Alternative discovery: created {relationships_created} relationships")
+        logger.info(f"Alternative Discovery: Created {count} navigation links")
         return graph
 
-
-def _detect_series(name: str, brand: str) -> str:
-    """Detect product series from name."""
-    clean = name.strip()
-    if brand and clean.lower().startswith(brand.lower()):
-        clean = clean[len(brand):].strip()
-    clean = _strip_hebrew(clean)
-    # Match first series identifier: 2+ uppercase alphanumeric characters
-    match = re.match(r'^([A-Z][A-Z0-9\-]{1,12})', clean)
-    if match and len(match.group(1)) >= 2:
-        return match.group(1)
-    return ""
-
-
-# ═══════════════════════════════════════════════════════════════════════════
-# STRICT "FASHION" SCHEMA — Variant vs Accessory vs None
-# ═══════════════════════════════════════════════════════════════════════════
-
-# Attribute keywords that indicate variant difference only (color, size, key count)
-VARIANT_ATTRIBUTE_KEYWORDS = re.compile(
-    r"\b(88|73|61|49|37|25|Compact|HP|AW|HA|EX|DX|SE|LE|Plus|Pro|Standard|"
-    r"Black|White|Red|Blue|Silver|Gold|Gray|Grey|Green|Natural|Sunburst|"
-    r"4-String|5-String|6-String|7-String|8-String|Keys?|Key)\b",
-    re.IGNORECASE,
-)
-
-
-def _base_name_for_variant_check(name: str, brand: str) -> str:
-    """Strip brand and variant-attribute keywords to get comparable base name."""
-    clean = (name or "").strip()
-    if brand and clean.lower().startswith(brand.lower()):
-        clean = clean[len(brand):].strip()
-    clean = _strip_hebrew(clean)
-    clean = COLOR_PATTERN.sub("", clean)
-    clean = SIZE_PATTERN.sub("", clean)
-    clean = re.sub(r"\s+", " ", clean).strip()
-    return clean.lower()
-
-
-def is_name_variant(name_a: str, name_b: str, brand_a: str = "", brand_b: str = "") -> bool:
-    """
-    True if the two names differ only by attribute keywords (Color, Size, Key Count).
-    Fashion logic: same product, different variant — not "related" products.
-    """
-    base_a = _base_name_for_variant_check(name_a, brand_a)
-    base_b = _base_name_for_variant_check(name_b, brand_b)
-    if not base_a or not base_b:
-        return False
-    return base_a == base_b
-
-
-def _get_model_or_family_name(product: CanonicalProduct, graph: Optional[ProductGraph] = None) -> str:
-    """Best-effort model/family name for accessory matching (e.g. 'Stage 4', 'P-145')."""
-    if graph and product.family_id:
-        fam = graph.families.get(product.family_id)
-        if fam and fam.family_name:
-            return fam.family_name
-    name = (product.name or "").strip()
-    if product.brand and name.lower().startswith(product.brand.lower()):
-        name = name[len(product.brand):].strip()
-    name = _strip_hebrew(name)
-    name = COLOR_PATTERN.sub("", name)
-    name = SIZE_PATTERN.sub("", name)
-    name = re.sub(r"\s+", " ", name).strip()
-    return name[:50] if name else ""
-
-
-def classify_relationship(
-    product_a: CanonicalProduct,
-    product_b: CanonicalProduct,
-    graph: Optional[ProductGraph] = None,
-) -> Optional[RelationshipType]:
-    """
-    Strict three-tier classification. Returns VARIANT_OF, ACCESSORY_FOR, or None.
-    No weak "related" links — drop anything that doesn't fit the catalog model.
-    """
-    # 1) Variant: same official URL or same base name (attribute-only difference)
-    if product_a.official_url and product_b.official_url and product_a.official_url == product_b.official_url:
-        return RelationshipType.VARIANT_OF
-    if is_name_variant(product_a.name, product_b.name, product_a.brand, product_b.brand):
-        return RelationshipType.VARIANT_OF
-
-    # 2) Accessory: B is accessory and B's name mentions A's model/family
-    if _is_accessory(product_b):
-        model_a = _get_model_or_family_name(product_a, graph)
-        if model_a and model_a.lower() in (product_b.name or "").lower():
-            return RelationshipType.ACCESSORY_FOR
-        # Same brand + shared word (e.g. "Nord Soft Case" vs "Nord Stage 4" — "Nord" shared)
-        if product_a.brand and product_a.brand.lower() == (product_b.brand or "").lower():
-            name_b_lower = (product_b.name or "").lower()
-            for part in (product_a.name or "").split():
-                if len(part) > 2 and part.lower() in name_b_lower:
-                    return RelationshipType.ACCESSORY_FOR
-
-    return None  # Drop weak links
-
-
-# ═══════════════════════════════════════════════════════════════════════════
-# SINGLETON
-# ═══════════════════════════════════════════════════════════════════════════
 
 _instance: Optional[RelationshipDiscovery] = None
 
 
 def get_relationship_discovery(use_ai: bool = False) -> RelationshipDiscovery:
-    """Get or create the singleton RelationshipDiscovery instance."""
     global _instance
     if _instance is None:
         _instance = RelationshipDiscovery(use_ai=use_ai)

@@ -56,7 +56,7 @@ PYTHONPATH=. python3 backend/conductor_main.py skeleton-sync
 
 **Full catalog (Golden List):** `PYTHONPATH=. python3 backend/conductor_main.py ingest-all` (commercial → enrich → sync → graph). Then optionally `rebuild-catalog` to refresh catalog and product graph. See [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md).
 
-Detailed intelligence is loaded on-demand when users view individual products (JIT). **v9.2**
+Detailed intelligence is loaded on-demand when users view individual products (JIT). **v9.3**
 
 ---
 

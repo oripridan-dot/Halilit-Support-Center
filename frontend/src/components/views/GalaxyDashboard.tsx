@@ -46,7 +46,29 @@ const galaxy = UNIVERSAL_CATEGORIES.map((cat) => ({
   }),
 }));
 
-const BACKEND_HEALTH_TIMEOUT_MS = 6000;
+const BACKEND_HEALTH_TIMEOUT_MS = 8000;
+const BACKEND_ORIGIN =
+  (typeof import.meta !== "undefined" && (import.meta as unknown as { env?: { VITE_API_ORIGIN?: string } }).env?.VITE_API_ORIGIN) ||
+  "http://127.0.0.1:8000";
+
+async function checkBackendHealth(signal: AbortSignal): Promise<boolean> {
+  try {
+    const r = await fetch("/api/health", { signal });
+    if (r.ok) return true;
+  } catch {
+    // Proxy or backend may be down; try direct backend URL (CORS allowed)
+  }
+  try {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), 4000);
+    const r = await fetch(`${BACKEND_ORIGIN}/api/health`, { signal: c.signal });
+    clearTimeout(t);
+    if (r.ok) return true;
+  } catch {
+    // ignore
+  }
+  return false;
+}
 
 export const GalaxyDashboard = () => {
   const { goToSpectrum } = useNavigationStore();
@@ -54,15 +76,14 @@ export const GalaxyDashboard = () => {
   const [slowLoadShown, setSlowLoadShown] = useState(false);
   const [backendReachable, setBackendReachable] = useState<boolean | null>(null);
 
-  // Check backend connectivity first so we don't hang on catalog fetch
+  // Check backend connectivity first so we don't hang on catalog fetch (proxy then direct)
   React.useEffect(() => {
     let cancelled = false;
     const controller = new AbortController();
     const t = setTimeout(() => controller.abort(), BACKEND_HEALTH_TIMEOUT_MS);
-    fetch("/api/health", { signal: controller.signal })
-      .then((r) => (r.ok ? true : Promise.reject(new Error(`${r.status}`))))
-      .then(() => {
-        if (!cancelled) setBackendReachable(true);
+    checkBackendHealth(controller.signal)
+      .then((ok) => {
+        if (!cancelled) setBackendReachable(ok);
       })
       .catch(() => {
         if (!cancelled) setBackendReachable(false);
@@ -109,9 +130,8 @@ export const GalaxyDashboard = () => {
     setBackendReachable(null);
     const controller = new AbortController();
     const t = setTimeout(() => controller.abort(), BACKEND_HEALTH_TIMEOUT_MS);
-    fetch("/api/health", { signal: controller.signal })
-      .then((r) => (r.ok ? true : Promise.reject(new Error(`${r.status}`))))
-      .then(() => setBackendReachable(true))
+    checkBackendHealth(controller.signal)
+      .then((ok) => setBackendReachable(ok))
       .catch(() => setBackendReachable(false))
       .finally(() => clearTimeout(t));
   }, []);

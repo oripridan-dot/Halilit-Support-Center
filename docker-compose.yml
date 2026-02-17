@@ -273,7 +273,8 @@ services:
   # =========================================================================
   # FastAPI Server (Optional - if running via Docker)
   # =========================================================================
-  # Uncomment to run FastAPI server in Docker alongside workers
+  # Uncomment to run FastAPI server in Docker alongside workers.
+  # PORT_BACKEND in .env (e.g. 8001) allows a second worktree to run without port conflict.
   #
   # api_server:
   #   build:
@@ -281,7 +282,7 @@ services:
   #     dockerfile: Dockerfile
   #   container_name: halilit_api
   #   ports:
-  #     - "8000:8000"
+  #     - "${PORT_BACKEND:-8000}:8000"
   #   volumes:
   #     - ./backend/data:/app/backend/data  # Persist product_graph.json for fast restarts
   #     - ./frontend/public/data:/app/frontend/public/data  # Golden list JSONs

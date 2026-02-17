@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v9.3)
+# Repository Instructions & Context (v9.5 — Openclaw)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -28,7 +28,7 @@
 
 ## Project Overview
 
-**Halilit Support Center v9.3** — JIT product intelligence platform for musical instruments.
+**Halilit Support Center v9.5 (Openclaw)** — JIT product intelligence platform for musical instruments.
 
 - **Architecture**: JIT (Just-in-Time) — skeleton or full catalog + on-demand Gemini 2.0 Flash intelligence. Product graph: families and relationships in priority order (official → commercial → contextual → spectrum).
 - **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Views: GalaxyDashboard, SpectrumModule, ProductPage.
@@ -60,7 +60,7 @@ cd frontend && pnpm dev                  # Frontend only
 
 ---
 
-## File Structure (v9.3)
+## File Structure (v9.5)
 
 ```
 backend/
@@ -74,7 +74,7 @@ backend/
 ├── unified_data_service.py    # Sync engine, search artifacts
 ├── api/                      # mcp_router
 ├── ingestion/                # halilit_page_scraper, relationship_*, taxonomy, data_models
-├── mcp/                      # MCP servers (catalog_db, design_director, ui_bridge, …)
+├── mcp/                      # MCP servers (catalog_db, ui_bridge, …)
 ├── scripts/                  # full_rescrape, enrich_catalog, generate_search_index, …
 ├── config/                   # init_db.sql, mcp_servers.json
 └── data/                     # graph/, ingestion/ (gitignored)
@@ -123,4 +123,4 @@ frontend/
 
 ---
 
-**v9.3.0** · February 2026
+**v9.5.0 — Openclaw** · February 2026

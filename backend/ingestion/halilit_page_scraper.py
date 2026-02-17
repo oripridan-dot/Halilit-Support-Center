@@ -25,6 +25,7 @@ Usage:
 
 import json
 import logging
+import os
 import re
 import time
 import hashlib
@@ -34,6 +35,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 from bs4 import BeautifulSoup
+
+from backend.ingestion.visual_validator import validate_hero_candidates
 
 logger = logging.getLogger("HalilitPageScraper")
 
@@ -49,10 +52,24 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/120.0.0.0 Safari/537.36"
     ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7",
     "Referer": "https://www.halilit.com/",
+    "Accept-Encoding": "gzip, deflate, br",
 }
-REQUEST_TIMEOUT = 12
+# Product page request timeout (seconds). Override with HALILIT_REQUEST_TIMEOUT in .env.
+REQUEST_TIMEOUT = int(os.environ.get("HALILIT_REQUEST_TIMEOUT", "20"))
+# Longer timeout for discovery (brands page, sitemap) — often slower from cold or restricted networks
+def _discovery_timeout():
+    import os
+    connect = int(os.environ.get("HALILIT_DISCOVERY_CONNECT", "10"))
+    read = int(os.environ.get("HALILIT_DISCOVERY_READ", "30"))
+    return (connect, read)
+
+
+DISCOVERY_TIMEOUT = _discovery_timeout()
+DISCOVERY_RETRIES = 3
+DISCOVERY_RETRY_BACKOFF = 5  # seconds between retries
 # Rate and concurrency from ingestion_config (sustainable defaults)
 def _ingestion_settings():
     try:
@@ -188,12 +205,15 @@ class HalilitPageScraper:
         return (len(html) < 2000
                 and ("page_no_referer" in html or "limit_no_referer" in html))
 
-    def _get(self, url: str, retries: int = 2) -> Optional[requests.Response]:
+    def _get(self, url: str, retries: int = 2, timeout: Optional[Tuple[float, float]] = None) -> Optional[requests.Response]:
         """Make a rate-limited GET request with anti-bot detection and retry."""
+        timeout = timeout or REQUEST_TIMEOUT
+        if isinstance(timeout, (int, float)):
+            timeout = (timeout, timeout)
         for attempt in range(retries + 1):
             self._rate_limit()
             try:
-                resp = self.session.get(url, timeout=REQUEST_TIMEOUT)
+                resp = self.session.get(url, timeout=timeout)
                 if resp.status_code != 200:
                     logger.warning(f"HTTP {resp.status_code} for {url}")
                     return None
@@ -214,6 +234,29 @@ class HalilitPageScraper:
                     time.sleep(2)
                     continue
                 return None
+        return None
+
+    def _get_discovery(self, url: str) -> Optional[requests.Response]:
+        """GET for brands page / sitemap: longer timeout and more retries with backoff."""
+        for attempt in range(DISCOVERY_RETRIES):
+            self._rate_limit()
+            try:
+                resp = self.session.get(url, timeout=DISCOVERY_TIMEOUT)
+                if resp.status_code != 200:
+                    logger.warning(f"HTTP {resp.status_code} for {url}")
+                    if attempt < DISCOVERY_RETRIES - 1:
+                        time.sleep(DISCOVERY_RETRY_BACKOFF)
+                    continue
+                if self._is_anti_bot_page(resp.text):
+                    logger.debug(f"Anti-bot on discovery URL {url}")
+                    if attempt < DISCOVERY_RETRIES - 1:
+                        time.sleep(DISCOVERY_RETRY_BACKOFF)
+                    continue
+                return resp
+            except requests.RequestException as e:
+                logger.warning(f"Discovery request failed for {url}: {e}")
+                if attempt < DISCOVERY_RETRIES - 1:
+                    time.sleep(DISCOVERY_RETRY_BACKOFF)
         return None
 
     # ─── Phase 1: Search/Brand Results (Product Listing) ──────────────
@@ -551,6 +594,16 @@ class HalilitPageScraper:
                     all_images.append(normalized)
                     seen_img.add(normalized)
 
+        # Visual validation: reject placeholders and low-quality hero images at ingestion time
+        hero_url, gallery_order, _ = validate_hero_candidates(
+            all_images,
+            purpose="hero",
+            product_name=full_name,
+            brand=brand_name,
+        )
+        if not gallery_order and all_images:
+            gallery_order = all_images  # Keep original order if validation skipped
+
         # Features from additionalProperty
         features = product.get("features", [])
 
@@ -573,9 +626,9 @@ class HalilitPageScraper:
             "description": product.get("description", ""),
             "page_description": page_description,
 
-            # Images
-            "image_url": all_images[0] if all_images else "",
-            "image_gallery": all_images,
+            # Images (hero validated; if none pass, leave hero empty but keep gallery URLs)
+            "image_url": hero_url or "",
+            "image_gallery": gallery_order,
             "official_images": [
                 {
                     "url": img,
@@ -584,7 +637,7 @@ class HalilitPageScraper:
                     "source": "halilit_product_page",
                     "priority": 100 - i * 10,
                 }
-                for i, img in enumerate(all_images)
+                for i, img in enumerate(gallery_order)
             ],
 
             # Features & Knowledge
@@ -834,7 +887,7 @@ class HalilitPageScraper:
 
         logger.info(f"🔍 Discovering all brands from {BRANDS_PAGE_URL}")
 
-        resp = self._get(BRANDS_PAGE_URL)
+        resp = self._get_discovery(BRANDS_PAGE_URL)
         if not resp:
             logger.warning(
                 "Failed to fetch brands page, falling back to sitemap")
@@ -894,7 +947,7 @@ class HalilitPageScraper:
         brands = set()
         for page in range(1, MAX_SITEMAP_PAGES + 1):
             url = f"{HALILIT_BASE}/sitemap.xml?page={page}"
-            resp = self._get(url)
+            resp = self._get_discovery(url)
             if not resp:
                 break
 
@@ -938,7 +991,7 @@ class HalilitPageScraper:
 
         for page in range(1, MAX_SITEMAP_PAGES + 1):
             url = f"{HALILIT_BASE}/sitemap.xml?page={page}"
-            resp = self._get(url)
+            resp = self._get_discovery(url)
             if not resp:
                 logger.warning(f"  Sitemap page {page} failed")
                 break

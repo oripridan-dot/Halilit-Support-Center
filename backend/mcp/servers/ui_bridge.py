@@ -70,8 +70,12 @@ TRANSFORMATION RULES:
 
 
 def _get_gemini_client():
-    """Get Gemini client if API key is available."""
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    """Get Gemini client if API key is available (from .env via env_secrets)."""
+    try:
+        from backend.env_secrets import get_gemini_api_key
+        api_key = get_gemini_api_key()
+    except Exception:
+        api_key = None
     if not api_key:
         return None
     try:

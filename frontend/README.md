@@ -1,4 +1,4 @@
-# Frontend — React 18 + TypeScript + Vite (v9.2)
+# Frontend — React 18 + TypeScript + Vite (v9.3)
 
 ## Setup
 

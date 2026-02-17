@@ -7,13 +7,14 @@
  * 1. GALAXY - Category dashboard
  * 2. SPECTRUM - Product spectrum by brand & price
  * 3. PRODUCT_PAGE - Full product analysis
+ * 4. ITEMS - Structured items (brand → type → series) with large images and interconnected products
  * 
  * Follows unified action patterns and error handling
  */
 import { create } from 'zustand';
 
 // The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE';
+export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'ITEMS';
 
 /**
  * Core navigation state that determines what the user sees
@@ -35,6 +36,7 @@ export interface NavigationState {
   // Actions (Following standardized pattern)
   goToGalaxy: () => void;
   goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
+  goToItems: () => void;
   openProductPage: (productId: string) => void;
   closeProductPage: () => void;
 
@@ -94,6 +96,18 @@ export const useNavigationStore = create<NavigationState>((set) => ({
   },
 
   /**
+   * Navigate to Items view (structured brand → type → series with variants, accessories, related)
+   */
+  goToItems: () => set({
+    currentView: 'ITEMS',
+    activeTribeId: null,
+    activeSubcategoryId: null,
+    activeProductId: null,
+    activeFilters: [],
+    lastError: null,
+  }),
+
+  /**
    * Open product analysis page
    * Renamed from openProductPop to openProductPage
    * @param productId - Product ID to analyze
@@ -118,7 +132,7 @@ export const useNavigationStore = create<NavigationState>((set) => ({
    */
   closeProductPage: () => set((state) => {
     const prev = (state as { _previousView?: AppView })._previousView;
-    const returnTo: AppView = prev === 'SPECTRUM' ? prev : 'GALAXY';
+    const returnTo: AppView = prev === 'SPECTRUM' || prev === 'ITEMS' ? prev : 'GALAXY';
     return {
       currentView: returnTo,
       activeProductId: null,

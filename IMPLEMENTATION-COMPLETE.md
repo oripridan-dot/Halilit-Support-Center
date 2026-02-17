@@ -1,4 +1,4 @@
-# Implementation Complete — Planned Features (v9.2)
+# Implementation Complete — Planned Features (v9.3)
 
 All planned features and implementation execution are complete. This document lists what was planned and how to run/verify each.
 
@@ -48,7 +48,7 @@ See [backend/ingestion/README.md](backend/ingestion/README.md) for relationship 
 | Doc | Status |
 |-----|--------|
 | **README.md** | ✅ CLI and populating note match conductor |
-| **ARCHITECTURE.md** | ✅ v9.2 JIT; product graph; relationship priority |
+| **ARCHITECTURE.md** | ✅ v9.3 JIT; product graph; relationship priority |
 | **WHAT-TO-DO.md** | ✅ Setup + skeleton-sync; optional full ingest |
 | **backend/ingestion/README.md** | ✅ Planned ingestions table + conductor commands |
 | **verify-data-loading.md** | ✅ Steps to run app and confirm new data |
@@ -78,4 +78,4 @@ For a minimal catalog (~30s), use `skeleton-sync` instead of `commercial-ingest`
 
 ---
 
-**v9.2** · Last updated: February 2026
+**v9.3** · Last updated: February 2026

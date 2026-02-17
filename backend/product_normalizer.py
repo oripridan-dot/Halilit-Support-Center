@@ -17,9 +17,10 @@ import json
 import logging
 import os
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 from backend.catalog_validator import validate_product as _validate_product
+from backend.ingestion.visual_validator import reject_official_if_mismatch
 
 logger = logging.getLogger(__name__)
 
@@ -726,6 +727,9 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     if not name:
         return None
 
+    # Commercial vs official image match: reject official data if images don't match same product
+    p = reject_official_if_mismatch(dict(p))
+
     raw_brand = (p.get("brand") or fallback_brand or "Unknown").strip()
     brand = _normalize_brand_name(raw_brand)
 
@@ -1029,18 +1033,32 @@ ENABLE_PRODUCT_GRAPH = os.environ.get(
     "ENABLE_PRODUCT_GRAPH", "true").lower() in ("1", "true", "yes")
 
 
-def build_catalog(data_dir: str, resolve: bool = True) -> dict:
+def build_catalog(
+    data_dir: str,
+    resolve: bool = True,
+    on_progress: Optional[Callable[[str, float, str], None]] = None,
+) -> dict:
     """
     Read all brand JSON files, normalize every product, optionally resolve
     missing data, and return a pre-indexed catalog with health metrics.
+    on_progress: optional callback (step, pct_0_to_1, message) for monitoring.
     """
     data_path = Path(data_dir)
     if not data_path.exists():
         logger.warning(f"Data directory not found: {data_dir}")
         return _empty_catalog()
 
+    def prog(step: str, pct: float, msg: str) -> None:
+        if on_progress:
+            on_progress(step, pct, msg)
+
     excluded = {"index.json", "search_index.json", "search_index_min.json",
                 "galaxy_db.json", "package.json"}
+
+    json_files = [f for f in sorted(data_path.glob("*.json")) if f.name not in excluded]
+    total_files = len(json_files)
+
+    prog("load", 0.0, "Loading brand files...")
 
     products_map: Dict[str, dict] = {}
     # Dedup by English model name within same brand to catch
@@ -1048,10 +1066,10 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
     brand_model_map: Dict[str, str] = {}  # brand+model -> first product id
     brands_found: set = set()
 
-    for json_file in sorted(data_path.glob("*.json")):
-        if json_file.name in excluded:
-            continue
-
+    for file_idx, json_file in enumerate(json_files):
+        if total_files > 0 and file_idx > 0 and file_idx % 25 == 0:
+            prog("load", 0.1 + 0.2 * (file_idx / total_files),
+                 f"{len(products_map)} products from {file_idx}/{total_files} files")
         try:
             with open(json_file, "r") as f:
                 file_data = json.load(f)
@@ -1086,6 +1104,10 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                                 product["description"] = existing["description"]
                             if not product["specs"] and existing["specs"]:
                                 product["specs"] = existing["specs"]
+                            if not product.get("price") and existing.get("price"):
+                                product["price"] = existing["price"]
+                            if not product.get("price_eilat") and existing.get("price_eilat"):
+                                product["price_eilat"] = existing["price_eilat"]
                             products_map[existing_id] = product
                         else:
                             # Existing is better — merge any new data into it
@@ -1095,6 +1117,10 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                                 existing["description"] = product["description"]
                             if not existing["specs"] and product["specs"]:
                                 existing["specs"] = product["specs"]
+                            if not existing.get("price") and product.get("price"):
+                                existing["price"] = product["price"]
+                            if not existing.get("price_eilat") and product.get("price_eilat"):
+                                existing["price_eilat"] = product["price_eilat"]
                         continue
 
                 if product["id"] not in products_map:
@@ -1106,9 +1132,11 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
             logger.error(f"Error loading {json_file.name}: {e}")
 
     products = list(products_map.values())
+    prog("load", 0.3, f"Loaded {len(products)} products from {total_files} files")
 
     # Smart resolution — auto-fill missing data using peer heuristics
     if resolve and products:
+        prog("resolve", 0.4, "Resolving catalog (peer heuristics)...")
         from backend.catalog_validator import resolve_catalog, validate_catalog
         products, resolve_summary = resolve_catalog(products)
         logger.info(
@@ -1122,6 +1150,8 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         -(1 if p["image_url"] else 0),
         -p["quality_score"],
     ))
+
+    prog("graph", 0.5, "Building product graph...")
 
     # ── Product Graph: Family & Relationship Discovery ──
     graph_indexes = {}
@@ -1179,6 +1209,7 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
                     "variant_count": len(fam.variant_ids),
                 }
 
+            prog("graph", 0.75, f"Graph: {graph_stats.get('total_families', 0)} families, {graph_stats.get('total_relationships', 0)} rels")
             logger.info(
                 f"Product graph: {graph_stats.get('total_families', 0)} families, "
                 f"{graph_stats.get('total_relationships', 0)} relationships, "
@@ -1220,9 +1251,15 @@ def build_catalog(data_dir: str, resolve: bool = True) -> dict:
         spectrum_counts[sid] = spectrum_counts.get(sid, 0) + 1
         brand_counts[b] = brand_counts.get(b, 0) + 1
 
+    prog("index", 0.85, "Computing health metrics...")
+
+    prog("index", 0.85, "Computing health metrics...")
+
     # Catalog health metrics
     from backend.catalog_validator import validate_catalog as _validate_catalog
     health = _validate_catalog(products)
+
+    prog("done", 1.0, f"Done: {len(products)} products, {len(brands_found)} brands")
 
     metadata = {
         "total_products": len(products),

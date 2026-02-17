@@ -174,8 +174,8 @@ export interface ConductorCatalog {
     families?: Record<string, FamilyMeta>;
 }
 
-/** Catalog request timeout (first load can take 1–2 min with 7k+ products). */
-const CATALOG_FETCH_TIMEOUT_MS = 120_000;
+/** Catalog request timeout (first load can take 2–5 min with 7k+ products). */
+const CATALOG_FETCH_TIMEOUT_MS = 360_000;
 
 /**
  * Load unified Conductor catalog — the single data source for all 3 screens.
@@ -215,7 +215,7 @@ export const useConductorCatalog = () => {
                 if (err instanceof Error) {
                     if (err.name === 'AbortError') {
                         throw new Error(
-                            'Catalog request timed out. The first load can take 1–2 minutes. Click Retry.'
+                            'Catalog request timed out. The first load can take 2–5 minutes. Click Retry.'
                         );
                     }
                     throw err;
@@ -367,35 +367,55 @@ export const useProductRelationships = (productId: string | null) => {
         const accessories: ConductorProduct[] = [];
         const compatible: ConductorProduct[] = [];
         const alternatives: ConductorProduct[] = [];
-        const relationshipMeta: Record<string, { confidence: number; sources_verified: string[] }> = {};
+        const seenAccessories = new Set<string>();
+        const seenCompatible = new Set<string>();
+        const seenAlternatives = new Set<string>();
+        const relationshipMeta: Record<string, { confidence: number; sources_verified: string[]; discovered_from?: string }> = {};
 
         for (const rel of rels) {
             const otherId = rel.source_id === productId ? rel.target_id : rel.source_id;
             const other = productMap.get(otherId);
             if (!other) continue;
 
-            relationshipMeta[otherId] = {
-                confidence: rel.confidence ?? 0,
-                sources_verified: rel.sources_verified ?? [],
-            };
+            const confidence = rel.confidence ?? 0;
+            const sources = rel.sources_verified ?? [];
+            const existing = relationshipMeta[otherId];
+            if (existing) {
+                existing.confidence = Math.max(existing.confidence, confidence);
+                existing.sources_verified = [...new Set([...existing.sources_verified, ...sources])];
+            } else {
+                relationshipMeta[otherId] = { confidence, sources_verified: sources, discovered_from: rel.discovered_from };
+            }
 
             switch (rel.relationship_type) {
                 case 'accessory_for':
-                    if (rel.target_id === productId) accessories.push(productMap.get(rel.source_id)!);
+                    if (rel.target_id === productId) {
+                        const acc = productMap.get(rel.source_id);
+                        if (acc && !seenAccessories.has(acc.id)) {
+                            seenAccessories.add(acc.id);
+                            accessories.push(acc);
+                        }
+                    }
                     break;
                 case 'compatible_with':
-                    compatible.push(other);
+                    if (!seenCompatible.has(otherId)) {
+                        seenCompatible.add(otherId);
+                        compatible.push(other);
+                    }
                     break;
                 case 'alternative_to':
-                    alternatives.push(other);
+                    if (!seenAlternatives.has(otherId)) {
+                        seenAlternatives.add(otherId);
+                        alternatives.push(other);
+                    }
                     break;
             }
         }
 
         return {
-            accessories: accessories.filter(Boolean),
-            compatible: compatible.filter(Boolean),
-            alternatives: alternatives.filter(Boolean),
+            accessories,
+            compatible,
+            alternatives,
             all: rels,
             relationshipMeta,
         };

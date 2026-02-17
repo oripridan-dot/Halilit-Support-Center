@@ -24,6 +24,18 @@ Usage:
     PYTHONPATH=. python3 backend/scripts/full_rescrape.py --resume
 """
 
+import sys
+from pathlib import Path
+
+# Path and .env before any backend imports so HALILIT_* and other env vars apply
+_ROOT = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(_ROOT))
+try:
+    from dotenv import load_dotenv
+    load_dotenv(_ROOT / ".env")
+except ImportError:
+    pass
+
 from backend.ingestion.halilit_page_scraper import (
     HalilitPageScraper,
     extract_model_name,
@@ -35,16 +47,11 @@ import json
 import logging
 import re
 import shutil
-import sys
 import time
 from datetime import datetime, timezone
-from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
-
 
 # ── Logging ───────────────────────────────────────────────────────────────
 logging.basicConfig(

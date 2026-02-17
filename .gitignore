@@ -1,4 +1,4 @@
-# Halilit Support Center v9.0 — Root .gitignore
+# Halilit Support Center v9.5 — Openclaw
 
 # === DEPENDENCIES ===
 node_modules/
@@ -17,6 +17,7 @@ build/
 .vscode/*
 !.vscode/extensions.json
 .idea/
+.cursor/
 *.suo
 *.ntvs*
 *.njsproj

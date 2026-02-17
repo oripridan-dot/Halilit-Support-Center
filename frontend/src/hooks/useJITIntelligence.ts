@@ -15,6 +15,12 @@ import type { ExplorationPath } from "../components/cockpit/ExplorationDock";
  */
 export type JITPhase = "idle" | "snap" | "intel" | "wisdom" | "complete" | "error";
 
+/** Visual intel from JIT: signal_chain + cheat_sheet for cockpit UI */
+export interface VisualIntelData {
+  signal_chain: Array< { step: number; label: string; type: string } >;
+  cheat_sheet: { title: string; bullets: string[] };
+}
+
 export interface JITIntelligenceState {
   phase: JITPhase;
   statusMessage: string;
@@ -24,6 +30,7 @@ export interface JITIntelligenceState {
   trustedReviews: ReviewSource[];
   fieldNotes: FieldNotesData | null;
   explorationPaths: ExplorationPath[];
+  visualIntel: VisualIntelData | null;
   isComplete: boolean;
   isCached: boolean;
   error: string | null;
@@ -55,6 +62,7 @@ const INITIAL_STATE: JITIntelligenceState = {
   trustedReviews: [],
   fieldNotes: null,
   explorationPaths: [],
+  visualIntel: null,
   isComplete: false,
   isCached: false,
   error: null,
@@ -219,6 +227,13 @@ function processEvent(
       setState((prev) => ({
         ...prev,
         explorationPaths: data.paths || [],
+      }));
+      break;
+
+    case "visual_intel":
+      setState((prev) => ({
+        ...prev,
+        visualIntel: data,
       }));
       break;
 

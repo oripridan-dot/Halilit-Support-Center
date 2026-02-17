@@ -1,4 +1,4 @@
-# Halilit Support Center v9.3
+# Halilit Support Center v9.5 — Openclaw
 
 **JIT (Just-in-Time) product intelligence platform** for musical instruments.  
 Skeleton catalog + full ingestion pipeline (commercial → enrich → sync → graph) + on-demand AI intelligence via Gemini 2.0 Flash.
@@ -47,7 +47,7 @@ PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: rem
 
 ---
 
-## Architecture (v9.3)
+## Architecture (v9.5 — Openclaw)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
@@ -60,7 +60,7 @@ PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: rem
 │  API (FastAPI — port 8000)                                              │
 │  /api/conductor/*  Catalog, taxonomy, filter, refresh                   │
 │  /api/jit/product/{id}  SSE stream (JIT intelligence)                  │
-│  /api/mcp/*        MCP tools (catalog, design_director, ui_bridge)      │
+│  /api/mcp/*        MCP tools (catalog, ui_bridge)                        │
 └──────────────────────────────┬──────────────────────────────────────────┘
                                │
 ┌──────────────────────────────▼──────────────────────────────────────────┐
@@ -132,7 +132,7 @@ backend/
 ├── source_rules.py        # Three Source Rules (Commercial / Official / Contextual)
 ├── api/                   # mcp_router
 ├── ingestion/             # halilit_page_scraper, relationship_*, taxonomy, data_models
-├── mcp/                   # MCP servers (catalog_db, design_director, ui_bridge, …)
+├── mcp/                   # MCP servers (catalog_db, ui_bridge, …)
 ├── scripts/               # full_rescrape, enrich_catalog, generate_search_index, …
 ├── config/                # init_db.sql, mcp_servers.json
 └── data/                  # graph/, ingestion/ (gitignored)
@@ -186,13 +186,20 @@ frontend/
 | -------- | -------- |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | System design, source rules, API reference |
 | [START-HERE.md](START-HERE.md) | Open app in browser, first-time install |
-| [WHAT-TO-DO.md](WHAT-TO-DO.md) | Get app running (v9.3), env, sync, ingest |
+| [WHAT-TO-DO.md](WHAT-TO-DO.md) | Get app running (v9.5), env, sync, ingest |
 | [IMPLEMENTATION-COMPLETE.md](IMPLEMENTATION-COMPLETE.md) | Feature checklist, run/verify steps |
 | [backend/ingestion/README.md](backend/ingestion/README.md) | Ingestion pipeline, relationship priority |
 
 ---
 
 ## Changelog
+
+### v9.5 — Openclaw (February 2026)
+
+- **Version**: 9.5.0 across root, frontend, and docs; codename **Openclaw**.
+- **Visual validation in ingestion**: Hero image quality check at scrape time; commercial vs official image match validator; reject mismatches and persist `visual_match_status` / `visual_match_confidence`.
+- **Golden list visual validation**: Script to run validation over the full golden list; `--refine` for fast reruns (skip already-validated products).
+- **Halilit scraping**: Configurable timeouts (`HALILIT_DISCOVERY_*`, `HALILIT_REQUEST_TIMEOUT`); `.env` loaded before scraper import in full_rescrape.
 
 ### v9.3 (February 2026)
 
@@ -208,4 +215,4 @@ frontend/
 
 ---
 
-**v9.3.0** · Last updated: February 2026
+**v9.5.0 — Openclaw** · Last updated: February 2026

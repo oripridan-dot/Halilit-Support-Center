@@ -95,7 +95,7 @@ The following extensions are automatically installed:
 
 ## Configuration Details
 
-- **Version**: v8.5
+- **Version**: v9.3
 - **Node Memory**: 2GB max old space size
 - **TypeScript Server Memory**: 2GB
 - **Python Interpreter**: `/usr/local/bin/python`

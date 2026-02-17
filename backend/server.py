@@ -422,6 +422,88 @@ async def get_spectrum_star_view(spectrum_id: str):
     }
 
 
+@app.get("/api/structured-items")
+async def get_structured_items():
+    """
+    Structured items tree: brand → type (galaxy/spectrum) → series/family → variants, accessories, related.
+    For the Items UI: hierarchy with large images and thumbnails, ready to switch with interconnected products.
+    """
+    global _catalog_cache_dict, _catalog_cache_time, _catalog_cache_json
+    now = time.time()
+    if _catalog_cache_dict is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
+        loop = asyncio.get_event_loop()
+        await loop.run_in_executor(None, _build_catalog_cache)
+    if _catalog_cache_dict is None and _catalog_cache_json is not None:
+        try:
+            _catalog_cache_dict = json.loads(_catalog_cache_json.decode("utf-8"))
+        except Exception as e:
+            logger.error(f"Failed to rebuild catalog dict: {e}")
+            return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+    if _catalog_cache_dict is None:
+        return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+    try:
+        from backend.structured_items import build_structured_items
+        out = build_structured_items(_catalog_cache_dict)
+        # Trim products_by_id to minimal fields for payload size
+        pid_map = out.get("products_by_id", {})
+        out["products_by_id"] = {
+            pid: {
+                "id": p.get("id"),
+                "name": p.get("name"),
+                "image_url": p.get("image_url"),
+                "price": p.get("price"),
+                "brand": p.get("brand"),
+            }
+            for pid, p in pid_map.items()
+        }
+        return out
+    except Exception as e:
+        logger.exception(f"Structured items build failed: {e}")
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+@app.post("/api/visual-grouping/suggest")
+async def post_visual_grouping_suggest(request: Request):
+    """
+    Run vision AI on family hero images and return classification + suggested merges.
+    Body: { "brand": "bespeco", "limit": 15, "apply": true } (limit capped at 50).
+    If "apply": true, verify and persist overrides so suggested merges take effect.
+    """
+    global _catalog_cache_dict, _catalog_cache_time, _catalog_cache_json
+    now = time.time()
+    if _catalog_cache_dict is None or (now - _catalog_cache_time) > CATALOG_CACHE_TTL:
+        loop = asyncio.get_event_loop()
+        await loop.run_in_executor(None, _build_catalog_cache)
+    if _catalog_cache_dict is None and _catalog_cache_json is not None:
+        try:
+            _catalog_cache_dict = json.loads(_catalog_cache_json.decode("utf-8"))
+        except Exception as e:
+            logger.error(f"Failed to rebuild catalog dict: {e}")
+            return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+    if _catalog_cache_dict is None:
+        return JSONResponse(status_code=503, content={"error": "Catalog still building"})
+
+    try:
+        body = await request.json()
+    except Exception:
+        body = {}
+    brand = body.get("brand")
+    limit = min(int(body.get("limit", 15)), 50)
+    do_apply = body.get("apply") is True
+    min_confidence = float(body.get("min_confidence", 0.7))
+
+    from backend.visual_grouping import run_visual_grouping_suggest, verify_and_apply
+    loop = asyncio.get_event_loop()
+    report = await loop.run_in_executor(
+        None,
+        lambda: run_visual_grouping_suggest(_catalog_cache_dict, brand=brand, limit=limit),
+    )
+    if do_apply and report.get("suggested_merges"):
+        apply_result = verify_and_apply(report, min_confidence=min_confidence)
+        report["apply"] = apply_result
+    return report
+
+
 @app.get("/api/catalog/health")
 async def get_catalog_health():
     """Catalog health metrics."""

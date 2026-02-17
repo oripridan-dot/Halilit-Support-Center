@@ -6,8 +6,6 @@ import {
   Shield,
   CheckCircle,
   Users,
-  GitCompare,
-  Puzzle,
   HelpCircle,
   Database,
   BarChart3,
@@ -35,7 +33,9 @@ import { FieldNotes } from "../cockpit/FieldNotes";
 import type { FieldNotesData } from "../cockpit/FieldNotes";
 import { ExplorationDock } from "../cockpit/ExplorationDock";
 import type { ExplorationPath } from "../cockpit/ExplorationDock";
-import { SmartAccessories } from "../cockpit/SmartAccessories";
+import { ProductRelations } from "../cockpit/ProductRelations";
+import { TruthMatrix } from "../cockpit/TruthMatrix";
+import { VisualIntelligence } from "../cockpit/VisualIntelligence";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
 
 /**
@@ -287,9 +287,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
             >
               {product.variant_key || product.name?.split(" ").pop() || "Current"}
             </button>
-            {variants.map((v) => (
+            {variants.map((v, i) => (
               <button
-                key={v.id}
+                key={`variant-switcher-${v.id}-${i}`}
                 onClick={() => openProductPage(v.id)}
                 className="px-3 py-1.5 rounded-md text-xs font-medium bg-zinc-800/60 text-zinc-400 hover:bg-zinc-700 hover:text-white transition-all shrink-0 border border-zinc-700/40"
               >
@@ -452,6 +452,25 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                     </a>
                   )}
                 </div>
+
+                {/* Truth Matrix — source transparency for price, specs, relations */}
+                <TruthMatrix
+                  dataTrust={product.data_trust}
+                  relationsVerified={
+                    [...accessories, ...compatible, ...alternatives].some((r) =>
+                      (relationshipMeta[r.id]?.sources_verified ?? []).some((s) =>
+                        ["official", "official_text_match", "official_url_match"].includes(s),
+                      ),
+                    )
+                  }
+                  relationsCommercial={
+                    [...accessories, ...compatible, ...alternatives].some((r) =>
+                      (relationshipMeta[r.id]?.sources_verified ?? []).includes("commercial"),
+                    )
+                  }
+                  hasRelations={accessories.length > 0 || compatible.length > 0 || alternatives.length > 0}
+                  brandColor={brandColor}
+                />
               </div>
             </div>
 
@@ -523,6 +542,14 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   brandColor={brandColor}
                   isLoading={jitPhase === "intel"}
                 />
+
+                {jit.visualIntel && (
+                  <VisualIntelligence
+                    key="visual-intel"
+                    data={jit.visualIntel}
+                    brandColor={brandColor}
+                  />
+                )}
 
                 <div key="specs-reviews" className="grid grid-cols-2 gap-4">
                   {/* Official Specs — show ALL specs */}
@@ -780,117 +807,33 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                   </motion.div>
                 )}
 
-                <div key="accessories">
-                  {accessories.length > 0 && accessories.some((a) => relationshipMeta[a.id]?.sources_verified?.includes("commercial")) && (
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-[9px] font-bold text-blue-400/90 bg-blue-500/10 border border-blue-500/20 rounded px-1.5 py-0.5" title="Commercial relationship">
-                        Commercial
-                      </span>
-                    </div>
-                  )}
-                  <SmartAccessories
-                    accessories={accessories.map((a) => ({
-                      id: a.id,
-                      name: a.name || "",
-                      price: a.price,
-                      image_url: a.image_url,
-                    }))}
-                    brandColor={brandColor}
-                    onProductClick={openProductPage}
-                  />
-                </div>
-
-                {compatible.length > 0 && (
-                  <motion.div
-                    key="compatible"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.28 }}
-                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
-                  >
-                    <div className="flex items-center gap-2 mb-4">
-                      <Puzzle size={14} className="text-blue-400" />
-                      <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
-                        Compatible Products
-                      </span>
-                      <span className="ml-auto text-[10px] text-zinc-600">
-                        {compatible.length} product{compatible.length !== 1 ? "s" : ""}
-                      </span>
-                    </div>
-                    <div className="flex gap-3 overflow-x-auto pb-1">
-                      {compatible.map((c) => (
-                        <button
-                          key={c.id}
-                          onClick={() => openProductPage(c.id)}
-                          className="group shrink-0 w-36 bg-zinc-800/40 hover:bg-zinc-800/70 border border-zinc-700/40 hover:border-blue-500/30 rounded-xl p-3 transition-all duration-200 text-left"
-                        >
-                          <div className="aspect-square bg-zinc-900/60 rounded-lg overflow-hidden mb-2">
-                            <ImageWithFallback
-                              src={c.image_url || ""}
-                              alt={c.name || "Compatible"}
-                              className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200"
-                            />
-                          </div>
-                          <p className="text-[11px] text-white font-medium truncate">{c.name}</p>
-                          {c.price > 0 && (
-                            <p className="text-[10px] text-zinc-400 mt-0.5">
-                              {"\u20AA"}{c.price.toLocaleString("he-IL")}
-                            </p>
-                          )}
-                        </button>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {alternatives.length > 0 && (
-                  <motion.div
-                    key="alternatives"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.3 }}
-                    className="rounded-xl bg-zinc-900/70 border border-zinc-800/50 p-5"
-                  >
-                    <div className="flex items-center gap-2 mb-4">
-                      <GitCompare size={14} className="text-amber-400" />
-                      <span className="text-[11px] font-bold text-zinc-400 uppercase tracking-wider">
-                        Alternatives to Consider
-                      </span>
-                      {alternatives.some((a) => relationshipMeta[a.id]?.sources_verified?.includes("spectrum")) && (
-                        <span className="text-[9px] font-bold text-amber-400/90 bg-amber-500/10 border border-amber-500/20 rounded px-1.5 py-0.5" title="Spectrum tier match">
-                          Spectrum
-                        </span>
-                      )}
-                      <span className="ml-auto text-[10px] text-zinc-600">
-                        {alternatives.length} option{alternatives.length !== 1 ? "s" : ""}
-                      </span>
-                    </div>
-                    <div className="flex gap-3 overflow-x-auto pb-1">
-                      {alternatives.map((a) => (
-                        <button
-                          key={a.id}
-                          onClick={() => openProductPage(a.id)}
-                          className="group shrink-0 w-36 bg-zinc-800/40 hover:bg-zinc-800/70 border border-zinc-700/40 hover:border-amber-500/30 rounded-xl p-3 transition-all duration-200 text-left"
-                        >
-                          <div className="aspect-square bg-zinc-900/60 rounded-lg overflow-hidden mb-2">
-                            <ImageWithFallback
-                              src={a.image_url || ""}
-                              alt={a.name || "Alternative"}
-                              className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-200"
-                            />
-                          </div>
-                          <p className="text-[11px] text-white font-medium truncate">{a.name}</p>
-                          <p className="text-[9px] text-zinc-500 truncate">{a.brand}</p>
-                          {a.price > 0 && (
-                            <p className="text-[10px] text-zinc-400 mt-0.5">
-                              {"\u20AA"}{a.price.toLocaleString("he-IL")}
-                            </p>
-                          )}
-                        </button>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
+                <ProductRelations
+                  key="relations"
+                  accessories={accessories.map((a) => ({
+                    id: a.id,
+                    name: a.name || "",
+                    price: a.price,
+                    image_url: a.image_url,
+                    relationType: "accessory",
+                  }))}
+                  compatible={compatible.map((c) => ({
+                    id: c.id,
+                    name: c.name || "",
+                    price: c.price,
+                    image_url: c.image_url,
+                    relationType: "compatible",
+                  }))}
+                  alternatives={alternatives.map((a) => ({
+                    id: a.id,
+                    name: a.name || "",
+                    price: a.price,
+                    image_url: a.image_url,
+                    relationType: "alternative",
+                  }))}
+                  relationshipMeta={relationshipMeta}
+                  brandColor={brandColor}
+                  onProductClick={openProductPage}
+                />
 
                 {variants.length > 0 && (
                   <motion.div
@@ -916,9 +859,9 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                       </span>
                     </div>
                     <div className="flex gap-3 overflow-x-auto pb-1">
-                      {variants.map((v) => (
+                      {variants.map((v, i) => (
                         <button
-                          key={v.id}
+                          key={`variant-card-${v.id}-${i}`}
                           onClick={() => openProductPage(v.id)}
                           className="group shrink-0 w-40 bg-zinc-800/40 hover:bg-zinc-800/70 border border-zinc-700/40 rounded-xl p-3 transition-all duration-200 text-left"
                         >

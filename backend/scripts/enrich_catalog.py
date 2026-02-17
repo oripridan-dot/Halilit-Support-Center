@@ -143,7 +143,13 @@ def _enrich_one(product: dict, scraper: HalilitPageScraper) -> Tuple[dict, Dict[
         if page_data.get("audiences") and not product.get("audiences"):
             enriched["audiences"] = page_data["audiences"]
 
-        return enriched, {"scraped": 1}
+        # Track when visual validation rejected the hero (gallery present but no hero URL)
+        delta = {"scraped": 1}
+        if (page_data.get("image_gallery") or page_data.get("official_images")) and not (
+            (page_data.get("image_url") or "").strip()
+        ):
+            delta["image_rejected"] = 1
+        return enriched, delta
 
     except Exception as e:
         logger.warning(f"Error scraping {url}: {e}")
@@ -239,6 +245,7 @@ def enrich_brand_file(
         "skipped_already_rich": 0,
         "scrape_failed": 0,
         "scrape_error": 0,
+        "image_rejected": 0,
     }
 
     if concurrent_products <= 1:
@@ -374,6 +381,7 @@ def main():
                              for s in all_stats)
     total_failed = sum(s.get("scrape_failed", 0) for s in all_stats)
     total_errors = sum(s.get("scrape_error", 0) for s in all_stats)
+    total_image_rejected = sum(s.get("image_rejected", 0) for s in all_stats)
 
     logger.info("\n" + "=" * 60)
     logger.info("ENRICHMENT SUMMARY")
@@ -383,7 +391,10 @@ def main():
     logger.info(f"Skipped (no URL):    {total_skipped_url}")
     logger.info(f"Skipped (already rich): {total_skipped_rich}")
     logger.info(f"Scrape failed:       {total_failed}")
+    if total_failed > 0:
+        logger.info("  (Halilit often returns anti-bot/referrer page or timeout from some networks)")
     logger.info(f"Scrape errors:       {total_errors}")
+    logger.info(f"Hero image rejected (visual validation): {total_image_rejected}")
 
 
 if __name__ == "__main__":

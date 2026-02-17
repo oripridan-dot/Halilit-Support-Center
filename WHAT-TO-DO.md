@@ -1,4 +1,4 @@
-# What to do — get the app running (v9.2 JIT)
+# What to do — get the app running (v9.5 — Openclaw)
 
 Do these in order, from the **project root** (the folder that contains `backend/` and `frontend/`).
 
@@ -104,7 +104,7 @@ See [backend/ingestion/README.md](backend/ingestion/README.md) and [IMPLEMENTATI
 
 ## Loading live product intelligence
 
-In v9.0, there is **no heavy ingestion step**. Instead:
+In v9.3, there is **no heavy ingestion step**. Instead:
 
 1. **Skeleton sync** populates the browse-able catalog (name, price, image).
 2. **JIT Agent** streams live AI intelligence when a user clicks on any product.

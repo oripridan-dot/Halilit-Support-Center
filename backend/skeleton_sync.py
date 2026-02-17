@@ -18,6 +18,12 @@ Usage:
 
 import json
 import logging
+
+# Import version from backend when available (script may run standalone)
+try:
+    from backend import __version__
+except ImportError:
+    __version__ = "9.3.0"
 import hashlib
 import re
 from datetime import datetime, timezone
@@ -206,7 +212,7 @@ def run_skeleton_sync(brand_filter: Optional[str] = None) -> bool:
 
     index_data = {
         "build_timestamp": datetime.now(timezone.utc).isoformat(),
-        "version": "2.0-jit",
+        "version": __version__,
         "total_products": len(all_products),
         "total_verified": len(all_products),
         "brands": index_brands,

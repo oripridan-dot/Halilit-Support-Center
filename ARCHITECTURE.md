@@ -1,6 +1,6 @@
 # Halilit Support Center — Architecture
 
-**Version**: 9.3.0 (JIT + Product Graph)  
+**Version**: 9.5.0 — Openclaw (JIT + Product Graph)  
 **Updated**: February 2026
 
 ---
@@ -118,7 +118,7 @@ All data adheres to three authorized sources:
 | JIT agent          | `jit_agent.py`           | On-demand intelligence stream |
 | Conductor CLI      | `conductor_main.py`      | ingest, sync, rebuild-catalog, dev |
 | Source rules       | `source_rules.py`        | Commercial / Official / Contextual law |
-| MCP                | `mcp/`                   | catalog_db, design_director, ui_bridge, … |
+| MCP                | `mcp/`                   | catalog_db, ui_bridge, … |
 
 ### Frontend
 
@@ -157,4 +157,4 @@ lsof -i :8000 && kill -9 <PID>
 
 ---
 
-**v9.3.0** · February 2026
+**v9.5.0 — Openclaw** · February 2026
