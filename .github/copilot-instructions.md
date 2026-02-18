@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v9.5 — Openclaw)
+# Repository Instructions & Context (v9.6.1 — Dark Factory)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -6,11 +6,11 @@
 
 ### The Three Authorized Data Sources
 
-| #   | Source         | Owner   | Owns                                                                 |
-| --- | -------------- | ------ | -------------------------------------------------------------------- |
-| 1   | **Commercial** | Halilit | Golden List, prices (IL+Eilat), SKUs, product existence              |
+| #   | Source         | Owner   | Owns                                                                      |
+| --- | -------------- | ------- | ------------------------------------------------------------------------- |
+| 1   | **Commercial** | Halilit | Golden List, prices (IL+Eilat), SKUs, product existence                   |
 | 2   | **Official**   | Brand   | Titles, descriptions, specs, media, documentation (official product page) |
-| 3   | **Contextual** | Reviews | Pros/cons, real-world experience, ratings (3+ trusted review sites)   |
+| 3   | **Contextual** | Reviews | Pros/cons, real-world experience, ratings (3+ trusted review sites)       |
 
 ### Zero Tolerance Policy
 
@@ -28,25 +28,27 @@
 
 ## Project Overview
 
-**Halilit Support Center v9.5 (Openclaw)** — JIT product intelligence platform for musical instruments.
+**Halilit Support Center v9.6.1 (Dark Factory)** — JIT product intelligence platform for musical instruments. Operator Console UI for inventory management and product support.
 
-- **Architecture**: JIT (Just-in-Time) — skeleton or full catalog + on-demand Gemini 2.0 Flash intelligence. Product graph: families and relationships in priority order (official → commercial → contextual → spectrum).
-- **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Views: GalaxyDashboard, SpectrumModule, ProductPage.
-- **Backend**: Python 3.11+ + FastAPI + Pydantic v2 + google-genai (Gemini 2.0 Flash). No Celery/Trinity; ingestion via Conductor CLI (commercial-ingest, enrich, sync, rebuild-catalog).
-- **Repo strategy**: Lean — generated data (brand JSONs, graph snapshot, search indexes) is gitignored. Only source code and static assets are tracked.
+- **Architecture**: Spec-driven Dark Factory. Specs in `specs/` are the **input**; code is the **output**. Never write code without reading the relevant spec first.
+- **Workflow**: `specs/interface/` → AI implements → verify outcome in app. See `OPERATOR_CONSOLE_SPEC.md` and `docs/WORKFLOW.md`.
+- **Frontend**: React 18 + Vite + TypeScript + Zustand + React Query + Tailwind CSS. Three views: Dashboard, Inventory, ProductDetail.
+- **Backend**: Python 3.11+ + FastAPI + google-genai (Gemini 2.0 Flash). Conductor CLI for data pipeline.
+- **Repo strategy**: Lean — generated data (brand JSONs, graph snapshot) is gitignored. Only source code and static assets are tracked.
 
 ---
 
 ## Running the System
 
 ```bash
-# From project root, with venv activated
-PYTHONPATH=. python backend/conductor_main.py dev
-# → Backend http://localhost:8000, Frontend http://localhost:5173 (or next free port)
+# From project root, with venv activated:
+./factory_reset.sh               # Clean start (backend + frontend)
+./factory_reset.sh --rebuild     # Force rebuild catalog cache
 
-# Or separately:
-PYTHONPATH=. python backend/server.py    # Backend only
-cd frontend && pnpm dev                  # Frontend only
+# Separately:
+PYTHONPATH=. python backend/conductor_main.py dev   # Both servers
+PYTHONPATH=. python backend/server.py               # Backend only (port 8000)
+cd frontend && pnpm dev                             # Frontend only (port 5173)
 ```
 
 ---
@@ -60,35 +62,69 @@ cd frontend && pnpm dev                  # Frontend only
 
 ---
 
-## File Structure (v9.5)
+## File Structure (v9.6.1)
 
 ```
 backend/
 ├── source_rules.py           # ⚠️ THE LAW — Three Source Rules (read first!)
 ├── server.py                 # FastAPI: catalog, JIT, MCP
-├── conductor_main.py         # CLI: skeleton-sync, commercial-ingest, enrich, ingest-all, sync, rebuild-catalog, catalog, dev, server
+├── conductor_main.py         # CLI: skeleton-sync, commercial-ingest, enrich, sync, dev, server
 ├── product_normalizer.py     # build_catalog(), graph pipeline
 ├── product_graph.py          # ProductGraph, families, relationships
-├── product_graph_store.py    # JSON snapshot (+ optional PostgreSQL)
-├── jit_agent.py              # On-demand product intelligence (SSE)
-├── unified_data_service.py    # Sync engine, search artifacts
-├── api/                      # mcp_router
+├── product_graph_store.py    # JSON snapshot
+├── jit_agent.py              # On-demand product intelligence (SSE streaming)
+├── unified_data_service.py   # Sync engine
+├── factory/                  # Builder Agent (spec → code), agent_core.py
+├── factory_supervisor.py     # Foreman: orchestrates Builder Agent runs
+├── hierarchy/                # Product hierarchy: models, service, api, validation
+├── api/                      # mcp_router (FastAPI)
 ├── ingestion/                # halilit_page_scraper, relationship_*, taxonomy, data_models
 ├── mcp/                      # MCP servers (catalog_db, ui_bridge, …)
-├── scripts/                  # full_rescrape, enrich_catalog, generate_search_index, …
+├── scripts/                  # enrich_catalog, generate_search_index, …
 ├── config/                   # init_db.sql, mcp_servers.json
-└── data/                     # graph/, ingestion/ (gitignored)
+└── data/                     # graph/, ingestion/, jit_cache/ (gitignored)
 
-frontend/
-├── src/
-│   ├── App.tsx               # Router: Galaxy, Spectrum, ProductPage
-│   ├── components/views/     # GalaxyDashboard, SpectrumModule, ProductPage
-│   ├── hooks/                # useConductorCatalog, useJITIntelligence
-│   ├── store/                # navigationStore
-│   └── types/
-├── public/data/              # Brand JSONs, index (generated)
-└── vite.config.ts            # Proxy to backend :8000
+frontend/src/
+├── App.tsx                   # Shell: sidebar + 3-view router (Dashboard, Inventory, ProductDetail)
+├── components/
+│   ├── views/                # DashboardView, InventoryView, ProductDetailView, IngestionStatusView
+│   ├── cockpit/              # ProductRelations, VerdictCard, TrustedConsensus, FieldNotes, ExplorationDock
+│   ├── GlobalSearch.tsx      # Search bar (header)
+│   ├── ImageWithFallback.tsx # Image component with fallback
+│   └── ui/                   # GlobalErrorBoundary (ui primitives)
+├── hooks/
+│   ├── useConductorCatalog.ts  # Catalog data from /api/conductor/catalog
+│   └── useJITIntelligence.ts   # JIT streaming intelligence
+├── store/
+│   └── navigationStore.ts    # App navigation state (Zustand)
+└── types/
+    ├── index.ts              # Canonical frontend types
+    └── generated.ts          # Backend-generated types
+
+specs/
+├── interface/                # ← CANONICAL UI SPECS
+│   ├── 01_operator_dashboard.md
+│   ├── 02_inventory_grid.md
+│   └── 03_product_intelligence.md
+├── data_pipeline/            # Ingestion rules, relationship logic
+├── behavior/                 # Search scenarios (Playwright)
+├── 01_data/                  # Compliance, halilit_api, official_scout, catalog_organizer
+└── pricing_logic.md
+
+OPERATOR_CONSOLE_SPEC.md      # Master spec (Level 5 workflow)
+docs/                         # Dev documentation (QUICK_START, WORKFLOW, ARCHITECTURE, etc.)
 ```
+
+---
+
+## The Dark Factory Workflow
+
+1. **Spec first**: Update or create the relevant spec in `specs/interface/` or `specs/data_pipeline/`.
+2. **Prompt AI**: "Read `specs/interface/02_inventory_grid.md`. Rewrite `InventoryView.tsx` to satisfy the spec."
+3. **Verify**: Check the outcome in the running app against the Behavior Scenarios in the spec.
+4. **Fix spec, not code**: If outcome fails, amend the spec and re-prompt.
+
+**Never write code without a spec. Never fix code by hand when the spec can be clarified.**
 
 ---
 
@@ -123,4 +159,4 @@ frontend/
 
 ---
 
-**v9.5.0 — Openclaw** · February 2026
+**v9.6.1 — Dark Factory** · February 2026

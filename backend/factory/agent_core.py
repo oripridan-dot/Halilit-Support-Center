@@ -2,35 +2,38 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-import openai
+import google.genai as genai
 
 # Load .env from project root (backend/factory -> backend -> root)
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 load_dotenv(_PROJECT_ROOT / ".env")
 
 # --- CONFIGURATION ---
-CLIENT = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-MODEL = "gpt-4o"  # Or "claude-3-5-sonnet-20240620" if using Anthropic
+_API_KEY = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
+_CLIENT = genai.Client(api_key=_API_KEY) if _API_KEY else None
+MODEL = "gemini-2.0-flash"
 
-def query_llm(system_prompt, user_prompt):
+
+def query_llm(system_prompt: str, user_prompt: str) -> str | None:
     """
-    Sends a request to the LLM and returns the text response.
+    Sends a request to Gemini and returns the text response.
     """
+    if not _CLIENT:
+        print("❌ No GEMINI_API_KEY / GOOGLE_API_KEY set")
+        return None
     try:
-        response = CLIENT.chat.completions.create(
+        combined = f"{system_prompt}\n\n{user_prompt}"
+        response = _CLIENT.models.generate_content(
             model=MODEL,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            temperature=0.1  # Low temperature for precise code generation
+            contents=combined,
         )
-        return response.choices[0].message.content
+        return response.text
     except Exception as e:
         print(f"❌ LLM Error: {e}")
         return None
 
-def save_artifact(path, content):
+
+def save_artifact(path: str, content: str) -> None:
     """
     Writes the code artifact to the disk.
     """

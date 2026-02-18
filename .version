@@ -1,5 +1,5 @@
-VERSION=9.6.0
-RELEASE_TAG=v9.6-ui
+VERSION=9.6.1
+RELEASE_TAG=v9.6.1-dark-factory
 BUILD_DATE=2026-02-18
 BRANCH=v9.6-ui
 STATUS=production-ready
@@ -7,4 +7,5 @@ ARCHITECTURE=spec-driven-operator-console
 AGENTS=conductor-cli-jit-agent
 COMPONENTS=unified-catalog-api,operator-console-ui,product-graph,specs
 TEST_COVERAGE=18/18
-WORKFLOW=spec-driven-factory
+WORKFLOW=spec-driven-dark-factory
+CODENAME=Dark-Factory
