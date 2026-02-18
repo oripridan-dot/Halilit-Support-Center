@@ -1,144 +1,148 @@
-#!/usr/bin/env python3
-"""
-THE DARK FACTORY SUPERVISOR
----------------------------
-This script acts as the "Foreman". It coordinates the agents (scripts)
-to ensure the Output (App) matches the Input (Specs).
-"""
-import os
 import sys
-import json
 import subprocess
+import shutil
+import os
 from pathlib import Path
-import time
 
 # --- CONFIGURATION ---
-ROOT_DIR = Path(__file__).parent
-SPECS_DIR = ROOT_DIR / "specs"
-BACKEND_DIR = ROOT_DIR / "backend"
-DATA_ARTIFACT = BACKEND_DIR / "data" / "learned_taxonomy.json"
+ROOT = Path(__file__).parent
+FRONTEND = ROOT / "frontend"
+BACKEND = ROOT / "backend"
+SPECS = ROOT / "specs"
 
+def log(msg): print(f"🏭 [FACTORY] {msg}")
 
-def log(step, msg, status="INFO"):
-    icons = {"INFO": "ℹ️", "SUCCESS": "✅", "WARN": "⚠️", "FAIL": "❌", "WORK": "⚙️"}
-    print(f"{icons.get(status, '')} [{step}] {msg}")
+def setup_factory():
+    """Establishes the Dark Factory folder structure."""
+    log("Initializing Factory Layout...")
 
+    # 1. Create Spec Directories
+    SPECS.mkdir(exist_ok=True)
+    (SPECS / "data").mkdir(exist_ok=True)
+    (SPECS / "ui").mkdir(exist_ok=True)
+    (SPECS / "scenarios").mkdir(exist_ok=True)
 
-def read_spec(spec_name):
-    """Reads a markdown spec to understand success criteria."""
-    spec_path = SPECS_DIR / spec_name
-    if not spec_path.exists():
-        log("SPEC", f"Missing specification: {spec_name}", "FAIL")
-        sys.exit(1)
-    return spec_path.read_text()
+    # 2. Migrate Agent Skills (Blueprints)
+    skills_dir = BACKEND / "agent_skills"
+    if skills_dir.exists():
+        log("Migrating agent skills to Specs...")
+        for file in skills_dir.glob("*.md"):
+            shutil.move(str(file), str(SPECS / "data" / file.name))
+        shutil.rmtree(skills_dir)
+        log("✅ Agent Skills moved to /specs/data")
 
+    # 3. Create Default UI Spec if missing
+    ui_spec = SPECS / "ui" / "operator_console.md"
+    if not ui_spec.exists():
+        ui_spec.write_text("""# Operator Console UI Spec
+- Theme: Dark Zinc
+- Layout: Sidebar + Header + Content
+- Views: Dashboard, Inventory (Grid), Product Detail (Tabs)
+""")
+        log("✅ Created default UI Spec")
 
-def run_agent_conductor(mode="rebuild-catalog"):
-    """Hires the Conductor Agent to ingest data."""
-    log("AGENT", f"Conductor starting task: {mode}...", "WORK")
-    start = time.time()
+def purge_legacy():
+    """Removes all code related to the old 'Game/Galaxy' interface."""
+    log("Purging Legacy 'Visual OS' modules...")
 
-    # Run the existing conductor script
-    cmd = [sys.executable, "conductor_main.py", mode]
-    result = subprocess.run(cmd, cwd=BACKEND_DIR, capture_output=True, text=True)
+    removals = [
+        FRONTEND / "src/components/views/GalaxyDashboard.tsx",
+        FRONTEND / "src/components/views/SpectrumModule.tsx",
+        FRONTEND / "src/components/views/arena",
+        FRONTEND / "src/components/views/galaxy",
+        FRONTEND / "src/components/v0",
+        FRONTEND / "public/assets/bg", # Heavy background images
+    ]
 
-    if result.returncode != 0:
-        log("AGENT", "Conductor crashed!", "FAIL")
-        print(result.stderr)
-        sys.exit(1)
+    for path in removals:
+        if path.exists():
+            if path.is_dir():
+                shutil.rmtree(path)
+            else:
+                path.unlink()
+            log(f"🗑️ Deleted legacy artifact: {path.name}")
+        else:
+            log(f"🤷 {path.name} already gone.")
 
-    duration = round(time.time() - start, 2)
-    log("AGENT", f"Conductor finished in {duration}s", "SUCCESS")
-
-
-def quality_control_data():
-    """Validates the artifact against the 'Data Spec'."""
-    log("QC", "Inspecting data artifacts...", "WORK")
-
-    if not DATA_ARTIFACT.exists():
-        log("QC", "Critical Artifact Missing: learned_taxonomy.json", "FAIL")
-        return False
-
+def build_backend():
+    """Runs the Conductor to generate the Golden Catalog."""
+    log("Starting Production Line: Data Ingestion...")
     try:
-        with open(DATA_ARTIFACT) as f:
-            data = json.load(f)
+        # Install requirements if needed
+        req_file = BACKEND / "requirements.txt"
+        if req_file.exists():
+            subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-r", str(req_file)], cwd=BACKEND, check=False)
 
-        # Example QC Rule from Spec: "Catalog must not be empty"
-        count = 0
-        if isinstance(data, list):
-            count = len(data)
-        elif isinstance(data, dict):
-            count = sum(len(v) for v in data.values())
-
-        if count < 100:
-            log("QC", f"Catalog too small ({count} items). Rejecting batch.", "FAIL")
-            return False
-
-        log("QC", f"Artifact Approved: {count} items ready for distribution.", "SUCCESS")
-        return True
-    except Exception as e:
-        log("QC", f"Corrupt Artifact: {e}", "FAIL")
-        return False
-
-
-def boot_console():
-    """Starts the Operator Console."""
-    log("OPS", "Booting System...", "WORK")
-
-    # 1. Start Backend API
-    api_proc = subprocess.Popen(
-        [sys.executable, "-m", "uvicorn", "server:app", "--port", "8000"],
-        cwd=BACKEND_DIR,
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.PIPE,
-    )
-    log("OPS", "API Server Online (Port 8000)", "SUCCESS")
-
-    # 2. Start Frontend
-    log("OPS", "Frontend Interface Launching...", "INFO")
-    subprocess.run(["npm", "run", "dev"], cwd=ROOT_DIR / "frontend")
-
-
-def main():
-    action = sys.argv[1] if len(sys.argv) > 1 else "start"
-
-    if action == "build":
-        # 1. Read Spec
-        # spec = read_spec("01_ingestion.md")
-        # 2. Run Agent
-        run_agent_conductor("rebuild-catalog")
-        # 3. QC Output
-        if not quality_control_data():
-            sys.exit(1)
-
-    elif action == "start":
-        if not quality_control_data():
-            log("OPS", "Data stale. Running auto-build...", "WARN")
-            run_agent_conductor("rebuild-catalog")
-        boot_console()
-
-    elif action == "purge":
-        # The Cleanup Crew
-        log("CLEAN", "Removing legacy 'Galaxy' debris...", "WORK")
-        paths_to_delete = [
-            "frontend/src/components/views/GalaxyDashboard.tsx",
-            "frontend/src/components/views/SpectrumModule.tsx",
-            "frontend/src/components/views/arena",
-            "frontend/src/components/views/galaxy",
-            "frontend/src/components/v0",
-            "frontend/public/assets/bg",
-        ]
-        for p in paths_to_delete:
-            path = ROOT_DIR / p
-            if path.exists():
-                subprocess.run(["rm", "-rf", str(path)])
-                log("CLEAN", f"Deleted {p}", "INFO")
-        log("CLEAN", "Factory Floor Clean.", "SUCCESS")
-
-    else:
-        log("OPS", f"Unknown action: {action}. Use: build | start | purge", "FAIL")
+        # Run Conductor
+        env = os.environ.copy()
+        env["PYTHONPATH"] = str(BACKEND)
+        subprocess.run([sys.executable, "conductor_main.py", "rebuild-catalog"], cwd=BACKEND, env=env, check=True)
+        log("✅ Data Build Complete.")
+    except subprocess.CalledProcessError as e:
+        log(f"❌ Data Build Failed: {e}")
         sys.exit(1)
 
+def run_agent_builder(spec_name):
+    """Activates the Builder Agent to implement a spec."""
+    log(f"Assigning Builder to Spec: {spec_name}...")
+    name = spec_name if spec_name.endswith(".md") else f"{spec_name}.md"
+    spec_path = SPECS / "ui" / name
+
+    if not spec_path.exists():
+        log(f"❌ Spec {name} not found in {SPECS}/ui")
+        sys.exit(1)
+
+    agent_script = BACKEND / "factory" / "builder_agent.py"
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.pathsep.join([str(BACKEND), str(BACKEND / "factory")])
+
+    result = subprocess.run(
+        [sys.executable, str(agent_script), str(spec_path.resolve())],
+        cwd=BACKEND,
+        env=env,
+        capture_output=True,
+        text=True,
+    )
+
+    print(result.stdout)
+    if result.stderr:
+        print("ERR:", result.stderr)
+    if result.returncode != 0:
+        sys.exit(result.returncode)
+
+def start_system():
+    """Launches the consolidated Operator Console."""
+    log("🚀 Launching Factory Output...")
+
+    # Start Backend API
+    api = subprocess.Popen([sys.executable, "-m", "uvicorn", "server:app", "--reload", "--port", "8000"], cwd=BACKEND)
+
+    # Start Frontend
+    try:
+        subprocess.run(["npm", "run", "dev"], cwd=FRONTEND, check=True)
+    except KeyboardInterrupt:
+        log("Shutting down...")
+        api.terminate()
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) < 2:
+        print("Usage: python factory.py [init|setup|purge|build|implement <spec>|start]")
+        sys.exit(1)
+
+    cmd = sys.argv[1]
+    if cmd == "init" or cmd == "setup":
+        setup_factory()
+        purge_legacy()
+    elif cmd == "purge":
+        purge_legacy()
+    elif cmd == "build":
+        build_backend()
+    elif cmd == "implement":
+        if len(sys.argv) < 3:
+            log("❌ implement requires a spec name (e.g. InventoryGrid.md)")
+            sys.exit(1)
+        run_agent_builder(sys.argv[2])
+    elif cmd == "start":
+        start_system()
+    else:
+        print(f"Unknown command: {cmd}")
