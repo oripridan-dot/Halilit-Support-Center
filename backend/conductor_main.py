@@ -29,7 +29,7 @@ import argparse
 import json
 import logging
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Dict
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
@@ -349,13 +349,24 @@ class ConductorCLI:
             logger.error(f"Search index rebuild failed: {e}")
 
     def show_catalog(self) -> bool:
-        """Display catalog statistics."""
+        """Display catalog statistics.
+
+        Uses _normalize_brand_name (canonical map) as primary grouping key,
+        then merges remaining groups where one brand name is a prefix of another,
+        so the unique brand count reflects actual Halilit partner brands (~84).
+        """
+        from backend.product_normalizer import _normalize_brand_name
+
         brands = self.get_all_brands()
         logger.info(f"\nCATALOG STATISTICS")
         logger.info("=" * 50)
-        logger.info(f"Total Brands: {len(brands)}")
+        logger.info(f"Raw Brand Files: {len(brands)}")
 
-        total_products = 0
+        # First pass: Group by canonical display name (uses _BRAND_CANONICAL_NAMES)
+        # This merges hyphen/space variants, sub-brands (e.g. "akai" + "akai professional")
+        brand_groups: Dict[str, List[str]] = {}
+        brand_product_counts: Dict[str, int] = {}
+
         for b in brands:
             data_file = self.frontend_dir / "public" / "data" / f"{b}.json"
             if data_file.exists():
@@ -363,10 +374,62 @@ class ConductorCLI:
                     with open(data_file) as f:
                         data = json.load(f)
                         count = len(data) if isinstance(data, list) else len(data.get("products", []))
-                        total_products += count
-                        logger.info(f"  {b}: {count} products")
+                    canonical = _normalize_brand_name(b)
+                    if canonical not in brand_groups:
+                        brand_groups[canonical] = []
+                        brand_product_counts[canonical] = 0
+                    brand_groups[canonical].append(b)
+                    brand_product_counts[canonical] += count
                 except Exception as e:
                     logger.warning(f"  {b}: Error ({e})")
+
+        # Second pass: Merge groups where one canonical name is a prefix of another
+        # (handles brands not in canonical map, e.g. "halilit" + "halilit-expo")
+        def _norm_for_prefix(s: str) -> str:
+            return s.lower().strip().replace("-", " ").replace("&", "and")
+
+        merged_groups: Dict[str, List[str]] = {}
+        merged_counts: Dict[str, int] = {}
+        processed = set()
+
+        for canonical in sorted(brand_groups.keys()):
+            if canonical in processed:
+                continue
+            variants = brand_groups[canonical].copy()
+            product_count = brand_product_counts[canonical]
+            canon_norm = _norm_for_prefix(canonical)
+
+            for other_canonical, other_variants in brand_groups.items():
+                if other_canonical == canonical or other_canonical in processed:
+                    continue
+                other_norm = _norm_for_prefix(other_canonical)
+                if len(canon_norm) >= 3 and len(other_norm) >= 3:
+                    if canon_norm.startswith(other_norm) or other_norm.startswith(canon_norm):
+                        variants.extend(other_variants)
+                        product_count += brand_product_counts[other_canonical]
+                        processed.add(other_canonical)
+
+            merged_groups[canonical] = variants
+            merged_counts[canonical] = product_count
+            processed.add(canonical)
+
+        unique_brands = len(merged_groups)
+        partner_brands = unique_brands if "Other" not in merged_groups else unique_brands - 1
+        logger.info(f"Unique Brands (deduplicated): {unique_brands}")
+        if "Other" in merged_groups:
+            logger.info(f"Partner Brands (excl. Other): {partner_brands}")
+        logger.info("")
+
+        total_products = 0
+        for canonical in sorted(merged_groups.keys()):
+            variants = merged_groups[canonical]
+            product_count = merged_counts[canonical]
+            total_products += product_count
+            display = ", ".join(sorted(set(variants))) if len(variants) > 1 else ""
+            if display:
+                logger.info(f"  {canonical}: {product_count} products (variants: {display})")
+            else:
+                logger.info(f"  {canonical}: {product_count} products")
 
         # Check inventory.json
         inv_file = self.frontend_dir / "public" / "data" / "inventory.json"

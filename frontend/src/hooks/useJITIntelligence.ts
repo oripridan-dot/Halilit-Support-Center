@@ -237,6 +237,15 @@ function processEvent(
       }));
       break;
 
+    case "error":
+      setState((prev) => ({
+        ...prev,
+        phase: "error",
+        error: data.message || data.error || "JIT intelligence error",
+        statusMessage: data.message || "Error occurred",
+      }));
+      break;
+
     case "complete":
       setState((prev) => ({
         ...prev,

@@ -401,8 +401,8 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
     brand_name = snap_data.get("brand", "")
     halilit_url = snap_data.get("halilit_url", "")
 
-    # ── Phase 2: PARALLEL SWARM — Halilit + Official fetch ──
-    yield _sse_event("status", {"phase": "intel", "message": "Fetching Halilit & official data in parallel..."})
+    # ── Phase 2: PARALLEL SWARM — Official first, then Halilit ──
+    yield _sse_event("status", {"phase": "intel", "message": "Fetching official brand data (priority) and Halilit data..."})
     loop = asyncio.get_event_loop()
     halilit_data = {}
     official_candidate = {}
@@ -415,9 +415,28 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
     async def _run_official():
         if not brand_name:
             return {}
+        # Try official_url from inventory first (if available)
+        official_url_from_inv = (inv_product or {}).get("official_url", "")
+        if official_url_from_inv:
+            try:
+                from backend.ingestion.official_scraper import fetch_official_page
+                official_data = await loop.run_in_executor(None, lambda: fetch_official_page(official_url_from_inv))
+                if official_data and official_data.get("url"):
+                    logger.info(f"Using official_url from inventory: {official_url_from_inv}")
+                    return official_data
+            except Exception as e:
+                logger.debug(f"Failed to fetch from inventory official_url: {e}")
+        # Fallback to search-based discovery
         return await loop.run_in_executor(None, lambda: _fetch_official_data(brand_name, product_name))
 
-    halilit_data, official_candidate = await asyncio.gather(_run_halilit(), _run_official())
+    # Fetch official first (priority), then Halilit
+    official_candidate, halilit_data = await asyncio.gather(_run_official(), _run_halilit())
+    
+    # Log what we got
+    if official_candidate and official_candidate.get("url"):
+        logger.info(f"✅ Official data found: {official_candidate.get('url')}")
+    else:
+        logger.warning(f"⚠️ No official data found for {product_name} ({brand_name}) - using Halilit data only")
 
     # ── Phase 2a (fallback): OPENCLAW FIELD AGENT — when Python official fetch is empty ──
     if (not official_candidate or not official_candidate.get("url")) and brand_name:
@@ -442,7 +461,19 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
             logger.debug("OpenClaw fallback skipped: %s", e)
 
     # ── Phase 2b: THE AUDITOR — Visual verification (compare commercial vs official image) ──
-    combined_data = dict(halilit_data) if halilit_data else {}
+    # PRIORITY: Official data first, Halilit as fallback (per Source Rules: Official owns specs/descriptions)
+    combined_data = dict(official_candidate) if official_candidate else {}
+    if halilit_data:
+        # Merge Halilit data, but official takes precedence
+        combined_data.setdefault("description", halilit_data.get("description", ""))
+        combined_data.setdefault("specs", {}).update(halilit_data.get("specs", {}))
+        combined_data.setdefault("features", halilit_data.get("features", []))
+        combined_data.setdefault("images", halilit_data.get("images", []))
+        combined_data.setdefault("faq", halilit_data.get("faq", []))
+        # Always keep Halilit price (commercial truth)
+        combined_data["price"] = halilit_data.get("price", 0)
+        combined_data["halilit_url"] = halilit_data.get("halilit_url", halilit_url)
+    
     identity_verified = False
     try:
         from backend.ingestion.visual_validator import get_visual_validator
@@ -466,13 +497,14 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
                         "phase": "auditor",
                         "message": f"Identity verified via image match (confidence: {similarity:.0%})",
                     })
-                    combined_data["description"] = (
-                        (official_candidate.get("description") or "").strip()
-                        + "\n\n---\n\n"
-                        + (halilit_data.get("description") or "").strip()
-                    ).strip()
-                    combined_data["specs"] = {**(halilit_data.get("specs") or {}), **(official_candidate.get("specs") or {})}
+                    # Official data takes precedence when verified
+                    if official_candidate.get("description"):
+                        combined_data["description"] = official_candidate.get("description", "")
+                    if official_candidate.get("specs"):
+                        combined_data["specs"] = {**combined_data.get("specs", {}), **official_candidate.get("specs", {})}
                     combined_data["official_url"] = official_candidate.get("url", "")
+                    if official_candidate.get("image_url"):
+                        combined_data.setdefault("images", []).insert(0, official_candidate.get("image_url"))
                 else:
                     yield _sse_event("status", {
                         "phase": "auditor",
@@ -515,6 +547,16 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
 
     # ── Phase 3: WISDOM — Trusted reviews + AI Reasoning ──
     yield _sse_event("status", {"phase": "wisdom", "message": f"Consulting trusted sources for {product_name}..."})
+
+    # Check API key before AI analysis
+    from backend.env_secrets import get_gemini_api_key
+    api_key = get_gemini_api_key()
+    if not api_key:
+        yield _sse_event("error", {
+            "error": "GOOGLE_API_KEY not configured",
+            "message": "Set GOOGLE_API_KEY or GEMINI_API_KEY in environment or .env file. Get key from https://aistudio.google.com/app/apikey",
+            "phase": "wisdom"
+        })
 
     # Search trusted review sources
     trusted_data = search_trusted_reviews(product_name)
@@ -616,6 +658,10 @@ async def _generate_ai_intelligence(
         features = halilit_data.get("features", [])
         specs = halilit_data.get("specs", {})
 
+        # Check data quality - if we only have minimal Halilit data, warn AI
+        has_official_data = bool(halilit_data.get("official_url") or (specs and len(specs) > 3))
+        data_quality = "official" if has_official_data else "commercial_only"
+        
         context_parts = [f"Product: {product_name}", f"Brand: {brand_name}"]
         if description:
             context_parts.append(f"Description: {description[:500]}")
@@ -624,6 +670,8 @@ async def _generate_ai_intelligence(
         if specs:
             specs_str = ", ".join(f"{k}: {v}" for k, v in list(specs.items())[:10])
             context_parts.append(f"Specs: {specs_str}")
+        else:
+            context_parts.append("Specs: Not available")
 
         context = "\n".join(context_parts)
 
@@ -638,8 +686,10 @@ Based on the following product data, provide:
 
 IMPORTANT RULES:
 - ONLY use facts from the provided data. NEVER fabricate specs, reviews, or claims.
-- If data is limited, say so honestly.
-- Be practical and professional — this is for music store employees.
+- If data is limited or incomplete, provide a helpful analysis based on what IS available (brand reputation, product category, typical use cases).
+- DO NOT say "unidentified" or "impossible to recommend" - use your knowledge of the brand and product category to provide value.
+- Be practical and professional — this is for music store employees helping customers.
+- If specs are missing, focus on brand reputation, category characteristics, and typical applications.
 
 Product Data:
 {context}

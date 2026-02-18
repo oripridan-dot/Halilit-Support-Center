@@ -1,154 +1,47 @@
-// frontend/src/store/navigationStore.ts
 /**
- * Navigation Store v8.5 - UNIFIED DATA PIPELINE
- * The Central State Machine for the 3-Screen User Journey.
- * 
- * Screens:
- * 1. GALAXY - Category dashboard
- * 2. SPECTRUM - Product spectrum by brand & price
- * 3. PRODUCT_PAGE - Full product analysis
- * 4. ITEMS - Structured items (brand → type → series) with large images and interconnected products
- * 
- * Follows unified action patterns and error handling
+ * Navigation Store — Operator Console v10
+ * Simple 3-state workflow: Dashboard → Inventory → Product Detail
+ * No Galaxy/Spectrum modes; strict hierarchy.
  */
 import { create } from 'zustand';
 
-// The Distinct States
-export type AppView = 'GALAXY' | 'SPECTRUM' | 'PRODUCT_PAGE' | 'ITEMS';
+export type ViewType = 'DASHBOARD' | 'INVENTORY' | 'PRODUCT_DETAIL' | 'INGESTION_STATUS';
 
-/**
- * Core navigation state that determines what the user sees
- */
-export interface NavigationState {
-  // Current view
-  currentView: AppView;
+interface NavigationState {
+  currentView: ViewType;
+  activeProductId: string | null;
 
-  // Context Data
-  activeTribeId: string | null;      // e.g., "guitars-bass"
-  activeSubcategoryId: string | null; // e.g., "electric-guitars"
-  activeProductId: string | null;     // e.g., "gibson-lp-std"
-  activeFilters: string[];           // Layer 3 Filters (The 1176 Buttons)
-
-  // Error handling
-  lastError: Error | null;
-  clearError: () => void;
-
-  // Actions (Following standardized pattern)
-  goToGalaxy: () => void;
-  goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => void;
-  goToItems: () => void;
-  openProductPage: (productId: string) => void;
-  closeProductPage: () => void;
-
-  // Utility actions
-  updateFilters: (filters: string[]) => void;
+  goToDashboard: () => void;
+  goToInventory: () => void;
+  goToProduct: (productId: string) => void;
+  goToIngestionStatus: () => void;
+  goBack: () => void;
 }
 
-/**
- * Create the navigation store with strictly typed actions
- */
-export const useNavigationStore = create<NavigationState>((set) => ({
-  // Initial state
-  currentView: 'GALAXY',
-  activeTribeId: null,
-  activeSubcategoryId: null,
+export const useNavigationStore = create<NavigationState>((set, get) => ({
+  currentView: 'DASHBOARD',
   activeProductId: null,
-  activeFilters: [],
-  lastError: null,
 
-  // Error handling
-  clearError: () => set({ lastError: null }),
+  goToDashboard: () => set({ currentView: 'DASHBOARD', activeProductId: null }),
+  goToInventory: () => set({ currentView: 'INVENTORY', activeProductId: null }),
 
-  // Navigation Actions - All follow consistent patterns
-
-  /**
-   * Navigate back to Galaxy dashboard
-   * Resets all selection state
-   */
-  goToGalaxy: () => set({
-    currentView: 'GALAXY',
-    activeTribeId: null,
-    activeSubcategoryId: null,
-    activeProductId: null,
-    activeFilters: [],
-    lastError: null,
-  }),
-
-  /**
-   * Navigate to Spectrum (product workbench with TierBar)
-   * @param tribeId - Main category ID
-   * @param subcategoryId - Subcategory ID
-   * @param filters - Active filter tags
-   */
-  goToSpectrum: (tribeId: string, subcategoryId: string, filters: string[]) => {
-    if (!tribeId || !subcategoryId) {
-      console.warn('goToSpectrum: Invalid parameters', { tribeId, subcategoryId });
-      return;
-    }
+  goToProduct: (productId) =>
     set({
-      currentView: 'SPECTRUM',
-      activeTribeId: tribeId,
-      activeSubcategoryId: subcategoryId,
-      activeFilters: filters,
-      activeProductId: null,
-      lastError: null,
-    });
-  },
-
-  /**
-   * Navigate to Items view (structured brand → type → series with variants, accessories, related)
-   */
-  goToItems: () => set({
-    currentView: 'ITEMS',
-    activeTribeId: null,
-    activeSubcategoryId: null,
-    activeProductId: null,
-    activeFilters: [],
-    lastError: null,
-  }),
-
-  /**
-   * Open product analysis page
-   * Renamed from openProductPop to openProductPage
-   * @param productId - Product ID to analyze
-   */
-  openProductPage: (productId: string) => {
-    if (!productId) {
-      console.warn('openProductPage: Invalid product ID');
-      return;
-    }
-    set((state) => ({
-      currentView: 'PRODUCT_PAGE',
+      currentView: 'PRODUCT_DETAIL',
       activeProductId: productId,
-      // Remember which view to return to
-      _previousView: state.currentView as AppView,
-      lastError: null,
-    }));
-  },
+    }),
 
-  /**
-   * Close product analysis page
-   * Returns to the previous view (Spectrum or Galaxy) while keeping state
-   */
-  closeProductPage: () => set((state) => {
-    const prev = (state as { _previousView?: AppView })._previousView;
-    const returnTo: AppView = prev === 'SPECTRUM' || prev === 'ITEMS' ? prev : 'GALAXY';
-    return {
-      currentView: returnTo,
-      activeProductId: null,
-      lastError: null,
-    };
-  }),
+  goToIngestionStatus: () =>
+    set({ currentView: 'INGESTION_STATUS', activeProductId: null }),
 
-  /**
-   * Update active filters (utility action)
-   * Keeps user on Spectrum view
-   */
-  updateFilters: (filters: string[]) => set((state) => {
-    // Only update if on Spectrum view
-    if (state.currentView === 'SPECTRUM') {
-      return { activeFilters: filters, lastError: null };
+  goBack: () => {
+    const { currentView } = get();
+    if (currentView === 'PRODUCT_DETAIL') {
+      set({ currentView: 'INVENTORY', activeProductId: null });
+    } else if (currentView === 'INGESTION_STATUS') {
+      set({ currentView: 'DASHBOARD', activeProductId: null });
+    } else {
+      set({ currentView: 'DASHBOARD', activeProductId: null });
     }
-    return state;
-  }),
+  },
 }));

@@ -1,18 +1,18 @@
 /**
- * HALILIT SUPPORT CENTER — Operator Console v9.6
+ * HALILIT SUPPORT CENTER — Operator Console v10
  *
- * Professional support console layout:
- * - Persistent sidebar (Overview, Inventory, JIT Analysis, System)
+ * Professional shell layout:
+ * - Persistent sidebar (Overview, Inventory Master, System)
  * - Header with breadcrumbs and global search (Command-K)
- * - Views: Dashboard (Overview), Inventory (data grid), Product Detail (tabs)
+ * - Views: Dashboard, Inventory, Product Detail
  */
 import React, { Suspense } from "react";
 import {
   LayoutDashboard,
   PackageSearch,
   Settings,
-  Activity,
   Server,
+  LifeBuoy,
 } from "lucide-react";
 import { useNavigationStore } from "./store/navigationStore";
 import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
@@ -21,11 +21,14 @@ import { GlobalSearch } from "./components/GlobalSearch";
 const DashboardView = React.lazy(() =>
   import("./components/views/DashboardView").then((m) => ({ default: m.DashboardView }))
 );
-const InventoryViewV0 = React.lazy(() =>
-  import("./components/v0/InventoryViewV0").then((m) => ({ default: m.InventoryViewV0 }))
+const InventoryView = React.lazy(() =>
+  import("./components/views/InventoryView").then((m) => ({ default: m.InventoryView }))
 );
 const ProductDetailView = React.lazy(() =>
   import("./components/views/ProductDetailView").then((m) => ({ default: m.ProductDetailView }))
+);
+const IngestionStatusView = React.lazy(() =>
+  import("./components/views/IngestionStatusView").then((m) => ({ default: m.IngestionStatusView }))
 );
 
 const SidebarItem = ({
@@ -68,25 +71,26 @@ const LoadingScreen = () => (
 );
 
 function App() {
-  const { currentView, goToGalaxy, goToItems } = useNavigationStore();
+  const { currentView, goToDashboard, goToInventory, goToIngestionStatus } = useNavigationStore();
 
   const breadcrumbLabel =
-    currentView === "GALAXY"
+    currentView === "DASHBOARD"
       ? "Overview"
-      : currentView === "ITEMS" || currentView === "SPECTRUM"
+      : currentView === "INVENTORY"
         ? "Inventory Master"
-        : "Product Detail";
+        : currentView === "INGESTION_STATUS"
+          ? "Ingestion Status"
+          : "Product Intelligence";
 
   return (
     <GlobalErrorBoundary>
       <div className="flex h-screen w-screen bg-zinc-950 text-zinc-100 font-sans overflow-hidden selection:bg-blue-500/30">
-        {/* 1. PROFESSIONAL SIDEBAR */}
         <aside
           className="w-64 flex-shrink-0 border-r border-zinc-800 bg-black flex flex-col"
           aria-label="Main navigation"
         >
           <div className="h-14 flex items-center px-4 border-b border-zinc-800 gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">
+            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white shadow-lg shadow-blue-900/20">
               H
             </div>
             <div className="flex flex-col">
@@ -104,20 +108,14 @@ function App() {
             <SidebarItem
               icon={LayoutDashboard}
               label="Overview"
-              isActive={currentView === "GALAXY"}
-              onClick={goToGalaxy}
+              isActive={currentView === "DASHBOARD"}
+              onClick={goToDashboard}
             />
             <SidebarItem
               icon={PackageSearch}
-              label="Inventory & Price"
-              isActive={currentView === "ITEMS" || currentView === "SPECTRUM"}
-              onClick={goToItems}
-            />
-            <SidebarItem
-              icon={Activity}
-              label="JIT Analysis"
-              isActive={currentView === "PRODUCT_PAGE"}
-              onClick={() => {}}
+              label="Inventory Master"
+              isActive={currentView === "INVENTORY" || currentView === "PRODUCT_DETAIL"}
+              onClick={goToInventory}
             />
 
             <div className="mt-6 px-3 py-2 text-[10px] font-bold text-zinc-600 uppercase tracking-widest">
@@ -126,27 +124,25 @@ function App() {
             <SidebarItem
               icon={Server}
               label="Ingestion Status"
-              isActive={false}
-              onClick={() => {}}
+              isActive={currentView === "INGESTION_STATUS"}
+              onClick={goToIngestionStatus}
             />
             <SidebarItem icon={Settings} label="Settings" isActive={false} onClick={() => {}} />
           </nav>
 
           <div className="p-4 border-t border-zinc-800">
             <div className="flex items-center gap-3">
-              <div
-                className="w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700"
-                aria-hidden
-              />
+              <div className="w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700 flex items-center justify-center">
+                <LifeBuoy size={14} className="text-zinc-400" aria-hidden />
+              </div>
               <div className="flex flex-col">
-                <span className="text-xs font-medium text-zinc-200">Admin User</span>
+                <span className="text-xs font-medium text-zinc-200">Support Agent</span>
                 <span className="text-[10px] text-zinc-500">Online</span>
               </div>
             </div>
           </div>
         </aside>
 
-        {/* 2. MAIN CONTENT AREA */}
         <div className="flex-1 flex flex-col min-w-0">
           <header className="h-14 border-b border-zinc-800 bg-zinc-950/50 backdrop-blur flex items-center justify-between px-6">
             <div className="text-sm text-zinc-400">
@@ -162,11 +158,12 @@ function App() {
             </div>
           </header>
 
-          <main className="flex-1 overflow-auto bg-zinc-950 relative">
+          <main className="flex-1 overflow-hidden bg-zinc-950 relative">
             <Suspense fallback={<LoadingScreen />}>
-              {currentView === "GALAXY" && <DashboardView />}
-              {(currentView === "ITEMS" || currentView === "SPECTRUM") && <InventoryViewV0 />}
-              {currentView === "PRODUCT_PAGE" && <ProductDetailView />}
+              {currentView === "DASHBOARD" && <DashboardView />}
+              {currentView === "INVENTORY" && <InventoryView />}
+              {currentView === "PRODUCT_DETAIL" && <ProductDetailView />}
+              {currentView === "INGESTION_STATUS" && <IngestionStatusView />}
             </Suspense>
           </main>
         </div>

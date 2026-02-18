@@ -400,7 +400,8 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "ampeg": "Ampeg", "amphion": "Amphion", "antigua": "Antigua",
     "arturia": "Arturia", "asm": "ASM", "adams": "Adams",
     "alesis": "Alesis",
-    "ashdown engineering": "Ashdown Engineering",
+    "ashdown": "Ashdown Engineering", "ashdown engineering": "Ashdown Engineering",
+    "ashdown-engineering": "Ashdown Engineering",
     "audio-technica": "Audio-Technica", "audio technica": "Audio-Technica",
     "austrian audio": "Austrian Audio", "avid": "Avid",
     "behringer": "Behringer", "bespeco": "Bespeco",
@@ -409,7 +410,7 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "breedlove guitars": "Breedlove", "breedlove": "Breedlove",
     "casio": "Casio", "clavia": "Clavia",
     "cordoba guitars": "Cordoba", "cordoba": "Cordoba",
-    "denon dj": "Denon DJ", "denon-dj": "Denon DJ",
+    "denon": "Denon", "denon dj": "Denon", "denon-dj": "Denon",
     "dixon": "Dixon", "drumdots": "DrumDots", "dw": "DW",
     "dynaudio": "Dynaudio",
     "eaw eastern acoustic works": "EAW", "eaw": "EAW",
@@ -423,12 +424,15 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "foxgear guitar effects and pedals": "FoxGear", "foxgear": "FoxGear",
     "fusion": "Fusion", "fzone": "FZone",
     "genelec": "Genelec", "gibson": "Gibson",
-    "gon bops percussion": "Gon Bops", "gon bops": "Gon Bops",
+    "gon bops": "Gon Bops", "gon bops percussion": "Gon Bops",
+    "gon-bops": "Gon Bops", "gon-bops-percussion": "Gon Bops",
     "guild": "Guild",
+    "halilit": "Halilit", "halilit expo": "Halilit", "halilit-expo": "Halilit",
     "headliner la equipment stands": "Headliner", "headliner": "Headliner",
     "headrush fx": "HeadRush", "headrush": "HeadRush",
     "heritage audio": "Heritage Audio", "hiwatt": "Hiwatt",
     "innovative percussion": "Innovative Percussion",
+    "innovative-percussion": "Innovative Percussion",
     "jasmine guitars": "Jasmine", "jasmine": "Jasmine",
     "keith mcmillen instruments kmi": "Keith McMillen", "keith mcmillen": "Keith McMillen",
     "krk systems": "KRK", "krk": "KRK",
@@ -437,7 +441,7 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "m audio": "M-Audio", "m-audio": "M-Audio",
     "mackie": "Mackie", "magma": "Magma",
     "maestro guitar pedals and effects": "Maestro", "maestro": "Maestro",
-    "marimba one": "Marimba One",
+    "marimba one": "Marimba One", "marimba-one": "Marimba One",
     "maton guitars": "Maton", "maton": "Maton",
     "maybach": "Maybach", "medeli": "Medeli",
     "mjc ironworks": "MJC Ironworks",
@@ -451,22 +455,25 @@ _BRAND_CANONICAL_NAMES: Dict[str, str] = {
     "playdifferently": "PLAYdifferently",
     "presonus": "PreSonus",
     "rapier 33 electric guitars": "Rapier", "rapier": "Rapier",
-    "rcf": "RCF", "regal tip": "Regal Tip",
-    "remo": "Remo", "rhythm tech": "Rhythm Tech",
-    "rode": "Rode", "rogers": "Rogers", "roland": "Roland",
-    "santos martinez": "Santos Martinez",
+    "rcf": "RCF", "regal tip": "Regal Tip", "regal-tip": "Regal Tip",
+    "remo": "Remo", "rhythm tech": "Rhythm Tech", "rhythm-tech": "Rhythm Tech",
+    "rode": "Rode", "rode x": "Rode", "rode-x": "Rode",
+    "rogers": "Rogers", "roger s": "Rogers", "roger-s": "Rogers",
+    "roland": "Roland",
+    "santos martinez": "Santos Martinez", "santos-martinez": "Santos Martinez",
     "sequential": "Sequential", "show": "Show",
     "shure": "Shure",
     "solar guitars": "Solar Guitars", "solar": "Solar Guitars",
     "sonarworks": "Sonarworks", "spector": "Spector",
-    "steinberg": "Steinberg",
+    "steinberg": "Steinberg", "teenage engineering": "Teenage Engineering",
+    "teenage-engineering": "Teenage Engineering",
     "studio logic": "Studiologic", "studiologic": "Studiologic",
-    "tombo": "Tombo", "topp pro": "Topp Pro",
+    "tombo": "Tombo", "topp pro": "Topp Pro", "topp-pro": "Topp Pro",
     "turkish": "Turkish",
-    "ultimate support": "Ultimate Support",
+    "ultimate support": "Ultimate Support", "ultimate-support": "Ultimate Support",
     "universal audio": "Universal Audio", "universal-audio": "Universal Audio",
     "v moda": "V-MODA", "v-moda": "V-MODA",
-    "vintage": "Vintage", "warm audio": "Warm Audio",
+    "vintage": "Vintage", "warm audio": "Warm Audio", "warm-audio": "Warm Audio",
     "washburn": "Washburn", "xotic": "Xotic", "xvive": "Xvive",
 }
 
@@ -1465,8 +1472,15 @@ def build_catalog(
                 if r not in bucket:
                     bucket.append(r)
 
+    # Always include relationships index (even if empty) so frontend can check for relationships
     if combined_relationships:
         all_indexes["relationships"] = combined_relationships
+    elif graph_indexes and graph_indexes.get("relationships"):
+        # Fallback to graph indexes if no OpenClaw hints
+        all_indexes["relationships"] = graph_indexes["relationships"]
+    else:
+        # Always include relationships index (even if empty)
+        all_indexes["relationships"] = {}
 
     # Prefer OpenClaw-provided family metadata when present; fall back to graph-only
     if openclaw_families_meta:

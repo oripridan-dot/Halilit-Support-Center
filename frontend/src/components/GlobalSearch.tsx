@@ -1,12 +1,21 @@
 import { Search, X, Command } from "lucide-react";
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import { useRealtimeSearch } from "../hooks/useRealtimeSearch";
+import React, { useEffect, useRef, useState, useCallback, useMemo } from "react";
+import { useConductorCatalog } from "../hooks/useConductorCatalog";
 import { useNavigationStore } from "../store/navigationStore";
 import { BaseComponentProps, EventHandler } from "../types/componentUtils";
 
 interface GlobalSearchProps extends BaseComponentProps {
   onSelect?: EventHandler<string>;
   maxResults?: number;
+}
+
+interface SearchResult {
+  id: string;
+  name: string;
+  brand: string;
+  image_url?: string;
+  category?: string;
+  subcategory?: string;
 }
 
 /**
@@ -28,11 +37,87 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const searchResult = useRealtimeSearch(query, { limit: maxResults });
-  const { data: results = [], loading, error } = searchResult;
-  const { openProductPage } = useNavigationStore();
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [reloadToken, setReloadToken] = useState(0);
+  const { products } = useConductorCatalog();
+  const { goToProduct } = useNavigationStore();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const productMap = useMemo(() => {
+    const map = new Map<string, ReturnType<typeof products[number]>>();
+    for (const p of products) {
+      map.set(p.id, p);
+    }
+    return map;
+  }, [products]);
+
+  const handleRetry = useCallback(() => {
+    setReloadToken((t) => t + 1);
+  }, []);
+
+  useEffect(() => {
+    const trimmed = query.trim();
+    if (!trimmed || trimmed.length < 2) {
+      setResults([]);
+      setLoading(false);
+      setError(null);
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `/api/products/search?q=${encodeURIComponent(trimmed)}`,
+          { signal: controller.signal },
+        );
+        if (!res.ok) {
+          throw new Error(`Search failed: ${res.status} ${res.statusText}`);
+        }
+        const body = await res.json();
+        const items = (body?.products ?? []) as Array<{
+          id: string;
+          product_name?: string;
+          brand?: string;
+        }>;
+
+        const mapped: SearchResult[] = items.slice(0, maxResults).map((item) => {
+          const p = productMap.get(item.id);
+          return {
+            id: item.id,
+            name: p?.name ?? item.product_name ?? item.id,
+            brand: p?.brand ?? item.brand ?? "",
+            image_url: p?.image_url,
+            category: p?.category,
+            subcategory: p?.subcategory,
+          };
+        });
+
+        setResults(mapped);
+        setLoading(false);
+      } catch (err) {
+        if ((err as Error).name === "AbortError") {
+          return;
+        }
+        setError(
+          err instanceof Error ? err.message : "Search failed. Please try again.",
+        );
+        setResults([]);
+        setLoading(false);
+      }
+    }, 200);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+      controller.abort();
+    };
+  }, [query, maxResults, productMap, reloadToken]);
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -64,14 +149,14 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
 
   const handleSelect = useCallback(
     (productId: string) => {
-      openProductPage(productId);
+      goToProduct(productId);
       onSelect?.(productId);
       setIsOpen(false);
       setQuery("");
       setSelectedIndex(-1);
       inputRef.current?.blur();
     },
-    [openProductPage, onSelect],
+    [goToProduct, onSelect],
   );
 
   // Keyboard navigation in results
@@ -189,9 +274,9 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
                   />
                 </svg>
               </div>
-              <p className="text-sm text-red-400 mb-2">{error.message}</p>
+              <p className="text-sm text-red-400 mb-2">{error}</p>
               <button
-                onClick={searchResult.retry}
+                onClick={handleRetry}
                 className="text-xs text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors"
               >
                 Retry search

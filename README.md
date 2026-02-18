@@ -216,4 +216,4 @@ frontend/
 
 ---
 
-**v9.5.0 — Openclaw** · Last updated: February 2026
+**v9.6.0 — Operator Console** · Last updated: February 18, 2026

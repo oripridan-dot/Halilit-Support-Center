@@ -4,7 +4,7 @@ Batch Catalog Enrichment Script (FAST ASYNC VERSION)
 ====================================================
 Processes all existing brand JSON files and enriches products by:
 1. Scraping individual Halilit product pages for JSON-LD data (ASYNC - MUCH FASTER)
-2. Optionally attempting official brand page scraping
+2. Fetching official brand product pages for specs, descriptions, images (per Source Rules)
 3. Deduplicating products across variant brand files
 4. Saving enriched data back to disk
 
@@ -97,6 +97,7 @@ def is_real_halilit_url(url: str) -> bool:
 async def _enrich_one_async(product: dict, scraper: AsyncHalilitPageScraper) -> Tuple[dict, Dict[str, int]]:
     """
     Enrich a single product asynchronously; returns (enriched_product, stats_delta).
+    Fetches both Halilit page data AND official brand page data (per Source Rules).
     """
     url = product.get("halilit_url") or product.get("source_url") or ""
 
@@ -107,54 +108,94 @@ async def _enrich_one_async(product: dict, scraper: AsyncHalilitPageScraper) -> 
     has_price = bool(product.get("price") or product.get("price_il"))
     has_image = bool(product.get("image_url"))
     has_gallery = len(product.get("gallery_images") or product.get("image_gallery") or []) > 1
+    has_official_specs = bool(product.get("official_specs") and isinstance(product.get("official_specs"), dict) and len(product.get("official_specs", {})) > 2)
 
-    if has_desc and has_price and has_image and has_gallery:
+    if has_desc and has_price and has_image and has_gallery and has_official_specs:
         return product, {"skipped_already_rich": 1}
 
+    stats_delta = {}
+    enriched = dict(product)
+
+    # ── Step 1: Fetch Halilit page data ──
     try:
         page_data = await scraper.scrape_product_page(url)
-        if not page_data:
-            return product, {"scrape_failed": 1}
-
-        enriched = dict(product)
-        if page_data.get("description") and not has_desc:
-            enriched["official_description"] = page_data["description"]
-            enriched["page_description"] = page_data["description"]
-        if page_data.get("price") and not has_price:
-            enriched["price"] = page_data["price"]
-            enriched["price_il"] = page_data["price"]
-        if page_data.get("gallery_images") and not has_gallery:
-            enriched["gallery_images"] = page_data["gallery_images"]
-        if page_data.get("image_gallery") and not has_gallery:
-            enriched["image_gallery"] = page_data["image_gallery"]
-            if not enriched.get("gallery_images"):
-                enriched["gallery_images"] = page_data["image_gallery"]
-        if not product.get("image_url"):
-            if page_data.get("image_url"):
-                enriched["image_url"] = page_data["image_url"]
-            elif page_data.get("image"):
-                enriched["image_url"] = page_data["image"]
-        if page_data.get("official_images") and not product.get("official_images"):
-            enriched["official_images"] = page_data["official_images"]
-        if page_data.get("sku") and not product.get("sku"):
-            enriched["sku"] = page_data["sku"]
-        if page_data.get("features") and not product.get("features"):
-            enriched["features"] = page_data["features"]
-        if page_data.get("faq") and not product.get("faq"):
-            enriched["faq"] = page_data["faq"]
-        if page_data.get("audiences") and not product.get("audiences"):
-            enriched["audiences"] = page_data["audiences"]
-
-        delta = {"scraped": 1}
-        if (page_data.get("image_gallery") or page_data.get("official_images")) and not (
-            (page_data.get("image_url") or "").strip()
-        ):
-            delta["image_rejected"] = 1
-        return enriched, delta
-
+        if page_data:
+            if page_data.get("description") and not has_desc:
+                enriched["official_description"] = page_data["description"]
+                enriched["page_description"] = page_data["description"]
+            if page_data.get("price") and not has_price:
+                enriched["price"] = page_data["price"]
+                enriched["price_il"] = page_data["price"]
+            if page_data.get("gallery_images") and not has_gallery:
+                enriched["gallery_images"] = page_data["gallery_images"]
+            if page_data.get("image_gallery") and not has_gallery:
+                enriched["image_gallery"] = page_data["image_gallery"]
+                if not enriched.get("gallery_images"):
+                    enriched["gallery_images"] = page_data["image_gallery"]
+            if not product.get("image_url"):
+                if page_data.get("image_url"):
+                    enriched["image_url"] = page_data["image_url"]
+                elif page_data.get("image"):
+                    enriched["image_url"] = page_data["image"]
+            if page_data.get("official_images") and not product.get("official_images"):
+                enriched["official_images"] = page_data["official_images"]
+            if page_data.get("sku") and not product.get("sku"):
+                enriched["sku"] = page_data["sku"]
+            if page_data.get("features") and not product.get("features"):
+                enriched["features"] = page_data["features"]
+            if page_data.get("faq") and not product.get("faq"):
+                enriched["faq"] = page_data["faq"]
+            if page_data.get("audiences") and not product.get("audiences"):
+                enriched["audiences"] = page_data["audiences"]
+            stats_delta["halilit_scraped"] = 1
+        else:
+            stats_delta["halilit_failed"] = 1
     except Exception as e:
-        logger.warning(f"Error scraping {url}: {e}")
-        return product, {"scrape_error": 1}
+        logger.warning(f"Error scraping Halilit page {url}: {e}")
+        stats_delta["halilit_error"] = 1
+
+    # ── Step 2: Fetch official brand page data (PRIORITY per Source Rules) ──
+    brand = product.get("brand", "")
+    product_name = product.get("product_name") or product.get("name", "")
+    
+    # Check if we already have official_url from inventory/catalog
+    official_url = product.get("official_url", "")
+    
+    if not official_url and brand and product_name:
+        # Try to find official URL (async-safe)
+        try:
+            from backend.ingestion.official_scraper import find_official_product_url
+            loop = asyncio.get_event_loop()
+            official_url = await loop.run_in_executor(None, lambda: find_official_product_url(brand, product_name))
+        except Exception as e:
+            logger.debug(f"Failed to find official URL for {product_name}: {e}")
+
+    if official_url and not has_official_specs:
+        try:
+            from backend.ingestion.official_scraper import fetch_official_page
+            # Run blocking fetch in executor to avoid blocking async loop
+            loop = asyncio.get_event_loop()
+            official_data = await loop.run_in_executor(None, lambda: fetch_official_page(official_url))
+            if official_data and official_data.get("url"):
+                # Official data takes precedence (per Source Rules)
+                if official_data.get("specs") and len(official_data.get("specs", {})) > 0:
+                    enriched["official_specs"] = official_data["specs"]
+                    enriched["official_url"] = official_data["url"]
+                if official_data.get("description") and not enriched.get("official_description"):
+                    enriched["official_description"] = official_data["description"]
+                if official_data.get("image_url") and not enriched.get("official_images"):
+                    enriched.setdefault("official_images", []).append({"url": official_data["image_url"], "source": "official"})
+                stats_delta["official_scraped"] = 1
+            else:
+                stats_delta["official_failed"] = 1
+        except Exception as e:
+            logger.debug(f"Error fetching official page {official_url}: {e}")
+            stats_delta["official_error"] = 1
+
+    if not stats_delta:
+        stats_delta["no_change"] = 1
+    
+    return enriched, stats_delta
 
 
 # Legacy sync version kept for compatibility
@@ -243,11 +284,14 @@ async def enrich_brand_file_async(
     stats = {
         "file": path.name,
         "total": len(products),
-        "scraped": 0,
+        "halilit_scraped": 0,
+        "official_scraped": 0,
         "skipped_no_url": 0,
         "skipped_already_rich": 0,
-        "scrape_failed": 0,
-        "scrape_error": 0,
+        "halilit_failed": 0,
+        "halilit_error": 0,
+        "official_failed": 0,
+        "official_error": 0,
         "image_rejected": 0,
     }
 
@@ -263,8 +307,9 @@ async def enrich_brand_file_async(
         has_price = bool(product.get("price") or product.get("price_il"))
         has_image = bool(product.get("image_url"))
         has_gallery = len(product.get("gallery_images") or product.get("image_gallery") or []) > 1
+        has_official_specs = bool(product.get("official_specs") and isinstance(product.get("official_specs"), dict) and len(product.get("official_specs", {})) > 2)
         
-        if has_desc and has_price and has_image and has_gallery:
+        if has_desc and has_price and has_image and has_gallery and has_official_specs:
             stats["skipped_already_rich"] += 1
             continue
         
@@ -292,15 +337,17 @@ async def enrich_brand_file_async(
                 stats[k] = stats.get(k, 0) + v
 
     # Progress logging
-    if stats["scraped"] > 0:
+    total_scraped = stats.get("halilit_scraped", 0) + stats.get("official_scraped", 0)
+    if total_scraped > 0:
         logger.info(
-            f"  [{path.stem}] Scraped {stats['scraped']}/{len(to_scrape)} "
+            f"  [{path.stem}] Scraped {total_scraped}/{len(to_scrape)} "
+            f"(Halilit: {stats.get('halilit_scraped', 0)}, Official: {stats.get('official_scraped', 0)}) "
             f"(skipped: {stats['skipped_already_rich']} already rich, {stats['skipped_no_url']} no URL)"
         )
 
-    if not dry_run and stats["scraped"] > 0:
+    if not dry_run and total_scraped > 0:
         save_brand_file(path, enriched_products, fmt)
-        logger.info(f"  ✅ Saved {path.name} ({stats['scraped']} enriched)")
+        logger.info(f"  ✅ Saved {path.name} ({total_scraped} enriched)")
 
     return stats
 
@@ -373,27 +420,35 @@ async def main_async():
                 concurrency=args.concurrency,
             )
             all_stats.append(stats)
-            total_scraped += stats.get("scraped", 0)
+            total_scraped += stats.get("halilit_scraped", 0) + stats.get("official_scraped", 0)
 
     # Summary
     total_products = sum(s.get("total", 0) for s in all_stats)
     total_skipped_url = sum(s.get("skipped_no_url", 0) for s in all_stats)
     total_skipped_rich = sum(s.get("skipped_already_rich", 0) for s in all_stats)
-    total_failed = sum(s.get("scrape_failed", 0) for s in all_stats)
-    total_errors = sum(s.get("scrape_error", 0) for s in all_stats)
+    total_halilit_scraped = sum(s.get("halilit_scraped", 0) for s in all_stats)
+    total_official_scraped = sum(s.get("official_scraped", 0) for s in all_stats)
+    total_halilit_failed = sum(s.get("halilit_failed", 0) for s in all_stats)
+    total_official_failed = sum(s.get("official_failed", 0) for s in all_stats)
+    total_halilit_errors = sum(s.get("halilit_error", 0) for s in all_stats)
+    total_official_errors = sum(s.get("official_error", 0) for s in all_stats)
     total_image_rejected = sum(s.get("image_rejected", 0) for s in all_stats)
 
     logger.info("\n" + "=" * 60)
     logger.info("ENRICHMENT SUMMARY")
     logger.info("=" * 60)
     logger.info(f"Total products:      {total_products}")
-    logger.info(f"Successfully scraped: {total_scraped}")
+    logger.info(f"Halilit scraped:     {total_halilit_scraped}")
+    logger.info(f"Official scraped:    {total_official_scraped}")
+    logger.info(f"Total enriched:      {total_scraped}")
     logger.info(f"Skipped (no URL):    {total_skipped_url}")
     logger.info(f"Skipped (already rich): {total_skipped_rich}")
-    logger.info(f"Scrape failed:       {total_failed}")
-    if total_failed > 0:
+    logger.info(f"Halilit failed:      {total_halilit_failed}")
+    logger.info(f"Official failed:     {total_official_failed}")
+    if total_halilit_failed > 0:
         logger.info("  (Halilit often returns anti-bot/referrer page or timeout)")
-    logger.info(f"Scrape errors:       {total_errors}")
+    logger.info(f"Halilit errors:      {total_halilit_errors}")
+    logger.info(f"Official errors:     {total_official_errors}")
     logger.info(f"Hero image rejected: {total_image_rejected}")
     logger.info("=" * 60)
 
