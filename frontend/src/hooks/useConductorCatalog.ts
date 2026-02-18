@@ -225,8 +225,8 @@ export const useConductorCatalog = () => {
                 throw err;
             }
         },
-        staleTime: 5 * 60 * 1000,
-        gcTime: 10 * 60 * 1000,
+        staleTime: import.meta.env.DEV ? 0 : 5 * 60 * 1000, // Always refetch in dev mode
+        gcTime: import.meta.env.DEV ? 0 : 10 * 60 * 1000, // Don't cache in dev mode
         retry: 2,
         refetchOnWindowFocus: true,
         refetchOnReconnect: true,
