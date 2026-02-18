@@ -186,6 +186,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
         setQuery("");
         setIsOpen(false);
         setSelectedIndex(-1);
+        setSearchQuery(null);
         inputRef.current?.blur();
       } else if (e.key === "ArrowDown") {
         e.preventDefault();
