@@ -2,7 +2,7 @@
 
 JIT (Just-in-Time) product intelligence platform for musical instruments. Catalog + product graph from the Conductor pipeline; on-demand AI intelligence via Gemini 2.0 Flash.
 
-**Workflow:** Spec-driven. You edit specs, the Factory produces code; you approve outcomes. See [docs/](docs/).
+**Workflow:** Dark Factory. Specs in `specs/` are the **input**; code is the **output**. The AI implements specs exactly. See [docs/](docs/) and `.cursorrules` (Dark Factory Protocol). Run the supervisor: `PYTHONPATH=. python3 backend/factory_supervisor.py [--rebuild]`.
 
 ---
 

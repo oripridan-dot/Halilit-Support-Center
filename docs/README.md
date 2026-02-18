@@ -22,9 +22,9 @@ This folder is the **single source** for how we build and run the Operator Conso
 Interface and behavior are defined in **Markdown specs**, not in ad-hoc tickets:
 
 - **Root:** [OPERATOR_CONSOLE_SPEC.md](../OPERATOR_CONSOLE_SPEC.md) — What the console must do; compliance rules.
-- **Specs folder:** [specs/](../specs/) — Data pipeline, interface, and behavior specs.
-  - `specs/interface/` — Dashboard, Inventory Grid, Product Intelligence.
-  - `specs/data_pipeline/` — Ingestion rules, relationship logic.
-  - `specs/behavior/` — Search and navigation scenarios (for tests).
+- **Specs folder:** [specs/](../specs/) — Blueprints (inputs); code is the artifact (output).
+  - **Factory floor:** `specs/01_data_ingestion/`, `specs/02_backend_logic/`, `specs/03_frontend_ui/`, `specs/04_end_to_end_scenarios/`.
+  - Legacy layout: `specs/interface/`, `specs/data_pipeline/`, `specs/behavior/`, `specs/pricing_logic.md`.
+- **Factory Supervisor:** `backend/factory_supervisor.py` — Compliance check, optional `--rebuild`, UI build. See [FACTORY_PIPELINE.md](FACTORY_PIPELINE.md).
 
-You **edit specs** when requirements change; you **prompt the AI** to produce code that satisfies them. You **approve outcomes**, not diffs.
+You **edit specs** when requirements change; the AI **implements** them (Dark Factory Protocol in `.cursorrules`). You **approve outcomes**, not diffs.

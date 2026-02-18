@@ -18,7 +18,16 @@ How to run the app and the data pipeline. One place for all run and Conductor co
 | `./test_functionality.sh` | Require servers running: health + catalog + search API. |
 | `python3 test_pipeline.py` | Optional: file structure + catalog build outcome (run from root). |
 
-Legacy verification scripts (`verify_running_code.sh`, `validate_integration.sh`) were removed; use outcome checks above and `specs/` + golden scenarios.
+**Factory Supervisor (Dark Factory):** Run compliance + optional rebuild + UI build:
+```bash
+PYTHONPATH=. python backend/factory_supervisor.py          # Compliance + UI build
+PYTHONPATH=. python backend/factory_supervisor.py --rebuild  # Rebuild catalog then compliance + UI build
+```
+Legacy verification scripts were removed; use outcome checks above and `specs/` + golden scenarios.
+
+## Factory floor (specs)
+
+Specs are organized as blueprints: `specs/01_data_ingestion/`, `specs/02_backend_logic/`, `specs/03_frontend_ui/`, `specs/04_end_to_end_scenarios/`. See `.cursorrules` (Dark Factory Protocol).
 
 ---
 
