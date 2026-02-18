@@ -36,11 +36,29 @@ function useDashboardStats() {
     queryKey: ["dashboard-stats"],
     queryFn: async () => {
       const res = await fetch("/api/dashboard/stats");
-      if (!res.ok) throw new Error(`Stats error ${res.status}`);
-      return res.json();
+      // Handle non-JSON responses (e.g., HTML from proxy when backend is down/not yet updated)
+      const text = await res.text();
+      let json: unknown;
+      try {
+        json = JSON.parse(text);
+      } catch {
+        if (text.trim().startsWith("<")) {
+          throw new Error(
+            "Backend server returned HTML instead of JSON. " +
+              "The server may need to be restarted to pick up the new /api/dashboard/stats endpoint.",
+          );
+        }
+        throw new Error(`Invalid response from server (status ${res.status})`);
+      }
+      if (!res.ok) {
+        const msg =
+          (json as { error?: string })?.error ?? `Server error ${res.status}`;
+        throw new Error(msg);
+      }
+      return json as DashboardStats;
     },
     staleTime: 30_000,
-    retry: 1,
+    retry: 0, // Don't retry — if backend is down, show degraded UI immediately
   });
 }
 
@@ -160,36 +178,12 @@ const DashboardView: React.FC = () => {
 
   const loading = catalogLoading || statsLoading;
   const spin = <span className="text-zinc-600 animate-pulse">…</span>;
-
-  if (statsError) {
-    return (
-      <div className="p-8 max-w-xl">
-        <div className="bg-amber-900/20 border border-amber-500/30 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-2">
-            <AlertTriangle size={16} className="text-amber-400" aria-hidden />
-            <p className="text-amber-400 font-medium">Stats unavailable</p>
-          </div>
-          <p className="text-sm text-zinc-400 mb-4">{String(statsError)}</p>
-          <div className="flex gap-3">
-            <button
-              type="button"
-              onClick={() => refetch()}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg"
-            >
-              Retry
-            </button>
-            <button
-              type="button"
-              onClick={goToIngestionStatus}
-              className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 text-sm font-medium rounded-lg"
-            >
-              Ingestion Status
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const hasStats = !!stats && !statsError;
+  const errorMsg = statsError
+    ? statsError instanceof Error
+      ? statsError.message
+      : String(statsError)
+    : null;
 
   return (
     <div className="p-8 max-w-7xl mx-auto">
@@ -207,6 +201,28 @@ const DashboardView: React.FC = () => {
         </p>
       </div>
 
+      {/* Inline stats-error banner — non-blocking */}
+      {errorMsg && (
+        <div className="flex items-center gap-2 mb-6 px-4 py-3 bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm">
+          <AlertTriangle
+            size={14}
+            className="text-amber-400 shrink-0"
+            aria-hidden
+          />
+          <span className="text-amber-300 font-medium">
+            Stats unavailable —
+          </span>
+          <span className="text-zinc-400 truncate">{errorMsg}</span>
+          <button
+            type="button"
+            onClick={() => refetch()}
+            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 text-xs rounded-lg"
+          >
+            Retry
+          </button>
+        </div>
+      )}
+
       {/* Key Metrics */}
       <section
         aria-label="Key metrics"
@@ -215,7 +231,13 @@ const DashboardView: React.FC = () => {
         <MetricCard
           icon={Package}
           label="Total products in catalog"
-          value={loading ? spin : (stats?.total_products ?? 0).toLocaleString()}
+          value={
+            loading
+              ? spin
+              : hasStats
+                ? stats!.total_products.toLocaleString()
+                : "—"
+          }
           sub="Active SKUs"
           accent="blue"
           onClick={goToInventory}
@@ -224,16 +246,24 @@ const DashboardView: React.FC = () => {
           icon={PhoneCall}
           label="Call for price"
           value={
-            loading ? spin : (stats?.calls_for_price ?? 0).toLocaleString()
+            loading
+              ? spin
+              : hasStats
+                ? stats!.calls_for_price.toLocaleString()
+                : "—"
           }
           sub="Missing IL price"
-          accent={stats && stats.calls_for_price > 0 ? "amber" : "zinc"}
+          accent={hasStats && stats!.calls_for_price > 0 ? "amber" : "zinc"}
         />
         <MetricCard
           icon={Tag}
           label="Active brands"
           value={
-            loading ? spin : (stats?.top_brands_count ?? 0).toLocaleString()
+            loading
+              ? spin
+              : hasStats
+                ? stats!.top_brands_count.toLocaleString()
+                : "—"
           }
           sub="Distinct brands in catalog"
           accent="green"
@@ -244,21 +274,21 @@ const DashboardView: React.FC = () => {
           value={
             loading ? (
               spin
-            ) : stats ? (
-              <LastRunStatus run={stats.last_ingestion_run} />
+            ) : hasStats ? (
+              <LastRunStatus run={stats!.last_ingestion_run} />
             ) : (
               "—"
             )
           }
           sub={
-            stats?.last_ingestion_run.product_count != null
-              ? `${stats.last_ingestion_run.product_count.toLocaleString()} products synced`
+            hasStats && stats!.last_ingestion_run.product_count != null
+              ? `${stats!.last_ingestion_run.product_count.toLocaleString()} products synced`
               : "No run recorded"
           }
           accent={
-            stats?.last_ingestion_run.status === "failed"
+            hasStats && stats!.last_ingestion_run.status === "failed"
               ? "red"
-              : stats?.last_ingestion_run.status === "running"
+              : hasStats && stats!.last_ingestion_run.status === "running"
                 ? "blue"
                 : "zinc"
           }

@@ -1,5 +1,11 @@
 import { Search, X, Command } from "lucide-react";
-import React, { useEffect, useRef, useState, useCallback, useMemo } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  useMemo,
+} from "react";
 import { useConductorCatalog } from "../hooks/useConductorCatalog";
 import { useNavigationStore } from "../store/navigationStore";
 import { BaseComponentProps, EventHandler } from "../types/componentUtils";
@@ -47,12 +53,20 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const productMap = useMemo(() => {
-    const map = new Map<string, ReturnType<typeof products[number]>>();
+    const map = new Map<string, ReturnType<(typeof products)[number]>>();
     for (const p of products) {
       map.set(p.id, p);
     }
     return map;
   }, [products]);
+
+  // Keep a stable ref to productMap so the search effect doesn't re-run when
+  // products array gets a new reference (e.g., React Query background refetch
+  // with staleTime:0 in dev). Only query/maxResults/reloadToken should retrigger.
+  const productMapRef = useRef(productMap);
+  useEffect(() => {
+    productMapRef.current = productMap;
+  }, [productMap]);
 
   const handleRetry = useCallback(() => {
     setReloadToken((t) => t + 1);
@@ -87,17 +101,22 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
           brand?: string;
         }>;
 
-        const mapped: SearchResult[] = items.slice(0, maxResults).map((item) => {
-          const p = productMap.get(item.id);
-          return {
-            id: item.id,
-            name: p?.name ?? item.product_name ?? item.id,
-            brand: p?.brand ?? item.brand ?? "",
-            image_url: p?.image_url,
-            category: p?.category,
-            subcategory: p?.subcategory,
-          };
-        }).filter(Boolean); // Remove any undefined/null results
+        // Use ref to avoid productMap in deps (prevents update loop on refetch)
+        const currentMap = productMapRef.current;
+        const mapped: SearchResult[] = items
+          .slice(0, maxResults)
+          .map((item) => {
+            const p = currentMap.get(item.id);
+            return {
+              id: item.id,
+              name: p?.name ?? item.product_name ?? item.id,
+              brand: p?.brand ?? item.brand ?? "",
+              image_url: p?.image_url,
+              category: p?.category,
+              subcategory: p?.subcategory,
+            };
+          })
+          .filter(Boolean);
 
         setResults(mapped);
         setLoading(false);
@@ -106,7 +125,9 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
           return;
         }
         setError(
-          err instanceof Error ? err.message : "Search failed. Please try again.",
+          err instanceof Error
+            ? err.message
+            : "Search failed. Please try again.",
         );
         setResults([]);
         setLoading(false);
@@ -117,7 +138,8 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       window.clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [query, maxResults, productMap, reloadToken]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query, maxResults, reloadToken]);
 
   // Close dropdown on click outside
   useEffect(() => {
