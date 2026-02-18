@@ -74,23 +74,38 @@ function SortIcon({
 
 const InventoryView: React.FC = () => {
   const { products, isLoading, error, refetch } = useConductorCatalog();
-  const { goToProduct, goToIngestionStatus, searchQuery, setSearchQuery } =
-    useNavigationStore();
-  const [filterText, setFilterText] = useState(searchQuery || "");
+  const {
+    goToProduct,
+    goToIngestionStatus,
+    searchQuery,
+    setSearchQuery,
+    initialCfpFilter,
+  } = useNavigationStore();
+  // Guard: searchQuery may be a SyntheticEvent if caller forgot arrow wrapper
+  const [filterText, setFilterText] = useState(
+    typeof searchQuery === "string" ? searchQuery : "",
+  );
+  const [cfpOnly, setCfpOnly] = useState(initialCfpFilter ?? false);
   const [brandFilter, setBrandFilter] = useState<string>("");
   const [categoryFilter, setCategoryFilter] = useState<string>("");
-  const [cfpOnly, setCfpOnly] = useState(false);
   const [sortField, setSortField] = useState<SortField>("name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [page, setPage] = useState(1);
 
   // Sync filterText with searchQuery from navigation store
+  // Guard against non-string values (e.g. SyntheticEvent passed without arrow wrapper)
   useEffect(() => {
-    if (searchQuery !== null) {
+    if (typeof searchQuery === "string" && searchQuery !== null) {
       setFilterText(searchQuery);
       if (searchQuery === "") setSearchQuery(null);
     }
   }, [searchQuery, setSearchQuery]);
+
+  // Sync cfpOnly when arriving via goToInventoryCfp deep-link
+  useEffect(() => {
+    if (initialCfpFilter === true) setCfpOnly(true);
+    else if (initialCfpFilter === false) setCfpOnly(false);
+  }, [initialCfpFilter]);
 
   // Reset page when filters change
   useEffect(() => {
@@ -114,13 +129,15 @@ const InventoryView: React.FC = () => {
   // Filter
   const filtered = useMemo(() => {
     let list = products;
-    if (filterText) {
-      const lower = filterText.toLowerCase();
+    const filterStr = typeof filterText === "string" ? filterText : "";
+    if (filterStr) {
+      const lower = filterStr.toLowerCase();
       list = list.filter(
         (p) =>
           (p.name ?? "").toLowerCase().includes(lower) ||
           (p.id ?? "").toLowerCase().includes(lower) ||
-          (p.brand ?? "").toLowerCase().includes(lower),
+          (p.brand ?? "").toLowerCase().includes(lower) ||
+          (p.category ?? "").toLowerCase().includes(lower),
       );
     }
     if (brandFilter) list = list.filter((p) => p.brand === brandFilter);

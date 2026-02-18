@@ -167,7 +167,8 @@ function LastRunStatus({ run }: { run: DashboardStats["last_ingestion_run"] }) {
 // ── Main View ────────────────────────────────────────────────────────────────
 
 const DashboardView: React.FC = () => {
-  const { goToInventory, goToIngestionStatus } = useNavigationStore();
+  const { goToInventory, goToInventoryCfp, goToIngestionStatus } =
+    useNavigationStore();
   const { isLoading: catalogLoading } = useConductorCatalog();
   const {
     data: stats,
@@ -240,7 +241,7 @@ const DashboardView: React.FC = () => {
           }
           sub="Active SKUs"
           accent="blue"
-          onClick={goToInventory}
+          onClick={() => goToInventory()}
         />
         <MetricCard
           icon={PhoneCall}
@@ -254,6 +255,7 @@ const DashboardView: React.FC = () => {
           }
           sub="Missing IL price"
           accent={hasStats && stats!.calls_for_price > 0 ? "amber" : "zinc"}
+          onClick={goToInventoryCfp}
         />
         <MetricCard
           icon={Tag}
@@ -303,7 +305,7 @@ const DashboardView: React.FC = () => {
         <div className="flex flex-wrap gap-3">
           <button
             type="button"
-            onClick={goToInventory}
+            onClick={() => goToInventory()}
             className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-blue-400"
           >
             <Package size={16} aria-hidden /> Open Inventory Master
