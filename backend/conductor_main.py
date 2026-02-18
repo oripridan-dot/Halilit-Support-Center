@@ -138,11 +138,11 @@ class ConductorCLI:
         delay: float = 0.5,
         merge_dupes: bool = False,
         workers: int = 1,
-        concurrent_products: int = 1,
+        concurrent_products: int = 50,
     ) -> bool:
         """
         Enrich catalog from Halilit product pages (description, images, features, FAQ).
-        Use concurrent_products > 1 for parallel pages within each file (default: 50 in enrich_catalog.py).
+        Use concurrent_products for parallel pages within each file (default: 50 for fast async scraping).
         """
         try:
             cmd = [sys.executable, str(PROJECT_ROOT / "backend" / "scripts" / "enrich_catalog.py")]
@@ -150,9 +150,8 @@ class ConductorCLI:
                 cmd.extend(["--brand", brand])
             if merge_dupes:
                 cmd.append("--merge-dupes")
-            # enrich_catalog.py uses --concurrency (not --concurrent-products or --delay or --workers)
-            if concurrent_products > 1:
-                cmd.extend(["--concurrency", str(concurrent_products)])
+            # enrich_catalog.py uses --concurrency (default: 50)
+            cmd.extend(["--concurrency", str(concurrent_products)])
             env = os.environ.copy()
             env["PYTHONPATH"] = str(PROJECT_ROOT)
             logger.info("Running catalog enrichment (Halilit page detail)...")
