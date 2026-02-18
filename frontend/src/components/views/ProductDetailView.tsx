@@ -9,11 +9,11 @@ import {
   useProductRelationships,
 } from "../../hooks/useConductorCatalog";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
-import { ArrowLeft, Copy, Check } from "lucide-react";
+import { ArrowLeft, Copy, Check, FileText, ExternalLink } from "lucide-react";
 import { ProductRelations } from "../cockpit/ProductRelations";
 import type { RelatedProduct } from "../cockpit/ProductRelations";
 
-type TabId = "ecosystem" | "specs" | "files";
+type TabId = "ecosystem" | "specs" | "history";
 
 const PLACEHOLDER_IMAGE = "/placeholder.png";
 
@@ -36,35 +36,49 @@ const ProductDetailView: React.FC = () => {
   } = useProductRelationships(activeProductId);
   const [activeTab, setActiveTab] = useState<TabId>("ecosystem");
   const [copyToast, setCopyToast] = useState(false);
+  const [quoteToast, setQuoteToast] = useState(false);
 
   const product = useMemo(
-    () => (activeProductId ? products.find((p) => p.id === activeProductId) : null),
-    [activeProductId, products]
+    () =>
+      activeProductId ? products.find((p) => p.id === activeProductId) : null,
+    [activeProductId, products],
   );
 
   const displayName = product?.name ?? jitState.snap?.name ?? "";
   const displayBrand = product?.brand ?? jitState.snap?.brand ?? "";
   const priceIl = product?.price ?? jitState.snap?.price ?? 0;
   const priceEilat = product?.price_eilat ?? jitState.snap?.price_eilat ?? 0;
-  const imageUrl = product?.image_url || jitState.snap?.thumbnail || PLACEHOLDER_IMAGE;
+  const imageUrl =
+    product?.image_url || jitState.snap?.thumbnail || PLACEHOLDER_IMAGE;
   const stock = (product as { stock?: number })?.stock ?? 1;
   const specsRecord = useMemo(() => {
-    const fromJit = jitState.officialSpecs?.specs as Record<string, unknown> | undefined;
+    const fromJit = jitState.officialSpecs?.specs as
+      | Record<string, unknown>
+      | undefined;
     const fromCatalog = product?.specs;
-    return (fromJit && Object.keys(fromJit).length > 0 ? fromJit : fromCatalog) ?? {};
+    return (
+      (fromJit && Object.keys(fromJit).length > 0 ? fromJit : fromCatalog) ?? {}
+    );
   }, [product?.specs, jitState.officialSpecs]);
 
   const fileLinks = useMemo(() => {
     const links: { label: string; url: string }[] = [];
-    if (product?.halilit_url) links.push({ label: "Halilit product page", url: product.halilit_url });
-    if (product?.official_url) links.push({ label: "Official page", url: product.official_url });
+    if (product?.halilit_url)
+      links.push({ label: "Halilit product page", url: product.halilit_url });
+    if (product?.official_url)
+      links.push({ label: "Official page", url: product.official_url });
     return links;
   }, [product?.halilit_url, product?.official_url]);
 
   const mapToRelated = useCallback(
     (
-      items: Array<{ id: string; name: string; price?: number; image_url?: string }>,
-      relationType: "accessory" | "compatible" | "alternative"
+      items: Array<{
+        id: string;
+        name: string;
+        price?: number;
+        image_url?: string;
+      }>,
+      relationType: "accessory" | "compatible" | "alternative",
     ): RelatedProduct[] =>
       items.map((p) => ({
         id: p.id,
@@ -73,7 +87,7 @@ const ProductDetailView: React.FC = () => {
         image_url: p.image_url,
         relationType,
       })),
-    []
+    [],
   );
 
   const handleCopySpecs = useCallback(() => {
@@ -84,6 +98,37 @@ const ProductDetailView: React.FC = () => {
       setTimeout(() => setCopyToast(false), 2000);
     });
   }, [specsRecord]);
+
+  const handleGenerateQuote = useCallback(() => {
+    // Mock: open browser print dialog with a formatted quote
+    const lines = [
+      `Quote — ${displayName}`,
+      `Brand: ${displayBrand}`,
+      `SKU: ${activeProductId ?? ""}`,
+      `IL Price: ₪${priceIl != null ? Number(priceIl).toLocaleString() : "N/A"}`,
+      `Eilat Price: ₪${priceEilat != null ? Number(priceEilat).toLocaleString() : "N/A"}`,
+      "",
+      "Technical Specifications:",
+      formatSpecsAsText(specsRecord),
+    ];
+    const win = window.open("", "_blank", "width=700,height=900");
+    if (win) {
+      win.document.write(
+        `<pre style="font-family:sans-serif;padding:2rem;">${lines.join("\n")}</pre>`,
+      );
+      win.document.close();
+      win.print();
+    }
+    setQuoteToast(true);
+    setTimeout(() => setQuoteToast(false), 2000);
+  }, [
+    displayName,
+    displayBrand,
+    activeProductId,
+    priceIl,
+    priceEilat,
+    specsRecord,
+  ]);
 
   if (!activeProductId) {
     return (
@@ -100,18 +145,25 @@ const ProductDetailView: React.FC = () => {
     );
   }
 
-  if (jitState.phase === "error" || (jitState.error && jitState.phase !== "idle")) {
+  if (
+    jitState.phase === "error" ||
+    (jitState.error && jitState.phase !== "idle")
+  ) {
     const is404 = jitState.error?.includes("404") ?? false;
     return (
       <div className="flex flex-col h-full items-center justify-center gap-4 p-8 text-zinc-400">
-        <h2 className="text-xl font-semibold text-white">Product Not Found</h2>
-        <p className="text-sm">{is404 ? "This product could not be loaded." : jitState.error}</p>
+        <h2 className="text-xl font-semibold text-white">
+          {is404 ? "404 Product" : "Product Error"}
+        </h2>
+        <p className="text-sm">
+          {is404 ? "This product could not be loaded." : jitState.error}
+        </p>
         <button
           type="button"
           onClick={goBack}
           className="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded-lg focus-visible:ring-2 focus-visible:ring-blue-500"
         >
-          Back to Grid
+          Back to Search
         </button>
       </div>
     );
@@ -120,14 +172,58 @@ const ProductDetailView: React.FC = () => {
   const loading = !product && !jitState.snap && jitState.phase !== "complete";
   if (loading) {
     return (
-      <div className="flex flex-col h-full items-center justify-center gap-4 p-8">
-        <div className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" aria-hidden />
-        <span className="text-sm text-zinc-500">Loading product…</span>
+      <div
+        className="flex flex-col h-full bg-zinc-950"
+        aria-busy
+        aria-label="Loading product"
+      >
+        {/* Skeleton: Header */}
+        <div className="border-b border-zinc-800 p-6 pb-0">
+          <div className="h-4 w-20 bg-zinc-800 rounded animate-pulse mb-6" />
+          <div className="flex items-start gap-6 mb-6">
+            <div className="w-32 h-32 rounded-lg bg-zinc-800 animate-pulse flex-shrink-0" />
+            <div className="flex-1 space-y-3 pt-2">
+              <div className="h-3 w-16 bg-zinc-800 rounded animate-pulse" />
+              <div className="h-7 w-2/3 bg-zinc-800 rounded animate-pulse" />
+              <div className="h-4 w-1/3 bg-zinc-800 rounded animate-pulse" />
+            </div>
+            <div className="w-36 bg-zinc-900 border border-zinc-800 rounded-lg p-4 space-y-2">
+              <div className="h-3 w-14 bg-zinc-800 rounded animate-pulse" />
+              <div className="h-8 w-24 bg-zinc-800 rounded animate-pulse" />
+              <div className="h-3 w-10 bg-zinc-800 rounded animate-pulse" />
+              <div className="h-5 w-16 bg-zinc-800 rounded animate-pulse" />
+            </div>
+          </div>
+          {/* Skeleton toolbar */}
+          <div className="flex gap-3 pb-3">
+            <div className="h-9 w-32 bg-zinc-800 rounded animate-pulse" />
+            <div className="h-9 w-36 bg-zinc-800 rounded animate-pulse" />
+            <div className="h-9 w-36 bg-zinc-800 rounded animate-pulse" />
+          </div>
+          {/* Skeleton tabs */}
+          <div className="flex gap-6 mt-2">
+            {["Ecosystem", "Specifications", "History"].map((t) => (
+              <div
+                key={t}
+                className="h-4 w-20 bg-zinc-800 rounded animate-pulse mb-3"
+              />
+            ))}
+          </div>
+        </div>
+        {/* Skeleton content */}
+        <div className="flex-1 p-8 space-y-3">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="h-10 bg-zinc-900 rounded animate-pulse" />
+          ))}
+        </div>
       </div>
     );
   }
 
-  const headerBg = stock === 0 ? "bg-red-950/30 border-red-900/30" : "bg-zinc-900 border-zinc-800";
+  const headerBg =
+    stock === 0
+      ? "bg-red-950/30 border-red-900/30"
+      : "bg-zinc-900 border-zinc-800";
 
   return (
     <div className="flex flex-col h-full bg-zinc-950">
@@ -163,34 +259,62 @@ const ProductDetailView: React.FC = () => {
           </div>
 
           <div className="flex flex-col items-end gap-2 bg-zinc-950/50 p-4 rounded-lg border border-zinc-800">
-            <span className="text-xs text-zinc-500 uppercase font-bold tracking-wider">IL Price</span>
+            <span className="text-xs text-zinc-500 uppercase font-bold tracking-wider">
+              IL Price
+            </span>
             <span className="text-3xl font-mono font-medium text-white">
               ₪{priceIl != null ? Number(priceIl).toLocaleString() : "N/A"}
             </span>
             <span className="text-xs text-zinc-500">Eilat</span>
             <span className="text-sm font-mono text-zinc-400">
-              ₪{priceEilat != null ? Number(priceEilat).toLocaleString() : "N/A"}
+              ₪
+              {priceEilat != null ? Number(priceEilat).toLocaleString() : "N/A"}
             </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 pb-3">
+        <div className="flex items-center gap-3 pb-3 flex-wrap">
           <button
             type="button"
             onClick={handleCopySpecs}
             className="flex items-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-sm focus-visible:ring-2 focus-visible:ring-blue-500"
+            title="Copy Technical Specifications to clipboard"
           >
-            {copyToast ? <Check size={16} aria-hidden /> : <Copy size={16} aria-hidden />}
-            {copyToast ? "Copied" : "Copy Specs"}
+            {copyToast ? (
+              <Check size={16} aria-hidden />
+            ) : (
+              <Copy size={16} aria-hidden />
+            )}
+            {copyToast ? "Copied" : "Copy Tech Specs"}
           </button>
-          {copyToast && (
-            <span className="text-xs text-emerald-400 animate-pulse">Copied to clipboard</span>
+          <button
+            type="button"
+            onClick={handleGenerateQuote}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-sm focus-visible:ring-2 focus-visible:ring-blue-500"
+            title="Generate a printable quote PDF"
+          >
+            {quoteToast ? (
+              <Check size={16} aria-hidden />
+            ) : (
+              <FileText size={16} aria-hidden />
+            )}
+            {quoteToast ? "Quote ready" : "Generate Quote PDF"}
+          </button>
+          {product?.official_url && (
+            <a
+              href={product.official_url}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-300 text-sm focus-visible:ring-2 focus-visible:ring-blue-500"
+            >
+              <ExternalLink size={16} aria-hidden /> Open Official Page
+            </a>
           )}
         </div>
 
         {/* Tabs */}
         <div className="flex gap-6 mt-2">
-          {(["ecosystem", "specs", "files"] as const).map((tab) => (
+          {(["ecosystem", "specs", "history"] as const).map((tab) => (
             <button
               key={tab}
               type="button"
@@ -201,7 +325,11 @@ const ProductDetailView: React.FC = () => {
                   : "border-transparent text-zinc-500 hover:text-zinc-300"
               }`}
             >
-              {tab === "ecosystem" ? "Ecosystem" : tab === "specs" ? "Specs" : "Files"}
+              {tab === "ecosystem"
+                ? "Ecosystem"
+                : tab === "specs"
+                  ? "Specifications"
+                  : "History"}
             </button>
           ))}
         </div>
@@ -213,7 +341,9 @@ const ProductDetailView: React.FC = () => {
           {activeTab === "ecosystem" && (
             <div className="min-h-[400px]">
               {relationsLoading ? (
-                <div className="flex items-center justify-center h-64 text-zinc-500">Loading relationships…</div>
+                <div className="flex items-center justify-center h-64 text-zinc-500">
+                  Loading relationships…
+                </div>
               ) : (
                 <ProductRelations
                   accessories={mapToRelated(accessories, "accessory")}
@@ -234,8 +364,13 @@ const ProductDetailView: React.FC = () => {
               {Object.keys(specsRecord).length > 0 ? (
                 <dl className="grid grid-cols-1 gap-y-2">
                   {Object.entries(specsRecord).map(([key, val]) => (
-                    <div key={key} className="grid grid-cols-3 gap-4 py-2 border-b border-zinc-900">
-                      <dt className="text-sm font-medium text-zinc-500">{key}</dt>
+                    <div
+                      key={key}
+                      className="grid grid-cols-3 gap-4 py-2 border-b border-zinc-900"
+                    >
+                      <dt className="text-sm font-medium text-zinc-500">
+                        {key}
+                      </dt>
                       <dd className="col-span-2 text-sm text-zinc-300">
                         {val !== null && val !== undefined ? String(val) : "—"}
                       </dd>
@@ -243,33 +378,46 @@ const ProductDetailView: React.FC = () => {
                   ))}
                 </dl>
               ) : (
-                <p className="text-zinc-500 italic">No technical specifications available.</p>
+                <p className="text-zinc-500 italic">
+                  No technical specifications available.
+                </p>
               )}
             </section>
           )}
 
-          {activeTab === "files" && (
+          {activeTab === "history" && (
             <section>
               <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 pb-2 border-b border-zinc-800">
-                PDF / Manual links
+                Support History
               </h3>
-              {fileLinks.length > 0 ? (
-                <ul className="space-y-2">
-                  {fileLinks.map(({ label, url }) => (
-                    <li key={url}>
-                      <a
-                        href={url}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-blue-400 hover:underline focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-zinc-500 italic">No PDF or manual links found.</p>
+              <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-center text-zinc-500 mb-6">
+                <p className="text-sm italic">
+                  No past tickets for this product.
+                </p>
+                <p className="text-xs mt-1 text-zinc-600">
+                  Ticket history integration coming soon.
+                </p>
+              </div>
+              {fileLinks.length > 0 && (
+                <>
+                  <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">
+                    Reference Links
+                  </h4>
+                  <ul className="space-y-2">
+                    {fileLinks.map(({ label, url }) => (
+                      <li key={url}>
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-1.5 text-blue-400 hover:underline focus-visible:ring-2 focus-visible:ring-blue-500 rounded text-sm"
+                        >
+                          <ExternalLink size={12} aria-hidden /> {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
               )}
             </section>
           )}
