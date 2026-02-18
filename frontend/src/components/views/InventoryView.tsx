@@ -2,7 +2,7 @@
  * Inventory View — Operator Console
  * Data grid powered by useConductorCatalog with filter and product navigation.
  */
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useConductorCatalog } from "../../hooks/useConductorCatalog";
 import { useNavigationStore } from "../../store/navigationStore";
 import { PackageOpen, Filter } from "lucide-react";
@@ -10,8 +10,15 @@ import type { ConductorProduct } from "../../hooks/useConductorCatalog";
 
 const InventoryView: React.FC = () => {
   const { products, isLoading, error, refetch } = useConductorCatalog();
-  const { goToProduct, goToIngestionStatus } = useNavigationStore();
-  const [filterText, setFilterText] = useState("");
+  const { goToProduct, goToIngestionStatus, searchQuery, setSearchQuery } = useNavigationStore();
+  const [filterText, setFilterText] = useState(searchQuery || "");
+  
+  // Sync filterText with searchQuery from navigation store
+  useEffect(() => {
+    if (searchQuery) {
+      setFilterText(searchQuery);
+    }
+  }, [searchQuery]);
 
   const filteredProducts = useMemo(() => {
     if (!filterText) return products;

@@ -785,6 +785,18 @@ if os.path.exists(str(FRONTEND_PUBLIC_DATA)):
     app.mount("/data", StaticFiles(directory=str(FRONTEND_PUBLIC_DATA)), name="data")
     logger.info(f"Serving /data from {FRONTEND_PUBLIC_DATA}")
 
+# Mount images directory if it exists (for locally cached product images)
+IMAGES_DIR = DATA_DIR / "images"
+if IMAGES_DIR.exists():
+    app.mount("/images", StaticFiles(directory=str(IMAGES_DIR)), name="images")
+    logger.info(f"Serving /images from {IMAGES_DIR}")
+
+# Mount frontend public assets (for placeholder images, etc.)
+FRONTEND_ASSETS = FRONTEND_DIR / "public" / "assets"
+if FRONTEND_ASSETS.exists():
+    app.mount("/assets", StaticFiles(directory=str(FRONTEND_ASSETS)), name="assets")
+    logger.info(f"Serving /assets from {FRONTEND_ASSETS}")
+
 if os.path.exists(FRONTEND_DIST):
     app.mount(
         "/assets", StaticFiles(directory=os.path.join(FRONTEND_DIST, "assets")), name="assets")

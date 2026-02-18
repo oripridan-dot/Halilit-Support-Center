@@ -195,6 +195,15 @@ frontend/
 
 ## Changelog
 
+### v9.6 — Operator Console (February 2026)
+
+- **Version**: 9.6.0 across root, frontend, and backend; codename **Operator Console**.
+- **Single pipeline architecture**: Unified data flow from ingestion → API → frontend; eliminated dual data sources.
+- **GlobalSearch migration**: Migrated from static `/data/search_index.json` to unified `/api/products/search` endpoint.
+- **Code cleanup**: Removed orphaned Galaxy/V0 components, legacy lib files (catalogLoader, taxonomyService, instantSearch).
+- **Navigation simplification**: Clean 3-state workflow (Dashboard → Inventory → Product Detail); removed camera/zoom logic.
+- **Verification**: Complete pipeline audit confirming single source of truth architecture.
+
 ### v9.5 — Openclaw (February 2026)
 
 - **Version**: 9.5.0 across root, frontend, and docs; codename **Openclaw**.

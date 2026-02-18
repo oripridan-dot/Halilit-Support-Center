@@ -42,7 +42,7 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [reloadToken, setReloadToken] = useState(0);
   const { products } = useConductorCatalog();
-  const { goToProduct } = useNavigationStore();
+  const { goToProduct, goToInventory, setSearchQuery } = useNavigationStore();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -154,9 +154,22 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       setIsOpen(false);
       setQuery("");
       setSelectedIndex(-1);
+      setSearchQuery(null);
       inputRef.current?.blur();
     },
-    [goToProduct, onSelect],
+    [goToProduct, onSelect, setSearchQuery],
+  );
+
+  const handleSearchSubmit = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault();
+      if (!query.trim()) return;
+      setSearchQuery(query.trim());
+      goToInventory(query.trim());
+      setIsOpen(false);
+      inputRef.current?.blur();
+    },
+    [query, setSearchQuery, goToInventory],
   );
 
   // Keyboard navigation in results
@@ -187,7 +200,8 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   );
 
   return (
-    <div
+    <form
+      onSubmit={handleSearchSubmit}
       className={`relative w-full max-w-md hidden md:block ${className ?? ""}`.trim()}
       ref={wrapperRef}
     >
@@ -217,7 +231,14 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
             setIsOpen(true);
           }}
           onBlur={() => setIsFocused(false)}
-          onKeyDown={handleKeyDown}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && query.trim()) {
+              e.preventDefault();
+              handleSearchSubmit(e);
+            } else {
+              handleKeyDown(e);
+            }
+          }}
         />
 
         {/* Result count */}
@@ -402,6 +423,6 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
           )}
         </div>
       )}
-    </div>
+    </form>
   );
 };
