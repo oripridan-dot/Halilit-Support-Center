@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Pipeline Validation Test — Operator Console v9.6.0
-Tests the complete data pipeline from ingestion → API → frontend consumption.
+Pipeline outcome validation — Operator Console (spec-driven).
+Run from project root. Tests that pipeline artifacts exist and catalog builds.
+Optional: python3 test_pipeline.py. See docs/FACTORY_PIPELINE.md.
 """
 
 import json

@@ -43,8 +43,11 @@ _catalog_cache_json: bytes | None = None
 _catalog_cache_gzip: bytes | None = None
 _catalog_cache_dict: dict | None = None  # Only keep dict when actively needed
 _catalog_cache_time: float = 0
+_catalog_disk_mtime: float = 0  # mtime of catalog_cache.json.gz when we last loaded/wrote it
 _catalog_build_lock = threading.Lock()
-CATALOG_CACHE_TTL = 300  # 5 minutes
+# In dev, use short TTL so rebuild-catalog + refresh shows new data quickly
+_DEV = os.environ.get("HALILIT_DEV", "").lower() in ("1", "true", "yes")
+CATALOG_CACHE_TTL = 30 if _DEV else 300  # 30s dev, 5 min prod
 
 # Fields to strip from products in the catalog response (keep contextual_data so UI can show review_synthesis, real_world_insights, review_sources)
 STRIP_FIELDS = {"search_text", "subcategory", "currency"}
@@ -152,12 +155,13 @@ FRONTEND_DIST = str(FRONTEND_DIR / "dist")
 
 def _invalidate_catalog_cache():
     """Force next request to rebuild catalog (used after sync)."""
-    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time, _catalog_disk_mtime
     with _catalog_build_lock:
         _catalog_cache_json = None
         _catalog_cache_gzip = None
         _catalog_cache_dict = None
         _catalog_cache_time = 0
+        _catalog_disk_mtime = 0
         try:
             if CATALOG_CACHE_PATH.exists():
                 CATALOG_CACHE_PATH.unlink()
@@ -170,7 +174,7 @@ def _load_catalog_from_disk() -> bool:
     Invalidates cache if it lacks relationship data (required for structured-items
     accessory hierarchy: flybars/covers only under parent, not top-level cards).
     """
-    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time, _catalog_disk_mtime
     if not CATALOG_CACHE_PATH.exists():
         return False
     try:
@@ -196,6 +200,7 @@ def _load_catalog_from_disk() -> bool:
         _catalog_cache_gzip = gzip_bytes
         _catalog_cache_dict = catalog
         _catalog_cache_time = time.time()
+        _catalog_disk_mtime = CATALOG_CACHE_PATH.stat().st_mtime
         n = catalog.get("metadata", {}).get("total_products", 0)
         logger.info(f"Catalog: loaded from disk ({n} products, {len(json_bytes)//1024}KB)")
         return True
@@ -205,11 +210,26 @@ def _load_catalog_from_disk() -> bool:
 
 
 def _build_catalog_cache():
-    """Build catalog and cache. Uses disk cache if fresh, else builds from scratch."""
-    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
+    """Build catalog and cache. Uses disk cache if fresh, else builds from scratch.
+    If catalog_cache.json.gz was updated on disk (e.g. by conductor rebuild-catalog),
+    we reload it so the UI sees new data without restarting the server.
+    """
+    global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time, _catalog_disk_mtime
     with _catalog_build_lock:
-        if _catalog_cache_json is not None and (time.time() - _catalog_cache_time) < CATALOG_CACHE_TTL:
-            return
+        now = time.time()
+        if _catalog_cache_json is not None and (now - _catalog_cache_time) < CATALOG_CACHE_TTL:
+            # In-memory cache valid — but if disk file was updated (e.g. rebuild-catalog), reload
+            if CATALOG_CACHE_PATH.exists():
+                disk_mtime = CATALOG_CACHE_PATH.stat().st_mtime
+                if disk_mtime > _catalog_disk_mtime:
+                    _catalog_cache_json = None
+                    _catalog_cache_gzip = None
+                    _catalog_cache_dict = None
+                    _catalog_cache_time = 0
+                    _catalog_disk_mtime = 0
+                    logger.info("Catalog disk file updated — will reload on next use")
+            if _catalog_cache_json is not None:
+                return
         # Fast path: load from disk cache
         if _load_catalog_from_disk():
             return
@@ -269,6 +289,7 @@ def _build_catalog_cache():
             DATA_DIR.mkdir(parents=True, exist_ok=True)
             with gzip.open(CATALOG_CACHE_PATH, "wb", compresslevel=6) as f:
                 f.write(json_bytes)
+            _catalog_disk_mtime = CATALOG_CACHE_PATH.stat().st_mtime
         except OSError as e:
             logger.warning(f"Could not write catalog cache: {e}")
 

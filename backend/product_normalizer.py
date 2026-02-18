@@ -1077,9 +1077,9 @@ def build_catalog(
         "index.json",
         "search_index.json",
         "search_index_min.json",
-        "galaxy_db.json",
+        "galaxy_db.json",  # Metadata file, not a brand catalog
         "package.json",
-        "inventory.json",
+        "inventory.json",  # Price overlay only, not primary source
     }
 
     json_files = [f for f in sorted(data_path.glob("*.json")) if f.name not in excluded]
@@ -1254,8 +1254,7 @@ def build_catalog(
                         # Merge if brands are different (catches "Other" brand duplicates)
                         if existing_brand != new_brand:
                             found_duplicate = True
-                            # Use name_dedup_key as matched_key for tracking
-                            matched_key = name_dedup_key if name_dedup_key else normalized_name
+                            matched_key = normalized_name  # Use normalized name as key
 
                 if found_duplicate and existing_id:
                     # Merge: keep whichever has higher quality, but merge missing fields

@@ -449,7 +449,7 @@ def main():
     print(f"  {len(all_product_urls)} unique product URLs discovered")
     print(f"  {total_new} new products added this run")
     print(f"  {total_products} total products in catalog")
-    print(f"  Restart the backend to reload: ./start.sh")
+    print(f"  Restart the backend to reload: ./factory_reset.sh or ./start_console.sh")
     print(f"{'=' * 60}")
 
 if __name__ == "__main__":

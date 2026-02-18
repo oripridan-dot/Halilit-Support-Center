@@ -58,7 +58,12 @@ Before outputting code, ask yourself:
 2. Is there a simpler way to do this?
 3. Did I handle the loading and error states?
 
-# 6. User Context & Process Help
+# 6. Spec-Driven Development (Halilit Support Center)
+- **Source of truth:** Requirements live in `specs/` and `OPERATOR_CONSOLE_SPEC.md`. Code is the artifact that satisfies specs.
+- **Outcome over code:** Prefer verifying behavior (scenarios, UI outcome) over reviewing implementation. If something is wrong, refine the spec and regenerate; avoid ad-hoc code debugging.
+- **Documentation:** Run commands and workflow are in `docs/` (QUICK_START, WORKFLOW, FACTORY_PIPELINE). Point users to docs, not one-off fix docs.
+
+# 7. User Context & Process Help
 - **User is not a coder:** When providing instructions, always include exact terminal commands that can be copy-pasted.
 - **Process execution:** The user needs help running processes, starting services, and troubleshooting startup issues. Always provide step-by-step commands with expected outputs.
 - **Error resolution:** When errors occur, provide the exact fix commands rather than just explaining what went wrong.

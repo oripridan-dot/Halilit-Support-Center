@@ -307,7 +307,7 @@ services:
   # RESTRICTED: Used only for official manufacturer spec verification and
   # internal employee concierge. See backend/agent_skills/COMPLIANCE.md.
   # Resource limits and security options prevent runaway usage.
-  # Enable with: docker-compose --profile openclaw up -d (or ./start.sh if OPENCLAW_URL set)
+  # Enable with: docker-compose --profile openclaw up -d (or ./factory_reset.sh if OPENCLAW_URL set)
   # =========================================================================
   openclaw:
     # Official image is published at ghcr.io/openclaw/openclaw; use that

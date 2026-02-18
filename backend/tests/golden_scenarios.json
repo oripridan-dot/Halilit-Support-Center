@@ -1,0 +1,12 @@
+[
+  {
+    "id": "roland-fp30x-accessory",
+    "description": "Roland FP-30X MUST have Roland KSC-70 as a verified accessory",
+    "product_identifier": { "sku_or_name": "Roland FP-30X", "brand": "Roland" },
+    "required_relationship": {
+      "type": "accessory",
+      "target_identifier": { "sku_or_name": "Roland KSC-70", "brand": "Roland" },
+      "verified": true
+    }
+  }
+]
