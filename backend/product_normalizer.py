@@ -722,9 +722,19 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     - Price = 0 is OK (shown as "Price on request")
     - No image is OK (gets empty string, frontend handles fallback)
     """
+    # Normalize product ID - handle different formats (halilit-123, 123, scraped-...)
     pid = p.get("id") or p.get("halilit_id") or p.get("sku")
     if not pid:
         return None
+    
+    # Normalize ID format: if numeric, prefix with "halilit-"
+    pid_str = str(pid).strip()
+    if pid_str.isdigit():
+        pid_str = f"halilit-{pid_str}"
+    elif not pid_str.startswith(("halilit-", "scraped-", "openclaw-")):
+        # If it's a valid ID but not prefixed, assume halilit
+        if pid_str.replace("-", "").replace("_", "").isdigit():
+            pid_str = f"halilit-{pid_str.replace('-', '').replace('_', '')}"
 
     name = (
         p.get("name")
@@ -983,7 +993,7 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     search_text = f"{name} {brand} {raw_category} {raw_subcategory} {description_short}".lower()
 
     product_dict = {
-        "id": str(pid),
+        "id": pid_str,  # Use normalized ID
         "name": name,
         "brand": brand,
         "brand_logo": brand_logo,
@@ -1114,6 +1124,7 @@ def build_catalog(
     # Dedup by English model name within same brand to catch
     # duplicates across variant files (e.g., "adam audio.json" + "adam-audio.json")
     brand_model_map: Dict[str, str] = {}  # brand+model -> first product id
+    name_to_product_id: Dict[str, str] = {}  # normalized_name -> first product id (for cross-brand matching)
     brands_found: set = set()
     # Optional graph hints coming from OpenClaw-consolidated brand catalogs
     openclaw_families_meta: Dict[str, dict] = {}
@@ -1208,18 +1219,61 @@ def build_catalog(
                 if raw_pid and raw_pid in raw_id_to_family_id:
                     product["family_id"] = raw_id_to_family_id[raw_pid]
 
-                # Dedup: check for same brand + English model name
+                # Dedup: check for same brand + English model name OR exact name match
                 eng_model = _extract_english_name(
                     product["name"]).lower().strip()
                 brand_key = _brand_dedup_key(product["brand"])
+                normalized_name = product["name"].lower().strip()
+                
+                # Create multiple dedup keys for better matching
                 dedup_key = f"{brand_key}::{eng_model}" if eng_model else ""
+                name_dedup_key = f"{brand_key}::{normalized_name}" if normalized_name else ""
 
+                # Check all dedup keys - use first match found
+                found_duplicate = False
+                matched_key = None
+                existing_id = None
+                
+                # 1. Check brand+model key (most specific)
                 if dedup_key and dedup_key in brand_model_map:
-                    # Merge: keep whichever has higher quality, but merge missing fields
+                    matched_key = dedup_key
                     existing_id = brand_model_map[dedup_key]
+                    found_duplicate = True
+                # 2. Check brand+full name key
+                elif name_dedup_key and name_dedup_key in brand_model_map:
+                    matched_key = name_dedup_key
+                    existing_id = brand_model_map[name_dedup_key]
+                    found_duplicate = True
+                # 3. Check exact name match (handles "Other" brand or wrong brand assignment)
+                elif normalized_name and normalized_name in name_to_product_id:
+                    existing_id = name_to_product_id[normalized_name]
                     if existing_id in products_map:
                         existing = products_map[existing_id]
-                        if product["quality_score"] > existing["quality_score"]:
+                        existing_brand = existing.get("brand", "").lower()
+                        new_brand = product["brand"].lower()
+                        # Merge if brands are different (catches "Other" brand duplicates)
+                        if existing_brand != new_brand:
+                            found_duplicate = True
+                            # Use name_dedup_key as matched_key for tracking
+                            matched_key = name_dedup_key if name_dedup_key else normalized_name
+
+                if found_duplicate and existing_id:
+                    # Merge: keep whichever has higher quality, but merge missing fields
+                    if existing_id in products_map:
+                        existing = products_map[existing_id]
+                        # When merging, prefer non-"Other" brand
+                        existing_brand = existing.get("brand", "").lower()
+                        new_brand = product["brand"].lower()
+                        prefer_existing = True
+                        
+                        # If existing has "Other" brand and new has real brand, prefer new
+                        if existing_brand == "other" and new_brand != "other":
+                            prefer_existing = False
+                        # If both have real brands, prefer higher quality score
+                        elif existing_brand != "other" and new_brand != "other":
+                            prefer_existing = product["quality_score"] <= existing["quality_score"]
+                        
+                        if not prefer_existing:
                             # New one is better — use it but keep any data the old one had
                             if not product["image_url"] and existing["image_url"]:
                                 product["image_url"] = existing["image_url"]
@@ -1232,6 +1286,9 @@ def build_catalog(
                             if not product.get("price_eilat") and existing.get("price_eilat"):
                                 product["price_eilat"] = existing["price_eilat"]
                             products_map[existing_id] = product
+                            # Update brand_model_map to point to new product
+                            if matched_key:
+                                brand_model_map[matched_key] = product["id"]
                         else:
                             # Existing is better — merge any new data into it
                             if not existing["image_url"] and product["image_url"]:
@@ -1244,6 +1301,9 @@ def build_catalog(
                                 existing["price"] = product["price"]
                             if not existing.get("price_eilat") and product.get("price_eilat"):
                                 existing["price_eilat"] = product["price_eilat"]
+                            # If existing has "Other" brand and new has real brand, update brand
+                            if existing_brand == "other" and new_brand != "other":
+                                existing["brand"] = product["brand"]
                             # Propagate OpenClaw family hints into the better existing product
                             if not existing.get("family_id") and product.get("family_id"):
                                 existing["family_id"] = product["family_id"]
@@ -1251,8 +1311,14 @@ def build_catalog(
 
                 if product["id"] not in products_map:
                     products_map[product["id"]] = product
+                    # Register all dedup keys to catch duplicates from different angles
                     if dedup_key:
                         brand_model_map[dedup_key] = product["id"]
+                    if name_dedup_key and name_dedup_key != dedup_key:
+                        brand_model_map[name_dedup_key] = product["id"]
+                    # Register exact name for cross-brand matching (handles "Other" brand)
+                    if normalized_name and normalized_name not in name_to_product_id:
+                        name_to_product_id[normalized_name] = product["id"]
                     brands_found.add(product["brand"])
                 else:
                     # If an existing product already occupies this ID, merge family_id if missing
