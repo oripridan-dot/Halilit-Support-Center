@@ -163,10 +163,17 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   const handleSearchSubmit = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();
-      if (!query.trim()) return;
-      setSearchQuery(query.trim());
-      goToInventory(query.trim());
+      const trimmed = query.trim();
+      if (!trimmed) {
+        setIsOpen(false);
+        setSearchQuery(null);
+        return;
+      }
+      setSearchQuery(trimmed);
+      goToInventory(trimmed);
       setIsOpen(false);
+      setQuery("");
+      setSelectedIndex(-1);
       inputRef.current?.blur();
     },
     [query, setSearchQuery, goToInventory],
@@ -251,13 +258,16 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
         {/* Clear button */}
         {query && (
           <button
+            type="button"
             className="p-0.5 text-zinc-500 hover:text-white transition-colors rounded hover:bg-zinc-700/50"
             onClick={() => {
               setQuery("");
               setIsOpen(false);
               setSelectedIndex(-1);
+              setSearchQuery(null);
               inputRef.current?.focus();
             }}
+            aria-label="Clear search"
           >
             <X className="h-3.5 w-3.5" />
           </button>

@@ -110,7 +110,7 @@ const ProductDetailView: React.FC = () => {
         <div className="flex items-start gap-6 mb-6">
           <div className="w-32 h-32 bg-white rounded-lg p-3 flex-shrink-0 border border-zinc-700/50 shadow-inner">
             <img
-              src={product.image_url || "/placeholder.png"}
+              src={product.image_url || "/assets/images/placeholder_product.svg"}
               alt=""
               className="w-full h-full object-contain"
             />

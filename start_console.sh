@@ -49,19 +49,28 @@ export PYTHONPATH="$SCRIPT_DIR:$PYTHONPATH"
 # 7. Start Backend (Background Process)
 echo "🔌 Starting API Server (Port 8000)..."
 cd backend
+# Use PYTHONPATH from environment
 python3 -m uvicorn server:app --reload --host 0.0.0.0 --port 8000 > ../backend.log 2>&1 &
 BACKEND_PID=$!
 cd ..
 
 # Wait for backend to be ready
 echo "⏳ Waiting for backend to start..."
+# Check if curl is available, otherwise use python
+if command -v curl &> /dev/null; then
+    HEALTH_CHECK_CMD="curl -s http://localhost:8000/api/health > /dev/null 2>&1"
+else
+    HEALTH_CHECK_CMD="python3 -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')\" > /dev/null 2>&1"
+fi
+
 for i in {1..30}; do
-    if curl -s http://localhost:8000/api/health > /dev/null 2>&1; then
+    if eval "$HEALTH_CHECK_CMD"; then
         echo "✅ Backend is ready!"
         break
     fi
     if [ $i -eq 30 ]; then
         echo "❌ ERROR: Backend failed to start after 30 seconds"
+        echo "   Check backend.log for errors: tail -20 backend.log"
         kill $BACKEND_PID 2>/dev/null || true
         exit 1
     fi

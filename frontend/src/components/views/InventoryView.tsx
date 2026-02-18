@@ -15,10 +15,14 @@ const InventoryView: React.FC = () => {
   
   // Sync filterText with searchQuery from navigation store
   useEffect(() => {
-    if (searchQuery) {
+    if (searchQuery !== null) {
       setFilterText(searchQuery);
+      // Clear searchQuery after applying to avoid re-triggering on navigation
+      if (searchQuery === "") {
+        setSearchQuery(null);
+      }
     }
-  }, [searchQuery]);
+  }, [searchQuery, setSearchQuery]);
 
   const filteredProducts = useMemo(() => {
     if (!filterText) return products;
@@ -82,7 +86,13 @@ const InventoryView: React.FC = () => {
             placeholder="Search by name, SKU or brand…"
             className="bg-zinc-900 border border-zinc-800 rounded px-3 py-1.5 text-xs text-zinc-200 w-72 focus:outline-none focus:border-blue-500 transition-colors"
             value={filterText}
-            onChange={(e) => setFilterText(e.target.value)}
+            onChange={(e) => {
+              setFilterText(e.target.value);
+              // Clear searchQuery when user manually changes filter
+              if (searchQuery !== null) {
+                setSearchQuery(null);
+              }
+            }}
             aria-label="Filter products"
           />
         </div>
@@ -124,8 +134,8 @@ const InventoryView: React.FC = () => {
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded bg-white p-1 flex-shrink-0 border border-zinc-800 overflow-hidden">
                       <img
-                        src={item.image_url || "/placeholder.png"}
-                        alt=""
+                        src={item.image_url || "/assets/images/placeholder_product.svg"}
+                        alt={item.name || "Product image"}
                         className="w-full h-full object-contain"
                         loading="lazy"
                         onError={(e) => {

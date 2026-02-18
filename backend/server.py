@@ -792,10 +792,12 @@ if IMAGES_DIR.exists():
     logger.info(f"Serving /images from {IMAGES_DIR}")
 
 # Mount frontend public assets (for placeholder images, etc.)
-FRONTEND_ASSETS = FRONTEND_DIR / "public" / "assets"
-if FRONTEND_ASSETS.exists():
-    app.mount("/assets", StaticFiles(directory=str(FRONTEND_ASSETS)), name="assets")
-    logger.info(f"Serving /assets from {FRONTEND_ASSETS}")
+# Only mount if dist doesn't exist (dist takes precedence)
+if not os.path.exists(FRONTEND_DIST):
+    FRONTEND_ASSETS = FRONTEND_DIR / "public" / "assets"
+    if FRONTEND_ASSETS.exists():
+        app.mount("/assets", StaticFiles(directory=str(FRONTEND_ASSETS)), name="assets")
+        logger.info(f"Serving /assets from {FRONTEND_ASSETS}")
 
 if os.path.exists(FRONTEND_DIST):
     app.mount(

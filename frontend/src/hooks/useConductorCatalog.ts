@@ -201,7 +201,9 @@ export const useConductorCatalog = () => {
                     throw new Error(`Failed to load catalog: ${response.status} ${response.statusText}`);
                 }
                 const catalog: ConductorCatalog = await response.json();
-                if (import.meta.env.DEV) {
+                // Log catalog load in dev mode only
+                if (import.meta.env.DEV && import.meta.env.MODE === 'development') {
+                    // eslint-disable-next-line no-console
                     console.log(
                         `✅ Catalog v10: ${catalog.metadata.total_products} products, ` +
                         `${catalog.metadata.brands.length} brands, ` +
