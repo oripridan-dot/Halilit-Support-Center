@@ -75,18 +75,42 @@ def _write_cache(product_id: str, data: Dict) -> None:
 
 
 def _load_inventory_product(product_id: str) -> Optional[Dict]:
-    """Load product from inventory.json by ID."""
+    """Load product from catalog cache by ID.
+
+    Reads backend/data/catalog_cache.json.gz (the normalized catalog).
+    Falls back to scanning brand JSON files in frontend/public/data/ if cache
+    is absent.
+    """
+    import gzip
+
+    # Primary: use pre-built catalog cache
+    cache_path = Path(__file__).parent / "data" / "catalog_cache.json.gz"
+    if cache_path.exists():
+        try:
+            with gzip.open(cache_path, "rt", encoding="utf-8") as f:
+                catalog = json.load(f)
+            for p in catalog.get("products", []):
+                if p.get("id") == product_id:
+                    return p
+        except Exception as e:
+            logger.warning(f"Failed to read catalog cache: {e}")
+
+    # Fallback: scan brand JSON files
     from backend.project_config import FRONTEND_PUBLIC_DATA
-    inv_path = Path(FRONTEND_PUBLIC_DATA) / "inventory.json"
-    if not inv_path.exists():
-        return None
-    try:
-        inventory = json.loads(inv_path.read_text())
-        for p in inventory.get("products", []):
-            if p.get("id") == product_id:
-                return p
-    except Exception as e:
-        logger.warning(f"Failed to read inventory: {e}")
+    data_dir = Path(FRONTEND_PUBLIC_DATA)
+    if data_dir.exists():
+        try:
+            for json_file in data_dir.glob("*.json"):
+                try:
+                    brand_data = json.loads(json_file.read_text(encoding="utf-8"))
+                    products = brand_data if isinstance(brand_data, list) else brand_data.get("products", [])
+                    for p in products:
+                        if p.get("id") == product_id:
+                            return p
+                except Exception:
+                    continue
+        except Exception as e:
+            logger.warning(f"Failed to scan brand files: {e}")
     return None
 
 

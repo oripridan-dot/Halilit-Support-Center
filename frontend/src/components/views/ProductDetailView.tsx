@@ -61,6 +61,11 @@ const ProductDetailView: React.FC = () => {
     );
   }, [product?.specs, jitState.officialSpecs]);
 
+  const displayDescription =
+    product?.description ||
+    (jitState.officialSpecs as { description?: string } | null)?.description ||
+    "";
+
   const fileLinks = useMemo(() => {
     const links: { label: string; url: string }[] = [];
     if (product?.halilit_url)
@@ -273,6 +278,12 @@ const ProductDetailView: React.FC = () => {
           </div>
         </div>
 
+        {displayDescription && (
+          <p className="text-sm text-zinc-400 leading-relaxed mb-4 line-clamp-3 max-w-3xl">
+            {displayDescription}
+          </p>
+        )}
+
         <div className="flex items-center gap-3 pb-3 flex-wrap">
           <button
             type="button"
@@ -377,6 +388,15 @@ const ProductDetailView: React.FC = () => {
                     </div>
                   ))}
                 </dl>
+              ) : displayDescription ? (
+                <div className="space-y-4">
+                  <p className="text-zinc-300 leading-relaxed text-sm whitespace-pre-line">
+                    {displayDescription}
+                  </p>
+                  <p className="text-xs text-zinc-600 italic">
+                    Technical specifications not yet fetched from official brand page.
+                  </p>
+                </div>
               ) : (
                 <p className="text-zinc-500 italic">
                   No technical specifications available.
