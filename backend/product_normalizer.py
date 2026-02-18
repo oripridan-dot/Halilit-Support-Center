@@ -16,6 +16,7 @@ Key changes from v8:
 import json
 import logging
 import os
+import re
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
@@ -1052,19 +1053,64 @@ def build_catalog(
         if on_progress:
             on_progress(step, pct, msg)
 
-    excluded = {"index.json", "search_index.json", "search_index_min.json",
-                "galaxy_db.json", "package.json"}
+    # Note: `inventory.json` is a skeleton-sync artifact. We treat it as a
+    # *price overlay* (by id/url), not as a primary product source, to avoid
+    # duplicating products with mismatched ids and losing rich brand-file fields.
+    excluded = {
+        "index.json",
+        "search_index.json",
+        "search_index_min.json",
+        "galaxy_db.json",
+        "package.json",
+        "inventory.json",
+    }
 
     json_files = [f for f in sorted(data_path.glob("*.json")) if f.name not in excluded]
     total_files = len(json_files)
 
     prog("load", 0.0, "Loading brand files...")
 
+    # ── Skeleton inventory price overlay ─────────────────────────────────────
+    # Many Halilit product pages are blocked or omit price in JSON-LD.
+    # Listing pages (skeleton sync) usually carry the real price, so we use it
+    # to fill missing `price_il` for brand products.
+    inventory_price_by_id: Dict[str, float] = {}
+    inventory_price_by_url: Dict[str, float] = {}
+    inv_path = data_path / "inventory.json"
+    if inv_path.exists():
+        try:
+            inv = json.loads(inv_path.read_text("utf-8"))
+            inv_products = inv.get("products", []) if isinstance(inv, dict) else []
+            for ip in inv_products:
+                if not isinstance(ip, dict):
+                    continue
+                url = str(ip.get("halilit_url") or ip.get("url") or "").strip()
+                raw_price = ip.get("price") if ip.get("price") is not None else ip.get("price_il")
+                try:
+                    price = float(raw_price) if raw_price is not None else 0.0
+                except (TypeError, ValueError):
+                    price = 0.0
+                if price <= 0:
+                    continue
+                if url:
+                    inventory_price_by_url[url] = price
+                    m = re.search(r"/items/(\d+)", url)
+                    if m:
+                        item_id = m.group(1)
+                        # Store both formats: "halilit-{id}" and just "{id}"
+                        inventory_price_by_id[f"halilit-{item_id}"] = price
+                        inventory_price_by_id[item_id] = price
+        except Exception as e:
+            logger.warning(f"Inventory overlay load failed: {e}")
+
     products_map: Dict[str, dict] = {}
     # Dedup by English model name within same brand to catch
     # duplicates across variant files (e.g., "adam audio.json" + "adam-audio.json")
     brand_model_map: Dict[str, str] = {}  # brand+model -> first product id
     brands_found: set = set()
+    # Optional graph hints coming from OpenClaw-consolidated brand catalogs
+    openclaw_families_meta: Dict[str, dict] = {}
+    openclaw_relationships_map: Dict[str, List[dict]] = {}
 
     for file_idx, json_file in enumerate(json_files):
         if total_files > 0 and file_idx > 0 and file_idx % 25 == 0:
@@ -1074,6 +1120,42 @@ def build_catalog(
             with open(json_file, "r") as f:
                 file_data = json.load(f)
 
+            # Optional OpenClaw-consolidated extras (families, relationships) on a per-brand file
+            brand_identity = file_data.get("brand_identity") if isinstance(file_data, dict) else {}
+            brand_name_from_file = (brand_identity or {}).get("name") or ""
+            families = file_data.get("families") if isinstance(file_data, dict) else []
+            relationships = file_data.get("relationships") if isinstance(file_data, dict) else []
+
+            # Map raw product ids → family_id for this brand (OpenClaw hint)
+            raw_id_to_family_id: Dict[str, str] = {}
+            if isinstance(families, list):
+                for fam in families:
+                    if not isinstance(fam, dict):
+                        continue
+                    fid = str(fam.get("family_id") or "").strip()
+                    if not fid:
+                        continue
+                    # Initialize or merge family metadata (brand-level graph hints)
+                    if fid not in openclaw_families_meta:
+                        openclaw_families_meta[fid] = {
+                            "id": fid,
+                            "family_name": fam.get("family_name") or "",
+                            "brand": fam.get("brand") or brand_name_from_file or "",
+                            "series": fam.get("series") or "",
+                            "hero_image": "",
+                            "variant_count": 0,
+                            "source": "openclaw",
+                        }
+                    variant_ids = fam.get("variant_ids") or []
+                    if isinstance(variant_ids, list):
+                        # Track max variant_count seen for this family across files (defensive)
+                        prev_count = int(openclaw_families_meta[fid].get("variant_count", 0) or 0)
+                        openclaw_families_meta[fid]["variant_count"] = max(prev_count, len(variant_ids))
+                        for vid in variant_ids:
+                            if not vid:
+                                continue
+                            raw_id_to_family_id[str(vid)] = fid
+
             raw_products = (
                 file_data if isinstance(file_data, list)
                 else file_data.get("products", []) if isinstance(file_data, dict)
@@ -1081,9 +1163,43 @@ def build_catalog(
             )
 
             for raw in raw_products:
+                # Seed ID before normalization so we can map OpenClaw hints → normalized products
+                raw_pid = str(
+                    raw.get("halilit_id")
+                    or raw.get("id")
+                    or raw.get("sku")
+                    or ""
+                )
+
+                # Apply skeleton price overlay (only when missing/zero)
+                try:
+                    current_price = _extract_price(raw)
+                except Exception:
+                    current_price = 0.0
+                if current_price <= 0 and (inventory_price_by_id or inventory_price_by_url):
+                    raw_url = str(raw.get("halilit_url") or raw.get("source_url") or "").strip()
+                    overlay_price = 0.0
+                    if raw_pid:
+                        # Try both "halilit-{id}" and just "{id}" formats
+                        overlay_price = inventory_price_by_id.get(raw_pid, 0.0)
+                        if overlay_price <= 0 and raw_pid.startswith("halilit-"):
+                            overlay_price = inventory_price_by_id.get(raw_pid.replace("halilit-", ""), 0.0)
+                        elif overlay_price <= 0 and not raw_pid.startswith("halilit-"):
+                            overlay_price = inventory_price_by_id.get(f"halilit-{raw_pid}", 0.0)
+                    if overlay_price <= 0 and raw_url:
+                        overlay_price = inventory_price_by_url.get(raw_url, 0.0)
+                    if overlay_price > 0:
+                        raw["price_il"] = overlay_price
+                        if not raw.get("price_eilat"):
+                            raw["price_eilat"] = round(overlay_price / 1.17, 2)
+
                 product = normalize_product(raw, fallback_brand=json_file.stem)
                 if not product:
                     continue
+
+                # Attach OpenClaw-provided family_id when available
+                if raw_pid and raw_pid in raw_id_to_family_id:
+                    product["family_id"] = raw_id_to_family_id[raw_pid]
 
                 # Dedup: check for same brand + English model name
                 eng_model = _extract_english_name(
@@ -1121,6 +1237,9 @@ def build_catalog(
                                 existing["price"] = product["price"]
                             if not existing.get("price_eilat") and product.get("price_eilat"):
                                 existing["price_eilat"] = product["price_eilat"]
+                            # Propagate OpenClaw family hints into the better existing product
+                            if not existing.get("family_id") and product.get("family_id"):
+                                existing["family_id"] = product["family_id"]
                         continue
 
                 if product["id"] not in products_map:
@@ -1128,6 +1247,41 @@ def build_catalog(
                     if dedup_key:
                         brand_model_map[dedup_key] = product["id"]
                     brands_found.add(product["brand"])
+                else:
+                    # If an existing product already occupies this ID, merge family_id if missing
+                    existing = products_map[product["id"]]
+                    if not existing.get("family_id") and product.get("family_id"):
+                        existing["family_id"] = product["family_id"]
+
+            # Incorporate OpenClaw relationships for this brand (optional, high-confidence hints)
+            if isinstance(relationships, list):
+                for rel in relationships:
+                    if not isinstance(rel, dict):
+                        continue
+                    src = str(rel.get("source_id") or "").strip()
+                    tgt = str(rel.get("target_id") or "").strip()
+                    rtype = str(rel.get("relationship_type") or "").strip().lower()
+                    if not src or not tgt or src == tgt:
+                        continue
+                    if rtype not in (
+                        "accessory_for",
+                        "alternative_to",
+                        "bundle_with",
+                        "compatible_with",
+                        "variant_of",
+                    ):
+                        continue
+                    rel_obj = {
+                        "source_id": src,
+                        "target_id": tgt,
+                        "relationship_type": rtype,
+                        "source": "openclaw",
+                    }
+                    # Attach relation to both endpoints so lookups by product_id are symmetric
+                    for pid in (src, tgt):
+                        bucket = openclaw_relationships_map.setdefault(pid, [])
+                        if rel_obj not in bucket:
+                            bucket.append(rel_obj)
         except Exception as e:
             logger.error(f"Error loading {json_file.name}: {e}")
 
@@ -1291,9 +1445,36 @@ def build_catalog(
         "by_spectrum": by_spectrum,
         "by_brand": by_brand,
     }
+
+    # Combine relationships from product graph (when enabled) with OpenClaw hints
+    combined_relationships: Dict[str, List[dict]] = {}
     if graph_indexes:
         all_indexes["by_family"] = graph_indexes.get("by_family", {})
-        all_indexes["relationships"] = graph_indexes.get("relationships", {})
+        base_rels = graph_indexes.get("relationships", {}) or {}
+        # Shallow copy to avoid mutating graph_indexes in-place
+        combined_relationships = {
+            pid: list(rels) for pid, rels in base_rels.items()
+        }
+
+    if openclaw_relationships_map:
+        if not combined_relationships:
+            combined_relationships = {}
+        for pid, rels in openclaw_relationships_map.items():
+            bucket = combined_relationships.setdefault(pid, [])
+            for r in rels:
+                if r not in bucket:
+                    bucket.append(r)
+
+    if combined_relationships:
+        all_indexes["relationships"] = combined_relationships
+
+    # Prefer OpenClaw-provided family metadata when present; fall back to graph-only
+    if openclaw_families_meta:
+        if not families_meta:
+            families_meta = openclaw_families_meta
+        else:
+            for fid, meta in openclaw_families_meta.items():
+                families_meta.setdefault(fid, meta)
 
     return {
         "products": products,
