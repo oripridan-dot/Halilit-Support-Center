@@ -6,7 +6,7 @@ Purge weak relationships from the persisted product graph snapshot.
    Removes: compatible_with, successor_of, bundle_with (and any other types).
 
 2. Of the kept types, removes low-confidence unverified edges:
-   - If confidence < 0.8 AND not verified by Official source AND not manually_curated → delete.
+   - If confidence < CONFIDENCE_THRESHOLD AND not verified by Official source AND not manually_curated → delete.
    Better to show 3 perfect accessories than 20 maybe-accessories.
 
 Usage:
@@ -32,7 +32,8 @@ GRAPH_DATA_DIR = BACKEND_DIR / "data" / "graph"
 SNAPSHOT_PATH = GRAPH_DATA_DIR / "product_graph.json"
 
 ALLOWED_TYPES = {"variant_of", "accessory_for", "alternative_to"}
-CONFIDENCE_THRESHOLD = 0.8
+# Very high confidence: keep only 0.9+ or verified. Lower to 0.8 to retain more "likely" matches.
+CONFIDENCE_THRESHOLD = 0.9
 OFFICIAL_VERIFIED_SOURCES = {"official", "official_text_match", "official_url_match"}
 
 

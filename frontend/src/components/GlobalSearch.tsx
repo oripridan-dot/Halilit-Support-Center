@@ -102,7 +102,10 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   );
 
   return (
-    <div className="relative w-full max-w-md hidden md:block" ref={wrapperRef}>
+    <div
+      className={`relative w-full max-w-md hidden md:block ${className ?? ""}`.trim()}
+      ref={wrapperRef}
+    >
       <div
         className={`relative group flex items-center gap-2 px-3 py-1.5 rounded-lg border transition-all duration-200 ${
           isFocused

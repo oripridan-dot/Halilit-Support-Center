@@ -1,148 +1,175 @@
-// frontend/src/App.tsx
 /**
- * HALILIT SUPPORT CENTER — JIT Architecture
+ * HALILIT SUPPORT CENTER — Operator Console v9.6
  *
- * Three screens that share the same data source:
- * 1. GalaxyDashboard - Category browser (galaxy view)
- * 2. SpectrumModule - Product spectrum
- * 3. ProductPage - Mission Control Cockpit (JIT intelligence)
- *
- * All screens consume data from: useConductorCatalog (React Query)
+ * Professional support console layout:
+ * - Persistent sidebar (Overview, Inventory, JIT Analysis, System)
+ * - Header with breadcrumbs and global search (Command-K)
+ * - Views: Dashboard (Overview), Inventory (data grid), Product Detail (tabs)
  */
-import React, { lazy, Suspense } from "react";
-import { GlobalSearch } from "./components/GlobalSearch";
-import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
-import { Breadcrumbs } from "./components/ui/Breadcrumbs";
+import React, { Suspense } from "react";
+import {
+  LayoutDashboard,
+  PackageSearch,
+  Settings,
+  Activity,
+  Server,
+} from "lucide-react";
 import { useNavigationStore } from "./store/navigationStore";
+import { GlobalErrorBoundary } from "./components/ui/GlobalErrorBoundary";
+import { GlobalSearch } from "./components/GlobalSearch";
 
-// Lazy load heavy views for code-splitting
-const GalaxyDashboard = lazy(() =>
-  import("./components/views/GalaxyDashboard").then((m) => ({
-    default: m.GalaxyDashboard,
-  })),
+const DashboardView = React.lazy(() =>
+  import("./components/views/DashboardView").then((m) => ({ default: m.DashboardView }))
 );
-const SpectrumModule = lazy(() =>
-  import("./components/views/SpectrumModule").then((m) => ({
-    default: m.SpectrumModule,
-  })),
+const InventoryViewV0 = React.lazy(() =>
+  import("./components/v0/InventoryViewV0").then((m) => ({ default: m.InventoryViewV0 }))
 );
-const ProductPage = lazy(() =>
-  import("./components/views/ProductPage").then((m) => ({
-    default: m.ProductPage,
-  })),
+const ProductDetailView = React.lazy(() =>
+  import("./components/views/ProductDetailView").then((m) => ({ default: m.ProductDetailView }))
 );
-const ItemsView = lazy(() =>
-  import("./components/views/ItemsView").then((m) => ({
-    default: m.ItemsView,
-  })),
+
+const SidebarItem = ({
+  icon: Icon,
+  label,
+  isActive,
+  onClick,
+}: {
+  icon: React.ElementType;
+  label: string;
+  isActive: boolean;
+  onClick: () => void;
+}) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
+      isActive
+        ? "bg-blue-600/10 text-blue-400 border border-blue-600/20"
+        : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-100"
+    }`}
+  >
+    <Icon size={18} aria-hidden />
+    {label}
+  </button>
 );
-// Loading placeholder with skeleton animation
-const LoadingPlaceholder = () => (
-  <div className="flex items-center justify-center w-full h-full bg-black/50">
-    <div className="flex flex-col items-center gap-4">
-      <div className="relative w-12 h-12">
-        <div className="absolute inset-0 rounded-full border-2 border-zinc-800" />
-        <div className="absolute inset-0 rounded-full border-2 border-t-blue-500 animate-spin" />
-      </div>
-      <p className="text-xs text-zinc-600 font-mono tracking-widest uppercase animate-pulse">
-        Loading
-      </p>
+
+const LoadingScreen = () => (
+  <div className="h-full w-full flex items-center justify-center bg-zinc-950">
+    <div className="flex flex-col items-center gap-3">
+      <div
+        className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"
+        aria-hidden
+      />
+      <span className="text-xs text-zinc-500 font-mono uppercase tracking-widest">
+        Loading System
+      </span>
     </div>
   </div>
 );
 
 function App() {
-  // Extract strictly what we need
-  const { currentView, activeProductId, goToItems, goToGalaxy } = useNavigationStore();
+  const { currentView, goToGalaxy, goToItems } = useNavigationStore();
+
+  const breadcrumbLabel =
+    currentView === "GALAXY"
+      ? "Overview"
+      : currentView === "ITEMS" || currentView === "SPECTRUM"
+        ? "Inventory Master"
+        : "Product Detail";
 
   return (
     <GlobalErrorBoundary>
-      <div className="flex h-screen w-screen flex-col bg-black text-white font-sans overflow-hidden">
-        {/* Global Header — refined with breadcrumbs */}
-        <header className="h-14 bg-black/95 backdrop-blur-md border-b border-zinc-800/60 flex items-center justify-between px-6 z-50 relative shadow-lg shadow-black/50">
-          <div className="flex items-center gap-3 shrink-0">
-            <button
-              onClick={() => useNavigationStore.getState().goToGalaxy()}
-              className="flex items-center gap-2.5 hover:opacity-80 transition-opacity"
-              title="Go to Dashboard"
-            >
-              <img
-                src="/assets/logos/halilit_logo.svg"
-                alt="Halilit"
-                className="h-6 w-auto"
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-              />
-              <span className="text-zinc-600 text-[10px] font-mono tracking-[0.15em] uppercase">
-                Support Center
+      <div className="flex h-screen w-screen bg-zinc-950 text-zinc-100 font-sans overflow-hidden selection:bg-blue-500/30">
+        {/* 1. PROFESSIONAL SIDEBAR */}
+        <aside
+          className="w-64 flex-shrink-0 border-r border-zinc-800 bg-black flex flex-col"
+          aria-label="Main navigation"
+        >
+          <div className="h-14 flex items-center px-4 border-b border-zinc-800 gap-3">
+            <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">
+              H
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm font-bold tracking-tight text-white">Halilit SC</span>
+              <span className="text-[10px] text-zinc-500 uppercase tracking-wider">
+                Operator Console
               </span>
-            </button>
-            <div className="h-5 w-px bg-zinc-800 mx-1" />
-            <nav className="flex items-center gap-1" aria-label="Main">
-              <button
-                type="button"
-                onClick={goToGalaxy}
-                className="px-2 py-1.5 rounded text-xs font-medium text-zinc-500 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-              >
-                Dashboard
-              </button>
-              <span className="text-zinc-700">/</span>
-              <button
-                type="button"
-                onClick={goToItems}
-                className="px-2 py-1.5 rounded text-xs font-medium text-zinc-500 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500"
-              >
-                Items
-              </button>
-            </nav>
-            <div className="h-5 w-px bg-zinc-800 mx-1" />
-            <Breadcrumbs />
+            </div>
           </div>
-          <div className="flex-1 max-w-xl px-6 flex justify-end items-center gap-3">
-            <GlobalSearch />
+
+          <nav className="flex-1 p-3 space-y-1">
+            <div className="px-3 py-2 text-[10px] font-bold text-zinc-600 uppercase tracking-widest">
+              Modules
+            </div>
+            <SidebarItem
+              icon={LayoutDashboard}
+              label="Overview"
+              isActive={currentView === "GALAXY"}
+              onClick={goToGalaxy}
+            />
+            <SidebarItem
+              icon={PackageSearch}
+              label="Inventory & Price"
+              isActive={currentView === "ITEMS" || currentView === "SPECTRUM"}
+              onClick={goToItems}
+            />
+            <SidebarItem
+              icon={Activity}
+              label="JIT Analysis"
+              isActive={currentView === "PRODUCT_PAGE"}
+              onClick={() => {}}
+            />
+
+            <div className="mt-6 px-3 py-2 text-[10px] font-bold text-zinc-600 uppercase tracking-widest">
+              System
+            </div>
+            <SidebarItem
+              icon={Server}
+              label="Ingestion Status"
+              isActive={false}
+              onClick={() => {}}
+            />
+            <SidebarItem icon={Settings} label="Settings" isActive={false} onClick={() => {}} />
+          </nav>
+
+          <div className="p-4 border-t border-zinc-800">
+            <div className="flex items-center gap-3">
+              <div
+                className="w-8 h-8 rounded-full bg-zinc-800 border border-zinc-700"
+                aria-hidden
+              />
+              <div className="flex flex-col">
+                <span className="text-xs font-medium text-zinc-200">Admin User</span>
+                <span className="text-[10px] text-zinc-500">Online</span>
+              </div>
+            </div>
           </div>
-        </header>
+        </aside>
 
-        {/* Main Stage */}
-        <main className="flex-1 relative overflow-hidden">
-          {/* Screen 1: Galaxy Dashboard */}
-          {currentView === "GALAXY" && (
-            <div className="absolute inset-0 animate-fade-in">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <GalaxyDashboard />
-              </Suspense>
+        {/* 2. MAIN CONTENT AREA */}
+        <div className="flex-1 flex flex-col min-w-0">
+          <header className="h-14 border-b border-zinc-800 bg-zinc-950/50 backdrop-blur flex items-center justify-between px-6">
+            <div className="text-sm text-zinc-400">
+              <span className="text-zinc-600">Console</span>
+              <span className="mx-2" aria-hidden>
+                /
+              </span>
+              <span className="text-zinc-200 font-medium">{breadcrumbLabel}</span>
             </div>
-          )}
 
-          {/* Screen 2: Spectrum Module (includes TierBar/product spectrum) */}
-          {currentView === "SPECTRUM" && (
-            <div className="absolute inset-0 animate-slide-up">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <SpectrumModule />
-              </Suspense>
+            <div className="w-96">
+              <GlobalSearch className="w-full max-w-none" />
             </div>
-          )}
+          </header>
 
-          {/* Screen 4: Structured Items (brand → type → series, variants, accessories, related) */}
-          {currentView === "ITEMS" && (
-            <div className="absolute inset-0 animate-fade-in">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <ItemsView />
-              </Suspense>
-            </div>
-          )}
-
-          {/* Screen 3: Product Page (Full Analysis View) */}
-          {currentView === "PRODUCT_PAGE" && activeProductId && (
-            <div className="absolute inset-0 z-50 bg-black/90 backdrop-blur-sm animate-fade-in flex items-center justify-center p-4">
-              <Suspense fallback={<LoadingPlaceholder />}>
-                <ProductPage productId={activeProductId} />
-              </Suspense>
-            </div>
-          )}
-
-        </main>
+          <main className="flex-1 overflow-auto bg-zinc-950 relative">
+            <Suspense fallback={<LoadingScreen />}>
+              {currentView === "GALAXY" && <DashboardView />}
+              {(currentView === "ITEMS" || currentView === "SPECTRUM") && <InventoryViewV0 />}
+              {currentView === "PRODUCT_PAGE" && <ProductDetailView />}
+            </Suspense>
+          </main>
+        </div>
       </div>
     </GlobalErrorBoundary>
   );

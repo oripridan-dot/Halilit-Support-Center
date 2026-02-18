@@ -799,6 +799,68 @@ class ConductorDataService:
             'categories': sorted(result, key=lambda x: x['product_count'], reverse=True)
         }
 
+    def get_subcategory_summary(self, include_brands: bool = False) -> Dict[str, Any]:
+        """
+        Get subcategory summary with distinct brand counts.
+
+        Subcategory is `taxonomy.canonical_subcategory` (the taxonomy manager output),
+        grouped under its parent `taxonomy.canonical_category`.
+
+        Returns: {
+            'subcategories': [
+                {
+                    'category': str,
+                    'subcategory': str,
+                    'product_count': int,
+                    'brand_count': int,
+                    # optional when include_brands=true:
+                    'brands': [str]
+                }
+            ]
+        }
+        """
+        catalog = self.get_unified_catalog()
+        products = catalog.get('products', [])
+
+        buckets: Dict[Tuple[str, str], Dict[str, Any]] = {}
+
+        for product in products:
+            taxonomy = product.get('taxonomy') if isinstance(product.get('taxonomy'), dict) else {}
+            cat = (taxonomy.get('canonical_category') or 'Uncategorized').strip() if isinstance(taxonomy, dict) else 'Uncategorized'
+            subcat = (taxonomy.get('canonical_subcategory') or '').strip() if isinstance(taxonomy, dict) else ''
+            if not subcat:
+                continue
+            brand = (product.get('brand') or 'Unknown').strip()
+
+            key = (cat, subcat)
+            if key not in buckets:
+                buckets[key] = {
+                    'category': cat,
+                    'subcategory': subcat,
+                    'product_count': 0,
+                    'brands': set(),
+                }
+
+            buckets[key]['product_count'] += 1
+            if brand:
+                buckets[key]['brands'].add(brand)
+
+        subcats_out: List[Dict[str, Any]] = []
+        for (_cat, _subcat), b in buckets.items():
+            brands_set = b.get('brands', set())
+            row: Dict[str, Any] = {
+                'category': b.get('category', 'Uncategorized'),
+                'subcategory': b.get('subcategory', ''),
+                'product_count': int(b.get('product_count', 0) or 0),
+                'brand_count': len(brands_set) if isinstance(brands_set, set) else 0,
+            }
+            if include_brands and isinstance(brands_set, set):
+                row['brands'] = sorted(list(brands_set))
+            subcats_out.append(row)
+
+        subcats_out.sort(key=lambda x: (x['brand_count'], x['product_count']), reverse=True)
+        return {'subcategories': subcats_out}
+
     # =========================================================================
     # PRIVATE HELPERS
     # =========================================================================

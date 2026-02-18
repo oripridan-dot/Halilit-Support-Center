@@ -193,6 +193,15 @@ class ConductorCLI:
         if not self.sync_to_frontend(brand=None):
             logger.warning("Sync had errors; catalog/graph may be incomplete.")
         self._rebuild_catalog_and_graph()
+        self._prebuild_catalog_cache()
+        # Populate hierarchy DB (for /api/hierarchy/items display)
+        try:
+            if self.populate_hierarchy():
+                logger.info("Hierarchy DB populated.")
+            else:
+                logger.warning("Hierarchy populate skipped or failed (DB may be unavailable).")
+        except Exception:
+            logger.warning("Hierarchy populate skipped (run manually: populate-hierarchy).")
         logger.info("=== Full ingestion complete (products, media, relationships) ===")
         return True
 
@@ -246,6 +255,24 @@ class ConductorCLI:
         except Exception as e:
             logger.warning(f"Catalog/graph rebuild failed (non-fatal): {e}")
 
+    def _prebuild_catalog_cache(self) -> None:
+        """Write catalog_cache.json.gz so first browser load is instant."""
+        try:
+            result = subprocess.run(
+                [sys.executable, str(PROJECT_ROOT / "backend" / "scripts" / "prebuild_catalog_cache.py")],
+                cwd=str(PROJECT_ROOT),
+                env={**os.environ, "PYTHONPATH": str(PROJECT_ROOT)},
+                capture_output=True,
+                text=True,
+                timeout=180,
+            )
+            if result.returncode == 0:
+                logger.info("Catalog cache prebuilt for fast first load.")
+            else:
+                logger.warning(f"Catalog prebuild failed (non-fatal): {result.stderr or result.stdout}")
+        except Exception as e:
+            logger.warning(f"Catalog prebuild skipped: {e}")
+
     def purge_weak_graph(self) -> bool:
         """Remove weak relationships from persisted graph snapshot (keep strict tiers only)."""
         try:
@@ -253,6 +280,19 @@ class ConductorCLI:
             return purge_main() == 0
         except Exception as e:
             logger.error(f"Purge graph failed: {e}")
+            return False
+
+    def populate_hierarchy(self) -> bool:
+        """Populate hierarchy DB tables from frontend product JSONs (after ingest + rebuild-catalog)."""
+        try:
+            import subprocess
+            cmd = [sys.executable, str(PROJECT_ROOT / "populate-hierarchy.py")]
+            env = os.environ.copy()
+            env["PYTHONPATH"] = str(PROJECT_ROOT)
+            result = subprocess.run(cmd, cwd=str(PROJECT_ROOT), env=env)
+            return result.returncode == 0
+        except Exception as e:
+            logger.error(f"Populate hierarchy failed: {e}")
             return False
 
     def sync_to_frontend(self, brand: Optional[str] = None) -> bool:
@@ -429,6 +469,9 @@ Examples:
     # purge-graph
     subparsers.add_parser("purge-graph", help="Remove weak relationships from persisted graph (keep variant_of, accessory_for, alternative_to only)")
 
+    # populate-hierarchy
+    subparsers.add_parser("populate-hierarchy", help="Populate hierarchy DB tables from frontend JSONs (run after ingest-all)")
+
     # catalog
     subparsers.add_parser("catalog", help="Show catalog statistics")
 
@@ -477,6 +520,8 @@ Examples:
             success = True
         elif args.command == "purge-graph":
             success = conductor.purge_weak_graph()
+        elif args.command == "populate-hierarchy":
+            success = conductor.populate_hierarchy()
         elif args.command == "catalog":
             success = conductor.show_catalog()
         elif args.command == "dev":

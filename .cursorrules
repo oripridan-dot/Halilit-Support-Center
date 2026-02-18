@@ -57,3 +57,9 @@ Before outputting code, ask yourself:
 1. Does this break accessibility?
 2. Is there a simpler way to do this?
 3. Did I handle the loading and error states?
+
+# 6. User Context & Process Help
+- **User is not a coder:** When providing instructions, always include exact terminal commands that can be copy-pasted.
+- **Process execution:** The user needs help running processes, starting services, and troubleshooting startup issues. Always provide step-by-step commands with expected outputs.
+- **Error resolution:** When errors occur, provide the exact fix commands rather than just explaining what went wrong.
+- **Docker/CLI setup:** Prefer providing complete, working command sequences over abstract explanations.

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import design tokens */
+@import './styles/design-tokens.css';
+
 /* ===== STUDIO DARK PALETTE ===== */
 :root {
   /* The "Studio" Dark Palette */

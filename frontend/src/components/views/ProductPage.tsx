@@ -37,6 +37,15 @@ import { ProductRelations } from "../cockpit/ProductRelations";
 import { TruthMatrix } from "../cockpit/TruthMatrix";
 import { VisualIntelligence } from "../cockpit/VisualIntelligence";
 import { useJITIntelligence } from "../../hooks/useJITIntelligence";
+import { HierarchyBreadcrumb } from "../hierarchy/HierarchyBreadcrumb";
+import { ProductHierarchyContext } from "../hierarchy/ProductHierarchyContext";
+import { ProductRelationsPanel } from "../hierarchy/ProductRelationsPanel";
+import {
+  extractDimensions,
+  formatDimensions,
+  getSizeCategory,
+} from "../../lib/sizeUtils";
+import { Ruler } from "lucide-react";
 
 /**
  * PRODUCT COCKPIT — Mission Control Layout
@@ -165,49 +174,65 @@ export const ProductPage = ({ productId }: { productId: string }) => {
       {/* ══════════════════════════════════════════════════════════
           ZONE 1: HUD HEADER (sticky)
          ══════════════════════════════════════════════════════════ */}
-      <div className="relative z-10 flex items-center justify-between px-6 py-3 border-b border-zinc-800/60 bg-zinc-950/90 backdrop-blur-md">
-        <div className="flex items-center gap-4">
-          {/* Back */}
-          <button
-            onClick={closeProductPage}
-            className="p-2 hover:bg-zinc-800 rounded-lg transition-all text-zinc-400 hover:text-white"
-          >
-            <ArrowLeft size={18} />
-          </button>
-
-          <div className="h-5 w-px bg-zinc-800" />
-
-          {/* Brand Logo */}
-          {brandLogo && (
-            <div className="w-10 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center overflow-hidden shrink-0 shadow-md">
-              <img
-                src={brandLogo}
-                alt={product.brand}
-                className="max-w-full max-h-full object-contain"
-                onError={(e) => (e.currentTarget.style.display = "none")}
-              />
-            </div>
-          )}
-
-          {/* Name & Brand */}
-          <div>
-            <div className="flex items-center gap-2">
-              <p
-                className="text-[10px] font-bold uppercase tracking-[0.15em]"
-                style={{ color: brandColor }}
-              >
-                {product.brand}
-              </p>
-              <span className="flex items-center gap-1 text-[9px] font-semibold text-emerald-400/80 bg-emerald-500/10 border border-emerald-500/15 rounded-full px-1.5 py-0.5">
-                <Shield size={8} />
-                HALILIT VERIFIED
-              </span>
-            </div>
-            <h1 className="text-base font-bold text-white leading-tight truncate max-w-md">
-              {product.name}
-            </h1>
-          </div>
+      <div className="relative z-10 border-b border-zinc-800/60 bg-zinc-950/90 backdrop-blur-md">
+        {/* Hierarchy Breadcrumb */}
+        <div className="px-6 pt-3 pb-2">
+          <HierarchyBreadcrumb
+            hierarchy={{
+              category: product.category,
+              subCategory: product.subcategory,
+              productType: product.product_data?.product_type,
+              brand: product.brand,
+              family: product.family_name || product.product_data?.family_name,
+              model: product.model_name || product.product_data?.model_name,
+            }}
+            className="mb-2"
+          />
         </div>
+
+        <div className="flex items-center justify-between px-6 py-3">
+          <div className="flex items-center gap-4">
+            {/* Back */}
+            <button
+              onClick={closeProductPage}
+              className="p-2 hover:bg-zinc-800 rounded-lg transition-all text-zinc-400 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
+            >
+              <ArrowLeft size={18} />
+            </button>
+
+            <div className="h-5 w-px bg-zinc-800" />
+
+            {/* Brand Logo */}
+            {brandLogo && (
+              <div className="w-10 h-10 bg-white rounded-lg p-1.5 flex items-center justify-center overflow-hidden shrink-0 shadow-md">
+                <img
+                  src={brandLogo}
+                  alt={product.brand}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => (e.currentTarget.style.display = "none")}
+                />
+              </div>
+            )}
+
+            {/* Name & Brand */}
+            <div>
+              <div className="flex items-center gap-2">
+                <p
+                  className="text-[10px] font-bold uppercase tracking-[0.15em]"
+                  style={{ color: brandColor }}
+                >
+                  {product.brand}
+                </p>
+                <span className="flex items-center gap-1 text-[9px] font-semibold text-emerald-400/80 bg-emerald-500/10 border border-emerald-500/15 rounded-full px-1.5 py-0.5">
+                  <Shield size={8} />
+                  HALILIT VERIFIED
+                </span>
+              </div>
+              <h1 className="text-base font-bold text-white leading-tight truncate max-w-md">
+                {product.name}
+              </h1>
+            </div>
+          </div>
 
         {/* Price + Stock */}
         <div className="flex items-center gap-4">
@@ -263,10 +288,11 @@ export const ProductPage = ({ productId }: { productId: string }) => {
 
           <button
             onClick={closeProductPage}
-            className="p-2 hover:bg-zinc-800 rounded-lg transition-all text-zinc-500 hover:text-white"
+            className="p-2 hover:bg-zinc-800 rounded-lg transition-all text-zinc-500 hover:text-white focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none"
           >
             <X size={16} />
           </button>
+        </div>
         </div>
       </div>
 
@@ -305,6 +331,17 @@ export const ProductPage = ({ productId }: { productId: string }) => {
          ══════════════════════════════════════════════════════════ */}
       <div className="flex-1 overflow-y-auto relative z-10">
         <div className="p-6 space-y-4">
+          {/* Hierarchy Context Panel - Full Width */}
+          <ProductHierarchyContext product={product} variants={variants} />
+
+          {/* Product Relations Panel - Full Width */}
+          <ProductRelationsPanel
+            accessories={accessories}
+            related={relationshipMeta?.related || []}
+            compatible={compatible}
+            alternatives={alternatives}
+          />
+
           <div className="grid grid-cols-12 gap-4">
             {/* ── LEFT COLUMN (4 cols): Hero Image + Quick Stats ── */}
             <div className="col-span-4 space-y-3">
@@ -574,6 +611,43 @@ export const ProductPage = ({ productId }: { productId: string }) => {
                           </span>
                         </span>
                       </h3>
+                      
+                      {/* Dimensions Highlight */}
+                      {(() => {
+                        const dimensions = extractDimensions(product.specs);
+                        return dimensions ? (
+                          <div className="mb-4 p-3 rounded-lg bg-blue-500/10 border border-blue-500/20">
+                            <div className="flex items-center gap-2 mb-2">
+                              <Ruler className="w-3.5 h-3.5 text-blue-400" />
+                              <span className="text-[10px] font-semibold text-blue-400 uppercase tracking-wider">
+                                Dimensions
+                              </span>
+                            </div>
+                            <div className="space-y-1">
+                              {dimensions.width && dimensions.height && dimensions.depth ? (
+                                <div className="text-sm font-bold text-white font-mono">
+                                  {dimensions.width.toFixed(1)} × {dimensions.height.toFixed(1)} × {dimensions.depth.toFixed(1)} cm
+                                </div>
+                              ) : (
+                                <div className="text-xs text-zinc-300">
+                                  {formatDimensions(dimensions)}
+                                </div>
+                              )}
+                              {dimensions.weight && (
+                                <div className="text-xs text-zinc-400">
+                                  Weight: {dimensions.weight.toFixed(1)} kg
+                                </div>
+                              )}
+                              {dimensions.volume && (
+                                <div className="text-[10px] text-zinc-500 mt-1">
+                                  Size: {getSizeCategory(dimensions)}
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ) : null;
+                      })()}
+                      
                       <div className="space-y-0.5 text-sm max-h-[300px] overflow-y-auto custom-scrollbar">
                         {Object.entries(product.specs)
                           .filter(([key]) => key !== "sku" && key !== "note" && key !== "extracted_name")

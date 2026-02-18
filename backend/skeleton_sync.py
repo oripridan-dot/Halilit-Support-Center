@@ -23,7 +23,7 @@ import logging
 try:
     from backend import __version__
 except ImportError:
-    __version__ = "9.3.0"
+    __version__ = "9.6.0"
 import hashlib
 import re
 from datetime import datetime, timezone

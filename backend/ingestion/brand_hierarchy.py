@@ -32,7 +32,8 @@ logger = logging.getLogger("BrandHierarchy")
 
 KNOWN_SERIES: Dict[str, List[str]] = {
     "Nord": ["Stage", "Electro", "Piano", "Grand", "Lead", "Wave"],
-    "Roland": ["Fantom", "Jupiter", "Juno", "RD", "FP", "Go", "LX", "HP"],
+    "Roland": ["Fantom", "Jupiter", "Juno", "RD", "FP", "Go", "LX", "HP", "V-Drums", "TD", "SPD"],
+    "Allen & Heath": ["dLive", "Avantis", "SQ", "Qu", "ZED", "Xone", "AHM"],
     "Yamaha": ["Montage", "ModX", "CP", "YC", "P-Series", "P", "DGX", "PSR", "Arius", "Clavinova"],
     "Korg": ["Nautilus", "Kronos", "Krome", "B2", "LP", "SV", "D1", "Liano"],
     "Kawai": ["ES", "MP", "CN", "CA", "Novus", "DG"],

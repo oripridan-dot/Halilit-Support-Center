@@ -48,7 +48,7 @@ services:
       POSTGRES_DB: ${POSTGRES_DB:-halilit_tasks}
       POSTGRES_USER: ${POSTGRES_USER:-halilit_user}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secure_password_change_me}
-      POSTGRES_INITDB_ARGS: "-c shared_buffers=256MB -c max_connections=100"
+      # POSTGRES_INITDB_ARGS: "-c shared_buffers=256MB -c max_connections=100"
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-halilit_user}"]
       interval: 10s
@@ -300,6 +300,51 @@ services:
   #   networks:
   #     - halilit-network
   #   restart: unless-stopped
+
+  # =========================================================================
+  # OpenClaw — Field Agent (Browser automation & Employee Concierge)
+  #
+  # RESTRICTED: Used only for official manufacturer spec verification and
+  # internal employee concierge. See backend/agent_skills/COMPLIANCE.md.
+  # Resource limits and security options prevent runaway usage.
+  # Enable with: docker-compose --profile openclaw up -d (or ./start.sh if OPENCLAW_URL set)
+  # =========================================================================
+  openclaw:
+    # Official image is published at ghcr.io/openclaw/openclaw; use that
+    # instead of the deprecated/openclaw Docker Hub namespace.
+    image: ghcr.io/openclaw/openclaw:latest
+    container_name: halilit-field-agent
+    ports:
+      # Map host PORT_OPENCLAW (default 3000) → gateway port 18789 inside container.
+      # The OpenClaw gateway listens on 18789 (WS + HTTP multiplex), not 3000.
+      - "${PORT_OPENCLAW:-3000}:18789"
+    volumes:
+      - ./backend/agent_skills:/root/.openclaw/skills
+    environment:
+      - OPENCLAW_API_KEY=${OPENCLAW_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - OLLAMA_HOST=${OLLAMA_HOST:-}
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    profiles:
+      - openclaw
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2G
+        reservations:
+          memory: 256M
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   # =========================================================================
   # MCP Servers (optional — enable with: docker-compose --profile mcp up -d)

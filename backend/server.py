@@ -26,6 +26,7 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from backend.project_config import FRONTEND_PUBLIC_DATA, FRONTEND_DIR, DATA_DIR
+from backend.hierarchy import api as hierarchy_api
 from backend.memory_utils import (
     start_memory_tracking,
     log_memory_snapshot,
@@ -134,6 +135,10 @@ try:
     from backend.api.mcp_router import router as mcp_router
     app.include_router(mcp_router)
     logger.info("MCP endpoints registered at /api/mcp")
+    
+    # Include hierarchy API router
+    app.include_router(hierarchy_api.router)
+    logger.info("Hierarchy endpoints registered at /api/hierarchy")
 except Exception as e:
     logger.warning(f"Failed to register MCP: {e}")
 
@@ -161,7 +166,10 @@ def _invalidate_catalog_cache():
 
 
 def _load_catalog_from_disk() -> bool:
-    """Load pre-built catalog from disk. Returns True if loaded successfully."""
+    """Load pre-built catalog from disk. Returns True if loaded successfully.
+    Invalidates cache if it lacks relationship data (required for structured-items
+    accessory hierarchy: flybars/covers only under parent, not top-level cards).
+    """
     global _catalog_cache_json, _catalog_cache_gzip, _catalog_cache_dict, _catalog_cache_time
     if not CATALOG_CACHE_PATH.exists():
         return False
@@ -172,6 +180,17 @@ def _load_catalog_from_disk() -> bool:
         with gzip.open(CATALOG_CACHE_PATH, "rb") as f:
             json_bytes = f.read()
         catalog = json.loads(json_bytes.decode("utf-8"))
+        rels = catalog.get("indexes", {}).get("relationships", {})
+        if not rels or not isinstance(rels, dict):
+            logger.info(
+                "Catalog disk cache has no relationship index — invalidating so "
+                "structured-items hierarchy (accessory-only families) can apply."
+            )
+            try:
+                CATALOG_CACHE_PATH.unlink()
+            except OSError:
+                pass
+            return False
         gzip_bytes = gzip.compress(json_bytes, compresslevel=6)
         _catalog_cache_json = json_bytes
         _catalog_cache_gzip = gzip_bytes
@@ -425,8 +444,8 @@ async def get_spectrum_star_view(spectrum_id: str):
 @app.get("/api/structured-items")
 async def get_structured_items():
     """
-    Structured items tree: brand → type (galaxy/spectrum) → series/family → variants, accessories, related.
-    For the Items UI: hierarchy with large images and thumbnails, ready to switch with interconnected products.
+    Products organized by: 1) Brand, 2) Category (what they are), 3) Relations (product lines, variants, accessories, related).
+    Response includes _hierarchy: ["brand", "category", "relations"] and brands[].categories[].relations.
     """
     global _catalog_cache_dict, _catalog_cache_time, _catalog_cache_json
     now = time.time()
@@ -565,6 +584,21 @@ async def get_conductor_categories():
         return {"error": str(e), "categories": []}
 
 
+@app.get("/api/conductor/subcategories")
+async def get_conductor_subcategories(include_brands: bool = False):
+    """
+    Subcategory summary:
+    - product_count per subcategory
+    - brand_count (distinct brands) per subcategory
+    - optionally include explicit brand list (include_brands=true)
+    """
+    try:
+        service = get_conductor_data_service()
+        return service.get_subcategory_summary(include_brands=include_brands)
+    except Exception as e:
+        return {"error": str(e), "subcategories": []}
+
+
 @app.get("/api/conductor/refresh")
 async def refresh_conductor_catalog(block: bool = False):
     """
@@ -674,6 +708,38 @@ async def batch_image_lookup(request: Request):
     except Exception as e:
         logger.error(f"Batch image lookup failed: {e}")
         return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PRODUCT SEARCH (OpenClaw / Employee Concierge)
+# ═══════════════════════════════════════════════════════════════════════════
+
+@app.get("/api/products/search")
+async def products_search(q: str = ""):
+    """
+    Search products by name, brand, or model. Used by OpenClaw skills and
+    employee concierge (WhatsApp/Telegram) to look up price, stock, and specs.
+    """
+    if not q or len(q.strip()) < 2:
+        return {"products": [], "total": 0}
+    try:
+        service = get_conductor_data_service()
+        result = service.filter_products({"search_query": q.strip()})
+        products = result.get("products", [])[:20]
+        # Minimal payload for chat/OpenClaw: id, name, brand, price
+        out = [
+            {
+                "id": p.get("halilit_id"),
+                "product_name": p.get("product_name"),
+                "brand": p.get("brand"),
+                "price_il": p.get("price_il"),
+            }
+            for p in products
+        ]
+        return {"products": out, "total": result.get("total_results", len(out))}
+    except Exception as e:
+        logger.warning("products/search failed: %s", e)
+        return {"products": [], "total": 0, "error": str(e)}
 
 
 # ═══════════════════════════════════════════════════════════════════════════

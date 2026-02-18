@@ -1,4 +1,4 @@
-# Halilit Support Center v9.5 — Openclaw
+# Halilit Support Center v9.6 — Data Extraction Fixes
 
 **JIT (Just-in-Time) product intelligence platform** for musical instruments.  
 Skeleton catalog + full ingestion pipeline (commercial → enrich → sync → graph) + on-demand AI intelligence via Gemini 2.0 Flash.
@@ -39,9 +39,10 @@ PYTHONPATH=. python backend/scripts/prebuild_catalog_cache.py
 ```bash
 source .venv/bin/activate
 PYTHONPATH=. python backend/conductor_main.py skeleton-sync        # Fast (~30s)
-PYTHONPATH=. python backend/conductor_main.py ingest-all           # Full: commercial → enrich → sync → graph
-PYTHONPATH=. python backend/conductor_main.py ingest-all --workers 4 --with-review-agent   # Parallel + review agent (validate, retry, improve)
-PYTHONPATH=. python backend/conductor_main.py rebuild-catalog      # Rebuild catalog + graph (brand hierarchy + discovery + purge)
+PYTHONPATH=. python backend/conductor_main.py ingest-all           # Full: commercial → enrich → sync → graph → populate-hierarchy
+PYTHONPATH=. python backend/conductor_main.py ingest-all --workers 4 --with-review-agent   # Parallel + review agent
+PYTHONPATH=. python backend/conductor_main.py rebuild-catalog      # Rebuild catalog + graph
+PYTHONPATH=. python backend/conductor_main.py populate-hierarchy   # Populate hierarchy DB from JSONs (for /api/hierarchy/items)
 PYTHONPATH=. python backend/conductor_main.py purge-graph         # One-off: remove weak relationships from persisted graph
 ```
 

@@ -30,6 +30,7 @@ OFFICIAL_FETCH_DELAY_SEC = 0.4
 OFFICIAL_FETCH_MAX_PER_RUN = 80
 
 # Section headings on brand pages that indicate related products (lowercase for match)
+# Brand-specific terms (Allen & Heath, RCF, Pro Audio) ensure strict adherence to manufacturer structure.
 RELATED_SECTION_HEADINGS = [
     ("accessories", RelationshipType.ACCESSORY_FOR),
     ("related products", RelationshipType.COMPATIBLE_WITH),
@@ -42,6 +43,12 @@ RELATED_SECTION_HEADINGS = [
     ("frequently bought together", RelationshipType.BUNDLE_WITH),
     ("similar products", RelationshipType.ALTERNATIVE_TO),
     ("alternatives", RelationshipType.ALTERNATIVE_TO),
+    # Brand-specific (Pro Audio / PA)
+    ("compatible accessories", RelationshipType.ACCESSORY_FOR),
+    ("works with", RelationshipType.COMPATIBLE_WITH),
+    ("optional extras", RelationshipType.ACCESSORY_FOR),
+    ("system components", RelationshipType.BUNDLE_WITH),
+    ("expansion options", RelationshipType.ACCESSORY_FOR),
 ]
 
 # Phrases that indicate a relationship, and the relationship type to suggest

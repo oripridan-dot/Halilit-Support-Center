@@ -1,13 +1,16 @@
 """
-Structured items tree: brand → type (galaxy/spectrum) → series/family → variants, colors, accessories, related.
+Structured items: products organized in strict order:
 
-Used by GET /api/structured-items and by the Items UI for an interactive hierarchy
-with large images and product thumbnails, ready to switch with interconnected products.
+  1. BRAND       — top level (e.g. Roland, PreSonus)
+  2. WHAT THEY ARE — category / product type (e.g. Keyboards, Drums, Studio)
+  3. RELATIONS   — product lines (series/families), variants, accessories, related
 
-Accessory families are grouped by semantic type (cases-bags, stands, pedals) so e.g. all
-guitar bags appear under one "Cases & Bags" item. Visual classification (see
-ingestion.visual_validator.classify_product_image) can be used to verify or suggest
-merges and to store visual_product_type for grouping overrides.
+Used by GET /api/structured-items. Response shape:
+  _hierarchy: ["brand", "category", "relations"]
+  brands: [ { brand, brand_key, categories: [ { ... what they are ... relations: [ ... ] } ] } ]
+  products_by_id: { id -> summary }
+
+Accessory families are grouped by semantic type (cases-bags, stands, pedals).
 """
 
 from __future__ import annotations
@@ -32,7 +35,7 @@ def get_visual_series_overrides() -> dict[str, str]:
         return {}
 
 ACCESSORY_KEYWORDS = frozenset(
-    {"pedal", "stand", "cover", "dust", "case", "bag", "monitor stand"}
+    {"pedal", "stand", "cover", "dust", "case", "bag", "monitor stand", "cvr", "flb", "flybar"}
 )
 
 # Semantic groups for accessories so e.g. all guitar bags/cases group under one item
@@ -109,17 +112,23 @@ def _accessory_semantic_series(family_name: str) -> str:
 
 def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
     """
-    Build hierarchy: brand → type (galaxy/spectrum) → series → items with variants, accessories, related.
+    Build hierarchy: 1) Brand, 2) Category (what they are), 3) Relations (product lines, variants, accessories, related).
+
+    Hierarchy rule: Families whose products are all accessories (source of accessory_for) are not
+    shown as top-level cards (e.g. flybars, covers). They only appear under their parent product's
+    "Accessories & parts" strip for a consistent parent/child relationship across all brands.
 
     Returns:
+      _hierarchy: ["brand", "category", "relations"]
       galaxies: list of { id, label, spectrums } for nav
       brands: list of {
         brand, brand_key,
-        types: [ { galaxy_id, galaxy_label, spectrum_id, spectrum_label, series: [ {
-          series_key, series_label,
-          families: [ { family_id, family_name, hero_image, variant_count, variants: [ product summaries ] } ],
-          variant_ids, direct_accessory_ids, related_ids
-        } ] } ]
+        categories: [  # what they are (product type)
+          { galaxy_id, galaxy_label, spectrum_id, spectrum_label,
+            relations: [  # product lines / families with variants, accessories, related
+              { series_key, series_label, families, variant_ids, direct_accessory_ids, related_ids }
+            ] }
+        ]
       }
       products_by_id: { id -> product } for resolving thumbnails/links
     """
@@ -137,8 +146,35 @@ def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
                 return products[idx]
         return None
 
-    # Group families by (brand, spectrum_id, series_key). Spectrum from first variant.
-    # Structure: (brand_key, spectrum_id) -> (series_key -> { families, variant_ids, ... })
+    # Products that are accessories (source of accessory_for) — they belong under a parent, not as top-level cards.
+    # Relationship source_id may be numeric (e.g. "3181079") while catalog product id may be prefixed (e.g. "halilit-3181079"); match both.
+    graph_accessory_source_ids: set[str] = set()
+    for _pid, rels in relationships_map.items():
+        for r in rels:
+            if (r.get("relationship_type") or "").lower() == "accessory_for":
+                src = r.get("source_id")
+                if src:
+                    graph_accessory_source_ids.add(src)
+    accessory_product_ids: set[str] = set(graph_accessory_source_ids)
+    for p in products:
+        pid = p.get("id")
+        if not pid or pid in accessory_product_ids:
+            continue
+        normalized = pid.replace("halilit-", "", 1) if pid.startswith("halilit-") else pid
+        if normalized in graph_accessory_source_ids:
+            accessory_product_ids.add(pid)
+        elif "-" in pid and pid.split("-", 1)[-1] in graph_accessory_source_ids:
+            accessory_product_ids.add(pid)
+        elif "_" in pid and pid.split("_", 1)[-1] in graph_accessory_source_ids:
+            accessory_product_ids.add(pid)
+    # One-pass index: family_id -> list of (product_id, image_url) for variant_ids and hero_image
+    family_id_to_variants: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for p in products:
+        fid = (p.get("family_id") or "").strip()
+        if fid:
+            family_id_to_variants[fid].append((p.get("id"), p.get("image_url") or ""))
+
+    # Group families by (brand, spectrum_id, series_key). Skip accessory-only families (e.g. flybar, cover) so they only appear under their parent
     by_brand_spectrum: dict[tuple[str, str], dict[str, dict]] = defaultdict(lambda: defaultdict(lambda: {
         "families": [],
         "variant_ids": [],
@@ -155,12 +191,17 @@ def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
         family_name = fam.get("family_name", "") or ""
         series_key = visual_overrides.get(fid) or _series_key(brand, family_name, fam.get("series", ""), fid)
         hero_image = fam.get("hero_image", "")
-        variant_ids = []  # from graph we don't have variant_ids in families_meta; get from products
-        for p in products:
-            if (p.get("family_id") or "").strip() == fid:
-                variant_ids.append(p.get("id"))
-                if not hero_image and p.get("image_url"):
-                    hero_image = p.get("image_url")
+        variants_list = family_id_to_variants.get(fid, [])
+        variant_ids = [vid for vid, _ in variants_list]
+        if not hero_image and variants_list:
+            hero_image = next((img for _, img in variants_list if img), "")
+        # Hierarchy: accessory-only families (e.g. cover, flybar) must not be top-level; they appear under parent's Accessories.
+        # 1) All variants are graph-marked accessories (source of accessory_for).
+        if variant_ids and all(pid in accessory_product_ids for pid in variant_ids):
+            continue
+        # 2) Heuristic: family name indicates accessory type (cover, flybar, etc.) — hide as top-level even if graph direction is wrong.
+        if _is_accessory_family(family_name):
+            continue
         spectrum_id = ""
         if variant_ids and variant_ids[0]:
             first_p = get_product(variant_ids[0])
@@ -206,7 +247,8 @@ def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
     except Exception:
         galaxies = []
 
-    spectrum_to_galaxy: dict[str, tuple[str, str]] = {}
+    # spectrum_id -> (galaxy_id, galaxy_label, spectrum_label) so breadcrumbs show type correctly
+    spectrum_to_galaxy: dict[str, tuple[str, str, str]] = {}
     for g in galaxies:
         gid = g.get("id", "")
         glabel = g.get("label", "")
@@ -214,12 +256,41 @@ def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
             sid = sp.get("id", "")
             slabel = sp.get("label", "")
             if sid:
-                spectrum_to_galaxy[sid] = (gid, glabel)
+                spectrum_to_galaxy[sid] = (gid, glabel, slabel)
 
-    # Group by brand_key, then by spectrum (type), then series
-    by_brand_only: dict[str, dict] = defaultdict(lambda: {"brand": "", "brand_key": "", "types": defaultdict(lambda: {"galaxy_id": "", "galaxy_label": "", "spectrum_id": "", "spectrum_label": "", "series": []})})
+    # Orphan roof: ensure every product appears under brand → type → series (no data left out)
+    placed_ids: set[str] = set()
+    for (_, _), series_map in by_brand_spectrum.items():
+        for data in series_map.values():
+            placed_ids.update(data["variant_ids"])
+            placed_ids.update(data["accessory_ids"])
+            placed_ids.update(data["related_ids"])
+    for p in products:
+        pid = p.get("id")
+        if not pid or pid in placed_ids:
+            continue
+        if pid in accessory_product_ids:
+            continue
+        brand = (p.get("brand") or "").strip().lower()
+        if not brand:
+            continue
+        spectrum_id = (p.get("spectrum_id") or "").strip() or "general-accessories"
+        key = (brand, spectrum_id)
+        entry = by_brand_spectrum[key]["other"]
+        entry["families"].append({
+            "family_id": f"orphan_{pid}",
+            "family_name": (p.get("name") or p.get("product_name") or "Other"),
+            "hero_image": p.get("image_url", ""),
+            "variant_count": 1,
+            "variants": [{"id": pid, "name": p.get("name", ""), "image_url": p.get("image_url", ""), "price": p.get("price", 0)}],
+        })
+        entry["variant_ids"].append(pid)
+        placed_ids.add(pid)
+
+    # Group by brand (1), then category / what they are (2), then relations (3: series/families)
+    by_brand_only: dict[str, dict] = defaultdict(lambda: {"brand": "", "brand_key": "", "categories": defaultdict(lambda: {"galaxy_id": "", "galaxy_label": "", "spectrum_id": "", "spectrum_label": "", "relations": []})})
     for (brand_key, spectrum_id), series_map in sorted(by_brand_spectrum.items()):
-        gid, glabel = spectrum_to_galaxy.get(spectrum_id, (spectrum_id or "uncategorized", spectrum_id or "Uncategorized"))
+        gid, glabel, slabel = spectrum_to_galaxy.get(spectrum_id, ("accessories-utility", "Accessories & Utility", "Uncategorized"))
         if by_brand_only[brand_key]["brand_key"] == "":
             display_name = brand_key.title()
             for p in products:
@@ -228,17 +299,19 @@ def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
                     break
             by_brand_only[brand_key]["brand"] = display_name
             by_brand_only[brand_key]["brand_key"] = brand_key
-        type_key = spectrum_id or "uncategorized"
-        t = by_brand_only[brand_key]["types"][type_key]
-        if not t.get("galaxy_id"):
-            t["galaxy_id"] = gid
-            t["galaxy_label"] = glabel
-            t["spectrum_id"] = spectrum_id
-            t["spectrum_label"] = glabel
-        SEMANTIC_SERIES_LABELS = {"cases-bags": "Cases & Bags", "stands": "Stands", "pedals": "Pedals", "other-accessories": "Other Accessories"}
+        category_key = spectrum_id or "uncategorized"
+        cat = by_brand_only[brand_key]["categories"][category_key]
+        if not cat.get("galaxy_id"):
+            cat["galaxy_id"] = gid
+            cat["galaxy_label"] = glabel
+            cat["spectrum_id"] = spectrum_id
+            cat["spectrum_label"] = slabel
+        SEMANTIC_SERIES_LABELS = {"cases-bags": "Cases & Bags", "stands": "Stands", "pedals": "Pedals", "other-accessories": "Other Accessories", "other": "Other"}
         for sk, data in sorted(series_map.items()):
+            if not (data.get("families") or data.get("variant_ids")):
+                continue
             series_label = SEMANTIC_SERIES_LABELS.get(sk) or (sk.replace("-", " ").title() if sk else "Other")
-            t["series"].append({
+            cat["relations"].append({
                 "series_key": sk,
                 "series_label": series_label,
                 "families": data["families"],
@@ -250,21 +323,29 @@ def build_structured_items(catalog: dict[str, Any]) -> dict[str, Any]:
     brands_list = []
     for brand_key in sorted(by_brand_only.keys()):
         b = by_brand_only[brand_key]
-        types_list = []
-        for t in b["types"].values():
-            if t.get("series"):
-                types_list.append({
-                    "galaxy_id": t.get("galaxy_id", ""),
-                    "galaxy_label": t.get("galaxy_label", ""),
-                    "spectrum_id": t.get("spectrum_id", ""),
-                    "spectrum_label": t.get("spectrum_label", ""),
-                    "series": t["series"],
+        categories_list = []
+        for cat in b["categories"].values():
+            if cat.get("relations"):
+                rels = cat["relations"]
+                categories_list.append({
+                    "galaxy_id": cat.get("galaxy_id", ""),
+                    "galaxy_label": cat.get("galaxy_label", ""),
+                    "spectrum_id": cat.get("spectrum_id", ""),
+                    "spectrum_label": cat.get("spectrum_label", ""),
+                    "relations": rels,
+                    "series": rels,
                 })
-        brands_list.append({"brand": b["brand"], "brand_key": brand_key, "types": types_list})
+        brands_list.append({
+            "brand": b["brand"],
+            "brand_key": brand_key,
+            "categories": categories_list,
+            "types": categories_list,
+        })
 
     products_by_id = {p.get("id"): p for p in products if p.get("id")}
 
     return {
+        "_hierarchy": ["brand", "category", "relations"],
         "galaxies": galaxies,
         "brands": brands_list,
         "products_by_id": products_by_id,

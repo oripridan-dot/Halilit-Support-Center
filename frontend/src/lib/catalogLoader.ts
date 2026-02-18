@@ -41,11 +41,31 @@ export interface BrandStats {
   categories?: string[];
 }
 
+/** Consolidated catalog category (per-brand unified structure) */
+export interface BrandCatalogCategory {
+  id: string;
+  label: string;
+  product_ids: string[];
+}
+
+/** Search index entry for fast client-side search within a brand */
+export interface BrandSearchEntry {
+  id: string;
+  t: string;
+  s: string;
+  b: string;
+}
+
 // Interface matching brand JSON structure (from roland.json)
 export interface BrandFile {
   brand_identity: BrandIdentityFile;
   products: Product[];
   stats?: BrandStats;
+  /** Consolidated structure: categories with product_ids (when organized) */
+  categories?: BrandCatalogCategory[];
+  /** Consolidated structure: minimal search index for easy search */
+  search_index?: BrandSearchEntry[];
+  meta?: { total_products: number; total_categories: number; organized_at: string };
 }
 
 export interface BrandCatalog {
@@ -58,6 +78,9 @@ export interface BrandCatalog {
   description?: string;
   products: Product[];
   brand_identity?: BrandIdentity;
+  /** When present, enables logical browse-by-category and fast search */
+  categories?: BrandCatalogCategory[];
+  search_index?: BrandSearchEntry[];
 }
 
 export interface BrandIndexEntry {
@@ -501,6 +524,8 @@ class CatalogLoader {
 
         return p as Product;
       }),
+      categories: data.categories,
+      search_index: data.search_index,
     };
 
     // Sort products by name for consistent ordering
@@ -685,6 +710,63 @@ class CatalogLoader {
     } catch {
       return null;
     }
+  }
+
+  /**
+   * Search within a brand's products. Uses consolidated search_index when present for fast match.
+   */
+  async searchWithinBrand(
+    brandId: string,
+    query: string,
+  ): Promise<Product[]> {
+    const catalog = await this.loadBrand(brandId);
+    const q = query.trim().toLowerCase();
+    if (!q) return catalog.products;
+    if (catalog.search_index && catalog.search_index.length > 0) {
+      const ids = new Set(
+        catalog.search_index
+          .filter(
+            (e) =>
+              e.t.toLowerCase().includes(q) ||
+              e.s.toLowerCase().includes(q),
+          )
+          .map((e) => e.id),
+      );
+      return catalog.products.filter((p) => ids.has(p.id ?? p.halilit_id ?? ""));
+    }
+    return catalog.products.filter(
+      (p) =>
+        (p.name ?? p.product_name ?? "")
+          .toLowerCase()
+          .includes(q),
+    );
+  }
+
+  /**
+   * Get products in a category within a brand. Uses consolidated categories when present.
+   */
+  async getProductsByCategory(
+    brandId: string,
+    categoryId: string,
+  ): Promise<Product[]> {
+    const catalog = await this.loadBrand(brandId);
+    if (catalog.categories && catalog.categories.length > 0) {
+      const cat = catalog.categories.find(
+        (c) => c.id === categoryId || c.label === categoryId,
+      );
+      if (cat) {
+        const ids = new Set(cat.product_ids);
+        return catalog.products.filter((p) =>
+          ids.has(p.id ?? p.halilit_id ?? ""),
+        );
+      }
+    }
+    return catalog.products.filter(
+      (p) =>
+        (p.taxonomy as { canonical_category?: string } | undefined)
+          ?.canonical_category === categoryId ||
+        (p.category as string) === categoryId,
+    );
   }
 
   /**

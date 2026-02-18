@@ -281,6 +281,7 @@ def _fetch_official_data(brand: str, product_name: str) -> Dict[str, Any]:
     """
     Fetch candidate official product page: find URL then extract og:image, description, specs.
     Used by JIT parallel swarm. Returns dict with url, image_url, description, specs.
+    When Python scraping returns nothing, the async stream may fall back to OpenClaw (Field Agent).
     """
     try:
         from backend.ingestion.official_scraper import find_official_product_url, fetch_official_page
@@ -417,6 +418,28 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
         return await loop.run_in_executor(None, lambda: _fetch_official_data(brand_name, product_name))
 
     halilit_data, official_candidate = await asyncio.gather(_run_halilit(), _run_official())
+
+    # ── Phase 2a (fallback): OPENCLAW FIELD AGENT — when Python official fetch is empty ──
+    if (not official_candidate or not official_candidate.get("url")) and brand_name:
+        try:
+            from backend.mcp.servers.browser_agent import get_browser_agent
+            agent = get_browser_agent()
+            if agent.available:
+                domain = (read_brand_page(brand_name, product_name) or {}).get("domain") or f"{brand_name.lower().replace(' ', '')}.com"
+                logger.info("Deploying Field Agent to verify %s on %s...", product_name, domain)
+                openclaw_result = await agent.verify_official_specs(domain, product_name)
+                if openclaw_result and not openclaw_result.get("error"):
+                    specs_text = openclaw_result.get("specs_text", "")
+                    diagram_url = openclaw_result.get("diagram_url", "")
+                    if specs_text or diagram_url:
+                        official_candidate = {
+                            "url": "",
+                            "image_url": diagram_url,
+                            "description": specs_text,
+                            "specs": {},
+                        }
+        except Exception as e:
+            logger.debug("OpenClaw fallback skipped: %s", e)
 
     # ── Phase 2b: THE AUDITOR — Visual verification (compare commercial vs official image) ──
     combined_data = dict(halilit_data) if halilit_data else {}
