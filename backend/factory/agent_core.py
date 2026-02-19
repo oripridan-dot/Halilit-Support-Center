@@ -22,13 +22,39 @@ FAST_MODEL = "gemini-2.0-flash-lite"
 MODEL = SMART_MODEL
 
 
-def get_project_context(target_type: str = "frontend") -> str:
+def get_project_context(target_type: str = "frontend", blackboard_file: str = "") -> str:
     """
     Loads critical project context so the Agent respects the Architecture.
     Returns a formatted string of key files to inject into prompts.
+
+    Args:
+        target_type:     "frontend" | "backend" — selects architecture files.
+        blackboard_file: Optional path to a Task-Force Blackboard file.
+                         When set, its contents are injected as shared context.
     """
     root = _PROJECT_ROOT
     context_parts: list[str] = []
+
+    # --- Always inject Lessons Learned (persistent agent memory) ---
+    lessons_path = root / "docs" / "LEARNED_GUIDELINES.md"
+    if lessons_path.exists():
+        lessons = lessons_path.read_text(encoding="utf-8")
+        context_parts.append(
+            f"--- CRITICAL LESSONS LEARNED (read before acting) ---\n{lessons}\n"
+            f"--- END LESSONS ---\n"
+        )
+
+    # --- Task-Force Blackboard (shared context for current mission) ---
+    if blackboard_file:
+        bb_path = Path(blackboard_file)
+        if not bb_path.is_absolute():
+            bb_path = root / blackboard_file
+        if bb_path.exists():
+            bb_content = bb_path.read_text(encoding="utf-8")
+            context_parts.append(
+                f"--- TASK-FORCE BLACKBOARD (shared team context) ---\n{bb_content}\n"
+                f"--- END BLACKBOARD ---\n"
+            )
 
     if target_type == "frontend":
         files = [

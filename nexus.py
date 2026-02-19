@@ -84,15 +84,17 @@ def print_header() -> None:
 # ---------------------------------------------------------------------------
 
 _ACTION_MAP = {
-    "design":    ("build", "🏗️  ARCHITECT",   "Drafting new blueprints..."),
-    "implement": ("build", "🔨 BUILDER",      "Translating specs to code..."),
-    "build":     ("build", "⚙️  CONDUCTOR",   "Rebuilding the product catalog..."),
-    "heal":      ("heal", "🚑 WATCHDOG",     "Diagnosing and auto-repairing (up to 3 cycles)..."),
-    "diagnose":  ("diagnose", "🔍 WATCHDOG SCAN", "Scanning for errors — no auto-fix..."),
-    "steer":     ("steer", "🧭 STRATEGIST",   "Analysing master plan..."),
-    "doc":       ("doc", "📝 SCRIBE",       "Regenerating ARCHITECTURE.md..."),
-    "optimize":  ("optimize", "✨ OPTIMIZER",   "Refactoring file..."),
-    "commit":    ("commit", "👮 REPO AGENT",   "Staging and committing progress..."),
+    "design":     ("build",      "🏗️  ARCHITECT",      "Drafting new blueprints..."),
+    "implement":  ("build",      "🔨 BUILDER",         "Translating specs to code..."),
+    "build":      ("build",      "⚙️  CONDUCTOR",      "Rebuilding the product catalog..."),
+    "heal":       ("heal",       "🚑 WATCHDOG",        "Diagnosing and auto-repairing (up to 3 cycles)..."),
+    "diagnose":   ("diagnose",   "🔍 WATCHDOG SCAN",   "Scanning for errors — no auto-fix..."),
+    "steer":      ("steer",      "🧭 STRATEGIST",      "Analysing master plan..."),
+    "doc":        ("doc",        "📝 SCRIBE",          "Regenerating ARCHITECTURE.md..."),
+    "optimize":   ("optimize",   "✨ OPTIMIZER",        "Refactoring file..."),
+    "commit":     ("commit",     "👮 REPO AGENT",      "Staging and committing progress..."),
+    "reflect":    ("reflect",    "🧠 MENTOR",          "Extracting lesson → updating LEARNED_GUIDELINES.md..."),
+    "task_force": ("task_force", "⚔️  TASK FORCE",     "Assembling multi-agent Task Force (Steerer→Builder→Watchdog)..."),
 }
 
 
@@ -119,7 +121,25 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["optimize", args] if args else None
     if tool == "commit":
         return factory + ["commit"]
+    if tool == "reflect":
+        return factory + ["reflect", args] if args else factory + ["reflect", "(no context provided)"]
+    if tool == "task_force":
+        # task has extra keys: id, goal, agents
+        # args carries the goal; use tool-level dict keys if available
+        return None  # handled by execute_task_force() below
     return None  # 'explain' or unknown
+
+
+def _build_task_force_cmd(task: dict) -> list[str] | None:
+    """Build a factory.py task_force command from a task-force queue item."""
+    py = sys.executable
+    factory = [py, str(ROOT / "factory.py")]
+    tf_id = task.get("id", "")
+    goal = task.get("goal", task.get("args", ""))
+    agents = ",".join(task.get("agents", ["steerer", "builder", "watchdog"]))
+    if not tf_id or not goal:
+        return None
+    return factory + ["task_force", tf_id, goal, agents]
 
 
 def run_process(task: dict) -> dict:
@@ -131,7 +151,11 @@ def run_process(task: dict) -> dict:
     tool = task["tool"]
     args = task.get("args", "")
 
-    cmd = _build_cmd(tool, args)
+    # task_force uses a special command builder
+    if tool == "task_force":
+        cmd = _build_task_force_cmd(task)
+    else:
+        cmd = _build_cmd(tool, args)
     if cmd is None:
         return {"tool": tool, "args": args, "success": True,
                 "summary": f"{DIM}[{tool.upper()}] No command dispatched (explain/none).{RESET}",
@@ -172,10 +196,16 @@ def execute_sequential(task: dict) -> dict:
         _, icon, label = info
         print(f"\n{MAGENTA}{BOLD}{icon} AGENT ACTIVATED{RESET}")
         print(f"   {label}")
-        if args:
+        if args and tool not in ("task_force",):
             print(f"   Target: {args}")
+        if tool == "task_force":
+            goal = task.get("goal", args)
+            tf_agents = task.get("agents", ["steerer", "builder", "watchdog"])
+            print(f"   ID     : {task.get('id', 'auto')}")
+            print(f"   Goal   : {goal}")
+            print(f"   Agents : {', '.join(tf_agents)}")
 
-    cmd = _build_cmd(tool, args)
+    cmd = _build_task_force_cmd(task) if tool == "task_force" else _build_cmd(tool, args)
     if cmd:
         # Stream stdout to terminal; capture stderr to detect failures
         proc = subprocess.run(cmd, stderr=subprocess.PIPE, text=True)
