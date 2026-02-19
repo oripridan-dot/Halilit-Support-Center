@@ -1,99 +1,76 @@
 # Spec: Accessory Recommendations Component
-
 **Target:** src/components/ProductDetail/AccessoryRecommendations.tsx
 
 ## Overview
-This component displays a list of recommended accessories for a specific product. It fetches these recommendations from a backend API endpoint and renders them as a horizontal scrollable list. The component handles loading states and displays a message if no recommendations are available.
+This component displays a carousel of accessory product recommendations on a product detail page. Recommendations are fetched from a backend API endpoint and displayed as interactive cards.
 
 ## Requirements
-- The component must fetch accessory recommendations from the `GET /api/v1/products/{product_id}/accessories` endpoint.
-- The component must display a loading indicator while fetching data.
-- The component must display a message indicating that no recommendations are available if the API returns an empty list.
-- Each accessory recommendation must display the accessory's name, image, and price.
-- Clicking on an accessory should navigate the user to the accessory's product detail page (using the appropriate product ID).
-- The component must be styled using Tailwind CSS with a dark theme (slate-900/blue-500 palette).
-- The accessory list must be horizontally scrollable on smaller screens.
-- The component should handle potential errors during API requests gracefully, displaying a generic error message to the user.
-- The component must use `React.lazy` for image loading to improve performance.
+- The component must fetch accessory recommendations from the `/api/products/{product_id}/accessories` endpoint.
+- The component must handle loading states, displaying a loading indicator while data is being fetched.
+- The component must handle error states, displaying an error message if the API call fails.
+- The component must display the recommendations in a horizontal carousel, allowing users to scroll through them.
+- Each recommendation card must display the product's name, a thumbnail image, and the product's price.
+- Each recommendation card must be clickable, navigating the user to the product detail page for that accessory.
+- The component must be responsive and adapt to different screen sizes.
+- The component must use Tailwind CSS for styling, adhering to the dark theme (slate-900/blue-500 palette).
+- The component must be implemented in React 18 with TypeScript.
 
 ## Data Contract
 
-**API Endpoint:** `GET /api/v1/products/{product_id}/accessories`
+**API Endpoint:** `/api/products/{product_id}/accessories` (GET)
 
-**Request Parameters:**
-- `product_id` (path parameter):  Integer. The ID of the product for which to retrieve accessory recommendations.
+**Request:**
 
-**Response (200 OK):**
-```json
-[
-  {
-    "id": 123,
-    "name": "Protective Case",
-    "imageUrl": "https://example.com/images/case.jpg",
-    "price": 19.99
-  },
-  {
-    "id": 456,
-    "name": "Screen Protector",
-    "imageUrl": "https://example.com/images/screen_protector.jpg",
-    "price": 9.99
-  }
-]
-```
+*   `product_id` (path parameter): Integer representing the ID of the main product.
 
-**Response (204 No Content):**
-Empty array `[]` indicates no recommendations are available.
-
-**Response (500 Internal Server Error):**
-```json
-{
-  "detail": "Internal Server Error"
-}
-```
-
-**TypeScript Interface:**
+**Response (JSON):**
 
 ```typescript
-interface Accessory {
+interface AccessoryProduct {
   id: number;
   name: string;
   imageUrl: string;
   price: number;
+  url: string; // URL to the product detail page
+}
+
+interface AccessoryRecommendationsResponse {
+  accessories: AccessoryProduct[];
 }
 ```
 
-**Input Props:**
+**Error Response (JSON):**
 
 ```typescript
-interface AccessoryRecommendationsProps {
-  productId: number;
+interface ErrorResponse {
+  detail: string;
 }
 ```
 
 ## Behavior Scenarios
 
-- **Scenario: Loading State**
-  - Input: Component mounts with `productId = 123`. API request in progress.
-  - Outcome: A loading indicator (e.g., spinner) is displayed.
+- **Scenario:** Initial Load - No Recommendations
+  - Input:  Component mounts, API returns an empty `accessories` array.
+  - Outcome: Displays a message "No accessories available for this product."
 
-- **Scenario: Recommendations Available**
-  - Input: Component mounts with `productId = 123`. API returns a list of accessories as per the "Response (200 OK)" example above.
-  - Outcome: The component renders a horizontally scrollable list of accessory cards, each displaying the accessory's name, image, and price.  Each card should be a link that navigates to the product detail page for the accessory (e.g., `/products/123` and `/products/456` in the example).
+- **Scenario:** Initial Load - Recommendations Available
+  - Input: Component mounts, API returns a list of accessories.
+  - Outcome: Displays a horizontal carousel of accessory product cards.  Each card displays the image, name, and price of the product.
 
-- **Scenario: No Recommendations Available**
-  - Input: Component mounts with `productId = 123`. API returns an empty array `[]`.
-  - Outcome: The component displays the message "No accessories recommended for this product."
+- **Scenario:** Loading State
+  - Input: Component mounts, API call is in progress.
+  - Outcome: Displays a loading indicator (e.g., a spinner).
 
-- **Scenario: API Error**
-  - Input: Component mounts with `productId = 123`. API returns a 500 Internal Server Error.
-  - Outcome: The component displays the message "Failed to load accessory recommendations."
+- **Scenario:** Error State
+  - Input: Component mounts, API call returns an error (e.g., 500 status code).
+  - Outcome: Displays an error message "Failed to load accessory recommendations."
 
-- **Scenario: Accessory Click**
-  - Input: The user clicks on an accessory card (e.g., the "Protective Case" with `id = 123`).
-  - Outcome: The user is navigated to the product detail page for the clicked accessory (e.g., `/products/123`).  Navigation should be handled using `next/link`.
+- **Scenario:** Click Accessory Card
+  - Input: User clicks on an accessory product card.
+  - Outcome: The user is navigated to the accessory product's detail page using the `url` property from the API response.
 
 ## Out of Scope
-- Implementation of the backend API endpoint.
-- Detailed styling of the individual accessory cards beyond the specified Tailwind CSS palette.  Assume basic card styling (rounded corners, shadow).
+- Implementing the backend API endpoint.
 - User authentication or authorization.
-- Client-side caching of accessory recommendations.
+- Detailed styling beyond basic layout and dark theme application.
+- Advanced carousel features like autoplay or custom navigation.
