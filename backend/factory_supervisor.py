@@ -534,16 +534,24 @@ def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
     # Standard tool map
     # ---------------------------------------------------------------------------
     else:
+        # Resolve bare filenames (e.g. "InventoryView.tsx") to repo-relative paths
+        resolved_args = args
+        if tool in ("optimize", "implement", "patch") and args and "/" not in args:
+            hits = list(_ROOT.rglob(args))
+            if hits:
+                resolved_args = str(hits[0].relative_to(_ROOT))
+                log(f"   🔍 Resolved '{args}' → '{resolved_args}'")
+
         _tool_cmd_map: dict[str, list[str]] = {
-            "design":    [py, factory_script, "design", args] if args else [],
-            "implement": [py, factory_script, "build", args] if args else [],
+            "design":    [py, factory_script, "design", resolved_args] if resolved_args else [],
+            "implement": [py, factory_script, "build", resolved_args] if resolved_args else [],
             "heal":      [py, factory_script, "heal"],
             "diagnose":  [py, factory_script, "diagnose"],
             "steer":     [py, factory_script, "steer"],
             "doc":       [py, factory_script, "doc"],
-            "optimize":  [py, factory_script, "optimize", args] if args else [],
+            "optimize":  [py, factory_script, "optimize", resolved_args] if resolved_args else [],
             "commit":    [py, factory_script, "commit"],
-            "reflect":   [py, factory_script, "reflect", args or "(no context)"],
+            "reflect":   [py, factory_script, "reflect", resolved_args or "(no context)"],
         }
         cmd = _tool_cmd_map.get(tool, [])
 
