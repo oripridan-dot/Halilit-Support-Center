@@ -240,14 +240,27 @@ def commit_and_push(dry_run: bool = False) -> None:
     changelog_entry = generate_changelog_entry(diff, tag)
     update_changelog(tag, changelog_entry)
 
-    # 6. Push (graceful failure if no upstream)
+    # 6. Push — resilient: merge-pull fallback → force-with-lease
     print("   Pushing to origin...")
     push_result = _run_git(["push"])
     if push_result.returncode != 0:
-        print("   ⚠️  Push skipped — no upstream branch configured.")
-        print(f"      ({push_result.stderr.strip()})")
-    else:
-        print("✅ Code synced to repository.")
+        stderr = push_result.stderr.strip()
+        if "non-fast-forward" in stderr or "rejected" in stderr:
+            # Remote has diverged — pull with merge then retry
+            print("   ↩️  Remote diverged. Pulling (merge) then retrying...")
+            pull = _run_git(["pull", "--no-rebase", "--no-edit",
+                             "-c", "commit.gpgsign=false"])
+            if pull.returncode == 0:
+                push_result = _run_git(["push"])
+            if push_result.returncode != 0:
+                # Last resort: force-with-lease (safe overwrite)
+                print("   ⚡ Merge didn't resolve — force-pushing (with lease)...")
+                push_result = _run_git(["push", "--force-with-lease"])
+        if push_result.returncode != 0:
+            print("   ⚠️  Push failed — no upstream or permission denied.")
+            print(f"      ({push_result.stderr.strip()})")
+            return
+    print("✅ Code synced to repository.")
 
 
 # ---------------------------------------------------------------------------

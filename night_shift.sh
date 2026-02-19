@@ -78,6 +78,11 @@ fi
 END_TS=$(date +%s)
 ELAPSED=$((END_TS - START_TS))
 
+# ── Step 4: COMMIT & PUSH ─────────────────────────────────────────────────────
+echo "📦 [4/4] Committing and pushing progress..."
+python3 "$FACTORY_PY" commit || echo "⚠️  Commit step encountered an error (non-fatal)"
+echo ""
+
 echo ""
 echo "☀️  ============================================="
 echo "☀️  Night Shift Complete — ${ELAPSED}s elapsed"
