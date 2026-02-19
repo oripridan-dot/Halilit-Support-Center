@@ -88,13 +88,11 @@ const AccessoryRecommendations: React.FC<AccessoryRecommendationsProps> = ({ pro
                     height={108}
                     className="rounded-t-lg object-cover"
                     layout="responsive"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/placeholder.png';
-                    }}
+                    loading="lazy"
                   />
                   <div className="p-2">
-                    <p className="text-sm font-medium text-white">{accessory.name}</p>
-                    <p className="text-xs text-blue-500">${accessory.price.toFixed(2)}</p>
+                    <p className="text-sm text-white truncate">{accessory.name}</p>
+                    <p className="text-sm text-gray-300">${accessory.price.toFixed(2)}</p>
                   </div>
                 </a>
               </Link>
