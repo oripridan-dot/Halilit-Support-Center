@@ -1,43 +1,45 @@
 ```markdown
-# Halilit Support Center — Architecture
-
 ## Overview
 
-The Halilit Support Center is a web application designed to provide product information and support. It features a dashboard, inventory view, and product detail view. The application uses a FastAPI backend to serve data, including a pre-built product catalog and JIT (Just-In-Time) intelligence. The frontend is built with React and uses `tanstack/react-query` for data fetching and `zustand` for state management.
+The Halilit Support Center is a web application designed to provide product information and support. It features a dashboard, inventory view, and product detail view. The application uses a FastAPI backend to serve data and a React frontend for the user interface. The backend also includes a JIT (Just-In-Time) intelligence engine for live product research and a suite of "Dark Factory" agents for automated development and documentation.
 
 ## Frontend Views
 
-*   **DashboardView**: Renders dashboard statistics and last ingestion run status. Accessed via the `DASHBOARD` view in the navigation store.
-*   **InventoryView**: Displays a list of products.  Accessed via the `INVENTORY` view in the navigation store.
-*   **ProductDetailView**: Shows detailed information for a specific product, including SKU and a copy button. Accessed via the `PRODUCT_DETAIL` view in the navigation store.
+*   **DashboardView**: Renders dashboard statistics, including total products, calls for price, top brands count, and the status of the last ingestion run. Uses the `DashboardStats` interface.
+*   **InventoryView**: Renders a list of products.  Each product card displays information and indicates out-of-stock or unconfirmed items with visual cues. Uses the `Product` type and `formatPrice` function.
+*   **ProductDetailView**: Renders detailed information for a single product, including an SKU and a copy button if the price is zero or null. Uses the `Product` type.
+*   **Ingestion Status**: (Implied, from `navigationStore.ts`) Displays the status of data ingestion.
 
 ## Hooks & State
 
-*   **`useConductorCatalog`**: Fetches and provides access to the product catalog data from `/api/conductor/catalog`.
-*   **`useJITIntelligence`**: Manages the JIT (Just-In-Time) intelligence phases for product research and data loading. Returns JITPhase.
-*   **`navigationStore`**:  Manages the application's navigation state (current view, active product ID, search query, and call-for-price filter). Stores `ViewType`, `activeProductId`, `searchQuery`, and `initialCfpFilter`.
+*   **useConductorCatalog**: Fetches and provides product catalog data from `/api/conductor/catalog`. The catalog includes a flat array of products and pre-computed indexes.  Returns an object matching the shape of the backend's catalog data.
+*   **useJITIntelligence**: Manages the JIT intelligence phases, including `idle`, `snap`, `intel`, `wisdom`, `complete`, and `error`. Returns visual intel (signal_chain, cheat_sheet) for the cockpit UI.
+*   **navigationStore**: A Zustand store that manages the application's navigation state, including the current view (`DASHBOARD`, `INVENTORY`, `PRODUCT_DETAIL`, `INGESTION_STATUS`), the active product ID, search query, and an initial call-for-price filter.
 
 ## Backend API
 
-*   `/api/conductor/catalog` (GET): Returns the product catalog data.
-*   `/api/jit/{product_id}` (GET): Returns JIT intelligence data for a product, streamed via SSE events.
+*   `/api/conductor/catalog`: (Implied, from `useConductorCatalog.ts`) Serves the product catalog data.
+*   `/`: Serves the static frontend assets.
+*   `/api/jit/{product_id}`: (Implied, from `backend/jit_agent.py`) Endpoint to trigger JIT intelligence for a given product ID.
 
 ## Data Pipeline
 
-1.  A scraper (not shown in the code) gathers product data.
-2.  `product_normalizer.py` normalizes the data into a consistent format.
-3.  `build_catalog()` (in `backend/product_normalizer.py`) builds the product catalog.
-4.  The frontend consumes the catalog data from the `/api/conductor/catalog` endpoint.
+1.  **Scraper**: (Implied) Collects data from various sources (not shown in the code).
+2.  **Product Normalizer**: Transforms scraped data into a consistent `Product` shape, pre-computing galaxy and spectrum IDs.
+3.  **Catalog Build**: (Implied, from `backend/server.py`) Builds the product catalog from the normalized data.
+4.  **Frontend**: Consumes the product catalog data via `useConductorCatalog` and displays it in the views.
 
 ## Factory Agents
 
-*   **`builder_agent.py`**: Materializes code from a specification.
-*   **`steerer_agent.py`**: Identifies critical gaps in specifications and generates new/updated specs.
-*   **`scribe_agent.py`**: Regenerates documentation based on the codebase.
-*   **`spec_writer.py`**: Translates human intent into specifications.
+*   **builder\_agent.py**: Materializes code from a specification.
+*   **steerer\_agent.py**: Identifies gaps in product specifications and generates new or updated specifications.
+*   **scribe\_agent.py**: Regenerates documentation based on the codebase.
+*   **spec\_writer.py**: Translates plain text descriptions into Markdown specifications.
 
 ## Key Conventions
 
-*   **Imports**: Uses relative imports within the project.
-*   **Product Shape**: Frontend relies on a guaranteed, flat product shape defined by `product_normalizer.normalize_product()`.
-*   **Source Rules**:  All data must come from one of three authorized sources, as defined in `backend/source_rules.py`.
+*   **Imports**:  React components and hooks, data types, and utility functions are imported from various files within the `frontend/src` directory.
+*   **Product Type**: The `Product` type is defined in `frontend/src/types.ts` (not shown in the code).
+*   **Tailwind Theme Tokens**: The code uses Tailwind CSS for styling, with custom colors such as `bg-bg-elevated`, `blue`, `amber`, `green`, `red`, and `zinc`.
+*   **Source Rules**:  All data originates from authorized sources, as defined in `backend/source_rules.py`.  No data synthesis is permitted.
+```
