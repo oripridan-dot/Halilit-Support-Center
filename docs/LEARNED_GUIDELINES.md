@@ -41,3 +41,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Optimization introduced linting violations.
 **Fix:** Fixed linting errors in ProductDetailView.tsx.
 **Lesson:** ALWAYS lint check after refactoring.
+
+### [2026-02-19] Lint Before Committing
+**Symptom:** Debugging revealed TypeScript/linting errors.
+**Root Cause:** Un-linted code was introduced.
+**Fix:** Resolved the TypeScript/lint errors.
+**Lesson:** ALWAYS lint code before committing.
