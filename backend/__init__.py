@@ -8,7 +8,7 @@ Lightweight API server with:
 - SSE streaming for progressive frontend loading
 - Source Rules compliance (Commercial / Official / Contextual)
 
-Version: 9.6.1 (Dark Factory)
+Version: 9.7.0 (Chief)
 """
 
 import sys
@@ -18,6 +18,6 @@ _parent_dir = str(Path(__file__).parent.parent)
 if _parent_dir not in sys.path:
     sys.path.insert(0, _parent_dir)
 
-__version__ = "9.6.1"
+__version__ = "9.7.0"
 
 __all__ = ["__version__"]

@@ -1,139 +1,43 @@
-# Halilit Support Center — Architecture
+```markdown
+# Halilit Support Center — Application Architecture
 
-**Version:** Operator Console (spec-driven)  
-**Updated:** February 2026
+## Overview
 
----
+The Halilit Support Center is a web application designed to manage and display product information, including inventory, pricing, and detailed product specifications. It features a dashboard, inventory view, and product detail view, along with a real-time intelligence engine that provides insights into product data. The application uses a FastAPI backend to serve data and a React frontend for the user interface.  The system emphasizes data accuracy and relies on a strict set of source rules.
 
-## System overview
+## Frontend Views
 
-AI-powered product intelligence platform using a **Just-in-Time (JIT)** architecture. Catalog is built from ingestion (Conductor); product graph provides families and relationships. Live intelligence is streamed on demand per product via Gemini 2.0 Flash.
+*   **DashboardView**: Renders dashboard metrics and a summary of product data.  Accessed via the `DASHBOARD` navigation state.
+*   **InventoryView**: Displays a filterable and searchable grid of products.  Accessed via the `INVENTORY` navigation state. Accepts an optional `initialCfpFilter` prop to pre-filter for "Call for Price" products.
+*   **ProductDetailView**: Shows detailed information for a specific product, including a copy-to-clipboard button for the product's SKU. Accessed via the `PRODUCT_DETAIL` navigation state.
 
-| Metric            | Value |
-| ----------------- | ----- |
-| Catalog           | Built from backend/data (learned_taxonomy, catalog_cache); API serves it |
-| Product graph     | Families + relationships (official → commercial → contextual → spectrum) |
-| Intelligence      | JIT — live per-product research via Gemini 2.0 |
-| Trusted sources   | Golden Circle (Sound On Sound, Sweetwater, …) |
-| Cache             | Catalog: server TTL; JIT: 7-day file-based per product |
+## Hooks & State
 
----
+*   `useConductorCatalog`: Fetches product data from `/api/conductor/catalog`.
+*   `useJITIntelligence`: Manages the JIT (Just-In-Time) Intelligence phases and data for the cockpit UI. Returns: `JITPhase`.
+*   `useNavigationStore`:  Manages the application's navigation state. Returns: `currentView`, `activeProductId`, `searchQuery`, `initialCfpFilter` and methods to change the view.
+*   `useDebouncedValue`: Debounces a value, used in `InventoryView`.
 
-## Architecture layers
+## Backend API
 
+*   `GET /api/conductor/catalog`: Returns pre-indexed product catalog data.
+
+## Data Pipeline
+
+1.  **Scraping:**  Not explicitly defined in the provided code, but implied as a source of product data.
+2.  **Normalization:** The `product_normalizer.py` module processes scraped product data, ensuring a consistent and predictable data shape. It pre-computes galaxy and spectrum IDs and pre-computes search text.
+3.  **Catalog:** The normalized product data is built into a catalog.
+4.  **Frontend:** The frontend consumes data from the `/api/conductor/catalog` endpoint and displays product information.
+
+## Factory Agents
+
+*   `steerer_agent.py`: Identifies gaps in product specifications and generates new or updated specifications.
+*   `scribe_agent.py`: Regenerates documentation to reflect the current state of the codebase.
+*   `spec_writer.py`: Translates plain text descriptions into Markdown specifications.
+*   `builder_agent.py`: Materializes code from a specification.
+
+## Key Conventions
+
+*   **Imports:**  Code imports are relative, e.g., `from backend import __version__`.
+*   **Source Rules:** Data must originate from authorized sources.
 ```
-┌──────────────────────────────────────────────────────────────────┐
-│                    FRONTEND (React 18 + Vite)                     │
-│  Zustand · React Query · Tailwind · Framer Motion                 │
-│  Views: DashboardView · InventoryView · ProductDetailView          │
-│  Data: useConductorCatalog() · useJITIntelligence(SSE)             │
-└────────────────────────┬─────────────────────────────────────────┘
-                         ↓  REST / SSE
-┌──────────────────────────────────────────────────────────────────┐
-│              API (FastAPI — port 8000)                             │
-│  /api/conductor/*   Catalog, taxonomy, filter, refresh            │
-│  /api/jit/product/* Live product intelligence (SSE)               │
-│  /api/products/search  Product search                             │
-│  /api/mcp/*         MCP tools                                     │
-└────────────────────────┬─────────────────────────────────────────┘
-                         ↓
-┌──────────────────────────────────────────────────────────────────┐
-│             CATALOG + PRODUCT GRAPH                               │
-│  product_normalizer.build_catalog() · ProductGraph · GraphStore   │
-│  Artifacts: learned_taxonomy.json, catalog_cache.json.gz          │
-│  Indexes: by_brand, by_family, relationships                       │
-└────────────────────────┬─────────────────────────────────────────┘
-                         ↓
-┌──────────────────────────────────────────────────────────────────┐
-│             RELATIONSHIP PIPELINE (priority order)                │
-│  1. Official   — brand pages, accessories/related                 │
-│  2. Commercial — variants + accessory links (catalog)             │
-│  3. Contextual — reviews: "works with X"                          │
-│  4. Spectrum   — alternatives by spectrum/tier                     │
-│  Persisted: backend/data/graph/product_graph.json                 │
-└────────────────────────┬─────────────────────────────────────────┘
-                         ↓
-┌──────────────────────────────────────────────────────────────────┐
-│             JIT AGENT (on-demand)                                 │
-│  Trigger: user opens product. SSE: snap → intel → wisdom → explore│
-│  Tools: read_halilit_page · search_trusted_reviews                 │
-│  Cache: 7-day file-based TTL per product                          │
-└──────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Source rules (THE LAW)
-
-| Source         | Owner   | Fields |
-| -------------- | ------- | ------ |
-| **Commercial** | Halilit | Price, SKU, catalog position, Golden List |
-| **Official**   | Brand   | Specs, images, descriptions, official_url |
-| **Contextual** | Reviews | Opinions, ratings (3+ trusted sources) |
-
-- **Zero tolerance:** No synthetic data. Empty fields over fabricated.
-- **Enforcement:** `backend/source_rules.py`.
-
----
-
-## API reference
-
-### Conductor (catalog)
-
-| Method | Path                        | Description              |
-| ------ | --------------------------- | ------------------------ |
-| GET    | `/api/conductor/catalog`    | Full catalog + graph indexes |
-| GET    | `/api/conductor/taxonomy`   | Category & brand schema  |
-| GET    | `/api/conductor/refresh`    | Force catalog rebuild    |
-
-### Products
-
-| Method | Path                        | Description              |
-| ------ | --------------------------- | ------------------------ |
-| GET    | `/api/products/search?q=`   | Product search           |
-
-### JIT
-
-| Method | Path                     | Description              |
-| ------ | ------------------------ | ------------------------ |
-| POST   | `/api/jit/product/{id}`  | SSE stream of intelligence |
-
-### System
-
-| Method | Path                  | Description   |
-| ------ | --------------------- | -------------- |
-| GET    | `/api/health`         | Service health |
-
----
-
-## Core components
-
-| Module             | File / path              | Purpose |
-| ------------------ | ------------------------ | ------- |
-| API server         | `server.py`              | FastAPI, catalog, JIT, MCP |
-| Catalog builder    | `product_normalizer.py`  | build_catalog(), graph pipeline |
-| Product graph      | `product_graph.py`       | ProductGraph, families, relationships |
-| Graph store        | `product_graph_store.py` | JSON snapshot, optional PostgreSQL |
-| JIT agent          | `jit_agent.py`           | On-demand intelligence stream |
-| Conductor CLI      | `conductor_main.py`      | ingest, sync, rebuild-catalog, dev |
-| Source rules       | `source_rules.py`        | Commercial / Official / Contextual law |
-
-### Frontend (Operator Console)
-
-| Module         | Path / file                    | Purpose |
-| -------------- | ------------------------------- | ------- |
-| App shell      | `App.tsx`                       | Router: Dashboard, Inventory, Product Detail |
-| Mission Control| `views/DashboardView.tsx`       | Key metrics, quick links |
-| Inventory Master| `views/InventoryView.tsx`       | Grid, filters, sort, row → Detail |
-| Product Intelligence | `views/ProductDetailView.tsx` | Header, toolbar, tabs (Ecosystem, Specs, History) |
-| Catalog hook   | `hooks/useConductorCatalog.ts`  | React Query catalog |
-| Global search  | `components/GlobalSearch.tsx`   | Search → API → navigate to Detail |
-
----
-
-## Documentation
-
-- **Workflow and specs:** [docs/README.md](README.md)
-- **Quick start:** [docs/QUICK_START.md](QUICK_START.md)
-- **Pipeline and Conductor:** [docs/FACTORY_PIPELINE.md](FACTORY_PIPELINE.md)
-- **Operator behavior:** [OPERATOR_CONSOLE_SPEC.md](../OPERATOR_CONSOLE_SPEC.md)

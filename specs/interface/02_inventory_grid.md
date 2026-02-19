@@ -1,6 +1,6 @@
 # Spec 02 — Inventory Master (Inventory Grid)
 
-**Version:** 2.0 · Dark Factory v9.6.1
+**Version:** 2.0 · Chief v9.7.0
 **Component:** `frontend/src/components/views/InventoryView.tsx`
 **Route state:** `currentView === 'INVENTORY'`
 **Data source:** `useConductorCatalog` hook → `/api/conductor/catalog`

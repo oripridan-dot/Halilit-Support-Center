@@ -1,6 +1,6 @@
 # Spec 01 — Operator Dashboard ("Mission Control")
 
-**Version:** 2.0 · Dark Factory v9.6.1
+**Version:** 2.0 · Chief v9.7.0
 **Component:** `frontend/src/components/views/DashboardView.tsx`
 **Route state:** `currentView === 'DASHBOARD'`
 **Data sources:** `/api/dashboard/stats` (FastAPI) · `useConductorCatalog` hook (loading flag only)

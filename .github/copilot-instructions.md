@@ -1,4 +1,4 @@
-# Repository Instructions & Context (v9.6.1 — Dark Factory)
+# Repository Instructions & Context (v9.7.0 — Chief)
 
 ## ⚠️ THE FUNDAMENTAL LAW — Three Source Rules (backend/source_rules.py)
 
@@ -28,7 +28,7 @@
 
 ## Project Overview
 
-**Halilit Support Center v9.6.1 (Dark Factory)** — JIT product intelligence platform for musical instruments. Operator Console UI for inventory management and product support.
+**Halilit Support Center v9.7.0 (Chief)** — JIT product intelligence platform for musical instruments. Operator Console UI for inventory management and product support.
 
 - **Architecture**: Spec-driven Dark Factory. Specs in `specs/` are the **input**; code is the **output**. Never write code without reading the relevant spec first.
 - **Workflow**: `specs/interface/` → AI implements → verify outcome in app. See `OPERATOR_CONSOLE_SPEC.md` and `docs/WORKFLOW.md`.
@@ -41,15 +41,23 @@
 ## Running the System
 
 ```bash
-# From project root, with venv activated:
+# Preferred — Master Factory Controller (requires GEMINI_API_KEY):
+export GEMINI_API_KEY="your-key"        # or GOOGLE_API_KEY
+python factory.py init                  # One-time: create folder structure
+python factory.py status                # Check environment health
+python factory.py design "description" [category]  # Architect: generate a spec
+python factory.py build <spec_path>     # Builder: materialise spec → code
+python factory.py start                 # Launch backend (8000) + frontend (5173)
+
+# Legacy / direct:
 ./factory_reset.sh               # Clean start (backend + frontend)
 ./factory_reset.sh --rebuild     # Force rebuild catalog cache
-
-# Separately:
 PYTHONPATH=. python backend/conductor_main.py dev   # Both servers
 PYTHONPATH=. python backend/server.py               # Backend only (port 8000)
 cd frontend && pnpm dev                             # Frontend only (port 5173)
 ```
+
+**Note:** `factory.py build` takes a spec file path (e.g. `specs/interface/dashboard.md`). `python factory.py design` writes specs to `specs/interface/` by default. `GEMINI_API_KEY` (or `GOOGLE_API_KEY`) is required for `design` and `build`.
 
 ---
 
@@ -62,7 +70,7 @@ cd frontend && pnpm dev                             # Frontend only (port 5173)
 
 ---
 
-## File Structure (v9.6.1)
+## File Structure (v9.7.0)
 
 ```
 backend/
@@ -159,4 +167,25 @@ docs/                         # Dev documentation (QUICK_START, WORKFLOW, ARCHIT
 
 ---
 
-**v9.6.1 — Dark Factory** · February 2026
+## 🏭 FACTORY PROTOCOL (Spec-Driven Development)
+
+You are an autonomous builder agent in a "Dark Factory". Your primary job is to translate MARKDOWN SPECIFICATIONS into TYPESCRIPT/PYTHON CODE.
+
+### Rule 1: The Spec is Law
+
+Before writing or editing code for a feature (e.g., "Inventory Grid"), you MUST check if a corresponding specification exists in `specs/`.
+
+- If the code conflicts with `specs/interface/` specs or `OPERATOR_CONSOLE_SPEC.md`, the code is WRONG.
+- Do not infer business logic. Read it from `specs/data_pipeline/`.
+- UI specs live in `specs/interface/` (e.g. `01_operator_dashboard.md`, `02_inventory_grid.md`, `03_product_intelligence.md`). There is no `specs/ui/` folder.
+
+### Rule 2: Behavior Scenarios (Scenes)
+
+When writing logic, verify it against the scenarios in `specs/behavior/` or `specs/scenarios/`.
+
+- **Example:** If coding the Search Bar, ensure it handles the "Empty State" scenario defined in `specs/behavior/01_search_scenarios.md`.
+
+### Rule 3: No "Galaxy" Code
+
+Do not suggest or import `GalaxyDashboard`, `Three.js`, or `React-Three-Fiber` unless explicitly instructed by a new Spec.
+**v9.7.0 — Chief** · February 2026
