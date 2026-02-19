@@ -28,8 +28,8 @@ FRONTEND_DIR = ROOT_DIR / "frontend/src/components/views"
 # System Prompt — v3.0: Queue Output
 # ---------------------------------------------------------------------------
 SYSTEM_PROMPT = """
-You are THE CHIEF (Level 9). You are a Massively Parallel Engineering Manager and CTO.
-Your Goal: Maximize velocity by identifying tasks that can run SIMULTANEOUSLY.
+You are THE CHIEF (Level 9). You are a Massively Parallel Engineering Manager, CTO, and a Senior Mentor.
+Your Goal: Maximize velocity by identifying tasks that can run SIMULTANEOUSLY, while mentoring the operator and exposing your strategic thinking process.
 
 STYLE GUIDE:
 1. **Be Parallel:** When multiple independent tasks exist, schedule them in parallel.
@@ -37,6 +37,7 @@ STYLE GUIDE:
 3. **Be Structured:** Output a clear, ordered task queue.
 4. **Clean Workspace:** If git status is DIRTY or STAGED and the user wants a new feature,
    insert a sequential 'commit' task FIRST to secure progress.
+5. **Be a Mentor:** Transparently expose your architectural reasoning. Highlight potential risks, explain design patterns, and tell the user what they need to learn or watch out for during this operation.
 
 TOOLS & PARALLELISM RULES:
 - 'design'      (Architect):  Creates Blueprints/Specs.                               PARALLEL SAFE ✅
@@ -58,7 +59,8 @@ TOOLS & PARALLELISM RULES:
 
 OUTPUT FORMAT (JSON ONLY — no markdown fences):
 {
-    "thought": "Internal reasoning: what does the user REALLY need?",
+    "thought": "Internal reasoning: what does the user REALLY need? What are the edge cases?",
+    "mentor_insight": "A deep dive into the architectural reasoning, trade-offs, and strategic lessons the user should be aware of.",
     "explanation": "Clear, jargon-free explanation of the plan (2-4 sentences).",
     "proposal": "I will [action] because [reason].",
     "queue": [
@@ -71,6 +73,7 @@ OUTPUT FORMAT (JSON ONLY — no markdown fences):
 TASK-FORCE FORMAT (for complex, cross-domain tasks):
 {
     "thought": "This needs frontend + backend changes. Time for a Task Force.",
+    "mentor_insight": "Cross-domain features require strict contracts. We use a Task Force so the Steerer can define the API boundary before the Builder writes code, preventing integration bugs later.",
     "explanation": "Assembling a Task Force: Steerer designs the contract, Builder codes it, Watchdog reviews.",
     "proposal": "I will spin up a Task Force for this cross-domain feature.",
     "queue": [
@@ -288,9 +291,24 @@ if __name__ == "__main__":
     test_input = sys.argv[1] if len(sys.argv) > 1 else ""
     is_startup = not bool(test_input)
     result = consult_chief(test_input, is_startup=is_startup)
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+
+    # Expose the Chief's thinking process to the Operator
+    print("\n" + "="*60)
+    print("🧠 THE CHIEF'S THINKING PROCESS")
+    print("="*60)
+    print(f"🤔 THOUGHT:\n   {result.get('thought', 'N/A')}\n")
+
+    if "mentor_insight" in result:
+        print(f"🎓 MENTOR INSIGHT:\n   {result['mentor_insight']}\n")
+
+    print(f"📢 EXPLANATION:\n   {result.get('explanation', 'N/A')}\n")
+    print(f"🎯 PROPOSAL:\n   {result.get('proposal', 'N/A')}")
+    print("="*60)
+
     if result.get("queue"):
         print(f"\n📋 QUEUE ({len(result['queue'])} tasks):")
         for i, t in enumerate(result["queue"], 1):
             mode = "⚡ PARALLEL" if t.get("parallel") else "🔒 SEQUENTIAL"
             print(f"   {i}. {mode} | {t['tool']} {t.get('args', '')}")
+    else:
+        print("\n📋 QUEUE: Empty (No tasks scheduled)")

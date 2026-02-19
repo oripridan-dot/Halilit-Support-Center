@@ -1,4 +1,24 @@
 ## [v4.1] — 2026-02-19
+- [feat] Implemented result caching for visual QA to avoid re-running Playwright for the same URL+spec within TTL.
+- [feat] Added `_vqa_cache_key`, `_vqa_cache_load`, `_vqa_cache_save`, `_vqa_cache_get`, and `_vqa_cache_set` functions for caching.
+- [refactor] Added `hashlib`, `json`, and `time` imports to `visual_qa.py`.
+- [feat] Added a new spec file: `specs/interface/global_search_-_prioritize_exact_sku_matches.md`.
+- [feat] Global search results now prioritize exact SKU matches.
+- [refactor] Updated `GlobalSearch.tsx` to handle search results more efficiently.
+- [feat] Added JIT Intelligence integration to ProductDetailView.
+- [feat] Added sourcing badges.
+- [feat] Use ConductorCatalog for product details.
+- [refactor] Updated imports in ProductDetailView.tsx.
+- [feat] Added useRef to ProductDetailView.tsx
+- [feat] Added JITPhase and JITIntelligenceState to useJITIntelligence hook.
+- [feat] Added useConductorCatalog hook.
+- [feat] Added SourcingBadge component.
+- [refactor] Updated RelationshipSection to handle product sources.
+- [refactor] Updated styling and logic in ProductDetailView.tsx.
+- [feat] Added logic to ProductDetailView to retrieve and display information from conductor catalog.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+
+## [v4.1] — 2026-02-19
 ## v4.1
 
 - [feat] Implemented result caching for visual QA to avoid re-running Playwright for the same URL+spec within TTL.

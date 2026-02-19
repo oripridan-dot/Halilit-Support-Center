@@ -1,9 +1,8 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, Loader2, XCircle } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { format } from 'date-fns';
 import { useNavigationStore } from '../../store/navigationStore';
-import { useConductorCatalog } from '../../hooks/useConductorCatalog';
+import { format } from 'date-fns';
 
 interface DashboardStats {
   total_products: number;
@@ -88,108 +87,116 @@ const useDashboardStats = () => {
             const res = await fetch('/api/dashboard/stats');
             const text = await res.text();
             if (text.startsWith('<')) {
-                throw new Error('Backend is unavailable');
+                throw new Error("Backend is down");
             }
-            if (!res.ok) {
-                const json = await res.json();
-                throw new Error(json.error || 'Failed to fetch dashboard stats');
+            try {
+                const json = JSON.parse(text);
+                return json;
+            } catch (error) {
+                throw new Error("Invalid JSON response");
             }
-            return JSON.parse(text) as DashboardStats;
         },
         staleTime: 30_000,
         retry: 0,
     });
 
+    let errorMsg: string | undefined = undefined;
+    if (query.error instanceof Error) {
+        errorMsg = query.error.message;
+    }
+
     return {
         ...query,
-        stats: query.data,
-        errorMsg: query.error?.message,
+        errorMsg,
+        hasStats: !!query.data && !query.error,
     };
 };
 
-const DashboardView: React.FC = () => {
-  const { goToInventory, goToInventoryCfp, goToIngestionStatus } = useNavigationStore();
-  const { stats, errorMsg, isLoading, refetch } = useDashboardStats();
-  const { isLoading: isCatalogLoading } = useConductorCatalog();
-  const hasStats = !!stats && !errorMsg;
 
-  const today = format(new Date(), 'EEEE, MMMM do, yyyy');
+const DashboardView: React.FC = () => {
+  const { data: stats, isLoading, errorMsg, refetch, hasStats } = useDashboardStats();
+  const { goToInventory, goToInventoryCfp, goToIngestionStatus } = useNavigationStore();
 
   return (
-    <div className="p-6">
-      <header className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-semibold">Mission Control</h1>
-        <p className="text-sm text-text-muted">{today}</p>
-      </header>
-
+    <>
       {errorMsg && (
         <div
-          className="flex items-center gap-2 mb-6 px-4 py-3
-                  bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
+          className="flex items-center gap-2 mb-6 px-4 py-3 bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
         >
           <AlertTriangle size={14} className="text-amber-400 shrink-0" />
           <span className="text-amber-300 font-medium">Stats unavailable —</span>
           <span className="text-zinc-400 truncate">{errorMsg}</span>
           <button
             onClick={() => refetch()}
-            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600
-                       text-zinc-200 text-xs rounded-lg"
+            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 text-xs rounded-lg"
           >
             Retry
           </button>
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Package }))) as React.ComponentType}
           label="Total products"
-          value={hasStats ? stats.total_products.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={hasStats ? stats?.total_products.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Active SKUs"
           accent="blue"
           onClick={() => goToInventory()}
         />
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Phone }))) as React.ComponentType}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.PhoneCall }))) as React.ComponentType}
           label="Call for price"
-          value={hasStats ? stats.calls_for_price.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={hasStats ? stats?.calls_for_price.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Missing IL price"
-          accent={hasStats && stats.calls_for_price > 0 ? 'amber' : 'zinc'}
+          accent={hasStats && stats?.calls_for_price > 0 ? "amber" : "zinc"}
           onClick={() => goToInventoryCfp()}
         />
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Briefcase }))) as React.ComponentType}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Tag }))) as React.ComponentType}
           label="Active brands"
-          value={hasStats ? stats.top_brands_count.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={hasStats ? stats?.top_brands_count.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Distinct brands in catalog"
           accent="green"
         />
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Clock }))) as React.ComponentType}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.RefreshCcw }))) as React.ComponentType}
           label="Last ingestion run"
-          value={hasStats ? <LastRunStatus run={stats.last_ingestion_run} /> : <span className="text-zinc-600 animate-pulse">…</span>}
+          value={hasStats ? <LastRunStatus run={stats!.last_ingestion_run} /> : <span className="text-zinc-600 animate-pulse">…</span>}
           sub={
-              hasStats && stats.last_ingestion_run.status !== 'never'
-              ? `${stats.last_ingestion_run.product_count?.toLocaleString() || 0} products synced`
-              : "No run recorded"
+            hasStats
+              ? stats?.last_ingestion_run.status === 'never'
+                ? 'No run recorded'
+                : `${stats?.last_ingestion_run.product_count?.toLocaleString()} products synced`
+              : undefined
           }
           accent={
-              hasStats
-                ? stats.last_ingestion_run.status === 'failed'
-                  ? 'red'
-                  : stats.last_ingestion_run.status === 'running'
-                  ? 'blue'
-                  : 'zinc'
+            hasStats
+              ? stats?.last_ingestion_run.status === 'failed'
+                ? 'red'
+                : stats?.last_ingestion_run.status === 'running'
+                ? 'blue'
                 : 'zinc'
-            }
+              : 'zinc'
+          }
         />
       </div>
 
-      <div className="flex gap-4">
-        <button className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-text-primary transition-colors" onClick={() => goToInventory()}>Open Inventory Master</button>
-        <button className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-text-primary transition-colors" onClick={() => goToIngestionStatus()}>Data Pipeline</button>
+      <div className="mt-8 space-x-4">
+        <button
+          onClick={() => goToInventory()}
+          className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-zinc-100 rounded-lg text-sm"
+        >
+          Open Inventory Master
+        </button>
+        <button
+          onClick={() => goToIngestionStatus()}
+          className="px-4 py-2 bg-zinc-700 hover:bg-zinc-600 text-zinc-100 rounded-lg text-sm"
+        >
+          Data Pipeline
+        </button>
       </div>
-    </div>
+    </>
   );
 };
 
