@@ -134,3 +134,7 @@ This specification defines the rules engine responsible for validating and trans
 - Error handling beyond raising `ValueError` exceptions.  Specific logging configuration is assumed to be handled by the caller.
 - Complex transformations beyond type casting, regular expression matching, allowed value checking, and datetime formatting, or value mapping.
 - Implementing custom validation functions. Validation is limited to min/max range, regex patterns, and allowed values.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

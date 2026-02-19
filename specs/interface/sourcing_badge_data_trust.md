@@ -98,3 +98,7 @@ Remove the local `renderBadge()` function entirely.
 - No `renderBadge()` function in ProductDetailView.
 - `SourcingBadge` and `JITBadge` are standalone, reusable components.
 - Colors match Three Source Rules: green=Commercial, blue=Official, orange=Contextual.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

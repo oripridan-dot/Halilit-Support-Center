@@ -258,3 +258,7 @@ useEffect(() => {
 - [ ] Out-of-stock rows get `bg-red-950/10` class
 - [ ] Pagination footer hidden when `totalPages === 1`
 - [ ] All 3 sync effects implemented
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

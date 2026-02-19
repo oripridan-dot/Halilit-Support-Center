@@ -93,3 +93,7 @@ interface SideBySidePricingProps {
 - [Specific design of the loading indicator or error message.]
 - [Backend API implementation — defined in a separate spec.]
 - [Currency conversion.]
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

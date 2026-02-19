@@ -35,3 +35,7 @@ To display a list of recommended accessories on the Product Detail screen, satis
     *   **Outcome:** The `/placeholder.png` image is displayed in place of the broken image.
 5.  **Scenario:** An accessory product has a `price` of `null`.
     *   **Outcome:** The accessory tile displays "Call for Price" instead of a numerical price.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

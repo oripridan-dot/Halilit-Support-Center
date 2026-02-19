@@ -41,3 +41,7 @@ Where:
 - The implementation of the product detail page itself is out of scope. This specification only covers the copy SKU button.
 - Analytics tracking of button clicks.
 - Complex error handling or logging beyond displaying a "Copy Failed" message.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

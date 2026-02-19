@@ -29,3 +29,7 @@ To provide a direct link to the Halilit product page on the Product Detail scree
 
 3.  **Scenario:** The Product Detail screen loads for a product with an invalid `halilit_url` (e.g., `halilit_url: "not a url"`).
     *   **Outcome:** No "View on Halilit Website" button is visible on the screen.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

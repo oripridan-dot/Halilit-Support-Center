@@ -29,3 +29,8 @@ Define how product data is scraped, normalized, and stored. The Conductor reads 
   - **Outcome:** Log; exclude from catalog; do not fail entire run.
 - **Scenario:** Source returns malformed HTML.
   - **Outcome:** Log; skip item; increment error count. Build fails if error count exceeds threshold.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
+- `pytest backend/tests/ -x -q`

@@ -78,3 +78,7 @@ class ImageValidationResponse(BaseModel):
 - Authentication or authorization for the endpoint.
 - Detailed error reporting beyond the boolean `is_valid` value (errors should be logged server-side).
 - Checking image dimensions or file size.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

@@ -62,3 +62,7 @@ This component displays a badge on the product detail page indicating whether a 
 - Persistence of JIT status (handled by the backend).
 - Detailed styling beyond basic color and text.
 - Alternative loading/error display implementations (beyond a basic message).
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

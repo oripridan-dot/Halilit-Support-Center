@@ -109,3 +109,7 @@ interface AgentAutonomyPanelProps {
 - User authentication and role-based access control. It's assumed the `userId` prop is derived from an existing authentication mechanism.
 - Detailed logging implementation on the backend (beyond the `AutonomyLevelChangeResponse` data contract).
 - Persistence of autonomy levels (handled by the backend).
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

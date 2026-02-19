@@ -105,3 +105,7 @@ interface Integration {
 - Implementing the actual product or integration detail pages. This component only provides the links to those pages.
 - Authentication. The API is assumed to be publicly accessible.
 - Search or filtering of related products or integrations.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

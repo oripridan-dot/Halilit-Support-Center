@@ -30,3 +30,8 @@ Define expected outcomes for search and navigation. Used for Playwright or manua
 ## Verification
 - Run these as Playwright tests against the built app.
 - Pass = all outcomes observed. Fail = at least one outcome missing; fix spec or implementation.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
+- `pnpm playwright test`

@@ -107,3 +107,7 @@ const ProductImage: React.FC<ProductImageProps> = ({ imageUrl, altText }) => {
 
 export default ProductImage;
 ```
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

@@ -65,3 +65,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Unknown.
 **Fix:** Not documented.
 **Lesson:** ALWAYS provide detailed failure context when calling 'reflect'.
+
+### [2026-02-19] Agent Autonomy Improvements
+**Symptom:** Insufficient failure detail provided.
+**Root Cause:** Unknown.
+**Fix:** Not documented.
+**Lesson:** ALWAYS provide detailed failure context when calling 'reflect'.

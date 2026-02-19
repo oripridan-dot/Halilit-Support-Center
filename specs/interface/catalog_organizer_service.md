@@ -136,3 +136,7 @@ This service is responsible for organizing and categorizing data received from H
 - [Dynamic configuration of categorization rules (rules are hardcoded for now).]
 - [Authentication and authorization for API endpoints.]
 - [Detailed error logging to an external service (only basic logging is implemented).]
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

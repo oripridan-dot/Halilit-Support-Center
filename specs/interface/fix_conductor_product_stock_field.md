@@ -74,3 +74,7 @@ Clicking a product row MUST call `useNavigationStore().goToProduct(product.id)`.
 **S2:** `stock === null` → amber border + "UNCONFIRMED" badge visible.
 **S3:** `stock > 0` → no border, no badge.
 **S4:** Click row → navigates to ProductDetailView for that product.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

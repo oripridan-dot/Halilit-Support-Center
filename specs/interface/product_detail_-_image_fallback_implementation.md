@@ -41,3 +41,7 @@ To provide a reusable component for displaying product images with a robust fall
     *   **Outcome:** The `useValidateHeroImage` hook returns `isValid: false`, and the `/placeholder.png` image is displayed. The image URL is cached as invalid.
 6. **Scenario:** The `ProductImage` component is used in `ProductDetailView` with `isHero` set to `true` and the `src` prop is being validated.
     * **Outcome:** A loading skeleton is displayed.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

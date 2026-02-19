@@ -45,3 +45,7 @@ interface HalilitURLButtonProps {
 - The fetching of the product data is out of scope.  This component only handles the display of the button, given a URL.
 - Error handling for invalid URLs (e.g., malformed URLs) is out of scope.  The component assumes the URL, if present, is valid.
 - The specific product detail page layout is out of scope.  This component is just the button.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

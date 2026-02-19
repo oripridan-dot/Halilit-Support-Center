@@ -123,3 +123,7 @@ Product found in catalog → renders left + right columns with data.
 
 **S4 — Copy SKU:**
 User clicks copy → icon changes to check for 2s → clipboard has product.id value.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

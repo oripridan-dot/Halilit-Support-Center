@@ -67,3 +67,7 @@ This script automates the creation and management of relationship records within
 - This specification does not cover the implementation of the scheduled task that executes this script.
 - This specification does not cover the user interface or API endpoint to view the created relationships.
 - Configuration of logging levels and output destinations is not defined in this document.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

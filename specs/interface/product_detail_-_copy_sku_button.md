@@ -35,3 +35,7 @@ To provide a one-tap "Copy SKU" button on the Product Detail screen for "Call fo
     *   **Action:** The user clicks the "Copy SKU" button.
     *   **Outcome:** The product's `id` (SKU) is copied to the clipboard.
     *   **Outcome:** A success message (e.g., "Copied!") appears briefly and disappears after 2 seconds.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

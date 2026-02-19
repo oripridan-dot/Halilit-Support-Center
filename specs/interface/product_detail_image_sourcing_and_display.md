@@ -80,3 +80,7 @@ interface ImageResponse {
 - Implementing a full image viewer (e.g., zoom functionality).
 - Authentication/Authorization for image access.
 - Detailed Tailwind CSS configuration (only basic styling is covered).
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

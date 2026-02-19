@@ -42,3 +42,7 @@ This mismatch causes silent runtime errors and wrong field access in all compone
 - `product.price`, `product.name`, `product.id`, `product.image_url`, `product.specs`,
   `product.data_trust` all resolve correctly without `as any` casts.
 - No TypeScript errors introduced.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

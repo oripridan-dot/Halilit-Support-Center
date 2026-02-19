@@ -72,3 +72,7 @@ Standard HTTP error codes (400, 404, 500) with a JSON body:
 - Styling beyond the specified background and text colors is out of scope.
 - The backend implementation of the `/products/{product_id}/sourcing` endpoint is out of scope. This spec assumes that endpoint exists and returns the documented data contract.
 - Caching strategies beyond what `react-query` provides by default.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

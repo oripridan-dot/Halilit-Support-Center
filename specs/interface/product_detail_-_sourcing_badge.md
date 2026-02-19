@@ -45,3 +45,7 @@ To visually indicate the source of truth for different data points displayed on 
 4. **Scenario:** The Product Detail screen loads with an invalid image.
     * **Outcome:** The placeholder image is displayed.
     * **Outcome:** There is no source badge displayed on the placeholder image since its value is derived from the component itself.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

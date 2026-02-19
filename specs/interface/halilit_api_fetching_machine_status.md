@@ -92,3 +92,7 @@ Example:
 - Data source implementation details (assumed to exist).
 - Monitoring and logging.
 -  Deployment configurations.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

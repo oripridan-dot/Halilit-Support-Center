@@ -190,3 +190,7 @@ goToIngestionStatus: () => void;
 - [ ] CfP card calls `goToInventoryCfp` (not `goToInventory`)
 - [ ] Quick Actions render regardless of stats state
 - [ ] TypeScript: no `any`, no non-null assertions without `hasStats` guard
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

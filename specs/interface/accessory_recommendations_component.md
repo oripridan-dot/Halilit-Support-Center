@@ -74,3 +74,7 @@ interface ErrorResponse {
 - User authentication or authorization.
 - Detailed styling beyond basic layout and dark theme application.
 - Advanced carousel features like autoplay or custom navigation.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

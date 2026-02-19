@@ -37,3 +37,7 @@ To prioritize "In Stock" items in search results, improving operator efficiency 
 
 5. **Scenario:** Two Products both are "Call for Price," one is "In Stock" and one is "Out of Stock".
     *   **Outcome:** The "In Stock" product appears earlier in the search result than the "Out of Stock" product.
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`

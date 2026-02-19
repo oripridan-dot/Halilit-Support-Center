@@ -53,3 +53,7 @@ interface UseValidateHeroImageResult {
 
 function useValidateHeroImage(imageUrl: string): UseValidateHeroImageResult;
 ```
+
+## Verification Commands
+- `pnpm tsc --noEmit`
+- `pnpm run lint`
