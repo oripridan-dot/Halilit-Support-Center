@@ -1,8 +1,7 @@
 import React from 'react';
 import { AlertTriangle, CheckCircle, Loader2, XCircle } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { format } from 'date-fns';
-import { useNavigationStore } from '../../stores/navigationStore';
+import { useNavigationStore } from '../../store/navigationStore';
 import { useConductorCatalog } from '../../hooks/useConductorCatalog';
 
 interface DashboardStats {
@@ -113,7 +112,7 @@ const DashboardView: React.FC = () => {
   const { isLoading: isCatalogLoading } = useConductorCatalog();
   const hasStats = !!stats && !errorMsg;
 
-  const today = format(new Date(), 'EEEE, MMMM do, yyyy');
+  const today = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
     <div className="p-6">

@@ -231,3 +231,10 @@ export interface JITStreamState {
     cached: boolean;
     durationMs: number;
 }
+
+/** Format a product's IL price as a localized currency string. */
+export function formatPrice(product: Product): string {
+    const price = product.price_il ?? product.pricing?.price_il;
+    if (price == null) return 'Call for Price';
+    return new Intl.NumberFormat('he-IL', { style: 'currency', currency: 'ILS' }).format(price);
+}
