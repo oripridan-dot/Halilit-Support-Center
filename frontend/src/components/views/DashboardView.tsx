@@ -1,8 +1,17 @@
-import React from 'react';
-import { AlertTriangle, CheckCircle, Loader2, XCircle, Package, PhoneCall, Tag, RefreshCcw } from 'lucide-react';
-import { useQuery } from '@tanstack/react-query';
-import { useNavigationStore } from '../../store/navigationStore';
-import { format } from 'date-fns';
+import React from "react";
+import {
+  AlertTriangle,
+  CheckCircle,
+  Loader2,
+  XCircle,
+  Package,
+  PhoneCall,
+  Tag,
+  RefreshCcw,
+} from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { useNavigationStore } from "../../store/navigationStore";
+import { format } from "date-fns";
 
 interface DashboardStats {
   total_products: number;
@@ -24,18 +33,29 @@ interface MetricCardProps {
   onClick?: () => void;
 }
 
-const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, sub, accent, onClick }) => {
+const MetricCard: React.FC<MetricCardProps> = ({
+  icon: Icon,
+  label,
+  value,
+  sub,
+  accent,
+  onClick,
+}) => {
   const accentColors: Record<string, string> = {
-    blue: 'bg-blue-100/10 text-blue-500',
-    amber: 'bg-amber-100/10 text-amber-500',
-    green: 'bg-green-100/10 text-green-500',
-    red: 'bg-red-100/10 text-red-500',
-    zinc: 'bg-zinc-100/10 text-zinc-500',
+    blue: "bg-blue-100/10 text-blue-500",
+    amber: "bg-amber-100/10 text-amber-500",
+    green: "bg-green-100/10 text-green-500",
+    red: "bg-red-100/10 text-red-500",
+    zinc: "bg-zinc-100/10 text-zinc-500",
   };
-  const accentClasses = accentColors[accent] || '';
+  const accentClasses = accentColors[accent] || "";
 
   return (
-    <div className="flex flex-col gap-2 p-4 rounded-xl bg-bg-elevated hover:bg-zinc-800 transition-colors touch-target" onClick={onClick} style={onClick ? { cursor: 'pointer' } : {}}>
+    <div
+      className="flex flex-col gap-2 p-4 rounded-xl bg-bg-elevated hover:bg-zinc-800 transition-colors touch-target"
+      onClick={onClick}
+      style={onClick ? { cursor: "pointer" } : {}}
+    >
       <div className="flex items-center justify-between">
         <div className={`p-2 rounded-md ${accentClasses}`}>
           <Icon size={20} />
@@ -48,11 +68,13 @@ const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, sub, 
   );
 };
 
-const LastRunStatus: React.FC<{ run: DashboardStats['last_ingestion_run'] }> = ({ run }) => {
-  if (run.status === 'never') {
+const LastRunStatus: React.FC<{
+  run: DashboardStats["last_ingestion_run"];
+}> = ({ run }) => {
+  if (run.status === "never") {
     return <span className="text-zinc-500">—</span>;
   }
-  if (run.status === 'running') {
+  if (run.status === "running") {
     return (
       <>
         <Loader2 size={16} className="inline mr-1 animate-spin text-blue-400" />
@@ -60,15 +82,18 @@ const LastRunStatus: React.FC<{ run: DashboardStats['last_ingestion_run'] }> = (
       </>
     );
   }
-  if (run.status === 'complete' || run.status === 'unknown') {
+  if (run.status === "complete" || run.status === "unknown") {
     return (
       <>
         <CheckCircle size={16} className="inline mr-1 text-emerald-400" />
-        {new Date(run.finished_at!).toLocaleString("en-IL", { dateStyle: "short", timeStyle: "short" })}
+        {new Date(run.finished_at!).toLocaleString("en-IL", {
+          dateStyle: "short",
+          timeStyle: "short",
+        })}
       </>
     );
   }
-  if (run.status === 'failed') {
+  if (run.status === "failed") {
     return (
       <>
         <XCircle size={16} className="inline mr-1 text-red-400" />
@@ -79,46 +104,45 @@ const LastRunStatus: React.FC<{ run: DashboardStats['last_ingestion_run'] }> = (
   return <span className="text-zinc-500">—</span>;
 };
 
-
 const useDashboardStats = () => {
-    const query = useQuery({
-        queryKey: ['dashboardStats'],
-        queryFn: async () => {
-            const res = await fetch('/api/dashboard/stats');
-            const text = await res.text();
-            if (text.startsWith('<')) {
-                throw new Error("Backend is down");
-            }
-            try {
-              const data: DashboardStats = JSON.parse(text);
-              return data;
-            } catch (error) {
-              console.error("Failed to parse dashboard stats", error);
-              throw new Error("Failed to fetch stats");
-            }
+  const query = useQuery({
+    queryKey: ["dashboardStats"],
+    queryFn: async () => {
+      const res = await fetch("/api/dashboard/stats");
+      const text = await res.text();
+      if (text.startsWith("<")) {
+        throw new Error("Backend is down");
+      }
+      try {
+        const data: DashboardStats = JSON.parse(text);
+        return data;
+      } catch (error) {
+        console.error("Failed to parse dashboard stats", error);
+        throw new Error("Failed to fetch stats");
+      }
+    },
+    staleTime: 30_000,
+    retry: 0,
+  });
 
-        },
-        staleTime: 30_000,
-        retry: 0,
-    });
+  const stats = query.data;
+  const statsError = query.error;
+  const errorMsg = statsError?.message;
+  const refetch = query.refetch;
 
-    const stats = query.data;
-    const statsError = query.error;
-    const errorMsg = statsError?.message;
-    const refetch = query.refetch;
-
-    return {
-        stats,
-        statsError,
-        errorMsg,
-        refetch,
-        isLoading: query.isLoading,
-    };
+  return {
+    stats,
+    statsError,
+    errorMsg,
+    refetch,
+    isLoading: query.isLoading,
+  };
 };
 
 const DashboardView: React.FC = () => {
   const { stats, errorMsg, refetch, isLoading } = useDashboardStats();
-  const { goToInventory, goToInventoryCfp, goToIngestionStatus } = useNavigationStore();
+  const { goToInventory, goToInventoryCfp, goToIngestionStatus } =
+    useNavigationStore();
 
   const hasStats = !!stats && !errorMsg;
 
@@ -131,7 +155,9 @@ const DashboardView: React.FC = () => {
                   bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
         >
           <AlertTriangle size={14} className="text-amber-400 shrink-0" />
-          <span className="text-amber-300 font-medium">Stats unavailable —</span>
+          <span className="text-amber-300 font-medium">
+            Stats unavailable —
+          </span>
           <span className="text-zinc-400 truncate">{errorMsg}</span>
           <button
             onClick={() => refetch()}
@@ -170,25 +196,43 @@ const DashboardView: React.FC = () => {
         <MetricCard
           icon={RefreshCcw}
           label="Last ingestion run"
-          value={<LastRunStatus run={hasStats ? stats.last_ingestion_run : { status: "never", finished_at: null, product_count: null }} />}
+          value={
+            <LastRunStatus
+              run={
+                hasStats
+                  ? stats.last_ingestion_run
+                  : { status: "never", finished_at: null, product_count: null }
+              }
+            />
+          }
           sub={
             hasStats && stats.last_ingestion_run.product_count
               ? `${stats.last_ingestion_run.product_count.toLocaleString()} products synced`
               : "No run recorded"
           }
           accent={
-            hasStats && stats.last_ingestion_run.status === 'failed'
-              ? 'red'
-              : stats && stats.last_ingestion_run.status === 'running'
-              ? 'blue'
-              : 'zinc'
+            hasStats && stats.last_ingestion_run.status === "failed"
+              ? "red"
+              : stats && stats.last_ingestion_run.status === "running"
+                ? "blue"
+                : "zinc"
           }
         />
       </div>
 
       <div className="space-x-4">
-        <button onClick={() => goToInventory()} className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 transition-colors text-zinc-100 text-sm">Open Inventory Master</button>
-        <button onClick={() => goToIngestionStatus()} className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 transition-colors text-zinc-100 text-sm">Data Pipeline</button>
+        <button
+          onClick={() => goToInventory()}
+          className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 transition-colors text-zinc-100 text-sm"
+        >
+          Open Inventory Master
+        </button>
+        <button
+          onClick={() => goToIngestionStatus()}
+          className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 transition-colors text-zinc-100 text-sm"
+        >
+          Data Pipeline
+        </button>
       </div>
     </div>
   );

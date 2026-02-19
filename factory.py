@@ -551,7 +551,8 @@ if __name__ == "__main__":
 
     elif command == "v0_design":
         if len(sys.argv) < 3:
-            log('❌ Usage: python factory.py v0_design "description" [ComponentType]')
+            log(
+                '❌ Usage: python factory.py v0_design "description" [ComponentType]')
             sys.exit(1)
         v0_ctype = sys.argv[3] if len(sys.argv) > 3 else "UIComponent"
         cmd_v0_design(sys.argv[2], v0_ctype)

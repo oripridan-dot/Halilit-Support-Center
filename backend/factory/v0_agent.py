@@ -88,6 +88,7 @@ RULES:
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _get_client():
     api_key = os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
     if not api_key:
@@ -205,7 +206,8 @@ def integrate_v0_output(v0_code: str, target_file: str) -> dict[str, Any]:
     # Backup existing file
     if full_path.exists():
         backup = full_path.with_suffix(".bak.tsx")
-        backup.write_text(full_path.read_text(encoding="utf-8"), encoding="utf-8")
+        backup.write_text(full_path.read_text(
+            encoding="utf-8"), encoding="utf-8")
 
     full_path.write_text(integrated, encoding="utf-8")
 

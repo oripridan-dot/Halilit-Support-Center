@@ -154,6 +154,7 @@ TOOLS: list[dict[str, Any]] = [
 # Tool implementations
 # ---------------------------------------------------------------------------
 
+
 def _run_factory(args: list[str], timeout: int = 120) -> tuple[bool, str]:
     """Run factory.py with given args. Returns (success, output)."""
     cmd = [_PYTHON, _FACTORY_PY] + args
@@ -243,6 +244,7 @@ _TOOL_HANDLERS = {
 # ---------------------------------------------------------------------------
 # MCP JSON-RPC stdio server loop
 # ---------------------------------------------------------------------------
+
 
 def _respond(request_id: Any, result: Any) -> None:
     msg = json.dumps({"jsonrpc": "2.0", "id": request_id, "result": result})
