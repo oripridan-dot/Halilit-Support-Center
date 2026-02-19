@@ -32,11 +32,14 @@ is the Three Source rules' domain).
 from __future__ import annotations
 
 import base64
+import hashlib
+import json
 import logging
 import os
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 from typing import Optional
 
@@ -47,6 +50,55 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 _PLAYWRIGHT_AVAILABLE: Optional[bool] = None  # cached after first check
+
+# ---------------------------------------------------------------------------
+# Result cache — avoid re-running Playwright for the same URL+spec within TTL
+# ---------------------------------------------------------------------------
+_VQA_CACHE_DIR = Path(__file__).resolve(
+).parent.parent.parent / "backend" / "data" / "jit_cache"
+_VQA_CACHE_FILE = _VQA_CACHE_DIR / "visual_qa_cache.json"
+_VQA_CACHE_TTL = 3600  # seconds (1 hour)
+
+
+def _vqa_cache_key(url: str, spec_text: str, hint: str) -> str:
+    raw = f"{url}|{spec_text[:200]}|{hint}"
+    return hashlib.md5(raw.encode()).hexdigest()
+
+
+def _vqa_cache_load() -> dict:
+    try:
+        if _VQA_CACHE_FILE.exists():
+            return json.loads(_VQA_CACHE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        pass
+    return {}
+
+
+def _vqa_cache_save(cache: dict) -> None:
+    try:
+        _VQA_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        _VQA_CACHE_FILE.write_text(json.dumps(
+            cache, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception as exc:
+        logger.warning("visual_qa: could not save result cache — %s", exc)
+
+
+def _vqa_cache_get(key: str) -> Optional[str]:
+    cache = _vqa_cache_load()
+    entry = cache.get(key)
+    if entry and time.time() - entry.get("ts", 0) < _VQA_CACHE_TTL:
+        logger.info("visual_qa: cache HIT — returning cached description")
+        return entry["description"]
+    return None
+
+
+def _vqa_cache_set(key: str, description: str) -> None:
+    cache = _vqa_cache_load()
+    cache[key] = {"description": description, "ts": time.time()}
+    # Evict entries older than 2× TTL to keep file small
+    cutoff = time.time() - _VQA_CACHE_TTL * 2
+    cache = {k: v for k, v in cache.items() if v.get("ts", 0) > cutoff}
+    _vqa_cache_save(cache)
 
 
 def _playwright_available() -> bool:
@@ -111,7 +163,7 @@ def _bootstrap_playwright() -> bool:
 def take_screenshot(
     url: str = "http://localhost:5173",
     output_path: Optional[Path] = None,
-    wait_ms: int = 2000,
+    wait_ms: int = 600,
 ) -> Optional[Path]:
     """
     Navigate to *url* with a headless Chromium browser and capture a full-page
@@ -140,7 +192,9 @@ def take_screenshot(
             browser = p.chromium.launch(headless=True)
             page = browser.new_page(viewport={"width": 1440, "height": 900})
             try:
-                page.goto(url, timeout=15_000, wait_until="networkidle")
+                # domcontentloaded is much faster than networkidle for SPAs;
+                # the extra wait_ms lets React finish painting.
+                page.goto(url, timeout=15_000, wait_until="domcontentloaded")
             except PWTimeout:
                 # Partial load — still worth screenshotting
                 logger.info(
@@ -149,7 +203,7 @@ def take_screenshot(
             if wait_ms > 0:
                 page.wait_for_timeout(wait_ms)
 
-            page.screenshot(path=str(output_path), full_page=True)
+            page.screenshot(path=str(output_path), full_page=False)
             browser.close()
 
         logger.info("visual_qa: screenshot saved → %s", output_path)
@@ -254,6 +308,10 @@ def capture_and_describe(
     description.  Safe to call even when Playwright/Gemini are absent —
     returns an explanatory stub in that case.
 
+    Results are cached on disk for ``_VQA_CACHE_TTL`` seconds so rapid
+    repeated calls (e.g. Chief → Task Force → Watchdog in one session) do
+    not re-launch the browser.
+
     Args:
         url:       URL to screenshot (default: Vite dev-server on 5173).
         spec_text: Spec markdown so the model knows what to look for.
@@ -264,6 +322,11 @@ def capture_and_describe(
         Plain-text UI description for use as ``screenshot_description`` in
         ``gatekeeper_review``.
     """
+    cache_key = _vqa_cache_key(url, spec_text, hint)
+    cached = _vqa_cache_get(cache_key)
+    if cached is not None:
+        return cached
+
     screenshot = take_screenshot(url=url)
     if screenshot is None:
         return "[visual_qa: screenshot capture unavailable — no visual QA performed]"
@@ -274,6 +337,7 @@ def capture_and_describe(
             spec_text=spec_text,
             hint=hint,
         )
+        _vqa_cache_set(cache_key, description)
         return description
     finally:
         if cleanup and screenshot.exists():

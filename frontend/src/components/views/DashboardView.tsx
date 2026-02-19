@@ -2,7 +2,7 @@ import React from 'react';
 import { AlertTriangle, CheckCircle, Loader2, XCircle } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { format } from 'date-fns';
-import { useNavigationStore } from '../../stores/navigationStore';
+import { useNavigationStore } from '../../store/navigationStore';
 import { useConductorCatalog } from '../../hooks/useConductorCatalog';
 
 interface DashboardStats {
