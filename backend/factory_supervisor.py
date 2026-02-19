@@ -368,5 +368,109 @@ def build_standard_dag(rebuild: bool = False) -> list[DAGNode]:
     return nodes
 
 
+# ---------------------------------------------------------------------------
+# Dynamic DAG Builder  (Pillar: Chief → DAG Bridge)
+# ---------------------------------------------------------------------------
+
+def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
+    """
+    Execute a single factory.py tool via subprocess.
+
+    Maps the Chief's tool names to `factory.py` CLI commands.
+    Returns True on success (exit-code 0), False on failure.
+    """
+    task = task or {}
+    py = sys.executable
+    factory_script = str(_ROOT / "factory.py")
+
+    _tool_cmd_map: dict[str, list[str]] = {
+        "design":    [py, factory_script, "design", args] if args else [],
+        "implement": [py, factory_script, "build", args] if args else [],
+        "build":     [py, factory_script, "build"],
+        "heal":      [py, factory_script, "heal"],
+        "diagnose":  [py, factory_script, "diagnose"],
+        "steer":     [py, factory_script, "steer"],
+        "doc":       [py, factory_script, "doc"],
+        "optimize":  [py, factory_script, "optimize", args] if args else [],
+        "commit":    [py, factory_script, "commit"],
+        "reflect":   [py, factory_script, "reflect", args or "(no context)"],
+    }
+
+    if tool == "task_force":
+        tf_id   = task.get("id", "")
+        tf_goal = task.get("goal", args)
+        agents  = ",".join(task.get("agents", ["steerer", "builder", "watchdog"]))
+        if not tf_id or not tf_goal:
+            log(f"⚠️  task_force skipped — missing 'id' or 'goal' in task: {task}")
+            return False
+        cmd = [py, factory_script, "task_force", tf_id, tf_goal, agents]
+    else:
+        cmd = _tool_cmd_map.get(tool, [])
+
+    if not cmd:
+        log(f"⚠️  No command mapped for tool '{tool}' — skipping.")
+        return True  # Non-fatal: unknown tool is not a hard failure
+
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.returncode != 0:
+        log(f"❌ Tool '{tool}' failed (exit {result.returncode})")
+        tail = "\n".join((result.stdout + "\n" + result.stderr).strip().splitlines()[-20:])
+        if tail:
+            log(tail)
+        return False
+    return True
+
+
+def build_dynamic_dag_from_queue(queue: list[dict]) -> list[DAGNode]:
+    """
+    Convert the Chief Agent's JSON task queue into an executable DAG.
+
+    The Chief outputs tasks as:
+        {"tool": str, "args": str, "parallel": bool, ...extra task_force keys...}
+
+    Dependency logic:
+      • parallel=True  → depends only on the LAST sequential barrier (or nothing).
+      • parallel=False → depends on ALL preceding nodes (acts as a synchronisation
+                         barrier, waits for every parallel fan-out to finish).
+
+    This mirrors the execution semantics of nexus.py's execute_swarm() but uses
+    the DAG engine so downstream failure propagation is automatic.
+    """
+    if not queue:
+        return []
+
+    nodes: list[DAGNode] = []
+    prev_sequential_id: str | None = None  # last barrier node id
+
+    for idx, task in enumerate(queue):
+        tool        = task.get("tool", "unknown")
+        args        = task.get("args", "")
+        is_parallel = task.get("parallel", False)
+        label       = f"{tool.upper()} | {args}".strip(" |")
+        node_id     = f"task_{idx:02d}_{tool}"
+
+        if is_parallel:
+            # Parallel node: only depends on the previous sequential barrier
+            depends_on = [prev_sequential_id] if prev_sequential_id else []
+        else:
+            # Sequential barrier: depends on every preceding node (fan-in)
+            depends_on = [n.id for n in nodes]
+
+        nodes.append(DAGNode(
+            id=node_id,
+            label=label,
+            fn=lambda t=task: run_agent_tool(
+                t.get("tool", ""), t.get("args", ""), t
+            ),
+            depends_on=depends_on,
+            parallel=is_parallel,
+        ))
+
+        if not is_parallel:
+            prev_sequential_id = node_id
+
+    return nodes
+
+
 if __name__ == "__main__":
     sys.exit(main())
