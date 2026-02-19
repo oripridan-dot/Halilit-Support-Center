@@ -22,7 +22,8 @@ import httpx
 logger = logging.getLogger("VisualValidator")
 
 # When set (e.g. "1" or "true"), ingestion skips visual validation (faster, less safe).
-INGESTION_SKIP_VISUAL_VALIDATION = os.environ.get("INGESTION_SKIP_VISUAL_VALIDATION", "").lower() in ("1", "true", "yes")
+INGESTION_SKIP_VISUAL_VALIDATION = os.environ.get(
+    "INGESTION_SKIP_VISUAL_VALIDATION", "").lower() in ("1", "true", "yes")
 
 # Default Gemini model for vision (image) analysis
 GEMINI_VISION_MODEL = os.environ.get("GEMINI_VISION_MODEL", "gemini-2.0-flash")
@@ -113,7 +114,8 @@ class VisualValidator:
             stat = ImageStat.Stat(img.convert("L"))
             if stat.stddev[0] < 10:  # Very low variance = solid color or simple graphic
                 score -= 50
-                issues.append("Low visual detail (likely placeholder or solid color)")
+                issues.append(
+                    "Low visual detail (likely placeholder or solid color)")
 
             # 4. Aspect Ratio (squarish or landscape preferred for products)
             aspect = width / height
@@ -153,7 +155,8 @@ class VisualValidator:
             # 2. Calculate pixel-by-pixel difference (RMS)
             diff = ImageChops.difference(img_a_thumb, img_b_thumb)
             stat = ImageStat.Stat(diff)
-            diff_val = math.sqrt(sum(s ** 2 for s in stat.mean) / len(stat.mean))
+            diff_val = math.sqrt(
+                sum(s ** 2 for s in stat.mean) / len(stat.mean))
 
             # Normalize: 0 is identical, 255 is opposite
             similarity = 1.0 - (diff_val / 255.0)
@@ -212,12 +215,14 @@ class VisualValidator:
             }
         global _gemini_key_logged
         if not _gemini_key_logged:
-            logger.info("Using GEMINI_API_KEY for vision (%d chars)", len(api_key))
+            logger.info(
+                "Using GEMINI_API_KEY for vision (%d chars)", len(api_key))
             _gemini_key_logged = True
 
         context = ""
         if product_name or brand:
-            context = f"\nProduct context: {brand or ''} {product_name or ''}".strip()
+            context = f"\nProduct context: {brand or ''} {product_name or ''}".strip(
+            )
 
         prompt = f"""You are a catalog quality auditor for a music instrument e-commerce site.
 Look at this product image and decide if it is acceptable as a HERO image (main product photo).
@@ -334,12 +339,14 @@ Respond with ONLY a JSON object, no markdown or extra text:
             }
         global _gemini_key_logged
         if not _gemini_key_logged:
-            logger.info("Using GEMINI_API_KEY for vision (%d chars)", len(api_key))
+            logger.info(
+                "Using GEMINI_API_KEY for vision (%d chars)", len(api_key))
             _gemini_key_logged = True
 
         context = ""
         if product_name or brand:
-            context = f" Product name or brand: {brand or ''} {product_name or ''}".strip()
+            context = f" Product name or brand: {brand or ''} {product_name or ''}".strip(
+            )
 
         prompt = f"""You are a catalog classifier for a music instrument e-commerce site.
 Look at this product image and choose ONE short product-type label (2-4 words) that best describes what the product IS for grouping with similar items.
@@ -543,7 +550,15 @@ def reject_official_if_mismatch(product: Dict[str, Any], min_similarity: float =
     official_hero_url = None
     if official_list:
         first = official_list[0]
-        official_hero_url = (first.get("url") if isinstance(first, dict) else first) or ""
+        official_hero_url = (first.get("url") if isinstance(
+            first, dict) else first) or ""
+
+    # Only validate when a real official brand URL exists.
+    # Without official_url, the "official_images" are just Halilit CDN images —
+    # comparing them against themselves wastes time and produces no value.
+    if not product.get("official_url"):
+        return product
+
     if not official_hero_url and product.get("official_url"):
         # We have official_url but no official_images — can't compare; leave as-is
         return product
@@ -559,7 +574,8 @@ def reject_official_if_mismatch(product: Dict[str, Any], min_similarity: float =
         product["official_url"] = ""
         return product
 
-    result = validate_commercial_official_match(commercial_url, official_hero_url, min_similarity=min_similarity)
+    result = validate_commercial_official_match(
+        commercial_url, official_hero_url, min_similarity=min_similarity)
     if result.get("match"):
         product["visual_match_status"] = "matched"
         product["visual_match_confidence"] = result.get("similarity", 0.0)

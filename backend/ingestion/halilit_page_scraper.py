@@ -60,6 +60,8 @@ HEADERS = {
 # Product page request timeout (seconds). Override with HALILIT_REQUEST_TIMEOUT in .env.
 REQUEST_TIMEOUT = int(os.environ.get("HALILIT_REQUEST_TIMEOUT", "20"))
 # Longer timeout for discovery (brands page, sitemap) — often slower from cold or restricted networks
+
+
 def _discovery_timeout():
     import os
     connect = int(os.environ.get("HALILIT_DISCOVERY_CONNECT", "10"))
@@ -71,6 +73,8 @@ DISCOVERY_TIMEOUT = _discovery_timeout()
 DISCOVERY_RETRIES = 3
 DISCOVERY_RETRY_BACKOFF = 5  # seconds between retries
 # Rate and concurrency from ingestion_config (sustainable defaults)
+
+
 def _ingestion_settings():
     try:
         from backend.ingestion.ingestion_config import (
@@ -83,6 +87,7 @@ def _ingestion_settings():
         return _R, _W, _B, _D, _M
     except Exception:
         return 0.5, 3, 40, 1.0, 0
+
 
 _RATE, _WORKERS, _BATCH, _BATCH_DELAY, _MAX_PRODUCTS = _ingestion_settings()
 RATE_LIMIT_DELAY = _RATE
@@ -782,7 +787,8 @@ class HalilitPageScraper:
 
         if MAX_PRODUCTS_PER_BRAND > 0:
             to_scrape = to_scrape[:MAX_PRODUCTS_PER_BRAND]
-            logger.info(f"  Capped at {len(to_scrape)} products (INGESTION_MAX_PRODUCTS)")
+            logger.info(
+                f"  Capped at {len(to_scrape)} products (INGESTION_MAX_PRODUCTS)")
 
         logger.info(f"  Scraping {len(to_scrape)} product pages...")
 
@@ -1093,17 +1099,18 @@ def enrich_product_from_page(
         or "ultimate stage piano" in current_desc.lower()
     )
     if is_placeholder:
+        # IMPORTANT: Halilit page text is COMMERCIAL data (Source Rule 1).
+        # It must NEVER be stored in official_description — that field is
+        # reserved exclusively for official brand page content (Source Rule 2).
+        # Store in description_commercial / page_description only.
         if page_data.get("description"):
             product["description_commercial"] = page_data["description"]
+            product["page_description"] = page_data["description"]
             product["description_short"] = page_data["description"][:200]
-            # Only set official_description if nothing better exists
-            if not product.get("official_description"):
-                product["official_description"] = page_data["description"]
         elif page_data.get("page_description"):
             product["description_commercial"] = page_data["page_description"]
+            product["page_description"] = page_data["page_description"]
             product["description_short"] = page_data["page_description"][:200]
-            if not product.get("official_description"):
-                product["official_description"] = page_data["page_description"]
 
     # Images: update if missing or placeholder
     current_img = product.get("image_url", "")

@@ -726,7 +726,7 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     pid = p.get("id") or p.get("halilit_id") or p.get("sku")
     if not pid:
         return None
-    
+
     # Normalize ID format: if numeric, prefix with "halilit-"
     pid_str = str(pid).strip()
     if pid_str.isdigit():
@@ -824,27 +824,62 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         "the ultimate stage piano for professionals",
         "no description available",
     )
+    # Halilit commercial text markers: these strings appear in Halilit's page
+    # snippets (marketing copy) and must NEVER be treated as official brand data.
+    _HALILIT_COMMERCIAL_MARKERS = (
+        "משלוח חינם",          # "free shipping"
+        "ברכישה מהאתר",       # "when ordering from the site"
+        "הזמן עכשיו",          # "order now"
+        "קנה עכשיו",           # "buy now"
+        "www.halilit.com",
+        "halilit.co.il",
+    )
+
+    def _is_commercial_text(d: str) -> bool:
+        """Return True if the text contains Halilit commerce markers."""
+        if not d:
+            return False
+        return any(marker in d for marker in _HALILIT_COMMERCIAL_MARKERS)
 
     def _is_real_desc(d: str) -> bool:
         if not d or len(d.strip()) < 10:
             return False
+        if d.strip().lower() in _PLACEHOLDER_DESCRIPTIONS:
+            return False
+        if _is_commercial_text(d):
+            return False  # Commercial text is not a real official description
+        return True
+
+    def _is_real_desc_any(d: str) -> bool:
+        """Like _is_real_desc but allows commercial text (for fallback display)."""
+        if not d or len(d.strip()) < 10:
+            return False
         return d.strip().lower() not in _PLACEHOLDER_DESCRIPTIONS
 
-    raw_desc = p.get("official_description") or ""
-    if not _is_real_desc(raw_desc):
+    # official_description: only use if it's genuinely from an official brand source
+    # (not Halilit commerce copy — those were incorrectly stored there by older
+    # pipeline versions and are now demoted back to commercial).
+    raw_official = p.get("official_description") or ""
+    official_description_clean = raw_official if _is_real_desc(
+        raw_official) else ""
+
+    raw_desc = official_description_clean
+    if not raw_desc:
         raw_desc = p.get("description_long") or ""
     if not _is_real_desc(raw_desc):
         raw_desc = p.get("description") or ""
-    if not _is_real_desc(raw_desc):
-        raw_desc = p.get("page_description") or ""
-    if not _is_real_desc(raw_desc):
+    # Fallback to commercial sources (shown in UI but labeled correctly)
+    if not _is_real_desc_any(raw_desc):
+        raw_desc = p.get("description_commercial") or p.get(
+            "page_description") or ""
+    if not _is_real_desc_any(raw_desc):
         raw_desc = p.get("description_short") or ""
-    if not _is_real_desc(raw_desc):
+    if not _is_real_desc_any(raw_desc):
         raw_desc = ""
     description = raw_desc.strip()
 
     raw_short = p.get("description_short") or ""
-    if not _is_real_desc(raw_short):
+    if not _is_real_desc_any(raw_short):
         raw_short = ""
     description_short = (
         raw_short
@@ -906,7 +941,8 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
             except (TypeError, ValueError):
                 pass
         if not review_count and (ctx_data.get("reviews") or ctx_data.get("review_sources")):
-            review_count = len(ctx_data.get("reviews") or []) or len(ctx_data.get("review_sources") or [])
+            review_count = len(ctx_data.get("reviews") or []) or len(
+                ctx_data.get("review_sources") or [])
 
     # Quality score — use smart validator that scores on what the UI renders
     # (computed after the full dict is built, see below)
@@ -944,9 +980,11 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     review_synthesis_summary = ""
     if isinstance(contextual_data.get("review_synthesis"), dict):
         rs = contextual_data["review_synthesis"]
-        review_synthesis_summary = (rs.get("summary") or rs.get("text") or "").strip() if isinstance(rs, dict) else ""
+        review_synthesis_summary = (rs.get("summary") or rs.get(
+            "text") or "").strip() if isinstance(rs, dict) else ""
     elif isinstance(contextual_data.get("review_synthesis"), str):
-        review_synthesis_summary = (contextual_data["review_synthesis"] or "").strip()
+        review_synthesis_summary = (
+            contextual_data["review_synthesis"] or "").strip()
     real_world_insights = list(p.get("real_world_insights") or [])
     if isinstance(contextual_data.get("real_world_insights"), list):
         for i in contextual_data["real_world_insights"]:
@@ -971,9 +1009,7 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
         sources = []
         if halilit_url:
             sources.append("halilit")
-        if official_url or has_official_specs or _is_real_desc(
-            (p.get("official_description") or "")
-        ):
+        if official_url or has_official_specs or official_description_clean:
             sources.append("official")
         if contextual_data or rating > 0 or pros or cons:
             sources.append("contextual")
@@ -984,7 +1020,7 @@ def normalize_product(p: dict, fallback_brand: str = "") -> Optional[dict]:
     data_trust = {
         "price_source": "halilit" if price > 0 else "none",
         "specs_source": "official" if has_official_specs else ("halilit" if specs else "none"),
-        "description_source": "official" if _is_real_desc(p.get("official_description") or "") else ("halilit" if description else "none"),
+        "description_source": "official" if official_description_clean else ("halilit" if description else "none"),
         "image_source": "halilit" if image_url and "halilit" in image_url else ("official" if image_url else "none"),
         "review_source": "contextual" if rating > 0 else "none",
     }
@@ -1082,7 +1118,8 @@ def build_catalog(
         "inventory.json",  # Price overlay only, not primary source
     }
 
-    json_files = [f for f in sorted(data_path.glob("*.json")) if f.name not in excluded]
+    json_files = [f for f in sorted(
+        data_path.glob("*.json")) if f.name not in excluded]
     total_files = len(json_files)
 
     prog("load", 0.0, "Loading brand files...")
@@ -1097,12 +1134,14 @@ def build_catalog(
     if inv_path.exists():
         try:
             inv = json.loads(inv_path.read_text("utf-8"))
-            inv_products = inv.get("products", []) if isinstance(inv, dict) else []
+            inv_products = inv.get(
+                "products", []) if isinstance(inv, dict) else []
             for ip in inv_products:
                 if not isinstance(ip, dict):
                     continue
                 url = str(ip.get("halilit_url") or ip.get("url") or "").strip()
-                raw_price = ip.get("price") if ip.get("price") is not None else ip.get("price_il")
+                raw_price = ip.get("price") if ip.get(
+                    "price") is not None else ip.get("price_il")
                 try:
                     price = float(raw_price) if raw_price is not None else 0.0
                 except (TypeError, ValueError):
@@ -1124,7 +1163,8 @@ def build_catalog(
     # Dedup by English model name within same brand to catch
     # duplicates across variant files (e.g., "adam audio.json" + "adam-audio.json")
     brand_model_map: Dict[str, str] = {}  # brand+model -> first product id
-    name_to_product_id: Dict[str, str] = {}  # normalized_name -> first product id (for cross-brand matching)
+    # normalized_name -> first product id (for cross-brand matching)
+    name_to_product_id: Dict[str, str] = {}
     brands_found: set = set()
     # Optional graph hints coming from OpenClaw-consolidated brand catalogs
     openclaw_families_meta: Dict[str, dict] = {}
@@ -1139,10 +1179,13 @@ def build_catalog(
                 file_data = json.load(f)
 
             # Optional OpenClaw-consolidated extras (families, relationships) on a per-brand file
-            brand_identity = file_data.get("brand_identity") if isinstance(file_data, dict) else {}
+            brand_identity = file_data.get(
+                "brand_identity") if isinstance(file_data, dict) else {}
             brand_name_from_file = (brand_identity or {}).get("name") or ""
-            families = file_data.get("families") if isinstance(file_data, dict) else []
-            relationships = file_data.get("relationships") if isinstance(file_data, dict) else []
+            families = file_data.get("families") if isinstance(
+                file_data, dict) else []
+            relationships = file_data.get(
+                "relationships") if isinstance(file_data, dict) else []
 
             # Map raw product ids → family_id for this brand (OpenClaw hint)
             raw_id_to_family_id: Dict[str, str] = {}
@@ -1167,8 +1210,10 @@ def build_catalog(
                     variant_ids = fam.get("variant_ids") or []
                     if isinstance(variant_ids, list):
                         # Track max variant_count seen for this family across files (defensive)
-                        prev_count = int(openclaw_families_meta[fid].get("variant_count", 0) or 0)
-                        openclaw_families_meta[fid]["variant_count"] = max(prev_count, len(variant_ids))
+                        prev_count = int(openclaw_families_meta[fid].get(
+                            "variant_count", 0) or 0)
+                        openclaw_families_meta[fid]["variant_count"] = max(
+                            prev_count, len(variant_ids))
                         for vid in variant_ids:
                             if not vid:
                                 continue
@@ -1195,17 +1240,21 @@ def build_catalog(
                 except Exception:
                     current_price = 0.0
                 if current_price <= 0 and (inventory_price_by_id or inventory_price_by_url):
-                    raw_url = str(raw.get("halilit_url") or raw.get("source_url") or "").strip()
+                    raw_url = str(raw.get("halilit_url") or raw.get(
+                        "source_url") or "").strip()
                     overlay_price = 0.0
                     if raw_pid:
                         # Try both "halilit-{id}" and just "{id}" formats
                         overlay_price = inventory_price_by_id.get(raw_pid, 0.0)
                         if overlay_price <= 0 and raw_pid.startswith("halilit-"):
-                            overlay_price = inventory_price_by_id.get(raw_pid.replace("halilit-", ""), 0.0)
+                            overlay_price = inventory_price_by_id.get(
+                                raw_pid.replace("halilit-", ""), 0.0)
                         elif overlay_price <= 0 and not raw_pid.startswith("halilit-"):
-                            overlay_price = inventory_price_by_id.get(f"halilit-{raw_pid}", 0.0)
+                            overlay_price = inventory_price_by_id.get(
+                                f"halilit-{raw_pid}", 0.0)
                     if overlay_price <= 0 and raw_url:
-                        overlay_price = inventory_price_by_url.get(raw_url, 0.0)
+                        overlay_price = inventory_price_by_url.get(
+                            raw_url, 0.0)
                     if overlay_price > 0:
                         raw["price_il"] = overlay_price
                         if not raw.get("price_eilat"):
@@ -1224,7 +1273,7 @@ def build_catalog(
                     product["name"]).lower().strip()
                 brand_key = _brand_dedup_key(product["brand"])
                 normalized_name = product["name"].lower().strip()
-                
+
                 # Create multiple dedup keys for better matching
                 dedup_key = f"{brand_key}::{eng_model}" if eng_model else ""
                 name_dedup_key = f"{brand_key}::{normalized_name}" if normalized_name else ""
@@ -1233,7 +1282,7 @@ def build_catalog(
                 found_duplicate = False
                 matched_key = None
                 existing_id = None
-                
+
                 # 1. Check brand+model key (most specific)
                 if dedup_key and dedup_key in brand_model_map:
                     matched_key = dedup_key
@@ -1264,14 +1313,14 @@ def build_catalog(
                         existing_brand = existing.get("brand", "").lower()
                         new_brand = product["brand"].lower()
                         prefer_existing = True
-                        
+
                         # If existing has "Other" brand and new has real brand, prefer new
                         if existing_brand == "other" and new_brand != "other":
                             prefer_existing = False
                         # If both have real brands, prefer higher quality score
                         elif existing_brand != "other" and new_brand != "other":
                             prefer_existing = product["quality_score"] <= existing["quality_score"]
-                        
+
                         if not prefer_existing:
                             # New one is better — use it but keep any data the old one had
                             if not product["image_url"] and existing["image_url"]:
@@ -1332,7 +1381,8 @@ def build_catalog(
                         continue
                     src = str(rel.get("source_id") or "").strip()
                     tgt = str(rel.get("target_id") or "").strip()
-                    rtype = str(rel.get("relationship_type") or "").strip().lower()
+                    rtype = str(rel.get("relationship_type")
+                                or "").strip().lower()
                     if not src or not tgt or src == tgt:
                         continue
                     if rtype not in (
@@ -1358,7 +1408,8 @@ def build_catalog(
             logger.error(f"Error loading {json_file.name}: {e}")
 
     products = list(products_map.values())
-    prog("load", 0.3, f"Loaded {len(products)} products from {total_files} files")
+    prog("load", 0.3,
+         f"Loaded {len(products)} products from {total_files} files")
 
     # Smart resolution — auto-fill missing data using peer heuristics
     if resolve and products:
@@ -1435,7 +1486,8 @@ def build_catalog(
                     "variant_count": len(fam.variant_ids),
                 }
 
-            prog("graph", 0.75, f"Graph: {graph_stats.get('total_families', 0)} families, {graph_stats.get('total_relationships', 0)} rels")
+            prog(
+                "graph", 0.75, f"Graph: {graph_stats.get('total_families', 0)} families, {graph_stats.get('total_relationships', 0)} rels")
             logger.info(
                 f"Product graph: {graph_stats.get('total_families', 0)} families, "
                 f"{graph_stats.get('total_relationships', 0)} relationships, "
@@ -1485,7 +1537,8 @@ def build_catalog(
     from backend.catalog_validator import validate_catalog as _validate_catalog
     health = _validate_catalog(products)
 
-    prog("done", 1.0, f"Done: {len(products)} products, {len(brands_found)} brands")
+    prog("done", 1.0,
+         f"Done: {len(products)} products, {len(brands_found)} brands")
 
     metadata = {
         "total_products": len(products),

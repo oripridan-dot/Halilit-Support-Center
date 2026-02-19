@@ -394,7 +394,8 @@ const ProductDetailView: React.FC = () => {
                     {displayDescription}
                   </p>
                   <p className="text-xs text-zinc-600 italic">
-                    Technical specifications not yet fetched from official brand page.
+                    Technical specifications not yet fetched from official brand
+                    page.
                   </p>
                 </div>
               ) : (

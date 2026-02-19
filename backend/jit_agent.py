@@ -102,8 +102,10 @@ def _load_inventory_product(product_id: str) -> Optional[Dict]:
         try:
             for json_file in data_dir.glob("*.json"):
                 try:
-                    brand_data = json.loads(json_file.read_text(encoding="utf-8"))
-                    products = brand_data if isinstance(brand_data, list) else brand_data.get("products", [])
+                    brand_data = json.loads(
+                        json_file.read_text(encoding="utf-8"))
+                    products = brand_data if isinstance(
+                        brand_data, list) else brand_data.get("products", [])
                     for p in products:
                         if p.get("id") == product_id:
                             return p
@@ -204,7 +206,8 @@ def read_brand_page(brand: str, product_name: str) -> Dict[str, Any]:
     }
 
     brand_lower = brand.lower().strip()
-    domain = brand_domains.get(brand_lower, f"{brand_lower.replace(' ', '')}.com")
+    domain = brand_domains.get(
+        brand_lower, f"{brand_lower.replace(' ', '')}.com")
 
     # Build a search query for the brand's official page
     search_query = f"{product_name} site:{domain}"
@@ -268,7 +271,8 @@ def verify_integrity(official_url: str, our_specs: Dict[str, Any]) -> Dict[str, 
         headers = {
             "User-Agent": "Mozilla/5.0 (compatible; HalilitSupport/1.0; +https://halilit.com)",
         }
-        resp = requests.get(official_url, headers=headers, timeout=10, allow_redirects=True)
+        resp = requests.get(official_url, headers=headers,
+                            timeout=10, allow_redirects=True)
         if resp.status_code != 200:
             result["note"] = f"Official page returned {resp.status_code}"
             return result
@@ -446,21 +450,24 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
                 from backend.ingestion.official_scraper import fetch_official_page
                 official_data = await loop.run_in_executor(None, lambda: fetch_official_page(official_url_from_inv))
                 if official_data and official_data.get("url"):
-                    logger.info(f"Using official_url from inventory: {official_url_from_inv}")
+                    logger.info(
+                        f"Using official_url from inventory: {official_url_from_inv}")
                     return official_data
             except Exception as e:
-                logger.debug(f"Failed to fetch from inventory official_url: {e}")
+                logger.debug(
+                    f"Failed to fetch from inventory official_url: {e}")
         # Fallback to search-based discovery
         return await loop.run_in_executor(None, lambda: _fetch_official_data(brand_name, product_name))
 
     # Fetch official first (priority), then Halilit
     official_candidate, halilit_data = await asyncio.gather(_run_official(), _run_halilit())
-    
+
     # Log what we got
     if official_candidate and official_candidate.get("url"):
         logger.info(f"✅ Official data found: {official_candidate.get('url')}")
     else:
-        logger.warning(f"⚠️ No official data found for {product_name} ({brand_name}) - using Halilit data only")
+        logger.warning(
+            f"⚠️ No official data found for {product_name} ({brand_name}) - using Halilit data only")
 
     # ── Phase 2a (fallback): OPENCLAW FIELD AGENT — when Python official fetch is empty ──
     if (not official_candidate or not official_candidate.get("url")) and brand_name:
@@ -468,8 +475,10 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
             from backend.mcp.servers.browser_agent import get_browser_agent
             agent = get_browser_agent()
             if agent.available:
-                domain = (read_brand_page(brand_name, product_name) or {}).get("domain") or f"{brand_name.lower().replace(' ', '')}.com"
-                logger.info("Deploying Field Agent to verify %s on %s...", product_name, domain)
+                domain = (read_brand_page(brand_name, product_name) or {}).get(
+                    "domain") or f"{brand_name.lower().replace(' ', '')}.com"
+                logger.info(
+                    "Deploying Field Agent to verify %s on %s...", product_name, domain)
                 openclaw_result = await agent.verify_official_specs(domain, product_name)
                 if openclaw_result and not openclaw_result.get("error"):
                     specs_text = openclaw_result.get("specs_text", "")
@@ -489,22 +498,27 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
     combined_data = dict(official_candidate) if official_candidate else {}
     if halilit_data:
         # Merge Halilit data, but official takes precedence
-        combined_data.setdefault("description", halilit_data.get("description", ""))
-        combined_data.setdefault("specs", {}).update(halilit_data.get("specs", {}))
+        combined_data.setdefault(
+            "description", halilit_data.get("description", ""))
+        combined_data.setdefault("specs", {}).update(
+            halilit_data.get("specs", {}))
         combined_data.setdefault("features", halilit_data.get("features", []))
         combined_data.setdefault("images", halilit_data.get("images", []))
         combined_data.setdefault("faq", halilit_data.get("faq", []))
         # Always keep Halilit price (commercial truth)
         combined_data["price"] = halilit_data.get("price", 0)
-        combined_data["halilit_url"] = halilit_data.get("halilit_url", halilit_url)
-    
+        combined_data["halilit_url"] = halilit_data.get(
+            "halilit_url", halilit_url)
+
     identity_verified = False
     try:
         from backend.ingestion.visual_validator import get_visual_validator
         validator = get_visual_validator()
-        halilit_image_url = (halilit_data.get("images") or [None])[0] if halilit_data else None
+        halilit_image_url = (halilit_data.get("images") or [None])[
+            0] if halilit_data else None
         if not halilit_image_url:
-            halilit_image_url = inv_product.get("image_url") or snap_data.get("thumbnail") or ""
+            halilit_image_url = inv_product.get(
+                "image_url") or snap_data.get("thumbnail") or ""
         official_image_url = (official_candidate or {}).get("image_url") or ""
 
         if halilit_image_url and official_image_url:
@@ -512,7 +526,8 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
             bytes_official, _ = await validator.fetch_image(official_image_url)
             if bytes_halilit and bytes_official:
                 comparison = await loop.run_in_executor(
-                    None, lambda: validator.compare_images(bytes_halilit, bytes_official)
+                    None, lambda: validator.compare_images(
+                        bytes_halilit, bytes_official)
                 )
                 similarity = comparison.get("similarity", 0)
                 identity_verified = similarity > 0.85
@@ -523,12 +538,16 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
                     })
                     # Official data takes precedence when verified
                     if official_candidate.get("description"):
-                        combined_data["description"] = official_candidate.get("description", "")
+                        combined_data["description"] = official_candidate.get(
+                            "description", "")
                     if official_candidate.get("specs"):
-                        combined_data["specs"] = {**combined_data.get("specs", {}), **official_candidate.get("specs", {})}
-                    combined_data["official_url"] = official_candidate.get("url", "")
+                        combined_data["specs"] = {
+                            **combined_data.get("specs", {}), **official_candidate.get("specs", {})}
+                    combined_data["official_url"] = official_candidate.get(
+                        "url", "")
                     if official_candidate.get("image_url"):
-                        combined_data.setdefault("images", []).insert(0, official_candidate.get("image_url"))
+                        combined_data.setdefault("images", []).insert(
+                            0, official_candidate.get("image_url"))
                 else:
                     yield _sse_event("status", {
                         "phase": "auditor",
@@ -553,7 +572,8 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
 
     # ── Phase 2c: VERIFY INTEGRITY — Compare specs to official page text ──
     verification_result = None
-    official_url = (inv_product or {}).get("official_url", "") or (official_candidate or {}).get("url", "")
+    official_url = (inv_product or {}).get("official_url", "") or (
+        official_candidate or {}).get("url", "")
     our_specs = combined_data.get("specs", {})
     if official_url and our_specs:
         try:
@@ -564,7 +584,8 @@ async def stream_product_intelligence(product_id: str) -> AsyncGenerator[str, No
             logger.warning(f"verify_integrity failed: {e}")
 
     # ── Phase 2d: VISUAL INTELLIGENCE — signal_chain + cheat_sheet ──
-    visual_intel = _generate_visual_intelligence(combined_data, product_name, brand_name)
+    visual_intel = _generate_visual_intelligence(
+        combined_data, product_name, brand_name)
     if visual_intel:
         yield _sse_event("visual_intel", visual_intel)
         cache_result["visual_intel"] = visual_intel
@@ -633,12 +654,15 @@ def _generate_visual_intelligence(
     specs = combined_data.get("specs", {})
     if isinstance(features, list) and features:
         for i, f in enumerate(features[:6]):
-            signal_chain.append({"step": i + 1, "label": f if isinstance(f, str) else str(f), "type": "feature"})
+            signal_chain.append(
+                {"step": i + 1, "label": f if isinstance(f, str) else str(f), "type": "feature"})
     if not signal_chain and specs:
         for i, (k, v) in enumerate(list(specs.items())[:5]):
-            signal_chain.append({"step": i + 1, "label": f"{k}: {v}", "type": "spec"})
+            signal_chain.append(
+                {"step": i + 1, "label": f"{k}: {v}", "type": "spec"})
     if not signal_chain:
-        signal_chain = [{"step": 1, "label": product_name or "Product", "type": "node"}]
+        signal_chain = [
+            {"step": 1, "label": product_name or "Product", "type": "node"}]
 
     bullets = []
     for f in (features or [])[:8]:
@@ -669,7 +693,8 @@ async def _generate_ai_intelligence(
     from backend.env_secrets import get_gemini_api_key
     api_key = get_gemini_api_key()
     if not api_key:
-        logger.info("No Gemini API key — skipping AI analysis (set GEMINI_API_KEY in .env from aistudio.google.com/app/apikey)")
+        logger.info(
+            "No Gemini API key — skipping AI analysis (set GEMINI_API_KEY in .env from aistudio.google.com/app/apikey)")
         return None, None
 
     try:
@@ -683,16 +708,18 @@ async def _generate_ai_intelligence(
         specs = halilit_data.get("specs", {})
 
         # Check data quality - if we only have minimal Halilit data, warn AI
-        has_official_data = bool(halilit_data.get("official_url") or (specs and len(specs) > 3))
+        has_official_data = bool(halilit_data.get(
+            "official_url") or (specs and len(specs) > 3))
         data_quality = "official" if has_official_data else "commercial_only"
-        
+
         context_parts = [f"Product: {product_name}", f"Brand: {brand_name}"]
         if description:
             context_parts.append(f"Description: {description[:500]}")
         if features:
             context_parts.append(f"Features: {', '.join(features[:8])}")
         if specs:
-            specs_str = ", ".join(f"{k}: {v}" for k, v in list(specs.items())[:10])
+            specs_str = ", ".join(
+                f"{k}: {v}" for k, v in list(specs.items())[:10])
             context_parts.append(f"Specs: {specs_str}")
         else:
             context_parts.append("Specs: Not available")
