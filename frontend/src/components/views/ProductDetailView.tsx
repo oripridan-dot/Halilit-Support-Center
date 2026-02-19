@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Product } from '../../types';
 import { Copy, AlertTriangle } from 'lucide-react';
 import { useNavigationStore } from '../../state/navigationStore';
 import { useProductRelationships } from '../../hooks/useProductRelationships';
 import ProductTile from '../ProductTile';
+import { useJITIntelligence, JITPhase, JITIntelligenceState } from '../../hooks/useJITIntelligence';
+import { useConductorCatalog } from '../../hooks/useConductorCatalog';
 
 interface Props {
   product: Product | undefined;
@@ -63,159 +65,168 @@ const RelationshipSection: React.FC<{
   );
 };
 
-const EcosystemTab: React.FC<Props> = ({ product }) => {
-  const {
-    accessories,
-    compatibles,
-    bundles,
-    alternatives,
-    accessoriesLoading,
-    compatiblesLoading,
-    bundlesLoading,
-    alternativesLoading,
-    error,
-  } = useProductRelationships(product?.id);
-  const navigationStore = useNavigationStore();
+const SourcingBadge: React.FC<{ source: string }> = ({ source }) => {
+  const badgeStyles = {
+    'Official Scout': 'bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-blue-300',
+    'Commercial Scout': 'bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-300',
+    'JIT Intelligence': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-300',
+    'Inferred Scout': 'bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-purple-300',
+  };
 
-  if (!product) {
+  const style = badgeStyles[source as keyof typeof badgeStyles];
+
+  if (!style) {
     return null;
   }
 
   return (
-    <div>
-      {error && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-          <strong className="font-bold">Error!</strong>
-          <span className="block sm:inline">{error}</span>
-        </div>
-      )}
-
-      <RelationshipSection
-        title="Accessories"
-        relationshipType="accessories"
-        products={accessories?.products}
-        source={accessories?.source}
-        loading={accessoriesLoading}
-        error={error}
-      />
-      <RelationshipSection
-        title="Compatibles"
-        relationshipType="compatibles"
-        products={compatibles?.products}
-        source={compatibles?.source}
-        loading={compatiblesLoading}
-        error={error}
-      />
-      <RelationshipSection
-        title="Bundles"
-        relationshipType="bundles"
-        products={bundles?.products}
-        source={bundles?.source}
-        loading={bundlesLoading}
-        error={error}
-      />
-      <RelationshipSection
-        title="Alternatives"
-        relationshipType="alternatives"
-        products={alternatives?.products}
-        source={alternatives?.source}
-        loading={alternativesLoading}
-        error={error}
-      />
-    </div>
+    <span className={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${style}`} aria-label={`Source: ${source}`}>
+      {source}
+    </span>
   );
 };
 
+
 const ProductDetailView: React.FC<Props> = ({ product }) => {
-  const [copyStatus, setCopyStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [activeTab, setActiveTab] = useState<'details' | 'ecosystem' | 'specifications' | 'history'>('details');
+  const { activeProductId } = useNavigationStore();
+  const { jitState } = useJITIntelligence(activeProductId || null);
+  const { catalogProduct, isLoading: isCatalogLoading, error: catalogError } = useConductorCatalog(activeProductId || null);
+  const [name, setName] = useState<string | undefined>(catalogProduct?.name);
+  const [brand, setBrand] = useState<string | undefined>(catalogProduct?.brand);
+  const [price, setPrice] = useState<number | null | undefined>(catalogProduct?.price);
+  const [priceEilat, setPriceEilat] = useState<number | null | undefined>(catalogProduct?.price_eilat);
+  const [imageUrl, setImageUrl] = useState<string | undefined>(catalogProduct?.image_url);
+  const [nameBadge, setNameBadge] = useState<string | undefined>('Official Scout');
+  const [brandBadge, setBrandBadge] = useState<string | undefined>('Official Scout');
+  const [priceBadge, setPriceBadge] = useState<string | undefined>('Commercial Scout');
+  const [imageBadge, setImageBadge] = useState<string | undefined>('Official Scout');
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const imageRef = useRef<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    if (catalogProduct) {
+      setName(catalogProduct.name);
+      setBrand(catalogProduct.brand);
+      setPrice(catalogProduct.price);
+      setPriceEilat(catalogProduct.price_eilat);
+      setImageUrl(catalogProduct.image_url);
+      setNameBadge('Official Scout');
+      setBrandBadge('Official Scout');
+      setPriceBadge('Commercial Scout');
+      setImageBadge('Official Scout');
+    }
+  }, [catalogProduct]);
 
 
   useEffect(() => {
-    if (copyStatus !== 'idle') {
-      const timeout = setTimeout(() => {
-        setCopyStatus('idle');
-      }, 2000);
-      return () => clearTimeout(timeout);
-    }
-  }, [copyStatus]);
+    if (jitState?.snap) {
+      if (jitState.snap.name !== name) {
+        setName(jitState.snap.name);
+        setNameBadge('JIT Intelligence');
+      }
+      if (jitState.snap.brand !== brand) {
+        setBrand(jitState.snap.brand);
+        setBrandBadge('JIT Intelligence');
+      }
 
-  const handleCopySku = async () => {
-    if (!product?.id) return;
-    try {
-      await navigator.clipboard.writeText(product.id);
-      setCopyStatus('success');
-    } catch (err) {
-      console.error('Failed to copy SKU: ', err);
-      setCopyStatus('error');
+      if (jitState.snap.price !== price) {
+        setPrice(jitState.snap.price);
+        setPriceBadge('JIT Intelligence');
+      }
+      if (jitState.snap.price_eilat !== priceEilat) {
+        setPriceEilat(jitState.snap.price_eilat);
+        setPriceBadge('JIT Intelligence');
+      }
+
+      if (jitState.snap.thumbnail && jitState.phase === 'complete') {
+        setImageUrl(jitState.snap.thumbnail);
+        setImageBadge('Inferred Scout');
+      }
     }
+  }, [jitState, name, brand, price, priceEilat]);
+
+  useEffect(() => {
+    if (jitState?.error) {
+      setName(catalogProduct?.name);
+      setBrand(catalogProduct?.brand);
+      setPrice(catalogProduct?.price);
+      setPriceEilat(catalogProduct?.price_eilat);
+      setImageUrl(catalogProduct?.image_url);
+      setNameBadge('Official Scout');
+      setBrandBadge('Official Scout');
+      setPriceBadge('Commercial Scout');
+      setImageBadge('Official Scout');
+    }
+  }, [jitState?.error, catalogProduct]);
+
+
+  const handleImageLoad = () => {
+    setIsImageLoading(false);
   };
 
-  const shouldShowCopyButton = product?.price === null || product?.price === 0;
+  const handleImageError = () => {
+    setIsImageLoading(false);
+    setImageUrl(catalogProduct?.image_url);
+  };
+
+
+  if (!product && isCatalogLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (catalogError) {
+    return <div>Error: {catalogError}</div>;
+  }
+
+  if (!product && !catalogProduct) {
+    return <div>Product not found</div>;
+  }
 
   return (
-    <div>
-      {/* Product Detail Content */}
-      {product && (
-        <>
-          <div className="flex items-center space-x-2 mb-2">
-            <span className="font-semibold">SKU:</span>
-            <span>{product.id}</span>
-            {shouldShowCopyButton && (
-              <button
-                onClick={handleCopySku}
-                className="inline-flex items-center px-2.5 py-1.5 border border-gray-300 shadow-sm text-xs font-medium rounded text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                <Copy className="mr-1 h-4 w-4" />
-                {copyStatus === 'success'
-                  ? 'Copied!'
-                  : copyStatus === 'error'
-                  ? 'Copy Failed'
-                  : 'Copy SKU'}
-              </button>
-            )}
-          </div>
-          {/* Price Display */}
-          <div className="mb-4">
-            {product.price === null || product.price === 0 ? (
-              <span>Price on request</span>
-            ) : (
-              <span>{product.pricing?.price_il} ILS</span>
-            )}
-          </div>
-          {copyStatus === 'error' && (
-            <div className="text-red-500 text-sm">
-              Copy failed. Please copy the SKU manually.
+    <div className="p-4">
+      {/* Header Card */}
+      <div className="bg-white rounded-lg shadow-md p-4 mb-4">
+        <div className="flex items-center mb-2">
+          {imageUrl ? (
+            <img
+              ref={imageRef}
+              src={imageUrl}
+              alt={name || 'Product Image'}
+              className="w-20 h-20 object-cover rounded mr-4"
+              onLoad={handleImageLoad}
+              onError={handleImageError}
+              style={{ display: isImageLoading ? 'none' : 'block' }}
+            />
+          ) : (
+            <div className="w-20 h-20 bg-gray-200 rounded mr-4 flex items-center justify-center">
+              <span className="text-gray-500">No Image</span>
             </div>
           )}
-
-          <div className="mb-4">
-            <button
-                className={`px-4 py-2 rounded-md ${activeTab === 'details' ? 'bg-gray-200' : 'bg-gray-100'} mr-2`}
-                onClick={() => setActiveTab('details')}
-            >
-              Details
-            </button>
-            <button
-                className={`px-4 py-2 rounded-md ${activeTab === 'ecosystem' ? 'bg-gray-200' : 'bg-gray-100'} mr-2`}
-                onClick={() => setActiveTab('ecosystem')}
-            >
-              Ecosystem
-            </button>
-          </div>
-
-          {activeTab === 'details' && (
-            <div>
-               {/* Details Content (Placeholder) */}
-              <p>Product Details Content Here</p>
+          <div className="flex-1">
+            <h1 className="text-xl font-semibold flex items-center">
+              {name}
+              {nameBadge && <SourcingBadge source={nameBadge} />}
+            </h1>
+            <p className="text-gray-700 flex items-center">
+              {brand}
+              {brandBadge && <SourcingBadge source={brandBadge} />}
+            </p>
+            {/* SKU (from catalog) -  badge should not be on SKU */}
+            <p className="text-gray-500">SKU: {product?.id}</p>
+            <div className="flex items-center">
+              <span className="font-bold mr-1">IL: </span>
+              <span>{price !== null && price !== undefined ? price : 'Call for Price'}</span>
+              {price !== null && price !== undefined && priceBadge && <SourcingBadge source={priceBadge} />}
             </div>
-          )}
-          {activeTab === 'ecosystem' && (
-            <EcosystemTab product={product} />
-          )}
+            <div className="flex items-center">
+              <span className="font-bold mr-1">Eilat: </span>
+              <span>{priceEilat !== null && priceEilat !== undefined ? priceEilat : 'Call for Price'}</span>
+              {priceEilat !== null && priceEilat !== undefined && priceBadge && <SourcingBadge source={priceBadge} />}
+            </div>
+          </div>
+        </div>
+      </div>
 
-        </>
-      )}
     </div>
   );
 };
