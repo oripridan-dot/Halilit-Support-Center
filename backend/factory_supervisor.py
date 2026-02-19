@@ -511,7 +511,8 @@ def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
                 text=True,
             )
             if result.returncode != 0:
-                log(f"❌ Tool 'build' (catalog rebuild) failed (exit {result.returncode})")
+                log(
+                    f"❌ Tool 'build' (catalog rebuild) failed (exit {result.returncode})")
                 tail = "\n".join(
                     (result.stdout + "\n" + result.stderr).strip().splitlines()[-20:])
                 if tail:
@@ -523,9 +524,10 @@ def run_agent_tool(tool: str, args: str = "", task: dict | None = None) -> bool:
     # 'task_force' — multi-agent coordinator
     # ---------------------------------------------------------------------------
     elif tool == "task_force":
-        tf_id   = task.get("id", "") or _uuid.uuid4().hex[:8]
+        tf_id = task.get("id", "") or _uuid.uuid4().hex[:8]
         tf_goal = task.get("goal", "") or args or "Improve the system"
-        agents  = ",".join(task.get("agents", ["steerer", "builder", "watchdog"]))
+        agents = ",".join(
+            task.get("agents", ["steerer", "builder", "watchdog"]))
         cmd = [py, factory_script, "task_force", tf_id, tf_goal, agents]
 
     # ---------------------------------------------------------------------------
