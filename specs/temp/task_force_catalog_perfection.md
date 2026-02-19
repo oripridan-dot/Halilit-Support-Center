@@ -1,6 +1,6 @@
 # Task-Force Blackboard: catalog_perfection
 
-**Goal:** Perfect the catalog presentation: rebuild data, audit InventoryView.tsx and ProductDetailView.tsx, run Visual QA, and fix discrepancies
+**Goal:** Perfect catalog presentation: rebuild catalog, audit InventoryView.tsx and ProductDetailView.tsx against specs, run visual QA, and fix discrepancies.
 **Agents:** steerer, builder, watchdog
 **Status:** In Progress
 
@@ -33,9 +33,9 @@
 **Status:** ❌ REJECTED
 
 **Reason:**
-- The UI state is unavailable, indicating Visual QA was not performed, violating the original request.
-- There is no implemented code provided to review.
+- The implemented code is missing, making it impossible to verify if the specification is met.
+- Architecture Contract, Implementation Notes, Watchdog Review and API Contracts are missing.
+- Visual QA was not performed, so visual discrepancies cannot be assessed.
 
 **Required Fix:**
-- Run Visual QA to identify discrepancies in the UI.
-- Provide the implemented code for review against the specification.
+Request the Builder to provide the implemented code, architecture contract, implementation notes, watchdog review and API contracts. Also, ensure that visual QA is performed and the results are included for review.
