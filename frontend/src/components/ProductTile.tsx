@@ -4,9 +4,8 @@ interface Product {
   id: string;
   name: string;
   image_url?: string | null;
-  price?: number | null;
-  stock?: number | null;
-  // Add other product properties as needed
+  price: number | null;
+  stock: number | null | undefined;
 }
 
 interface ProductTileProps {
@@ -14,24 +13,24 @@ interface ProductTileProps {
 }
 
 const ProductTile: React.FC<ProductTileProps> = ({ product }) => {
-  const { stock, price } = product;
-
+  const { price, stock } = product;
   const isOutOfStock = stock === 0;
   const isUnconfirmedStock = stock === null || stock === undefined;
   const isCallForPrice = !price || price <= 0;
 
-  let borderClass = '';
-  if (isOutOfStock) {
-    borderClass = 'border-red-500';
-  } else if (isUnconfirmedStock) {
-    borderClass = 'border-amber-500';
-  }
+  const borderClass = isOutOfStock
+    ? 'border-red-500'
+    : isUnconfirmedStock
+    ? 'border-amber-500'
+    : '';
 
   return (
-    <div className={`relative border rounded-lg shadow-md p-4 ${borderClass}`}>
+    <div
+      className={`relative border rounded-lg shadow-md p-4 ${borderClass}`}
+    >
       {/* Badges */}
       {(isOutOfStock || isUnconfirmedStock) && (
-        <div className="absolute top-0 right-0 m-2">
+        <div className="absolute top-2 right-2">
           {isOutOfStock && (
             <span className="bg-red-500 text-white px-2 py-1 rounded-md text-xs">
               OUT OF STOCK
@@ -45,20 +44,24 @@ const ProductTile: React.FC<ProductTileProps> = ({ product }) => {
         </div>
       )}
 
-      {/* Product Image (Placeholder handled elsewhere) */}
-      {/* Assuming an image component handles the actual image display and fallback */}
+      {/* Image and other product details (implementation will vary based on project structure) */}
+      <img
+        src={product.image_url || '/placeholder.png'}
+        alt={product.name}
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = '/placeholder.png';
+        }}
+        className="w-full h-40 object-cover rounded-md"
+      />
 
-      {/* Product Name */}
-      <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-
-      {/* Price or Call for Price */}
-      {isCallForPrice ? (
-        <div className="text-red-500">Call for Price</div>
-      ) : (
-        <div className="text-gray-700">
-          {price !== null && price !== undefined ? `$${price.toFixed(2)}` : ''}
-        </div>
-      )}
+      <div className="mt-2">
+        <h3 className="text-lg font-semibold">{product.name}</h3>
+        {isCallForPrice ? (
+          <p className="text-red-500">Call for Price</p>
+        ) : (
+          <p className="text-gray-700">${price?.toFixed(2)}</p>
+        )}
+      </div>
     </div>
   );
 };

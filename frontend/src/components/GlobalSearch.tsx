@@ -87,46 +87,35 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
     const controller = new AbortController();
     const timeoutId = window.setTimeout(async () => {
       try {
-        const res = await fetch(
-          `/api/products/search?q=${encodeURIComponent(trimmed)}`,
-          { signal: controller.signal },
-        );
-        if (!res.ok) {
-          throw new Error(`Search failed: ${res.status} ${res.statusText}`);
-        }
-        const body = await res.json();
-
-        let exactMatch: SearchResult | null = null;
-        const otherResults: SearchResult[] = [];
-
-        if (productMapRef.current) {
-          const lowerCaseQuery = trimmed.toLowerCase();
-          for (const product of body.results as SearchResult[]) {
-            if (productMapRef.current.has(trimmed.toUpperCase()) && product.id.toLowerCase() === lowerCaseQuery) {
-              exactMatch = product;
-            } else {
-              otherResults.push(product);
-            }
-          }
-        }
-        let finalResults: SearchResult[] = [];
+        const exactMatch = productMapRef.current.get(trimmed.toUpperCase());
+        let searchResults: SearchResult[] = [];
 
         if (exactMatch) {
-            finalResults.push(exactMatch);
-            finalResults = finalResults.concat(otherResults);
+          searchResults = [exactMatch];
+          const otherResults = Array.from(productMapRef.current.values())
+            .filter(
+              (product) =>
+                product.id.toUpperCase() !== trimmed.toUpperCase() &&
+                (product.name.toLowerCase().includes(trimmed.toLowerCase()) ||
+                  product.brand.toLowerCase().includes(trimmed.toLowerCase())),
+            )
+            .slice(0, maxResults - 1);
+          searchResults = searchResults.concat(otherResults);
         } else {
-            finalResults = otherResults;
+           searchResults = Array.from(productMapRef.current.values()).filter(
+            (product) =>
+              product.name.toLowerCase().includes(trimmed.toLowerCase()) ||
+              product.brand.toLowerCase().includes(trimmed.toLowerCase()),
+          ).slice(0, maxResults);
         }
 
-
-        setResults(finalResults.slice(0, maxResults));
+        setResults(searchResults);
         setError(null);
-      } catch (err: any) {
-        if (err.name === "AbortError") {
-          console.log("Search aborted");
-        } else {
-          setError(err.message || "An unexpected error occurred.");
+      } catch (e: any) {
+        if (e.name !== 'AbortError') {
+          setError(e.message || 'An error occurred during search.');
         }
+        setResults([]);
       } finally {
         setLoading(false);
       }
@@ -136,12 +125,12 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       clearTimeout(timeoutId);
       controller.abort();
     };
-  }, [query, maxResults, reloadToken]);
+  }, [query, maxResults]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
-    setSelectedIndex(-1);
     setIsOpen(true);
+    setSelectedIndex(-1);
   };
 
   const handleInputFocus = () => {
@@ -149,80 +138,49 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
   };
 
   const handleInputBlur = () => {
-    // Delay the closing of the dropdown to allow for clicks on the results
+    // Blur handler to prevent immediate closing when clicking on the dropdown
     setTimeout(() => {
-      setIsOpen(false);
       setIsFocused(false);
-    }, 150);
+      if (!wrapperRef.current?.contains(document.activeElement)) {
+        setIsOpen(false);
+      }
+    }, 100);
   };
 
-
-  const handleKeyDown = useCallback(
-    (e: React.KeyboardEvent<HTMLInputElement>) => {
-      if (!isOpen) {
-        if (e.key === "Enter" || (e.ctrlKey || e.metaKey) && e.key === "k") {
-          e.preventDefault();
-          setIsOpen(true);
-          inputRef.current?.focus();
-        }
-        return;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setSelectedIndex((prevIndex) =>
+        Math.min(prevIndex + 1, results.length - 1),
+      );
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSelectedIndex((prevIndex) => Math.max(prevIndex - 1, -1));
+    } else if (e.key === "Enter") {
+      if (selectedIndex >= 0 && selectedIndex < results.length) {
+        handleResultSelect(results[selectedIndex].id);
+      } else if (results.length > 0) {
+        handleResultSelect(results[0].id);
       }
-
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        setSelectedIndex((prevIndex) =>
-          Math.min(prevIndex + 1, results.length - 1),
-        );
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        setSelectedIndex((prevIndex) => Math.max(prevIndex - 1, 0));
-      } else if (e.key === "Enter") {
-        e.preventDefault();
-        if (selectedIndex >= 0 && selectedIndex < results.length) {
-          handleResultSelect(results[selectedIndex].id);
-        } else if (results.length === 1) {
-            handleResultSelect(results[0].id)
-        }
-      } else if (e.key === "Escape") {
-        e.preventDefault();
-        setIsOpen(false);
-        setQuery("");
-        setSelectedIndex(-1);
-        inputRef.current?.blur();
-      }
-    },
-    [isOpen, results.length, selectedIndex, handleResultSelect],
-  );
-
-  const handleResultSelect = useCallback(
-    (id: string) => {
-      onSelect?.(id);
-      goToProduct(id);
-      setQuery("");
+    } else if (e.key === "Escape") {
       setIsOpen(false);
-      setSelectedIndex(-1);
-    },
-    [onSelect, goToProduct],
-  );
+      setQuery("");
+    }
+  };
 
+  const handleResultSelect = (id: string) => {
+    onSelect?.(id);
+    setSearchQuery(query); // For navigation store
+    goToProduct(id);
+    setIsOpen(false);
+    setQuery("");
+  };
 
-  const handleClickOutside = useCallback(
-    (event: Event) => {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-        setSelectedIndex(-1);
-      }
-    },
-    [],
-  );
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [handleClickOutside]);
-
+  const handleClear = () => {
+    setQuery("");
+    setIsOpen(false);
+    setSelectedIndex(-1);
+  };
 
   const renderResults = () => {
     if (loading) {
@@ -236,8 +194,8 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
         <div className="px-3 py-2 text-red-500 text-sm">
           {error}
           <button
-            className="ml-2 text-xs text-blue-400 hover:underline"
             onClick={handleRetry}
+            className="ml-2 text-blue-400 hover:underline"
           >
             Retry
           </button>
@@ -245,71 +203,74 @@ export const GlobalSearch: React.FC<GlobalSearchProps> = ({
       );
     }
 
-    if (!results.length) {
+    if (!results.length && query.trim().length >= 2) {
       return (
         <div className="px-3 py-2 text-zinc-400 text-sm">No results found.</div>
       );
     }
 
-    return results.map((result, index) => (
+    return results.slice(0, maxResults).map((result, index) => (
       <button
         key={result.id}
-        className={`w-full text-left px-3 py-2 text-sm hover:bg-zinc-800 focus:bg-zinc-800 outline-none ${
-          selectedIndex === index ? "bg-zinc-800" : "bg-zinc-900"
-        }`}
         onClick={() => handleResultSelect(result.id)}
-        onMouseEnter={() => setSelectedIndex(index)}
-        onMouseLeave={() => {
-          if (selectedIndex === index) {
-            setSelectedIndex(-1);
-          }
-        }}
-        tabIndex={0}
+        className={`px-3 py-2 text-sm text-left w-full hover:bg-zinc-800 focus-visible:bg-zinc-800 outline-none ${selectedIndex === index ? "bg-zinc-800" : "bg-transparent"
+          }`}
+        tabIndex={-1}
+        role="option"
+        aria-selected={selectedIndex === index}
       >
-        <div className="flex items-center justify-between">
-          <span>{result.name}</span>
-          <span className="text-xs text-zinc-400">{result.brand}</span>
+        <div className="flex items-center gap-2">
+          {result.image_url && (
+            <img
+              src={result.image_url}
+              alt={result.name}
+              className="w-6 h-6 rounded object-cover"
+            />
+          )}
+          <span>
+            {result.name} ({result.brand})
+          </span>
         </div>
-        <span className="text-xs text-zinc-500">{result.id}</span>
       </button>
     ));
   };
-
 
   return (
     <div
       ref={wrapperRef}
       className={`relative w-full ${className}`}
+      onFocus={() => setIsFocused(true)}
+      onBlur={handleInputBlur}
     >
-      <div className="flex items-center w-full px-4 py-2 bg-zinc-900 rounded-md border border-zinc-700 focus-within:border-blue-400 transition-colors">
-        <Search className="mr-2 h-4 w-4 text-zinc-400" />
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <Search className="w-5 h-5 text-zinc-400" />
+        </div>
         <input
           ref={inputRef}
           type="text"
+          className="w-full rounded-md border border-zinc-700 bg-zinc-900 text-sm text-zinc-100 placeholder:text-zinc-500 pl-10 pr-10 py-2 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 outline-none"
           placeholder="Search products..."
           value={query}
           onChange={handleInputChange}
           onFocus={handleInputFocus}
-          onBlur={handleInputBlur}
           onKeyDown={handleKeyDown}
-          className="bg-transparent w-full text-sm outline-none"
+          autoComplete="off"
         />
         {query && (
-          <button onClick={() => setQuery("")} className="ml-2">
-            <X className="h-4 w-4 text-zinc-400" />
+          <button
+            onClick={handleClear}
+            className="absolute inset-y-0 right-0 flex items-center pr-3"
+          >
+            <X className="w-5 h-5 text-zinc-400" />
           </button>
         )}
-        <div className="absolute right-2 top-2">
-          {(isFocused || isOpen) && (
-            <Command
-              size={16}
-              className="text-zinc-400 hover:text-white"
-            />
-          )}
-        </div>
       </div>
       {isOpen && (
-        <div className="absolute z-10 mt-1 w-full bg-zinc-900 rounded-md shadow-md overflow-hidden border border-zinc-700">
+        <div
+          className="absolute z-10 mt-1 w-full bg-zinc-900 rounded-md border border-zinc-700 shadow-md overflow-hidden focus-within:ring-2 ring-blue-500"
+          role="listbox"
+        >
           {renderResults()}
         </div>
       )}
