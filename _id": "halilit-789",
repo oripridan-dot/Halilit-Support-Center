@@ -1,0 +1,168 @@
+import { Product } from './types';
+
+interface BrandIdentity {
+    id: string;
+    name: string;
+    slug: string;
+    logo_url: string | null;
+    website: string | null;
+    description: string | null;
+}
+
+interface Family {
+    family_id: string;
+    family_name: string;
+    series?: string;
+    brand: string;
+    variant_ids: string[];
+    is_accessory_family: boolean;
+}
+
+interface Relationship {
+    source_id: string;
+    target_id: string;
+    relationship_type:
+        | 'accessory_for'
+        | 'alternative_to'
+        | 'bundle_with'
+        | 'compatible_with'
+        | 'variant_of';
+}
+
+interface Category {
+    id: string;
+    label: string;
+    product_ids: string[];
+}
+
+interface SearchIndexEntry {
+    id: string;
+    t: string;
+    s: string;
+    b: string;
+}
+
+interface Meta {
+    total_products: number;
+    total_categories: number;
+    organized_at: string;
+}
+
+interface OrganizedCatalog {
+    brand_identity: BrandIdentity;
+    families?: Family[];
+    relationships?: Relationship[];
+    categories: Category[];
+    products: Product[];
+    search_index: SearchIndexEntry[];
+    meta: Meta;
+}
+
+const organizeBrandCatalog = (input: {
+    brand_slug: string;
+    brand_name: string;
+    products: Product[];
+}): OrganizedCatalog => {
+    const { brand_slug, brand_name, products } = input;
+
+    const brandIdentity: BrandIdentity = {
+        id: brand_slug,
+        name: brand_name,
+        slug: brand_slug,
+        logo_url: null,
+        website: null,
+        description: null,
+    };
+
+    const categories: Category[] = [];
+    const productCategories: { [categoryId: string]: string[] } = {};
+
+    products.forEach((product) => {
+        const categoryLabel = product.taxonomy?.canonical_category || 'Uncategorized';
+        const categoryId = categoryLabel.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+        if (!productCategories[categoryId]) {
+            productCategories[categoryId] = [];
+            categories.push({ id: categoryId, label: categoryLabel, product_ids: [] });
+        }
+        productCategories[categoryId].push(product.halilit_id);
+    });
+
+    categories.forEach(category => {
+        category.product_ids = productCategories[category.id];
+    });
+
+
+    const searchIndex: SearchIndexEntry[] = products.map((product) => {
+        const categoryLabel = product.taxonomy?.canonical_category || 'Uncategorized';
+        return {
+            id: product.halilit_id,
+            t: product.product_name,
+            s: categoryLabel,
+            b: brand_slug,
+        };
+    });
+
+    const meta: Meta = {
+        total_products: products.length,
+        total_categories: categories.length,
+        organized_at: new Date().toISOString(),
+    };
+
+    // Optional: Family and Relationship Inference (Example - needs more sophisticated logic)
+    const families: Family[] = [];
+    const relationships: Relationship[] = [];
+
+    // Simple family inference based on model number
+    const modelNumberMap: { [modelNumber: string]: string[] } = {};
+
+    products.forEach(product => {
+        const modelNumber = product.model_number;
+        if (modelNumber) {
+            if (!modelNumberMap[modelNumber]) {
+                modelNumberMap[modelNumber] = [];
+            }
+            modelNumberMap[modelNumber].push(product.halilit_id);
+        }
+    });
+
+    for (const modelNumber in modelNumberMap) {
+        if (modelNumberMap.hasOwnProperty(modelNumber) && modelNumberMap[modelNumber].length > 1) {
+            families.push({
+                family_id: `fam_${brand_slug}_${modelNumber.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+                family_name: modelNumber, // Or derive a family name
+                brand: brand_name,
+                variant_ids: modelNumberMap[modelNumber],
+                is_accessory_family: false, // Could be refined.
+            });
+        }
+    }
+
+
+    // Simple accessory relationships (example)
+    products.forEach(product => {
+        if (product.product_name.toLowerCase().includes('case') || product.product_name.toLowerCase().includes('bag')) {
+            // Very basic relationship - could be improved.  Needs source data for the "target".
+        }
+    });
+
+
+    const result: OrganizedCatalog = {
+        brand_identity: brandIdentity,
+        categories: categories,
+        products: products,
+        search_index: searchIndex,
+        meta: meta,
+    };
+
+    if (families.length > 0) {
+        result.families = families;
+    }
+    if (relationships.length > 0) {
+        result.relationships = relationships;
+    }
+
+    return result;
+};
+
+export default organizeBrandCatalog;

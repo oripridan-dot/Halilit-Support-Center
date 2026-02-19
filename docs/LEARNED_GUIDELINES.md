@@ -47,3 +47,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Un-linted code was introduced.
 **Fix:** Resolved the TypeScript/lint errors.
 **Lesson:** ALWAYS lint code before committing.
+
+### [2026-02-19] Validate Catalog Data Format
+**Symptom:** Product catalog build failed.
+**Root Cause:** Invalid data format in catalog.
+**Fix:** Added validation step to build.
+**Lesson:** ALWAYS validate external data inputs.

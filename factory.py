@@ -17,6 +17,13 @@ from pathlib import Path
 
 # --- PATHS ---
 ROOT = Path(__file__).resolve().parent
+
+# Load .env early so GEMINI_API_KEY is available for all subcommands
+try:
+    from dotenv import load_dotenv as _load_dotenv
+    _load_dotenv(ROOT / ".env")
+except ImportError:
+    pass  # python-dotenv optional; rely on shell env if not installed
 FRONTEND = ROOT / "frontend"
 BACKEND = ROOT / "backend"
 SPECS = ROOT / "specs"
