@@ -1,24 +1,9 @@
-/**
- * Dashboard View — Mission Control
- * Spec: specs/interface/01_operator_dashboard.md
- */
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import { useNavigationStore } from "../../store/navigationStore";
-import { useConductorCatalog } from "../../hooks/useConductorCatalog";
-import {
-  Package,
-  PhoneCall,
-  RefreshCw,
-  Tag,
-  ArrowRight,
-  CheckCircle,
-  XCircle,
-  Loader2,
-  AlertTriangle,
-} from "lucide-react";
-
-// ── Dashboard Stats ──────────────────────────────────────────────────────────
+import React from 'react';
+import { AlertTriangle, CheckCircle, Loader2, XCircle } from 'lucide-react';
+import { useQuery } from '@tanstack/react-query';
+import { format } from 'date-fns';
+import { useNavigationStore } from '../../stores/navigationStore';
+import { useConductorCatalog } from '../../hooks/useConductorCatalog';
 
 interface DashboardStats {
   total_products: number;
@@ -31,297 +16,181 @@ interface DashboardStats {
   };
 }
 
-function useDashboardStats() {
-  return useQuery<DashboardStats>({
-    queryKey: ["dashboard-stats"],
-    queryFn: async () => {
-      const res = await fetch("/api/dashboard/stats");
-      // Handle non-JSON responses (e.g., HTML from proxy when backend is down/not yet updated)
-      const text = await res.text();
-      let json: unknown;
-      try {
-        json = JSON.parse(text);
-      } catch {
-        if (text.trim().startsWith("<")) {
-          throw new Error(
-            "Backend server returned HTML instead of JSON. " +
-              "The server may need to be restarted to pick up the new /api/dashboard/stats endpoint.",
-          );
-        }
-        throw new Error(`Invalid response from server (status ${res.status})`);
-      }
-      if (!res.ok) {
-        const msg =
-          (json as { error?: string })?.error ?? `Server error ${res.status}`;
-        throw new Error(msg);
-      }
-      return json as DashboardStats;
-    },
-    staleTime: 30_000,
-    retry: 0, // Don't retry — if backend is down, show degraded UI immediately
-  });
-}
-
-// ── Sub-components ────────────────────────────────────────────────────────────
-
 interface MetricCardProps {
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType;
   label: string;
   value: React.ReactNode;
   sub?: React.ReactNode;
-  accent?: "blue" | "amber" | "green" | "red" | "zinc";
+  accent: "blue" | "amber" | "green" | "red" | "zinc";
   onClick?: () => void;
 }
 
-const ACCENT_COLOR: Record<string, string> = {
-  blue: "bg-blue-500/10 border-blue-500/30 text-blue-400",
-  amber: "bg-amber-500/10 border-amber-500/30 text-amber-400",
-  green: "bg-emerald-500/10 border-emerald-500/30 text-emerald-400",
-  red: "bg-red-500/10 border-red-500/30 text-red-400",
-  zinc: "bg-zinc-800 border-zinc-700 text-zinc-400",
-};
+const MetricCard: React.FC<MetricCardProps> = ({ icon: Icon, label, value, sub, accent, onClick }) => {
+  const accentColors: Record<string, string> = {
+    blue: 'bg-blue-100/10 text-blue-500',
+    amber: 'bg-amber-100/10 text-amber-500',
+    green: 'bg-green-100/10 text-green-500',
+    red: 'bg-red-100/10 text-red-500',
+    zinc: 'bg-zinc-100/10 text-zinc-500',
+  };
+  const accentClasses = accentColors[accent] || '';
 
-const MetricCard: React.FC<MetricCardProps> = ({
-  icon: Icon,
-  label,
-  value,
-  sub,
-  accent = "zinc",
-  onClick,
-}) => {
-  const accentCls = ACCENT_COLOR[accent];
-  if (onClick) {
-    return (
-      <button
-        type="button"
-        onClick={onClick}
-        className="flex flex-col gap-3 p-6 bg-zinc-900 border border-zinc-800 rounded-xl text-left transition-all cursor-pointer hover:border-blue-500/40 hover:bg-zinc-800/70 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 group"
-      >
-        <div className={`self-start p-2.5 rounded-lg border ${accentCls}`}>
-          <Icon size={20} aria-hidden />
-        </div>
-        <div>
-          <div className="text-2xl font-bold text-white leading-tight">
-            {value}
-          </div>
-          <div className="text-sm text-zinc-400 mt-0.5">{label}</div>
-          {sub && <div className="text-xs text-zinc-600 mt-1">{sub}</div>}
-        </div>
-        <ArrowRight
-          size={14}
-          className="text-zinc-600 opacity-0 group-hover:opacity-100 transition-opacity mt-auto"
-          aria-hidden
-        />
-      </button>
-    );
-  }
   return (
-    <div className="flex flex-col gap-3 p-6 bg-zinc-900 border border-zinc-800 rounded-xl">
-      <div className={`self-start p-2.5 rounded-lg border ${accentCls}`}>
-        <Icon size={20} aria-hidden />
-      </div>
-      <div>
-        <div className="text-2xl font-bold text-white leading-tight">
-          {value}
+    <div className="flex flex-col gap-2 p-4 rounded-xl bg-bg-elevated hover:bg-zinc-800 transition-colors touch-target" onClick={onClick} style={onClick ? { cursor: 'pointer' } : {}}>
+      <div className="flex items-center justify-between">
+        <div className={`p-2 rounded-md ${accentClasses}`}>
+          <Icon size={20} />
         </div>
-        <div className="text-sm text-zinc-400 mt-0.5">{label}</div>
-        {sub && <div className="text-xs text-zinc-600 mt-1">{sub}</div>}
       </div>
+      <div className="text-sm text-text-secondary">{label}</div>
+      <div className="text-2xl font-semibold">{value}</div>
+      {sub && <div className="text-xs text-text-muted">{sub}</div>}
     </div>
   );
 };
 
-// ── Last Run Status ───────────────────────────────────────────────────────────
-
-function LastRunStatus({ run }: { run: DashboardStats["last_ingestion_run"] }) {
-  if (run.status === "never")
-    return <span className="text-zinc-500 text-lg font-bold">—</span>;
-  if (run.status === "running")
+const LastRunStatus: React.FC<{ run: DashboardStats['last_ingestion_run'] }> = ({ run }) => {
+  if (run.status === 'never') {
+    return <span className="text-zinc-500">—</span>;
+  }
+  if (run.status === 'running') {
     return (
-      <span className="flex items-center gap-1.5 text-blue-400 text-base font-semibold">
-        <Loader2 size={13} className="animate-spin" aria-hidden /> Running…
-      </span>
-    );
-  if (run.status === "complete" || run.status === "unknown") {
-    const date = run.finished_at
-      ? new Date(run.finished_at).toLocaleString("en-IL", {
-          dateStyle: "short",
-          timeStyle: "short",
-        })
-      : "—";
-    return (
-      <span className="flex items-center gap-1.5 text-emerald-400 text-sm font-semibold">
-        <CheckCircle size={13} aria-hidden /> {date}
-      </span>
+      <>
+        <Loader2 size={16} className="inline mr-1 animate-spin text-blue-400" />
+        <span className="text-blue-400">Running...</span>
+      </>
     );
   }
-  if (run.status === "failed")
+  if (run.status === 'complete' || run.status === 'unknown') {
     return (
-      <span className="flex items-center gap-1.5 text-red-400 text-base font-semibold">
-        <XCircle size={13} aria-hidden /> Failed
-      </span>
+      <>
+        <CheckCircle size={16} className="inline mr-1 text-emerald-400" />
+        {new Date(run.finished_at!).toLocaleString("en-IL", { dateStyle: "short", timeStyle: "short" })}
+      </>
     );
-  return <span className="text-zinc-500 text-lg font-bold">—</span>;
-}
+  }
+  if (run.status === 'failed') {
+    return (
+      <>
+        <XCircle size={16} className="inline mr-1 text-red-400" />
+        <span className="text-red-400">Failed</span>
+      </>
+    );
+  }
+  return <span className="text-zinc-500">—</span>;
+};
 
-// ── Main View ────────────────────────────────────────────────────────────────
+
+const useDashboardStats = () => {
+    const query = useQuery({
+        queryKey: ['dashboardStats'],
+        queryFn: async () => {
+            const res = await fetch('/api/dashboard/stats');
+            const text = await res.text();
+            if (text.startsWith('<')) {
+                throw new Error('Backend is unavailable');
+            }
+            if (!res.ok) {
+                const json = await res.json();
+                throw new Error(json.error || 'Failed to fetch dashboard stats');
+            }
+            return JSON.parse(text) as DashboardStats;
+        },
+        staleTime: 30_000,
+        retry: 0,
+    });
+
+    return {
+        ...query,
+        stats: query.data,
+        errorMsg: query.error?.message,
+    };
+};
 
 const DashboardView: React.FC = () => {
-  const { goToInventory, goToInventoryCfp, goToIngestionStatus } =
-    useNavigationStore();
-  const { isLoading: catalogLoading } = useConductorCatalog();
-  const {
-    data: stats,
-    isLoading: statsLoading,
-    error: statsError,
-    refetch,
-  } = useDashboardStats();
+  const { goToInventory, goToInventoryCfp, goToIngestionStatus } = useNavigationStore();
+  const { stats, errorMsg, isLoading, refetch } = useDashboardStats();
+  const { isLoading: isCatalogLoading } = useConductorCatalog();
+  const hasStats = !!stats && !errorMsg;
 
-  const loading = catalogLoading || statsLoading;
-  const spin = <span className="text-zinc-600 animate-pulse">…</span>;
-  const hasStats = !!stats && !statsError;
-  const errorMsg = statsError
-    ? statsError instanceof Error
-      ? statsError.message
-      : String(statsError)
-    : null;
+  const today = format(new Date(), 'EEEE, MMMM do, yyyy');
 
   return (
-    <div className="p-8 max-w-7xl mx-auto">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-white mb-1">Mission Control</h1>
-        <p className="text-sm text-zinc-500">
-          Operator Console · v9.6.1 Dark Factory ·{" "}
-          {new Date().toLocaleDateString("en-IL", {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-        </p>
-      </div>
+    <div className="p-6">
+      <header className="flex items-center justify-between mb-8">
+        <h1 className="text-2xl font-semibold">Mission Control</h1>
+        <p className="text-sm text-text-muted">{today}</p>
+      </header>
 
-      {/* Inline stats-error banner — non-blocking */}
       {errorMsg && (
-        <div className="flex items-center gap-2 mb-6 px-4 py-3 bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm">
-          <AlertTriangle
-            size={14}
-            className="text-amber-400 shrink-0"
-            aria-hidden
-          />
-          <span className="text-amber-300 font-medium">
-            Stats unavailable —
-          </span>
+        <div
+          className="flex items-center gap-2 mb-6 px-4 py-3
+                  bg-amber-900/20 border border-amber-500/30 rounded-xl text-sm"
+        >
+          <AlertTriangle size={14} className="text-amber-400 shrink-0" />
+          <span className="text-amber-300 font-medium">Stats unavailable —</span>
           <span className="text-zinc-400 truncate">{errorMsg}</span>
           <button
-            type="button"
             onClick={() => refetch()}
-            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600 text-zinc-200 text-xs rounded-lg"
+            className="ml-auto shrink-0 px-3 py-1 bg-zinc-700 hover:bg-zinc-600
+                       text-zinc-200 text-xs rounded-lg"
           >
             Retry
           </button>
         </div>
       )}
 
-      {/* Key Metrics */}
-      <section
-        aria-label="Key metrics"
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 mb-8">
         <MetricCard
-          icon={Package}
-          label="Total products in catalog"
-          value={
-            loading
-              ? spin
-              : hasStats
-                ? stats!.total_products.toLocaleString()
-                : "—"
-          }
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Package }))) as React.ComponentType}
+          label="Total products"
+          value={hasStats ? stats.total_products.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Active SKUs"
           accent="blue"
           onClick={() => goToInventory()}
         />
         <MetricCard
-          icon={PhoneCall}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Phone }))) as React.ComponentType}
           label="Call for price"
-          value={
-            loading
-              ? spin
-              : hasStats
-                ? stats!.calls_for_price.toLocaleString()
-                : "—"
-          }
+          value={hasStats ? stats.calls_for_price.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Missing IL price"
-          accent={hasStats && stats!.calls_for_price > 0 ? "amber" : "zinc"}
-          onClick={goToInventoryCfp}
+          accent={hasStats && stats.calls_for_price > 0 ? 'amber' : 'zinc'}
+          onClick={() => goToInventoryCfp()}
         />
         <MetricCard
-          icon={Tag}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Briefcase }))) as React.ComponentType}
           label="Active brands"
-          value={
-            loading
-              ? spin
-              : hasStats
-                ? stats!.top_brands_count.toLocaleString()
-                : "—"
-          }
+          value={hasStats ? stats.top_brands_count.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Distinct brands in catalog"
           accent="green"
         />
         <MetricCard
-          icon={RefreshCw}
+          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Clock }))) as React.ComponentType}
           label="Last ingestion run"
-          value={
-            loading ? (
-              spin
-            ) : hasStats ? (
-              <LastRunStatus run={stats!.last_ingestion_run} />
-            ) : (
-              "—"
-            )
-          }
+          value={hasStats ? <LastRunStatus run={stats.last_ingestion_run} /> : <span className="text-zinc-600 animate-pulse">…</span>}
           sub={
-            hasStats && stats!.last_ingestion_run.product_count != null
-              ? `${stats!.last_ingestion_run.product_count.toLocaleString()} products synced`
+              hasStats && stats.last_ingestion_run.status !== 'never'
+              ? `${stats.last_ingestion_run.product_count?.toLocaleString() || 0} products synced`
               : "No run recorded"
           }
           accent={
-            hasStats && stats!.last_ingestion_run.status === "failed"
-              ? "red"
-              : hasStats && stats!.last_ingestion_run.status === "running"
-                ? "blue"
-                : "zinc"
-          }
+              hasStats
+                ? stats.last_ingestion_run.status === 'failed'
+                  ? 'red'
+                  : stats.last_ingestion_run.status === 'running'
+                  ? 'blue'
+                  : 'zinc'
+                : 'zinc'
+            }
         />
-      </section>
+      </div>
 
-      {/* Quick Actions */}
-      <section aria-label="Quick actions">
-        <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
-          Quick Actions
-        </h2>
-        <div className="flex flex-wrap gap-3">
-          <button
-            type="button"
-            onClick={() => goToInventory()}
-            className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors focus-visible:ring-2 focus-visible:ring-blue-400"
-          >
-            <Package size={16} aria-hidden /> Open Inventory Master
-          </button>
-          <button
-            type="button"
-            onClick={goToIngestionStatus}
-            className="flex items-center gap-2 px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-sm font-medium rounded-lg transition-colors border border-zinc-700 focus-visible:ring-2 focus-visible:ring-blue-400"
-          >
-            <RefreshCw size={16} aria-hidden /> Data Pipeline
-          </button>
-        </div>
-      </section>
+      <div className="flex gap-4">
+        <button className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-text-primary transition-colors" onClick={() => goToInventory()}>Open Inventory Master</button>
+        <button className="px-4 py-2 rounded-lg bg-zinc-700 hover:bg-zinc-600 text-text-primary transition-colors" onClick={() => goToIngestionStatus()}>Data Pipeline</button>
+      </div>
     </div>
   );
 };
 
 export default DashboardView;
-export { DashboardView };

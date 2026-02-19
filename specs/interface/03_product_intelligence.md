@@ -1,6 +1,6 @@
 # Spec 03 — Product Intelligence View
 
-**Version:** 2.0 · Dark Factory v9.6.1
+**Version:** 2.0 · Chief v9.7.0
 **Component:** `frontend/src/components/views/ProductDetailView.tsx`
 **Route state:** `currentView === 'PRODUCT_DETAIL'`, `activeProductId: string`
 **Data sources:** `useConductorCatalog` (catalog), `useJITIntelligence` (SSE stream), `useProductRelationships` (graph)
