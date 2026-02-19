@@ -88,6 +88,7 @@ _ACTION_MAP = {
     "implement":  ("build",      "🔨 BUILDER",         "Translating specs to code..."),
     "build":      ("build",      "⚙️  CONDUCTOR",      "Rebuilding the product catalog..."),
     "heal":       ("heal",       "🚑 WATCHDOG",        "Diagnosing and auto-repairing (up to 3 cycles)..."),
+    "ui_validate": ("ui_validate", "🖥️  UI VALIDATOR",   "Scanning imports + Vite build check..."),
     "diagnose":   ("diagnose",   "🔍 WATCHDOG SCAN",   "Scanning for errors — no auto-fix..."),
     "steer":      ("steer",      "🧭 STRATEGIST",      "Analysing master plan..."),
     "doc":        ("doc",        "📝 SCRIBE",          "Regenerating ARCHITECTURE.md..."),
@@ -112,6 +113,8 @@ def _build_cmd(tool: str, args: str) -> list[str] | None:
         return factory + ["build"]
     if tool == "heal":
         return factory + ["heal"]
+    if tool == "ui_validate":
+        return factory + ["ui_validate"] + (["--no-build"] if args == "--no-build" else [])
     if tool == "diagnose":
         return factory + ["diagnose"]
     if tool == "steer":

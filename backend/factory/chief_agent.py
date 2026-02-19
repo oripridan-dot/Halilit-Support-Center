@@ -46,6 +46,10 @@ TOOLS & PARALLELISM RULES:
 - 'design'      (Architect):  Creates Blueprints/Specs.                               PARALLEL SAFE ✅
 - 'implement'   (Builder):    Turns Specs into Code.                                   PARALLEL SAFE ✅ (if different files)
 - 'heal'        (Watchdog):   Finds and fixes bugs.                                    SEQUENTIAL 🔒
+- 'ui_validate' (UI Validator):Scans frontend imports + runs Vite build to catch       PARALLEL SAFE ✅
+                              runtime import errors tsc/eslint miss (e.g. wrong
+                              folder name, missing hooks). Use AFTER every
+                              'implement' that touches frontend files.
 - 'diagnose'    (Scanner):    Scans for errors, no auto-fix.                           PARALLEL SAFE ✅
 - 'steer'       (Strategist): Reviews business goals.                                  PARALLEL SAFE ✅
 - 'doc'         (Scribe):     Regenerates ARCHITECTURE.md.                             SEQUENTIAL 🔒

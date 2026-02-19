@@ -163,6 +163,18 @@ def cmd_diagnose() -> None:
     )
 
 
+def cmd_ui_validate(skip_build: bool = False) -> None:
+    """UI Validator: scan imports + run Vite build to catch runtime errors."""
+    log("Activating UI Validator Agent...")
+    agent = FACTORY / "ui_validator_agent.py"
+    env = {**os.environ, "PYTHONPATH": str(FACTORY)}
+    args = [sys.executable, str(agent)]
+    if skip_build:
+        args.append("--no-build")
+    result = subprocess.run(args, cwd=str(ROOT), env=env)
+    sys.exit(result.returncode)
+
+
 def cmd_heal(max_cycles: int = 3) -> None:
     """Autonomous fix loop: Watchdog -> Builder -> Watchdog (up to max_cycles)."""
     ensure_env()
@@ -504,6 +516,10 @@ if __name__ == "__main__":
 
     elif command == "status":
         cmd_status()
+
+    elif command == "ui_validate":
+        skip = "--no-build" in sys.argv
+        cmd_ui_validate(skip_build=skip)
 
     elif command == "diagnose":
         cmd_diagnose()
