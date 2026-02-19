@@ -1,5 +1,5 @@
 {
-  "name": "Halilit Support Center v8.5",
+  "name": "Halilit Support Center v9.7",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/python:1": {

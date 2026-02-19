@@ -29,7 +29,7 @@ This directory contains the configuration for GitHub Codespaces and VS Code Dev 
    # Edit .env file and add your Google API key
    nano .env
    ```
-   Get your API key from: https://makersuite.google.com/app/apikey
+   Get your API key from: https://aistudio.google.com/app/apikey
 
 2. **Start Docker Services** (optional but recommended for full functionality)
    ```bash
@@ -95,7 +95,7 @@ The following extensions are automatically installed:
 
 ## Configuration Details
 
-- **Version**: v9.3
+- **Version**: v9.7
 - **Node Memory**: 2GB max old space size
 - **TypeScript Server Memory**: 2GB
 - **Python Interpreter**: `/usr/local/bin/python`

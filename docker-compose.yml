@@ -2,6 +2,30 @@ version: "3.9"
 
 services:
   # =========================================================================
+  # Redis - Celery Broker & Result Backend
+  # =========================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: halilit_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - halilit-network
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # =========================================================================
   # FastAPI Server — The only service needed for JIT architecture
   # =========================================================================
   api:
@@ -17,11 +41,14 @@ services:
       --port 8000
       --reload
     environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
       GOOGLE_API_KEY: ${GOOGLE_API_KEY:-}
       PYTHONUNBUFFERED: "1"
       LOG_LEVEL: "INFO"
     volumes:
       - .:/app
+    networks:
+      - halilit-network
     restart: unless-stopped
     logging:
       driver: "json-file"
