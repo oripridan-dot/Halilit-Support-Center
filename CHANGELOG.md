@@ -1,4 +1,34 @@
 ## [v4.1] — 2026-02-19
+## [v4.1]
+
+### Visual QA
+- [feat] Implemented result caching for visual QA.
+- [feat] Added caching functions for visual QA.
+- [refactor] Added `hashlib`, `json`, and `time` imports to `visual_qa.py`.
+
+### Global Search
+- [feat] Added a new spec file: `specs/interface/global_search_-_prioritize_exact_sku_matches.md`.
+- [feat] Global search prioritizes exact SKU matches.
+- [refactor] Updated `GlobalSearch.tsx` for efficient search result handling.
+
+### Product Detail View
+- [feat] Added JIT Intelligence integration to ProductDetailView.
+- [feat] Added sourcing badges.
+- [feat] Used ConductorCatalog for product details.
+- [refactor] Updated imports in ProductDetailView.tsx.
+- [feat] Added useRef to ProductDetailView.tsx.
+- [feat] Added JITPhase and JITIntelligenceState to useJITIntelligence hook.
+- [feat] Added useConductorCatalog hook.
+- [feat] Added SourcingBadge component.
+- [refactor] Updated RelationshipSection to handle product sources.
+- [refactor] Updated styling and logic in ProductDetailView.tsx.
+- [feat] Added logic to ProductDetailView to display information from conductor catalog.
+- [refactor] Added a check to ProductDetailView to prevent calling useProductRelationships if there's no product.
+
+### Backend Changes
+- [refactor] Updated the SYSTEM_PROMPT in chief_agent.py.
+
+## [v4.1] — 2026-02-19
 ## v4.1
 
 - [feat] Implemented result caching for visual QA.
