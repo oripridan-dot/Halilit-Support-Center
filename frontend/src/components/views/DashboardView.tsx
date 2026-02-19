@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle, Loader2, XCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Loader2, XCircle, Package, PhoneCall, Tag, RefreshCcw } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigationStore } from '../../store/navigationStore';
 import { format } from 'date-fns';
@@ -137,7 +137,7 @@ const DashboardView: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Package }))) as React.ComponentType}
+          icon={Package}
           label="Total products"
           value={hasStats ? stats?.total_products.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Active SKUs"
@@ -145,7 +145,7 @@ const DashboardView: React.FC = () => {
           onClick={() => goToInventory()}
         />
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.PhoneCall }))) as React.ComponentType}
+          icon={PhoneCall}
           label="Call for price"
           value={hasStats ? stats?.calls_for_price.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Missing IL price"
@@ -153,14 +153,14 @@ const DashboardView: React.FC = () => {
           onClick={() => goToInventoryCfp()}
         />
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.Tag }))) as React.ComponentType}
+          icon={Tag}
           label="Active brands"
           value={hasStats ? stats?.top_brands_count.toLocaleString() : <span className="text-zinc-600 animate-pulse">…</span>}
           sub="Distinct brands in catalog"
           accent="green"
         />
         <MetricCard
-          icon={React.lazy(() => import('lucide-react').then(mod => ({ default: mod.RefreshCcw }))) as React.ComponentType}
+          icon={RefreshCcw}
           label="Last ingestion run"
           value={hasStats ? <LastRunStatus run={stats!.last_ingestion_run} /> : <span className="text-zinc-600 animate-pulse">…</span>}
           sub={
