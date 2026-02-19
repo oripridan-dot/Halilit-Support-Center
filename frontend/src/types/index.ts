@@ -1,25 +1,38 @@
 /**
- * Halilit Support Center - Unified Types
+ * Halilit Support Center - Unified Types  v9.7.0
  *
- * This is the SINGLE source of truth for all TypeScript types.
- * Types are aligned with the backend pipeline output format.
+ * SINGLE source of truth for all frontend TypeScript types.
  *
- * Types auto-generated from backend data models.
+ * ARCHITECTURE:
+ *   - `Product` / `ConductorProduct` = catalog API shape (id, name, price, specs, …)
+ *   - `PipelineProduct` / `IngestionProductDraft` = internal backend pipeline model
+ *
+ * ⚠️  Do NOT access pipeline-model fields (halilit_id, product_name, price_il,
+ *     display?.hero_image) in UI components. Use ConductorProduct fields instead.
  */
 
-// Re-export auto-generated types from backend
+// ── Backend pipeline types (internal / non-UI) ────────────────────────────────
 export * from './generated';
+import type { IngestionProductDraft, PricingTier } from './generated';
 
-// Import for local use
-import type { IngestionProductDraft, PricingTier, IngestionStatus } from './generated';
+/** Backend pipeline model — NOT for UI rendering. Use Product instead. */
+export type PipelineProduct = IngestionProductDraft;
 
-// ============================================
-// TYPE ALIASES (for backward compatibility)
-// ============================================
+// ── Canonical frontend product type ──────────────────────────────────────────
+export type { ConductorProduct } from '../hooks/useConductorCatalog';
+import type { ConductorProduct } from '../hooks/useConductorCatalog';
 
-/** Product type - alias for IngestionProductDraft */
-export type Product = IngestionProductDraft;
-export type OptimizedProduct = IngestionProductDraft; // Legacy support
+// ── Type aliases ─────────────────────────────────────────────────────────────
+
+/**
+ * Product — canonical UI type backed by ConductorProduct.
+ * API fields: id, name, brand, price, price_eilat, image_url, image_gallery,
+ *             specs, features, description, data_trust, quality_score, stock, …
+ */
+export type Product = ConductorProduct;
+
+/** @deprecated Use Product (ConductorProduct) */
+export type OptimizedProduct = ConductorProduct;
 
 /** BrandIdentity - brand metadata */
 export interface BrandIdentity {
@@ -84,16 +97,25 @@ export type Tier = PricingTier;
 // HELPER FUNCTIONS
 // ============================================
 
-/**
- * Get product price formatted for display
- * @deprecated Prefer inline formatting in components
- */
+/** Format IL price for display */
 export function formatPrice(product: Product): string {
-  const price = (product as any).price || product.pricing?.price_il || product.price_il;
-  if (!price) return 'Price on request';
-  return new Intl.NumberFormat('en-IL', {
+  const price = product.price;
+  if (!price || price === 0) return 'Call for Price';
+  return new Intl.NumberFormat('he-IL', {
     style: 'currency',
-    currency: 'ILS'
+    currency: 'ILS',
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+
+/** Format Eilat price for display */
+export function formatPriceEilat(product: Product): string {
+  const price = product.price_eilat;
+  if (!price || price === 0) return 'Call for Price';
+  return new Intl.NumberFormat('he-IL', {
+    style: 'currency',
+    currency: 'ILS',
+    maximumFractionDigits: 0,
   }).format(price);
 }
 
@@ -111,20 +133,17 @@ export function getTierColor(tier: PricingTier): string {
   return colors[tier] || colors.entry;
 }
 
-/**
- * Filter products by tier
- */
+/** Filter products by tier */
 export function filterByTier(products: Product[], tier: PricingTier): Product[] {
-  return products.filter(p => (p.pricing?.tier || (p as any).tier) === tier);
+  return products.filter(p => p.tier === tier);
 }
 
-/**
- * Search products by text
- */
+/** Search products by text (uses pre-built search_text index or name/brand fallback) */
 export function searchProducts(products: Product[], query: string): Product[] {
   const q = query.toLowerCase();
   return products.filter(p =>
-    p.product_name?.toLowerCase().includes(q) ||
+    p.search_text?.toLowerCase().includes(q) ||
+    p.name?.toLowerCase().includes(q) ||
     p.brand?.toLowerCase().includes(q)
   );
 }

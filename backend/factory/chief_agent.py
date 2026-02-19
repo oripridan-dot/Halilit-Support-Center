@@ -23,6 +23,8 @@ from agent_core import query_llm  # noqa: E402
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 SPECS_DIR = ROOT_DIR / "specs"
 FRONTEND_DIR = ROOT_DIR / "frontend/src/components/views"
+MASTER_PLAN_PATH = SPECS_DIR / "strategy" / \
+    "master_plan.md"  # The Spine — Ubiquitous Language & ToC
 
 # ---------------------------------------------------------------------------
 # System Prompt — v3.0: Queue Output
@@ -156,14 +158,29 @@ def get_git_status() -> str:
 
 
 def get_project_state() -> str:
-    """Scans the factory floor to see what exists."""
+    """Scans the factory floor and reads the Master Plan to establish global context."""
     state = []
 
-    # 0. Git status
+    # --- 0. INJECT THE SPINE (The Master Plan / Ubiquitous Language) ---
+    if MASTER_PLAN_PATH.exists():
+        with open(MASTER_PLAN_PATH, "r", encoding="utf-8") as f:
+            master_plan = f.read()
+        state.append(
+            "=== THE MASTER PLAN (UBIQUITOUS LANGUAGE & DIRECTORY) ===")
+        state.append(master_plan)
+        state.append(
+            "=========================================================\n")
+    else:
+        state.append(
+            "⚠️  WARNING: The Spine (specs/strategy/master_plan.md) is missing. "
+            "Agents lack global product context.\n"
+        )
+
+    # 1. Git status
     git_status = get_git_status()
     state.append(f"Git Status: {git_status}")
 
-    # 1. Check Specs
+    # 2. Check Specs
     if SPECS_DIR.exists():
         specs = list(SPECS_DIR.rglob("*.md"))
         state.append(f"Found {len(specs)} Specification(s) in /specs.")
@@ -172,7 +189,7 @@ def get_project_state() -> str:
     else:
         state.append("MISSING: /specs directory not found.")
 
-    # 2. Check Frontend views
+    # 3. Check Frontend views
     if FRONTEND_DIR.exists():
         views = list(FRONTEND_DIR.glob("*.tsx"))
         state.append(
@@ -181,12 +198,7 @@ def get_project_state() -> str:
         state.append(
             "MISSING: Frontend views folder is empty or does not exist.")
 
-    # 3. Specific artifact checks
-    ui_spec = SPECS_DIR / "interface" / "01_operator_dashboard.md"
-    if not ui_spec.exists():
-        state.append(
-            "WARNING: Main UI spec (specs/interface/01_operator_dashboard.md) is missing.")
-
+    # 4. Specific artifact checks
     taxonomy = ROOT_DIR / "backend" / "data" / "learned_taxonomy.json"
     if not taxonomy.exists():
         state.append(

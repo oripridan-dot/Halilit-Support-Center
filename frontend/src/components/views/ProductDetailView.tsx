@@ -1,188 +1,258 @@
-import React, { useMemo } from 'react';
-import { useConductorCatalog, useJITIntelligence } from '../../hooks';
-import SourcingBadge from '../ProductDetail/SourcingBadge';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { useConductorCatalog } from '../../hooks/useConductorCatalog';
+import type { ConductorProduct } from '../../hooks/useConductorCatalog';
+import { useNavigationStore } from '../../store/navigationStore';
+import { ExternalLink, Check, ClipboardCopy, AlertTriangle } from 'lucide-react';
+import { ImageWithFallback } from '../ImageWithFallback';
+import { ProductImageCarousel } from '../ProductImageCarousel';
+import { EcosystemTab } from '../EcosystemTab';
 import JITBadge from '../ProductDetail/JITBadge';
-import ProductImage from '../ProductImage';
+import SourcingBadge from '../ProductDetail/SourcingBadge';
+import { useJITIntelligence } from '../../hooks/useJITIntelligence';
 
-interface ProductDetailProps {
-  productId: string;
-}
+const ProductDetailView: React.FC = () => {
+  const { products } = useConductorCatalog();
+  const { activeProductId } = useNavigationStore();
+  const navigate = useNavigate();
+  const { productId } = useParams<{ productId: string }>();
+  const [copied, setCopied] = useState(false);
+  const { jitState, refetch } = useJITIntelligence(productId || '');
+  const [activeTab, setActiveTab] = useState('overview');
 
-const ProductDetailView: React.FC<ProductDetailProps> = ({ productId }) => {
-  const { data: catalogData, isLoading: isCatalogLoading, error: catalogError } = useConductorCatalog(productId);
-  const { jitState } = useJITIntelligence(productId);
+  const product = useMemo<ConductorProduct | null>(
+    () => products.find(p => p.id === (productId || activeProductId)) ?? null,
+    [products, productId, activeProductId]
+  );
 
-  const productName = useMemo(() => {
-    if (jitState?.snap?.name) {
-      return jitState.snap.name;
+  useEffect(() => {
+    if (copied) {
+      const timeout = setTimeout(() => setCopied(false), 2000);
+      return () => clearTimeout(timeout);
     }
-    return catalogData?.name;
-  }, [catalogData?.name, jitState?.snap?.name]);
+  }, [copied]);
 
-  const brandName = useMemo(() => {
-    if (jitState?.snap?.brand) {
-      return jitState.snap.brand;
+  const handleCopySKU = async () => {
+    if (!product?.id) return;
+    try {
+      await navigator.clipboard.writeText(product.id);
+      setCopied(true);
+    } catch (err) {
+      console.error('Failed to copy SKU:', err);
     }
-    return catalogData?.brand;
-  }, [catalogData?.brand, jitState?.snap?.brand]);
+  };
 
-  const price = useMemo(() => {
-    if (jitState?.snap?.price) {
-      return jitState.snap.price;
-    }
-    return catalogData?.price;
-  }, [catalogData?.price, jitState?.snap?.price]);
-
-  const priceEilat = useMemo(() => {
-    if (jitState?.snap?.price_eilat) {
-        return jitState.snap.price_eilat
-    }
-    return catalogData?.price_eilat;
-  }, [catalogData?.price_eilat, jitState?.snap?.price_eilat]);
-
-  const imageUrl = useMemo(() => {
-    if (jitState?.snap?.thumbnail && jitState.status === 'complete') {
-      return jitState.snap.thumbnail;
-    }
-    return catalogData?.image_url;
-  }, [catalogData?.image_url, jitState?.snap?.thumbnail, jitState.status]);
-
-  const renderBadge = (source: 'Official Scout' | 'Commercial Scout' | 'JIT Intelligence' | 'Inferred Scout', label: string) => {
-    let badgeStyle = '';
-    let badgeText = '';
-    let ariaLabel = `Source: ${label}`;
-
+  const getBadgeLabel = (source: string | undefined) => {
     switch (source) {
-      case 'Official Scout':
-        badgeStyle = 'bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-blue-300';
-        badgeText = 'Official Scout';
-        break;
-      case 'Commercial Scout':
-        badgeStyle = 'bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-300';
-        badgeText = 'Commercial Scout';
-        break;
-      case 'JIT Intelligence':
-        badgeStyle = 'bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-purple-300';
-        badgeText = 'JIT Intelligence';
-        break;
-      case 'Inferred Scout':
-        badgeStyle = 'bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-purple-300';
-        badgeText = 'Inferred Scout';
-        break;
+      case 'halilit': return 'Commercial';
+      case 'official': return 'Official';
+      case 'estimated': return 'Estimated';
+      default: return null;
     }
-
-    return (
-      <span aria-label={ariaLabel} className={`text-xs font-semibold mr-2 px-2.5 py-0.5 rounded ${badgeStyle}`}>
-        {badgeText}
-      </span>
-    );
   };
 
-  const renderProductName = () => {
-    if (!productName) return null;
-
-    let badgeSource: 'Official Scout' | 'JIT Intelligence' = 'Official Scout';
-    if (jitState?.snap?.name) {
-      badgeSource = 'JIT Intelligence';
-    }
-
+  if (!product && !jitState.isLoading && !jitState.error) {
     return (
-      <div className="flex items-center">
-        {productName}
-        {badgeSource && renderBadge(badgeSource, badgeSource)}
+      <div className="bg-zinc-950 min-h-screen p-4 flex flex-col items-center justify-center">
+        <p className="text-white text-lg">Product not found</p>
+        <button onClick={() => navigate(-1)} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          Back
+        </button>
       </div>
     );
-  };
+  }
 
-  const renderBrandName = () => {
-    if (!brandName) return null;
-
-    let badgeSource: 'Official Scout' | 'JIT Intelligence' = 'Official Scout';
-    if (jitState?.snap?.brand) {
-      badgeSource = 'JIT Intelligence';
-    }
-
+  if (jitState.error) {
     return (
-      <div className="flex items-center">
-        {brandName}
-        {badgeSource && renderBadge(badgeSource, badgeSource)}
-      </div>
-    );
-  };
-
-  const renderPrice = () => {
-    if (price === null || price === undefined) {
-      return (
-        <div>
-          Call for Price
-          <JITBadge productId={productId} />
+      <div className="bg-zinc-950 min-h-screen p-4 flex flex-col items-center justify-center">
+        <div className="bg-red-800 text-white p-4 rounded flex items-center gap-2">
+          <AlertTriangle size={20} />
+          <span>Error loading product intelligence.</span>
+          <button onClick={refetch} className="ml-4 px-2 py-1 bg-white text-red-700 rounded hover:bg-gray-200">Retry</button>
         </div>
-      );
-    }
-    let badgeSource: 'Commercial Scout' | 'JIT Intelligence' = 'Commercial Scout';
-    if (jitState?.snap?.price) {
-      badgeSource = 'JIT Intelligence';
-    }
-
-    return (
-      <div className="flex items-center">
-        {price}
-        {badgeSource && renderBadge(badgeSource, badgeSource)}
       </div>
     );
-  };
-
-  const renderPriceEilat = () => {
-      if (priceEilat === null || priceEilat === undefined) {
-          return null;
-      }
-
-      let badgeSource: 'Commercial Scout' | 'JIT Intelligence' = 'Commercial Scout';
-      if(jitState?.snap?.price_eilat) {
-          badgeSource = 'JIT Intelligence';
-      }
-
-      return(
-          <div className="flex items-center">
-              {priceEilat}
-              {badgeSource && renderBadge(badgeSource, badgeSource)}
-          </div>
-      )
   }
 
-  const renderSpecifications = () => {
-    if (!catalogData?.specifications) return null;
-
+  if (jitState.isLoading || !product) {
     return (
-      <div>
-        {Object.entries(catalogData.specifications).map(([key, value]) => (
-          <div key={key} className="flex items-center">
-            {key}: {value}
-            {renderBadge('Official Scout', 'Official Scout')}
+      <div className="bg-zinc-950 min-h-screen p-4">
+        <div className="md:grid md:grid-cols-3 gap-4">
+          <div className="md:col-span-1">
+            <div className="bg-zinc-900 rounded-lg animate-pulse h-64 mb-4" />
+            <div className="bg-zinc-800 rounded-full h-6 w-24 mb-2" />
+            <div className="bg-zinc-800 rounded-full h-4 w-48 mb-2" />
           </div>
-        ))}
+          <div className="md:col-span-2">
+            <div className="bg-zinc-800 rounded-full h-8 w-64 mb-4" />
+            <div className="bg-zinc-800 rounded-full h-4 w-full mb-2" />
+            <div className="bg-zinc-800 rounded-full h-4 w-3/4 mb-2" />
+          </div>
+        </div>
       </div>
     );
-  };
-
-  if (isCatalogLoading) {
-    return <div>Loading...</div>;
   }
 
-  if (catalogError) {
-    return <div>Error: {catalogError.message}</div>;
-  }
+  const priceLabel = getBadgeLabel(product.data_trust?.price_source);
+  const specsLabel = getBadgeLabel(product.data_trust?.specs_source);
+
+  const price = (jitState.data as any)?.price ?? product.price;
+  const priceEilat = (jitState.data as any)?.price_eilat ?? product.price_eilat;
+  const name = (jitState.data as any)?.name ?? product.name;
+  const brand = (jitState.data as any)?.brand ?? product.brand;
+  const imageUrl = (jitState.data as any)?.image_url ?? product.image_url;
 
   return (
-    <div>
-      <ProductImage imageUrl={imageUrl} altText={productName || 'Product Image'} />
-      {renderProductName()}
-      {renderBrandName()}
-      {renderPrice()}
-      {renderPriceEilat()}
-      {renderSpecifications()}
-      <SourcingBadge productId={productId} />
-      <JITBadge productId={productId} />
+    <div className="bg-zinc-950 min-h-screen p-4">
+      <div className="md:grid md:grid-cols-3 gap-6">
+
+        {/* ── Left: Image + meta ─────────────────────────────────── */}
+        <div className="md:col-span-1 space-y-3">
+          {imageUrl
+            ? <ImageWithFallback src={imageUrl} alt={name} className="rounded-xl w-full object-contain max-h-72" />
+            : <div className="bg-zinc-800 rounded-xl h-64" />
+          }
+          <ProductImageCarousel images={product.image_gallery || []} />
+
+          {/* SKU */}
+          <div className="flex items-center justify-between bg-zinc-900 rounded-lg px-3 py-2">
+            <div className="flex items-center gap-2">
+              <span className="text-zinc-400 text-xs">SKU</span>
+              <span className="text-white text-sm font-mono">{product.id}</span>
+            </div>
+            <button onClick={handleCopySKU} className="text-blue-400 hover:text-blue-300">
+              {copied ? <Check size={14} /> : <ClipboardCopy size={14} />}
+            </button>
+          </div>
+
+          {/* Pricing */}
+          <div className="space-y-1">
+            {price > 0
+              ? <p className="text-white font-semibold">₪ {price.toLocaleString('he-IL')} <span className="text-zinc-500 text-xs font-normal">(IL)</span></p>
+              : <p className="text-zinc-500 italic">Call for Price (IL)</p>
+            }
+            {priceEilat > 0 && (
+              <p className="text-zinc-300 text-sm">₪ {priceEilat.toLocaleString('he-IL')} <span className="text-zinc-500 text-xs">(Eilat)</span></p>
+            )}
+            {priceLabel && <SourcingBadge source={(product.data_trust?.price_source ?? 'none') as any} label={priceLabel} />}
+          </div>
+
+          {/* Links */}
+          <div className="space-y-1">
+            {product.halilit_url && (
+              <a href={product.halilit_url} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm">
+                <ExternalLink size={14} /> Halilit Page
+              </a>
+            )}
+            {product.official_url && (
+              <a href={product.official_url} target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sky-400 hover:text-sky-300 text-sm">
+                <ExternalLink size={14} /> Official Page
+              </a>
+            )}
+          </div>
+          {specsLabel && <SourcingBadge source={(product.data_trust?.specs_source ?? 'none') as any} label={specsLabel} />}
+        </div>
+
+        {/* ── Right: Tabs ────────────────────────────────────────── */}
+        <div className="md:col-span-2">
+          <div className="flex items-start justify-between mb-4 gap-2">
+            <div>
+              <h1 className="text-white text-2xl font-semibold leading-tight">{name}</h1>
+              <p className="text-zinc-400 text-sm mt-0.5">{brand}</p>
+            </div>
+            <JITBadge productId={product.id} />
+          </div>
+
+          {/* Tab bar */}
+          <div className="flex border-b border-zinc-700 mb-4">
+            {(['overview', 'specs', 'ecosystem', 'reviews'] as const).map(tab => (
+              <button key={tab} onClick={() => setActiveTab(tab)}
+                className={`py-2 px-4 capitalize text-sm transition-colors ${
+                  activeTab === tab
+                    ? 'border-b-2 border-blue-500 text-blue-400'
+                    : 'text-zinc-400 hover:text-white'
+                }`}>
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Overview */}
+          {activeTab === 'overview' && (
+            <div className="space-y-4">
+              {product.description && <p className="text-zinc-200 leading-relaxed">{product.description}</p>}
+              {(product.features?.length ?? 0) > 0 && (
+                <div>
+                  <h2 className="text-white font-semibold mb-2">Features</h2>
+                  <ul className="list-disc list-inside text-zinc-300 space-y-1">
+                    {product.features.map((f, i) => <li key={i}>{f}</li>)}
+                  </ul>
+                </div>
+              )}
+              {(product.pros?.length ?? 0) > 0 && (
+                <div>
+                  <h2 className="text-white font-semibold mb-2">Pros</h2>
+                  <ul className="list-disc list-inside text-emerald-400 space-y-1">
+                    {product.pros.map((p, i) => <li key={i}>{p}</li>)}
+                  </ul>
+                </div>
+              )}
+              {(product.cons?.length ?? 0) > 0 && (
+                <div>
+                  <h2 className="text-white font-semibold mb-2">Cons</h2>
+                  <ul className="list-disc list-inside text-red-400 space-y-1">
+                    {product.cons.map((c, i) => <li key={i}>{c}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Specs table */}
+          {activeTab === 'specs' && (
+            <table className="text-sm text-zinc-300 w-full">
+              <tbody>
+                {Object.entries(product.specs || {}).map(([key, value]) => (
+                  <tr key={key} className="border-b border-zinc-800">
+                    <td className="py-2 pr-4 text-white font-medium whitespace-nowrap w-1/3">{key}</td>
+                    <td className="py-2 text-zinc-300">{String(value)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+
+          {/* Ecosystem */}
+          {activeTab === 'ecosystem' && <EcosystemTab productId={product.id} />}
+
+          {/* Reviews */}
+          {activeTab === 'reviews' && (
+            <div className="space-y-3">
+              {product.rating > 0 && (
+                <p className="text-zinc-200">Rating: <span className="text-white font-semibold">{product.rating}/5</span>
+                  {product.review_count > 0 && <span className="text-zinc-500 text-sm"> ({product.review_count} reviews)</span>}
+                </p>
+              )}
+              {product.review_synthesis_summary && (
+                <p className="text-zinc-300 leading-relaxed">{product.review_synthesis_summary}</p>
+              )}
+              {(product.real_world_insights?.length ?? 0) > 0 && (
+                <div>
+                  <h2 className="text-white font-semibold mb-2">Real-world Insights</h2>
+                  <ul className="list-disc list-inside text-zinc-300 space-y-1">
+                    {product.real_world_insights!.map((insight, i) => <li key={i}>{insight}</li>)}
+                  </ul>
+                </div>
+              )}
+              {product.review_sources && product.review_sources.length > 0 && (
+                <p className="text-zinc-500 text-xs">Sources: {product.review_sources.join(', ')}</p>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
