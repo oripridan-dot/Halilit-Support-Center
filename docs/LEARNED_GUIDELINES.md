@@ -53,3 +53,9 @@ _(No lessons recorded yet. The Reflect Agent will populate this section as the s
 **Root Cause:** Invalid data format in catalog.
 **Fix:** Added validation step to build.
 **Lesson:** ALWAYS validate external data inputs.
+
+### [2026-02-19] Incorrect Catalog Organizer Spec
+**Symptom:** Product catalog build failed.
+**Root Cause:** The catalog organizer spec was misconfigured.
+**Fix:** Corrected misconfigured catalog organizer spec.
+**Lesson:** ALWAYS validate organizer specifications before builds.
