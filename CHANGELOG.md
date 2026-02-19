@@ -4,6 +4,14 @@
 - [feat] Implemented result caching for visual QA to avoid re-running Playwright for the same URL+spec within TTL.
 - [feat] Added `_vqa_cache_key`, `_vqa_cache_load`, `_vqa_cache_save`, `_vqa_cache_get`, and `_vqa_cache_set` functions for caching.
 - [refactor] Added `hashlib`, `json`, and `time` imports to `visual_qa.py`.
+- [feat] Added a new spec file: `specs/interface/global_search_-_prioritize_exact_sku_matches.md`.
+
+## [v4.1] — 2026-02-19
+## v4.1
+
+- [feat] Implemented result caching for visual QA to avoid re-running Playwright for the same URL+spec within TTL.
+- [feat] Added `_vqa_cache_key`, `_vqa_cache_load`, `_vqa_cache_save`, `_vqa_cache_get`, and `_vqa_cache_set` functions for caching.
+- [refactor] Added `hashlib`, `json`, and `time` imports to `visual_qa.py`.
 
 ## [v4.1] — 2026-02-19
 - [feat] Implemented result caching for visual QA to avoid re-running Playwright for the same URL+spec within TTL.
