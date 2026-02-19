@@ -469,7 +469,8 @@ if __name__ == "__main__":
 
     elif command == "task_force":
         if len(sys.argv) < 4:
-            log('❌ Usage: python factory.py task_force <id> "goal" [agent1,agent2,...]')
+            log(
+                '❌ Usage: python factory.py task_force <id> "goal" [agent1,agent2,...]')
             sys.exit(1)
         tf_id = sys.argv[2]
         tf_goal = sys.argv[3]

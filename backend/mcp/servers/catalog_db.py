@@ -319,7 +319,6 @@ async def mcp_endpoint(request: Request) -> JSONResponse:
     })
 
 
-
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     port = int(os.getenv("MCP_CATALOG_PORT", "8102"))

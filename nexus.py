@@ -205,7 +205,8 @@ def execute_sequential(task: dict) -> dict:
             print(f"   Goal   : {goal}")
             print(f"   Agents : {', '.join(tf_agents)}")
 
-    cmd = _build_task_force_cmd(task) if tool == "task_force" else _build_cmd(tool, args)
+    cmd = _build_task_force_cmd(
+        task) if tool == "task_force" else _build_cmd(tool, args)
     if cmd:
         # Stream stdout to terminal; capture stderr to detect failures
         proc = subprocess.run(cmd, stderr=subprocess.PIPE, text=True)

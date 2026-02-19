@@ -271,3 +271,175 @@ def commit_and_push(dry_run: bool = False) -> None:
 if __name__ == "__main__":
     dry = "--dry-run" in sys.argv or "-n" in sys.argv
     commit_and_push(dry_run=dry)
+
+
+# ---------------------------------------------------------------------------
+# Feature Branch Lifecycle (Pillar: Autonomous Rollbacks)
+# ---------------------------------------------------------------------------
+
+def create_feature_branch(feature_slug: str) -> str:
+    """
+    Create and checkout a new AI feature branch before any code is touched.
+
+    Branch name: ai-<feature_slug>-<short_sha>
+    Returns the branch name, or the current branch name if creation fails
+    (safe fallback — we never block the build over a branch failure).
+    """
+    import re as _re
+    # Sanitize slug: lowercase, replace spaces/special chars with hyphens
+    clean_slug = _re.sub(r"[^\w]+", "-", feature_slug.lower()).strip("-")[:40]
+    # Short SHA for uniqueness
+    sha_result = _run_git(["rev-parse", "--short", "HEAD"])
+    short_sha = sha_result.stdout.strip(
+    )[:7] if sha_result.returncode == 0 else "x"
+    branch_name = f"ai-{clean_slug}-{short_sha}"
+
+    result = _run_git(["checkout", "-b", branch_name])
+    if result.returncode == 0:
+        print(f"🌿  Feature branch created: {branch_name}")
+        return branch_name
+
+    # Branch may already exist — try checking it out
+    result2 = _run_git(["checkout", branch_name])
+    if result2.returncode == 0:
+        print(f"🌿  Resumed feature branch: {branch_name}")
+        return branch_name
+
+    # Fallback: stay on current branch
+    current = get_current_branch()
+    print(f"⚠️  Could not create feature branch — continuing on: {current}")
+    return current
+
+
+def rollback_branch(branch_name: str, base_branch: str = "v9.7.0") -> bool:
+    """
+    Hard-reset to the last clean commit and optionally delete the feature branch.
+    Used when the inner loop exhausts its retries without passing verification.
+
+    Steps:
+        1. git reset --hard HEAD  (discard uncommitted changes on feature branch)
+        2. git checkout <base_branch>
+        3. git branch -D <feature_branch>   (delete the failed branch)
+
+    Returns True if rollback succeeded.
+    """
+    if branch_name == base_branch:
+        print("⚠️  Cannot rollback — already on base branch. Resetting to HEAD...")
+        _run_git(["reset", "--hard", "HEAD"])
+        _run_git(["clean", "-fd"])
+        return True
+
+    print(f"🚨  Rolling back failed branch: {branch_name} → {base_branch}")
+
+    # 1. Discard any uncommitted changes on the feature branch
+    _run_git(["reset", "--hard", "HEAD"])
+    _run_git(["clean", "-fd"])
+
+    # 2. Switch back to base
+    checkout = _run_git(["checkout", base_branch])
+    if checkout.returncode != 0:
+        print(f"❌  Rollback failed: could not checkout {base_branch}")
+        return False
+
+    # 3. Delete the failed branch
+    _run_git(["branch", "-D", branch_name])
+    print(f"✅  Rolled back. Working tree restored to {base_branch}.")
+    return True
+
+
+def merge_feature_branch(feature_branch: str, base_branch: str = "v9.7.0") -> bool:
+    """
+    Squash-merge a successful feature branch into the base branch.
+    Called by the Chief after the Gatekeeper approves.
+
+    Returns True if merge succeeded.
+    """
+    if feature_branch == base_branch:
+        return True  # Nothing to merge
+
+    print(f"🔀  Merging {feature_branch} → {base_branch}...")
+    checkout = _run_git(["checkout", base_branch])
+    if checkout.returncode != 0:
+        print(f"❌  Cannot checkout base branch {base_branch} for merge.")
+        return False
+
+    merge = _run_git(["merge", "--squash", feature_branch])
+    if merge.returncode != 0:
+        print(f"❌  Merge failed:\n{merge.stderr.strip()}")
+        return False
+
+    print(f"✅  Squash-merged {feature_branch} into {base_branch}.")
+    # Delete the feature branch
+    _run_git(["branch", "-D", feature_branch])
+    return True
+
+
+def generate_failure_report(
+    feature_slug: str,
+    original_prompt: str,
+    error_summary: str,
+    rounds_attempted: int,
+    branch_name: str,
+) -> str:
+    """
+    Write a FACTORY_FAILURE_REPORT.md to the project root explaining exactly
+    why the autonomous cycle failed — saves operators from untangling broken code.
+
+    Returns the absolute path to the report file.
+    """
+    from datetime import datetime
+    report_path = ROOT_DIR / "FACTORY_FAILURE_REPORT.md"
+    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")
+
+    content = f"""# 🏭 Factory Failure Report
+
+**Feature:** {feature_slug}
+**Date:** {timestamp}
+**Branch (auto-rolled back):** `{branch_name}`
+**Rounds Attempted:** {rounds_attempted}
+
+---
+
+## Original Request
+
+> {original_prompt}
+
+---
+
+## Failure Analysis
+
+The autonomous improvement loop exhausted **{rounds_attempted} rounds** without
+producing code that passed all Verification Commands.
+
+### Last Error Encountered
+
+```
+{error_summary[:3000]}
+```
+
+---
+
+## What Happened
+
+1. The Builder generated code and the Sandbox Executor ran the Verification Commands.
+2. The code failed the automated checks on every round.
+3. After {rounds_attempted} attempts, the system halted and rolled back `{branch_name}`.
+4. The working tree has been restored to a clean state.
+
+---
+
+## Recommended Next Steps
+
+1. **Review the error above** — copy the exact error message and tell the Chief:
+   `"The last attempt failed with: [paste error]. Fix it."`
+2. **Simplify the request** — break it into smaller, atomic tasks.
+3. **Check `specs/repairs/current_fix.md`** — the Watchdog may have generated a
+   detailed repair spec already.
+
+---
+
+*Generated automatically by the Dark Factory Autonomous Pipeline.*
+"""
+    report_path.write_text(content, encoding="utf-8")
+    print(f"📋  Failure report written → FACTORY_FAILURE_REPORT.md")
+    return str(report_path)

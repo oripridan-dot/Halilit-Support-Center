@@ -19,10 +19,10 @@ from pathlib import Path
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 try:
-    from agent_core import query_llm, save_artifact
+    from agent_core import query_llm, save_artifact, build_dynamic_context, search_codebase
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from agent_core import query_llm, save_artifact
+    from agent_core import query_llm, save_artifact, build_dynamic_context, search_codebase
 
 # ---------------------------------------------------------------------------
 # Paths — use the real spec directory layout (not specs/ui or specs/data)
@@ -50,9 +50,10 @@ You are the SYSTEM STEERER & VALIDATOR for the Halilit Support Center Dark Facto
 YOUR ROLE:
 1. Read the Strategic Master Plan (business goals + technical standards).
 2. Audit ALL existing Technical Specs (the current system state).
-3. Identify the SINGLE most critical gap or conflict between what the strategy
+3. Examine the DYNAMICALLY DISCOVERED CONTEXT (real codebase files found by search).
+4. Identify the SINGLE most critical gap or conflict between what the strategy
    demands and what the specs currently describe.
-4. OUTPUT one complete Markdown spec file that closes that gap.
+5. OUTPUT one complete Markdown spec file that closes that gap.
 
 OUTPUT RULES — follow exactly:
 - Start with "# Spec: [Title of Feature]"
@@ -62,6 +63,22 @@ OUTPUT RULES — follow exactly:
 - Requirements must be concrete and testable — no vague language.
 - Do NOT wrap your output in markdown fences (no ``` blocks around the whole file).
 - Output ONLY the spec file — no preamble, no explanation, no commentary.
+
+**MANDATORY SECTION — every spec MUST end with:**
+
+## Verification Commands
+List the exact terminal commands that PROVE this feature works after the Builder
+implements it. Each command must be runnable non-interactively. Examples:
+- `pnpm tsc --noEmit`       (TypeScript compile check — always include for .tsx specs)
+- `pnpm run lint`           (ESLint check — include when touching JSX/TSX)
+- `pytest backend/tests/test_feature.py -v`  (pytest — include for backend specs)
+- `python -m py_compile backend/module.py`   (syntax check — lightweight backend)
+
+RULES for Verification Commands:
+1. Always include at least ONE compile/type-check command.
+2. Only include commands appropriate to the domain (frontend vs backend).
+3. The commands will be run AUTOMATICALLY by the Builder's sandbox. They must be
+   deterministic and idempotent.
 
 ARCHITECTURE REMINDERS:
 - Frontend: React 18 + TypeScript + Tailwind CSS + Zustand (useNavigationStore in store/navigationStore.ts).
@@ -110,6 +127,17 @@ def steer_system() -> None:
     print("🔍  Auditing Current System Specs …")
     current_state = _read_specs()
 
+    # --- Dynamic Context Discovery (Pillar 1) ---
+    print("🔎  Discovering relevant codebase context …")
+    # Extract keywords from strategy as discovery queries
+    _kw_pattern = re.compile(
+        r'\b(?:implement|add|build|fix|create|upgrade|improve)\s+([a-z][a-z _\-]{3,40})', re.IGNORECASE)
+    discovery_queries = [m.group(1).strip()
+                         for m in _kw_pattern.finditer(strategy[:3000])][:5]
+    # Always include these anchor queries
+    discovery_queries += ["inventory grid", "product detail", "dashboard"]
+    dynamic_ctx = build_dynamic_context(discovery_queries[:6])
+
     prompt = f"""
 STRATEGIC GOALS (Master Plan):
 {strategy}
@@ -117,12 +145,16 @@ STRATEGIC GOALS (Master Plan):
 CURRENT SYSTEM STATE (Existing Specs):
 {current_state}
 
+DYNAMICALLY DISCOVERED CODEBASE CONTEXT (real files found by searching the repo):
+{dynamic_ctx}
+
 TASK:
 Identify the SINGLE most critical missing feature or logic gap that prevents
 the Halilit Support Center from achieving the Strategic Goals above.
 Then write a complete, production-ready spec file to close that gap.
 
 Remember: output ONLY the spec markdown — no explanation before or after.
+The spec MUST include a "## Verification Commands" section at the end.
 """
 
     print("🧠  Analysing gaps …")
