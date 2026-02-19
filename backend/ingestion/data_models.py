@@ -14,7 +14,7 @@ SOURCE RULES (see backend/source_rules.py for the full law):
 NO SYNTHETIC DATA. NO MOCKING. ONLY REAL DATA.
 """
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import List, Dict, Optional, Any
 from enum import Enum
 from datetime import datetime
@@ -67,15 +67,14 @@ class DataSourceConfidence(str, Enum):
 
 class SourceProvenance(BaseModel):
     """Track where data came from and its quality"""
+    model_config = ConfigDict(use_enum_values=False)
+
     source_name: str  # "halilit", "official_nord", "amazon", etc.
     source_url: str
     confidence: DataSourceConfidence = DataSourceConfidence.COMMERCIAL
     timestamp: datetime = Field(default_factory=datetime.utcnow)
     extraction_method: str  # "api", "web_scraper", "manual", "feed"
     extraction_notes: Optional[str] = None
-
-    class Config:
-        use_enum_values = False
 
 
 class FieldLineage(BaseModel):
@@ -89,14 +88,13 @@ class FieldLineage(BaseModel):
 
 class TaxonomyMapping(BaseModel):
     """Product's position in taxonomy hierarchy"""
+    model_config = ConfigDict(use_enum_values=False)
+
     canonical_category: str  # Universal: "Keyboards & Synthesizers"
     canonical_subcategory: str  # Universal: "Synthesizer"
     brand_taxonomy: Optional[str] = None  # Brand-specific if different
     alt_categories: List[str] = []  # Secondary classifications
     keywords: List[str] = []  # For search/discovery
-
-    class Config:
-        use_enum_values = False
 
 
 class PricingData(BaseModel):
@@ -116,8 +114,7 @@ class PricingData(BaseModel):
     last_price_change: Optional[datetime] = None
     previous_price_il: Optional[float] = None
 
-    class Config:
-        use_enum_values = True
+    model_config = ConfigDict(use_enum_values=True)
 
 
 class MediaAsset(BaseModel):
@@ -133,6 +130,8 @@ class MediaAsset(BaseModel):
 
 class DisplayProperties(BaseModel):
     """How product should be displayed in UI"""
+    model_config = ConfigDict(use_enum_values=True)
+
     display_role: DisplayRole = DisplayRole.SPECIALIST
     hero_image: Optional[str] = None  # URL to main hero image
     thumbnail_image: Optional[str] = None
@@ -141,9 +140,6 @@ class DisplayProperties(BaseModel):
     color_hint: Optional[str] = None  # Suggested brand color
     media_assets: List[MediaAsset] = []
     visual_issues: List[str] = []  # Issues found by VisualValidator
-
-    class Config:
-        use_enum_values = True
 
 
 class ProductSpecifications(BaseModel):
@@ -260,10 +256,7 @@ class IngestionProductDraft(BaseModel):
     cross_validation_status: str = Field(
         "pending", description="pending, validated, conflicts_found, incomplete")
 
-    class Config:
-        arbitrary_types_allowed = True
-        use_enum_values = True
-        extra = "allow"
+    model_config = ConfigDict(arbitrary_types_allowed=True, use_enum_values=True, extra="allow")
 
 
 class IngestionBatch(BaseModel):

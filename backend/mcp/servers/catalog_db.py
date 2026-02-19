@@ -14,13 +14,21 @@ import os
 from pathlib import Path
 from typing import Any
 
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 import uvicorn
 
 logger = logging.getLogger("mcp.server.catalog_db")
 
-app = FastAPI(title="Halilit Catalog DB MCP Server")
+
+@asynccontextmanager
+async def _lifespan(app: FastAPI):
+    _load_catalog()
+    yield
+
+
+app = FastAPI(title="Halilit Catalog DB MCP Server", lifespan=_lifespan)
 
 # Load catalog data at startup
 _catalog: list[dict[str, Any]] = []
@@ -310,10 +318,6 @@ async def mcp_endpoint(request: Request) -> JSONResponse:
         },
     })
 
-
-@app.on_event("startup")
-async def startup():
-    _load_catalog()
 
 
 if __name__ == "__main__":
